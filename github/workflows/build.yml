@@ -35,25 +35,25 @@ jobs:
         run: gradle assembleDebug --no-daemon
 
       - name: Name the APK after its build number
-        run: cp project/app/build/outputs/apk/debug/app-debug.apk "PS5-Sender-1.${{ github.run_number }}.apk"
+        run: cp project/app/build/outputs/apk/debug/app-debug.apk "Bento-1.${{ github.run_number }}.apk"
 
       # Kept as a backup download (Actions tab > the run > Artifacts)
       - uses: actions/upload-artifact@v4
         with:
-          name: pssender-debug-apk
-          path: PS5-Sender-1.${{ github.run_number }}.apk
+          name: bento-debug-apk
+          path: Bento-1.${{ github.run_number }}.apk
 
       - name: Publish on the Releases page
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           TAG="v1.${{ github.run_number }}"
-          APK="PS5-Sender-1.${{ github.run_number }}.apk"
+          APK="Bento-1.${{ github.run_number }}.apk"
           REPO="${{ github.repository }}"
           if gh release view "$TAG" --repo "$REPO" > /dev/null 2>&1; then
             gh release upload "$TAG" "$APK" --clobber --repo "$REPO"
           else
             gh release create "$TAG" "$APK" --repo "$REPO" --target "${{ github.sha }}" \
-              --title "PS5 Sender 1.${{ github.run_number }}" \
+              --title "Bento 1.${{ github.run_number }}" \
               --notes "Build ${{ github.run_number }}. Download the .apk below and install it over the previous version."
           fi
