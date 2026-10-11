@@ -73,12 +73,12 @@ Bento uses up to three services on the console. You only need the ones for the t
 
 ## Get the app
 
-**Download.** Open this repository's [Releases](https://github.com/DubDeezo-hub/Testt/releases) page and download the newest `Bento-1.N.apk`. Open it on your phone and, if Android asks, allow installing apps from that source. A new release installs over the old one and keeps your settings, because every build is signed with the same key. Bento also checks the Releases page for you and tells you when a newer build is there (see [About, updates and backup](#about-updates-and-backup)); installing it is still up to you.
+**Download.** Open this repository's [Releases](https://github.com/DubDeezo-hub/Bento-Beta/releases) page and download the newest `Bento-1.N.apk`. Open it on your phone and, if Android asks, allow installing apps from that source. A new release installs over the old one and keeps your settings, because every build is signed with the same key. Bento also checks the Releases page for you and tells you when a newer build is there (see [About, updates and backup](#about-updates-and-backup)); installing it is still up to you.
 
 **Build it yourself (works from a phone).**
 
 1. Put `pssender-project.zip` and `.github/workflows/main.yml` in a GitHub repository. The Kotlin sources are inside the zip.
-2. Open the repository's [Actions](https://github.com/DubDeezo-hub/Testt/actions) tab, choose **Build APK**, and tap **Run workflow**. It also runs on every push to `main`.
+2. Open the repository's [Actions](https://github.com/DubDeezo-hub/Bento-Beta/actions) tab, choose **Build APK**, and tap **Run workflow**. It also runs on every push to `main`.
 3. When it finishes, the APK is on the Releases page (and on the run as the `bento-debug-apk` artifact).
 
 More in [Build, signing and releases](#build-signing-and-releases).
@@ -469,7 +469,7 @@ Beside the code: `AndroidManifest.xml` (permissions, services, the share-sheet e
 - **The workflow** (`main.yml`, named *Build APK*) runs when you start it by hand or push to `main`. It checks out the repository, sets up Temurin JDK 17 and Gradle 8.9, accepts the Android SDK licenses, unzips the project, runs `gradle assembleDebug`, and names the result `Bento-1.N.apk`, where N is the run number.
 - **Releases.** The APK is kept as the run's `bento-debug-apk` artifact and published as a release tagged `v1.N` ("Bento 1.N"). The app's `versionCode` is N too, so every build counts as an update of the one before it and Android installs it over the old one. The update check inside the app compares that number with the newest release's tag.
 - **Signing.** Every build is signed with the same key, `app/pssender-debug.keystore` (inside the zip). Otherwise a GitHub build machine would make a new random key on every run, and Android refuses to install an app over a copy signed with a different key. **Don't replace that file**: the next build wouldn't install over the old ones, and you would have to uninstall first and lose your saved settings. It is a public debug key, so it can't prove who built an APK. Install builds you made yourself or got from this repository's Releases.
-- **Building from your own repository.** The update check looks at the Releases page of `DubDeezo-hub/Testt` (the constant `UPDATE_REPO` in `Update.kt`). If you build Bento from a repository of your own, change that line, or switch the check off in the About window.
+- **Building from your own repository.** The update check looks at the Releases page of `DubDeezo-hub/Bento-Beta` (the constant `UPDATE_REPO` in `Update.kt`). If you build Bento from a repository of your own, change that line, or switch the check off in the About window.
 - **Toolchain.** Android Gradle Plugin 8.5.2, Kotlin 2.0.20 with the Compose compiler plugin, Gradle 8.9, JDK 17, `compileSdk` and `targetSdk` 34, `minSdk` 29 (Android 10). Dependencies: Compose BOM 2024.09.00, `androidx.activity:activity-compose` 1.9.2, Material 3, AndroidX SwipeRefreshLayout 1.1.0 (pull down to reload in the Web tab), OkHttp 4.12.0 and Apache Commons Net 3.11.1.
 
 ## Testing without a PS5
