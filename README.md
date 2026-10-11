@@ -291,7 +291,7 @@ Tap the app name at the top (or **About & backup** in the console switcher) to o
 - **Right-to-left** languages (Arabic, Persian, Hebrew, Urdu) mirror the layout. Values such as paths and addresses are wrapped in Unicode isolates so they keep their own order inside a right-to-left sentence.
 - **Dark and light** themes follow the phone, with one accent color per console.
 - **The icon** is an adaptive icon with a themed (monochrome) version for Android 13 and newer.
-- The translations are machine-drafted and have not been reviewed by native speakers.
+- The translations have not been reviewed by native speakers yet.
 
 <details>
 <summary>All 53 languages</summary>
@@ -529,7 +529,7 @@ It shows that the phone side works. It can't show that a real PS5 accepts the sa
 - **How the PS5 downloads from the phone is unconfirmed.** The server supports `HEAD` and byte ranges, but what a real console sends hasn't been observed.
 - **Wi-Fi can get in the way.** A guest or isolated network can stop the console from reaching the phone, and can hide the console from **Find my PS5**.
 - **Nothing is encrypted.** FTP and the install requests are plain text on your local network, and the app allows cleartext traffic for that reason.
-- **Translations are unreviewed.** They are machine-drafted, so some wording may be off.
+- **Translations are unreviewed.** They have not been checked by native speakers, so some wording may be off.
 - **Debug-signed, outside Google Play.** Bento tells you when a newer build is on the Releases page, but it can't install it by itself: you download the APK and open it.
 - **Find my PS5 is a best guess.** It lists the devices on your Wi-Fi that answer on the console's usual ports. A device that only has an FTP server could be anything, so check the address. There is no list of the games installed on the console; Bento sends things to the console, it doesn't manage its library.
 - **Continuing after the app was closed starts again from the beginning.** The resume described under [Transfers](#transfers) is for dropped connections and pauses while the app is running. The list of unfinished transfers holds at most 200.
@@ -567,7 +567,7 @@ PlayStation and PS5 are trademarks of Sony Interactive Entertainment Inc. Androi
 
 Bento exists because of other people's work. Thank you to everyone below.
 
-**Made by** DubDeezo: the idea, the direction and the testing.
+**Made by** DubDeezo.
 
 ### On the PS5: what Bento talks to
 
@@ -605,7 +605,3 @@ Bento is only a client. Everything it connects to on the console was made by oth
 ### Standards
 
 [RFC 959](https://www.rfc-editor.org/rfc/rfc959) (FTP), [RFC 3659](https://www.rfc-editor.org/rfc/rfc3659) (`SIZE` and `REST`), [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110) (HTTP: `Range`, `If-Range`, `ETag`, 206 and 416) and [Unicode UAX #9](https://www.unicode.org/reports/tr9/) (bidirectional text, for the right-to-left isolates).
-
-### AI assistance
-
-The code and the translations were written with **Claude** (Anthropic), under DubDeezo's direction. The translations are machine-drafted and haven't been reviewed by native speakers.
