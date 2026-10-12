@@ -209,6 +209,7 @@ A file browser for the console over FTP. It opens the folder you were last in on
 - **Sort** by name, by size (largest first) or by date (newest first). Folders always come first, and the choice is remembered.
 - **Search** filters the folder you are viewing as you type: every word you type has to be somewhere in the name, in any order and whatever the case.
 - **Pinned folders.** **Pin this folder** adds a 📌 button for it under the toolbar (up to 12 per console); tap it to jump straight there. **Unpin this folder** removes it. If a pinned folder can't be opened (it was renamed or deleted), the app says so and offers to unpin it.
+- **Pull down to refresh.** Pulling the list down when it is at its top loads the folder again, the same as **Refresh**.
 - File commands use a short FTP session each, with 30-second timeouts. The listing reloads after every change and after a transfer ends.
 
 ### Web tab
@@ -302,7 +303,7 @@ Afrikaans, Arabic, Bengali, Bulgarian, Catalan, Chinese (Simplified), Chinese (T
 
 ## Under the hood
 
-Bento is Kotlin with Jetpack Compose and Material 3: 43 source files, about 12,100 lines, in one module (`app`).
+Bento is Kotlin with Jetpack Compose and Material 3: 43 source files, about 12,200 lines, in one module (`app`).
 
 ### Design notes
 
@@ -536,6 +537,7 @@ It shows that the phone side works. It can't show that a real PS5 accepts the sa
 - **Downloading folders has limits.** At most 2,000 files from 1,000 folders, 12 levels deep; links inside folders are skipped. A folder that can't be read stops the whole plan, with an error that names it.
 - **Browser tabs are not saved when the app is closed.** They survive rotating the phone, but not closing the app. The pages of tabs in the background are paused where Android allows, not frozen.
 - **Pulling down on a web page can start a reload when you meant to scroll,** on pages that scroll inside a box rather than the page itself.
+- **Pull to refresh in the Files tab is the newest addition.** It builds, but it hasn't been tried on a phone yet.
 - **Bento doesn't jailbreak anything** and doesn't include payloads, packages or firmware.
 
 ## Privacy and security

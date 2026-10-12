@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -18,12 +19,14 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Checkbox
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -218,9 +221,10 @@ private fun EntryRow(
  * Browse the console's files over FTP: open folders, rename, delete, create folders, upload into the folder
  * being viewed, and download files and whole folders to the phone (downloads run in the background like uploads do).
  * Holding an entry picks it and lets more be picked, to download or delete them together. The list can be sorted and
- * searched, folders can be pinned for a quick way back, and the folder viewed last is opened again next time.
+ * searched, folders can be pinned for a quick way back, and the folder viewed last is opened again next time. Pulling the
+ * list down loads the folder again.
  */
-@OptIn(ExperimentalLayoutApi::class)
+@OptIn(ExperimentalLayoutApi::class, ExperimentalMaterial3Api::class)
 @Composable
 fun FilesTab(
     model: FilesModel,
@@ -274,6 +278,19 @@ fun FilesTab(
 
     // Every time the tab is shown (or another console is selected) the listing is refreshed
     LaunchedEffect(profile.id) { reload() }
+
+    // Pulling the list down loads the folder again. Its spinner turns while that reload runs and stops when the listing is
+    // in; the bar under the buttons is for everything else that keeps the tab busy.
+    var pulled by remember { mutableStateOf(false) }
+    LaunchedEffect(model.busy) {
+        if (!model.busy) pulled = false
+    }
+    val pullToReload: () -> Unit = {
+        if (ready) {
+            pulled = true
+            reload()
+        }
+    }
 
     // ...and again when a transfer finishes, so a new upload appears in the list
     var wasActive by remember { mutableStateOf(transferActive) }
@@ -657,7 +674,7 @@ fun FilesTab(
             }
             if (searching) Field(str(R.string.files_search_hint), query) { query = it }
         }
-        if (model.busy) LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
+        if (model.busy && !pulled) LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
         if (settings == null) {
             Text(str(R.string.files_need_ip), style = MaterialTheme.typography.bodySmall)
         } else if (model.message.isNotEmpty()) {
@@ -667,27 +684,34 @@ fun FilesTab(
         if (query.isNotBlank() && model.entries.isNotEmpty() && shown.isEmpty()) {
             Text(str(R.string.files_no_match), style = MaterialTheme.typography.bodySmall)
         }
-        LazyColumn(modifier = Modifier.fillMaxWidth().weight(1f)) {
-            items(shown) { e ->
-                EntryRow(
-                    e,
-                    picking = picking,
-                    ticked = e.name in selected,
-                    onTap = {
-                        if (picking) {
-                            selected = toggled(selected, e.name)
-                        } else if (settings != null && !model.busy) {
-                            when {
-                                e.isDir -> model.open(scope, settings, joinPath(model.path, e.name))
-                                // A link might lead to a folder: try it, and offer the actions if it isn't one
-                                e.isLink -> model.open(scope, settings, joinPath(model.path, e.name), onError = { menuFor = e })
-                                else -> menuFor = e
+        // Pulling down only starts when the list is at its top, so scrolling up the list never reloads it
+        PullToRefreshBox(
+            isRefreshing = pulled && model.busy,
+            onRefresh = pullToReload,
+            modifier = Modifier.fillMaxWidth().weight(1f)
+        ) {
+            LazyColumn(modifier = Modifier.fillMaxSize()) {
+                items(shown) { e ->
+                    EntryRow(
+                        e,
+                        picking = picking,
+                        ticked = e.name in selected,
+                        onTap = {
+                            if (picking) {
+                                selected = toggled(selected, e.name)
+                            } else if (settings != null && !model.busy) {
+                                when {
+                                    e.isDir -> model.open(scope, settings, joinPath(model.path, e.name))
+                                    // A link might lead to a folder: try it, and offer the actions if it isn't one
+                                    e.isLink -> model.open(scope, settings, joinPath(model.path, e.name), onError = { menuFor = e })
+                                    else -> menuFor = e
+                                }
                             }
-                        }
-                    },
-                    onHold = { selected = toggled(selected, e.name) },
-                    onMenu = { menuFor = e }
-                )
+                        },
+                        onHold = { selected = toggled(selected, e.name) },
+                        onMenu = { menuFor = e }
+                    )
+                }
             }
         }
     }
