@@ -128,7 +128,7 @@ fun topicFor(e: Throwable): HelpTopic? {
         val text = (t.message ?: "").lowercase()
         when {
             t is UnknownHostException || t is NoRouteToHostException -> return HelpTopic.UNREACHABLE
-            t is ConnectException -> return if ("refused" in text) HelpTopic.PORT_CLOSED else HelpTopic.UNREACHABLE
+            t is ConnectException -> return if ("refused" in text || "refused" in (t.cause?.message ?: "").lowercase()) HelpTopic.PORT_CLOSED else HelpTopic.UNREACHABLE
             t is SocketTimeoutException -> return if ("connect" in text) HelpTopic.UNREACHABLE else HelpTopic.DROPPED
             t is FTPConnectionClosedException || t is EOFException -> return HelpTopic.DROPPED
             t is SocketException -> return when {
