@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Chinese (Traditional). Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">取消</string>
+    <string name="action_close">關閉</string>
+    <string name="action_done">完成</string>
+    <string name="action_delete">刪除</string>
+    <string name="action_rename">重新命名</string>
+    <string name="action_save">儲存</string>
+    <string name="action_remove">移除</string>
+    <string name="action_send">傳送</string>
+    <string name="action_open">開啟</string>
+    <string name="action_block">封鎖</string>
+    <string name="action_home">首頁</string>
+    <string name="action_dismiss">隱藏</string>
+    <string name="action_try_again">重試</string>
+    <string name="action_skip">略過</string>
+    <string name="action_cancel_all">全部取消</string>
+    <string name="action_create">建立</string>
+    <string name="action_set">設定</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">作者：%1$s</string>
+    <string name="nav_install">安裝</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">上傳</string>
+    <string name="nav_files">檔案</string>
+    <string name="nav_web">網頁</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">安裝程式</string>
+    <string name="service_loader">載入器</string>
+    <string name="list_separator">、</string>
+    <string name="status_set_ip">請設定 PS5 的 IP 位址</string>
+    <string name="status_checking">檢查中…</string>
+    <string name="status_ready">已就緒</string>
+    <string name="status_partly">部分就緒</string>
+    <string name="status_partly_off">部分就緒 · 無回應：%1$s</string>
+    <string name="status_offline">無法連線到主機</string>
+    <string name="status_hint_unset">可在 PS5 的「設定 &gt; 網路 &gt; 連線狀態 &gt; 檢視連線狀態」中找到。點一下這裡來輸入。</string>
+    <string name="status_hint_offline">此位址沒有回應。請檢查 IP 位址、PS5 是否已開機並連上同一個 Wi-Fi，以及 etaHEN 是否正在執行。</string>
+    <string name="status_hint_one">無回應：%1$s。請在主機上啟動它，或檢查它的連接埠。</string>
+    <string name="status_hint_many">無回應：%1$s。請在主機上啟動它們，或檢查它們的連接埠。</string>
+    <string name="console_switch">切換主機</string>
+    <string name="console_change_ip">變更 IP 位址</string>
+    <string name="console_ip_title">主機 IP 位址</string>
+    <string name="console_ip_label">IP 位址</string>
+    <string name="console_ip_help">可在 PS5 的「設定 &gt; 網路 &gt; 連線狀態 &gt; 檢視連線狀態」中找到。</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">傳輸</string>
+    <string name="transfer_sending">傳送中</string>
+    <string name="transfer_sending_to">正在傳送到 %1$s</string>
+    <string name="transfer_receiving">接收中</string>
+    <string name="transfer_receiving_from">正在從 %1$s 接收</string>
+    <string name="transfer_detail_total">%1$s · %2$s / %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">啟動中…</string>
+    <string name="transfer_stopped">已停止</string>
+    <string name="transfer_start_failed">無法開始傳輸：%1$s</string>
+    <string name="transfer_retry_in">連線已中斷。%1$d 秒後重試…</string>
+    <string name="transfer_reconnecting">正在重新連線…</string>
+    <string name="transfer_eta">剩餘 %1$s</string>
+    <string name="transfer_queued">%1$d 個等待中</string>
+    <string name="queue_title">等待中的傳輸</string>
+    <string name="queue_clear">全部移除</string>
+    <string name="queue_empty">沒有等待中的項目。</string>
+    <string name="notif_channel">PS5 傳輸</string>
+    <string name="notif_sent">已傳送：%1$s</string>
+    <string name="notif_received">已接收：%1$s</string>
+    <string name="percent_value">%1$d%%</string>
+    <string name="desc_done">完成</string>
+    <string name="desc_problem">發生問題</string>
+    <string name="status_hide">隱藏這則訊息</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">已加入佇列。%1$d 個等待中。</string>
+    <string name="msg_set_ip_first">請先設定主機的 IP 位址。點一下頂端的卡片。</string>
+    <string name="msg_sending_link">正在傳送連結到 PS5…</string>
+    <string name="msg_check_ip_ftp">請檢查主機的 IP 位址和 FTP 連接埠。</string>
+    <string name="msg_adding_to_shelf_link">正在加入 Payload 庫…</string>
+    <string name="status_idle">閒置</string>
+    <string name="status_sending">傳送中…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">要離開這個網站嗎？</string>
+    <string name="offsite_text">該頁面想要開啟 %1$s。點選連結時，廣告常會觸發這種情況，所以只有在你預期會這樣時才繼續。</string>
+    <string name="choose_install">將連結傳送到 PS5 安裝程式</string>
+    <string name="choose_ftp">上傳到 PS5（FTP）</string>
+    <string name="choose_shelf">儲存到 Payload 庫</string>
+    <string name="choose_phone">儲存到手機</string>
+    <string name="choose_help">安裝程式需要一個主機不必登入就能開啟的直接套件連結。FTP 適用於任何檔案，並會保留你的登入工作階段。手機會在背景中繼資料，進度顯示在底部列上方和通知中。Payload 庫會在 App 內儲存小型 Payload（最大 %1$s），供 Payload 分頁使用。</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">安裝程式連接埠（etaHEN：12800）</string>
+    <string name="install_accepted">安裝程式已接受：%1$s</string>
+    <string name="install_not_accepted">未被接受（upload %1$s：%2$s；api %3$s：%4$s）</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">從這支手機安裝</string>
+    <string name="serve_intro">主機會透過 Wi-Fi 直接從這支手機下載套件，因此不需要事先複製。手機和主機必須在同一個網路中。</string>
+    <string name="serve_choose">選擇套件</string>
+    <string name="serve_none">未選擇套件</string>
+    <string name="serve_start">開始分享</string>
+    <string name="serve_stop">停止分享</string>
+    <string name="serve_copy">複製連結</string>
+    <string name="serve_copied">已複製連結</string>
+    <string name="serve_file_waiting">正在等待主機開始下載…</string>
+    <string name="serve_file_pulling">主機正在下載：%1$s</string>
+    <string name="serve_file_done">主機已下載全部內容</string>
+    <string name="serve_unreadable">無法讀取這個檔案</string>
+    <string name="serve_hint">如果主機一直沒有開始下載，可能是 Wi-Fi 阻止了裝置之間互相連線（訪客網路通常會這樣）。請使用主要網路，並讓這個 App 在背景持續執行。</string>
+    <string name="serve_no_wifi">找不到這支手機的 Wi-Fi 位址。請將它連上與主機相同的 Wi-Fi。</string>
+    <string name="serve_failed">無法開始分享：%1$s</string>
+    <string name="serve_idle_stop">由於長時間沒有下載任何內容，分享已停止。</string>
+    <string name="serve_notif_title">正在與 %1$s 分享</string>
+    <string name="serve_notif_text">已下載的檔案：%1$d / %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">選擇檔案</string>
+    <string name="upload_none">未選擇檔案</string>
+    <string name="upload_files_chosen">已選擇的檔案：%1$d 個</string>
+    <string name="upload_start">在背景上傳</string>
+    <string name="upload_help">進度顯示在底部列上方和通知中。離開 App 後仍會繼續。</string>
+    <string name="ftp_port">FTP 連接埠</string>
+    <string name="ftp_user">使用者名稱</string>
+    <string name="ftp_password">密碼</string>
+    <string name="ftp_folder">遠端資料夾</string>
+    <string name="ftp_use_folder">使用 %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">載入中…</string>
+    <string name="files_empty">這個資料夾是空的。</string>
+    <string name="files_not_loaded">尚未載入</string>
+    <string name="files_up">⬆ 上一層</string>
+    <string name="files_refresh">重新整理</string>
+    <string name="files_new_folder">新增資料夾</string>
+    <string name="files_upload_here">上傳到這裡</string>
+    <string name="files_ftp_settings">FTP 設定</string>
+    <string name="files_need_ip">請設定主機的 IP 位址（點一下頂端的卡片）和有效的 FTP 連接埠，才能瀏覽它的檔案。</string>
+    <string name="files_kind_folder">資料夾</string>
+    <string name="files_kind_link">連結，%1$s</string>
+    <string name="files_download">下載到手機</string>
+    <string name="files_new_name">新名稱</string>
+    <string name="files_name_used">這裡已有相同名稱。</string>
+    <string name="files_renaming">重新命名中…</string>
+    <string name="files_renamed">已將 %1$s 重新命名為 %2$s</string>
+    <string name="files_delete_title">要刪除 %1$s 嗎？</string>
+    <string name="files_delete_folder">這會從主機上刪除該資料夾和其中的所有內容，且無法復原。</string>
+    <string name="files_delete_file">這會從主機上刪除該檔案，且無法復原。</string>
+    <string name="files_deleting">刪除中…</string>
+    <string name="files_deleted">已刪除：%1$s</string>
+    <string name="files_deleted_inside">已刪除：%1$s（其中的項目數：%2$d）</string>
+    <string name="files_creating">建立資料夾中…</string>
+    <string name="files_created">已建立資料夾 %1$s</string>
+    <string name="files_folder_name">資料夾名稱</string>
+    <string name="name_empty">名稱不能是空的。</string>
+    <string name="name_not_allowed">不允許使用這個名稱。</string>
+    <string name="name_slash">名稱不能包含斜線。</string>
+    <string name="name_control">名稱包含不允許的字元。</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">失敗：%1$s</string>
+    <string name="ftp_port_hint">無法連線到 FTP 伺服器。請檢查主機 IP 和 FTP 連接埠（etaHEN 內建的 FTP 使用 1337，FTP Payload 使用 2121）。</string>
+    <string name="err_login">FTP 登入失敗</string>
+    <string name="err_cant_open">無法開啟 %1$s（%2$s）</string>
+    <string name="err_rename">重新命名失敗（%1$s）</string>
+    <string name="err_mkdir">無法建立資料夾（%1$s）</string>
+    <string name="err_too_deep">資料夾巢狀層級過深</string>
+    <string name="err_delete_path">無法刪除 %1$s（%2$s）</string>
+    <string name="err_upload">FTP 上傳失敗：%1$s</string>
+    <string name="err_download">FTP 下載失敗：%1$s</string>
+    <string name="err_open_file">無法開啟檔案</string>
+    <string name="err_cancelled_upload">已取消。%1$s 可能殘留不完整的檔案</string>
+    <string name="err_cancelled_download">已取消。不完整的下載已捨棄。</string>
+    <string name="err_gave_up">連線一直失敗，已放棄。最後一次錯誤：%1$s</string>
+    <string name="err_short_upload">在傳送的 %2$s 中，主機只儲存了 %1$s。</string>
+    <string name="err_short_download">%2$s 中只收到了 %1$s。</string>
+    <string name="err_empty_file">檔案是空的</string>
+    <string name="err_save">無法儲存 %1$s</string>
+    <string name="sent_to_ps5">已傳送到 PS5：%1$s</string>
+    <string name="saved_to_downloads">已儲存到「下載/PS5」：%1$s</string>
+    <string name="dl_http_failed">下載失敗：HTTP %1$s</string>
+    <string name="dl_empty">下載失敗：回應是空的</string>
+    <string name="dl_cut_short">整個檔案抵達之前連線就關閉了。</string>
+    <string name="dl_create_failed">無法在「下載」中建立檔案</string>
+    <string name="dl_write_failed">無法開啟新檔案進行寫入</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">已傳送：%1$s</string>
+    <string name="shelf_added">已加入庫：%1$s（%2$s）</string>
+    <string name="shelf_updated">已在庫中更新：%1$s（%2$s）</string>
+    <string name="shelf_too_large">該檔案大於 %1$s，因此未加入庫中。</string>
+    <string name="shelf_too_large_url">該檔案大小為 %1$s。庫最多可存放 %2$s 的 Payload。</string>
+    <string name="payload_adding">正在加入庫…</string>
+    <string name="payload_remove_title">要移除 %1$s 嗎？</string>
+    <string name="payload_remove_text">它會從庫中刪除。手機上的原始檔案不受影響。</string>
+    <string name="payload_loader_port">載入器連接埠</string>
+    <string name="payload_shelf_title">Payload 庫</string>
+    <string name="payload_shelf_empty">還沒有儲存任何內容。加入你常用的 Payload（FTP 伺服器、etaHEN 等），即可一鍵傳送。你也可以在「網頁」分頁下載時直接儲存。</string>
+    <string name="payload_sending">正在傳送 %1$s…</string>
+    <string name="payload_result">%1$s：%2$s</string>
+    <string name="payload_add">將 Payload 加入庫</string>
+    <string name="payload_once_title">只傳送一次檔案</string>
+    <string name="payload_choose">選擇 Payload（.elf / .bin）</string>
+    <string name="payload_send">傳送 Payload</string>
+
+    <!-- consoles -->
+    <string name="profile_default">我的 PS5</string>
+    <string name="profile_new">主機 %1$d</string>
+    <string name="profile_fallback">主機</string>
+    <string name="consoles_title">主機</string>
+    <string name="console_rename_title">重新命名主機</string>
+    <string name="console_name_label">名稱</string>
+    <string name="console_delete_title">要刪除 %1$s 嗎？</string>
+    <string name="console_delete_text">它儲存的 IP 位址和連接埠會被移除。你的其他主機不受影響。</string>
+    <string name="console_no_ip">尚無 IP 位址</string>
+    <string name="console_color_of">%1$s 的顏色</string>
+    <string name="console_use_color">使用 %1$s</string>
+    <string name="console_add">新增主機</string>
+    <string name="language_button">語言</string>
+    <string name="color_blue">藍色</string>
+    <string name="color_orange">橘色</string>
+    <string name="color_green">綠色</string>
+    <string name="color_pink">粉紅色</string>
+    <string name="color_purple">紫色</string>
+    <string name="color_teal">青色</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">已開始下載（請見「下載」）</string>
+    <string name="web_load_failed">無法載入頁面：%1$s</string>
+    <string name="web_http_server">網站目前忙碌或無法使用（錯誤 %1$s）。請稍後再試。</string>
+    <string name="web_http_other">網站回傳了錯誤 %1$s。</string>
+    <string name="web_open_first">請先開啟一個頁面</string>
+    <string name="web_bookmark_saved">書籤已儲存</string>
+    <string name="web_bookmark_exists">已在書籤中</string>
+    <string name="web_home_set">已設定首頁：%1$s</string>
+    <string name="web_reload">重新載入</string>
+    <string name="web_add">★ 新增</string>
+    <string name="web_bookmarks">書籤</string>
+    <string name="web_homepage_label">首頁 URL</string>
+    <string name="web_bookmarks_empty">還沒有書籤。開啟一個頁面，然後點一下 %1$s。</string>
+    <string name="web_bookmarks_help">點一下書籤即可開啟。「%1$s」會將它設為首頁。</string>
+    <string name="adblock_title">廣告封鎖</string>
+    <string name="adblock_switch">封鎖廣告網域</string>
+    <string name="adblock_info">目前已封鎖：%1$d。內建清單中的廣告網路：%2$d。變更後請重新載入頁面。</string>
+    <string name="adblock_own">你自己的網域，每行一個</string>
+    <string name="adblock_on">廣告封鎖：開 · 已封鎖：%1$d · 點一下即可變更</string>
+    <string name="adblock_off">廣告封鎖：關 · 已封鎖：%1$d · 點一下即可變更</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">我該怎麼辦？</string>
+    <string name="help_what">發生了什麼事</string>
+    <string name="help_try">可以嘗試</string>
+    <string name="help_details">詳細資訊</string>
+    <string name="help_copy">複製詳細資訊</string>
+    <string name="help_copied">已複製</string>
+    <string name="help_unreachable_title">無法連線到主機</string>
+    <string name="help_unreachable_what">主機的位址沒有任何回應。</string>
+    <string name="help_unreachable_try">• 在 PS5 上檢查 IP 位址（設定 &gt; 網路 &gt; 連線狀態）。重新啟動後它可能會改變。\n• 讓主機完全喚醒。休息模式通常會關閉網路。\n• 兩台裝置使用同一個 Wi-Fi。訪客網路和 VPN 會封鎖連線。</string>
+    <string name="help_port_title">該服務未執行</string>
+    <string name="help_port_what">主機有回應，但該連接埠上沒有任何程式在監聽。</string>
+    <string name="help_port_try">• 在主機上啟動 etaHEN。它提供安裝程式（12800）、載入器（9021）和 FTP（1337）。\n• 獨立的 FTP Payload 通常使用 2121。請在這裡輸入相同的連接埠。\n• 在主機卡片上，熄滅的指示燈表示缺少的服務。</string>
+    <string name="help_login_title">FTP 登入被拒絕</string>
+    <string name="help_login_what">主機的 FTP 伺服器拒絕了該使用者名稱或密碼。</string>
+    <string name="help_login_try">• etaHEN 接受使用者名稱 anonymous 和任意密碼。\n• 如果你在主機上設定了登入資訊，請在「上傳」分頁中輸入。\n• 密碼不會被儲存。重新啟動 App 後請重新輸入。</string>
+    <string name="help_dropped_title">連線已中斷</string>
+    <string name="help_dropped_what">與主機的連線中斷，或資料不再傳輸。App 會重試，並從中斷處繼續。</string>
+    <string name="help_dropped_try">• 讓手機靠近路由器，並保持主機處於喚醒狀態。\n• 暫停網路上的其他大型下載。\n• 如果仍然失敗，請稍等片刻，然後點一下「重試」。</string>
+    <string name="help_refused_title">安裝程式沒有接受該連結</string>
+    <string name="help_refused_what">可以連線到主機，但它的安裝程式拒絕了此連結。</string>
+    <string name="help_refused_try">• 連結必須直接指向套件檔案，並且不必登入即可開啟。\n• 主機必須能夠存取它。此手機上的連結僅在同一個 Wi-Fi 下有效。\n• 檢查安裝程式是否正在執行，以及主機是否有可用空間。</string>
+    <string name="help_storage_title">主機停止了儲存</string>
+    <string name="help_storage_what">主機儲存的內容比傳送的少。通常是磁碟已滿或為唯讀。</string>
+    <string name="help_storage_try">• 釋出主機上的一些空間。\n• 選擇其他資料夾，例如 USB 隨身碟上的資料夾。\n• 然後點一下「重試」。</string>
+    <string name="help_denied_title">該資料夾或檔案被拒絕存取</string>
+    <string name="help_denied_what">FTP 伺服器在此處無法開啟、寫入或變更它。</string>
+    <string name="help_denied_try">• 檢查資料夾是否存在。名稱區分大小寫。\n• 系統資料夾是唯讀的。請使用 /data 或 USB 隨身碟。\n• 正在執行的遊戲所使用的檔案可能被鎖定。請關閉遊戲。</string>
+    <string name="help_phone_title">手機無法使用該檔案</string>
+    <string name="help_phone_what">檔案已遺失或被移動、App 失去了對它的存取權限，或手機空間不足。</string>
+    <string name="help_phone_try">• 重新選擇該檔案。\n• 釋出手機上的一些儲存空間。\n• 如果檔案在雲端 App 中，請先儲存到手機。</string>
+    <string name="help_link_title">下載連結失敗</string>
+    <string name="help_link_what">網站沒有提供該檔案。連結可能已過期、需要登入，或網站忙碌中。</string>
+    <string name="help_link_try">• 從「網頁」分頁重新開始下載。這樣可以保留你的登入狀態。\n• 檔案代管網站的連結通常幾分鐘後就會過期。\n• 如果網站回報了 500 系列錯誤，請稍後再試。</string>
+
+    <!-- update check -->
+    <string name="update_available">有可用的新版本 %1$s</string>
+    <string name="update_download">下載</string>
+    <string name="update_later">稍後</string>
+    <string name="update_title">更新</string>
+    <string name="update_current">你已是最新版本（%1$s）。</string>
+    <string name="update_none">Releases 頁面上尚未找到任何發行版。</string>
+    <string name="update_check_now">立即檢查</string>
+    <string name="update_auto">開啟 App 時檢查更新</string>
+    <string name="update_privacy">檢查時會向 GitHub 詢問最新發行版，每天最多一次。不會傳送任何與你或你的主機有關的資訊；和任何網站一樣，GitHub 會看到你的 IP 位址。</string>
+
+    <!-- find my console -->
+    <string name="find_button">尋找我的 PS5</string>
+    <string name="find_scanning">正在網路 %1$s 上尋找您的主機…</string>
+    <string name="find_again">重新掃描</string>
+    <string name="find_none">找不到主機。</string>
+    <string name="find_none_try">• 讓主機完全開機（不要處於休息模式），並啟動 etaHEN。\n• 手機和主機使用同一個 Wi-Fi。訪客網路和 VPN 會把裝置彼此隔開。\n• 然後重新掃描。</string>
+    <string name="find_no_wifi">這支手機未連上 Wi-Fi 網路。請將它連上與主機相同的 Wi-Fi，然後重新掃描。</string>
+    <string name="find_pick">點一下「使用」即可設定主機「%1$s」的位址。</string>
+    <string name="find_saved">已儲存的位址</string>
+    <string name="find_used_by">已為「%1$s」儲存</string>
+    <string name="find_updated">主機「%1$s」現在使用 %2$s。</string>
+    <string name="find_privacy">只會掃描您的 Wi-Fi 網路，且僅限主機的少數幾個連接埠。不會透過網際網路傳送任何內容。</string>
+    <string name="action_stop">停止</string>
+    <string name="action_use">使用</string>
+
+    <!-- about and backup -->
+    <string name="about_title">關於 Bento</string>
+    <string name="about_version">版本 %1$s</string>
+    <string name="about_button">關於與備份</string>
+    <string name="about_report">複製報告</string>
+    <string name="about_report_help">複製 App 版本、手機型號和最後一則訊息，方便貼到錯誤報告中。不包含 IP 位址和連結。</string>
+    <string name="about_report_copied">報告已複製</string>
+    <string name="about_releases">Releases 頁面</string>
+    <string name="backup_title">備份</string>
+    <string name="backup_text">將你的主機、首頁、書籤、廣告清單和 Payload 儲存到一個檔案中。不會儲存 FTP 密碼。</string>
+    <string name="backup_save">儲存備份</string>
+    <string name="backup_restore">還原備份</string>
+    <string name="backup_saved">備份已儲存。</string>
+    <string name="backup_contents">主機：%1$d · 書籤：%2$d · Payload：%3$d</string>
+    <string name="backup_made">建立於 %1$s</string>
+    <string name="backup_skipped">因檔案會過大而未包含的 Payload：%1$d</string>
+    <string name="backup_bad_file">該檔案不是 Bento 備份。</string>
+    <string name="backup_too_new">該備份由較新版本的 Bento 建立。請更新 App 後再試。</string>
+    <string name="restore_title">還原此備份？</string>
+    <string name="restore_text">你的主機、首頁、書籤和廣告清單將被檔案中的內容取代。檔案中的 Payload 會加入 Payload 庫。你需要重新輸入 FTP 密碼。</string>
+    <string name="restore_button">還原</string>
+    <string name="restore_done">備份已還原。</string>
+    <string name="restore_payloads_failed">無法儲存的 Payload：%1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">套件連結（每行一個）</string>
+    <string name="install_paste">貼上</string>
+    <string name="action_clear">清除</string>
+    <string name="install_paste_none">剪貼簿中沒有網頁連結。</string>
+    <string name="install_links_skipped">只會傳送以 http:// 或 https:// 開頭的位址。已略過：%1$d</string>
+    <string name="install_recent">最近的連結</string>
+    <string name="install_recent_clear">清除清單</string>
+    <string name="install_sending_n">正在傳送第 %1$d 個連結，共 %2$d 個…</string>
+    <string name="install_batch_done">已接受：%1$d / %2$d 個連結</string>
+    <string name="install_batch_notsent">未傳送：%1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">鏈</string>
+    <string name="chains_hint">鏈會依序傳送多個 Payload，每個之後都有一段間隔。長按應用程式圖示，即可從主畫面啟動前四條鏈中的一條。</string>
+    <string name="chain_new">新增鏈</string>
+    <string name="action_edit">編輯</string>
+    <string name="chain_summary_steps">Payload：%1$d</string>
+    <string name="chain_summary_pauses">間隔：%1$s</string>
+    <string name="chain_edit_title">編輯鏈</string>
+    <string name="chain_steps_title">Payload，依序排列（最多 %1$d 個）</string>
+    <string name="chain_add_step">新增 Payload</string>
+    <string name="chain_pick_title">要新增哪個 Payload？</string>
+    <string name="chain_wait_label">然後等待（秒）</string>
+    <string name="chain_missing">不在庫中</string>
+    <string name="chain_move_up">上移</string>
+    <string name="chain_move_down">下移</string>
+    <string name="chain_pin">新增到主畫面</string>
+    <string name="chain_pin_unsupported">這個啟動器無法新增捷徑。長按應用程式圖示，即可在那裡找到您的鏈。</string>
+    <string name="chain_sending">正在傳送 %1$s（第 %2$d 個，共 %3$d 個）…</string>
+    <string name="chain_waiting">%1$s後傳送下一個 Payload</string>
+    <string name="chain_retrying">正在等待主機就緒…</string>
+    <string name="chain_result_done">完成。已傳送的 Payload：%1$d/%2$d</string>
+    <string name="chain_result_stopped">已停止。已傳送的 Payload：%1$d/%2$d</string>
+    <string name="chain_result_failed">在第 %1$d 步（%2$s）停止。已傳送的 Payload：%3$d/%4$d</string>
+    <string name="chain_err_target">請先設定主機的 IP 位址和載入器連接埠。</string>
+    <string name="chain_err_missing">已不在庫中：%1$s。請重新新增，或編輯該鏈。</string>
+    <string name="chain_err_unknown">該鏈已不存在。</string>
+    <string name="notif_channel_chain">Payload 鏈</string>
+    <string name="backup_chains">鏈：%1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">上次未完成的傳輸：%1$d</string>
+    <string name="unfinished_hint">App 在這些傳輸完成之前就關閉了。「繼續」會讓每一項從頭重新開始。</string>
+    <string name="unfinished_continue">繼續</string>
+    <string name="unfinished_discard">捨棄</string>
+    <string name="unfinished_missing">找不到這些檔案了，請重新選擇：%1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">暫停</string>
+    <string name="transfer_resume">繼續</string>
+    <string name="transfer_paused">已暫停</string>
+    <string name="speed_limit_title">速度限制</string>
+    <string name="speed_limit_off">不限速</string>
+    <string name="speed_limit_value">限制：%1$s</string>
+    <string name="speed_limit_hint">會減慢傳輸速度，讓 Wi-Fi 留給其他用途。變更立即生效。</string>
+    <string name="summary_title">已完成的傳輸：%1$d/%2$d</string>
+    <string name="summary_detail">%1$s，耗時 %2$s</string>
+    <string name="summary_failed">失敗：%1$d</string>
+    <string name="summary_stopped">已停止：%1$d</string>
+    <string name="notif_channel_results">傳輸結果</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">已選擇：%1$d</string>
+    <string name="files_select_all">全選</string>
+    <string name="files_select_none">取消全選</string>
+    <string name="files_delete_many_title">要刪除所選項目（%1$d）嗎？</string>
+    <string name="files_delete_many_text">這會從主機上刪除所選的檔案和資料夾，資料夾會連同其中的所有內容一併刪除，且無法復原。</string>
+    <string name="files_deleted_many">已刪除的項目：%1$d</string>
+    <string name="files_delete_partial">已刪除的項目：%1$d，未刪除：%2$d。第一個問題：%3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">正在查看各個資料夾…</string>
+    <string name="files_dl_confirm_title">要下載到手機嗎？</string>
+    <string name="files_dl_confirm_text">檔案：%1$d，共 %2$s。這些檔案會儲存在 Downloads/PS5 中，資料夾結構與主機上相同。</string>
+    <string name="files_dl_links">資料夾內的連結不會下載：%1$d。</string>
+    <string name="files_dl_truncated">已取得的檔案：%1$d。這些資料夾裡還有更多檔案，或層級比 App 追蹤的更深。</string>
+    <string name="files_dl_none">所選內容中沒有可下載的檔案。</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">排序</string>
+    <string name="files_sort_title">排序方式</string>
+    <string name="files_sort_name">名稱</string>
+    <string name="files_sort_size">大小，由大到小</string>
+    <string name="files_sort_newest">最新的在前</string>
+    <string name="files_search">搜尋</string>
+    <string name="files_search_hint">在此資料夾中搜尋</string>
+    <string name="files_no_match">此資料夾中沒有符合搜尋的項目。</string>
+    <string name="files_pin">釘選此資料夾</string>
+    <string name="files_unpin">取消釘選此資料夾</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">分頁：%1$d</string>
+    <string name="web_tabs_title">分頁</string>
+    <string name="web_tab_new">新分頁</string>
+    <string name="web_tabs_full">分頁太多。上限為 %1$d。請先關閉一個。</string>
+    <string name="web_find">尋找</string>
+    <string name="web_find_hint">在此頁面中尋找</string>
+    <string name="web_find_none">沒有相符項目</string>
+    <string name="web_desktop">電腦版網站</string>
+    <string name="web_link_new_tab">在新分頁中開啟</string>
+    <string name="web_link_copy">複製連結</string>
+    <string name="web_link_copied">已複製連結</string>
+    <string name="web_link_use">傳送或下載…</string>
+</resources>

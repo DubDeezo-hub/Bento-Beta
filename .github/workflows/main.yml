@@ -27,15 +27,11 @@ jobs:
       - name: Accept Android SDK licenses
         run: yes | sdkmanager --licenses > /dev/null || true
 
-      - name: Unpack project
-        run: unzip -q pssender-project.zip -d project
-
       - name: Build debug APK
-        working-directory: project
         run: gradle assembleDebug --no-daemon
 
       - name: Name the APK after its build number
-        run: cp project/app/build/outputs/apk/debug/app-debug.apk "Bento-1.${{ github.run_number }}.apk"
+        run: cp app/build/outputs/apk/debug/app-debug.apk "Bento-1.${{ github.run_number }}.apk"
 
       # Kept as a backup download (Actions tab > the run > Artifacts)
       - uses: actions/upload-artifact@v6

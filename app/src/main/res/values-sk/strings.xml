@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Slovak. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">Zrušiť</string>
+    <string name="action_close">Zavrieť</string>
+    <string name="action_done">Hotovo</string>
+    <string name="action_delete">Vymazať</string>
+    <string name="action_rename">Premenovať</string>
+    <string name="action_save">Uložiť</string>
+    <string name="action_remove">Odstrániť</string>
+    <string name="action_send">Odoslať</string>
+    <string name="action_open">Otvoriť</string>
+    <string name="action_block">Blokovať</string>
+    <string name="action_home">Domov</string>
+    <string name="action_dismiss">Skryť</string>
+    <string name="action_try_again">Skúsiť znova</string>
+    <string name="action_skip">Preskočiť</string>
+    <string name="action_cancel_all">Zrušiť všetko</string>
+    <string name="action_create">Vytvoriť</string>
+    <string name="action_set">Nastaviť</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">autor: %1$s</string>
+    <string name="nav_install">Inštalovať</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">Nahrať</string>
+    <string name="nav_files">Súbory</string>
+    <string name="nav_web">Web</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Installer</string>
+    <string name="service_loader">Loader</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">Nastavte IP adresu konzoly PS5</string>
+    <string name="status_checking">Kontrola…</string>
+    <string name="status_ready">Pripravené</string>
+    <string name="status_partly">Čiastočne pripravené</string>
+    <string name="status_partly_off">Čiastočne pripravené · neodpovedá: %1$s</string>
+    <string name="status_offline">Konzola nie je dostupná</string>
+    <string name="status_hint_unset">Nájdete ju na PS5 v Settings &gt; Network &gt; Connection Status &gt; View Connection Status. Ťuknutím sem ju zadáte.</string>
+    <string name="status_hint_offline">Na tejto adrese nikto neodpovedá. Skontrolujte IP adresu, či je konzola zapnutá a v rovnakej sieti Wi-Fi a či beží etaHEN.</string>
+    <string name="status_hint_one">Neodpovedá: %1$s. Spustite túto službu na konzole alebo skontrolujte jej port.</string>
+    <string name="status_hint_many">Neodpovedajú: %1$s. Spustite tieto služby na konzole alebo skontrolujte ich porty.</string>
+    <string name="console_switch">Prepnúť konzolu</string>
+    <string name="console_change_ip">Zmeniť IP adresu</string>
+    <string name="console_ip_title">IP adresa konzoly</string>
+    <string name="console_ip_label">IP adresa</string>
+    <string name="console_ip_help">Nájdete ju na PS5 v Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">Prenos</string>
+    <string name="transfer_sending">Odosielanie</string>
+    <string name="transfer_sending_to">Odosielanie do: %1$s</string>
+    <string name="transfer_receiving">Prijímanie</string>
+    <string name="transfer_receiving_from">Prijímanie z: %1$s</string>
+    <string name="transfer_detail_total">%1$s · %2$s z %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">Spúšťanie…</string>
+    <string name="transfer_stopped">Zastavené</string>
+    <string name="transfer_start_failed">Prenos sa nepodarilo spustiť: %1$s</string>
+    <string name="transfer_retry_in">Pripojenie sa prerušilo. Ďalší pokus o %1$d s…</string>
+    <string name="transfer_reconnecting">Opätovné pripájanie…</string>
+    <string name="transfer_eta">Zostáva: %1$s</string>
+    <string name="transfer_queued">Vo fronte: %1$d</string>
+    <string name="queue_title">Prenosy vo fronte</string>
+    <string name="queue_clear">Odstrániť všetko</string>
+    <string name="queue_empty">Vo fronte nič nie je.</string>
+    <string name="notif_channel">Prenosy na PS5</string>
+    <string name="notif_sent">Odoslané: %1$s</string>
+    <string name="notif_received">Prijaté: %1$s</string>
+    <string name="percent_value">%1$d%%</string>
+    <string name="desc_done">Hotovo</string>
+    <string name="desc_problem">Problém</string>
+    <string name="status_hide">Skryť túto správu</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">Pridané do fronty. Vo fronte: %1$d.</string>
+    <string name="msg_set_ip_first">Najprv nastavte IP adresu konzoly. Ťuknite na kartu navrchu.</string>
+    <string name="msg_sending_link">Odosiela sa odkaz na PS5…</string>
+    <string name="msg_check_ip_ftp">Skontrolujte IP adresu konzoly a port FTP.</string>
+    <string name="msg_adding_to_shelf_link">Pridáva sa do knižnice payloadov…</string>
+    <string name="status_idle">Nečinné</string>
+    <string name="status_sending">Odosiela sa…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">Opustiť túto stránku?</string>
+    <string name="offsite_text">Stránka chce otvoriť %1$s. Reklamy to často spúšťajú, keď ťuknete na odkaz, preto pokračujte, iba ak ste to očakávali.</string>
+    <string name="choose_install">Odoslať odkaz do Installera na PS5</string>
+    <string name="choose_ftp">Nahrať na PS5 (FTP)</string>
+    <string name="choose_shelf">Uložiť do knižnice payloadov</string>
+    <string name="choose_phone">Uložiť do telefónu</string>
+    <string name="choose_help">Installer potrebuje priamy odkaz na balík, ktorý konzola otvorí bez prihlásenia. FTP funguje s ľubovoľným súborom a zachová vaše prihlásenie. Telefón dáta preposiela na pozadí, pričom priebeh sa zobrazuje nad dolným panelom a v oznámení. Knižnica payloadov uchováva v aplikácii malý payload (do %1$s) pre kartu Payload.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Port pre Installer (etaHEN: 12800)</string>
+    <string name="install_accepted">Installer ho prijal: %1$s</string>
+    <string name="install_not_accepted">Neprijaté (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">Inštalovať z tohto telefónu</string>
+    <string name="serve_intro">Konzola sťahuje balíky priamo z tohto telefónu cez Wi-Fi, takže nie je potrebné nič vopred kopírovať. Telefón a konzola musia byť v rovnakej sieti.</string>
+    <string name="serve_choose">Vybrať balíky</string>
+    <string name="serve_none">Nie sú vybrané žiadne balíky</string>
+    <string name="serve_start">Spustiť zdieľanie</string>
+    <string name="serve_stop">Zastaviť zdieľanie</string>
+    <string name="serve_copy">Kopírovať odkaz</string>
+    <string name="serve_copied">Odkaz bol skopírovaný</string>
+    <string name="serve_file_waiting">Čaká sa, kým konzola začne sťahovať…</string>
+    <string name="serve_file_pulling">Konzola sťahuje: %1$s</string>
+    <string name="serve_file_done">Konzola stiahla všetko</string>
+    <string name="serve_unreadable">Tento súbor sa nedá prečítať</string>
+    <string name="serve_hint">Ak konzola nikdy nezačne sťahovať, Wi-Fi môže zariadeniam brániť, aby sa navzájom našli (siete pre hostí to často robia). Použite hlavnú sieť a nechajte túto aplikáciu bežať na pozadí.</string>
+    <string name="serve_no_wifi">Adresa Wi-Fi tohto telefónu sa nenašla. Pripojte ho k tej istej sieti Wi-Fi ako konzolu.</string>
+    <string name="serve_failed">Zdieľanie sa nepodarilo spustiť: %1$s</string>
+    <string name="serve_idle_stop">Zdieľanie sa zastavilo, pretože sa dlho nič nesťahovalo.</string>
+    <string name="serve_notif_title">Zdieľanie s: %1$s</string>
+    <string name="serve_notif_text">Stiahnuté súbory: %1$d / %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">Vybrať súbory</string>
+    <string name="upload_none">Nie sú vybrané žiadne súbory</string>
+    <string name="upload_files_chosen">Vybrané súbory: %1$d</string>
+    <string name="upload_start">Nahrať na pozadí</string>
+    <string name="upload_help">Priebeh sa zobrazuje nad dolným panelom a v oznámení. Pokračuje aj vtedy, keď aplikáciu opustíte.</string>
+    <string name="ftp_port">Port FTP</string>
+    <string name="ftp_user">Používateľské meno</string>
+    <string name="ftp_password">Heslo</string>
+    <string name="ftp_folder">Vzdialený priečinok</string>
+    <string name="ftp_use_folder">Použiť %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">Načítava sa…</string>
+    <string name="files_empty">Tento priečinok je prázdny.</string>
+    <string name="files_not_loaded">Ešte nenačítané</string>
+    <string name="files_up">⬆ Hore</string>
+    <string name="files_refresh">Obnoviť</string>
+    <string name="files_new_folder">Nový priečinok</string>
+    <string name="files_upload_here">Nahrať sem</string>
+    <string name="files_ftp_settings">Nastavenia FTP</string>
+    <string name="files_need_ip">Nastavte IP adresu konzoly (ťuknite na kartu navrchu) a platný port FTP, aby ste mohli prehliadať jej súbory.</string>
+    <string name="files_kind_folder">Priečinok</string>
+    <string name="files_kind_link">Odkaz, %1$s</string>
+    <string name="files_download">Stiahnuť do telefónu</string>
+    <string name="files_new_name">Nový názov</string>
+    <string name="files_name_used">Tento názov sa tu už používa.</string>
+    <string name="files_renaming">Premenúva sa…</string>
+    <string name="files_renamed">Premenované: %1$s na %2$s</string>
+    <string name="files_delete_title">Vymazať %1$s?</string>
+    <string name="files_delete_folder">Týmto sa z konzoly vymaže priečinok a všetko v ňom. Túto akciu nemožno vrátiť späť.</string>
+    <string name="files_delete_file">Týmto sa z konzoly vymaže súbor. Túto akciu nemožno vrátiť späť.</string>
+    <string name="files_deleting">Maže sa…</string>
+    <string name="files_deleted">Vymazané: %1$s</string>
+    <string name="files_deleted_inside">Vymazané: %1$s (položiek vo vnútri: %2$d)</string>
+    <string name="files_creating">Vytvára sa priečinok…</string>
+    <string name="files_created">Priečinok %1$s bol vytvorený</string>
+    <string name="files_folder_name">Názov priečinka</string>
+    <string name="name_empty">Názov nemôže byť prázdny.</string>
+    <string name="name_not_allowed">Tento názov nie je povolený.</string>
+    <string name="name_slash">Názov nemôže obsahovať lomky.</string>
+    <string name="name_control">Názov obsahuje nepovolené znaky.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">Zlyhalo: %1$s</string>
+    <string name="ftp_port_hint">K serveru FTP sa nedá pripojiť. Skontrolujte IP konzoly a port FTP (vstavaný FTP v etaHEN používa 1337, payload FTP používa 2121).</string>
+    <string name="err_login">Prihlásenie na FTP zlyhalo</string>
+    <string name="err_cant_open">nedá sa otvoriť %1$s (%2$s)</string>
+    <string name="err_rename">premenovanie zlyhalo (%1$s)</string>
+    <string name="err_mkdir">priečinok sa nepodarilo vytvoriť (%1$s)</string>
+    <string name="err_too_deep">priečinok je vnorený príliš hlboko</string>
+    <string name="err_delete_path">nepodarilo sa vymazať %1$s (%2$s)</string>
+    <string name="err_upload">Nahrávanie cez FTP zlyhalo: %1$s</string>
+    <string name="err_download">Sťahovanie cez FTP zlyhalo: %1$s</string>
+    <string name="err_open_file">Súbor sa nepodarilo otvoriť</string>
+    <string name="err_cancelled_upload">Zrušené. Čiastočný súbor mohol zostať v %1$s</string>
+    <string name="err_cancelled_download">Zrušené. Čiastočné stiahnutie bolo zahodené.</string>
+    <string name="err_gave_up">Vzdané, pretože pripojenie stále zlyhávalo. Posledná chyba: %1$s</string>
+    <string name="err_short_upload">Z odoslaných %2$s si konzola ponechala iba %1$s.</string>
+    <string name="err_short_download">Prišlo iba %1$s z %2$s.</string>
+    <string name="err_empty_file">Súbor je prázdny</string>
+    <string name="err_save">Nepodarilo sa uložiť %1$s</string>
+    <string name="sent_to_ps5">Odoslané na PS5: %1$s</string>
+    <string name="saved_to_downloads">Uložené do Downloads/PS5: %1$s</string>
+    <string name="dl_http_failed">Sťahovanie zlyhalo: HTTP %1$s</string>
+    <string name="dl_empty">Sťahovanie zlyhalo: prázdna odpoveď</string>
+    <string name="dl_cut_short">Pripojenie sa zatvorilo skôr, než prišiel celý súbor.</string>
+    <string name="dl_create_failed">Súbor sa nepodarilo vytvoriť v priečinku Downloads</string>
+    <string name="dl_write_failed">Nový súbor sa nepodarilo otvoriť na zápis</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">Odoslané: %1$s</string>
+    <string name="shelf_added">Pridané do knižnice: %1$s (%2$s)</string>
+    <string name="shelf_updated">Aktualizované v knižnici: %1$s (%2$s)</string>
+    <string name="shelf_too_large">Tento súbor je väčší ako %1$s, preto sa do knižnice nepridal.</string>
+    <string name="shelf_too_large_url">Tento súbor má %1$s. Knižnica prijíma payloady do %2$s.</string>
+    <string name="payload_adding">Pridáva sa do knižnice…</string>
+    <string name="payload_remove_title">Odstrániť %1$s?</string>
+    <string name="payload_remove_text">Bude vymazaný z knižnice. Pôvodný súbor vo vašom telefóne zostane nedotknutý.</string>
+    <string name="payload_loader_port">Port pre Loader</string>
+    <string name="payload_shelf_title">Knižnica payloadov</string>
+    <string name="payload_shelf_empty">Zatiaľ nič nie je uložené. Pridajte payloady, ktoré často používate (server FTP, etaHEN, ...), a odošlite každý jedným ťuknutím. Môžete ho uložiť aj priamo z karty Web pri sťahovaní.</string>
+    <string name="payload_sending">Odosiela sa %1$s…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">Pridať payload do knižnice</string>
+    <string name="payload_once_title">Jednorazové odoslanie súboru</string>
+    <string name="payload_choose">Vybrať payload (.elf / .bin)</string>
+    <string name="payload_send">Odoslať payload</string>
+
+    <!-- consoles -->
+    <string name="profile_default">Moja PS5</string>
+    <string name="profile_new">Konzola %1$d</string>
+    <string name="profile_fallback">Konzola</string>
+    <string name="consoles_title">Konzoly</string>
+    <string name="console_rename_title">Premenovať konzolu</string>
+    <string name="console_name_label">Názov</string>
+    <string name="console_delete_title">Vymazať %1$s?</string>
+    <string name="console_delete_text">Jej uložená IP adresa a porty sa odstránia. Vaše ďalšie konzoly to neovplyvní.</string>
+    <string name="console_no_ip">zatiaľ bez IP adresy</string>
+    <string name="console_color_of">Farba pre %1$s</string>
+    <string name="console_use_color">Použiť %1$s</string>
+    <string name="console_add">Pridať konzolu</string>
+    <string name="language_button">Jazyk</string>
+    <string name="color_blue">Modrá</string>
+    <string name="color_orange">Oranžová</string>
+    <string name="color_green">Zelená</string>
+    <string name="color_pink">Ružová</string>
+    <string name="color_purple">Fialová</string>
+    <string name="color_teal">Tyrkysová</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">Sťahovanie sa začalo (pozrite Downloads)</string>
+    <string name="web_load_failed">Stránku sa nepodarilo načítať: %1$s</string>
+    <string name="web_http_server">Web je momentálne zaneprázdnený alebo nedostupný (chyba %1$s). Skúste to o chvíľu znova.</string>
+    <string name="web_http_other">Web odpovedal chybou %1$s.</string>
+    <string name="web_open_first">Najprv otvorte stránku</string>
+    <string name="web_bookmark_saved">Záložka bola uložená</string>
+    <string name="web_bookmark_exists">Už je vo vašich záložkách</string>
+    <string name="web_home_set">Domovská stránka nastavená na %1$s</string>
+    <string name="web_reload">Načítať znova</string>
+    <string name="web_add">★ Pridať</string>
+    <string name="web_bookmarks">Záložky</string>
+    <string name="web_homepage_label">URL domovskej stránky</string>
+    <string name="web_bookmarks_empty">Zatiaľ žiadne záložky. Otvorte stránku a ťuknite na %1$s.</string>
+    <string name="web_bookmarks_help">Ťuknutím na záložku ju otvoríte. „%1$s“ z nej urobí vašu domovskú stránku.</string>
+    <string name="adblock_title">Blokovanie reklám</string>
+    <string name="adblock_switch">Blokovať reklamné domény</string>
+    <string name="adblock_info">Doteraz zablokované: %1$d. Sietí vo vstavanom zozname: %2$d. Po každej zmene načítajte stránku znova.</string>
+    <string name="adblock_own">Vaše vlastné domény, jedna na riadok</string>
+    <string name="adblock_on">Blokovanie reklám: zapnuté · zablokované: %1$d · ťuknutím zmeníte</string>
+    <string name="adblock_off">Blokovanie reklám: vypnuté · zablokované: %1$d · ťuknutím zmeníte</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">Čo môžem urobiť?</string>
+    <string name="help_what">Čo sa stalo</string>
+    <string name="help_try">Čo vyskúšať</string>
+    <string name="help_details">Podrobnosti</string>
+    <string name="help_copy">Kopírovať podrobnosti</string>
+    <string name="help_copied">Skopírované</string>
+    <string name="help_unreachable_title">Konzolu sa nepodarilo kontaktovať</string>
+    <string name="help_unreachable_what">Na adrese konzoly nikto neodpovedá.</string>
+    <string name="help_unreachable_try">• Skontrolujte adresu IP na PS5 (Settings &gt; Network &gt; Connection Status). Po reštarte sa môže zmeniť.\n• Konzolu úplne prebuďte. Pokojový režim často vypína sieť.\n• Na oboch zariadeniach používajte tú istú sieť Wi-Fi. Hosťovské siete a VPN ju blokujú.</string>
+    <string name="help_port_title">Táto služba nebeží</string>
+    <string name="help_port_what">Konzola odpovedala, ale na tomto porte nič nepočúva.</string>
+    <string name="help_port_try">• Spustite na konzole etaHEN. Poskytuje Installer (12800), Loader (9021) a FTP (1337).\n• Samostatný FTP payload zvyčajne používa 2121. Zadajte tu rovnaký port.\n• Na karte konzoly zhasnutá kontrolka ukazuje, čo chýba.</string>
+    <string name="help_login_title">Prihlásenie FTP bolo odmietnuté</string>
+    <string name="help_login_what">FTP server konzoly odmietol používateľské meno alebo heslo.</string>
+    <string name="help_login_try">• etaHEN akceptuje používateľské meno anonymous s ľubovoľným heslom.\n• Ak ste na konzole nastavili prihlásenie, zadajte ho v sekcii Nahrať.\n• Heslo sa neukladá. Po reštarte aplikácie ho zadajte znova.</string>
+    <string name="help_dropped_title">Spojenie sa prerušilo</string>
+    <string name="help_dropped_what">Spojenie s konzolou sa prerušilo alebo dáta prestali prúdiť. Aplikácia to skúsi znova a pokračuje tam, kde skončila.</string>
+    <string name="help_dropped_try">• Majte telefón blízko routera a konzolu prebudenú.\n• Pozastavte iné veľké sťahovania v sieti.\n• Ak to stále zlyháva, chvíľu počkajte a ťuknite na Skúsiť znova.</string>
+    <string name="help_refused_title">Installer odkaz neprijal</string>
+    <string name="help_refused_what">Konzola je dostupná, ale jej Installer tento odkaz odmietol.</string>
+    <string name="help_refused_try">• Odkaz musí viesť priamo na súbor balíka a otvoriť sa bez prihlásenia.\n• Konzola sa k nemu musí vedieť dostať. Odkazy z tohto telefónu fungujú iba v tej istej sieti Wi-Fi.\n• Skontrolujte, či Installer beží a či má konzola voľné miesto.</string>
+    <string name="help_storage_title">Konzola prestala ukladať</string>
+    <string name="help_storage_what">Konzola uložila menej, než sa odoslalo. Disk je zvyčajne plný alebo len na čítanie.</string>
+    <string name="help_storage_try">• Uvoľnite miesto na konzole.\n• Vyberte iný priečinok, napríklad na USB disku.\n• Potom ťuknite na Skúsiť znova.</string>
+    <string name="help_denied_title">Tento priečinok alebo súbor bol odmietnutý</string>
+    <string name="help_denied_what">FTP server ho tu nemôže otvoriť, zapisovať doň ani ho meniť.</string>
+    <string name="help_denied_try">• Skontrolujte, či priečinok existuje. V názvoch sa rozlišujú veľké a malé písmená.\n• Systémové priečinky sú len na čítanie. Použite /data alebo USB disk.\n• Súbor používaný bežiacou hrou môže byť zamknutý. Zavrite hru.</string>
+    <string name="help_phone_title">Telefón nemôže použiť súbor</string>
+    <string name="help_phone_what">Súbor zmizol alebo bol presunutý, aplikácia stratila k nemu prístup alebo v telefóne došlo miesto.</string>
+    <string name="help_phone_try">• Vyberte súbor znova.\n• Uvoľnite úložisko v telefóne.\n• Súbor z cloudovej aplikácie najprv uložte do telefónu.</string>
+    <string name="help_link_title">Odkaz na stiahnutie zlyhal</string>
+    <string name="help_link_what">Web súbor neposkytol. Odkaz mohol vypršať, vyžadovať prihlásenie alebo je web vyťažený.</string>
+    <string name="help_link_try">• Spustite sťahovanie znova z karty Web. Tak zostanete prihlásení.\n• Odkazy zo stránok na hosting súborov často vypršia po niekoľkých minútach.\n• Ak web nahlásil chybu zo série 500, skúste to neskôr.</string>
+
+    <!-- update check -->
+    <string name="update_available">K dispozícii je verzia %1$s</string>
+    <string name="update_download">Stiahnuť</string>
+    <string name="update_later">Neskôr</string>
+    <string name="update_title">Aktualizácie</string>
+    <string name="update_current">Máte najnovšiu verziu (%1$s).</string>
+    <string name="update_none">Na stránke Releases zatiaľ nebolo nájdené žiadne vydanie.</string>
+    <string name="update_check_now">Skontrolovať teraz</string>
+    <string name="update_auto">Kontrolovať aktualizácie pri otvorení aplikácie</string>
+    <string name="update_privacy">Kontrola sa pýta GitHubu na najnovšie vydanie, najviac raz denne. Nič o vás ani o vašich konzolách sa neodosiela; GitHub vidí vašu adresu IP ako každý web.</string>
+
+    <!-- find my console -->
+    <string name="find_button">Nájsť moju PS5</string>
+    <string name="find_scanning">Hľadanie vašej konzoly v sieti %1$s…</string>
+    <string name="find_again">Hľadať znova</string>
+    <string name="find_none">Nenašla sa žiadna konzola.</string>
+    <string name="find_none_try">• Konzolu úplne zapnite (nie v pokojovom režime) a spustite etaHEN.\n• Na telefóne aj na konzole používajte rovnakú sieť Wi-Fi. Hosťovské siete a VPN zariadenia navzájom oddeľujú.\n• Potom hľadajte znova.</string>
+    <string name="find_no_wifi">Tento telefón nie je pripojený k sieti Wi-Fi. Pripojte ho k rovnakej sieti Wi-Fi ako konzolu a potom hľadajte znova.</string>
+    <string name="find_pick">Ťuknutím na Použiť nastavíte adresu konzoly „%1$s“.</string>
+    <string name="find_saved">Uložená adresa</string>
+    <string name="find_used_by">Uložené pre „%1$s“</string>
+    <string name="find_updated">Konzola „%1$s“ teraz používa %2$s.</string>
+    <string name="find_privacy">Prehľadáva sa iba vaša sieť Wi-Fi a len na niekoľkých portoch konzoly. Nič sa neposiela cez internet.</string>
+    <string name="action_stop">Zastaviť</string>
+    <string name="action_use">Použiť</string>
+
+    <!-- about and backup -->
+    <string name="about_title">O aplikácii Bento</string>
+    <string name="about_version">Verzia %1$s</string>
+    <string name="about_button">Informácie a zálohovanie</string>
+    <string name="about_report">Kopírovať správu</string>
+    <string name="about_report_help">Skopíruje verziu aplikácie, model telefónu a poslednú správu, aby ste ich mohli vložiť do hlásenia chyby. Adresy IP a odkazy sa vynechajú.</string>
+    <string name="about_report_copied">Správa skopírovaná</string>
+    <string name="about_releases">Stránka Releases</string>
+    <string name="backup_title">Záloha</string>
+    <string name="backup_text">Uloží vaše konzoly, domovskú stránku, záložky, zoznam reklám a payloady do jedného súboru. Heslá FTP sa neukladajú.</string>
+    <string name="backup_save">Uložiť zálohu</string>
+    <string name="backup_restore">Obnoviť zálohu</string>
+    <string name="backup_saved">Záloha bola uložená.</string>
+    <string name="backup_contents">Konzoly: %1$d · Záložky: %2$d · Payloady: %3$d</string>
+    <string name="backup_made">Vytvorená %1$s</string>
+    <string name="backup_skipped">Payloady vynechané, pretože by súbor bol príliš veľký: %1$d</string>
+    <string name="backup_bad_file">Tento súbor nie je záloha Bento.</string>
+    <string name="backup_too_new">Túto zálohu vytvorila novšia verzia Bento. Aktualizujte aplikáciu a skúste to znova.</string>
+    <string name="restore_title">Obnoviť túto zálohu?</string>
+    <string name="restore_text">Vaše konzoly, domovská stránka, záložky a zoznam reklám sa nahradia tými zo súboru. Payloady zo súboru sa pridajú do knižnice payloadov. Heslá FTP budete musieť zadať znova.</string>
+    <string name="restore_button">Obnoviť</string>
+    <string name="restore_done">Záloha bola obnovená.</string>
+    <string name="restore_payloads_failed">Payloady, ktoré sa nepodarilo uložiť: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">Odkazy na balíky (jeden na riadok)</string>
+    <string name="install_paste">Prilepiť</string>
+    <string name="action_clear">Vymazať</string>
+    <string name="install_paste_none">V schránke nie je žiadny webový odkaz.</string>
+    <string name="install_links_skipped">Odosielajú sa iba adresy, ktoré začínajú na http:// alebo https://. Vynechané: %1$d</string>
+    <string name="install_recent">Nedávne odkazy</string>
+    <string name="install_recent_clear">Vymazať zoznam</string>
+    <string name="install_sending_n">Odosiela sa odkaz %1$d z %2$d…</string>
+    <string name="install_batch_done">Prijaté: %1$d z %2$d odkazov</string>
+    <string name="install_batch_notsent">Neodoslané: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">Reťazce</string>
+    <string name="chains_hint">Reťazec odošle niekoľko payloadov za sebou, po každom s pauzou. Dlhým podržaním ikony aplikácie spustíte z domovskej obrazovky jeden z prvých štyroch reťazcov.</string>
+    <string name="chain_new">Nový reťazec</string>
+    <string name="action_edit">Upraviť</string>
+    <string name="chain_summary_steps">Payloady: %1$d</string>
+    <string name="chain_summary_pauses">Pauzy: %1$s</string>
+    <string name="chain_edit_title">Upraviť reťazec</string>
+    <string name="chain_steps_title">Payloady v poradí (najviac %1$d)</string>
+    <string name="chain_add_step">Pridať payload</string>
+    <string name="chain_pick_title">Ktorý payload pridať?</string>
+    <string name="chain_wait_label">Potom počkať (sekundy)</string>
+    <string name="chain_missing">Nie je v knižnici</string>
+    <string name="chain_move_up">Posunúť nahor</string>
+    <string name="chain_move_down">Posunúť nadol</string>
+    <string name="chain_pin">Pridať na domovskú obrazovku</string>
+    <string name="chain_pin_unsupported">Tento launcher nemôže pridávať odkazy. Dlhým podržaním ikony aplikácie tam nájdete svoje reťazce.</string>
+    <string name="chain_sending">Odosiela sa %1$s (%2$d z %3$d)…</string>
+    <string name="chain_waiting">Ďalší payload o %1$s</string>
+    <string name="chain_retrying">Čaká sa, kým bude konzola pripravená…</string>
+    <string name="chain_result_done">Hotovo. Odoslané payloady: %1$d z %2$d</string>
+    <string name="chain_result_stopped">Zastavené. Odoslané payloady: %1$d z %2$d</string>
+    <string name="chain_result_failed">Zastavené v kroku %1$d (%2$s). Odoslané payloady: %3$d z %4$d</string>
+    <string name="chain_err_target">Najprv nastavte adresu IP konzoly a port pre Loader.</string>
+    <string name="chain_err_missing">Už nie je v knižnici: %1$s. Pridajte ho znova alebo upravte reťazec.</string>
+    <string name="chain_err_unknown">Tento reťazec už neexistuje.</string>
+    <string name="notif_channel_chain">Reťazce payloadov</string>
+    <string name="backup_chains">Reťazce: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">Minule nedokončené: %1$d</string>
+    <string name="unfinished_hint">Aplikácia sa zavrela skôr, než sa tieto prenosy skončili. „Pokračovať“ spustí každý znova od začiatku.</string>
+    <string name="unfinished_continue">Pokračovať</string>
+    <string name="unfinished_discard">Zahodiť</string>
+    <string name="unfinished_missing">Súbory sa už nenašli, vyberte ich znova: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">Pozastaviť</string>
+    <string name="transfer_resume">Pokračovať</string>
+    <string name="transfer_paused">Pozastavené</string>
+    <string name="speed_limit_title">Obmedzenie rýchlosti</string>
+    <string name="speed_limit_off">Bez obmedzenia</string>
+    <string name="speed_limit_value">Obmedzenie: %1$s</string>
+    <string name="speed_limit_hint">Spomalí prenosy, aby zostala sieť Wi-Fi voľná pre iné veci. Zmena sa prejaví okamžite.</string>
+    <string name="summary_title">Dokončené prenosy: %1$d z %2$d</string>
+    <string name="summary_detail">%1$s za %2$s</string>
+    <string name="summary_failed">Zlyhalo: %1$d</string>
+    <string name="summary_stopped">Zastavené: %1$d</string>
+    <string name="notif_channel_results">Výsledky prenosov</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">Vybrané: %1$d</string>
+    <string name="files_select_all">Vybrať všetko</string>
+    <string name="files_select_none">Zrušiť výber</string>
+    <string name="files_delete_many_title">Vymazať vybrané položky (%1$d)?</string>
+    <string name="files_delete_many_text">Týmto sa z konzoly vymažú vybrané súbory a priečinky, priečinky aj so všetkým, čo obsahujú. Túto akciu nemožno vrátiť späť.</string>
+    <string name="files_deleted_many">Vymazané položky: %1$d</string>
+    <string name="files_delete_partial">Vymazané položky: %1$d, nevymazané: %2$d. Prvý problém: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">Prehľadávam priečinky…</string>
+    <string name="files_dl_confirm_title">Stiahnuť do telefónu?</string>
+    <string name="files_dl_confirm_text">Súbory: %1$d, spolu %2$s. Uložia sa do Downloads/PS5, v rovnakých priečinkoch ako na konzole.</string>
+    <string name="files_dl_links">Odkazy vnútri priečinkov sa nesťahujú: %1$d.</string>
+    <string name="files_dl_truncated">Zahrnuté súbory: %1$d. Priečinky ich obsahujú viac, alebo siahajú hlbšie, než aplikácia sleduje.</string>
+    <string name="files_dl_none">Vo výbere nie je žiadny súbor na stiahnutie.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">Zoradiť</string>
+    <string name="files_sort_title">Zoradiť podľa</string>
+    <string name="files_sort_name">Názov</string>
+    <string name="files_sort_size">Veľkosť, od najväčších</string>
+    <string name="files_sort_newest">Od najnovších</string>
+    <string name="files_search">Hľadať</string>
+    <string name="files_search_hint">Hľadať v tomto priečinku</string>
+    <string name="files_no_match">Nič v tomto priečinku nezodpovedá hľadaniu.</string>
+    <string name="files_pin">Pripnúť tento priečinok</string>
+    <string name="files_unpin">Odopnúť tento priečinok</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">Karty: %1$d</string>
+    <string name="web_tabs_title">Karty</string>
+    <string name="web_tab_new">Nová karta</string>
+    <string name="web_tabs_full">Príliš veľa kariet. Limit je %1$d. Najprv jednu zavrite.</string>
+    <string name="web_find">Hľadať</string>
+    <string name="web_find_hint">Hľadať na tejto stránke</string>
+    <string name="web_find_none">Žiadne zhody</string>
+    <string name="web_desktop">Verzia pre počítač</string>
+    <string name="web_link_new_tab">Otvoriť na novej karte</string>
+    <string name="web_link_copy">Kopírovať odkaz</string>
+    <string name="web_link_copied">Odkaz bol skopírovaný</string>
+    <string name="web_link_use">Odoslať alebo stiahnuť…</string>
+</resources>

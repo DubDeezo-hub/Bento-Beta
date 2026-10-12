@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Danish. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">Annuller</string>
+    <string name="action_close">Luk</string>
+    <string name="action_done">Færdig</string>
+    <string name="action_delete">Slet</string>
+    <string name="action_rename">Omdøb</string>
+    <string name="action_save">Gem</string>
+    <string name="action_remove">Fjern</string>
+    <string name="action_send">Send</string>
+    <string name="action_open">Åbn</string>
+    <string name="action_block">Bloker</string>
+    <string name="action_home">Startside</string>
+    <string name="action_dismiss">Skjul</string>
+    <string name="action_try_again">Prøv igen</string>
+    <string name="action_skip">Spring over</string>
+    <string name="action_cancel_all">Annuller alle</string>
+    <string name="action_create">Opret</string>
+    <string name="action_set">Angiv</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">af %1$s</string>
+    <string name="nav_install">Installer</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">Upload</string>
+    <string name="nav_files">Filer</string>
+    <string name="nav_web">Web</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Installer</string>
+    <string name="service_loader">Loader</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">Angiv IP-adressen på din PS5</string>
+    <string name="status_checking">Tjekker…</string>
+    <string name="status_ready">Klar</string>
+    <string name="status_partly">Delvist klar</string>
+    <string name="status_partly_off">Delvist klar · svarer ikke: %1$s</string>
+    <string name="status_offline">Kan ikke få forbindelse til konsollen</string>
+    <string name="status_hint_unset">Du finder den på PS5 under Indstillinger &gt; Netværk &gt; Forbindelsesstatus &gt; Vis forbindelsesstatus. Tryk her for at indtaste den.</string>
+    <string name="status_hint_offline">Der svarer intet på denne adresse. Tjek IP-adressen, at PS5 er tændt og på samme Wi-Fi-netværk, og at etaHEN kører.</string>
+    <string name="status_hint_one">Svarer ikke: %1$s. Start tjenesten på konsollen, eller tjek dens port.</string>
+    <string name="status_hint_many">Svarer ikke: %1$s. Start tjenesterne på konsollen, eller tjek deres porte.</string>
+    <string name="console_switch">Skift konsol</string>
+    <string name="console_change_ip">Skift IP-adresse</string>
+    <string name="console_ip_title">Konsollens IP-adresse</string>
+    <string name="console_ip_label">IP-adresse</string>
+    <string name="console_ip_help">Du finder den på PS5 under Indstillinger &gt; Netværk &gt; Forbindelsesstatus &gt; Vis forbindelsesstatus.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">Overførsel</string>
+    <string name="transfer_sending">Sender</string>
+    <string name="transfer_sending_to">Sender til %1$s</string>
+    <string name="transfer_receiving">Modtager</string>
+    <string name="transfer_receiving_from">Modtager fra %1$s</string>
+    <string name="transfer_detail_total">%1$s · %2$s af %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">Starter…</string>
+    <string name="transfer_stopped">Stoppet</string>
+    <string name="transfer_start_failed">Overførslen kunne ikke startes: %1$s</string>
+    <string name="transfer_retry_in">Forbindelsen blev afbrudt. Prøver igen om %1$d s…</string>
+    <string name="transfer_reconnecting">Genopretter forbindelsen…</string>
+    <string name="transfer_eta">%1$s tilbage</string>
+    <string name="transfer_queued">%1$d venter</string>
+    <string name="queue_title">Ventende overførsler</string>
+    <string name="queue_clear">Fjern alle</string>
+    <string name="queue_empty">Der er ikke noget, der venter.</string>
+    <string name="notif_channel">PS5-overførsler</string>
+    <string name="notif_sent">%1$s sendt</string>
+    <string name="notif_received">%1$s modtaget</string>
+    <string name="percent_value">%1$d %%</string>
+    <string name="desc_done">Færdig</string>
+    <string name="desc_problem">Problem</string>
+    <string name="status_hide">Skjul denne meddelelse</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">Føjet til køen. %1$d venter.</string>
+    <string name="msg_set_ip_first">Angiv først konsollens IP-adresse. Tryk på kortet øverst.</string>
+    <string name="msg_sending_link">Sender link til PS5…</string>
+    <string name="msg_check_ip_ftp">Tjek konsollens IP-adresse og FTP-porten.</string>
+    <string name="msg_adding_to_shelf_link">Føjer til payload-biblioteket…</string>
+    <string name="status_idle">Inaktiv</string>
+    <string name="status_sending">Sender…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">Forlad dette websted?</string>
+    <string name="offsite_text">Siden vil åbne %1$s. Reklamer udløser ofte dette, når du trykker på et link, så fortsæt kun, hvis du forventede det.</string>
+    <string name="choose_install">Send link til PS5-installeren</string>
+    <string name="choose_ftp">Upload til PS5 (FTP)</string>
+    <string name="choose_shelf">Gem i payload-biblioteket</string>
+    <string name="choose_phone">Gem på telefonen</string>
+    <string name="choose_help">Installeren skal bruge et direkte pakkelink, som konsollen kan åbne uden at logge ind. FTP virker med alle filer og bevarer din login-session. Telefonen videresender dataene i baggrunden, og fremdriften vises over den nederste bjælke og i en notifikation. Payload-biblioteket gemmer en lille payload (op til %1$s) i appen til fanen Payload.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Installer-port (etaHEN: 12800)</string>
+    <string name="install_accepted">Installeren accepterede det: %1$s</string>
+    <string name="install_not_accepted">Ikke accepteret (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">Installer fra denne telefon</string>
+    <string name="serve_intro">Konsollen downloader pakkerne direkte fra denne telefon via Wi-Fi, så der skal ikke kopieres noget først. Telefonen og konsollen skal være på samme netværk.</string>
+    <string name="serve_choose">Vælg pakker</string>
+    <string name="serve_none">Ingen pakker valgt</string>
+    <string name="serve_start">Start deling</string>
+    <string name="serve_stop">Stop deling</string>
+    <string name="serve_copy">Kopier link</string>
+    <string name="serve_copied">Linket er kopieret</string>
+    <string name="serve_file_waiting">Venter på, at konsollen begynder at downloade…</string>
+    <string name="serve_file_pulling">Konsollen downloader: %1$s</string>
+    <string name="serve_file_done">Konsollen har downloadet det hele</string>
+    <string name="serve_unreadable">Denne fil kan ikke læses</string>
+    <string name="serve_hint">Hvis konsollen aldrig begynder at downloade, kan Wi-Fi-netværket forhindre enheder i at nå hinanden (gæstenetværk gør ofte det). Brug hovednetværket, og lad denne app køre i baggrunden.</string>
+    <string name="serve_no_wifi">Telefonens Wi-Fi-adresse kan ikke findes. Forbind den til det samme Wi-Fi som konsollen.</string>
+    <string name="serve_failed">Deling kunne ikke startes: %1$s</string>
+    <string name="serve_idle_stop">Delingen blev stoppet, fordi der ikke blev downloadet noget i lang tid.</string>
+    <string name="serve_notif_title">Deler med %1$s</string>
+    <string name="serve_notif_text">Downloadede filer: %1$d / %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">Vælg filer</string>
+    <string name="upload_none">Ingen filer valgt</string>
+    <string name="upload_files_chosen">Valgte filer: %1$d</string>
+    <string name="upload_start">Upload i baggrunden</string>
+    <string name="upload_help">Fremdriften vises over den nederste bjælke og i en notifikation. Den fortsætter, hvis du forlader appen.</string>
+    <string name="ftp_port">FTP-port</string>
+    <string name="ftp_user">Brugernavn</string>
+    <string name="ftp_password">Adgangskode</string>
+    <string name="ftp_folder">Ekstern mappe</string>
+    <string name="ftp_use_folder">Brug %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">Indlæser…</string>
+    <string name="files_empty">Denne mappe er tom.</string>
+    <string name="files_not_loaded">Ikke indlæst endnu</string>
+    <string name="files_up">⬆ Op</string>
+    <string name="files_refresh">Opdater</string>
+    <string name="files_new_folder">Ny mappe</string>
+    <string name="files_upload_here">Upload hertil</string>
+    <string name="files_ftp_settings">FTP-indstillinger</string>
+    <string name="files_need_ip">Angiv konsollens IP-adresse (tryk på kortet øverst) og en gyldig FTP-port for at gennemse dens filer.</string>
+    <string name="files_kind_folder">Mappe</string>
+    <string name="files_kind_link">Link, %1$s</string>
+    <string name="files_download">Download til telefonen</string>
+    <string name="files_new_name">Nyt navn</string>
+    <string name="files_name_used">Det navn er allerede i brug her.</string>
+    <string name="files_renaming">Omdøber…</string>
+    <string name="files_renamed">%1$s blev omdøbt til %2$s</string>
+    <string name="files_delete_title">Slet %1$s?</string>
+    <string name="files_delete_folder">Dette sletter mappen og alt i den fra konsollen. Det kan ikke fortrydes.</string>
+    <string name="files_delete_file">Dette sletter filen fra konsollen. Det kan ikke fortrydes.</string>
+    <string name="files_deleting">Sletter…</string>
+    <string name="files_deleted">%1$s slettet</string>
+    <string name="files_deleted_inside">%1$s slettet (elementer i den: %2$d)</string>
+    <string name="files_creating">Opretter mappe…</string>
+    <string name="files_created">Mappen %1$s blev oprettet</string>
+    <string name="files_folder_name">Mappenavn</string>
+    <string name="name_empty">Navnet må ikke være tomt.</string>
+    <string name="name_not_allowed">Det navn er ikke tilladt.</string>
+    <string name="name_slash">Navnet må ikke indeholde skråstreger.</string>
+    <string name="name_control">Navnet indeholder tegn, der ikke er tilladt.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">Mislykkedes: %1$s</string>
+    <string name="ftp_port_hint">Kan ikke få forbindelse til FTP-serveren. Tjek konsollens IP-adresse og FTP-porten (etaHENs indbyggede FTP bruger 1337, FTP-payloaden bruger 2121).</string>
+    <string name="err_login">FTP-login mislykkedes</string>
+    <string name="err_cant_open">kan ikke åbne %1$s (%2$s)</string>
+    <string name="err_rename">omdøbning mislykkedes (%1$s)</string>
+    <string name="err_mkdir">kunne ikke oprette mappen (%1$s)</string>
+    <string name="err_too_deep">mappen er indlejret for dybt</string>
+    <string name="err_delete_path">kunne ikke slette %1$s (%2$s)</string>
+    <string name="err_upload">FTP-upload mislykkedes: %1$s</string>
+    <string name="err_download">FTP-download mislykkedes: %1$s</string>
+    <string name="err_open_file">Kunne ikke åbne filen</string>
+    <string name="err_cancelled_upload">Annulleret. En ufuldstændig fil kan være tilbage i %1$s</string>
+    <string name="err_cancelled_download">Annulleret. Den ufuldstændige download blev kasseret.</string>
+    <string name="err_gave_up">Opgav, efter at forbindelsen blev ved med at svigte. Seneste fejl: %1$s</string>
+    <string name="err_short_upload">Konsollen beholdt kun %1$s af de %2$s, der blev sendt.</string>
+    <string name="err_short_download">Kun %1$s af %2$s nåede frem.</string>
+    <string name="err_empty_file">Filen er tom</string>
+    <string name="err_save">Kunne ikke gemme %1$s</string>
+    <string name="sent_to_ps5">Sendt til PS5: %1$s</string>
+    <string name="saved_to_downloads">Gemt i Downloads/PS5: %1$s</string>
+    <string name="dl_http_failed">Download mislykkedes: HTTP %1$s</string>
+    <string name="dl_empty">Download mislykkedes: tomt svar</string>
+    <string name="dl_cut_short">Forbindelsen blev lukket, før hele filen nåede frem.</string>
+    <string name="dl_create_failed">Kunne ikke oprette filen i Downloads</string>
+    <string name="dl_write_failed">Kunne ikke åbne den nye fil til skrivning</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">%1$s sendt</string>
+    <string name="shelf_added">Føjet til biblioteket: %1$s (%2$s)</string>
+    <string name="shelf_updated">Opdateret i biblioteket: %1$s (%2$s)</string>
+    <string name="shelf_too_large">Filen er større end %1$s og blev derfor ikke føjet til biblioteket.</string>
+    <string name="shelf_too_large_url">Filen er %1$s. Biblioteket modtager payloads på op til %2$s.</string>
+    <string name="payload_adding">Føjer til biblioteket…</string>
+    <string name="payload_remove_title">Fjern %1$s?</string>
+    <string name="payload_remove_text">Den slettes fra biblioteket. Den oprindelige fil på din telefon berøres ikke.</string>
+    <string name="payload_loader_port">Loader-port</string>
+    <string name="payload_shelf_title">Payload-bibliotek</string>
+    <string name="payload_shelf_empty">Intet gemt endnu. Tilføj de payloads, du bruger ofte (en FTP-server, etaHEN, ...), og send hver af dem med ét tryk. Du kan også gemme en direkte fra fanen Web, når du downloader den.</string>
+    <string name="payload_sending">Sender %1$s…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">Føj payload til biblioteket</string>
+    <string name="payload_once_title">Send en fil én gang</string>
+    <string name="payload_choose">Vælg payload (.elf / .bin)</string>
+    <string name="payload_send">Send payload</string>
+
+    <!-- consoles -->
+    <string name="profile_default">Min PS5</string>
+    <string name="profile_new">Konsol %1$d</string>
+    <string name="profile_fallback">Konsol</string>
+    <string name="consoles_title">Konsoller</string>
+    <string name="console_rename_title">Omdøb konsol</string>
+    <string name="console_name_label">Navn</string>
+    <string name="console_delete_title">Slet %1$s?</string>
+    <string name="console_delete_text">Dens gemte IP-adresse og porte fjernes. Dine andre konsoller påvirkes ikke.</string>
+    <string name="console_no_ip">ingen IP-adresse endnu</string>
+    <string name="console_color_of">Farve for %1$s</string>
+    <string name="console_use_color">Brug %1$s</string>
+    <string name="console_add">Tilføj konsol</string>
+    <string name="language_button">Sprog</string>
+    <string name="color_blue">Blå</string>
+    <string name="color_orange">Orange</string>
+    <string name="color_green">Grøn</string>
+    <string name="color_pink">Pink</string>
+    <string name="color_purple">Lilla</string>
+    <string name="color_teal">Turkis</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">Download startet (se Downloads)</string>
+    <string name="web_load_failed">Siden kunne ikke indlæses: %1$s</string>
+    <string name="web_http_server">Websitet er optaget eller nede lige nu (fejl %1$s). Prøv igen om lidt.</string>
+    <string name="web_http_other">Websitet svarede med fejl %1$s.</string>
+    <string name="web_open_first">Åbn først en side</string>
+    <string name="web_bookmark_saved">Bogmærket er gemt</string>
+    <string name="web_bookmark_exists">Findes allerede i dine bogmærker</string>
+    <string name="web_home_set">Startsiden er sat til %1$s</string>
+    <string name="web_reload">Genindlæs</string>
+    <string name="web_add">★ Tilføj</string>
+    <string name="web_bookmarks">Bogmærker</string>
+    <string name="web_homepage_label">Startsidens URL</string>
+    <string name="web_bookmarks_empty">Ingen bogmærker endnu. Åbn en side, og tryk på %1$s.</string>
+    <string name="web_bookmarks_help">Tryk på et bogmærke for at åbne det. »%1$s« gør det til din startside.</string>
+    <string name="adblock_title">Reklameblokering</string>
+    <string name="adblock_switch">Bloker reklamedomæner</string>
+    <string name="adblock_info">Blokeret indtil videre: %1$d. Netværk på den indbyggede liste: %2$d. Genindlæs siden efter hver ændring.</string>
+    <string name="adblock_own">Dine egne domæner, ét pr. linje</string>
+    <string name="adblock_on">Reklameblokering: til · blokeret: %1$d · tryk for at ændre</string>
+    <string name="adblock_off">Reklameblokering: fra · blokeret: %1$d · tryk for at ændre</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">Hvad kan jeg gøre?</string>
+    <string name="help_what">Hvad skete der</string>
+    <string name="help_try">Hvad du kan prøve</string>
+    <string name="help_details">Detaljer</string>
+    <string name="help_copy">Kopiér detaljer</string>
+    <string name="help_copied">Kopieret</string>
+    <string name="help_unreachable_title">Kan ikke nå konsollen</string>
+    <string name="help_unreachable_what">Der svarer ikke noget på konsollens adresse.</string>
+    <string name="help_unreachable_try">• Tjek IP-adressen på PS5 (Indstillinger &gt; Netværk &gt; Forbindelsesstatus). Den kan ændre sig efter en genstart.\n• Væk konsollen helt. Hviletilstand slår ofte netværket fra.\n• Brug samme Wi-Fi på begge. Gæstenetværk og VPN blokerer det.</string>
+    <string name="help_port_title">Den tjeneste kører ikke</string>
+    <string name="help_port_what">Konsollen svarede, men intet lytter på den port.</string>
+    <string name="help_port_try">• Start etaHEN på konsollen. Den leverer Installer (12800), Loader (9021) og FTP (1337).\n• En separat FTP-payload bruger som regel 2121. Indtast samme port her.\n• På konsolkortet viser det lys, der er slukket, hvad der mangler.</string>
+    <string name="help_login_title">FTP-login afvist</string>
+    <string name="help_login_what">Konsollens FTP-server afviste brugernavnet eller adgangskoden.</string>
+    <string name="help_login_try">• etaHEN accepterer brugernavnet anonymous med en vilkårlig adgangskode.\n• Hvis du har oprettet et login på konsollen, skal du indtaste det under Upload.\n• Adgangskoden gemmes ikke. Indtast den igen, når du har genstartet appen.</string>
+    <string name="help_dropped_title">Forbindelsen blev afbrudt</string>
+    <string name="help_dropped_what">Forbindelsen til konsollen blev afbrudt, eller der flyttes ikke længere data. Appen prøver igen og fortsætter, hvor den slap.</string>
+    <string name="help_dropped_try">• Hold telefonen tæt på routeren, og hold konsollen vågen.\n• Sæt andre store downloads på netværket på pause.\n• Hvis det bliver ved med at fejle, så vent lidt, og tryk på Prøv igen.</string>
+    <string name="help_refused_title">Installer tog ikke imod linket</string>
+    <string name="help_refused_what">Konsollen kan nås, men dens Installer afviste dette link.</string>
+    <string name="help_refused_try">• Linket skal føre direkte til pakkefilen og kunne åbnes uden login.\n• Konsollen skal kunne nå det. Links fra denne telefon virker kun på samme Wi-Fi.\n• Tjek, at Installer kører, og at konsollen har ledig plads.</string>
+    <string name="help_storage_title">Konsollen holdt op med at gemme</string>
+    <string name="help_storage_what">Konsollen gemte mindre, end der blev sendt. Drevet er som regel fuldt eller skrivebeskyttet.</string>
+    <string name="help_storage_try">• Frigør plads på konsollen.\n• Vælg en anden mappe, for eksempel på et USB-drev.\n• Tryk derefter på Prøv igen.</string>
+    <string name="help_denied_title">Mappen eller filen blev afvist</string>
+    <string name="help_denied_what">FTP-serveren kan ikke åbne, skrive til eller ændre den her.</string>
+    <string name="help_denied_try">• Tjek, at mappen findes. Der skelnes mellem store og små bogstaver i navne.\n• Systemmapper er skrivebeskyttede. Brug /data eller et USB-drev.\n• En fil, der bruges af et spil, som kører, kan være låst. Luk spillet.</string>
+    <string name="help_phone_title">Telefonen kan ikke bruge filen</string>
+    <string name="help_phone_what">Filen er væk eller flyttet, appen har mistet adgangen til den, eller telefonen har ikke mere plads.</string>
+    <string name="help_phone_try">• Vælg filen igen.\n• Frigør lagerplads på telefonen.\n• Hvis filen ligger i en skyapp, så gem den på telefonen først.</string>
+    <string name="help_link_title">Download-linket fejlede</string>
+    <string name="help_link_what">Hjemmesiden afleverede ikke filen. Linket kan være udløbet, kræve login, eller siden er optaget.</string>
+    <string name="help_link_try">• Start downloaden igen fra Web-fanen. Så beholder du dit login.\n• Links fra fildelingssider udløber ofte efter få minutter.\n• Hvis siden meldte en fejl i 500-serien, så prøv igen senere.</string>
+
+    <!-- update check -->
+    <string name="update_available">Version %1$s er tilgængelig</string>
+    <string name="update_download">Download</string>
+    <string name="update_later">Senere</string>
+    <string name="update_title">Opdateringer</string>
+    <string name="update_current">Du har den nyeste version (%1$s).</string>
+    <string name="update_none">Der er endnu ingen udgivelse på siden Releases.</string>
+    <string name="update_check_now">Tjek nu</string>
+    <string name="update_auto">Tjek for opdateringer, når appen åbnes</string>
+    <string name="update_privacy">Tjekket spørger GitHub om den nyeste udgivelse højst én gang om dagen. Der sendes intet om dig eller dine konsoller; GitHub ser din IP-adresse, som enhver hjemmeside gør.</string>
+
+    <!-- find my console -->
+    <string name="find_button">Find min PS5</string>
+    <string name="find_scanning">Leder efter din konsol på %1$s…</string>
+    <string name="find_again">Scan igen</string>
+    <string name="find_none">Ingen konsol fundet.</string>
+    <string name="find_none_try">• Tænd konsollen helt (ikke hviletilstand), og start etaHEN.\n• Brug samme Wi-Fi på telefonen og konsollen. Gæstenetværk og VPN holder enhederne adskilt.\n• Scan derefter igen.</string>
+    <string name="find_no_wifi">Denne telefon er ikke på et Wi-Fi-netværk. Forbind den til det samme Wi-Fi som konsollen, og scan derefter igen.</string>
+    <string name="find_pick">Tryk på Brug for at angive adressen på %1$s.</string>
+    <string name="find_saved">Gemt adresse</string>
+    <string name="find_used_by">Gemt til %1$s</string>
+    <string name="find_updated">%1$s bruger nu %2$s.</string>
+    <string name="find_privacy">Kun dit Wi-Fi-netværk bliver scannet, på nogle få konsolporte. Der sendes intet over internettet.</string>
+    <string name="action_stop">Stop</string>
+    <string name="action_use">Brug</string>
+
+    <!-- about and backup -->
+    <string name="about_title">Om Bento</string>
+    <string name="about_version">Version %1$s</string>
+    <string name="about_button">Om og backup</string>
+    <string name="about_report">Kopiér rapport</string>
+    <string name="about_report_help">Kopierer appens version, din telefonmodel og den seneste besked, så du kan indsætte dem i en fejlrapport. IP-adresser og links udelades.</string>
+    <string name="about_report_copied">Rapport kopieret</string>
+    <string name="about_releases">Siden Releases</string>
+    <string name="backup_title">Backup</string>
+    <string name="backup_text">Gemmer dine konsoller, startside, bogmærker, annonceliste og payloads i én fil. FTP-adgangskoder gemmes ikke.</string>
+    <string name="backup_save">Gem backup</string>
+    <string name="backup_restore">Gendan backup</string>
+    <string name="backup_saved">Backup gemt.</string>
+    <string name="backup_contents">Konsoller: %1$d · Bogmærker: %2$d · Payloads: %3$d</string>
+    <string name="backup_made">Oprettet %1$s</string>
+    <string name="backup_skipped">Payloads udeladt, fordi filen ville blive for stor: %1$d</string>
+    <string name="backup_bad_file">Den fil er ikke en Bento-backup.</string>
+    <string name="backup_too_new">Den backup er lavet af en nyere version af Bento. Opdater appen, og prøv igen.</string>
+    <string name="restore_title">Gendan denne backup?</string>
+    <string name="restore_text">Dine konsoller, startside, bogmærker og annonceliste erstattes af dem i filen. Payloads i filen føjes til payload-biblioteket. Du skal indtaste dine FTP-adgangskoder igen.</string>
+    <string name="restore_button">Gendan</string>
+    <string name="restore_done">Backup gendannet.</string>
+    <string name="restore_payloads_failed">Payloads, der ikke kunne gemmes: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">Pakkelinks (ét pr. linje)</string>
+    <string name="install_paste">Indsæt</string>
+    <string name="action_clear">Ryd</string>
+    <string name="install_paste_none">Intet weblink på udklipsholderen.</string>
+    <string name="install_links_skipped">Kun adresser, der starter med http:// eller https://, sendes. Udeladt: %1$d</string>
+    <string name="install_recent">Seneste links</string>
+    <string name="install_recent_clear">Ryd listen</string>
+    <string name="install_sending_n">Sender link %1$d af %2$d…</string>
+    <string name="install_batch_done">Accepteret: %1$d af %2$d links</string>
+    <string name="install_batch_notsent">Ikke sendt: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">Kæder</string>
+    <string name="chains_hint">En kæde sender flere payloads efter hinanden med en pause efter hver. Tryk og hold på appikonet for at starte en af de første fire kæder fra din startskærm.</string>
+    <string name="chain_new">Ny kæde</string>
+    <string name="action_edit">Rediger</string>
+    <string name="chain_summary_steps">Payloads: %1$d</string>
+    <string name="chain_summary_pauses">Pauser: %1$s</string>
+    <string name="chain_edit_title">Rediger kæde</string>
+    <string name="chain_steps_title">Payloads i rækkefølge (højst %1$d)</string>
+    <string name="chain_add_step">Tilføj payload</string>
+    <string name="chain_pick_title">Hvilken payload skal tilføjes?</string>
+    <string name="chain_wait_label">Vent derefter (sekunder)</string>
+    <string name="chain_missing">Ikke i biblioteket</string>
+    <string name="chain_move_up">Flyt op</string>
+    <string name="chain_move_down">Flyt ned</string>
+    <string name="chain_pin">Føj til startskærmen</string>
+    <string name="chain_pin_unsupported">Denne launcher kan ikke tilføje genveje. Tryk og hold på appikonet for at finde dine kæder der.</string>
+    <string name="chain_sending">Sender %1$s (%2$d af %3$d)…</string>
+    <string name="chain_waiting">Næste payload om %1$s</string>
+    <string name="chain_retrying">Venter på, at konsollen er klar…</string>
+    <string name="chain_result_done">Færdig. Payloads sendt: %1$d af %2$d</string>
+    <string name="chain_result_stopped">Stoppet. Payloads sendt: %1$d af %2$d</string>
+    <string name="chain_result_failed">Stoppet ved trin %1$d (%2$s). Payloads sendt: %3$d af %4$d</string>
+    <string name="chain_err_target">Angiv først konsollens IP-adresse og Loader-porten.</string>
+    <string name="chain_err_missing">Findes ikke længere i biblioteket: %1$s. Tilføj den igen, eller rediger kæden.</string>
+    <string name="chain_err_unknown">Den kæde findes ikke længere.</string>
+    <string name="notif_channel_chain">Payload-kæder</string>
+    <string name="backup_chains">Kæder: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">Ikke færdige sidste gang: %1$d</string>
+    <string name="unfinished_hint">Appen blev lukket, før disse var færdige. “Fortsæt” starter hver af dem forfra.</string>
+    <string name="unfinished_continue">Fortsæt</string>
+    <string name="unfinished_discard">Kassér</string>
+    <string name="unfinished_missing">Filer findes ikke længere, vælg dem igen: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">Pause</string>
+    <string name="transfer_resume">Fortsæt</string>
+    <string name="transfer_paused">På pause</string>
+    <string name="speed_limit_title">Hastighedsgrænse</string>
+    <string name="speed_limit_off">Ingen grænse</string>
+    <string name="speed_limit_value">Grænse: %1$s</string>
+    <string name="speed_limit_hint">Gør overførslerne langsommere, så Wi-Fi\'et er frit til andre ting. En ændring træder i kraft med det samme.</string>
+    <string name="summary_title">Overførsler færdige: %1$d af %2$d</string>
+    <string name="summary_detail">%1$s på %2$s</string>
+    <string name="summary_failed">Mislykkedes: %1$d</string>
+    <string name="summary_stopped">Stoppet: %1$d</string>
+    <string name="notif_channel_results">Overførselsresultater</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">Valgt: %1$d</string>
+    <string name="files_select_all">Vælg alle</string>
+    <string name="files_select_none">Fravælg alle</string>
+    <string name="files_delete_many_title">Slet de valgte elementer (%1$d)?</string>
+    <string name="files_delete_many_text">Dette sletter de valgte filer og mapper fra konsollen, mapper med alt indhold. Det kan ikke fortrydes.</string>
+    <string name="files_deleted_many">Slettede elementer: %1$d</string>
+    <string name="files_delete_partial">Slettede elementer: %1$d, ikke slettet: %2$d. Det første problem: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">Gennemgår mapperne…</string>
+    <string name="files_dl_confirm_title">Download til telefonen?</string>
+    <string name="files_dl_confirm_text">Filer: %1$d, i alt %2$s. De gemmes i Downloads/PS5, i de samme mapper som på konsollen.</string>
+    <string name="files_dl_links">Links i mapper downloades ikke: %1$d.</string>
+    <string name="files_dl_truncated">Medtagne filer: %1$d. Mapperne indeholder mere, eller går dybere, end appen følger.</string>
+    <string name="files_dl_none">Der er ingen fil at downloade i udvalget.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">Sortér</string>
+    <string name="files_sort_title">Sortér efter</string>
+    <string name="files_sort_name">Navn</string>
+    <string name="files_sort_size">Størrelse, største først</string>
+    <string name="files_sort_newest">Nyeste først</string>
+    <string name="files_search">Søg</string>
+    <string name="files_search_hint">Søg i denne mappe</string>
+    <string name="files_no_match">Intet i denne mappe passer til søgningen.</string>
+    <string name="files_pin">Fastgør denne mappe</string>
+    <string name="files_unpin">Frigør denne mappe</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">Faner: %1$d</string>
+    <string name="web_tabs_title">Faner</string>
+    <string name="web_tab_new">Ny fane</string>
+    <string name="web_tabs_full">For mange faner. Grænsen er %1$d. Luk først en.</string>
+    <string name="web_find">Find</string>
+    <string name="web_find_hint">Find på denne side</string>
+    <string name="web_find_none">Ingen resultater</string>
+    <string name="web_desktop">Computerversion</string>
+    <string name="web_link_new_tab">Åbn i ny fane</string>
+    <string name="web_link_copy">Kopier link</string>
+    <string name="web_link_copied">Linket er kopieret</string>
+    <string name="web_link_use">Send eller download…</string>
+</resources>

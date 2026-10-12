@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Greek. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">Ακύρωση</string>
+    <string name="action_close">Κλείσιμο</string>
+    <string name="action_done">Τέλος</string>
+    <string name="action_delete">Διαγραφή</string>
+    <string name="action_rename">Μετονομασία</string>
+    <string name="action_save">Αποθήκευση</string>
+    <string name="action_remove">Αφαίρεση</string>
+    <string name="action_send">Αποστολή</string>
+    <string name="action_open">Άνοιγμα</string>
+    <string name="action_block">Αποκλεισμός</string>
+    <string name="action_home">Αρχική</string>
+    <string name="action_dismiss">Απόκρυψη</string>
+    <string name="action_try_again">Επανάληψη</string>
+    <string name="action_skip">Παράλειψη</string>
+    <string name="action_cancel_all">Ακύρωση όλων</string>
+    <string name="action_create">Δημιουργία</string>
+    <string name="action_set">Ορισμός</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">από %1$s</string>
+    <string name="nav_install">Εγκατ.</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">Αποστολή</string>
+    <string name="nav_files">Αρχεία</string>
+    <string name="nav_web">Web</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Installer</string>
+    <string name="service_loader">Loader</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">Ορίστε τη διεύθυνση IP του PS5 σας</string>
+    <string name="status_checking">Έλεγχος…</string>
+    <string name="status_ready">Έτοιμο</string>
+    <string name="status_partly">Εν μέρει έτοιμο</string>
+    <string name="status_partly_off">Εν μέρει έτοιμο · καμία απάντηση: %1$s</string>
+    <string name="status_offline">Δεν είναι δυνατή η σύνδεση με την κονσόλα</string>
+    <string name="status_hint_unset">Θα τη βρείτε στο PS5 στις Ρυθμίσεις &gt; Δίκτυο &gt; Κατάσταση σύνδεσης &gt; Προβολή κατάστασης σύνδεσης. Πατήστε εδώ για να την εισαγάγετε.</string>
+    <string name="status_hint_offline">Τίποτα δεν ανταποκρίνεται σε αυτή τη διεύθυνση. Ελέγξτε τη διεύθυνση IP, αν το PS5 είναι ενεργοποιημένο και στο ίδιο δίκτυο Wi-Fi, και αν εκτελείται το etaHEN.</string>
+    <string name="status_hint_one">Καμία απάντηση: %1$s. Ξεκινήστε την υπηρεσία στην κονσόλα ή ελέγξτε τη θύρα της.</string>
+    <string name="status_hint_many">Καμία απάντηση: %1$s. Ξεκινήστε τις υπηρεσίες στην κονσόλα ή ελέγξτε τις θύρες τους.</string>
+    <string name="console_switch">Αλλαγή κονσόλας</string>
+    <string name="console_change_ip">Αλλαγή διεύθυνσης IP</string>
+    <string name="console_ip_title">Διεύθυνση IP της κονσόλας</string>
+    <string name="console_ip_label">Διεύθυνση IP</string>
+    <string name="console_ip_help">Θα τη βρείτε στο PS5 στις Ρυθμίσεις &gt; Δίκτυο &gt; Κατάσταση σύνδεσης &gt; Προβολή κατάστασης σύνδεσης.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">Μεταφορά</string>
+    <string name="transfer_sending">Αποστολή</string>
+    <string name="transfer_sending_to">Αποστολή προς %1$s</string>
+    <string name="transfer_receiving">Λήψη</string>
+    <string name="transfer_receiving_from">Λήψη από %1$s</string>
+    <string name="transfer_detail_total">%1$s · %2$s από %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">Εκκίνηση…</string>
+    <string name="transfer_stopped">Διακόπηκε</string>
+    <string name="transfer_start_failed">Η μεταφορά δεν ξεκίνησε: %1$s</string>
+    <string name="transfer_retry_in">Η σύνδεση χάθηκε. Νέα προσπάθεια σε %1$d s…</string>
+    <string name="transfer_reconnecting">Επανασύνδεση…</string>
+    <string name="transfer_eta">Απομένει: %1$s</string>
+    <string name="transfer_queued">%1$d σε αναμονή</string>
+    <string name="queue_title">Μεταφορές σε αναμονή</string>
+    <string name="queue_clear">Αφαίρεση όλων</string>
+    <string name="queue_empty">Τίποτα δεν περιμένει.</string>
+    <string name="notif_channel">Μεταφορές PS5</string>
+    <string name="notif_sent">Στάλθηκε: %1$s</string>
+    <string name="notif_received">Ελήφθη: %1$s</string>
+    <string name="percent_value">%1$d%%</string>
+    <string name="desc_done">Ολοκληρώθηκε</string>
+    <string name="desc_problem">Πρόβλημα</string>
+    <string name="status_hide">Απόκρυψη αυτού του μηνύματος</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">Προστέθηκε στην ουρά. %1$d σε αναμονή.</string>
+    <string name="msg_set_ip_first">Ορίστε πρώτα τη διεύθυνση IP της κονσόλας. Πατήστε την κάρτα στο επάνω μέρος.</string>
+    <string name="msg_sending_link">Αποστολή συνδέσμου στο PS5…</string>
+    <string name="msg_check_ip_ftp">Ελέγξτε τη διεύθυνση IP της κονσόλας και τη θύρα FTP.</string>
+    <string name="msg_adding_to_shelf_link">Προσθήκη στη βιβλιοθήκη payload…</string>
+    <string name="status_idle">Αδράνεια</string>
+    <string name="status_sending">Αποστολή…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">Έξοδος από αυτόν τον ιστότοπο;</string>
+    <string name="offsite_text">Η σελίδα θέλει να ανοίξει το %1$s. Οι διαφημίσεις το προκαλούν συχνά όταν πατάτε έναν σύνδεσμο, οπότε συνεχίστε μόνο αν το περιμένατε.</string>
+    <string name="choose_install">Αποστολή συνδέσμου στον Installer του PS5</string>
+    <string name="choose_ftp">Αποστολή στο PS5 (FTP)</string>
+    <string name="choose_shelf">Αποθήκευση στη βιβλιοθήκη payload</string>
+    <string name="choose_phone">Αποθήκευση στο τηλέφωνο</string>
+    <string name="choose_help">Ο Installer χρειάζεται έναν άμεσο σύνδεσμο πακέτου που η κονσόλα μπορεί να ανοίξει χωρίς σύνδεση. Το FTP λειτουργεί με οποιοδήποτε αρχείο και διατηρεί τη συνεδρία σύνδεσής σας. Το τηλέφωνο προωθεί τα δεδομένα στο παρασκήνιο, με την πρόοδο πάνω από τη γραμμή στο κάτω μέρος και σε μια ειδοποίηση. Η βιβλιοθήκη payload κρατά στην εφαρμογή ένα μικρό payload (έως %1$s) για την καρτέλα Payload.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Θύρα του Installer (etaHEN: 12800)</string>
+    <string name="install_accepted">Ο Installer το αποδέχτηκε: %1$s</string>
+    <string name="install_not_accepted">Δεν έγινε αποδεκτό (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">Εγκατάσταση από αυτό το τηλέφωνο</string>
+    <string name="serve_intro">Η κονσόλα κατεβάζει τα πακέτα απευθείας από αυτό το τηλέφωνο μέσω Wi-Fi, οπότε δεν χρειάζεται να αντιγραφεί τίποτα πρώτα. Το τηλέφωνο και η κονσόλα πρέπει να βρίσκονται στο ίδιο δίκτυο.</string>
+    <string name="serve_choose">Επιλογή πακέτων</string>
+    <string name="serve_none">Δεν επιλέχθηκαν πακέτα</string>
+    <string name="serve_start">Έναρξη κοινής χρήσης</string>
+    <string name="serve_stop">Διακοπή κοινής χρήσης</string>
+    <string name="serve_copy">Αντιγραφή συνδέσμου</string>
+    <string name="serve_copied">Ο σύνδεσμος αντιγράφηκε</string>
+    <string name="serve_file_waiting">Αναμονή να ξεκινήσει η κονσόλα τη λήψη…</string>
+    <string name="serve_file_pulling">Η κονσόλα κάνει λήψη: %1$s</string>
+    <string name="serve_file_done">Η κονσόλα έκανε λήψη όλων</string>
+    <string name="serve_unreadable">Δεν είναι δυνατή η ανάγνωση αυτού του αρχείου</string>
+    <string name="serve_hint">Αν η κονσόλα δεν ξεκινά ποτέ τη λήψη, ίσως το Wi-Fi εμποδίζει τις συσκευές να επικοινωνούν μεταξύ τους (τα δίκτυα επισκεπτών το κάνουν συχνά). Χρησιμοποιήστε το κύριο δίκτυο και αφήστε αυτή την εφαρμογή να εκτελείται στο παρασκήνιο.</string>
+    <string name="serve_no_wifi">Δεν βρέθηκε η διεύθυνση Wi-Fi αυτού του τηλεφώνου. Συνδέστε το στο ίδιο Wi-Fi με την κονσόλα.</string>
+    <string name="serve_failed">Δεν ήταν δυνατή η έναρξη της κοινής χρήσης: %1$s</string>
+    <string name="serve_idle_stop">Η κοινή χρήση σταμάτησε, επειδή δεν έγινε λήψη κανενός αρχείου για πολλή ώρα.</string>
+    <string name="serve_notif_title">Κοινή χρήση με %1$s</string>
+    <string name="serve_notif_text">Ληφθέντα αρχεία: %1$d / %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">Επιλογή αρχείων</string>
+    <string name="upload_none">Δεν επιλέχθηκαν αρχεία</string>
+    <string name="upload_files_chosen">Επιλεγμένα αρχεία: %1$d</string>
+    <string name="upload_start">Αποστολή στο παρασκήνιο</string>
+    <string name="upload_help">Η πρόοδος εμφανίζεται πάνω από τη γραμμή στο κάτω μέρος και σε μια ειδοποίηση. Συνεχίζεται ακόμη κι αν βγείτε από την εφαρμογή.</string>
+    <string name="ftp_port">Θύρα FTP</string>
+    <string name="ftp_user">Όνομα χρήστη</string>
+    <string name="ftp_password">Κωδικός πρόσβασης</string>
+    <string name="ftp_folder">Απομακρυσμένος φάκελος</string>
+    <string name="ftp_use_folder">Χρήση: %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">Φόρτωση…</string>
+    <string name="files_empty">Ο φάκελος είναι κενός.</string>
+    <string name="files_not_loaded">Δεν έχει φορτωθεί ακόμη</string>
+    <string name="files_up">⬆ Πάνω</string>
+    <string name="files_refresh">Ανανέωση</string>
+    <string name="files_new_folder">Νέος φάκελος</string>
+    <string name="files_upload_here">Αποστολή εδώ</string>
+    <string name="files_ftp_settings">Ρυθμίσεις FTP</string>
+    <string name="files_need_ip">Ορίστε τη διεύθυνση IP της κονσόλας (πατήστε την κάρτα στο επάνω μέρος) και μια έγκυρη θύρα FTP για να περιηγηθείτε στα αρχεία της.</string>
+    <string name="files_kind_folder">Φάκελος</string>
+    <string name="files_kind_link">Σύνδεσμος, %1$s</string>
+    <string name="files_download">Λήψη στο τηλέφωνο</string>
+    <string name="files_new_name">Νέο όνομα</string>
+    <string name="files_name_used">Αυτό το όνομα χρησιμοποιείται ήδη εδώ.</string>
+    <string name="files_renaming">Μετονομασία…</string>
+    <string name="files_renamed">Το «%1$s» μετονομάστηκε σε «%2$s»</string>
+    <string name="files_delete_title">Διαγραφή του «%1$s»;</string>
+    <string name="files_delete_folder">Αυτό διαγράφει τον φάκελο και όλο το περιεχόμενό του από την κονσόλα. Δεν μπορεί να αναιρεθεί.</string>
+    <string name="files_delete_file">Αυτό διαγράφει το αρχείο από την κονσόλα. Δεν μπορεί να αναιρεθεί.</string>
+    <string name="files_deleting">Διαγραφή…</string>
+    <string name="files_deleted">Διαγράφηκε: %1$s</string>
+    <string name="files_deleted_inside">Διαγράφηκε: %1$s (στοιχεία μέσα: %2$d)</string>
+    <string name="files_creating">Δημιουργία φακέλου…</string>
+    <string name="files_created">Ο φάκελος %1$s δημιουργήθηκε</string>
+    <string name="files_folder_name">Όνομα φακέλου</string>
+    <string name="name_empty">Το όνομα δεν μπορεί να είναι κενό.</string>
+    <string name="name_not_allowed">Αυτό το όνομα δεν επιτρέπεται.</string>
+    <string name="name_slash">Το όνομα δεν μπορεί να περιέχει κάθετους.</string>
+    <string name="name_control">Το όνομα περιέχει χαρακτήρες που δεν επιτρέπονται.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">Αποτυχία: %1$s</string>
+    <string name="ftp_port_hint">Δεν είναι δυνατή η σύνδεση με τον διακομιστή FTP. Ελέγξτε τη διεύθυνση IP της κονσόλας και τη θύρα FTP (το ενσωματωμένο FTP του etaHEN χρησιμοποιεί το 1337, το payload FTP το 2121).</string>
+    <string name="err_login">Η σύνδεση FTP απέτυχε</string>
+    <string name="err_cant_open">αδυναμία ανοίγματος του %1$s (%2$s)</string>
+    <string name="err_rename">η μετονομασία απέτυχε (%1$s)</string>
+    <string name="err_mkdir">ο φάκελος δεν δημιουργήθηκε (%1$s)</string>
+    <string name="err_too_deep">ο φάκελος είναι ενσωματωμένος πολύ βαθιά</string>
+    <string name="err_delete_path">η διαγραφή του %1$s απέτυχε (%2$s)</string>
+    <string name="err_upload">Η αποστολή FTP απέτυχε: %1$s</string>
+    <string name="err_download">Η λήψη FTP απέτυχε: %1$s</string>
+    <string name="err_open_file">Δεν ήταν δυνατό το άνοιγμα του αρχείου</string>
+    <string name="err_cancelled_upload">Ακυρώθηκε. Ένα μερικό αρχείο μπορεί να παραμείνει στο %1$s</string>
+    <string name="err_cancelled_download">Ακυρώθηκε. Η μερική λήψη απορρίφθηκε.</string>
+    <string name="err_gave_up">Εγκαταλείφθηκε, επειδή η σύνδεση συνέχιζε να αποτυγχάνει. Τελευταίο σφάλμα: %1$s</string>
+    <string name="err_short_upload">Από τα %2$s που στάλθηκαν, η κονσόλα κράτησε μόνο %1$s.</string>
+    <string name="err_short_download">Έφτασαν μόνο %1$s από %2$s.</string>
+    <string name="err_empty_file">Το αρχείο είναι κενό</string>
+    <string name="err_save">Δεν ήταν δυνατή η αποθήκευση του %1$s</string>
+    <string name="sent_to_ps5">Στάλθηκε στο PS5: %1$s</string>
+    <string name="saved_to_downloads">Αποθηκεύτηκε στο Downloads/PS5: %1$s</string>
+    <string name="dl_http_failed">Η λήψη απέτυχε: HTTP %1$s</string>
+    <string name="dl_empty">Η λήψη απέτυχε: κενή απάντηση</string>
+    <string name="dl_cut_short">Η σύνδεση έκλεισε πριν φτάσει ολόκληρο το αρχείο.</string>
+    <string name="dl_create_failed">Δεν ήταν δυνατή η δημιουργία του αρχείου στο Downloads</string>
+    <string name="dl_write_failed">Δεν ήταν δυνατό το άνοιγμα του νέου αρχείου για εγγραφή</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">Στάλθηκε: %1$s</string>
+    <string name="shelf_added">Προστέθηκε στη βιβλιοθήκη: %1$s (%2$s)</string>
+    <string name="shelf_updated">Ενημερώθηκε στη βιβλιοθήκη: %1$s (%2$s)</string>
+    <string name="shelf_too_large">Αυτό το αρχείο είναι μεγαλύτερο από %1$s, γι’ αυτό δεν προστέθηκε στη βιβλιοθήκη.</string>
+    <string name="shelf_too_large_url">Το αρχείο έχει μέγεθος %1$s. Η βιβλιοθήκη δέχεται payload έως %2$s.</string>
+    <string name="payload_adding">Προσθήκη στη βιβλιοθήκη…</string>
+    <string name="payload_remove_title">Αφαίρεση του «%1$s»;</string>
+    <string name="payload_remove_text">Διαγράφεται από τη βιβλιοθήκη. Το αρχικό αρχείο στο τηλέφωνό σας δεν επηρεάζεται.</string>
+    <string name="payload_loader_port">Θύρα του Loader</string>
+    <string name="payload_shelf_title">Βιβλιοθήκη payload</string>
+    <string name="payload_shelf_empty">Δεν έχει αποθηκευτεί τίποτα ακόμη. Προσθέστε τα payload που χρησιμοποιείτε συχνά (έναν διακομιστή FTP, το etaHEN, ...) και στείλτε το καθένα με ένα πάτημα. Μπορείτε επίσης να αποθηκεύσετε ένα απευθείας από την καρτέλα Web όταν το κατεβάζετε.</string>
+    <string name="payload_sending">Αποστολή του %1$s…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">Προσθήκη payload στη βιβλιοθήκη</string>
+    <string name="payload_once_title">Αποστολή αρχείου μία φορά</string>
+    <string name="payload_choose">Επιλογή payload (.elf / .bin)</string>
+    <string name="payload_send">Αποστολή payload</string>
+
+    <!-- consoles -->
+    <string name="profile_default">Το PS5 μου</string>
+    <string name="profile_new">Κονσόλα %1$d</string>
+    <string name="profile_fallback">Κονσόλα</string>
+    <string name="consoles_title">Κονσόλες</string>
+    <string name="console_rename_title">Μετονομασία κονσόλας</string>
+    <string name="console_name_label">Όνομα</string>
+    <string name="console_delete_title">Διαγραφή του «%1$s»;</string>
+    <string name="console_delete_text">Η αποθηκευμένη διεύθυνση IP και οι θύρες της αφαιρούνται. Οι άλλες κονσόλες σας δεν επηρεάζονται.</string>
+    <string name="console_no_ip">δεν υπάρχει ακόμη διεύθυνση IP</string>
+    <string name="console_color_of">Χρώμα για «%1$s»</string>
+    <string name="console_use_color">Χρήση: %1$s</string>
+    <string name="console_add">Προσθήκη κονσόλας</string>
+    <string name="language_button">Γλώσσα</string>
+    <string name="color_blue">Μπλε</string>
+    <string name="color_orange">Πορτοκαλί</string>
+    <string name="color_green">Πράσινο</string>
+    <string name="color_pink">Ροζ</string>
+    <string name="color_purple">Μωβ</string>
+    <string name="color_teal">Τιρκουάζ</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">Η λήψη ξεκίνησε (δείτε το Downloads)</string>
+    <string name="web_load_failed">Δεν ήταν δυνατή η φόρτωση της σελίδας: %1$s</string>
+    <string name="web_http_server">Ο ιστότοπος είναι απασχολημένος ή εκτός λειτουργίας αυτή τη στιγμή (σφάλμα %1$s). Δοκιμάστε ξανά σε λίγο.</string>
+    <string name="web_http_other">Ο ιστότοπος απάντησε με σφάλμα %1$s.</string>
+    <string name="web_open_first">Ανοίξτε πρώτα μια σελίδα</string>
+    <string name="web_bookmark_saved">Ο σελιδοδείκτης αποθηκεύτηκε</string>
+    <string name="web_bookmark_exists">Υπάρχει ήδη στους σελιδοδείκτες σας</string>
+    <string name="web_home_set">Η αρχική σελίδα ορίστηκε σε %1$s</string>
+    <string name="web_reload">Επαναφόρτωση</string>
+    <string name="web_add">★ Προσθήκη</string>
+    <string name="web_bookmarks">Σελιδοδείκτες</string>
+    <string name="web_homepage_label">URL αρχικής σελίδας</string>
+    <string name="web_bookmarks_empty">Δεν υπάρχουν ακόμη σελιδοδείκτες. Ανοίξτε μια σελίδα και πατήστε %1$s.</string>
+    <string name="web_bookmarks_help">Πατήστε έναν σελιδοδείκτη για να τον ανοίξετε. Το «%1$s» τον κάνει αρχική σας σελίδα.</string>
+    <string name="adblock_title">Φραγή διαφημίσεων</string>
+    <string name="adblock_switch">Φραγή τομέων διαφημίσεων</string>
+    <string name="adblock_info">Αποκλείστηκαν μέχρι τώρα: %1$d. Δίκτυα στην ενσωματωμένη λίστα: %2$d. Φορτώστε ξανά τη σελίδα μετά από κάθε αλλαγή.</string>
+    <string name="adblock_own">Οι δικοί σας τομείς, ένας ανά γραμμή</string>
+    <string name="adblock_on">Φραγή διαφημίσεων: ενεργή · αποκλείστηκαν: %1$d · πατήστε για αλλαγή</string>
+    <string name="adblock_off">Φραγή διαφημίσεων: ανενεργή · αποκλείστηκαν: %1$d · πατήστε για αλλαγή</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">Τι μπορώ να κάνω;</string>
+    <string name="help_what">Τι συνέβη</string>
+    <string name="help_try">Τι να δοκιμάσετε</string>
+    <string name="help_details">Λεπτομέρειες</string>
+    <string name="help_copy">Αντιγραφή λεπτομερειών</string>
+    <string name="help_copied">Αντιγράφηκε</string>
+    <string name="help_unreachable_title">Δεν είναι δυνατή η σύνδεση με την κονσόλα</string>
+    <string name="help_unreachable_what">Κανείς δεν απαντά στη διεύθυνση της κονσόλας.</string>
+    <string name="help_unreachable_try">• Ελέγξτε τη διεύθυνση IP στο PS5 (Ρυθμίσεις &gt; Δίκτυο &gt; Κατάσταση σύνδεσης). Μπορεί να αλλάξει μετά από επανεκκίνηση.\n• Ξυπνήστε πλήρως την κονσόλα. Η λειτουργία ανάπαυσης συχνά απενεργοποιεί το δίκτυο.\n• Χρησιμοποιήστε το ίδιο Wi-Fi και στις δύο συσκευές. Τα δίκτυα επισκεπτών και τα VPN το μπλοκάρουν.</string>
+    <string name="help_port_title">Η υπηρεσία δεν εκτελείται</string>
+    <string name="help_port_what">Η κονσόλα απάντησε, αλλά καμία υπηρεσία δεν ακούει σε αυτή τη θύρα.</string>
+    <string name="help_port_try">• Εκκινήστε το etaHEN στην κονσόλα. Παρέχει τον Installer (12800), τον Loader (9021) και το FTP (1337).\n• Ένα ξεχωριστό FTP payload χρησιμοποιεί συνήθως το 2121. Εισαγάγετε εδώ την ίδια θύρα.\n• Στην κάρτα της κονσόλας, η φωτεινή ένδειξη που είναι σβηστή δείχνει τι λείπει.</string>
+    <string name="help_login_title">Η σύνδεση FTP απορρίφθηκε</string>
+    <string name="help_login_what">Ο διακομιστής FTP της κονσόλας απέρριψε το όνομα χρήστη ή τον κωδικό πρόσβασης.</string>
+    <string name="help_login_try">• Το etaHEN δέχεται το όνομα χρήστη anonymous με οποιονδήποτε κωδικό.\n• Αν ορίσατε στοιχεία σύνδεσης στην κονσόλα, εισαγάγετέ τα στην Αποστολή.\n• Ο κωδικός δεν αποθηκεύεται. Εισαγάγετέ τον ξανά μετά την επανεκκίνηση της εφαρμογής.</string>
+    <string name="help_dropped_title">Η σύνδεση διακόπηκε</string>
+    <string name="help_dropped_what">Η σύνδεση με την κονσόλα διακόπηκε ή σταμάτησε η μεταφορά δεδομένων. Η εφαρμογή ξαναδοκιμάζει και συνεχίζει από εκεί που σταμάτησε.</string>
+    <string name="help_dropped_try">• Κρατήστε το τηλέφωνο κοντά στο router και την κονσόλα ξύπνια.\n• Θέστε σε παύση άλλες μεγάλες λήψεις στο δίκτυο.\n• Αν συνεχίσει να αποτυγχάνει, περιμένετε λίγο και πατήστε Επανάληψη.</string>
+    <string name="help_refused_title">Ο Installer δεν δέχτηκε τον σύνδεσμο</string>
+    <string name="help_refused_what">Η κονσόλα είναι προσβάσιμη, αλλά ο Installer της απέρριψε αυτόν τον σύνδεσμο.</string>
+    <string name="help_refused_try">• Ο σύνδεσμος πρέπει να οδηγεί απευθείας στο αρχείο του πακέτου και να ανοίγει χωρίς σύνδεση.\n• Η κονσόλα πρέπει να μπορεί να τον φτάσει. Οι σύνδεσμοι από αυτό το τηλέφωνο λειτουργούν μόνο στο ίδιο Wi-Fi.\n• Ελέγξτε ότι ο Installer εκτελείται και ότι η κονσόλα έχει ελεύθερο χώρο.</string>
+    <string name="help_storage_title">Η κονσόλα σταμάτησε να αποθηκεύει</string>
+    <string name="help_storage_what">Η κονσόλα κράτησε λιγότερα από όσα στάλθηκαν. Ο δίσκος είναι συνήθως γεμάτος ή μόνο για ανάγνωση.</string>
+    <string name="help_storage_try">• Ελευθερώστε χώρο στην κονσόλα.\n• Επιλέξτε άλλον φάκελο, για παράδειγμα σε μονάδα USB.\n• Έπειτα πατήστε Επανάληψη.</string>
+    <string name="help_denied_title">Ο φάκελος ή το αρχείο απορρίφθηκε</string>
+    <string name="help_denied_what">Ο διακομιστής FTP δεν μπορεί να το ανοίξει, να γράψει σε αυτό ή να το αλλάξει εδώ.</string>
+    <string name="help_denied_try">• Ελέγξτε ότι ο φάκελος υπάρχει. Τα ονόματα διακρίνουν κεφαλαία και πεζά.\n• Οι φάκελοι συστήματος είναι μόνο για ανάγνωση. Χρησιμοποιήστε το /data ή μια μονάδα USB.\n• Ένα αρχείο που χρησιμοποιεί ένα παιχνίδι σε εκτέλεση μπορεί να είναι κλειδωμένο. Κλείστε το παιχνίδι.</string>
+    <string name="help_phone_title">Το τηλέφωνο δεν μπορεί να χρησιμοποιήσει το αρχείο</string>
+    <string name="help_phone_what">Το αρχείο λείπει ή μετακινήθηκε, η εφαρμογή έχασε την πρόσβαση ή το τηλέφωνο δεν έχει χώρο.</string>
+    <string name="help_phone_try">• Επιλέξτε ξανά το αρχείο.\n• Ελευθερώστε αποθηκευτικό χώρο στο τηλέφωνο.\n• Για αρχείο σε εφαρμογή cloud, αποθηκεύστε το πρώτα στο τηλέφωνο.</string>
+    <string name="help_link_title">Ο σύνδεσμος λήψης απέτυχε</string>
+    <string name="help_link_what">Ο ιστότοπος δεν παρέδωσε το αρχείο. Ο σύνδεσμος μπορεί να έχει λήξει, να απαιτεί σύνδεση ή ο ιστότοπος να είναι απασχολημένος.</string>
+    <string name="help_link_try">• Ξεκινήστε ξανά τη λήψη από την καρτέλα Web. Έτσι διατηρείται η σύνδεσή σας.\n• Οι σύνδεσμοι από ιστότοπους φιλοξενίας αρχείων λήγουν συχνά μετά από λίγα λεπτά.\n• Αν ο ιστότοπος ανέφερε σφάλμα της σειράς 500, δοκιμάστε αργότερα.</string>
+
+    <!-- update check -->
+    <string name="update_available">Διατίθεται η έκδοση %1$s</string>
+    <string name="update_download">Λήψη</string>
+    <string name="update_later">Αργότερα</string>
+    <string name="update_title">Ενημερώσεις</string>
+    <string name="update_current">Έχετε την πιο πρόσφατη έκδοση (%1$s).</string>
+    <string name="update_none">Δεν βρέθηκε ακόμη κυκλοφορία στη σελίδα Releases.</string>
+    <string name="update_check_now">Έλεγχος τώρα</string>
+    <string name="update_auto">Έλεγχος για ενημερώσεις κατά το άνοιγμα της εφαρμογής</string>
+    <string name="update_privacy">Ο έλεγχος ρωτά το GitHub για την πιο πρόσφατη κυκλοφορία, το πολύ μία φορά την ημέρα. Δεν στέλνεται τίποτα για εσάς ή τις κονσόλες σας· το GitHub βλέπει τη διεύθυνση IP σας, όπως κάθε ιστότοπος.</string>
+
+    <!-- find my console -->
+    <string name="find_button">Εύρεση του PS5 μου</string>
+    <string name="find_scanning">Αναζήτηση της κονσόλας σας στο δίκτυο %1$s…</string>
+    <string name="find_again">Νέα σάρωση</string>
+    <string name="find_none">Δεν βρέθηκε κονσόλα.</string>
+    <string name="find_none_try">• Ενεργοποιήστε πλήρως την κονσόλα (όχι σε λειτουργία ανάπαυσης) και ξεκινήστε το etaHEN.\n• Χρησιμοποιήστε το ίδιο Wi-Fi στο τηλέφωνο και στην κονσόλα. Τα δίκτυα επισκεπτών και τα VPN κρατούν τις συσκευές χωριστά.\n• Έπειτα σαρώστε ξανά.</string>
+    <string name="find_no_wifi">Αυτό το τηλέφωνο δεν είναι συνδεδεμένο σε δίκτυο Wi-Fi. Συνδέστε το στο ίδιο Wi-Fi με την κονσόλα και σαρώστε ξανά.</string>
+    <string name="find_pick">Πατήστε Χρήση για να ορίσετε τη διεύθυνση της κονσόλας «%1$s».</string>
+    <string name="find_saved">Αποθηκευμένη διεύθυνση</string>
+    <string name="find_used_by">Αποθηκευμένη για «%1$s»</string>
+    <string name="find_updated">Η κονσόλα «%1$s» χρησιμοποιεί τώρα τη διεύθυνση %2$s.</string>
+    <string name="find_privacy">Σαρώνεται μόνο το δίκτυο Wi-Fi σας, σε λίγες θύρες της κονσόλας. Τίποτα δεν στέλνεται μέσω διαδικτύου.</string>
+    <string name="action_stop">Διακοπή</string>
+    <string name="action_use">Χρήση</string>
+
+    <!-- about and backup -->
+    <string name="about_title">Σχετικά με το Bento</string>
+    <string name="about_version">Έκδοση %1$s</string>
+    <string name="about_button">Πληροφορίες και αντίγραφο ασφαλείας</string>
+    <string name="about_report">Αντιγραφή αναφοράς</string>
+    <string name="about_report_help">Αντιγράφει την έκδοση της εφαρμογής, το μοντέλο του τηλεφώνου σας και το τελευταίο μήνυμα, για επικόλληση σε αναφορά σφάλματος. Οι διευθύνσεις IP και οι σύνδεσμοι παραλείπονται.</string>
+    <string name="about_report_copied">Η αναφορά αντιγράφηκε</string>
+    <string name="about_releases">Σελίδα Releases</string>
+    <string name="backup_title">Αντίγραφο ασφαλείας</string>
+    <string name="backup_text">Αποθηκεύει τις κονσόλες, την αρχική σελίδα, τους σελιδοδείκτες, τη λίστα διαφημίσεων και τα payload σας σε ένα αρχείο. Οι κωδικοί FTP δεν αποθηκεύονται.</string>
+    <string name="backup_save">Αποθήκευση αντιγράφου</string>
+    <string name="backup_restore">Επαναφορά αντιγράφου</string>
+    <string name="backup_saved">Το αντίγραφο ασφαλείας αποθηκεύτηκε.</string>
+    <string name="backup_contents">Κονσόλες: %1$d · Σελιδοδείκτες: %2$d · Payload: %3$d</string>
+    <string name="backup_made">Δημιουργήθηκε στις %1$s</string>
+    <string name="backup_skipped">Payload που παραλείφθηκαν επειδή το αρχείο θα γινόταν πολύ μεγάλο: %1$d</string>
+    <string name="backup_bad_file">Αυτό το αρχείο δεν είναι αντίγραφο ασφαλείας του Bento.</string>
+    <string name="backup_too_new">Αυτό το αντίγραφο δημιουργήθηκε από νεότερη έκδοση του Bento. Ενημερώστε την εφαρμογή και δοκιμάστε ξανά.</string>
+    <string name="restore_title">Επαναφορά αυτού του αντιγράφου;</string>
+    <string name="restore_text">Οι κονσόλες, η αρχική σελίδα, οι σελιδοδείκτες και η λίστα διαφημίσεων αντικαθίστανται από όσα υπάρχουν στο αρχείο. Τα payload του αρχείου προστίθενται στη βιβλιοθήκη payload. Θα χρειαστεί να πληκτρολογήσετε ξανά τους κωδικούς FTP.</string>
+    <string name="restore_button">Επαναφορά</string>
+    <string name="restore_done">Το αντίγραφο ασφαλείας επαναφέρθηκε.</string>
+    <string name="restore_payloads_failed">Payload που δεν ήταν δυνατό να αποθηκευτούν: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">Σύνδεσμοι πακέτων (ένας ανά γραμμή)</string>
+    <string name="install_paste">Επικόλληση</string>
+    <string name="action_clear">Εκκαθάριση</string>
+    <string name="install_paste_none">Δεν υπάρχει σύνδεσμος ιστού στο πρόχειρο.</string>
+    <string name="install_links_skipped">Αποστέλλονται μόνο διευθύνσεις που ξεκινούν με http:// ή https://. Παραλείφθηκαν: %1$d</string>
+    <string name="install_recent">Πρόσφατοι σύνδεσμοι</string>
+    <string name="install_recent_clear">Εκκαθάριση λίστας</string>
+    <string name="install_sending_n">Αποστολή συνδέσμου %1$d από %2$d…</string>
+    <string name="install_batch_done">Έγιναν δεκτοί: %1$d από %2$d συνδέσμους</string>
+    <string name="install_batch_notsent">Δεν στάλθηκαν: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">Αλυσίδες</string>
+    <string name="chains_hint">Μια αλυσίδα στέλνει πολλά payload το ένα μετά το άλλο, με παύση μετά από καθένα. Πατήστε παρατεταμένα το εικονίδιο της εφαρμογής για να ξεκινήσετε μία από τις τέσσερις πρώτες αλυσίδες από την αρχική οθόνη.</string>
+    <string name="chain_new">Νέα αλυσίδα</string>
+    <string name="action_edit">Επεξεργασία</string>
+    <string name="chain_summary_steps">Payload: %1$d</string>
+    <string name="chain_summary_pauses">Παύσεις: %1$s</string>
+    <string name="chain_edit_title">Επεξεργασία αλυσίδας</string>
+    <string name="chain_steps_title">Payload, με τη σειρά (το πολύ %1$d)</string>
+    <string name="chain_add_step">Προσθήκη payload</string>
+    <string name="chain_pick_title">Ποιο payload θέλετε να προσθέσετε;</string>
+    <string name="chain_wait_label">Έπειτα αναμονή (δευτερόλεπτα)</string>
+    <string name="chain_missing">Δεν είναι στη βιβλιοθήκη</string>
+    <string name="chain_move_up">Μετακίνηση πάνω</string>
+    <string name="chain_move_down">Μετακίνηση κάτω</string>
+    <string name="chain_pin">Προσθήκη στην αρχική οθόνη</string>
+    <string name="chain_pin_unsupported">Αυτό το launcher δεν μπορεί να προσθέσει συντομεύσεις. Πατήστε παρατεταμένα το εικονίδιο της εφαρμογής για να βρείτε εκεί τις αλυσίδες σας.</string>
+    <string name="chain_sending">Αποστολή του %1$s (%2$d από %3$d)…</string>
+    <string name="chain_waiting">Επόμενο payload σε %1$s</string>
+    <string name="chain_retrying">Αναμονή μέχρι να είναι έτοιμη η κονσόλα…</string>
+    <string name="chain_result_done">Ολοκληρώθηκε. Payload που στάλθηκαν: %1$d από %2$d</string>
+    <string name="chain_result_stopped">Διακόπηκε. Payload που στάλθηκαν: %1$d από %2$d</string>
+    <string name="chain_result_failed">Διακόπηκε στο βήμα %1$d (%2$s). Payload που στάλθηκαν: %3$d από %4$d</string>
+    <string name="chain_err_target">Ορίστε πρώτα τη διεύθυνση IP της κονσόλας και τη θύρα του Loader.</string>
+    <string name="chain_err_missing">Δεν υπάρχει πια στη βιβλιοθήκη: %1$s. Προσθέστε το ξανά ή επεξεργαστείτε την αλυσίδα.</string>
+    <string name="chain_err_unknown">Αυτή η αλυσίδα δεν υπάρχει πια.</string>
+    <string name="notif_channel_chain">Αλυσίδες payload</string>
+    <string name="backup_chains">Αλυσίδες: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">Ημιτελή από την προηγούμενη φορά: %1$d</string>
+    <string name="unfinished_hint">Η εφαρμογή έκλεισε πριν ολοκληρωθούν αυτές οι μεταφορές. Το «Συνέχεια» ξεκινά την καθεμία ξανά από την αρχή.</string>
+    <string name="unfinished_continue">Συνέχεια</string>
+    <string name="unfinished_discard">Απόρριψη</string>
+    <string name="unfinished_missing">Τα αρχεία δεν βρέθηκαν πια, επιλέξτε τα ξανά: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">Παύση</string>
+    <string name="transfer_resume">Συνέχεια</string>
+    <string name="transfer_paused">Σε παύση</string>
+    <string name="speed_limit_title">Όριο ταχύτητας</string>
+    <string name="speed_limit_off">Χωρίς όριο</string>
+    <string name="speed_limit_value">Όριο: %1$s</string>
+    <string name="speed_limit_hint">Επιβραδύνει τις μεταφορές ώστε το Wi-Fi να μένει ελεύθερο για άλλες χρήσεις. Μια αλλαγή ισχύει αμέσως.</string>
+    <string name="summary_title">Ολοκληρωμένες μεταφορές: %1$d από %2$d</string>
+    <string name="summary_detail">%1$s σε %2$s</string>
+    <string name="summary_failed">Απέτυχαν: %1$d</string>
+    <string name="summary_stopped">Διακόπηκαν: %1$d</string>
+    <string name="notif_channel_results">Αποτελέσματα μεταφορών</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">Επιλεγμένα: %1$d</string>
+    <string name="files_select_all">Επιλογή όλων</string>
+    <string name="files_select_none">Αναίρεση επιλογής</string>
+    <string name="files_delete_many_title">Διαγραφή των επιλεγμένων στοιχείων (%1$d);</string>
+    <string name="files_delete_many_text">Αυτό διαγράφει από την κονσόλα τα επιλεγμένα αρχεία και φακέλους, οι φάκελοι μαζί με όλο το περιεχόμενό τους. Δεν μπορεί να αναιρεθεί.</string>
+    <string name="files_deleted_many">Διαγραμμένα στοιχεία: %1$d</string>
+    <string name="files_delete_partial">Διαγραμμένα στοιχεία: %1$d, μη διαγραμμένα: %2$d. Το πρώτο πρόβλημα: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">Έλεγχος των φακέλων…</string>
+    <string name="files_dl_confirm_title">Λήψη στο τηλέφωνο;</string>
+    <string name="files_dl_confirm_text">Αρχεία: %1$d, συνολικά %2$s. Αποθηκεύονται στο Downloads/PS5, στους ίδιους φακέλους όπως στην κονσόλα.</string>
+    <string name="files_dl_links">Οι σύνδεσμοι μέσα σε φακέλους δεν λαμβάνονται: %1$d.</string>
+    <string name="files_dl_truncated">Αρχεία που περιλήφθηκαν: %1$d. Οι φάκελοι περιέχουν περισσότερα ή φτάνουν πιο βαθιά απ’ όσο ακολουθεί η εφαρμογή.</string>
+    <string name="files_dl_none">Στην επιλογή δεν υπάρχει αρχείο για λήψη.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">Ταξινόμηση</string>
+    <string name="files_sort_title">Ταξινόμηση κατά</string>
+    <string name="files_sort_name">Όνομα</string>
+    <string name="files_sort_size">Μέγεθος, πρώτα τα μεγαλύτερα</string>
+    <string name="files_sort_newest">Πρώτα τα νεότερα</string>
+    <string name="files_search">Αναζήτηση</string>
+    <string name="files_search_hint">Αναζήτηση σε αυτόν τον φάκελο</string>
+    <string name="files_no_match">Τίποτα σε αυτόν τον φάκελο δεν ταιριάζει με την αναζήτηση.</string>
+    <string name="files_pin">Καρφίτσωμα αυτού του φακέλου</string>
+    <string name="files_unpin">Ξεκαρφίτσωμα αυτού του φακέλου</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">Καρτέλες: %1$d</string>
+    <string name="web_tabs_title">Καρτέλες</string>
+    <string name="web_tab_new">Νέα καρτέλα</string>
+    <string name="web_tabs_full">Πάρα πολλές καρτέλες. Το όριο είναι %1$d. Κλείστε πρώτα μία.</string>
+    <string name="web_find">Εύρεση</string>
+    <string name="web_find_hint">Εύρεση σε αυτή τη σελίδα</string>
+    <string name="web_find_none">Καμία αντιστοιχία</string>
+    <string name="web_desktop">Έκδοση για υπολογιστές</string>
+    <string name="web_link_new_tab">Άνοιγμα σε νέα καρτέλα</string>
+    <string name="web_link_copy">Αντιγραφή συνδέσμου</string>
+    <string name="web_link_copied">Ο σύνδεσμος αντιγράφηκε</string>
+    <string name="web_link_use">Αποστολή ή λήψη…</string>
+</resources>

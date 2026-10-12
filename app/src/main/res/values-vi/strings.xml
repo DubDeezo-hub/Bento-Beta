@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Vietnamese. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">Hủy</string>
+    <string name="action_close">Đóng</string>
+    <string name="action_done">Xong</string>
+    <string name="action_delete">Xóa</string>
+    <string name="action_rename">Đổi tên</string>
+    <string name="action_save">Lưu</string>
+    <string name="action_remove">Gỡ bỏ</string>
+    <string name="action_send">Gửi</string>
+    <string name="action_open">Mở</string>
+    <string name="action_block">Chặn</string>
+    <string name="action_home">Trang chủ</string>
+    <string name="action_dismiss">Ẩn</string>
+    <string name="action_try_again">Thử lại</string>
+    <string name="action_skip">Bỏ qua</string>
+    <string name="action_cancel_all">Hủy tất cả</string>
+    <string name="action_create">Tạo</string>
+    <string name="action_set">Đặt</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">bởi %1$s</string>
+    <string name="nav_install">Cài đặt</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">Tải lên</string>
+    <string name="nav_files">Tệp</string>
+    <string name="nav_web">Web</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Installer</string>
+    <string name="service_loader">Loader</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">Đặt địa chỉ IP của PS5</string>
+    <string name="status_checking">Đang kiểm tra…</string>
+    <string name="status_ready">Sẵn sàng</string>
+    <string name="status_partly">Sẵn sàng một phần</string>
+    <string name="status_partly_off">Sẵn sàng một phần · không phản hồi: %1$s</string>
+    <string name="status_offline">Không thể kết nối với console</string>
+    <string name="status_hint_unset">Bạn có thể xem trên PS5 tại Cài đặt &gt; Mạng &gt; Trạng thái kết nối &gt; Xem trạng thái kết nối. Nhấn vào đây để nhập.</string>
+    <string name="status_hint_offline">Không có phản hồi tại địa chỉ này. Hãy kiểm tra địa chỉ IP, PS5 đã bật và cùng mạng Wi-Fi chưa, và etaHEN có đang chạy không.</string>
+    <string name="status_hint_one">Không phản hồi: %1$s. Hãy khởi động dịch vụ trên console hoặc kiểm tra cổng của nó.</string>
+    <string name="status_hint_many">Không phản hồi: %1$s. Hãy khởi động các dịch vụ trên console hoặc kiểm tra cổng của chúng.</string>
+    <string name="console_switch">Đổi console</string>
+    <string name="console_change_ip">Đổi địa chỉ IP</string>
+    <string name="console_ip_title">Địa chỉ IP của console</string>
+    <string name="console_ip_label">Địa chỉ IP</string>
+    <string name="console_ip_help">Bạn có thể xem trên PS5 tại Cài đặt &gt; Mạng &gt; Trạng thái kết nối &gt; Xem trạng thái kết nối.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">Truyền tệp</string>
+    <string name="transfer_sending">Đang gửi</string>
+    <string name="transfer_sending_to">Đang gửi đến %1$s</string>
+    <string name="transfer_receiving">Đang nhận</string>
+    <string name="transfer_receiving_from">Đang nhận từ %1$s</string>
+    <string name="transfer_detail_total">%1$s · %2$s trên %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">Đang bắt đầu…</string>
+    <string name="transfer_stopped">Đã dừng</string>
+    <string name="transfer_start_failed">Không thể bắt đầu truyền: %1$s</string>
+    <string name="transfer_retry_in">Mất kết nối. Thử lại sau %1$d giây…</string>
+    <string name="transfer_reconnecting">Đang kết nối lại…</string>
+    <string name="transfer_eta">Còn lại %1$s</string>
+    <string name="transfer_queued">%1$d đang chờ</string>
+    <string name="queue_title">Các lượt truyền đang chờ</string>
+    <string name="queue_clear">Gỡ bỏ tất cả</string>
+    <string name="queue_empty">Không có gì đang chờ.</string>
+    <string name="notif_channel">Truyền tệp PS5</string>
+    <string name="notif_sent">Đã gửi: %1$s</string>
+    <string name="notif_received">Đã nhận: %1$s</string>
+    <string name="percent_value">%1$d%%</string>
+    <string name="desc_done">Xong</string>
+    <string name="desc_problem">Sự cố</string>
+    <string name="status_hide">Ẩn thông báo này</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">Đã thêm vào hàng đợi. %1$d đang chờ.</string>
+    <string name="msg_set_ip_first">Hãy đặt địa chỉ IP của console trước. Nhấn vào thẻ ở trên cùng.</string>
+    <string name="msg_sending_link">Đang gửi liên kết đến PS5…</string>
+    <string name="msg_check_ip_ftp">Hãy kiểm tra địa chỉ IP của console và cổng FTP.</string>
+    <string name="msg_adding_to_shelf_link">Đang thêm vào thư viện payload…</string>
+    <string name="status_idle">Nhàn rỗi</string>
+    <string name="status_sending">Đang gửi…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">Rời khỏi trang web này?</string>
+    <string name="offsite_text">Trang muốn mở %1$s. Quảng cáo thường gây ra điều này khi bạn nhấn vào liên kết, vì vậy chỉ tiếp tục nếu bạn đã dự đoán trước.</string>
+    <string name="choose_install">Gửi liên kết đến Installer của PS5</string>
+    <string name="choose_ftp">Tải lên PS5 (FTP)</string>
+    <string name="choose_shelf">Lưu vào thư viện payload</string>
+    <string name="choose_phone">Lưu vào điện thoại</string>
+    <string name="choose_help">Installer cần một liên kết gói trực tiếp mà console có thể mở mà không cần đăng nhập. FTP hoạt động với mọi tệp và giữ phiên đăng nhập của bạn. Điện thoại chuyển tiếp dữ liệu trong nền, với tiến trình hiển thị phía trên thanh dưới cùng và trong một thông báo. Thư viện payload lưu một payload nhỏ (tối đa %1$s) trong ứng dụng cho tab Payload.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Cổng Installer (etaHEN: 12800)</string>
+    <string name="install_accepted">Installer đã chấp nhận: %1$s</string>
+    <string name="install_not_accepted">Không được chấp nhận (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">Cài đặt từ điện thoại này</string>
+    <string name="serve_intro">Console tải các gói trực tiếp từ điện thoại này qua Wi-Fi nên bạn không cần sao chép trước. Điện thoại và console phải ở cùng một mạng.</string>
+    <string name="serve_choose">Chọn gói</string>
+    <string name="serve_none">Chưa chọn gói</string>
+    <string name="serve_start">Bắt đầu chia sẻ</string>
+    <string name="serve_stop">Dừng chia sẻ</string>
+    <string name="serve_copy">Sao chép liên kết</string>
+    <string name="serve_copied">Đã sao chép liên kết</string>
+    <string name="serve_file_waiting">Đang chờ console bắt đầu tải…</string>
+    <string name="serve_file_pulling">Console đang tải: %1$s</string>
+    <string name="serve_file_done">Console đã tải xong tất cả</string>
+    <string name="serve_unreadable">Không đọc được tệp này</string>
+    <string name="serve_hint">Nếu console mãi không bắt đầu tải, có thể Wi-Fi đang chặn các thiết bị kết nối với nhau (mạng khách thường như vậy). Hãy dùng mạng chính và để ứng dụng này chạy trong nền.</string>
+    <string name="serve_no_wifi">Không tìm thấy địa chỉ Wi-Fi của điện thoại này. Hãy kết nối nó với cùng mạng Wi-Fi với console.</string>
+    <string name="serve_failed">Không thể bắt đầu chia sẻ: %1$s</string>
+    <string name="serve_idle_stop">Đã dừng chia sẻ vì lâu rồi không có gì được tải xuống.</string>
+    <string name="serve_notif_title">Đang chia sẻ với %1$s</string>
+    <string name="serve_notif_text">Tệp đã tải: %1$d / %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">Chọn tệp</string>
+    <string name="upload_none">Chưa chọn tệp</string>
+    <string name="upload_files_chosen">Số tệp đã chọn: %1$d</string>
+    <string name="upload_start">Tải lên trong nền</string>
+    <string name="upload_help">Tiến trình hiển thị phía trên thanh dưới cùng và trong một thông báo. Quá trình vẫn tiếp tục nếu bạn thoát khỏi ứng dụng.</string>
+    <string name="ftp_port">Cổng FTP</string>
+    <string name="ftp_user">Tên người dùng</string>
+    <string name="ftp_password">Mật khẩu</string>
+    <string name="ftp_folder">Thư mục từ xa</string>
+    <string name="ftp_use_folder">Dùng %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">Đang tải…</string>
+    <string name="files_empty">Thư mục này trống.</string>
+    <string name="files_not_loaded">Chưa được tải</string>
+    <string name="files_up">⬆ Lên</string>
+    <string name="files_refresh">Làm mới</string>
+    <string name="files_new_folder">Thư mục mới</string>
+    <string name="files_upload_here">Tải lên đây</string>
+    <string name="files_ftp_settings">Cài đặt FTP</string>
+    <string name="files_need_ip">Hãy đặt địa chỉ IP của console (nhấn vào thẻ ở trên cùng) và một cổng FTP hợp lệ để duyệt các tệp của nó.</string>
+    <string name="files_kind_folder">Thư mục</string>
+    <string name="files_kind_link">Liên kết, %1$s</string>
+    <string name="files_download">Tải xuống điện thoại</string>
+    <string name="files_new_name">Tên mới</string>
+    <string name="files_name_used">Tên này đã được dùng ở đây.</string>
+    <string name="files_renaming">Đang đổi tên…</string>
+    <string name="files_renamed">Đã đổi tên %1$s thành %2$s</string>
+    <string name="files_delete_title">Xóa %1$s?</string>
+    <string name="files_delete_folder">Thao tác này xóa thư mục và mọi thứ bên trong khỏi console. Không thể hoàn tác.</string>
+    <string name="files_delete_file">Thao tác này xóa tệp khỏi console. Không thể hoàn tác.</string>
+    <string name="files_deleting">Đang xóa…</string>
+    <string name="files_deleted">Đã xóa %1$s</string>
+    <string name="files_deleted_inside">Đã xóa %1$s (mục bên trong: %2$d)</string>
+    <string name="files_creating">Đang tạo thư mục…</string>
+    <string name="files_created">Đã tạo thư mục %1$s</string>
+    <string name="files_folder_name">Tên thư mục</string>
+    <string name="name_empty">Tên không được để trống.</string>
+    <string name="name_not_allowed">Tên này không được phép.</string>
+    <string name="name_slash">Tên không được chứa dấu gạch chéo.</string>
+    <string name="name_control">Tên chứa ký tự không được phép.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">Thất bại: %1$s</string>
+    <string name="ftp_port_hint">Không thể kết nối với máy chủ FTP. Hãy kiểm tra địa chỉ IP của console và cổng FTP (FTP tích hợp của etaHEN dùng cổng 1337, payload FTP dùng cổng 2121).</string>
+    <string name="err_login">Đăng nhập FTP thất bại</string>
+    <string name="err_cant_open">không thể mở %1$s (%2$s)</string>
+    <string name="err_rename">đổi tên thất bại (%1$s)</string>
+    <string name="err_mkdir">không thể tạo thư mục (%1$s)</string>
+    <string name="err_too_deep">thư mục lồng quá sâu</string>
+    <string name="err_delete_path">không thể xóa %1$s (%2$s)</string>
+    <string name="err_upload">Tải lên qua FTP thất bại: %1$s</string>
+    <string name="err_download">Tải xuống qua FTP thất bại: %1$s</string>
+    <string name="err_open_file">Không thể mở tệp</string>
+    <string name="err_cancelled_upload">Đã hủy. Một tệp dở dang có thể còn lại tại %1$s</string>
+    <string name="err_cancelled_download">Đã hủy. Bản tải xuống dở dang đã bị loại bỏ.</string>
+    <string name="err_gave_up">Đã dừng vì kết nối liên tục thất bại. Lỗi gần nhất: %1$s</string>
+    <string name="err_short_upload">Trong %2$s đã gửi, console chỉ giữ lại %1$s.</string>
+    <string name="err_short_download">Chỉ nhận được %1$s trên %2$s.</string>
+    <string name="err_empty_file">Tệp trống</string>
+    <string name="err_save">Không thể lưu %1$s</string>
+    <string name="sent_to_ps5">Đã gửi đến PS5: %1$s</string>
+    <string name="saved_to_downloads">Đã lưu vào Downloads/PS5: %1$s</string>
+    <string name="dl_http_failed">Tải xuống thất bại: HTTP %1$s</string>
+    <string name="dl_empty">Tải xuống thất bại: phản hồi trống</string>
+    <string name="dl_cut_short">Kết nối đã đóng trước khi nhận đủ cả tệp.</string>
+    <string name="dl_create_failed">Không thể tạo tệp trong Downloads</string>
+    <string name="dl_write_failed">Không thể mở tệp mới để ghi</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">Đã gửi %1$s</string>
+    <string name="shelf_added">Đã thêm vào thư viện: %1$s (%2$s)</string>
+    <string name="shelf_updated">Đã cập nhật trong thư viện: %1$s (%2$s)</string>
+    <string name="shelf_too_large">Tệp này lớn hơn %1$s nên không được thêm vào thư viện.</string>
+    <string name="shelf_too_large_url">Tệp này có dung lượng %1$s. Thư viện nhận payload tối đa %2$s.</string>
+    <string name="payload_adding">Đang thêm vào thư viện…</string>
+    <string name="payload_remove_title">Gỡ bỏ %1$s?</string>
+    <string name="payload_remove_text">Nó sẽ bị xóa khỏi thư viện. Tệp gốc trên điện thoại của bạn không bị ảnh hưởng.</string>
+    <string name="payload_loader_port">Cổng Loader</string>
+    <string name="payload_shelf_title">Thư viện payload</string>
+    <string name="payload_shelf_empty">Chưa lưu gì. Hãy thêm các payload bạn dùng thường xuyên (máy chủ FTP, etaHEN, ...) và gửi từng cái chỉ với một lần nhấn. Bạn cũng có thể lưu trực tiếp từ tab Web khi tải xuống.</string>
+    <string name="payload_sending">Đang gửi %1$s…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">Thêm payload vào thư viện</string>
+    <string name="payload_once_title">Gửi một tệp một lần</string>
+    <string name="payload_choose">Chọn payload (.elf / .bin)</string>
+    <string name="payload_send">Gửi payload</string>
+
+    <!-- consoles -->
+    <string name="profile_default">PS5 của tôi</string>
+    <string name="profile_new">Console %1$d</string>
+    <string name="profile_fallback">Console</string>
+    <string name="consoles_title">Console</string>
+    <string name="console_rename_title">Đổi tên console</string>
+    <string name="console_name_label">Tên</string>
+    <string name="console_delete_title">Xóa %1$s?</string>
+    <string name="console_delete_text">Địa chỉ IP và các cổng đã lưu của nó sẽ bị xóa. Các console khác của bạn không bị ảnh hưởng.</string>
+    <string name="console_no_ip">chưa có địa chỉ IP</string>
+    <string name="console_color_of">Màu của %1$s</string>
+    <string name="console_use_color">Dùng %1$s</string>
+    <string name="console_add">Thêm console</string>
+    <string name="language_button">Ngôn ngữ</string>
+    <string name="color_blue">Xanh dương</string>
+    <string name="color_orange">Cam</string>
+    <string name="color_green">Xanh lá</string>
+    <string name="color_pink">Hồng</string>
+    <string name="color_purple">Tím</string>
+    <string name="color_teal">Xanh lơ</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">Đã bắt đầu tải xuống (xem Downloads)</string>
+    <string name="web_load_failed">Không thể tải trang: %1$s</string>
+    <string name="web_http_server">Trang web đang bận hoặc ngừng hoạt động (lỗi %1$s). Hãy thử lại sau ít phút.</string>
+    <string name="web_http_other">Trang web phản hồi bằng lỗi %1$s.</string>
+    <string name="web_open_first">Hãy mở một trang trước</string>
+    <string name="web_bookmark_saved">Đã lưu dấu trang</string>
+    <string name="web_bookmark_exists">Đã có trong dấu trang của bạn</string>
+    <string name="web_home_set">Đã đặt trang chủ thành %1$s</string>
+    <string name="web_reload">Tải lại</string>
+    <string name="web_add">★ Thêm</string>
+    <string name="web_bookmarks">Dấu trang</string>
+    <string name="web_homepage_label">URL trang chủ</string>
+    <string name="web_bookmarks_empty">Chưa có dấu trang. Hãy mở một trang và nhấn %1$s.</string>
+    <string name="web_bookmarks_help">Nhấn vào dấu trang để mở. “%1$s” đặt nó làm trang chủ của bạn.</string>
+    <string name="adblock_title">Chặn quảng cáo</string>
+    <string name="adblock_switch">Chặn tên miền quảng cáo</string>
+    <string name="adblock_info">Đã chặn đến nay: %1$d. Mạng trong danh sách tích hợp: %2$d. Hãy tải lại trang sau mỗi thay đổi.</string>
+    <string name="adblock_own">Tên miền của riêng bạn, mỗi dòng một tên miền</string>
+    <string name="adblock_on">Chặn quảng cáo: bật · đã chặn: %1$d · nhấn để thay đổi</string>
+    <string name="adblock_off">Chặn quảng cáo: tắt · đã chặn: %1$d · nhấn để thay đổi</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">Tôi có thể làm gì?</string>
+    <string name="help_what">Chuyện gì đã xảy ra</string>
+    <string name="help_try">Nên thử gì</string>
+    <string name="help_details">Chi tiết</string>
+    <string name="help_copy">Sao chép chi tiết</string>
+    <string name="help_copied">Đã sao chép</string>
+    <string name="help_unreachable_title">Không kết nối được với console</string>
+    <string name="help_unreachable_what">Không có gì phản hồi tại địa chỉ của console.</string>
+    <string name="help_unreachable_try">• Kiểm tra địa chỉ IP trên PS5 (Cài đặt &gt; Mạng &gt; Trạng thái kết nối). Địa chỉ này có thể thay đổi sau khi khởi động lại.\n• Đánh thức console hoàn toàn. Chế độ nghỉ thường tắt mạng.\n• Dùng cùng một mạng Wi-Fi cho cả hai. Mạng khách và VPN sẽ chặn kết nối.</string>
+    <string name="help_port_title">Dịch vụ đó chưa chạy</string>
+    <string name="help_port_what">Console đã phản hồi, nhưng không có gì lắng nghe ở cổng đó.</string>
+    <string name="help_port_try">• Khởi động etaHEN trên console. Nó cung cấp Installer (12800), Loader (9021) và FTP (1337).\n• Một payload FTP riêng thường dùng cổng 2121. Hãy nhập cùng cổng đó ở đây.\n• Trên thẻ console, đèn đang tắt cho biết thiếu gì.</string>
+    <string name="help_login_title">Đăng nhập FTP bị từ chối</string>
+    <string name="help_login_what">Máy chủ FTP của console đã từ chối tên người dùng hoặc mật khẩu.</string>
+    <string name="help_login_try">• etaHEN chấp nhận tên người dùng anonymous với mật khẩu bất kỳ.\n• Nếu bạn đã đặt thông tin đăng nhập trên console, hãy nhập ở mục Tải lên.\n• Mật khẩu không được lưu. Hãy nhập lại sau khi khởi động lại ứng dụng.</string>
+    <string name="help_dropped_title">Kết nối bị ngắt</string>
+    <string name="help_dropped_what">Liên kết với console bị đứt hoặc dữ liệu ngừng truyền. Ứng dụng sẽ thử lại và tiếp tục từ chỗ đã dừng.</string>
+    <string name="help_dropped_try">• Để điện thoại gần bộ định tuyến và giữ console luôn thức.\n• Tạm dừng các lượt tải xuống lớn khác trên mạng.\n• Nếu vẫn lỗi, hãy chờ một lát rồi nhấn Thử lại.</string>
+    <string name="help_refused_title">Installer không nhận liên kết</string>
+    <string name="help_refused_what">Có thể kết nối với console, nhưng Installer của nó đã từ chối liên kết này.</string>
+    <string name="help_refused_try">• Liên kết phải dẫn thẳng tới tệp gói và mở được mà không cần đăng nhập.\n• Console phải truy cập được liên kết đó. Liên kết từ điện thoại này chỉ hoạt động trên cùng mạng Wi-Fi.\n• Kiểm tra Installer đang chạy và console còn dung lượng trống.</string>
+    <string name="help_storage_title">Console đã ngừng lưu</string>
+    <string name="help_storage_what">Console lưu ít hơn lượng đã gửi. Ổ đĩa thường đầy hoặc chỉ đọc.</string>
+    <string name="help_storage_try">• Giải phóng dung lượng trên console.\n• Chọn thư mục khác, ví dụ trên ổ USB.\n• Sau đó nhấn Thử lại.</string>
+    <string name="help_denied_title">Thư mục hoặc tệp đó bị từ chối</string>
+    <string name="help_denied_what">Máy chủ FTP không thể mở, ghi hoặc thay đổi mục đó ở đây.</string>
+    <string name="help_denied_try">• Kiểm tra thư mục có tồn tại không. Tên phân biệt chữ hoa và chữ thường.\n• Thư mục hệ thống là chỉ đọc. Hãy dùng /data hoặc ổ USB.\n• Tệp đang được một trò chơi đang chạy sử dụng có thể bị khóa. Hãy đóng trò chơi.</string>
+    <string name="help_phone_title">Điện thoại không dùng được tệp</string>
+    <string name="help_phone_what">Tệp đã mất hoặc bị di chuyển, ứng dụng không còn quyền truy cập vào nó, hoặc điện thoại hết dung lượng.</string>
+    <string name="help_phone_try">• Chọn lại tệp.\n• Giải phóng bộ nhớ trên điện thoại.\n• Với tệp trong ứng dụng đám mây, hãy lưu nó vào điện thoại trước.</string>
+    <string name="help_link_title">Liên kết tải xuống bị lỗi</string>
+    <string name="help_link_what">Trang web không trả về tệp. Liên kết có thể đã hết hạn, cần đăng nhập, hoặc trang đang bận.</string>
+    <string name="help_link_try">• Bắt đầu lại lượt tải xuống từ tab Web. Cách này giữ nguyên phiên đăng nhập của bạn.\n• Liên kết từ các trang lưu trữ tệp thường hết hạn sau vài phút.\n• Nếu trang báo lỗi dạng 500, hãy thử lại sau.</string>
+
+    <!-- update check -->
+    <string name="update_available">Đã có phiên bản %1$s</string>
+    <string name="update_download">Tải xuống</string>
+    <string name="update_later">Để sau</string>
+    <string name="update_title">Cập nhật</string>
+    <string name="update_current">Bạn đang dùng phiên bản mới nhất (%1$s).</string>
+    <string name="update_none">Chưa tìm thấy bản phát hành nào trên trang Releases.</string>
+    <string name="update_check_now">Kiểm tra ngay</string>
+    <string name="update_auto">Kiểm tra cập nhật khi mở ứng dụng</string>
+    <string name="update_privacy">Việc kiểm tra hỏi GitHub về bản phát hành mới nhất, nhiều nhất một lần mỗi ngày. Không có thông tin nào về bạn hay các console của bạn được gửi đi; GitHub thấy địa chỉ IP của bạn, như mọi trang web.</string>
+
+    <!-- find my console -->
+    <string name="find_button">Tìm PS5 của tôi</string>
+    <string name="find_scanning">Đang tìm console của bạn trên mạng %1$s…</string>
+    <string name="find_again">Quét lại</string>
+    <string name="find_none">Không tìm thấy console nào.</string>
+    <string name="find_none_try">• Bật console hoàn toàn (không phải chế độ nghỉ) và khởi động etaHEN.\n• Dùng cùng một mạng Wi-Fi cho điện thoại và console. Mạng khách và VPN sẽ tách các thiết bị khỏi nhau.\n• Sau đó quét lại.</string>
+    <string name="find_no_wifi">Điện thoại này không ở trong mạng Wi-Fi nào. Hãy kết nối nó với cùng mạng Wi-Fi với console, rồi quét lại.</string>
+    <string name="find_pick">Nhấn Dùng để đặt địa chỉ cho console “%1$s”.</string>
+    <string name="find_saved">Địa chỉ đã lưu</string>
+    <string name="find_used_by">Đã lưu cho “%1$s”</string>
+    <string name="find_updated">Console “%1$s” hiện dùng %2$s.</string>
+    <string name="find_privacy">Chỉ mạng Wi-Fi của bạn được quét, trên một vài cổng của console. Không có gì được gửi qua internet.</string>
+    <string name="action_stop">Dừng</string>
+    <string name="action_use">Dùng</string>
+
+    <!-- about and backup -->
+    <string name="about_title">Giới thiệu Bento</string>
+    <string name="about_version">Phiên bản %1$s</string>
+    <string name="about_button">Giới thiệu &amp; sao lưu</string>
+    <string name="about_report">Sao chép báo cáo</string>
+    <string name="about_report_help">Sao chép phiên bản ứng dụng, kiểu điện thoại của bạn và thông báo gần nhất để dán vào báo cáo lỗi. Địa chỉ IP và liên kết sẽ bị lược bỏ.</string>
+    <string name="about_report_copied">Đã sao chép báo cáo</string>
+    <string name="about_releases">Trang Releases</string>
+    <string name="backup_title">Sao lưu</string>
+    <string name="backup_text">Lưu các console, trang chủ, dấu trang, danh sách quảng cáo và payload của bạn trong một tệp. Mật khẩu FTP không được lưu.</string>
+    <string name="backup_save">Lưu bản sao lưu</string>
+    <string name="backup_restore">Khôi phục bản sao lưu</string>
+    <string name="backup_saved">Đã lưu bản sao lưu.</string>
+    <string name="backup_contents">Console: %1$d · Dấu trang: %2$d · Payload: %3$d</string>
+    <string name="backup_made">Tạo vào %1$s</string>
+    <string name="backup_skipped">Payload bị bỏ qua vì tệp sẽ quá lớn: %1$d</string>
+    <string name="backup_bad_file">Tệp đó không phải bản sao lưu Bento.</string>
+    <string name="backup_too_new">Bản sao lưu đó do một phiên bản Bento mới hơn tạo ra. Hãy cập nhật ứng dụng rồi thử lại.</string>
+    <string name="restore_title">Khôi phục bản sao lưu này?</string>
+    <string name="restore_text">Các console, trang chủ, dấu trang và danh sách quảng cáo của bạn sẽ được thay bằng nội dung trong tệp. Payload trong tệp sẽ được thêm vào thư viện payload. Bạn sẽ cần nhập lại mật khẩu FTP.</string>
+    <string name="restore_button">Khôi phục</string>
+    <string name="restore_done">Đã khôi phục bản sao lưu.</string>
+    <string name="restore_payloads_failed">Payload không lưu được: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">Liên kết gói (mỗi dòng một liên kết)</string>
+    <string name="install_paste">Dán</string>
+    <string name="action_clear">Xóa</string>
+    <string name="install_paste_none">Không có liên kết web trong khay nhớ tạm.</string>
+    <string name="install_links_skipped">Chỉ gửi các địa chỉ bắt đầu bằng http:// hoặc https://. Đã bỏ qua: %1$d</string>
+    <string name="install_recent">Liên kết gần đây</string>
+    <string name="install_recent_clear">Xóa danh sách</string>
+    <string name="install_sending_n">Đang gửi liên kết %1$d/%2$d…</string>
+    <string name="install_batch_done">Đã chấp nhận: %1$d/%2$d liên kết</string>
+    <string name="install_batch_notsent">Chưa gửi: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">Chuỗi</string>
+    <string name="chains_hint">Một chuỗi gửi lần lượt nhiều payload, có khoảng nghỉ sau mỗi payload. Nhấn giữ biểu tượng ứng dụng để bắt đầu một trong bốn chuỗi đầu tiên từ màn hình chính.</string>
+    <string name="chain_new">Chuỗi mới</string>
+    <string name="action_edit">Sửa</string>
+    <string name="chain_summary_steps">Payload: %1$d</string>
+    <string name="chain_summary_pauses">Khoảng nghỉ: %1$s</string>
+    <string name="chain_edit_title">Sửa chuỗi</string>
+    <string name="chain_steps_title">Payload, theo thứ tự (tối đa %1$d)</string>
+    <string name="chain_add_step">Thêm payload</string>
+    <string name="chain_pick_title">Thêm payload nào?</string>
+    <string name="chain_wait_label">Sau đó chờ (giây)</string>
+    <string name="chain_missing">Không có trong thư viện</string>
+    <string name="chain_move_up">Chuyển lên</string>
+    <string name="chain_move_down">Chuyển xuống</string>
+    <string name="chain_pin">Thêm vào màn hình chính</string>
+    <string name="chain_pin_unsupported">Trình khởi chạy này không thể thêm lối tắt. Nhấn giữ biểu tượng ứng dụng để tìm các chuỗi của bạn ở đó.</string>
+    <string name="chain_sending">Đang gửi %1$s (%2$d trên %3$d)…</string>
+    <string name="chain_waiting">Payload tiếp theo sau %1$s</string>
+    <string name="chain_retrying">Đang chờ console sẵn sàng…</string>
+    <string name="chain_result_done">Xong. Payload đã gửi: %1$d trên %2$d</string>
+    <string name="chain_result_stopped">Đã dừng. Payload đã gửi: %1$d trên %2$d</string>
+    <string name="chain_result_failed">Đã dừng ở bước %1$d (%2$s). Payload đã gửi: %3$d trên %4$d</string>
+    <string name="chain_err_target">Hãy đặt địa chỉ IP của console và cổng Loader trước.</string>
+    <string name="chain_err_missing">Không còn trong thư viện: %1$s. Hãy thêm lại hoặc sửa chuỗi.</string>
+    <string name="chain_err_unknown">Chuỗi đó không còn tồn tại.</string>
+    <string name="notif_channel_chain">Chuỗi payload</string>
+    <string name="backup_chains">Chuỗi: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">Chưa xong từ lần trước: %1$d</string>
+    <string name="unfinished_hint">Ứng dụng đã đóng trước khi các mục này xong. “Tiếp tục” sẽ bắt đầu lại từng mục từ đầu.</string>
+    <string name="unfinished_continue">Tiếp tục</string>
+    <string name="unfinished_discard">Bỏ đi</string>
+    <string name="unfinished_missing">Không còn tìm thấy tệp, hãy chọn lại: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">Tạm dừng</string>
+    <string name="transfer_resume">Tiếp tục</string>
+    <string name="transfer_paused">Đã tạm dừng</string>
+    <string name="speed_limit_title">Giới hạn tốc độ</string>
+    <string name="speed_limit_off">Không giới hạn</string>
+    <string name="speed_limit_value">Giới hạn: %1$s</string>
+    <string name="speed_limit_hint">Làm chậm quá trình truyền để Wi-Fi còn trống cho việc khác. Thay đổi có hiệu lực ngay.</string>
+    <string name="summary_title">Đã truyền xong: %1$d trên %2$d</string>
+    <string name="summary_detail">%1$s trong %2$s</string>
+    <string name="summary_failed">Lỗi: %1$d</string>
+    <string name="summary_stopped">Đã dừng: %1$d</string>
+    <string name="notif_channel_results">Kết quả truyền</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">Đã chọn: %1$d</string>
+    <string name="files_select_all">Chọn tất cả</string>
+    <string name="files_select_none">Bỏ chọn tất cả</string>
+    <string name="files_delete_many_title">Xóa các mục đã chọn (%1$d)?</string>
+    <string name="files_delete_many_text">Thao tác này xóa các tệp và thư mục đã chọn khỏi console, thư mục bị xóa cùng mọi thứ bên trong. Không thể hoàn tác.</string>
+    <string name="files_deleted_many">Đã xóa các mục: %1$d</string>
+    <string name="files_delete_partial">Đã xóa các mục: %1$d, chưa xóa: %2$d. Sự cố đầu tiên: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">Đang xem qua các thư mục…</string>
+    <string name="files_dl_confirm_title">Tải xuống điện thoại?</string>
+    <string name="files_dl_confirm_text">Số tệp: %1$d, tổng cộng %2$s. Các tệp được lưu trong Downloads/PS5, trong cùng các thư mục như trên console.</string>
+    <string name="files_dl_links">Liên kết bên trong thư mục không được tải xuống: %1$d.</string>
+    <string name="files_dl_truncated">Số tệp đã lấy: %1$d. Các thư mục chứa nhiều hơn thế, hoặc nằm sâu hơn mức ứng dụng theo dõi.</string>
+    <string name="files_dl_none">Không có tệp nào để tải xuống trong phần đã chọn.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">Sắp xếp</string>
+    <string name="files_sort_title">Sắp xếp theo</string>
+    <string name="files_sort_name">Tên</string>
+    <string name="files_sort_size">Kích thước, lớn nhất trước</string>
+    <string name="files_sort_newest">Mới nhất trước</string>
+    <string name="files_search">Tìm kiếm</string>
+    <string name="files_search_hint">Tìm trong thư mục này</string>
+    <string name="files_no_match">Không có gì trong thư mục này khớp với tìm kiếm.</string>
+    <string name="files_pin">Ghim thư mục này</string>
+    <string name="files_unpin">Bỏ ghim thư mục này</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">Tab: %1$d</string>
+    <string name="web_tabs_title">Tab</string>
+    <string name="web_tab_new">Tab mới</string>
+    <string name="web_tabs_full">Quá nhiều tab. Giới hạn là %1$d. Hãy đóng bớt một tab trước.</string>
+    <string name="web_find">Tìm</string>
+    <string name="web_find_hint">Tìm trong trang này</string>
+    <string name="web_find_none">Không có kết quả khớp</string>
+    <string name="web_desktop">Trang web cho máy tính</string>
+    <string name="web_link_new_tab">Mở trong tab mới</string>
+    <string name="web_link_copy">Sao chép liên kết</string>
+    <string name="web_link_copied">Đã sao chép liên kết</string>
+    <string name="web_link_use">Gửi hoặc tải xuống…</string>
+</resources>

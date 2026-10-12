@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Turkish. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">İptal</string>
+    <string name="action_close">Kapat</string>
+    <string name="action_done">Tamam</string>
+    <string name="action_delete">Sil</string>
+    <string name="action_rename">Yeniden adlandır</string>
+    <string name="action_save">Kaydet</string>
+    <string name="action_remove">Kaldır</string>
+    <string name="action_send">Gönder</string>
+    <string name="action_open">Aç</string>
+    <string name="action_block">Engelle</string>
+    <string name="action_home">Ana sayfa</string>
+    <string name="action_dismiss">Gizle</string>
+    <string name="action_try_again">Tekrar dene</string>
+    <string name="action_skip">Atla</string>
+    <string name="action_cancel_all">Tümünü iptal et</string>
+    <string name="action_create">Oluştur</string>
+    <string name="action_set">Ayarla</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">%1$s tarafından</string>
+    <string name="nav_install">Kur</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">Yükle</string>
+    <string name="nav_files">Dosyalar</string>
+    <string name="nav_web">Web</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Kurulum</string>
+    <string name="service_loader">Yükleyici</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">PS5’in IP adresini ayarla</string>
+    <string name="status_checking">Denetleniyor…</string>
+    <string name="status_ready">Hazır</string>
+    <string name="status_partly">Kısmen hazır</string>
+    <string name="status_partly_off">Kısmen hazır · yanıt yok: %1$s</string>
+    <string name="status_offline">Konsola ulaşılamıyor</string>
+    <string name="status_hint_unset">PS5’te Ayarlar &gt; Ağ &gt; Bağlantı Durumu &gt; Bağlantı Durumunu Görüntüle yolunda bulabilirsin. Girmek için buraya dokun.</string>
+    <string name="status_hint_offline">Bu adresten yanıt gelmiyor. IP’yi, PS5’in aynı Wi-Fi ağında açık olduğunu ve etaHEN’in çalıştığını kontrol et.</string>
+    <string name="status_hint_one">Yanıt yok: %1$s. Konsolda başlat veya bağlantı noktasını kontrol et.</string>
+    <string name="status_hint_many">Yanıt yok: %1$s. Konsolda başlat veya bağlantı noktalarını kontrol et.</string>
+    <string name="console_switch">Konsolu değiştir</string>
+    <string name="console_change_ip">IP adresini değiştir</string>
+    <string name="console_ip_title">Konsolun IP adresi</string>
+    <string name="console_ip_label">IP adresi</string>
+    <string name="console_ip_help">PS5’te Ayarlar &gt; Ağ &gt; Bağlantı Durumu &gt; Bağlantı Durumunu Görüntüle yolunda bulabilirsin.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">Aktarım</string>
+    <string name="transfer_sending">Gönderiliyor</string>
+    <string name="transfer_sending_to">Gönderiliyor: %1$s</string>
+    <string name="transfer_receiving">Alınıyor</string>
+    <string name="transfer_receiving_from">Alınıyor: %1$s</string>
+    <string name="transfer_detail_total">%1$s · %2$s / %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">Başlatılıyor…</string>
+    <string name="transfer_stopped">Durduruldu</string>
+    <string name="transfer_start_failed">Aktarım başlatılamadı: %1$s</string>
+    <string name="transfer_retry_in">Bağlantı koptu. %1$d sn içinde tekrar denenecek…</string>
+    <string name="transfer_reconnecting">Yeniden bağlanılıyor…</string>
+    <string name="transfer_eta">%1$s kaldı</string>
+    <string name="transfer_queued">%1$d bekliyor</string>
+    <string name="queue_title">Bekleyen aktarımlar</string>
+    <string name="queue_clear">Tümünü kaldır</string>
+    <string name="queue_empty">Bekleyen bir şey yok.</string>
+    <string name="notif_channel">PS5 aktarımları</string>
+    <string name="notif_sent">Gönderildi: %1$s</string>
+    <string name="notif_received">Alındı: %1$s</string>
+    <string name="percent_value">%%%1$d</string>
+    <string name="desc_done">Bitti</string>
+    <string name="desc_problem">Sorun</string>
+    <string name="status_hide">Bu iletiyi gizle</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">Kuyruğa eklendi. %1$d bekliyor.</string>
+    <string name="msg_set_ip_first">Önce konsolun IP adresini ayarla. Üstteki karta dokun.</string>
+    <string name="msg_sending_link">Bağlantı PS5’e gönderiliyor…</string>
+    <string name="msg_check_ip_ftp">Konsolun IP adresini ve FTP bağlantı noktasını kontrol et.</string>
+    <string name="msg_adding_to_shelf_link">Payload kitaplığına ekleniyor…</string>
+    <string name="status_idle">Boşta</string>
+    <string name="status_sending">Gönderiliyor…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">Siteden ayrılmak istiyor musun?</string>
+    <string name="offsite_text">Sayfa %1$s adresini açmak istiyor. Bir bağlantıya dokunduğunda bunu çoğu zaman reklamlar tetikler; bu yüzden yalnızca beklediğin bir şeyse devam et.</string>
+    <string name="choose_install">Bağlantıyı PS5 yükleyicisine gönder</string>
+    <string name="choose_ftp">PS5’e yükle (FTP)</string>
+    <string name="choose_shelf">Payload kitaplığına kaydet</string>
+    <string name="choose_phone">Telefona kaydet</string>
+    <string name="choose_help">Yükleyici, konsolun oturum açmadan açabileceği doğrudan bir paket bağlantısı ister. FTP her dosyayla çalışır ve oturumunu korur. Telefon verileri arka planda aktarır; ilerleme alt çubuğun üstünde ve bir bildirimde görünür. Payload kitaplığı, küçük bir payload’u (en fazla %1$s) uygulamanın içinde saklar ve Payload sekmesinde kullanılır.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Yükleyici bağlantı noktası (etaHEN: 12800)</string>
+    <string name="install_accepted">Yükleyici kabul etti: %1$s</string>
+    <string name="install_not_accepted">Kabul edilmedi (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">Bu telefondan kur</string>
+    <string name="serve_intro">Konsol, paketleri Wi-Fi üzerinden doğrudan bu telefondan indirir; bu yüzden önce bir şey kopyalamana gerek kalmaz. Telefon ve konsol aynı ağda olmalı.</string>
+    <string name="serve_choose">Paketleri seç</string>
+    <string name="serve_none">Paket seçilmedi</string>
+    <string name="serve_start">Paylaşımı başlat</string>
+    <string name="serve_stop">Paylaşımı durdur</string>
+    <string name="serve_copy">Bağlantıyı kopyala</string>
+    <string name="serve_copied">Bağlantı kopyalandı</string>
+    <string name="serve_file_waiting">Konsolun indirmeye başlaması bekleniyor…</string>
+    <string name="serve_file_pulling">Konsol indiriyor: %1$s</string>
+    <string name="serve_file_done">Konsol hepsini indirdi</string>
+    <string name="serve_unreadable">Bu dosya okunamıyor</string>
+    <string name="serve_hint">Konsol hiç indirmeye başlamazsa Wi-Fi, cihazların birbirine ulaşmasını engelliyor olabilir (misafir ağları sık sık böyle yapar). Ana ağı kullan ve bu uygulamanın arka planda çalışmasına izin ver.</string>
+    <string name="serve_no_wifi">Bu telefonun Wi-Fi adresi bulunamadı. Telefonu konsolla aynı Wi-Fi ağına bağla.</string>
+    <string name="serve_failed">Paylaşım başlatılamadı: %1$s</string>
+    <string name="serve_idle_stop">Uzun süre hiçbir şey indirilmediği için paylaşım durduruldu.</string>
+    <string name="serve_notif_title">%1$s ile paylaşılıyor</string>
+    <string name="serve_notif_text">İndirilen dosyalar: %1$d / %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">Dosyaları seç</string>
+    <string name="upload_none">Dosya seçilmedi</string>
+    <string name="upload_files_chosen">Seçilen dosyalar: %1$d</string>
+    <string name="upload_start">Arka planda yükle</string>
+    <string name="upload_help">İlerleme alt çubuğun üstünde ve bir bildirimde görünür. Uygulamadan çıksan bile devam eder.</string>
+    <string name="ftp_port">FTP bağlantı noktası</string>
+    <string name="ftp_user">Kullanıcı adı</string>
+    <string name="ftp_password">Parola</string>
+    <string name="ftp_folder">Uzak klasör</string>
+    <string name="ftp_use_folder">Kullan: %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">Yükleniyor…</string>
+    <string name="files_empty">Bu klasör boş.</string>
+    <string name="files_not_loaded">Henüz yüklenmedi</string>
+    <string name="files_up">⬆ Yukarı</string>
+    <string name="files_refresh">Yenile</string>
+    <string name="files_new_folder">Yeni klasör</string>
+    <string name="files_upload_here">Buraya yükle</string>
+    <string name="files_ftp_settings">FTP ayarları</string>
+    <string name="files_need_ip">Dosyalarına göz atmak için konsolun IP adresini (üstteki karta dokun) ve geçerli bir FTP bağlantı noktası ayarla.</string>
+    <string name="files_kind_folder">Klasör</string>
+    <string name="files_kind_link">Bağlantı, %1$s</string>
+    <string name="files_download">Telefona indir</string>
+    <string name="files_new_name">Yeni ad</string>
+    <string name="files_name_used">Bu ad burada zaten kullanılıyor.</string>
+    <string name="files_renaming">Yeniden adlandırılıyor…</string>
+    <string name="files_renamed">Yeniden adlandırıldı: %1$s → %2$s</string>
+    <string name="files_delete_title">%1$s silinsin mi?</string>
+    <string name="files_delete_folder">Bu işlem klasörü ve içindeki her şeyi konsoldan siler. Geri alınamaz.</string>
+    <string name="files_delete_file">Bu işlem dosyayı konsoldan siler. Geri alınamaz.</string>
+    <string name="files_deleting">Siliniyor…</string>
+    <string name="files_deleted">Silindi: %1$s</string>
+    <string name="files_deleted_inside">Silindi: %1$s (içindeki öğe sayısı: %2$d)</string>
+    <string name="files_creating">Klasör oluşturuluyor…</string>
+    <string name="files_created">Klasör oluşturuldu: %1$s</string>
+    <string name="files_folder_name">Klasör adı</string>
+    <string name="name_empty">Ad boş olamaz.</string>
+    <string name="name_not_allowed">Bu adın kullanılmasına izin verilmiyor.</string>
+    <string name="name_slash">Ad eğik çizgi içeremez.</string>
+    <string name="name_control">Ad, izin verilmeyen karakterler içeriyor.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">Başarısız: %1$s</string>
+    <string name="ftp_port_hint">FTP sunucusuna ulaşılamıyor. Konsolun IP adresini ve FTP bağlantı noktasını kontrol et (etaHEN’in yerleşik FTP’si 1337, FTP payload’u 2121 kullanır).</string>
+    <string name="err_login">FTP oturumu açılamadı</string>
+    <string name="err_cant_open">%1$s açılamıyor (%2$s)</string>
+    <string name="err_rename">yeniden adlandırma başarısız (%1$s)</string>
+    <string name="err_mkdir">klasör oluşturulamadı (%1$s)</string>
+    <string name="err_too_deep">klasör çok derin iç içe</string>
+    <string name="err_delete_path">%1$s silinemedi (%2$s)</string>
+    <string name="err_upload">FTP yüklemesi başarısız: %1$s</string>
+    <string name="err_download">FTP indirmesi başarısız: %1$s</string>
+    <string name="err_open_file">Dosya açılamadı</string>
+    <string name="err_cancelled_upload">İptal edildi. %1$s konumunda yarım bir dosya kalmış olabilir</string>
+    <string name="err_cancelled_download">İptal edildi. Yarım indirme atıldı.</string>
+    <string name="err_gave_up">Bağlantı sürekli başarısız olduğu için vazgeçildi. Son hata: %1$s</string>
+    <string name="err_short_upload">Gönderilen %2$s içinden konsol yalnızca %1$s sakladı.</string>
+    <string name="err_short_download">%2$s içinden yalnızca %1$s ulaştı.</string>
+    <string name="err_empty_file">Dosya boş</string>
+    <string name="err_save">%1$s kaydedilemedi</string>
+    <string name="sent_to_ps5">PS5’e gönderildi: %1$s</string>
+    <string name="saved_to_downloads">İndirilenler/PS5 içine kaydedildi: %1$s</string>
+    <string name="dl_http_failed">İndirme başarısız: HTTP %1$s</string>
+    <string name="dl_empty">İndirme başarısız: boş yanıt</string>
+    <string name="dl_cut_short">Dosyanın tamamı ulaşmadan bağlantı kapandı.</string>
+    <string name="dl_create_failed">İndirilenler içinde dosya oluşturulamadı</string>
+    <string name="dl_write_failed">Yeni dosya yazmak için açılamadı</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">Gönderildi: %1$s</string>
+    <string name="shelf_added">Kitaplığa eklendi: %1$s (%2$s)</string>
+    <string name="shelf_updated">Kitaplıkta güncellendi: %1$s (%2$s)</string>
+    <string name="shelf_too_large">Bu dosya %1$s boyutundan büyük olduğu için kitaplığa eklenmedi.</string>
+    <string name="shelf_too_large_url">Bu dosya %1$s boyutunda. Kitaplık en fazla %2$s boyutundaki payload’ları alır.</string>
+    <string name="payload_adding">Kitaplığa ekleniyor…</string>
+    <string name="payload_remove_title">%1$s kaldırılsın mı?</string>
+    <string name="payload_remove_text">Kitaplıktan silinir. Telefonundaki özgün dosyaya dokunulmaz.</string>
+    <string name="payload_loader_port">Yükleyici bağlantı noktası</string>
+    <string name="payload_shelf_title">Payload kitaplığı</string>
+    <string name="payload_shelf_empty">Henüz bir şey kaydedilmedi. Sık kullandığın payload’ları (bir FTP sunucusu, etaHEN vb.) ekle ve her birini tek dokunuşla gönder. Web sekmesinde indirirken doğrudan da kaydedebilirsin.</string>
+    <string name="payload_sending">%1$s gönderiliyor…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">Kitaplığa payload ekle</string>
+    <string name="payload_once_title">Bir dosyayı bir kez gönder</string>
+    <string name="payload_choose">Payload seç (.elf / .bin)</string>
+    <string name="payload_send">Payload gönder</string>
+
+    <!-- consoles -->
+    <string name="profile_default">PS5’im</string>
+    <string name="profile_new">Konsol %1$d</string>
+    <string name="profile_fallback">Konsol</string>
+    <string name="consoles_title">Konsollar</string>
+    <string name="console_rename_title">Konsolu yeniden adlandır</string>
+    <string name="console_name_label">Ad</string>
+    <string name="console_delete_title">%1$s silinsin mi?</string>
+    <string name="console_delete_text">Kayıtlı IP adresi ve bağlantı noktaları kaldırılır. Diğer konsolların etkilenmez.</string>
+    <string name="console_no_ip">henüz IP adresi yok</string>
+    <string name="console_color_of">%1$s rengi</string>
+    <string name="console_use_color">Kullan: %1$s</string>
+    <string name="console_add">Konsol ekle</string>
+    <string name="language_button">Dil</string>
+    <string name="color_blue">Mavi</string>
+    <string name="color_orange">Turuncu</string>
+    <string name="color_green">Yeşil</string>
+    <string name="color_pink">Pembe</string>
+    <string name="color_purple">Mor</string>
+    <string name="color_teal">Camgöbeği</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">İndirme başladı (İndirilenler’e bak)</string>
+    <string name="web_load_failed">Sayfa yüklenemedi: %1$s</string>
+    <string name="web_http_server">Site şu anda meşgul veya çalışmıyor (hata %1$s). Biraz sonra tekrar dene.</string>
+    <string name="web_http_other">Site %1$s hatasıyla yanıt verdi.</string>
+    <string name="web_open_first">Önce bir sayfa aç</string>
+    <string name="web_bookmark_saved">Yer imi kaydedildi</string>
+    <string name="web_bookmark_exists">Zaten yer imlerinde</string>
+    <string name="web_home_set">Ana sayfa ayarlandı: %1$s</string>
+    <string name="web_reload">Yeniden yükle</string>
+    <string name="web_add">★ Ekle</string>
+    <string name="web_bookmarks">Yer imleri</string>
+    <string name="web_homepage_label">Ana sayfa URL’si</string>
+    <string name="web_bookmarks_empty">Henüz yer imi yok. Bir sayfa aç ve %1$s düğmesine dokun.</string>
+    <string name="web_bookmarks_help">Açmak için bir yer imine dokun. “%1$s” düğmesi onu ana sayfa yapar.</string>
+    <string name="adblock_title">Reklam engelleme</string>
+    <string name="adblock_switch">Reklam alan adlarını engelle</string>
+    <string name="adblock_info">Şimdiye kadar engellenen: %1$d. Yerleşik listedeki ağlar: %2$d. Bir şeyi değiştirdikten sonra sayfayı yeniden yükle.</string>
+    <string name="adblock_own">Kendi alan adların, her satıra bir tane</string>
+    <string name="adblock_on">Reklam engelleme: açık · engellenen: %1$d · değiştirmek için dokun</string>
+    <string name="adblock_off">Reklam engelleme: kapalı · engellenen: %1$d · değiştirmek için dokun</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">Ne yapabilirim?</string>
+    <string name="help_what">Ne oldu</string>
+    <string name="help_try">Neler denenebilir</string>
+    <string name="help_details">Ayrıntılar</string>
+    <string name="help_copy">Ayrıntıları kopyala</string>
+    <string name="help_copied">Kopyalandı</string>
+    <string name="help_unreachable_title">Konsola ulaşılamıyor</string>
+    <string name="help_unreachable_what">Konsolun adresinde hiçbir şey yanıt vermiyor.</string>
+    <string name="help_unreachable_try">• PS5’teki IP adresini kontrol et (Ayarlar &gt; Ağ &gt; Bağlantı Durumu). Yeniden başlatmadan sonra değişebilir.\n• Konsolu tamamen uyandır. Dinlenme modu çoğu zaman ağı kapatır.\n• İkisinde de aynı Wi-Fi ağını kullan. Misafir ağları ve VPN’ler bunu engeller.</string>
+    <string name="help_port_title">Bu hizmet çalışmıyor</string>
+    <string name="help_port_what">Konsol yanıt verdi, ancak o bağlantı noktasında dinleyen bir şey yok.</string>
+    <string name="help_port_try">• Konsolda etaHEN’i başlat. Kurulum (12800), Yükleyici (9021) ve FTP (1337) hizmetlerini sağlar.\n• Ayrı bir FTP payload’u genellikle 2121 kullanır. Aynı bağlantı noktasını buraya gir.\n• Konsol kartında sönük olan ışık neyin eksik olduğunu gösterir.</string>
+    <string name="help_login_title">FTP girişi reddedildi</string>
+    <string name="help_login_what">Konsolun FTP sunucusu kullanıcı adını veya parolayı reddetti.</string>
+    <string name="help_login_try">• etaHEN, herhangi bir parolayla anonymous kullanıcı adını kabul eder.\n• Konsolda bir giriş ayarladıysan bunu Yükle sekmesine gir.\n• Parola kaydedilmez. Uygulamayı yeniden başlattıktan sonra tekrar gir.</string>
+    <string name="help_dropped_title">Bağlantı koptu</string>
+    <string name="help_dropped_what">Konsolla bağlantı koptu veya veri akışı durdu. Uygulama yeniden dener ve kaldığı yerden devam eder.</string>
+    <string name="help_dropped_try">• Telefonu yönlendiriciye yakın, konsolu da uyanık tut.\n• Ağdaki diğer büyük indirmeleri duraklat.\n• Yine de olmuyorsa biraz bekle ve Tekrar dene’ye dokun.</string>
+    <string name="help_refused_title">Yükleyici bağlantıyı kabul etmedi</string>
+    <string name="help_refused_what">Konsola ulaşılabiliyor, ancak yükleyicisi bu bağlantıyı reddetti.</string>
+    <string name="help_refused_try">• Bağlantı doğrudan paket dosyasına götürmeli ve oturum açmadan açılmalı.\n• Konsol ona ulaşabilmeli. Bu telefondaki bağlantılar yalnızca aynı Wi-Fi ağında çalışır.\n• Yükleyicinin çalıştığından ve konsolda boş alan olduğundan emin ol.</string>
+    <string name="help_storage_title">Konsol depolamayı bıraktı</string>
+    <string name="help_storage_what">Konsol, gönderilenden daha azını sakladı. Sürücü genellikle dolu ya da salt okunurdur.</string>
+    <string name="help_storage_try">• Konsolda biraz yer aç.\n• Başka bir klasör seç, örneğin bir USB sürücüde.\n• Sonra Tekrar dene’ye dokun.</string>
+    <string name="help_denied_title">O klasör veya dosya reddedildi</string>
+    <string name="help_denied_what">FTP sunucusu burada onu açamıyor, yazamıyor veya değiştiremiyor.</string>
+    <string name="help_denied_try">• Klasörün var olduğunu kontrol et. Adlarda büyük/küçük harf ayrımı vardır.\n• Sistem klasörleri salt okunurdur. /data veya bir USB sürücü kullan.\n• Çalışan bir oyunun kullandığı dosya kilitli olabilir. Oyunu kapat.</string>
+    <string name="help_phone_title">Telefon dosyayı kullanamıyor</string>
+    <string name="help_phone_what">Dosya silinmiş veya taşınmış, uygulama ona erişimini kaybetmiş ya da telefonda yer kalmamış.</string>
+    <string name="help_phone_try">• Dosyayı yeniden seç.\n• Telefonda biraz depolama alanı aç.\n• Bulut uygulamasındaki bir dosyayı önce telefona kaydet.</string>
+    <string name="help_link_title">İndirme bağlantısı başarısız oldu</string>
+    <string name="help_link_what">Web sitesi dosyayı vermedi. Bağlantının süresi dolmuş olabilir, oturum açmak gerekebilir ya da site meşgul olabilir.</string>
+    <string name="help_link_try">• İndirmeyi Web sekmesinden yeniden başlat. Böylece oturumun korunur.\n• Dosya barındırma sitelerinin bağlantıları genellikle birkaç dakika sonra geçersiz olur.\n• Site 500’lü bir hata bildirdiyse daha sonra tekrar dene.</string>
+
+    <!-- update check -->
+    <string name="update_available">%1$s sürümü mevcut</string>
+    <string name="update_download">İndir</string>
+    <string name="update_later">Sonra</string>
+    <string name="update_title">Güncellemeler</string>
+    <string name="update_current">En son sürüme sahipsin (%1$s).</string>
+    <string name="update_none">Releases sayfasında henüz bir sürüm bulunamadı.</string>
+    <string name="update_check_now">Şimdi denetle</string>
+    <string name="update_auto">Uygulama açılırken güncellemeleri denetle</string>
+    <string name="update_privacy">Denetim, GitHub’a en yeni sürümü sorar; günde en fazla bir kez. Senin veya konsolların hakkında hiçbir şey gönderilmez; GitHub, her web sitesi gibi IP adresini görür.</string>
+
+    <!-- find my console -->
+    <string name="find_button">PS5’imi bul</string>
+    <string name="find_scanning">Konsolun %1$s ağında aranıyor…</string>
+    <string name="find_again">Yeniden tara</string>
+    <string name="find_none">Konsol bulunamadı.</string>
+    <string name="find_none_try">• Konsolu tamamen aç (dinlenme modunda olmasın) ve etaHEN’i başlat.\n• Telefonda ve konsolda aynı Wi-Fi ağını kullan. Misafir ağları ve VPN’ler cihazları birbirinden ayırır.\n• Sonra yeniden tara.</string>
+    <string name="find_no_wifi">Bu telefon bir Wi-Fi ağına bağlı değil. Telefonu konsolla aynı Wi-Fi ağına bağla, sonra yeniden tara.</string>
+    <string name="find_pick">“%1$s” konsolunun adresini ayarlamak için Kullan’a dokun.</string>
+    <string name="find_saved">Kayıtlı adres</string>
+    <string name="find_used_by">“%1$s” için kaydedildi</string>
+    <string name="find_updated">“%1$s” artık %2$s adresini kullanıyor.</string>
+    <string name="find_privacy">Yalnızca Wi-Fi ağın taranır, konsolun birkaç bağlantı noktasında. İnternet üzerinden hiçbir şey gönderilmez.</string>
+    <string name="action_stop">Durdur</string>
+    <string name="action_use">Kullan</string>
+
+    <!-- about and backup -->
+    <string name="about_title">Bento hakkında</string>
+    <string name="about_version">Sürüm %1$s</string>
+    <string name="about_button">Hakkında ve yedek</string>
+    <string name="about_report">Raporu kopyala</string>
+    <string name="about_report_help">Uygulama sürümünü, telefon modelini ve son iletiyi kopyalar; bir hata raporuna yapıştırabilirsin. IP adresleri ve bağlantılar dahil edilmez.</string>
+    <string name="about_report_copied">Rapor kopyalandı</string>
+    <string name="about_releases">Releases sayfası</string>
+    <string name="backup_title">Yedek</string>
+    <string name="backup_text">Konsollarını, ana sayfanı, yer imlerini, reklam listesini ve payload’larını tek bir dosyaya kaydeder. FTP parolaları kaydedilmez.</string>
+    <string name="backup_save">Yedeği kaydet</string>
+    <string name="backup_restore">Yedeği geri yükle</string>
+    <string name="backup_saved">Yedek kaydedildi.</string>
+    <string name="backup_contents">Konsollar: %1$d · Yer imleri: %2$d · Payload’lar: %3$d</string>
+    <string name="backup_made">%1$s tarihinde oluşturuldu</string>
+    <string name="backup_skipped">Dosya çok büyük olacağı için dışarıda bırakılan payload’lar: %1$d</string>
+    <string name="backup_bad_file">Bu dosya bir Bento yedeği değil.</string>
+    <string name="backup_too_new">Bu yedek, Bento’nun daha yeni bir sürümüyle oluşturulmuş. Uygulamayı güncelle ve tekrar dene.</string>
+    <string name="restore_title">Bu yedek geri yüklensin mi?</string>
+    <string name="restore_text">Konsolların, ana sayfan, yer imlerin ve reklam listen dosyadakilerle değiştirilir. Dosyadaki payload’lar Payload kitaplığına eklenir. FTP parolalarını yeniden girmen gerekir.</string>
+    <string name="restore_button">Geri yükle</string>
+    <string name="restore_done">Yedek geri yüklendi.</string>
+    <string name="restore_payloads_failed">Saklanamayan payload’lar: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">Paket bağlantıları (her satıra bir tane)</string>
+    <string name="install_paste">Yapıştır</string>
+    <string name="action_clear">Temizle</string>
+    <string name="install_paste_none">Panoda web bağlantısı yok.</string>
+    <string name="install_links_skipped">Yalnızca http:// veya https:// ile başlayan adresler gönderilir. Dışarıda bırakılan: %1$d</string>
+    <string name="install_recent">Son bağlantılar</string>
+    <string name="install_recent_clear">Listeyi temizle</string>
+    <string name="install_sending_n">Bağlantı gönderiliyor: %1$d / %2$d…</string>
+    <string name="install_batch_done">Kabul edilen: %1$d / %2$d bağlantı</string>
+    <string name="install_batch_notsent">Gönderilmeyen: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">Zincirler</string>
+    <string name="chains_hint">Bir zincir, birden çok payload’ı arka arkaya gönderir; her birinden sonra bir bekleme olur. Ana ekrandan ilk dört zincirden birini başlatmak için uygulama simgesine basılı tut.</string>
+    <string name="chain_new">Yeni zincir</string>
+    <string name="action_edit">Düzenle</string>
+    <string name="chain_summary_steps">Payload: %1$d</string>
+    <string name="chain_summary_pauses">Beklemeler: %1$s</string>
+    <string name="chain_edit_title">Zinciri düzenle</string>
+    <string name="chain_steps_title">Payload’lar, sırayla (en fazla %1$d)</string>
+    <string name="chain_add_step">Payload ekle</string>
+    <string name="chain_pick_title">Hangi payload eklensin?</string>
+    <string name="chain_wait_label">Sonra bekle (saniye)</string>
+    <string name="chain_missing">Kitaplıkta yok</string>
+    <string name="chain_move_up">Yukarı taşı</string>
+    <string name="chain_move_down">Aşağı taşı</string>
+    <string name="chain_pin">Ana ekrana ekle</string>
+    <string name="chain_pin_unsupported">Bu başlatıcı kısayol ekleyemiyor. Zincirlerini orada bulmak için uygulama simgesine basılı tut.</string>
+    <string name="chain_sending">%1$s gönderiliyor (%2$d / %3$d)…</string>
+    <string name="chain_waiting">Sonraki payload %1$s sonra</string>
+    <string name="chain_retrying">Konsolun hazır olması bekleniyor…</string>
+    <string name="chain_result_done">Bitti. Gönderilen payload’lar: %1$d / %2$d</string>
+    <string name="chain_result_stopped">Durduruldu. Gönderilen payload’lar: %1$d / %2$d</string>
+    <string name="chain_result_failed">%1$d. adımda durdu (%2$s). Gönderilen payload’lar: %3$d / %4$d</string>
+    <string name="chain_err_target">Önce konsolun IP adresini ve Yükleyici bağlantı noktasını ayarla.</string>
+    <string name="chain_err_missing">Artık kitaplıkta yok: %1$s. Yeniden ekle ya da zinciri düzenle.</string>
+    <string name="chain_err_unknown">Bu zincir artık yok.</string>
+    <string name="notif_channel_chain">Payload zincirleri</string>
+    <string name="backup_chains">Zincirler: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">Geçen seferden tamamlanmayanlar: %1$d</string>
+    <string name="unfinished_hint">Uygulama, bunlar bitmeden kapandı. “Devam et” her birini baştan yeniden başlatır.</string>
+    <string name="unfinished_continue">Devam et</string>
+    <string name="unfinished_discard">Vazgeç</string>
+    <string name="unfinished_missing">Dosyalar artık bulunamıyor, yeniden seçin: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">Duraklat</string>
+    <string name="transfer_resume">Sürdür</string>
+    <string name="transfer_paused">Duraklatıldı</string>
+    <string name="speed_limit_title">Hız sınırı</string>
+    <string name="speed_limit_off">Sınır yok</string>
+    <string name="speed_limit_value">Sınır: %1$s</string>
+    <string name="speed_limit_hint">Aktarımları yavaşlatır, böylece Wi-Fi başka işler için boş kalır. Değişiklik hemen geçerli olur.</string>
+    <string name="summary_title">Tamamlanan aktarımlar: %1$d / %2$d</string>
+    <string name="summary_detail">%1$s, %2$s içinde</string>
+    <string name="summary_failed">Başarısız: %1$d</string>
+    <string name="summary_stopped">Durdurulan: %1$d</string>
+    <string name="notif_channel_results">Aktarım sonuçları</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">Seçilen: %1$d</string>
+    <string name="files_select_all">Tümünü seç</string>
+    <string name="files_select_none">Seçimi kaldır</string>
+    <string name="files_delete_many_title">Seçilen öğeler silinsin mi (%1$d)?</string>
+    <string name="files_delete_many_text">Bu işlem seçilen dosya ve klasörleri konsoldan siler; klasörler içindeki her şeyle birlikte silinir. Geri alınamaz.</string>
+    <string name="files_deleted_many">Silinen öğeler: %1$d</string>
+    <string name="files_delete_partial">Silinen öğeler: %1$d, silinemeyen: %2$d. İlk sorun: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">Klasörler taranıyor…</string>
+    <string name="files_dl_confirm_title">Telefona indirilsin mi?</string>
+    <string name="files_dl_confirm_text">Dosyalar: %1$d, toplam %2$s. Downloads/PS5 içine, konsoldakiyle aynı klasörlerde kaydedilir.</string>
+    <string name="files_dl_links">Klasörlerin içindeki bağlantılar indirilmez: %1$d.</string>
+    <string name="files_dl_truncated">Alınan dosyalar: %1$d. Klasörlerde daha fazlası var ya da uygulamanın izlediğinden daha derine iniyor.</string>
+    <string name="files_dl_none">Seçimde indirilecek dosya yok.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">Sırala</string>
+    <string name="files_sort_title">Sıralama ölçütü</string>
+    <string name="files_sort_name">Ad</string>
+    <string name="files_sort_size">Boyut, en büyük önce</string>
+    <string name="files_sort_newest">En yeni önce</string>
+    <string name="files_search">Ara</string>
+    <string name="files_search_hint">Bu klasörde ara</string>
+    <string name="files_no_match">Bu klasörde aramayla eşleşen bir şey yok.</string>
+    <string name="files_pin">Bu klasörü sabitle</string>
+    <string name="files_unpin">Bu klasörün sabitlemesini kaldır</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">Sekmeler: %1$d</string>
+    <string name="web_tabs_title">Sekmeler</string>
+    <string name="web_tab_new">Yeni sekme</string>
+    <string name="web_tabs_full">Çok fazla sekme var. Sınır %1$d. Önce birini kapat.</string>
+    <string name="web_find">Bul</string>
+    <string name="web_find_hint">Bu sayfada bul</string>
+    <string name="web_find_none">Eşleşme yok</string>
+    <string name="web_desktop">Masaüstü sitesi</string>
+    <string name="web_link_new_tab">Yeni sekmede aç</string>
+    <string name="web_link_copy">Bağlantıyı kopyala</string>
+    <string name="web_link_copied">Bağlantı kopyalandı</string>
+    <string name="web_link_use">Gönder veya indir…</string>
+</resources>

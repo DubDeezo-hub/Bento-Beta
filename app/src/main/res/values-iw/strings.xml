@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hebrew. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">ביטול</string>
+    <string name="action_close">סגירה</string>
+    <string name="action_done">סיום</string>
+    <string name="action_delete">מחיקה</string>
+    <string name="action_rename">שינוי שם</string>
+    <string name="action_save">שמירה</string>
+    <string name="action_remove">הסרה</string>
+    <string name="action_send">שליחה</string>
+    <string name="action_open">פתיחה</string>
+    <string name="action_block">חסימה</string>
+    <string name="action_home">בית</string>
+    <string name="action_dismiss">הסתרה</string>
+    <string name="action_try_again">ניסיון חוזר</string>
+    <string name="action_skip">דילוג</string>
+    <string name="action_cancel_all">ביטול הכול</string>
+    <string name="action_create">יצירה</string>
+    <string name="action_set">הגדרה</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">מאת %1$s</string>
+    <string name="nav_install">התקנה</string>
+    <string name="nav_payload">‏Payload</string>
+    <string name="nav_upload">העלאה</string>
+    <string name="nav_files">קבצים</string>
+    <string name="nav_web">אינטרנט</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">‏Installer</string>
+    <string name="service_loader">‏Loader</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">הגדירו את כתובת ה-IP של ה-PS5</string>
+    <string name="status_checking">בודק…</string>
+    <string name="status_ready">מוכן</string>
+    <string name="status_partly">מוכן חלקית</string>
+    <string name="status_partly_off">מוכן חלקית · אין תגובה: %1$s</string>
+    <string name="status_offline">לא ניתן להגיע לקונסולה</string>
+    <string name="status_hint_unset">אפשר למצוא אותה ב-PS5 בתפריט Settings &gt; Network &gt; Connection Status &gt; View Connection Status. הקישו כאן כדי להזין.</string>
+    <string name="status_hint_offline">אין מענה בכתובת הזו. בדקו את כתובת ה-IP, שהקונסולה דלוקה ומחוברת לאותה רשת Wi-Fi, ושה-etaHEN פועל.</string>
+    <string name="status_hint_one">אין תגובה: %1$s. הפעילו את השירות בקונסולה או בדקו את הפורט שלו.</string>
+    <string name="status_hint_many">אין תגובה: %1$s. הפעילו את השירותים בקונסולה או בדקו את הפורטים שלהם.</string>
+    <string name="console_switch">החלפת קונסולה</string>
+    <string name="console_change_ip">שינוי כתובת ה-IP</string>
+    <string name="console_ip_title">כתובת ה-IP של הקונסולה</string>
+    <string name="console_ip_label">כתובת IP</string>
+    <string name="console_ip_help">אפשר למצוא אותה ב-PS5 בתפריט Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">העברה</string>
+    <string name="transfer_sending">שולח</string>
+    <string name="transfer_sending_to">שולח אל %1$s</string>
+    <string name="transfer_receiving">מקבל</string>
+    <string name="transfer_receiving_from">מקבל מ-%1$s</string>
+    <string name="transfer_detail_total">‏%1$s · %2$s מתוך %3$s</string>
+    <string name="transfer_detail_done">‏%1$s · %2$s</string>
+    <string name="transfer_starting">מתחיל…</string>
+    <string name="transfer_stopped">נעצר</string>
+    <string name="transfer_start_failed">לא ניתן היה להתחיל את ההעברה: %1$s</string>
+    <string name="transfer_retry_in">החיבור נותק. ניסיון חוזר בעוד %1$d שנ׳…</string>
+    <string name="transfer_reconnecting">מתחבר מחדש…</string>
+    <string name="transfer_eta">נותר %1$s</string>
+    <string name="transfer_queued">‏%1$d בהמתנה</string>
+    <string name="queue_title">העברות בהמתנה</string>
+    <string name="queue_clear">הסרת הכול</string>
+    <string name="queue_empty">אין פריטים בהמתנה.</string>
+    <string name="notif_channel">העברות PS5</string>
+    <string name="notif_sent">נשלח: %1$s</string>
+    <string name="notif_received">התקבל: %1$s</string>
+    <string name="percent_value">‏%1$d%%</string>
+    <string name="desc_done">הושלם</string>
+    <string name="desc_problem">בעיה</string>
+    <string name="status_hide">הסתרת ההודעה</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">נוסף לתור. %1$d בהמתנה.</string>
+    <string name="msg_set_ip_first">קודם הגדירו את כתובת ה-IP של הקונסולה. הקישו על הכרטיס שבראש המסך.</string>
+    <string name="msg_sending_link">שולח קישור ל-PS5…</string>
+    <string name="msg_check_ip_ftp">בדקו את כתובת ה-IP של הקונסולה ואת פורט ה-FTP.</string>
+    <string name="msg_adding_to_shelf_link">מוסיף לספריית ה-payload…</string>
+    <string name="status_idle">לא פעיל</string>
+    <string name="status_sending">שולח…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">לעזוב את האתר?</string>
+    <string name="offsite_text">הדף מבקש לפתוח את %1$s. מודעות גורמות לכך לעיתים קרובות כשמקישים על קישור, לכן המשיכו רק אם ציפיתם לכך.</string>
+    <string name="choose_install">שליחת קישור ל-Installer ב-PS5</string>
+    <string name="choose_ftp">העלאה ל-PS5 (FTP)</string>
+    <string name="choose_shelf">שמירה בספריית ה-payload</string>
+    <string name="choose_phone">שמירה בטלפון</string>
+    <string name="choose_help">ה-Installer צריך קישור ישיר לחבילה שהקונסולה יכולה לפתוח בלי להתחבר. FTP עובד עם כל קובץ ושומר על ההתחברות שלכם. הטלפון מעביר את הנתונים ברקע, וההתקדמות מוצגת מעל הסרגל התחתון ובהתראה. ספריית ה-payload שומרת בתוך האפליקציה payload קטן (עד %1$s) עבור הלשונית Payload.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">פורט של Installer (etaHEN: 12800)</string>
+    <string name="install_accepted">ה-Installer קיבל את זה: %1$s</string>
+    <string name="install_not_accepted">לא התקבל (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">התקנה מהטלפון הזה</string>
+    <string name="serve_intro">הקונסולה מורידה את החבילות ישירות מהטלפון הזה דרך Wi-Fi, כך שאין צורך להעתיק אותן קודם. הטלפון והקונסולה חייבים להיות באותה רשת.</string>
+    <string name="serve_choose">בחירת חבילות</string>
+    <string name="serve_none">לא נבחרו חבילות</string>
+    <string name="serve_start">התחלת שיתוף</string>
+    <string name="serve_stop">הפסקת שיתוף</string>
+    <string name="serve_copy">העתקת קישור</string>
+    <string name="serve_copied">הקישור הועתק</string>
+    <string name="serve_file_waiting">ממתין שהקונסולה תתחיל להוריד…</string>
+    <string name="serve_file_pulling">הקונסולה מורידה: %1$s</string>
+    <string name="serve_file_done">הקונסולה הורידה הכול</string>
+    <string name="serve_unreadable">לא ניתן לקרוא את הקובץ הזה</string>
+    <string name="serve_hint">אם הקונסולה לא מתחילה להוריד, ייתכן שרשת ה-Wi-Fi מונעת ממכשירים לתקשר זה עם זה (רשתות אורחים עושות זאת לעיתים קרובות). השתמשו ברשת הראשית ותנו לאפליקציה הזו לפעול ברקע.</string>
+    <string name="serve_no_wifi">לא ניתן למצוא את כתובת ה-Wi-Fi של הטלפון הזה. חברו אותו לאותה רשת Wi-Fi שאליה מחוברת הקונסולה.</string>
+    <string name="serve_failed">לא ניתן היה להתחיל לשתף: %1$s</string>
+    <string name="serve_idle_stop">השיתוף הופסק כי במשך זמן רב לא הורד דבר.</string>
+    <string name="serve_notif_title">משתף עם %1$s</string>
+    <string name="serve_notif_text">קבצים שהורדו: %1$d מתוך %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">בחירת קבצים</string>
+    <string name="upload_none">לא נבחרו קבצים</string>
+    <string name="upload_files_chosen">קבצים שנבחרו: %1$d</string>
+    <string name="upload_start">העלאה ברקע</string>
+    <string name="upload_help">ההתקדמות מוצגת מעל הסרגל התחתון ובהתראה. העלאה נמשכת גם אם תצאו מהאפליקציה.</string>
+    <string name="ftp_port">פורט FTP</string>
+    <string name="ftp_user">שם משתמש</string>
+    <string name="ftp_password">סיסמה</string>
+    <string name="ftp_folder">תיקייה מרוחקת</string>
+    <string name="ftp_use_folder">שימוש ב-%1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">טוען…</string>
+    <string name="files_empty">התיקייה הזו ריקה.</string>
+    <string name="files_not_loaded">עדיין לא נטען</string>
+    <string name="files_up">⬆ למעלה</string>
+    <string name="files_refresh">רענון</string>
+    <string name="files_new_folder">תיקייה חדשה</string>
+    <string name="files_upload_here">העלאה לכאן</string>
+    <string name="files_ftp_settings">הגדרות FTP</string>
+    <string name="files_need_ip">הגדירו את כתובת ה-IP של הקונסולה (הקישו על הכרטיס שבראש המסך) ופורט FTP תקין כדי לעיין בקבצים שלה.</string>
+    <string name="files_kind_folder">תיקייה</string>
+    <string name="files_kind_link">קישור, %1$s</string>
+    <string name="files_download">הורדה לטלפון</string>
+    <string name="files_new_name">שם חדש</string>
+    <string name="files_name_used">השם הזה כבר בשימוש כאן.</string>
+    <string name="files_renaming">משנה שם…</string>
+    <string name="files_renamed">שם %1$s שונה ל-%2$s</string>
+    <string name="files_delete_title">למחוק את %1$s?</string>
+    <string name="files_delete_folder">פעולה זו מוחקת את התיקייה ואת כל מה שבתוכה מהקונסולה. אי אפשר לבטל אותה.</string>
+    <string name="files_delete_file">פעולה זו מוחקת את הקובץ מהקונסולה. אי אפשר לבטל אותה.</string>
+    <string name="files_deleting">מוחק…</string>
+    <string name="files_deleted">נמחק: %1$s</string>
+    <string name="files_deleted_inside">נמחק: %1$s (פריטים בפנים: %2$d)</string>
+    <string name="files_creating">יוצר תיקייה…</string>
+    <string name="files_created">התיקייה %1$s נוצרה</string>
+    <string name="files_folder_name">שם התיקייה</string>
+    <string name="name_empty">השם לא יכול להיות ריק.</string>
+    <string name="name_not_allowed">השם הזה אינו מותר.</string>
+    <string name="name_slash">השם לא יכול להכיל לוכסנים.</string>
+    <string name="name_control">השם מכיל תווים שאינם מותרים.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">נכשל: %1$s</string>
+    <string name="ftp_port_hint">לא ניתן להתחבר לשרת ה-FTP. בדקו את כתובת ה-IP של הקונסולה ואת פורט ה-FTP (ה-FTP המובנה של etaHEN משתמש ב-1337, וה-payload של FTP משתמש ב-2121).</string>
+    <string name="err_login">ההתחברות ל-FTP נכשלה</string>
+    <string name="err_cant_open">לא ניתן לפתוח את %1$s (%2$s)</string>
+    <string name="err_rename">שינוי השם נכשל (%1$s)</string>
+    <string name="err_mkdir">לא ניתן היה ליצור את התיקייה (%1$s)</string>
+    <string name="err_too_deep">התיקייה מקוננת עמוק מדי</string>
+    <string name="err_delete_path">לא ניתן היה למחוק את %1$s (%2$s)</string>
+    <string name="err_upload">ההעלאה ב-FTP נכשלה: %1$s</string>
+    <string name="err_download">ההורדה ב-FTP נכשלה: %1$s</string>
+    <string name="err_open_file">לא ניתן היה לפתוח את הקובץ</string>
+    <string name="err_cancelled_upload">בוטל. ייתכן שנשאר קובץ חלקי ב-%1$s</string>
+    <string name="err_cancelled_download">בוטל. ההורדה החלקית נמחקה.</string>
+    <string name="err_gave_up">הפעולה הופסקה אחרי שהחיבור המשיך להיכשל. השגיאה האחרונה: %1$s</string>
+    <string name="err_short_upload">הקונסולה שמרה רק %1$s מתוך %2$s שנשלחו.</string>
+    <string name="err_short_download">הגיעו רק %1$s מתוך %2$s.</string>
+    <string name="err_empty_file">הקובץ ריק</string>
+    <string name="err_save">לא ניתן היה לשמור את %1$s</string>
+    <string name="sent_to_ps5">נשלח ל-PS5: %1$s</string>
+    <string name="saved_to_downloads">נשמר ב-Downloads/PS5: %1$s</string>
+    <string name="dl_http_failed">ההורדה נכשלה: HTTP %1$s</string>
+    <string name="dl_empty">ההורדה נכשלה: תשובה ריקה</string>
+    <string name="dl_cut_short">החיבור נסגר לפני שהקובץ כולו הגיע.</string>
+    <string name="dl_create_failed">לא ניתן היה ליצור את הקובץ ב-Downloads</string>
+    <string name="dl_write_failed">לא ניתן היה לפתוח את הקובץ החדש לכתיבה</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">נשלח: %1$s</string>
+    <string name="shelf_added">נוסף לספרייה: %1$s (%2$s)</string>
+    <string name="shelf_updated">עודכן בספרייה: %1$s (%2$s)</string>
+    <string name="shelf_too_large">הקובץ הזה גדול מ-%1$s, ולכן לא נוסף לספרייה.</string>
+    <string name="shelf_too_large_url">גודל הקובץ הוא %1$s. הספרייה מקבלת payload עד %2$s.</string>
+    <string name="payload_adding">מוסיף לספרייה…</string>
+    <string name="payload_remove_title">להסיר את %1$s?</string>
+    <string name="payload_remove_text">הוא יימחק מהספרייה. הקובץ המקורי בטלפון שלכם לא ישתנה.</string>
+    <string name="payload_loader_port">פורט של Loader</string>
+    <string name="payload_shelf_title">ספריית payload</string>
+    <string name="payload_shelf_empty">עדיין לא נשמר דבר. הוסיפו payload שבהם אתם משתמשים לעיתים קרובות (שרת FTP, etaHEN, ...) ושלחו כל אחד בהקשה אחת. אפשר גם לשמור אחד ישירות מהלשונית אינטרנט בזמן ההורדה.</string>
+    <string name="payload_sending">שולח את %1$s…</string>
+    <string name="payload_result">‏%1$s: %2$s</string>
+    <string name="payload_add">הוספת payload לספרייה</string>
+    <string name="payload_once_title">שליחת קובץ חד-פעמית</string>
+    <string name="payload_choose">בחירת payload (.elf / .bin)</string>
+    <string name="payload_send">שליחת payload</string>
+
+    <!-- consoles -->
+    <string name="profile_default">ה-PS5 שלי</string>
+    <string name="profile_new">קונסולה %1$d</string>
+    <string name="profile_fallback">קונסולה</string>
+    <string name="consoles_title">קונסולות</string>
+    <string name="console_rename_title">שינוי שם הקונסולה</string>
+    <string name="console_name_label">שם</string>
+    <string name="console_delete_title">למחוק את %1$s?</string>
+    <string name="console_delete_text">כתובת ה-IP והפורטים השמורים שלה יוסרו. שאר הקונסולות שלכם לא יושפעו.</string>
+    <string name="console_no_ip">עדיין אין כתובת IP</string>
+    <string name="console_color_of">הצבע של %1$s</string>
+    <string name="console_use_color">שימוש ב-%1$s</string>
+    <string name="console_add">הוספת קונסולה</string>
+    <string name="language_button">שפה</string>
+    <string name="color_blue">כחול</string>
+    <string name="color_orange">כתום</string>
+    <string name="color_green">ירוק</string>
+    <string name="color_pink">ורוד</string>
+    <string name="color_purple">סגול</string>
+    <string name="color_teal">טורקיז</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">ההורדה התחילה (ראו Downloads)</string>
+    <string name="web_load_failed">לא ניתן היה לטעון את הדף: %1$s</string>
+    <string name="web_http_server">האתר עמוס או לא זמין כרגע (שגיאה %1$s). נסו שוב בעוד רגע.</string>
+    <string name="web_http_other">האתר החזיר שגיאה %1$s.</string>
+    <string name="web_open_first">קודם פתחו דף</string>
+    <string name="web_bookmark_saved">הסימנייה נשמרה</string>
+    <string name="web_bookmark_exists">כבר קיים בסימניות שלכם</string>
+    <string name="web_home_set">דף הבית הוגדר ל-%1$s</string>
+    <string name="web_reload">טעינה מחדש</string>
+    <string name="web_add">★ הוספה</string>
+    <string name="web_bookmarks">סימניות</string>
+    <string name="web_homepage_label">כתובת URL של דף הבית</string>
+    <string name="web_bookmarks_empty">אין עדיין סימניות. פתחו דף והקישו על %1$s.</string>
+    <string name="web_bookmarks_help">הקישו על סימנייה כדי לפתוח אותה. הלחצן ״%1$s״ מגדיר אותה כדף הבית שלכם.</string>
+    <string name="adblock_title">חסימת פרסומות</string>
+    <string name="adblock_switch">חסימת דומיינים של פרסומות</string>
+    <string name="adblock_info">נחסמו עד כה: %1$d. רשתות ברשימה המובנית: %2$d. יש לטעון את הדף מחדש לאחר כל שינוי.</string>
+    <string name="adblock_own">הדומיינים שלכם, אחד בכל שורה</string>
+    <string name="adblock_on">חסימת פרסומות: פועלת · נחסמו: %1$d · הקישו כדי לשנות</string>
+    <string name="adblock_off">חסימת פרסומות: כבויה · נחסמו: %1$d · הקישו כדי לשנות</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">מה אפשר לעשות?</string>
+    <string name="help_what">מה קרה</string>
+    <string name="help_try">מה לנסות</string>
+    <string name="help_details">פרטים</string>
+    <string name="help_copy">העתקת הפרטים</string>
+    <string name="help_copied">הועתק</string>
+    <string name="help_unreachable_title">אי אפשר להגיע לקונסולה</string>
+    <string name="help_unreachable_what">אף אחד לא עונה בכתובת של הקונסולה.</string>
+    <string name="help_unreachable_try">• בדקו את כתובת ה-IP ב-PS5 (Settings &gt; Network &gt; Connection Status). היא עשויה להשתנות לאחר הפעלה מחדש.\n• העירו את הקונסולה לגמרי. מצב מנוחה מכבה לעיתים קרובות את הרשת.\n• השתמשו באותה רשת Wi-Fi בשני המכשירים. רשתות אורחים ו-VPN חוסמים את החיבור.</string>
+    <string name="help_port_title">השירות הזה לא פועל</string>
+    <string name="help_port_what">הקונסולה ענתה, אבל שום דבר לא מאזין בפורט הזה.</string>
+    <string name="help_port_try">• הפעילו את etaHEN בקונסולה. הוא מספק את Installer (12800), את Loader (9021) ואת FTP (1337).\n• payload נפרד של FTP משתמש בדרך כלל ב-2121. הזינו כאן את אותו פורט.\n• בכרטיס הקונסולה, נורה כבויה מראה מה חסר.</string>
+    <string name="help_login_title">כניסת FTP נדחתה</string>
+    <string name="help_login_what">שרת ה-FTP של הקונסולה דחה את שם המשתמש או את הסיסמה.</string>
+    <string name="help_login_try">• etaHEN מקבל את שם המשתמש anonymous עם כל סיסמה.\n• אם הגדרתם כניסה בקונסולה, הזינו אותה בלשונית העלאה.\n• הסיסמה לא נשמרת. הזינו אותה שוב לאחר הפעלה מחדש של האפליקציה.</string>
+    <string name="help_dropped_title">החיבור נותק</string>
+    <string name="help_dropped_what">הקשר עם הקונסולה נפסק או שהנתונים הפסיקו לזרום. האפליקציה מנסה שוב וממשיכה מהמקום שבו נעצרה.</string>
+    <string name="help_dropped_try">• השאירו את הטלפון קרוב לנתב ואת הקונסולה ערה.\n• השהו הורדות גדולות אחרות ברשת.\n• אם זה ממשיך להיכשל, המתינו רגע והקישו על ניסיון חוזר.</string>
+    <string name="help_refused_title">ה-Installer לא קיבל את הקישור</string>
+    <string name="help_refused_what">אפשר להגיע לקונסולה, אבל ה-Installer שלה דחה את הקישור הזה.</string>
+    <string name="help_refused_try">• הקישור חייב להוביל ישירות לקובץ החבילה ולהיפתח ללא כניסה.\n• הקונסולה חייבת להצליח להגיע אליו. קישורים מהטלפון הזה פועלים רק באותה רשת Wi-Fi.\n• ודאו שה-Installer פועל ושיש לקונסולה מקום פנוי.</string>
+    <string name="help_storage_title">הקונסולה הפסיקה לשמור</string>
+    <string name="help_storage_what">הקונסולה שמרה פחות ממה שנשלח. הכונן בדרך כלל מלא או לקריאה בלבד.</string>
+    <string name="help_storage_try">• פנו מקום בקונסולה.\n• בחרו תיקייה אחרת, למשל בכונן USB.\n• לאחר מכן הקישו על ניסיון חוזר.</string>
+    <string name="help_denied_title">התיקייה או הקובץ נדחו</string>
+    <string name="help_denied_what">שרת ה-FTP לא יכול לפתוח אותם, לכתוב אליהם או לשנות אותם כאן.</string>
+    <string name="help_denied_try">• ודאו שהתיקייה קיימת. השמות רגישים לאותיות גדולות וקטנות.\n• תיקיות מערכת הן לקריאה בלבד. השתמשו ב-/data או בכונן USB.\n• קובץ שמשחק פעיל משתמש בו עשוי להיות נעול. סגרו את המשחק.</string>
+    <string name="help_phone_title">הטלפון לא יכול להשתמש בקובץ</string>
+    <string name="help_phone_what">הקובץ נעלם או הועבר, האפליקציה איבדה גישה אליו, או שנגמר המקום בטלפון.</string>
+    <string name="help_phone_try">• בחרו שוב את הקובץ.\n• פנו מקום אחסון בטלפון.\n• אם הקובץ נמצא באפליקציית ענן, שמרו אותו קודם בטלפון.</string>
+    <string name="help_link_title">קישור ההורדה נכשל</string>
+    <string name="help_link_what">האתר לא מסר את הקובץ. ייתכן שהקישור פג תוקף, דורש כניסה, או שהאתר עמוס.</string>
+    <string name="help_link_try">• התחילו את ההורדה שוב מהלשונית אינטרנט. כך הכניסה שלכם נשמרת.\n• קישורים מאתרי אחסון קבצים פגים לעיתים קרובות אחרי כמה דקות.\n• אם האתר דיווח על שגיאה בסדרת 500, נסו שוב מאוחר יותר.</string>
+
+    <!-- update check -->
+    <string name="update_available">גרסה %1$s זמינה</string>
+    <string name="update_download">הורדה</string>
+    <string name="update_later">מאוחר יותר</string>
+    <string name="update_title">עדכונים</string>
+    <string name="update_current">יש לכם את הגרסה האחרונה (%1$s).</string>
+    <string name="update_none">עדיין לא נמצאה גרסה בדף Releases.</string>
+    <string name="update_check_now">בדיקה עכשיו</string>
+    <string name="update_auto">בדיקת עדכונים בעת פתיחת האפליקציה</string>
+    <string name="update_privacy">הבדיקה שואלת את GitHub מהי הגרסה האחרונה, לכל היותר פעם ביום. שום מידע עליכם או על הקונסולות שלכם לא נשלח; GitHub רואה את כתובת ה-IP שלכם, כמו כל אתר.</string>
+
+    <!-- find my console -->
+    <string name="find_button">איתור ה-PS5 שלי</string>
+    <string name="find_scanning">מתבצע חיפוש של הקונסולה ברשת %1$s…</string>
+    <string name="find_again">סריקה חוזרת</string>
+    <string name="find_none">לא נמצאה קונסולה.</string>
+    <string name="find_none_try">• הפעילו את הקונסולה לגמרי (לא במצב מנוחה) והפעילו את etaHEN.\n• השתמשו באותה רשת Wi-Fi בטלפון ובקונסולה. רשתות אורחים ו-VPN מפרידות בין המכשירים.\n• ואז סרקו שוב.</string>
+    <string name="find_no_wifi">הטלפון הזה אינו מחובר לרשת Wi-Fi. חברו אותו לאותה רשת Wi-Fi שאליה מחוברת הקונסולה, ואז סרקו שוב.</string>
+    <string name="find_pick">הקישו על “שימוש” כדי להגדיר את הכתובת של %1$s.</string>
+    <string name="find_saved">כתובת שמורה</string>
+    <string name="find_used_by">נשמרה עבור %1$s</string>
+    <string name="find_updated">‏%1$s משתמש עכשיו ב-%2$s.</string>
+    <string name="find_privacy">נסרקת רק רשת ה-Wi-Fi שלכם, בכמה פורטים של הקונסולה. שום דבר לא נשלח דרך האינטרנט.</string>
+    <string name="action_stop">עצירה</string>
+    <string name="action_use">שימוש</string>
+
+    <!-- about and backup -->
+    <string name="about_title">על Bento</string>
+    <string name="about_version">גרסה %1$s</string>
+    <string name="about_button">אודות וגיבוי</string>
+    <string name="about_report">העתקת דוח</string>
+    <string name="about_report_help">מעתיק את גרסת האפליקציה, את דגם הטלפון ואת ההודעה האחרונה, כדי שתוכלו להדביק אותם בדוח באג. כתובות IP וקישורים מושמטים.</string>
+    <string name="about_report_copied">הדוח הועתק</string>
+    <string name="about_releases">דף Releases</string>
+    <string name="backup_title">גיבוי</string>
+    <string name="backup_text">שומר את הקונסולות, דף הבית, הסימניות, רשימת הפרסומות וה-payload בקובץ אחד. סיסמאות FTP אינן נשמרות.</string>
+    <string name="backup_save">שמירת גיבוי</string>
+    <string name="backup_restore">שחזור גיבוי</string>
+    <string name="backup_saved">הגיבוי נשמר.</string>
+    <string name="backup_contents">קונסולות: %1$d · סימניות: %2$d · Payload: %3$d</string>
+    <string name="backup_made">נוצר ב-%1$s</string>
+    <string name="backup_skipped">‏payload שהושמטו כי הקובץ היה גדול מדי: %1$d</string>
+    <string name="backup_bad_file">הקובץ הזה אינו גיבוי של Bento.</string>
+    <string name="backup_too_new">הגיבוי הזה נוצר על ידי גרסה חדשה יותר של Bento. עדכנו את האפליקציה ונסו שוב.</string>
+    <string name="restore_title">לשחזר את הגיבוי הזה?</string>
+    <string name="restore_text">הקונסולות, דף הבית, הסימניות ורשימת הפרסומות שלכם יוחלפו באלה שבקובץ. ה-payload שבקובץ יתווספו לספריית ה-payload. יהיה עליכם להקליד שוב את סיסמאות ה-FTP.</string>
+    <string name="restore_button">שחזור</string>
+    <string name="restore_done">הגיבוי שוחזר.</string>
+    <string name="restore_payloads_failed">‏payload שלא ניתן היה לשמור: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">קישורי חבילות (אחד בכל שורה)</string>
+    <string name="install_paste">הדבקה</string>
+    <string name="action_clear">ניקוי</string>
+    <string name="install_paste_none">אין קישור לאתר בלוח.</string>
+    <string name="install_links_skipped">רק כתובות שמתחילות ב-http:// או ב-https:// נשלחות. הושמטו: %1$d</string>
+    <string name="install_recent">קישורים אחרונים</string>
+    <string name="install_recent_clear">ניקוי הרשימה</string>
+    <string name="install_sending_n">שליחת קישור %1$d מתוך %2$d…</string>
+    <string name="install_batch_done">התקבלו: %1$d מתוך %2$d קישורים</string>
+    <string name="install_batch_notsent">לא נשלחו: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">שרשראות</string>
+    <string name="chains_hint">שרשרת שולחת כמה payload בזה אחר זה, עם הפסקה אחרי כל אחד. לחצו לחיצה ארוכה על סמל האפליקציה כדי להפעיל אחת מארבע השרשראות הראשונות ממסך הבית.</string>
+    <string name="chain_new">שרשרת חדשה</string>
+    <string name="action_edit">עריכה</string>
+    <string name="chain_summary_steps">מספר payload: %1$d</string>
+    <string name="chain_summary_pauses">הפסקות: %1$s</string>
+    <string name="chain_edit_title">עריכת שרשרת</string>
+    <string name="chain_steps_title">‏Payload לפי הסדר (עד %1$d)</string>
+    <string name="chain_add_step">הוספת payload</string>
+    <string name="chain_pick_title">איזה payload להוסיף?</string>
+    <string name="chain_wait_label">אחר כך להמתין (שניות)</string>
+    <string name="chain_missing">לא בספרייה</string>
+    <string name="chain_move_up">הזזה למעלה</string>
+    <string name="chain_move_down">הזזה למטה</string>
+    <string name="chain_pin">הוספה למסך הבית</string>
+    <string name="chain_pin_unsupported">המשגר הזה לא יכול להוסיף קיצורי דרך. לחצו לחיצה ארוכה על סמל האפליקציה כדי למצוא שם את השרשראות שלכם.</string>
+    <string name="chain_sending">שולח את %1$s (%2$d מתוך %3$d)…</string>
+    <string name="chain_waiting">ה-payload הבא בעוד %1$s</string>
+    <string name="chain_retrying">ממתין שהקונסולה תהיה מוכנה…</string>
+    <string name="chain_result_done">בוצע. נשלחו payload: %1$d מתוך %2$d</string>
+    <string name="chain_result_stopped">נעצר. נשלחו payload: %1$d מתוך %2$d</string>
+    <string name="chain_result_failed">נעצר בשלב %1$d (%2$s). נשלחו payload: %3$d מתוך %4$d</string>
+    <string name="chain_err_target">הגדירו קודם את כתובת ה-IP של הקונסולה ואת הפורט של Loader.</string>
+    <string name="chain_err_missing">כבר לא בספרייה: %1$s. הוסיפו אותו שוב או ערכו את השרשרת.</string>
+    <string name="chain_err_unknown">השרשרת הזו כבר לא קיימת.</string>
+    <string name="notif_channel_chain">שרשראות payload</string>
+    <string name="backup_chains">שרשראות: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">לא הושלמו בפעם הקודמת: %1$d</string>
+    <string name="unfinished_hint">האפליקציה נסגרה לפני שאלה הסתיימו. “המשך” מתחיל כל אחד מהם מחדש מההתחלה.</string>
+    <string name="unfinished_continue">המשך</string>
+    <string name="unfinished_discard">התעלם</string>
+    <string name="unfinished_missing">הקבצים כבר לא נמצאים, בחרו אותם שוב: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">השהיה</string>
+    <string name="transfer_resume">המשך</string>
+    <string name="transfer_paused">מושהה</string>
+    <string name="speed_limit_title">הגבלת מהירות</string>
+    <string name="speed_limit_off">ללא הגבלה</string>
+    <string name="speed_limit_value">הגבלה: %1$s</string>
+    <string name="speed_limit_hint">מאט את ההעברות כדי שרשת ה-Wi-Fi תישאר פנויה לדברים אחרים. שינוי נכנס לתוקף מיד.</string>
+    <string name="summary_title">העברות שהושלמו: %1$d מתוך %2$d</string>
+    <string name="summary_detail">‏%1$s תוך %2$s</string>
+    <string name="summary_failed">נכשלו: %1$d</string>
+    <string name="summary_stopped">נעצרו: %1$d</string>
+    <string name="notif_channel_results">תוצאות העברה</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">נבחרו: %1$d</string>
+    <string name="files_select_all">בחירת הכול</string>
+    <string name="files_select_none">ביטול הבחירה</string>
+    <string name="files_delete_many_title">למחוק את הפריטים שנבחרו (%1$d)?</string>
+    <string name="files_delete_many_text">פעולה זו מוחקת מהקונסולה את הקבצים והתיקיות שנבחרו, ותיקיות נמחקות עם כל מה שבתוכן. אי אפשר לבטל אותה.</string>
+    <string name="files_deleted_many">פריטים שנמחקו: %1$d</string>
+    <string name="files_delete_partial">פריטים שנמחקו: %1$d, פריטים שלא נמחקו: %2$d. הבעיה הראשונה: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">בודק את התיקיות…</string>
+    <string name="files_dl_confirm_title">להוריד לטלפון?</string>
+    <string name="files_dl_confirm_text">קבצים: %1$d, בסך הכול %2$s. הם נשמרים ב-Downloads/PS5, באותן תיקיות כמו בקונסולה.</string>
+    <string name="files_dl_links">קישורים שבתוך תיקיות לא יורדים: %1$d.</string>
+    <string name="files_dl_truncated">קבצים שנלקחו: %1$d. בתיקיות יש יותר מזה, או שהן עמוקות יותר ממה שהאפליקציה עוקבת אחריו.</string>
+    <string name="files_dl_none">אין בבחירה קובץ להורדה.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">מיון</string>
+    <string name="files_sort_title">מיון לפי</string>
+    <string name="files_sort_name">שם</string>
+    <string name="files_sort_size">גודל, הגדול ביותר קודם</string>
+    <string name="files_sort_newest">החדש ביותר קודם</string>
+    <string name="files_search">חיפוש</string>
+    <string name="files_search_hint">חיפוש בתיקייה הזו</string>
+    <string name="files_no_match">אין בתיקייה הזו דבר שתואם לחיפוש.</string>
+    <string name="files_pin">הצמדת התיקייה הזו</string>
+    <string name="files_unpin">ביטול ההצמדה של התיקייה הזו</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">לשוניות: %1$d</string>
+    <string name="web_tabs_title">לשוניות</string>
+    <string name="web_tab_new">לשונית חדשה</string>
+    <string name="web_tabs_full">יותר מדי לשוניות. המגבלה היא %1$d. סגרו קודם אחת.</string>
+    <string name="web_find">חיפוש</string>
+    <string name="web_find_hint">חיפוש בדף הזה</string>
+    <string name="web_find_none">אין התאמות</string>
+    <string name="web_desktop">אתר למחשב</string>
+    <string name="web_link_new_tab">פתיחה בלשונית חדשה</string>
+    <string name="web_link_copy">העתקת קישור</string>
+    <string name="web_link_copied">הקישור הועתק</string>
+    <string name="web_link_use">שליחה או הורדה…</string>
+</resources>

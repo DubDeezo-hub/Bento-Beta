@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- German. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">Abbrechen</string>
+    <string name="action_close">Schließen</string>
+    <string name="action_done">Fertig</string>
+    <string name="action_delete">Löschen</string>
+    <string name="action_rename">Umbenennen</string>
+    <string name="action_save">Speichern</string>
+    <string name="action_remove">Entfernen</string>
+    <string name="action_send">Senden</string>
+    <string name="action_open">Öffnen</string>
+    <string name="action_block">Blockieren</string>
+    <string name="action_home">Start</string>
+    <string name="action_dismiss">Ausblenden</string>
+    <string name="action_try_again">Erneut versuchen</string>
+    <string name="action_skip">Überspringen</string>
+    <string name="action_cancel_all">Alle abbrechen</string>
+    <string name="action_create">Erstellen</string>
+    <string name="action_set">Festlegen</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">von %1$s</string>
+    <string name="nav_install">Install</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">Upload</string>
+    <string name="nav_files">Dateien</string>
+    <string name="nav_web">Web</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Installer</string>
+    <string name="service_loader">Loader</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">Gib die IP-Adresse deiner PS5 ein</string>
+    <string name="status_checking">Prüfe…</string>
+    <string name="status_ready">Bereit</string>
+    <string name="status_partly">Teilweise bereit</string>
+    <string name="status_partly_off">Teilweise bereit · aus: %1$s</string>
+    <string name="status_offline">Konsole nicht erreichbar</string>
+    <string name="status_hint_unset">Du findest sie auf der PS5 unter Einstellungen &gt; Netzwerk &gt; Verbindungsstatus &gt; Verbindungsstatus anzeigen. Tippe hier, um sie einzugeben.</string>
+    <string name="status_hint_offline">An dieser Adresse antwortet nichts. Prüfe die IP, ob die PS5 eingeschaltet und im selben WLAN ist und ob etaHEN läuft.</string>
+    <string name="status_hint_one">Keine Antwort von: %1$s. Starte den Dienst auf der Konsole oder prüfe seinen Port.</string>
+    <string name="status_hint_many">Keine Antwort von: %1$s. Starte die Dienste auf der Konsole oder prüfe ihre Ports.</string>
+    <string name="console_switch">Konsole wechseln</string>
+    <string name="console_change_ip">IP-Adresse ändern</string>
+    <string name="console_ip_title">IP-Adresse der Konsole</string>
+    <string name="console_ip_label">IP-Adresse</string>
+    <string name="console_ip_help">Du findest sie auf der PS5 unter Einstellungen &gt; Netzwerk &gt; Verbindungsstatus &gt; Verbindungsstatus anzeigen.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">Übertragung</string>
+    <string name="transfer_sending">Senden</string>
+    <string name="transfer_sending_to">Senden an %1$s</string>
+    <string name="transfer_receiving">Empfangen</string>
+    <string name="transfer_receiving_from">Empfangen von %1$s</string>
+    <string name="transfer_detail_total">%1$s · %2$s von %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">Wird gestartet…</string>
+    <string name="transfer_stopped">Gestoppt</string>
+    <string name="transfer_start_failed">Die Übertragung konnte nicht gestartet werden: %1$s</string>
+    <string name="transfer_retry_in">Verbindung verloren. Neuer Versuch in %1$d s…</string>
+    <string name="transfer_reconnecting">Verbindung wird wiederhergestellt…</string>
+    <string name="transfer_eta">noch %1$s</string>
+    <string name="transfer_queued">%1$d wartend</string>
+    <string name="queue_title">Wartende Übertragungen</string>
+    <string name="queue_clear">Alle entfernen</string>
+    <string name="queue_empty">Nichts wartet.</string>
+    <string name="notif_channel">PS5-Übertragungen</string>
+    <string name="notif_sent">Gesendet: %1$s</string>
+    <string name="notif_received">Empfangen: %1$s</string>
+    <string name="percent_value">%1$d %%</string>
+    <string name="desc_done">Fertig</string>
+    <string name="desc_problem">Problem</string>
+    <string name="status_hide">Diese Meldung ausblenden</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">Zur Warteschlange hinzugefügt. %1$d wartend.</string>
+    <string name="msg_set_ip_first">Lege zuerst die IP-Adresse der Konsole fest. Tippe oben auf die Karte.</string>
+    <string name="msg_sending_link">Link wird an die PS5 gesendet…</string>
+    <string name="msg_check_ip_ftp">Prüfe die IP-Adresse der Konsole und den FTP-Port.</string>
+    <string name="msg_adding_to_shelf_link">Wird zur Payload-Bibliothek hinzugefügt…</string>
+    <string name="status_idle">Inaktiv</string>
+    <string name="status_sending">Wird gesendet…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">Diese Website verlassen?</string>
+    <string name="offsite_text">Die Seite möchte %1$s öffnen. Werbung löst das oft aus, wenn man auf einen Link tippt – fahre also nur fort, wenn du es erwartet hast.</string>
+    <string name="choose_install">Link an den PS5-Installer senden</string>
+    <string name="choose_ftp">Auf die PS5 hochladen (FTP)</string>
+    <string name="choose_shelf">In der Payload-Bibliothek speichern</string>
+    <string name="choose_phone">Auf dem Handy speichern</string>
+    <string name="choose_help">Der Installer braucht einen direkten Paketlink, den die Konsole ohne Anmeldung öffnen kann. FTP funktioniert mit jeder Datei und behält deine Anmeldung bei. Das Handy leitet die Daten im Hintergrund weiter, der Fortschritt erscheint über der unteren Leiste und in einer Benachrichtigung. Die Payload-Bibliothek speichert einen kleinen Payload (bis %1$s) in der App für den Tab „Payload“.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Installer-Port (etaHEN: 12800)</string>
+    <string name="install_accepted">Der Installer hat es akzeptiert: %1$s</string>
+    <string name="install_not_accepted">Nicht akzeptiert (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">Von diesem Handy installieren</string>
+    <string name="serve_intro">Die Konsole lädt die Pakete per WLAN direkt von diesem Handy herunter, es muss also nichts vorher kopiert werden. Handy und Konsole müssen im selben Netzwerk sein.</string>
+    <string name="serve_choose">Pakete auswählen</string>
+    <string name="serve_none">Keine Pakete ausgewählt</string>
+    <string name="serve_start">Freigabe starten</string>
+    <string name="serve_stop">Freigabe beenden</string>
+    <string name="serve_copy">Link kopieren</string>
+    <string name="serve_copied">Link kopiert</string>
+    <string name="serve_file_waiting">Warte darauf, dass die Konsole den Download startet…</string>
+    <string name="serve_file_pulling">Die Konsole lädt herunter: %1$s</string>
+    <string name="serve_file_done">Die Konsole hat alles heruntergeladen</string>
+    <string name="serve_unreadable">Diese Datei kann nicht gelesen werden</string>
+    <string name="serve_hint">Falls die Konsole nie mit dem Download beginnt, verhindert das WLAN vielleicht, dass sich Geräte gegenseitig erreichen (Gastnetzwerke tun das oft). Nutze das Hauptnetzwerk und lass diese App im Hintergrund laufen.</string>
+    <string name="serve_no_wifi">Die WLAN-Adresse dieses Handys wurde nicht gefunden. Verbinde es mit demselben WLAN wie die Konsole.</string>
+    <string name="serve_failed">Die Freigabe konnte nicht gestartet werden: %1$s</string>
+    <string name="serve_idle_stop">Die Freigabe wurde beendet, weil lange nichts heruntergeladen wurde.</string>
+    <string name="serve_notif_title">Freigabe für %1$s</string>
+    <string name="serve_notif_text">Heruntergeladene Dateien: %1$d / %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">Dateien auswählen</string>
+    <string name="upload_none">Keine Dateien ausgewählt</string>
+    <string name="upload_files_chosen">Ausgewählte Dateien: %1$d</string>
+    <string name="upload_start">Im Hintergrund hochladen</string>
+    <string name="upload_help">Der Fortschritt erscheint über der unteren Leiste und in einer Benachrichtigung. Der Upload läuft weiter, wenn du die App verlässt.</string>
+    <string name="ftp_port">FTP-Port</string>
+    <string name="ftp_user">Benutzername</string>
+    <string name="ftp_password">Passwort</string>
+    <string name="ftp_folder">Remote-Ordner</string>
+    <string name="ftp_use_folder">%1$s verwenden</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">Wird geladen…</string>
+    <string name="files_empty">Dieser Ordner ist leer.</string>
+    <string name="files_not_loaded">Noch nicht geladen</string>
+    <string name="files_up">⬆ Nach oben</string>
+    <string name="files_refresh">Aktualisieren</string>
+    <string name="files_new_folder">Neuer Ordner</string>
+    <string name="files_upload_here">Hier hochladen</string>
+    <string name="files_ftp_settings">FTP-Einstellungen</string>
+    <string name="files_need_ip">Lege die IP-Adresse der Konsole fest (tippe oben auf die Karte) und einen gültigen FTP-Port, um ihre Dateien zu durchsuchen.</string>
+    <string name="files_kind_folder">Ordner</string>
+    <string name="files_kind_link">Verknüpfung, %1$s</string>
+    <string name="files_download">Aufs Handy herunterladen</string>
+    <string name="files_new_name">Neuer Name</string>
+    <string name="files_name_used">Dieser Name wird hier bereits verwendet.</string>
+    <string name="files_renaming">Wird umbenannt…</string>
+    <string name="files_renamed">%1$s wurde in %2$s umbenannt</string>
+    <string name="files_delete_title">%1$s löschen?</string>
+    <string name="files_delete_folder">Dadurch werden der Ordner und alles darin von der Konsole gelöscht. Das lässt sich nicht rückgängig machen.</string>
+    <string name="files_delete_file">Dadurch wird die Datei von der Konsole gelöscht. Das lässt sich nicht rückgängig machen.</string>
+    <string name="files_deleting">Wird gelöscht…</string>
+    <string name="files_deleted">%1$s gelöscht</string>
+    <string name="files_deleted_inside">%1$s gelöscht (Elemente darin: %2$d)</string>
+    <string name="files_creating">Ordner wird erstellt…</string>
+    <string name="files_created">Ordner %1$s erstellt</string>
+    <string name="files_folder_name">Ordnername</string>
+    <string name="name_empty">Der Name darf nicht leer sein.</string>
+    <string name="name_not_allowed">Dieser Name ist nicht erlaubt.</string>
+    <string name="name_slash">Der Name darf keine Schrägstriche enthalten.</string>
+    <string name="name_control">Der Name enthält nicht erlaubte Zeichen.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">Fehlgeschlagen: %1$s</string>
+    <string name="ftp_port_hint">Der FTP-Server ist nicht erreichbar. Prüfe die IP der Konsole und den FTP-Port (das integrierte FTP von etaHEN nutzt 1337, der FTP-Payload nutzt 2121).</string>
+    <string name="err_login">FTP-Anmeldung fehlgeschlagen</string>
+    <string name="err_cant_open">%1$s kann nicht geöffnet werden (%2$s)</string>
+    <string name="err_rename">Umbenennen fehlgeschlagen (%1$s)</string>
+    <string name="err_mkdir">Ordner konnte nicht erstellt werden (%1$s)</string>
+    <string name="err_too_deep">der Ordner ist zu tief verschachtelt</string>
+    <string name="err_delete_path">%1$s konnte nicht gelöscht werden (%2$s)</string>
+    <string name="err_upload">FTP-Upload fehlgeschlagen: %1$s</string>
+    <string name="err_download">FTP-Download fehlgeschlagen: %1$s</string>
+    <string name="err_open_file">Die Datei konnte nicht geöffnet werden</string>
+    <string name="err_cancelled_upload">Abgebrochen. Unter %1$s kann eine unvollständige Datei zurückbleiben</string>
+    <string name="err_cancelled_download">Abgebrochen. Der unvollständige Download wurde verworfen.</string>
+    <string name="err_gave_up">Aufgegeben, nachdem die Verbindung immer wieder ausgefallen ist. Letzter Fehler: %1$s</string>
+    <string name="err_short_upload">Die Konsole hat von den gesendeten %2$s nur %1$s behalten.</string>
+    <string name="err_short_download">Nur %1$s von %2$s sind angekommen.</string>
+    <string name="err_empty_file">Die Datei ist leer</string>
+    <string name="err_save">%1$s konnte nicht gespeichert werden</string>
+    <string name="sent_to_ps5">An die PS5 gesendet: %1$s</string>
+    <string name="saved_to_downloads">Gespeichert in Downloads/PS5: %1$s</string>
+    <string name="dl_http_failed">Download fehlgeschlagen: HTTP %1$s</string>
+    <string name="dl_empty">Download fehlgeschlagen: leere Antwort</string>
+    <string name="dl_cut_short">Die Verbindung wurde geschlossen, bevor die ganze Datei angekommen war.</string>
+    <string name="dl_create_failed">Die Datei konnte in Downloads nicht erstellt werden</string>
+    <string name="dl_write_failed">Die neue Datei konnte nicht zum Schreiben geöffnet werden</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">Gesendet: %1$s</string>
+    <string name="shelf_added">Zur Bibliothek hinzugefügt: %1$s (%2$s)</string>
+    <string name="shelf_updated">In der Bibliothek aktualisiert: %1$s (%2$s)</string>
+    <string name="shelf_too_large">Diese Datei ist größer als %1$s und wurde daher nicht zur Bibliothek hinzugefügt.</string>
+    <string name="shelf_too_large_url">Diese Datei ist %1$s groß. Die Bibliothek nimmt Payloads bis %2$s auf.</string>
+    <string name="payload_adding">Wird zur Bibliothek hinzugefügt…</string>
+    <string name="payload_remove_title">%1$s entfernen?</string>
+    <string name="payload_remove_text">Es wird aus der Bibliothek gelöscht. Die Originaldatei auf deinem Handy bleibt unberührt.</string>
+    <string name="payload_loader_port">Loader-Port</string>
+    <string name="payload_shelf_title">Payload-Bibliothek</string>
+    <string name="payload_shelf_empty">Noch nichts gespeichert. Füge Payloads hinzu, die du oft brauchst (einen FTP-Server, etaHEN, ...), und sende jeden mit einem Tipp. Du kannst einen auch direkt im Web-Tab speichern, wenn du ihn herunterlädst.</string>
+    <string name="payload_sending">%1$s wird gesendet…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">Payload zur Bibliothek hinzufügen</string>
+    <string name="payload_once_title">Eine Datei einmalig senden</string>
+    <string name="payload_choose">Payload auswählen (.elf / .bin)</string>
+    <string name="payload_send">Payload senden</string>
+
+    <!-- consoles -->
+    <string name="profile_default">Meine PS5</string>
+    <string name="profile_new">Konsole %1$d</string>
+    <string name="profile_fallback">Konsole</string>
+    <string name="consoles_title">Konsolen</string>
+    <string name="console_rename_title">Konsole umbenennen</string>
+    <string name="console_name_label">Name</string>
+    <string name="console_delete_title">%1$s löschen?</string>
+    <string name="console_delete_text">Die gespeicherte IP-Adresse und die Ports werden entfernt. Deine anderen Konsolen sind nicht betroffen.</string>
+    <string name="console_no_ip">noch keine IP-Adresse</string>
+    <string name="console_color_of">Farbe von %1$s</string>
+    <string name="console_use_color">%1$s verwenden</string>
+    <string name="console_add">Konsole hinzufügen</string>
+    <string name="language_button">Sprache</string>
+    <string name="color_blue">Blau</string>
+    <string name="color_orange">Orange</string>
+    <string name="color_green">Grün</string>
+    <string name="color_pink">Rosa</string>
+    <string name="color_purple">Violett</string>
+    <string name="color_teal">Türkis</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">Download gestartet (siehe Downloads)</string>
+    <string name="web_load_failed">Seite konnte nicht geladen werden: %1$s</string>
+    <string name="web_http_server">Die Website ist gerade überlastet oder nicht erreichbar (Fehler %1$s). Versuche es gleich noch einmal.</string>
+    <string name="web_http_other">Die Website hat mit Fehler %1$s geantwortet.</string>
+    <string name="web_open_first">Öffne zuerst eine Seite</string>
+    <string name="web_bookmark_saved">Lesezeichen gespeichert</string>
+    <string name="web_bookmark_exists">Bereits in deinen Lesezeichen</string>
+    <string name="web_home_set">Startseite festgelegt: %1$s</string>
+    <string name="web_reload">Neu laden</string>
+    <string name="web_add">★ Hinzufügen</string>
+    <string name="web_bookmarks">Lesezeichen</string>
+    <string name="web_homepage_label">Startseiten-URL</string>
+    <string name="web_bookmarks_empty">Noch keine Lesezeichen. Öffne eine Seite und tippe auf %1$s.</string>
+    <string name="web_bookmarks_help">Tippe auf ein Lesezeichen, um es zu öffnen. „%1$s“ macht es zu deiner Startseite.</string>
+    <string name="adblock_title">Werbeblocker</string>
+    <string name="adblock_switch">Werbe-Domains blockieren</string>
+    <string name="adblock_info">Bisher blockiert: %1$d. Netzwerke in der integrierten Liste: %2$d. Lade die Seite nach jeder Änderung neu.</string>
+    <string name="adblock_own">Deine eigenen Domains, eine pro Zeile</string>
+    <string name="adblock_on">Werbeblocker: an · blockiert: %1$d · zum Ändern tippen</string>
+    <string name="adblock_off">Werbeblocker: aus · blockiert: %1$d · zum Ändern tippen</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">Was kann ich tun?</string>
+    <string name="help_what">Was passiert ist</string>
+    <string name="help_try">Was du versuchen kannst</string>
+    <string name="help_details">Details</string>
+    <string name="help_copy">Details kopieren</string>
+    <string name="help_copied">Kopiert</string>
+    <string name="help_unreachable_title">Konsole nicht erreichbar</string>
+    <string name="help_unreachable_what">Unter der Adresse der Konsole antwortet nichts.</string>
+    <string name="help_unreachable_try">• Prüfe die IP-Adresse auf der PS5 (Einstellungen &gt; Netzwerk &gt; Verbindungsstatus). Sie kann sich nach einem Neustart ändern.\n• Weck die Konsole vollständig auf. Im Ruhemodus ist das Netzwerk oft aus.\n• Nutze auf beiden Geräten dasselbe WLAN. Gastnetzwerke und VPNs blockieren die Verbindung.</string>
+    <string name="help_port_title">Dieser Dienst läuft nicht</string>
+    <string name="help_port_what">Die Konsole hat geantwortet, aber an diesem Port lauscht nichts.</string>
+    <string name="help_port_try">• Starte etaHEN auf der Konsole. Es stellt den Installer (12800), den Loader (9021) und FTP (1337) bereit.\n• Ein separates FTP-Payload nutzt meist 2121. Gib hier denselben Port ein.\n• Auf der Konsolenkarte zeigt das erloschene Licht, was fehlt.</string>
+    <string name="help_login_title">FTP-Anmeldung abgelehnt</string>
+    <string name="help_login_what">Der FTP-Server der Konsole hat Benutzernamen oder Passwort abgelehnt.</string>
+    <string name="help_login_try">• etaHEN akzeptiert den Benutzernamen anonymous mit jedem Passwort.\n• Falls du auf der Konsole eine Anmeldung festgelegt hast, gib sie unter Upload ein.\n• Das Passwort wird nicht gespeichert. Gib es nach einem Neustart der App erneut ein.</string>
+    <string name="help_dropped_title">Die Verbindung wurde unterbrochen</string>
+    <string name="help_dropped_what">Die Verbindung zur Konsole ist abgebrochen oder es fließen keine Daten mehr. Die App versucht es erneut und macht dort weiter, wo sie aufgehört hat.</string>
+    <string name="help_dropped_try">• Halte das Handy in der Nähe des Routers und die Konsole wach.\n• Pausiere andere große Downloads im Netzwerk.\n• Wenn es weiter scheitert, warte kurz und tippe auf Erneut versuchen.</string>
+    <string name="help_refused_title">Der Installer hat den Link nicht angenommen</string>
+    <string name="help_refused_what">Die Konsole ist erreichbar, aber ihr Installer hat diesen Link abgelehnt.</string>
+    <string name="help_refused_try">• Der Link muss direkt zur Paketdatei führen und ohne Anmeldung öffnen.\n• Die Konsole muss ihn erreichen können. Links von diesem Handy funktionieren nur im selben WLAN.\n• Prüfe, ob der Installer läuft und die Konsole freien Speicher hat.</string>
+    <string name="help_storage_title">Die Konsole hat aufgehört zu speichern</string>
+    <string name="help_storage_what">Die Konsole hat weniger behalten, als gesendet wurde. Meist ist das Laufwerk voll oder schreibgeschützt.</string>
+    <string name="help_storage_try">• Schaffe Speicherplatz auf der Konsole.\n• Wähle einen anderen Ordner, zum Beispiel auf einem USB-Laufwerk.\n• Tippe dann auf Erneut versuchen.</string>
+    <string name="help_denied_title">Dieser Ordner oder diese Datei wurde abgelehnt</string>
+    <string name="help_denied_what">Der FTP-Server kann sie hier nicht öffnen, beschreiben oder ändern.</string>
+    <string name="help_denied_try">• Prüfe, ob der Ordner existiert. Groß- und Kleinschreibung zählt.\n• Systemordner sind schreibgeschützt. Nutze /data oder ein USB-Laufwerk.\n• Eine Datei, die ein laufendes Spiel verwendet, kann gesperrt sein. Beende das Spiel.</string>
+    <string name="help_phone_title">Das Handy kann die Datei nicht verwenden</string>
+    <string name="help_phone_what">Die Datei ist weg oder verschoben, die App hat den Zugriff verloren oder auf dem Handy ist kein Platz mehr.</string>
+    <string name="help_phone_try">• Wähle die Datei erneut aus.\n• Schaffe Speicherplatz auf dem Handy.\n• Speichere eine Datei aus einer Cloud-App zuerst auf dem Handy.</string>
+    <string name="help_link_title">Der Download-Link hat nicht funktioniert</string>
+    <string name="help_link_what">Die Website hat die Datei nicht herausgegeben. Der Link ist vielleicht abgelaufen, verlangt eine Anmeldung oder die Seite ist überlastet.</string>
+    <string name="help_link_try">• Starte den Download erneut im Web-Tab. So bleibt deine Anmeldung erhalten.\n• Links von Filehostern laufen oft nach wenigen Minuten ab.\n• Meldet die Seite einen Fehler aus der 500er-Reihe, versuche es später erneut.</string>
+
+    <!-- update check -->
+    <string name="update_available">Version %1$s ist verfügbar</string>
+    <string name="update_download">Herunterladen</string>
+    <string name="update_later">Später</string>
+    <string name="update_title">Updates</string>
+    <string name="update_current">Du hast die neueste Version (%1$s).</string>
+    <string name="update_none">Auf der Seite Releases wurde noch keine Version gefunden.</string>
+    <string name="update_check_now">Jetzt prüfen</string>
+    <string name="update_auto">Beim Öffnen der App nach Updates suchen</string>
+    <string name="update_privacy">Die Prüfung fragt GitHub höchstens einmal am Tag nach der neuesten Version. Es werden keine Angaben über dich oder deine Konsolen gesendet; GitHub sieht deine IP-Adresse, wie jede Website.</string>
+
+    <!-- find my console -->
+    <string name="find_button">Meine PS5 finden</string>
+    <string name="find_scanning">Suche deine Konsole im Netzwerk %1$s…</string>
+    <string name="find_again">Erneut suchen</string>
+    <string name="find_none">Keine Konsole gefunden.</string>
+    <string name="find_none_try">• Schalte die Konsole vollständig ein (nicht im Ruhemodus) und starte etaHEN.\n• Nutze am Handy und an der Konsole dasselbe WLAN. Gastnetzwerke und VPNs halten Geräte voneinander getrennt.\n• Suche dann erneut.</string>
+    <string name="find_no_wifi">Dieses Handy ist mit keinem WLAN verbunden. Verbinde es mit demselben WLAN wie die Konsole und suche dann erneut.</string>
+    <string name="find_pick">Tippe auf Verwenden, um die Adresse von %1$s festzulegen.</string>
+    <string name="find_saved">Gespeicherte Adresse</string>
+    <string name="find_used_by">Gespeichert für %1$s</string>
+    <string name="find_updated">%1$s verwendet jetzt %2$s.</string>
+    <string name="find_privacy">Es wird nur dein WLAN durchsucht, und zwar an ein paar Konsolen-Ports. Nichts wird über das Internet gesendet.</string>
+    <string name="action_stop">Stopp</string>
+    <string name="action_use">Verwenden</string>
+
+    <!-- about and backup -->
+    <string name="about_title">Über Bento</string>
+    <string name="about_version">Version %1$s</string>
+    <string name="about_button">Info &amp; Backup</string>
+    <string name="about_report">Bericht kopieren</string>
+    <string name="about_report_help">Kopiert App-Version, Handy-Modell und die letzte Meldung, damit du sie in einen Fehlerbericht einfügen kannst. IP-Adressen und Links werden weggelassen.</string>
+    <string name="about_report_copied">Bericht kopiert</string>
+    <string name="about_releases">Seite Releases</string>
+    <string name="backup_title">Backup</string>
+    <string name="backup_text">Speichert deine Konsolen, Startseite, Lesezeichen, Werbeliste und Payloads in einer Datei. FTP-Passwörter werden nicht gespeichert.</string>
+    <string name="backup_save">Backup speichern</string>
+    <string name="backup_restore">Backup wiederherstellen</string>
+    <string name="backup_saved">Backup gespeichert.</string>
+    <string name="backup_contents">Konsolen: %1$d · Lesezeichen: %2$d · Payloads: %3$d</string>
+    <string name="backup_made">Erstellt am %1$s</string>
+    <string name="backup_skipped">Payloads weggelassen, weil die Datei zu groß würde: %1$d</string>
+    <string name="backup_bad_file">Diese Datei ist kein Bento-Backup.</string>
+    <string name="backup_too_new">Dieses Backup stammt von einer neueren Version von Bento. Aktualisiere die App und versuche es erneut.</string>
+    <string name="restore_title">Dieses Backup wiederherstellen?</string>
+    <string name="restore_text">Deine Konsolen, Startseite, Lesezeichen und Werbeliste werden durch die aus der Datei ersetzt. Payloads aus der Datei kommen in die Payload-Bibliothek. Deine FTP-Passwörter musst du erneut eingeben.</string>
+    <string name="restore_button">Wiederherstellen</string>
+    <string name="restore_done">Backup wiederhergestellt.</string>
+    <string name="restore_payloads_failed">Payloads, die nicht gespeichert werden konnten: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">Paket-Links (einer pro Zeile)</string>
+    <string name="install_paste">Einfügen</string>
+    <string name="action_clear">Leeren</string>
+    <string name="install_paste_none">Kein Web-Link in der Zwischenablage.</string>
+    <string name="install_links_skipped">Nur Adressen, die mit http:// oder https:// beginnen, werden gesendet. Weggelassen: %1$d</string>
+    <string name="install_recent">Zuletzt verwendete Links</string>
+    <string name="install_recent_clear">Liste leeren</string>
+    <string name="install_sending_n">Link %1$d von %2$d wird gesendet…</string>
+    <string name="install_batch_done">Angenommen: %1$d von %2$d Links</string>
+    <string name="install_batch_notsent">Nicht gesendet: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">Ketten</string>
+    <string name="chains_hint">Eine Kette sendet mehrere Payloads nacheinander, mit einer Pause nach jedem. Halte das App-Symbol gedrückt, um eine der ersten vier Ketten direkt vom Startbildschirm zu starten.</string>
+    <string name="chain_new">Neue Kette</string>
+    <string name="action_edit">Bearbeiten</string>
+    <string name="chain_summary_steps">Payloads: %1$d</string>
+    <string name="chain_summary_pauses">Pausen: %1$s</string>
+    <string name="chain_edit_title">Kette bearbeiten</string>
+    <string name="chain_steps_title">Payloads in Reihenfolge (höchstens %1$d)</string>
+    <string name="chain_add_step">Payload hinzufügen</string>
+    <string name="chain_pick_title">Welches Payload hinzufügen?</string>
+    <string name="chain_wait_label">Danach warten (Sekunden)</string>
+    <string name="chain_missing">Nicht in der Bibliothek</string>
+    <string name="chain_move_up">Nach oben</string>
+    <string name="chain_move_down">Nach unten</string>
+    <string name="chain_pin">Zum Startbildschirm hinzufügen</string>
+    <string name="chain_pin_unsupported">Dieser Launcher kann keine Verknüpfungen hinzufügen. Halte das App-Symbol gedrückt, um dort deine Ketten zu finden.</string>
+    <string name="chain_sending">%1$s wird gesendet (%2$d von %3$d)…</string>
+    <string name="chain_waiting">Nächstes Payload in %1$s</string>
+    <string name="chain_retrying">Warte, bis die Konsole bereit ist…</string>
+    <string name="chain_result_done">Fertig. Gesendete Payloads: %1$d von %2$d</string>
+    <string name="chain_result_stopped">Gestoppt. Gesendete Payloads: %1$d von %2$d</string>
+    <string name="chain_result_failed">Bei Schritt %1$d gestoppt (%2$s). Gesendete Payloads: %3$d von %4$d</string>
+    <string name="chain_err_target">Lege zuerst die IP-Adresse der Konsole und den Loader-Port fest.</string>
+    <string name="chain_err_missing">Nicht mehr in der Bibliothek: %1$s. Füge es erneut hinzu oder bearbeite die Kette.</string>
+    <string name="chain_err_unknown">Diese Kette gibt es nicht mehr.</string>
+    <string name="notif_channel_chain">Payload-Ketten</string>
+    <string name="backup_chains">Ketten: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">Vom letzten Mal nicht fertig: %1$d</string>
+    <string name="unfinished_hint">Die App wurde beendet, bevor diese Übertragungen fertig waren. „Fortsetzen“ startet jede noch einmal von vorn.</string>
+    <string name="unfinished_continue">Fortsetzen</string>
+    <string name="unfinished_discard">Verwerfen</string>
+    <string name="unfinished_missing">Dateien nicht mehr gefunden, bitte neu auswählen: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">Pause</string>
+    <string name="transfer_resume">Fortsetzen</string>
+    <string name="transfer_paused">Pausiert</string>
+    <string name="speed_limit_title">Geschwindigkeitslimit</string>
+    <string name="speed_limit_off">Kein Limit</string>
+    <string name="speed_limit_value">Limit: %1$s</string>
+    <string name="speed_limit_hint">Bremst Übertragungen, damit das WLAN für andere Dinge frei bleibt. Eine Änderung gilt sofort.</string>
+    <string name="summary_title">Übertragungen abgeschlossen: %1$d von %2$d</string>
+    <string name="summary_detail">%1$s in %2$s</string>
+    <string name="summary_failed">Fehlgeschlagen: %1$d</string>
+    <string name="summary_stopped">Gestoppt: %1$d</string>
+    <string name="notif_channel_results">Übertragungsergebnisse</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">Ausgewählt: %1$d</string>
+    <string name="files_select_all">Alle auswählen</string>
+    <string name="files_select_none">Auswahl aufheben</string>
+    <string name="files_delete_many_title">Ausgewählte Elemente löschen (%1$d)?</string>
+    <string name="files_delete_many_text">Dadurch werden die ausgewählten Dateien und Ordner von der Konsole gelöscht, Ordner samt allem darin. Das lässt sich nicht rückgängig machen.</string>
+    <string name="files_deleted_many">Gelöschte Elemente: %1$d</string>
+    <string name="files_delete_partial">Gelöschte Elemente: %1$d, nicht gelöscht: %2$d. Das erste Problem: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">Ordner werden durchsucht…</string>
+    <string name="files_dl_confirm_title">Aufs Handy herunterladen?</string>
+    <string name="files_dl_confirm_text">Dateien: %1$d, zusammen %2$s. Sie werden in Downloads/PS5 gespeichert, in denselben Ordnern wie auf der Konsole.</string>
+    <string name="files_dl_links">Verknüpfungen in Ordnern werden nicht heruntergeladen: %1$d.</string>
+    <string name="files_dl_truncated">Übernommene Dateien: %1$d. Die Ordner enthalten mehr, oder sie gehen tiefer, als die App ihnen folgt.</string>
+    <string name="files_dl_none">In der Auswahl ist keine Datei zum Herunterladen.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">Sortieren</string>
+    <string name="files_sort_title">Sortieren nach</string>
+    <string name="files_sort_name">Name</string>
+    <string name="files_sort_size">Größe, größte zuerst</string>
+    <string name="files_sort_newest">Neueste zuerst</string>
+    <string name="files_search">Suchen</string>
+    <string name="files_search_hint">In diesem Ordner suchen</string>
+    <string name="files_no_match">Nichts in diesem Ordner passt zur Suche.</string>
+    <string name="files_pin">Ordner anheften</string>
+    <string name="files_unpin">Ordner lösen</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">Tabs: %1$d</string>
+    <string name="web_tabs_title">Tabs</string>
+    <string name="web_tab_new">Neuer Tab</string>
+    <string name="web_tabs_full">Zu viele Tabs. Das Limit ist %1$d. Schließe zuerst einen.</string>
+    <string name="web_find">Suchen</string>
+    <string name="web_find_hint">Auf dieser Seite suchen</string>
+    <string name="web_find_none">Keine Treffer</string>
+    <string name="web_desktop">Desktop-Website</string>
+    <string name="web_link_new_tab">In neuem Tab öffnen</string>
+    <string name="web_link_copy">Link kopieren</string>
+    <string name="web_link_copied">Link kopiert</string>
+    <string name="web_link_use">Senden oder herunterladen…</string>
+</resources>

@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Japanese. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">キャンセル</string>
+    <string name="action_close">閉じる</string>
+    <string name="action_done">完了</string>
+    <string name="action_delete">削除</string>
+    <string name="action_rename">名前を変更</string>
+    <string name="action_save">保存</string>
+    <string name="action_remove">削除</string>
+    <string name="action_send">送信</string>
+    <string name="action_open">開く</string>
+    <string name="action_block">ブロック</string>
+    <string name="action_home">ホーム</string>
+    <string name="action_dismiss">非表示</string>
+    <string name="action_try_again">再試行</string>
+    <string name="action_skip">スキップ</string>
+    <string name="action_cancel_all">すべてキャンセル</string>
+    <string name="action_create">作成</string>
+    <string name="action_set">設定</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">作者：%1$s</string>
+    <string name="nav_install">インストール</string>
+    <string name="nav_payload">ペイロード</string>
+    <string name="nav_upload">アップロード</string>
+    <string name="nav_files">ファイル</string>
+    <string name="nav_web">Web</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">インストーラー</string>
+    <string name="service_loader">ローダー</string>
+    <string name="list_separator">、</string>
+    <string name="status_set_ip">PS5のIPアドレスを設定してください</string>
+    <string name="status_checking">確認中…</string>
+    <string name="status_ready">準備完了</string>
+    <string name="status_partly">一部のみ準備完了</string>
+    <string name="status_partly_off">一部のみ準備完了 · 応答なし: %1$s</string>
+    <string name="status_offline">コンソールに接続できません</string>
+    <string name="status_hint_unset">PS5の「設定 &gt; ネットワーク &gt; 接続状況 &gt; 接続状況を見る」で確認できます。ここをタップして入力してください。</string>
+    <string name="status_hint_offline">このアドレスから応答がありません。IPアドレス、PS5が同じWi-Fiに接続された電源オンの状態か、etaHENが動作しているかを確認してください。</string>
+    <string name="status_hint_one">応答なし: %1$s。コンソールで起動するか、ポートを確認してください。</string>
+    <string name="status_hint_many">応答なし: %1$s。コンソールで起動するか、ポートを確認してください。</string>
+    <string name="console_switch">コンソールを切り替え</string>
+    <string name="console_change_ip">IPアドレスを変更</string>
+    <string name="console_ip_title">コンソールのIPアドレス</string>
+    <string name="console_ip_label">IPアドレス</string>
+    <string name="console_ip_help">PS5の「設定 &gt; ネットワーク &gt; 接続状況 &gt; 接続状況を見る」で確認できます。</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">転送</string>
+    <string name="transfer_sending">送信中</string>
+    <string name="transfer_sending_to">%1$sへ送信中</string>
+    <string name="transfer_receiving">受信中</string>
+    <string name="transfer_receiving_from">%1$sから受信中</string>
+    <string name="transfer_detail_total">%1$s · %2$s / %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">開始中…</string>
+    <string name="transfer_stopped">停止しました</string>
+    <string name="transfer_start_failed">転送を開始できませんでした: %1$s</string>
+    <string name="transfer_retry_in">接続が切れました。%1$d秒後に再試行します…</string>
+    <string name="transfer_reconnecting">再接続中…</string>
+    <string name="transfer_eta">残り%1$s</string>
+    <string name="transfer_queued">%1$d件待機中</string>
+    <string name="queue_title">待機中の転送</string>
+    <string name="queue_clear">すべて削除</string>
+    <string name="queue_empty">待機中の項目はありません。</string>
+    <string name="notif_channel">PS5への転送</string>
+    <string name="notif_sent">送信済み: %1$s</string>
+    <string name="notif_received">受信済み: %1$s</string>
+    <string name="percent_value">%1$d%%</string>
+    <string name="desc_done">完了</string>
+    <string name="desc_problem">問題あり</string>
+    <string name="status_hide">このメッセージを非表示</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">キューに追加しました。%1$d件待機中。</string>
+    <string name="msg_set_ip_first">先にコンソールのIPアドレスを設定してください。上部のカードをタップします。</string>
+    <string name="msg_sending_link">PS5へリンクを送信中…</string>
+    <string name="msg_check_ip_ftp">コンソールのIPアドレスとFTPポートを確認してください。</string>
+    <string name="msg_adding_to_shelf_link">ペイロードライブラリに追加中…</string>
+    <string name="status_idle">待機中</string>
+    <string name="status_sending">送信中…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">このサイトを離れますか？</string>
+    <string name="offsite_text">このページは%1$sを開こうとしています。リンクをタップしたときに広告が原因でこうなることが多いので、予想していた場合のみ続行してください。</string>
+    <string name="choose_install">PS5のインストーラーにリンクを送信</string>
+    <string name="choose_ftp">PS5にアップロード（FTP）</string>
+    <string name="choose_shelf">ペイロードライブラリに保存</string>
+    <string name="choose_phone">スマートフォンに保存</string>
+    <string name="choose_help">インストーラーには、コンソールがログインなしで開ける直接のパッケージリンクが必要です。FTPはどんなファイルにも使え、ログインセッションも保持されます。スマートフォンがバックグラウンドでデータを中継し、進行状況は下部バーの上と通知に表示されます。ペイロードライブラリは、小さなペイロード（%1$sまで）をアプリ内に保存し、ペイロードタブで使えます。</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">インストーラーのポート（etaHEN: 12800）</string>
+    <string name="install_accepted">インストーラーが受け付けました: %1$s</string>
+    <string name="install_not_accepted">受け付けられませんでした（upload %1$s: %2$s; api %3$s: %4$s）</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">このスマートフォンからインストール</string>
+    <string name="serve_intro">コンソールがこのスマートフォンからWi-Fi経由でパッケージを直接ダウンロードするため、事前にコピーする必要はありません。スマートフォンとコンソールは同じネットワークに接続してください。</string>
+    <string name="serve_choose">パッケージを選択</string>
+    <string name="serve_none">パッケージが選択されていません</string>
+    <string name="serve_start">共有を開始</string>
+    <string name="serve_stop">共有を停止</string>
+    <string name="serve_copy">リンクをコピー</string>
+    <string name="serve_copied">リンクをコピーしました</string>
+    <string name="serve_file_waiting">コンソールのダウンロード開始を待っています…</string>
+    <string name="serve_file_pulling">コンソールがダウンロード中: %1$s</string>
+    <string name="serve_file_done">コンソールがすべてダウンロードしました</string>
+    <string name="serve_unreadable">このファイルを読み取れません</string>
+    <string name="serve_hint">コンソールがいつまでもダウンロードを始めない場合は、Wi-Fiが機器同士の通信を遮断している可能性があります（ゲストネットワークではよくあります）。メインのネットワークを使い、このアプリをバックグラウンドで動かしたままにしてください。</string>
+    <string name="serve_no_wifi">このスマートフォンのWi-Fiアドレスが見つかりません。コンソールと同じWi-Fiに接続してください。</string>
+    <string name="serve_failed">共有を開始できませんでした: %1$s</string>
+    <string name="serve_idle_stop">長時間ダウンロードがなかったため、共有を停止しました。</string>
+    <string name="serve_notif_title">%1$sと共有中</string>
+    <string name="serve_notif_text">ダウンロード済みファイル: %1$d / %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">ファイルを選択</string>
+    <string name="upload_none">ファイルが選択されていません</string>
+    <string name="upload_files_chosen">選択したファイル: %1$d件</string>
+    <string name="upload_start">バックグラウンドでアップロード</string>
+    <string name="upload_help">進行状況は下部バーの上と通知に表示されます。アプリを閉じても続行されます。</string>
+    <string name="ftp_port">FTPポート</string>
+    <string name="ftp_user">ユーザー名</string>
+    <string name="ftp_password">パスワード</string>
+    <string name="ftp_folder">リモートフォルダー</string>
+    <string name="ftp_use_folder">%1$sを使用</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">読み込み中…</string>
+    <string name="files_empty">このフォルダーは空です。</string>
+    <string name="files_not_loaded">未読み込み</string>
+    <string name="files_up">⬆ 上へ</string>
+    <string name="files_refresh">更新</string>
+    <string name="files_new_folder">新規フォルダー</string>
+    <string name="files_upload_here">ここへ送信</string>
+    <string name="files_ftp_settings">FTP設定</string>
+    <string name="files_need_ip">コンソールのIPアドレス（上部のカードをタップ）と有効なFTPポートを設定すると、ファイルを閲覧できます。</string>
+    <string name="files_kind_folder">フォルダー</string>
+    <string name="files_kind_link">リンク、%1$s</string>
+    <string name="files_download">スマートフォンにダウンロード</string>
+    <string name="files_new_name">新しい名前</string>
+    <string name="files_name_used">その名前はここですでに使われています。</string>
+    <string name="files_renaming">名前を変更中…</string>
+    <string name="files_renamed">%1$sを%2$sに変更しました</string>
+    <string name="files_delete_title">%1$sを削除しますか？</string>
+    <string name="files_delete_folder">フォルダーとその中身がすべてコンソールから削除されます。元に戻せません。</string>
+    <string name="files_delete_file">ファイルがコンソールから削除されます。元に戻せません。</string>
+    <string name="files_deleting">削除中…</string>
+    <string name="files_deleted">削除しました: %1$s</string>
+    <string name="files_deleted_inside">削除しました: %1$s（中の項目数: %2$d）</string>
+    <string name="files_creating">フォルダーを作成中…</string>
+    <string name="files_created">フォルダー%1$sを作成しました</string>
+    <string name="files_folder_name">フォルダー名</string>
+    <string name="name_empty">名前は空にできません。</string>
+    <string name="name_not_allowed">その名前は使用できません。</string>
+    <string name="name_slash">名前にスラッシュは使えません。</string>
+    <string name="name_control">名前に使用できない文字が含まれています。</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">失敗: %1$s</string>
+    <string name="ftp_port_hint">FTPサーバーに接続できません。コンソールのIPアドレスとFTPポートを確認してください（etaHENの内蔵FTPは1337、FTPペイロードは2121を使用します）。</string>
+    <string name="err_login">FTPログインに失敗しました</string>
+    <string name="err_cant_open">%1$sを開けません（%2$s）</string>
+    <string name="err_rename">名前の変更に失敗しました（%1$s）</string>
+    <string name="err_mkdir">フォルダーを作成できませんでした（%1$s）</string>
+    <string name="err_too_deep">フォルダーの階層が深すぎます</string>
+    <string name="err_delete_path">%1$sを削除できませんでした（%2$s）</string>
+    <string name="err_upload">FTPアップロードに失敗しました: %1$s</string>
+    <string name="err_download">FTPダウンロードに失敗しました: %1$s</string>
+    <string name="err_open_file">ファイルを開けませんでした</string>
+    <string name="err_cancelled_upload">キャンセルしました。%1$sに不完全なファイルが残っている可能性があります</string>
+    <string name="err_cancelled_download">キャンセルしました。不完全なダウンロードは破棄されました。</string>
+    <string name="err_gave_up">接続の失敗が続いたため中止しました。最後のエラー: %1$s</string>
+    <string name="err_short_upload">送信した%2$sのうち、コンソールに保存されたのは%1$sだけです。</string>
+    <string name="err_short_download">%2$sのうち%1$sしか届きませんでした。</string>
+    <string name="err_empty_file">ファイルが空です</string>
+    <string name="err_save">%1$sを保存できませんでした</string>
+    <string name="sent_to_ps5">PS5に送信しました: %1$s</string>
+    <string name="saved_to_downloads">ダウンロード/PS5に保存しました: %1$s</string>
+    <string name="dl_http_failed">ダウンロードに失敗しました: HTTP %1$s</string>
+    <string name="dl_empty">ダウンロードに失敗しました: 応答が空です</string>
+    <string name="dl_cut_short">ファイル全体が届く前に接続が閉じられました。</string>
+    <string name="dl_create_failed">ダウンロードフォルダーにファイルを作成できませんでした</string>
+    <string name="dl_write_failed">新しいファイルを書き込み用に開けませんでした</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">送信しました: %1$s</string>
+    <string name="shelf_added">ライブラリに追加しました: %1$s（%2$s）</string>
+    <string name="shelf_updated">ライブラリで更新しました: %1$s（%2$s）</string>
+    <string name="shelf_too_large">このファイルは%1$sを超えているため、ライブラリに追加されませんでした。</string>
+    <string name="shelf_too_large_url">このファイルは%1$sです。ライブラリに入れられるペイロードは%2$sまでです。</string>
+    <string name="payload_adding">ライブラリに追加中…</string>
+    <string name="payload_remove_title">%1$sを削除しますか？</string>
+    <string name="payload_remove_text">ライブラリから削除されます。スマートフォン上の元のファイルはそのままです。</string>
+    <string name="payload_loader_port">ローダーのポート</string>
+    <string name="payload_shelf_title">ペイロードライブラリ</string>
+    <string name="payload_shelf_empty">まだ何も保存されていません。よく使うペイロード（FTPサーバー、etaHENなど）を追加すると、ワンタップで送信できます。Webタブでダウンロードするときに直接保存することもできます。</string>
+    <string name="payload_sending">%1$sを送信中…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">ライブラリにペイロードを追加</string>
+    <string name="payload_once_title">ファイルを1回だけ送信</string>
+    <string name="payload_choose">ペイロードを選択（.elf / .bin）</string>
+    <string name="payload_send">ペイロードを送信</string>
+
+    <!-- consoles -->
+    <string name="profile_default">マイPS5</string>
+    <string name="profile_new">コンソール%1$d</string>
+    <string name="profile_fallback">コンソール</string>
+    <string name="consoles_title">コンソール</string>
+    <string name="console_rename_title">コンソール名の変更</string>
+    <string name="console_name_label">名前</string>
+    <string name="console_delete_title">%1$sを削除しますか？</string>
+    <string name="console_delete_text">保存されているIPアドレスとポートが削除されます。ほかのコンソールには影響しません。</string>
+    <string name="console_no_ip">IPアドレス未設定</string>
+    <string name="console_color_of">%1$sの色</string>
+    <string name="console_use_color">%1$sを使用</string>
+    <string name="console_add">コンソールを追加</string>
+    <string name="language_button">言語</string>
+    <string name="color_blue">青</string>
+    <string name="color_orange">オレンジ</string>
+    <string name="color_green">緑</string>
+    <string name="color_pink">ピンク</string>
+    <string name="color_purple">紫</string>
+    <string name="color_teal">ティール</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">ダウンロードを開始しました（ダウンロードを確認）</string>
+    <string name="web_load_failed">ページを読み込めませんでした: %1$s</string>
+    <string name="web_http_server">サイトが混み合っているか、現在利用できません（エラー%1$s）。しばらくしてからもう一度お試しください。</string>
+    <string name="web_http_other">サイトがエラー%1$sを返しました。</string>
+    <string name="web_open_first">先にページを開いてください</string>
+    <string name="web_bookmark_saved">ブックマークを保存しました</string>
+    <string name="web_bookmark_exists">すでにブックマークに入っています</string>
+    <string name="web_home_set">ホームページを設定しました: %1$s</string>
+    <string name="web_reload">再読み込み</string>
+    <string name="web_add">★ 追加</string>
+    <string name="web_bookmarks">ブックマーク</string>
+    <string name="web_homepage_label">ホームページのURL</string>
+    <string name="web_bookmarks_empty">ブックマークはまだありません。ページを開いて%1$sをタップしてください。</string>
+    <string name="web_bookmarks_help">ブックマークをタップすると開きます。「%1$s」でホームページに設定されます。</string>
+    <string name="adblock_title">広告ブロック</string>
+    <string name="adblock_switch">広告ドメインをブロック</string>
+    <string name="adblock_info">これまでのブロック数: %1$d。内蔵リストのネットワーク数: %2$d。変更したらページを再読み込みしてください。</string>
+    <string name="adblock_own">独自のドメイン（1行に1つ）</string>
+    <string name="adblock_on">広告ブロック: オン · ブロック数: %1$d · タップして変更</string>
+    <string name="adblock_off">広告ブロック: オフ · ブロック数: %1$d · タップして変更</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">どうすればよいですか？</string>
+    <string name="help_what">何が起きたか</string>
+    <string name="help_try">試してみること</string>
+    <string name="help_details">詳細</string>
+    <string name="help_copy">詳細をコピー</string>
+    <string name="help_copied">コピーしました</string>
+    <string name="help_unreachable_title">コンソールに接続できません</string>
+    <string name="help_unreachable_what">コンソールのアドレスから応答がありません。</string>
+    <string name="help_unreachable_try">• PS5でIPアドレスを確認してください（設定 &gt; ネットワーク &gt; 接続状況）。再起動後に変わることがあります。\n• コンソールを完全に起動してください。レストモードではネットワークがオフになることがよくあります。\n• 両方で同じWi-Fiを使ってください。ゲストネットワークやVPNは接続を妨げます。</string>
+    <string name="help_port_title">そのサービスが動作していません</string>
+    <string name="help_port_what">コンソールは応答しましたが、そのポートで待ち受けているものがありません。</string>
+    <string name="help_port_try">• コンソールでetaHENを起動してください。インストーラー（12800）、ローダー（9021）、FTP（1337）が提供されます。\n• 別のFTPペイロードは通常2121を使います。ここに同じポートを入力してください。\n• コンソールのカードでは、消灯しているライトが足りないものを示します。</string>
+    <string name="help_login_title">FTPログインが拒否されました</string>
+    <string name="help_login_what">コンソールのFTPサーバーがユーザー名またはパスワードを拒否しました。</string>
+    <string name="help_login_try">• etaHENはユーザー名anonymousを任意のパスワードで受け付けます。\n• コンソールでログインを設定した場合は、アップロードで入力してください。\n• パスワードは保存されません。アプリを再起動した後にもう一度入力してください。</string>
+    <string name="help_dropped_title">接続が切れました</string>
+    <string name="help_dropped_what">コンソールとの接続が切れたか、データが流れなくなりました。アプリは再試行し、止まったところから再開します。</string>
+    <string name="help_dropped_try">• スマートフォンをルーターの近くに置き、コンソールを起動したままにしてください。\n• ネットワーク上の他の大きなダウンロードを一時停止してください。\n• 失敗が続く場合は、少し待ってから「再試行」をタップしてください。</string>
+    <string name="help_refused_title">インストーラーがリンクを受け付けませんでした</string>
+    <string name="help_refused_what">コンソールには接続できますが、そのインストーラーがこのリンクを拒否しました。</string>
+    <string name="help_refused_try">• リンクはパッケージファイルに直接つながり、ログインなしで開ける必要があります。\n• コンソールからアクセスできる必要があります。このスマートフォンのリンクは同じWi-Fi上でのみ機能します。\n• インストーラーが動作していて、コンソールに空き容量があることを確認してください。</string>
+    <string name="help_storage_title">コンソールが保存を停止しました</string>
+    <string name="help_storage_what">コンソールは送信された量より少ないデータしか保存しませんでした。ドライブがいっぱいか、読み取り専用であることがほとんどです。</string>
+    <string name="help_storage_try">• コンソールの空き容量を増やしてください。\n• USBドライブなど、別のフォルダーを選んでください。\n• その後「再試行」をタップしてください。</string>
+    <string name="help_denied_title">そのフォルダーまたはファイルは拒否されました</string>
+    <string name="help_denied_what">FTPサーバーはここでそれを開く、書き込む、または変更することができません。</string>
+    <string name="help_denied_try">• フォルダーが存在することを確認してください。名前は大文字と小文字が区別されます。\n• システムフォルダーは読み取り専用です。/dataまたはUSBドライブを使ってください。\n• 実行中のゲームが使っているファイルはロックされていることがあります。ゲームを終了してください。</string>
+    <string name="help_phone_title">スマートフォンがファイルを使えません</string>
+    <string name="help_phone_what">ファイルが削除または移動された、アプリがアクセス権を失った、またはスマートフォンの空き容量がありません。</string>
+    <string name="help_phone_try">• ファイルをもう一度選んでください。\n• スマートフォンのストレージ容量を空けてください。\n• クラウドアプリ内のファイルは、先にスマートフォンに保存してください。</string>
+    <string name="help_link_title">ダウンロードリンクが失敗しました</string>
+    <string name="help_link_what">ウェブサイトがファイルを渡しませんでした。リンクの期限切れ、ログインが必要、またはサイトが混雑している可能性があります。</string>
+    <string name="help_link_try">• Webタブからもう一度ダウンロードを開始してください。ログイン状態が保たれます。\n• ファイル共有サイトのリンクは、数分で期限切れになることがよくあります。\n• サイトが500番台のエラーを返した場合は、後でもう一度お試しください。</string>
+
+    <!-- update check -->
+    <string name="update_available">バージョン%1$sが利用可能です</string>
+    <string name="update_download">ダウンロード</string>
+    <string name="update_later">あとで</string>
+    <string name="update_title">アップデート</string>
+    <string name="update_current">最新バージョン（%1$s）をお使いです。</string>
+    <string name="update_none">Releasesページにリリースがまだ見つかりません。</string>
+    <string name="update_check_now">今すぐ確認</string>
+    <string name="update_auto">アプリを開いたときにアップデートを確認する</string>
+    <string name="update_privacy">確認ではGitHubに最新リリースを問い合わせます（1日に最大1回）。あなたやコンソールに関する情報は送信されません。ほかのウェブサイトと同様に、GitHubにはIPアドレスが見えます。</string>
+
+    <!-- find my console -->
+    <string name="find_button">PS5を探す</string>
+    <string name="find_scanning">ネットワーク %1$s でコンソールを探しています…</string>
+    <string name="find_again">もう一度スキャン</string>
+    <string name="find_none">コンソールが見つかりませんでした。</string>
+    <string name="find_none_try">• コンソールを完全に起動し（レストモードではなく）、etaHENを開始してください。\n• スマートフォンとコンソールで同じWi-Fiを使ってください。ゲストネットワークやVPNは機器どうしを分離します。\n• そのうえで、もう一度スキャンしてください。</string>
+    <string name="find_no_wifi">このスマートフォンはWi-Fiネットワークに接続されていません。コンソールと同じWi-Fiに接続してから、もう一度スキャンしてください。</string>
+    <string name="find_pick">「使用」をタップすると、%1$s のアドレスを設定します。</string>
+    <string name="find_saved">保存済みのアドレス</string>
+    <string name="find_used_by">%1$s 用に保存済み</string>
+    <string name="find_updated">%1$s は %2$s を使用するようになりました。</string>
+    <string name="find_privacy">スキャンするのはお使いのWi-Fiネットワークだけで、コンソールのいくつかのポートに限られます。インターネットには何も送信されません。</string>
+    <string name="action_stop">停止</string>
+    <string name="action_use">使用</string>
+
+    <!-- about and backup -->
+    <string name="about_title">Bentoについて</string>
+    <string name="about_version">バージョン%1$s</string>
+    <string name="about_button">情報とバックアップ</string>
+    <string name="about_report">レポートをコピー</string>
+    <string name="about_report_help">アプリのバージョン、スマートフォンのモデル、最後のメッセージをコピーします。バグ報告に貼り付けられます。IPアドレスとリンクは含まれません。</string>
+    <string name="about_report_copied">レポートをコピーしました</string>
+    <string name="about_releases">Releasesページ</string>
+    <string name="backup_title">バックアップ</string>
+    <string name="backup_text">コンソール、ホームページ、ブックマーク、広告リスト、ペイロードを1つのファイルに保存します。FTPのパスワードは保存されません。</string>
+    <string name="backup_save">バックアップを保存</string>
+    <string name="backup_restore">バックアップを復元</string>
+    <string name="backup_saved">バックアップを保存しました。</string>
+    <string name="backup_contents">コンソール: %1$d · ブックマーク: %2$d · ペイロード: %3$d</string>
+    <string name="backup_made">作成日: %1$s</string>
+    <string name="backup_skipped">ファイルが大きくなりすぎるため除外されたペイロード: %1$d</string>
+    <string name="backup_bad_file">このファイルはBentoのバックアップではありません。</string>
+    <string name="backup_too_new">このバックアップは、より新しいバージョンのBentoで作成されました。アプリをアップデートしてから、もう一度お試しください。</string>
+    <string name="restore_title">このバックアップを復元しますか？</string>
+    <string name="restore_text">コンソール、ホームページ、ブックマーク、広告リストは、ファイル内のものに置き換えられます。ファイル内のペイロードはペイロードライブラリに追加されます。FTPのパスワードはもう一度入力する必要があります。</string>
+    <string name="restore_button">復元</string>
+    <string name="restore_done">バックアップを復元しました。</string>
+    <string name="restore_payloads_failed">保存できなかったペイロード: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">パッケージのリンク（1行に1つ）</string>
+    <string name="install_paste">貼り付け</string>
+    <string name="action_clear">クリア</string>
+    <string name="install_paste_none">クリップボードにWebリンクがありません。</string>
+    <string name="install_links_skipped">http:// または https:// で始まるアドレスのみ送信されます。除外: %1$d</string>
+    <string name="install_recent">最近のリンク</string>
+    <string name="install_recent_clear">リストをクリア</string>
+    <string name="install_sending_n">リンク%1$d/%2$dを送信中…</string>
+    <string name="install_batch_done">受け付け済み: %2$d件中%1$d件のリンク</string>
+    <string name="install_batch_notsent">未送信: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">チェーン</string>
+    <string name="chains_hint">チェーンは、複数のペイロードを順番に送信し、それぞれの後に待ち時間を入れます。アプリのアイコンを長押しすると、最初の4つのチェーンのいずれかをホーム画面から開始できます。</string>
+    <string name="chain_new">新しいチェーン</string>
+    <string name="action_edit">編集</string>
+    <string name="chain_summary_steps">ペイロード: %1$d</string>
+    <string name="chain_summary_pauses">待ち時間: %1$s</string>
+    <string name="chain_edit_title">チェーンを編集</string>
+    <string name="chain_steps_title">ペイロード（順番どおり、最大 %1$d 個）</string>
+    <string name="chain_add_step">ペイロードを追加</string>
+    <string name="chain_pick_title">どのペイロードを追加しますか？</string>
+    <string name="chain_wait_label">その後の待ち時間（秒）</string>
+    <string name="chain_missing">ライブラリにありません</string>
+    <string name="chain_move_up">上へ移動</string>
+    <string name="chain_move_down">下へ移動</string>
+    <string name="chain_pin">ホーム画面に追加</string>
+    <string name="chain_pin_unsupported">このランチャーはショートカットを追加できません。アプリのアイコンを長押しすると、そこでチェーンを見つけられます。</string>
+    <string name="chain_sending">%1$s を送信中（%2$d / %3$d）…</string>
+    <string name="chain_waiting">次のペイロードまで %1$s</string>
+    <string name="chain_retrying">コンソールの準備ができるのを待っています…</string>
+    <string name="chain_result_done">完了しました。送信したペイロード: %2$d 個中 %1$d 個</string>
+    <string name="chain_result_stopped">停止しました。送信したペイロード: %2$d 個中 %1$d 個</string>
+    <string name="chain_result_failed">ステップ %1$d（%2$s）で停止しました。送信したペイロード: %4$d 個中 %3$d 個</string>
+    <string name="chain_err_target">先にコンソールのIPアドレスとローダーのポートを設定してください。</string>
+    <string name="chain_err_missing">ライブラリにありません: %1$s。もう一度追加するか、チェーンを編集してください。</string>
+    <string name="chain_err_unknown">そのチェーンはもう存在しません。</string>
+    <string name="notif_channel_chain">ペイロードのチェーン</string>
+    <string name="backup_chains">チェーン: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">前回終わらなかった転送: %1$d件</string>
+    <string name="unfinished_hint">これらが終わる前にアプリが閉じました。「続ける」を押すと、それぞれを最初からやり直します。</string>
+    <string name="unfinished_continue">続ける</string>
+    <string name="unfinished_discard">破棄</string>
+    <string name="unfinished_missing">ファイルが見つかりません。選び直してください: %1$d件</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">一時停止</string>
+    <string name="transfer_resume">再開</string>
+    <string name="transfer_paused">一時停止中</string>
+    <string name="speed_limit_title">速度制限</string>
+    <string name="speed_limit_off">制限なし</string>
+    <string name="speed_limit_value">制限: %1$s</string>
+    <string name="speed_limit_hint">転送を遅くして、Wi-Fiを他の用途に空けておきます。変更はすぐに反映されます。</string>
+    <string name="summary_title">完了した転送: %2$d 件中 %1$d 件</string>
+    <string name="summary_detail">%1$s（所要時間 %2$s）</string>
+    <string name="summary_failed">失敗: %1$d 件</string>
+    <string name="summary_stopped">停止: %1$d 件</string>
+    <string name="notif_channel_results">転送の結果</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">選択中: %1$d件</string>
+    <string name="files_select_all">すべて選択</string>
+    <string name="files_select_none">選択を解除</string>
+    <string name="files_delete_many_title">選択した項目（%1$d件）を削除しますか？</string>
+    <string name="files_delete_many_text">選択したファイルとフォルダーがコンソールから削除されます。フォルダーは中身ごと削除されます。元に戻せません。</string>
+    <string name="files_deleted_many">削除した項目: %1$d件</string>
+    <string name="files_delete_partial">削除した項目: %1$d件、削除できなかった項目: %2$d件。最初の問題: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">フォルダーの中を調べています…</string>
+    <string name="files_dl_confirm_title">スマートフォンにダウンロードしますか？</string>
+    <string name="files_dl_confirm_text">ファイル%1$d件、合計%2$s。コンソールと同じフォルダー構成で Downloads/PS5 に保存されます。</string>
+    <string name="files_dl_links">フォルダー内のリンクはダウンロードされません: %1$d件。</string>
+    <string name="files_dl_truncated">取得したファイル: %1$d件。フォルダーにはそれ以上の数が入っているか、アプリがたどる深さより深くなっています。</string>
+    <string name="files_dl_none">選択した項目にダウンロードできるファイルがありません。</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">並べ替え</string>
+    <string name="files_sort_title">並べ替えの基準</string>
+    <string name="files_sort_name">名前</string>
+    <string name="files_sort_size">サイズの大きい順</string>
+    <string name="files_sort_newest">新しい順</string>
+    <string name="files_search">検索</string>
+    <string name="files_search_hint">このフォルダー内を検索</string>
+    <string name="files_no_match">このフォルダーに検索に一致するものはありません。</string>
+    <string name="files_pin">このフォルダーを固定</string>
+    <string name="files_unpin">このフォルダーの固定を解除</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">タブ: %1$d</string>
+    <string name="web_tabs_title">タブ</string>
+    <string name="web_tab_new">新しいタブ</string>
+    <string name="web_tabs_full">タブが多すぎます。上限は%1$dです。先に1つ閉じてください。</string>
+    <string name="web_find">検索</string>
+    <string name="web_find_hint">このページ内を検索</string>
+    <string name="web_find_none">一致する項目はありません</string>
+    <string name="web_desktop">PC版サイト</string>
+    <string name="web_link_new_tab">新しいタブで開く</string>
+    <string name="web_link_copy">リンクをコピー</string>
+    <string name="web_link_copied">リンクをコピーしました</string>
+    <string name="web_link_use">送信またはダウンロード…</string>
+</resources>

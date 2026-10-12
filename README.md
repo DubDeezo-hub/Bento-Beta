@@ -77,8 +77,8 @@ Bento uses up to three services on the console. You only need the ones for the t
 
 **Build it yourself (works from a phone).**
 
-1. Put `pssender-project.zip` and `.github/workflows/main.yml` in a GitHub repository. The Kotlin sources are inside the zip.
-2. Open the repository's [Actions](https://github.com/DubDeezo-hub/Bento-Beta/actions) tab, choose **Build APK**, and tap **Run workflow**. It also runs on every push to `main`.
+1. Fork this repository on GitHub, or copy its files into a repository of your own. In a fork, open the **Actions** tab once and allow workflows to run.
+2. In the **Actions** tab, choose **Build APK** and tap **Run workflow**. It also runs on every push to `main`.
 3. When it finishes, the APK is on the Releases page (and on the run as the `bento-debug-apk` artifact).
 
 More in [Build, signing and releases](#build-signing-and-releases).
@@ -316,7 +316,7 @@ Bento is Kotlin with Jetpack Compose and Material 3: 43 source files, about 12,1
 
 ### Source map
 
-Paths are relative to `app/src/main/java/com/example/pssender/` inside `pssender-project.zip`.
+Paths are relative to [`app/src/main/java/com/example/pssender/`](app/src/main/java/com/example/pssender/).
 
 #### Screens
 
@@ -465,10 +465,10 @@ Beside the code: `AndroidManifest.xml` (permissions, services, the share-sheet e
 
 ## Build, signing and releases
 
-- **Where the code is.** The repository holds `pssender-project.zip` (the Android project), `.github/workflows/main.yml` (the build), [`fake_console.py`](fake_console.py) (a stand-in console for testing, see [Testing without a PS5](#testing-without-a-ps5)) and this README with its icon, `bento-icon.png`. The Kotlin files are inside the zip, which GitHub can't browse; unzip it to read them. The project started as "PS5 Sender", which is why the package (`com.example.pssender`) and the zip keep that name while the app is called Bento.
-- **The workflow** (`main.yml`, named *Build APK*) runs when you start it by hand or push to `main`. It checks out the repository, sets up Temurin JDK 17 and Gradle 8.9, accepts the Android SDK licenses, unzips the project, runs `gradle assembleDebug`, and names the result `Bento-1.N.apk`, where N is the run number.
+- **Where the code is.** The Android project is in this repository as plain files: [`app/`](app/) holds the code, the texts in every language and the icon drawables, with `build.gradle.kts`, `settings.gradle.kts` and `gradle.properties` at the top. Beside it are `.github/workflows/main.yml` (the build), [`fake_console.py`](fake_console.py) (a stand-in console for testing, see [Testing without a PS5](#testing-without-a-ps5)), the [license](LICENSE) and this README with its icon, `bento-icon.png`. The project started as "PS5 Sender", which is why the package (`com.example.pssender`) keeps that name while the app is called Bento.
+- **The workflow** (`main.yml`, named *Build APK*) runs when you start it by hand or push to `main`. It checks out the repository, sets up Temurin JDK 17 and Gradle 8.9, accepts the Android SDK licenses, runs `gradle assembleDebug`, and names the result `Bento-1.N.apk`, where N is the run number.
 - **Releases.** The APK is kept as the run's `bento-debug-apk` artifact and published as a release tagged `v1.N` ("Bento 1.N"). The app's `versionCode` is N too, so every build counts as an update of the one before it and Android installs it over the old one. The update check inside the app compares that number with the newest release's tag.
-- **Signing.** Every build is signed with the same key, `app/pssender-debug.keystore` (inside the zip). Otherwise a GitHub build machine would make a new random key on every run, and Android refuses to install an app over a copy signed with a different key. **Don't replace that file**: the next build wouldn't install over the old ones, and you would have to uninstall first and lose your saved settings. It is a public debug key, so it can't prove who built an APK. Install builds you made yourself or got from this repository's Releases.
+- **Signing.** Every build is signed with the same key, `app/pssender-debug.keystore`. Otherwise a GitHub build machine would make a new random key on every run, and Android refuses to install an app over a copy signed with a different key. **Don't replace that file**: the next build wouldn't install over the old ones, and you would have to uninstall first and lose your saved settings. It is a public debug key, so it can't prove who built an APK. Install builds you made yourself or got from this repository's Releases.
 - **Building from your own repository.** The update check looks at the Releases page of `DubDeezo-hub/Bento-Beta` (the constant `UPDATE_REPO` in `Update.kt`). If you build Bento from a repository of your own, change that line, or switch the check off in the About window.
 - **Toolchain.** Android Gradle Plugin 8.5.2, Kotlin 2.0.20 with the Compose compiler plugin, Gradle 8.9, JDK 17, `compileSdk` and `targetSdk` 34, `minSdk` 29 (Android 10). Dependencies: Compose BOM 2024.09.00, `androidx.activity:activity-compose` 1.9.2, Material 3, AndroidX SwipeRefreshLayout 1.1.0 (pull down to reload in the Web tab), OkHttp 4.12.0 and Apache Commons Net 3.11.1.
 
@@ -561,7 +561,7 @@ Sending a payload or deleting files on a console can have consequences: a bad pa
 
 PlayStation and PS5 are trademarks of Sony Interactive Entertainment Inc. Android is a trademark of Google LLC. Bento is an independent hobby project and is not affiliated with, endorsed by or sponsored by either company.
 
-**License.** Bento's own code has no license yet. Until the author adds one, you don't have permission to copy, change or redistribute it. The libraries and tools in the credits keep their own licenses.
+**License.** Bento is released under the [MIT License](LICENSE): you may use, copy, change and share it, as long as the copyright notice and the license text go along with it. The libraries and tools in the credits keep their own licenses.
 
 ## Credits
 

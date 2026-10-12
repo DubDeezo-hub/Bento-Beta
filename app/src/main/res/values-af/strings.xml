@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Afrikaans. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">Kanselleer</string>
+    <string name="action_close">Sluit</string>
+    <string name="action_done">Klaar</string>
+    <string name="action_delete">Vee uit</string>
+    <string name="action_rename">Hernoem</string>
+    <string name="action_save">Stoor</string>
+    <string name="action_remove">Verwyder</string>
+    <string name="action_send">Stuur</string>
+    <string name="action_open">Maak oop</string>
+    <string name="action_block">Blokkeer</string>
+    <string name="action_home">Tuis</string>
+    <string name="action_dismiss">Verberg</string>
+    <string name="action_try_again">Probeer weer</string>
+    <string name="action_skip">Slaan oor</string>
+    <string name="action_cancel_all">Kanselleer alles</string>
+    <string name="action_create">Skep</string>
+    <string name="action_set">Stel</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">deur %1$s</string>
+    <string name="nav_install">Installeer</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">Laai op</string>
+    <string name="nav_files">Lêers</string>
+    <string name="nav_web">Web</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Installer</string>
+    <string name="service_loader">Loader</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">Stel jou PS5 se IP-adres</string>
+    <string name="status_checking">Kontroleer tans…</string>
+    <string name="status_ready">Gereed</string>
+    <string name="status_partly">Gedeeltelik gereed</string>
+    <string name="status_partly_off">Gedeeltelik gereed · geen reaksie: %1$s</string>
+    <string name="status_offline">Kan nie die konsole bereik nie</string>
+    <string name="status_hint_unset">Vind dit op die PS5 by Settings &gt; Network &gt; Connection Status &gt; View Connection Status. Tik hier om dit in te voer.</string>
+    <string name="status_hint_offline">Niks reageer by hierdie adres nie. Kontroleer die IP, of die konsole aan is en op dieselfde Wi-Fi is, en of etaHEN loop.</string>
+    <string name="status_hint_one">Geen reaksie: %1$s. Begin dit op die konsole of kontroleer sy poort.</string>
+    <string name="status_hint_many">Geen reaksie: %1$s. Begin hulle op die konsole of kontroleer hul poorte.</string>
+    <string name="console_switch">Wissel konsole</string>
+    <string name="console_change_ip">Verander IP-adres</string>
+    <string name="console_ip_title">Konsole se IP-adres</string>
+    <string name="console_ip_label">IP-adres</string>
+    <string name="console_ip_help">Vind dit op die PS5 by Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">Oordrag</string>
+    <string name="transfer_sending">Stuur tans</string>
+    <string name="transfer_sending_to">Stuur tans na %1$s</string>
+    <string name="transfer_receiving">Ontvang tans</string>
+    <string name="transfer_receiving_from">Ontvang tans van %1$s</string>
+    <string name="transfer_detail_total">%1$s · %2$s van %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">Begin tans…</string>
+    <string name="transfer_stopped">Gestop</string>
+    <string name="transfer_start_failed">Kon nie die oordrag begin nie: %1$s</string>
+    <string name="transfer_retry_in">Verbinding verloor. Probeer weer oor %1$d s…</string>
+    <string name="transfer_reconnecting">Koppel weer…</string>
+    <string name="transfer_eta">%1$s oor</string>
+    <string name="transfer_queued">%1$d wag</string>
+    <string name="queue_title">Oordragte wat wag</string>
+    <string name="queue_clear">Verwyder alles</string>
+    <string name="queue_empty">Niks wag nie.</string>
+    <string name="notif_channel">PS5-oordragte</string>
+    <string name="notif_sent">Gestuur: %1$s</string>
+    <string name="notif_received">Ontvang: %1$s</string>
+    <string name="percent_value">%1$d%%</string>
+    <string name="desc_done">Klaar</string>
+    <string name="desc_problem">Probleem</string>
+    <string name="status_hide">Verberg hierdie boodskap</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">By die tou gevoeg. %1$d wag.</string>
+    <string name="msg_set_ip_first">Stel eers die konsole se IP-adres. Tik die kaart bo-aan.</string>
+    <string name="msg_sending_link">Stuur tans die skakel na die PS5…</string>
+    <string name="msg_check_ip_ftp">Kontroleer die konsole se IP-adres en die FTP-poort.</string>
+    <string name="msg_adding_to_shelf_link">Voeg tans by die payload-biblioteek…</string>
+    <string name="status_idle">Onaktief</string>
+    <string name="status_sending">Stuur tans…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">Hierdie werf verlaat?</string>
+    <string name="offsite_text">Die bladsy wil %1$s oopmaak. Advertensies veroorsaak dit dikwels wanneer jy op ’n skakel tik, so gaan net voort as jy dit verwag het.</string>
+    <string name="choose_install">Stuur skakel na die PS5 se Installer</string>
+    <string name="choose_ftp">Laai op na die PS5 (FTP)</string>
+    <string name="choose_shelf">Stoor in die payload-biblioteek</string>
+    <string name="choose_phone">Stoor op die foon</string>
+    <string name="choose_help">Die Installer het ’n direkte skakel na die pakket nodig wat die konsole sonder aanmelding kan oopmaak. FTP werk met enige lêer en behou jou aanmeldsessie. Die foon gee die data op die agtergrond deur, met vordering bo die onderste balk en in ’n kennisgewing. Die payload-biblioteek hou ’n klein payload (tot %1$s) binne die toepassing vir die Payload-oortjie.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Installer-poort (etaHEN: 12800)</string>
+    <string name="install_accepted">Die Installer het dit aanvaar: %1$s</string>
+    <string name="install_not_accepted">Nie aanvaar nie (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">Installeer vanaf hierdie foon</string>
+    <string name="serve_intro">Die konsole laai die pakkette direk vanaf hierdie foon oor Wi-Fi af, so niks hoef eers gekopieer te word nie. Die foon en die konsole moet op dieselfde netwerk wees.</string>
+    <string name="serve_choose">Kies pakkette</string>
+    <string name="serve_none">Geen pakkette gekies nie</string>
+    <string name="serve_start">Begin deel</string>
+    <string name="serve_stop">Hou op deel</string>
+    <string name="serve_copy">Kopieer skakel</string>
+    <string name="serve_copied">Skakel gekopieer</string>
+    <string name="serve_file_waiting">Wag dat die konsole begin aflaai…</string>
+    <string name="serve_file_pulling">Die konsole laai tans af: %1$s</string>
+    <string name="serve_file_done">Die konsole het alles afgelaai</string>
+    <string name="serve_unreadable">Kan nie hierdie lêer lees nie</string>
+    <string name="serve_hint">As die konsole nooit begin aflaai nie, keer die Wi-Fi dalk dat toestelle mekaar bereik (gasnetwerke doen dit dikwels). Gebruik die hoofnetwerk en laat hierdie toepassing in die agtergrond loop.</string>
+    <string name="serve_no_wifi">Kan nie hierdie foon se Wi-Fi-adres vind nie. Koppel dit aan dieselfde Wi-Fi as die konsole.</string>
+    <string name="serve_failed">Kon nie begin deel nie: %1$s</string>
+    <string name="serve_idle_stop">Deel het gestop omdat niks vir ’n lang tyd afgelaai is nie.</string>
+    <string name="serve_notif_title">Deel met %1$s</string>
+    <string name="serve_notif_text">Lêers afgelaai: %1$d / %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">Kies lêers</string>
+    <string name="upload_none">Geen lêers gekies nie</string>
+    <string name="upload_files_chosen">Lêers gekies: %1$d</string>
+    <string name="upload_start">Laai op in die agtergrond</string>
+    <string name="upload_help">Vordering word bo die onderste balk en in ’n kennisgewing gewys. Dit gaan voort, selfs as jy die toepassing verlaat.</string>
+    <string name="ftp_port">FTP-poort</string>
+    <string name="ftp_user">Gebruikernaam</string>
+    <string name="ftp_password">Wagwoord</string>
+    <string name="ftp_folder">Afgeleë gids</string>
+    <string name="ftp_use_folder">Gebruik %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">Laai tans…</string>
+    <string name="files_empty">Hierdie gids is leeg.</string>
+    <string name="files_not_loaded">Nog nie gelaai nie</string>
+    <string name="files_up">⬆ Op</string>
+    <string name="files_refresh">Herlaai</string>
+    <string name="files_new_folder">Nuwe gids</string>
+    <string name="files_upload_here">Laai hier op</string>
+    <string name="files_ftp_settings">FTP-instellings</string>
+    <string name="files_need_ip">Stel die konsole se IP-adres (tik die kaart bo-aan) en ’n geldige FTP-poort om deur sy lêers te blaai.</string>
+    <string name="files_kind_folder">Gids</string>
+    <string name="files_kind_link">Skakel, %1$s</string>
+    <string name="files_download">Laai af op die foon</string>
+    <string name="files_new_name">Nuwe naam</string>
+    <string name="files_name_used">Daardie naam word reeds hier gebruik.</string>
+    <string name="files_renaming">Hernoem tans…</string>
+    <string name="files_renamed">%1$s hernoem na %2$s</string>
+    <string name="files_delete_title">Vee %1$s uit?</string>
+    <string name="files_delete_folder">Dit vee die gids en alles daarin van die konsole uit. Dit kan nie ongedaan gemaak word nie.</string>
+    <string name="files_delete_file">Dit vee die lêer van die konsole uit. Dit kan nie ongedaan gemaak word nie.</string>
+    <string name="files_deleting">Vee tans uit…</string>
+    <string name="files_deleted">Uitgevee: %1$s</string>
+    <string name="files_deleted_inside">Uitgevee: %1$s (items daarin: %2$d)</string>
+    <string name="files_creating">Skep tans gids…</string>
+    <string name="files_created">Gids %1$s geskep</string>
+    <string name="files_folder_name">Gidsnaam</string>
+    <string name="name_empty">Die naam mag nie leeg wees nie.</string>
+    <string name="name_not_allowed">Daardie naam word nie toegelaat nie.</string>
+    <string name="name_slash">Die naam mag nie ’n skuinsstreep bevat nie.</string>
+    <string name="name_control">Die naam bevat karakters wat nie toegelaat word nie.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">Het misluk: %1$s</string>
+    <string name="ftp_port_hint">Kan nie die FTP-bediener bereik nie. Kontroleer die konsole se IP en die FTP-poort (etaHEN se ingeboude FTP gebruik 1337, die FTP-payload gebruik 2121).</string>
+    <string name="err_login">FTP-aanmelding het misluk</string>
+    <string name="err_cant_open">kan %1$s nie oopmaak nie (%2$s)</string>
+    <string name="err_rename">hernoeming het misluk (%1$s)</string>
+    <string name="err_mkdir">kan nie die gids skep nie (%1$s)</string>
+    <string name="err_too_deep">gids is te diep genes</string>
+    <string name="err_delete_path">kan %1$s nie uitvee nie (%2$s)</string>
+    <string name="err_upload">FTP-oplaai het misluk: %1$s</string>
+    <string name="err_download">FTP-aflaai het misluk: %1$s</string>
+    <string name="err_open_file">Kan nie die lêer oopmaak nie</string>
+    <string name="err_cancelled_upload">Gekanselleer. ’n Gedeeltelike lêer kan in %1$s agterbly</string>
+    <string name="err_cancelled_download">Gekanselleer. Die gedeeltelike aflaai is weggegooi.</string>
+    <string name="err_gave_up">Opgegee nadat die verbinding aanhoudend misluk het. Laaste fout: %1$s</string>
+    <string name="err_short_upload">Van die %2$s wat gestuur is, het die konsole net %1$s behou.</string>
+    <string name="err_short_download">Net %1$s van %2$s het aangekom.</string>
+    <string name="err_empty_file">Die lêer is leeg</string>
+    <string name="err_save">Kan %1$s nie stoor nie</string>
+    <string name="sent_to_ps5">Na die PS5 gestuur: %1$s</string>
+    <string name="saved_to_downloads">Gestoor in Downloads/PS5: %1$s</string>
+    <string name="dl_http_failed">Aflaai het misluk: HTTP %1$s</string>
+    <string name="dl_empty">Aflaai het misluk: leë antwoord</string>
+    <string name="dl_cut_short">Die verbinding het gesluit voordat die hele lêer aangekom het.</string>
+    <string name="dl_create_failed">Kon nie die lêer in Downloads skep nie</string>
+    <string name="dl_write_failed">Kon nie die nuwe lêer oopmaak om te skryf nie</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">Gestuur: %1$s</string>
+    <string name="shelf_added">By die biblioteek gevoeg: %1$s (%2$s)</string>
+    <string name="shelf_updated">In die biblioteek opgedateer: %1$s (%2$s)</string>
+    <string name="shelf_too_large">Daardie lêer is groter as %1$s, so dit is nie by die biblioteek gevoeg nie.</string>
+    <string name="shelf_too_large_url">Daardie lêer is %1$s groot. Die biblioteek neem payloads tot %2$s.</string>
+    <string name="payload_adding">Voeg tans by die biblioteek…</string>
+    <string name="payload_remove_title">Verwyder %1$s?</string>
+    <string name="payload_remove_text">Dit word uit die biblioteek uitgevee. Die oorspronklike lêer op jou foon bly onaangeraak.</string>
+    <string name="payload_loader_port">Loader-poort</string>
+    <string name="payload_shelf_title">Payload-biblioteek</string>
+    <string name="payload_shelf_empty">Niks gestoor nie. Voeg payloads by wat jy dikwels gebruik (FTP-bediener, etaHEN, ...) en stuur elkeen met een tik. Jy kan dit ook direk vanaf die Web-oortjie stoor terwyl jy dit aflaai.</string>
+    <string name="payload_sending">Stuur tans %1$s…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">Voeg payload by die biblioteek</string>
+    <string name="payload_once_title">Stuur ’n lêer een keer</string>
+    <string name="payload_choose">Kies payload (.elf / .bin)</string>
+    <string name="payload_send">Stuur payload</string>
+
+    <!-- consoles -->
+    <string name="profile_default">My PS5</string>
+    <string name="profile_new">Konsole %1$d</string>
+    <string name="profile_fallback">Konsole</string>
+    <string name="consoles_title">Konsoles</string>
+    <string name="console_rename_title">Hernoem konsole</string>
+    <string name="console_name_label">Naam</string>
+    <string name="console_delete_title">Vee %1$s uit?</string>
+    <string name="console_delete_text">Sy gestoorde IP-adres en poorte word verwyder. Jou ander konsoles word nie geraak nie.</string>
+    <string name="console_no_ip">nog geen IP-adres nie</string>
+    <string name="console_color_of">Kleur van %1$s</string>
+    <string name="console_use_color">Gebruik %1$s</string>
+    <string name="console_add">Voeg konsole by</string>
+    <string name="language_button">Taal</string>
+    <string name="color_blue">Blou</string>
+    <string name="color_orange">Oranje</string>
+    <string name="color_green">Groen</string>
+    <string name="color_pink">Pienk</string>
+    <string name="color_purple">Pers</string>
+    <string name="color_teal">Blougroen</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">Aflaai het begin (kyk in Downloads)</string>
+    <string name="web_load_failed">Kon nie die bladsy laai nie: %1$s</string>
+    <string name="web_http_server">Die werf is nou besig of af (fout %1$s). Probeer oor ’n rukkie weer.</string>
+    <string name="web_http_other">Die werf het met fout %1$s gereageer.</string>
+    <string name="web_open_first">Maak eers ’n bladsy oop</string>
+    <string name="web_bookmark_saved">Boekmerk gestoor</string>
+    <string name="web_bookmark_exists">Reeds in jou boekmerke</string>
+    <string name="web_home_set">Tuisblad gestel op %1$s</string>
+    <string name="web_reload">Laai weer</string>
+    <string name="web_add">★ Voeg by</string>
+    <string name="web_bookmarks">Boekmerke</string>
+    <string name="web_homepage_label">Tuisblad-URL</string>
+    <string name="web_bookmarks_empty">Nog geen boekmerke nie. Maak ’n bladsy oop en tik %1$s.</string>
+    <string name="web_bookmarks_help">Tik op ’n boekmerk om dit oop te maak. “%1$s” maak dit jou tuisblad.</string>
+    <string name="adblock_title">Advertensieblokkering</string>
+    <string name="adblock_switch">Blokkeer advertensiedomeine</string>
+    <string name="adblock_info">Tot dusver geblokkeer: %1$d. Netwerke in die ingeboude lys: %2$d. Laai die bladsy weer nadat jy iets verander het.</string>
+    <string name="adblock_own">Jou eie domeine, een per reël</string>
+    <string name="adblock_on">Advertensieblokkering: aan · geblokkeer: %1$d · tik om te verander</string>
+    <string name="adblock_off">Advertensieblokkering: af · geblokkeer: %1$d · tik om te verander</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">Wat kan ek doen?</string>
+    <string name="help_what">Wat gebeur het</string>
+    <string name="help_try">Wat om te probeer</string>
+    <string name="help_details">Besonderhede</string>
+    <string name="help_copy">Kopieer besonderhede</string>
+    <string name="help_copied">Gekopieer</string>
+    <string name="help_unreachable_title">Kan nie die konsole bereik nie</string>
+    <string name="help_unreachable_what">Niks antwoord by die konsole se adres nie.</string>
+    <string name="help_unreachable_try">• Kontroleer die IP-adres op die PS5 (Settings &gt; Network &gt; Connection Status). Dit kan ná \'n herbegin verander.\n• Maak die konsole heeltemal wakker. Rusmodus skakel dikwels die netwerk af.\n• Gebruik dieselfde Wi-Fi op albei. Gasnetwerke en VPN\'s blokkeer dit.</string>
+    <string name="help_port_title">Daardie diens loop nie</string>
+    <string name="help_port_what">Die konsole het geantwoord, maar niks luister op daardie poort nie.</string>
+    <string name="help_port_try">• Begin etaHEN op die konsole. Dit verskaf die Installer (12800), die Loader (9021) en FTP (1337).\n• \'n Aparte FTP-payload gebruik gewoonlik 2121. Voer dieselfde poort hier in.\n• Op die konsolekaart wys die lig wat af is wat ontbreek.</string>
+    <string name="help_login_title">FTP-aanmelding geweier</string>
+    <string name="help_login_what">Die konsole se FTP-bediener het die gebruikersnaam of wagwoord verwerp.</string>
+    <string name="help_login_try">• etaHEN aanvaar die gebruikersnaam anonymous met enige wagwoord.\n• As jy \'n aanmelding op die konsole ingestel het, voer dit onder Laai op in.\n• Die wagwoord word nie gestoor nie. Voer dit weer in nadat jy die toepassing herbegin het.</string>
+    <string name="help_dropped_title">Die verbinding het verbreek</string>
+    <string name="help_dropped_what">Die skakel na die konsole het gebreek of opgehou data skuif. Die toepassing probeer weer en gaan voort waar dit opgehou het.</string>
+    <string name="help_dropped_try">• Hou die foon naby die router en die konsole wakker.\n• Onderbreek ander groot aflaaie op die netwerk.\n• As dit aanhou misluk, wag \'n oomblik en tik Probeer weer.</string>
+    <string name="help_refused_title">Die Installer het nie die skakel aanvaar nie</string>
+    <string name="help_refused_what">Die konsole is bereikbaar, maar sy Installer het hierdie skakel geweier.</string>
+    <string name="help_refused_try">• Die skakel moet reguit na die pakketlêer lei en sonder aanmelding oopmaak.\n• Die konsole moet dit kan bereik. Skakels vanaf hierdie foon werk net op dieselfde Wi-Fi.\n• Maak seker die Installer loop en die konsole het vrye spasie.</string>
+    <string name="help_storage_title">Die konsole het opgehou stoor</string>
+    <string name="help_storage_what">Die konsole het minder gehou as wat gestuur is. Die stasie is gewoonlik vol of leesalleen.</string>
+    <string name="help_storage_try">• Maak spasie op die konsole vry.\n• Kies \'n ander vouer, byvoorbeeld op \'n USB-stasie.\n• Tik dan Probeer weer.</string>
+    <string name="help_denied_title">Daardie vouer of lêer is geweier</string>
+    <string name="help_denied_what">Die FTP-bediener kan dit nie hier oopmaak, skryf of verander nie.</string>
+    <string name="help_denied_try">• Kontroleer dat die vouer bestaan. Name is hoofletter-sensitief.\n• Stelselvouers is leesalleen. Gebruik /data of \'n USB-stasie.\n• \'n Lêer wat deur \'n lopende speletjie gebruik word, kan gesluit wees. Maak die speletjie toe.</string>
+    <string name="help_phone_title">Die foon kan nie die lêer gebruik nie</string>
+    <string name="help_phone_what">Die lêer is weg of verskuif, die toepassing het toegang verloor, of die foon het nie spasie nie.</string>
+    <string name="help_phone_try">• Kies die lêer weer.\n• Maak berging op die foon vry.\n• Stoor \'n lêer in \'n wolktoepassing eers op die foon.</string>
+    <string name="help_link_title">Die aflaaiskakel het misluk</string>
+    <string name="help_link_what">Die webwerf het nie die lêer oorhandig nie. Die skakel het dalk verval, vereis \'n aanmelding, of die werf is besig.</string>
+    <string name="help_link_try">• Begin die aflaai weer vanaf die Web-oortjie. Dit behou jou aanmelding.\n• Skakels van lêerhostingwerwe verval dikwels ná \'n paar minute.\n• As die werf \'n fout in die 500\'s gerapporteer het, probeer later weer.</string>
+
+    <!-- update check -->
+    <string name="update_available">Weergawe %1$s is beskikbaar</string>
+    <string name="update_download">Laai af</string>
+    <string name="update_later">Later</string>
+    <string name="update_title">Opdaterings</string>
+    <string name="update_current">Jy het die nuutste weergawe (%1$s).</string>
+    <string name="update_none">Nog geen vrystelling op die Releases-bladsy gevind nie.</string>
+    <string name="update_check_now">Kyk nou</string>
+    <string name="update_auto">Kyk vir opdaterings wanneer die toepassing oopmaak</string>
+    <string name="update_privacy">Die kontrole vra GitHub vir die nuutste vrystelling, hoogstens een keer per dag. Niks oor jou of jou konsoles word gestuur nie; GitHub sien jou IP-adres, soos enige webwerf.</string>
+
+    <!-- find my console -->
+    <string name="find_button">Soek my PS5</string>
+    <string name="find_scanning">Soek tans na jou konsole op %1$s…</string>
+    <string name="find_again">Soek weer</string>
+    <string name="find_none">Geen konsole gevind nie.</string>
+    <string name="find_none_try">• Skakel die konsole heeltemal aan (nie rusmodus nie) en begin etaHEN.\n• Gebruik dieselfde Wi-Fi op die foon en die konsole. Gasnetwerke en VPN\'s hou toestelle van mekaar af.\n• Soek dan weer.</string>
+    <string name="find_no_wifi">Hierdie foon is nie op \'n Wi-Fi-netwerk nie. Koppel dit aan dieselfde Wi-Fi as die konsole en soek dan weer.</string>
+    <string name="find_pick">Tik Gebruik om die adres van %1$s te stel.</string>
+    <string name="find_saved">Gestoorde adres</string>
+    <string name="find_used_by">Gestoor vir %1$s</string>
+    <string name="find_updated">%1$s gebruik nou %2$s.</string>
+    <string name="find_privacy">Net jou Wi-Fi-netwerk word geskandeer, op \'n paar konsole-poorte. Niks word oor die internet gestuur nie.</string>
+    <string name="action_stop">Stop</string>
+    <string name="action_use">Gebruik</string>
+
+    <!-- about and backup -->
+    <string name="about_title">Oor Bento</string>
+    <string name="about_version">Weergawe %1$s</string>
+    <string name="about_button">Oor en rugsteun</string>
+    <string name="about_report">Kopieer verslag</string>
+    <string name="about_report_help">Kopieer die toepassingweergawe, jou foonmodel en die laaste boodskap, om in \'n foutverslag te plak. IP-adresse en skakels word weggelaat.</string>
+    <string name="about_report_copied">Verslag gekopieer</string>
+    <string name="about_releases">Releases-bladsy</string>
+    <string name="backup_title">Rugsteun</string>
+    <string name="backup_text">Stoor jou konsoles, tuisblad, boekmerke, advertensielys en payloads in een lêer. FTP-wagwoorde word nie gestoor nie.</string>
+    <string name="backup_save">Stoor rugsteun</string>
+    <string name="backup_restore">Herstel rugsteun</string>
+    <string name="backup_saved">Rugsteun gestoor.</string>
+    <string name="backup_contents">Konsoles: %1$d · Boekmerke: %2$d · Payloads: %3$d</string>
+    <string name="backup_made">Gemaak op %1$s</string>
+    <string name="backup_skipped">Payloads weggelaat omdat die lêer te groot sou word: %1$d</string>
+    <string name="backup_bad_file">Daardie lêer is nie \'n Bento-rugsteun nie.</string>
+    <string name="backup_too_new">Daardie rugsteun is deur \'n nuwer weergawe van Bento gemaak. Dateer die toepassing op en probeer weer.</string>
+    <string name="restore_title">Hierdie rugsteun herstel?</string>
+    <string name="restore_text">Jou konsoles, tuisblad, boekmerke en advertensielys word vervang deur dié in die lêer. Payloads in die lêer word by die payload-biblioteek gevoeg. Jy sal jou FTP-wagwoorde weer moet intik.</string>
+    <string name="restore_button">Herstel</string>
+    <string name="restore_done">Rugsteun herstel.</string>
+    <string name="restore_payloads_failed">Payloads wat nie gestoor kon word nie: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">Pakketskakels (een per reël)</string>
+    <string name="install_paste">Plak</string>
+    <string name="action_clear">Maak skoon</string>
+    <string name="install_paste_none">Geen webskakel op die knipbord nie.</string>
+    <string name="install_links_skipped">Slegs adresse wat met http:// of https:// begin, word gestuur. Weggelaat: %1$d</string>
+    <string name="install_recent">Onlangse skakels</string>
+    <string name="install_recent_clear">Maak lys skoon</string>
+    <string name="install_sending_n">Stuur skakel %1$d van %2$d…</string>
+    <string name="install_batch_done">Aanvaar: %1$d van %2$d skakels</string>
+    <string name="install_batch_notsent">Nie gestuur nie: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">Kettings</string>
+    <string name="chains_hint">\'n Ketting stuur verskeie payloads een ná die ander, met \'n pouse ná elkeen. Druk en hou die programikoon om een van die eerste vier kettings vanaf jou tuisskerm te begin.</string>
+    <string name="chain_new">Nuwe ketting</string>
+    <string name="action_edit">Wysig</string>
+    <string name="chain_summary_steps">Payloads: %1$d</string>
+    <string name="chain_summary_pauses">Pouses: %1$s</string>
+    <string name="chain_edit_title">Wysig ketting</string>
+    <string name="chain_steps_title">Payloads, in volgorde (hoogstens %1$d)</string>
+    <string name="chain_add_step">Voeg payload by</string>
+    <string name="chain_pick_title">Watter payload moet bygevoeg word?</string>
+    <string name="chain_wait_label">Wag dan (sekondes)</string>
+    <string name="chain_missing">Nie in die biblioteek nie</string>
+    <string name="chain_move_up">Skuif op</string>
+    <string name="chain_move_down">Skuif af</string>
+    <string name="chain_pin">Voeg by tuisskerm</string>
+    <string name="chain_pin_unsupported">Hierdie lanseerder kan nie kortpaaie byvoeg nie. Druk en hou die programikoon om jou kettings daar te vind.</string>
+    <string name="chain_sending">Stuur tans %1$s (%2$d van %3$d)…</string>
+    <string name="chain_waiting">Volgende payload oor %1$s</string>
+    <string name="chain_retrying">Wag dat die konsole gereed is…</string>
+    <string name="chain_result_done">Klaar. Payloads gestuur: %1$d van %2$d</string>
+    <string name="chain_result_stopped">Gestop. Payloads gestuur: %1$d van %2$d</string>
+    <string name="chain_result_failed">Gestop by stap %1$d (%2$s). Payloads gestuur: %3$d van %4$d</string>
+    <string name="chain_err_target">Stel eers die konsole se IP-adres en die Loader-poort.</string>
+    <string name="chain_err_missing">Nie meer in die biblioteek nie: %1$s. Voeg dit weer by of wysig die ketting.</string>
+    <string name="chain_err_unknown">Daardie ketting bestaan nie meer nie.</string>
+    <string name="notif_channel_chain">Payload-kettings</string>
+    <string name="backup_chains">Kettings: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">Laas nie klaar nie: %1$d</string>
+    <string name="unfinished_hint">Die toep het gesluit voordat hierdie klaar was. “Gaan voort” begin elkeen weer van voor af.</string>
+    <string name="unfinished_continue">Gaan voort</string>
+    <string name="unfinished_discard">Gooi weg</string>
+    <string name="unfinished_missing">Lêers word nie meer gevind nie, kies hulle weer: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">Onderbreek</string>
+    <string name="transfer_resume">Gaan voort</string>
+    <string name="transfer_paused">Onderbreek</string>
+    <string name="speed_limit_title">Spoedgrens</string>
+    <string name="speed_limit_off">Geen grens</string>
+    <string name="speed_limit_value">Grens: %1$s</string>
+    <string name="speed_limit_hint">Vertraag oordragte sodat die Wi-Fi vry bly vir ander dinge. \'n Verandering tree dadelik in werking.</string>
+    <string name="summary_title">Oordragte voltooi: %1$d van %2$d</string>
+    <string name="summary_detail">%1$s in %2$s</string>
+    <string name="summary_failed">Misluk: %1$d</string>
+    <string name="summary_stopped">Gestop: %1$d</string>
+    <string name="notif_channel_results">Oordragresultate</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">Gekies: %1$d</string>
+    <string name="files_select_all">Kies alles</string>
+    <string name="files_select_none">Kies niks</string>
+    <string name="files_delete_many_title">Vee die gekose items uit (%1$d)?</string>
+    <string name="files_delete_many_text">Dit vee die gekose lêers en gidse van die konsole uit, gidse met alles daarin. Dit kan nie ongedaan gemaak word nie.</string>
+    <string name="files_deleted_many">Items uitgevee: %1$d</string>
+    <string name="files_delete_partial">Items uitgevee: %1$d, nie uitgevee nie: %2$d. Die eerste probleem: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">Gaan deur die gidse…</string>
+    <string name="files_dl_confirm_title">Laai af op die foon?</string>
+    <string name="files_dl_confirm_text">Lêers: %1$d, saam %2$s. Hulle word in Downloads/PS5 gestoor, in dieselfde gidse as op die konsole.</string>
+    <string name="files_dl_links">Skakels binne gidse word nie afgelaai nie: %1$d.</string>
+    <string name="files_dl_truncated">Lêers ingesluit: %1$d. Die gidse bevat meer, of gaan dieper as wat die toep volg.</string>
+    <string name="files_dl_none">Daar is geen lêer om af te laai in die keuse nie.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">Sorteer</string>
+    <string name="files_sort_title">Sorteer volgens</string>
+    <string name="files_sort_name">Naam</string>
+    <string name="files_sort_size">Grootte, grootste eerste</string>
+    <string name="files_sort_newest">Nuutste eerste</string>
+    <string name="files_search">Soek</string>
+    <string name="files_search_hint">Soek in hierdie gids</string>
+    <string name="files_no_match">Niks in hierdie gids pas by die soektog nie.</string>
+    <string name="files_pin">Speld hierdie gids vas</string>
+    <string name="files_unpin">Maak hierdie gids los</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">Oortjies: %1$d</string>
+    <string name="web_tabs_title">Oortjies</string>
+    <string name="web_tab_new">Nuwe oortjie</string>
+    <string name="web_tabs_full">Te veel oortjies. Die perk is %1$d. Sluit eers een.</string>
+    <string name="web_find">Soek</string>
+    <string name="web_find_hint">Soek op hierdie bladsy</string>
+    <string name="web_find_none">Geen resultate nie</string>
+    <string name="web_desktop">Rekenaarwerf</string>
+    <string name="web_link_new_tab">Maak oop in nuwe oortjie</string>
+    <string name="web_link_copy">Kopieer skakel</string>
+    <string name="web_link_copied">Skakel gekopieer</string>
+    <string name="web_link_use">Stuur of laai af…</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark mode: the same style name with the dark navy page color from Theme.kt and light status bar icons. -->
+    <style name="Theme.PSSender" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">#0E1320</item>
+        <item name="android:statusBarColor">#0E1320</item>
+        <item name="android:navigationBarColor">#0E1320</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+</resources>

@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Finnish. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">Peruuta</string>
+    <string name="action_close">Sulje</string>
+    <string name="action_done">Valmis</string>
+    <string name="action_delete">Poista</string>
+    <string name="action_rename">Nimeä uudelleen</string>
+    <string name="action_save">Tallenna</string>
+    <string name="action_remove">Poista</string>
+    <string name="action_send">Lähetä</string>
+    <string name="action_open">Avaa</string>
+    <string name="action_block">Estä</string>
+    <string name="action_home">Aloitussivu</string>
+    <string name="action_dismiss">Piilota</string>
+    <string name="action_try_again">Yritä uudelleen</string>
+    <string name="action_skip">Ohita</string>
+    <string name="action_cancel_all">Peruuta kaikki</string>
+    <string name="action_create">Luo</string>
+    <string name="action_set">Aseta</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">tekijä: %1$s</string>
+    <string name="nav_install">Asenna</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">Lähetys</string>
+    <string name="nav_files">Tiedostot</string>
+    <string name="nav_web">Web</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Installer</string>
+    <string name="service_loader">Loader</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">Aseta PS5:n IP-osoite</string>
+    <string name="status_checking">Tarkistetaan…</string>
+    <string name="status_ready">Valmis</string>
+    <string name="status_partly">Osittain valmis</string>
+    <string name="status_partly_off">Osittain valmis · ei vastaa: %1$s</string>
+    <string name="status_offline">Konsoliin ei saada yhteyttä</string>
+    <string name="status_hint_unset">Löydät sen PS5:ltä kohdasta Asetukset &gt; Verkko &gt; Yhteyden tila &gt; Näytä yhteyden tila. Napauta tästä ja kirjoita se.</string>
+    <string name="status_hint_offline">Tässä osoitteessa ei vastaa mikään. Tarkista IP-osoite, että PS5 on päällä ja samassa Wi-Fi-verkossa ja että etaHEN on käynnissä.</string>
+    <string name="status_hint_one">Ei vastaa: %1$s. Käynnistä palvelu konsolilla tai tarkista sen portti.</string>
+    <string name="status_hint_many">Ei vastaa: %1$s. Käynnistä palvelut konsolilla tai tarkista niiden portit.</string>
+    <string name="console_switch">Vaihda konsolia</string>
+    <string name="console_change_ip">Vaihda IP-osoite</string>
+    <string name="console_ip_title">Konsolin IP-osoite</string>
+    <string name="console_ip_label">IP-osoite</string>
+    <string name="console_ip_help">Löydät sen PS5:ltä kohdasta Asetukset &gt; Verkko &gt; Yhteyden tila &gt; Näytä yhteyden tila.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">Siirto</string>
+    <string name="transfer_sending">Lähetetään</string>
+    <string name="transfer_sending_to">Lähetetään konsolille: %1$s</string>
+    <string name="transfer_receiving">Vastaanotetaan</string>
+    <string name="transfer_receiving_from">Vastaanotetaan konsolilta: %1$s</string>
+    <string name="transfer_detail_total">%1$s · %2$s / %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">Aloitetaan…</string>
+    <string name="transfer_stopped">Pysäytetty</string>
+    <string name="transfer_start_failed">Siirtoa ei voitu aloittaa: %1$s</string>
+    <string name="transfer_retry_in">Yhteys katkesi. Yritetään uudelleen %1$d s kuluttua…</string>
+    <string name="transfer_reconnecting">Yhdistetään uudelleen…</string>
+    <string name="transfer_eta">%1$s jäljellä</string>
+    <string name="transfer_queued">%1$d odottaa</string>
+    <string name="queue_title">Odottavat siirrot</string>
+    <string name="queue_clear">Poista kaikki</string>
+    <string name="queue_empty">Mikään ei odota.</string>
+    <string name="notif_channel">PS5-siirrot</string>
+    <string name="notif_sent">Lähetetty: %1$s</string>
+    <string name="notif_received">Vastaanotettu: %1$s</string>
+    <string name="percent_value">%1$d %%</string>
+    <string name="desc_done">Valmis</string>
+    <string name="desc_problem">Ongelma</string>
+    <string name="status_hide">Piilota tämä viesti</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">Lisätty jonoon. %1$d odottaa.</string>
+    <string name="msg_set_ip_first">Aseta ensin konsolin IP-osoite. Napauta ylhäällä olevaa korttia.</string>
+    <string name="msg_sending_link">Lähetetään linkkiä PS5:lle…</string>
+    <string name="msg_check_ip_ftp">Tarkista konsolin IP-osoite ja FTP-portti.</string>
+    <string name="msg_adding_to_shelf_link">Lisätään payload-kirjastoon…</string>
+    <string name="status_idle">Ei toimintaa</string>
+    <string name="status_sending">Lähetetään…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">Poistutaanko tältä sivustolta?</string>
+    <string name="offsite_text">Sivu haluaa avata osoitteen %1$s. Mainokset aiheuttavat tämän usein, kun napautat linkkiä, joten jatka vain, jos odotit tätä.</string>
+    <string name="choose_install">Lähetä linkki PS5:n Installer-palveluun</string>
+    <string name="choose_ftp">Lähetä PS5:lle (FTP)</string>
+    <string name="choose_shelf">Tallenna payload-kirjastoon</string>
+    <string name="choose_phone">Tallenna puhelimeen</string>
+    <string name="choose_help">Installer tarvitsee suoran pakettilinkin, jonka konsoli voi avata kirjautumatta. FTP toimii kaikille tiedostoille ja säilyttää kirjautumisistuntosi. Puhelin välittää tiedot taustalla, ja edistyminen näkyy alapalkin yläpuolella sekä ilmoituksessa. Payload-kirjasto säilyttää sovelluksessa pienen payloadin (enintään %1$s) Payload-välilehteä varten.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Installerin portti (etaHEN: 12800)</string>
+    <string name="install_accepted">Installer hyväksyi sen: %1$s</string>
+    <string name="install_not_accepted">Ei hyväksytty (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">Asenna tästä puhelimesta</string>
+    <string name="serve_intro">Konsoli lataa paketit suoraan tästä puhelimesta Wi-Fin kautta, joten mitään ei tarvitse kopioida ensin. Puhelimen ja konsolin on oltava samassa verkossa.</string>
+    <string name="serve_choose">Valitse paketit</string>
+    <string name="serve_none">Paketteja ei ole valittu</string>
+    <string name="serve_start">Aloita jakaminen</string>
+    <string name="serve_stop">Lopeta jakaminen</string>
+    <string name="serve_copy">Kopioi linkki</string>
+    <string name="serve_copied">Linkki kopioitu</string>
+    <string name="serve_file_waiting">Odotetaan, että konsoli aloittaa latauksen…</string>
+    <string name="serve_file_pulling">Konsoli lataa: %1$s</string>
+    <string name="serve_file_done">Konsoli on ladannut kaiken</string>
+    <string name="serve_unreadable">Tätä tiedostoa ei voi lukea</string>
+    <string name="serve_hint">Jos konsoli ei koskaan aloita latausta, Wi-Fi saattaa estää laitteita tavoittamasta toisiaan (vierasverkot tekevät niin usein). Käytä pääverkkoa ja anna tämän sovelluksen toimia taustalla.</string>
+    <string name="serve_no_wifi">Tämän puhelimen Wi-Fi-osoitetta ei löydy. Yhdistä puhelin samaan Wi-Fi-verkkoon kuin konsoli.</string>
+    <string name="serve_failed">Jakamista ei voitu aloittaa: %1$s</string>
+    <string name="serve_idle_stop">Jakaminen pysähtyi, koska mitään ei ladattu pitkään aikaan.</string>
+    <string name="serve_notif_title">Jakaminen: %1$s</string>
+    <string name="serve_notif_text">Ladatut tiedostot: %1$d / %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">Valitse tiedostot</string>
+    <string name="upload_none">Tiedostoja ei ole valittu</string>
+    <string name="upload_files_chosen">Valitut tiedostot: %1$d</string>
+    <string name="upload_start">Lähetä taustalla</string>
+    <string name="upload_help">Edistyminen näkyy alapalkin yläpuolella ja ilmoituksessa. Lähetys jatkuu, vaikka poistuisit sovelluksesta.</string>
+    <string name="ftp_port">FTP-portti</string>
+    <string name="ftp_user">Käyttäjänimi</string>
+    <string name="ftp_password">Salasana</string>
+    <string name="ftp_folder">Etäkansio</string>
+    <string name="ftp_use_folder">Käytä: %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">Ladataan…</string>
+    <string name="files_empty">Tämä kansio on tyhjä.</string>
+    <string name="files_not_loaded">Ei vielä ladattu</string>
+    <string name="files_up">⬆ Ylös</string>
+    <string name="files_refresh">Päivitä</string>
+    <string name="files_new_folder">Uusi kansio</string>
+    <string name="files_upload_here">Lähetä tänne</string>
+    <string name="files_ftp_settings">FTP-asetukset</string>
+    <string name="files_need_ip">Aseta konsolin IP-osoite (napauta ylhäällä olevaa korttia) ja kelvollinen FTP-portti, jotta voit selata sen tiedostoja.</string>
+    <string name="files_kind_folder">Kansio</string>
+    <string name="files_kind_link">Linkki, %1$s</string>
+    <string name="files_download">Lataa puhelimeen</string>
+    <string name="files_new_name">Uusi nimi</string>
+    <string name="files_name_used">Tämä nimi on jo käytössä täällä.</string>
+    <string name="files_renaming">Nimetään uudelleen…</string>
+    <string name="files_renamed">%1$s nimettiin uudelleen: %2$s</string>
+    <string name="files_delete_title">Poistetaanko %1$s?</string>
+    <string name="files_delete_folder">Kansio ja kaikki sen sisältö poistetaan konsolilta. Tätä ei voi peruuttaa.</string>
+    <string name="files_delete_file">Tiedosto poistetaan konsolilta. Tätä ei voi peruuttaa.</string>
+    <string name="files_deleting">Poistetaan…</string>
+    <string name="files_deleted">Poistettu: %1$s</string>
+    <string name="files_deleted_inside">Poistettu: %1$s (sisällä olevia kohteita: %2$d)</string>
+    <string name="files_creating">Luodaan kansiota…</string>
+    <string name="files_created">Kansio luotu: %1$s</string>
+    <string name="files_folder_name">Kansion nimi</string>
+    <string name="name_empty">Nimi ei voi olla tyhjä.</string>
+    <string name="name_not_allowed">Tämä nimi ei ole sallittu.</string>
+    <string name="name_slash">Nimi ei voi sisältää kauttaviivoja.</string>
+    <string name="name_control">Nimessä on merkkejä, joita ei sallita.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">Epäonnistui: %1$s</string>
+    <string name="ftp_port_hint">FTP-palvelimeen ei saada yhteyttä. Tarkista konsolin IP-osoite ja FTP-portti (etaHENin sisäänrakennettu FTP käyttää porttia 1337, FTP-payload porttia 2121).</string>
+    <string name="err_login">FTP-kirjautuminen epäonnistui</string>
+    <string name="err_cant_open">ei voi avata: %1$s (%2$s)</string>
+    <string name="err_rename">uudelleennimeäminen epäonnistui (%1$s)</string>
+    <string name="err_mkdir">kansion luominen epäonnistui (%1$s)</string>
+    <string name="err_too_deep">kansio on sisäkkäin liian syvällä</string>
+    <string name="err_delete_path">poistaminen epäonnistui: %1$s (%2$s)</string>
+    <string name="err_upload">FTP-lähetys epäonnistui: %1$s</string>
+    <string name="err_download">FTP-lataus epäonnistui: %1$s</string>
+    <string name="err_open_file">Tiedostoa ei voitu avata</string>
+    <string name="err_cancelled_upload">Peruutettu. Keskeneräinen tiedosto voi jäädä sijaintiin %1$s</string>
+    <string name="err_cancelled_download">Peruutettu. Keskeneräinen lataus hylättiin.</string>
+    <string name="err_gave_up">Luovutettiin, kun yhteys jatkoi katkeamista. Viimeisin virhe: %1$s</string>
+    <string name="err_short_upload">Lähetetystä määrästä (%2$s) konsoli säilytti vain %1$s.</string>
+    <string name="err_short_download">Perille tuli vain %1$s (koko %2$s).</string>
+    <string name="err_empty_file">Tiedosto on tyhjä</string>
+    <string name="err_save">Tallennus epäonnistui: %1$s</string>
+    <string name="sent_to_ps5">Lähetetty PS5:lle: %1$s</string>
+    <string name="saved_to_downloads">Tallennettu kansioon Downloads/PS5: %1$s</string>
+    <string name="dl_http_failed">Lataus epäonnistui: HTTP %1$s</string>
+    <string name="dl_empty">Lataus epäonnistui: tyhjä vastaus</string>
+    <string name="dl_cut_short">Yhteys sulkeutui ennen kuin koko tiedosto oli perillä.</string>
+    <string name="dl_create_failed">Tiedostoa ei voitu luoda Downloads-kansioon</string>
+    <string name="dl_write_failed">Uutta tiedostoa ei voitu avata kirjoitettavaksi</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">Lähetetty: %1$s</string>
+    <string name="shelf_added">Lisätty kirjastoon: %1$s (%2$s)</string>
+    <string name="shelf_updated">Päivitetty kirjastossa: %1$s (%2$s)</string>
+    <string name="shelf_too_large">Tiedosto on suurempi kuin %1$s, joten sitä ei lisätty kirjastoon.</string>
+    <string name="shelf_too_large_url">Tiedoston koko on %1$s. Kirjasto ottaa vastaan enintään %2$s kokoisia payloadeja.</string>
+    <string name="payload_adding">Lisätään kirjastoon…</string>
+    <string name="payload_remove_title">Poistetaanko %1$s?</string>
+    <string name="payload_remove_text">Se poistetaan kirjastosta. Puhelimessa oleva alkuperäinen tiedosto säilyy koskemattomana.</string>
+    <string name="payload_loader_port">Loaderin portti</string>
+    <string name="payload_shelf_title">Payload-kirjasto</string>
+    <string name="payload_shelf_empty">Mitään ei ole vielä tallennettu. Lisää usein käyttämäsi payloadit (FTP-palvelin, etaHEN, ...) ja lähetä jokainen yhdellä napautuksella. Voit tallentaa payloadin myös suoraan Web-välilehdeltä, kun lataat sen.</string>
+    <string name="payload_sending">Lähetetään: %1$s…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">Lisää payload kirjastoon</string>
+    <string name="payload_once_title">Lähetä tiedosto kerran</string>
+    <string name="payload_choose">Valitse payload (.elf / .bin)</string>
+    <string name="payload_send">Lähetä payload</string>
+
+    <!-- consoles -->
+    <string name="profile_default">Oma PS5</string>
+    <string name="profile_new">Konsoli %1$d</string>
+    <string name="profile_fallback">Konsoli</string>
+    <string name="consoles_title">Konsolit</string>
+    <string name="console_rename_title">Nimeä konsoli uudelleen</string>
+    <string name="console_name_label">Nimi</string>
+    <string name="console_delete_title">Poistetaanko %1$s?</string>
+    <string name="console_delete_text">Sen tallennettu IP-osoite ja portit poistetaan. Muihin konsoleihisi tämä ei vaikuta.</string>
+    <string name="console_no_ip">ei vielä IP-osoitetta</string>
+    <string name="console_color_of">Väri: %1$s</string>
+    <string name="console_use_color">Käytä: %1$s</string>
+    <string name="console_add">Lisää konsoli</string>
+    <string name="language_button">Kieli</string>
+    <string name="color_blue">Sininen</string>
+    <string name="color_orange">Oranssi</string>
+    <string name="color_green">Vihreä</string>
+    <string name="color_pink">Pinkki</string>
+    <string name="color_purple">Violetti</string>
+    <string name="color_teal">Turkoosi</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">Lataus alkoi (katso Downloads)</string>
+    <string name="web_load_failed">Sivua ei voitu ladata: %1$s</string>
+    <string name="web_http_server">Sivusto on juuri nyt kuormittunut tai alhaalla (virhe %1$s). Yritä hetken kuluttua uudelleen.</string>
+    <string name="web_http_other">Sivusto vastasi virheellä %1$s.</string>
+    <string name="web_open_first">Avaa ensin sivu</string>
+    <string name="web_bookmark_saved">Kirjanmerkki tallennettu</string>
+    <string name="web_bookmark_exists">On jo kirjanmerkeissäsi</string>
+    <string name="web_home_set">Aloitussivuksi asetettu: %1$s</string>
+    <string name="web_reload">Lataa uudelleen</string>
+    <string name="web_add">★ Lisää</string>
+    <string name="web_bookmarks">Kirjanmerkit</string>
+    <string name="web_homepage_label">Aloitussivun URL-osoite</string>
+    <string name="web_bookmarks_empty">Ei vielä kirjanmerkkejä. Avaa sivu ja napauta: %1$s.</string>
+    <string name="web_bookmarks_help">Avaa kirjanmerkki napauttamalla sitä. ”%1$s” asettaa sen aloitussivuksesi.</string>
+    <string name="adblock_title">Mainosten esto</string>
+    <string name="adblock_switch">Estä mainosdomainit</string>
+    <string name="adblock_info">Estetty toistaiseksi: %1$d. Verkkoja sisäänrakennetussa luettelossa: %2$d. Lataa sivu uudelleen jokaisen muutoksen jälkeen.</string>
+    <string name="adblock_own">Omat domainisi, yksi riviä kohden</string>
+    <string name="adblock_on">Mainosten esto: päällä · estetty: %1$d · muuta napauttamalla</string>
+    <string name="adblock_off">Mainosten esto: pois · estetty: %1$d · muuta napauttamalla</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">Mitä voin tehdä?</string>
+    <string name="help_what">Mitä tapahtui</string>
+    <string name="help_try">Mitä voit kokeilla</string>
+    <string name="help_details">Tiedot</string>
+    <string name="help_copy">Kopioi tiedot</string>
+    <string name="help_copied">Kopioitu</string>
+    <string name="help_unreachable_title">Konsoliin ei saada yhteyttä</string>
+    <string name="help_unreachable_what">Konsolin osoitteessa ei vastaa mikään.</string>
+    <string name="help_unreachable_try">• Tarkista IP-osoite PS5:ltä (Asetukset &gt; Verkko &gt; Yhteyden tila). Se voi muuttua uudelleenkäynnistyksen jälkeen.\n• Herätä konsoli kokonaan. Lepotila katkaisee verkon usein.\n• Käytä molemmissa samaa Wi-Fiä. Vierasverkot ja VPN estävät yhteyden.</string>
+    <string name="help_port_title">Kyseinen palvelu ei ole käynnissä</string>
+    <string name="help_port_what">Konsoli vastasi, mutta kyseisessä portissa ei kuuntele mikään.</string>
+    <string name="help_port_try">• Käynnistä etaHEN konsolilla. Se tarjoaa Installerin (12800), Loaderin (9021) ja FTP:n (1337).\n• Erillinen FTP-payload käyttää yleensä porttia 2121. Anna tähän sama portti.\n• Konsolikortissa sammunut valo näyttää, mikä puuttuu.</string>
+    <string name="help_login_title">FTP-kirjautuminen evättiin</string>
+    <string name="help_login_what">Konsolin FTP-palvelin hylkäsi käyttäjänimen tai salasanan.</string>
+    <string name="help_login_try">• etaHEN hyväksyy käyttäjänimen anonymous millä tahansa salasanalla.\n• Jos asetit konsolille kirjautumistiedot, anna ne kohdassa Lähetys.\n• Salasanaa ei tallenneta. Anna se uudelleen sovelluksen käynnistyksen jälkeen.</string>
+    <string name="help_dropped_title">Yhteys katkesi</string>
+    <string name="help_dropped_what">Yhteys konsoliin katkesi tai tiedonsiirto pysähtyi. Sovellus yrittää uudelleen ja jatkaa siitä, mihin jäi.</string>
+    <string name="help_dropped_try">• Pidä puhelin lähellä reititintä ja konsoli hereillä.\n• Keskeytä muut suuret lataukset verkossa.\n• Jos epäonnistuminen jatkuu, odota hetki ja napauta Yritä uudelleen.</string>
+    <string name="help_refused_title">Installer ei hyväksynyt linkkiä</string>
+    <string name="help_refused_what">Konsoli on tavoitettavissa, mutta sen Installer hylkäsi tämän linkin.</string>
+    <string name="help_refused_try">• Linkin on johdettava suoraan pakettitiedostoon ja avauduttava ilman kirjautumista.\n• Konsolin on päästävä siihen käsiksi. Tämän puhelimen linkit toimivat vain samassa Wi-Fissä.\n• Tarkista, että Installer on käynnissä ja konsolilla on vapaata tilaa.</string>
+    <string name="help_storage_title">Konsoli lopetti tallennuksen</string>
+    <string name="help_storage_what">Konsoli tallensi vähemmän kuin lähetettiin. Asema on yleensä täynnä tai vain luku -tilassa.</string>
+    <string name="help_storage_try">• Vapauta tilaa konsolilta.\n• Valitse toinen kansio, esimerkiksi USB-asemalta.\n• Napauta sitten Yritä uudelleen.</string>
+    <string name="help_denied_title">Kansio tai tiedosto evättiin</string>
+    <string name="help_denied_what">FTP-palvelin ei voi avata, kirjoittaa tai muuttaa sitä täällä.</string>
+    <string name="help_denied_try">• Tarkista, että kansio on olemassa. Nimissä isot ja pienet kirjaimet ovat eri asia.\n• Järjestelmäkansiot ovat vain luku -tilassa. Käytä kansiota /data tai USB-asemaa.\n• Käynnissä olevan pelin käyttämä tiedosto voi olla lukittu. Sulje peli.</string>
+    <string name="help_phone_title">Puhelin ei voi käyttää tiedostoa</string>
+    <string name="help_phone_what">Tiedosto on poissa tai siirretty, sovellus menetti pääsyn siihen tai puhelimen tila on loppu.</string>
+    <string name="help_phone_try">• Valitse tiedosto uudelleen.\n• Vapauta tallennustilaa puhelimesta.\n• Jos tiedosto on pilvisovelluksessa, tallenna se ensin puhelimeen.</string>
+    <string name="help_link_title">Latauslinkki epäonnistui</string>
+    <string name="help_link_what">Verkkosivusto ei luovuttanut tiedostoa. Linkki on voinut vanhentua, vaatia kirjautumisen tai sivusto on kiireinen.</string>
+    <string name="help_link_try">• Aloita lataus uudelleen Web-välilehdeltä. Silloin kirjautumisesi säilyy.\n• Tiedostonjakosivustojen linkit vanhenevat usein muutamassa minuutissa.\n• Jos sivusto ilmoitti virheen 500-sarjasta, yritä myöhemmin uudelleen.</string>
+
+    <!-- update check -->
+    <string name="update_available">Versio %1$s on saatavilla</string>
+    <string name="update_download">Lataa</string>
+    <string name="update_later">Myöhemmin</string>
+    <string name="update_title">Päivitykset</string>
+    <string name="update_current">Sinulla on uusin versio (%1$s).</string>
+    <string name="update_none">Releases-sivulta ei ole vielä löytynyt julkaisua.</string>
+    <string name="update_check_now">Tarkista nyt</string>
+    <string name="update_auto">Tarkista päivitykset, kun sovellus avataan</string>
+    <string name="update_privacy">Tarkistus kysyy GitHubilta uusinta julkaisua enintään kerran päivässä. Sinusta tai konsoleistasi ei lähetetä mitään; GitHub näkee IP-osoitteesi kuten mikä tahansa verkkosivusto.</string>
+
+    <!-- find my console -->
+    <string name="find_button">Etsi oma PS5</string>
+    <string name="find_scanning">Etsitään konsoliasi verkosta %1$s…</string>
+    <string name="find_again">Skannaa uudelleen</string>
+    <string name="find_none">Konsolia ei löytynyt.</string>
+    <string name="find_none_try">• Kytke konsoli kokonaan päälle (ei lepotilaan) ja käynnistä etaHEN.\n• Käytä puhelimessa ja konsolissa samaa Wi-Fiä. Vierasverkot ja VPN pitävät laitteet erillään.\n• Skannaa sitten uudelleen.</string>
+    <string name="find_no_wifi">Tämä puhelin ei ole Wi-Fi-verkossa. Yhdistä se samaan Wi-Fi-verkkoon kuin konsoli ja skannaa sitten uudelleen.</string>
+    <string name="find_pick">Aseta osoite napauttamalla Käytä (%1$s).</string>
+    <string name="find_saved">Tallennettu osoite</string>
+    <string name="find_used_by">Tallennettu: %1$s</string>
+    <string name="find_updated">%1$s käyttää nyt osoitetta %2$s.</string>
+    <string name="find_privacy">Vain oma Wi-Fi-verkkosi skannataan, muutamasta konsolin portista. Mitään ei lähetetä internetiin.</string>
+    <string name="action_stop">Pysäytä</string>
+    <string name="action_use">Käytä</string>
+
+    <!-- about and backup -->
+    <string name="about_title">Tietoja: Bento</string>
+    <string name="about_version">Versio %1$s</string>
+    <string name="about_button">Tietoja ja varmuuskopio</string>
+    <string name="about_report">Kopioi raportti</string>
+    <string name="about_report_help">Kopioi sovelluksen version, puhelimen mallin ja viimeisimmän viestin, jotta voit liittää ne virheraporttiin. IP-osoitteet ja linkit jätetään pois.</string>
+    <string name="about_report_copied">Raportti kopioitu</string>
+    <string name="about_releases">Releases-sivu</string>
+    <string name="backup_title">Varmuuskopio</string>
+    <string name="backup_text">Tallentaa konsolisi, aloitussivun, kirjanmerkit, mainoslistan ja payloadit yhteen tiedostoon. FTP-salasanoja ei tallenneta.</string>
+    <string name="backup_save">Tallenna varmuuskopio</string>
+    <string name="backup_restore">Palauta varmuuskopio</string>
+    <string name="backup_saved">Varmuuskopio tallennettu.</string>
+    <string name="backup_contents">Konsolit: %1$d · Kirjanmerkit: %2$d · Payloadit: %3$d</string>
+    <string name="backup_made">Luotu %1$s</string>
+    <string name="backup_skipped">Payloadit, jotka jätettiin pois, koska tiedostosta olisi tullut liian suuri: %1$d</string>
+    <string name="backup_bad_file">Tämä tiedosto ei ole Bento-varmuuskopio.</string>
+    <string name="backup_too_new">Tämän varmuuskopion on tehnyt Bento-sovelluksen uudempi versio. Päivitä sovellus ja yritä uudelleen.</string>
+    <string name="restore_title">Palautetaanko tämä varmuuskopio?</string>
+    <string name="restore_text">Konsolisi, aloitussivusi, kirjanmerkkisi ja mainoslistasi korvataan tiedoston sisällöllä. Tiedoston payloadit lisätään payload-kirjastoon. FTP-salasanat täytyy antaa uudelleen.</string>
+    <string name="restore_button">Palauta</string>
+    <string name="restore_done">Varmuuskopio palautettu.</string>
+    <string name="restore_payloads_failed">Payloadit, joita ei voitu tallentaa: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">Pakettilinkit (yksi riviä kohti)</string>
+    <string name="install_paste">Liitä</string>
+    <string name="action_clear">Tyhjennä</string>
+    <string name="install_paste_none">Leikepöydällä ei ole verkkolinkkiä.</string>
+    <string name="install_links_skipped">Vain osoitteet, jotka alkavat merkeillä http:// tai https://, lähetetään. Pois jätetty: %1$d</string>
+    <string name="install_recent">Viimeaikaiset linkit</string>
+    <string name="install_recent_clear">Tyhjennä luettelo</string>
+    <string name="install_sending_n">Lähetetään linkkiä %1$d / %2$d…</string>
+    <string name="install_batch_done">Hyväksytty: %1$d / %2$d linkkiä</string>
+    <string name="install_batch_notsent">Ei lähetetty: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">Ketjut</string>
+    <string name="chains_hint">Ketju lähettää useita payloadeja peräkkäin, ja jokaisen jälkeen pidetään tauko. Paina sovelluskuvaketta pitkään, niin voit käynnistää jonkin neljästä ensimmäisestä ketjusta aloitusnäytöltä.</string>
+    <string name="chain_new">Uusi ketju</string>
+    <string name="action_edit">Muokkaa</string>
+    <string name="chain_summary_steps">Payloadit: %1$d</string>
+    <string name="chain_summary_pauses">Tauot: %1$s</string>
+    <string name="chain_edit_title">Muokkaa ketjua</string>
+    <string name="chain_steps_title">Payloadit järjestyksessä (enintään %1$d)</string>
+    <string name="chain_add_step">Lisää payload</string>
+    <string name="chain_pick_title">Mikä payload lisätään?</string>
+    <string name="chain_wait_label">Odota sen jälkeen (sekuntia)</string>
+    <string name="chain_missing">Ei kirjastossa</string>
+    <string name="chain_move_up">Siirrä ylös</string>
+    <string name="chain_move_down">Siirrä alas</string>
+    <string name="chain_pin">Lisää aloitusnäyttöön</string>
+    <string name="chain_pin_unsupported">Tämä käynnistin ei voi lisätä pikakuvakkeita. Paina sovelluskuvaketta pitkään, niin löydät ketjusi sieltä.</string>
+    <string name="chain_sending">Lähetetään: %1$s (%2$d/%3$d)…</string>
+    <string name="chain_waiting">Seuraava payload %1$s kuluttua</string>
+    <string name="chain_retrying">Odotetaan, että konsoli on valmis…</string>
+    <string name="chain_result_done">Valmis. Payloadeja lähetetty: %1$d / %2$d</string>
+    <string name="chain_result_stopped">Pysäytetty. Payloadeja lähetetty: %1$d / %2$d</string>
+    <string name="chain_result_failed">Pysähtyi vaiheeseen %1$d (%2$s). Payloadeja lähetetty: %3$d / %4$d</string>
+    <string name="chain_err_target">Aseta ensin konsolin IP-osoite ja Loaderin portti.</string>
+    <string name="chain_err_missing">Ei enää kirjastossa: %1$s. Lisää se uudelleen tai muokkaa ketjua.</string>
+    <string name="chain_err_unknown">Tätä ketjua ei enää ole.</string>
+    <string name="notif_channel_chain">Payload-ketjut</string>
+    <string name="backup_chains">Ketjut: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">Viime kerralla kesken jääneet: %1$d</string>
+    <string name="unfinished_hint">Sovellus suljettiin, ennen kuin nämä valmistuivat. ”Jatka” aloittaa jokaisen uudelleen alusta.</string>
+    <string name="unfinished_continue">Jatka</string>
+    <string name="unfinished_discard">Hylkää</string>
+    <string name="unfinished_missing">Tiedostoja ei enää löydy, valitse ne uudelleen: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">Keskeytä</string>
+    <string name="transfer_resume">Jatka</string>
+    <string name="transfer_paused">Keskeytetty</string>
+    <string name="speed_limit_title">Nopeusrajoitus</string>
+    <string name="speed_limit_off">Ei rajoitusta</string>
+    <string name="speed_limit_value">Rajoitus: %1$s</string>
+    <string name="speed_limit_hint">Hidastaa siirtoja, jotta Wi-Fi pysyy vapaana muuhun käyttöön. Muutos tulee voimaan heti.</string>
+    <string name="summary_title">Siirrot valmiit: %1$d / %2$d</string>
+    <string name="summary_detail">%1$s ajassa %2$s</string>
+    <string name="summary_failed">Epäonnistui: %1$d</string>
+    <string name="summary_stopped">Pysäytetty: %1$d</string>
+    <string name="notif_channel_results">Siirtojen tulokset</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">Valittu: %1$d</string>
+    <string name="files_select_all">Valitse kaikki</string>
+    <string name="files_select_none">Poista valinnat</string>
+    <string name="files_delete_many_title">Poistetaanko valitut kohteet (%1$d)?</string>
+    <string name="files_delete_many_text">Valitut tiedostot ja kansiot poistetaan konsolilta, kansiot kaikkine sisältöineen. Tätä ei voi peruuttaa.</string>
+    <string name="files_deleted_many">Poistetut kohteet: %1$d</string>
+    <string name="files_delete_partial">Poistetut kohteet: %1$d, ei poistettu: %2$d. Ensimmäinen ongelma: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">Käydään kansioita läpi…</string>
+    <string name="files_dl_confirm_title">Ladataanko puhelimeen?</string>
+    <string name="files_dl_confirm_text">Tiedostoja: %1$d, yhteensä %2$s. Ne tallennetaan kansioon Downloads/PS5 samoihin kansioihin kuin konsolilla.</string>
+    <string name="files_dl_links">Kansioiden sisällä olevia linkkejä ei ladata: %1$d.</string>
+    <string name="files_dl_truncated">Mukaan otetut tiedostot: %1$d. Kansioissa on enemmän, tai ne ulottuvat syvemmälle kuin sovellus seuraa.</string>
+    <string name="files_dl_none">Valinnassa ei ole ladattavaa tiedostoa.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">Järjestä</string>
+    <string name="files_sort_title">Järjestysperuste</string>
+    <string name="files_sort_name">Nimi</string>
+    <string name="files_sort_size">Koko, suurin ensin</string>
+    <string name="files_sort_newest">Uusin ensin</string>
+    <string name="files_search">Haku</string>
+    <string name="files_search_hint">Hae tästä kansiosta</string>
+    <string name="files_no_match">Mikään tässä kansiossa ei vastaa hakua.</string>
+    <string name="files_pin">Kiinnitä tämä kansio</string>
+    <string name="files_unpin">Irrota tämä kansio</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">Välilehdet: %1$d</string>
+    <string name="web_tabs_title">Välilehdet</string>
+    <string name="web_tab_new">Uusi välilehti</string>
+    <string name="web_tabs_full">Liikaa välilehtiä. Raja on %1$d. Sulje ensin yksi.</string>
+    <string name="web_find">Etsi</string>
+    <string name="web_find_hint">Etsi tältä sivulta</string>
+    <string name="web_find_none">Ei osumia</string>
+    <string name="web_desktop">Tietokoneversio</string>
+    <string name="web_link_new_tab">Avaa uudessa välilehdessä</string>
+    <string name="web_link_copy">Kopioi linkki</string>
+    <string name="web_link_copied">Linkki kopioitu</string>
+    <string name="web_link_use">Lähetä tai lataa…</string>
+</resources>

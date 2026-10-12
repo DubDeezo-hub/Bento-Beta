@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Catalan. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">Cancel·la</string>
+    <string name="action_close">Tanca</string>
+    <string name="action_done">Fet</string>
+    <string name="action_delete">Suprimeix</string>
+    <string name="action_rename">Canvia el nom</string>
+    <string name="action_save">Desa</string>
+    <string name="action_remove">Elimina</string>
+    <string name="action_send">Envia</string>
+    <string name="action_open">Obre</string>
+    <string name="action_block">Bloqueja</string>
+    <string name="action_home">Inici</string>
+    <string name="action_dismiss">Amaga</string>
+    <string name="action_try_again">Torna-ho a provar</string>
+    <string name="action_skip">Omet</string>
+    <string name="action_cancel_all">Cancel·la-ho tot</string>
+    <string name="action_create">Crea</string>
+    <string name="action_set">Defineix</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">per %1$s</string>
+    <string name="nav_install">Instal·la</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">Penja</string>
+    <string name="nav_files">Fitxers</string>
+    <string name="nav_web">Web</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Installer</string>
+    <string name="service_loader">Loader</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">Defineix l\'adreça IP de la PS5</string>
+    <string name="status_checking">S\'està comprovant…</string>
+    <string name="status_ready">A punt</string>
+    <string name="status_partly">Parcialment a punt</string>
+    <string name="status_partly_off">Parcialment a punt · no respon: %1$s</string>
+    <string name="status_offline">No es pot accedir a la consola</string>
+    <string name="status_hint_unset">La trobaràs a la PS5 a Settings &gt; Network &gt; Connection Status &gt; View Connection Status. Toca aquí per introduir-la.</string>
+    <string name="status_hint_offline">No hi ha cap resposta en aquesta adreça. Comprova l\'adreça IP, que la consola estigui encesa i a la mateixa xarxa Wi-Fi i que etaHEN s\'estigui executant.</string>
+    <string name="status_hint_one">No respon: %1$s. Inicia aquest servei a la consola o comprova\'n el port.</string>
+    <string name="status_hint_many">No responen: %1$s. Inicia aquests serveis a la consola o comprova\'n els ports.</string>
+    <string name="console_switch">Canvia de consola</string>
+    <string name="console_change_ip">Canvia l\'adreça IP</string>
+    <string name="console_ip_title">Adreça IP de la consola</string>
+    <string name="console_ip_label">Adreça IP</string>
+    <string name="console_ip_help">La trobaràs a la PS5 a Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">Transferència</string>
+    <string name="transfer_sending">S\'està enviant</string>
+    <string name="transfer_sending_to">S\'està enviant a %1$s</string>
+    <string name="transfer_receiving">S\'està rebent</string>
+    <string name="transfer_receiving_from">S\'està rebent de %1$s</string>
+    <string name="transfer_detail_total">%1$s · %2$s de %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">S\'està iniciant…</string>
+    <string name="transfer_stopped">Aturada</string>
+    <string name="transfer_start_failed">No s\'ha pogut iniciar la transferència: %1$s</string>
+    <string name="transfer_retry_in">S\'ha perdut la connexió. Es tornarà a provar d\'aquí a %1$d s…</string>
+    <string name="transfer_reconnecting">Tornant a connectar…</string>
+    <string name="transfer_eta">Resta: %1$s</string>
+    <string name="transfer_queued">%1$d en espera</string>
+    <string name="queue_title">Transferències en espera</string>
+    <string name="queue_clear">Elimina-ho tot</string>
+    <string name="queue_empty">No hi ha res en espera.</string>
+    <string name="notif_channel">Transferències de la PS5</string>
+    <string name="notif_sent">S\'ha enviat %1$s</string>
+    <string name="notif_received">S\'ha rebut %1$s</string>
+    <string name="percent_value">%1$d%%</string>
+    <string name="desc_done">Fet</string>
+    <string name="desc_problem">Problema</string>
+    <string name="status_hide">Amaga aquest missatge</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">S\'ha afegit a la cua. %1$d en espera.</string>
+    <string name="msg_set_ip_first">Primer defineix l\'adreça IP de la consola. Toca la targeta de la part superior.</string>
+    <string name="msg_sending_link">S\'està enviant l\'enllaç a la PS5…</string>
+    <string name="msg_check_ip_ftp">Comprova l\'adreça IP de la consola i el port FTP.</string>
+    <string name="msg_adding_to_shelf_link">S\'està afegint a la biblioteca de payloads…</string>
+    <string name="status_idle">Inactiu</string>
+    <string name="status_sending">S\'està enviant…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">Vols sortir d\'aquest lloc?</string>
+    <string name="offsite_text">La pàgina vol obrir %1$s. Sovint són els anuncis els que ho provoquen quan toques un enllaç, així que continua només si ho esperaves.</string>
+    <string name="choose_install">Envia l\'enllaç a l\'Installer de la PS5</string>
+    <string name="choose_ftp">Penja a la PS5 (FTP)</string>
+    <string name="choose_shelf">Desa a la biblioteca de payloads</string>
+    <string name="choose_phone">Desa al telèfon</string>
+    <string name="choose_help">L\'Installer necessita un enllaç directe al paquet que la consola pugui obrir sense iniciar la sessió. L\'FTP funciona amb qualsevol fitxer i manté la teva sessió. El telèfon retransmet les dades en segon pla, amb el progrés a sobre de la barra inferior i en una notificació. La biblioteca de payloads guarda dins de l\'aplicació un payload petit (fins a %1$s) per a la pestanya Payload.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Port de l\'Installer (etaHEN: 12800)</string>
+    <string name="install_accepted">L\'Installer l\'ha acceptat: %1$s</string>
+    <string name="install_not_accepted">No acceptat (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">Instal·la des d\'aquest telèfon</string>
+    <string name="serve_intro">La consola baixa els paquets directament d\'aquest telèfon per Wi-Fi, de manera que no cal copiar res abans. El telèfon i la consola han d\'estar a la mateixa xarxa.</string>
+    <string name="serve_choose">Tria paquets</string>
+    <string name="serve_none">No s\'ha triat cap paquet</string>
+    <string name="serve_start">Comença a compartir</string>
+    <string name="serve_stop">Deixa de compartir</string>
+    <string name="serve_copy">Copia l\'enllaç</string>
+    <string name="serve_copied">S\'ha copiat l\'enllaç</string>
+    <string name="serve_file_waiting">Esperant que la consola comenci a baixar…</string>
+    <string name="serve_file_pulling">La consola està baixant: %1$s</string>
+    <string name="serve_file_done">La consola ho ha baixat tot</string>
+    <string name="serve_unreadable">No es pot llegir aquest fitxer</string>
+    <string name="serve_hint">Si la consola no comença mai a baixar, pot ser que el Wi-Fi impedeixi que els dispositius es vegin entre ells (les xarxes de convidats ho fan sovint). Utilitza la xarxa principal i deixa que aquesta aplicació s\'executi en segon pla.</string>
+    <string name="serve_no_wifi">No es pot trobar l\'adreça Wi-Fi d\'aquest telèfon. Connecta\'l a la mateixa xarxa Wi-Fi que la consola.</string>
+    <string name="serve_failed">No s\'ha pogut començar a compartir: %1$s</string>
+    <string name="serve_idle_stop">S\'ha deixat de compartir perquè no s\'ha baixat res durant molt de temps.</string>
+    <string name="serve_notif_title">Compartint amb %1$s</string>
+    <string name="serve_notif_text">Fitxers baixats: %1$d / %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">Tria fitxers</string>
+    <string name="upload_none">No s\'ha triat cap fitxer</string>
+    <string name="upload_files_chosen">Fitxers triats: %1$d</string>
+    <string name="upload_start">Penja en segon pla</string>
+    <string name="upload_help">El progrés es mostra a sobre de la barra inferior i en una notificació. Continua encara que surtis de l\'aplicació.</string>
+    <string name="ftp_port">Port FTP</string>
+    <string name="ftp_user">Nom d\'usuari</string>
+    <string name="ftp_password">Contrasenya</string>
+    <string name="ftp_folder">Carpeta remota</string>
+    <string name="ftp_use_folder">Utilitza %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">S\'està carregant…</string>
+    <string name="files_empty">Aquesta carpeta és buida.</string>
+    <string name="files_not_loaded">Encara no s\'ha carregat</string>
+    <string name="files_up">⬆ Amunt</string>
+    <string name="files_refresh">Actualitza</string>
+    <string name="files_new_folder">Carpeta nova</string>
+    <string name="files_upload_here">Penja aquí</string>
+    <string name="files_ftp_settings">Configuració d\'FTP</string>
+    <string name="files_need_ip">Defineix l\'adreça IP de la consola (toca la targeta de la part superior) i un port FTP vàlid per explorar-ne els fitxers.</string>
+    <string name="files_kind_folder">Carpeta</string>
+    <string name="files_kind_link">Enllaç, %1$s</string>
+    <string name="files_download">Baixa al telèfon</string>
+    <string name="files_new_name">Nom nou</string>
+    <string name="files_name_used">Aquest nom ja s\'està utilitzant aquí.</string>
+    <string name="files_renaming">S\'està canviant el nom…</string>
+    <string name="files_renamed">S\'ha canviat el nom de %1$s a %2$s</string>
+    <string name="files_delete_title">Vols suprimir %1$s?</string>
+    <string name="files_delete_folder">Això suprimeix la carpeta i tot el seu contingut de la consola. No es pot desfer.</string>
+    <string name="files_delete_file">Això suprimeix el fitxer de la consola. No es pot desfer.</string>
+    <string name="files_deleting">S\'està suprimint…</string>
+    <string name="files_deleted">S\'ha suprimit %1$s</string>
+    <string name="files_deleted_inside">S\'ha suprimit %1$s (elements a dins: %2$d)</string>
+    <string name="files_creating">S\'està creant la carpeta…</string>
+    <string name="files_created">S\'ha creat la carpeta %1$s</string>
+    <string name="files_folder_name">Nom de la carpeta</string>
+    <string name="name_empty">El nom no pot estar buit.</string>
+    <string name="name_not_allowed">Aquest nom no està permès.</string>
+    <string name="name_slash">El nom no pot contenir barres.</string>
+    <string name="name_control">El nom conté caràcters no permesos.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">Ha fallat: %1$s</string>
+    <string name="ftp_port_hint">No es pot accedir al servidor FTP. Comprova l\'IP de la consola i el port FTP (l\'FTP integrat d\'etaHEN utilitza el 1337 i el payload FTP, el 2121).</string>
+    <string name="err_login">Ha fallat l\'inici de sessió FTP</string>
+    <string name="err_cant_open">no es pot obrir %1$s (%2$s)</string>
+    <string name="err_rename">ha fallat el canvi de nom (%1$s)</string>
+    <string name="err_mkdir">no s\'ha pogut crear la carpeta (%1$s)</string>
+    <string name="err_too_deep">la carpeta està imbricada massa endins</string>
+    <string name="err_delete_path">no s\'ha pogut suprimir %1$s (%2$s)</string>
+    <string name="err_upload">Ha fallat la pujada per FTP: %1$s</string>
+    <string name="err_download">Ha fallat la baixada per FTP: %1$s</string>
+    <string name="err_open_file">No s\'ha pogut obrir el fitxer</string>
+    <string name="err_cancelled_upload">S\'ha cancel·lat. Pot ser que quedi un fitxer parcial a %1$s</string>
+    <string name="err_cancelled_download">S\'ha cancel·lat. La baixada parcial s\'ha descartat.</string>
+    <string name="err_gave_up">S\'ha desistit perquè la connexió seguia fallant. Últim error: %1$s</string>
+    <string name="err_short_upload">De %2$s enviats, la consola només n\'ha conservat %1$s.</string>
+    <string name="err_short_download">Només han arribat %1$s de %2$s.</string>
+    <string name="err_empty_file">El fitxer és buit</string>
+    <string name="err_save">No s\'ha pogut desar %1$s</string>
+    <string name="sent_to_ps5">S\'ha enviat a la PS5: %1$s</string>
+    <string name="saved_to_downloads">S\'ha desat a Downloads/PS5: %1$s</string>
+    <string name="dl_http_failed">Ha fallat la baixada: HTTP %1$s</string>
+    <string name="dl_empty">Ha fallat la baixada: resposta buida</string>
+    <string name="dl_cut_short">La connexió s\'ha tancat abans que arribés tot el fitxer.</string>
+    <string name="dl_create_failed">No s\'ha pogut crear el fitxer a Downloads</string>
+    <string name="dl_write_failed">No s\'ha pogut obrir el fitxer nou per escriure-hi</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">S\'ha enviat %1$s</string>
+    <string name="shelf_added">S\'ha afegit a la biblioteca: %1$s (%2$s)</string>
+    <string name="shelf_updated">S\'ha actualitzat a la biblioteca: %1$s (%2$s)</string>
+    <string name="shelf_too_large">Aquest fitxer és més gran que %1$s, de manera que no s\'ha afegit a la biblioteca.</string>
+    <string name="shelf_too_large_url">Aquest fitxer ocupa %1$s. La biblioteca accepta payloads de fins a %2$s.</string>
+    <string name="payload_adding">S\'està afegint a la biblioteca…</string>
+    <string name="payload_remove_title">Vols eliminar %1$s?</string>
+    <string name="payload_remove_text">S\'elimina de la biblioteca. El fitxer original del teu telèfon no es toca.</string>
+    <string name="payload_loader_port">Port del Loader</string>
+    <string name="payload_shelf_title">Biblioteca de payloads</string>
+    <string name="payload_shelf_empty">Encara no hi ha res desat. Afegeix els payloads que fas servir sovint (un servidor FTP, etaHEN, ...) i envia\'ls amb un sol toc. També en pots desar un directament des de la pestanya Web quan el baixes.</string>
+    <string name="payload_sending">S\'està enviant %1$s…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">Afegeix un payload a la biblioteca</string>
+    <string name="payload_once_title">Envia un fitxer una vegada</string>
+    <string name="payload_choose">Tria un payload (.elf / .bin)</string>
+    <string name="payload_send">Envia el payload</string>
+
+    <!-- consoles -->
+    <string name="profile_default">La meva PS5</string>
+    <string name="profile_new">Consola %1$d</string>
+    <string name="profile_fallback">Consola</string>
+    <string name="consoles_title">Consoles</string>
+    <string name="console_rename_title">Canvia el nom de la consola</string>
+    <string name="console_name_label">Nom</string>
+    <string name="console_delete_title">Vols suprimir %1$s?</string>
+    <string name="console_delete_text">L\'adreça IP i els ports que té desats s\'eliminen. Les altres consoles no es veuen afectades.</string>
+    <string name="console_no_ip">encara sense adreça IP</string>
+    <string name="console_color_of">Color de %1$s</string>
+    <string name="console_use_color">Utilitza %1$s</string>
+    <string name="console_add">Afegeix una consola</string>
+    <string name="language_button">Idioma</string>
+    <string name="color_blue">Blau</string>
+    <string name="color_orange">Taronja</string>
+    <string name="color_green">Verd</string>
+    <string name="color_pink">Rosa</string>
+    <string name="color_purple">Porpra</string>
+    <string name="color_teal">Blau verdós</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">S\'ha iniciat la baixada (vegeu Downloads)</string>
+    <string name="web_load_failed">No s\'ha pogut carregar la pàgina: %1$s</string>
+    <string name="web_http_server">El lloc està ocupat o fora de servei ara mateix (error %1$s). Torna-ho a provar d\'aquí a un moment.</string>
+    <string name="web_http_other">El lloc ha respost amb l\'error %1$s.</string>
+    <string name="web_open_first">Obre primer una pàgina</string>
+    <string name="web_bookmark_saved">S\'ha desat el marcador</string>
+    <string name="web_bookmark_exists">Ja és als teus marcadors</string>
+    <string name="web_home_set">La pàgina d\'inici s\'ha definit com a %1$s</string>
+    <string name="web_reload">Torna a carregar</string>
+    <string name="web_add">★ Afegeix</string>
+    <string name="web_bookmarks">Marcadors</string>
+    <string name="web_homepage_label">URL de la pàgina d\'inici</string>
+    <string name="web_bookmarks_empty">Encara no hi ha cap marcador. Obre una pàgina i toca %1$s.</string>
+    <string name="web_bookmarks_help">Toca un marcador per obrir-lo. «%1$s» el defineix com a pàgina d\'inici.</string>
+    <string name="adblock_title">Bloqueig d\'anuncis</string>
+    <string name="adblock_switch">Bloqueja dominis d\'anuncis</string>
+    <string name="adblock_info">Bloquejats fins ara: %1$d. Xarxes a la llista integrada: %2$d. Torna a carregar la pàgina després de canviar res.</string>
+    <string name="adblock_own">Els teus propis dominis, un per línia</string>
+    <string name="adblock_on">Bloqueig d\'anuncis: activat · bloquejats: %1$d · toca per canviar</string>
+    <string name="adblock_off">Bloqueig d\'anuncis: desactivat · bloquejats: %1$d · toca per canviar</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">Què puc fer?</string>
+    <string name="help_what">Què ha passat</string>
+    <string name="help_try">Què pots provar</string>
+    <string name="help_details">Detalls</string>
+    <string name="help_copy">Copia els detalls</string>
+    <string name="help_copied">Copiat</string>
+    <string name="help_unreachable_title">No es pot arribar a la consola</string>
+    <string name="help_unreachable_what">Ningú respon a l\'adreça de la consola.</string>
+    <string name="help_unreachable_try">• Comprova l\'adreça IP a la PS5 (Settings &gt; Network &gt; Connection Status). Pot canviar després de reiniciar.\n• Desperta del tot la consola. El mode de repòs sovint desactiva la xarxa.\n• Utilitza la mateixa Wi-Fi als dos dispositius. Les xarxes de convidats i les VPN ho bloquegen.</string>
+    <string name="help_port_title">Aquest servei no s\'està executant</string>
+    <string name="help_port_what">La consola ha respost, però res no escolta en aquest port.</string>
+    <string name="help_port_try">• Inicia etaHEN a la consola. Ofereix l\'Installer (12800), el Loader (9021) i l\'FTP (1337).\n• Un payload d\'FTP independent sol utilitzar el 2121. Introdueix aquí el mateix port.\n• A la targeta de la consola, el llum apagat mostra què falta.</string>
+    <string name="help_login_title">Inici de sessió FTP rebutjat</string>
+    <string name="help_login_what">El servidor FTP de la consola ha rebutjat el nom d\'usuari o la contrasenya.</string>
+    <string name="help_login_try">• etaHEN accepta el nom d\'usuari anonymous amb qualsevol contrasenya.\n• Si has definit un inici de sessió a la consola, introdueix-lo a Penja.\n• La contrasenya no es desa. Torna a introduir-la després de reiniciar l\'aplicació.</string>
+    <string name="help_dropped_title">S\'ha perdut la connexió</string>
+    <string name="help_dropped_what">L\'enllaç amb la consola s\'ha trencat o ha deixat de moure dades. L\'aplicació ho torna a provar i continua pel punt on havia quedat.</string>
+    <string name="help_dropped_try">• Mantén el telèfon a prop del router i la consola desperta.\n• Atura altres baixades grans a la xarxa.\n• Si segueix fallant, espera un moment i toca Torna-ho a provar.</string>
+    <string name="help_refused_title">L\'Installer no ha acceptat l\'enllaç</string>
+    <string name="help_refused_what">Es pot arribar a la consola, però el seu Installer ha rebutjat aquest enllaç.</string>
+    <string name="help_refused_try">• L\'enllaç ha de portar directament al fitxer del paquet i obrir-se sense iniciar sessió.\n• La consola ha de poder-hi arribar. Els enllaços d\'aquest telèfon només funcionen a la mateixa Wi-Fi.\n• Comprova que l\'Installer s\'està executant i que la consola té espai lliure.</string>
+    <string name="help_storage_title">La consola ha deixat d\'emmagatzemar</string>
+    <string name="help_storage_what">La consola ha desat menys del que s\'ha enviat. Normalment la unitat és plena o de només lectura.</string>
+    <string name="help_storage_try">• Allibera espai a la consola.\n• Tria una altra carpeta, per exemple en una unitat USB.\n• Després toca Torna-ho a provar.</string>
+    <string name="help_denied_title">S\'ha rebutjat aquesta carpeta o fitxer</string>
+    <string name="help_denied_what">El servidor FTP no ho pot obrir, escriure ni canviar aquí.</string>
+    <string name="help_denied_try">• Comprova que la carpeta existeix. Els noms distingeixen majúscules i minúscules.\n• Les carpetes del sistema són de només lectura. Utilitza /data o una unitat USB.\n• Un fitxer que fa servir un joc en execució pot estar bloquejat. Tanca el joc.</string>
+    <string name="help_phone_title">El telèfon no pot utilitzar el fitxer</string>
+    <string name="help_phone_what">El fitxer ja no hi és o s\'ha mogut, l\'aplicació ha perdut l\'accés o el telèfon no té espai.</string>
+    <string name="help_phone_try">• Torna a triar el fitxer.\n• Allibera emmagatzematge al telèfon.\n• Si el fitxer és en una aplicació al núvol, desa\'l primer al telèfon.</string>
+    <string name="help_link_title">L\'enllaç de baixada ha fallat</string>
+    <string name="help_link_what">El web no ha lliurat el fitxer. L\'enllaç pot haver caducat, necessitar inici de sessió o el web pot estar ocupat.</string>
+    <string name="help_link_try">• Torna a iniciar la baixada des de la pestanya Web. Així es conserva la teva sessió.\n• Els enllaços de llocs d\'allotjament de fitxers solen caducar al cap d\'uns minuts.\n• Si el web ha informat d\'un error de la sèrie 500, prova-ho més tard.</string>
+
+    <!-- update check -->
+    <string name="update_available">La versió %1$s està disponible</string>
+    <string name="update_download">Baixa</string>
+    <string name="update_later">Més tard</string>
+    <string name="update_title">Actualitzacions</string>
+    <string name="update_current">Tens l\'última versió (%1$s).</string>
+    <string name="update_none">Encara no hi ha cap versió a la pàgina Releases.</string>
+    <string name="update_check_now">Comprova ara</string>
+    <string name="update_auto">Comprova si hi ha actualitzacions en obrir l\'aplicació</string>
+    <string name="update_privacy">La comprovació demana a GitHub l\'última versió, com a màxim un cop al dia. No s\'envia res sobre tu ni sobre les teves consoles; GitHub veu la teva adreça IP, com qualsevol web.</string>
+
+    <!-- find my console -->
+    <string name="find_button">Troba la meva PS5</string>
+    <string name="find_scanning">S\'està cercant la consola a la xarxa %1$s…</string>
+    <string name="find_again">Torna a cercar</string>
+    <string name="find_none">No s\'ha trobat cap consola.</string>
+    <string name="find_none_try">• Encén del tot la consola (no en mode de repòs) i inicia etaHEN.\n• Utilitza la mateixa Wi-Fi al telèfon i a la consola. Les xarxes de convidats i les VPN mantenen els dispositius separats.\n• Després torna a cercar.</string>
+    <string name="find_no_wifi">Aquest telèfon no està connectat a cap xarxa Wi-Fi. Connecta\'l a la mateixa Wi-Fi que la consola i torna a cercar.</string>
+    <string name="find_pick">Toca Utilitza per definir l\'adreça de %1$s.</string>
+    <string name="find_saved">Adreça desada</string>
+    <string name="find_used_by">Desada per a %1$s</string>
+    <string name="find_updated">%1$s ara utilitza %2$s.</string>
+    <string name="find_privacy">Només s\'escaneja la teva xarxa Wi-Fi, en uns quants ports de la consola. No s\'envia res per Internet.</string>
+    <string name="action_stop">Atura</string>
+    <string name="action_use">Utilitza</string>
+
+    <!-- about and backup -->
+    <string name="about_title">Quant a Bento</string>
+    <string name="about_version">Versió %1$s</string>
+    <string name="about_button">Quant a i còpia de seguretat</string>
+    <string name="about_report">Copia l\'informe</string>
+    <string name="about_report_help">Copia la versió de l\'aplicació, el model del telèfon i l\'últim missatge, per enganxar-los en un informe d\'errors. Les adreces IP i els enllaços s\'ometen.</string>
+    <string name="about_report_copied">Informe copiat</string>
+    <string name="about_releases">Pàgina Releases</string>
+    <string name="backup_title">Còpia de seguretat</string>
+    <string name="backup_text">Desa les consoles, la pàgina d\'inici, els marcadors, la llista d\'anuncis i els payloads en un sol fitxer. Les contrasenyes d\'FTP no es desen.</string>
+    <string name="backup_save">Desa la còpia</string>
+    <string name="backup_restore">Restaura la còpia</string>
+    <string name="backup_saved">S\'ha desat la còpia de seguretat.</string>
+    <string name="backup_contents">Consoles: %1$d · Marcadors: %2$d · Payloads: %3$d</string>
+    <string name="backup_made">Feta el %1$s</string>
+    <string name="backup_skipped">Payloads omesos perquè el fitxer seria massa gran: %1$d</string>
+    <string name="backup_bad_file">Aquest fitxer no és una còpia de seguretat de Bento.</string>
+    <string name="backup_too_new">Aquesta còpia l\'ha feta una versió més nova de Bento. Actualitza l\'aplicació i torna-ho a provar.</string>
+    <string name="restore_title">Vols restaurar aquesta còpia?</string>
+    <string name="restore_text">Les consoles, la pàgina d\'inici, els marcadors i la llista d\'anuncis se substitueixen pels del fitxer. Els payloads del fitxer s\'afegeixen a la biblioteca de payloads. Hauràs de tornar a escriure les contrasenyes d\'FTP.</string>
+    <string name="restore_button">Restaura</string>
+    <string name="restore_done">S\'ha restaurat la còpia de seguretat.</string>
+    <string name="restore_payloads_failed">Payloads que no s\'han pogut desar: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">Enllaços de paquets (un per línia)</string>
+    <string name="install_paste">Enganxa</string>
+    <string name="action_clear">Neteja</string>
+    <string name="install_paste_none">No hi ha cap enllaç web al porta-retalls.</string>
+    <string name="install_links_skipped">Només s\'envien les adreces que comencen per http:// o https://. Omeses: %1$d</string>
+    <string name="install_recent">Enllaços recents</string>
+    <string name="install_recent_clear">Neteja la llista</string>
+    <string name="install_sending_n">S\'està enviant l\'enllaç %1$d de %2$d…</string>
+    <string name="install_batch_done">Acceptats: %1$d de %2$d enllaços</string>
+    <string name="install_batch_notsent">No enviats: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">Cadenes</string>
+    <string name="chains_hint">Una cadena envia diversos payloads un darrere l\'altre, amb una pausa després de cadascun. Mantén premuda la icona de l\'aplicació per iniciar una de les quatre primeres cadenes des de la pantalla d\'inici.</string>
+    <string name="chain_new">Cadena nova</string>
+    <string name="action_edit">Edita</string>
+    <string name="chain_summary_steps">Payloads: %1$d</string>
+    <string name="chain_summary_pauses">Pauses: %1$s</string>
+    <string name="chain_edit_title">Edita la cadena</string>
+    <string name="chain_steps_title">Payloads, per ordre (com a màxim %1$d)</string>
+    <string name="chain_add_step">Afegeix un payload</string>
+    <string name="chain_pick_title">Quin payload vols afegir?</string>
+    <string name="chain_wait_label">Després espera (segons)</string>
+    <string name="chain_missing">No és a la biblioteca</string>
+    <string name="chain_move_up">Mou amunt</string>
+    <string name="chain_move_down">Mou avall</string>
+    <string name="chain_pin">Afegeix a la pantalla d\'inici</string>
+    <string name="chain_pin_unsupported">Aquest llançador no pot afegir dreceres. Mantén premuda la icona de l\'aplicació per trobar-hi les teves cadenes.</string>
+    <string name="chain_sending">S\'està enviant %1$s (%2$d de %3$d)…</string>
+    <string name="chain_waiting">Següent payload d\'aquí a %1$s</string>
+    <string name="chain_retrying">Esperant que la consola estigui a punt…</string>
+    <string name="chain_result_done">Fet. Payloads enviats: %1$d de %2$d</string>
+    <string name="chain_result_stopped">Aturada. Payloads enviats: %1$d de %2$d</string>
+    <string name="chain_result_failed">Aturada al pas %1$d (%2$s). Payloads enviats: %3$d de %4$d</string>
+    <string name="chain_err_target">Defineix primer l\'adreça IP de la consola i el port del Loader.</string>
+    <string name="chain_err_missing">Ja no és a la biblioteca: %1$s. Afegeix-lo de nou o edita la cadena.</string>
+    <string name="chain_err_unknown">Aquesta cadena ja no existeix.</string>
+    <string name="notif_channel_chain">Cadenes de payloads</string>
+    <string name="backup_chains">Cadenes: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">Sense acabar l’última vegada: %1$d</string>
+    <string name="unfinished_hint">L’aplicació es va tancar abans que aquestes acabessin. «Continua» inicia cadascuna un altre cop des del principi.</string>
+    <string name="unfinished_continue">Continua</string>
+    <string name="unfinished_discard">Descarta</string>
+    <string name="unfinished_missing">Ja no es troben els fitxers, torna’ls a triar: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">Pausa</string>
+    <string name="transfer_resume">Reprèn</string>
+    <string name="transfer_paused">En pausa</string>
+    <string name="speed_limit_title">Límit de velocitat</string>
+    <string name="speed_limit_off">Sense límit</string>
+    <string name="speed_limit_value">Límit: %1$s</string>
+    <string name="speed_limit_hint">Alenteix les transferències perquè la Wi-Fi quedi lliure per a altres coses. Un canvi té efecte de seguida.</string>
+    <string name="summary_title">Transferències fetes: %1$d de %2$d</string>
+    <string name="summary_detail">%1$s en %2$s</string>
+    <string name="summary_failed">Fallides: %1$d</string>
+    <string name="summary_stopped">Aturades: %1$d</string>
+    <string name="notif_channel_results">Resultats de les transferències</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">Seleccionats: %1$d</string>
+    <string name="files_select_all">Selecciona-ho tot</string>
+    <string name="files_select_none">No seleccionis res</string>
+    <string name="files_delete_many_title">Vols suprimir els elements seleccionats (%1$d)?</string>
+    <string name="files_delete_many_text">Això suprimeix de la consola els fitxers i les carpetes seleccionats, les carpetes amb tot el seu contingut. No es pot desfer.</string>
+    <string name="files_deleted_many">Elements suprimits: %1$d</string>
+    <string name="files_delete_partial">Elements suprimits: %1$d, no suprimits: %2$d. El primer problema: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">Revisant les carpetes…</string>
+    <string name="files_dl_confirm_title">Vols baixar-ho al telèfon?</string>
+    <string name="files_dl_confirm_text">Fitxers: %1$d, en total %2$s. Es desen a Downloads/PS5, a les mateixes carpetes que a la consola.</string>
+    <string name="files_dl_links">Els enllaços dins de les carpetes no es baixen: %1$d.</string>
+    <string name="files_dl_truncated">Fitxers inclosos: %1$d. Les carpetes en contenen més, o van més endins del que l’aplicació segueix.</string>
+    <string name="files_dl_none">A la selecció no hi ha cap fitxer per baixar.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">Ordena</string>
+    <string name="files_sort_title">Ordena per</string>
+    <string name="files_sort_name">Nom</string>
+    <string name="files_sort_size">Mida, primer els més grans</string>
+    <string name="files_sort_newest">Primer els més recents</string>
+    <string name="files_search">Cerca</string>
+    <string name="files_search_hint">Cerca en aquesta carpeta</string>
+    <string name="files_no_match">Res d’aquesta carpeta coincideix amb la cerca.</string>
+    <string name="files_pin">Fixa aquesta carpeta</string>
+    <string name="files_unpin">Deixa de fixar aquesta carpeta</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">Pestanyes: %1$d</string>
+    <string name="web_tabs_title">Pestanyes</string>
+    <string name="web_tab_new">Pestanya nova</string>
+    <string name="web_tabs_full">Hi ha massa pestanyes. El límit és %1$d. Tanca’n una primer.</string>
+    <string name="web_find">Cerca</string>
+    <string name="web_find_hint">Cerca en aquesta pàgina</string>
+    <string name="web_find_none">Cap coincidència</string>
+    <string name="web_desktop">Lloc d’escriptori</string>
+    <string name="web_link_new_tab">Obre en una pestanya nova</string>
+    <string name="web_link_copy">Copia l\'enllaç</string>
+    <string name="web_link_copied">S\'ha copiat l\'enllaç</string>
+    <string name="web_link_use">Envia o baixa…</string>
+</resources>

@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hindi. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">रद्द करें</string>
+    <string name="action_close">बंद करें</string>
+    <string name="action_done">हो गया</string>
+    <string name="action_delete">हटाएं</string>
+    <string name="action_rename">नाम बदलें</string>
+    <string name="action_save">सहेजें</string>
+    <string name="action_remove">निकालें</string>
+    <string name="action_send">भेजें</string>
+    <string name="action_open">खोलें</string>
+    <string name="action_block">ब्लॉक करें</string>
+    <string name="action_home">होम</string>
+    <string name="action_dismiss">छिपाएं</string>
+    <string name="action_try_again">फिर से कोशिश करें</string>
+    <string name="action_skip">छोड़ें</string>
+    <string name="action_cancel_all">सभी रद्द करें</string>
+    <string name="action_create">बनाएं</string>
+    <string name="action_set">सेट करें</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">%1$s द्वारा</string>
+    <string name="nav_install">इंस्टॉल</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">अपलोड</string>
+    <string name="nav_files">फ़ाइलें</string>
+    <string name="nav_web">वेब</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Installer</string>
+    <string name="service_loader">Loader</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">अपने PS5 का IP पता सेट करें</string>
+    <string name="status_checking">जांच हो रही है…</string>
+    <string name="status_ready">तैयार</string>
+    <string name="status_partly">आंशिक रूप से तैयार</string>
+    <string name="status_partly_off">आंशिक रूप से तैयार · जवाब नहीं: %1$s</string>
+    <string name="status_offline">कंसोल से संपर्क नहीं हो पा रहा</string>
+    <string name="status_hint_unset">इसे PS5 पर Settings &gt; Network &gt; Connection Status &gt; View Connection Status में देखें। दर्ज करने के लिए यहां टैप करें।</string>
+    <string name="status_hint_offline">इस पते पर कोई जवाब नहीं दे रहा। IP पता जांचें, देखें कि कंसोल चालू है और उसी Wi-Fi नेटवर्क पर है, और etaHEN चल रहा है।</string>
+    <string name="status_hint_one">जवाब नहीं दे रहा: %1$s। इसे कंसोल पर शुरू करें या इसका पोर्ट जांचें।</string>
+    <string name="status_hint_many">जवाब नहीं दे रहे: %1$s। इन्हें कंसोल पर शुरू करें या इनके पोर्ट जांचें।</string>
+    <string name="console_switch">कंसोल बदलें</string>
+    <string name="console_change_ip">IP पता बदलें</string>
+    <string name="console_ip_title">कंसोल का IP पता</string>
+    <string name="console_ip_label">IP पता</string>
+    <string name="console_ip_help">इसे PS5 पर Settings &gt; Network &gt; Connection Status &gt; View Connection Status में देखें।</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">ट्रांसफ़र</string>
+    <string name="transfer_sending">भेजा जा रहा है</string>
+    <string name="transfer_sending_to">%1$s को भेजा जा रहा है</string>
+    <string name="transfer_receiving">प्राप्त हो रहा है</string>
+    <string name="transfer_receiving_from">%1$s से प्राप्त हो रहा है</string>
+    <string name="transfer_detail_total">%1$s · %3$s में से %2$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">शुरू हो रहा है…</string>
+    <string name="transfer_stopped">रोका गया</string>
+    <string name="transfer_start_failed">ट्रांसफ़र शुरू नहीं हो सका: %1$s</string>
+    <string name="transfer_retry_in">कनेक्शन टूट गया। %1$d सेकंड में फिर कोशिश की जाएगी…</string>
+    <string name="transfer_reconnecting">फिर से कनेक्ट हो रहा है…</string>
+    <string name="transfer_eta">%1$s बाकी</string>
+    <string name="transfer_queued">%1$d प्रतीक्षा में</string>
+    <string name="queue_title">प्रतीक्षा में ट्रांसफ़र</string>
+    <string name="queue_clear">सभी निकालें</string>
+    <string name="queue_empty">कुछ भी प्रतीक्षा में नहीं है।</string>
+    <string name="notif_channel">PS5 ट्रांसफ़र</string>
+    <string name="notif_sent">भेजा गया: %1$s</string>
+    <string name="notif_received">प्राप्त हुआ: %1$s</string>
+    <string name="percent_value">%1$d%%</string>
+    <string name="desc_done">हो गया</string>
+    <string name="desc_problem">समस्या</string>
+    <string name="status_hide">यह संदेश छिपाएं</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">कतार में जोड़ा गया। %1$d प्रतीक्षा में।</string>
+    <string name="msg_set_ip_first">पहले कंसोल का IP पता सेट करें। ऊपर दिए कार्ड पर टैप करें।</string>
+    <string name="msg_sending_link">PS5 को लिंक भेजा जा रहा है…</string>
+    <string name="msg_check_ip_ftp">कंसोल का IP पता और FTP पोर्ट जांचें।</string>
+    <string name="msg_adding_to_shelf_link">payload लाइब्रेरी में जोड़ा जा रहा है…</string>
+    <string name="status_idle">निष्क्रिय</string>
+    <string name="status_sending">भेजा जा रहा है…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">यह साइट छोड़ें?</string>
+    <string name="offsite_text">पेज %1$s खोलना चाहता है। लिंक पर टैप करने पर यह अक्सर विज्ञापनों की वजह से होता है, इसलिए तभी आगे बढ़ें जब आपको इसकी उम्मीद थी।</string>
+    <string name="choose_install">PS5 के Installer को लिंक भेजें</string>
+    <string name="choose_ftp">PS5 पर अपलोड करें (FTP)</string>
+    <string name="choose_shelf">payload लाइब्रेरी में सहेजें</string>
+    <string name="choose_phone">फ़ोन में सहेजें</string>
+    <string name="choose_help">Installer को पैकेज का सीधा लिंक चाहिए, जिसे कंसोल बिना लॉग इन किए खोल सके। FTP किसी भी फ़ाइल के साथ काम करता है और आपका लॉगिन सेशन बनाए रखता है। फ़ोन डेटा को बैकग्राउंड में आगे भेजता है, और प्रगति निचली बार के ऊपर और एक नोटिफ़िकेशन में दिखती है। payload लाइब्रेरी ऐप के अंदर एक छोटा payload (%1$s तक) Payload टैब के लिए रखती है।</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Installer पोर्ट (etaHEN: 12800)</string>
+    <string name="install_accepted">Installer ने इसे स्वीकार किया: %1$s</string>
+    <string name="install_not_accepted">स्वीकार नहीं किया गया (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">इस फ़ोन से इंस्टॉल करें</string>
+    <string name="serve_intro">कंसोल Wi-Fi के ज़रिए पैकेज सीधे इस फ़ोन से डाउनलोड करता है, इसलिए पहले कुछ कॉपी करने की ज़रूरत नहीं। फ़ोन और कंसोल एक ही नेटवर्क पर होने चाहिए।</string>
+    <string name="serve_choose">पैकेज चुनें</string>
+    <string name="serve_none">कोई पैकेज नहीं चुना गया</string>
+    <string name="serve_start">शेयरिंग शुरू करें</string>
+    <string name="serve_stop">शेयरिंग रोकें</string>
+    <string name="serve_copy">लिंक कॉपी करें</string>
+    <string name="serve_copied">लिंक कॉपी हो गया</string>
+    <string name="serve_file_waiting">कंसोल के डाउनलोड शुरू करने का इंतज़ार है…</string>
+    <string name="serve_file_pulling">कंसोल डाउनलोड कर रहा है: %1$s</string>
+    <string name="serve_file_done">कंसोल ने सब कुछ डाउनलोड कर लिया</string>
+    <string name="serve_unreadable">यह फ़ाइल पढ़ी नहीं जा सकती</string>
+    <string name="serve_hint">अगर कंसोल कभी डाउनलोड शुरू नहीं करता, तो हो सकता है Wi-Fi डिवाइस को एक-दूसरे तक पहुँचने से रोक रहा हो (गेस्ट नेटवर्क अक्सर ऐसा करते हैं)। मुख्य नेटवर्क इस्तेमाल करें और इस ऐप को बैकग्राउंड में चलने दें।</string>
+    <string name="serve_no_wifi">इस फ़ोन का Wi-Fi पता नहीं मिला। इसे उसी Wi-Fi से जोड़ें जिससे कंसोल जुड़ा है।</string>
+    <string name="serve_failed">शेयरिंग शुरू नहीं हो सकी: %1$s</string>
+    <string name="serve_idle_stop">शेयरिंग रोक दी गई, क्योंकि काफ़ी देर से कुछ भी डाउनलोड नहीं हुआ।</string>
+    <string name="serve_notif_title">%1$s के साथ शेयरिंग</string>
+    <string name="serve_notif_text">डाउनलोड हुई फ़ाइलें: %2$d में से %1$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">फ़ाइलें चुनें</string>
+    <string name="upload_none">कोई फ़ाइल नहीं चुनी गई</string>
+    <string name="upload_files_chosen">चुनी गई फ़ाइलें: %1$d</string>
+    <string name="upload_start">बैकग्राउंड में अपलोड करें</string>
+    <string name="upload_help">प्रगति निचली बार के ऊपर और एक नोटिफ़िकेशन में दिखती है। ऐप छोड़ने पर भी यह चलती रहती है।</string>
+    <string name="ftp_port">FTP पोर्ट</string>
+    <string name="ftp_user">उपयोगकर्ता नाम</string>
+    <string name="ftp_password">पासवर्ड</string>
+    <string name="ftp_folder">रिमोट फ़ोल्डर</string>
+    <string name="ftp_use_folder">%1$s इस्तेमाल करें</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">लोड हो रहा है…</string>
+    <string name="files_empty">यह फ़ोल्डर खाली है।</string>
+    <string name="files_not_loaded">अभी लोड नहीं हुआ</string>
+    <string name="files_up">⬆ ऊपर</string>
+    <string name="files_refresh">रीफ़्रेश करें</string>
+    <string name="files_new_folder">नया फ़ोल्डर</string>
+    <string name="files_upload_here">यहां अपलोड करें</string>
+    <string name="files_ftp_settings">FTP सेटिंग</string>
+    <string name="files_need_ip">कंसोल की फ़ाइलें ब्राउज़ करने के लिए उसका IP पता सेट करें (ऊपर दिए कार्ड पर टैप करें) और मान्य FTP पोर्ट दें।</string>
+    <string name="files_kind_folder">फ़ोल्डर</string>
+    <string name="files_kind_link">लिंक, %1$s</string>
+    <string name="files_download">फ़ोन पर डाउनलोड करें</string>
+    <string name="files_new_name">नया नाम</string>
+    <string name="files_name_used">यह नाम यहां पहले से इस्तेमाल में है।</string>
+    <string name="files_renaming">नाम बदला जा रहा है…</string>
+    <string name="files_renamed">%1$s का नाम बदलकर %2$s किया गया</string>
+    <string name="files_delete_title">%1$s हटाएं?</string>
+    <string name="files_delete_folder">इससे फ़ोल्डर और उसके अंदर की हर चीज़ कंसोल से हट जाएगी। इसे पहले जैसा नहीं किया जा सकता।</string>
+    <string name="files_delete_file">इससे फ़ाइल कंसोल से हट जाएगी। इसे पहले जैसा नहीं किया जा सकता।</string>
+    <string name="files_deleting">हटाया जा रहा है…</string>
+    <string name="files_deleted">हटाया गया: %1$s</string>
+    <string name="files_deleted_inside">हटाया गया: %1$s (अंदर के आइटम: %2$d)</string>
+    <string name="files_creating">फ़ोल्डर बनाया जा रहा है…</string>
+    <string name="files_created">फ़ोल्डर %1$s बनाया गया</string>
+    <string name="files_folder_name">फ़ोल्डर का नाम</string>
+    <string name="name_empty">नाम खाली नहीं हो सकता।</string>
+    <string name="name_not_allowed">यह नाम मान्य नहीं है।</string>
+    <string name="name_slash">नाम में स्लैश नहीं हो सकते।</string>
+    <string name="name_control">नाम में अमान्य वर्ण हैं।</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">विफल: %1$s</string>
+    <string name="ftp_port_hint">FTP सर्वर से संपर्क नहीं हो पा रहा। कंसोल का IP और FTP पोर्ट जांचें (etaHEN का बिल्ट-इन FTP 1337 इस्तेमाल करता है, FTP payload 2121)।</string>
+    <string name="err_login">FTP लॉगिन विफल रहा</string>
+    <string name="err_cant_open">%1$s नहीं खुल पा रहा (%2$s)</string>
+    <string name="err_rename">नाम बदलना विफल रहा (%1$s)</string>
+    <string name="err_mkdir">फ़ोल्डर नहीं बन सका (%1$s)</string>
+    <string name="err_too_deep">फ़ोल्डर बहुत गहराई में है</string>
+    <string name="err_delete_path">%1$s नहीं हट सका (%2$s)</string>
+    <string name="err_upload">FTP अपलोड विफल रहा: %1$s</string>
+    <string name="err_download">FTP डाउनलोड विफल रहा: %1$s</string>
+    <string name="err_open_file">फ़ाइल नहीं खोली जा सकी</string>
+    <string name="err_cancelled_upload">रद्द किया गया। %1$s पर अधूरी फ़ाइल बची हो सकती है</string>
+    <string name="err_cancelled_download">रद्द किया गया। अधूरा डाउनलोड हटा दिया गया।</string>
+    <string name="err_gave_up">कनेक्शन बार-बार विफल होने के कारण कोशिश छोड़ दी गई। आखिरी त्रुटि: %1$s</string>
+    <string name="err_short_upload">भेजे गए %2$s में से कंसोल ने केवल %1$s रखा।</string>
+    <string name="err_short_download">%2$s में से केवल %1$s पहुँचा।</string>
+    <string name="err_empty_file">फ़ाइल खाली है</string>
+    <string name="err_save">%1$s सहेजा नहीं जा सका</string>
+    <string name="sent_to_ps5">PS5 को भेजा गया: %1$s</string>
+    <string name="saved_to_downloads">Downloads/PS5 में सहेजा गया: %1$s</string>
+    <string name="dl_http_failed">डाउनलोड विफल रहा: HTTP %1$s</string>
+    <string name="dl_empty">डाउनलोड विफल रहा: खाली जवाब</string>
+    <string name="dl_cut_short">पूरी फ़ाइल पहुँचने से पहले कनेक्शन बंद हो गया।</string>
+    <string name="dl_create_failed">Downloads में फ़ाइल नहीं बन सकी</string>
+    <string name="dl_write_failed">नई फ़ाइल लिखने के लिए नहीं खुल सकी</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">भेजा गया: %1$s</string>
+    <string name="shelf_added">लाइब्रेरी में जोड़ा गया: %1$s (%2$s)</string>
+    <string name="shelf_updated">लाइब्रेरी में अपडेट किया गया: %1$s (%2$s)</string>
+    <string name="shelf_too_large">यह फ़ाइल %1$s से बड़ी है, इसलिए लाइब्रेरी में नहीं जोड़ी गई।</string>
+    <string name="shelf_too_large_url">इस फ़ाइल का आकार %1$s है। लाइब्रेरी %2$s तक के payload लेती है।</string>
+    <string name="payload_adding">लाइब्रेरी में जोड़ा जा रहा है…</string>
+    <string name="payload_remove_title">%1$s हटाएं?</string>
+    <string name="payload_remove_text">यह लाइब्रेरी से हट जाएगा। आपके फ़ोन की मूल फ़ाइल को कुछ नहीं होगा।</string>
+    <string name="payload_loader_port">Loader पोर्ट</string>
+    <string name="payload_shelf_title">payload लाइब्रेरी</string>
+    <string name="payload_shelf_empty">अभी कुछ सहेजा नहीं गया है। जो payload आप अक्सर इस्तेमाल करते हैं (FTP सर्वर, etaHEN, ...) उन्हें जोड़ें और हर एक को एक टैप में भेजें। डाउनलोड करते समय आप उसे सीधे वेब टैब से भी सहेज सकते हैं।</string>
+    <string name="payload_sending">%1$s भेजा जा रहा है…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">लाइब्रेरी में payload जोड़ें</string>
+    <string name="payload_once_title">एक बार के लिए फ़ाइल भेजें</string>
+    <string name="payload_choose">payload चुनें (.elf / .bin)</string>
+    <string name="payload_send">payload भेजें</string>
+
+    <!-- consoles -->
+    <string name="profile_default">मेरा PS5</string>
+    <string name="profile_new">कंसोल %1$d</string>
+    <string name="profile_fallback">कंसोल</string>
+    <string name="consoles_title">कंसोल</string>
+    <string name="console_rename_title">कंसोल का नाम बदलें</string>
+    <string name="console_name_label">नाम</string>
+    <string name="console_delete_title">%1$s हटाएं?</string>
+    <string name="console_delete_text">इसका सहेजा गया IP पता और पोर्ट हटा दिए जाएंगे। आपके दूसरे कंसोल पर कोई असर नहीं पड़ेगा।</string>
+    <string name="console_no_ip">अभी तक कोई IP पता नहीं</string>
+    <string name="console_color_of">%1$s का रंग</string>
+    <string name="console_use_color">%1$s इस्तेमाल करें</string>
+    <string name="console_add">कंसोल जोड़ें</string>
+    <string name="language_button">भाषा</string>
+    <string name="color_blue">नीला</string>
+    <string name="color_orange">नारंगी</string>
+    <string name="color_green">हरा</string>
+    <string name="color_pink">गुलाबी</string>
+    <string name="color_purple">बैंगनी</string>
+    <string name="color_teal">हरा-नीला</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">डाउनलोड शुरू हुआ (Downloads देखें)</string>
+    <string name="web_load_failed">पेज लोड नहीं हो सका: %1$s</string>
+    <string name="web_http_server">साइट अभी व्यस्त है या बंद है (त्रुटि %1$s)। थोड़ी देर बाद फिर कोशिश करें।</string>
+    <string name="web_http_other">साइट ने त्रुटि %1$s के साथ जवाब दिया।</string>
+    <string name="web_open_first">पहले कोई पेज खोलें</string>
+    <string name="web_bookmark_saved">बुकमार्क सहेजा गया</string>
+    <string name="web_bookmark_exists">यह पहले से आपके बुकमार्क में है</string>
+    <string name="web_home_set">होमपेज %1$s पर सेट किया गया</string>
+    <string name="web_reload">फिर से लोड करें</string>
+    <string name="web_add">★ जोड़ें</string>
+    <string name="web_bookmarks">बुकमार्क</string>
+    <string name="web_homepage_label">होमपेज URL</string>
+    <string name="web_bookmarks_empty">अभी कोई बुकमार्क नहीं है। कोई पेज खोलें और %1$s पर टैप करें।</string>
+    <string name="web_bookmarks_help">बुकमार्क खोलने के लिए उस पर टैप करें। “%1$s” उसे आपका होमपेज बना देता है।</string>
+    <string name="adblock_title">विज्ञापन ब्लॉक</string>
+    <string name="adblock_switch">विज्ञापन डोमेन ब्लॉक करें</string>
+    <string name="adblock_info">अब तक ब्लॉक किए गए: %1$d। बिल्ट-इन सूची में नेटवर्क: %2$d। कुछ भी बदलने के बाद पेज फिर से लोड करें।</string>
+    <string name="adblock_own">आपके अपने डोमेन, हर पंक्ति में एक</string>
+    <string name="adblock_on">विज्ञापन ब्लॉक: चालू · ब्लॉक किए गए: %1$d · बदलने के लिए टैप करें</string>
+    <string name="adblock_off">विज्ञापन ब्लॉक: बंद · ब्लॉक किए गए: %1$d · बदलने के लिए टैप करें</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">मैं क्या करूँ?</string>
+    <string name="help_what">क्या हुआ</string>
+    <string name="help_try">क्या आज़माएँ</string>
+    <string name="help_details">विवरण</string>
+    <string name="help_copy">विवरण कॉपी करें</string>
+    <string name="help_copied">कॉपी हो गया</string>
+    <string name="help_unreachable_title">कंसोल तक नहीं पहुँचा जा सकता</string>
+    <string name="help_unreachable_what">कंसोल के पते पर कोई जवाब नहीं दे रहा।</string>
+    <string name="help_unreachable_try">• PS5 पर IP पता जाँचें (Settings &gt; Network &gt; Connection Status)। रीस्टार्ट के बाद यह बदल सकता है।\n• कंसोल को पूरी तरह जगाएँ। रेस्ट मोड अक्सर नेटवर्क बंद कर देता है।\n• दोनों पर एक ही Wi-Fi इस्तेमाल करें। गेस्ट नेटवर्क और VPN इसे रोकते हैं।</string>
+    <string name="help_port_title">वह सेवा चालू नहीं है</string>
+    <string name="help_port_what">कंसोल ने जवाब दिया, लेकिन उस पोर्ट पर कुछ भी सुन नहीं रहा है।</string>
+    <string name="help_port_try">• कंसोल पर etaHEN चालू करें। यह Installer (12800), Loader (9021) और FTP (1337) उपलब्ध कराता है।\n• अलग FTP payload आम तौर पर 2121 इस्तेमाल करता है। यहाँ वही पोर्ट दर्ज करें।\n• कंसोल कार्ड पर बुझी हुई लाइट दिखाती है कि क्या कम है।</string>
+    <string name="help_login_title">FTP लॉगिन अस्वीकार हुआ</string>
+    <string name="help_login_what">कंसोल के FTP सर्वर ने उपयोगकर्ता नाम या पासवर्ड स्वीकार नहीं किया।</string>
+    <string name="help_login_try">• etaHEN उपयोगकर्ता नाम anonymous को किसी भी पासवर्ड के साथ स्वीकार करता है।\n• अगर आपने कंसोल पर लॉगिन सेट किया है, तो उसे अपलोड में दर्ज करें।\n• पासवर्ड सहेजा नहीं जाता। ऐप दोबारा शुरू करने के बाद उसे फिर दर्ज करें।</string>
+    <string name="help_dropped_title">कनेक्शन टूट गया</string>
+    <string name="help_dropped_what">कंसोल से लिंक टूट गया या डेटा का आना-जाना रुक गया। ऐप फिर कोशिश करता है और जहाँ रुका था वहीं से आगे बढ़ता है।</string>
+    <string name="help_dropped_try">• फ़ोन को राउटर के पास और कंसोल को जागा हुआ रखें।\n• नेटवर्क पर दूसरे बड़े डाउनलोड रोक दें।\n• अगर यह बार-बार विफल हो, तो थोड़ी देर रुकें और फिर से कोशिश करें पर टैप करें।</string>
+    <string name="help_refused_title">Installer ने लिंक नहीं लिया</string>
+    <string name="help_refused_what">कंसोल तक पहुँचा जा सकता है, लेकिन उसके Installer ने यह लिंक अस्वीकार कर दिया।</string>
+    <string name="help_refused_try">• लिंक सीधे पैकेज फ़ाइल तक ले जाना चाहिए और बिना लॉगिन के खुलना चाहिए।\n• कंसोल उस तक पहुँच पाना चाहिए। इस फ़ोन के लिंक केवल उसी Wi-Fi पर काम करते हैं।\n• जाँचें कि Installer चालू है और कंसोल में खाली जगह है।</string>
+    <string name="help_storage_title">कंसोल ने स्टोर करना बंद कर दिया</string>
+    <string name="help_storage_what">भेजे गए से कम डेटा कंसोल ने रखा। ड्राइव आम तौर पर भरी हुई या केवल-पढ़ने योग्य होती है।</string>
+    <string name="help_storage_try">• कंसोल पर कुछ जगह खाली करें।\n• कोई दूसरा फ़ोल्डर चुनें, जैसे USB ड्राइव पर।\n• फिर फिर से कोशिश करें पर टैप करें।</string>
+    <string name="help_denied_title">उस फ़ोल्डर या फ़ाइल को अस्वीकार कर दिया गया</string>
+    <string name="help_denied_what">FTP सर्वर इसे यहाँ खोल, इसमें लिख या इसे बदल नहीं सकता।</string>
+    <string name="help_denied_try">• जाँचें कि फ़ोल्डर मौजूद है। नामों में छोटे-बड़े अक्षर अलग माने जाते हैं।\n• सिस्टम फ़ोल्डर केवल-पढ़ने योग्य होते हैं। /data या USB ड्राइव इस्तेमाल करें।\n• चल रहे गेम की इस्तेमाल की जा रही फ़ाइल लॉक हो सकती है। गेम बंद करें।</string>
+    <string name="help_phone_title">फ़ोन फ़ाइल का इस्तेमाल नहीं कर सकता</string>
+    <string name="help_phone_what">फ़ाइल हट गई है या कहीं और ले जाई गई है, ऐप की उस तक पहुँच चली गई है, या फ़ोन में जगह नहीं बची है।</string>
+    <string name="help_phone_try">• फ़ाइल फिर से चुनें।\n• फ़ोन में कुछ स्टोरेज खाली करें।\n• क्लाउड ऐप में मौजूद फ़ाइल को पहले फ़ोन में सहेजें।</string>
+    <string name="help_link_title">डाउनलोड लिंक विफल रहा</string>
+    <string name="help_link_what">वेबसाइट ने फ़ाइल नहीं दी। लिंक की समय-सीमा खत्म हो सकती है, लॉगिन चाहिए हो सकता है, या साइट व्यस्त हो सकती है।</string>
+    <string name="help_link_try">• डाउनलोड वेब टैब से फिर शुरू करें। इससे आपका लॉगिन बना रहता है।\n• फ़ाइल-होस्टिंग साइटों के लिंक अक्सर कुछ मिनट में खत्म हो जाते हैं।\n• अगर साइट ने 500 वाली श्रेणी की त्रुटि बताई, तो बाद में फिर कोशिश करें।</string>
+
+    <!-- update check -->
+    <string name="update_available">वर्शन %1$s उपलब्ध है</string>
+    <string name="update_download">डाउनलोड करें</string>
+    <string name="update_later">बाद में</string>
+    <string name="update_title">अपडेट</string>
+    <string name="update_current">आपके पास नवीनतम वर्शन है (%1$s)।</string>
+    <string name="update_none">Releases पेज पर अभी तक कोई रिलीज़ नहीं मिली।</string>
+    <string name="update_check_now">अभी जाँचें</string>
+    <string name="update_auto">ऐप खुलने पर अपडेट जाँचें</string>
+    <string name="update_privacy">यह जाँच GitHub से नवीनतम रिलीज़ पूछती है, दिन में अधिकतम एक बार। आपके या आपके कंसोल के बारे में कुछ नहीं भेजा जाता; किसी भी वेबसाइट की तरह GitHub आपका IP पता देखता है।</string>
+
+    <!-- find my console -->
+    <string name="find_button">मेरा PS5 खोजें</string>
+    <string name="find_scanning">%1$s नेटवर्क पर आपका कंसोल खोजा जा रहा है…</string>
+    <string name="find_again">फिर से स्कैन करें</string>
+    <string name="find_none">कोई कंसोल नहीं मिला।</string>
+    <string name="find_none_try">• कंसोल को पूरी तरह चालू करें (रेस्ट मोड में नहीं) और etaHEN शुरू करें।\n• फ़ोन और कंसोल, दोनों पर एक ही Wi-Fi इस्तेमाल करें। गेस्ट नेटवर्क और VPN डिवाइसों को एक-दूसरे से अलग रखते हैं।\n• फिर दोबारा स्कैन करें।</string>
+    <string name="find_no_wifi">यह फ़ोन किसी Wi-Fi नेटवर्क से नहीं जुड़ा है। इसे उसी Wi-Fi से जोड़ें जिससे कंसोल जुड़ा है, फिर दोबारा स्कैन करें।</string>
+    <string name="find_pick">%1$s का पता सेट करने के लिए इस्तेमाल करें पर टैप करें।</string>
+    <string name="find_saved">सहेजा गया पता</string>
+    <string name="find_used_by">%1$s के लिए सहेजा गया</string>
+    <string name="find_updated">%1$s अब %2$s इस्तेमाल करता है।</string>
+    <string name="find_privacy">सिर्फ़ आपका Wi-Fi नेटवर्क स्कैन किया जाता है, कंसोल के कुछ पोर्ट पर। इंटरनेट पर कुछ भी नहीं भेजा जाता।</string>
+    <string name="action_stop">रोकें</string>
+    <string name="action_use">इस्तेमाल करें</string>
+
+    <!-- about and backup -->
+    <string name="about_title">Bento के बारे में</string>
+    <string name="about_version">वर्शन %1$s</string>
+    <string name="about_button">जानकारी और बैकअप</string>
+    <string name="about_report">रिपोर्ट कॉपी करें</string>
+    <string name="about_report_help">ऐप का वर्शन, आपके फ़ोन का मॉडल और आख़िरी संदेश कॉपी करता है, ताकि आप उसे बग रिपोर्ट में चिपका सकें। IP पते और लिंक शामिल नहीं किए जाते।</string>
+    <string name="about_report_copied">रिपोर्ट कॉपी हो गई</string>
+    <string name="about_releases">Releases पेज</string>
+    <string name="backup_title">बैकअप</string>
+    <string name="backup_text">आपके कंसोल, होमपेज, बुकमार्क, विज्ञापन सूची और payload एक फ़ाइल में सहेजता है। FTP पासवर्ड सहेजे नहीं जाते।</string>
+    <string name="backup_save">बैकअप सहेजें</string>
+    <string name="backup_restore">बैकअप रीस्टोर करें</string>
+    <string name="backup_saved">बैकअप सहेजा गया।</string>
+    <string name="backup_contents">कंसोल: %1$d · बुकमार्क: %2$d · Payload: %3$d</string>
+    <string name="backup_made">%1$s को बनाया गया</string>
+    <string name="backup_skipped">फ़ाइल बहुत बड़ी हो जाने के कारण छोड़े गए payload: %1$d</string>
+    <string name="backup_bad_file">वह फ़ाइल Bento बैकअप नहीं है।</string>
+    <string name="backup_too_new">वह बैकअप Bento के नए वर्शन ने बनाया था। ऐप अपडेट करें, फिर कोशिश करें।</string>
+    <string name="restore_title">यह बैकअप रीस्टोर करें?</string>
+    <string name="restore_text">आपके कंसोल, होमपेज, बुकमार्क और विज्ञापन सूची फ़ाइल वाले से बदल दिए जाएँगे। फ़ाइल के payload, payload लाइब्रेरी में जोड़े जाएँगे। आपको अपने FTP पासवर्ड फिर से टाइप करने होंगे।</string>
+    <string name="restore_button">रीस्टोर करें</string>
+    <string name="restore_done">बैकअप रीस्टोर हो गया।</string>
+    <string name="restore_payloads_failed">जो payload स्टोर नहीं हो सके: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">पैकेज लिंक (हर पंक्ति में एक)</string>
+    <string name="install_paste">चिपकाएँ</string>
+    <string name="action_clear">साफ़ करें</string>
+    <string name="install_paste_none">क्लिपबोर्ड पर कोई वेब लिंक नहीं है।</string>
+    <string name="install_links_skipped">केवल वही पते भेजे जाते हैं जो http:// या https:// से शुरू होते हैं। छोड़े गए: %1$d</string>
+    <string name="install_recent">हाल के लिंक</string>
+    <string name="install_recent_clear">सूची साफ़ करें</string>
+    <string name="install_sending_n">लिंक %1$d/%2$d भेजा जा रहा है…</string>
+    <string name="install_batch_done">स्वीकार किए गए: %1$d/%2$d लिंक</string>
+    <string name="install_batch_notsent">भेजे नहीं गए: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">चेन</string>
+    <string name="chains_hint">चेन कई payload एक के बाद एक भेजती है, हर एक के बाद एक विराम के साथ। होम स्क्रीन से पहली चार चेन में से कोई एक शुरू करने के लिए ऐप आइकन को दबाकर रखें।</string>
+    <string name="chain_new">नई चेन</string>
+    <string name="action_edit">संपादित करें</string>
+    <string name="chain_summary_steps">Payload: %1$d</string>
+    <string name="chain_summary_pauses">विराम: %1$s</string>
+    <string name="chain_edit_title">चेन संपादित करें</string>
+    <string name="chain_steps_title">Payload, क्रम से (ज़्यादा से ज़्यादा %1$d)</string>
+    <string name="chain_add_step">Payload जोड़ें</string>
+    <string name="chain_pick_title">कौन-सा payload जोड़ें?</string>
+    <string name="chain_wait_label">फिर इंतज़ार करें (सेकंड)</string>
+    <string name="chain_missing">लाइब्रेरी में नहीं है</string>
+    <string name="chain_move_up">ऊपर ले जाएँ</string>
+    <string name="chain_move_down">नीचे ले जाएँ</string>
+    <string name="chain_pin">होम स्क्रीन पर जोड़ें</string>
+    <string name="chain_pin_unsupported">यह लॉन्चर शॉर्टकट नहीं जोड़ सकता। अपनी चेन वहाँ देखने के लिए ऐप आइकन को दबाकर रखें।</string>
+    <string name="chain_sending">%1$s भेजा जा रहा है (%3$d में से %2$d)…</string>
+    <string name="chain_waiting">अगला payload %1$s में</string>
+    <string name="chain_retrying">कंसोल के तैयार होने का इंतज़ार है…</string>
+    <string name="chain_result_done">हो गया। भेजे गए payload: %2$d में से %1$d</string>
+    <string name="chain_result_stopped">रोका गया। भेजे गए payload: %2$d में से %1$d</string>
+    <string name="chain_result_failed">चरण %1$d पर रुका (%2$s)। भेजे गए payload: %4$d में से %3$d</string>
+    <string name="chain_err_target">पहले कंसोल का IP पता और Loader पोर्ट सेट करें।</string>
+    <string name="chain_err_missing">अब लाइब्रेरी में नहीं है: %1$s। इसे फिर से जोड़ें या चेन संपादित करें।</string>
+    <string name="chain_err_unknown">वह चेन अब मौजूद नहीं है।</string>
+    <string name="notif_channel_chain">Payload चेन</string>
+    <string name="backup_chains">चेन: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">पिछली बार अधूरे रहे: %1$d</string>
+    <string name="unfinished_hint">ये पूरे होने से पहले ऐप बंद हो गया। “जारी रखें” हर एक को फिर से शुरुआत से शुरू करता है।</string>
+    <string name="unfinished_continue">जारी रखें</string>
+    <string name="unfinished_discard">छोड़ दें</string>
+    <string name="unfinished_missing">फ़ाइलें अब नहीं मिल रहीं, उन्हें फिर से चुनें: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">पॉज़ करें</string>
+    <string name="transfer_resume">फिर शुरू करें</string>
+    <string name="transfer_paused">पॉज़ किया गया</string>
+    <string name="speed_limit_title">गति सीमा</string>
+    <string name="speed_limit_off">कोई सीमा नहीं</string>
+    <string name="speed_limit_value">सीमा: %1$s</string>
+    <string name="speed_limit_hint">ट्रांसफ़र को धीमा करता है, ताकि Wi-Fi दूसरे कामों के लिए खाली रहे। बदलाव तुरंत लागू होता है।</string>
+    <string name="summary_title">पूरे हुए ट्रांसफ़र: %2$d में से %1$d</string>
+    <string name="summary_detail">%2$s में %1$s</string>
+    <string name="summary_failed">विफल: %1$d</string>
+    <string name="summary_stopped">रोके गए: %1$d</string>
+    <string name="notif_channel_results">ट्रांसफ़र के नतीजे</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">चुने गए: %1$d</string>
+    <string name="files_select_all">सभी चुनें</string>
+    <string name="files_select_none">चयन हटाएं</string>
+    <string name="files_delete_many_title">चुने गए आइटम (%1$d) हटाएं?</string>
+    <string name="files_delete_many_text">इससे चुनी गई फ़ाइलें और फ़ोल्डर कंसोल से हट जाएंगे, फ़ोल्डर अपने अंदर की हर चीज़ के साथ। इसे पहले जैसा नहीं किया जा सकता।</string>
+    <string name="files_deleted_many">हटाए गए आइटम: %1$d</string>
+    <string name="files_delete_partial">हटाए गए आइटम: %1$d, नहीं हटाए गए: %2$d। पहली समस्या: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">फ़ोल्डर देखे जा रहे हैं…</string>
+    <string name="files_dl_confirm_title">फ़ोन पर डाउनलोड करें?</string>
+    <string name="files_dl_confirm_text">फ़ाइलें: %1$d, कुल %2$s। इन्हें Downloads/PS5 में उन्हीं फ़ोल्डरों में सहेजा जाएगा जिनमें ये कंसोल पर हैं।</string>
+    <string name="files_dl_links">फ़ोल्डरों के अंदर के लिंक डाउनलोड नहीं किए जाते: %1$d।</string>
+    <string name="files_dl_truncated">ली गई फ़ाइलें: %1$d। फ़ोल्डरों में इससे ज़्यादा हैं, या वे उससे ज़्यादा गहरे हैं जितना ऐप देखता है।</string>
+    <string name="files_dl_none">चुने गए आइटम में डाउनलोड करने के लिए कोई फ़ाइल नहीं है।</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">क्रमबद्ध करें</string>
+    <string name="files_sort_title">इसके अनुसार क्रमबद्ध करें</string>
+    <string name="files_sort_name">नाम</string>
+    <string name="files_sort_size">आकार, सबसे बड़ी पहले</string>
+    <string name="files_sort_newest">सबसे नई पहले</string>
+    <string name="files_search">खोजें</string>
+    <string name="files_search_hint">इस फ़ोल्डर में खोजें</string>
+    <string name="files_no_match">इस फ़ोल्डर में कुछ भी खोज से मेल नहीं खाता।</string>
+    <string name="files_pin">इस फ़ोल्डर को पिन करें</string>
+    <string name="files_unpin">इस फ़ोल्डर का पिन हटाएं</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">टैब: %1$d</string>
+    <string name="web_tabs_title">टैब</string>
+    <string name="web_tab_new">नया टैब</string>
+    <string name="web_tabs_full">बहुत ज़्यादा टैब हैं। सीमा %1$d है। पहले एक बंद करें।</string>
+    <string name="web_find">खोजें</string>
+    <string name="web_find_hint">इस पेज में खोजें</string>
+    <string name="web_find_none">कोई मिलान नहीं</string>
+    <string name="web_desktop">डेस्कटॉप साइट</string>
+    <string name="web_link_new_tab">नए टैब में खोलें</string>
+    <string name="web_link_copy">लिंक कॉपी करें</string>
+    <string name="web_link_copied">लिंक कॉपी हो गया</string>
+    <string name="web_link_use">भेजें या डाउनलोड करें…</string>
+</resources>

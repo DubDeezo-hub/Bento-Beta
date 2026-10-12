@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Czech. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">Zrušit</string>
+    <string name="action_close">Zavřít</string>
+    <string name="action_done">Hotovo</string>
+    <string name="action_delete">Smazat</string>
+    <string name="action_rename">Přejmenovat</string>
+    <string name="action_save">Uložit</string>
+    <string name="action_remove">Odebrat</string>
+    <string name="action_send">Odeslat</string>
+    <string name="action_open">Otevřít</string>
+    <string name="action_block">Blokovat</string>
+    <string name="action_home">Domů</string>
+    <string name="action_dismiss">Skrýt</string>
+    <string name="action_try_again">Zkusit znovu</string>
+    <string name="action_skip">Přeskočit</string>
+    <string name="action_cancel_all">Zrušit vše</string>
+    <string name="action_create">Vytvořit</string>
+    <string name="action_set">Nastavit</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">autor: %1$s</string>
+    <string name="nav_install">Instalace</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">Nahrát</string>
+    <string name="nav_files">Soubory</string>
+    <string name="nav_web">Web</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Installer</string>
+    <string name="service_loader">Loader</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">Nastavte IP adresu své PS5</string>
+    <string name="status_checking">Kontrola…</string>
+    <string name="status_ready">Připraveno</string>
+    <string name="status_partly">Částečně připraveno</string>
+    <string name="status_partly_off">Částečně připraveno · bez odpovědi: %1$s</string>
+    <string name="status_offline">Konzoli se nepodařilo najít</string>
+    <string name="status_hint_unset">Najdete ji na PS5 v Nastavení &gt; Síť &gt; Stav připojení &gt; Zobrazit stav připojení. Klepnutím sem ji zadáte.</string>
+    <string name="status_hint_offline">Na této adrese nic neodpovídá. Zkontrolujte IP adresu, zda je PS5 zapnutá a ve stejné síti Wi-Fi a zda běží etaHEN.</string>
+    <string name="status_hint_one">Bez odpovědi: %1$s. Spusťte službu na konzoli nebo zkontrolujte její port.</string>
+    <string name="status_hint_many">Bez odpovědi: %1$s. Spusťte služby na konzoli nebo zkontrolujte jejich porty.</string>
+    <string name="console_switch">Přepnout konzoli</string>
+    <string name="console_change_ip">Změnit IP adresu</string>
+    <string name="console_ip_title">IP adresa konzole</string>
+    <string name="console_ip_label">IP adresa</string>
+    <string name="console_ip_help">Najdete ji na PS5 v Nastavení &gt; Síť &gt; Stav připojení &gt; Zobrazit stav připojení.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">Přenos</string>
+    <string name="transfer_sending">Odesílání</string>
+    <string name="transfer_sending_to">Odesílání do: %1$s</string>
+    <string name="transfer_receiving">Příjem</string>
+    <string name="transfer_receiving_from">Příjem z: %1$s</string>
+    <string name="transfer_detail_total">%1$s · %2$s z %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">Spouštění…</string>
+    <string name="transfer_stopped">Zastaveno</string>
+    <string name="transfer_start_failed">Přenos se nepodařilo spustit: %1$s</string>
+    <string name="transfer_retry_in">Připojení se přerušilo. Další pokus za %1$d s…</string>
+    <string name="transfer_reconnecting">Připojování znovu…</string>
+    <string name="transfer_eta">Zbývá: %1$s</string>
+    <string name="transfer_queued">Ve frontě: %1$d</string>
+    <string name="queue_title">Přenosy ve frontě</string>
+    <string name="queue_clear">Odebrat vše</string>
+    <string name="queue_empty">Ve frontě nic není.</string>
+    <string name="notif_channel">Přenosy PS5</string>
+    <string name="notif_sent">Odesláno: %1$s</string>
+    <string name="notif_received">Přijato: %1$s</string>
+    <string name="percent_value">%1$d %%</string>
+    <string name="desc_done">Hotovo</string>
+    <string name="desc_problem">Problém</string>
+    <string name="status_hide">Skrýt tuto zprávu</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">Přidáno do fronty. Ve frontě: %1$d.</string>
+    <string name="msg_set_ip_first">Nejprve nastavte IP adresu konzole. Klepněte na kartu nahoře.</string>
+    <string name="msg_sending_link">Odesílání odkazu do PS5…</string>
+    <string name="msg_check_ip_ftp">Zkontrolujte IP adresu konzole a port FTP.</string>
+    <string name="msg_adding_to_shelf_link">Přidávání do knihovny payloadů…</string>
+    <string name="status_idle">Nečinné</string>
+    <string name="status_sending">Odesílání…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">Opustit tento web?</string>
+    <string name="offsite_text">Stránka chce otevřít %1$s. Reklamy to často způsobují po klepnutí na odkaz, takže pokračujte, jen pokud jste to očekávali.</string>
+    <string name="choose_install">Odeslat odkaz do Installeru na PS5</string>
+    <string name="choose_ftp">Nahrát na PS5 (FTP)</string>
+    <string name="choose_shelf">Uložit do knihovny payloadů</string>
+    <string name="choose_phone">Uložit do telefonu</string>
+    <string name="choose_help">Installer potřebuje přímý odkaz na balíček, který konzole otevře bez přihlášení. FTP funguje pro jakýkoli soubor a zachová vaše přihlášení. Telefon data přeposílá na pozadí a průběh se zobrazuje nad spodní lištou a v oznámení. Knihovna payloadů uchovává v aplikaci malý payload (do %1$s) pro kartu Payload.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Port Installeru (etaHEN: 12800)</string>
+    <string name="install_accepted">Installer to přijal: %1$s</string>
+    <string name="install_not_accepted">Nepřijato (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">Instalovat z tohoto telefonu</string>
+    <string name="serve_intro">Konzole stahuje balíčky přímo z tohoto telefonu přes Wi-Fi, takže se nemusí nic předem kopírovat. Telefon a konzole musí být ve stejné síti.</string>
+    <string name="serve_choose">Vybrat balíčky</string>
+    <string name="serve_none">Nebyly vybrány žádné balíčky</string>
+    <string name="serve_start">Zahájit sdílení</string>
+    <string name="serve_stop">Ukončit sdílení</string>
+    <string name="serve_copy">Kopírovat odkaz</string>
+    <string name="serve_copied">Odkaz zkopírován</string>
+    <string name="serve_file_waiting">Čeká se, až konzole zahájí stahování…</string>
+    <string name="serve_file_pulling">Konzole stahuje: %1$s</string>
+    <string name="serve_file_done">Konzole stáhla všechno</string>
+    <string name="serve_unreadable">Tento soubor nelze přečíst</string>
+    <string name="serve_hint">Pokud konzole stahování nikdy nezačne, Wi-Fi může zařízením bránit, aby se navzájem našla (sítě pro hosty to často dělají). Použijte hlavní síť a nechte tuto aplikaci běžet na pozadí.</string>
+    <string name="serve_no_wifi">Adresu Wi-Fi tohoto telefonu se nepodařilo najít. Připojte jej ke stejné síti Wi-Fi jako konzole.</string>
+    <string name="serve_failed">Sdílení se nepodařilo zahájit: %1$s</string>
+    <string name="serve_idle_stop">Sdílení bylo ukončeno, protože se dlouho nic nestahovalo.</string>
+    <string name="serve_notif_title">Sdílení s: %1$s</string>
+    <string name="serve_notif_text">Stažené soubory: %1$d / %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">Vybrat soubory</string>
+    <string name="upload_none">Nebyly vybrány žádné soubory</string>
+    <string name="upload_files_chosen">Vybrané soubory: %1$d</string>
+    <string name="upload_start">Nahrát na pozadí</string>
+    <string name="upload_help">Průběh se zobrazuje nad spodní lištou a v oznámení. Nahrávání pokračuje, i když aplikaci opustíte.</string>
+    <string name="ftp_port">Port FTP</string>
+    <string name="ftp_user">Uživatelské jméno</string>
+    <string name="ftp_password">Heslo</string>
+    <string name="ftp_folder">Vzdálená složka</string>
+    <string name="ftp_use_folder">Použít: %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">Načítání…</string>
+    <string name="files_empty">Tato složka je prázdná.</string>
+    <string name="files_not_loaded">Zatím nenačteno</string>
+    <string name="files_up">⬆ Nahoru</string>
+    <string name="files_refresh">Obnovit</string>
+    <string name="files_new_folder">Nová složka</string>
+    <string name="files_upload_here">Nahrát sem</string>
+    <string name="files_ftp_settings">Nastavení FTP</string>
+    <string name="files_need_ip">Nastavte IP adresu konzole (klepněte na kartu nahoře) a platný port FTP, abyste mohli procházet její soubory.</string>
+    <string name="files_kind_folder">Složka</string>
+    <string name="files_kind_link">Odkaz, %1$s</string>
+    <string name="files_download">Stáhnout do telefonu</string>
+    <string name="files_new_name">Nový název</string>
+    <string name="files_name_used">Tento název už se tady používá.</string>
+    <string name="files_renaming">Přejmenování…</string>
+    <string name="files_renamed">Přejmenováno: %1$s na %2$s</string>
+    <string name="files_delete_title">Smazat „%1$s“?</string>
+    <string name="files_delete_folder">Tím se z konzole smaže složka i vše v ní. Nelze to vzít zpět.</string>
+    <string name="files_delete_file">Tím se z konzole smaže soubor. Nelze to vzít zpět.</string>
+    <string name="files_deleting">Mazání…</string>
+    <string name="files_deleted">Smazáno: %1$s</string>
+    <string name="files_deleted_inside">Smazáno: %1$s (položek uvnitř: %2$d)</string>
+    <string name="files_creating">Vytváření složky…</string>
+    <string name="files_created">Složka vytvořena: %1$s</string>
+    <string name="files_folder_name">Název složky</string>
+    <string name="name_empty">Název nesmí být prázdný.</string>
+    <string name="name_not_allowed">Tento název není povolen.</string>
+    <string name="name_slash">Název nesmí obsahovat lomítka.</string>
+    <string name="name_control">Název obsahuje nepovolené znaky.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">Selhalo: %1$s</string>
+    <string name="ftp_port_hint">K serveru FTP se nelze připojit. Zkontrolujte IP adresu konzole a port FTP (vestavěné FTP v etaHEN používá 1337, payload FTP používá 2121).</string>
+    <string name="err_login">Přihlášení k FTP selhalo</string>
+    <string name="err_cant_open">nelze otevřít %1$s (%2$s)</string>
+    <string name="err_rename">přejmenování selhalo (%1$s)</string>
+    <string name="err_mkdir">složku se nepodařilo vytvořit (%1$s)</string>
+    <string name="err_too_deep">složka je vnořená příliš hluboko</string>
+    <string name="err_delete_path">nepodařilo se smazat %1$s (%2$s)</string>
+    <string name="err_upload">Nahrávání přes FTP selhalo: %1$s</string>
+    <string name="err_download">Stahování přes FTP selhalo: %1$s</string>
+    <string name="err_open_file">Soubor se nepodařilo otevřít</string>
+    <string name="err_cancelled_upload">Zrušeno. V umístění %1$s může zůstat neúplný soubor</string>
+    <string name="err_cancelled_download">Zrušeno. Neúplné stahování bylo zahozeno.</string>
+    <string name="err_gave_up">Vzdáno, protože připojení stále selhávalo. Poslední chyba: %1$s</string>
+    <string name="err_short_upload">Z odeslaných %2$s si konzole ponechala jen %1$s.</string>
+    <string name="err_short_download">Dorazilo jen %1$s z %2$s.</string>
+    <string name="err_empty_file">Soubor je prázdný</string>
+    <string name="err_save">Soubor %1$s se nepodařilo uložit</string>
+    <string name="sent_to_ps5">Odesláno do PS5: %1$s</string>
+    <string name="saved_to_downloads">Uloženo do Downloads/PS5: %1$s</string>
+    <string name="dl_http_failed">Stahování selhalo: HTTP %1$s</string>
+    <string name="dl_empty">Stahování selhalo: prázdná odpověď</string>
+    <string name="dl_cut_short">Připojení se zavřelo dřív, než dorazil celý soubor.</string>
+    <string name="dl_create_failed">Soubor se nepodařilo vytvořit ve složce Downloads</string>
+    <string name="dl_write_failed">Nový soubor se nepodařilo otevřít pro zápis</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">Odesláno: %1$s</string>
+    <string name="shelf_added">Přidáno do knihovny: %1$s (%2$s)</string>
+    <string name="shelf_updated">Aktualizováno v knihovně: %1$s (%2$s)</string>
+    <string name="shelf_too_large">Soubor je větší než %1$s, proto nebyl přidán do knihovny.</string>
+    <string name="shelf_too_large_url">Soubor má %1$s. Knihovna přijímá payloady do velikosti %2$s.</string>
+    <string name="payload_adding">Přidávání do knihovny…</string>
+    <string name="payload_remove_title">Odebrat „%1$s“?</string>
+    <string name="payload_remove_text">Odebere se z knihovny. Původní soubor v telefonu zůstane nedotčen.</string>
+    <string name="payload_loader_port">Port Loaderu</string>
+    <string name="payload_shelf_title">Knihovna payloadů</string>
+    <string name="payload_shelf_empty">Zatím nic není uloženo. Přidejte payloady, které používáte často (server FTP, etaHEN, ...), a odesílejte je jedním klepnutím. Payload můžete uložit také přímo z karty Web při jeho stahování.</string>
+    <string name="payload_sending">Odesílání: %1$s…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">Přidat payload do knihovny</string>
+    <string name="payload_once_title">Odeslat soubor jednorázově</string>
+    <string name="payload_choose">Vybrat payload (.elf / .bin)</string>
+    <string name="payload_send">Odeslat payload</string>
+
+    <!-- consoles -->
+    <string name="profile_default">Moje PS5</string>
+    <string name="profile_new">Konzole %1$d</string>
+    <string name="profile_fallback">Konzole</string>
+    <string name="consoles_title">Konzole</string>
+    <string name="console_rename_title">Přejmenovat konzoli</string>
+    <string name="console_name_label">Název</string>
+    <string name="console_delete_title">Smazat „%1$s“?</string>
+    <string name="console_delete_text">Uložená IP adresa a porty budou odstraněny. Vaše ostatní konzole nejsou dotčeny.</string>
+    <string name="console_no_ip">zatím bez IP adresy</string>
+    <string name="console_color_of">Barva: %1$s</string>
+    <string name="console_use_color">Použít: %1$s</string>
+    <string name="console_add">Přidat konzoli</string>
+    <string name="language_button">Jazyk</string>
+    <string name="color_blue">Modrá</string>
+    <string name="color_orange">Oranžová</string>
+    <string name="color_green">Zelená</string>
+    <string name="color_pink">Růžová</string>
+    <string name="color_purple">Fialová</string>
+    <string name="color_teal">Tyrkysová</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">Stahování zahájeno (viz Downloads)</string>
+    <string name="web_load_failed">Stránku se nepodařilo načíst: %1$s</string>
+    <string name="web_http_server">Web je teď přetížený nebo nedostupný (chyba %1$s). Zkuste to za chvíli znovu.</string>
+    <string name="web_http_other">Web odpověděl chybou %1$s.</string>
+    <string name="web_open_first">Nejprve otevřete stránku</string>
+    <string name="web_bookmark_saved">Záložka uložena</string>
+    <string name="web_bookmark_exists">Už je v záložkách</string>
+    <string name="web_home_set">Domovská stránka nastavena: %1$s</string>
+    <string name="web_reload">Načíst znovu</string>
+    <string name="web_add">★ Přidat</string>
+    <string name="web_bookmarks">Záložky</string>
+    <string name="web_homepage_label">URL domovské stránky</string>
+    <string name="web_bookmarks_empty">Zatím žádné záložky. Otevřete stránku a klepněte na %1$s.</string>
+    <string name="web_bookmarks_help">Klepnutím na záložku ji otevřete. „%1$s“ ji nastaví jako domovskou stránku.</string>
+    <string name="adblock_title">Blokování reklam</string>
+    <string name="adblock_switch">Blokovat reklamní domény</string>
+    <string name="adblock_info">Dosud zablokováno: %1$d. Sítí ve vestavěném seznamu: %2$d. Po každé změně načtěte stránku znovu.</string>
+    <string name="adblock_own">Vaše vlastní domény, jedna na řádek</string>
+    <string name="adblock_on">Blokování reklam: zapnuto · zablokováno: %1$d · klepnutím změníte</string>
+    <string name="adblock_off">Blokování reklam: vypnuto · zablokováno: %1$d · klepnutím změníte</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">Co mohu dělat?</string>
+    <string name="help_what">Co se stalo</string>
+    <string name="help_try">Co zkusit</string>
+    <string name="help_details">Podrobnosti</string>
+    <string name="help_copy">Kopírovat podrobnosti</string>
+    <string name="help_copied">Zkopírováno</string>
+    <string name="help_unreachable_title">Konzoli se nedaří kontaktovat</string>
+    <string name="help_unreachable_what">Na adrese konzole nikdo neodpovídá.</string>
+    <string name="help_unreachable_try">• Zkontrolujte IP adresu na PS5 (Nastavení &gt; Síť &gt; Stav připojení). Po restartu se může změnit.\n• Konzoli úplně probuďte. Klidový režim často vypíná síť.\n• Používejte na obou zařízeních stejnou Wi-Fi. Sítě pro hosty a VPN to blokují.</string>
+    <string name="help_port_title">Tato služba neběží</string>
+    <string name="help_port_what">Konzole odpověděla, ale na tomto portu nic neposlouchá.</string>
+    <string name="help_port_try">• Spusťte na konzoli etaHEN. Poskytuje Installer (12800), Loader (9021) a FTP (1337).\n• Samostatný FTP payload obvykle používá port 2121. Zadejte tady stejný port.\n• Na kartě konzole ukazuje zhasnutá kontrolka, co chybí.</string>
+    <string name="help_login_title">Přihlášení k FTP bylo odmítnuto</string>
+    <string name="help_login_what">FTP server konzole odmítl uživatelské jméno nebo heslo.</string>
+    <string name="help_login_try">• etaHEN přijme uživatelské jméno anonymous s libovolným heslem.\n• Pokud jste na konzoli nastavili přihlášení, zadejte ho v části Nahrát.\n• Heslo se neukládá. Po restartu aplikace ho zadejte znovu.</string>
+    <string name="help_dropped_title">Spojení se přerušilo</string>
+    <string name="help_dropped_what">Spojení s konzolí se přerušilo nebo přestala proudit data. Aplikace to zkouší znovu a pokračuje tam, kde skončila.</string>
+    <string name="help_dropped_try">• Mějte telefon blízko routeru a konzoli probuzenou.\n• Pozastavte jiná velká stahování v síti.\n• Pokud to stále selhává, chvíli počkejte a klepněte na Zkusit znovu.</string>
+    <string name="help_refused_title">Installer odkaz nepřijal</string>
+    <string name="help_refused_what">Konzole je dostupná, ale její Installer tento odkaz odmítl.</string>
+    <string name="help_refused_try">• Odkaz musí vést přímo na soubor balíčku a otevřít se bez přihlášení.\n• Konzole se k němu musí dostat. Odkazy z tohoto telefonu fungují jen ve stejné Wi-Fi.\n• Zkontrolujte, zda Installer běží a zda má konzole volné místo.</string>
+    <string name="help_storage_title">Konzole přestala ukládat</string>
+    <string name="help_storage_what">Konzole uložila méně, než bylo odesláno. Disk bývá plný nebo jen pro čtení.</string>
+    <string name="help_storage_try">• Uvolněte místo na konzoli.\n• Vyberte jinou složku, například na USB disku.\n• Pak klepněte na Zkusit znovu.</string>
+    <string name="help_denied_title">Složka nebo soubor byly odmítnuty</string>
+    <string name="help_denied_what">FTP server to tady nemůže otevřít, zapsat ani změnit.</string>
+    <string name="help_denied_try">• Zkontrolujte, že složka existuje. V názvech se rozlišují velká a malá písmena.\n• Systémové složky jsou jen pro čtení. Použijte /data nebo USB disk.\n• Soubor používaný běžící hrou může být zamčený. Zavřete hru.</string>
+    <string name="help_phone_title">Telefon nemůže soubor použít</string>
+    <string name="help_phone_what">Soubor zmizel nebo byl přesunut, aplikace k němu ztratila přístup, nebo v telefonu došlo místo.</string>
+    <string name="help_phone_try">• Vyberte soubor znovu.\n• Uvolněte úložiště v telefonu.\n• U souboru v cloudové aplikaci ho nejdřív uložte do telefonu.</string>
+    <string name="help_link_title">Odkaz ke stažení selhal</string>
+    <string name="help_link_what">Web soubor nevydal. Odkaz mohl vypršet, vyžadovat přihlášení, nebo je web přetížený.</string>
+    <string name="help_link_try">• Spusťte stahování znovu z karty Web. Tím se zachová vaše přihlášení.\n• Odkazy z webů pro sdílení souborů často vyprší po několika minutách.\n• Pokud web hlásil chybu řady 500, zkuste to později.</string>
+
+    <!-- update check -->
+    <string name="update_available">Je dostupná verze %1$s</string>
+    <string name="update_download">Stáhnout</string>
+    <string name="update_later">Později</string>
+    <string name="update_title">Aktualizace</string>
+    <string name="update_current">Máte nejnovější verzi (%1$s).</string>
+    <string name="update_none">Na stránce Releases zatím není žádné vydání.</string>
+    <string name="update_check_now">Zkontrolovat</string>
+    <string name="update_auto">Kontrolovat aktualizace při otevření aplikace</string>
+    <string name="update_privacy">Kontrola se ptá GitHubu na nejnovější vydání nejvýše jednou denně. Nic o vás ani o vašich konzolích se neodesílá; GitHub vidí vaši IP adresu jako každý web.</string>
+
+    <!-- find my console -->
+    <string name="find_button">Najít moji PS5</string>
+    <string name="find_scanning">Hledání vaší konzole v síti %1$s…</string>
+    <string name="find_again">Hledat znovu</string>
+    <string name="find_none">Nebyla nalezena žádná konzole.</string>
+    <string name="find_none_try">• Konzoli úplně zapněte (ne klidový režim) a spusťte etaHEN.\n• Používejte na telefonu i na konzoli stejnou Wi-Fi. Sítě pro hosty a VPN zařízení od sebe oddělují.\n• Pak hledejte znovu.</string>
+    <string name="find_no_wifi">Tento telefon není připojen k síti Wi-Fi. Připojte jej ke stejné síti Wi-Fi jako konzole a pak hledejte znovu.</string>
+    <string name="find_pick">Klepnutím na Použít nastavíte adresu konzole %1$s.</string>
+    <string name="find_saved">Uložená adresa</string>
+    <string name="find_used_by">Uloženo pro %1$s</string>
+    <string name="find_updated">%1$s nyní používá %2$s.</string>
+    <string name="find_privacy">Prohledává se jen vaše síť Wi-Fi a jen na několika portech konzole. Nic se neposílá přes internet.</string>
+    <string name="action_stop">Zastavit</string>
+    <string name="action_use">Použít</string>
+
+    <!-- about and backup -->
+    <string name="about_title">O aplikaci Bento</string>
+    <string name="about_version">Verze %1$s</string>
+    <string name="about_button">O aplikaci a záloha</string>
+    <string name="about_report">Kopírovat zprávu</string>
+    <string name="about_report_help">Zkopíruje verzi aplikace, model telefonu a poslední zprávu, aby šly vložit do hlášení chyby. IP adresy a odkazy se vynechají.</string>
+    <string name="about_report_copied">Zpráva zkopírována</string>
+    <string name="about_releases">Stránka Releases</string>
+    <string name="backup_title">Záloha</string>
+    <string name="backup_text">Uloží vaše konzole, domovskou stránku, záložky, seznam reklam a payloady do jednoho souboru. Hesla k FTP se neukládají.</string>
+    <string name="backup_save">Uložit zálohu</string>
+    <string name="backup_restore">Obnovit zálohu</string>
+    <string name="backup_saved">Záloha uložena.</string>
+    <string name="backup_contents">Konzole: %1$d · Záložky: %2$d · Payloady: %3$d</string>
+    <string name="backup_made">Vytvořeno %1$s</string>
+    <string name="backup_skipped">Vynechané payloady, protože by soubor byl příliš velký: %1$d</string>
+    <string name="backup_bad_file">Tento soubor není záloha aplikace Bento.</string>
+    <string name="backup_too_new">Tuto zálohu vytvořila novější verze aplikace Bento. Aktualizujte aplikaci a zkuste to znovu.</string>
+    <string name="restore_title">Obnovit tuto zálohu?</string>
+    <string name="restore_text">Vaše konzole, domovská stránka, záložky a seznam reklam se nahradí těmi ze souboru. Payloady ze souboru se přidají do knihovny payloadů. Hesla k FTP budete muset zadat znovu.</string>
+    <string name="restore_button">Obnovit</string>
+    <string name="restore_done">Záloha obnovena.</string>
+    <string name="restore_payloads_failed">Payloady, které se nepodařilo uložit: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">Odkazy na balíčky (jeden na řádek)</string>
+    <string name="install_paste">Vložit</string>
+    <string name="action_clear">Vymazat</string>
+    <string name="install_paste_none">Ve schránce není žádný webový odkaz.</string>
+    <string name="install_links_skipped">Odesílají se jen adresy začínající http:// nebo https://. Vynecháno: %1$d</string>
+    <string name="install_recent">Nedávné odkazy</string>
+    <string name="install_recent_clear">Vymazat seznam</string>
+    <string name="install_sending_n">Odesílání odkazu %1$d z %2$d…</string>
+    <string name="install_batch_done">Přijato: %1$d z %2$d odkazů</string>
+    <string name="install_batch_notsent">Neodesláno: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">Řetězce</string>
+    <string name="chains_hint">Řetězec odešle několik payloadů za sebou, po každém s pauzou. Dlouhým stisknutím ikony aplikace spustíte jeden z prvních čtyř řetězců z domovské obrazovky.</string>
+    <string name="chain_new">Nový řetězec</string>
+    <string name="action_edit">Upravit</string>
+    <string name="chain_summary_steps">Payloady: %1$d</string>
+    <string name="chain_summary_pauses">Pauzy: %1$s</string>
+    <string name="chain_edit_title">Upravit řetězec</string>
+    <string name="chain_steps_title">Payloady v pořadí (nejvýše %1$d)</string>
+    <string name="chain_add_step">Přidat payload</string>
+    <string name="chain_pick_title">Který payload přidat?</string>
+    <string name="chain_wait_label">Poté počkat (sekundy)</string>
+    <string name="chain_missing">Není v knihovně</string>
+    <string name="chain_move_up">Posunout nahoru</string>
+    <string name="chain_move_down">Posunout dolů</string>
+    <string name="chain_pin">Přidat na domovskou obrazovku</string>
+    <string name="chain_pin_unsupported">Tento launcher nemůže přidávat zástupce. Dlouhým stisknutím ikony aplikace tam najdete své řetězce.</string>
+    <string name="chain_sending">Odesílání %1$s (%2$d z %3$d)…</string>
+    <string name="chain_waiting">Další payload za %1$s</string>
+    <string name="chain_retrying">Čekání, až bude konzole připravená…</string>
+    <string name="chain_result_done">Hotovo. Odeslané payloady: %1$d z %2$d</string>
+    <string name="chain_result_stopped">Zastaveno. Odeslané payloady: %1$d z %2$d</string>
+    <string name="chain_result_failed">Zastaveno v kroku %1$d (%2$s). Odeslané payloady: %3$d z %4$d</string>
+    <string name="chain_err_target">Nejdřív nastavte IP adresu konzole a port Loaderu.</string>
+    <string name="chain_err_missing">Už není v knihovně: %1$s. Přidejte jej znovu nebo upravte řetězec.</string>
+    <string name="chain_err_unknown">Tento řetězec už neexistuje.</string>
+    <string name="notif_channel_chain">Řetězce payloadů</string>
+    <string name="backup_chains">Řetězce: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">Minule nedokončeno: %1$d</string>
+    <string name="unfinished_hint">Aplikace se zavřela dřív, než tyto přenosy skončily. „Pokračovat“ spustí každý znovu od začátku.</string>
+    <string name="unfinished_continue">Pokračovat</string>
+    <string name="unfinished_discard">Zahodit</string>
+    <string name="unfinished_missing">Soubory už nejsou k nalezení, vyberte je znovu: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">Pozastavit</string>
+    <string name="transfer_resume">Pokračovat</string>
+    <string name="transfer_paused">Pozastaveno</string>
+    <string name="speed_limit_title">Omezení rychlosti</string>
+    <string name="speed_limit_off">Bez omezení</string>
+    <string name="speed_limit_value">Omezení: %1$s</string>
+    <string name="speed_limit_hint">Zpomalí přenosy, aby zůstala Wi-Fi volná pro jiné věci. Změna se projeví okamžitě.</string>
+    <string name="summary_title">Dokončené přenosy: %1$d z %2$d</string>
+    <string name="summary_detail">%1$s za %2$s</string>
+    <string name="summary_failed">Selhalo: %1$d</string>
+    <string name="summary_stopped">Zastaveno: %1$d</string>
+    <string name="notif_channel_results">Výsledky přenosů</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">Vybráno: %1$d</string>
+    <string name="files_select_all">Vybrat vše</string>
+    <string name="files_select_none">Zrušit výběr</string>
+    <string name="files_delete_many_title">Smazat vybrané položky (%1$d)?</string>
+    <string name="files_delete_many_text">Tím se z konzole smažou vybrané soubory a složky, složky i se vším, co obsahují. Nelze to vzít zpět.</string>
+    <string name="files_deleted_many">Smazané položky: %1$d</string>
+    <string name="files_delete_partial">Smazané položky: %1$d, nesmazané: %2$d. První problém: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">Prohlížím složky…</string>
+    <string name="files_dl_confirm_title">Stáhnout do telefonu?</string>
+    <string name="files_dl_confirm_text">Soubory: %1$d, dohromady %2$s. Uloží se do Downloads/PS5, ve stejných složkách jako na konzoli.</string>
+    <string name="files_dl_links">Odkazy uvnitř složek se nestahují: %1$d.</string>
+    <string name="files_dl_truncated">Zahrnuté soubory: %1$d. Složky jich obsahují víc, nebo jdou hlouběji, než aplikace sleduje.</string>
+    <string name="files_dl_none">Ve výběru není žádný soubor ke stažení.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">Seřadit</string>
+    <string name="files_sort_title">Seřadit podle</string>
+    <string name="files_sort_name">Název</string>
+    <string name="files_sort_size">Velikost, od největších</string>
+    <string name="files_sort_newest">Od nejnovějších</string>
+    <string name="files_search">Hledat</string>
+    <string name="files_search_hint">Hledat v této složce</string>
+    <string name="files_no_match">Nic v této složce neodpovídá hledání.</string>
+    <string name="files_pin">Připnout tuto složku</string>
+    <string name="files_unpin">Odepnout tuto složku</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">Karty: %1$d</string>
+    <string name="web_tabs_title">Karty</string>
+    <string name="web_tab_new">Nová karta</string>
+    <string name="web_tabs_full">Příliš mnoho karet. Limit je %1$d. Nejprve jednu zavřete.</string>
+    <string name="web_find">Hledat</string>
+    <string name="web_find_hint">Hledat na této stránce</string>
+    <string name="web_find_none">Žádné shody</string>
+    <string name="web_desktop">Verze pro počítač</string>
+    <string name="web_link_new_tab">Otevřít na nové kartě</string>
+    <string name="web_link_copy">Kopírovat odkaz</string>
+    <string name="web_link_copied">Odkaz zkopírován</string>
+    <string name="web_link_use">Odeslat nebo stáhnout…</string>
+</resources>

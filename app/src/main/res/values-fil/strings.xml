@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Filipino. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">Kanselahin</string>
+    <string name="action_close">Isara</string>
+    <string name="action_done">Tapos na</string>
+    <string name="action_delete">I-delete</string>
+    <string name="action_rename">Palitan ang pangalan</string>
+    <string name="action_save">I-save</string>
+    <string name="action_remove">Alisin</string>
+    <string name="action_send">Ipadala</string>
+    <string name="action_open">Buksan</string>
+    <string name="action_block">I-block</string>
+    <string name="action_home">Home</string>
+    <string name="action_dismiss">Itago</string>
+    <string name="action_try_again">Subukan muli</string>
+    <string name="action_skip">Laktawan</string>
+    <string name="action_cancel_all">Kanselahin lahat</string>
+    <string name="action_create">Gumawa</string>
+    <string name="action_set">Itakda</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">ni %1$s</string>
+    <string name="nav_install">I-install</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">I-upload</string>
+    <string name="nav_files">Mga file</string>
+    <string name="nav_web">Web</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Installer</string>
+    <string name="service_loader">Loader</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">Itakda ang IP address ng iyong PS5</string>
+    <string name="status_checking">Sinusuri…</string>
+    <string name="status_ready">Handa na</string>
+    <string name="status_partly">Bahagyang handa</string>
+    <string name="status_partly_off">Bahagyang handa · walang sagot: %1$s</string>
+    <string name="status_offline">Hindi maabot ang console</string>
+    <string name="status_hint_unset">Hanapin ito sa PS5 sa Settings &gt; Network &gt; Connection Status &gt; View Connection Status. I-tap dito para ilagay.</string>
+    <string name="status_hint_offline">Walang sumasagot sa address na ito. Tingnan ang IP, kung gising ang console at nasa parehong Wi-Fi, at kung tumatakbo ang etaHEN.</string>
+    <string name="status_hint_one">Walang sagot: %1$s. Simulan ito sa console o tingnan ang port nito.</string>
+    <string name="status_hint_many">Walang sagot: %1$s. Simulan ang mga ito sa console o tingnan ang mga port nila.</string>
+    <string name="console_switch">Magpalit ng console</string>
+    <string name="console_change_ip">Baguhin ang IP address</string>
+    <string name="console_ip_title">IP address ng console</string>
+    <string name="console_ip_label">IP address</string>
+    <string name="console_ip_help">Hanapin ito sa PS5 sa Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">Paglilipat</string>
+    <string name="transfer_sending">Ipinapadala</string>
+    <string name="transfer_sending_to">Ipinapadala sa %1$s</string>
+    <string name="transfer_receiving">Tumatanggap</string>
+    <string name="transfer_receiving_from">Tumatanggap mula sa %1$s</string>
+    <string name="transfer_detail_total">%1$s · %2$s ng %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">Sinisimulan…</string>
+    <string name="transfer_stopped">Itinigil</string>
+    <string name="transfer_start_failed">Hindi masimulan ang paglilipat: %1$s</string>
+    <string name="transfer_retry_in">Naputol ang koneksyon. Susubukan muli sa loob ng %1$d s…</string>
+    <string name="transfer_reconnecting">Kumokonekta muli…</string>
+    <string name="transfer_eta">%1$s na lang</string>
+    <string name="transfer_queued">%1$d ang naghihintay</string>
+    <string name="queue_title">Mga paglilipat na naghihintay</string>
+    <string name="queue_clear">Alisin lahat</string>
+    <string name="queue_empty">Walang naghihintay.</string>
+    <string name="notif_channel">Mga paglilipat sa PS5</string>
+    <string name="notif_sent">Naipadala: %1$s</string>
+    <string name="notif_received">Natanggap: %1$s</string>
+    <string name="percent_value">%1$d%%</string>
+    <string name="desc_done">Tapos na</string>
+    <string name="desc_problem">Problema</string>
+    <string name="status_hide">Itago ang mensaheng ito</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">Idinagdag sa pila. %1$d ang naghihintay.</string>
+    <string name="msg_set_ip_first">Itakda muna ang IP address ng console. I-tap ang card sa itaas.</string>
+    <string name="msg_sending_link">Ipinapadala ang link sa PS5…</string>
+    <string name="msg_check_ip_ftp">Tingnan ang IP address ng console at ang FTP port.</string>
+    <string name="msg_adding_to_shelf_link">Idinadagdag sa payload library…</string>
+    <string name="status_idle">Walang ginagawa</string>
+    <string name="status_sending">Ipinapadala…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">Iwan ang site na ito?</string>
+    <string name="offsite_text">Gustong buksan ng page ang %1$s. Madalas itong ma-trigger ng mga ad kapag nag-tap ka ng link, kaya magpatuloy lang kung inaasahan mo ito.</string>
+    <string name="choose_install">Ipadala ang link sa Installer ng PS5</string>
+    <string name="choose_ftp">I-upload sa PS5 (FTP)</string>
+    <string name="choose_shelf">I-save sa payload library</string>
+    <string name="choose_phone">I-save sa telepono</string>
+    <string name="choose_help">Kailangan ng Installer ng direktang link ng package na mabubuksan ng console nang hindi nagla-log in. Gumagana ang FTP sa anumang file at pinananatili ang iyong login session. Ipinapasa ng telepono ang data sa background, at makikita ang progress sa ibabaw ng bottom bar at sa isang notification. Nag-iingat ang payload library ng maliit na payload (hanggang %1$s) sa loob ng app para sa Payload tab.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Port ng Installer (etaHEN: 12800)</string>
+    <string name="install_accepted">Tinanggap ito ng Installer: %1$s</string>
+    <string name="install_not_accepted">Hindi tinanggap (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">I-install mula sa teleponong ito</string>
+    <string name="serve_intro">Dina-download ng console ang mga package nang direkta mula sa teleponong ito sa pamamagitan ng Wi-Fi, kaya hindi na kailangang kopyahin muna ang anuman. Dapat nasa iisang network ang telepono at ang console.</string>
+    <string name="serve_choose">Pumili ng mga package</string>
+    <string name="serve_none">Walang napiling package</string>
+    <string name="serve_start">Simulang mag-share</string>
+    <string name="serve_stop">Itigil ang pag-share</string>
+    <string name="serve_copy">Kopyahin ang link</string>
+    <string name="serve_copied">Nakopya ang link</string>
+    <string name="serve_file_waiting">Hinihintay na magsimulang mag-download ang console…</string>
+    <string name="serve_file_pulling">Nagda-download ang console: %1$s</string>
+    <string name="serve_file_done">Na-download na ng console ang lahat</string>
+    <string name="serve_unreadable">Hindi mabasa ang file na ito</string>
+    <string name="serve_hint">Kung hindi kailanman nagsisimulang mag-download ang console, maaaring hinaharang ng Wi-Fi ang mga device na magkaabot sa isa\'t isa (madalas itong ginagawa ng mga guest network). Gamitin ang pangunahing network at hayaang tumakbo ang app na ito sa background.</string>
+    <string name="serve_no_wifi">Hindi mahanap ang Wi-Fi address ng teleponong ito. Ikonekta ito sa parehong Wi-Fi ng console.</string>
+    <string name="serve_failed">Hindi masimulan ang pag-share: %1$s</string>
+    <string name="serve_idle_stop">Huminto ang pag-share dahil matagal nang walang na-download.</string>
+    <string name="serve_notif_title">Pag-share sa %1$s</string>
+    <string name="serve_notif_text">Mga na-download na file: %1$d / %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">Pumili ng mga file</string>
+    <string name="upload_none">Walang napiling file</string>
+    <string name="upload_files_chosen">Mga napiling file: %1$d</string>
+    <string name="upload_start">I-upload sa background</string>
+    <string name="upload_help">Makikita ang progress sa ibabaw ng bottom bar at sa isang notification. Magpapatuloy ito kahit umalis ka sa app.</string>
+    <string name="ftp_port">FTP port</string>
+    <string name="ftp_user">Username</string>
+    <string name="ftp_password">Password</string>
+    <string name="ftp_folder">Remote na folder</string>
+    <string name="ftp_use_folder">Gamitin ang %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">Naglo-load…</string>
+    <string name="files_empty">Walang laman ang folder na ito.</string>
+    <string name="files_not_loaded">Hindi pa na-load</string>
+    <string name="files_up">⬆ Pataas</string>
+    <string name="files_refresh">I-refresh</string>
+    <string name="files_new_folder">Bagong folder</string>
+    <string name="files_upload_here">I-upload dito</string>
+    <string name="files_ftp_settings">Mga setting ng FTP</string>
+    <string name="files_need_ip">Itakda ang IP address ng console (i-tap ang card sa itaas) at isang valid na FTP port para ma-browse ang mga file nito.</string>
+    <string name="files_kind_folder">Folder</string>
+    <string name="files_kind_link">Link, %1$s</string>
+    <string name="files_download">I-download sa telepono</string>
+    <string name="files_new_name">Bagong pangalan</string>
+    <string name="files_name_used">Ginagamit na ang pangalang iyon dito.</string>
+    <string name="files_renaming">Pinapalitan ang pangalan…</string>
+    <string name="files_renamed">Pinalitan ang pangalan ng %1$s sa %2$s</string>
+    <string name="files_delete_title">I-delete ang %1$s?</string>
+    <string name="files_delete_folder">Made-delete nito ang folder at lahat ng nasa loob nito mula sa console. Hindi ito mababawi.</string>
+    <string name="files_delete_file">Made-delete nito ang file mula sa console. Hindi ito mababawi.</string>
+    <string name="files_deleting">Dine-delete…</string>
+    <string name="files_deleted">Na-delete: %1$s</string>
+    <string name="files_deleted_inside">Na-delete: %1$s (mga item sa loob: %2$d)</string>
+    <string name="files_creating">Gumagawa ng folder…</string>
+    <string name="files_created">Ginawa ang folder na %1$s</string>
+    <string name="files_folder_name">Pangalan ng folder</string>
+    <string name="name_empty">Hindi puwedeng walang laman ang pangalan.</string>
+    <string name="name_not_allowed">Hindi pinapayagan ang pangalang iyon.</string>
+    <string name="name_slash">Hindi puwedeng maglaman ng slash ang pangalan.</string>
+    <string name="name_control">May mga character na hindi pinapayagan ang pangalan.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">Nabigo: %1$s</string>
+    <string name="ftp_port_hint">Hindi maabot ang FTP server. Tingnan ang IP ng console at ang FTP port (1337 ang gamit ng built-in na FTP ng etaHEN, 2121 naman ang gamit ng FTP payload).</string>
+    <string name="err_login">Nabigo ang pag-log in sa FTP</string>
+    <string name="err_cant_open">hindi mabuksan ang %1$s (%2$s)</string>
+    <string name="err_rename">nabigo ang pagpapalit ng pangalan (%1$s)</string>
+    <string name="err_mkdir">hindi magawa ang folder (%1$s)</string>
+    <string name="err_too_deep">masyadong malalim ang pagkaka-nest ng folder</string>
+    <string name="err_delete_path">hindi ma-delete ang %1$s (%2$s)</string>
+    <string name="err_upload">Nabigo ang pag-upload sa FTP: %1$s</string>
+    <string name="err_download">Nabigo ang pag-download sa FTP: %1$s</string>
+    <string name="err_open_file">Hindi mabuksan ang file</string>
+    <string name="err_cancelled_upload">Kinansela. Maaaring may natirang hindi kumpletong file sa %1$s</string>
+    <string name="err_cancelled_download">Kinansela. Itinapon ang hindi kumpletong download.</string>
+    <string name="err_gave_up">Sumuko matapos patuloy na mabigo ang koneksyon. Huling error: %1$s</string>
+    <string name="err_short_upload">Sa ipinadalang %2$s, %1$s lang ang itinabi ng console.</string>
+    <string name="err_short_download">%1$s lang sa %2$s ang dumating.</string>
+    <string name="err_empty_file">Walang laman ang file</string>
+    <string name="err_save">Hindi ma-save ang %1$s</string>
+    <string name="sent_to_ps5">Naipadala sa PS5: %1$s</string>
+    <string name="saved_to_downloads">Na-save sa Downloads/PS5: %1$s</string>
+    <string name="dl_http_failed">Nabigo ang pag-download: HTTP %1$s</string>
+    <string name="dl_empty">Nabigo ang pag-download: walang laman ang tugon</string>
+    <string name="dl_cut_short">Nagsara ang koneksyon bago dumating ang buong file.</string>
+    <string name="dl_create_failed">Hindi magawa ang file sa Downloads</string>
+    <string name="dl_write_failed">Hindi mabuksan ang bagong file para sulatan</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">Naipadala: %1$s</string>
+    <string name="shelf_added">Naidagdag sa library: %1$s (%2$s)</string>
+    <string name="shelf_updated">Na-update sa library: %1$s (%2$s)</string>
+    <string name="shelf_too_large">Mas malaki ang file na iyon kaysa sa %1$s, kaya hindi ito naidagdag sa library.</string>
+    <string name="shelf_too_large_url">%1$s ang laki ng file na iyon. Tumatanggap ang library ng mga payload hanggang %2$s.</string>
+    <string name="payload_adding">Idinadagdag sa library…</string>
+    <string name="payload_remove_title">Alisin ang %1$s?</string>
+    <string name="payload_remove_text">Made-delete ito sa library. Hindi magagalaw ang orihinal na file sa iyong telepono.</string>
+    <string name="payload_loader_port">Port ng Loader</string>
+    <string name="payload_shelf_title">Payload library</string>
+    <string name="payload_shelf_empty">Wala pang naka-save. Magdagdag ng mga payload na madalas mong gamitin (FTP server, etaHEN, ...) at ipadala ang bawat isa sa isang tap. Puwede mo rin itong direktang i-save mula sa Web tab habang dina-download.</string>
+    <string name="payload_sending">Ipinapadala ang %1$s…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">Magdagdag ng payload sa library</string>
+    <string name="payload_once_title">Magpadala ng file nang isang beses</string>
+    <string name="payload_choose">Pumili ng payload (.elf / .bin)</string>
+    <string name="payload_send">Ipadala ang payload</string>
+
+    <!-- consoles -->
+    <string name="profile_default">Aking PS5</string>
+    <string name="profile_new">Console %1$d</string>
+    <string name="profile_fallback">Console</string>
+    <string name="consoles_title">Mga console</string>
+    <string name="console_rename_title">Palitan ang pangalan ng console</string>
+    <string name="console_name_label">Pangalan</string>
+    <string name="console_delete_title">I-delete ang %1$s?</string>
+    <string name="console_delete_text">Aalisin ang naka-save nitong IP address at mga port. Hindi maaapektuhan ang iba mong console.</string>
+    <string name="console_no_ip">wala pang IP address</string>
+    <string name="console_color_of">Kulay ng %1$s</string>
+    <string name="console_use_color">Gamitin ang %1$s</string>
+    <string name="console_add">Magdagdag ng console</string>
+    <string name="language_button">Wika</string>
+    <string name="color_blue">Asul</string>
+    <string name="color_orange">Kahel</string>
+    <string name="color_green">Berde</string>
+    <string name="color_pink">Pink</string>
+    <string name="color_purple">Lila</string>
+    <string name="color_teal">Teal</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">Nagsimula ang pag-download (tingnan ang Downloads)</string>
+    <string name="web_load_failed">Hindi ma-load ang page: %1$s</string>
+    <string name="web_http_server">Abala o down ang site ngayon (error %1$s). Subukan ulit sa ilang sandali.</string>
+    <string name="web_http_other">Sumagot ang site ng error %1$s.</string>
+    <string name="web_open_first">Magbukas muna ng page</string>
+    <string name="web_bookmark_saved">Na-save ang bookmark</string>
+    <string name="web_bookmark_exists">Nasa mga bookmark mo na</string>
+    <string name="web_home_set">Itinakda ang homepage sa %1$s</string>
+    <string name="web_reload">I-reload</string>
+    <string name="web_add">★ Idagdag</string>
+    <string name="web_bookmarks">Mga bookmark</string>
+    <string name="web_homepage_label">URL ng homepage</string>
+    <string name="web_bookmarks_empty">Wala pang bookmark. Magbukas ng page at i-tap ang %1$s.</string>
+    <string name="web_bookmarks_help">I-tap ang bookmark para buksan ito. Ginagawa itong homepage mo ng “%1$s”.</string>
+    <string name="adblock_title">Ad block</string>
+    <string name="adblock_switch">I-block ang mga domain ng ad</string>
+    <string name="adblock_info">Na-block na: %1$d. Mga network sa built-in na listahan: %2$d. I-reload ang page pagkatapos magbago ng anuman.</string>
+    <string name="adblock_own">Sarili mong mga domain, isa kada linya</string>
+    <string name="adblock_on">Ad block: naka-on · na-block: %1$d · i-tap para baguhin</string>
+    <string name="adblock_off">Ad block: naka-off · na-block: %1$d · i-tap para baguhin</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">Ano ang magagawa ko?</string>
+    <string name="help_what">Ano ang nangyari</string>
+    <string name="help_try">Ano ang puwedeng subukan</string>
+    <string name="help_details">Mga detalye</string>
+    <string name="help_copy">Kopyahin ang mga detalye</string>
+    <string name="help_copied">Nakopya na</string>
+    <string name="help_unreachable_title">Hindi maabot ang console</string>
+    <string name="help_unreachable_what">Walang sumasagot sa address ng console.</string>
+    <string name="help_unreachable_try">• Tingnan ang IP address sa PS5 (Settings &gt; Network &gt; Connection Status). Maaari itong magbago pagkatapos mag-restart.\n• Gisingin nang buo ang console. Madalas na pinapatay ng rest mode ang network.\n• Gamitin ang parehong Wi-Fi sa dalawa. Hinaharangan ito ng mga guest network at VPN.</string>
+    <string name="help_port_title">Hindi tumatakbo ang serbisyong iyon</string>
+    <string name="help_port_what">Sumagot ang console, pero walang nakikinig sa port na iyon.</string>
+    <string name="help_port_try">• Simulan ang etaHEN sa console. Ibinibigay nito ang Installer (12800), ang Loader (9021) at ang FTP (1337).\n• Karaniwang 2121 ang gamit ng hiwalay na FTP payload. Ilagay dito ang parehong port.\n• Sa card ng console, ipinapakita ng ilaw na patay kung ano ang kulang.</string>
+    <string name="help_login_title">Tinanggihan ang FTP login</string>
+    <string name="help_login_what">Tinanggihan ng FTP server ng console ang user name o password.</string>
+    <string name="help_login_try">• Tinatanggap ng etaHEN ang user name na anonymous na may anumang password.\n• Kung nagtakda ka ng login sa console, ilagay ito sa I-upload.\n• Hindi sine-save ang password. Ilagay itong muli pagkatapos i-restart ang app.</string>
+    <string name="help_dropped_title">Naputol ang koneksyon</string>
+    <string name="help_dropped_what">Naputol ang link sa console o huminto ang paggalaw ng data. Susubukan ulit ng app at magpapatuloy ito kung saan ito huminto.</string>
+    <string name="help_dropped_try">• Ilapit ang telepono sa router at panatilihing gising ang console.\n• I-pause ang iba pang malalaking download sa network.\n• Kung patuloy na pumapalya, maghintay sandali at i-tap ang Subukan muli.</string>
+    <string name="help_refused_title">Hindi tinanggap ng Installer ang link</string>
+    <string name="help_refused_what">Naaabot ang console, pero tinanggihan ng Installer nito ang link na ito.</string>
+    <string name="help_refused_try">• Dapat diretso ang link sa package file at bumukas nang walang login.\n• Dapat maabot ito ng console. Gumagana lang sa parehong Wi-Fi ang mga link mula sa teleponong ito.\n• Tiyaking tumatakbo ang Installer at may libreng espasyo ang console.</string>
+    <string name="help_storage_title">Huminto sa pag-imbak ang console</string>
+    <string name="help_storage_what">Mas kaunti ang itinabi ng console kaysa sa ipinadala. Karaniwang puno o read-only ang drive.</string>
+    <string name="help_storage_try">• Magbakante ng espasyo sa console.\n• Pumili ng ibang folder, halimbawa sa USB drive.\n• Pagkatapos ay i-tap ang Subukan muli.</string>
+    <string name="help_denied_title">Tinanggihan ang folder o file na iyon</string>
+    <string name="help_denied_what">Hindi ito mabuksan, masulatan o mabago ng FTP server dito.</string>
+    <string name="help_denied_try">• Tiyaking umiiral ang folder. May pagkakaiba ang malaki at maliit na titik sa mga pangalan.\n• Read-only ang mga system folder. Gamitin ang /data o isang USB drive.\n• Maaaring naka-lock ang file na ginagamit ng larong tumatakbo. Isara ang laro.</string>
+    <string name="help_phone_title">Hindi magamit ng telepono ang file</string>
+    <string name="help_phone_what">Wala na o nailipat ang file, nawalan ng access ang app dito, o wala nang espasyo ang telepono.</string>
+    <string name="help_phone_try">• Piliin muli ang file.\n• Magbakante ng storage sa telepono.\n• Kung nasa cloud app ang file, i-save muna ito sa telepono.</string>
+    <string name="help_link_title">Pumalya ang download link</string>
+    <string name="help_link_what">Hindi ibinigay ng website ang file. Maaaring nag-expire na ang link, kailangan ng login, o abala ang site.</string>
+    <string name="help_link_try">• Simulan muli ang download mula sa Web tab. Pinapanatili nito ang login mo.\n• Madalas mag-expire pagkalipas ng ilang minuto ang mga link mula sa mga file-hosting site.\n• Kung may error sa 500s na iniulat ang site, subukan ulit mamaya.</string>
+
+    <!-- update check -->
+    <string name="update_available">Available ang bersyon %1$s</string>
+    <string name="update_download">I-download</string>
+    <string name="update_later">Mamaya</string>
+    <string name="update_title">Mga update</string>
+    <string name="update_current">Nasa iyo na ang pinakabagong bersyon (%1$s).</string>
+    <string name="update_none">Wala pang nakitang release sa Releases page.</string>
+    <string name="update_check_now">Tingnan ngayon</string>
+    <string name="update_auto">Tingnan ang mga update kapag binuksan ang app</string>
+    <string name="update_privacy">Tinatanong ng check ang GitHub tungkol sa pinakabagong release, hanggang isang beses lang sa isang araw. Walang ipinapadalang impormasyon tungkol sa iyo o sa mga console mo; nakikita ng GitHub ang IP address mo, tulad ng anumang website.</string>
+
+    <!-- find my console -->
+    <string name="find_button">Hanapin ang PS5 ko</string>
+    <string name="find_scanning">Hinahanap ang iyong console sa %1$s…</string>
+    <string name="find_again">I-scan muli</string>
+    <string name="find_none">Walang nakitang console.</string>
+    <string name="find_none_try">• Buksan nang buo ang console (hindi rest mode) at simulan ang etaHEN.\n• Gamitin ang parehong Wi-Fi sa telepono at sa console. Pinaghihiwalay ng mga guest network at VPN ang mga device.\n• Pagkatapos ay mag-scan muli.</string>
+    <string name="find_no_wifi">Hindi nakakonekta sa Wi-Fi network ang teleponong ito. Ikonekta ito sa parehong Wi-Fi ng console, pagkatapos ay mag-scan muli.</string>
+    <string name="find_pick">I-tap ang Gamitin para itakda ang address ng %1$s.</string>
+    <string name="find_saved">Naka-save na address</string>
+    <string name="find_used_by">Naka-save para sa %1$s</string>
+    <string name="find_updated">Ginagamit na ngayon ng %1$s ang %2$s.</string>
+    <string name="find_privacy">Ang Wi-Fi network mo lang ang ini-scan, sa ilang port ng console. Walang ipinapadala sa internet.</string>
+    <string name="action_stop">Ihinto</string>
+    <string name="action_use">Gamitin</string>
+
+    <!-- about and backup -->
+    <string name="about_title">Tungkol sa Bento</string>
+    <string name="about_version">Bersyon %1$s</string>
+    <string name="about_button">Tungkol at backup</string>
+    <string name="about_report">Kopyahin ang ulat</string>
+    <string name="about_report_help">Kinokopya ang bersyon ng app, modelo ng telepono mo at ang huling mensahe, para i-paste sa bug report. Hindi isinasama ang mga IP address at link.</string>
+    <string name="about_report_copied">Nakopya ang ulat</string>
+    <string name="about_releases">Releases page</string>
+    <string name="backup_title">Backup</string>
+    <string name="backup_text">Sine-save ang mga console, homepage, bookmark, ad list at payload mo sa isang file. Hindi sine-save ang mga FTP password.</string>
+    <string name="backup_save">I-save ang backup</string>
+    <string name="backup_restore">I-restore ang backup</string>
+    <string name="backup_saved">Na-save ang backup.</string>
+    <string name="backup_contents">Mga console: %1$d · Mga bookmark: %2$d · Mga payload: %3$d</string>
+    <string name="backup_made">Ginawa noong %1$s</string>
+    <string name="backup_skipped">Mga payload na hindi isinama dahil masyadong malaki ang file: %1$d</string>
+    <string name="backup_bad_file">Hindi backup ng Bento ang file na iyon.</string>
+    <string name="backup_too_new">Ginawa ang backup na iyon ng mas bagong bersyon ng Bento. I-update ang app, pagkatapos ay subukan muli.</string>
+    <string name="restore_title">I-restore ang backup na ito?</string>
+    <string name="restore_text">Papalitan ng laman ng file ang mga console, homepage, bookmark at ad list mo. Idaragdag sa payload library ang mga payload sa file. Kakailanganin mong i-type muli ang mga FTP password mo.</string>
+    <string name="restore_button">I-restore</string>
+    <string name="restore_done">Na-restore ang backup.</string>
+    <string name="restore_payloads_failed">Mga payload na hindi ma-store: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">Mga package link (isa bawat linya)</string>
+    <string name="install_paste">I-paste</string>
+    <string name="action_clear">I-clear</string>
+    <string name="install_paste_none">Walang web link sa clipboard.</string>
+    <string name="install_links_skipped">Mga address lang na nagsisimula sa http:// o https:// ang ipinapadala. Hindi isinama: %1$d</string>
+    <string name="install_recent">Mga kamakailang link</string>
+    <string name="install_recent_clear">I-clear ang listahan</string>
+    <string name="install_sending_n">Ipinapadala ang link %1$d sa %2$d…</string>
+    <string name="install_batch_done">Tinanggap: %1$d sa %2$d link</string>
+    <string name="install_batch_notsent">Hindi naipadala: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">Mga chain</string>
+    <string name="chains_hint">Nagpapadala ang isang chain ng ilang payload nang sunud-sunod, na may pahinga pagkatapos ng bawat isa. Pindutin nang matagal ang icon ng app para simulan ang isa sa unang apat na chain mula sa home screen.</string>
+    <string name="chain_new">Bagong chain</string>
+    <string name="action_edit">I-edit</string>
+    <string name="chain_summary_steps">Mga payload: %1$d</string>
+    <string name="chain_summary_pauses">Mga pahinga: %1$s</string>
+    <string name="chain_edit_title">I-edit ang chain</string>
+    <string name="chain_steps_title">Mga payload, ayon sa pagkakasunod (hanggang %1$d)</string>
+    <string name="chain_add_step">Magdagdag ng payload</string>
+    <string name="chain_pick_title">Aling payload ang idaragdag?</string>
+    <string name="chain_wait_label">Pagkatapos ay maghintay (segundo)</string>
+    <string name="chain_missing">Wala sa library</string>
+    <string name="chain_move_up">Ilipat pataas</string>
+    <string name="chain_move_down">Ilipat pababa</string>
+    <string name="chain_pin">Idagdag sa home screen</string>
+    <string name="chain_pin_unsupported">Hindi makapagdagdag ng shortcut ang launcher na ito. Pindutin nang matagal ang icon ng app para makita roon ang iyong mga chain.</string>
+    <string name="chain_sending">Ipinapadala ang %1$s (%2$d sa %3$d)…</string>
+    <string name="chain_waiting">Susunod na payload sa loob ng %1$s</string>
+    <string name="chain_retrying">Hinihintay na maging handa ang console…</string>
+    <string name="chain_result_done">Tapos na. Mga payload na naipadala: %1$d sa %2$d</string>
+    <string name="chain_result_stopped">Itinigil. Mga payload na naipadala: %1$d sa %2$d</string>
+    <string name="chain_result_failed">Huminto sa hakbang %1$d (%2$s). Mga payload na naipadala: %3$d sa %4$d</string>
+    <string name="chain_err_target">Itakda muna ang IP address ng console at ang loader port.</string>
+    <string name="chain_err_missing">Wala na sa library: %1$s. Idagdag itong muli o i-edit ang chain.</string>
+    <string name="chain_err_unknown">Wala na ang chain na iyon.</string>
+    <string name="notif_channel_chain">Mga payload chain</string>
+    <string name="backup_chains">Mga chain: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">Hindi natapos noong huli: %1$d</string>
+    <string name="unfinished_hint">Nag-close ang app bago natapos ang mga ito. Sisimulan ng “Magpatuloy” ang bawat isa ulit mula sa simula.</string>
+    <string name="unfinished_continue">Magpatuloy</string>
+    <string name="unfinished_discard">Itapon</string>
+    <string name="unfinished_missing">Hindi na makita ang mga file, piliin ulit ang mga ito: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">I-pause</string>
+    <string name="transfer_resume">Ituloy</string>
+    <string name="transfer_paused">Naka-pause</string>
+    <string name="speed_limit_title">Limitasyon sa bilis</string>
+    <string name="speed_limit_off">Walang limitasyon</string>
+    <string name="speed_limit_value">Limitasyon: %1$s</string>
+    <string name="speed_limit_hint">Binabagalan ang mga transfer para manatiling libre ang Wi-Fi para sa ibang gamit. Agad na magkakaroon ng bisa ang pagbabago.</string>
+    <string name="summary_title">Tapos na ang mga transfer: %1$d sa %2$d</string>
+    <string name="summary_detail">%1$s sa loob ng %2$s</string>
+    <string name="summary_failed">Pumalya: %1$d</string>
+    <string name="summary_stopped">Itinigil: %1$d</string>
+    <string name="notif_channel_results">Mga resulta ng transfer</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">Napili: %1$d</string>
+    <string name="files_select_all">Piliin lahat</string>
+    <string name="files_select_none">Alisin ang lahat ng pili</string>
+    <string name="files_delete_many_title">I-delete ang mga napiling item (%1$d)?</string>
+    <string name="files_delete_many_text">Made-delete nito mula sa console ang mga napiling file at folder, kasama ang lahat ng nasa loob ng mga folder. Hindi ito mababawi.</string>
+    <string name="files_deleted_many">Na-delete na item: %1$d</string>
+    <string name="files_delete_partial">Na-delete na item: %1$d, hindi na-delete: %2$d. Ang unang problema: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">Tinitingnan ang mga folder…</string>
+    <string name="files_dl_confirm_title">I-download sa telepono?</string>
+    <string name="files_dl_confirm_text">Mga file: %1$d, kabuuang %2$s. Sine-save ang mga ito sa Downloads/PS5, sa parehong mga folder tulad ng sa console.</string>
+    <string name="files_dl_links">Hindi dina-download ang mga link sa loob ng mga folder: %1$d.</string>
+    <string name="files_dl_truncated">Mga file na kinuha: %1$d. Mas marami ang laman ng mga folder, o mas malalim ang mga ito kaysa sa sinusundan ng app.</string>
+    <string name="files_dl_none">Walang file na ma-download sa napili.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">I-sort</string>
+    <string name="files_sort_title">I-sort ayon sa</string>
+    <string name="files_sort_name">Pangalan</string>
+    <string name="files_sort_size">Laki, pinakamalaki muna</string>
+    <string name="files_sort_newest">Pinakabago muna</string>
+    <string name="files_search">Maghanap</string>
+    <string name="files_search_hint">Maghanap sa folder na ito</string>
+    <string name="files_no_match">Walang tumutugma sa paghahanap sa folder na ito.</string>
+    <string name="files_pin">I-pin ang folder na ito</string>
+    <string name="files_unpin">I-unpin ang folder na ito</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">Mga tab: %1$d</string>
+    <string name="web_tabs_title">Mga tab</string>
+    <string name="web_tab_new">Bagong tab</string>
+    <string name="web_tabs_full">Masyadong maraming tab. Ang limitasyon ay %1$d. Magsara muna ng isa.</string>
+    <string name="web_find">Hanapin</string>
+    <string name="web_find_hint">Hanapin sa page na ito</string>
+    <string name="web_find_none">Walang tugma</string>
+    <string name="web_desktop">Desktop site</string>
+    <string name="web_link_new_tab">Buksan sa bagong tab</string>
+    <string name="web_link_copy">Kopyahin ang link</string>
+    <string name="web_link_copied">Nakopya ang link</string>
+    <string name="web_link_use">Ipadala o i-download…</string>
+</resources>

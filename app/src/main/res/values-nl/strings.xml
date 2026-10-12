@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dutch. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">Annuleren</string>
+    <string name="action_close">Sluiten</string>
+    <string name="action_done">Klaar</string>
+    <string name="action_delete">Verwijderen</string>
+    <string name="action_rename">Hernoemen</string>
+    <string name="action_save">Opslaan</string>
+    <string name="action_remove">Weghalen</string>
+    <string name="action_send">Versturen</string>
+    <string name="action_open">Openen</string>
+    <string name="action_block">Blokkeren</string>
+    <string name="action_home">Start</string>
+    <string name="action_dismiss">Verbergen</string>
+    <string name="action_try_again">Opnieuw proberen</string>
+    <string name="action_skip">Overslaan</string>
+    <string name="action_cancel_all">Alles annuleren</string>
+    <string name="action_create">Maken</string>
+    <string name="action_set">Instellen</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">door %1$s</string>
+    <string name="nav_install">Installeer</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">Upload</string>
+    <string name="nav_files">Bestanden</string>
+    <string name="nav_web">Web</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Installer</string>
+    <string name="service_loader">Loader</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">Stel het IP-adres van je PS5 in</string>
+    <string name="status_checking">Controleren…</string>
+    <string name="status_ready">Gereed</string>
+    <string name="status_partly">Deels gereed</string>
+    <string name="status_partly_off">Deels gereed · geen reactie: %1$s</string>
+    <string name="status_offline">Console niet bereikbaar</string>
+    <string name="status_hint_unset">Je vindt het op de PS5 onder Instellingen &gt; Netwerk &gt; Verbindingsstatus &gt; Verbindingsstatus weergeven. Tik hier om het in te voeren.</string>
+    <string name="status_hint_offline">Er reageert niets op dit adres. Controleer het IP-adres, of de PS5 aanstaat en op hetzelfde wifi-netwerk zit, en of etaHEN draait.</string>
+    <string name="status_hint_one">Geen reactie van: %1$s. Start de service op de console of controleer de poort.</string>
+    <string name="status_hint_many">Geen reactie van: %1$s. Start de services op de console of controleer de poorten.</string>
+    <string name="console_switch">Van console wisselen</string>
+    <string name="console_change_ip">IP-adres wijzigen</string>
+    <string name="console_ip_title">IP-adres van de console</string>
+    <string name="console_ip_label">IP-adres</string>
+    <string name="console_ip_help">Je vindt het op de PS5 onder Instellingen &gt; Netwerk &gt; Verbindingsstatus &gt; Verbindingsstatus weergeven.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">Overdracht</string>
+    <string name="transfer_sending">Verzenden</string>
+    <string name="transfer_sending_to">Verzenden naar %1$s</string>
+    <string name="transfer_receiving">Ontvangen</string>
+    <string name="transfer_receiving_from">Ontvangen van %1$s</string>
+    <string name="transfer_detail_total">%1$s · %2$s van %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">Starten…</string>
+    <string name="transfer_stopped">Gestopt</string>
+    <string name="transfer_start_failed">De overdracht kon niet worden gestart: %1$s</string>
+    <string name="transfer_retry_in">Verbinding verbroken. Opnieuw proberen over %1$d s…</string>
+    <string name="transfer_reconnecting">Opnieuw verbinden…</string>
+    <string name="transfer_eta">nog %1$s</string>
+    <string name="transfer_queued">%1$d wachtend</string>
+    <string name="queue_title">Wachtende overdrachten</string>
+    <string name="queue_clear">Alles weghalen</string>
+    <string name="queue_empty">Er wacht niets.</string>
+    <string name="notif_channel">PS5-overdrachten</string>
+    <string name="notif_sent">%1$s verzonden</string>
+    <string name="notif_received">%1$s ontvangen</string>
+    <string name="percent_value">%1$d%%</string>
+    <string name="desc_done">Klaar</string>
+    <string name="desc_problem">Probleem</string>
+    <string name="status_hide">Dit bericht verbergen</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">Aan de wachtrij toegevoegd. %1$d wachtend.</string>
+    <string name="msg_set_ip_first">Stel eerst het IP-adres van de console in. Tik bovenaan op de kaart.</string>
+    <string name="msg_sending_link">Link naar PS5 verzenden…</string>
+    <string name="msg_check_ip_ftp">Controleer het IP-adres van de console en de FTP-poort.</string>
+    <string name="msg_adding_to_shelf_link">Toevoegen aan de payload-bibliotheek…</string>
+    <string name="status_idle">Inactief</string>
+    <string name="status_sending">Verzenden…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">Deze site verlaten?</string>
+    <string name="offsite_text">De pagina wil %1$s openen. Advertenties veroorzaken dit vaak als je op een link tikt, dus ga alleen verder als je dit verwachtte.</string>
+    <string name="choose_install">Link naar PS5-installer sturen</string>
+    <string name="choose_ftp">Uploaden naar PS5 (FTP)</string>
+    <string name="choose_shelf">Opslaan in payload-bibliotheek</string>
+    <string name="choose_phone">Opslaan op telefoon</string>
+    <string name="choose_help">De installer heeft een directe pakketlink nodig die de console zonder inloggen kan openen. FTP werkt voor elk bestand en behoudt je inlogsessie. De telefoon geeft de gegevens op de achtergrond door, met de voortgang boven de onderste balk en in een melding. De payload-bibliotheek bewaart een kleine payload (tot %1$s) in de app voor het tabblad Payload.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Installer-poort (etaHEN: 12800)</string>
+    <string name="install_accepted">De installer heeft het geaccepteerd: %1$s</string>
+    <string name="install_not_accepted">Niet geaccepteerd (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">Installeren vanaf deze telefoon</string>
+    <string name="serve_intro">De console downloadt de pakketten rechtstreeks van deze telefoon via wifi, dus er hoeft eerst niets gekopieerd te worden. De telefoon en de console moeten op hetzelfde netwerk zitten.</string>
+    <string name="serve_choose">Pakketten kiezen</string>
+    <string name="serve_none">Geen pakketten gekozen</string>
+    <string name="serve_start">Delen starten</string>
+    <string name="serve_stop">Delen stoppen</string>
+    <string name="serve_copy">Link kopiëren</string>
+    <string name="serve_copied">Link gekopieerd</string>
+    <string name="serve_file_waiting">Wachten tot de console begint met downloaden…</string>
+    <string name="serve_file_pulling">De console downloadt: %1$s</string>
+    <string name="serve_file_done">De console heeft alles gedownload</string>
+    <string name="serve_unreadable">Dit bestand kan niet worden gelezen</string>
+    <string name="serve_hint">Als de console nooit begint met downloaden, houdt het wifi misschien apparaten tegen om elkaar te bereiken (gastnetwerken doen dat vaak). Gebruik het hoofdnetwerk en laat deze app op de achtergrond draaien.</string>
+    <string name="serve_no_wifi">Het wifi-adres van deze telefoon is niet gevonden. Verbind de telefoon met hetzelfde wifi-netwerk als de console.</string>
+    <string name="serve_failed">Delen kon niet worden gestart: %1$s</string>
+    <string name="serve_idle_stop">Het delen is gestopt omdat er lange tijd niets is gedownload.</string>
+    <string name="serve_notif_title">Delen met %1$s</string>
+    <string name="serve_notif_text">Gedownloade bestanden: %1$d / %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">Bestanden kiezen</string>
+    <string name="upload_none">Geen bestanden gekozen</string>
+    <string name="upload_files_chosen">Gekozen bestanden: %1$d</string>
+    <string name="upload_start">Uploaden op de achtergrond</string>
+    <string name="upload_help">De voortgang staat boven de onderste balk en in een melding. Het gaat door als je de app verlaat.</string>
+    <string name="ftp_port">FTP-poort</string>
+    <string name="ftp_user">Gebruikersnaam</string>
+    <string name="ftp_password">Wachtwoord</string>
+    <string name="ftp_folder">Externe map</string>
+    <string name="ftp_use_folder">%1$s gebruiken</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">Laden…</string>
+    <string name="files_empty">Deze map is leeg.</string>
+    <string name="files_not_loaded">Nog niet geladen</string>
+    <string name="files_up">⬆ Omhoog</string>
+    <string name="files_refresh">Vernieuwen</string>
+    <string name="files_new_folder">Nieuwe map</string>
+    <string name="files_upload_here">Hier uploaden</string>
+    <string name="files_ftp_settings">FTP-instellingen</string>
+    <string name="files_need_ip">Stel het IP-adres van de console in (tik bovenaan op de kaart) en een geldige FTP-poort om de bestanden te bekijken.</string>
+    <string name="files_kind_folder">Map</string>
+    <string name="files_kind_link">Link, %1$s</string>
+    <string name="files_download">Downloaden naar telefoon</string>
+    <string name="files_new_name">Nieuwe naam</string>
+    <string name="files_name_used">Die naam is hier al in gebruik.</string>
+    <string name="files_renaming">Hernoemen…</string>
+    <string name="files_renamed">%1$s hernoemd naar %2$s</string>
+    <string name="files_delete_title">%1$s verwijderen?</string>
+    <string name="files_delete_folder">Hiermee worden de map en alles erin van de console verwijderd. Dit kan niet ongedaan worden gemaakt.</string>
+    <string name="files_delete_file">Hiermee wordt het bestand van de console verwijderd. Dit kan niet ongedaan worden gemaakt.</string>
+    <string name="files_deleting">Verwijderen…</string>
+    <string name="files_deleted">%1$s verwijderd</string>
+    <string name="files_deleted_inside">%1$s verwijderd (items erin: %2$d)</string>
+    <string name="files_creating">Map maken…</string>
+    <string name="files_created">Map %1$s gemaakt</string>
+    <string name="files_folder_name">Mapnaam</string>
+    <string name="name_empty">De naam mag niet leeg zijn.</string>
+    <string name="name_not_allowed">Die naam is niet toegestaan.</string>
+    <string name="name_slash">De naam mag geen schuine strepen bevatten.</string>
+    <string name="name_control">De naam bevat tekens die niet zijn toegestaan.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">Mislukt: %1$s</string>
+    <string name="ftp_port_hint">De FTP-server is niet bereikbaar. Controleer het IP-adres van de console en de FTP-poort (de ingebouwde FTP van etaHEN gebruikt 1337, de FTP-payload gebruikt 2121).</string>
+    <string name="err_login">FTP-aanmelding mislukt</string>
+    <string name="err_cant_open">kan %1$s niet openen (%2$s)</string>
+    <string name="err_rename">hernoemen mislukt (%1$s)</string>
+    <string name="err_mkdir">kon de map niet maken (%1$s)</string>
+    <string name="err_too_deep">de map is te diep genest</string>
+    <string name="err_delete_path">kon %1$s niet verwijderen (%2$s)</string>
+    <string name="err_upload">FTP-upload mislukt: %1$s</string>
+    <string name="err_download">FTP-download mislukt: %1$s</string>
+    <string name="err_open_file">Kon het bestand niet openen</string>
+    <string name="err_cancelled_upload">Geannuleerd. Mogelijk blijft een gedeeltelijk bestand achter op %1$s</string>
+    <string name="err_cancelled_download">Geannuleerd. De gedeeltelijke download is verwijderd.</string>
+    <string name="err_gave_up">Opgegeven nadat de verbinding steeds bleef mislukken. Laatste fout: %1$s</string>
+    <string name="err_short_upload">De console heeft slechts %1$s bewaard van de %2$s die zijn verzonden.</string>
+    <string name="err_short_download">Slechts %1$s van %2$s is aangekomen.</string>
+    <string name="err_empty_file">Het bestand is leeg</string>
+    <string name="err_save">Kon %1$s niet opslaan</string>
+    <string name="sent_to_ps5">Naar PS5 verzonden: %1$s</string>
+    <string name="saved_to_downloads">Opgeslagen in Downloads/PS5: %1$s</string>
+    <string name="dl_http_failed">Download mislukt: HTTP %1$s</string>
+    <string name="dl_empty">Download mislukt: leeg antwoord</string>
+    <string name="dl_cut_short">De verbinding werd gesloten voordat het hele bestand binnen was.</string>
+    <string name="dl_create_failed">Kon het bestand niet maken in Downloads</string>
+    <string name="dl_write_failed">Kon het nieuwe bestand niet openen om te schrijven</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">%1$s verzonden</string>
+    <string name="shelf_added">Toegevoegd aan de bibliotheek: %1$s (%2$s)</string>
+    <string name="shelf_updated">Bijgewerkt in de bibliotheek: %1$s (%2$s)</string>
+    <string name="shelf_too_large">Dat bestand is groter dan %1$s en is daarom niet aan de bibliotheek toegevoegd.</string>
+    <string name="shelf_too_large_url">Dat bestand is %1$s. De bibliotheek accepteert payloads tot %2$s.</string>
+    <string name="payload_adding">Toevoegen aan de bibliotheek…</string>
+    <string name="payload_remove_title">%1$s weghalen?</string>
+    <string name="payload_remove_text">Het wordt uit de bibliotheek verwijderd. Het originele bestand op je telefoon blijft ongemoeid.</string>
+    <string name="payload_loader_port">Loader-poort</string>
+    <string name="payload_shelf_title">Payload-bibliotheek</string>
+    <string name="payload_shelf_empty">Nog niets opgeslagen. Voeg de payloads toe die je vaak gebruikt (een FTP-server, etaHEN, ...) en verstuur ze met één tik. Je kunt er ook een rechtstreeks vanuit het tabblad Web opslaan wanneer je hem downloadt.</string>
+    <string name="payload_sending">%1$s verzenden…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">Payload aan bibliotheek toevoegen</string>
+    <string name="payload_once_title">Eenmalig een bestand verzenden</string>
+    <string name="payload_choose">Payload kiezen (.elf / .bin)</string>
+    <string name="payload_send">Payload verzenden</string>
+
+    <!-- consoles -->
+    <string name="profile_default">Mijn PS5</string>
+    <string name="profile_new">Console %1$d</string>
+    <string name="profile_fallback">Console</string>
+    <string name="consoles_title">Consoles</string>
+    <string name="console_rename_title">Console hernoemen</string>
+    <string name="console_name_label">Naam</string>
+    <string name="console_delete_title">%1$s verwijderen?</string>
+    <string name="console_delete_text">Het opgeslagen IP-adres en de poorten worden verwijderd. Je andere consoles blijven ongewijzigd.</string>
+    <string name="console_no_ip">nog geen IP-adres</string>
+    <string name="console_color_of">Kleur van %1$s</string>
+    <string name="console_use_color">%1$s gebruiken</string>
+    <string name="console_add">Console toevoegen</string>
+    <string name="language_button">Taal</string>
+    <string name="color_blue">Blauw</string>
+    <string name="color_orange">Oranje</string>
+    <string name="color_green">Groen</string>
+    <string name="color_pink">Roze</string>
+    <string name="color_purple">Paars</string>
+    <string name="color_teal">Blauwgroen</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">Download gestart (zie Downloads)</string>
+    <string name="web_load_failed">Pagina laden mislukt: %1$s</string>
+    <string name="web_http_server">De site is nu druk of offline (fout %1$s). Probeer het zo opnieuw.</string>
+    <string name="web_http_other">De site antwoordde met fout %1$s.</string>
+    <string name="web_open_first">Open eerst een pagina</string>
+    <string name="web_bookmark_saved">Bladwijzer opgeslagen</string>
+    <string name="web_bookmark_exists">Staat al in je bladwijzers</string>
+    <string name="web_home_set">Startpagina ingesteld op %1$s</string>
+    <string name="web_reload">Opnieuw laden</string>
+    <string name="web_add">★ Toevoegen</string>
+    <string name="web_bookmarks">Bladwijzers</string>
+    <string name="web_homepage_label">URL van startpagina</string>
+    <string name="web_bookmarks_empty">Nog geen bladwijzers. Open een pagina en tik op %1$s.</string>
+    <string name="web_bookmarks_help">Tik op een bladwijzer om hem te openen. Met “%1$s” maak je hem je startpagina.</string>
+    <string name="adblock_title">Advertentieblokkering</string>
+    <string name="adblock_switch">Advertentiedomeinen blokkeren</string>
+    <string name="adblock_info">Tot nu toe geblokkeerd: %1$d. Netwerken in de ingebouwde lijst: %2$d. Laad de pagina opnieuw na elke wijziging.</string>
+    <string name="adblock_own">Je eigen domeinen, één per regel</string>
+    <string name="adblock_on">Advertentieblokkering: aan · geblokkeerd: %1$d · tik om te wijzigen</string>
+    <string name="adblock_off">Advertentieblokkering: uit · geblokkeerd: %1$d · tik om te wijzigen</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">Wat kan ik doen?</string>
+    <string name="help_what">Wat er is gebeurd</string>
+    <string name="help_try">Wat je kunt proberen</string>
+    <string name="help_details">Details</string>
+    <string name="help_copy">Details kopiëren</string>
+    <string name="help_copied">Gekopieerd</string>
+    <string name="help_unreachable_title">Console niet bereikbaar</string>
+    <string name="help_unreachable_what">Er reageert niets op het adres van de console.</string>
+    <string name="help_unreachable_try">• Controleer het IP-adres op de PS5 (Instellingen &gt; Netwerk &gt; Verbindingsstatus). Het kan na een herstart veranderen.\n• Maak de console helemaal wakker. De rustmodus schakelt het netwerk vaak uit.\n• Gebruik op beide hetzelfde Wi-Fi-netwerk. Gastnetwerken en VPN\'s blokkeren dit.</string>
+    <string name="help_port_title">Die service draait niet</string>
+    <string name="help_port_what">De console reageerde, maar er luistert niets op die poort.</string>
+    <string name="help_port_try">• Start etaHEN op de console. Die levert de Installer (12800), de Loader (9021) en FTP (1337).\n• Een aparte FTP-payload gebruikt meestal 2121. Vul hier dezelfde poort in.\n• Op de consolekaart laat het lampje dat uit is zien wat er ontbreekt.</string>
+    <string name="help_login_title">FTP-login geweigerd</string>
+    <string name="help_login_what">De FTP-server van de console heeft de gebruikersnaam of het wachtwoord geweigerd.</string>
+    <string name="help_login_try">• etaHEN accepteert de gebruikersnaam anonymous met elk wachtwoord.\n• Als je op de console een login hebt ingesteld, vul je die in bij Upload.\n• Het wachtwoord wordt niet opgeslagen. Voer het opnieuw in nadat je de app opnieuw hebt gestart.</string>
+    <string name="help_dropped_title">De verbinding is verbroken</string>
+    <string name="help_dropped_what">De verbinding met de console is verbroken of er stroomt geen data meer. De app probeert het opnieuw en gaat verder waar hij gebleven was.</string>
+    <string name="help_dropped_try">• Houd de telefoon dicht bij de router en de console wakker.\n• Pauzeer andere grote downloads op het netwerk.\n• Blijft het mislukken? Wacht even en tik op Opnieuw proberen.</string>
+    <string name="help_refused_title">De Installer accepteerde de link niet</string>
+    <string name="help_refused_what">De console is bereikbaar, maar de Installer ervan heeft deze link geweigerd.</string>
+    <string name="help_refused_try">• De link moet rechtstreeks naar het pakketbestand leiden en zonder login openen.\n• De console moet er bij kunnen. Links van deze telefoon werken alleen op hetzelfde Wi-Fi-netwerk.\n• Controleer of de Installer draait en of de console vrije ruimte heeft.</string>
+    <string name="help_storage_title">De console stopte met opslaan</string>
+    <string name="help_storage_what">De console heeft minder bewaard dan er is verzonden. De schijf is meestal vol of alleen-lezen.</string>
+    <string name="help_storage_try">• Maak ruimte vrij op de console.\n• Kies een andere map, bijvoorbeeld op een USB-schijf.\n• Tik daarna op Opnieuw proberen.</string>
+    <string name="help_denied_title">Die map of dat bestand is geweigerd</string>
+    <string name="help_denied_what">De FTP-server kan het hier niet openen, naar schrijven of wijzigen.</string>
+    <string name="help_denied_try">• Controleer of de map bestaat. Namen zijn hoofdlettergevoelig.\n• Systeemmappen zijn alleen-lezen. Gebruik /data of een USB-schijf.\n• Een bestand dat een draaiend spel gebruikt, kan vergrendeld zijn. Sluit het spel.</string>
+    <string name="help_phone_title">De telefoon kan het bestand niet gebruiken</string>
+    <string name="help_phone_what">Het bestand is weg of verplaatst, de app heeft er geen toegang meer toe, of de telefoon heeft geen ruimte meer.</string>
+    <string name="help_phone_try">• Kies het bestand opnieuw.\n• Maak opslagruimte vrij op de telefoon.\n• Sla een bestand in een cloud-app eerst op de telefoon op.</string>
+    <string name="help_link_title">De downloadlink is mislukt</string>
+    <string name="help_link_what">De website gaf het bestand niet vrij. De link kan verlopen zijn, een login vereisen, of de site is druk.</string>
+    <string name="help_link_try">• Start de download opnieuw vanuit het tabblad Web. Zo blijf je ingelogd.\n• Links van bestandshostingsites verlopen vaak na een paar minuten.\n• Meldde de site een fout in de 500-reeks? Probeer het later opnieuw.</string>
+
+    <!-- update check -->
+    <string name="update_available">Versie %1$s is beschikbaar</string>
+    <string name="update_download">Downloaden</string>
+    <string name="update_later">Later</string>
+    <string name="update_title">Updates</string>
+    <string name="update_current">Je hebt de nieuwste versie (%1$s).</string>
+    <string name="update_none">Er is nog geen release gevonden op de pagina Releases.</string>
+    <string name="update_check_now">Nu controleren</string>
+    <string name="update_auto">Controleren op updates wanneer de app opent</string>
+    <string name="update_privacy">De controle vraagt GitHub naar de nieuwste release, hooguit één keer per dag. Er wordt niets over jou of je consoles verzonden; GitHub ziet je IP-adres, net als elke website.</string>
+
+    <!-- find my console -->
+    <string name="find_button">Mijn PS5 zoeken</string>
+    <string name="find_scanning">Console zoeken op netwerk %1$s…</string>
+    <string name="find_again">Opnieuw scannen</string>
+    <string name="find_none">Geen console gevonden.</string>
+    <string name="find_none_try">• Zet de console helemaal aan (niet in rustmodus) en start etaHEN.\n• Gebruik op de telefoon en de console hetzelfde wifi-netwerk. Gastnetwerken en VPN\'s houden apparaten gescheiden.\n• Scan daarna opnieuw.</string>
+    <string name="find_no_wifi">Deze telefoon zit niet op een wifi-netwerk. Verbind de telefoon met hetzelfde wifi-netwerk als de console en scan daarna opnieuw.</string>
+    <string name="find_pick">Tik op Gebruiken om het adres van %1$s in te stellen.</string>
+    <string name="find_saved">Opgeslagen adres</string>
+    <string name="find_used_by">Opgeslagen voor %1$s</string>
+    <string name="find_updated">%1$s gebruikt nu %2$s.</string>
+    <string name="find_privacy">Alleen je wifi-netwerk wordt gescand, op een paar poorten van de console. Er wordt niets via internet verstuurd.</string>
+    <string name="action_stop">Stoppen</string>
+    <string name="action_use">Gebruiken</string>
+
+    <!-- about and backup -->
+    <string name="about_title">Over Bento</string>
+    <string name="about_version">Versie %1$s</string>
+    <string name="about_button">Info en back-up</string>
+    <string name="about_report">Rapport kopiëren</string>
+    <string name="about_report_help">Kopieert de appversie, je telefoonmodel en het laatste bericht, om in een bugrapport te plakken. IP-adressen en links worden weggelaten.</string>
+    <string name="about_report_copied">Rapport gekopieerd</string>
+    <string name="about_releases">Pagina Releases</string>
+    <string name="backup_title">Back-up</string>
+    <string name="backup_text">Slaat je consoles, startpagina, bladwijzers, advertentielijst en payloads op in één bestand. FTP-wachtwoorden worden niet opgeslagen.</string>
+    <string name="backup_save">Back-up opslaan</string>
+    <string name="backup_restore">Back-up herstellen</string>
+    <string name="backup_saved">Back-up opgeslagen.</string>
+    <string name="backup_contents">Consoles: %1$d · Bladwijzers: %2$d · Payloads: %3$d</string>
+    <string name="backup_made">Gemaakt op %1$s</string>
+    <string name="backup_skipped">Payloads die zijn weggelaten omdat het bestand te groot zou worden: %1$d</string>
+    <string name="backup_bad_file">Dat bestand is geen Bento-back-up.</string>
+    <string name="backup_too_new">Die back-up is gemaakt met een nieuwere versie van Bento. Werk de app bij en probeer het opnieuw.</string>
+    <string name="restore_title">Deze back-up herstellen?</string>
+    <string name="restore_text">Je consoles, startpagina, bladwijzers en advertentielijst worden vervangen door die in het bestand. Payloads in het bestand worden toegevoegd aan de payload-bibliotheek. Je moet je FTP-wachtwoorden opnieuw typen.</string>
+    <string name="restore_button">Herstellen</string>
+    <string name="restore_done">Back-up hersteld.</string>
+    <string name="restore_payloads_failed">Payloads die niet konden worden opgeslagen: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">Pakketlinks (één per regel)</string>
+    <string name="install_paste">Plakken</string>
+    <string name="action_clear">Wissen</string>
+    <string name="install_paste_none">Geen weblink op het klembord.</string>
+    <string name="install_links_skipped">Alleen adressen die beginnen met http:// of https:// worden verzonden. Weggelaten: %1$d</string>
+    <string name="install_recent">Recente links</string>
+    <string name="install_recent_clear">Lijst wissen</string>
+    <string name="install_sending_n">Link %1$d van %2$d verzenden…</string>
+    <string name="install_batch_done">Geaccepteerd: %1$d van %2$d links</string>
+    <string name="install_batch_notsent">Niet verzonden: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">Ketens</string>
+    <string name="chains_hint">Een keten verstuurt meerdere payloads na elkaar, met een pauze na elk. Houd het app-pictogram ingedrukt om vanaf je startscherm een van de eerste vier ketens te starten.</string>
+    <string name="chain_new">Nieuwe keten</string>
+    <string name="action_edit">Bewerken</string>
+    <string name="chain_summary_steps">Payloads: %1$d</string>
+    <string name="chain_summary_pauses">Pauzes: %1$s</string>
+    <string name="chain_edit_title">Keten bewerken</string>
+    <string name="chain_steps_title">Payloads, op volgorde (maximaal %1$d)</string>
+    <string name="chain_add_step">Payload toevoegen</string>
+    <string name="chain_pick_title">Welke payload toevoegen?</string>
+    <string name="chain_wait_label">Wacht daarna (seconden)</string>
+    <string name="chain_missing">Niet in de bibliotheek</string>
+    <string name="chain_move_up">Omhoog</string>
+    <string name="chain_move_down">Omlaag</string>
+    <string name="chain_pin">Aan startscherm toevoegen</string>
+    <string name="chain_pin_unsupported">Deze launcher kan geen snelkoppelingen toevoegen. Houd het app-pictogram ingedrukt om je ketens daar te vinden.</string>
+    <string name="chain_sending">%1$s versturen (%2$d van %3$d)…</string>
+    <string name="chain_waiting">Volgende payload over %1$s</string>
+    <string name="chain_retrying">Wachten tot de console klaar is…</string>
+    <string name="chain_result_done">Klaar. Verstuurde payloads: %1$d van %2$d</string>
+    <string name="chain_result_stopped">Gestopt. Verstuurde payloads: %1$d van %2$d</string>
+    <string name="chain_result_failed">Gestopt bij stap %1$d (%2$s). Verstuurde payloads: %3$d van %4$d</string>
+    <string name="chain_err_target">Stel eerst het IP-adres van de console en de Loader-poort in.</string>
+    <string name="chain_err_missing">Niet meer in de bibliotheek: %1$s. Voeg hem opnieuw toe of bewerk de keten.</string>
+    <string name="chain_err_unknown">Die keten bestaat niet meer.</string>
+    <string name="notif_channel_chain">Payload-ketens</string>
+    <string name="backup_chains">Ketens: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">Vorige keer niet afgerond: %1$d</string>
+    <string name="unfinished_hint">De app werd gesloten voordat deze klaar waren. Met ‘Doorgaan’ begint elk opnieuw vanaf het begin.</string>
+    <string name="unfinished_continue">Doorgaan</string>
+    <string name="unfinished_discard">Verwerpen</string>
+    <string name="unfinished_missing">Bestanden niet meer gevonden, kies ze opnieuw: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">Pauzeren</string>
+    <string name="transfer_resume">Hervatten</string>
+    <string name="transfer_paused">Gepauzeerd</string>
+    <string name="speed_limit_title">Snelheidslimiet</string>
+    <string name="speed_limit_off">Geen limiet</string>
+    <string name="speed_limit_value">Limiet: %1$s</string>
+    <string name="speed_limit_hint">Vertraagt overdrachten zodat het wifi-netwerk vrij blijft voor andere dingen. Een wijziging gaat direct in.</string>
+    <string name="summary_title">Overdrachten voltooid: %1$d van %2$d</string>
+    <string name="summary_detail">%1$s in %2$s</string>
+    <string name="summary_failed">Mislukt: %1$d</string>
+    <string name="summary_stopped">Gestopt: %1$d</string>
+    <string name="notif_channel_results">Overdrachtsresultaten</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">Geselecteerd: %1$d</string>
+    <string name="files_select_all">Alles selecteren</string>
+    <string name="files_select_none">Niets selecteren</string>
+    <string name="files_delete_many_title">Geselecteerde items verwijderen (%1$d)?</string>
+    <string name="files_delete_many_text">Hiermee worden de geselecteerde bestanden en mappen van de console verwijderd, mappen met alles erin. Dit kan niet ongedaan worden gemaakt.</string>
+    <string name="files_deleted_many">Verwijderde items: %1$d</string>
+    <string name="files_delete_partial">Verwijderde items: %1$d, niet verwijderd: %2$d. Het eerste probleem: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">Mappen doorzoeken…</string>
+    <string name="files_dl_confirm_title">Downloaden naar telefoon?</string>
+    <string name="files_dl_confirm_text">Bestanden: %1$d, samen %2$s. Ze worden opgeslagen in Downloads/PS5, in dezelfde mappen als op de console.</string>
+    <string name="files_dl_links">Links in mappen worden niet gedownload: %1$d.</string>
+    <string name="files_dl_truncated">Meegenomen bestanden: %1$d. De mappen bevatten meer, of gaan dieper dan de app volgt.</string>
+    <string name="files_dl_none">In de selectie staat geen bestand om te downloaden.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">Sorteren</string>
+    <string name="files_sort_title">Sorteren op</string>
+    <string name="files_sort_name">Naam</string>
+    <string name="files_sort_size">Grootte, grootste eerst</string>
+    <string name="files_sort_newest">Nieuwste eerst</string>
+    <string name="files_search">Zoeken</string>
+    <string name="files_search_hint">Zoeken in deze map</string>
+    <string name="files_no_match">Niets in deze map komt overeen met de zoekopdracht.</string>
+    <string name="files_pin">Deze map vastzetten</string>
+    <string name="files_unpin">Deze map losmaken</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">Tabbladen: %1$d</string>
+    <string name="web_tabs_title">Tabbladen</string>
+    <string name="web_tab_new">Nieuw tabblad</string>
+    <string name="web_tabs_full">Te veel tabbladen. De limiet is %1$d. Sluit er eerst een.</string>
+    <string name="web_find">Zoeken</string>
+    <string name="web_find_hint">Zoeken op deze pagina</string>
+    <string name="web_find_none">Geen overeenkomsten</string>
+    <string name="web_desktop">Desktopsite</string>
+    <string name="web_link_new_tab">Openen in nieuw tabblad</string>
+    <string name="web_link_copy">Link kopiëren</string>
+    <string name="web_link_copied">Link gekopieerd</string>
+    <string name="web_link_use">Versturen of downloaden…</string>
+</resources>

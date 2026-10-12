@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Persian. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">لغو</string>
+    <string name="action_close">بستن</string>
+    <string name="action_done">تمام</string>
+    <string name="action_delete">حذف</string>
+    <string name="action_rename">تغییر نام</string>
+    <string name="action_save">ذخیره</string>
+    <string name="action_remove">برداشتن</string>
+    <string name="action_send">ارسال</string>
+    <string name="action_open">باز کردن</string>
+    <string name="action_block">مسدود کردن</string>
+    <string name="action_home">خانه</string>
+    <string name="action_dismiss">پنهان کردن</string>
+    <string name="action_try_again">تلاش دوباره</string>
+    <string name="action_skip">رد کردن</string>
+    <string name="action_cancel_all">لغو همه</string>
+    <string name="action_create">ایجاد</string>
+    <string name="action_set">تنظیم</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">توسط %1$s</string>
+    <string name="nav_install">نصب</string>
+    <string name="nav_payload">‏Payload</string>
+    <string name="nav_upload">آپلود</string>
+    <string name="nav_files">فایل‌ها</string>
+    <string name="nav_web">وب</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">‏Installer</string>
+    <string name="service_loader">‏Loader</string>
+    <string name="list_separator">"، "</string>
+    <string name="status_set_ip">نشانی IP کنسول PS5 خود را تنظیم کنید</string>
+    <string name="status_checking">در حال بررسی…</string>
+    <string name="status_ready">آماده</string>
+    <string name="status_partly">تا حدی آماده</string>
+    <string name="status_partly_off">تا حدی آماده · بدون پاسخ: %1$s</string>
+    <string name="status_offline">دسترسی به کنسول ممکن نیست</string>
+    <string name="status_hint_unset">آن را در PS5 در مسیر Settings &gt; Network &gt; Connection Status &gt; View Connection Status پیدا کنید. برای وارد کردن اینجا ضربه بزنید.</string>
+    <string name="status_hint_offline">هیچ پاسخی در این نشانی نیست. نشانی IP را بررسی کنید، همچنین اینکه کنسول روشن و در همان شبکه Wi-Fi است و etaHEN در حال اجراست.</string>
+    <string name="status_hint_one">پاسخ نمی‌دهد: %1$s. آن را در کنسول راه‌اندازی کنید یا پورت آن را بررسی کنید.</string>
+    <string name="status_hint_many">پاسخ نمی‌دهند: %1$s. آن‌ها را در کنسول راه‌اندازی کنید یا پورت آن‌ها را بررسی کنید.</string>
+    <string name="console_switch">تغییر کنسول</string>
+    <string name="console_change_ip">تغییر نشانی IP</string>
+    <string name="console_ip_title">نشانی IP کنسول</string>
+    <string name="console_ip_label">نشانی IP</string>
+    <string name="console_ip_help">آن را در PS5 در مسیر Settings &gt; Network &gt; Connection Status &gt; View Connection Status پیدا کنید.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">انتقال</string>
+    <string name="transfer_sending">در حال ارسال</string>
+    <string name="transfer_sending_to">در حال ارسال به %1$s</string>
+    <string name="transfer_receiving">در حال دریافت</string>
+    <string name="transfer_receiving_from">در حال دریافت از %1$s</string>
+    <string name="transfer_detail_total">‏%1$s · %2$s از %3$s</string>
+    <string name="transfer_detail_done">‏%1$s · %2$s</string>
+    <string name="transfer_starting">در حال شروع…</string>
+    <string name="transfer_stopped">متوقف شد</string>
+    <string name="transfer_start_failed">انتقال شروع نشد: %1$s</string>
+    <string name="transfer_retry_in">اتصال قطع شد. تلاش دوباره پس از %1$d ثانیه…</string>
+    <string name="transfer_reconnecting">در حال اتصال دوباره…</string>
+    <string name="transfer_eta">باقی‌مانده: %1$s</string>
+    <string name="transfer_queued">‏%1$d در انتظار</string>
+    <string name="queue_title">انتقال‌های در انتظار</string>
+    <string name="queue_clear">برداشتن همه</string>
+    <string name="queue_empty">چیزی در انتظار نیست.</string>
+    <string name="notif_channel">انتقال‌های PS5</string>
+    <string name="notif_sent">ارسال شد: %1$s</string>
+    <string name="notif_received">دریافت شد: %1$s</string>
+    <string name="percent_value">‏%1$d%%</string>
+    <string name="desc_done">انجام شد</string>
+    <string name="desc_problem">مشکل</string>
+    <string name="status_hide">پنهان کردن این پیام</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">به صف اضافه شد. %1$d در انتظار.</string>
+    <string name="msg_set_ip_first">ابتدا نشانی IP کنسول را تنظیم کنید. روی کارت بالای صفحه ضربه بزنید.</string>
+    <string name="msg_sending_link">در حال ارسال پیوند به PS5…</string>
+    <string name="msg_check_ip_ftp">نشانی IP کنسول و پورت FTP را بررسی کنید.</string>
+    <string name="msg_adding_to_shelf_link">در حال افزودن به کتابخانه payload…</string>
+    <string name="status_idle">غیرفعال</string>
+    <string name="status_sending">در حال ارسال…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">از این سایت خارج می‌شوید؟</string>
+    <string name="offsite_text">صفحه می‌خواهد %1$s را باز کند. وقتی روی پیوندی ضربه می‌زنید، اغلب تبلیغات باعث این کار می‌شوند؛ پس فقط در صورتی ادامه دهید که انتظارش را داشتید.</string>
+    <string name="choose_install">ارسال پیوند به Installer در PS5</string>
+    <string name="choose_ftp">آپلود در PS5 (FTP)</string>
+    <string name="choose_shelf">ذخیره در کتابخانه payload</string>
+    <string name="choose_phone">ذخیره در تلفن</string>
+    <string name="choose_help">‏Installer به یک پیوند مستقیم بسته نیاز دارد که کنسول بدون ورود به سیستم بتواند آن را باز کند. FTP با هر فایلی کار می‌کند و نشست ورود شما را حفظ می‌کند. تلفن داده‌ها را در پس‌زمینه منتقل می‌کند و پیشرفت بالای نوار پایین و در یک اعلان نمایش داده می‌شود. کتابخانه payload یک payload کوچک (تا %1$s) را برای زبانه Payload داخل برنامه نگه می‌دارد.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">پورت Installer (etaHEN: 12800)</string>
+    <string name="install_accepted">‏Installer آن را پذیرفت: %1$s</string>
+    <string name="install_not_accepted">پذیرفته نشد (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">نصب از این تلفن</string>
+    <string name="serve_intro">کنسول بسته‌ها را از طریق Wi-Fi مستقیماً از این تلفن دانلود می‌کند، پس لازم نیست ابتدا چیزی کپی شود. تلفن و کنسول باید در یک شبکه باشند.</string>
+    <string name="serve_choose">انتخاب بسته‌ها</string>
+    <string name="serve_none">بسته‌ای انتخاب نشده است</string>
+    <string name="serve_start">شروع اشتراک‌گذاری</string>
+    <string name="serve_stop">توقف اشتراک‌گذاری</string>
+    <string name="serve_copy">کپی پیوند</string>
+    <string name="serve_copied">پیوند کپی شد</string>
+    <string name="serve_file_waiting">در انتظار شروع دانلود توسط کنسول…</string>
+    <string name="serve_file_pulling">کنسول در حال دانلود است: %1$s</string>
+    <string name="serve_file_done">کنسول همه را دانلود کرد</string>
+    <string name="serve_unreadable">خواندن این فایل ممکن نیست</string>
+    <string name="serve_hint">اگر کنسول هرگز دانلود را شروع نکرد، شاید Wi-Fi مانع دسترسی دستگاه‌ها به یکدیگر شده است (شبکه‌های مهمان اغلب چنین می‌کنند). از شبکه اصلی استفاده کنید و بگذارید این برنامه در پس‌زمینه اجرا شود.</string>
+    <string name="serve_no_wifi">نشانی Wi-Fi این تلفن پیدا نشد. آن را به همان Wi-Fi کنسول وصل کنید.</string>
+    <string name="serve_failed">شروع اشتراک‌گذاری ممکن نشد: %1$s</string>
+    <string name="serve_idle_stop">اشتراک‌گذاری متوقف شد، چون مدت زیادی چیزی دانلود نشد.</string>
+    <string name="serve_notif_title">اشتراک‌گذاری با %1$s</string>
+    <string name="serve_notif_text">فایل‌های دانلود‌شده: %1$d از %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">انتخاب فایل‌ها</string>
+    <string name="upload_none">فایلی انتخاب نشده است</string>
+    <string name="upload_files_chosen">فایل‌های انتخاب‌شده: %1$d</string>
+    <string name="upload_start">آپلود در پس‌زمینه</string>
+    <string name="upload_help">پیشرفت بالای نوار پایین و در یک اعلان نمایش داده می‌شود. حتی اگر از برنامه خارج شوید ادامه می‌یابد.</string>
+    <string name="ftp_port">پورت FTP</string>
+    <string name="ftp_user">نام کاربری</string>
+    <string name="ftp_password">گذرواژه</string>
+    <string name="ftp_folder">پوشه راه دور</string>
+    <string name="ftp_use_folder">استفاده از %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">در حال بارگذاری…</string>
+    <string name="files_empty">این پوشه خالی است.</string>
+    <string name="files_not_loaded">هنوز بارگذاری نشده</string>
+    <string name="files_up">⬆ بالا</string>
+    <string name="files_refresh">تازه‌سازی</string>
+    <string name="files_new_folder">پوشه جدید</string>
+    <string name="files_upload_here">آپلود در اینجا</string>
+    <string name="files_ftp_settings">تنظیمات FTP</string>
+    <string name="files_need_ip">برای مرور فایل‌های کنسول، نشانی IP آن را تنظیم کنید (روی کارت بالای صفحه ضربه بزنید) و یک پورت FTP معتبر وارد کنید.</string>
+    <string name="files_kind_folder">پوشه</string>
+    <string name="files_kind_link">پیوند، %1$s</string>
+    <string name="files_download">دانلود در تلفن</string>
+    <string name="files_new_name">نام جدید</string>
+    <string name="files_name_used">این نام قبلاً در اینجا استفاده شده است.</string>
+    <string name="files_renaming">در حال تغییر نام…</string>
+    <string name="files_renamed">نام %1$s به %2$s تغییر کرد</string>
+    <string name="files_delete_title">‏%1$s حذف شود؟</string>
+    <string name="files_delete_folder">این کار پوشه و همه چیز داخل آن را از کنسول حذف می‌کند. قابل بازگشت نیست.</string>
+    <string name="files_delete_file">این کار فایل را از کنسول حذف می‌کند. قابل بازگشت نیست.</string>
+    <string name="files_deleting">در حال حذف…</string>
+    <string name="files_deleted">حذف شد: %1$s</string>
+    <string name="files_deleted_inside">حذف شد: %1$s (موارد داخل: %2$d)</string>
+    <string name="files_creating">در حال ایجاد پوشه…</string>
+    <string name="files_created">پوشه %1$s ایجاد شد</string>
+    <string name="files_folder_name">نام پوشه</string>
+    <string name="name_empty">نام نمی‌تواند خالی باشد.</string>
+    <string name="name_not_allowed">این نام مجاز نیست.</string>
+    <string name="name_slash">نام نمی‌تواند شامل اسلش باشد.</string>
+    <string name="name_control">نام شامل نویسه‌های غیرمجاز است.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">ناموفق: %1$s</string>
+    <string name="ftp_port_hint">دسترسی به سرور FTP ممکن نیست. IP کنسول و پورت FTP را بررسی کنید (FTP داخلی etaHEN از 1337 استفاده می‌کند و payload FTP از 2121).</string>
+    <string name="err_login">ورود به FTP ناموفق بود</string>
+    <string name="err_cant_open">باز کردن %1$s ممکن نیست (%2$s)</string>
+    <string name="err_rename">تغییر نام ناموفق بود (%1$s)</string>
+    <string name="err_mkdir">ایجاد پوشه ممکن نشد (%1$s)</string>
+    <string name="err_too_deep">پوشه بیش از حد تودرتو است</string>
+    <string name="err_delete_path">حذف %1$s ممکن نشد (%2$s)</string>
+    <string name="err_upload">آپلود FTP ناموفق بود: %1$s</string>
+    <string name="err_download">دانلود FTP ناموفق بود: %1$s</string>
+    <string name="err_open_file">باز کردن فایل ممکن نشد</string>
+    <string name="err_cancelled_upload">لغو شد. ممکن است یک فایل ناقص در %1$s باقی مانده باشد</string>
+    <string name="err_cancelled_download">لغو شد. دانلود ناقص کنار گذاشته شد.</string>
+    <string name="err_gave_up">چون اتصال مدام قطع می‌شد، عملیات متوقف شد. آخرین خطا: %1$s</string>
+    <string name="err_short_upload">کنسول از %2$s ارسال‌شده فقط %1$s را نگه داشت.</string>
+    <string name="err_short_download">فقط %1$s از %2$s رسید.</string>
+    <string name="err_empty_file">فایل خالی است</string>
+    <string name="err_save">ذخیره %1$s ممکن نشد</string>
+    <string name="sent_to_ps5">به PS5 ارسال شد: %1$s</string>
+    <string name="saved_to_downloads">در Downloads/PS5 ذخیره شد: %1$s</string>
+    <string name="dl_http_failed">دانلود ناموفق بود: HTTP %1$s</string>
+    <string name="dl_empty">دانلود ناموفق بود: پاسخ خالی</string>
+    <string name="dl_cut_short">اتصال پیش از رسیدن کامل فایل بسته شد.</string>
+    <string name="dl_create_failed">ایجاد فایل در Downloads ممکن نشد</string>
+    <string name="dl_write_failed">باز کردن فایل جدید برای نوشتن ممکن نشد</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">ارسال شد: %1$s</string>
+    <string name="shelf_added">به کتابخانه افزوده شد: %1$s (%2$s)</string>
+    <string name="shelf_updated">در کتابخانه به‌روزرسانی شد: %1$s (%2$s)</string>
+    <string name="shelf_too_large">این فایل بزرگ‌تر از %1$s است، بنابراین به کتابخانه افزوده نشد.</string>
+    <string name="shelf_too_large_url">اندازه این فایل %1$s است. کتابخانه payload تا %2$s را می‌پذیرد.</string>
+    <string name="payload_adding">در حال افزودن به کتابخانه…</string>
+    <string name="payload_remove_title">‏%1$s برداشته شود؟</string>
+    <string name="payload_remove_text">از کتابخانه حذف می‌شود. فایل اصلی روی تلفن شما دست‌نخورده می‌ماند.</string>
+    <string name="payload_loader_port">پورت Loader</string>
+    <string name="payload_shelf_title">کتابخانه payload</string>
+    <string name="payload_shelf_empty">هنوز چیزی ذخیره نشده است. payload‌هایی را که زیاد استفاده می‌کنید (سرور FTP، etaHEN، ...) اضافه کنید و هرکدام را با یک ضربه ارسال کنید. هنگام دانلود می‌توانید آن را مستقیماً از زبانه وب هم ذخیره کنید.</string>
+    <string name="payload_sending">در حال ارسال %1$s…</string>
+    <string name="payload_result">‏%1$s: %2$s</string>
+    <string name="payload_add">افزودن payload به کتابخانه</string>
+    <string name="payload_once_title">ارسال یک‌باره فایل</string>
+    <string name="payload_choose">انتخاب payload (.elf / .bin)</string>
+    <string name="payload_send">ارسال payload</string>
+
+    <!-- consoles -->
+    <string name="profile_default">‏PS5 من</string>
+    <string name="profile_new">کنسول %1$d</string>
+    <string name="profile_fallback">کنسول</string>
+    <string name="consoles_title">کنسول‌ها</string>
+    <string name="console_rename_title">تغییر نام کنسول</string>
+    <string name="console_name_label">نام</string>
+    <string name="console_delete_title">‏%1$s حذف شود؟</string>
+    <string name="console_delete_text">نشانی IP و پورت‌های ذخیره‌شده آن حذف می‌شوند. سایر کنسول‌های شما بی‌تأثیر می‌مانند.</string>
+    <string name="console_no_ip">هنوز نشانی IP ندارد</string>
+    <string name="console_color_of">رنگ %1$s</string>
+    <string name="console_use_color">استفاده از %1$s</string>
+    <string name="console_add">افزودن کنسول</string>
+    <string name="language_button">زبان</string>
+    <string name="color_blue">آبی</string>
+    <string name="color_orange">نارنجی</string>
+    <string name="color_green">سبز</string>
+    <string name="color_pink">صورتی</string>
+    <string name="color_purple">بنفش</string>
+    <string name="color_teal">فیروزه‌ای</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">دانلود شروع شد (Downloads را ببینید)</string>
+    <string name="web_load_failed">بارگذاری صفحه ممکن نشد: %1$s</string>
+    <string name="web_http_server">سایت اکنون مشغول است یا از دسترس خارج است (خطای %1$s). کمی بعد دوباره امتحان کنید.</string>
+    <string name="web_http_other">سایت با خطای %1$s پاسخ داد.</string>
+    <string name="web_open_first">ابتدا یک صفحه را باز کنید</string>
+    <string name="web_bookmark_saved">نشانک ذخیره شد</string>
+    <string name="web_bookmark_exists">از قبل در نشانک‌های شما هست</string>
+    <string name="web_home_set">صفحه اصلی روی %1$s تنظیم شد</string>
+    <string name="web_reload">بارگذاری مجدد</string>
+    <string name="web_add">★ افزودن</string>
+    <string name="web_bookmarks">نشانک‌ها</string>
+    <string name="web_homepage_label">‏URL صفحه اصلی</string>
+    <string name="web_bookmarks_empty">هنوز نشانکی نیست. یک صفحه را باز کنید و روی %1$s ضربه بزنید.</string>
+    <string name="web_bookmarks_help">برای باز کردن نشانک، روی آن ضربه بزنید. «%1$s» آن را صفحه اصلی شما می‌کند.</string>
+    <string name="adblock_title">مسدودسازی تبلیغات</string>
+    <string name="adblock_switch">مسدود کردن دامنه‌های تبلیغاتی</string>
+    <string name="adblock_info">تاکنون مسدود شده: %1$d. شبکه‌ها در فهرست داخلی: %2$d. پس از هر تغییر، صفحه را دوباره بارگذاری کنید.</string>
+    <string name="adblock_own">دامنه‌های خودتان، هر خط یکی</string>
+    <string name="adblock_on">مسدودسازی تبلیغات: روشن · مسدود شده: %1$d · برای تغییر ضربه بزنید</string>
+    <string name="adblock_off">مسدودسازی تبلیغات: خاموش · مسدود شده: %1$d · برای تغییر ضربه بزنید</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">چه کاری می‌توانم بکنم؟</string>
+    <string name="help_what">چه اتفاقی افتاد</string>
+    <string name="help_try">چه چیزهایی را امتحان کنید</string>
+    <string name="help_details">جزئیات</string>
+    <string name="help_copy">کپی جزئیات</string>
+    <string name="help_copied">کپی شد</string>
+    <string name="help_unreachable_title">دسترسی به کنسول ممکن نیست</string>
+    <string name="help_unreachable_what">هیچ پاسخی از نشانی کنسول نمی‌آید.</string>
+    <string name="help_unreachable_try">• نشانی IP را روی PS5 بررسی کنید (Settings &gt; Network &gt; Connection Status). ممکن است پس از راه‌اندازی مجدد تغییر کند.\n• کنسول را کاملاً بیدار کنید. حالت استراحت اغلب شبکه را خاموش می‌کند.\n• روی هر دو دستگاه از یک Wi-Fi استفاده کنید. شبکه‌های مهمان و VPN مانع اتصال می‌شوند.</string>
+    <string name="help_port_title">آن سرویس در حال اجرا نیست</string>
+    <string name="help_port_what">کنسول پاسخ داد، اما هیچ چیزی روی آن پورت گوش نمی‌دهد.</string>
+    <string name="help_port_try">• etaHEN را روی کنسول اجرا کنید. این برنامه Installer (12800)، Loader (9021) و FTP (1337) را فراهم می‌کند.\n• یک payload جداگانهٔ FTP معمولاً از 2121 استفاده می‌کند. همان پورت را اینجا وارد کنید.\n• در کارت کنسول، چراغ خاموش نشان می‌دهد چه چیزی کم است.</string>
+    <string name="help_login_title">ورود به FTP رد شد</string>
+    <string name="help_login_what">سرور FTP کنسول نام کاربری یا گذرواژه را نپذیرفت.</string>
+    <string name="help_login_try">• etaHEN نام کاربری anonymous را با هر گذرواژه‌ای می‌پذیرد.\n• اگر روی کنسول ورود تعریف کرده‌اید، آن را در آپلود وارد کنید.\n• گذرواژه ذخیره نمی‌شود. پس از راه‌اندازی مجدد برنامه دوباره آن را وارد کنید.</string>
+    <string name="help_dropped_title">اتصال قطع شد</string>
+    <string name="help_dropped_what">ارتباط با کنسول قطع شد یا انتقال داده متوقف شد. برنامه دوباره تلاش می‌کند و از همان جایی که متوقف شد ادامه می‌دهد.</string>
+    <string name="help_dropped_try">• گوشی را نزدیک مودم نگه دارید و کنسول را بیدار نگه دارید.\n• دانلودهای بزرگ دیگر را در شبکه متوقف کنید.\n• اگر باز هم ناموفق بود، کمی صبر کنید و روی تلاش دوباره بزنید.</string>
+    <string name="help_refused_title">‏Installer پیوند را نپذیرفت</string>
+    <string name="help_refused_what">به کنسول دسترسی هست، اما Installer آن این پیوند را رد کرد.</string>
+    <string name="help_refused_try">• پیوند باید مستقیماً به فایل بسته برسد و بدون ورود باز شود.\n• کنسول باید بتواند به آن برسد. پیوندهای این گوشی فقط روی همان Wi-Fi کار می‌کنند.\n• بررسی کنید که Installer در حال اجرا باشد و کنسول فضای آزاد داشته باشد.</string>
+    <string name="help_storage_title">کنسول دیگر ذخیره نمی‌کند</string>
+    <string name="help_storage_what">کنسول کمتر از مقدار ارسال‌شده را نگه داشت. معمولاً درایو پر یا فقط‌خواندنی است.</string>
+    <string name="help_storage_try">• روی کنسول فضا آزاد کنید.\n• پوشهٔ دیگری انتخاب کنید، مثلاً روی درایو USB.\n• سپس روی تلاش دوباره بزنید.</string>
+    <string name="help_denied_title">آن پوشه یا فایل رد شد</string>
+    <string name="help_denied_what">سرور FTP نمی‌تواند آن را اینجا باز کند، روی آن بنویسد یا آن را تغییر دهد.</string>
+    <string name="help_denied_try">• بررسی کنید که پوشه وجود داشته باشد. نام‌ها به حروف بزرگ و کوچک حساس‌اند.\n• پوشه‌های سیستمی فقط‌خواندنی‌اند. از /data یا درایو USB استفاده کنید.\n• فایلی که یک بازی در حال اجرا از آن استفاده می‌کند ممکن است قفل باشد. بازی را ببندید.</string>
+    <string name="help_phone_title">گوشی نمی‌تواند از فایل استفاده کند</string>
+    <string name="help_phone_what">فایل حذف یا جابه‌جا شده، برنامه دسترسی‌اش را از دست داده، یا گوشی فضا ندارد.</string>
+    <string name="help_phone_try">• فایل را دوباره انتخاب کنید.\n• مقداری فضای ذخیره‌سازی گوشی را آزاد کنید.\n• اگر فایل در یک برنامهٔ ابری است، ابتدا آن را روی گوشی ذخیره کنید.</string>
+    <string name="help_link_title">پیوند دانلود ناموفق بود</string>
+    <string name="help_link_what">وب‌سایت فایل را تحویل نداد. ممکن است پیوند منقضی شده باشد، ورود بخواهد یا سایت مشغول باشد.</string>
+    <string name="help_link_try">• دانلود را دوباره از زبانهٔ وب شروع کنید. این کار ورود شما را حفظ می‌کند.\n• پیوندهای سایت‌های میزبان فایل اغلب پس از چند دقیقه منقضی می‌شوند.\n• اگر سایت خطایی در رده ۵۰۰ گزارش کرد، بعداً دوباره تلاش کنید.</string>
+
+    <!-- update check -->
+    <string name="update_available">نسخهٔ %1$s در دسترس است</string>
+    <string name="update_download">دانلود</string>
+    <string name="update_later">بعداً</string>
+    <string name="update_title">به‌روزرسانی‌ها</string>
+    <string name="update_current">آخرین نسخه را دارید (%1$s).</string>
+    <string name="update_none">هنوز نسخه‌ای در صفحهٔ Releases پیدا نشده است.</string>
+    <string name="update_check_now">بررسی اکنون</string>
+    <string name="update_auto">بررسی به‌روزرسانی هنگام باز شدن برنامه</string>
+    <string name="update_privacy">این بررسی حداکثر روزی یک بار از GitHub آخرین نسخه را می‌پرسد. هیچ اطلاعاتی دربارهٔ شما یا کنسول‌هایتان فرستاده نمی‌شود؛ GitHub مانند هر وب‌سایتی نشانی IP شما را می‌بیند.</string>
+
+    <!-- find my console -->
+    <string name="find_button">پیدا کردن PS5 من</string>
+    <string name="find_scanning">در حال جست‌وجوی کنسول شما در شبکهٔ %1$s…</string>
+    <string name="find_again">اسکن دوباره</string>
+    <string name="find_none">کنسولی پیدا نشد.</string>
+    <string name="find_none_try">• کنسول را کاملاً روشن کنید (نه در حالت استراحت) و etaHEN را اجرا کنید.\n• در گوشی و کنسول از یک Wi-Fi استفاده کنید. شبکه‌های مهمان و VPN دستگاه‌ها را از هم جدا نگه می‌دارند.\n• سپس دوباره اسکن کنید.</string>
+    <string name="find_no_wifi">این گوشی به شبکهٔ Wi-Fi وصل نیست. آن را به همان Wi-Fi کنسول وصل کنید و دوباره اسکن کنید.</string>
+    <string name="find_pick">برای تنظیم نشانی %1$s روی «استفاده» بزنید.</string>
+    <string name="find_saved">نشانی ذخیره‌شده</string>
+    <string name="find_used_by">ذخیره‌شده برای %1$s</string>
+    <string name="find_updated">‏%1$s اکنون از %2$s استفاده می‌کند.</string>
+    <string name="find_privacy">فقط شبکهٔ Wi-Fi شما اسکن می‌شود، آن هم روی چند پورت کنسول. هیچ چیزی از طریق اینترنت ارسال نمی‌شود.</string>
+    <string name="action_stop">توقف</string>
+    <string name="action_use">استفاده</string>
+
+    <!-- about and backup -->
+    <string name="about_title">دربارهٔ Bento</string>
+    <string name="about_version">نسخهٔ %1$s</string>
+    <string name="about_button">درباره و پشتیبان‌گیری</string>
+    <string name="about_report">کپی گزارش</string>
+    <string name="about_report_help">نسخهٔ برنامه، مدل گوشی و آخرین پیام را کپی می‌کند تا در گزارش باگ جای‌گذاری کنید. نشانی‌های IP و پیوندها حذف می‌شوند.</string>
+    <string name="about_report_copied">گزارش کپی شد</string>
+    <string name="about_releases">صفحهٔ Releases</string>
+    <string name="backup_title">پشتیبان‌گیری</string>
+    <string name="backup_text">کنسول‌ها، صفحهٔ اصلی، نشانک‌ها، فهرست تبلیغات و payloadها را در یک فایل ذخیره می‌کند. گذرواژه‌های FTP ذخیره نمی‌شوند.</string>
+    <string name="backup_save">ذخیرهٔ پشتیبان</string>
+    <string name="backup_restore">بازیابی پشتیبان</string>
+    <string name="backup_saved">پشتیبان ذخیره شد.</string>
+    <string name="backup_contents">کنسول‌ها: %1$d · نشانک‌ها: %2$d · Payloadها: %3$d</string>
+    <string name="backup_made">ساخته‌شده در %1$s</string>
+    <string name="backup_skipped">‏payloadهایی که چون فایل بیش‌ازحد بزرگ می‌شد کنار گذاشته شدند: %1$d</string>
+    <string name="backup_bad_file">این فایل پشتیبان Bento نیست.</string>
+    <string name="backup_too_new">این پشتیبان با نسخهٔ جدیدتری از Bento ساخته شده است. برنامه را به‌روز کنید و دوباره تلاش کنید.</string>
+    <string name="restore_title">این پشتیبان بازیابی شود؟</string>
+    <string name="restore_text">کنسول‌ها، صفحهٔ اصلی، نشانک‌ها و فهرست تبلیغات شما با موارد داخل فایل جایگزین می‌شوند. payloadهای داخل فایل به کتابخانهٔ payload اضافه می‌شوند. باید گذرواژه‌های FTP را دوباره وارد کنید.</string>
+    <string name="restore_button">بازیابی</string>
+    <string name="restore_done">پشتیبان بازیابی شد.</string>
+    <string name="restore_payloads_failed">‏payloadهایی که ذخیره نشدند: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">پیوندهای بسته (هر خط یک پیوند)</string>
+    <string name="install_paste">چسباندن</string>
+    <string name="action_clear">پاک کردن</string>
+    <string name="install_paste_none">هیچ پیوند وبی در کلیپ‌بورد نیست.</string>
+    <string name="install_links_skipped">فقط نشانی‌هایی که با http:// یا https:// شروع می‌شوند ارسال می‌شوند. کنار گذاشته‌شده: %1$d</string>
+    <string name="install_recent">پیوندهای اخیر</string>
+    <string name="install_recent_clear">پاک کردن فهرست</string>
+    <string name="install_sending_n">در حال ارسال پیوند %1$d از %2$d…</string>
+    <string name="install_batch_done">پذیرفته‌شده: %1$d از %2$d پیوند</string>
+    <string name="install_batch_notsent">ارسال‌نشده: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">زنجیره‌ها</string>
+    <string name="chains_hint">هر زنجیره چند payload را پشت سر هم می‌فرستد و بعد از هر کدام مکث می‌کند. برای شروع یکی از چهار زنجیرهٔ اول از صفحهٔ اصلی، روی نماد برنامه فشار دهید و نگه دارید.</string>
+    <string name="chain_new">زنجیرهٔ جدید</string>
+    <string name="action_edit">ویرایش</string>
+    <string name="chain_summary_steps">تعداد payloadها: %1$d</string>
+    <string name="chain_summary_pauses">مکث‌ها: %1$s</string>
+    <string name="chain_edit_title">ویرایش زنجیره</string>
+    <string name="chain_steps_title">‏payloadها به ترتیب (حداکثر %1$d)</string>
+    <string name="chain_add_step">افزودن payload</string>
+    <string name="chain_pick_title">کدام payload اضافه شود؟</string>
+    <string name="chain_wait_label">سپس صبر کن (ثانیه)</string>
+    <string name="chain_missing">در کتابخانه نیست</string>
+    <string name="chain_move_up">انتقال به بالا</string>
+    <string name="chain_move_down">انتقال به پایین</string>
+    <string name="chain_pin">افزودن به صفحهٔ اصلی</string>
+    <string name="chain_pin_unsupported">این لانچر نمی‌تواند میان‌بر اضافه کند. برای پیدا کردن زنجیره‌هایتان، روی نماد برنامه فشار دهید و نگه دارید.</string>
+    <string name="chain_sending">در حال ارسال %1$s (%2$d از %3$d)…</string>
+    <string name="chain_waiting">‏payload بعدی تا %1$s دیگر</string>
+    <string name="chain_retrying">در انتظار آماده شدن کنسول…</string>
+    <string name="chain_result_done">انجام شد. payloadهای ارسال‌شده: %1$d از %2$d</string>
+    <string name="chain_result_stopped">متوقف شد. payloadهای ارسال‌شده: %1$d از %2$d</string>
+    <string name="chain_result_failed">در مرحلهٔ %1$d متوقف شد (%2$s). payloadهای ارسال‌شده: %3$d از %4$d</string>
+    <string name="chain_err_target">ابتدا نشانی IP کنسول و پورت Loader را تنظیم کنید.</string>
+    <string name="chain_err_missing">دیگر در کتابخانه نیست: %1$s. دوباره اضافه‌اش کنید یا زنجیره را ویرایش کنید.</string>
+    <string name="chain_err_unknown">آن زنجیره دیگر وجود ندارد.</string>
+    <string name="notif_channel_chain">زنجیره‌های payload</string>
+    <string name="backup_chains">زنجیره‌ها: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">ناتمام از دفعهٔ قبل: %1$d</string>
+    <string name="unfinished_hint">برنامه پیش از پایان این موارد بسته شد. «ادامه» هر کدام را دوباره از ابتدا شروع می‌کند.</string>
+    <string name="unfinished_continue">ادامه</string>
+    <string name="unfinished_discard">کنار گذاشتن</string>
+    <string name="unfinished_missing">فایل‌ها دیگر پیدا نمی‌شوند، دوباره انتخابشان کنید: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">مکث</string>
+    <string name="transfer_resume">ادامه</string>
+    <string name="transfer_paused">موقتاً متوقف</string>
+    <string name="speed_limit_title">محدودیت سرعت</string>
+    <string name="speed_limit_off">بدون محدودیت</string>
+    <string name="speed_limit_value">محدودیت: %1$s</string>
+    <string name="speed_limit_hint">انتقال‌ها را کندتر می‌کند تا Wi-Fi برای کارهای دیگر آزاد بماند. تغییر بلافاصله اعمال می‌شود.</string>
+    <string name="summary_title">انتقال‌های انجام‌شده: %1$d از %2$d</string>
+    <string name="summary_detail">‏%1$s در %2$s</string>
+    <string name="summary_failed">ناموفق: %1$d</string>
+    <string name="summary_stopped">متوقف‌شده: %1$d</string>
+    <string name="notif_channel_results">نتیجهٔ انتقال‌ها</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">انتخاب‌شده: %1$d</string>
+    <string name="files_select_all">انتخاب همه</string>
+    <string name="files_select_none">لغو انتخاب</string>
+    <string name="files_delete_many_title">موارد انتخاب‌شده (%1$d) حذف شوند؟</string>
+    <string name="files_delete_many_text">این کار فایل‌ها و پوشه‌های انتخاب‌شده را از کنسول حذف می‌کند و پوشه‌ها همراه با همه چیز داخلشان حذف می‌شوند. قابل بازگشت نیست.</string>
+    <string name="files_deleted_many">موارد حذف‌شده: %1$d</string>
+    <string name="files_delete_partial">موارد حذف‌شده: %1$d، حذف‌نشده: %2$d. اولین مشکل: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">در حال بررسی پوشه‌ها…</string>
+    <string name="files_dl_confirm_title">در تلفن دانلود شود؟</string>
+    <string name="files_dl_confirm_text">فایل‌ها: %1$d، در مجموع %2$s. آن‌ها در Downloads/PS5 و در همان پوشه‌هایی ذخیره می‌شوند که روی کنسول هستند.</string>
+    <string name="files_dl_links">پیوندهای داخل پوشه‌ها دانلود نمی‌شوند: %1$d.</string>
+    <string name="files_dl_truncated">فایل‌های برداشته‌شده: %1$d. پوشه‌ها بیشتر از این دارند، یا عمیق‌تر از حدی هستند که برنامه دنبال می‌کند.</string>
+    <string name="files_dl_none">در موارد انتخاب‌شده فایلی برای دانلود وجود ندارد.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">مرتب‌سازی</string>
+    <string name="files_sort_title">مرتب‌سازی بر اساس</string>
+    <string name="files_sort_name">نام</string>
+    <string name="files_sort_size">اندازه، بزرگ‌ترین اول</string>
+    <string name="files_sort_newest">جدیدترین اول</string>
+    <string name="files_search">جستجو</string>
+    <string name="files_search_hint">جستجو در این پوشه</string>
+    <string name="files_no_match">در این پوشه چیزی با جستجو مطابقت ندارد.</string>
+    <string name="files_pin">سنجاق کردن این پوشه</string>
+    <string name="files_unpin">برداشتن سنجاق این پوشه</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">زبانه‌ها: %1$d</string>
+    <string name="web_tabs_title">زبانه‌ها</string>
+    <string name="web_tab_new">زبانهٔ جدید</string>
+    <string name="web_tabs_full">تعداد زبانه‌ها بیش از حد است. حد مجاز %1$d است. ابتدا یکی را ببندید.</string>
+    <string name="web_find">یافتن</string>
+    <string name="web_find_hint">یافتن در این صفحه</string>
+    <string name="web_find_none">موردی پیدا نشد</string>
+    <string name="web_desktop">سایت دسکتاپ</string>
+    <string name="web_link_new_tab">باز کردن در زبانهٔ جدید</string>
+    <string name="web_link_copy">کپی پیوند</string>
+    <string name="web_link_copied">پیوند کپی شد</string>
+    <string name="web_link_use">ارسال یا دانلود…</string>
+</resources>

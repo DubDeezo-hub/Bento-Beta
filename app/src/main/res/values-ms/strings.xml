@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Malay. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">Batal</string>
+    <string name="action_close">Tutup</string>
+    <string name="action_done">Selesai</string>
+    <string name="action_delete">Padam</string>
+    <string name="action_rename">Namakan semula</string>
+    <string name="action_save">Simpan</string>
+    <string name="action_remove">Alih keluar</string>
+    <string name="action_send">Hantar</string>
+    <string name="action_open">Buka</string>
+    <string name="action_block">Sekat</string>
+    <string name="action_home">Utama</string>
+    <string name="action_dismiss">Sembunyi</string>
+    <string name="action_try_again">Cuba lagi</string>
+    <string name="action_skip">Langkau</string>
+    <string name="action_cancel_all">Batalkan semua</string>
+    <string name="action_create">Buat</string>
+    <string name="action_set">Tetapkan</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">oleh %1$s</string>
+    <string name="nav_install">Pasang</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">Muat naik</string>
+    <string name="nav_files">Fail</string>
+    <string name="nav_web">Web</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Installer</string>
+    <string name="service_loader">Loader</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">Tetapkan alamat IP PS5 anda</string>
+    <string name="status_checking">Menyemak…</string>
+    <string name="status_ready">Sedia</string>
+    <string name="status_partly">Sebahagian sedia</string>
+    <string name="status_partly_off">Sebahagian sedia · tiada respons: %1$s</string>
+    <string name="status_offline">Tidak dapat menghubungi konsol</string>
+    <string name="status_hint_unset">Cari di PS5 pada Settings &gt; Network &gt; Connection Status &gt; View Connection Status. Ketik di sini untuk memasukkannya.</string>
+    <string name="status_hint_offline">Tiada respons pada alamat ini. Semak alamat IP, sama ada konsol dihidupkan dan berada pada rangkaian Wi-Fi yang sama, dan sama ada etaHEN sedang berjalan.</string>
+    <string name="status_hint_one">Tiada respons: %1$s. Mulakan perkhidmatan itu pada konsol atau semak portnya.</string>
+    <string name="status_hint_many">Tiada respons: %1$s. Mulakan perkhidmatan itu pada konsol atau semak port masing-masing.</string>
+    <string name="console_switch">Tukar konsol</string>
+    <string name="console_change_ip">Tukar alamat IP</string>
+    <string name="console_ip_title">Alamat IP konsol</string>
+    <string name="console_ip_label">Alamat IP</string>
+    <string name="console_ip_help">Cari di PS5 pada Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">Pemindahan</string>
+    <string name="transfer_sending">Menghantar</string>
+    <string name="transfer_sending_to">Menghantar ke %1$s</string>
+    <string name="transfer_receiving">Menerima</string>
+    <string name="transfer_receiving_from">Menerima daripada %1$s</string>
+    <string name="transfer_detail_total">%1$s · %2$s daripada %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">Memulakan…</string>
+    <string name="transfer_stopped">Dihentikan</string>
+    <string name="transfer_start_failed">Tidak dapat memulakan pemindahan: %1$s</string>
+    <string name="transfer_retry_in">Sambungan terputus. Mencuba semula dalam %1$d saat…</string>
+    <string name="transfer_reconnecting">Menyambung semula…</string>
+    <string name="transfer_eta">%1$s lagi</string>
+    <string name="transfer_queued">%1$d menunggu</string>
+    <string name="queue_title">Pemindahan yang menunggu</string>
+    <string name="queue_clear">Alih keluar semua</string>
+    <string name="queue_empty">Tiada apa yang menunggu.</string>
+    <string name="notif_channel">Pemindahan PS5</string>
+    <string name="notif_sent">Dihantar: %1$s</string>
+    <string name="notif_received">Diterima: %1$s</string>
+    <string name="percent_value">%1$d%%</string>
+    <string name="desc_done">Selesai</string>
+    <string name="desc_problem">Masalah</string>
+    <string name="status_hide">Sembunyikan mesej ini</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">Ditambahkan ke baris gilir. %1$d menunggu.</string>
+    <string name="msg_set_ip_first">Tetapkan alamat IP konsol dahulu. Ketik kad di bahagian atas.</string>
+    <string name="msg_sending_link">Menghantar pautan ke PS5…</string>
+    <string name="msg_check_ip_ftp">Semak alamat IP konsol dan port FTP.</string>
+    <string name="msg_adding_to_shelf_link">Menambah ke pustaka payload…</string>
+    <string name="status_idle">Tidak aktif</string>
+    <string name="status_sending">Menghantar…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">Tinggalkan tapak ini?</string>
+    <string name="offsite_text">Halaman ingin membuka %1$s. Iklan sering menyebabkan ini apabila anda mengetik pautan, jadi teruskan hanya jika anda menjangkakannya.</string>
+    <string name="choose_install">Hantar pautan ke Installer PS5</string>
+    <string name="choose_ftp">Muat naik ke PS5 (FTP)</string>
+    <string name="choose_shelf">Simpan ke pustaka payload</string>
+    <string name="choose_phone">Simpan ke telefon</string>
+    <string name="choose_help">Installer memerlukan pautan terus ke pakej yang boleh dibuka oleh konsol tanpa log masuk. FTP berfungsi dengan mana-mana fail dan mengekalkan sesi log masuk anda. Telefon menyampaikan data di latar belakang, dengan kemajuan dipaparkan di atas bar bawah dan dalam pemberitahuan. Pustaka payload menyimpan payload kecil (sehingga %1$s) di dalam apl untuk tab Payload.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Port Installer (etaHEN: 12800)</string>
+    <string name="install_accepted">Installer menerimanya: %1$s</string>
+    <string name="install_not_accepted">Tidak diterima (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">Pasang dari telefon ini</string>
+    <string name="serve_intro">Konsol memuat turun pakej terus dari telefon ini melalui Wi-Fi, jadi tidak perlu menyalin apa-apa terlebih dahulu. Telefon dan konsol mesti berada pada rangkaian yang sama.</string>
+    <string name="serve_choose">Pilih pakej</string>
+    <string name="serve_none">Tiada pakej dipilih</string>
+    <string name="serve_start">Mula berkongsi</string>
+    <string name="serve_stop">Henti berkongsi</string>
+    <string name="serve_copy">Salin pautan</string>
+    <string name="serve_copied">Pautan disalin</string>
+    <string name="serve_file_waiting">Menunggu konsol mula memuat turun…</string>
+    <string name="serve_file_pulling">Konsol sedang memuat turun: %1$s</string>
+    <string name="serve_file_done">Konsol telah memuat turun semuanya</string>
+    <string name="serve_unreadable">Fail ini tidak dapat dibaca</string>
+    <string name="serve_hint">Jika konsol tidak pernah mula memuat turun, Wi-Fi mungkin menghalang peranti daripada mencapai satu sama lain (rangkaian tetamu sering berbuat demikian). Gunakan rangkaian utama dan biarkan apl ini berjalan di latar belakang.</string>
+    <string name="serve_no_wifi">Alamat Wi-Fi telefon ini tidak ditemui. Sambungkan telefon ke Wi-Fi yang sama dengan konsol.</string>
+    <string name="serve_failed">Tidak dapat mula berkongsi: %1$s</string>
+    <string name="serve_idle_stop">Perkongsian dihentikan kerana tiada apa-apa dimuat turun untuk tempoh yang lama.</string>
+    <string name="serve_notif_title">Berkongsi dengan %1$s</string>
+    <string name="serve_notif_text">Fail dimuat turun: %1$d / %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">Pilih fail</string>
+    <string name="upload_none">Tiada fail dipilih</string>
+    <string name="upload_files_chosen">Fail dipilih: %1$d</string>
+    <string name="upload_start">Muat naik di latar belakang</string>
+    <string name="upload_help">Kemajuan dipaparkan di atas bar bawah dan dalam pemberitahuan. Ia diteruskan walaupun anda meninggalkan apl.</string>
+    <string name="ftp_port">Port FTP</string>
+    <string name="ftp_user">Nama pengguna</string>
+    <string name="ftp_password">Kata laluan</string>
+    <string name="ftp_folder">Folder jauh</string>
+    <string name="ftp_use_folder">Gunakan %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">Memuatkan…</string>
+    <string name="files_empty">Folder ini kosong.</string>
+    <string name="files_not_loaded">Belum dimuatkan</string>
+    <string name="files_up">⬆ Naik</string>
+    <string name="files_refresh">Muat semula</string>
+    <string name="files_new_folder">Folder baharu</string>
+    <string name="files_upload_here">Muat naik di sini</string>
+    <string name="files_ftp_settings">Tetapan FTP</string>
+    <string name="files_need_ip">Tetapkan alamat IP konsol (ketik kad di bahagian atas) dan port FTP yang sah untuk menyemak imbas failnya.</string>
+    <string name="files_kind_folder">Folder</string>
+    <string name="files_kind_link">Pautan, %1$s</string>
+    <string name="files_download">Muat turun ke telefon</string>
+    <string name="files_new_name">Nama baharu</string>
+    <string name="files_name_used">Nama itu sudah digunakan di sini.</string>
+    <string name="files_renaming">Menamakan semula…</string>
+    <string name="files_renamed">%1$s dinamakan semula kepada %2$s</string>
+    <string name="files_delete_title">Padam %1$s?</string>
+    <string name="files_delete_folder">Ini memadam folder dan semua yang ada di dalamnya daripada konsol. Tindakan ini tidak boleh dibuat asal.</string>
+    <string name="files_delete_file">Ini memadam fail daripada konsol. Tindakan ini tidak boleh dibuat asal.</string>
+    <string name="files_deleting">Memadam…</string>
+    <string name="files_deleted">Dipadam: %1$s</string>
+    <string name="files_deleted_inside">Dipadam: %1$s (item di dalam: %2$d)</string>
+    <string name="files_creating">Mencipta folder…</string>
+    <string name="files_created">Folder %1$s dicipta</string>
+    <string name="files_folder_name">Nama folder</string>
+    <string name="name_empty">Nama tidak boleh kosong.</string>
+    <string name="name_not_allowed">Nama itu tidak dibenarkan.</string>
+    <string name="name_slash">Nama tidak boleh mengandungi garis condong.</string>
+    <string name="name_control">Nama mengandungi aksara yang tidak dibenarkan.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">Gagal: %1$s</string>
+    <string name="ftp_port_hint">Tidak dapat menghubungi pelayan FTP. Semak IP konsol dan port FTP (FTP terbina dalam etaHEN menggunakan 1337, payload FTP menggunakan 2121).</string>
+    <string name="err_login">Log masuk FTP gagal</string>
+    <string name="err_cant_open">tidak dapat membuka %1$s (%2$s)</string>
+    <string name="err_rename">penamaan semula gagal (%1$s)</string>
+    <string name="err_mkdir">tidak dapat mencipta folder (%1$s)</string>
+    <string name="err_too_deep">folder bersarang terlalu dalam</string>
+    <string name="err_delete_path">tidak dapat memadam %1$s (%2$s)</string>
+    <string name="err_upload">Muat naik FTP gagal: %1$s</string>
+    <string name="err_download">Muat turun FTP gagal: %1$s</string>
+    <string name="err_open_file">Tidak dapat membuka fail</string>
+    <string name="err_cancelled_upload">Dibatalkan. Fail separa mungkin kekal di %1$s</string>
+    <string name="err_cancelled_download">Dibatalkan. Muat turun separa telah dibuang.</string>
+    <string name="err_gave_up">Dihentikan kerana sambungan terus gagal. Ralat terakhir: %1$s</string>
+    <string name="err_short_upload">Daripada %2$s yang dihantar, konsol hanya menyimpan %1$s.</string>
+    <string name="err_short_download">Hanya %1$s daripada %2$s yang sampai.</string>
+    <string name="err_empty_file">Fail kosong</string>
+    <string name="err_save">Tidak dapat menyimpan %1$s</string>
+    <string name="sent_to_ps5">Dihantar ke PS5: %1$s</string>
+    <string name="saved_to_downloads">Disimpan ke Downloads/PS5: %1$s</string>
+    <string name="dl_http_failed">Muat turun gagal: HTTP %1$s</string>
+    <string name="dl_empty">Muat turun gagal: respons kosong</string>
+    <string name="dl_cut_short">Sambungan ditutup sebelum seluruh fail sampai.</string>
+    <string name="dl_create_failed">Tidak dapat mencipta fail dalam Downloads</string>
+    <string name="dl_write_failed">Tidak dapat membuka fail baharu untuk ditulis</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">Dihantar: %1$s</string>
+    <string name="shelf_added">Ditambah ke pustaka: %1$s (%2$s)</string>
+    <string name="shelf_updated">Dikemas kini dalam pustaka: %1$s (%2$s)</string>
+    <string name="shelf_too_large">Fail itu lebih besar daripada %1$s, jadi ia tidak ditambah ke pustaka.</string>
+    <string name="shelf_too_large_url">Fail itu bersaiz %1$s. Pustaka menerima payload sehingga %2$s.</string>
+    <string name="payload_adding">Menambah ke pustaka…</string>
+    <string name="payload_remove_title">Alih keluar %1$s?</string>
+    <string name="payload_remove_text">Ia akan dipadam daripada pustaka. Fail asal pada telefon anda tidak diusik.</string>
+    <string name="payload_loader_port">Port Loader</string>
+    <string name="payload_shelf_title">Pustaka payload</string>
+    <string name="payload_shelf_empty">Belum ada yang disimpan. Tambah payload yang kerap anda gunakan (pelayan FTP, etaHEN, ...) dan hantar setiap satu dengan satu ketikan. Anda juga boleh menyimpannya terus daripada tab Web semasa memuat turunnya.</string>
+    <string name="payload_sending">Menghantar %1$s…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">Tambah payload ke pustaka</string>
+    <string name="payload_once_title">Hantar fail sekali</string>
+    <string name="payload_choose">Pilih payload (.elf / .bin)</string>
+    <string name="payload_send">Hantar payload</string>
+
+    <!-- consoles -->
+    <string name="profile_default">PS5 saya</string>
+    <string name="profile_new">Konsol %1$d</string>
+    <string name="profile_fallback">Konsol</string>
+    <string name="consoles_title">Konsol</string>
+    <string name="console_rename_title">Namakan semula konsol</string>
+    <string name="console_name_label">Nama</string>
+    <string name="console_delete_title">Padam %1$s?</string>
+    <string name="console_delete_text">Alamat IP dan port yang disimpannya akan dialih keluar. Konsol anda yang lain tidak terjejas.</string>
+    <string name="console_no_ip">belum ada alamat IP</string>
+    <string name="console_color_of">Warna untuk %1$s</string>
+    <string name="console_use_color">Gunakan %1$s</string>
+    <string name="console_add">Tambah konsol</string>
+    <string name="language_button">Bahasa</string>
+    <string name="color_blue">Biru</string>
+    <string name="color_orange">Oren</string>
+    <string name="color_green">Hijau</string>
+    <string name="color_pink">Merah jambu</string>
+    <string name="color_purple">Ungu</string>
+    <string name="color_teal">Hijau kebiruan</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">Muat turun dimulakan (lihat Downloads)</string>
+    <string name="web_load_failed">Tidak dapat memuatkan halaman: %1$s</string>
+    <string name="web_http_server">Tapak sedang sibuk atau tidak tersedia sekarang (ralat %1$s). Cuba lagi sebentar nanti.</string>
+    <string name="web_http_other">Tapak membalas dengan ralat %1$s.</string>
+    <string name="web_open_first">Buka halaman dahulu</string>
+    <string name="web_bookmark_saved">Penanda halaman disimpan</string>
+    <string name="web_bookmark_exists">Sudah ada dalam penanda halaman anda</string>
+    <string name="web_home_set">Laman utama ditetapkan kepada %1$s</string>
+    <string name="web_reload">Muat semula</string>
+    <string name="web_add">★ Tambah</string>
+    <string name="web_bookmarks">Penanda halaman</string>
+    <string name="web_homepage_label">URL laman utama</string>
+    <string name="web_bookmarks_empty">Belum ada penanda halaman. Buka halaman dan ketik %1$s.</string>
+    <string name="web_bookmarks_help">Ketik penanda halaman untuk membukanya. “%1$s” menjadikannya laman utama anda.</string>
+    <string name="adblock_title">Sekat iklan</string>
+    <string name="adblock_switch">Sekat domain iklan</string>
+    <string name="adblock_info">Disekat setakat ini: %1$d. Rangkaian dalam senarai terbina dalam: %2$d. Muat semula halaman selepas mengubah apa-apa.</string>
+    <string name="adblock_own">Domain anda sendiri, satu setiap baris</string>
+    <string name="adblock_on">Sekat iklan: hidup · disekat: %1$d · ketik untuk menukar</string>
+    <string name="adblock_off">Sekat iklan: mati · disekat: %1$d · ketik untuk menukar</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">Apa yang boleh saya lakukan?</string>
+    <string name="help_what">Apa yang berlaku</string>
+    <string name="help_try">Apa yang boleh dicuba</string>
+    <string name="help_details">Butiran</string>
+    <string name="help_copy">Salin butiran</string>
+    <string name="help_copied">Disalin</string>
+    <string name="help_unreachable_title">Konsol tidak dapat dicapai</string>
+    <string name="help_unreachable_what">Tiada yang menjawab pada alamat konsol.</string>
+    <string name="help_unreachable_try">• Semak alamat IP pada PS5 (Settings &gt; Network &gt; Connection Status). Alamat ini boleh berubah selepas dimulakan semula.\n• Bangunkan konsol sepenuhnya. Mod rehat sering mematikan rangkaian.\n• Gunakan Wi-Fi yang sama pada kedua-duanya. Rangkaian tetamu dan VPN menyekatnya.</string>
+    <string name="help_port_title">Perkhidmatan itu tidak berjalan</string>
+    <string name="help_port_what">Konsol menjawab, tetapi tiada apa-apa yang mendengar pada port itu.</string>
+    <string name="help_port_try">• Mulakan etaHEN pada konsol. Ia menyediakan Installer (12800), Loader (9021) dan FTP (1337).\n• Payload FTP yang berasingan biasanya menggunakan 2121. Masukkan port yang sama di sini.\n• Pada kad konsol, lampu yang padam menunjukkan apa yang tiada.</string>
+    <string name="help_login_title">Log masuk FTP ditolak</string>
+    <string name="help_login_what">Pelayan FTP konsol menolak nama pengguna atau kata laluan.</string>
+    <string name="help_login_try">• etaHEN menerima nama pengguna anonymous dengan sebarang kata laluan.\n• Jika anda menetapkan log masuk pada konsol, masukkannya di Muat naik.\n• Kata laluan tidak disimpan. Masukkan semula selepas aplikasi dimulakan semula.</string>
+    <string name="help_dropped_title">Sambungan terputus</string>
+    <string name="help_dropped_what">Pautan ke konsol terputus atau data berhenti bergerak. Aplikasi mencuba semula dan menyambung dari tempat ia berhenti.</string>
+    <string name="help_dropped_try">• Letakkan telefon berhampiran penghala dan pastikan konsol terjaga.\n• Jeda muat turun besar yang lain pada rangkaian.\n• Jika terus gagal, tunggu seketika dan ketik Cuba lagi.</string>
+    <string name="help_refused_title">Installer tidak menerima pautan</string>
+    <string name="help_refused_what">Konsol boleh dicapai, tetapi Installer-nya menolak pautan ini.</string>
+    <string name="help_refused_try">• Pautan mesti menuju terus ke fail pakej dan terbuka tanpa log masuk.\n• Konsol mesti dapat mencapainya. Pautan dari telefon ini hanya berfungsi pada Wi-Fi yang sama.\n• Pastikan Installer sedang berjalan dan konsol mempunyai ruang kosong.</string>
+    <string name="help_storage_title">Konsol berhenti menyimpan</string>
+    <string name="help_storage_what">Konsol menyimpan kurang daripada yang dihantar. Pemacu biasanya penuh atau baca sahaja.</string>
+    <string name="help_storage_try">• Kosongkan ruang pada konsol.\n• Pilih folder lain, contohnya pada pemacu USB.\n• Kemudian ketik Cuba lagi.</string>
+    <string name="help_denied_title">Folder atau fail itu ditolak</string>
+    <string name="help_denied_what">Pelayan FTP tidak boleh membukanya, menulis padanya atau mengubahnya di sini.</string>
+    <string name="help_denied_try">• Semak folder itu wujud. Nama peka huruf besar/kecil.\n• Folder sistem ialah baca sahaja. Gunakan /data atau pemacu USB.\n• Fail yang digunakan oleh permainan yang sedang berjalan mungkin dikunci. Tutup permainan itu.</string>
+    <string name="help_phone_title">Telefon tidak dapat menggunakan fail itu</string>
+    <string name="help_phone_what">Fail itu hilang atau dialihkan, aplikasi kehilangan akses kepadanya, atau telefon kehabisan ruang.</string>
+    <string name="help_phone_try">• Pilih fail itu semula.\n• Kosongkan storan pada telefon.\n• Untuk fail dalam aplikasi awan, simpan ke telefon dahulu.</string>
+    <string name="help_link_title">Pautan muat turun gagal</string>
+    <string name="help_link_what">Laman web tidak menyerahkan fail. Pautan mungkin telah tamat tempoh, memerlukan log masuk, atau laman sibuk.</string>
+    <string name="help_link_try">• Mulakan semula muat turun dari tab Web. Ini mengekalkan log masuk anda.\n• Pautan dari laman penghosan fail sering tamat tempoh selepas beberapa minit.\n• Jika laman melaporkan ralat siri 500, cuba lagi kemudian.</string>
+
+    <!-- update check -->
+    <string name="update_available">Versi %1$s tersedia</string>
+    <string name="update_download">Muat turun</string>
+    <string name="update_later">Kemudian</string>
+    <string name="update_title">Kemas kini</string>
+    <string name="update_current">Anda mempunyai versi terkini (%1$s).</string>
+    <string name="update_none">Belum ada keluaran dijumpai pada halaman Releases.</string>
+    <string name="update_check_now">Semak sekarang</string>
+    <string name="update_auto">Semak kemas kini apabila aplikasi dibuka</string>
+    <string name="update_privacy">Semakan ini bertanya kepada GitHub tentang keluaran terbaharu, paling kerap sekali sehari. Tiada apa-apa tentang anda atau konsol anda dihantar; GitHub melihat alamat IP anda, seperti mana-mana laman web.</string>
+
+    <!-- find my console -->
+    <string name="find_button">Cari PS5 saya</string>
+    <string name="find_scanning">Mencari konsol anda pada rangkaian %1$s…</string>
+    <string name="find_again">Imbas semula</string>
+    <string name="find_none">Tiada konsol ditemui.</string>
+    <string name="find_none_try">• Hidupkan konsol sepenuhnya (bukan mod rehat) dan mulakan etaHEN.\n• Gunakan Wi-Fi yang sama pada telefon dan konsol. Rangkaian tetamu dan VPN mengasingkan peranti antara satu sama lain.\n• Kemudian imbas semula.</string>
+    <string name="find_no_wifi">Telefon ini tidak berada pada rangkaian Wi-Fi. Sambungkan telefon ke Wi-Fi yang sama dengan konsol, kemudian imbas semula.</string>
+    <string name="find_pick">Ketik Guna untuk menetapkan alamat %1$s.</string>
+    <string name="find_saved">Alamat disimpan</string>
+    <string name="find_used_by">Disimpan untuk %1$s</string>
+    <string name="find_updated">%1$s kini menggunakan %2$s.</string>
+    <string name="find_privacy">Hanya rangkaian Wi-Fi anda yang diimbas, pada beberapa port konsol. Tiada apa-apa dihantar melalui internet.</string>
+    <string name="action_stop">Henti</string>
+    <string name="action_use">Guna</string>
+
+    <!-- about and backup -->
+    <string name="about_title">Perihal Bento</string>
+    <string name="about_version">Versi %1$s</string>
+    <string name="about_button">Perihal &amp; sandaran</string>
+    <string name="about_report">Salin laporan</string>
+    <string name="about_report_help">Menyalin versi aplikasi, model telefon anda dan mesej terakhir, untuk ditampal ke dalam laporan pepijat. Alamat IP dan pautan ditinggalkan.</string>
+    <string name="about_report_copied">Laporan disalin</string>
+    <string name="about_releases">Halaman Releases</string>
+    <string name="backup_title">Sandaran</string>
+    <string name="backup_text">Menyimpan konsol, laman utama, penanda halaman, senarai iklan dan payload anda dalam satu fail. Kata laluan FTP tidak disimpan.</string>
+    <string name="backup_save">Simpan sandaran</string>
+    <string name="backup_restore">Pulihkan sandaran</string>
+    <string name="backup_saved">Sandaran disimpan.</string>
+    <string name="backup_contents">Konsol: %1$d · Penanda halaman: %2$d · Payload: %3$d</string>
+    <string name="backup_made">Dibuat pada %1$s</string>
+    <string name="backup_skipped">Payload yang ditinggalkan kerana fail akan terlalu besar: %1$d</string>
+    <string name="backup_bad_file">Fail itu bukan sandaran Bento.</string>
+    <string name="backup_too_new">Sandaran itu dibuat oleh versi Bento yang lebih baharu. Kemas kini aplikasi, kemudian cuba lagi.</string>
+    <string name="restore_title">Pulihkan sandaran ini?</string>
+    <string name="restore_text">Konsol, laman utama, penanda halaman dan senarai iklan anda diganti dengan yang ada dalam fail. Payload dalam fail ditambah ke pustaka payload. Anda perlu menaip semula kata laluan FTP anda.</string>
+    <string name="restore_button">Pulihkan</string>
+    <string name="restore_done">Sandaran dipulihkan.</string>
+    <string name="restore_payloads_failed">Payload yang tidak dapat disimpan: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">Pautan pakej (satu setiap baris)</string>
+    <string name="install_paste">Tampal</string>
+    <string name="action_clear">Kosongkan</string>
+    <string name="install_paste_none">Tiada pautan web pada papan keratan.</string>
+    <string name="install_links_skipped">Hanya alamat yang bermula dengan http:// atau https:// dihantar. Ditinggalkan: %1$d</string>
+    <string name="install_recent">Pautan terkini</string>
+    <string name="install_recent_clear">Kosongkan senarai</string>
+    <string name="install_sending_n">Menghantar pautan %1$d daripada %2$d…</string>
+    <string name="install_batch_done">Diterima: %1$d daripada %2$d pautan</string>
+    <string name="install_batch_notsent">Tidak dihantar: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">Rantaian</string>
+    <string name="chains_hint">Rantaian menghantar beberapa payload satu demi satu, dengan jeda selepas setiap satu. Tekan lama ikon aplikasi untuk memulakan salah satu daripada empat rantaian pertama dari skrin utama.</string>
+    <string name="chain_new">Rantaian baharu</string>
+    <string name="action_edit">Edit</string>
+    <string name="chain_summary_steps">Payload: %1$d</string>
+    <string name="chain_summary_pauses">Jeda: %1$s</string>
+    <string name="chain_edit_title">Edit rantaian</string>
+    <string name="chain_steps_title">Payload, mengikut urutan (paling banyak %1$d)</string>
+    <string name="chain_add_step">Tambah payload</string>
+    <string name="chain_pick_title">Payload yang mana hendak ditambah?</string>
+    <string name="chain_wait_label">Kemudian tunggu (saat)</string>
+    <string name="chain_missing">Tiada dalam pustaka</string>
+    <string name="chain_move_up">Alih ke atas</string>
+    <string name="chain_move_down">Alih ke bawah</string>
+    <string name="chain_pin">Tambah ke skrin utama</string>
+    <string name="chain_pin_unsupported">Pelancar ini tidak boleh menambah pintasan. Tekan lama ikon aplikasi untuk mencari rantaian anda di sana.</string>
+    <string name="chain_sending">Menghantar %1$s (%2$d daripada %3$d)…</string>
+    <string name="chain_waiting">Payload seterusnya dalam %1$s</string>
+    <string name="chain_retrying">Menunggu konsol sedia…</string>
+    <string name="chain_result_done">Selesai. Payload dihantar: %1$d daripada %2$d</string>
+    <string name="chain_result_stopped">Dihentikan. Payload dihantar: %1$d daripada %2$d</string>
+    <string name="chain_result_failed">Berhenti pada langkah %1$d (%2$s). Payload dihantar: %3$d daripada %4$d</string>
+    <string name="chain_err_target">Tetapkan dahulu alamat IP konsol dan port Loader.</string>
+    <string name="chain_err_missing">Tiada lagi dalam pustaka: %1$s. Tambah semula atau edit rantaian.</string>
+    <string name="chain_err_unknown">Rantaian itu sudah tiada.</string>
+    <string name="notif_channel_chain">Rantaian payload</string>
+    <string name="backup_chains">Rantaian: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">Belum selesai kali lepas: %1$d</string>
+    <string name="unfinished_hint">Apl ditutup sebelum ini selesai. “Teruskan” memulakan setiap satu semula dari awal.</string>
+    <string name="unfinished_continue">Teruskan</string>
+    <string name="unfinished_discard">Buang</string>
+    <string name="unfinished_missing">Fail tidak lagi ditemui, pilih semula: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">Jeda</string>
+    <string name="transfer_resume">Sambung semula</string>
+    <string name="transfer_paused">Dijeda</string>
+    <string name="speed_limit_title">Had kelajuan</string>
+    <string name="speed_limit_off">Tiada had</string>
+    <string name="speed_limit_value">Had: %1$s</string>
+    <string name="speed_limit_hint">Memperlahankan pemindahan supaya Wi-Fi kekal bebas untuk kegunaan lain. Perubahan berkuat kuasa serta-merta.</string>
+    <string name="summary_title">Pemindahan selesai: %1$d daripada %2$d</string>
+    <string name="summary_detail">%1$s dalam %2$s</string>
+    <string name="summary_failed">Gagal: %1$d</string>
+    <string name="summary_stopped">Dihentikan: %1$d</string>
+    <string name="notif_channel_results">Keputusan pemindahan</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">Dipilih: %1$d</string>
+    <string name="files_select_all">Pilih semua</string>
+    <string name="files_select_none">Nyahpilih semua</string>
+    <string name="files_delete_many_title">Padam item yang dipilih (%1$d)?</string>
+    <string name="files_delete_many_text">Ini memadam fail dan folder yang dipilih daripada konsol, folder bersama semua yang ada di dalamnya. Tindakan ini tidak boleh dibuat asal.</string>
+    <string name="files_deleted_many">Item dipadam: %1$d</string>
+    <string name="files_delete_partial">Item dipadam: %1$d, tidak dipadam: %2$d. Masalah pertama: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">Menyemak folder…</string>
+    <string name="files_dl_confirm_title">Muat turun ke telefon?</string>
+    <string name="files_dl_confirm_text">Fail: %1$d, jumlah %2$s. Fail disimpan dalam Downloads/PS5, dalam folder yang sama seperti pada konsol.</string>
+    <string name="files_dl_links">Pautan di dalam folder tidak dimuat turun: %1$d.</string>
+    <string name="files_dl_truncated">Fail diambil: %1$d. Folder mengandungi lebih daripada itu, atau lebih dalam daripada yang diikuti apl.</string>
+    <string name="files_dl_none">Tiada fail untuk dimuat turun dalam pilihan ini.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">Isih</string>
+    <string name="files_sort_title">Isih mengikut</string>
+    <string name="files_sort_name">Nama</string>
+    <string name="files_sort_size">Saiz, terbesar dahulu</string>
+    <string name="files_sort_newest">Terbaharu dahulu</string>
+    <string name="files_search">Cari</string>
+    <string name="files_search_hint">Cari dalam folder ini</string>
+    <string name="files_no_match">Tiada apa-apa dalam folder ini yang sepadan dengan carian.</string>
+    <string name="files_pin">Semat folder ini</string>
+    <string name="files_unpin">Nyahsemat folder ini</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">Tab: %1$d</string>
+    <string name="web_tabs_title">Tab</string>
+    <string name="web_tab_new">Tab baharu</string>
+    <string name="web_tabs_full">Terlalu banyak tab. Hadnya ialah %1$d. Tutup satu dahulu.</string>
+    <string name="web_find">Cari</string>
+    <string name="web_find_hint">Cari dalam halaman ini</string>
+    <string name="web_find_none">Tiada padanan</string>
+    <string name="web_desktop">Tapak desktop</string>
+    <string name="web_link_new_tab">Buka dalam tab baharu</string>
+    <string name="web_link_copy">Salin pautan</string>
+    <string name="web_link_copied">Pautan disalin</string>
+    <string name="web_link_use">Hantar atau muat turun…</string>
+</resources>

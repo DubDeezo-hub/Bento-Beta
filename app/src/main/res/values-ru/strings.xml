@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Russian. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">Отмена</string>
+    <string name="action_close">Закрыть</string>
+    <string name="action_done">Готово</string>
+    <string name="action_delete">Удалить</string>
+    <string name="action_rename">Переименовать</string>
+    <string name="action_save">Сохранить</string>
+    <string name="action_remove">Убрать</string>
+    <string name="action_send">Отправить</string>
+    <string name="action_open">Открыть</string>
+    <string name="action_block">Блокировать</string>
+    <string name="action_home">Домой</string>
+    <string name="action_dismiss">Скрыть</string>
+    <string name="action_try_again">Повторить</string>
+    <string name="action_skip">Пропустить</string>
+    <string name="action_cancel_all">Отменить все</string>
+    <string name="action_create">Создать</string>
+    <string name="action_set">Задать</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">автор: %1$s</string>
+    <string name="nav_install">Установка</string>
+    <string name="nav_payload">Пейлоад</string>
+    <string name="nav_upload">Отправка</string>
+    <string name="nav_files">Файлы</string>
+    <string name="nav_web">Веб</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Установщик</string>
+    <string name="service_loader">Загрузчик</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">Укажите IP-адрес PS5</string>
+    <string name="status_checking">Проверка…</string>
+    <string name="status_ready">Готова</string>
+    <string name="status_partly">Готова частично</string>
+    <string name="status_partly_off">Готова частично · нет ответа: %1$s</string>
+    <string name="status_offline">Консоль недоступна</string>
+    <string name="status_hint_unset">Его можно найти на PS5: Настройки &gt; Сеть &gt; Состояние подключения &gt; Просмотреть состояние подключения. Нажмите здесь, чтобы ввести его.</string>
+    <string name="status_hint_offline">По этому адресу никто не отвечает. Проверьте IP, включена ли PS5 и подключена ли она к той же сети Wi-Fi, а также запущен ли etaHEN.</string>
+    <string name="status_hint_one">Нет ответа: %1$s. Запустите его на консоли или проверьте порт.</string>
+    <string name="status_hint_many">Нет ответа: %1$s. Запустите их на консоли или проверьте порты.</string>
+    <string name="console_switch">Сменить консоль</string>
+    <string name="console_change_ip">Изменить IP-адрес</string>
+    <string name="console_ip_title">IP-адрес консоли</string>
+    <string name="console_ip_label">IP-адрес</string>
+    <string name="console_ip_help">Его можно найти на PS5: Настройки &gt; Сеть &gt; Состояние подключения &gt; Просмотреть состояние подключения.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">Передача</string>
+    <string name="transfer_sending">Отправка</string>
+    <string name="transfer_sending_to">Отправка на %1$s</string>
+    <string name="transfer_receiving">Получение</string>
+    <string name="transfer_receiving_from">Получение с %1$s</string>
+    <string name="transfer_detail_total">%1$s · %2$s из %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">Запуск…</string>
+    <string name="transfer_stopped">Остановлено</string>
+    <string name="transfer_start_failed">Не удалось запустить передачу: %1$s</string>
+    <string name="transfer_retry_in">Соединение потеряно. Повтор через %1$d с…</string>
+    <string name="transfer_reconnecting">Повторное подключение…</string>
+    <string name="transfer_eta">осталось %1$s</string>
+    <string name="transfer_queued">В очереди: %1$d</string>
+    <string name="queue_title">Передачи в очереди</string>
+    <string name="queue_clear">Убрать все</string>
+    <string name="queue_empty">Очередь пуста.</string>
+    <string name="notif_channel">Передачи на PS5</string>
+    <string name="notif_sent">Отправлено: %1$s</string>
+    <string name="notif_received">Получено: %1$s</string>
+    <string name="percent_value">%1$d %%</string>
+    <string name="desc_done">Готово</string>
+    <string name="desc_problem">Проблема</string>
+    <string name="status_hide">Скрыть это сообщение</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">Добавлено в очередь. В очереди: %1$d.</string>
+    <string name="msg_set_ip_first">Сначала укажите IP-адрес консоли. Нажмите на карточку вверху.</string>
+    <string name="msg_sending_link">Отправка ссылки на PS5…</string>
+    <string name="msg_check_ip_ftp">Проверьте IP-адрес консоли и порт FTP.</string>
+    <string name="msg_adding_to_shelf_link">Добавление в библиотеку пейлоадов…</string>
+    <string name="status_idle">Ожидание</string>
+    <string name="status_sending">Отправка…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">Покинуть этот сайт?</string>
+    <string name="offsite_text">Страница хочет открыть %1$s. Часто это вызывает реклама при нажатии на ссылку, поэтому продолжайте, только если вы этого ждали.</string>
+    <string name="choose_install">Отправить ссылку установщику PS5</string>
+    <string name="choose_ftp">Загрузить на PS5 (FTP)</string>
+    <string name="choose_shelf">Сохранить в библиотеку пейлоадов</string>
+    <string name="choose_phone">Сохранить на телефон</string>
+    <string name="choose_help">Установщику нужна прямая ссылка на пакет, которую консоль сможет открыть без входа в аккаунт. FTP подходит для любых файлов и сохраняет ваш сеанс. Телефон передаёт данные в фоне: ход выполнения виден над нижней панелью и в уведомлении. Библиотека пейлоадов хранит небольшой пейлоад (до %1$s) внутри приложения для вкладки «Пейлоад».</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Порт установщика (etaHEN: 12800)</string>
+    <string name="install_accepted">Установщик принял: %1$s</string>
+    <string name="install_not_accepted">Не принято (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">Установка с этого телефона</string>
+    <string name="serve_intro">Консоль скачивает пакеты прямо с этого телефона по Wi-Fi, поэтому предварительно ничего копировать не нужно. Телефон и консоль должны быть в одной сети.</string>
+    <string name="serve_choose">Выбрать пакеты</string>
+    <string name="serve_none">Пакеты не выбраны</string>
+    <string name="serve_start">Начать раздачу</string>
+    <string name="serve_stop">Остановить раздачу</string>
+    <string name="serve_copy">Копировать ссылку</string>
+    <string name="serve_copied">Ссылка скопирована</string>
+    <string name="serve_file_waiting">Ожидание, пока консоль начнёт скачивание…</string>
+    <string name="serve_file_pulling">Консоль скачивает: %1$s</string>
+    <string name="serve_file_done">Консоль скачала всё</string>
+    <string name="serve_unreadable">Не удаётся прочитать этот файл</string>
+    <string name="serve_hint">Если консоль так и не начинает скачивание, возможно, Wi-Fi не даёт устройствам видеть друг друга (в гостевых сетях так обычно и бывает). Используйте основную сеть и не закрывайте это приложение — пусть работает в фоне.</string>
+    <string name="serve_no_wifi">Не удаётся найти адрес этого телефона в Wi-Fi. Подключите его к той же сети Wi-Fi, что и консоль.</string>
+    <string name="serve_failed">Не удалось начать раздачу: %1$s</string>
+    <string name="serve_idle_stop">Раздача остановлена: долгое время ничего не скачивалось.</string>
+    <string name="serve_notif_title">Раздача для %1$s</string>
+    <string name="serve_notif_text">Скачано файлов: %1$d из %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">Выбрать файлы</string>
+    <string name="upload_none">Файлы не выбраны</string>
+    <string name="upload_files_chosen">Выбрано файлов: %1$d</string>
+    <string name="upload_start">Загрузить в фоне</string>
+    <string name="upload_help">Ход выполнения виден над нижней панелью и в уведомлении. Загрузка продолжится, если вы закроете приложение.</string>
+    <string name="ftp_port">Порт FTP</string>
+    <string name="ftp_user">Имя пользователя</string>
+    <string name="ftp_password">Пароль</string>
+    <string name="ftp_folder">Удалённая папка</string>
+    <string name="ftp_use_folder">Использовать %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">Загрузка…</string>
+    <string name="files_empty">Эта папка пуста.</string>
+    <string name="files_not_loaded">Ещё не загружено</string>
+    <string name="files_up">⬆ Вверх</string>
+    <string name="files_refresh">Обновить</string>
+    <string name="files_new_folder">Новая папка</string>
+    <string name="files_upload_here">Загрузить сюда</string>
+    <string name="files_ftp_settings">Настройки FTP</string>
+    <string name="files_need_ip">Укажите IP-адрес консоли (нажмите на карточку вверху) и допустимый порт FTP, чтобы просматривать её файлы.</string>
+    <string name="files_kind_folder">Папка</string>
+    <string name="files_kind_link">Ссылка, %1$s</string>
+    <string name="files_download">Скачать на телефон</string>
+    <string name="files_new_name">Новое имя</string>
+    <string name="files_name_used">Такое имя здесь уже есть.</string>
+    <string name="files_renaming">Переименование…</string>
+    <string name="files_renamed">Переименовано: %1$s в %2$s</string>
+    <string name="files_delete_title">Удалить %1$s?</string>
+    <string name="files_delete_folder">Папка и всё её содержимое будут удалены с консоли. Это нельзя отменить.</string>
+    <string name="files_delete_file">Файл будет удалён с консоли. Это нельзя отменить.</string>
+    <string name="files_deleting">Удаление…</string>
+    <string name="files_deleted">Удалено: %1$s</string>
+    <string name="files_deleted_inside">Удалено: %1$s (элементов внутри: %2$d)</string>
+    <string name="files_creating">Создание папки…</string>
+    <string name="files_created">Папка создана: %1$s</string>
+    <string name="files_folder_name">Имя папки</string>
+    <string name="name_empty">Имя не может быть пустым.</string>
+    <string name="name_not_allowed">Это имя недопустимо.</string>
+    <string name="name_slash">Имя не может содержать косые черты.</string>
+    <string name="name_control">В имени есть недопустимые символы.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">Ошибка: %1$s</string>
+    <string name="ftp_port_hint">Не удаётся подключиться к FTP-серверу. Проверьте IP консоли и порт FTP (встроенный FTP etaHEN использует 1337, FTP-пейлоад — 2121).</string>
+    <string name="err_login">Не удалось войти по FTP</string>
+    <string name="err_cant_open">не удаётся открыть %1$s (%2$s)</string>
+    <string name="err_rename">не удалось переименовать (%1$s)</string>
+    <string name="err_mkdir">не удалось создать папку (%1$s)</string>
+    <string name="err_too_deep">слишком глубокая вложенность папок</string>
+    <string name="err_delete_path">не удалось удалить %1$s (%2$s)</string>
+    <string name="err_upload">Ошибка загрузки по FTP: %1$s</string>
+    <string name="err_download">Ошибка скачивания по FTP: %1$s</string>
+    <string name="err_open_file">Не удалось открыть файл</string>
+    <string name="err_cancelled_upload">Отменено. В %1$s может остаться неполный файл</string>
+    <string name="err_cancelled_download">Отменено. Неполная загрузка удалена.</string>
+    <string name="err_gave_up">Остановлено: соединение постоянно обрывалось. Последняя ошибка: %1$s</string>
+    <string name="err_short_upload">Консоль сохранила только %1$s из отправленных %2$s.</string>
+    <string name="err_short_download">Получено только %1$s из %2$s.</string>
+    <string name="err_empty_file">Файл пуст</string>
+    <string name="err_save">Не удалось сохранить %1$s</string>
+    <string name="sent_to_ps5">Отправлено на PS5: %1$s</string>
+    <string name="saved_to_downloads">Сохранено в «Загрузки/PS5»: %1$s</string>
+    <string name="dl_http_failed">Ошибка скачивания: HTTP %1$s</string>
+    <string name="dl_empty">Ошибка скачивания: пустой ответ</string>
+    <string name="dl_cut_short">Соединение закрылось раньше, чем файл был получен целиком.</string>
+    <string name="dl_create_failed">Не удалось создать файл в папке «Загрузки»</string>
+    <string name="dl_write_failed">Не удалось открыть новый файл для записи</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">Отправлено: %1$s</string>
+    <string name="shelf_added">Добавлено в библиотеку: %1$s (%2$s)</string>
+    <string name="shelf_updated">Обновлено в библиотеке: %1$s (%2$s)</string>
+    <string name="shelf_too_large">Этот файл больше %1$s, поэтому он не был добавлен в библиотеку.</string>
+    <string name="shelf_too_large_url">Размер файла — %1$s. Библиотека принимает пейлоады до %2$s.</string>
+    <string name="payload_adding">Добавление в библиотеку…</string>
+    <string name="payload_remove_title">Убрать %1$s?</string>
+    <string name="payload_remove_text">Он будет удалён из библиотеки. Исходный файл на телефоне не затрагивается.</string>
+    <string name="payload_loader_port">Порт загрузчика</string>
+    <string name="payload_shelf_title">Библиотека пейлоадов</string>
+    <string name="payload_shelf_empty">Пока ничего не сохранено. Добавьте пейлоады, которые вы часто используете (FTP-сервер, etaHEN, ...), и отправляйте каждый одним касанием. Также можно сохранить пейлоад прямо при скачивании на вкладке «Веб».</string>
+    <string name="payload_sending">Отправка %1$s…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">Добавить пейлоад в библиотеку</string>
+    <string name="payload_once_title">Отправить файл один раз</string>
+    <string name="payload_choose">Выбрать пейлоад (.elf / .bin)</string>
+    <string name="payload_send">Отправить пейлоад</string>
+
+    <!-- consoles -->
+    <string name="profile_default">Моя PS5</string>
+    <string name="profile_new">Консоль %1$d</string>
+    <string name="profile_fallback">Консоль</string>
+    <string name="consoles_title">Консоли</string>
+    <string name="console_rename_title">Переименовать консоль</string>
+    <string name="console_name_label">Имя</string>
+    <string name="console_delete_title">Удалить %1$s?</string>
+    <string name="console_delete_text">Сохранённые для неё IP-адрес и порты будут удалены. Ваши другие консоли не затрагиваются.</string>
+    <string name="console_no_ip">IP-адрес ещё не указан</string>
+    <string name="console_color_of">Цвет: %1$s</string>
+    <string name="console_use_color">Выбрать цвет: %1$s</string>
+    <string name="console_add">Добавить консоль</string>
+    <string name="language_button">Язык</string>
+    <string name="color_blue">Синий</string>
+    <string name="color_orange">Оранжевый</string>
+    <string name="color_green">Зелёный</string>
+    <string name="color_pink">Розовый</string>
+    <string name="color_purple">Фиолетовый</string>
+    <string name="color_teal">Бирюзовый</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">Скачивание началось (см. «Загрузки»)</string>
+    <string name="web_load_failed">Не удалось загрузить страницу: %1$s</string>
+    <string name="web_http_server">Сайт сейчас перегружен или недоступен (ошибка %1$s). Повторите попытку чуть позже.</string>
+    <string name="web_http_other">Сайт ответил ошибкой %1$s.</string>
+    <string name="web_open_first">Сначала откройте страницу</string>
+    <string name="web_bookmark_saved">Закладка сохранена</string>
+    <string name="web_bookmark_exists">Уже есть в закладках</string>
+    <string name="web_home_set">Домашняя страница: %1$s</string>
+    <string name="web_reload">Обновить</string>
+    <string name="web_add">★ Добавить</string>
+    <string name="web_bookmarks">Закладки</string>
+    <string name="web_homepage_label">URL домашней страницы</string>
+    <string name="web_bookmarks_empty">Закладок пока нет. Откройте страницу и нажмите %1$s.</string>
+    <string name="web_bookmarks_help">Нажмите на закладку, чтобы открыть её. Кнопка «%1$s» делает её домашней страницей.</string>
+    <string name="adblock_title">Блокировка рекламы</string>
+    <string name="adblock_switch">Блокировать рекламные домены</string>
+    <string name="adblock_info">Заблокировано: %1$d. Сетей во встроенном списке: %2$d. После любых изменений перезагрузите страницу.</string>
+    <string name="adblock_own">Ваши домены, по одному в строке</string>
+    <string name="adblock_on">Блокировка рекламы: вкл. · заблокировано: %1$d · нажмите, чтобы изменить</string>
+    <string name="adblock_off">Блокировка рекламы: выкл. · заблокировано: %1$d · нажмите, чтобы изменить</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">Что можно сделать?</string>
+    <string name="help_what">Что произошло</string>
+    <string name="help_try">Что попробовать</string>
+    <string name="help_details">Подробности</string>
+    <string name="help_copy">Копировать подробности</string>
+    <string name="help_copied">Скопировано</string>
+    <string name="help_unreachable_title">Консоль недоступна</string>
+    <string name="help_unreachable_what">По адресу консоли никто не отвечает.</string>
+    <string name="help_unreachable_try">• Проверьте IP-адрес на PS5 (Настройки &gt; Сеть &gt; Состояние подключения). После перезагрузки он может измениться.\n• Полностью выведите консоль из режима покоя. Режим покоя часто отключает сеть.\n• Используйте одну и ту же сеть Wi-Fi на обоих устройствах. Гостевые сети и VPN блокируют подключение.</string>
+    <string name="help_port_title">Эта служба не запущена</string>
+    <string name="help_port_what">Консоль ответила, но на этом порту ничего не слушает.</string>
+    <string name="help_port_try">• Запустите etaHEN на консоли. Он предоставляет Установщик (12800), Загрузчик (9021) и FTP (1337).\n• Отдельный FTP-пейлоад обычно использует порт 2121. Введите здесь тот же порт.\n• На карточке консоли погасший индикатор показывает, чего не хватает.</string>
+    <string name="help_login_title">Вход по FTP отклонён</string>
+    <string name="help_login_what">FTP-сервер консоли отклонил имя пользователя или пароль.</string>
+    <string name="help_login_try">• etaHEN принимает имя пользователя anonymous с любым паролем.\n• Если вы задали логин на консоли, введите его на вкладке «Отправка».\n• Пароль не сохраняется. Введите его снова после перезапуска приложения.</string>
+    <string name="help_dropped_title">Соединение прервано</string>
+    <string name="help_dropped_what">Связь с консолью оборвалась, или данные перестали передаваться. Приложение повторяет попытку и продолжает с того места, где остановилось.</string>
+    <string name="help_dropped_try">• Держите телефон рядом с роутером, а консоль — в активном режиме.\n• Приостановите другие крупные загрузки в сети.\n• Если ошибка повторяется, подождите немного и нажмите «Повторить».</string>
+    <string name="help_refused_title">Установщик не принял ссылку</string>
+    <string name="help_refused_what">Консоль доступна, но её Установщик отклонил эту ссылку.</string>
+    <string name="help_refused_try">• Ссылка должна вести прямо на файл пакета и открываться без входа в аккаунт.\n• Консоль должна иметь к ней доступ. Ссылки с этого телефона работают только в той же сети Wi-Fi.\n• Убедитесь, что Установщик запущен и на консоли есть свободное место.</string>
+    <string name="help_storage_title">Консоль перестала сохранять</string>
+    <string name="help_storage_what">Консоль сохранила меньше, чем было отправлено. Обычно диск заполнен или доступен только для чтения.</string>
+    <string name="help_storage_try">• Освободите место на консоли.\n• Выберите другую папку, например на USB-накопителе.\n• Затем нажмите «Повторить».</string>
+    <string name="help_denied_title">Эта папка или файл отклонены</string>
+    <string name="help_denied_what">FTP-сервер не может открыть, записать или изменить это здесь.</string>
+    <string name="help_denied_try">• Проверьте, что папка существует. Регистр в именах важен.\n• Системные папки доступны только для чтения. Используйте /data или USB-накопитель.\n• Файл, который использует запущенная игра, может быть заблокирован. Закройте игру.</string>
+    <string name="help_phone_title">Телефон не может использовать файл</string>
+    <string name="help_phone_what">Файл удалён или перемещён, приложение потеряло к нему доступ, либо на телефоне закончилось место.</string>
+    <string name="help_phone_try">• Выберите файл ещё раз.\n• Освободите место в памяти телефона.\n• Файл из облачного приложения сначала сохраните на телефон.</string>
+    <string name="help_link_title">Ссылка для загрузки не сработала</string>
+    <string name="help_link_what">Сайт не отдал файл. Срок действия ссылки мог истечь, может требоваться вход или сайт перегружен.</string>
+    <string name="help_link_try">• Начните загрузку заново на вкладке «Веб». Так вы останетесь в аккаунте.\n• Ссылки с файлообменников часто истекают через несколько минут.\n• Если сайт сообщил об ошибке из серии 500, повторите позже.</string>
+
+    <!-- update check -->
+    <string name="update_available">Доступна версия %1$s</string>
+    <string name="update_download">Скачать</string>
+    <string name="update_later">Позже</string>
+    <string name="update_title">Обновления</string>
+    <string name="update_current">У вас последняя версия (%1$s).</string>
+    <string name="update_none">На странице Releases пока не найдено ни одного релиза.</string>
+    <string name="update_check_now">Проверить сейчас</string>
+    <string name="update_auto">Проверять обновления при открытии приложения</string>
+    <string name="update_privacy">При проверке у GitHub запрашивается последний релиз, не чаще раза в сутки. Ничего о вас и ваших консолях не отправляется; GitHub видит ваш IP-адрес, как и любой сайт.</string>
+
+    <!-- find my console -->
+    <string name="find_button">Найти мою PS5</string>
+    <string name="find_scanning">Поиск консоли в сети %1$s…</string>
+    <string name="find_again">Искать снова</string>
+    <string name="find_none">Консоль не найдена.</string>
+    <string name="find_none_try">• Полностью включите консоль (не режим покоя) и запустите etaHEN.\n• Используйте одну и ту же сеть Wi-Fi на телефоне и на консоли. Гостевые сети и VPN разделяют устройства.\n• Затем повторите поиск.</string>
+    <string name="find_no_wifi">Этот телефон не подключён к сети Wi-Fi. Подключите его к той же сети Wi-Fi, что и консоль, и повторите поиск.</string>
+    <string name="find_pick">Нажмите «Использовать», чтобы задать адрес консоли «%1$s».</string>
+    <string name="find_saved">Сохранённый адрес</string>
+    <string name="find_used_by">Сохранён для «%1$s»</string>
+    <string name="find_updated">Консоль «%1$s» теперь использует %2$s.</string>
+    <string name="find_privacy">Сканируется только ваша сеть Wi-Fi, и только на нескольких портах консоли. Ничего не отправляется через интернет.</string>
+    <string name="action_stop">Остановить</string>
+    <string name="action_use">Использовать</string>
+
+    <!-- about and backup -->
+    <string name="about_title">О приложении Bento</string>
+    <string name="about_version">Версия %1$s</string>
+    <string name="about_button">О приложении и резервная копия</string>
+    <string name="about_report">Копировать отчёт</string>
+    <string name="about_report_help">Копирует версию приложения, модель телефона и последнее сообщение, чтобы вставить их в отчёт об ошибке. IP-адреса и ссылки не включаются.</string>
+    <string name="about_report_copied">Отчёт скопирован</string>
+    <string name="about_releases">Страница Releases</string>
+    <string name="backup_title">Резервная копия</string>
+    <string name="backup_text">Сохраняет ваши консоли, домашнюю страницу, закладки, список рекламы и пейлоады в одном файле. Пароли FTP не сохраняются.</string>
+    <string name="backup_save">Сохранить копию</string>
+    <string name="backup_restore">Восстановить из копии</string>
+    <string name="backup_saved">Резервная копия сохранена.</string>
+    <string name="backup_contents">Консоли: %1$d · Закладки: %2$d · Пейлоады: %3$d</string>
+    <string name="backup_made">Создана %1$s</string>
+    <string name="backup_skipped">Пейлоады, пропущенные из-за слишком большого размера файла: %1$d</string>
+    <string name="backup_bad_file">Этот файл не является резервной копией Bento.</string>
+    <string name="backup_too_new">Эта копия создана более новой версией Bento. Обновите приложение и повторите попытку.</string>
+    <string name="restore_title">Восстановить из этой копии?</string>
+    <string name="restore_text">Ваши консоли, домашняя страница, закладки и список рекламы будут заменены данными из файла. Пейлоады из файла добавятся в библиотеку пейлоадов. Пароли FTP придётся ввести заново.</string>
+    <string name="restore_button">Восстановить</string>
+    <string name="restore_done">Данные восстановлены.</string>
+    <string name="restore_payloads_failed">Пейлоады, которые не удалось сохранить: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">Ссылки на пакеты (по одной в строке)</string>
+    <string name="install_paste">Вставить</string>
+    <string name="action_clear">Очистить</string>
+    <string name="install_paste_none">В буфере обмена нет веб-ссылки.</string>
+    <string name="install_links_skipped">Отправляются только адреса, начинающиеся с http:// или https://. Пропущено: %1$d</string>
+    <string name="install_recent">Недавние ссылки</string>
+    <string name="install_recent_clear">Очистить список</string>
+    <string name="install_sending_n">Отправка ссылки %1$d из %2$d…</string>
+    <string name="install_batch_done">Принято: %1$d из %2$d ссылок</string>
+    <string name="install_batch_notsent">Не отправлено: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">Цепочки</string>
+    <string name="chains_hint">Цепочка отправляет несколько пейлоадов один за другим, с паузой после каждого. Нажмите и удерживайте значок приложения, чтобы запустить с главного экрана одну из первых четырёх цепочек.</string>
+    <string name="chain_new">Новая цепочка</string>
+    <string name="action_edit">Изменить</string>
+    <string name="chain_summary_steps">Пейлоады: %1$d</string>
+    <string name="chain_summary_pauses">Паузы: %1$s</string>
+    <string name="chain_edit_title">Изменение цепочки</string>
+    <string name="chain_steps_title">Пейлоады по порядку (не более %1$d)</string>
+    <string name="chain_add_step">Добавить пейлоад</string>
+    <string name="chain_pick_title">Какой пейлоад добавить?</string>
+    <string name="chain_wait_label">Затем ждать (секунды)</string>
+    <string name="chain_missing">Нет в библиотеке</string>
+    <string name="chain_move_up">Переместить вверх</string>
+    <string name="chain_move_down">Переместить вниз</string>
+    <string name="chain_pin">Добавить на главный экран</string>
+    <string name="chain_pin_unsupported">Этот лаунчер не может добавлять ярлыки. Нажмите и удерживайте значок приложения, чтобы найти там свои цепочки.</string>
+    <string name="chain_sending">Отправка: %1$s (%2$d из %3$d)…</string>
+    <string name="chain_waiting">Следующий пейлоад через %1$s</string>
+    <string name="chain_retrying">Ожидание готовности консоли…</string>
+    <string name="chain_result_done">Готово. Отправлено пейлоадов: %1$d из %2$d</string>
+    <string name="chain_result_stopped">Остановлено. Отправлено пейлоадов: %1$d из %2$d</string>
+    <string name="chain_result_failed">Остановлено на шаге %1$d (%2$s). Отправлено пейлоадов: %3$d из %4$d</string>
+    <string name="chain_err_target">Сначала укажите IP-адрес консоли и порт загрузчика.</string>
+    <string name="chain_err_missing">Больше нет в библиотеке: %1$s. Добавьте его снова или измените цепочку.</string>
+    <string name="chain_err_unknown">Такой цепочки больше нет.</string>
+    <string name="notif_channel_chain">Цепочки пейлоадов</string>
+    <string name="backup_chains">Цепочки: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">Не завершено в прошлый раз: %1$d</string>
+    <string name="unfinished_hint">Приложение закрылось, не закончив эти передачи. «Продолжить» запускает каждую заново, с самого начала.</string>
+    <string name="unfinished_continue">Продолжить</string>
+    <string name="unfinished_discard">Отбросить</string>
+    <string name="unfinished_missing">Файлы больше не найдены, выберите их снова: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">Пауза</string>
+    <string name="transfer_resume">Продолжить</string>
+    <string name="transfer_paused">На паузе</string>
+    <string name="speed_limit_title">Ограничение скорости</string>
+    <string name="speed_limit_off">Без ограничений</string>
+    <string name="speed_limit_value">Ограничение: %1$s</string>
+    <string name="speed_limit_hint">Замедляет передачу, чтобы сеть Wi-Fi оставалась свободной для другого. Изменение вступает в силу сразу.</string>
+    <string name="summary_title">Завершено передач: %1$d из %2$d</string>
+    <string name="summary_detail">%1$s за %2$s</string>
+    <string name="summary_failed">С ошибкой: %1$d</string>
+    <string name="summary_stopped">Остановлено: %1$d</string>
+    <string name="notif_channel_results">Результаты передачи</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">Выбрано: %1$d</string>
+    <string name="files_select_all">Выбрать все</string>
+    <string name="files_select_none">Снять выбор</string>
+    <string name="files_delete_many_title">Удалить выбранные элементы (%1$d)?</string>
+    <string name="files_delete_many_text">Выбранные файлы и папки будут удалены с консоли, папки — вместе со всем содержимым. Это нельзя отменить.</string>
+    <string name="files_deleted_many">Удалено элементов: %1$d</string>
+    <string name="files_delete_partial">Удалено элементов: %1$d, не удалено: %2$d. Первая проблема: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">Просмотр папок…</string>
+    <string name="files_dl_confirm_title">Скачать на телефон?</string>
+    <string name="files_dl_confirm_text">Файлов: %1$d, всего %2$s. Они сохраняются в Downloads/PS5, в тех же папках, что и на консоли.</string>
+    <string name="files_dl_links">Ссылки внутри папок не скачиваются: %1$d.</string>
+    <string name="files_dl_truncated">Включено файлов: %1$d. В папках их больше, или они лежат глубже, чем приложение заходит.</string>
+    <string name="files_dl_none">В выбранном нет файлов для скачивания.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">Сортировка</string>
+    <string name="files_sort_title">Сортировать по</string>
+    <string name="files_sort_name">Имени</string>
+    <string name="files_sort_size">Размеру, сначала большие</string>
+    <string name="files_sort_newest">Дате, сначала новые</string>
+    <string name="files_search">Поиск</string>
+    <string name="files_search_hint">Поиск в этой папке</string>
+    <string name="files_no_match">В этой папке ничего не соответствует поиску.</string>
+    <string name="files_pin">Закрепить эту папку</string>
+    <string name="files_unpin">Открепить эту папку</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">Вкладки: %1$d</string>
+    <string name="web_tabs_title">Вкладки</string>
+    <string name="web_tab_new">Новая вкладка</string>
+    <string name="web_tabs_full">Слишком много вкладок. Максимум: %1$d. Сначала закройте одну.</string>
+    <string name="web_find">Найти</string>
+    <string name="web_find_hint">Найти на странице</string>
+    <string name="web_find_none">Совпадений нет</string>
+    <string name="web_desktop">Версия для ПК</string>
+    <string name="web_link_new_tab">Открыть в новой вкладке</string>
+    <string name="web_link_copy">Копировать ссылку</string>
+    <string name="web_link_copied">Ссылка скопирована</string>
+    <string name="web_link_use">Отправить или скачать…</string>
+</resources>

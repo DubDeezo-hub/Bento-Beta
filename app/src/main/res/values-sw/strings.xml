@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Swahili. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">Ghairi</string>
+    <string name="action_close">Funga</string>
+    <string name="action_done">Maliza</string>
+    <string name="action_delete">Futa</string>
+    <string name="action_rename">Badilisha jina</string>
+    <string name="action_save">Hifadhi</string>
+    <string name="action_remove">Ondoa</string>
+    <string name="action_send">Tuma</string>
+    <string name="action_open">Fungua</string>
+    <string name="action_block">Zuia</string>
+    <string name="action_home">Mwanzo</string>
+    <string name="action_dismiss">Ficha</string>
+    <string name="action_try_again">Jaribu tena</string>
+    <string name="action_skip">Ruka</string>
+    <string name="action_cancel_all">Ghairi zote</string>
+    <string name="action_create">Unda</string>
+    <string name="action_set">Weka</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">na %1$s</string>
+    <string name="nav_install">Sakinisha</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">Pakia</string>
+    <string name="nav_files">Faili</string>
+    <string name="nav_web">Wavuti</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Installer</string>
+    <string name="service_loader">Loader</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">Weka anwani ya IP ya PS5 yako</string>
+    <string name="status_checking">Inakagua…</string>
+    <string name="status_ready">Tayari</string>
+    <string name="status_partly">Tayari kwa kiasi</string>
+    <string name="status_partly_off">Tayari kwa kiasi · haijibu: %1$s</string>
+    <string name="status_offline">Haiwezi kufikia konsoli</string>
+    <string name="status_hint_unset">Ipate kwenye PS5 katika Settings &gt; Network &gt; Connection Status &gt; View Connection Status. Gusa hapa kuiingiza.</string>
+    <string name="status_hint_offline">Hakuna kinachojibu kwenye anwani hii. Angalia IP, kama konsoli imewashwa na iko kwenye Wi-Fi ileile, na kama etaHEN inafanya kazi.</string>
+    <string name="status_hint_one">Haijibu: %1$s. Iwashe kwenye konsoli au angalia mlango wake.</string>
+    <string name="status_hint_many">Hazijibu: %1$s. Ziwashe kwenye konsoli au angalia milango yake.</string>
+    <string name="console_switch">Badilisha konsoli</string>
+    <string name="console_change_ip">Badilisha anwani ya IP</string>
+    <string name="console_ip_title">Anwani ya IP ya konsoli</string>
+    <string name="console_ip_label">Anwani ya IP</string>
+    <string name="console_ip_help">Ipate kwenye PS5 katika Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">Uhamishaji</string>
+    <string name="transfer_sending">Inatuma</string>
+    <string name="transfer_sending_to">Inatuma kwa %1$s</string>
+    <string name="transfer_receiving">Inapokea</string>
+    <string name="transfer_receiving_from">Inapokea kutoka %1$s</string>
+    <string name="transfer_detail_total">%1$s · %2$s kati ya %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">Inaanza…</string>
+    <string name="transfer_stopped">Imesimamishwa</string>
+    <string name="transfer_start_failed">Imeshindwa kuanza uhamishaji: %1$s</string>
+    <string name="transfer_retry_in">Muunganisho umekatika. Itajaribu tena baada ya sekunde %1$d…</string>
+    <string name="transfer_reconnecting">Inaunganisha tena…</string>
+    <string name="transfer_eta">Muda uliobaki: %1$s</string>
+    <string name="transfer_queued">Zinazosubiri: %1$d</string>
+    <string name="queue_title">Uhamishaji unaosubiri</string>
+    <string name="queue_clear">Ondoa zote</string>
+    <string name="queue_empty">Hakuna kinachosubiri.</string>
+    <string name="notif_channel">Uhamishaji wa PS5</string>
+    <string name="notif_sent">Imetumwa: %1$s</string>
+    <string name="notif_received">Imepokelewa: %1$s</string>
+    <string name="percent_value">%1$d%%</string>
+    <string name="desc_done">Imekamilika</string>
+    <string name="desc_problem">Tatizo</string>
+    <string name="status_hide">Ficha ujumbe huu</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">Imeongezwa kwenye foleni. Zinazosubiri: %1$d.</string>
+    <string name="msg_set_ip_first">Weka kwanza anwani ya IP ya konsoli. Gusa kadi iliyo juu.</string>
+    <string name="msg_sending_link">Inatuma kiungo kwa PS5…</string>
+    <string name="msg_check_ip_ftp">Angalia anwani ya IP ya konsoli na mlango wa FTP.</string>
+    <string name="msg_adding_to_shelf_link">Inaongeza kwenye maktaba ya payload…</string>
+    <string name="status_idle">Hakuna shughuli</string>
+    <string name="status_sending">Inatuma…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">Kuondoka kwenye tovuti hii?</string>
+    <string name="offsite_text">Ukurasa unataka kufungua %1$s. Matangazo mara nyingi husababisha hili unapogusa kiungo, kwa hiyo endelea tu kama ulilitarajia.</string>
+    <string name="choose_install">Tuma kiungo kwa Installer ya PS5</string>
+    <string name="choose_ftp">Pakia kwenye PS5 (FTP)</string>
+    <string name="choose_shelf">Hifadhi kwenye maktaba ya payload</string>
+    <string name="choose_phone">Hifadhi kwenye simu</string>
+    <string name="choose_help">Installer inahitaji kiungo cha moja kwa moja cha kifurushi ambacho konsoli inaweza kufungua bila kuingia kwenye akaunti. FTP inafanya kazi na faili yoyote na inahifadhi kipindi chako cha kuingia. Simu inapitisha data chinichini, na maendeleo yanaonyeshwa juu ya upau wa chini na kwenye arifa. Maktaba ya payload inahifadhi payload ndogo (hadi %1$s) ndani ya programu kwa ajili ya kichupo cha Payload.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Mlango wa Installer (etaHEN: 12800)</string>
+    <string name="install_accepted">Installer imekubali: %1$s</string>
+    <string name="install_not_accepted">Haikukubaliwa (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">Sakinisha kutoka kwenye simu hii</string>
+    <string name="serve_intro">Konsoli hupakua vifurushi moja kwa moja kutoka kwenye simu hii kupitia Wi-Fi, kwa hivyo hakuna haja ya kunakili chochote kwanza. Simu na konsoli lazima ziwe kwenye mtandao mmoja.</string>
+    <string name="serve_choose">Chagua vifurushi</string>
+    <string name="serve_none">Hakuna vifurushi vilivyochaguliwa</string>
+    <string name="serve_start">Anza kushiriki</string>
+    <string name="serve_stop">Acha kushiriki</string>
+    <string name="serve_copy">Nakili kiungo</string>
+    <string name="serve_copied">Kiungo kimenakiliwa</string>
+    <string name="serve_file_waiting">Inasubiri konsoli ianze kupakua…</string>
+    <string name="serve_file_pulling">Konsoli inapakua: %1$s</string>
+    <string name="serve_file_done">Konsoli imepakua vyote</string>
+    <string name="serve_unreadable">Faili hili haliwezi kusomwa</string>
+    <string name="serve_hint">Konsoli isipoanza kupakua kamwe, huenda Wi-Fi inazuia vifaa kufikiana (mitandao ya wageni mara nyingi hufanya hivyo). Tumia mtandao mkuu, na uache programu hii iendelee kufanya kazi chinichini.</string>
+    <string name="serve_no_wifi">Anwani ya Wi-Fi ya simu hii haijapatikana. Iunganishe kwenye Wi-Fi ileile ya konsoli.</string>
+    <string name="serve_failed">Imeshindwa kuanza kushiriki: %1$s</string>
+    <string name="serve_idle_stop">Kushiriki kumesimama kwa sababu hakuna kilichopakuliwa kwa muda mrefu.</string>
+    <string name="serve_notif_title">Kushiriki na %1$s</string>
+    <string name="serve_notif_text">Faili zilizopakuliwa: %1$d / %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">Chagua faili</string>
+    <string name="upload_none">Hakuna faili zilizochaguliwa</string>
+    <string name="upload_files_chosen">Faili zilizochaguliwa: %1$d</string>
+    <string name="upload_start">Pakia chinichini</string>
+    <string name="upload_help">Maendeleo yanaonyeshwa juu ya upau wa chini na kwenye arifa. Yanaendelea hata ukiondoka kwenye programu.</string>
+    <string name="ftp_port">Mlango wa FTP</string>
+    <string name="ftp_user">Jina la mtumiaji</string>
+    <string name="ftp_password">Nenosiri</string>
+    <string name="ftp_folder">Folda ya mbali</string>
+    <string name="ftp_use_folder">Tumia %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">Inapakia…</string>
+    <string name="files_empty">Folda hii haina kitu.</string>
+    <string name="files_not_loaded">Haijapakiwa bado</string>
+    <string name="files_up">⬆ Juu</string>
+    <string name="files_refresh">Onyesha upya</string>
+    <string name="files_new_folder">Folda mpya</string>
+    <string name="files_upload_here">Pakia hapa</string>
+    <string name="files_ftp_settings">Mipangilio ya FTP</string>
+    <string name="files_need_ip">Weka anwani ya IP ya konsoli (gusa kadi iliyo juu) na mlango halali wa FTP ili uvinjari faili zake.</string>
+    <string name="files_kind_folder">Folda</string>
+    <string name="files_kind_link">Kiungo, %1$s</string>
+    <string name="files_download">Pakua kwenye simu</string>
+    <string name="files_new_name">Jina jipya</string>
+    <string name="files_name_used">Jina hilo tayari linatumika hapa.</string>
+    <string name="files_renaming">Inabadilisha jina…</string>
+    <string name="files_renamed">%1$s imepewa jina jipya %2$s</string>
+    <string name="files_delete_title">Futa %1$s?</string>
+    <string name="files_delete_folder">Hii itafuta folda na kila kitu kilicho ndani yake kutoka kwenye konsoli. Haiwezi kutenduliwa.</string>
+    <string name="files_delete_file">Hii itafuta faili kutoka kwenye konsoli. Haiwezi kutenduliwa.</string>
+    <string name="files_deleting">Inafuta…</string>
+    <string name="files_deleted">Imefutwa: %1$s</string>
+    <string name="files_deleted_inside">Imefutwa: %1$s (vitu vilivyomo: %2$d)</string>
+    <string name="files_creating">Inaunda folda…</string>
+    <string name="files_created">Folda %1$s imeundwa</string>
+    <string name="files_folder_name">Jina la folda</string>
+    <string name="name_empty">Jina haliwezi kuwa tupu.</string>
+    <string name="name_not_allowed">Jina hilo haliruhusiwi.</string>
+    <string name="name_slash">Jina haliwezi kuwa na mkwaju.</string>
+    <string name="name_control">Jina lina herufi zisizoruhusiwa.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">Imeshindwa: %1$s</string>
+    <string name="ftp_port_hint">Haiwezi kufikia seva ya FTP. Angalia IP ya konsoli na mlango wa FTP (FTP iliyojengewa ndani ya etaHEN hutumia 1337, payload ya FTP hutumia 2121).</string>
+    <string name="err_login">Kuingia kwenye FTP kumeshindwa</string>
+    <string name="err_cant_open">imeshindwa kufungua %1$s (%2$s)</string>
+    <string name="err_rename">kubadilisha jina kumeshindwa (%1$s)</string>
+    <string name="err_mkdir">imeshindwa kuunda folda (%1$s)</string>
+    <string name="err_too_deep">folda zimeingiliana kwa kina kupita kiasi</string>
+    <string name="err_delete_path">imeshindwa kufuta %1$s (%2$s)</string>
+    <string name="err_upload">Kupakia kwa FTP kumeshindwa: %1$s</string>
+    <string name="err_download">Kupakua kwa FTP kumeshindwa: %1$s</string>
+    <string name="err_open_file">Imeshindwa kufungua faili</string>
+    <string name="err_cancelled_upload">Imeghairiwa. Faili isiyokamilika inaweza kubaki katika %1$s</string>
+    <string name="err_cancelled_download">Imeghairiwa. Upakuaji usiokamilika umetupwa.</string>
+    <string name="err_gave_up">Imeachwa baada ya muunganisho kuendelea kushindwa. Hitilafu ya mwisho: %1$s</string>
+    <string name="err_short_upload">Kati ya %2$s zilizotumwa, konsoli ilihifadhi %1$s pekee.</string>
+    <string name="err_short_download">Ni %1$s pekee kati ya %2$s zilizofika.</string>
+    <string name="err_empty_file">Faili ni tupu</string>
+    <string name="err_save">Imeshindwa kuhifadhi %1$s</string>
+    <string name="sent_to_ps5">Imetumwa kwa PS5: %1$s</string>
+    <string name="saved_to_downloads">Imehifadhiwa katika Downloads/PS5: %1$s</string>
+    <string name="dl_http_failed">Upakuaji umeshindwa: HTTP %1$s</string>
+    <string name="dl_empty">Upakuaji umeshindwa: jibu tupu</string>
+    <string name="dl_cut_short">Muunganisho ulifungwa kabla faili lote halijafika.</string>
+    <string name="dl_create_failed">Imeshindwa kuunda faili katika Downloads</string>
+    <string name="dl_write_failed">Imeshindwa kufungua faili mpya kwa ajili ya kuandika</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">Imetumwa: %1$s</string>
+    <string name="shelf_added">Imeongezwa kwenye maktaba: %1$s (%2$s)</string>
+    <string name="shelf_updated">Imesasishwa kwenye maktaba: %1$s (%2$s)</string>
+    <string name="shelf_too_large">Faili hiyo ni kubwa kuliko %1$s, kwa hiyo haikuongezwa kwenye maktaba.</string>
+    <string name="shelf_too_large_url">Faili hiyo ina ukubwa wa %1$s. Maktaba inakubali payload hadi %2$s.</string>
+    <string name="payload_adding">Inaongeza kwenye maktaba…</string>
+    <string name="payload_remove_title">Ondoa %1$s?</string>
+    <string name="payload_remove_text">Itafutwa kwenye maktaba. Faili asili kwenye simu yako haitaguswa.</string>
+    <string name="payload_loader_port">Mlango wa Loader</string>
+    <string name="payload_shelf_title">Maktaba ya payload</string>
+    <string name="payload_shelf_empty">Hakuna kilichohifadhiwa bado. Ongeza payload unazotumia mara kwa mara (seva ya FTP, etaHEN, ...) na utume kila moja kwa mguso mmoja. Unaweza pia kuzihifadhi moja kwa moja kutoka kichupo cha Wavuti unapozipakua.</string>
+    <string name="payload_sending">Inatuma %1$s…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">Ongeza payload kwenye maktaba</string>
+    <string name="payload_once_title">Tuma faili mara moja</string>
+    <string name="payload_choose">Chagua payload (.elf / .bin)</string>
+    <string name="payload_send">Tuma payload</string>
+
+    <!-- consoles -->
+    <string name="profile_default">PS5 yangu</string>
+    <string name="profile_new">Konsoli %1$d</string>
+    <string name="profile_fallback">Konsoli</string>
+    <string name="consoles_title">Konsoli</string>
+    <string name="console_rename_title">Badilisha jina la konsoli</string>
+    <string name="console_name_label">Jina</string>
+    <string name="console_delete_title">Futa %1$s?</string>
+    <string name="console_delete_text">Anwani ya IP na milango iliyohifadhiwa ya konsoli hii vitaondolewa. Konsoli zako nyingine hazitaathiriwa.</string>
+    <string name="console_no_ip">bado haina anwani ya IP</string>
+    <string name="console_color_of">Rangi ya %1$s</string>
+    <string name="console_use_color">Tumia %1$s</string>
+    <string name="console_add">Ongeza konsoli</string>
+    <string name="language_button">Lugha</string>
+    <string name="color_blue">Buluu</string>
+    <string name="color_orange">Chungwa</string>
+    <string name="color_green">Kijani</string>
+    <string name="color_pink">Waridi</string>
+    <string name="color_purple">Zambarau</string>
+    <string name="color_teal">Kijani-buluu</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">Upakuaji umeanza (angalia Downloads)</string>
+    <string name="web_load_failed">Imeshindwa kupakia ukurasa: %1$s</string>
+    <string name="web_http_server">Tovuti ina shughuli nyingi au haipatikani kwa sasa (hitilafu %1$s). Jaribu tena baadaye kidogo.</string>
+    <string name="web_http_other">Tovuti ilijibu kwa hitilafu %1$s.</string>
+    <string name="web_open_first">Fungua ukurasa kwanza</string>
+    <string name="web_bookmark_saved">Alamisho imehifadhiwa</string>
+    <string name="web_bookmark_exists">Tayari iko kwenye alamisho zako</string>
+    <string name="web_home_set">Ukurasa wa mwanzo umewekwa kuwa %1$s</string>
+    <string name="web_reload">Pakia upya</string>
+    <string name="web_add">★ Ongeza</string>
+    <string name="web_bookmarks">Alamisho</string>
+    <string name="web_homepage_label">URL ya ukurasa wa mwanzo</string>
+    <string name="web_bookmarks_empty">Hakuna alamisho bado. Fungua ukurasa kisha uguse %1$s.</string>
+    <string name="web_bookmarks_help">Gusa alamisho ili kuifungua. “%1$s” huifanya kuwa ukurasa wako wa mwanzo.</string>
+    <string name="adblock_title">Kizuia matangazo</string>
+    <string name="adblock_switch">Zuia vikoa vya matangazo</string>
+    <string name="adblock_info">Vilivyozuiwa hadi sasa: %1$d. Mitandao iliyo kwenye orodha iliyojengewa ndani: %2$d. Pakia ukurasa upya baada ya kubadilisha chochote.</string>
+    <string name="adblock_own">Vikoa vyako mwenyewe, kimoja kwa kila mstari</string>
+    <string name="adblock_on">Kizuia matangazo: kimewashwa · vilivyozuiwa: %1$d · gusa kubadilisha</string>
+    <string name="adblock_off">Kizuia matangazo: kimezimwa · vilivyozuiwa: %1$d · gusa kubadilisha</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">Naweza kufanya nini?</string>
+    <string name="help_what">Kilichotokea</string>
+    <string name="help_try">Cha kujaribu</string>
+    <string name="help_details">Maelezo</string>
+    <string name="help_copy">Nakili maelezo</string>
+    <string name="help_copied">Imenakiliwa</string>
+    <string name="help_unreachable_title">Haiwezekani kufikia konsoli</string>
+    <string name="help_unreachable_what">Hakuna kinachojibu kwenye anwani ya konsoli.</string>
+    <string name="help_unreachable_try">• Angalia anwani ya IP kwenye PS5 (Settings &gt; Network &gt; Connection Status). Inaweza kubadilika baada ya kuwasha upya.\n• Amsha konsoli kikamilifu. Hali ya kupumzika mara nyingi huzima mtandao.\n• Tumia Wi-Fi ile ile kwenye vyote viwili. Mitandao ya wageni na VPN huizuia.</string>
+    <string name="help_port_title">Huduma hiyo haifanyi kazi</string>
+    <string name="help_port_what">Konsoli ilijibu, lakini hakuna kinachosikiliza kwenye mlango huo.</string>
+    <string name="help_port_try">• Anzisha etaHEN kwenye konsoli. Inatoa Installer (12800), Loader (9021) na FTP (1337).\n• Payload tofauti ya FTP kwa kawaida hutumia 2121. Weka mlango ule ule hapa.\n• Kwenye kadi ya konsoli, taa iliyozimwa inaonyesha kinachokosekana.</string>
+    <string name="help_login_title">Kuingia kwa FTP kumekataliwa</string>
+    <string name="help_login_what">Seva ya FTP ya konsoli ilikataa jina la mtumiaji au nenosiri.</string>
+    <string name="help_login_try">• etaHEN hukubali jina la mtumiaji anonymous na nenosiri lolote.\n• Ikiwa uliweka kuingia kwenye konsoli, liweke chini ya Pakia.\n• Nenosiri halihifadhiwi. Liweke tena baada ya kuwasha upya programu.</string>
+    <string name="help_dropped_title">Muunganisho umekatika</string>
+    <string name="help_dropped_what">Kiungo cha konsoli kimekatika au data imeacha kusonga. Programu hujaribu tena na kuendelea pale ilipoishia.</string>
+    <string name="help_dropped_try">• Weka simu karibu na kipanga njia na konsoli iwe macho.\n• Sitisha vipakuliwa vingine vikubwa kwenye mtandao.\n• Ikiendelea kushindwa, subiri kidogo kisha gusa Jaribu tena.</string>
+    <string name="help_refused_title">Installer haikukubali kiungo</string>
+    <string name="help_refused_what">Konsoli inafikika, lakini Installer yake ilikataa kiungo hiki.</string>
+    <string name="help_refused_try">• Kiungo lazima kielekeze moja kwa moja kwenye faili ya kifurushi na kifunguke bila kuingia.\n• Konsoli lazima iweze kukifikia. Viungo kutoka kwa simu hii hufanya kazi kwenye Wi-Fi ile ile pekee.\n• Hakikisha Installer inaendeshwa na konsoli ina nafasi wazi.</string>
+    <string name="help_storage_title">Konsoli iliacha kuhifadhi</string>
+    <string name="help_storage_what">Konsoli ilihifadhi kidogo kuliko kilichotumwa. Diski kwa kawaida imejaa au ni ya kusomwa pekee.</string>
+    <string name="help_storage_try">• Futa nafasi kwenye konsoli.\n• Chagua folda nyingine, kwa mfano kwenye diski ya USB.\n• Kisha gusa Jaribu tena.</string>
+    <string name="help_denied_title">Folda au faili hiyo ilikataliwa</string>
+    <string name="help_denied_what">Seva ya FTP haiwezi kuifungua, kuiandikia au kuibadilisha hapa.</string>
+    <string name="help_denied_try">• Hakikisha folda ipo. Majina hutofautisha herufi kubwa na ndogo.\n• Folda za mfumo ni za kusomwa pekee. Tumia /data au diski ya USB.\n• Faili inayotumiwa na mchezo unaoendesha inaweza kuwa imefungwa. Funga mchezo.</string>
+    <string name="help_phone_title">Simu haiwezi kutumia faili</string>
+    <string name="help_phone_what">Faili imetoweka au imehamishwa, programu imepoteza ufikiaji wake, au simu imeishiwa nafasi.</string>
+    <string name="help_phone_try">• Chagua faili tena.\n• Futa hifadhi kwenye simu.\n• Kwa faili iliyo kwenye programu ya wingu, ihifadhi kwanza kwenye simu.</string>
+    <string name="help_link_title">Kiungo cha kupakua kimeshindwa</string>
+    <string name="help_link_what">Tovuti haikutoa faili. Kiungo kinaweza kuwa kimeisha muda, kuhitaji kuingia, au tovuti ina shughuli nyingi.</string>
+    <string name="help_link_try">• Anza tena upakuaji kutoka kichupo cha Wavuti. Hilo huhifadhi kuingia kwako.\n• Viungo kutoka tovuti za kuhifadhi faili mara nyingi huisha muda baada ya dakika chache.\n• Ikiwa tovuti iliripoti hitilafu ya mfululizo wa 500, jaribu tena baadaye.</string>
+
+    <!-- update check -->
+    <string name="update_available">Toleo la %1$s linapatikana</string>
+    <string name="update_download">Pakua</string>
+    <string name="update_later">Baadaye</string>
+    <string name="update_title">Masasisho</string>
+    <string name="update_current">Una toleo jipya zaidi (%1$s).</string>
+    <string name="update_none">Hakuna toleo lililopatikana bado kwenye ukurasa wa Releases.</string>
+    <string name="update_check_now">Angalia sasa</string>
+    <string name="update_auto">Angalia masasisho programu inapofunguliwa</string>
+    <string name="update_privacy">Ukaguzi huuliza GitHub kuhusu toleo jipya zaidi, mara moja kwa siku kwa kiwango cha juu. Hakuna kinachotumwa kukuhusu wewe au konsoli zako; GitHub huona anwani yako ya IP, kama tovuti yoyote.</string>
+
+    <!-- find my console -->
+    <string name="find_button">Tafuta PS5 yangu</string>
+    <string name="find_scanning">Inatafuta konsoli yako kwenye mtandao %1$s…</string>
+    <string name="find_again">Changanua tena</string>
+    <string name="find_none">Hakuna konsoli iliyopatikana.</string>
+    <string name="find_none_try">• Washa konsoli kikamilifu (si hali ya kupumzika) na uanzishe etaHEN.\n• Tumia Wi-Fi ileile kwenye simu na kwenye konsoli. Mitandao ya wageni na VPN hutenganisha vifaa.\n• Kisha changanua tena.</string>
+    <string name="find_no_wifi">Simu hii haiko kwenye mtandao wa Wi-Fi. Iunganishe kwenye Wi-Fi ileile ya konsoli, kisha changanua tena.</string>
+    <string name="find_pick">Gusa Tumia ili kuweka anwani ya konsoli “%1$s”.</string>
+    <string name="find_saved">Anwani iliyohifadhiwa</string>
+    <string name="find_used_by">Imehifadhiwa kwa ajili ya “%1$s”</string>
+    <string name="find_updated">Konsoli “%1$s” sasa inatumia %2$s.</string>
+    <string name="find_privacy">Ni mtandao wako wa Wi-Fi pekee unaochanganuliwa, kwenye milango michache ya konsoli. Hakuna kinachotumwa kupitia intaneti.</string>
+    <string name="action_stop">Simamisha</string>
+    <string name="action_use">Tumia</string>
+
+    <!-- about and backup -->
+    <string name="about_title">Kuhusu Bento</string>
+    <string name="about_version">Toleo %1$s</string>
+    <string name="about_button">Kuhusu na nakala rudufu</string>
+    <string name="about_report">Nakili ripoti</string>
+    <string name="about_report_help">Hunakili toleo la programu, modeli ya simu yako na ujumbe wa mwisho, ili ubandike kwenye ripoti ya hitilafu. Anwani za IP na viungo huachwa.</string>
+    <string name="about_report_copied">Ripoti imenakiliwa</string>
+    <string name="about_releases">Ukurasa wa Releases</string>
+    <string name="backup_title">Nakala rudufu</string>
+    <string name="backup_text">Huhifadhi konsoli zako, ukurasa wa mwanzo, alamisho, orodha ya matangazo na payload katika faili moja. Manenosiri ya FTP hayahifadhiwi.</string>
+    <string name="backup_save">Hifadhi nakala rudufu</string>
+    <string name="backup_restore">Rejesha nakala rudufu</string>
+    <string name="backup_saved">Nakala rudufu imehifadhiwa.</string>
+    <string name="backup_contents">Konsoli: %1$d · Alamisho: %2$d · Payload: %3$d</string>
+    <string name="backup_made">Imeundwa tarehe %1$s</string>
+    <string name="backup_skipped">Payload zilizoachwa kwa sababu faili ingekuwa kubwa mno: %1$d</string>
+    <string name="backup_bad_file">Faili hiyo si nakala rudufu ya Bento.</string>
+    <string name="backup_too_new">Nakala rudufu hiyo iliundwa na toleo jipya zaidi la Bento. Sasisha programu, kisha ujaribu tena.</string>
+    <string name="restore_title">Kurejesha nakala rudufu hii?</string>
+    <string name="restore_text">Konsoli zako, ukurasa wa mwanzo, alamisho na orodha ya matangazo vitabadilishwa na vilivyo kwenye faili. Payload zilizo kwenye faili zitaongezwa kwenye maktaba ya payload. Utahitaji kuandika tena manenosiri yako ya FTP.</string>
+    <string name="restore_button">Rejesha</string>
+    <string name="restore_done">Nakala rudufu imerejeshwa.</string>
+    <string name="restore_payloads_failed">Payload zisizoweza kuhifadhiwa: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">Viungo vya vifurushi (kimoja kwa kila mstari)</string>
+    <string name="install_paste">Bandika</string>
+    <string name="action_clear">Futa</string>
+    <string name="install_paste_none">Hakuna kiungo cha wavuti kwenye ubao wa kunakili.</string>
+    <string name="install_links_skipped">Anwani zinazoanza na http:// au https:// pekee ndizo hutumwa. Zilizoachwa: %1$d</string>
+    <string name="install_recent">Viungo vya hivi karibuni</string>
+    <string name="install_recent_clear">Futa orodha</string>
+    <string name="install_sending_n">Inatuma kiungo %1$d kati ya %2$d…</string>
+    <string name="install_batch_done">Vilivyokubaliwa: %1$d kati ya viungo %2$d</string>
+    <string name="install_batch_notsent">Visivyotumwa: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">Minyororo</string>
+    <string name="chains_hint">Mnyororo hutuma payload kadhaa moja baada ya nyingine, kukiwa na kituo baada ya kila moja. Bonyeza na ushikilie aikoni ya programu ili kuanzisha mmoja wa minyororo minne ya kwanza kutoka skrini ya kwanza.</string>
+    <string name="chain_new">Mnyororo mpya</string>
+    <string name="action_edit">Hariri</string>
+    <string name="chain_summary_steps">Payload: %1$d</string>
+    <string name="chain_summary_pauses">Vituo: %1$s</string>
+    <string name="chain_edit_title">Hariri mnyororo</string>
+    <string name="chain_steps_title">Payload, kwa mpangilio (zisizozidi %1$d)</string>
+    <string name="chain_add_step">Ongeza payload</string>
+    <string name="chain_pick_title">Ongeza payload ipi?</string>
+    <string name="chain_wait_label">Kisha subiri (sekunde)</string>
+    <string name="chain_missing">Haipo kwenye maktaba</string>
+    <string name="chain_move_up">Hamisha juu</string>
+    <string name="chain_move_down">Hamisha chini</string>
+    <string name="chain_pin">Ongeza kwenye skrini ya kwanza</string>
+    <string name="chain_pin_unsupported">Kizinduzi hiki hakiwezi kuongeza njia za mkato. Bonyeza na ushikilie aikoni ya programu ili kupata minyororo yako huko.</string>
+    <string name="chain_sending">Inatuma %1$s (%2$d kati ya %3$d)…</string>
+    <string name="chain_waiting">Payload inayofuata baada ya %1$s</string>
+    <string name="chain_retrying">Inasubiri konsoli iwe tayari…</string>
+    <string name="chain_result_done">Imekamilika. Payload zilizotumwa: %1$d kati ya %2$d</string>
+    <string name="chain_result_stopped">Imesimamishwa. Payload zilizotumwa: %1$d kati ya %2$d</string>
+    <string name="chain_result_failed">Imesimama kwenye hatua ya %1$d (%2$s). Payload zilizotumwa: %3$d kati ya %4$d</string>
+    <string name="chain_err_target">Weka kwanza anwani ya IP ya konsoli na mlango wa Loader.</string>
+    <string name="chain_err_missing">Haipo tena kwenye maktaba: %1$s. Iongeze tena au hariri mnyororo.</string>
+    <string name="chain_err_unknown">Mnyororo huo haupo tena.</string>
+    <string name="notif_channel_chain">Minyororo ya payload</string>
+    <string name="backup_chains">Minyororo: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">Havijakamilika mara ya mwisho: %1$d</string>
+    <string name="unfinished_hint">Programu ilifungwa kabla ya hivi kukamilika. “Endelea” huanza kila kimoja upya tangu mwanzo.</string>
+    <string name="unfinished_continue">Endelea</string>
+    <string name="unfinished_discard">Tupa</string>
+    <string name="unfinished_missing">Faili hazipatikani tena, zichague tena: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">Sitisha</string>
+    <string name="transfer_resume">Endelea</string>
+    <string name="transfer_paused">Imesitishwa</string>
+    <string name="speed_limit_title">Kikomo cha kasi</string>
+    <string name="speed_limit_off">Hakuna kikomo</string>
+    <string name="speed_limit_value">Kikomo: %1$s</string>
+    <string name="speed_limit_hint">Hupunguza kasi ya uhamishaji ili Wi-Fi ibaki huru kwa mambo mengine. Mabadiliko huanza kutumika mara moja.</string>
+    <string name="summary_title">Uhamishaji uliokamilika: %1$d kati ya %2$d</string>
+    <string name="summary_detail">%1$s ndani ya %2$s</string>
+    <string name="summary_failed">Uliofeli: %1$d</string>
+    <string name="summary_stopped">Uliosimamishwa: %1$d</string>
+    <string name="notif_channel_results">Matokeo ya uhamishaji</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">Vilivyochaguliwa: %1$d</string>
+    <string name="files_select_all">Chagua vyote</string>
+    <string name="files_select_none">Usichague chochote</string>
+    <string name="files_delete_many_title">Futa vipengee vilivyochaguliwa (%1$d)?</string>
+    <string name="files_delete_many_text">Hii itafuta kwenye konsoli faili na folda zilizochaguliwa, folda pamoja na kila kitu kilicho ndani yake. Haiwezi kutenduliwa.</string>
+    <string name="files_deleted_many">Vipengee vilivyofutwa: %1$d</string>
+    <string name="files_delete_partial">Vipengee vilivyofutwa: %1$d, ambavyo havikufutwa: %2$d. Tatizo la kwanza: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">Inapitia folda…</string>
+    <string name="files_dl_confirm_title">Pakua kwenye simu?</string>
+    <string name="files_dl_confirm_text">Faili: %1$d, jumla %2$s. Zinahifadhiwa katika Downloads/PS5, katika folda zile zile kama kwenye konsoli.</string>
+    <string name="files_dl_links">Viungo vilivyo ndani ya folda havipakuliwi: %1$d.</string>
+    <string name="files_dl_truncated">Faili zilizojumuishwa: %1$d. Folda zina zaidi ya hizo, au zinaenda ndani zaidi kuliko programu inavyofuata.</string>
+    <string name="files_dl_none">Hakuna faili ya kupakua kwenye uteuzi.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">Panga</string>
+    <string name="files_sort_title">Panga kwa</string>
+    <string name="files_sort_name">Jina</string>
+    <string name="files_sort_size">Ukubwa, kubwa zaidi kwanza</string>
+    <string name="files_sort_newest">Mpya zaidi kwanza</string>
+    <string name="files_search">Tafuta</string>
+    <string name="files_search_hint">Tafuta kwenye folda hii</string>
+    <string name="files_no_match">Hakuna kitu kwenye folda hii kinacholingana na utafutaji.</string>
+    <string name="files_pin">Bandika folda hii</string>
+    <string name="files_unpin">Ondoa folda hii kwenye vilivyobandikwa</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">Vichupo: %1$d</string>
+    <string name="web_tabs_title">Vichupo</string>
+    <string name="web_tab_new">Kichupo kipya</string>
+    <string name="web_tabs_full">Vichupo ni vingi mno. Kikomo ni %1$d. Funga kimoja kwanza.</string>
+    <string name="web_find">Tafuta</string>
+    <string name="web_find_hint">Tafuta kwenye ukurasa huu</string>
+    <string name="web_find_none">Hakuna zinazolingana</string>
+    <string name="web_desktop">Tovuti ya kompyuta</string>
+    <string name="web_link_new_tab">Fungua kwenye kichupo kipya</string>
+    <string name="web_link_copy">Nakili kiungo</string>
+    <string name="web_link_copied">Kiungo kimenakiliwa</string>
+    <string name="web_link_use">Tuma au pakua…</string>
+</resources>

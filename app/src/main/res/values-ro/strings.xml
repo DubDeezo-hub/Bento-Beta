@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Romanian. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">Anulează</string>
+    <string name="action_close">Închide</string>
+    <string name="action_done">Gata</string>
+    <string name="action_delete">Șterge</string>
+    <string name="action_rename">Redenumește</string>
+    <string name="action_save">Salvează</string>
+    <string name="action_remove">Elimină</string>
+    <string name="action_send">Trimite</string>
+    <string name="action_open">Deschide</string>
+    <string name="action_block">Blochează</string>
+    <string name="action_home">Pagina principală</string>
+    <string name="action_dismiss">Ascunde</string>
+    <string name="action_try_again">Încearcă din nou</string>
+    <string name="action_skip">Omite</string>
+    <string name="action_cancel_all">Anulează tot</string>
+    <string name="action_create">Creează</string>
+    <string name="action_set">Setează</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">de %1$s</string>
+    <string name="nav_install">Instalare</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">Încărcare</string>
+    <string name="nav_files">Fișiere</string>
+    <string name="nav_web">Web</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Installer</string>
+    <string name="service_loader">Loader</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">Setează adresa IP a consolei PS5</string>
+    <string name="status_checking">Se verifică…</string>
+    <string name="status_ready">Pregătit</string>
+    <string name="status_partly">Parțial pregătit</string>
+    <string name="status_partly_off">Parțial pregătit · fără răspuns: %1$s</string>
+    <string name="status_offline">Nu se poate contacta consola</string>
+    <string name="status_hint_unset">O găsești pe PS5 la Setări &gt; Rețea &gt; Stare conexiune &gt; Vizualizare stare conexiune. Atinge aici pentru a o introduce.</string>
+    <string name="status_hint_offline">Nimic nu răspunde la această adresă. Verifică adresa IP, dacă PS5 este pornită și în aceeași rețea Wi-Fi și dacă etaHEN rulează.</string>
+    <string name="status_hint_one">Fără răspuns: %1$s. Pornește serviciul pe consolă sau verifică portul acestuia.</string>
+    <string name="status_hint_many">Fără răspuns: %1$s. Pornește serviciile pe consolă sau verifică porturile lor.</string>
+    <string name="console_switch">Schimbă consola</string>
+    <string name="console_change_ip">Schimbă adresa IP</string>
+    <string name="console_ip_title">Adresa IP a consolei</string>
+    <string name="console_ip_label">Adresă IP</string>
+    <string name="console_ip_help">O găsești pe PS5 la Setări &gt; Rețea &gt; Stare conexiune &gt; Vizualizare stare conexiune.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">Transfer</string>
+    <string name="transfer_sending">Se trimite</string>
+    <string name="transfer_sending_to">Se trimite către %1$s</string>
+    <string name="transfer_receiving">Se primește</string>
+    <string name="transfer_receiving_from">Se primește de la %1$s</string>
+    <string name="transfer_detail_total">%1$s · %2$s din %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">Se pornește…</string>
+    <string name="transfer_stopped">Oprit</string>
+    <string name="transfer_start_failed">Transferul nu a putut porni: %1$s</string>
+    <string name="transfer_retry_in">Conexiune pierdută. Se reîncearcă în %1$d s…</string>
+    <string name="transfer_reconnecting">Se reconectează…</string>
+    <string name="transfer_eta">Rămas: %1$s</string>
+    <string name="transfer_queued">%1$d în așteptare</string>
+    <string name="queue_title">Transferuri în așteptare</string>
+    <string name="queue_clear">Elimină tot</string>
+    <string name="queue_empty">Nimic în așteptare.</string>
+    <string name="notif_channel">Transferuri PS5</string>
+    <string name="notif_sent">Trimis: %1$s</string>
+    <string name="notif_received">Primit: %1$s</string>
+    <string name="percent_value">%1$d %%</string>
+    <string name="desc_done">Gata</string>
+    <string name="desc_problem">Problemă</string>
+    <string name="status_hide">Ascunde acest mesaj</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">Adăugat în coadă. %1$d în așteptare.</string>
+    <string name="msg_set_ip_first">Setează mai întâi adresa IP a consolei. Atinge cardul din partea de sus.</string>
+    <string name="msg_sending_link">Se trimite linkul către PS5…</string>
+    <string name="msg_check_ip_ftp">Verifică adresa IP a consolei și portul FTP.</string>
+    <string name="msg_adding_to_shelf_link">Se adaugă în biblioteca de payload-uri…</string>
+    <string name="status_idle">Inactiv</string>
+    <string name="status_sending">Se trimite…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">Părăsești acest site?</string>
+    <string name="offsite_text">Pagina vrea să deschidă %1$s. Reclamele provoacă deseori acest lucru când atingi un link, așa că continuă doar dacă te așteptai la asta.</string>
+    <string name="choose_install">Trimite linkul către Installer-ul PS5</string>
+    <string name="choose_ftp">Încarcă pe PS5 (FTP)</string>
+    <string name="choose_shelf">Salvează în biblioteca de payload-uri</string>
+    <string name="choose_phone">Salvează pe telefon</string>
+    <string name="choose_help">Installer-ul are nevoie de un link direct către pachet, pe care consola îl poate deschide fără autentificare. FTP funcționează cu orice fișier și îți păstrează sesiunea de autentificare. Telefonul retransmite datele în fundal, iar progresul apare deasupra barei de jos și într-o notificare. Biblioteca de payload-uri păstrează în aplicație un payload mic (până la %1$s) pentru fila Payload.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Portul Installer-ului (etaHEN: 12800)</string>
+    <string name="install_accepted">Installer-ul l-a acceptat: %1$s</string>
+    <string name="install_not_accepted">Neacceptat (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">Instalează de pe acest telefon</string>
+    <string name="serve_intro">Consola descarcă pachetele direct de pe acest telefon prin Wi-Fi, așa că nu trebuie copiat nimic înainte. Telefonul și consola trebuie să fie în aceeași rețea.</string>
+    <string name="serve_choose">Alege pachetele</string>
+    <string name="serve_none">Niciun pachet ales</string>
+    <string name="serve_start">Pornește partajarea</string>
+    <string name="serve_stop">Oprește partajarea</string>
+    <string name="serve_copy">Copiază linkul</string>
+    <string name="serve_copied">Link copiat</string>
+    <string name="serve_file_waiting">Se așteaptă ca consola să înceapă descărcarea…</string>
+    <string name="serve_file_pulling">Consola descarcă: %1$s</string>
+    <string name="serve_file_done">Consola a descărcat tot</string>
+    <string name="serve_unreadable">Acest fișier nu poate fi citit</string>
+    <string name="serve_hint">Dacă consola nu începe niciodată descărcarea, este posibil ca rețeaua Wi-Fi să împiedice dispozitivele să se vadă între ele (rețelele pentru invitați fac adesea asta). Folosește rețeaua principală și lasă această aplicație să ruleze în fundal.</string>
+    <string name="serve_no_wifi">Nu se găsește adresa Wi-Fi a acestui telefon. Conectează-l la aceeași rețea Wi-Fi ca a consolei.</string>
+    <string name="serve_failed">Partajarea nu a putut porni: %1$s</string>
+    <string name="serve_idle_stop">Partajarea s-a oprit pentru că nu s-a descărcat nimic multă vreme.</string>
+    <string name="serve_notif_title">Se partajează cu %1$s</string>
+    <string name="serve_notif_text">Fișiere descărcate: %1$d / %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">Alege fișierele</string>
+    <string name="upload_none">Niciun fișier ales</string>
+    <string name="upload_files_chosen">Fișiere alese: %1$d</string>
+    <string name="upload_start">Încarcă în fundal</string>
+    <string name="upload_help">Progresul apare deasupra barei de jos și într-o notificare. Continuă chiar dacă părăsești aplicația.</string>
+    <string name="ftp_port">Port FTP</string>
+    <string name="ftp_user">Nume de utilizator</string>
+    <string name="ftp_password">Parolă</string>
+    <string name="ftp_folder">Folder la distanță</string>
+    <string name="ftp_use_folder">Folosește %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">Se încarcă…</string>
+    <string name="files_empty">Acest folder este gol.</string>
+    <string name="files_not_loaded">Încă neîncărcat</string>
+    <string name="files_up">⬆ Sus</string>
+    <string name="files_refresh">Reîmprospătează</string>
+    <string name="files_new_folder">Folder nou</string>
+    <string name="files_upload_here">Încarcă aici</string>
+    <string name="files_ftp_settings">Setări FTP</string>
+    <string name="files_need_ip">Setează adresa IP a consolei (atinge cardul din partea de sus) și un port FTP valid pentru a-i răsfoi fișierele.</string>
+    <string name="files_kind_folder">Folder</string>
+    <string name="files_kind_link">Link, %1$s</string>
+    <string name="files_download">Descarcă pe telefon</string>
+    <string name="files_new_name">Nume nou</string>
+    <string name="files_name_used">Acest nume este deja folosit aici.</string>
+    <string name="files_renaming">Se redenumește…</string>
+    <string name="files_renamed">%1$s a fost redenumit în %2$s</string>
+    <string name="files_delete_title">Ștergi %1$s?</string>
+    <string name="files_delete_folder">Aceasta șterge folderul și tot conținutul lui de pe consolă. Nu se poate anula.</string>
+    <string name="files_delete_file">Aceasta șterge fișierul de pe consolă. Nu se poate anula.</string>
+    <string name="files_deleting">Se șterge…</string>
+    <string name="files_deleted">%1$s a fost șters</string>
+    <string name="files_deleted_inside">%1$s a fost șters (elemente în interior: %2$d)</string>
+    <string name="files_creating">Se creează folderul…</string>
+    <string name="files_created">Folderul %1$s a fost creat</string>
+    <string name="files_folder_name">Numele folderului</string>
+    <string name="name_empty">Numele nu poate fi gol.</string>
+    <string name="name_not_allowed">Acest nume nu este permis.</string>
+    <string name="name_slash">Numele nu poate conține bare oblice.</string>
+    <string name="name_control">Numele conține caractere nepermise.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">Eșuat: %1$s</string>
+    <string name="ftp_port_hint">Serverul FTP nu poate fi contactat. Verifică adresa IP a consolei și portul FTP (FTP-ul încorporat al etaHEN folosește 1337, payload-ul FTP folosește 2121).</string>
+    <string name="err_login">Autentificarea FTP a eșuat</string>
+    <string name="err_cant_open">nu se poate deschide %1$s (%2$s)</string>
+    <string name="err_rename">redenumirea a eșuat (%1$s)</string>
+    <string name="err_mkdir">folderul nu a putut fi creat (%1$s)</string>
+    <string name="err_too_deep">folderul este imbricat prea adânc</string>
+    <string name="err_delete_path">%1$s nu a putut fi șters (%2$s)</string>
+    <string name="err_upload">Încărcarea prin FTP a eșuat: %1$s</string>
+    <string name="err_download">Descărcarea prin FTP a eșuat: %1$s</string>
+    <string name="err_open_file">Fișierul nu a putut fi deschis</string>
+    <string name="err_cancelled_upload">Anulat. Un fișier parțial poate rămâne la %1$s</string>
+    <string name="err_cancelled_download">Anulat. Descărcarea parțială a fost eliminată.</string>
+    <string name="err_gave_up">S-a renunțat, deoarece conexiunea a continuat să eșueze. Ultima eroare: %1$s</string>
+    <string name="err_short_upload">Din ce s-a trimis (%2$s), consola a păstrat doar %1$s.</string>
+    <string name="err_short_download">A ajuns doar %1$s din %2$s.</string>
+    <string name="err_empty_file">Fișierul este gol</string>
+    <string name="err_save">%1$s nu a putut fi salvat</string>
+    <string name="sent_to_ps5">Trimis pe PS5: %1$s</string>
+    <string name="saved_to_downloads">Salvat în Downloads/PS5: %1$s</string>
+    <string name="dl_http_failed">Descărcarea a eșuat: HTTP %1$s</string>
+    <string name="dl_empty">Descărcarea a eșuat: răspuns gol</string>
+    <string name="dl_cut_short">Conexiunea s-a închis înainte să ajungă tot fișierul.</string>
+    <string name="dl_create_failed">Fișierul nu a putut fi creat în Downloads</string>
+    <string name="dl_write_failed">Fișierul nou nu a putut fi deschis pentru scriere</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">%1$s a fost trimis</string>
+    <string name="shelf_added">Adăugat în bibliotecă: %1$s (%2$s)</string>
+    <string name="shelf_updated">Actualizat în bibliotecă: %1$s (%2$s)</string>
+    <string name="shelf_too_large">Fișierul este mai mare de %1$s, așa că nu a fost adăugat în bibliotecă.</string>
+    <string name="shelf_too_large_url">Fișierul are %1$s. Biblioteca acceptă payload-uri de până la %2$s.</string>
+    <string name="payload_adding">Se adaugă în bibliotecă…</string>
+    <string name="payload_remove_title">Elimini %1$s?</string>
+    <string name="payload_remove_text">Va fi șters din bibliotecă. Fișierul original de pe telefon nu este afectat.</string>
+    <string name="payload_loader_port">Portul Loader-ului</string>
+    <string name="payload_shelf_title">Bibliotecă de payload-uri</string>
+    <string name="payload_shelf_empty">Nimic salvat încă. Adaugă payload-urile pe care le folosești des (un server FTP, etaHEN, ...) și trimite-le pe fiecare cu o atingere. Poți salva unul și direct din fila Web, când îl descarci.</string>
+    <string name="payload_sending">Se trimite %1$s…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">Adaugă payload în bibliotecă</string>
+    <string name="payload_once_title">Trimite un fișier o singură dată</string>
+    <string name="payload_choose">Alege payload (.elf / .bin)</string>
+    <string name="payload_send">Trimite payload</string>
+
+    <!-- consoles -->
+    <string name="profile_default">PS5-ul meu</string>
+    <string name="profile_new">Consolă %1$d</string>
+    <string name="profile_fallback">Consolă</string>
+    <string name="consoles_title">Console</string>
+    <string name="console_rename_title">Redenumește consola</string>
+    <string name="console_name_label">Nume</string>
+    <string name="console_delete_title">Ștergi %1$s?</string>
+    <string name="console_delete_text">Adresa IP și porturile salvate sunt eliminate. Celelalte console nu sunt afectate.</string>
+    <string name="console_no_ip">încă fără adresă IP</string>
+    <string name="console_color_of">Culoarea pentru %1$s</string>
+    <string name="console_use_color">Folosește %1$s</string>
+    <string name="console_add">Adaugă consolă</string>
+    <string name="language_button">Limbă</string>
+    <string name="color_blue">Albastru</string>
+    <string name="color_orange">Portocaliu</string>
+    <string name="color_green">Verde</string>
+    <string name="color_pink">Roz</string>
+    <string name="color_purple">Mov</string>
+    <string name="color_teal">Turcoaz</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">Descărcarea a început (vezi Downloads)</string>
+    <string name="web_load_failed">Pagina nu a putut fi încărcată: %1$s</string>
+    <string name="web_http_server">Site-ul este ocupat sau indisponibil acum (eroare %1$s). Încearcă din nou peste puțin timp.</string>
+    <string name="web_http_other">Site-ul a răspuns cu eroarea %1$s.</string>
+    <string name="web_open_first">Deschide mai întâi o pagină</string>
+    <string name="web_bookmark_saved">Marcaj salvat</string>
+    <string name="web_bookmark_exists">Este deja în marcajele tale</string>
+    <string name="web_home_set">Pagina principală a fost setată la %1$s</string>
+    <string name="web_reload">Reîncarcă</string>
+    <string name="web_add">★ Adaugă</string>
+    <string name="web_bookmarks">Marcaje</string>
+    <string name="web_homepage_label">URL-ul paginii principale</string>
+    <string name="web_bookmarks_empty">Niciun marcaj încă. Deschide o pagină și atinge %1$s.</string>
+    <string name="web_bookmarks_help">Atinge un marcaj ca să-l deschizi. „%1$s” îl face pagina ta principală.</string>
+    <string name="adblock_title">Blocare reclame</string>
+    <string name="adblock_switch">Blochează domeniile de reclame</string>
+    <string name="adblock_info">Blocate până acum: %1$d. Rețele în lista încorporată: %2$d. Reîncarcă pagina după fiecare modificare.</string>
+    <string name="adblock_own">Propriile domenii, câte unul pe rând</string>
+    <string name="adblock_on">Blocare reclame: activă · blocate: %1$d · atinge pentru a schimba</string>
+    <string name="adblock_off">Blocare reclame: dezactivată · blocate: %1$d · atinge pentru a schimba</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">Ce pot face?</string>
+    <string name="help_what">Ce s-a întâmplat</string>
+    <string name="help_try">Ce poți încerca</string>
+    <string name="help_details">Detalii</string>
+    <string name="help_copy">Copiază detaliile</string>
+    <string name="help_copied">Copiat</string>
+    <string name="help_unreachable_title">Consola nu poate fi contactată</string>
+    <string name="help_unreachable_what">Nimic nu răspunde la adresa consolei.</string>
+    <string name="help_unreachable_try">• Verifică adresa IP pe PS5 (Setări &gt; Rețea &gt; Stare conexiune). Se poate schimba după o repornire.\n• Trezește complet consola. Modul de repaus oprește adesea rețeaua.\n• Folosește aceeași rețea Wi-Fi pe ambele. Rețelele pentru oaspeți și VPN-urile o blochează.</string>
+    <string name="help_port_title">Acel serviciu nu rulează</string>
+    <string name="help_port_what">Consola a răspuns, dar nimic nu ascultă pe acel port.</string>
+    <string name="help_port_try">• Pornește etaHEN pe consolă. Acesta oferă Installer (12800), Loader (9021) și FTP (1337).\n• Un payload FTP separat folosește de obicei 2121. Introdu aici același port.\n• Pe cardul consolei, lumina stinsă arată ce lipsește.</string>
+    <string name="help_login_title">Autentificare FTP refuzată</string>
+    <string name="help_login_what">Serverul FTP al consolei a respins numele de utilizator sau parola.</string>
+    <string name="help_login_try">• etaHEN acceptă numele de utilizator anonymous cu orice parolă.\n• Dacă ai setat o autentificare pe consolă, introdu-o la Încărcare.\n• Parola nu este salvată. Introdu-o din nou după repornirea aplicației.</string>
+    <string name="help_dropped_title">Conexiunea s-a întrerupt</string>
+    <string name="help_dropped_what">Legătura cu consola s-a întrerupt sau datele nu mai circulă. Aplicația reîncearcă și continuă de unde a rămas.</string>
+    <string name="help_dropped_try">• Ține telefonul aproape de router și consola trează.\n• Pune pe pauză alte descărcări mari din rețea.\n• Dacă tot eșuează, așteaptă puțin și atinge Încearcă din nou.</string>
+    <string name="help_refused_title">Installer nu a acceptat linkul</string>
+    <string name="help_refused_what">Consola este accesibilă, dar Installer-ul ei a refuzat acest link.</string>
+    <string name="help_refused_try">• Linkul trebuie să ducă direct la fișierul pachet și să se deschidă fără autentificare.\n• Consola trebuie să poată ajunge la el. Linkurile de pe acest telefon funcționează doar în aceeași rețea Wi-Fi.\n• Verifică dacă Installer rulează și dacă consola are spațiu liber.</string>
+    <string name="help_storage_title">Consola a încetat să stocheze</string>
+    <string name="help_storage_what">Consola a păstrat mai puțin decât s-a trimis. Unitatea este de obicei plină sau doar în citire.</string>
+    <string name="help_storage_try">• Eliberează spațiu pe consolă.\n• Alege alt dosar, de exemplu pe o unitate USB.\n• Apoi atinge Încearcă din nou.</string>
+    <string name="help_denied_title">Dosarul sau fișierul a fost refuzat</string>
+    <string name="help_denied_what">Serverul FTP nu îl poate deschide, scrie sau modifica aici.</string>
+    <string name="help_denied_try">• Verifică dacă dosarul există. Numele fac distincție între majuscule și minuscule.\n• Dosarele de sistem sunt doar în citire. Folosește /data sau o unitate USB.\n• Un fișier folosit de un joc care rulează poate fi blocat. Închide jocul.</string>
+    <string name="help_phone_title">Telefonul nu poate folosi fișierul</string>
+    <string name="help_phone_what">Fișierul a dispărut sau a fost mutat, aplicația a pierdut accesul la el sau telefonul nu mai are spațiu.</string>
+    <string name="help_phone_try">• Alege din nou fișierul.\n• Eliberează spațiu de stocare pe telefon.\n• Pentru un fișier dintr-o aplicație cloud, salvează-l mai întâi pe telefon.</string>
+    <string name="help_link_title">Linkul de descărcare a eșuat</string>
+    <string name="help_link_what">Site-ul nu a dat fișierul. Linkul poate fi expirat, poate cere autentificare sau site-ul poate fi ocupat.</string>
+    <string name="help_link_try">• Pornește din nou descărcarea din fila Web. Astfel rămâi autentificat.\n• Linkurile de pe site-urile de găzduire a fișierelor expiră adesea după câteva minute.\n• Dacă site-ul a raportat o eroare din seria 500, încearcă din nou mai târziu.</string>
+
+    <!-- update check -->
+    <string name="update_available">Versiunea %1$s este disponibilă</string>
+    <string name="update_download">Descarcă</string>
+    <string name="update_later">Mai târziu</string>
+    <string name="update_title">Actualizări</string>
+    <string name="update_current">Ai cea mai recentă versiune (%1$s).</string>
+    <string name="update_none">Nu a fost găsită încă nicio versiune pe pagina Releases.</string>
+    <string name="update_check_now">Verifică acum</string>
+    <string name="update_auto">Caută actualizări când se deschide aplicația</string>
+    <string name="update_privacy">Verificarea întreabă GitHub care este cea mai recentă versiune, cel mult o dată pe zi. Nu se trimite nimic despre tine sau despre consolele tale; GitHub îți vede adresa IP, ca orice site web.</string>
+
+    <!-- find my console -->
+    <string name="find_button">Găsește PS5-ul meu</string>
+    <string name="find_scanning">Se caută consola ta în rețeaua %1$s…</string>
+    <string name="find_again">Scanează din nou</string>
+    <string name="find_none">Nu s-a găsit nicio consolă.</string>
+    <string name="find_none_try">• Pornește complet consola (nu în modul de repaus) și lansează etaHEN.\n• Folosește aceeași rețea Wi-Fi pe telefon și pe consolă. Rețelele pentru oaspeți și VPN-urile țin dispozitivele separate.\n• Apoi scanează din nou.</string>
+    <string name="find_no_wifi">Acest telefon nu este într-o rețea Wi-Fi. Conectează-l la aceeași rețea Wi-Fi ca a consolei, apoi scanează din nou.</string>
+    <string name="find_pick">Atinge Folosește pentru a seta adresa consolei „%1$s”.</string>
+    <string name="find_saved">Adresă salvată</string>
+    <string name="find_used_by">Salvată pentru „%1$s”</string>
+    <string name="find_updated">Consola „%1$s” folosește acum %2$s.</string>
+    <string name="find_privacy">Se scanează doar rețeaua ta Wi-Fi, pe câteva porturi ale consolei. Nu se trimite nimic prin internet.</string>
+    <string name="action_stop">Oprește</string>
+    <string name="action_use">Folosește</string>
+
+    <!-- about and backup -->
+    <string name="about_title">Despre Bento</string>
+    <string name="about_version">Versiunea %1$s</string>
+    <string name="about_button">Despre și copie de rezervă</string>
+    <string name="about_report">Copiază raportul</string>
+    <string name="about_report_help">Copiază versiunea aplicației, modelul telefonului și ultimul mesaj, ca să le lipești într-un raport de eroare. Adresele IP și linkurile sunt omise.</string>
+    <string name="about_report_copied">Raport copiat</string>
+    <string name="about_releases">Pagina Releases</string>
+    <string name="backup_title">Copie de rezervă</string>
+    <string name="backup_text">Salvează consolele, pagina principală, marcajele, lista de reclame și payload-urile tale într-un singur fișier. Parolele FTP nu sunt salvate.</string>
+    <string name="backup_save">Salvează copia de rezervă</string>
+    <string name="backup_restore">Restaurează copia de rezervă</string>
+    <string name="backup_saved">Copie de rezervă salvată.</string>
+    <string name="backup_contents">Console: %1$d · Marcaje: %2$d · Payload-uri: %3$d</string>
+    <string name="backup_made">Creată pe %1$s</string>
+    <string name="backup_skipped">Payload-uri omise pentru că fișierul ar fi prea mare: %1$d</string>
+    <string name="backup_bad_file">Acel fișier nu este o copie de rezervă Bento.</string>
+    <string name="backup_too_new">Acea copie de rezervă a fost creată de o versiune mai nouă de Bento. Actualizează aplicația și încearcă din nou.</string>
+    <string name="restore_title">Restaurezi această copie de rezervă?</string>
+    <string name="restore_text">Consolele, pagina principală, marcajele și lista de reclame vor fi înlocuite cu cele din fișier. Payload-urile din fișier sunt adăugate în biblioteca de payload-uri. Va trebui să-ți introduci din nou parolele FTP.</string>
+    <string name="restore_button">Restaurează</string>
+    <string name="restore_done">Copie de rezervă restaurată.</string>
+    <string name="restore_payloads_failed">Payload-uri care nu au putut fi stocate: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">Linkuri de pachete (unul pe linie)</string>
+    <string name="install_paste">Lipește</string>
+    <string name="action_clear">Șterge</string>
+    <string name="install_paste_none">Nu există niciun link web în clipboard.</string>
+    <string name="install_links_skipped">Se trimit doar adresele care încep cu http:// sau https://. Omise: %1$d</string>
+    <string name="install_recent">Linkuri recente</string>
+    <string name="install_recent_clear">Șterge lista</string>
+    <string name="install_sending_n">Se trimite linkul %1$d din %2$d…</string>
+    <string name="install_batch_done">Acceptate: %1$d din %2$d linkuri</string>
+    <string name="install_batch_notsent">Netrimise: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">Lanțuri</string>
+    <string name="chains_hint">Un lanț trimite mai multe payload-uri unul după altul, cu o pauză după fiecare. Ține apăsat pe pictograma aplicației ca să pornești de pe ecranul principal unul dintre primele patru lanțuri.</string>
+    <string name="chain_new">Lanț nou</string>
+    <string name="action_edit">Editează</string>
+    <string name="chain_summary_steps">Payload-uri: %1$d</string>
+    <string name="chain_summary_pauses">Pauze: %1$s</string>
+    <string name="chain_edit_title">Editează lanțul</string>
+    <string name="chain_steps_title">Payload-uri, în ordine (cel mult %1$d)</string>
+    <string name="chain_add_step">Adaugă un payload</string>
+    <string name="chain_pick_title">Ce payload adaugi?</string>
+    <string name="chain_wait_label">Apoi așteaptă (secunde)</string>
+    <string name="chain_missing">Nu e în bibliotecă</string>
+    <string name="chain_move_up">Mută în sus</string>
+    <string name="chain_move_down">Mută în jos</string>
+    <string name="chain_pin">Adaugă pe ecranul principal</string>
+    <string name="chain_pin_unsupported">Acest launcher nu poate adăuga scurtături. Ține apăsat pe pictograma aplicației ca să-ți găsești acolo lanțurile.</string>
+    <string name="chain_sending">Se trimite %1$s (%2$d din %3$d)…</string>
+    <string name="chain_waiting">Următorul payload în %1$s</string>
+    <string name="chain_retrying">Se așteaptă ca consola să fie gata…</string>
+    <string name="chain_result_done">Gata. Payload-uri trimise: %1$d din %2$d</string>
+    <string name="chain_result_stopped">Oprit. Payload-uri trimise: %1$d din %2$d</string>
+    <string name="chain_result_failed">Oprit la pasul %1$d (%2$s). Payload-uri trimise: %3$d din %4$d</string>
+    <string name="chain_err_target">Setează mai întâi adresa IP a consolei și portul Loader-ului.</string>
+    <string name="chain_err_missing">Nu mai este în bibliotecă: %1$s. Adaug-o din nou sau editează lanțul.</string>
+    <string name="chain_err_unknown">Lanțul acela nu mai există.</string>
+    <string name="notif_channel_chain">Lanțuri de payload-uri</string>
+    <string name="backup_chains">Lanțuri: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">Neterminate data trecută: %1$d</string>
+    <string name="unfinished_hint">Aplicația s-a închis înainte ca acestea să se termine. „Continuă” le pornește pe fiecare din nou, de la început.</string>
+    <string name="unfinished_continue">Continuă</string>
+    <string name="unfinished_discard">Renunță</string>
+    <string name="unfinished_missing">Fișierele nu mai sunt găsite, alege-le din nou: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">Pauză</string>
+    <string name="transfer_resume">Reia</string>
+    <string name="transfer_paused">În pauză</string>
+    <string name="speed_limit_title">Limită de viteză</string>
+    <string name="speed_limit_off">Fără limită</string>
+    <string name="speed_limit_value">Limită: %1$s</string>
+    <string name="speed_limit_hint">Încetinește transferurile, ca rețeaua Wi-Fi să rămână liberă pentru alte lucruri. O modificare se aplică imediat.</string>
+    <string name="summary_title">Transferuri terminate: %1$d din %2$d</string>
+    <string name="summary_detail">%1$s în %2$s</string>
+    <string name="summary_failed">Eșuate: %1$d</string>
+    <string name="summary_stopped">Oprite: %1$d</string>
+    <string name="notif_channel_results">Rezultatele transferurilor</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">Selectate: %1$d</string>
+    <string name="files_select_all">Selectează tot</string>
+    <string name="files_select_none">Deselectează tot</string>
+    <string name="files_delete_many_title">Ștergi elementele selectate (%1$d)?</string>
+    <string name="files_delete_many_text">Aceasta șterge de pe consolă fișierele și folderele selectate, folderele cu tot conținutul lor. Nu se poate anula.</string>
+    <string name="files_deleted_many">Elemente șterse: %1$d</string>
+    <string name="files_delete_partial">Elemente șterse: %1$d, neșterse: %2$d. Prima problemă: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">Se parcurg folderele…</string>
+    <string name="files_dl_confirm_title">Descarci pe telefon?</string>
+    <string name="files_dl_confirm_text">Fișiere: %1$d, în total %2$s. Se salvează în Downloads/PS5, în aceleași foldere ca pe consolă.</string>
+    <string name="files_dl_links">Linkurile din foldere nu se descarcă: %1$d.</string>
+    <string name="files_dl_truncated">Fișiere incluse: %1$d. Folderele conțin mai multe sau merg mai adânc decât urmărește aplicația.</string>
+    <string name="files_dl_none">În selecție nu există niciun fișier de descărcat.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">Sortează</string>
+    <string name="files_sort_title">Sortează după</string>
+    <string name="files_sort_name">Nume</string>
+    <string name="files_sort_size">Mărime, cele mai mari întâi</string>
+    <string name="files_sort_newest">Cele mai noi întâi</string>
+    <string name="files_search">Caută</string>
+    <string name="files_search_hint">Caută în acest folder</string>
+    <string name="files_no_match">Nimic din acest folder nu se potrivește cu căutarea.</string>
+    <string name="files_pin">Fixează acest folder</string>
+    <string name="files_unpin">Detașează acest folder</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">File: %1$d</string>
+    <string name="web_tabs_title">File</string>
+    <string name="web_tab_new">Filă nouă</string>
+    <string name="web_tabs_full">Prea multe file. Limita este %1$d. Închide mai întâi una.</string>
+    <string name="web_find">Caută</string>
+    <string name="web_find_hint">Caută în această pagină</string>
+    <string name="web_find_none">Nicio potrivire</string>
+    <string name="web_desktop">Site pentru desktop</string>
+    <string name="web_link_new_tab">Deschide într-o filă nouă</string>
+    <string name="web_link_copy">Copiază linkul</string>
+    <string name="web_link_copied">Link copiat</string>
+    <string name="web_link_use">Trimite sau descarcă…</string>
+</resources>

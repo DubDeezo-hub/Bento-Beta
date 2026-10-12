@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hungarian. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">Mégse</string>
+    <string name="action_close">Bezárás</string>
+    <string name="action_done">Kész</string>
+    <string name="action_delete">Törlés</string>
+    <string name="action_rename">Átnevezés</string>
+    <string name="action_save">Mentés</string>
+    <string name="action_remove">Eltávolítás</string>
+    <string name="action_send">Küldés</string>
+    <string name="action_open">Megnyitás</string>
+    <string name="action_block">Tiltás</string>
+    <string name="action_home">Kezdőlap</string>
+    <string name="action_dismiss">Elrejtés</string>
+    <string name="action_try_again">Újrapróbálás</string>
+    <string name="action_skip">Kihagyás</string>
+    <string name="action_cancel_all">Összes megszakítása</string>
+    <string name="action_create">Létrehozás</string>
+    <string name="action_set">Beállítás</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">készítette: %1$s</string>
+    <string name="nav_install">Telepítés</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">Feltöltés</string>
+    <string name="nav_files">Fájlok</string>
+    <string name="nav_web">Web</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Installer</string>
+    <string name="service_loader">Loader</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">Állítsd be a PS5 IP-címét</string>
+    <string name="status_checking">Ellenőrzés…</string>
+    <string name="status_ready">Kész</string>
+    <string name="status_partly">Részben kész</string>
+    <string name="status_partly_off">Részben kész · nem válaszol: %1$s</string>
+    <string name="status_offline">A konzol nem érhető el</string>
+    <string name="status_hint_unset">A PS5-ön itt találod: Beállítások &gt; Hálózat &gt; Kapcsolat állapota &gt; Kapcsolat állapotának megtekintése. Koppints ide a megadásához.</string>
+    <string name="status_hint_offline">Ezen a címen semmi sem válaszol. Ellenőrizd az IP-címet, hogy a PS5 be van-e kapcsolva és ugyanazon a Wi-Fi-hálózaton van-e, valamint hogy fut-e az etaHEN.</string>
+    <string name="status_hint_one">Nem válaszol: %1$s. Indítsd el a szolgáltatást a konzolon, vagy ellenőrizd a portját.</string>
+    <string name="status_hint_many">Nem válaszol: %1$s. Indítsd el a szolgáltatásokat a konzolon, vagy ellenőrizd a portjaikat.</string>
+    <string name="console_switch">Konzol váltása</string>
+    <string name="console_change_ip">IP-cím módosítása</string>
+    <string name="console_ip_title">A konzol IP-címe</string>
+    <string name="console_ip_label">IP-cím</string>
+    <string name="console_ip_help">A PS5-ön itt találod: Beállítások &gt; Hálózat &gt; Kapcsolat állapota &gt; Kapcsolat állapotának megtekintése.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">Átvitel</string>
+    <string name="transfer_sending">Küldés</string>
+    <string name="transfer_sending_to">Küldés ide: %1$s</string>
+    <string name="transfer_receiving">Fogadás</string>
+    <string name="transfer_receiving_from">Fogadás innen: %1$s</string>
+    <string name="transfer_detail_total">%1$s · %2$s / %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">Indítás…</string>
+    <string name="transfer_stopped">Leállítva</string>
+    <string name="transfer_start_failed">Az átvitelt nem sikerült elindítani: %1$s</string>
+    <string name="transfer_retry_in">A kapcsolat megszakadt. Újrapróbálkozás %1$d mp múlva…</string>
+    <string name="transfer_reconnecting">Újracsatlakozás…</string>
+    <string name="transfer_eta">%1$s van hátra</string>
+    <string name="transfer_queued">%1$d várakozik</string>
+    <string name="queue_title">Várakozó átvitelek</string>
+    <string name="queue_clear">Összes eltávolítása</string>
+    <string name="queue_empty">Semmi sem várakozik.</string>
+    <string name="notif_channel">PS5-átvitelek</string>
+    <string name="notif_sent">Elküldve: %1$s</string>
+    <string name="notif_received">Fogadva: %1$s</string>
+    <string name="percent_value">%1$d%%</string>
+    <string name="desc_done">Kész</string>
+    <string name="desc_problem">Hiba</string>
+    <string name="status_hide">Üzenet elrejtése</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">Hozzáadva a sorhoz. %1$d várakozik.</string>
+    <string name="msg_set_ip_first">Először állítsd be a konzol IP-címét. Koppints a felül lévő kártyára.</string>
+    <string name="msg_sending_link">Link küldése a PS5-re…</string>
+    <string name="msg_check_ip_ftp">Ellenőrizd a konzol IP-címét és az FTP-portot.</string>
+    <string name="msg_adding_to_shelf_link">Hozzáadás a payload-tárhoz…</string>
+    <string name="status_idle">Tétlen</string>
+    <string name="status_sending">Küldés…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">Elhagyod ezt az oldalt?</string>
+    <string name="offsite_text">Az oldal ezt akarja megnyitni: %1$s. A hirdetések gyakran ezt váltják ki, ha linkre koppintasz, ezért csak akkor folytasd, ha számítottál rá.</string>
+    <string name="choose_install">Link küldése a PS5 Installerének</string>
+    <string name="choose_ftp">Feltöltés a PS5-re (FTP)</string>
+    <string name="choose_shelf">Mentés a payload-tárba</string>
+    <string name="choose_phone">Mentés a telefonra</string>
+    <string name="choose_help">Az Installernek közvetlen csomaglinkre van szüksége, amelyet a konzol bejelentkezés nélkül meg tud nyitni. Az FTP bármilyen fájllal működik, és megtartja a bejelentkezési munkamenetedet. A telefon a háttérben továbbítja az adatokat, a folyamat az alsó sáv felett és egy értesítésben látható. A payload-tár a kisebb payloadokat (legfeljebb %1$s) az alkalmazásban őrzi a Payload lap számára.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Installer-port (etaHEN: 12800)</string>
+    <string name="install_accepted">Az Installer elfogadta: %1$s</string>
+    <string name="install_not_accepted">Nem fogadta el (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">Telepítés erről a telefonról</string>
+    <string name="serve_intro">A konzol Wi-Fi-n keresztül közvetlenül erről a telefonról tölti le a csomagokat, így nem kell előbb átmásolni őket. A telefonnak és a konzolnak ugyanazon a hálózaton kell lennie.</string>
+    <string name="serve_choose">Csomagok kiválasztása</string>
+    <string name="serve_none">Nincs kiválasztott csomag</string>
+    <string name="serve_start">Megosztás indítása</string>
+    <string name="serve_stop">Megosztás leállítása</string>
+    <string name="serve_copy">Link másolása</string>
+    <string name="serve_copied">Link átmásolva</string>
+    <string name="serve_file_waiting">Várakozás, hogy a konzol elkezdje a letöltést…</string>
+    <string name="serve_file_pulling">A konzol letölt: %1$s</string>
+    <string name="serve_file_done">A konzol mindent letöltött</string>
+    <string name="serve_unreadable">Ez a fájl nem olvasható</string>
+    <string name="serve_hint">Ha a konzol soha nem kezdi el a letöltést, lehet, hogy a Wi-Fi megakadályozza az eszközök egymás elérését (a vendéghálózatok gyakran ezt teszik). Használd a fő hálózatot, és hagyd, hogy ez az alkalmazás a háttérben fusson.</string>
+    <string name="serve_no_wifi">Nem található ennek a telefonnak a Wi-Fi-címe. Csatlakoztasd ugyanahhoz a Wi-Fi-hez, mint a konzolt.</string>
+    <string name="serve_failed">A megosztást nem sikerült elindítani: %1$s</string>
+    <string name="serve_idle_stop">A megosztás leállt, mert hosszú ideig nem töltöttek le semmit.</string>
+    <string name="serve_notif_title">Megosztás: %1$s</string>
+    <string name="serve_notif_text">Letöltött fájlok: %1$d / %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">Fájlok kiválasztása</string>
+    <string name="upload_none">Nincs kiválasztott fájl</string>
+    <string name="upload_files_chosen">Kiválasztott fájlok: %1$d</string>
+    <string name="upload_start">Feltöltés a háttérben</string>
+    <string name="upload_help">A folyamat az alsó sáv felett és egy értesítésben látható. A feltöltés akkor is folytatódik, ha kilépsz az alkalmazásból.</string>
+    <string name="ftp_port">FTP-port</string>
+    <string name="ftp_user">Felhasználónév</string>
+    <string name="ftp_password">Jelszó</string>
+    <string name="ftp_folder">Távoli mappa</string>
+    <string name="ftp_use_folder">Használat: %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">Betöltés…</string>
+    <string name="files_empty">Ez a mappa üres.</string>
+    <string name="files_not_loaded">Még nincs betöltve</string>
+    <string name="files_up">⬆ Fel</string>
+    <string name="files_refresh">Frissítés</string>
+    <string name="files_new_folder">Új mappa</string>
+    <string name="files_upload_here">Feltöltés ide</string>
+    <string name="files_ftp_settings">FTP-beállítások</string>
+    <string name="files_need_ip">Állítsd be a konzol IP-címét (koppints a felül lévő kártyára) és egy érvényes FTP-portot a fájlok böngészéséhez.</string>
+    <string name="files_kind_folder">Mappa</string>
+    <string name="files_kind_link">Link, %1$s</string>
+    <string name="files_download">Letöltés a telefonra</string>
+    <string name="files_new_name">Új név</string>
+    <string name="files_name_used">Ez a név már használatban van itt.</string>
+    <string name="files_renaming">Átnevezés…</string>
+    <string name="files_renamed">%1$s átnevezve erre: %2$s</string>
+    <string name="files_delete_title">Törlöd ezt: %1$s?</string>
+    <string name="files_delete_folder">Ez törli a mappát és minden tartalmát a konzolról. Ez nem vonható vissza.</string>
+    <string name="files_delete_file">Ez törli a fájlt a konzolról. Ez nem vonható vissza.</string>
+    <string name="files_deleting">Törlés…</string>
+    <string name="files_deleted">Törölve: %1$s</string>
+    <string name="files_deleted_inside">Törölve: %1$s (benne lévő elemek: %2$d)</string>
+    <string name="files_creating">Mappa létrehozása…</string>
+    <string name="files_created">Mappa létrehozva: %1$s</string>
+    <string name="files_folder_name">Mappa neve</string>
+    <string name="name_empty">A név nem lehet üres.</string>
+    <string name="name_not_allowed">Ez a név nem engedélyezett.</string>
+    <string name="name_slash">A név nem tartalmazhat perjeleket.</string>
+    <string name="name_control">A név nem engedélyezett karaktereket tartalmaz.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">Sikertelen: %1$s</string>
+    <string name="ftp_port_hint">Az FTP-kiszolgáló nem érhető el. Ellenőrizd a konzol IP-címét és az FTP-portot (az etaHEN beépített FTP-je az 1337-es, az FTP-payload a 2121-es portot használja).</string>
+    <string name="err_login">Az FTP-bejelentkezés sikertelen</string>
+    <string name="err_cant_open">nem nyitható meg: %1$s (%2$s)</string>
+    <string name="err_rename">az átnevezés sikertelen (%1$s)</string>
+    <string name="err_mkdir">a mappát nem sikerült létrehozni (%1$s)</string>
+    <string name="err_too_deep">a mappa túl mélyen van egymásba ágyazva</string>
+    <string name="err_delete_path">nem sikerült törölni: %1$s (%2$s)</string>
+    <string name="err_upload">Az FTP-feltöltés sikertelen: %1$s</string>
+    <string name="err_download">Az FTP-letöltés sikertelen: %1$s</string>
+    <string name="err_open_file">A fájlt nem sikerült megnyitni</string>
+    <string name="err_cancelled_upload">Megszakítva. Egy részleges fájl maradhat itt: %1$s</string>
+    <string name="err_cancelled_download">Megszakítva. A részleges letöltést elvetettük.</string>
+    <string name="err_gave_up">Leállítva, mert a kapcsolat újra és újra megszakadt. Utolsó hiba: %1$s</string>
+    <string name="err_short_upload">A konzol csak %1$s adatot tartott meg az elküldött %2$s mennyiségből.</string>
+    <string name="err_short_download">Az összesen %2$s mennyiségből csak %1$s érkezett meg.</string>
+    <string name="err_empty_file">A fájl üres</string>
+    <string name="err_save">Nem sikerült menteni: %1$s</string>
+    <string name="sent_to_ps5">Elküldve a PS5-re: %1$s</string>
+    <string name="saved_to_downloads">Mentve ide: Downloads/PS5: %1$s</string>
+    <string name="dl_http_failed">A letöltés sikertelen: HTTP %1$s</string>
+    <string name="dl_empty">A letöltés sikertelen: üres válasz</string>
+    <string name="dl_cut_short">A kapcsolat lezárult, mielőtt a teljes fájl megérkezett volna.</string>
+    <string name="dl_create_failed">A fájlt nem sikerült létrehozni a Downloads mappában</string>
+    <string name="dl_write_failed">Az új fájlt nem sikerült megnyitni íráshoz</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">Elküldve: %1$s</string>
+    <string name="shelf_added">Hozzáadva a tárhoz: %1$s (%2$s)</string>
+    <string name="shelf_updated">Frissítve a tárban: %1$s (%2$s)</string>
+    <string name="shelf_too_large">Ez a fájl nagyobb, mint %1$s, ezért nem került a tárba.</string>
+    <string name="shelf_too_large_url">A fájl mérete %1$s. A tár legfeljebb %2$s méretű payloadokat fogad el.</string>
+    <string name="payload_adding">Hozzáadás a tárhoz…</string>
+    <string name="payload_remove_title">Eltávolítod ezt: %1$s?</string>
+    <string name="payload_remove_text">Törlődik a tárból. A telefonodon lévő eredeti fájl érintetlen marad.</string>
+    <string name="payload_loader_port">Loader-port</string>
+    <string name="payload_shelf_title">Payload-tár</string>
+    <string name="payload_shelf_empty">Még nincs semmi mentve. Add hozzá a gyakran használt payloadokat (FTP-kiszolgáló, etaHEN, ...), és küldd el mindegyiket egyetlen koppintással. Letöltéskor közvetlenül a Web lapról is elmentheted őket.</string>
+    <string name="payload_sending">Küldés: %1$s…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">Payload hozzáadása a tárhoz</string>
+    <string name="payload_once_title">Fájl egyszeri elküldése</string>
+    <string name="payload_choose">Payload kiválasztása (.elf / .bin)</string>
+    <string name="payload_send">Payload küldése</string>
+
+    <!-- consoles -->
+    <string name="profile_default">Saját PS5</string>
+    <string name="profile_new">%1$d. konzol</string>
+    <string name="profile_fallback">Konzol</string>
+    <string name="consoles_title">Konzolok</string>
+    <string name="console_rename_title">Konzol átnevezése</string>
+    <string name="console_name_label">Név</string>
+    <string name="console_delete_title">Törlöd ezt: %1$s?</string>
+    <string name="console_delete_text">A mentett IP-cím és a portok törlődnek. A többi konzolodat ez nem érinti.</string>
+    <string name="console_no_ip">még nincs IP-cím</string>
+    <string name="console_color_of">Szín: %1$s</string>
+    <string name="console_use_color">Használat: %1$s</string>
+    <string name="console_add">Konzol hozzáadása</string>
+    <string name="language_button">Nyelv</string>
+    <string name="color_blue">Kék</string>
+    <string name="color_orange">Narancs</string>
+    <string name="color_green">Zöld</string>
+    <string name="color_pink">Rózsaszín</string>
+    <string name="color_purple">Lila</string>
+    <string name="color_teal">Pávakék</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">A letöltés elindult (lásd: Downloads)</string>
+    <string name="web_load_failed">Az oldal betöltése sikertelen: %1$s</string>
+    <string name="web_http_server">Az oldal jelenleg túlterhelt vagy nem elérhető (hiba: %1$s). Próbáld újra egy perc múlva.</string>
+    <string name="web_http_other">Az oldal %1$s hibával válaszolt.</string>
+    <string name="web_open_first">Először nyiss meg egy oldalt</string>
+    <string name="web_bookmark_saved">Könyvjelző mentve</string>
+    <string name="web_bookmark_exists">Már szerepel a könyvjelzők között</string>
+    <string name="web_home_set">Kezdőlap beállítva: %1$s</string>
+    <string name="web_reload">Újratöltés</string>
+    <string name="web_add">★ Hozzáadás</string>
+    <string name="web_bookmarks">Könyvjelzők</string>
+    <string name="web_homepage_label">A kezdőlap URL-je</string>
+    <string name="web_bookmarks_empty">Még nincsenek könyvjelzők. Nyiss meg egy oldalt, és koppints erre: %1$s.</string>
+    <string name="web_bookmarks_help">Koppints egy könyvjelzőre a megnyitásához. A(z) „%1$s” gomb kezdőlappá teszi.</string>
+    <string name="adblock_title">Reklámblokkoló</string>
+    <string name="adblock_switch">Reklámtartományok blokkolása</string>
+    <string name="adblock_info">Eddig blokkolva: %1$d. Hálózatok a beépített listában: %2$d. Minden módosítás után töltsd újra az oldalt.</string>
+    <string name="adblock_own">Saját tartományok, soronként egy</string>
+    <string name="adblock_on">Reklámblokkoló: be · blokkolva: %1$d · koppints a módosításhoz</string>
+    <string name="adblock_off">Reklámblokkoló: ki · blokkolva: %1$d · koppints a módosításhoz</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">Mit tehetek?</string>
+    <string name="help_what">Mi történt</string>
+    <string name="help_try">Mit érdemes kipróbálni</string>
+    <string name="help_details">Részletek</string>
+    <string name="help_copy">Részletek másolása</string>
+    <string name="help_copied">Másolva</string>
+    <string name="help_unreachable_title">A konzol nem érhető el</string>
+    <string name="help_unreachable_what">A konzol címén semmi nem válaszol.</string>
+    <string name="help_unreachable_try">• Ellenőrizd az IP-címet a PS5-ön (Beállítások &gt; Hálózat &gt; Kapcsolat állapota). Újraindítás után megváltozhat.\n• Ébreszd fel teljesen a konzolt. A pihenő mód gyakran kikapcsolja a hálózatot.\n• Mindkét eszközön ugyanazt a Wi-Fi-t használd. A vendéghálózatok és a VPN-ek blokkolják.</string>
+    <string name="help_port_title">Az a szolgáltatás nem fut</string>
+    <string name="help_port_what">A konzol válaszolt, de azon a porton semmi sem figyel.</string>
+    <string name="help_port_try">• Indítsd el az etaHEN-t a konzolon. Ez biztosítja az Installert (12800), a Loadert (9021) és az FTP-t (1337).\n• Egy különálló FTP payload általában a 2121-es portot használja. Itt ugyanazt a portot add meg.\n• A konzol kártyáján a kialudt jelzőfény mutatja, mi hiányzik.</string>
+    <string name="help_login_title">Az FTP-bejelentkezést elutasították</string>
+    <string name="help_login_what">A konzol FTP-kiszolgálója elutasította a felhasználónevet vagy a jelszót.</string>
+    <string name="help_login_try">• Az etaHEN az anonymous felhasználónevet bármilyen jelszóval elfogadja.\n• Ha beállítottál bejelentkezést a konzolon, add meg a Feltöltés alatt.\n• A jelszó nem kerül mentésre. Az alkalmazás újraindítása után add meg újra.</string>
+    <string name="help_dropped_title">A kapcsolat megszakadt</string>
+    <string name="help_dropped_what">A konzollal a kapcsolat megszakadt, vagy az adatforgalom leállt. Az alkalmazás újrapróbálkozik, és onnan folytatja, ahol abbahagyta.</string>
+    <string name="help_dropped_try">• Tartsd a telefont a router közelében, a konzolt pedig ébren.\n• Szüneteltesd a hálózat többi nagy letöltését.\n• Ha továbbra is sikertelen, várj egy kicsit, és koppints az Újrapróbálás gombra.</string>
+    <string name="help_refused_title">Az Installer nem fogadta el a linket</string>
+    <string name="help_refused_what">A konzol elérhető, de az Installere elutasította ezt a linket.</string>
+    <string name="help_refused_try">• A linknek közvetlenül a csomagfájlra kell mutatnia, és bejelentkezés nélkül meg kell nyílnia.\n• A konzolnak el kell tudnia érni. A telefonról származó linkek csak ugyanazon a Wi-Fi-n működnek.\n• Ellenőrizd, hogy az Installer fut-e, és van-e szabad hely a konzolon.</string>
+    <string name="help_storage_title">A konzol leállt a mentéssel</string>
+    <string name="help_storage_what">A konzol kevesebbet tárolt el, mint amennyit küldtek. A meghajtó általában tele van vagy csak olvasható.</string>
+    <string name="help_storage_try">• Szabadíts fel helyet a konzolon.\n• Válassz másik mappát, például egy USB-meghajtón.\n• Ezután koppints az Újrapróbálás gombra.</string>
+    <string name="help_denied_title">Ezt a mappát vagy fájlt elutasították</string>
+    <string name="help_denied_what">Az FTP-kiszolgáló itt nem tudja megnyitni, írni vagy módosítani.</string>
+    <string name="help_denied_try">• Ellenőrizd, hogy a mappa létezik-e. A nevek kis- és nagybetűérzékenyek.\n• A rendszermappák csak olvashatók. Használd a /data mappát vagy egy USB-meghajtót.\n• Egy futó játék által használt fájl zárolva lehet. Zárd be a játékot.</string>
+    <string name="help_phone_title">A telefon nem tudja használni a fájlt</string>
+    <string name="help_phone_what">A fájl eltűnt vagy áthelyezték, az alkalmazás elvesztette a hozzáférést, vagy elfogyott a telefon tárhelye.</string>
+    <string name="help_phone_try">• Válaszd ki újra a fájlt.\n• Szabadíts fel tárhelyet a telefonon.\n• Felhőalkalmazásban lévő fájlnál előbb mentsd a telefonra.</string>
+    <string name="help_link_title">A letöltési link nem működött</string>
+    <string name="help_link_what">A webhely nem adta át a fájlt. A link lehet, hogy lejárt, bejelentkezést kér, vagy a webhely túlterhelt.</string>
+    <string name="help_link_try">• Indítsd újra a letöltést a Web lapról. Így megmarad a bejelentkezésed.\n• A fájlmegosztó webhelyek linkjei gyakran néhány perc után lejárnak.\n• Ha a webhely 500-as tartományú hibát jelzett, próbáld újra később.</string>
+
+    <!-- update check -->
+    <string name="update_available">Elérhető a(z) %1$s verzió</string>
+    <string name="update_download">Letöltés</string>
+    <string name="update_later">Később</string>
+    <string name="update_title">Frissítések</string>
+    <string name="update_current">A legújabb verziót használod (%1$s).</string>
+    <string name="update_none">A Releases oldalon még nem található kiadás.</string>
+    <string name="update_check_now">Ellenőrzés most</string>
+    <string name="update_auto">Frissítések keresése az alkalmazás megnyitásakor</string>
+    <string name="update_privacy">Az ellenőrzés naponta legfeljebb egyszer lekérdezi a GitHubtól a legújabb kiadást. Rólad és a konzoljaidról semmi nem kerül elküldésre; a GitHub – mint bármely webhely – látja az IP-címedet.</string>
+
+    <!-- find my console -->
+    <string name="find_button">PS5 megkeresése</string>
+    <string name="find_scanning">A konzolod keresése itt: %1$s…</string>
+    <string name="find_again">Keresés újra</string>
+    <string name="find_none">Nem található konzol.</string>
+    <string name="find_none_try">• Kapcsold be teljesen a konzolt (ne pihenő módban legyen), és indítsd el az etaHEN-t.\n• A telefonon és a konzolon ugyanazt a Wi-Fi-t használd. A vendéghálózatok és a VPN-ek elszigetelik egymástól az eszközöket.\n• Utána keress újra.</string>
+    <string name="find_no_wifi">Ez a telefon nincs Wi-Fi-hálózaton. Csatlakoztasd ugyanahhoz a Wi-Fi-hez, mint a konzolt, majd keress újra.</string>
+    <string name="find_pick">Koppints a Használ gombra, hogy beállítsd a konzol címét (%1$s).</string>
+    <string name="find_saved">Mentett cím</string>
+    <string name="find_used_by">Mentve ehhez: %1$s</string>
+    <string name="find_updated">%1$s mostantól ezt használja: %2$s.</string>
+    <string name="find_privacy">Csak a Wi-Fi-hálózatod kerül átvizsgálásra, a konzol néhány portján. Semmi sem kerül elküldésre az interneten.</string>
+    <string name="action_stop">Leállítás</string>
+    <string name="action_use">Használ</string>
+
+    <!-- about and backup -->
+    <string name="about_title">A Bento névjegye</string>
+    <string name="about_version">%1$s verzió</string>
+    <string name="about_button">Névjegy és biztonsági mentés</string>
+    <string name="about_report">Jelentés másolása</string>
+    <string name="about_report_help">Kimásolja az alkalmazás verzióját, a telefonod típusát és az utolsó üzenetet, hogy hibajelentésbe illeszthesd. Az IP-címek és a linkek kimaradnak.</string>
+    <string name="about_report_copied">Jelentés másolva</string>
+    <string name="about_releases">Releases oldal</string>
+    <string name="backup_title">Biztonsági mentés</string>
+    <string name="backup_text">A konzolokat, a kezdőlapot, a könyvjelzőket, a reklámlistát és a payloadokat egyetlen fájlba menti. Az FTP-jelszavak nem kerülnek mentésre.</string>
+    <string name="backup_save">Biztonsági mentés mentése</string>
+    <string name="backup_restore">Biztonsági mentés visszaállítása</string>
+    <string name="backup_saved">A biztonsági mentés elkészült.</string>
+    <string name="backup_contents">Konzolok: %1$d · Könyvjelzők: %2$d · Payloadok: %3$d</string>
+    <string name="backup_made">Készült: %1$s</string>
+    <string name="backup_skipped">Kihagyott payloadok, mert a fájl túl nagy lenne: %1$d</string>
+    <string name="backup_bad_file">Ez a fájl nem Bento biztonsági mentés.</string>
+    <string name="backup_too_new">Ezt a mentést a Bento újabb verziója készítette. Frissítsd az alkalmazást, majd próbáld újra.</string>
+    <string name="restore_title">Visszaállítod ezt a mentést?</string>
+    <string name="restore_text">A konzolokat, a kezdőlapot, a könyvjelzőket és a reklámlistát a fájlban lévők váltják fel. A fájlban lévő payloadok bekerülnek a payload-tárba. Az FTP-jelszavakat újra be kell írnod.</string>
+    <string name="restore_button">Visszaállítás</string>
+    <string name="restore_done">A mentés visszaállítva.</string>
+    <string name="restore_payloads_failed">Nem tárolható payloadok: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">Csomaglinkek (soronként egy)</string>
+    <string name="install_paste">Beillesztés</string>
+    <string name="action_clear">Törlés</string>
+    <string name="install_paste_none">A vágólapon nincs webes link.</string>
+    <string name="install_links_skipped">Csak a http:// vagy https:// kezdetű címek kerülnek elküldésre. Kihagyva: %1$d</string>
+    <string name="install_recent">Legutóbbi linkek</string>
+    <string name="install_recent_clear">Lista törlése</string>
+    <string name="install_sending_n">Link küldése: %1$d/%2$d…</string>
+    <string name="install_batch_done">Elfogadva: %1$d/%2$d link</string>
+    <string name="install_batch_notsent">Nem küldve: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">Láncok</string>
+    <string name="chains_hint">A lánc több payloadot küld egymás után, mindegyik után szünettel. Nyomd hosszan az alkalmazás ikonját, hogy a kezdőképernyőről elindíthasd az első négy lánc egyikét.</string>
+    <string name="chain_new">Új lánc</string>
+    <string name="action_edit">Szerkesztés</string>
+    <string name="chain_summary_steps">Payloadok: %1$d</string>
+    <string name="chain_summary_pauses">Szünetek: %1$s</string>
+    <string name="chain_edit_title">Lánc szerkesztése</string>
+    <string name="chain_steps_title">Payloadok sorrendben (legfeljebb %1$d)</string>
+    <string name="chain_add_step">Payload hozzáadása</string>
+    <string name="chain_pick_title">Melyik payloadot adod hozzá?</string>
+    <string name="chain_wait_label">Utána várj (másodperc)</string>
+    <string name="chain_missing">Nincs a tárban</string>
+    <string name="chain_move_up">Mozgatás felfelé</string>
+    <string name="chain_move_down">Mozgatás lefelé</string>
+    <string name="chain_pin">Hozzáadás a kezdőképernyőhöz</string>
+    <string name="chain_pin_unsupported">Ez az indítóalkalmazás nem tud parancsikont hozzáadni. Nyomd hosszan az alkalmazás ikonját, és ott megtalálod a láncaidat.</string>
+    <string name="chain_sending">Küldés: %1$s (%2$d / %3$d)…</string>
+    <string name="chain_waiting">Következő payload %1$s múlva</string>
+    <string name="chain_retrying">Várakozás, amíg a konzol készen áll…</string>
+    <string name="chain_result_done">Kész. Elküldött payloadok: %1$d / %2$d</string>
+    <string name="chain_result_stopped">Leállítva. Elküldött payloadok: %1$d / %2$d</string>
+    <string name="chain_result_failed">Leállt – %1$d. lépés (%2$s). Elküldött payloadok: %3$d / %4$d</string>
+    <string name="chain_err_target">Először állítsd be a konzol IP-címét és a Loader portját.</string>
+    <string name="chain_err_missing">Már nincs a tárban: %1$s. Add hozzá újra, vagy szerkeszd a láncot.</string>
+    <string name="chain_err_unknown">Ez a lánc már nem létezik.</string>
+    <string name="notif_channel_chain">Payload-láncok</string>
+    <string name="backup_chains">Láncok: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">Legutóbb be nem fejezettek: %1$d</string>
+    <string name="unfinished_hint">Az alkalmazás bezárult, mielőtt ezek befejeződtek volna. A „Folytatás” mindegyiket újra elindítja az elejétől.</string>
+    <string name="unfinished_continue">Folytatás</string>
+    <string name="unfinished_discard">Elvetés</string>
+    <string name="unfinished_missing">A fájlok már nem találhatók, válassza ki őket újra: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">Szünet</string>
+    <string name="transfer_resume">Folytatás</string>
+    <string name="transfer_paused">Szüneteltetve</string>
+    <string name="speed_limit_title">Sebességkorlát</string>
+    <string name="speed_limit_off">Nincs korlát</string>
+    <string name="speed_limit_value">Korlát: %1$s</string>
+    <string name="speed_limit_hint">Lassítja az átviteleket, hogy a Wi-Fi szabad maradjon más dolgokra. A módosítás azonnal érvénybe lép.</string>
+    <string name="summary_title">Befejezett átvitelek: %1$d / %2$d</string>
+    <string name="summary_detail">%1$s, %2$s alatt</string>
+    <string name="summary_failed">Sikertelen: %1$d</string>
+    <string name="summary_stopped">Leállítva: %1$d</string>
+    <string name="notif_channel_results">Átvitelek eredménye</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">Kijelölve: %1$d</string>
+    <string name="files_select_all">Összes kijelölése</string>
+    <string name="files_select_none">Kijelölés törlése</string>
+    <string name="files_delete_many_title">Törli a kijelölt elemeket (%1$d)?</string>
+    <string name="files_delete_many_text">Ez törli a kijelölt fájlokat és mappákat a konzolról, a mappákat a bennük lévő mindennel együtt. Ez nem vonható vissza.</string>
+    <string name="files_deleted_many">Törölt elemek: %1$d</string>
+    <string name="files_delete_partial">Törölt elemek: %1$d, nem törölt: %2$d. Az első probléma: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">Mappák átnézése…</string>
+    <string name="files_dl_confirm_title">Letölti a telefonra?</string>
+    <string name="files_dl_confirm_text">Fájlok: %1$d, összesen %2$s. A Downloads/PS5 mappába kerülnek, ugyanazokban a mappákban, mint a konzolon.</string>
+    <string name="files_dl_links">A mappákon belüli linkek nem töltődnek le: %1$d.</string>
+    <string name="files_dl_truncated">Bevett fájlok: %1$d. A mappák ennél többet tartalmaznak, vagy mélyebbre nyúlnak, mint ameddig az alkalmazás követi őket.</string>
+    <string name="files_dl_none">A kijelölésben nincs letölthető fájl.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">Rendezés</string>
+    <string name="files_sort_title">Rendezés szempontja</string>
+    <string name="files_sort_name">Név</string>
+    <string name="files_sort_size">Méret, a legnagyobb elöl</string>
+    <string name="files_sort_newest">A legújabb elöl</string>
+    <string name="files_search">Keresés</string>
+    <string name="files_search_hint">Keresés ebben a mappában</string>
+    <string name="files_no_match">Ebben a mappában semmi sem egyezik a kereséssel.</string>
+    <string name="files_pin">Mappa rögzítése</string>
+    <string name="files_unpin">Mappa rögzítésének feloldása</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">Lapok: %1$d</string>
+    <string name="web_tabs_title">Lapok</string>
+    <string name="web_tab_new">Új lap</string>
+    <string name="web_tabs_full">Túl sok lap. A korlát: %1$d. Előbb zárj be egyet.</string>
+    <string name="web_find">Keresés</string>
+    <string name="web_find_hint">Keresés ezen az oldalon</string>
+    <string name="web_find_none">Nincs találat</string>
+    <string name="web_desktop">Asztali webhely</string>
+    <string name="web_link_new_tab">Megnyitás új lapon</string>
+    <string name="web_link_copy">Link másolása</string>
+    <string name="web_link_copied">Link átmásolva</string>
+    <string name="web_link_use">Küldés vagy letöltés…</string>
+</resources>

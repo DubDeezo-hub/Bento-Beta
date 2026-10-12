@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The icon of a chain on the app icon's press-and-hold menu and on the home screen: two chevrons in the app's cyan on its dark field -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <path
+        android:fillColor="#FF08141A"
+        android:pathData="M24,24m-24,0a24,24 0 1,1 48,0a24,24 0 1,1 -48,0" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M16,15L25,24L16,33M25,15L34,24L25,33"
+        android:strokeColor="#FF19E3FF"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="3.5" />
+</vector>

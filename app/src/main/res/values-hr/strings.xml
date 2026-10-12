@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Croatian. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">Odustani</string>
+    <string name="action_close">Zatvori</string>
+    <string name="action_done">Gotovo</string>
+    <string name="action_delete">Izbriši</string>
+    <string name="action_rename">Preimenuj</string>
+    <string name="action_save">Spremi</string>
+    <string name="action_remove">Ukloni</string>
+    <string name="action_send">Pošalji</string>
+    <string name="action_open">Otvori</string>
+    <string name="action_block">Blokiraj</string>
+    <string name="action_home">Početna</string>
+    <string name="action_dismiss">Sakrij</string>
+    <string name="action_try_again">Pokušaj ponovno</string>
+    <string name="action_skip">Preskoči</string>
+    <string name="action_cancel_all">Odustani od svega</string>
+    <string name="action_create">Izradi</string>
+    <string name="action_set">Postavi</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">autor: %1$s</string>
+    <string name="nav_install">Instaliraj</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">Prijenos</string>
+    <string name="nav_files">Datoteke</string>
+    <string name="nav_web">Web</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Installer</string>
+    <string name="service_loader">Loader</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">Postavite IP adresu konzole PS5</string>
+    <string name="status_checking">Provjera…</string>
+    <string name="status_ready">Spremno</string>
+    <string name="status_partly">Djelomično spremno</string>
+    <string name="status_partly_off">Djelomično spremno · ne odgovara: %1$s</string>
+    <string name="status_offline">Konzola nije dostupna</string>
+    <string name="status_hint_unset">Pronađite je na PS5 pod Settings &gt; Network &gt; Connection Status &gt; View Connection Status. Dodirnite ovdje za unos.</string>
+    <string name="status_hint_offline">Ništa ne odgovara na ovoj adresi. Provjerite IP adresu, je li konzola uključena i na istoj Wi-Fi mreži te radi li etaHEN.</string>
+    <string name="status_hint_one">Ne odgovara: %1$s. Pokrenite ga na konzoli ili provjerite njegov port.</string>
+    <string name="status_hint_many">Ne odgovaraju: %1$s. Pokrenite ih na konzoli ili provjerite njihove portove.</string>
+    <string name="console_switch">Promijeni konzolu</string>
+    <string name="console_change_ip">Promijeni IP adresu</string>
+    <string name="console_ip_title">IP adresa konzole</string>
+    <string name="console_ip_label">IP adresa</string>
+    <string name="console_ip_help">Pronađite je na PS5 pod Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">Prijenos</string>
+    <string name="transfer_sending">Slanje</string>
+    <string name="transfer_sending_to">Slanje na: %1$s</string>
+    <string name="transfer_receiving">Primanje</string>
+    <string name="transfer_receiving_from">Primanje od: %1$s</string>
+    <string name="transfer_detail_total">%1$s · %2$s od %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">Pokretanje…</string>
+    <string name="transfer_stopped">Zaustavljeno</string>
+    <string name="transfer_start_failed">Prijenos nije mogao započeti: %1$s</string>
+    <string name="transfer_retry_in">Veza je prekinuta. Ponovni pokušaj za %1$d s…</string>
+    <string name="transfer_reconnecting">Ponovno povezivanje…</string>
+    <string name="transfer_eta">Preostalo: %1$s</string>
+    <string name="transfer_queued">Na čekanju: %1$d</string>
+    <string name="queue_title">Prijenosi na čekanju</string>
+    <string name="queue_clear">Ukloni sve</string>
+    <string name="queue_empty">Ništa nije na čekanju.</string>
+    <string name="notif_channel">Prijenosi na PS5</string>
+    <string name="notif_sent">Poslano: %1$s</string>
+    <string name="notif_received">Primljeno: %1$s</string>
+    <string name="percent_value">%1$d%%</string>
+    <string name="desc_done">Gotovo</string>
+    <string name="desc_problem">Problem</string>
+    <string name="status_hide">Sakrij ovu poruku</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">Dodano u red. Na čekanju: %1$d.</string>
+    <string name="msg_set_ip_first">Prvo postavite IP adresu konzole. Dodirnite karticu na vrhu.</string>
+    <string name="msg_sending_link">Slanje poveznice na PS5…</string>
+    <string name="msg_check_ip_ftp">Provjerite IP adresu konzole i FTP port.</string>
+    <string name="msg_adding_to_shelf_link">Dodavanje u biblioteku payloada…</string>
+    <string name="status_idle">Neaktivno</string>
+    <string name="status_sending">Slanje…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">Napustiti ovu stranicu?</string>
+    <string name="offsite_text">Stranica želi otvoriti %1$s. Oglasi to često pokreću kad dodirnete poveznicu, stoga nastavite samo ako ste to očekivali.</string>
+    <string name="choose_install">Pošalji poveznicu u Installer na PS5</string>
+    <string name="choose_ftp">Prenesi na PS5 (FTP)</string>
+    <string name="choose_shelf">Spremi u biblioteku payloada</string>
+    <string name="choose_phone">Spremi na telefon</string>
+    <string name="choose_help">Installer treba izravnu poveznicu na paket koju konzola može otvoriti bez prijave. FTP radi s bilo kojom datotekom i zadržava vašu sesiju prijave. Telefon prosljeđuje podatke u pozadini, a napredak se prikazuje iznad donje trake i u obavijesti. Biblioteka payloada čuva mali payload (do %1$s) unutar aplikacije za karticu Payload.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Port za Installer (etaHEN: 12800)</string>
+    <string name="install_accepted">Installer ga je prihvatio: %1$s</string>
+    <string name="install_not_accepted">Nije prihvaćeno (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">Instaliraj s ovog telefona</string>
+    <string name="serve_intro">Konzola preuzima pakete izravno s ovog telefona preko Wi-Fi mreže, pa ništa ne treba prethodno kopirati. Telefon i konzola moraju biti na istoj mreži.</string>
+    <string name="serve_choose">Odaberi pakete</string>
+    <string name="serve_none">Nijedan paket nije odabran</string>
+    <string name="serve_start">Pokreni dijeljenje</string>
+    <string name="serve_stop">Zaustavi dijeljenje</string>
+    <string name="serve_copy">Kopiraj poveznicu</string>
+    <string name="serve_copied">Poveznica je kopirana</string>
+    <string name="serve_file_waiting">Čeka se da konzola započne preuzimanje…</string>
+    <string name="serve_file_pulling">Konzola preuzima: %1$s</string>
+    <string name="serve_file_done">Konzola je preuzela sve</string>
+    <string name="serve_unreadable">Ova se datoteka ne može pročitati</string>
+    <string name="serve_hint">Ako konzola nikad ne počne preuzimati, Wi-Fi možda sprječava uređaje da se međusobno vide (mreže za goste to često rade). Koristite glavnu mrežu i pustite da ova aplikacija radi u pozadini.</string>
+    <string name="serve_no_wifi">Wi-Fi adresa ovog telefona nije pronađena. Spojite ga na istu Wi-Fi mrežu kao i konzolu.</string>
+    <string name="serve_failed">Dijeljenje nije moguće pokrenuti: %1$s</string>
+    <string name="serve_idle_stop">Dijeljenje je zaustavljeno jer dulje vrijeme ništa nije preuzeto.</string>
+    <string name="serve_notif_title">Dijeljenje s: %1$s</string>
+    <string name="serve_notif_text">Preuzete datoteke: %1$d / %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">Odaberi datoteke</string>
+    <string name="upload_none">Nijedna datoteka nije odabrana</string>
+    <string name="upload_files_chosen">Odabrane datoteke: %1$d</string>
+    <string name="upload_start">Prenesi u pozadini</string>
+    <string name="upload_help">Napredak se prikazuje iznad donje trake i u obavijesti. Nastavlja se i ako napustite aplikaciju.</string>
+    <string name="ftp_port">FTP port</string>
+    <string name="ftp_user">Korisničko ime</string>
+    <string name="ftp_password">Zaporka</string>
+    <string name="ftp_folder">Udaljena mapa</string>
+    <string name="ftp_use_folder">Koristi %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">Učitavanje…</string>
+    <string name="files_empty">Ova je mapa prazna.</string>
+    <string name="files_not_loaded">Još nije učitano</string>
+    <string name="files_up">⬆ Gore</string>
+    <string name="files_refresh">Osvježi</string>
+    <string name="files_new_folder">Nova mapa</string>
+    <string name="files_upload_here">Prenesi ovdje</string>
+    <string name="files_ftp_settings">FTP postavke</string>
+    <string name="files_need_ip">Postavite IP adresu konzole (dodirnite karticu na vrhu) i važeći FTP port da biste pregledavali njezine datoteke.</string>
+    <string name="files_kind_folder">Mapa</string>
+    <string name="files_kind_link">Poveznica, %1$s</string>
+    <string name="files_download">Preuzmi na telefon</string>
+    <string name="files_new_name">Novi naziv</string>
+    <string name="files_name_used">Taj je naziv već u uporabi ovdje.</string>
+    <string name="files_renaming">Preimenovanje…</string>
+    <string name="files_renamed">Preimenovano: %1$s u %2$s</string>
+    <string name="files_delete_title">Izbrisati %1$s?</string>
+    <string name="files_delete_folder">Ovo briše mapu i sve u njoj s konzole. Radnja se ne može poništiti.</string>
+    <string name="files_delete_file">Ovo briše datoteku s konzole. Radnja se ne može poništiti.</string>
+    <string name="files_deleting">Brisanje…</string>
+    <string name="files_deleted">Izbrisano: %1$s</string>
+    <string name="files_deleted_inside">Izbrisano: %1$s (stavki unutra: %2$d)</string>
+    <string name="files_creating">Izrada mape…</string>
+    <string name="files_created">Mapa %1$s je izrađena</string>
+    <string name="files_folder_name">Naziv mape</string>
+    <string name="name_empty">Naziv ne smije biti prazan.</string>
+    <string name="name_not_allowed">Taj naziv nije dopušten.</string>
+    <string name="name_slash">Naziv ne smije sadržavati kose crte.</string>
+    <string name="name_control">Naziv sadrži nedopuštene znakove.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">Neuspjeh: %1$s</string>
+    <string name="ftp_port_hint">FTP poslužitelj nije dostupan. Provjerite IP konzole i FTP port (ugrađeni FTP u etaHEN-u koristi 1337, FTP payload koristi 2121).</string>
+    <string name="err_login">Prijava na FTP nije uspjela</string>
+    <string name="err_cant_open">nije moguće otvoriti %1$s (%2$s)</string>
+    <string name="err_rename">preimenovanje nije uspjelo (%1$s)</string>
+    <string name="err_mkdir">mapu nije moguće izraditi (%1$s)</string>
+    <string name="err_too_deep">mapa je ugniježđena preduboko</string>
+    <string name="err_delete_path">nije moguće izbrisati %1$s (%2$s)</string>
+    <string name="err_upload">FTP prijenos nije uspio: %1$s</string>
+    <string name="err_download">FTP preuzimanje nije uspjelo: %1$s</string>
+    <string name="err_open_file">Datoteku nije moguće otvoriti</string>
+    <string name="err_cancelled_upload">Otkazano. Nepotpuna datoteka mogla je ostati na %1$s</string>
+    <string name="err_cancelled_download">Otkazano. Nepotpuno preuzimanje je odbačeno.</string>
+    <string name="err_gave_up">Odustalo se jer je veza stalno padala. Posljednja pogreška: %1$s</string>
+    <string name="err_short_upload">Od poslanih %2$s konzola je zadržala samo %1$s.</string>
+    <string name="err_short_download">Stiglo je samo %1$s od %2$s.</string>
+    <string name="err_empty_file">Datoteka je prazna</string>
+    <string name="err_save">Nije moguće spremiti %1$s</string>
+    <string name="sent_to_ps5">Poslano na PS5: %1$s</string>
+    <string name="saved_to_downloads">Spremljeno u Downloads/PS5: %1$s</string>
+    <string name="dl_http_failed">Preuzimanje nije uspjelo: HTTP %1$s</string>
+    <string name="dl_empty">Preuzimanje nije uspjelo: prazan odgovor</string>
+    <string name="dl_cut_short">Veza je zatvorena prije nego što je stigla cijela datoteka.</string>
+    <string name="dl_create_failed">Datoteku nije moguće izraditi u mapi Downloads</string>
+    <string name="dl_write_failed">Novu datoteku nije moguće otvoriti za pisanje</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">Poslano: %1$s</string>
+    <string name="shelf_added">Dodano u biblioteku: %1$s (%2$s)</string>
+    <string name="shelf_updated">Ažurirano u biblioteci: %1$s (%2$s)</string>
+    <string name="shelf_too_large">Ta je datoteka veća od %1$s pa nije dodana u biblioteku.</string>
+    <string name="shelf_too_large_url">Ta datoteka ima %1$s. Biblioteka prima payloade do %2$s.</string>
+    <string name="payload_adding">Dodavanje u biblioteku…</string>
+    <string name="payload_remove_title">Ukloniti %1$s?</string>
+    <string name="payload_remove_text">Bit će izbrisan iz biblioteke. Izvorna datoteka na vašem telefonu ostaje netaknuta.</string>
+    <string name="payload_loader_port">Port za Loader</string>
+    <string name="payload_shelf_title">Biblioteka payloada</string>
+    <string name="payload_shelf_empty">Još ništa nije spremljeno. Dodajte payloade koje često koristite (FTP poslužitelj, etaHEN, ...) i pošaljite svaki jednim dodirom. Možete ga spremiti i izravno s kartice Web kad ga preuzimate.</string>
+    <string name="payload_sending">Slanje %1$s…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">Dodaj payload u biblioteku</string>
+    <string name="payload_once_title">Jednokratno slanje datoteke</string>
+    <string name="payload_choose">Odaberi payload (.elf / .bin)</string>
+    <string name="payload_send">Pošalji payload</string>
+
+    <!-- consoles -->
+    <string name="profile_default">Moj PS5</string>
+    <string name="profile_new">Konzola %1$d</string>
+    <string name="profile_fallback">Konzola</string>
+    <string name="consoles_title">Konzole</string>
+    <string name="console_rename_title">Preimenuj konzolu</string>
+    <string name="console_name_label">Naziv</string>
+    <string name="console_delete_title">Izbrisati %1$s?</string>
+    <string name="console_delete_text">Njezina spremljena IP adresa i portovi bit će uklonjeni. Vaše druge konzole nisu zahvaćene.</string>
+    <string name="console_no_ip">još nema IP adrese</string>
+    <string name="console_color_of">Boja za %1$s</string>
+    <string name="console_use_color">Koristi %1$s</string>
+    <string name="console_add">Dodaj konzolu</string>
+    <string name="language_button">Jezik</string>
+    <string name="color_blue">Plava</string>
+    <string name="color_orange">Narančasta</string>
+    <string name="color_green">Zelena</string>
+    <string name="color_pink">Ružičasta</string>
+    <string name="color_purple">Ljubičasta</string>
+    <string name="color_teal">Tirkizna</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">Preuzimanje je započelo (vidi Downloads)</string>
+    <string name="web_load_failed">Stranicu nije moguće učitati: %1$s</string>
+    <string name="web_http_server">Web-mjesto je trenutačno zauzeto ili nedostupno (pogreška %1$s). Pokušajte ponovno za trenutak.</string>
+    <string name="web_http_other">Web-mjesto je odgovorilo pogreškom %1$s.</string>
+    <string name="web_open_first">Prvo otvorite stranicu</string>
+    <string name="web_bookmark_saved">Knjižna oznaka spremljena</string>
+    <string name="web_bookmark_exists">Već je u vašim knjižnim oznakama</string>
+    <string name="web_home_set">Početna stranica postavljena na %1$s</string>
+    <string name="web_reload">Ponovno učitaj</string>
+    <string name="web_add">★ Dodaj</string>
+    <string name="web_bookmarks">Knjižne oznake</string>
+    <string name="web_homepage_label">URL početne stranice</string>
+    <string name="web_bookmarks_empty">Još nema knjižnih oznaka. Otvorite stranicu i dodirnite %1$s.</string>
+    <string name="web_bookmarks_help">Dodirnite knjižnu oznaku da biste je otvorili. „%1$s” je postavlja kao vašu početnu stranicu.</string>
+    <string name="adblock_title">Blokiranje oglasa</string>
+    <string name="adblock_switch">Blokiraj domene oglasa</string>
+    <string name="adblock_info">Dosad blokirano: %1$d. Mreža na ugrađenom popisu: %2$d. Nakon svake promjene ponovno učitajte stranicu.</string>
+    <string name="adblock_own">Vaše vlastite domene, po jedna u retku</string>
+    <string name="adblock_on">Blokiranje oglasa: uključeno · blokirano: %1$d · dodirnite za promjenu</string>
+    <string name="adblock_off">Blokiranje oglasa: isključeno · blokirano: %1$d · dodirnite za promjenu</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">Što mogu učiniti?</string>
+    <string name="help_what">Što se dogodilo</string>
+    <string name="help_try">Što pokušati</string>
+    <string name="help_details">Pojedinosti</string>
+    <string name="help_copy">Kopiraj pojedinosti</string>
+    <string name="help_copied">Kopirano</string>
+    <string name="help_unreachable_title">Konzola nije dostupna</string>
+    <string name="help_unreachable_what">Ništa se ne odaziva na adresi konzole.</string>
+    <string name="help_unreachable_try">• Provjerite IP adresu na PS5 (Settings &gt; Network &gt; Connection Status). Može se promijeniti nakon ponovnog pokretanja.\n• Potpuno probudite konzolu. Stanje mirovanja često isključuje mrežu.\n• Koristite isti Wi-Fi na oba uređaja. Mreže za goste i VPN to blokiraju.</string>
+    <string name="help_port_title">Ta usluga nije pokrenuta</string>
+    <string name="help_port_what">Konzola je odgovorila, ali ništa ne sluša na tom portu.</string>
+    <string name="help_port_try">• Pokrenite etaHEN na konzoli. On pruža Installer (12800), Loader (9021) i FTP (1337).\n• Zaseban FTP payload obično koristi 2121. Ovdje unesite isti port.\n• Na kartici konzole ugašeno svjetlo pokazuje što nedostaje.</string>
+    <string name="help_login_title">FTP prijava odbijena</string>
+    <string name="help_login_what">FTP poslužitelj konzole odbio je korisničko ime ili lozinku.</string>
+    <string name="help_login_try">• etaHEN prihvaća korisničko ime anonymous s bilo kojom lozinkom.\n• Ako ste na konzoli postavili prijavu, unesite je u Prijenos.\n• Lozinka se ne sprema. Unesite je ponovno nakon ponovnog pokretanja aplikacije.</string>
+    <string name="help_dropped_title">Veza je prekinuta</string>
+    <string name="help_dropped_what">Veza s konzolom prekinula se ili podaci više ne teku. Aplikacija pokušava ponovno i nastavlja od mjesta gdje je stala.</string>
+    <string name="help_dropped_try">• Držite telefon blizu usmjerivača, a konzolu budnom.\n• Pauzirajte ostala velika preuzimanja na mreži.\n• Ako i dalje ne uspijeva, pričekajte trenutak i dodirnite Pokušaj ponovno.</string>
+    <string name="help_refused_title">Installer nije prihvatio poveznicu</string>
+    <string name="help_refused_what">Konzola je dostupna, ali je njezin Installer odbio ovu poveznicu.</string>
+    <string name="help_refused_try">• Poveznica mora voditi izravno do datoteke paketa i otvarati se bez prijave.\n• Konzola mora moći doći do nje. Poveznice s ovog telefona rade samo na istom Wi-Fi-ju.\n• Provjerite radi li Installer i ima li konzola slobodnog prostora.</string>
+    <string name="help_storage_title">Konzola je prestala spremati</string>
+    <string name="help_storage_what">Konzola je spremila manje nego što je poslano. Pogon je obično pun ili samo za čitanje.</string>
+    <string name="help_storage_try">• Oslobodite prostor na konzoli.\n• Odaberite drugu mapu, na primjer na USB pogonu.\n• Zatim dodirnite Pokušaj ponovno.</string>
+    <string name="help_denied_title">Ta je mapa ili datoteka odbijena</string>
+    <string name="help_denied_what">FTP poslužitelj je ovdje ne može otvoriti, u nju pisati ni je mijenjati.</string>
+    <string name="help_denied_try">• Provjerite postoji li mapa. U imenima se razlikuju velika i mala slova.\n• Sistemske mape su samo za čitanje. Koristite /data ili USB pogon.\n• Datoteka koju koristi pokrenuta igra može biti zaključana. Zatvorite igru.</string>
+    <string name="help_phone_title">Telefon ne može koristiti datoteku</string>
+    <string name="help_phone_what">Datoteka je nestala ili premještena, aplikacija je izgubila pristup njoj ili telefonu ponestaje prostora.</string>
+    <string name="help_phone_try">• Ponovno odaberite datoteku.\n• Oslobodite prostor za pohranu na telefonu.\n• Datoteku iz aplikacije u oblaku najprije spremite na telefon.</string>
+    <string name="help_link_title">Poveznica za preuzimanje nije uspjela</string>
+    <string name="help_link_what">Web-mjesto nije predalo datoteku. Poveznica je možda istekla, traži prijavu ili je mjesto zauzeto.</string>
+    <string name="help_link_try">• Ponovno pokrenite preuzimanje s kartice Web. Tako se zadržava vaša prijava.\n• Poveznice s web-mjesta za smještaj datoteka često isteknu nakon nekoliko minuta.\n• Ako je mjesto prijavilo pogrešku iz serije 500, pokušajte ponovno kasnije.</string>
+
+    <!-- update check -->
+    <string name="update_available">Dostupna je verzija %1$s</string>
+    <string name="update_download">Preuzmi</string>
+    <string name="update_later">Kasnije</string>
+    <string name="update_title">Ažuriranja</string>
+    <string name="update_current">Imate najnoviju verziju (%1$s).</string>
+    <string name="update_none">Na stranici Releases još nije pronađeno izdanje.</string>
+    <string name="update_check_now">Provjeri sada</string>
+    <string name="update_auto">Provjeri ažuriranja kad se aplikacija otvori</string>
+    <string name="update_privacy">Provjera traži od GitHuba najnovije izdanje, najviše jednom dnevno. Ništa o vama ni o vašim konzolama se ne šalje; GitHub vidi vašu IP adresu, kao i svako web-mjesto.</string>
+
+    <!-- find my console -->
+    <string name="find_button">Pronađi moj PS5</string>
+    <string name="find_scanning">Traženje vaše konzole na mreži %1$s…</string>
+    <string name="find_again">Skeniraj ponovno</string>
+    <string name="find_none">Konzola nije pronađena.</string>
+    <string name="find_none_try">• Potpuno uključite konzolu (ne u stanju mirovanja) i pokrenite etaHEN.\n• Koristite isti Wi-Fi na telefonu i na konzoli. Mreže za goste i VPN drže uređaje odvojenima.\n• Zatim ponovno skenirajte.</string>
+    <string name="find_no_wifi">Ovaj telefon nije na Wi-Fi mreži. Spojite ga na istu Wi-Fi mrežu kao i konzolu, a zatim ponovno skenirajte.</string>
+    <string name="find_pick">Dodirnite Koristi da postavite adresu konzole %1$s.</string>
+    <string name="find_saved">Spremljena adresa</string>
+    <string name="find_used_by">Spremljeno za %1$s</string>
+    <string name="find_updated">%1$s sada koristi %2$s.</string>
+    <string name="find_privacy">Skenira se samo vaša Wi-Fi mreža, na nekoliko portova konzole. Ništa se ne šalje putem interneta.</string>
+    <string name="action_stop">Zaustavi</string>
+    <string name="action_use">Koristi</string>
+
+    <!-- about and backup -->
+    <string name="about_title">O aplikaciji Bento</string>
+    <string name="about_version">Verzija %1$s</string>
+    <string name="about_button">O aplikaciji i sigurnosna kopija</string>
+    <string name="about_report">Kopiraj izvješće</string>
+    <string name="about_report_help">Kopira verziju aplikacije, model vašeg telefona i posljednju poruku, kako biste ih mogli zalijepiti u prijavu greške. IP adrese i poveznice izostavljaju se.</string>
+    <string name="about_report_copied">Izvješće kopirano</string>
+    <string name="about_releases">Stranica Releases</string>
+    <string name="backup_title">Sigurnosna kopija</string>
+    <string name="backup_text">Sprema vaše konzole, početnu stranicu, knjižne oznake, popis oglasa i payloade u jednu datoteku. FTP lozinke se ne spremaju.</string>
+    <string name="backup_save">Spremi sigurnosnu kopiju</string>
+    <string name="backup_restore">Vrati sigurnosnu kopiju</string>
+    <string name="backup_saved">Sigurnosna kopija spremljena.</string>
+    <string name="backup_contents">Konzole: %1$d · Knjižne oznake: %2$d · Payloadi: %3$d</string>
+    <string name="backup_made">Izrađena %1$s</string>
+    <string name="backup_skipped">Payloadi izostavljeni jer bi datoteka bila prevelika: %1$d</string>
+    <string name="backup_bad_file">Ta datoteka nije Bento sigurnosna kopija.</string>
+    <string name="backup_too_new">Tu je sigurnosnu kopiju izradila novija verzija aplikacije Bento. Ažurirajte aplikaciju pa pokušajte ponovno.</string>
+    <string name="restore_title">Vratiti ovu sigurnosnu kopiju?</string>
+    <string name="restore_text">Vaše konzole, početna stranica, knjižne oznake i popis oglasa zamjenjuju se onima iz datoteke. Payloadi iz datoteke dodaju se u biblioteku payloada. Morat ćete ponovno upisati FTP lozinke.</string>
+    <string name="restore_button">Vrati</string>
+    <string name="restore_done">Sigurnosna kopija vraćena.</string>
+    <string name="restore_payloads_failed">Payloadi koji se nisu mogli spremiti: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">Poveznice paketa (po jedna u retku)</string>
+    <string name="install_paste">Zalijepi</string>
+    <string name="action_clear">Očisti</string>
+    <string name="install_paste_none">Na međuspremniku nema web-poveznice.</string>
+    <string name="install_links_skipped">Šalju se samo adrese koje počinju s http:// ili https://. Izostavljeno: %1$d</string>
+    <string name="install_recent">Nedavne poveznice</string>
+    <string name="install_recent_clear">Očisti popis</string>
+    <string name="install_sending_n">Slanje poveznice %1$d od %2$d…</string>
+    <string name="install_batch_done">Prihvaćeno: %1$d od %2$d poveznica</string>
+    <string name="install_batch_notsent">Nije poslano: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">Lanci</string>
+    <string name="chains_hint">Lanac šalje nekoliko payloada jedan za drugim, s pauzom nakon svakog. Dugo pritisnite ikonu aplikacije kako biste s početnog zaslona pokrenuli jedan od prva četiri lanca.</string>
+    <string name="chain_new">Novi lanac</string>
+    <string name="action_edit">Uredi</string>
+    <string name="chain_summary_steps">Payloadi: %1$d</string>
+    <string name="chain_summary_pauses">Pauze: %1$s</string>
+    <string name="chain_edit_title">Uredi lanac</string>
+    <string name="chain_steps_title">Payloadi redom (najviše %1$d)</string>
+    <string name="chain_add_step">Dodaj payload</string>
+    <string name="chain_pick_title">Koji payload dodati?</string>
+    <string name="chain_wait_label">Zatim pričekajte (sekunde)</string>
+    <string name="chain_missing">Nije u biblioteci</string>
+    <string name="chain_move_up">Pomakni gore</string>
+    <string name="chain_move_down">Pomakni dolje</string>
+    <string name="chain_pin">Dodaj na početni zaslon</string>
+    <string name="chain_pin_unsupported">Ovaj launcher ne može dodavati prečace. Dugo pritisnite ikonu aplikacije da biste ondje pronašli svoje lance.</string>
+    <string name="chain_sending">Slanje: %1$s (%2$d od %3$d)…</string>
+    <string name="chain_waiting">Sljedeći payload za %1$s</string>
+    <string name="chain_retrying">Čekanje da konzola bude spremna…</string>
+    <string name="chain_result_done">Gotovo. Poslani payloadi: %1$d od %2$d</string>
+    <string name="chain_result_stopped">Zaustavljeno. Poslani payloadi: %1$d od %2$d</string>
+    <string name="chain_result_failed">Zaustavljeno na koraku %1$d (%2$s). Poslani payloadi: %3$d od %4$d</string>
+    <string name="chain_err_target">Prvo postavite IP adresu konzole i port za Loader.</string>
+    <string name="chain_err_missing">Više nije u biblioteci: %1$s. Dodajte ga ponovno ili uredite lanac.</string>
+    <string name="chain_err_unknown">Taj lanac više ne postoji.</string>
+    <string name="notif_channel_chain">Lanci payloada</string>
+    <string name="backup_chains">Lanci: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">Nedovršeno od prošli put: %1$d</string>
+    <string name="unfinished_hint">Aplikacija se zatvorila prije nego što su se ovi prijenosi dovršili. „Nastavi” svaki pokreće iznova od početka.</string>
+    <string name="unfinished_continue">Nastavi</string>
+    <string name="unfinished_discard">Odbaci</string>
+    <string name="unfinished_missing">Datoteke se više ne nalaze, odaberite ih ponovno: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">Pauziraj</string>
+    <string name="transfer_resume">Nastavi</string>
+    <string name="transfer_paused">Pauzirano</string>
+    <string name="speed_limit_title">Ograničenje brzine</string>
+    <string name="speed_limit_off">Bez ograničenja</string>
+    <string name="speed_limit_value">Ograničenje: %1$s</string>
+    <string name="speed_limit_hint">Usporava prijenose kako bi Wi-Fi ostao slobodan za druge stvari. Promjena odmah stupa na snagu.</string>
+    <string name="summary_title">Završeni prijenosi: %1$d od %2$d</string>
+    <string name="summary_detail">%1$s za %2$s</string>
+    <string name="summary_failed">Neuspjelo: %1$d</string>
+    <string name="summary_stopped">Zaustavljeno: %1$d</string>
+    <string name="notif_channel_results">Rezultati prijenosa</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">Odabrano: %1$d</string>
+    <string name="files_select_all">Odaberi sve</string>
+    <string name="files_select_none">Poništi odabir</string>
+    <string name="files_delete_many_title">Izbrisati odabrane stavke (%1$d)?</string>
+    <string name="files_delete_many_text">Ovo briše odabrane datoteke i mape s konzole, mape sa svime u njima. Radnja se ne može poništiti.</string>
+    <string name="files_deleted_many">Izbrisane stavke: %1$d</string>
+    <string name="files_delete_partial">Izbrisane stavke: %1$d, neizbrisane: %2$d. Prvi problem: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">Pregledavanje mapa…</string>
+    <string name="files_dl_confirm_title">Preuzeti na telefon?</string>
+    <string name="files_dl_confirm_text">Datoteke: %1$d, ukupno %2$s. Spremaju se u Downloads/PS5, u istim mapama kao na konzoli.</string>
+    <string name="files_dl_links">Poveznice unutar mapa ne preuzimaju se: %1$d.</string>
+    <string name="files_dl_truncated">Uključene datoteke: %1$d. Mape ih sadrže više ili idu dublje nego što ih aplikacija prati.</string>
+    <string name="files_dl_none">U odabiru nema datoteke za preuzimanje.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">Poredaj</string>
+    <string name="files_sort_title">Poredaj po</string>
+    <string name="files_sort_name">Nazivu</string>
+    <string name="files_sort_size">Veličini, najveće prvo</string>
+    <string name="files_sort_newest">Najnovije prvo</string>
+    <string name="files_search">Traži</string>
+    <string name="files_search_hint">Traži u ovoj mapi</string>
+    <string name="files_no_match">Ništa u ovoj mapi ne odgovara pretrazi.</string>
+    <string name="files_pin">Prikvači ovu mapu</string>
+    <string name="files_unpin">Otkvači ovu mapu</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">Kartice: %1$d</string>
+    <string name="web_tabs_title">Kartice</string>
+    <string name="web_tab_new">Nova kartica</string>
+    <string name="web_tabs_full">Previše kartica. Ograničenje je %1$d. Prvo zatvorite jednu.</string>
+    <string name="web_find">Traži</string>
+    <string name="web_find_hint">Traži na ovoj stranici</string>
+    <string name="web_find_none">Nema podudaranja</string>
+    <string name="web_desktop">Verzija za računalo</string>
+    <string name="web_link_new_tab">Otvori na novoj kartici</string>
+    <string name="web_link_copy">Kopiraj poveznicu</string>
+    <string name="web_link_copied">Poveznica je kopirana</string>
+    <string name="web_link_use">Pošalji ili preuzmi…</string>
+</resources>

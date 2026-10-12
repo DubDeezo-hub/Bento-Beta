@@ -1,0 +1,12 @@
+# What a build or an editor leaves behind
+.gradle/
+.kotlin/
+build/
+local.properties
+*.iml
+.idea/
+captures/
+*.apk
+
+# Python
+__pycache__/

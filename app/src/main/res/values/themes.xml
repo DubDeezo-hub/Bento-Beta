@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Light mode. The colors are the page color from Theme.kt, so the status bar, the navigation bar and the
+        first frame (before the screen is drawn) blend into the app instead of flashing white or purple.
+    -->
+    <style name="Theme.PSSender" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">#F4F6FB</item>
+        <item name="android:statusBarColor">#F4F6FB</item>
+        <item name="android:navigationBarColor">#F4F6FB</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>

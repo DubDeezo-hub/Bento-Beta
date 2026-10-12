@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Lithuanian. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">Atšaukti</string>
+    <string name="action_close">Uždaryti</string>
+    <string name="action_done">Atlikta</string>
+    <string name="action_delete">Ištrinti</string>
+    <string name="action_rename">Pervardyti</string>
+    <string name="action_save">Išsaugoti</string>
+    <string name="action_remove">Pašalinti</string>
+    <string name="action_send">Siųsti</string>
+    <string name="action_open">Atidaryti</string>
+    <string name="action_block">Blokuoti</string>
+    <string name="action_home">Pradžia</string>
+    <string name="action_dismiss">Paslėpti</string>
+    <string name="action_try_again">Bandyti dar kartą</string>
+    <string name="action_skip">Praleisti</string>
+    <string name="action_cancel_all">Atšaukti viską</string>
+    <string name="action_create">Sukurti</string>
+    <string name="action_set">Nustatyti</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">autorius: %1$s</string>
+    <string name="nav_install">Įdiegti</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">Įkelti</string>
+    <string name="nav_files">Failai</string>
+    <string name="nav_web">Naršyklė</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Installer</string>
+    <string name="service_loader">Loader</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">Nustatykite PS5 IP adresą</string>
+    <string name="status_checking">Tikrinama…</string>
+    <string name="status_ready">Paruošta</string>
+    <string name="status_partly">Iš dalies paruošta</string>
+    <string name="status_partly_off">Iš dalies paruošta · neatsako: %1$s</string>
+    <string name="status_offline">Nepavyksta pasiekti konsolės</string>
+    <string name="status_hint_unset">Rasite jį PS5 skiltyje Settings &gt; Network &gt; Connection Status &gt; View Connection Status. Palieskite čia, kad įvestumėte.</string>
+    <string name="status_hint_offline">Šiuo adresu niekas neatsako. Patikrinkite IP adresą, ar konsolė įjungta ir prijungta prie to paties Wi-Fi tinklo, ir ar veikia etaHEN.</string>
+    <string name="status_hint_one">Neatsako: %1$s. Paleiskite šią paslaugą konsolėje arba patikrinkite jos prievadą.</string>
+    <string name="status_hint_many">Neatsako: %1$s. Paleiskite šias paslaugas konsolėje arba patikrinkite jų prievadus.</string>
+    <string name="console_switch">Perjungti konsolę</string>
+    <string name="console_change_ip">Keisti IP adresą</string>
+    <string name="console_ip_title">Konsolės IP adresas</string>
+    <string name="console_ip_label">IP adresas</string>
+    <string name="console_ip_help">Rasite jį PS5 skiltyje Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">Perkėlimas</string>
+    <string name="transfer_sending">Siunčiama</string>
+    <string name="transfer_sending_to">Siunčiama į: %1$s</string>
+    <string name="transfer_receiving">Gaunama</string>
+    <string name="transfer_receiving_from">Gaunama iš: %1$s</string>
+    <string name="transfer_detail_total">%1$s · %2$s iš %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">Pradedama…</string>
+    <string name="transfer_stopped">Sustabdyta</string>
+    <string name="transfer_start_failed">Nepavyko pradėti perkėlimo: %1$s</string>
+    <string name="transfer_retry_in">Ryšys nutrūko. Bandoma dar kartą po %1$d s…</string>
+    <string name="transfer_reconnecting">Jungiamasi iš naujo…</string>
+    <string name="transfer_eta">Liko: %1$s</string>
+    <string name="transfer_queued">Eilėje: %1$d</string>
+    <string name="queue_title">Perkėlimai eilėje</string>
+    <string name="queue_clear">Pašalinti viską</string>
+    <string name="queue_empty">Eilėje nieko nėra.</string>
+    <string name="notif_channel">PS5 perkėlimai</string>
+    <string name="notif_sent">Išsiųsta: %1$s</string>
+    <string name="notif_received">Gauta: %1$s</string>
+    <string name="percent_value">%1$d%%</string>
+    <string name="desc_done">Atlikta</string>
+    <string name="desc_problem">Problema</string>
+    <string name="status_hide">Slėpti šį pranešimą</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">Įtraukta į eilę. Eilėje: %1$d.</string>
+    <string name="msg_set_ip_first">Pirmiausia nustatykite konsolės IP adresą. Palieskite viršuje esančią kortelę.</string>
+    <string name="msg_sending_link">Siunčiama nuoroda į PS5…</string>
+    <string name="msg_check_ip_ftp">Patikrinkite konsolės IP adresą ir FTP prievadą.</string>
+    <string name="msg_adding_to_shelf_link">Pridedama į payload biblioteką…</string>
+    <string name="status_idle">Neveikia</string>
+    <string name="status_sending">Siunčiama…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">Palikti šią svetainę?</string>
+    <string name="offsite_text">Puslapis nori atidaryti %1$s. Dažnai tai sukelia skelbimai, kai paliečiate nuorodą, todėl tęskite tik jei to tikėjotės.</string>
+    <string name="choose_install">Siųsti nuorodą į PS5 Installer</string>
+    <string name="choose_ftp">Įkelti į PS5 (FTP)</string>
+    <string name="choose_shelf">Išsaugoti payload bibliotekoje</string>
+    <string name="choose_phone">Išsaugoti telefone</string>
+    <string name="choose_help">Installer reikia tiesioginės paketo nuorodos, kurią konsolė gali atidaryti neprisijungusi. FTP veikia su bet kuriuo failu ir išlaiko jūsų prisijungimo seansą. Telefonas perduoda duomenis fone, o eiga rodoma virš apatinės juostos ir pranešime. Payload biblioteka programoje saugo nedidelį payload (iki %1$s) kortelei Payload.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Installer prievadas (etaHEN: 12800)</string>
+    <string name="install_accepted">Installer jį priėmė: %1$s</string>
+    <string name="install_not_accepted">Nepriimta (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">Įdiegti iš šio telefono</string>
+    <string name="serve_intro">Konsolė atsisiunčia paketus tiesiai iš šio telefono per Wi-Fi, todėl nieko iš anksto kopijuoti nereikia. Telefonas ir konsolė turi būti tame pačiame tinkle.</string>
+    <string name="serve_choose">Pasirinkti paketus</string>
+    <string name="serve_none">Paketai nepasirinkti</string>
+    <string name="serve_start">Pradėti bendrinimą</string>
+    <string name="serve_stop">Sustabdyti bendrinimą</string>
+    <string name="serve_copy">Kopijuoti nuorodą</string>
+    <string name="serve_copied">Nuoroda nukopijuota</string>
+    <string name="serve_file_waiting">Laukiama, kol konsolė pradės siuntimąsi…</string>
+    <string name="serve_file_pulling">Konsolė siunčiasi: %1$s</string>
+    <string name="serve_file_done">Konsolė atsisiuntė viską</string>
+    <string name="serve_unreadable">Šio failo nepavyksta perskaityti</string>
+    <string name="serve_hint">Jei konsolė niekada nepradeda siųstis, Wi-Fi gali neleisti įrenginiams pasiekti vieni kitų (svečių tinklai tai daro dažnai). Naudokite pagrindinį tinklą ir leiskite šiai programai veikti fone.</string>
+    <string name="serve_no_wifi">Nepavyksta rasti šio telefono Wi-Fi adreso. Prijunkite jį prie to paties Wi-Fi tinklo kaip konsolę.</string>
+    <string name="serve_failed">Nepavyko pradėti bendrinimo: %1$s</string>
+    <string name="serve_idle_stop">Bendrinimas sustabdytas, nes ilgai nieko nebuvo atsisiųsta.</string>
+    <string name="serve_notif_title">Bendrinama su: %1$s</string>
+    <string name="serve_notif_text">Atsisiųsti failai: %1$d / %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">Pasirinkti failus</string>
+    <string name="upload_none">Failai nepasirinkti</string>
+    <string name="upload_files_chosen">Pasirinkti failai: %1$d</string>
+    <string name="upload_start">Įkelti fone</string>
+    <string name="upload_help">Eiga rodoma virš apatinės juostos ir pranešime. Ji tęsiasi, net jei išeisite iš programos.</string>
+    <string name="ftp_port">FTP prievadas</string>
+    <string name="ftp_user">Naudotojo vardas</string>
+    <string name="ftp_password">Slaptažodis</string>
+    <string name="ftp_folder">Nuotolinis aplankas</string>
+    <string name="ftp_use_folder">Naudoti %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">Įkeliama…</string>
+    <string name="files_empty">Šis aplankas tuščias.</string>
+    <string name="files_not_loaded">Dar neįkelta</string>
+    <string name="files_up">⬆ Aukštyn</string>
+    <string name="files_refresh">Atnaujinti</string>
+    <string name="files_new_folder">Naujas aplankas</string>
+    <string name="files_upload_here">Įkelti čia</string>
+    <string name="files_ftp_settings">FTP nustatymai</string>
+    <string name="files_need_ip">Nustatykite konsolės IP adresą (palieskite viršuje esančią kortelę) ir tinkamą FTP prievadą, kad galėtumėte naršyti jos failus.</string>
+    <string name="files_kind_folder">Aplankas</string>
+    <string name="files_kind_link">Nuoroda, %1$s</string>
+    <string name="files_download">Atsisiųsti į telefoną</string>
+    <string name="files_new_name">Naujas pavadinimas</string>
+    <string name="files_name_used">Šis pavadinimas čia jau naudojamas.</string>
+    <string name="files_renaming">Pervardijama…</string>
+    <string name="files_renamed">Pervardyta: %1$s į %2$s</string>
+    <string name="files_delete_title">Ištrinti %1$s?</string>
+    <string name="files_delete_folder">Tai ištrins aplanką ir visą jo turinį iš konsolės. To atšaukti negalima.</string>
+    <string name="files_delete_file">Tai ištrins failą iš konsolės. To atšaukti negalima.</string>
+    <string name="files_deleting">Trinama…</string>
+    <string name="files_deleted">Ištrinta: %1$s</string>
+    <string name="files_deleted_inside">Ištrinta: %1$s (elementų viduje: %2$d)</string>
+    <string name="files_creating">Kuriamas aplankas…</string>
+    <string name="files_created">Aplankas %1$s sukurtas</string>
+    <string name="files_folder_name">Aplanko pavadinimas</string>
+    <string name="name_empty">Pavadinimas negali būti tuščias.</string>
+    <string name="name_not_allowed">Šis pavadinimas neleidžiamas.</string>
+    <string name="name_slash">Pavadinime negali būti pasvirųjų brūkšnių.</string>
+    <string name="name_control">Pavadinime yra neleidžiamų simbolių.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">Nepavyko: %1$s</string>
+    <string name="ftp_port_hint">Nepavyksta pasiekti FTP serverio. Patikrinkite konsolės IP ir FTP prievadą (integruotas etaHEN FTP naudoja 1337, FTP payload naudoja 2121).</string>
+    <string name="err_login">Nepavyko prisijungti prie FTP</string>
+    <string name="err_cant_open">nepavyksta atidaryti %1$s (%2$s)</string>
+    <string name="err_rename">nepavyko pervardyti (%1$s)</string>
+    <string name="err_mkdir">nepavyko sukurti aplanko (%1$s)</string>
+    <string name="err_too_deep">aplankas įdėtas per giliai</string>
+    <string name="err_delete_path">nepavyko ištrinti %1$s (%2$s)</string>
+    <string name="err_upload">FTP įkėlimas nepavyko: %1$s</string>
+    <string name="err_download">FTP atsisiuntimas nepavyko: %1$s</string>
+    <string name="err_open_file">Nepavyko atidaryti failo</string>
+    <string name="err_cancelled_upload">Atšaukta. Dalinis failas gali likti čia: %1$s</string>
+    <string name="err_cancelled_download">Atšaukta. Dalinis atsisiuntimas atmestas.</string>
+    <string name="err_gave_up">Nutraukta, nes ryšys vis nutrūkdavo. Paskutinė klaida: %1$s</string>
+    <string name="err_short_upload">Iš išsiųstų %2$s konsolė išsaugojo tik %1$s.</string>
+    <string name="err_short_download">Atkeliavo tik %1$s iš %2$s.</string>
+    <string name="err_empty_file">Failas tuščias</string>
+    <string name="err_save">Nepavyko išsaugoti %1$s</string>
+    <string name="sent_to_ps5">Išsiųsta į PS5: %1$s</string>
+    <string name="saved_to_downloads">Išsaugota aplanke Downloads/PS5: %1$s</string>
+    <string name="dl_http_failed">Atsisiuntimas nepavyko: HTTP %1$s</string>
+    <string name="dl_empty">Atsisiuntimas nepavyko: tuščias atsakymas</string>
+    <string name="dl_cut_short">Ryšys buvo uždarytas dar neatkeliavus visam failui.</string>
+    <string name="dl_create_failed">Nepavyko sukurti failo aplanke Downloads</string>
+    <string name="dl_write_failed">Nepavyko atidaryti naujo failo rašymui</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">Išsiųsta: %1$s</string>
+    <string name="shelf_added">Pridėta į biblioteką: %1$s (%2$s)</string>
+    <string name="shelf_updated">Atnaujinta bibliotekoje: %1$s (%2$s)</string>
+    <string name="shelf_too_large">Šis failas didesnis nei %1$s, todėl nepridėtas į biblioteką.</string>
+    <string name="shelf_too_large_url">Šio failo dydis – %1$s. Biblioteka priima payload iki %2$s.</string>
+    <string name="payload_adding">Pridedama į biblioteką…</string>
+    <string name="payload_remove_title">Pašalinti %1$s?</string>
+    <string name="payload_remove_text">Jis bus ištrintas iš bibliotekos. Originalus failas jūsų telefone nebus paliestas.</string>
+    <string name="payload_loader_port">Loader prievadas</string>
+    <string name="payload_shelf_title">Payload biblioteka</string>
+    <string name="payload_shelf_empty">Dar nieko neišsaugota. Pridėkite dažnai naudojamus payload (FTP serverį, etaHEN, ...) ir siųskite kiekvieną vienu palietimu. Taip pat galite išsaugoti tiesiai iš kortelės Naršyklė, kai jį atsisiunčiate.</string>
+    <string name="payload_sending">Siunčiama %1$s…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">Pridėti payload į biblioteką</string>
+    <string name="payload_once_title">Vienkartinis failo siuntimas</string>
+    <string name="payload_choose">Pasirinkti payload (.elf / .bin)</string>
+    <string name="payload_send">Siųsti payload</string>
+
+    <!-- consoles -->
+    <string name="profile_default">Mano PS5</string>
+    <string name="profile_new">Konsolė %1$d</string>
+    <string name="profile_fallback">Konsolė</string>
+    <string name="consoles_title">Konsolės</string>
+    <string name="console_rename_title">Pervardyti konsolę</string>
+    <string name="console_name_label">Pavadinimas</string>
+    <string name="console_delete_title">Ištrinti %1$s?</string>
+    <string name="console_delete_text">Jos išsaugotas IP adresas ir prievadai bus pašalinti. Kitoms jūsų konsolėms tai įtakos neturės.</string>
+    <string name="console_no_ip">dar nėra IP adreso</string>
+    <string name="console_color_of">%1$s spalva</string>
+    <string name="console_use_color">Naudoti %1$s</string>
+    <string name="console_add">Pridėti konsolę</string>
+    <string name="language_button">Kalba</string>
+    <string name="color_blue">Mėlyna</string>
+    <string name="color_orange">Oranžinė</string>
+    <string name="color_green">Žalia</string>
+    <string name="color_pink">Rožinė</string>
+    <string name="color_purple">Violetinė</string>
+    <string name="color_teal">Žalsvai mėlyna</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">Atsisiuntimas prasidėjo (žr. Downloads)</string>
+    <string name="web_load_failed">Nepavyko įkelti puslapio: %1$s</string>
+    <string name="web_http_server">Svetainė šiuo metu užimta arba neveikia (klaida %1$s). Pabandykite dar kartą po akimirkos.</string>
+    <string name="web_http_other">Svetainė atsakė klaida %1$s.</string>
+    <string name="web_open_first">Pirmiausia atidarykite puslapį</string>
+    <string name="web_bookmark_saved">Žymė išsaugota</string>
+    <string name="web_bookmark_exists">Jau yra jūsų žymėse</string>
+    <string name="web_home_set">Pagrindinis puslapis nustatytas į %1$s</string>
+    <string name="web_reload">Įkelti iš naujo</string>
+    <string name="web_add">★ Pridėti</string>
+    <string name="web_bookmarks">Žymės</string>
+    <string name="web_homepage_label">Pagrindinio puslapio URL</string>
+    <string name="web_bookmarks_empty">Žymių dar nėra. Atidarykite puslapį ir palieskite %1$s.</string>
+    <string name="web_bookmarks_help">Palieskite žymę, kad ją atidarytumėte. „%1$s“ nustato ją kaip jūsų pagrindinį puslapį.</string>
+    <string name="adblock_title">Skelbimų blokavimas</string>
+    <string name="adblock_switch">Blokuoti skelbimų domenus</string>
+    <string name="adblock_info">Iki šiol užblokuota: %1$d. Tinklų įtrauktame sąraše: %2$d. Pakeitę ką nors, iš naujo įkelkite puslapį.</string>
+    <string name="adblock_own">Jūsų pačių domenai, po vieną eilutėje</string>
+    <string name="adblock_on">Skelbimų blokavimas: įjungtas · užblokuota: %1$d · palieskite, kad pakeistumėte</string>
+    <string name="adblock_off">Skelbimų blokavimas: išjungtas · užblokuota: %1$d · palieskite, kad pakeistumėte</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">Ką galiu daryti?</string>
+    <string name="help_what">Kas įvyko</string>
+    <string name="help_try">Ką išbandyti</string>
+    <string name="help_details">Išsami informacija</string>
+    <string name="help_copy">Kopijuoti informaciją</string>
+    <string name="help_copied">Nukopijuota</string>
+    <string name="help_unreachable_title">Nepavyksta pasiekti konsolės</string>
+    <string name="help_unreachable_what">Konsolės adresu niekas neatsako.</string>
+    <string name="help_unreachable_try">• Patikrinkite IP adresą PS5 įrenginyje (Settings &gt; Network &gt; Connection Status). Jis gali pasikeisti paleidus iš naujo.\n• Visiškai pažadinkite konsolę. Ramybės režimas dažnai išjungia tinklą.\n• Abiem įrenginiams naudokite tą patį Wi-Fi. Svečių tinklai ir VPN tai blokuoja.</string>
+    <string name="help_port_title">Ši paslauga neveikia</string>
+    <string name="help_port_what">Konsolė atsakė, bet tame prievade niekas neklauso.</string>
+    <string name="help_port_try">• Paleiskite etaHEN konsolėje. Jis teikia Installer (12800), Loader (9021) ir FTP (1337).\n• Atskiras FTP payload paprastai naudoja 2121. Čia įveskite tą patį prievadą.\n• Konsolės kortelėje užgesusi lemputė rodo, ko trūksta.</string>
+    <string name="help_login_title">FTP prisijungimas atmestas</string>
+    <string name="help_login_what">Konsolės FTP serveris atmetė naudotojo vardą arba slaptažodį.</string>
+    <string name="help_login_try">• etaHEN priima naudotojo vardą anonymous su bet kokiu slaptažodžiu.\n• Jei konsolėje nustatėte prisijungimą, įveskite jį skiltyje Įkelti.\n• Slaptažodis neišsaugomas. Iš naujo paleidę programėlę, įveskite jį dar kartą.</string>
+    <string name="help_dropped_title">Ryšys nutrūko</string>
+    <string name="help_dropped_what">Ryšys su konsole nutrūko arba duomenys nebeperduodami. Programėlė bando dar kartą ir tęsia nuo ten, kur sustojo.</string>
+    <string name="help_dropped_try">• Laikykite telefoną arti maršrutizatoriaus, o konsolę – pažadintą.\n• Pristabdykite kitus didelius atsisiuntimus tinkle.\n• Jei vis tiek nepavyksta, šiek tiek palaukite ir palieskite Bandyti dar kartą.</string>
+    <string name="help_refused_title">Installer nepriėmė nuorodos</string>
+    <string name="help_refused_what">Konsolę pasiekti galima, bet jos Installer atmetė šią nuorodą.</string>
+    <string name="help_refused_try">• Nuoroda turi vesti tiesiai į paketo failą ir atsidaryti be prisijungimo.\n• Konsolė turi galėti ją pasiekti. Šio telefono nuorodos veikia tik tame pačiame Wi-Fi tinkle.\n• Patikrinkite, ar veikia Installer ir ar konsolėje yra laisvos vietos.</string>
+    <string name="help_storage_title">Konsolė nustojo saugoti</string>
+    <string name="help_storage_what">Konsolė išsaugojo mažiau, nei buvo išsiųsta. Diskas dažniausiai pilnas arba tik skaitymui.</string>
+    <string name="help_storage_try">• Atlaisvinkite vietos konsolėje.\n• Pasirinkite kitą aplanką, pavyzdžiui, USB diske.\n• Tada palieskite Bandyti dar kartą.</string>
+    <string name="help_denied_title">Aplankas arba failas atmestas</string>
+    <string name="help_denied_what">FTP serveris čia negali jo atidaryti, į jį rašyti ar jo keisti.</string>
+    <string name="help_denied_try">• Patikrinkite, ar aplankas egzistuoja. Pavadinimuose didžiosios ir mažosios raidės skiriamos.\n• Sistemos aplankai yra tik skaitymui. Naudokite /data arba USB diską.\n• Veikiančio žaidimo naudojamas failas gali būti užrakintas. Uždarykite žaidimą.</string>
+    <string name="help_phone_title">Telefonas negali naudoti failo</string>
+    <string name="help_phone_what">Failas dingo arba perkeltas, programėlė neteko prieigos prie jo arba telefone baigėsi vieta.</string>
+    <string name="help_phone_try">• Dar kartą pasirinkite failą.\n• Atlaisvinkite saugyklos vietos telefone.\n• Jei failas yra debesies programėlėje, pirmiausia išsaugokite jį telefone.</string>
+    <string name="help_link_title">Nepavyko atsisiųsti iš nuorodos</string>
+    <string name="help_link_what">Svetainė neatidavė failo. Nuoroda gali būti pasibaigusi, reikalauti prisijungimo arba svetainė gali būti užimta.</string>
+    <string name="help_link_try">• Paleiskite atsisiuntimą iš naujo skirtuke Naršyklė. Taip išsaugomas jūsų prisijungimas.\n• Failų talpinimo svetainių nuorodos dažnai nustoja galioti po kelių minučių.\n• Jei svetainė pranešė apie 500 serijos klaidą, pabandykite vėliau.</string>
+
+    <!-- update check -->
+    <string name="update_available">Galima %1$s versija</string>
+    <string name="update_download">Atsisiųsti</string>
+    <string name="update_later">Vėliau</string>
+    <string name="update_title">Naujinimai</string>
+    <string name="update_current">Turite naujausią versiją (%1$s).</string>
+    <string name="update_none">Puslapyje Releases dar nerasta jokio leidimo.</string>
+    <string name="update_check_now">Tikrinti dabar</string>
+    <string name="update_auto">Atidarius programėlę tikrinti, ar yra naujinimų</string>
+    <string name="update_privacy">Patikra paklausia GitHub apie naujausią leidimą ne dažniau kaip kartą per dieną. Nieko apie jus ar jūsų konsoles nesiunčiama; GitHub mato jūsų IP adresą, kaip ir bet kuri svetainė.</string>
+
+    <!-- find my console -->
+    <string name="find_button">Rasti mano PS5</string>
+    <string name="find_scanning">Ieškoma jūsų konsolės tinkle %1$s…</string>
+    <string name="find_again">Skenuoti iš naujo</string>
+    <string name="find_none">Konsolė nerasta.</string>
+    <string name="find_none_try">• Visiškai įjunkite konsolę (ne ramybės režimu) ir paleiskite etaHEN.\n• Telefone ir konsolėje naudokite tą patį Wi-Fi. Svečių tinklai ir VPN laiko įrenginius atskirtus.\n• Tada skenuokite iš naujo.</string>
+    <string name="find_no_wifi">Šis telefonas neprijungtas prie Wi-Fi tinklo. Prijunkite jį prie to paties Wi-Fi tinklo kaip konsolę, tada skenuokite iš naujo.</string>
+    <string name="find_pick">Palieskite Naudoti, kad nustatytumėte konsolės „%1$s“ adresą.</string>
+    <string name="find_saved">Išsaugotas adresas</string>
+    <string name="find_used_by">Išsaugota konsolei „%1$s“</string>
+    <string name="find_updated">Konsolė „%1$s“ dabar naudoja %2$s.</string>
+    <string name="find_privacy">Skenuojamas tik jūsų Wi-Fi tinklas, keliuose konsolės prievaduose. Niekas nesiunčiama internetu.</string>
+    <string name="action_stop">Stabdyti</string>
+    <string name="action_use">Naudoti</string>
+
+    <!-- about and backup -->
+    <string name="about_title">Apie Bento</string>
+    <string name="about_version">Versija %1$s</string>
+    <string name="about_button">Apie ir atsarginė kopija</string>
+    <string name="about_report">Kopijuoti ataskaitą</string>
+    <string name="about_report_help">Nukopijuoja programėlės versiją, telefono modelį ir paskutinį pranešimą, kad galėtumėte įklijuoti į pranešimą apie klaidą. IP adresai ir nuorodos praleidžiami.</string>
+    <string name="about_report_copied">Ataskaita nukopijuota</string>
+    <string name="about_releases">Puslapis Releases</string>
+    <string name="backup_title">Atsarginė kopija</string>
+    <string name="backup_text">Išsaugo jūsų konsoles, pagrindinį puslapį, žymes, skelbimų sąrašą ir payload viename faile. FTP slaptažodžiai neišsaugomi.</string>
+    <string name="backup_save">Išsaugoti atsarginę kopiją</string>
+    <string name="backup_restore">Atkurti atsarginę kopiją</string>
+    <string name="backup_saved">Atsarginė kopija išsaugota.</string>
+    <string name="backup_contents">Konsolės: %1$d · Žymės: %2$d · Payload: %3$d</string>
+    <string name="backup_made">Sukurta %1$s</string>
+    <string name="backup_skipped">Praleisti payload, nes failas būtų per didelis: %1$d</string>
+    <string name="backup_bad_file">Tas failas nėra Bento atsarginė kopija.</string>
+    <string name="backup_too_new">Tą atsarginę kopiją sukūrė naujesnė Bento versija. Atnaujinkite programėlę ir bandykite dar kartą.</string>
+    <string name="restore_title">Atkurti šią atsarginę kopiją?</string>
+    <string name="restore_text">Jūsų konsolės, pagrindinis puslapis, žymės ir skelbimų sąrašas bus pakeisti tais, kurie yra faile. Faile esantys payload bus įtraukti į payload biblioteką. Savo FTP slaptažodžius turėsite įvesti iš naujo.</string>
+    <string name="restore_button">Atkurti</string>
+    <string name="restore_done">Atsarginė kopija atkurta.</string>
+    <string name="restore_payloads_failed">Payload, kurių nepavyko išsaugoti: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">Paketų nuorodos (po vieną eilutėje)</string>
+    <string name="install_paste">Įklijuoti</string>
+    <string name="action_clear">Išvalyti</string>
+    <string name="install_paste_none">Iškarpinėje nėra žiniatinklio nuorodos.</string>
+    <string name="install_links_skipped">Siunčiami tik adresai, prasidedantys http:// arba https://. Praleista: %1$d</string>
+    <string name="install_recent">Naujausios nuorodos</string>
+    <string name="install_recent_clear">Išvalyti sąrašą</string>
+    <string name="install_sending_n">Siunčiama nuoroda %1$d iš %2$d…</string>
+    <string name="install_batch_done">Priimta: %1$d iš %2$d nuorodų</string>
+    <string name="install_batch_notsent">Neišsiųsta: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">Grandinės</string>
+    <string name="chains_hint">Grandinė siunčia kelis payload vieną po kito, po kiekvieno darydama pauzę. Ilgai palaikykite programos piktogramą, kad pagrindiniame ekrane paleistumėte vieną iš pirmųjų keturių grandinių.</string>
+    <string name="chain_new">Nauja grandinė</string>
+    <string name="action_edit">Redaguoti</string>
+    <string name="chain_summary_steps">Payload: %1$d</string>
+    <string name="chain_summary_pauses">Pauzės: %1$s</string>
+    <string name="chain_edit_title">Redaguoti grandinę</string>
+    <string name="chain_steps_title">Payload eilės tvarka (daugiausia %1$d)</string>
+    <string name="chain_add_step">Pridėti payload</string>
+    <string name="chain_pick_title">Kurį payload pridėti?</string>
+    <string name="chain_wait_label">Tada palaukti (sekundės)</string>
+    <string name="chain_missing">Nėra bibliotekoje</string>
+    <string name="chain_move_up">Perkelti aukštyn</string>
+    <string name="chain_move_down">Perkelti žemyn</string>
+    <string name="chain_pin">Pridėti prie pagrindinio ekrano</string>
+    <string name="chain_pin_unsupported">Ši paleidimo programa negali pridėti nuorodų. Ilgai palaikykite programos piktogramą, kad ten rastumėte savo grandines.</string>
+    <string name="chain_sending">Siunčiama %1$s (%2$d iš %3$d)…</string>
+    <string name="chain_waiting">Kitas payload po %1$s</string>
+    <string name="chain_retrying">Laukiama, kol konsolė bus paruošta…</string>
+    <string name="chain_result_done">Atlikta. Išsiųsti payload: %1$d iš %2$d</string>
+    <string name="chain_result_stopped">Sustabdyta. Išsiųsti payload: %1$d iš %2$d</string>
+    <string name="chain_result_failed">Sustabdyta %1$d žingsnyje (%2$s). Išsiųsti payload: %3$d iš %4$d</string>
+    <string name="chain_err_target">Pirmiausia nustatykite konsolės IP adresą ir Loader prievadą.</string>
+    <string name="chain_err_missing">Bibliotekoje jo nebėra: %1$s. Pridėkite iš naujo arba redaguokite grandinę.</string>
+    <string name="chain_err_unknown">Tokios grandinės nebėra.</string>
+    <string name="notif_channel_chain">Payload grandinės</string>
+    <string name="backup_chains">Grandinės: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">Praeitą kartą nebaigta: %1$d</string>
+    <string name="unfinished_hint">Programa užsidarė, kol šie perdavimai dar nebuvo baigti. „Tęsti“ paleidžia kiekvieną iš naujo, nuo pradžių.</string>
+    <string name="unfinished_continue">Tęsti</string>
+    <string name="unfinished_discard">Atmesti</string>
+    <string name="unfinished_missing">Failų nebepavyksta rasti, pasirinkite juos iš naujo: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">Pristabdyti</string>
+    <string name="transfer_resume">Tęsti</string>
+    <string name="transfer_paused">Pristabdyta</string>
+    <string name="speed_limit_title">Greičio riba</string>
+    <string name="speed_limit_off">Be ribos</string>
+    <string name="speed_limit_value">Riba: %1$s</string>
+    <string name="speed_limit_hint">Sulėtina perdavimus, kad Wi-Fi liktų laisvas kitiems dalykams. Pakeitimas įsigalioja iš karto.</string>
+    <string name="summary_title">Atlikti perdavimai: %1$d iš %2$d</string>
+    <string name="summary_detail">%1$s per %2$s</string>
+    <string name="summary_failed">Nepavyko: %1$d</string>
+    <string name="summary_stopped">Sustabdyta: %1$d</string>
+    <string name="notif_channel_results">Perdavimų rezultatai</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">Pasirinkta: %1$d</string>
+    <string name="files_select_all">Pasirinkti viską</string>
+    <string name="files_select_none">Atšaukti pasirinkimą</string>
+    <string name="files_delete_many_title">Ištrinti pasirinktus elementus (%1$d)?</string>
+    <string name="files_delete_many_text">Tai ištrins iš konsolės pasirinktus failus ir aplankus, aplankus – su visu jų turiniu. To atšaukti negalima.</string>
+    <string name="files_deleted_many">Ištrinta elementų: %1$d</string>
+    <string name="files_delete_partial">Ištrinta elementų: %1$d, neištrinta: %2$d. Pirmoji problema: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">Peržiūrimi aplankai…</string>
+    <string name="files_dl_confirm_title">Atsisiųsti į telefoną?</string>
+    <string name="files_dl_confirm_text">Failų: %1$d, iš viso %2$s. Jie išsaugomi Downloads/PS5, tuose pačiuose aplankuose kaip konsolėje.</string>
+    <string name="files_dl_links">Nuorodos aplankų viduje neatsisiunčiamos: %1$d.</string>
+    <string name="files_dl_truncated">Įtraukta failų: %1$d. Aplankuose jų yra daugiau arba jie sudėti giliau, nei programa seka.</string>
+    <string name="files_dl_none">Pasirinkime nėra failo, kurį būtų galima atsisiųsti.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">Rūšiuoti</string>
+    <string name="files_sort_title">Rūšiuoti pagal</string>
+    <string name="files_sort_name">Pavadinimas</string>
+    <string name="files_sort_size">Dydis, didžiausi pirma</string>
+    <string name="files_sort_newest">Naujausi pirma</string>
+    <string name="files_search">Ieškoti</string>
+    <string name="files_search_hint">Ieškoti šiame aplanke</string>
+    <string name="files_no_match">Niekas šiame aplanke neatitinka paieškos.</string>
+    <string name="files_pin">Prisegti šį aplanką</string>
+    <string name="files_unpin">Atsegti šį aplanką</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">Skirtukai: %1$d</string>
+    <string name="web_tabs_title">Skirtukai</string>
+    <string name="web_tab_new">Naujas skirtukas</string>
+    <string name="web_tabs_full">Per daug skirtukų. Riba yra %1$d. Pirmiausia uždarykite vieną.</string>
+    <string name="web_find">Ieškoti</string>
+    <string name="web_find_hint">Ieškoti šiame puslapyje</string>
+    <string name="web_find_none">Atitikmenų nėra</string>
+    <string name="web_desktop">Kompiuterio svetainė</string>
+    <string name="web_link_new_tab">Atidaryti naujame skirtuke</string>
+    <string name="web_link_copy">Kopijuoti nuorodą</string>
+    <string name="web_link_copied">Nuoroda nukopijuota</string>
+    <string name="web_link_use">Siųsti arba atsisiųsti…</string>
+</resources>

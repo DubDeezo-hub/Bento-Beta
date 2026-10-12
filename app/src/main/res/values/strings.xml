@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- English (default). Every other language is in res/values-xx/strings.xml. -->
+<resources>
+    <string name="app_name" translatable="false">Bento</string>
+    <string name="credit_name" translatable="false">DubDeezo</string>
+    <string name="service_ftp" translatable="false">FTP</string>
+
+    <!-- shared actions -->
+    <string name="action_cancel">Cancel</string>
+    <string name="action_close">Close</string>
+    <string name="action_done">Done</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_rename">Rename</string>
+    <string name="action_save">Save</string>
+    <string name="action_remove">Remove</string>
+    <string name="action_send">Send</string>
+    <string name="action_open">Open</string>
+    <string name="action_block">Block</string>
+    <string name="action_home">Home</string>
+    <string name="action_dismiss">Dismiss</string>
+    <string name="action_try_again">Try again</string>
+    <string name="action_skip">Skip</string>
+    <string name="action_cancel_all">Cancel all</string>
+    <string name="action_create">Create</string>
+    <string name="action_set">Set</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">by %1$s</string>
+    <string name="nav_install">Install</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">Upload</string>
+    <string name="nav_files">Files</string>
+    <string name="nav_web">Web</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Installer</string>
+    <string name="service_loader">Loader</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">Set your PS5\'s IP address</string>
+    <string name="status_checking">Checking…</string>
+    <string name="status_ready">Ready</string>
+    <string name="status_partly">Partly ready</string>
+    <string name="status_partly_off">Partly ready · off: %1$s</string>
+    <string name="status_offline">Can\'t reach the console</string>
+    <string name="status_hint_unset">Find it on the PS5 under Settings &gt; Network &gt; Connection Status &gt; View Connection Status. Tap here to enter it.</string>
+    <string name="status_hint_offline">Nothing answers at this address. Check the IP, that the PS5 is awake on the same Wi-Fi, and that etaHEN is running.</string>
+    <string name="status_hint_one">Not answering: %1$s. Start it on the console, or check its port.</string>
+    <string name="status_hint_many">Not answering: %1$s. Start them on the console, or check their ports.</string>
+    <string name="console_switch">Switch console</string>
+    <string name="console_change_ip">Change the IP address</string>
+    <string name="console_ip_title">Console IP address</string>
+    <string name="console_ip_label">IP address</string>
+    <string name="console_ip_help">Find it on the PS5 under Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">Transfer</string>
+    <string name="transfer_sending">Sending</string>
+    <string name="transfer_sending_to">Sending to %1$s</string>
+    <string name="transfer_receiving">Receiving</string>
+    <string name="transfer_receiving_from">Receiving from %1$s</string>
+    <string name="transfer_detail_total">%1$s · %2$s of %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">Starting…</string>
+    <string name="transfer_stopped">Stopped</string>
+    <string name="transfer_start_failed">Couldn\'t start the transfer: %1$s</string>
+    <string name="transfer_retry_in">Connection lost. Trying again in %1$d s…</string>
+    <string name="transfer_reconnecting">Reconnecting…</string>
+    <string name="transfer_eta">%1$s left</string>
+    <string name="transfer_queued">%1$d waiting</string>
+    <string name="queue_title">Waiting transfers</string>
+    <string name="queue_clear">Clear all</string>
+    <string name="queue_empty">Nothing is waiting.</string>
+    <string name="notif_channel">PS5 transfers</string>
+    <string name="notif_sent">%1$s sent</string>
+    <string name="notif_received">%1$s received</string>
+    <string name="percent_value">%1$d%%</string>
+    <string name="desc_done">Done</string>
+    <string name="desc_problem">Problem</string>
+    <string name="status_hide">Hide this message</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">Added to the queue. %1$d waiting.</string>
+    <string name="msg_set_ip_first">Set the console\'s IP address first. Tap the card at the top.</string>
+    <string name="msg_sending_link">Sending link to PS5…</string>
+    <string name="msg_check_ip_ftp">Check the console\'s IP address and the FTP port.</string>
+    <string name="msg_adding_to_shelf_link">Adding to the payload shelf…</string>
+    <string name="status_idle">Idle</string>
+    <string name="status_sending">Sending…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">Leave this site?</string>
+    <string name="offsite_text">The page wants to open %1$s. Ads often trigger this when you tap a link, so only continue if you expected it.</string>
+    <string name="choose_install">Send link to PS5 installer</string>
+    <string name="choose_ftp">Upload to PS5 (FTP)</string>
+    <string name="choose_shelf">Save to payload shelf</string>
+    <string name="choose_phone">Save to phone</string>
+    <string name="choose_help">The installer needs a direct package link the console can open without logging in. FTP works for any file and keeps your login session. The phone relays the data in the background, with progress above the bottom bar and in a notification. The payload shelf keeps a small payload (up to %1$s) inside the app for the Payload tab.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Installer port (etaHEN: 12800)</string>
+    <string name="install_accepted">Installer accepted it: %1$s</string>
+    <string name="install_not_accepted">Not accepted (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">Install from this phone</string>
+    <string name="serve_intro">The console downloads the packages straight from this phone over Wi-Fi, so nothing is copied to it first. The phone and the console must be on the same network.</string>
+    <string name="serve_choose">Choose packages</string>
+    <string name="serve_none">No packages chosen</string>
+    <string name="serve_start">Start sharing</string>
+    <string name="serve_stop">Stop sharing</string>
+    <string name="serve_copy">Copy link</string>
+    <string name="serve_copied">Link copied</string>
+    <string name="serve_file_waiting">Waiting for the console to start downloading…</string>
+    <string name="serve_file_pulling">The console is downloading: %1$s</string>
+    <string name="serve_file_done">The console has downloaded all of it</string>
+    <string name="serve_unreadable">Can\'t read this file</string>
+    <string name="serve_hint">If the console never starts downloading, the Wi-Fi may be stopping devices from reaching each other (guest networks often do). Use the main network, and let this app run in the background.</string>
+    <string name="serve_no_wifi">Can\'t find this phone\'s Wi-Fi address. Connect it to the same Wi-Fi as the console.</string>
+    <string name="serve_failed">Couldn\'t start sharing: %1$s</string>
+    <string name="serve_idle_stop">Sharing stopped because nothing was downloaded for a long time.</string>
+    <string name="serve_notif_title">Sharing with %1$s</string>
+    <string name="serve_notif_text">Files downloaded: %1$d / %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">Choose files</string>
+    <string name="upload_none">No files chosen</string>
+    <string name="upload_files_chosen">Files chosen: %1$d</string>
+    <string name="upload_start">Upload in background</string>
+    <string name="upload_help">Progress shows above the bottom bar and in a notification. It keeps going if you leave the app.</string>
+    <string name="ftp_port">FTP port</string>
+    <string name="ftp_user">Username</string>
+    <string name="ftp_password">Password</string>
+    <string name="ftp_folder">Remote folder</string>
+    <string name="ftp_use_folder">Use %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">Loading…</string>
+    <string name="files_empty">This folder is empty.</string>
+    <string name="files_not_loaded">Not loaded yet</string>
+    <string name="files_up">⬆ Up</string>
+    <string name="files_refresh">Refresh</string>
+    <string name="files_new_folder">New folder</string>
+    <string name="files_upload_here">Upload here</string>
+    <string name="files_ftp_settings">FTP settings</string>
+    <string name="files_need_ip">Set the console\'s IP address (tap the card at the top) and a valid FTP port to browse its files.</string>
+    <string name="files_kind_folder">Folder</string>
+    <string name="files_kind_link">Link, %1$s</string>
+    <string name="files_download">Download to phone</string>
+    <string name="files_new_name">New name</string>
+    <string name="files_name_used">That name is already used here.</string>
+    <string name="files_renaming">Renaming…</string>
+    <string name="files_renamed">Renamed %1$s to %2$s</string>
+    <string name="files_delete_title">Delete %1$s?</string>
+    <string name="files_delete_folder">This deletes the folder and everything inside it from the console. It can\'t be undone.</string>
+    <string name="files_delete_file">This deletes the file from the console. It can\'t be undone.</string>
+    <string name="files_deleting">Deleting…</string>
+    <string name="files_deleted">Deleted %1$s</string>
+    <string name="files_deleted_inside">Deleted %1$s (items inside: %2$d)</string>
+    <string name="files_creating">Creating folder…</string>
+    <string name="files_created">Created the folder %1$s</string>
+    <string name="files_folder_name">Folder name</string>
+    <string name="name_empty">The name can\'t be empty.</string>
+    <string name="name_not_allowed">That name isn\'t allowed.</string>
+    <string name="name_slash">The name can\'t contain slash characters.</string>
+    <string name="name_control">The name has characters that aren\'t allowed.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">Failed: %1$s</string>
+    <string name="ftp_port_hint">Can\'t reach the FTP server. Check the console IP and the FTP port (etaHEN\'s built-in FTP uses 1337, the FTP payload uses 2121).</string>
+    <string name="err_login">FTP login failed</string>
+    <string name="err_cant_open">can\'t open %1$s (%2$s)</string>
+    <string name="err_rename">rename failed (%1$s)</string>
+    <string name="err_mkdir">couldn\'t create the folder (%1$s)</string>
+    <string name="err_too_deep">the folder is nested too deeply</string>
+    <string name="err_delete_path">couldn\'t delete %1$s (%2$s)</string>
+    <string name="err_upload">FTP upload failed: %1$s</string>
+    <string name="err_download">FTP download failed: %1$s</string>
+    <string name="err_open_file">Could not open the file</string>
+    <string name="err_cancelled_upload">Cancelled. A partial file may remain at %1$s</string>
+    <string name="err_cancelled_download">Cancelled. The partial download was discarded.</string>
+    <string name="err_gave_up">Gave up after the connection kept failing. Last error: %1$s</string>
+    <string name="err_short_upload">The console kept only %1$s of the %2$s that were sent.</string>
+    <string name="err_short_download">Only %1$s of %2$s arrived.</string>
+    <string name="err_empty_file">The file is empty</string>
+    <string name="err_save">Couldn\'t save %1$s</string>
+    <string name="sent_to_ps5">Sent to PS5: %1$s</string>
+    <string name="saved_to_downloads">Saved to Downloads/PS5: %1$s</string>
+    <string name="dl_http_failed">Download failed: HTTP %1$s</string>
+    <string name="dl_empty">Download failed: empty response</string>
+    <string name="dl_cut_short">The connection closed before the whole file arrived.</string>
+    <string name="dl_create_failed">Couldn\'t create the file in Downloads</string>
+    <string name="dl_write_failed">Couldn\'t open the new file for writing</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">Sent %1$s</string>
+    <string name="shelf_added">Added on the shelf: %1$s (%2$s)</string>
+    <string name="shelf_updated">Updated on the shelf: %1$s (%2$s)</string>
+    <string name="shelf_too_large">That file is bigger than %1$s, so it wasn\'t added to the shelf.</string>
+    <string name="shelf_too_large_url">That file is %1$s. The shelf takes payloads up to %2$s.</string>
+    <string name="payload_adding">Adding to the shelf…</string>
+    <string name="payload_remove_title">Remove %1$s?</string>
+    <string name="payload_remove_text">It is deleted from the shelf. The original file on your phone isn\'t touched.</string>
+    <string name="payload_loader_port">Loader port</string>
+    <string name="payload_shelf_title">Payload shelf</string>
+    <string name="payload_shelf_empty">Nothing saved yet. Add the payloads you use often (an FTP server, etaHEN, ...) and send each with one tap. You can also save one straight from the Web tab when you download it.</string>
+    <string name="payload_sending">Sending %1$s…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">Add payload to shelf</string>
+    <string name="payload_once_title">Send a file once</string>
+    <string name="payload_choose">Choose payload (.elf / .bin)</string>
+    <string name="payload_send">Send payload</string>
+
+    <!-- consoles -->
+    <string name="profile_default">My PS5</string>
+    <string name="profile_new">Console %1$d</string>
+    <string name="profile_fallback">Console</string>
+    <string name="consoles_title">Consoles</string>
+    <string name="console_rename_title">Rename console</string>
+    <string name="console_name_label">Name</string>
+    <string name="console_delete_title">Delete %1$s?</string>
+    <string name="console_delete_text">Its saved IP address and ports are removed. Your other consoles are not affected.</string>
+    <string name="console_no_ip">no IP address yet</string>
+    <string name="console_color_of">Color of %1$s</string>
+    <string name="console_use_color">Use %1$s</string>
+    <string name="console_add">Add console</string>
+    <string name="language_button">Language</string>
+    <string name="color_blue">Blue</string>
+    <string name="color_orange">Orange</string>
+    <string name="color_green">Green</string>
+    <string name="color_pink">Pink</string>
+    <string name="color_purple">Purple</string>
+    <string name="color_teal">Teal</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">Download started (see Downloads)</string>
+    <string name="web_load_failed">Couldn\'t load page: %1$s</string>
+    <string name="web_http_server">The site is busy or down right now (error %1$s). Try again in a moment.</string>
+    <string name="web_http_other">The site replied with error %1$s.</string>
+    <string name="web_open_first">Open a page first</string>
+    <string name="web_bookmark_saved">Bookmark saved</string>
+    <string name="web_bookmark_exists">Already in your bookmarks</string>
+    <string name="web_home_set">Homepage set to %1$s</string>
+    <string name="web_reload">Reload</string>
+    <string name="web_add">★ Add</string>
+    <string name="web_bookmarks">Bookmarks</string>
+    <string name="web_homepage_label">Homepage URL</string>
+    <string name="web_bookmarks_empty">No bookmarks yet. Open a page and tap %1$s.</string>
+    <string name="web_bookmarks_help">Tap a bookmark to open it. %1$s makes it your homepage.</string>
+    <string name="adblock_title">Ad block</string>
+    <string name="adblock_switch">Block ad domains</string>
+    <string name="adblock_info">Blocked so far: %1$d. Networks in the built-in list: %2$d. Reload the page after changing anything.</string>
+    <string name="adblock_own">Your own domains, one per line</string>
+    <string name="adblock_on">Ad block: on · blocked: %1$d · tap to change</string>
+    <string name="adblock_off">Ad block: off · blocked: %1$d · tap to change</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">What can I do?</string>
+    <string name="help_what">What happened</string>
+    <string name="help_try">What to try</string>
+    <string name="help_details">Details</string>
+    <string name="help_copy">Copy details</string>
+    <string name="help_copied">Copied</string>
+    <string name="help_unreachable_title">Can\'t reach the console</string>
+    <string name="help_unreachable_what">Nothing answers at the console\'s address.</string>
+    <string name="help_unreachable_try">• Check the IP address on the PS5 (Settings &gt; Network &gt; Connection Status). It can change after a restart.\n• Wake the console fully. Rest mode often turns the network off.\n• Use the same Wi-Fi on both. Guest networks and VPNs block it.</string>
+    <string name="help_port_title">That service isn\'t running</string>
+    <string name="help_port_what">The console answered, but nothing listens on that port.</string>
+    <string name="help_port_try">• Start etaHEN on the console. It provides the installer (12800), the loader (9021) and FTP (1337).\n• A separate FTP payload usually uses 2121. Enter the same port here.\n• On the console card, the light that is off shows what is missing.</string>
+    <string name="help_login_title">FTP login refused</string>
+    <string name="help_login_what">The console\'s FTP server rejected the user name or password.</string>
+    <string name="help_login_try">• etaHEN accepts the user name anonymous with any password.\n• If you set a login on the console, enter it under Upload.\n• The password isn\'t saved. Enter it again after restarting the app.</string>
+    <string name="help_dropped_title">The connection dropped</string>
+    <string name="help_dropped_what">The link to the console broke or stopped moving data. The app retries and continues where it stopped.</string>
+    <string name="help_dropped_try">• Keep the phone near the router and the console awake.\n• Pause other big downloads on the network.\n• If it keeps failing, wait a moment and tap Try again.</string>
+    <string name="help_refused_title">The installer didn\'t take the link</string>
+    <string name="help_refused_what">The console is reachable, but its installer refused this link.</string>
+    <string name="help_refused_try">• The link must lead straight to the package file and open without a login.\n• The console must be able to reach it. Links from this phone only work on the same Wi-Fi.\n• Check that the installer is running and the console has free space.</string>
+    <string name="help_storage_title">The console stopped storing</string>
+    <string name="help_storage_what">The console kept less than was sent. The drive is usually full or read-only.</string>
+    <string name="help_storage_try">• Free some space on the console.\n• Choose another folder, for example on a USB drive.\n• Then tap Try again.</string>
+    <string name="help_denied_title">That folder or file was refused</string>
+    <string name="help_denied_what">The FTP server can\'t open, write or change it here.</string>
+    <string name="help_denied_try">• Check that the folder exists. Names are case-sensitive.\n• System folders are read-only. Use /data or a USB drive.\n• A file used by a running game may be locked. Close the game.</string>
+    <string name="help_phone_title">The phone can\'t use the file</string>
+    <string name="help_phone_what">The file is gone or moved, the app lost access to it, or the phone is out of space.</string>
+    <string name="help_phone_try">• Choose the file again.\n• Free some storage on the phone.\n• For a file in a cloud app, save it to the phone first.</string>
+    <string name="help_link_title">The download link failed</string>
+    <string name="help_link_what">The website did not hand over the file. The link may have expired, need a login, or the site is busy.</string>
+    <string name="help_link_try">• Start the download again from the Web tab. That keeps your login.\n• Links from file-hosting sites often expire after a few minutes.\n• If the site reported an error in the 500s, try again later.</string>
+
+    <!-- update check -->
+    <string name="update_available">Version %1$s is available</string>
+    <string name="update_download">Download</string>
+    <string name="update_later">Later</string>
+    <string name="update_title">Updates</string>
+    <string name="update_current">You have the latest version (%1$s).</string>
+    <string name="update_none">No release found on the Releases page yet.</string>
+    <string name="update_check_now">Check now</string>
+    <string name="update_auto">Check for updates when the app opens</string>
+    <string name="update_privacy">The check asks GitHub for the newest release, at most once a day. Nothing about you or your consoles is sent; GitHub sees your IP address, as any website does.</string>
+
+    <!-- find my console -->
+    <string name="find_button">Find my PS5</string>
+    <string name="find_scanning">Looking for your console on %1$s…</string>
+    <string name="find_again">Scan again</string>
+    <string name="find_none">No console found.</string>
+    <string name="find_none_try">• Turn the console fully on (not rest mode) and start etaHEN.\n• Use the same Wi-Fi on the phone and the console. Guest networks and VPNs keep devices apart.\n• Then scan again.</string>
+    <string name="find_no_wifi">This phone isn\'t on a Wi-Fi network. Connect it to the same Wi-Fi as the console, then scan again.</string>
+    <string name="find_pick">Tap Use to set the address of %1$s.</string>
+    <string name="find_saved">Saved address</string>
+    <string name="find_used_by">Saved for %1$s</string>
+    <string name="find_updated">%1$s now uses %2$s.</string>
+    <string name="find_privacy">Only your Wi-Fi network is scanned, on a few console ports. Nothing is sent over the internet.</string>
+    <string name="action_stop">Stop</string>
+    <string name="action_use">Use</string>
+
+    <!-- about and backup -->
+    <string name="about_title">About Bento</string>
+    <string name="about_version">Version %1$s</string>
+    <string name="about_button">About &amp; backup</string>
+    <string name="about_report">Copy report</string>
+    <string name="about_report_help">Copies the app version, your phone model and the last message, to paste into a bug report. IP addresses and links are left out.</string>
+    <string name="about_report_copied">Report copied</string>
+    <string name="about_releases">Releases page</string>
+    <string name="backup_title">Backup</string>
+    <string name="backup_text">Saves your consoles, homepage, bookmarks, ad list and payloads in one file. FTP passwords are not saved.</string>
+    <string name="backup_save">Save backup</string>
+    <string name="backup_restore">Restore backup</string>
+    <string name="backup_saved">Backup saved.</string>
+    <string name="backup_contents">Consoles: %1$d · Bookmarks: %2$d · Payloads: %3$d</string>
+    <string name="backup_made">Made on %1$s</string>
+    <string name="backup_skipped">Payloads left out because the file would be too large: %1$d</string>
+    <string name="backup_bad_file">That file is not a Bento backup.</string>
+    <string name="backup_too_new">That backup was made by a newer version of Bento. Update the app, then try again.</string>
+    <string name="restore_title">Restore this backup?</string>
+    <string name="restore_text">Your consoles, homepage, bookmarks and ad list are replaced by the ones in the file. Payloads in the file are added to the shelf. You will need to type your FTP passwords again.</string>
+    <string name="restore_button">Restore</string>
+    <string name="restore_done">Backup restored.</string>
+    <string name="restore_payloads_failed">Payloads that could not be stored: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">Package links (one per line)</string>
+    <string name="install_paste">Paste</string>
+    <string name="action_clear">Clear</string>
+    <string name="install_paste_none">No web link on the clipboard.</string>
+    <string name="install_links_skipped">Only addresses that start with http:// or https:// are sent. Left out: %1$d</string>
+    <string name="install_recent">Recent links</string>
+    <string name="install_recent_clear">Clear list</string>
+    <string name="install_sending_n">Sending link %1$d of %2$d…</string>
+    <string name="install_batch_done">Accepted: %1$d of %2$d links</string>
+    <string name="install_batch_notsent">Not sent: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">Chains</string>
+    <string name="chains_hint">A chain sends several payloads one after the other, with a pause after each. Press and hold the app icon to start one of the first four chains from your home screen.</string>
+    <string name="chain_new">New chain</string>
+    <string name="action_edit">Edit</string>
+    <string name="chain_summary_steps">Payloads: %1$d</string>
+    <string name="chain_summary_pauses">Pauses: %1$s</string>
+    <string name="chain_edit_title">Edit chain</string>
+    <string name="chain_steps_title">Payloads, in order (at most %1$d)</string>
+    <string name="chain_add_step">Add payload</string>
+    <string name="chain_pick_title">Add which payload?</string>
+    <string name="chain_wait_label">Then wait (seconds)</string>
+    <string name="chain_missing">Not on the shelf</string>
+    <string name="chain_move_up">Move up</string>
+    <string name="chain_move_down">Move down</string>
+    <string name="chain_pin">Add to home screen</string>
+    <string name="chain_pin_unsupported">This launcher can\'t add shortcuts. Press and hold the app icon to find your chains there.</string>
+    <string name="chain_sending">Sending %1$s (%2$d of %3$d)…</string>
+    <string name="chain_waiting">Next payload in %1$s</string>
+    <string name="chain_retrying">Waiting for the console to be ready…</string>
+    <string name="chain_result_done">Done. Payloads sent: %1$d of %2$d</string>
+    <string name="chain_result_stopped">Stopped. Payloads sent: %1$d of %2$d</string>
+    <string name="chain_result_failed">Stopped at step %1$d (%2$s). Payloads sent: %3$d of %4$d</string>
+    <string name="chain_err_target">Set the console\'s IP address and the loader port first.</string>
+    <string name="chain_err_missing">Not on the shelf any more: %1$s. Add it again or edit the chain.</string>
+    <string name="chain_err_unknown">That chain doesn\'t exist any more.</string>
+    <string name="notif_channel_chain">Payload chains</string>
+    <string name="backup_chains">Chains: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">Unfinished from last time: %1$d</string>
+    <string name="unfinished_hint">The app closed before these were done. Continue starts each one again from the beginning.</string>
+    <string name="unfinished_continue">Continue</string>
+    <string name="unfinished_discard">Discard</string>
+    <string name="unfinished_missing">Files not found any more, choose them again: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">Pause</string>
+    <string name="transfer_resume">Resume</string>
+    <string name="transfer_paused">Paused</string>
+    <string name="speed_limit_title">Speed limit</string>
+    <string name="speed_limit_off">No limit</string>
+    <string name="speed_limit_value">Limit: %1$s</string>
+    <string name="speed_limit_hint">Slows transfers down so the Wi-Fi stays free for other things. A change takes effect right away.</string>
+    <string name="summary_title">Transfers done: %1$d of %2$d</string>
+    <string name="summary_detail">%1$s in %2$s</string>
+    <string name="summary_failed">Failed: %1$d</string>
+    <string name="summary_stopped">Stopped: %1$d</string>
+    <string name="notif_channel_results">Transfer results</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">Selected: %1$d</string>
+    <string name="files_select_all">Select all</string>
+    <string name="files_select_none">Select none</string>
+    <string name="files_delete_many_title">Delete selected items (%1$d)?</string>
+    <string name="files_delete_many_text">This deletes the selected files and folders from the console, folders with everything inside them. It can\'t be undone.</string>
+    <string name="files_deleted_many">Items deleted: %1$d</string>
+    <string name="files_delete_partial">Items deleted: %1$d, not deleted: %2$d. The first problem: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">Looking through the folders…</string>
+    <string name="files_dl_confirm_title">Download to phone?</string>
+    <string name="files_dl_confirm_text">Files: %1$d, together %2$s. They are saved in Downloads/PS5, in the same folders as on the console.</string>
+    <string name="files_dl_links">Links inside folders are not downloaded: %1$d.</string>
+    <string name="files_dl_truncated">Files taken: %1$d. The folders hold more than that, or go deeper than the app follows.</string>
+    <string name="files_dl_none">There is no file to download in the selection.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">Sort</string>
+    <string name="files_sort_title">Sort by</string>
+    <string name="files_sort_name">Name</string>
+    <string name="files_sort_size">Size, largest first</string>
+    <string name="files_sort_newest">Newest first</string>
+    <string name="files_search">Search</string>
+    <string name="files_search_hint">Search in this folder</string>
+    <string name="files_no_match">Nothing in this folder matches the search.</string>
+    <string name="files_pin">Pin this folder</string>
+    <string name="files_unpin">Unpin this folder</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">Tabs: %1$d</string>
+    <string name="web_tabs_title">Tabs</string>
+    <string name="web_tab_new">New tab</string>
+    <string name="web_tabs_full">Too many tabs. The limit is %1$d. Close one first.</string>
+    <string name="web_find">Find</string>
+    <string name="web_find_hint">Find in this page</string>
+    <string name="web_find_none">No matches</string>
+    <string name="web_desktop">Desktop site</string>
+    <string name="web_link_new_tab">Open in new tab</string>
+    <string name="web_link_copy">Copy link</string>
+    <string name="web_link_copied">Link copied</string>
+    <string name="web_link_use">Send or download…</string>
+</resources>

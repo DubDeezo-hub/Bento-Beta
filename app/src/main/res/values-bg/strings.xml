@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bulgarian. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">Отказ</string>
+    <string name="action_close">Затваряне</string>
+    <string name="action_done">Готово</string>
+    <string name="action_delete">Изтриване</string>
+    <string name="action_rename">Преименуване</string>
+    <string name="action_save">Запазване</string>
+    <string name="action_remove">Премахване</string>
+    <string name="action_send">Изпращане</string>
+    <string name="action_open">Отваряне</string>
+    <string name="action_block">Блокиране</string>
+    <string name="action_home">Начало</string>
+    <string name="action_dismiss">Скриване</string>
+    <string name="action_try_again">Нов опит</string>
+    <string name="action_skip">Пропускане</string>
+    <string name="action_cancel_all">Отказ от всички</string>
+    <string name="action_create">Създаване</string>
+    <string name="action_set">Задаване</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">от %1$s</string>
+    <string name="nav_install">Инсталация</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">Качване</string>
+    <string name="nav_files">Файлове</string>
+    <string name="nav_web">Уеб</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Installer</string>
+    <string name="service_loader">Loader</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">Задайте IP адреса на вашата PS5</string>
+    <string name="status_checking">Проверка…</string>
+    <string name="status_ready">Готово</string>
+    <string name="status_partly">Частично готово</string>
+    <string name="status_partly_off">Частично готово · без отговор: %1$s</string>
+    <string name="status_offline">Няма връзка с конзолата</string>
+    <string name="status_hint_unset">Намерете го на PS5 в Settings &gt; Network &gt; Connection Status &gt; View Connection Status. Докоснете тук, за да го въведете.</string>
+    <string name="status_hint_offline">На този адрес не отговаря нищо. Проверете IP адреса, дали PS5 е включена и в същата Wi-Fi мрежа и дали etaHEN работи.</string>
+    <string name="status_hint_one">Не отговаря: %1$s. Стартирайте го на конзолата или проверете порта му.</string>
+    <string name="status_hint_many">Не отговарят: %1$s. Стартирайте ги на конзолата или проверете портовете им.</string>
+    <string name="console_switch">Смяна на конзолата</string>
+    <string name="console_change_ip">Промяна на IP адреса</string>
+    <string name="console_ip_title">IP адрес на конзолата</string>
+    <string name="console_ip_label">IP адрес</string>
+    <string name="console_ip_help">Намерете го на PS5 в Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">Прехвърляне</string>
+    <string name="transfer_sending">Изпращане</string>
+    <string name="transfer_sending_to">Изпращане към %1$s</string>
+    <string name="transfer_receiving">Получаване</string>
+    <string name="transfer_receiving_from">Получаване от %1$s</string>
+    <string name="transfer_detail_total">%1$s · %2$s от %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">Стартиране…</string>
+    <string name="transfer_stopped">Спряно</string>
+    <string name="transfer_start_failed">Прехвърлянето не можа да започне: %1$s</string>
+    <string name="transfer_retry_in">Връзката е прекъсната. Нов опит след %1$d с…</string>
+    <string name="transfer_reconnecting">Повторно свързване…</string>
+    <string name="transfer_eta">Остава: %1$s</string>
+    <string name="transfer_queued">В опашката: %1$d</string>
+    <string name="queue_title">Прехвърляния в опашката</string>
+    <string name="queue_clear">Премахване на всички</string>
+    <string name="queue_empty">Няма нищо в опашката.</string>
+    <string name="notif_channel">Прехвърляния към PS5</string>
+    <string name="notif_sent">Изпратено: %1$s</string>
+    <string name="notif_received">Получено: %1$s</string>
+    <string name="percent_value">%1$d%%</string>
+    <string name="desc_done">Готово</string>
+    <string name="desc_problem">Проблем</string>
+    <string name="status_hide">Скриване на това съобщение</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">Добавено в опашката. В опашката: %1$d.</string>
+    <string name="msg_set_ip_first">Първо задайте IP адреса на конзолата. Докоснете картата в горната част.</string>
+    <string name="msg_sending_link">Изпращане на връзката към PS5…</string>
+    <string name="msg_check_ip_ftp">Проверете IP адреса на конзолата и FTP порта.</string>
+    <string name="msg_adding_to_shelf_link">Добавяне към библиотеката с payload…</string>
+    <string name="status_idle">Неактивно</string>
+    <string name="status_sending">Изпращане…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">Напускане на този сайт?</string>
+    <string name="offsite_text">Страницата иска да отвори %1$s. Рекламите често предизвикват това, когато докоснете връзка, затова продължете само ако сте го очаквали.</string>
+    <string name="choose_install">Изпращане на връзка към Installer на PS5</string>
+    <string name="choose_ftp">Качване на PS5 (FTP)</string>
+    <string name="choose_shelf">Запазване в библиотеката с payload</string>
+    <string name="choose_phone">Запазване в телефона</string>
+    <string name="choose_help">Installer има нужда от директна връзка към пакета, която конзолата може да отвори без вход. FTP работи с всеки файл и запазва вашата сесия. Телефонът препредава данните във фонов режим, като напредъкът се показва над долната лента и в известие. Библиотеката с payload съхранява малък payload (до %1$s) в приложението за раздела Payload.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Порт на Installer (etaHEN: 12800)</string>
+    <string name="install_accepted">Installer го прие: %1$s</string>
+    <string name="install_not_accepted">Не е приет (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">Инсталиране от този телефон</string>
+    <string name="serve_intro">Конзолата изтегля пакетите директно от този телефон през Wi-Fi, така че не е нужно първо да копирате нищо. Телефонът и конзолата трябва да са в една и съща мрежа.</string>
+    <string name="serve_choose">Избор на пакети</string>
+    <string name="serve_none">Няма избрани пакети</string>
+    <string name="serve_start">Започване на споделянето</string>
+    <string name="serve_stop">Спиране на споделянето</string>
+    <string name="serve_copy">Копиране на връзката</string>
+    <string name="serve_copied">Връзката е копирана</string>
+    <string name="serve_file_waiting">Изчакване конзолата да започне изтеглянето…</string>
+    <string name="serve_file_pulling">Конзолата изтегля: %1$s</string>
+    <string name="serve_file_done">Конзолата изтегли всичко</string>
+    <string name="serve_unreadable">Този файл не може да бъде прочетен</string>
+    <string name="serve_hint">Ако конзолата така и не започне изтегляне, възможно е Wi-Fi мрежата да пречи на устройствата да се виждат (гостните мрежи често правят това). Използвайте основната мрежа и оставете това приложение да работи на заден план.</string>
+    <string name="serve_no_wifi">Wi-Fi адресът на този телефон не е намерен. Свържете го към същата Wi-Fi мрежа като конзолата.</string>
+    <string name="serve_failed">Споделянето не можа да започне: %1$s</string>
+    <string name="serve_idle_stop">Споделянето е спряно, защото дълго време нищо не е било изтегляно.</string>
+    <string name="serve_notif_title">Споделяне с %1$s</string>
+    <string name="serve_notif_text">Изтеглени файлове: %1$d от %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">Избор на файлове</string>
+    <string name="upload_none">Няма избрани файлове</string>
+    <string name="upload_files_chosen">Избрани файлове: %1$d</string>
+    <string name="upload_start">Качване на заден план</string>
+    <string name="upload_help">Напредъкът се показва над долната лента и в известие. Продължава, дори да излезете от приложението.</string>
+    <string name="ftp_port">FTP порт</string>
+    <string name="ftp_user">Потребителско име</string>
+    <string name="ftp_password">Парола</string>
+    <string name="ftp_folder">Отдалечена папка</string>
+    <string name="ftp_use_folder">Използване на %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">Зареждане…</string>
+    <string name="files_empty">Тази папка е празна.</string>
+    <string name="files_not_loaded">Още не е заредено</string>
+    <string name="files_up">⬆ Нагоре</string>
+    <string name="files_refresh">Опресняване</string>
+    <string name="files_new_folder">Нова папка</string>
+    <string name="files_upload_here">Качване тук</string>
+    <string name="files_ftp_settings">Настройки на FTP</string>
+    <string name="files_need_ip">Задайте IP адреса на конзолата (докоснете картата най-горе) и валиден FTP порт, за да разглеждате файловете ѝ.</string>
+    <string name="files_kind_folder">Папка</string>
+    <string name="files_kind_link">Връзка, %1$s</string>
+    <string name="files_download">Изтегляне в телефона</string>
+    <string name="files_new_name">Ново име</string>
+    <string name="files_name_used">Това име вече се използва тук.</string>
+    <string name="files_renaming">Преименуване…</string>
+    <string name="files_renamed">Преименувано: %1$s на %2$s</string>
+    <string name="files_delete_title">Изтриване на %1$s?</string>
+    <string name="files_delete_folder">Това ще изтрие папката и всичко в нея от конзолата. Не може да бъде отменено.</string>
+    <string name="files_delete_file">Това ще изтрие файла от конзолата. Не може да бъде отменено.</string>
+    <string name="files_deleting">Изтриване…</string>
+    <string name="files_deleted">Изтрито: %1$s</string>
+    <string name="files_deleted_inside">Изтрито: %1$s (елементи вътре: %2$d)</string>
+    <string name="files_creating">Създаване на папка…</string>
+    <string name="files_created">Папката %1$s е създадена</string>
+    <string name="files_folder_name">Име на папката</string>
+    <string name="name_empty">Името не може да е празно.</string>
+    <string name="name_not_allowed">Това име не е разрешено.</string>
+    <string name="name_slash">Името не може да съдържа наклонени черти.</string>
+    <string name="name_control">Името съдържа непозволени символи.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">Неуспех: %1$s</string>
+    <string name="ftp_port_hint">Няма връзка с FTP сървъра. Проверете IP адреса на конзолата и FTP порта (вграденият FTP на etaHEN използва 1337, FTP payload — 2121).</string>
+    <string name="err_login">Неуспешен вход във FTP</string>
+    <string name="err_cant_open">не може да се отвори %1$s (%2$s)</string>
+    <string name="err_rename">преименуването не успя (%1$s)</string>
+    <string name="err_mkdir">папката не можа да се създаде (%1$s)</string>
+    <string name="err_too_deep">папката е вложена твърде дълбоко</string>
+    <string name="err_delete_path">%1$s не можа да се изтрие (%2$s)</string>
+    <string name="err_upload">Неуспешно качване по FTP: %1$s</string>
+    <string name="err_download">Неуспешно изтегляне по FTP: %1$s</string>
+    <string name="err_open_file">Файлът не можа да се отвори</string>
+    <string name="err_cancelled_upload">Отменено. Непълен файл може да е останал в %1$s</string>
+    <string name="err_cancelled_download">Отменено. Непълното изтегляне беше изхвърлено.</string>
+    <string name="err_gave_up">Спряно, защото връзката продължи да се проваля. Последна грешка: %1$s</string>
+    <string name="err_short_upload">От изпратените %2$s конзолата е запазила само %1$s.</string>
+    <string name="err_short_download">Пристигнаха само %1$s от %2$s.</string>
+    <string name="err_empty_file">Файлът е празен</string>
+    <string name="err_save">%1$s не можа да се запази</string>
+    <string name="sent_to_ps5">Изпратено към PS5: %1$s</string>
+    <string name="saved_to_downloads">Запазено в Downloads/PS5: %1$s</string>
+    <string name="dl_http_failed">Неуспешно изтегляне: HTTP %1$s</string>
+    <string name="dl_empty">Неуспешно изтегляне: празен отговор</string>
+    <string name="dl_cut_short">Връзката се затвори, преди да пристигне целият файл.</string>
+    <string name="dl_create_failed">Файлът не можа да се създаде в Downloads</string>
+    <string name="dl_write_failed">Новият файл не можа да се отвори за запис</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">Изпратено: %1$s</string>
+    <string name="shelf_added">Добавено в библиотеката: %1$s (%2$s)</string>
+    <string name="shelf_updated">Обновено в библиотеката: %1$s (%2$s)</string>
+    <string name="shelf_too_large">Този файл е по-голям от %1$s, затова не е добавен в библиотеката.</string>
+    <string name="shelf_too_large_url">Този файл е %1$s. Библиотеката приема payload до %2$s.</string>
+    <string name="payload_adding">Добавяне в библиотеката…</string>
+    <string name="payload_remove_title">Премахване на %1$s?</string>
+    <string name="payload_remove_text">Ще бъде изтрит от библиотеката. Оригиналният файл на телефона ви не се променя.</string>
+    <string name="payload_loader_port">Порт на Loader</string>
+    <string name="payload_shelf_title">Библиотека с payload</string>
+    <string name="payload_shelf_empty">Още няма нищо запазено. Добавете payload, които използвате често (FTP сървър, etaHEN, ...), и изпращайте всеки с едно докосване. Можете също да запазите такъв директно от раздела Уеб, когато го изтегляте.</string>
+    <string name="payload_sending">Изпращане на %1$s…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">Добавяне на payload в библиотеката</string>
+    <string name="payload_once_title">Еднократно изпращане на файл</string>
+    <string name="payload_choose">Избор на payload (.elf / .bin)</string>
+    <string name="payload_send">Изпращане на payload</string>
+
+    <!-- consoles -->
+    <string name="profile_default">Моята PS5</string>
+    <string name="profile_new">Конзола %1$d</string>
+    <string name="profile_fallback">Конзола</string>
+    <string name="consoles_title">Конзоли</string>
+    <string name="console_rename_title">Преименуване на конзолата</string>
+    <string name="console_name_label">Име</string>
+    <string name="console_delete_title">Изтриване на %1$s?</string>
+    <string name="console_delete_text">Запазените ѝ IP адрес и портове ще бъдат премахнати. Другите ви конзоли не са засегнати.</string>
+    <string name="console_no_ip">още няма IP адрес</string>
+    <string name="console_color_of">Цвят на %1$s</string>
+    <string name="console_use_color">Използване на %1$s</string>
+    <string name="console_add">Добавяне на конзола</string>
+    <string name="language_button">Език</string>
+    <string name="color_blue">Син</string>
+    <string name="color_orange">Оранжев</string>
+    <string name="color_green">Зелен</string>
+    <string name="color_pink">Розов</string>
+    <string name="color_purple">Лилав</string>
+    <string name="color_teal">Тюркоазен</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">Изтеглянето започна (вижте Downloads)</string>
+    <string name="web_load_failed">Страницата не можа да се зареди: %1$s</string>
+    <string name="web_http_server">Сайтът е зает или не работи в момента (грешка %1$s). Опитайте отново след малко.</string>
+    <string name="web_http_other">Сайтът отговори с грешка %1$s.</string>
+    <string name="web_open_first">Първо отворете страница</string>
+    <string name="web_bookmark_saved">Отметката е запазена</string>
+    <string name="web_bookmark_exists">Вече е в отметките ви</string>
+    <string name="web_home_set">Началната страница е зададена на %1$s</string>
+    <string name="web_reload">Презареждане</string>
+    <string name="web_add">★ Добавяне</string>
+    <string name="web_bookmarks">Отметки</string>
+    <string name="web_homepage_label">URL на началната страница</string>
+    <string name="web_bookmarks_empty">Още няма отметки. Отворете страница и докоснете %1$s.</string>
+    <string name="web_bookmarks_help">Докоснете отметка, за да я отворите. „%1$s“ я прави ваша начална страница.</string>
+    <string name="adblock_title">Блокиране на реклами</string>
+    <string name="adblock_switch">Блокиране на рекламни домейни</string>
+    <string name="adblock_info">Блокирани досега: %1$d. Мрежи във вградения списък: %2$d. Презаредете страницата след всяка промяна.</string>
+    <string name="adblock_own">Вашите собствени домейни, по един на ред</string>
+    <string name="adblock_on">Блокиране на реклами: включено · блокирани: %1$d · докоснете за промяна</string>
+    <string name="adblock_off">Блокиране на реклами: изключено · блокирани: %1$d · докоснете за промяна</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">Какво мога да направя?</string>
+    <string name="help_what">Какво се случи</string>
+    <string name="help_try">Какво да опитате</string>
+    <string name="help_details">Подробности</string>
+    <string name="help_copy">Копиране на подробностите</string>
+    <string name="help_copied">Копирано</string>
+    <string name="help_unreachable_title">Конзолата не може да бъде достигната</string>
+    <string name="help_unreachable_what">На адреса на конзолата никой не отговаря.</string>
+    <string name="help_unreachable_try">• Проверете IP адреса на PS5 (Settings &gt; Network &gt; Connection Status). Той може да се промени след рестартиране.\n• Събудете конзолата напълно. Режимът на покой често изключва мрежата.\n• Използвайте една и съща Wi-Fi мрежа и на двете. Гостните мрежи и VPN я блокират.</string>
+    <string name="help_port_title">Тази услуга не работи</string>
+    <string name="help_port_what">Конзолата отговори, но на този порт нищо не слуша.</string>
+    <string name="help_port_try">• Стартирайте etaHEN на конзолата. Той предоставя Installer (12800), Loader (9021) и FTP (1337).\n• Отделен FTP payload обикновено използва 2121. Въведете същия порт тук.\n• На картата на конзолата изгасналата светлина показва какво липсва.</string>
+    <string name="help_login_title">FTP входът е отказан</string>
+    <string name="help_login_what">FTP сървърът на конзолата отхвърли потребителското име или паролата.</string>
+    <string name="help_login_try">• etaHEN приема потребителско име anonymous с произволна парола.\n• Ако сте задали вход на конзолата, въведете го в „Качване“.\n• Паролата не се запазва. Въведете я отново след рестартиране на приложението.</string>
+    <string name="help_dropped_title">Връзката прекъсна</string>
+    <string name="help_dropped_what">Връзката с конзолата се разпадна или спря да предава данни. Приложението опитва отново и продължава откъдето е спряло.</string>
+    <string name="help_dropped_try">• Дръжте телефона близо до рутера, а конзолата — събудена.\n• Спрете други големи изтегляния в мрежата.\n• Ако продължава да се проваля, изчакайте малко и натиснете „Нов опит“.</string>
+    <string name="help_refused_title">Installer не прие връзката</string>
+    <string name="help_refused_what">Конзолата е достъпна, но нейният Installer отказа тази връзка.</string>
+    <string name="help_refused_try">• Връзката трябва да води директно до файла на пакета и да се отваря без вход.\n• Конзолата трябва да може да я достигне. Връзки от този телефон работят само в същата Wi-Fi мрежа.\n• Проверете дали Installer работи и дали конзолата има свободно място.</string>
+    <string name="help_storage_title">Конзолата спря да записва</string>
+    <string name="help_storage_what">Конзолата е запазила по-малко, отколкото е изпратено. Устройството обикновено е пълно или само за четене.</string>
+    <string name="help_storage_try">• Освободете място на конзолата.\n• Изберете друга папка, например на USB устройство.\n• След това натиснете „Нов опит“.</string>
+    <string name="help_denied_title">Тази папка или файл бяха отказани</string>
+    <string name="help_denied_what">FTP сървърът не може да го отвори, запише или промени тук.</string>
+    <string name="help_denied_try">• Проверете дали папката съществува. Имената различават главни и малки букви.\n• Системните папки са само за четене. Използвайте /data или USB устройство.\n• Файл, използван от работеща игра, може да е заключен. Затворете играта.</string>
+    <string name="help_phone_title">Телефонът не може да използва файла</string>
+    <string name="help_phone_what">Файлът е изчезнал или преместен, приложението е загубило достъп до него или на телефона няма място.</string>
+    <string name="help_phone_try">• Изберете файла отново.\n• Освободете място в паметта на телефона.\n• За файл в облачно приложение първо го запазете на телефона.</string>
+    <string name="help_link_title">Връзката за изтегляне не проработи</string>
+    <string name="help_link_what">Сайтът не предаде файла. Връзката може да е изтекла, да изисква вход или сайтът да е зает.</string>
+    <string name="help_link_try">• Започнете изтеглянето отново от раздела Уеб. Така входът ви се запазва.\n• Връзките от сайтове за съхранение на файлове често изтичат след няколко минути.\n• Ако сайтът е съобщил грешка от серията 500, опитайте по-късно.</string>
+
+    <!-- update check -->
+    <string name="update_available">Налична е версия %1$s</string>
+    <string name="update_download">Изтегляне</string>
+    <string name="update_later">По-късно</string>
+    <string name="update_title">Актуализации</string>
+    <string name="update_current">Имате най-новата версия (%1$s).</string>
+    <string name="update_none">Все още няма издание на страницата Releases.</string>
+    <string name="update_check_now">Проверка сега</string>
+    <string name="update_auto">Проверка за актуализации при отваряне на приложението</string>
+    <string name="update_privacy">Проверката пита GitHub за най-новото издание най-много веднъж на ден. Нищо за вас или вашите конзоли не се изпраща; GitHub вижда вашия IP адрес, както всеки уебсайт.</string>
+
+    <!-- find my console -->
+    <string name="find_button">Намери моята PS5</string>
+    <string name="find_scanning">Търсене на конзолата ви в мрежата %1$s…</string>
+    <string name="find_again">Сканирай отново</string>
+    <string name="find_none">Не е намерена конзола.</string>
+    <string name="find_none_try">• Включете конзолата напълно (не в режим на покой) и стартирайте etaHEN.\n• Използвайте една и съща Wi-Fi мрежа на телефона и на конзолата. Гостните мрежи и VPN държат устройствата разделени.\n• След това сканирайте отново.</string>
+    <string name="find_no_wifi">Този телефон не е в Wi-Fi мрежа. Свържете го към същата Wi-Fi мрежа като конзолата и сканирайте отново.</string>
+    <string name="find_pick">Докоснете „Използвай“, за да зададете адреса на %1$s.</string>
+    <string name="find_saved">Запазен адрес</string>
+    <string name="find_used_by">Запазен за %1$s</string>
+    <string name="find_updated">%1$s вече използва %2$s.</string>
+    <string name="find_privacy">Сканира се само вашата Wi-Fi мрежа и само няколко порта на конзолата. Нищо не се изпраща през интернет.</string>
+    <string name="action_stop">Спри</string>
+    <string name="action_use">Използвай</string>
+
+    <!-- about and backup -->
+    <string name="about_title">За Bento</string>
+    <string name="about_version">Версия %1$s</string>
+    <string name="about_button">Относно и архив</string>
+    <string name="about_report">Копиране на доклад</string>
+    <string name="about_report_help">Копира версията на приложението, модела на телефона и последното съобщение, за да ги поставите в сигнал за грешка. IP адресите и връзките се пропускат.</string>
+    <string name="about_report_copied">Докладът е копиран</string>
+    <string name="about_releases">Страница Releases</string>
+    <string name="backup_title">Резервно копие</string>
+    <string name="backup_text">Запазва вашите конзоли, началната страница, отметките, списъка с реклами и payload файловете в един файл. FTP паролите не се запазват.</string>
+    <string name="backup_save">Запазване на копие</string>
+    <string name="backup_restore">Възстановяване на копие</string>
+    <string name="backup_saved">Резервното копие е запазено.</string>
+    <string name="backup_contents">Конзоли: %1$d · Отметки: %2$d · Payload: %3$d</string>
+    <string name="backup_made">Създадено на %1$s</string>
+    <string name="backup_skipped">Пропуснати payload файлове, защото файлът би станал твърде голям: %1$d</string>
+    <string name="backup_bad_file">Този файл не е резервно копие на Bento.</string>
+    <string name="backup_too_new">Това резервно копие е създадено от по-нова версия на Bento. Актуализирайте приложението и опитайте отново.</string>
+    <string name="restore_title">Да се възстанови ли това копие?</string>
+    <string name="restore_text">Вашите конзоли, началната страница, отметките и списъкът с реклами се заменят с тези от файла. Payload файловете от файла се добавят към библиотеката с payload. Ще трябва да въведете FTP паролите отново.</string>
+    <string name="restore_button">Възстановяване</string>
+    <string name="restore_done">Резервното копие е възстановено.</string>
+    <string name="restore_payloads_failed">Payload файлове, които не можаха да се запазят: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">Връзки към пакети (по една на ред)</string>
+    <string name="install_paste">Поставяне</string>
+    <string name="action_clear">Изчистване</string>
+    <string name="install_paste_none">В клипборда няма уеб връзка.</string>
+    <string name="install_links_skipped">Изпращат се само адреси, започващи с http:// или https://. Пропуснати: %1$d</string>
+    <string name="install_recent">Скорошни връзки</string>
+    <string name="install_recent_clear">Изчистване на списъка</string>
+    <string name="install_sending_n">Изпращане на връзка %1$d от %2$d…</string>
+    <string name="install_batch_done">Приети: %1$d от %2$d връзки</string>
+    <string name="install_batch_notsent">Неизпратени: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">Вериги</string>
+    <string name="chains_hint">Веригата изпраща няколко payload-а един след друг, с пауза след всеки. Натиснете и задръжте иконата на приложението, за да стартирате една от първите четири вериги от началния екран.</string>
+    <string name="chain_new">Нова верига</string>
+    <string name="action_edit">Редактирай</string>
+    <string name="chain_summary_steps">Payload-и: %1$d</string>
+    <string name="chain_summary_pauses">Паузи: %1$s</string>
+    <string name="chain_edit_title">Редактиране на верига</string>
+    <string name="chain_steps_title">Payload-и по ред (най-много %1$d)</string>
+    <string name="chain_add_step">Добави payload</string>
+    <string name="chain_pick_title">Кой payload да се добави?</string>
+    <string name="chain_wait_label">После изчакай (секунди)</string>
+    <string name="chain_missing">Не е в библиотеката</string>
+    <string name="chain_move_up">Премести нагоре</string>
+    <string name="chain_move_down">Премести надолу</string>
+    <string name="chain_pin">Добави на началния екран</string>
+    <string name="chain_pin_unsupported">Този лаунчър не може да добавя преки пътища. Натиснете и задръжте иконата на приложението, за да намерите веригите си там.</string>
+    <string name="chain_sending">Изпращане на %1$s (%2$d от %3$d)…</string>
+    <string name="chain_waiting">Следващият payload след %1$s</string>
+    <string name="chain_retrying">Изчакване конзолата да е готова…</string>
+    <string name="chain_result_done">Готово. Изпратени payload-и: %1$d от %2$d</string>
+    <string name="chain_result_stopped">Спряно. Изпратени payload-и: %1$d от %2$d</string>
+    <string name="chain_result_failed">Спряно на стъпка %1$d (%2$s). Изпратени payload-и: %3$d от %4$d</string>
+    <string name="chain_err_target">Първо задайте IP адреса на конзолата и порта на Loader.</string>
+    <string name="chain_err_missing">Вече не е в библиотеката: %1$s. Добавете го отново или редактирайте веригата.</string>
+    <string name="chain_err_unknown">Тази верига вече не съществува.</string>
+    <string name="notif_channel_chain">Вериги от payload-и</string>
+    <string name="backup_chains">Вериги: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">Незавършени от миналия път: %1$d</string>
+    <string name="unfinished_hint">Приложението се затвори, преди тези прехвърляния да приключат. „Продължи“ стартира всяко отново от началото.</string>
+    <string name="unfinished_continue">Продължи</string>
+    <string name="unfinished_discard">Отхвърли</string>
+    <string name="unfinished_missing">Файловете вече не се намират, изберете ги отново: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">Пауза</string>
+    <string name="transfer_resume">Продължи</string>
+    <string name="transfer_paused">На пауза</string>
+    <string name="speed_limit_title">Ограничение на скоростта</string>
+    <string name="speed_limit_off">Без ограничение</string>
+    <string name="speed_limit_value">Ограничение: %1$s</string>
+    <string name="speed_limit_hint">Забавя прехвърлянията, за да остане Wi-Fi мрежата свободна за други неща. Промяната влиза в сила веднага.</string>
+    <string name="summary_title">Завършени прехвърляния: %1$d от %2$d</string>
+    <string name="summary_detail">%1$s за %2$s</string>
+    <string name="summary_failed">Неуспешни: %1$d</string>
+    <string name="summary_stopped">Спрени: %1$d</string>
+    <string name="notif_channel_results">Резултати от прехвърлянията</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">Избрани: %1$d</string>
+    <string name="files_select_all">Избери всички</string>
+    <string name="files_select_none">Премахни избора</string>
+    <string name="files_delete_many_title">Да се изтрият ли избраните елементи (%1$d)?</string>
+    <string name="files_delete_many_text">Избраните файлове и папки ще бъдат изтрити от конзолата, папките заедно с цялото им съдържание. Не може да бъде отменено.</string>
+    <string name="files_deleted_many">Изтрити елементи: %1$d</string>
+    <string name="files_delete_partial">Изтрити елементи: %1$d, неизтрити: %2$d. Първият проблем: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">Преглеждане на папките…</string>
+    <string name="files_dl_confirm_title">Да се изтеглят ли в телефона?</string>
+    <string name="files_dl_confirm_text">Файлове: %1$d, общо %2$s. Запазват се в Downloads/PS5, в същите папки като на конзолата.</string>
+    <string name="files_dl_links">Връзките в папките не се изтеглят: %1$d.</string>
+    <string name="files_dl_truncated">Включени файлове: %1$d. Папките съдържат повече или отиват по-дълбоко, отколкото приложението следва.</string>
+    <string name="files_dl_none">В избраното няма файл за изтегляне.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">Сортиране</string>
+    <string name="files_sort_title">Сортиране по</string>
+    <string name="files_sort_name">Име</string>
+    <string name="files_sort_size">Размер, първо най-големите</string>
+    <string name="files_sort_newest">Първо най-новите</string>
+    <string name="files_search">Търсене</string>
+    <string name="files_search_hint">Търсене в тази папка</string>
+    <string name="files_no_match">Нищо в тази папка не съвпада с търсенето.</string>
+    <string name="files_pin">Закачи тази папка</string>
+    <string name="files_unpin">Откачи тази папка</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">Раздели: %1$d</string>
+    <string name="web_tabs_title">Раздели</string>
+    <string name="web_tab_new">Нов раздел</string>
+    <string name="web_tabs_full">Твърде много раздели. Ограничението е %1$d. Първо затворете един.</string>
+    <string name="web_find">Търсене</string>
+    <string name="web_find_hint">Търсене в тази страница</string>
+    <string name="web_find_none">Няма съвпадения</string>
+    <string name="web_desktop">Версия за настолен компютър</string>
+    <string name="web_link_new_tab">Отваряне в нов раздел</string>
+    <string name="web_link_copy">Копиране на връзката</string>
+    <string name="web_link_copied">Връзката е копирана</string>
+    <string name="web_link_use">Изпращане или изтегляне…</string>
+</resources>

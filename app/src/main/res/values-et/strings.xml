@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Estonian. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">Tühista</string>
+    <string name="action_close">Sule</string>
+    <string name="action_done">Valmis</string>
+    <string name="action_delete">Kustuta</string>
+    <string name="action_rename">Nimeta ümber</string>
+    <string name="action_save">Salvesta</string>
+    <string name="action_remove">Eemalda</string>
+    <string name="action_send">Saada</string>
+    <string name="action_open">Ava</string>
+    <string name="action_block">Blokeeri</string>
+    <string name="action_home">Avaleht</string>
+    <string name="action_dismiss">Peida</string>
+    <string name="action_try_again">Proovi uuesti</string>
+    <string name="action_skip">Jäta vahele</string>
+    <string name="action_cancel_all">Tühista kõik</string>
+    <string name="action_create">Loo</string>
+    <string name="action_set">Määra</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">autor: %1$s</string>
+    <string name="nav_install">Installi</string>
+    <string name="nav_payload">Payload</string>
+    <string name="nav_upload">Laadi üles</string>
+    <string name="nav_files">Failid</string>
+    <string name="nav_web">Veeb</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">Installer</string>
+    <string name="service_loader">Loader</string>
+    <string name="list_separator">", "</string>
+    <string name="status_set_ip">Määrake PS5 IP-aadress</string>
+    <string name="status_checking">Kontrollimine…</string>
+    <string name="status_ready">Valmis</string>
+    <string name="status_partly">Osaliselt valmis</string>
+    <string name="status_partly_off">Osaliselt valmis · ei vasta: %1$s</string>
+    <string name="status_offline">Konsooliga ei saa ühendust</string>
+    <string name="status_hint_unset">Leiate selle PS5-st menüüst Settings &gt; Network &gt; Connection Status &gt; View Connection Status. Puudutage siin, et see sisestada.</string>
+    <string name="status_hint_offline">Sellel aadressil ei vasta keegi. Kontrollige IP-aadressi, et konsool oleks sisse lülitatud ja samas Wi-Fi-võrgus ning et etaHEN töötaks.</string>
+    <string name="status_hint_one">Ei vasta: %1$s. Käivitage see teenus konsoolis või kontrollige selle porti.</string>
+    <string name="status_hint_many">Ei vasta: %1$s. Käivitage need teenused konsoolis või kontrollige nende porte.</string>
+    <string name="console_switch">Vaheta konsooli</string>
+    <string name="console_change_ip">Muuda IP-aadressi</string>
+    <string name="console_ip_title">Konsooli IP-aadress</string>
+    <string name="console_ip_label">IP-aadress</string>
+    <string name="console_ip_help">Leiate selle PS5-st menüüst Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">Ülekanne</string>
+    <string name="transfer_sending">Saatmine</string>
+    <string name="transfer_sending_to">Saatmine: %1$s</string>
+    <string name="transfer_receiving">Vastuvõtmine</string>
+    <string name="transfer_receiving_from">Vastuvõtmine allikast: %1$s</string>
+    <string name="transfer_detail_total">%1$s · %2$s / %3$s</string>
+    <string name="transfer_detail_done">%1$s · %2$s</string>
+    <string name="transfer_starting">Käivitamine…</string>
+    <string name="transfer_stopped">Peatatud</string>
+    <string name="transfer_start_failed">Ülekannet ei saanud alustada: %1$s</string>
+    <string name="transfer_retry_in">Ühendus katkes. Uus katse %1$d s pärast…</string>
+    <string name="transfer_reconnecting">Ühendan uuesti…</string>
+    <string name="transfer_eta">Jäänud: %1$s</string>
+    <string name="transfer_queued">Ootel: %1$d</string>
+    <string name="queue_title">Ootel ülekanded</string>
+    <string name="queue_clear">Eemalda kõik</string>
+    <string name="queue_empty">Midagi ei ole ootel.</string>
+    <string name="notif_channel">PS5 ülekanded</string>
+    <string name="notif_sent">Saadetud: %1$s</string>
+    <string name="notif_received">Vastu võetud: %1$s</string>
+    <string name="percent_value">%1$d%%</string>
+    <string name="desc_done">Valmis</string>
+    <string name="desc_problem">Probleem</string>
+    <string name="status_hide">Peida see teade</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">Lisatud järjekorda. Ootel: %1$d.</string>
+    <string name="msg_set_ip_first">Määrake esmalt konsooli IP-aadress. Puudutage ülaosas olevat kaarti.</string>
+    <string name="msg_sending_link">Lingi saatmine PS5-le…</string>
+    <string name="msg_check_ip_ftp">Kontrollige konsooli IP-aadressi ja FTP porti.</string>
+    <string name="msg_adding_to_shelf_link">Lisamine payloadide kogusse…</string>
+    <string name="status_idle">Ootel</string>
+    <string name="status_sending">Saatmine…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">Kas lahkuda sellelt saidilt?</string>
+    <string name="offsite_text">Leht soovib avada %1$s. Seda põhjustavad sageli reklaamid, kui puudutate linki, seega jätkake ainult siis, kui seda ootasite.</string>
+    <string name="choose_install">Saada link PS5 Installerile</string>
+    <string name="choose_ftp">Laadi PS5-le üles (FTP)</string>
+    <string name="choose_shelf">Salvesta payloadide kogusse</string>
+    <string name="choose_phone">Salvesta telefoni</string>
+    <string name="choose_help">Installer vajab otselinki paketile, mille konsool saab avada ilma sisselogimata. FTP töötab mis tahes failiga ja säilitab teie sisselogimise seansi. Telefon edastab andmed taustal ning edenemist näidatakse alumise riba kohal ja teavituses. Payloadide kogu hoiab rakenduses väikest payloadi (kuni %1$s) vahekaardi Payload jaoks.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">Installeri port (etaHEN: 12800)</string>
+    <string name="install_accepted">Installer võttis selle vastu: %1$s</string>
+    <string name="install_not_accepted">Vastu võtmata (upload %1$s: %2$s; api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">Installi sellest telefonist</string>
+    <string name="serve_intro">Konsool laadib paketid otse sellest telefonist Wi-Fi kaudu alla, seega ei pea midagi eelnevalt kopeerima. Telefon ja konsool peavad olema samas võrgus.</string>
+    <string name="serve_choose">Vali paketid</string>
+    <string name="serve_none">Pakette pole valitud</string>
+    <string name="serve_start">Alusta jagamist</string>
+    <string name="serve_stop">Lõpeta jagamine</string>
+    <string name="serve_copy">Kopeeri link</string>
+    <string name="serve_copied">Link kopeeritud</string>
+    <string name="serve_file_waiting">Ootan, kuni konsool alustab allalaadimist…</string>
+    <string name="serve_file_pulling">Konsool laadib alla: %1$s</string>
+    <string name="serve_file_done">Konsool laadis kõik alla</string>
+    <string name="serve_unreadable">Seda faili ei saa lugeda</string>
+    <string name="serve_hint">Kui konsool ei hakka kunagi alla laadima, võib Wi-Fi takistada seadmeid üksteiseni jõudmast (külalisvõrgud teevad seda sageli). Kasutage põhivõrku ja laske sellel rakendusel taustal töötada.</string>
+    <string name="serve_no_wifi">Selle telefoni Wi-Fi-aadressi ei leitud. Ühendage see samasse Wi-Fi-võrku, kus on konsool.</string>
+    <string name="serve_failed">Jagamist ei saanud alustada: %1$s</string>
+    <string name="serve_idle_stop">Jagamine peatati, sest pikka aega ei laaditud midagi alla.</string>
+    <string name="serve_notif_title">Jagamine: %1$s</string>
+    <string name="serve_notif_text">Alla laaditud faile: %1$d / %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">Vali failid</string>
+    <string name="upload_none">Faile pole valitud</string>
+    <string name="upload_files_chosen">Valitud faile: %1$d</string>
+    <string name="upload_start">Laadi taustal üles</string>
+    <string name="upload_help">Edenemist näidatakse alumise riba kohal ja teavituses. See jätkub ka siis, kui rakendusest väljute.</string>
+    <string name="ftp_port">FTP port</string>
+    <string name="ftp_user">Kasutajanimi</string>
+    <string name="ftp_password">Parool</string>
+    <string name="ftp_folder">Kaugkaust</string>
+    <string name="ftp_use_folder">Kasuta %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">Laadimine…</string>
+    <string name="files_empty">See kaust on tühi.</string>
+    <string name="files_not_loaded">Pole veel laaditud</string>
+    <string name="files_up">⬆ Üles</string>
+    <string name="files_refresh">Värskenda</string>
+    <string name="files_new_folder">Uus kaust</string>
+    <string name="files_upload_here">Laadi siia üles</string>
+    <string name="files_ftp_settings">FTP seaded</string>
+    <string name="files_need_ip">Määrake konsooli IP-aadress (puudutage ülaosas olevat kaarti) ja kehtiv FTP port, et sirvida selle faile.</string>
+    <string name="files_kind_folder">Kaust</string>
+    <string name="files_kind_link">Link, %1$s</string>
+    <string name="files_download">Laadi telefoni alla</string>
+    <string name="files_new_name">Uus nimi</string>
+    <string name="files_name_used">See nimi on siin juba kasutusel.</string>
+    <string name="files_renaming">Ümbernimetamine…</string>
+    <string name="files_renamed">%1$s nimetati ümber nimeks %2$s</string>
+    <string name="files_delete_title">Kas kustutada %1$s?</string>
+    <string name="files_delete_folder">See kustutab kausta ja kõik selle sisu konsoolist. Seda ei saa tagasi võtta.</string>
+    <string name="files_delete_file">See kustutab faili konsoolist. Seda ei saa tagasi võtta.</string>
+    <string name="files_deleting">Kustutamine…</string>
+    <string name="files_deleted">Kustutatud: %1$s</string>
+    <string name="files_deleted_inside">Kustutatud: %1$s (üksusi sees: %2$d)</string>
+    <string name="files_creating">Kausta loomine…</string>
+    <string name="files_created">Kaust %1$s loodud</string>
+    <string name="files_folder_name">Kausta nimi</string>
+    <string name="name_empty">Nimi ei tohi olla tühi.</string>
+    <string name="name_not_allowed">See nimi pole lubatud.</string>
+    <string name="name_slash">Nimi ei tohi sisaldada kaldkriipse.</string>
+    <string name="name_control">Nimes on lubamatuid märke.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">Ebaõnnestus: %1$s</string>
+    <string name="ftp_port_hint">FTP-serveriga ei saa ühendust. Kontrollige konsooli IP-aadressi ja FTP porti (etaHENi sisseehitatud FTP kasutab porti 1337, FTP payload porti 2121).</string>
+    <string name="err_login">FTP-sisselogimine ebaõnnestus</string>
+    <string name="err_cant_open">ei saa avada %1$s (%2$s)</string>
+    <string name="err_rename">ümbernimetamine ebaõnnestus (%1$s)</string>
+    <string name="err_mkdir">kausta ei saanud luua (%1$s)</string>
+    <string name="err_too_deep">kaust on pesastatud liiga sügavale</string>
+    <string name="err_delete_path">ei saanud kustutada %1$s (%2$s)</string>
+    <string name="err_upload">FTP-üleslaadimine ebaõnnestus: %1$s</string>
+    <string name="err_download">FTP-allalaadimine ebaõnnestus: %1$s</string>
+    <string name="err_open_file">Faili ei saanud avada</string>
+    <string name="err_cancelled_upload">Tühistatud. Poolik fail võib olla jäänud asukohta %1$s</string>
+    <string name="err_cancelled_download">Tühistatud. Poolik allalaadimine jäeti kõrvale.</string>
+    <string name="err_gave_up">Loobuti, sest ühendus katkes järjest. Viimane viga: %1$s</string>
+    <string name="err_short_upload">Saadetud andmemahust (%2$s) säilitas konsool vaid %1$s.</string>
+    <string name="err_short_download">Kohale jõudis vaid %1$s (kokku %2$s).</string>
+    <string name="err_empty_file">Fail on tühi</string>
+    <string name="err_save">%1$s salvestamine ebaõnnestus</string>
+    <string name="sent_to_ps5">PS5-le saadetud: %1$s</string>
+    <string name="saved_to_downloads">Salvestatud kausta Downloads/PS5: %1$s</string>
+    <string name="dl_http_failed">Allalaadimine ebaõnnestus: HTTP %1$s</string>
+    <string name="dl_empty">Allalaadimine ebaõnnestus: tühi vastus</string>
+    <string name="dl_cut_short">Ühendus suleti enne, kui kogu fail kohale jõudis.</string>
+    <string name="dl_create_failed">Faili ei saanud kausta Downloads luua</string>
+    <string name="dl_write_failed">Uut faili ei saanud kirjutamiseks avada</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">Saadetud: %1$s</string>
+    <string name="shelf_added">Kogusse lisatud: %1$s (%2$s)</string>
+    <string name="shelf_updated">Kogus uuendatud: %1$s (%2$s)</string>
+    <string name="shelf_too_large">See fail on suurem kui %1$s, seega seda kogusse ei lisatud.</string>
+    <string name="shelf_too_large_url">Selle faili suurus on %1$s. Kogu võtab vastu payloade kuni %2$s.</string>
+    <string name="payload_adding">Kogusse lisamine…</string>
+    <string name="payload_remove_title">Kas eemaldada %1$s?</string>
+    <string name="payload_remove_text">See kustutatakse kogust. Algne fail teie telefonis jääb puutumata.</string>
+    <string name="payload_loader_port">Loaderi port</string>
+    <string name="payload_shelf_title">Payloadide kogu</string>
+    <string name="payload_shelf_empty">Veel pole midagi salvestatud. Lisage payloadid, mida sageli kasutate (FTP-server, etaHEN, ...), ja saatke igaüks ühe puudutusega. Selle saate salvestada ka otse vahekaardilt Veeb, kui seda alla laadite.</string>
+    <string name="payload_sending">Saatmine: %1$s…</string>
+    <string name="payload_result">%1$s: %2$s</string>
+    <string name="payload_add">Lisa payload kogusse</string>
+    <string name="payload_once_title">Saada fail ühe korra</string>
+    <string name="payload_choose">Vali payload (.elf / .bin)</string>
+    <string name="payload_send">Saada payload</string>
+
+    <!-- consoles -->
+    <string name="profile_default">Minu PS5</string>
+    <string name="profile_new">Konsool %1$d</string>
+    <string name="profile_fallback">Konsool</string>
+    <string name="consoles_title">Konsoolid</string>
+    <string name="console_rename_title">Nimeta konsool ümber</string>
+    <string name="console_name_label">Nimi</string>
+    <string name="console_delete_title">Kas kustutada %1$s?</string>
+    <string name="console_delete_text">Selle salvestatud IP-aadress ja pordid eemaldatakse. Teisi teie konsoole see ei mõjuta.</string>
+    <string name="console_no_ip">IP-aadressi veel pole</string>
+    <string name="console_color_of">%1$s värv</string>
+    <string name="console_use_color">Kasuta %1$s</string>
+    <string name="console_add">Lisa konsool</string>
+    <string name="language_button">Keel</string>
+    <string name="color_blue">Sinine</string>
+    <string name="color_orange">Oranž</string>
+    <string name="color_green">Roheline</string>
+    <string name="color_pink">Roosa</string>
+    <string name="color_purple">Lilla</string>
+    <string name="color_teal">Türkiis</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">Allalaadimine algas (vt Downloads)</string>
+    <string name="web_load_failed">Lehte ei saanud laadida: %1$s</string>
+    <string name="web_http_server">Sait on praegu hõivatud või maas (viga %1$s). Proovige hetke pärast uuesti.</string>
+    <string name="web_http_other">Sait vastas veaga %1$s.</string>
+    <string name="web_open_first">Avage esmalt leht</string>
+    <string name="web_bookmark_saved">Järjehoidja salvestatud</string>
+    <string name="web_bookmark_exists">On juba teie järjehoidjates</string>
+    <string name="web_home_set">Avaleheks määrati %1$s</string>
+    <string name="web_reload">Laadi uuesti</string>
+    <string name="web_add">★ Lisa</string>
+    <string name="web_bookmarks">Järjehoidjad</string>
+    <string name="web_homepage_label">Avalehe URL</string>
+    <string name="web_bookmarks_empty">Järjehoidjaid veel pole. Avage leht ja puudutage %1$s.</string>
+    <string name="web_bookmarks_help">Puudutage järjehoidjat, et seda avada. „%1$s” määrab selle teie avaleheks.</string>
+    <string name="adblock_title">Reklaamide blokeerimine</string>
+    <string name="adblock_switch">Blokeeri reklaamidomeenid</string>
+    <string name="adblock_info">Seni blokeeritud: %1$d. Võrke sisseehitatud loendis: %2$d. Pärast iga muudatust laadige leht uuesti.</string>
+    <string name="adblock_own">Teie enda domeenid, üks rea kohta</string>
+    <string name="adblock_on">Reklaamide blokeerimine: sees · blokeeritud: %1$d · puudutage muutmiseks</string>
+    <string name="adblock_off">Reklaamide blokeerimine: väljas · blokeeritud: %1$d · puudutage muutmiseks</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">Mida ma saan teha?</string>
+    <string name="help_what">Mis juhtus</string>
+    <string name="help_try">Mida proovida</string>
+    <string name="help_details">Üksikasjad</string>
+    <string name="help_copy">Kopeeri üksikasjad</string>
+    <string name="help_copied">Kopeeritud</string>
+    <string name="help_unreachable_title">Konsooliga ei saa ühendust</string>
+    <string name="help_unreachable_what">Konsooli aadressil ei vasta keegi.</string>
+    <string name="help_unreachable_try">• Kontrollige PS5-s IP-aadressi (Settings &gt; Network &gt; Connection Status). See võib pärast taaskäivitust muutuda.\n• Äratage konsool täielikult. Puhkerežiim lülitab võrgu sageli välja.\n• Kasutage mõlemal seadmel sama Wi-Fi-t. Külaliste võrgud ja VPN blokeerivad ühenduse.</string>
+    <string name="help_port_title">See teenus ei tööta</string>
+    <string name="help_port_what">Konsool vastas, kuid sellel pordil ei kuula miski.</string>
+    <string name="help_port_try">• Käivitage konsoolis etaHEN. See pakub Installerit (12800), Loaderit (9021) ja FTP-d (1337).\n• Eraldi FTP payload kasutab tavaliselt porti 2121. Sisestage siia sama port.\n• Konsooli kaardil näitab kustunud tuli, mis puudub.</string>
+    <string name="help_login_title">FTP sisselogimine keelati</string>
+    <string name="help_login_what">Konsooli FTP-server lükkas kasutajanime või parooli tagasi.</string>
+    <string name="help_login_try">• etaHEN võtab vastu kasutajanime anonymous mis tahes parooliga.\n• Kui seadsite konsoolis sisselogimise, sisestage see jaotises Laadi üles.\n• Parooli ei salvestata. Sisestage see pärast rakenduse taaskäivitamist uuesti.</string>
+    <string name="help_dropped_title">Ühendus katkes</string>
+    <string name="help_dropped_what">Ühendus konsooliga katkes või andmed enam ei liigu. Rakendus proovib uuesti ja jätkab sealt, kus pooleli jäi.</string>
+    <string name="help_dropped_try">• Hoidke telefon ruuteri lähedal ja konsool ärkvel.\n• Peatage muud suured allalaadimised võrgus.\n• Kui see jätkuvalt ebaõnnestub, oodake hetk ja puudutage Proovi uuesti.</string>
+    <string name="help_refused_title">Installer ei võtnud linki vastu</string>
+    <string name="help_refused_what">Konsool on kättesaadav, kuid selle Installer lükkas selle lingi tagasi.</string>
+    <string name="help_refused_try">• Link peab viima otse paketifailini ja avanema ilma sisselogimiseta.\n• Konsool peab sellele ligi pääsema. Selle telefoni lingid töötavad ainult samas Wi-Fi-s.\n• Kontrollige, et Installer töötab ja konsoolil on vaba ruumi.</string>
+    <string name="help_storage_title">Konsool lõpetas salvestamise</string>
+    <string name="help_storage_what">Konsool salvestas vähem, kui saadeti. Draiv on tavaliselt täis või kirjutuskaitstud.</string>
+    <string name="help_storage_try">• Vabastage konsoolis ruumi.\n• Valige mõni teine kaust, näiteks USB-draivil.\n• Seejärel puudutage Proovi uuesti.</string>
+    <string name="help_denied_title">Kaust või fail lükati tagasi</string>
+    <string name="help_denied_what">FTP-server ei saa seda siin avada, sellesse kirjutada ega seda muuta.</string>
+    <string name="help_denied_try">• Kontrollige, et kaust on olemas. Nimedes on suur- ja väiketähed erinevad.\n• Süsteemikaustad on kirjutuskaitstud. Kasutage /data või USB-draivi.\n• Töötava mängu kasutatav fail võib olla lukus. Sulgege mäng.</string>
+    <string name="help_phone_title">Telefon ei saa faili kasutada</string>
+    <string name="help_phone_what">Fail on kadunud või teisaldatud, rakendus kaotas juurdepääsu või telefonis pole ruumi.</string>
+    <string name="help_phone_try">• Valige fail uuesti.\n• Vabastage telefonis salvestusruumi.\n• Pilverakenduse faili puhul salvestage see kõigepealt telefoni.</string>
+    <string name="help_link_title">Allalaadimislink ebaõnnestus</string>
+    <string name="help_link_what">Veebisait ei andnud faili üle. Link võib olla aegunud, nõuda sisselogimist või sait on hõivatud.</string>
+    <string name="help_link_try">• Alustage allalaadimist uuesti vahekaardilt Veeb. Nii säilib teie sisselogimine.\n• Failihostingu saitide lingid aeguvad sageli mõne minuti pärast.\n• Kui sait teatas 500-seeria veast, proovige hiljem uuesti.</string>
+
+    <!-- update check -->
+    <string name="update_available">Saadaval on versioon %1$s</string>
+    <string name="update_download">Laadi alla</string>
+    <string name="update_later">Hiljem</string>
+    <string name="update_title">Värskendused</string>
+    <string name="update_current">Teil on uusim versioon (%1$s).</string>
+    <string name="update_none">Lehelt Releases pole veel väljalaset leitud.</string>
+    <string name="update_check_now">Kontrolli kohe</string>
+    <string name="update_auto">Kontrolli rakenduse avamisel värskendusi</string>
+    <string name="update_privacy">Kontroll küsib GitHubilt uusimat väljalaset kõige rohkem kord päevas. Teie ega teie konsoolide kohta ei saadeta midagi; GitHub näeb teie IP-aadressi nagu iga veebisait.</string>
+
+    <!-- find my console -->
+    <string name="find_button">Leia minu PS5</string>
+    <string name="find_scanning">Konsooli otsimine võrgust %1$s…</string>
+    <string name="find_again">Skanni uuesti</string>
+    <string name="find_none">Ühtegi konsooli ei leitud.</string>
+    <string name="find_none_try">• Lülitage konsool täielikult sisse (mitte puhkerežiimi) ja käivitage etaHEN.\n• Kasutage telefonis ja konsoolis sama Wi-Fi-t. Külaliste võrgud ja VPN hoiavad seadmed lahus.\n• Seejärel skannige uuesti.</string>
+    <string name="find_no_wifi">See telefon ei ole Wi-Fi-võrgus. Ühendage see samasse Wi-Fi-võrku, kus on konsool, ja skannige uuesti.</string>
+    <string name="find_pick">Konsooli %1$s aadressi määramiseks puudutage Kasuta.</string>
+    <string name="find_saved">Salvestatud aadress</string>
+    <string name="find_used_by">Salvestatud konsoolile %1$s</string>
+    <string name="find_updated">%1$s kasutab nüüd aadressi %2$s.</string>
+    <string name="find_privacy">Skannitakse ainult teie Wi-Fi-võrku, mõnel konsooli pordil. Internetti ei saadeta midagi.</string>
+    <string name="action_stop">Peata</string>
+    <string name="action_use">Kasuta</string>
+
+    <!-- about and backup -->
+    <string name="about_title">Teave: Bento</string>
+    <string name="about_version">Versioon %1$s</string>
+    <string name="about_button">Teave ja varukoopia</string>
+    <string name="about_report">Kopeeri aruanne</string>
+    <string name="about_report_help">Kopeerib rakenduse versiooni, telefoni mudeli ja viimase teate, et saaksite need veateatesse kleepida. IP-aadressid ja lingid jäetakse välja.</string>
+    <string name="about_report_copied">Aruanne kopeeritud</string>
+    <string name="about_releases">Releases-leht</string>
+    <string name="backup_title">Varukoopia</string>
+    <string name="backup_text">Salvestab teie konsoolid, avalehe, järjehoidjad, reklaamiloendi ja payloadid ühte faili. FTP paroole ei salvestata.</string>
+    <string name="backup_save">Salvesta varukoopia</string>
+    <string name="backup_restore">Taasta varukoopia</string>
+    <string name="backup_saved">Varukoopia salvestatud.</string>
+    <string name="backup_contents">Konsoolid: %1$d · Järjehoidjad: %2$d · Payloadid: %3$d</string>
+    <string name="backup_made">Loodud %1$s</string>
+    <string name="backup_skipped">Payloadid, mis jäeti välja, sest fail oleks liiga suur: %1$d</string>
+    <string name="backup_bad_file">See fail ei ole Bento varukoopia.</string>
+    <string name="backup_too_new">Selle varukoopia tegi Bento uuem versioon. Värskendage rakendust ja proovige uuesti.</string>
+    <string name="restore_title">Kas taastada see varukoopia?</string>
+    <string name="restore_text">Teie konsoolid, avaleht, järjehoidjad ja reklaamiloend asendatakse failis olevatega. Failis olevad payloadid lisatakse payloadide kogusse. FTP paroolid tuleb uuesti sisestada.</string>
+    <string name="restore_button">Taasta</string>
+    <string name="restore_done">Varukoopia taastatud.</string>
+    <string name="restore_payloads_failed">Payloadid, mida ei saanud salvestada: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">Paketilingid (üks rea kohta)</string>
+    <string name="install_paste">Kleebi</string>
+    <string name="action_clear">Tühjenda</string>
+    <string name="install_paste_none">Lõikelaual pole veebilinki.</string>
+    <string name="install_links_skipped">Saadetakse ainult aadressid, mis algavad tekstiga http:// või https://. Välja jäetud: %1$d</string>
+    <string name="install_recent">Hiljutised lingid</string>
+    <string name="install_recent_clear">Tühjenda loend</string>
+    <string name="install_sending_n">Lingi %1$d/%2$d saatmine…</string>
+    <string name="install_batch_done">Vastu võetud: %1$d/%2$d linki</string>
+    <string name="install_batch_notsent">Saatmata: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">Ahelad</string>
+    <string name="chains_hint">Ahel saadab mitu payloadi üksteise järel, igaühe järel pausiga. Vajutage rakenduse ikoonile pikalt, et käivitada avakuvalt üks esimesest neljast ahelast.</string>
+    <string name="chain_new">Uus ahel</string>
+    <string name="action_edit">Muuda</string>
+    <string name="chain_summary_steps">Payloadid: %1$d</string>
+    <string name="chain_summary_pauses">Pausid: %1$s</string>
+    <string name="chain_edit_title">Muuda ahelat</string>
+    <string name="chain_steps_title">Payloadid järjekorras (kuni %1$d)</string>
+    <string name="chain_add_step">Lisa payload</string>
+    <string name="chain_pick_title">Millise payloadi lisada?</string>
+    <string name="chain_wait_label">Seejärel oota (sekundit)</string>
+    <string name="chain_missing">Pole kogus</string>
+    <string name="chain_move_up">Liiguta üles</string>
+    <string name="chain_move_down">Liiguta alla</string>
+    <string name="chain_pin">Lisa avakuvale</string>
+    <string name="chain_pin_unsupported">See käivitaja ei saa otseteid lisada. Vajutage rakenduse ikoonile pikalt, et oma ahelaid sealt leida.</string>
+    <string name="chain_sending">Saadan: %1$s (%2$d / %3$d)…</string>
+    <string name="chain_waiting">Järgmine payload %1$s pärast</string>
+    <string name="chain_retrying">Ootan, kuni konsool on valmis…</string>
+    <string name="chain_result_done">Valmis. Saadetud payloadid: %1$d / %2$d</string>
+    <string name="chain_result_stopped">Peatatud. Saadetud payloadid: %1$d / %2$d</string>
+    <string name="chain_result_failed">Peatatud sammul %1$d (%2$s). Saadetud payloadid: %3$d / %4$d</string>
+    <string name="chain_err_target">Määrake esmalt konsooli IP-aadress ja Loaderi port.</string>
+    <string name="chain_err_missing">Pole enam kogus: %1$s. Lisage see uuesti või muutke ahelat.</string>
+    <string name="chain_err_unknown">Seda ahelat enam ei ole.</string>
+    <string name="notif_channel_chain">Payloadide ahelad</string>
+    <string name="backup_chains">Ahelad: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">Eelmisel korral pooleli jäänud: %1$d</string>
+    <string name="unfinished_hint">Rakendus suleti enne, kui need olid valmis. „Jätka” alustab igaüht uuesti algusest.</string>
+    <string name="unfinished_continue">Jätka</string>
+    <string name="unfinished_discard">Loobu</string>
+    <string name="unfinished_missing">Faile ei leitud enam, vali need uuesti: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">Paus</string>
+    <string name="transfer_resume">Jätka</string>
+    <string name="transfer_paused">Pausil</string>
+    <string name="speed_limit_title">Kiiruse piirang</string>
+    <string name="speed_limit_off">Piirangut pole</string>
+    <string name="speed_limit_value">Piirang: %1$s</string>
+    <string name="speed_limit_hint">Aeglustab ülekandeid, et Wi-Fi jääks vabaks muuks kasutuseks. Muudatus jõustub kohe.</string>
+    <string name="summary_title">Lõpetatud ülekanded: %1$d / %2$d</string>
+    <string name="summary_detail">%1$s ajaga %2$s</string>
+    <string name="summary_failed">Ebaõnnestunud: %1$d</string>
+    <string name="summary_stopped">Peatatud: %1$d</string>
+    <string name="notif_channel_results">Ülekannete tulemused</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">Valitud: %1$d</string>
+    <string name="files_select_all">Vali kõik</string>
+    <string name="files_select_none">Tühista valik</string>
+    <string name="files_delete_many_title">Kas kustutada valitud üksused (%1$d)?</string>
+    <string name="files_delete_many_text">See kustutab konsoolist valitud failid ja kaustad, kaustad koos kogu nende sisuga. Seda ei saa tagasi võtta.</string>
+    <string name="files_deleted_many">Kustutatud üksused: %1$d</string>
+    <string name="files_delete_partial">Kustutatud üksused: %1$d, kustutamata: %2$d. Esimene probleem: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">Kaustu vaadatakse läbi…</string>
+    <string name="files_dl_confirm_title">Kas laadida telefoni alla?</string>
+    <string name="files_dl_confirm_text">Faile: %1$d, kokku %2$s. Need salvestatakse kausta Downloads/PS5 samadesse kaustadesse nagu konsoolis.</string>
+    <string name="files_dl_links">Kaustades olevaid linke ei laadita alla: %1$d.</string>
+    <string name="files_dl_truncated">Kaasatud failid: %1$d. Kaustades on rohkem või need ulatuvad sügavamale, kui rakendus jälgib.</string>
+    <string name="files_dl_none">Valikus pole ühtegi allalaaditavat faili.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">Sorteeri</string>
+    <string name="files_sort_title">Sortimise alus</string>
+    <string name="files_sort_name">Nimi</string>
+    <string name="files_sort_size">Suurus, suurim enne</string>
+    <string name="files_sort_newest">Uusim enne</string>
+    <string name="files_search">Otsi</string>
+    <string name="files_search_hint">Otsi sellest kaustast</string>
+    <string name="files_no_match">Selles kaustas ei vasta miski otsingule.</string>
+    <string name="files_pin">Kinnita see kaust</string>
+    <string name="files_unpin">Eemalda selle kausta kinnitus</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">Vahekaardid: %1$d</string>
+    <string name="web_tabs_title">Vahekaardid</string>
+    <string name="web_tab_new">Uus vahekaart</string>
+    <string name="web_tabs_full">Liiga palju vahekaarte. Piir on %1$d. Sulgege kõigepealt üks.</string>
+    <string name="web_find">Otsi</string>
+    <string name="web_find_hint">Otsi sellelt lehelt</string>
+    <string name="web_find_none">Vasteid pole</string>
+    <string name="web_desktop">Arvutisait</string>
+    <string name="web_link_new_tab">Ava uuel vahekaardil</string>
+    <string name="web_link_copy">Kopeeri link</string>
+    <string name="web_link_copied">Link kopeeritud</string>
+    <string name="web_link_use">Saada või laadi alla…</string>
+</resources>

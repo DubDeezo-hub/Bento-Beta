@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Arabic. Corrections are welcome: edit the text between the tags. -->
+<resources>
+
+    <!-- shared actions -->
+    <string name="action_cancel">إلغاء</string>
+    <string name="action_close">إغلاق</string>
+    <string name="action_done">تم</string>
+    <string name="action_delete">حذف</string>
+    <string name="action_rename">إعادة تسمية</string>
+    <string name="action_save">حفظ</string>
+    <string name="action_remove">إزالة</string>
+    <string name="action_send">إرسال</string>
+    <string name="action_open">فتح</string>
+    <string name="action_block">حظر</string>
+    <string name="action_home">الرئيسية</string>
+    <string name="action_dismiss">إخفاء</string>
+    <string name="action_try_again">إعادة المحاولة</string>
+    <string name="action_skip">تخطّي</string>
+    <string name="action_cancel_all">إلغاء الكل</string>
+    <string name="action_create">إنشاء</string>
+    <string name="action_set">تعيين</string>
+
+    <!-- header and bottom bar -->
+    <string name="credit_line">بواسطة %1$s</string>
+    <string name="nav_install">تثبيت</string>
+    <string name="nav_payload">‏Payload</string>
+    <string name="nav_upload">رفع</string>
+    <string name="nav_files">الملفات</string>
+    <string name="nav_web">الويب</string>
+
+    <!-- console card and status -->
+    <string name="service_installer">المثبّت</string>
+    <string name="service_loader">المحمّل</string>
+    <string name="list_separator">"، "</string>
+    <string name="status_set_ip">عيّن عنوان IP لجهاز PS5</string>
+    <string name="status_checking">جارٍ التحقق…</string>
+    <string name="status_ready">جاهز</string>
+    <string name="status_partly">جاهز جزئيًا</string>
+    <string name="status_partly_off">جاهز جزئيًا · لا استجابة: %1$s</string>
+    <string name="status_offline">تعذّر الوصول إلى الجهاز</string>
+    <string name="status_hint_unset">ستجده على PS5 في الإعدادات &gt; الشبكة &gt; حالة الاتصال &gt; عرض حالة الاتصال. المس هنا لإدخاله.</string>
+    <string name="status_hint_offline">لا توجد استجابة على هذا العنوان. تحقق من عنوان IP، ومن أن PS5 قيد التشغيل ومتصل بشبكة Wi-Fi نفسها، ومن أن etaHEN يعمل.</string>
+    <string name="status_hint_one">لا استجابة من: %1$s. شغّله على الجهاز أو تحقق من منفذه.</string>
+    <string name="status_hint_many">لا استجابة من: %1$s. شغّلها على الجهاز أو تحقق من منافذها.</string>
+    <string name="console_switch">تبديل الجهاز</string>
+    <string name="console_change_ip">تغيير عنوان IP</string>
+    <string name="console_ip_title">عنوان IP للجهاز</string>
+    <string name="console_ip_label">عنوان IP</string>
+    <string name="console_ip_help">ستجده على PS5 في الإعدادات &gt; الشبكة &gt; حالة الاتصال &gt; عرض حالة الاتصال.</string>
+
+    <!-- transfer card and notification -->
+    <string name="transfer_default_name">نقل</string>
+    <string name="transfer_sending">جارٍ الإرسال</string>
+    <string name="transfer_sending_to">جارٍ الإرسال إلى %1$s</string>
+    <string name="transfer_receiving">جارٍ الاستقبال</string>
+    <string name="transfer_receiving_from">جارٍ الاستقبال من %1$s</string>
+    <string name="transfer_detail_total">‏%1$s · %2$s من %3$s</string>
+    <string name="transfer_detail_done">‏%1$s · %2$s</string>
+    <string name="transfer_starting">جارٍ البدء…</string>
+    <string name="transfer_stopped">تم الإيقاف</string>
+    <string name="transfer_start_failed">تعذّر بدء النقل: %1$s</string>
+    <string name="transfer_retry_in">انقطع الاتصال. إعادة المحاولة بعد %1$d ث…</string>
+    <string name="transfer_reconnecting">جارٍ إعادة الاتصال…</string>
+    <string name="transfer_eta">المتبقي %1$s</string>
+    <string name="transfer_queued">‏%1$d في الانتظار</string>
+    <string name="queue_title">عمليات النقل المنتظرة</string>
+    <string name="queue_clear">إزالة الكل</string>
+    <string name="queue_empty">لا شيء في الانتظار.</string>
+    <string name="notif_channel">عمليات النقل إلى PS5</string>
+    <string name="notif_sent">تم الإرسال: %1$s</string>
+    <string name="notif_received">تم الاستقبال: %1$s</string>
+    <string name="percent_value">‏%1$d%%</string>
+    <string name="desc_done">تم</string>
+    <string name="desc_problem">مشكلة</string>
+    <string name="status_hide">إخفاء هذه الرسالة</string>
+
+    <!-- messages on the status line -->
+    <string name="msg_queued">أُضيف إلى قائمة الانتظار. %1$d في الانتظار.</string>
+    <string name="msg_set_ip_first">عيّن عنوان IP للجهاز أولًا. المس البطاقة في الأعلى.</string>
+    <string name="msg_sending_link">جارٍ إرسال الرابط إلى PS5…</string>
+    <string name="msg_check_ip_ftp">تحقق من عنوان IP للجهاز ومنفذ FTP.</string>
+    <string name="msg_adding_to_shelf_link">جارٍ الإضافة إلى مكتبة Payload…</string>
+    <string name="status_idle">خامل</string>
+    <string name="status_sending">جارٍ الإرسال…</string>
+
+    <!-- leaving a site, and the download chooser -->
+    <string name="offsite_title">مغادرة هذا الموقع؟</string>
+    <string name="offsite_text">تريد الصفحة فتح %1$s. غالبًا ما تتسبب الإعلانات في ذلك عند لمس رابط، لذا تابع فقط إذا كنت تتوقع ذلك.</string>
+    <string name="choose_install">إرسال الرابط إلى مثبّت PS5</string>
+    <string name="choose_ftp">رفع إلى PS5 (FTP)</string>
+    <string name="choose_shelf">حفظ في مكتبة Payload</string>
+    <string name="choose_phone">حفظ على الهاتف</string>
+    <string name="choose_help">يحتاج المثبّت إلى رابط مباشر للحزمة يستطيع الجهاز فتحه دون تسجيل الدخول. يعمل FTP مع أي ملف ويحتفظ بجلسة تسجيل دخولك. يمرّر الهاتف البيانات في الخلفية، ويظهر التقدم فوق الشريط السفلي وفي إشعار. تحتفظ مكتبة Payload بملف Payload صغير (حتى %1$s) داخل التطبيق لاستخدامه في تبويب Payload.</string>
+
+    <!-- Install tab -->
+    <string name="install_port_label">منفذ المثبّت (etaHEN: 12800)</string>
+    <string name="install_accepted">قبِله المثبّت: %1$s</string>
+    <string name="install_not_accepted">لم يُقبل (upload %1$s: %2$s؛ api %3$s: %4$s)</string>
+
+    <!-- Install from this phone -->
+    <string name="serve_title">التثبيت من هذا الهاتف</string>
+    <string name="serve_intro">ينزّل الجهاز الحزم مباشرةً من هذا الهاتف عبر Wi-Fi، فلا حاجة إلى نسخها أولًا. يجب أن يكون الهاتف والجهاز على الشبكة نفسها.</string>
+    <string name="serve_choose">اختيار الحزم</string>
+    <string name="serve_none">لم يتم اختيار حزم</string>
+    <string name="serve_start">بدء المشاركة</string>
+    <string name="serve_stop">إيقاف المشاركة</string>
+    <string name="serve_copy">نسخ الرابط</string>
+    <string name="serve_copied">تم نسخ الرابط</string>
+    <string name="serve_file_waiting">في انتظار أن يبدأ الجهاز التنزيل…</string>
+    <string name="serve_file_pulling">الجهاز يقوم بالتنزيل: %1$s</string>
+    <string name="serve_file_done">نزّل الجهاز كل شيء</string>
+    <string name="serve_unreadable">تعذّرت قراءة هذا الملف</string>
+    <string name="serve_hint">إذا لم يبدأ الجهاز التنزيل أبدًا، فقد تكون شبكة Wi-Fi تمنع الأجهزة من الوصول بعضها إلى بعض (وهذا شائع في شبكات الضيوف). استخدم الشبكة الرئيسية، واترك هذا التطبيق يعمل في الخلفية.</string>
+    <string name="serve_no_wifi">تعذّر العثور على عنوان Wi-Fi لهذا الهاتف. وصّل الهاتف بشبكة Wi-Fi نفسها المتصل بها الجهاز.</string>
+    <string name="serve_failed">تعذّر بدء المشاركة: %1$s</string>
+    <string name="serve_idle_stop">توقفت المشاركة لأنه لم يُنزَّل أي شيء لفترة طويلة.</string>
+    <string name="serve_notif_title">المشاركة مع %1$s</string>
+    <string name="serve_notif_text">الملفات التي تم تنزيلها: %1$d من %2$d</string>
+
+    <!-- Upload tab and FTP fields -->
+    <string name="upload_choose">اختيار ملفات</string>
+    <string name="upload_none">لم يتم اختيار ملفات</string>
+    <string name="upload_files_chosen">الملفات المختارة: %1$d</string>
+    <string name="upload_start">رفع في الخلفية</string>
+    <string name="upload_help">يظهر التقدم فوق الشريط السفلي وفي إشعار. يستمر الرفع حتى لو غادرت التطبيق.</string>
+    <string name="ftp_port">منفذ FTP</string>
+    <string name="ftp_user">اسم المستخدم</string>
+    <string name="ftp_password">كلمة المرور</string>
+    <string name="ftp_folder">المجلد البعيد</string>
+    <string name="ftp_use_folder">استخدام %1$s</string>
+
+    <!-- Files tab -->
+    <string name="files_loading">جارٍ التحميل…</string>
+    <string name="files_empty">هذا المجلد فارغ.</string>
+    <string name="files_not_loaded">لم يتم التحميل بعد</string>
+    <string name="files_up">⬆ للأعلى</string>
+    <string name="files_refresh">تحديث</string>
+    <string name="files_new_folder">مجلد جديد</string>
+    <string name="files_upload_here">رفع هنا</string>
+    <string name="files_ftp_settings">إعدادات FTP</string>
+    <string name="files_need_ip">عيّن عنوان IP للجهاز (المس البطاقة في الأعلى) ومنفذ FTP صالحًا لتصفّح ملفاته.</string>
+    <string name="files_kind_folder">مجلد</string>
+    <string name="files_kind_link">رابط، %1$s</string>
+    <string name="files_download">تنزيل إلى الهاتف</string>
+    <string name="files_new_name">اسم جديد</string>
+    <string name="files_name_used">هذا الاسم مستخدم بالفعل هنا.</string>
+    <string name="files_renaming">جارٍ إعادة التسمية…</string>
+    <string name="files_renamed">تمت إعادة تسمية %1$s إلى %2$s</string>
+    <string name="files_delete_title">حذف %1$s؟</string>
+    <string name="files_delete_folder">سيؤدي هذا إلى حذف المجلد وكل ما بداخله من الجهاز. لا يمكن التراجع عن ذلك.</string>
+    <string name="files_delete_file">سيؤدي هذا إلى حذف الملف من الجهاز. لا يمكن التراجع عن ذلك.</string>
+    <string name="files_deleting">جارٍ الحذف…</string>
+    <string name="files_deleted">تم الحذف: %1$s</string>
+    <string name="files_deleted_inside">تم الحذف: %1$s (عدد العناصر بداخله: %2$d)</string>
+    <string name="files_creating">جارٍ إنشاء المجلد…</string>
+    <string name="files_created">تم إنشاء المجلد %1$s</string>
+    <string name="files_folder_name">اسم المجلد</string>
+    <string name="name_empty">لا يمكن أن يكون الاسم فارغًا.</string>
+    <string name="name_not_allowed">هذا الاسم غير مسموح به.</string>
+    <string name="name_slash">لا يمكن أن يحتوي الاسم على شرطات مائلة.</string>
+    <string name="name_control">يحتوي الاسم على أحرف غير مسموح بها.</string>
+
+    <!-- results and errors -->
+    <string name="err_failed">فشل: %1$s</string>
+    <string name="ftp_port_hint">تعذّر الوصول إلى خادم FTP. تحقق من عنوان IP للجهاز ومنفذ FTP (يستخدم FTP المدمج في etaHEN المنفذ 1337، ويستخدم Payload الخاص بـ FTP المنفذ 2121).</string>
+    <string name="err_login">فشل تسجيل الدخول إلى FTP</string>
+    <string name="err_cant_open">تعذّر فتح %1$s (%2$s)</string>
+    <string name="err_rename">فشلت إعادة التسمية (%1$s)</string>
+    <string name="err_mkdir">تعذّر إنشاء المجلد (%1$s)</string>
+    <string name="err_too_deep">المجلد متداخل بعمق كبير</string>
+    <string name="err_delete_path">تعذّر حذف %1$s (%2$s)</string>
+    <string name="err_upload">فشل رفع FTP: %1$s</string>
+    <string name="err_download">فشل تنزيل FTP: %1$s</string>
+    <string name="err_open_file">تعذّر فتح الملف</string>
+    <string name="err_cancelled_upload">تم الإلغاء. قد يتبقى ملف جزئي في %1$s</string>
+    <string name="err_cancelled_download">تم الإلغاء. تم تجاهل التنزيل الجزئي.</string>
+    <string name="err_gave_up">توقفت العملية بعد أن استمر فشل الاتصال. آخر خطأ: %1$s</string>
+    <string name="err_short_upload">احتفظ الجهاز بما حجمه %1$s فقط من %2$s التي أُرسلت.</string>
+    <string name="err_short_download">وصل %1$s فقط من أصل %2$s.</string>
+    <string name="err_empty_file">الملف فارغ</string>
+    <string name="err_save">تعذّر حفظ %1$s</string>
+    <string name="sent_to_ps5">تم الإرسال إلى PS5: %1$s</string>
+    <string name="saved_to_downloads">تم الحفظ في التنزيلات/PS5: %1$s</string>
+    <string name="dl_http_failed">فشل التنزيل: HTTP %1$s</string>
+    <string name="dl_empty">فشل التنزيل: استجابة فارغة</string>
+    <string name="dl_cut_short">أُغلق الاتصال قبل وصول الملف كاملًا.</string>
+    <string name="dl_create_failed">تعذّر إنشاء الملف في التنزيلات</string>
+    <string name="dl_write_failed">تعذّر فتح الملف الجديد للكتابة</string>
+
+    <!-- Payload tab and shelf -->
+    <string name="payload_sent">تم الإرسال: %1$s</string>
+    <string name="shelf_added">تمت الإضافة إلى المكتبة: %1$s (%2$s)</string>
+    <string name="shelf_updated">تم التحديث في المكتبة: %1$s (%2$s)</string>
+    <string name="shelf_too_large">هذا الملف أكبر من %1$s، لذا لم تتم إضافته إلى المكتبة.</string>
+    <string name="shelf_too_large_url">حجم هذا الملف %1$s. تقبل المكتبة ملفات Payload حتى %2$s.</string>
+    <string name="payload_adding">جارٍ الإضافة إلى المكتبة…</string>
+    <string name="payload_remove_title">إزالة %1$s؟</string>
+    <string name="payload_remove_text">سيتم حذفه من المكتبة. لن يتأثر الملف الأصلي على هاتفك.</string>
+    <string name="payload_loader_port">منفذ المحمّل</string>
+    <string name="payload_shelf_title">مكتبة Payload</string>
+    <string name="payload_shelf_empty">لم يتم حفظ أي شيء بعد. أضف ملفات Payload التي تستخدمها كثيرًا (خادم FTP أو etaHEN وغيرها) وأرسل كل واحد بلمسة. يمكنك أيضًا حفظ أحدها مباشرة من تبويب الويب عند تنزيله.</string>
+    <string name="payload_sending">جارٍ إرسال %1$s…</string>
+    <string name="payload_result">‏%1$s: %2$s</string>
+    <string name="payload_add">إضافة Payload إلى المكتبة</string>
+    <string name="payload_once_title">إرسال ملف مرة واحدة</string>
+    <string name="payload_choose">اختيار Payload (⁦.elf / .bin⁩)</string>
+    <string name="payload_send">إرسال Payload</string>
+
+    <!-- consoles -->
+    <string name="profile_default">جهازي PS5</string>
+    <string name="profile_new">الجهاز %1$d</string>
+    <string name="profile_fallback">جهاز</string>
+    <string name="consoles_title">الأجهزة</string>
+    <string name="console_rename_title">إعادة تسمية الجهاز</string>
+    <string name="console_name_label">الاسم</string>
+    <string name="console_delete_title">حذف %1$s؟</string>
+    <string name="console_delete_text">سيتم حذف عنوان IP والمنافذ المحفوظة له. لن تتأثر أجهزتك الأخرى.</string>
+    <string name="console_no_ip">لا يوجد عنوان IP بعد</string>
+    <string name="console_color_of">لون %1$s</string>
+    <string name="console_use_color">استخدام %1$s</string>
+    <string name="console_add">إضافة جهاز</string>
+    <string name="language_button">اللغة</string>
+    <string name="color_blue">أزرق</string>
+    <string name="color_orange">برتقالي</string>
+    <string name="color_green">أخضر</string>
+    <string name="color_pink">وردي</string>
+    <string name="color_purple">بنفسجي</string>
+    <string name="color_teal">أزرق مخضر</string>
+
+    <!-- Web tab -->
+    <string name="web_download_started">بدأ التنزيل (انظر التنزيلات)</string>
+    <string name="web_load_failed">تعذّر تحميل الصفحة: %1$s</string>
+    <string name="web_http_server">الموقع مشغول أو متوقف حاليًا (الخطأ %1$s). حاول مرة أخرى بعد قليل.</string>
+    <string name="web_http_other">ردّ الموقع بالخطأ %1$s.</string>
+    <string name="web_open_first">افتح صفحة أولًا</string>
+    <string name="web_bookmark_saved">تم حفظ الإشارة المرجعية</string>
+    <string name="web_bookmark_exists">موجودة بالفعل في إشاراتك المرجعية</string>
+    <string name="web_home_set">تم تعيين الصفحة الرئيسية: %1$s</string>
+    <string name="web_reload">إعادة تحميل</string>
+    <string name="web_add">★ إضافة</string>
+    <string name="web_bookmarks">الإشارات المرجعية</string>
+    <string name="web_homepage_label">عنوان URL للصفحة الرئيسية</string>
+    <string name="web_bookmarks_empty">لا توجد إشارات مرجعية بعد. افتح صفحة واضغط على %1$s.</string>
+    <string name="web_bookmarks_help">المس إشارة مرجعية لفتحها. يجعلها الزر «%1$s» صفحتك الرئيسية.</string>
+    <string name="adblock_title">حظر الإعلانات</string>
+    <string name="adblock_switch">حظر نطاقات الإعلانات</string>
+    <string name="adblock_info">تم الحظر حتى الآن: %1$d. الشبكات في القائمة المدمجة: %2$d. أعد تحميل الصفحة بعد تغيير أي شيء.</string>
+    <string name="adblock_own">نطاقاتك الخاصة، واحد في كل سطر</string>
+    <string name="adblock_on">حظر الإعلانات: يعمل · المحظور: %1$d · المس للتغيير</string>
+    <string name="adblock_off">حظر الإعلانات: متوقف · المحظور: %1$d · المس للتغيير</string>
+
+    <!-- help pages for problems -->
+    <string name="help_button">ماذا أفعل؟</string>
+    <string name="help_what">ما الذي حدث</string>
+    <string name="help_try">ما يمكنك تجربته</string>
+    <string name="help_details">التفاصيل</string>
+    <string name="help_copy">نسخ التفاصيل</string>
+    <string name="help_copied">تم النسخ</string>
+    <string name="help_unreachable_title">تعذّر الوصول إلى الجهاز</string>
+    <string name="help_unreachable_what">لا يوجد ردّ على عنوان الجهاز.</string>
+    <string name="help_unreachable_try">• تحقّق من عنوان IP على PS5 (الإعدادات &gt; الشبكة &gt; حالة الاتصال). قد يتغيّر بعد إعادة التشغيل.\n• أيقظ الجهاز بالكامل. غالبًا ما يوقف وضع الراحة الشبكة.\n• استخدم شبكة Wi-Fi نفسها على الجهازين. شبكات الضيوف وشبكات VPN تمنع الاتصال.</string>
+    <string name="help_port_title">هذه الخدمة غير قيد التشغيل</string>
+    <string name="help_port_what">ردّ الجهاز، لكن لا شيء يستمع على هذا المنفذ.</string>
+    <string name="help_port_try">• شغّل etaHEN على الجهاز. فهو يوفّر المثبّت (12800) والمحمّل (9021) وFTP (1337).\n• يستخدم Payload منفصل لـ FTP عادةً المنفذ 2121. أدخل المنفذ نفسه هنا.\n• في بطاقة الجهاز، يوضّح المؤشر المطفأ الخدمة الناقصة.</string>
+    <string name="help_login_title">تم رفض تسجيل الدخول إلى FTP</string>
+    <string name="help_login_what">رفض خادم FTP في الجهاز اسم المستخدم أو كلمة المرور.</string>
+    <string name="help_login_try">• يقبل etaHEN اسم المستخدم anonymous مع أي كلمة مرور.\n• إذا حدّدت بيانات دخول على الجهاز، فأدخلها ضمن رفع.\n• لا تُحفظ كلمة المرور. أدخلها مجددًا بعد إعادة تشغيل التطبيق.</string>
+    <string name="help_dropped_title">انقطع الاتصال</string>
+    <string name="help_dropped_what">انقطع الاتصال بالجهاز أو توقّف نقل البيانات. يعيد التطبيق المحاولة ويتابع من حيث توقّف.</string>
+    <string name="help_dropped_try">• أبقِ الهاتف قريبًا من الراوتر وأبقِ الجهاز مستيقظًا.\n• أوقف التنزيلات الكبيرة الأخرى على الشبكة مؤقتًا.\n• إذا تكرّر الفشل، انتظر قليلًا ثم اضغط إعادة المحاولة.</string>
+    <string name="help_refused_title">لم يقبل المثبّت الرابط</string>
+    <string name="help_refused_what">يمكن الوصول إلى الجهاز، لكن المثبّت فيه رفض هذا الرابط.</string>
+    <string name="help_refused_try">• يجب أن يؤدي الرابط مباشرة إلى ملف الحزمة وأن يُفتح دون تسجيل دخول.\n• يجب أن يتمكن الجهاز من الوصول إليه. الروابط القادمة من هذا الهاتف تعمل فقط على شبكة Wi-Fi نفسها.\n• تأكّد من أن المثبّت يعمل وأن في الجهاز مساحة فارغة.</string>
+    <string name="help_storage_title">توقّف الجهاز عن التخزين</string>
+    <string name="help_storage_what">احتفظ الجهاز بأقل مما أُرسل إليه. غالبًا ما يكون القرص ممتلئًا أو للقراءة فقط.</string>
+    <string name="help_storage_try">• حرّر بعض المساحة على الجهاز.\n• اختر مجلدًا آخر، مثل مجلد على وحدة USB.\n• ثم اضغط إعادة المحاولة.</string>
+    <string name="help_denied_title">تم رفض هذا المجلد أو الملف</string>
+    <string name="help_denied_what">لا يستطيع خادم FTP فتحه أو الكتابة فيه أو تغييره هنا.</string>
+    <string name="help_denied_try">• تأكّد من وجود المجلد. الأسماء حساسة لحالة الأحرف.\n• مجلدات النظام للقراءة فقط. استخدم /data أو وحدة USB.\n• قد يكون ملف تستخدمه لعبة قيد التشغيل مقفلًا. أغلق اللعبة.</string>
+    <string name="help_phone_title">لا يستطيع الهاتف استخدام الملف</string>
+    <string name="help_phone_what">الملف محذوف أو منقول، أو فقد التطبيق الوصول إليه، أو لا توجد مساحة كافية على الهاتف.</string>
+    <string name="help_phone_try">• اختر الملف مرة أخرى.\n• حرّر بعض المساحة على الهاتف.\n• بالنسبة إلى ملف في تطبيق سحابي، احفظه على الهاتف أولًا.</string>
+    <string name="help_link_title">فشل رابط التنزيل</string>
+    <string name="help_link_what">لم يسلّم الموقع الملف. قد يكون الرابط منتهي الصلاحية أو يتطلب تسجيل دخول، أو أن الموقع مشغول.</string>
+    <string name="help_link_try">• ابدأ التنزيل من جديد من تبويب الويب. هذا يحافظ على تسجيل دخولك.\n• تنتهي صلاحية الروابط من مواقع استضافة الملفات غالبًا بعد دقائق قليلة.\n• إذا أبلغ الموقع عن خطأ من فئة 500، فحاول لاحقًا.</string>
+
+    <!-- update check -->
+    <string name="update_available">الإصدار %1$s متاح</string>
+    <string name="update_download">تنزيل</string>
+    <string name="update_later">لاحقًا</string>
+    <string name="update_title">التحديثات</string>
+    <string name="update_current">لديك أحدث إصدار (%1$s).</string>
+    <string name="update_none">لم يُعثر بعدُ على إصدار في صفحة Releases.</string>
+    <string name="update_check_now">تحقّق الآن</string>
+    <string name="update_auto">التحقق من التحديثات عند فتح التطبيق</string>
+    <string name="update_privacy">يطلب الفحص من GitHub أحدث إصدار مرة واحدة في اليوم على الأكثر. لا يُرسل أي شيء عنك أو عن أجهزتك؛ يرى GitHub عنوان IP الخاص بك كما يفعل أي موقع.</string>
+
+    <!-- find my console -->
+    <string name="find_button">ابحث عن PS5 الخاص بي</string>
+    <string name="find_scanning">جارٍ البحث عن جهازك على الشبكة %1$s…</string>
+    <string name="find_again">ابحث مرة أخرى</string>
+    <string name="find_none">لم يُعثر على أي جهاز.</string>
+    <string name="find_none_try">• شغّل الجهاز بالكامل (وليس وضع الراحة) وابدأ etaHEN.\n• استخدم شبكة Wi-Fi نفسها على الهاتف وعلى الجهاز. شبكات الضيوف وشبكات VPN تفصل الأجهزة بعضها عن بعض.\n• ثم ابحث مرة أخرى.</string>
+    <string name="find_no_wifi">هذا الهاتف غير متصل بشبكة Wi-Fi. وصّله بشبكة Wi-Fi نفسها المتصل بها الجهاز، ثم ابحث مرة أخرى.</string>
+    <string name="find_pick">اضغط على استخدام لتعيين عنوان %1$s.</string>
+    <string name="find_saved">العنوان المحفوظ</string>
+    <string name="find_used_by">محفوظ لـ %1$s</string>
+    <string name="find_updated">يستخدم %1$s الآن %2$s.</string>
+    <string name="find_privacy">يُفحص شبكة Wi-Fi الخاصة بك فقط، وعلى بضعة منافذ في الجهاز. لا يُرسَل أي شيء عبر الإنترنت.</string>
+    <string name="action_stop">إيقاف</string>
+    <string name="action_use">استخدام</string>
+
+    <!-- about and backup -->
+    <string name="about_title">حول Bento</string>
+    <string name="about_version">الإصدار %1$s</string>
+    <string name="about_button">حول والنسخ الاحتياطي</string>
+    <string name="about_report">نسخ التقرير</string>
+    <string name="about_report_help">ينسخ إصدار التطبيق وطراز هاتفك وآخر رسالة، لتلصقها في بلاغ عن مشكلة. لا تتضمن عناوين IP ولا الروابط.</string>
+    <string name="about_report_copied">تم نسخ التقرير</string>
+    <string name="about_releases">صفحة Releases</string>
+    <string name="backup_title">النسخ الاحتياطي</string>
+    <string name="backup_text">يحفظ أجهزتك والصفحة الرئيسية والإشارات المرجعية وقائمة الإعلانات وملفات Payload في ملف واحد. لا تُحفظ كلمات مرور FTP.</string>
+    <string name="backup_save">حفظ نسخة احتياطية</string>
+    <string name="backup_restore">استعادة نسخة احتياطية</string>
+    <string name="backup_saved">تم حفظ النسخة الاحتياطية.</string>
+    <string name="backup_contents">الأجهزة: %1$d · الإشارات المرجعية: %2$d · Payload: %3$d</string>
+    <string name="backup_made">أُنشئت في %1$s</string>
+    <string name="backup_skipped">ملفات Payload المستبعدة لأن الملف سيصبح كبيرًا جدًا: %1$d</string>
+    <string name="backup_bad_file">هذا الملف ليس نسخة احتياطية من Bento.</string>
+    <string name="backup_too_new">أُنشئت هذه النسخة بإصدار أحدث من Bento. حدّث التطبيق ثم حاول مرة أخرى.</string>
+    <string name="restore_title">استعادة هذه النسخة الاحتياطية؟</string>
+    <string name="restore_text">سيتم استبدال أجهزتك والصفحة الرئيسية والإشارات المرجعية وقائمة الإعلانات بما في الملف. تُضاف ملفات Payload الموجودة في الملف إلى مكتبة Payload. ستحتاج إلى إدخال كلمات مرور FTP مرة أخرى.</string>
+    <string name="restore_button">استعادة</string>
+    <string name="restore_done">تمت استعادة النسخة الاحتياطية.</string>
+    <string name="restore_payloads_failed">ملفات Payload التي تعذّر تخزينها: %1$d</string>
+
+    <!-- install box -->
+    <string name="install_links_label">روابط الحزم (رابط في كل سطر)</string>
+    <string name="install_paste">لصق</string>
+    <string name="action_clear">مسح</string>
+    <string name="install_paste_none">لا يوجد رابط ويب في الحافظة.</string>
+    <string name="install_links_skipped">تُرسل فقط العناوين التي تبدأ بـ http:// أو https://. المستبعد: %1$d</string>
+    <string name="install_recent">روابط حديثة</string>
+    <string name="install_recent_clear">مسح القائمة</string>
+    <string name="install_sending_n">جارٍ إرسال الرابط %1$d من %2$d…</string>
+    <string name="install_batch_done">المقبول: %1$d من %2$d رابط</string>
+    <string name="install_batch_notsent">لم يُرسل: %1$d</string>
+
+    <!-- payload chains -->
+    <string name="chains_title">السلاسل</string>
+    <string name="chains_hint">ترسل السلسلة عدة payloads واحدًا تلو الآخر، مع استراحة بعد كل واحد. اضغط مطولًا على أيقونة التطبيق لتشغيل إحدى السلاسل الأربع الأولى من الشاشة الرئيسية.</string>
+    <string name="chain_new">سلسلة جديدة</string>
+    <string name="action_edit">تعديل</string>
+    <string name="chain_summary_steps">عدد الـ payloads: %1$d</string>
+    <string name="chain_summary_pauses">فترات التوقف: %1$s</string>
+    <string name="chain_edit_title">تعديل السلسلة</string>
+    <string name="chain_steps_title">الـ payloads بالترتيب (%1$d كحد أقصى)</string>
+    <string name="chain_add_step">إضافة payload</string>
+    <string name="chain_pick_title">أي payload تريد إضافته؟</string>
+    <string name="chain_wait_label">ثم انتظر (بالثواني)</string>
+    <string name="chain_missing">ليس في المكتبة</string>
+    <string name="chain_move_up">نقل لأعلى</string>
+    <string name="chain_move_down">نقل لأسفل</string>
+    <string name="chain_pin">إضافة إلى الشاشة الرئيسية</string>
+    <string name="chain_pin_unsupported">لا يستطيع هذا المشغّل إضافة اختصارات. اضغط مطولًا على أيقونة التطبيق لتجد سلاسلك هناك.</string>
+    <string name="chain_sending">جارٍ إرسال %1$s (%2$d من %3$d)…</string>
+    <string name="chain_waiting">الـ payload التالي بعد %1$s</string>
+    <string name="chain_retrying">بانتظار أن يصبح الجهاز جاهزًا…</string>
+    <string name="chain_result_done">تم. الـ payloads المُرسَلة: %1$d من %2$d</string>
+    <string name="chain_result_stopped">تم الإيقاف. الـ payloads المُرسَلة: %1$d من %2$d</string>
+    <string name="chain_result_failed">توقفت عند الخطوة %1$d (%2$s). الـ payloads المُرسَلة: %3$d من %4$d</string>
+    <string name="chain_err_target">عيّن أولًا عنوان IP للجهاز ومنفذ المحمّل.</string>
+    <string name="chain_err_missing">لم يعد في المكتبة: %1$s. أضفه مرة أخرى أو عدّل السلسلة.</string>
+    <string name="chain_err_unknown">هذه السلسلة لم تعد موجودة.</string>
+    <string name="notif_channel_chain">سلاسل payload</string>
+    <string name="backup_chains">السلاسل: %1$d</string>
+
+    <!-- unfinished transfers -->
+    <string name="unfinished_title">لم يكتمل في المرة السابقة: %1$d</string>
+    <string name="unfinished_hint">أُغلق التطبيق قبل اكتمال هذه العمليات. يبدأ «متابعة» كل واحدة منها من جديد من البداية.</string>
+    <string name="unfinished_continue">متابعة</string>
+    <string name="unfinished_discard">تجاهل</string>
+    <string name="unfinished_missing">لم يعد بالإمكان العثور على الملفات، اخترها من جديد: %1$d</string>
+
+    <!-- pause, speed limit, summary of a run -->
+    <string name="transfer_pause">إيقاف مؤقت</string>
+    <string name="transfer_resume">استئناف</string>
+    <string name="transfer_paused">متوقف مؤقتًا</string>
+    <string name="speed_limit_title">حد السرعة</string>
+    <string name="speed_limit_off">بلا حد</string>
+    <string name="speed_limit_value">الحد: %1$s</string>
+    <string name="speed_limit_hint">يبطئ عمليات النقل لتبقى شبكة Wi-Fi متاحة لاستخدامات أخرى. يسري التغيير فورًا.</string>
+    <string name="summary_title">عمليات النقل المكتملة: %1$d من %2$d</string>
+    <string name="summary_detail">‏%1$s خلال %2$s</string>
+    <string name="summary_failed">الفاشلة: %1$d</string>
+    <string name="summary_stopped">الموقوفة: %1$d</string>
+    <string name="notif_channel_results">نتائج النقل</string>
+
+    <!-- files tab: selecting -->
+    <string name="files_selected">المحدد: %1$d</string>
+    <string name="files_select_all">تحديد الكل</string>
+    <string name="files_select_none">إلغاء التحديد</string>
+    <string name="files_delete_many_title">حذف العناصر المحددة (%1$d)؟</string>
+    <string name="files_delete_many_text">سيؤدي هذا إلى حذف الملفات والمجلدات المحددة من الجهاز، وتُحذف المجلدات مع كل ما بداخلها. لا يمكن التراجع عن ذلك.</string>
+    <string name="files_deleted_many">العناصر المحذوفة: %1$d</string>
+    <string name="files_delete_partial">العناصر المحذوفة: %1$d، وغير المحذوفة: %2$d. أول مشكلة: %3$s</string>
+
+    <!-- files tab: downloading folders -->
+    <string name="files_dl_planning">جارٍ فحص المجلدات…</string>
+    <string name="files_dl_confirm_title">التنزيل إلى الهاتف؟</string>
+    <string name="files_dl_confirm_text">الملفات: %1$d، بحجم إجمالي %2$s. تُحفظ في Downloads/PS5 وفي المجلدات نفسها الموجودة على الجهاز.</string>
+    <string name="files_dl_links">الروابط داخل المجلدات لا تُنزَّل: %1$d.</string>
+    <string name="files_dl_truncated">الملفات المأخوذة: %1$d. تحتوي المجلدات على أكثر من ذلك، أو تمتد أعمق مما يتتبعه التطبيق.</string>
+    <string name="files_dl_none">لا يوجد ملف للتنزيل في التحديد.</string>
+
+    <!-- files tab: sorting, searching, pinning -->
+    <string name="files_sort">ترتيب</string>
+    <string name="files_sort_title">ترتيب حسب</string>
+    <string name="files_sort_name">الاسم</string>
+    <string name="files_sort_size">الحجم، الأكبر أولًا</string>
+    <string name="files_sort_newest">الأحدث أولًا</string>
+    <string name="files_search">بحث</string>
+    <string name="files_search_hint">البحث في هذا المجلد</string>
+    <string name="files_no_match">لا يوجد في هذا المجلد ما يطابق البحث.</string>
+    <string name="files_pin">تثبيت هذا المجلد</string>
+    <string name="files_unpin">إلغاء تثبيت هذا المجلد</string>
+
+    <!-- the Web tab: tabs, find in page, desktop site, the menu of a link -->
+    <string name="web_tabs">التبويبات: %1$d</string>
+    <string name="web_tabs_title">التبويبات</string>
+    <string name="web_tab_new">تبويب جديد</string>
+    <string name="web_tabs_full">عدد التبويبات كبير جدًا. الحد الأقصى هو %1$d. أغلق واحدًا أولًا.</string>
+    <string name="web_find">بحث</string>
+    <string name="web_find_hint">البحث في هذه الصفحة</string>
+    <string name="web_find_none">لا توجد نتائج</string>
+    <string name="web_desktop">موقع سطح المكتب</string>
+    <string name="web_link_new_tab">فتح في تبويب جديد</string>
+    <string name="web_link_copy">نسخ الرابط</string>
+    <string name="web_link_copied">تم نسخ الرابط</string>
+    <string name="web_link_use">إرسال أو تنزيل…</string>
+</resources>
