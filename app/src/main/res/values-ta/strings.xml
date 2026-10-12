@@ -33,14 +33,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">உங்கள் PS5-இன் IP முகவரியை அமைக்கவும்</string>
+    <string name="status_set_ip">உங்கள் %1$s-இன் IP முகவரியை அமைக்கவும்</string>
     <string name="status_checking">சரிபார்க்கிறது…</string>
     <string name="status_ready">தயார்</string>
     <string name="status_partly">பகுதியளவு தயார்</string>
     <string name="status_partly_off">பகுதியளவு தயார் · பதிலில்லை: %1$s</string>
     <string name="status_offline">கன்சோலை அணுக முடியவில்லை</string>
     <string name="status_hint_unset">PS5-இல் Settings &gt; Network &gt; Connection Status &gt; View Connection Status என்ற இடத்தில் இதைக் காணலாம். உள்ளிட இங்கே தட்டவும்.</string>
-    <string name="status_hint_offline">இந்த முகவரியில் எதுவும் பதிலளிக்கவில்லை. IP-ஐயும், கன்சோல் இயக்கத்தில் உள்ளதா மற்றும் அதே Wi-Fi-இல் உள்ளதா என்பதையும், etaHEN இயங்குகிறதா என்பதையும் சரிபார்க்கவும்.</string>
+    <string name="status_hint_unset_ps4">PS4-இல் Settings &gt; Network &gt; View Connection Status என்ற இடத்தில் இதைக் காணலாம். உள்ளிட இங்கே தட்டவும்.</string>
+    <string name="status_hint_offline">இந்த முகவரியில் எதுவும் பதிலளிக்கவில்லை. IP-ஐயும், %1$s இயக்கத்தில் உள்ளதா மற்றும் அதே Wi-Fi-இல் உள்ளதா என்பதையும், %2$s இயங்குகிறதா என்பதையும் சரிபார்க்கவும்.</string>
     <string name="status_hint_one">பதிலளிக்கவில்லை: %1$s. அதைக் கன்சோலில் தொடங்கவும் அல்லது அதன் போர்ட்டைச் சரிபார்க்கவும்.</string>
     <string name="status_hint_many">பதிலளிக்கவில்லை: %1$s. அவற்றைக் கன்சோலில் தொடங்கவும் அல்லது அவற்றின் போர்ட்களைச் சரிபார்க்கவும்.</string>
     <string name="console_switch">கன்சோலை மாற்று</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">கன்சோலின் IP முகவரி</string>
     <string name="console_ip_label">IP முகவரி</string>
     <string name="console_ip_help">PS5-இல் Settings &gt; Network &gt; Connection Status &gt; View Connection Status என்ற இடத்தில் இதைக் காணலாம்.</string>
+    <string name="console_ip_help_ps4">PS4-இல் Settings &gt; Network &gt; View Connection Status என்ற இடத்தில் இதைக் காணலாம்.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">பரிமாற்றம்</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">காத்திருக்கும் பரிமாற்றங்கள்</string>
     <string name="queue_clear">அனைத்தையும் அகற்று</string>
     <string name="queue_empty">எதுவும் காத்திருக்கவில்லை.</string>
-    <string name="notif_channel">PS5 பரிமாற்றங்கள்</string>
+    <string name="notif_channel">PS4/PS5 பரிமாற்றங்கள்</string>
     <string name="notif_sent">அனுப்பப்பட்டது: %1$s</string>
     <string name="notif_received">பெறப்பட்டது: %1$s</string>
     <string name="percent_value">%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">வரிசையில் சேர்க்கப்பட்டது. காத்திருப்பவை: %1$d.</string>
     <string name="msg_set_ip_first">முதலில் கன்சோலின் IP முகவரியை அமைக்கவும். மேலே உள்ள கார்டைத் தட்டவும்.</string>
-    <string name="msg_sending_link">PS5-க்கு இணைப்பை அனுப்புகிறது…</string>
+    <string name="msg_sending_link">%1$s-க்கு இணைப்பை அனுப்புகிறது…</string>
     <string name="msg_check_ip_ftp">கன்சோலின் IP முகவரியையும் FTP போர்ட்டையும் சரிபார்க்கவும்.</string>
     <string name="msg_adding_to_shelf_link">payload நூலகத்தில் சேர்க்கிறது…</string>
     <string name="status_idle">செயலில் இல்லை</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">இந்தத் தளத்தை விட்டு வெளியேறவா?</string>
     <string name="offsite_text">பக்கம் இதைத் திறக்க விரும்புகிறது: %1$s. இணைப்பைத் தட்டும்போது இதற்கு விளம்பரங்களே பெரும்பாலும் காரணம்; எனவே இதை எதிர்பார்த்திருந்தால் மட்டுமே தொடரவும்.</string>
-    <string name="choose_install">PS5-இன் Installer-க்கு இணைப்பை அனுப்பு</string>
-    <string name="choose_ftp">PS5-க்குப் பதிவேற்று (FTP)</string>
+    <string name="choose_install">%1$s-இன் Installer-க்கு இணைப்பை அனுப்பு</string>
+    <string name="choose_ftp">%1$s-க்குப் பதிவேற்று (FTP)</string>
     <string name="choose_shelf">payload நூலகத்தில் சேமி</string>
     <string name="choose_phone">தொலைபேசியில் சேமி</string>
     <string name="choose_help">Installer-க்கு, உள்நுழையாமலேயே கன்சோல் திறக்கக்கூடிய தொகுப்பின் நேரடி இணைப்பு தேவை. FTP எந்தக் கோப்புடனும் செயல்படும்; உங்கள் உள்நுழைவு அமர்வையும் தக்கவைக்கும். தொலைபேசி தரவைப் பின்னணியில் அனுப்புகிறது; முன்னேற்றம் கீழ்ப் பட்டிக்கு மேலேயும் ஓர் அறிவிப்பிலும் காட்டப்படும். payload நூலகம் ஒரு சிறிய payload-ஐ (%1$s வரை) Payload தாவலுக்காக ஆப்ஸுக்குள் வைத்திருக்கும்.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Installer போர்ட் (etaHEN: 12800)</string>
+    <string name="install_port_label">Installer போர்ட் (%1$s: 12800)</string>
     <string name="install_accepted">Installer ஏற்றுக்கொண்டது: %1$s</string>
     <string name="install_not_accepted">ஏற்கப்படவில்லை (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">தோல்வி: %1$s</string>
     <string name="ftp_port_hint">FTP சேவையகத்தை அணுக முடியவில்லை. கன்சோலின் IP-ஐயும் FTP போர்ட்டையும் சரிபார்க்கவும் (etaHEN-இன் உள்ளமைந்த FTP 1337-ஐயும், FTP payload 2121-ஐயும் பயன்படுத்தும்).</string>
+    <string name="ftp_port_hint_ps4">FTP சேவையகத்தை அணுக முடியவில்லை. கன்சோலின் IP-ஐயும் FTP போர்ட்டையும் சரிபார்க்கவும் (GoldHEN-இன் FTP 2121-ஐப் பயன்படுத்தும்).</string>
     <string name="err_login">FTP உள்நுழைவு தோல்வியடைந்தது</string>
     <string name="err_cant_open">%1$s-ஐத் திறக்க முடியவில்லை (%2$s)</string>
     <string name="err_rename">மறுபெயரிடுதல் தோல்வியடைந்தது (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">%2$s-இல் %1$s மட்டுமே வந்து சேர்ந்தது.</string>
     <string name="err_empty_file">கோப்பு காலியாக உள்ளது</string>
     <string name="err_save">%1$s-ஐச் சேமிக்க முடியவில்லை</string>
-    <string name="sent_to_ps5">PS5-க்கு அனுப்பப்பட்டது: %1$s</string>
-    <string name="saved_to_downloads">Downloads/PS5-இல் சேமிக்கப்பட்டது: %1$s</string>
+    <string name="sent_to_ps5">%2$s-க்கு அனுப்பப்பட்டது: %1$s</string>
+    <string name="saved_to_downloads">Downloads/%2$s-இல் சேமிக்கப்பட்டது: %1$s</string>
     <string name="dl_http_failed">பதிவிறக்கம் தோல்வியடைந்தது: HTTP %1$s</string>
     <string name="dl_empty">பதிவிறக்கம் தோல்வியடைந்தது: வெற்றுப் பதில்</string>
     <string name="dl_cut_short">முழு கோப்பும் வந்து சேர்வதற்கு முன் இணைப்பு மூடப்பட்டது.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">இது நூலகத்திலிருந்து நீக்கப்படும். உங்கள் தொலைபேசியில் உள்ள அசல் கோப்பு பாதிக்கப்படாது.</string>
     <string name="payload_loader_port">Loader போர்ட்</string>
     <string name="payload_shelf_title">Payload நூலகம்</string>
-    <string name="payload_shelf_empty">இன்னும் எதுவும் சேமிக்கப்படவில்லை. நீங்கள் அடிக்கடி பயன்படுத்தும் payload-களை (FTP சேவையகம், etaHEN, ...) சேர்த்து, ஒவ்வொன்றையும் ஒரே தட்டலில் அனுப்புங்கள். இணையத் தாவலில் பதிவிறக்கும்போதே அவற்றை நேரடியாகச் சேமிக்கவும் முடியும்.</string>
+    <string name="payload_shelf_empty">இன்னும் எதுவும் சேமிக்கப்படவில்லை. நீங்கள் அடிக்கடி பயன்படுத்தும் payload-களை (FTP சேவையகம், %1$s, ...) சேர்த்து, ஒவ்வொன்றையும் ஒரே தட்டலில் அனுப்புங்கள். இணையத் தாவலில் பதிவிறக்கும்போதே அவற்றை நேரடியாகச் சேமிக்கவும் முடியும்.</string>
     <string name="payload_sending">%1$s-ஐ அனுப்புகிறது…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">நூலகத்தில் payload-ஐச் சேர்</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Payload-ஐ அனுப்பு</string>
 
     <!-- consoles -->
-    <string name="profile_default">என் PS5</string>
+    <string name="profile_default">என் %1$s</string>
     <string name="profile_new">கன்சோல் %1$d</string>
     <string name="profile_fallback">கன்சோல்</string>
     <string name="consoles_title">கன்சோல்கள்</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">அதன் சேமிக்கப்பட்ட IP முகவரியும் போர்ட்களும் அகற்றப்படும். உங்கள் மற்ற கன்சோல்கள் பாதிக்கப்படாது.</string>
     <string name="console_no_ip">இன்னும் IP முகவரி இல்லை</string>
     <string name="console_color_of">%1$s-இன் நிறம்</string>
+    <string name="console_type_of">%1$s-இன் கன்சோல் வகை</string>
     <string name="console_use_color">%1$s-ஐப் பயன்படுத்து</string>
     <string name="console_add">கன்சோலைச் சேர்</string>
     <string name="language_button">மொழி</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">நகலெடுக்கப்பட்டது</string>
     <string name="help_unreachable_title">கன்சோலை அடைய முடியவில்லை</string>
     <string name="help_unreachable_what">கன்சோலின் முகவரியில் எதுவும் பதிலளிக்கவில்லை.</string>
-    <string name="help_unreachable_try">• PS5-இல் IP முகவரியைச் சரிபார்க்கவும் (Settings &gt; Network &gt; Connection Status). மறுதொடக்கத்திற்குப் பிறகு அது மாறலாம்.\n• கன்சோலை முழுமையாக எழுப்பவும். ஓய்வு பயன்முறை பெரும்பாலும் நெட்வொர்க்கை அணைத்துவிடும்.\n• இரண்டிலும் ஒரே Wi-Fi-ஐப் பயன்படுத்தவும். விருந்தினர் நெட்வொர்க்குகளும் VPN-உம் அதைத் தடுக்கின்றன.</string>
+    <string name="help_unreachable_try">• %1$s-இல் IP முகவரியைச் சரிபார்க்கவும் (Settings &gt; Network &gt; Connection Status). மறுதொடக்கத்திற்குப் பிறகு அது மாறலாம்.\n• கன்சோலை முழுமையாக எழுப்பவும். ஓய்வு பயன்முறை பெரும்பாலும் நெட்வொர்க்கை அணைத்துவிடும்.\n• இரண்டிலும் ஒரே Wi-Fi-ஐப் பயன்படுத்தவும். விருந்தினர் நெட்வொர்க்குகளும் VPN-உம் அதைத் தடுக்கின்றன.</string>
     <string name="help_port_title">அந்தச் சேவை இயங்கவில்லை</string>
     <string name="help_port_what">கன்சோல் பதிலளித்தது, ஆனால் அந்தப் போர்ட்டில் எதுவும் கேட்கவில்லை.</string>
     <string name="help_port_try">• கன்சோலில் etaHEN-ஐத் தொடங்கவும். அது Installer (12800), Loader (9021), FTP (1337) ஆகியவற்றை வழங்குகிறது.\n• தனி FTP payload பொதுவாக 2121-ஐப் பயன்படுத்தும். அதே போர்ட்டை இங்கே உள்ளிடவும்.\n• கன்சோல் கார்டில், அணைந்துள்ள விளக்கு எது இல்லை என்பதைக் காட்டுகிறது.</string>
+    <string name="help_port_try_ps4">• கன்சோலில் GoldHEN-ஐத் தொடங்கவும். அது Loader (9090), FTP (2121) ஆகியவற்றை வழங்குகிறது.\n• தொகுப்புகளை நிறுவ, கன்சோலில் flatz-இன் Remote Package Installer-ஐயும் இயக்கவும் (12800).\n• கன்சோல் கார்டில், அணைந்துள்ள விளக்கு எது இல்லை என்பதைக் காட்டுகிறது.</string>
     <string name="help_login_title">FTP உள்நுழைவு நிராகரிக்கப்பட்டது</string>
     <string name="help_login_what">கன்சோலின் FTP சேவையகம் பயனர்பெயரை அல்லது கடவுச்சொல்லை நிராகரித்தது.</string>
-    <string name="help_login_try">• etaHEN எந்தக் கடவுச்சொல்லுடனும் anonymous என்ற பயனர்பெயரை ஏற்கும்.\n• கன்சோலில் உள்நுழைவை அமைத்திருந்தால், அதைப் பதிவேற்று பகுதியில் உள்ளிடவும்.\n• கடவுச்சொல் சேமிக்கப்படாது. செயலியை மறுதொடக்கம் செய்த பிறகு மீண்டும் உள்ளிடவும்.</string>
+    <string name="help_login_try">• %2$s எந்தக் கடவுச்சொல்லுடனும் anonymous என்ற பயனர்பெயரை ஏற்கும்.\n• கன்சோலில் உள்நுழைவை அமைத்திருந்தால், அதைப் பதிவேற்று பகுதியில் உள்ளிடவும்.\n• கடவுச்சொல் சேமிக்கப்படாது. செயலியை மறுதொடக்கம் செய்த பிறகு மீண்டும் உள்ளிடவும்.</string>
     <string name="help_dropped_title">தொடர்பு துண்டிக்கப்பட்டது</string>
     <string name="help_dropped_what">கன்சோலுடனான தொடர்பு துண்டிக்கப்பட்டது அல்லது தரவு நகர்வது நின்றுவிட்டது. செயலி மீண்டும் முயன்று நிறுத்திய இடத்திலிருந்து தொடரும்.</string>
     <string name="help_dropped_try">• தொலைபேசியை ரூட்டருக்கு அருகிலும் கன்சோலை விழிப்பிலும் வைக்கவும்.\n• நெட்வொர்க்கில் உள்ள மற்ற பெரிய பதிவிறக்கங்களை இடைநிறுத்தவும்.\n• தொடர்ந்து தோல்வியடைந்தால், சற்று காத்திருந்து மீண்டும் முயல் என்பதைத் தட்டவும்.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">இந்தச் சரிபார்ப்பு GitHub-இடம் சமீபத்திய வெளியீட்டைப் பற்றிக் கேட்கிறது, ஒரு நாளில் அதிகபட்சம் ஒருமுறை. உங்களைப் பற்றியோ உங்கள் கன்சோல்களைப் பற்றியோ எதுவும் அனுப்பப்படுவதில்லை; எந்த இணையதளத்தையும் போலவே GitHub உங்கள் IP முகவரியைப் பார்க்கும்.</string>
 
     <!-- find my console -->
-    <string name="find_button">என் PS5-ஐக் கண்டறி</string>
+    <string name="find_button">என் %1$s-ஐக் கண்டறி</string>
     <string name="find_scanning">%1$s நெட்வொர்க்கில் உங்கள் கன்சோலைத் தேடுகிறது…</string>
     <string name="find_again">மீண்டும் ஸ்கேன் செய்</string>
     <string name="find_none">கன்சோல் எதுவும் கிடைக்கவில்லை.</string>
-    <string name="find_none_try">• கன்சோலை முழுமையாக இயக்கவும் (ஓய்வு பயன்முறையில் அல்ல), etaHEN-ஐத் தொடங்கவும்.\n• தொலைபேசியிலும் கன்சோலிலும் ஒரே Wi-Fi-ஐப் பயன்படுத்தவும். விருந்தினர் நெட்வொர்க்குகளும் VPN-உம் சாதனங்களைப் பிரித்து வைக்கும்.\n• பிறகு மீண்டும் ஸ்கேன் செய்யவும்.</string>
+    <string name="find_none_try">• கன்சோலை முழுமையாக இயக்கவும் (ஓய்வு பயன்முறையில் அல்ல), %1$s-ஐத் தொடங்கவும்.\n• தொலைபேசியிலும் கன்சோலிலும் ஒரே Wi-Fi-ஐப் பயன்படுத்தவும். விருந்தினர் நெட்வொர்க்குகளும் VPN-உம் சாதனங்களைப் பிரித்து வைக்கும்.\n• பிறகு மீண்டும் ஸ்கேன் செய்யவும்.</string>
     <string name="find_no_wifi">இந்தத் தொலைபேசி Wi-Fi நெட்வொர்க்கில் இல்லை. கன்சோல் இணைந்துள்ள அதே Wi-Fi-இல் இதை இணைத்து, பிறகு மீண்டும் ஸ்கேன் செய்யவும்.</string>
     <string name="find_pick">%1$s-இன் முகவரியை அமைக்க “பயன்படுத்து” என்பதைத் தட்டவும்.</string>
     <string name="find_saved">சேமித்த முகவரி</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">கோப்புறைகளைப் பார்க்கிறது…</string>
     <string name="files_dl_confirm_title">தொலைபேசியில் பதிவிறக்கவா?</string>
-    <string name="files_dl_confirm_text">கோப்புகள்: %1$d, மொத்தம் %2$s. இவை Downloads/PS5 இல், கன்சோலில் உள்ள அதே கோப்புறைகளில் சேமிக்கப்படும்.</string>
+    <string name="files_dl_confirm_text">கோப்புகள்: %1$d, மொத்தம் %2$s. இவை Downloads/%3$s இல், கன்சோலில் உள்ள அதே கோப்புறைகளில் சேமிக்கப்படும்.</string>
     <string name="files_dl_links">கோப்புறைகளுக்குள் இருக்கும் இணைப்புகள் பதிவிறக்கப்படாது: %1$d.</string>
     <string name="files_dl_truncated">எடுக்கப்பட்ட கோப்புகள்: %1$d. கோப்புறைகளில் இதைவிட அதிகம் உள்ளன, அல்லது ஆப்ஸ் பின்தொடரும் ஆழத்தைவிட ஆழமாக உள்ளன.</string>
     <string name="files_dl_none">தேர்வில் பதிவிறக்க கோப்பு எதுவும் இல்லை.</string>

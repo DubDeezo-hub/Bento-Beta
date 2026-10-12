@@ -35,6 +35,7 @@ object UnfinishedCodec {
             o.put("remoteSize", r.remoteSize)
             o.put("console", r.console)
             o.put("profile", r.profileId)
+            o.put("model", r.model)
             items.put(o)
         }
         return JSONObject().put("v", VERSION).put("items", items).toString()
@@ -87,7 +88,9 @@ object UnfinishedCodec {
             remotePath = remotePath,
             remoteSize = o.optLong("remoteSize", -1L),
             console = text("console").orEmpty(),
-            profileId = text("profile").orEmpty()
+            profileId = text("profile").orEmpty(),
+            // Kept before there were PS4s: those were all PS5s
+            model = text("model")?.takeIf { it == ConsoleType.PS4.model } ?: ConsoleType.PS5.model
         )
     }
 }
@@ -208,7 +211,8 @@ fun refreshSaved(
             user = console.ftpUser.trim(),
             pass = passwords[console.id].orEmpty(),
             console = console.name,
-            profileId = console.id
+            profileId = console.id,
+            model = console.type.model
         )
     }
     val link = saved.url

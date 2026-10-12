@@ -19,8 +19,6 @@ import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.apache.commons.net.ftp.FTPClient
 import org.apache.commons.net.ftp.FTPClientConfig
-import org.json.JSONArray
-import org.json.JSONObject
 import java.io.File
 import java.io.FileInputStream
 import java.io.IOException
@@ -30,7 +28,6 @@ import java.net.ConnectException
 import java.net.InetSocketAddress
 import java.net.Socket
 import java.net.SocketTimeoutException
-import java.net.URLEncoder
 import java.time.Duration
 import java.util.concurrent.TimeUnit
 
@@ -82,9 +79,11 @@ class PhoneFileSource(private val cr: ContentResolver, private val uri: Uri) : B
 }
 
 /**
- * Asks the console's package-installer service (port 12800 on etaHEN) to install a package from a URL.
+ * Asks the console's package-installer service (port 12800: etaHEN's on a PS5, the Remote Package Installer app on a PS4)
+ * to install a package from a URL.
  * 1) etaHEN style: multipart POST /upload with a "url" field; success text contains "SUCCESS:".
- * 2) Remote Package Installer style: POST /api/install with {"type":"direct","packages":[...]}.
+ * 2) Remote Package Installer style: POST /api/install with {"type":"direct","packages":["<link>"]}; the link goes as it
+ *    is, the way flatz's README shows it, except that an https link is sent as http.
  * Formats are taken from public documentation of existing installer tools; verify against your console.
  */
 suspend fun installRequest(host: String, port: String, pkgUrl: String): InstallReply =
@@ -101,9 +100,9 @@ suspend fun installRequest(host: String, port: String, pkgUrl: String): InstallR
                 return@withContext InstallReply(true, AppText.get(R.string.install_accepted, first.second.trim()))
             }
 
-            // RPI-style: URL-encoded, with the https scheme swapped to http
-            val encoded = URLEncoder.encode(pkgUrl, "UTF-8").replace("https%3A", "http%3A")
-            val json = JSONObject().put("type", "direct").put("packages", JSONArray().put(encoded)).toString()
+            // RPI style: the plain link, with the https scheme swapped to http
+            val link = if (pkgUrl.startsWith("https://", ignoreCase = true)) "http://" + pkgUrl.substring(8) else pkgUrl
+            val json = "{\"type\":\"direct\",\"packages\":[" + jsonString(link) + "]}"
             val second = http.newCall(
                 Request.Builder().url("$base/api/install")
                     .post(json.toRequestBody("text/plain; charset=utf-8".toMediaType())).build()
@@ -126,6 +125,23 @@ suspend fun installRequest(host: String, port: String, pkgUrl: String): InstallR
             InstallReply(false, failedText(e))
         }
     }
+
+/**
+ * [s] as a JSON string. Only the quote, the backslash and control characters are escaped: a "/" stays as it is, the way
+ * the Remote Package Installer's examples write links (a JSON library would send "\/").
+ */
+private fun jsonString(s: String): String {
+    val sb = StringBuilder("\"")
+    for (c in s) {
+        when {
+            c == '"' -> sb.append("\\\"")
+            c == '\\' -> sb.append("\\\\")
+            c < ' ' -> sb.append("\\u%04x".format(c.code))
+            else -> sb.append(c)
+        }
+    }
+    return sb.append('"').toString()
+}
 
 /** Like [installRequest], but only returns the message to show. */
 suspend fun sendInstall(host: String, port: String, pkgUrl: String): String = installRequest(host, port, pkgUrl).text
@@ -236,7 +252,8 @@ suspend fun isPortOpen(host: String, port: Int, timeoutMs: Int = 1500): Boolean 
  */
 fun ftpFailureMessage(e: Exception): String {
     if (e !is ConnectException && e !is SocketTimeoutException) return failedText(e)
-    return Hints.tag(failedText(e) + "\n" + AppText.get(R.string.ftp_port_hint), topicFor(e))
+    val hint = if (ActiveConsole.type == ConsoleType.PS4) R.string.ftp_port_hint_ps4 else R.string.ftp_port_hint
+    return Hints.tag(failedText(e) + "\n" + AppText.get(hint), topicFor(e))
 }
 
 /** The message for a file problem on the phone ("Could not open the file"), with its help page. */
@@ -540,7 +557,7 @@ fun ftpDownloadToPhone(
         val values = ContentValues().apply {
             put(MediaStore.MediaColumns.DISPLAY_NAME, name)
             put(MediaStore.MediaColumns.MIME_TYPE, mime)
-            put(MediaStore.MediaColumns.RELATIVE_PATH, downloadFolder(saveIn))
+            put(MediaStore.MediaColumns.RELATIVE_PATH, downloadFolder(saveIn, s.model))
             put(MediaStore.MediaColumns.IS_PENDING, 1)
         }
         val uri = cr.insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, values)
@@ -550,7 +567,7 @@ fun ftpDownloadToPhone(
         mem.discard = { created.delete() }
         sink = created
     }
-    val result = ftpDownload(sink, remote, size, s, AppText.get(R.string.saved_to_downloads, savedAs(saveIn, name)), mem, hooks)
+    val result = ftpDownload(sink, remote, size, s, AppText.get(R.string.saved_to_downloads, savedAs(saveIn, name), s.model), mem, hooks)
     if (result.ok) {
         sink.publish()
         mem.sink = null

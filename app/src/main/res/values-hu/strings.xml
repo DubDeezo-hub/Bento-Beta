@@ -33,14 +33,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">Állítsd be a PS5 IP-címét</string>
+    <string name="status_set_ip">Állítsd be a %1$s IP-címét</string>
     <string name="status_checking">Ellenőrzés…</string>
     <string name="status_ready">Kész</string>
     <string name="status_partly">Részben kész</string>
     <string name="status_partly_off">Részben kész · nem válaszol: %1$s</string>
     <string name="status_offline">A konzol nem érhető el</string>
     <string name="status_hint_unset">A PS5-ön itt találod: Beállítások &gt; Hálózat &gt; Kapcsolat állapota &gt; Kapcsolat állapotának megtekintése. Koppints ide a megadásához.</string>
-    <string name="status_hint_offline">Ezen a címen semmi sem válaszol. Ellenőrizd az IP-címet, hogy a PS5 be van-e kapcsolva és ugyanazon a Wi-Fi-hálózaton van-e, valamint hogy fut-e az etaHEN.</string>
+    <string name="status_hint_unset_ps4">A PS4-ön itt találod: Beállítások &gt; Hálózat &gt; Kapcsolat állapotának megtekintése. Koppints ide a megadásához.</string>
+    <string name="status_hint_offline">Ezen a címen semmi sem válaszol. Ellenőrizd az IP-címet, hogy a %1$s be van-e kapcsolva és ugyanazon a Wi-Fi-hálózaton van-e, valamint hogy fut-e az %2$s.</string>
     <string name="status_hint_one">Nem válaszol: %1$s. Indítsd el a szolgáltatást a konzolon, vagy ellenőrizd a portját.</string>
     <string name="status_hint_many">Nem válaszol: %1$s. Indítsd el a szolgáltatásokat a konzolon, vagy ellenőrizd a portjaikat.</string>
     <string name="console_switch">Konzol váltása</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">A konzol IP-címe</string>
     <string name="console_ip_label">IP-cím</string>
     <string name="console_ip_help">A PS5-ön itt találod: Beállítások &gt; Hálózat &gt; Kapcsolat állapota &gt; Kapcsolat állapotának megtekintése.</string>
+    <string name="console_ip_help_ps4">A PS4-ön itt találod: Beállítások &gt; Hálózat &gt; Kapcsolat állapotának megtekintése.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">Átvitel</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">Várakozó átvitelek</string>
     <string name="queue_clear">Összes eltávolítása</string>
     <string name="queue_empty">Semmi sem várakozik.</string>
-    <string name="notif_channel">PS5-átvitelek</string>
+    <string name="notif_channel">PS4/PS5-átvitelek</string>
     <string name="notif_sent">Elküldve: %1$s</string>
     <string name="notif_received">Fogadva: %1$s</string>
     <string name="percent_value">%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">Hozzáadva a sorhoz. %1$d várakozik.</string>
     <string name="msg_set_ip_first">Először állítsd be a konzol IP-címét. Koppints a felül lévő kártyára.</string>
-    <string name="msg_sending_link">Link küldése a PS5-re…</string>
+    <string name="msg_sending_link">Link küldése a %1$s-re…</string>
     <string name="msg_check_ip_ftp">Ellenőrizd a konzol IP-címét és az FTP-portot.</string>
     <string name="msg_adding_to_shelf_link">Hozzáadás a payload-tárhoz…</string>
     <string name="status_idle">Tétlen</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">Elhagyod ezt az oldalt?</string>
     <string name="offsite_text">Az oldal ezt akarja megnyitni: %1$s. A hirdetések gyakran ezt váltják ki, ha linkre koppintasz, ezért csak akkor folytasd, ha számítottál rá.</string>
-    <string name="choose_install">Link küldése a PS5 Installerének</string>
-    <string name="choose_ftp">Feltöltés a PS5-re (FTP)</string>
+    <string name="choose_install">Link küldése a %1$s Installerének</string>
+    <string name="choose_ftp">Feltöltés a %1$s-re (FTP)</string>
     <string name="choose_shelf">Mentés a payload-tárba</string>
     <string name="choose_phone">Mentés a telefonra</string>
     <string name="choose_help">Az Installernek közvetlen csomaglinkre van szüksége, amelyet a konzol bejelentkezés nélkül meg tud nyitni. Az FTP bármilyen fájllal működik, és megtartja a bejelentkezési munkamenetedet. A telefon a háttérben továbbítja az adatokat, a folyamat az alsó sáv felett és egy értesítésben látható. A payload-tár a kisebb payloadokat (legfeljebb %1$s) az alkalmazásban őrzi a Payload lap számára.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Installer-port (etaHEN: 12800)</string>
+    <string name="install_port_label">Installer-port (%1$s: 12800)</string>
     <string name="install_accepted">Az Installer elfogadta: %1$s</string>
     <string name="install_not_accepted">Nem fogadta el (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">Sikertelen: %1$s</string>
     <string name="ftp_port_hint">Az FTP-kiszolgáló nem érhető el. Ellenőrizd a konzol IP-címét és az FTP-portot (az etaHEN beépített FTP-je az 1337-es, az FTP-payload a 2121-es portot használja).</string>
+    <string name="ftp_port_hint_ps4">Az FTP-kiszolgáló nem érhető el. Ellenőrizd a konzol IP-címét és az FTP-portot (a GoldHEN FTP-je a 2121-es portot használja).</string>
     <string name="err_login">Az FTP-bejelentkezés sikertelen</string>
     <string name="err_cant_open">nem nyitható meg: %1$s (%2$s)</string>
     <string name="err_rename">az átnevezés sikertelen (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">Az összesen %2$s mennyiségből csak %1$s érkezett meg.</string>
     <string name="err_empty_file">A fájl üres</string>
     <string name="err_save">Nem sikerült menteni: %1$s</string>
-    <string name="sent_to_ps5">Elküldve a PS5-re: %1$s</string>
-    <string name="saved_to_downloads">Mentve ide: Downloads/PS5: %1$s</string>
+    <string name="sent_to_ps5">Elküldve a %2$s-re: %1$s</string>
+    <string name="saved_to_downloads">Mentve ide: Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">A letöltés sikertelen: HTTP %1$s</string>
     <string name="dl_empty">A letöltés sikertelen: üres válasz</string>
     <string name="dl_cut_short">A kapcsolat lezárult, mielőtt a teljes fájl megérkezett volna.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">Törlődik a tárból. A telefonodon lévő eredeti fájl érintetlen marad.</string>
     <string name="payload_loader_port">Loader-port</string>
     <string name="payload_shelf_title">Payload-tár</string>
-    <string name="payload_shelf_empty">Még nincs semmi mentve. Add hozzá a gyakran használt payloadokat (FTP-kiszolgáló, etaHEN, ...), és küldd el mindegyiket egyetlen koppintással. Letöltéskor közvetlenül a Web lapról is elmentheted őket.</string>
+    <string name="payload_shelf_empty">Még nincs semmi mentve. Add hozzá a gyakran használt payloadokat (FTP-kiszolgáló, %1$s, ...), és küldd el mindegyiket egyetlen koppintással. Letöltéskor közvetlenül a Web lapról is elmentheted őket.</string>
     <string name="payload_sending">Küldés: %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Payload hozzáadása a tárhoz</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Payload küldése</string>
 
     <!-- consoles -->
-    <string name="profile_default">Saját PS5</string>
+    <string name="profile_default">Saját %1$s</string>
     <string name="profile_new">%1$d. konzol</string>
     <string name="profile_fallback">Konzol</string>
     <string name="consoles_title">Konzolok</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">A mentett IP-cím és a portok törlődnek. A többi konzolodat ez nem érinti.</string>
     <string name="console_no_ip">még nincs IP-cím</string>
     <string name="console_color_of">Szín: %1$s</string>
+    <string name="console_type_of">Konzoltípus: %1$s</string>
     <string name="console_use_color">Használat: %1$s</string>
     <string name="console_add">Konzol hozzáadása</string>
     <string name="language_button">Nyelv</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">Másolva</string>
     <string name="help_unreachable_title">A konzol nem érhető el</string>
     <string name="help_unreachable_what">A konzol címén semmi nem válaszol.</string>
-    <string name="help_unreachable_try">• Ellenőrizd az IP-címet a PS5-ön (Beállítások &gt; Hálózat &gt; Kapcsolat állapota). Újraindítás után megváltozhat.\n• Ébreszd fel teljesen a konzolt. A pihenő mód gyakran kikapcsolja a hálózatot.\n• Mindkét eszközön ugyanazt a Wi-Fi-t használd. A vendéghálózatok és a VPN-ek blokkolják.</string>
+    <string name="help_unreachable_try">• Ellenőrizd az IP-címet a %1$s-ön (Beállítások &gt; Hálózat &gt; Kapcsolat állapota). Újraindítás után megváltozhat.\n• Ébreszd fel teljesen a konzolt. A pihenő mód gyakran kikapcsolja a hálózatot.\n• Mindkét eszközön ugyanazt a Wi-Fi-t használd. A vendéghálózatok és a VPN-ek blokkolják.</string>
     <string name="help_port_title">Az a szolgáltatás nem fut</string>
     <string name="help_port_what">A konzol válaszolt, de azon a porton semmi sem figyel.</string>
     <string name="help_port_try">• Indítsd el az etaHEN-t a konzolon. Ez biztosítja az Installert (12800), a Loadert (9021) és az FTP-t (1337).\n• Egy különálló FTP payload általában a 2121-es portot használja. Itt ugyanazt a portot add meg.\n• A konzol kártyáján a kialudt jelzőfény mutatja, mi hiányzik.</string>
+    <string name="help_port_try_ps4">• Indítsd el a GoldHEN-t a konzolon. Ez biztosítja a Loadert (9090) és az FTP-t (2121).\n• Csomagok telepítéséhez a konzolon flatz Remote Package Installerének is futnia kell (12800).\n• A konzol kártyáján a kialudt jelzőfény mutatja, mi hiányzik.</string>
     <string name="help_login_title">Az FTP-bejelentkezést elutasították</string>
     <string name="help_login_what">A konzol FTP-kiszolgálója elutasította a felhasználónevet vagy a jelszót.</string>
-    <string name="help_login_try">• Az etaHEN az anonymous felhasználónevet bármilyen jelszóval elfogadja.\n• Ha beállítottál bejelentkezést a konzolon, add meg a Feltöltés alatt.\n• A jelszó nem kerül mentésre. Az alkalmazás újraindítása után add meg újra.</string>
+    <string name="help_login_try">• Az %2$s az anonymous felhasználónevet bármilyen jelszóval elfogadja.\n• Ha beállítottál bejelentkezést a konzolon, add meg a Feltöltés alatt.\n• A jelszó nem kerül mentésre. Az alkalmazás újraindítása után add meg újra.</string>
     <string name="help_dropped_title">A kapcsolat megszakadt</string>
     <string name="help_dropped_what">A konzollal a kapcsolat megszakadt, vagy az adatforgalom leállt. Az alkalmazás újrapróbálkozik, és onnan folytatja, ahol abbahagyta.</string>
     <string name="help_dropped_try">• Tartsd a telefont a router közelében, a konzolt pedig ébren.\n• Szüneteltesd a hálózat többi nagy letöltését.\n• Ha továbbra is sikertelen, várj egy kicsit, és koppints az Újrapróbálás gombra.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">Az ellenőrzés naponta legfeljebb egyszer lekérdezi a GitHubtól a legújabb kiadást. Rólad és a konzoljaidról semmi nem kerül elküldésre; a GitHub – mint bármely webhely – látja az IP-címedet.</string>
 
     <!-- find my console -->
-    <string name="find_button">PS5 megkeresése</string>
+    <string name="find_button">%1$s megkeresése</string>
     <string name="find_scanning">A konzolod keresése itt: %1$s…</string>
     <string name="find_again">Keresés újra</string>
     <string name="find_none">Nem található konzol.</string>
-    <string name="find_none_try">• Kapcsold be teljesen a konzolt (ne pihenő módban legyen), és indítsd el az etaHEN-t.\n• A telefonon és a konzolon ugyanazt a Wi-Fi-t használd. A vendéghálózatok és a VPN-ek elszigetelik egymástól az eszközöket.\n• Utána keress újra.</string>
+    <string name="find_none_try">• Kapcsold be teljesen a konzolt (ne pihenő módban legyen), és indítsd el az %1$s-t.\n• A telefonon és a konzolon ugyanazt a Wi-Fi-t használd. A vendéghálózatok és a VPN-ek elszigetelik egymástól az eszközöket.\n• Utána keress újra.</string>
     <string name="find_no_wifi">Ez a telefon nincs Wi-Fi-hálózaton. Csatlakoztasd ugyanahhoz a Wi-Fi-hez, mint a konzolt, majd keress újra.</string>
     <string name="find_pick">Koppints a Használ gombra, hogy beállítsd a konzol címét (%1$s).</string>
     <string name="find_saved">Mentett cím</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">Mappák átnézése…</string>
     <string name="files_dl_confirm_title">Letölti a telefonra?</string>
-    <string name="files_dl_confirm_text">Fájlok: %1$d, összesen %2$s. A Downloads/PS5 mappába kerülnek, ugyanazokban a mappákban, mint a konzolon.</string>
+    <string name="files_dl_confirm_text">Fájlok: %1$d, összesen %2$s. A Downloads/%3$s mappába kerülnek, ugyanazokban a mappákban, mint a konzolon.</string>
     <string name="files_dl_links">A mappákon belüli linkek nem töltődnek le: %1$d.</string>
     <string name="files_dl_truncated">Bevett fájlok: %1$d. A mappák ennél többet tartalmaznak, vagy mélyebbre nyúlnak, mint ameddig az alkalmazás követi őket.</string>
     <string name="files_dl_none">A kijelölésben nincs letölthető fájl.</string>

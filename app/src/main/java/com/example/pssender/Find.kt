@@ -53,7 +53,8 @@ private enum class FindPhase { SCANNING, DONE, STOPPED, NO_WIFI }
 /**
  * The window that scans the Wi-Fi network for the console. The scan starts as soon as it opens; the addresses it finds
  * appear while it runs. [savedHost] is the address saved for the console now, [otherConsoles] maps the addresses saved for
- * the other consoles to their names. [onUse] is told the address the person picked.
+ * the other consoles to their names. [onUse] is told the address the person picked. [type] is the selected console's type,
+ * which the window is named after ("Find my PS4").
  */
 @Composable
 fun FindConsoleDialog(
@@ -62,7 +63,8 @@ fun FindConsoleDialog(
     ports: ScanPorts,
     otherConsoles: Map<String, String>,
     onUse: (String) -> Unit,
-    onClose: () -> Unit
+    onClose: () -> Unit,
+    type: ConsoleType = ConsoleType.PS5
 ) {
     var runs by remember { mutableStateOf(0) } // goes up to start another scan
     var stopped by remember { mutableStateOf(false) }
@@ -98,7 +100,7 @@ fun FindConsoleDialog(
 
     AlertDialog(
         onDismissRequest = onClose,
-        title = { Text(str(R.string.find_button)) },
+        title = { Text(str(R.string.find_button, type.model)) },
         text = {
             Column(
                 modifier = Modifier.verticalScroll(rememberScrollState()),
@@ -119,7 +121,7 @@ fun FindConsoleDialog(
                         hits.forEach { hit -> HitRow(hit, savedHost, otherConsoles[hit.host]) { onUse(hit.host) } }
                     } else if (phase != FindPhase.SCANNING) {
                         Text(str(R.string.find_none))
-                        Text(str(R.string.find_none_try), style = MaterialTheme.typography.bodySmall)
+                        Text(str(R.string.find_none_try, type.hen), style = MaterialTheme.typography.bodySmall)
                     }
                     Text(
                         str(R.string.find_privacy),

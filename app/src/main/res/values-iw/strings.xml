@@ -33,14 +33,15 @@
     <string name="service_installer">‏Installer</string>
     <string name="service_loader">‏Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">הגדירו את כתובת ה-IP של ה-PS5</string>
+    <string name="status_set_ip">הגדירו את כתובת ה-IP של ה-%1$s</string>
     <string name="status_checking">בודק…</string>
     <string name="status_ready">מוכן</string>
     <string name="status_partly">מוכן חלקית</string>
     <string name="status_partly_off">מוכן חלקית · אין תגובה: %1$s</string>
     <string name="status_offline">לא ניתן להגיע לקונסולה</string>
     <string name="status_hint_unset">אפשר למצוא אותה ב-PS5 בתפריט Settings &gt; Network &gt; Connection Status &gt; View Connection Status. הקישו כאן כדי להזין.</string>
-    <string name="status_hint_offline">אין מענה בכתובת הזו. בדקו את כתובת ה-IP, שהקונסולה דלוקה ומחוברת לאותה רשת Wi-Fi, ושה-etaHEN פועל.</string>
+    <string name="status_hint_unset_ps4">אפשר למצוא אותה ב-PS4 בתפריט Settings &gt; Network &gt; View Connection Status. הקישו כאן כדי להזין.</string>
+    <string name="status_hint_offline">אין מענה בכתובת הזו. בדקו את כתובת ה-IP, שה-%1$s דלוקה ומחוברת לאותה רשת Wi-Fi, ושה-%2$s פועל.</string>
     <string name="status_hint_one">אין תגובה: %1$s. הפעילו את השירות בקונסולה או בדקו את הפורט שלו.</string>
     <string name="status_hint_many">אין תגובה: %1$s. הפעילו את השירותים בקונסולה או בדקו את הפורטים שלהם.</string>
     <string name="console_switch">החלפת קונסולה</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">כתובת ה-IP של הקונסולה</string>
     <string name="console_ip_label">כתובת IP</string>
     <string name="console_ip_help">אפשר למצוא אותה ב-PS5 בתפריט Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+    <string name="console_ip_help_ps4">אפשר למצוא אותה ב-PS4 בתפריט Settings &gt; Network &gt; View Connection Status.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">העברה</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">העברות בהמתנה</string>
     <string name="queue_clear">הסרת הכול</string>
     <string name="queue_empty">אין פריטים בהמתנה.</string>
-    <string name="notif_channel">העברות PS5</string>
+    <string name="notif_channel">העברות PS4/PS5</string>
     <string name="notif_sent">נשלח: %1$s</string>
     <string name="notif_received">התקבל: %1$s</string>
     <string name="percent_value">‏%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">נוסף לתור. %1$d בהמתנה.</string>
     <string name="msg_set_ip_first">קודם הגדירו את כתובת ה-IP של הקונסולה. הקישו על הכרטיס שבראש המסך.</string>
-    <string name="msg_sending_link">שולח קישור ל-PS5…</string>
+    <string name="msg_sending_link">שולח קישור ל-%1$s…</string>
     <string name="msg_check_ip_ftp">בדקו את כתובת ה-IP של הקונסולה ואת פורט ה-FTP.</string>
     <string name="msg_adding_to_shelf_link">מוסיף לספריית ה-payload…</string>
     <string name="status_idle">לא פעיל</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">לעזוב את האתר?</string>
     <string name="offsite_text">הדף מבקש לפתוח את %1$s. מודעות גורמות לכך לעיתים קרובות כשמקישים על קישור, לכן המשיכו רק אם ציפיתם לכך.</string>
-    <string name="choose_install">שליחת קישור ל-Installer ב-PS5</string>
-    <string name="choose_ftp">העלאה ל-PS5 (FTP)</string>
+    <string name="choose_install">שליחת קישור ל-Installer ב-%1$s</string>
+    <string name="choose_ftp">העלאה ל-%1$s (FTP)</string>
     <string name="choose_shelf">שמירה בספריית ה-payload</string>
     <string name="choose_phone">שמירה בטלפון</string>
     <string name="choose_help">ה-Installer צריך קישור ישיר לחבילה שהקונסולה יכולה לפתוח בלי להתחבר. FTP עובד עם כל קובץ ושומר על ההתחברות שלכם. הטלפון מעביר את הנתונים ברקע, וההתקדמות מוצגת מעל הסרגל התחתון ובהתראה. ספריית ה-payload שומרת בתוך האפליקציה payload קטן (עד %1$s) עבור הלשונית Payload.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">פורט של Installer (etaHEN: 12800)</string>
+    <string name="install_port_label">פורט של Installer (%1$s: 12800)</string>
     <string name="install_accepted">ה-Installer קיבל את זה: %1$s</string>
     <string name="install_not_accepted">לא התקבל (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">נכשל: %1$s</string>
     <string name="ftp_port_hint">לא ניתן להתחבר לשרת ה-FTP. בדקו את כתובת ה-IP של הקונסולה ואת פורט ה-FTP (ה-FTP המובנה של etaHEN משתמש ב-1337, וה-payload של FTP משתמש ב-2121).</string>
+    <string name="ftp_port_hint_ps4">לא ניתן להתחבר לשרת ה-FTP. בדקו את כתובת ה-IP של הקונסולה ואת פורט ה-FTP (ה-FTP של GoldHEN משתמש ב-2121).</string>
     <string name="err_login">ההתחברות ל-FTP נכשלה</string>
     <string name="err_cant_open">לא ניתן לפתוח את %1$s (%2$s)</string>
     <string name="err_rename">שינוי השם נכשל (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">הגיעו רק %1$s מתוך %2$s.</string>
     <string name="err_empty_file">הקובץ ריק</string>
     <string name="err_save">לא ניתן היה לשמור את %1$s</string>
-    <string name="sent_to_ps5">נשלח ל-PS5: %1$s</string>
-    <string name="saved_to_downloads">נשמר ב-Downloads/PS5: %1$s</string>
+    <string name="sent_to_ps5">נשלח ל-%2$s: %1$s</string>
+    <string name="saved_to_downloads">נשמר ב-Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">ההורדה נכשלה: HTTP %1$s</string>
     <string name="dl_empty">ההורדה נכשלה: תשובה ריקה</string>
     <string name="dl_cut_short">החיבור נסגר לפני שהקובץ כולו הגיע.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">הוא יימחק מהספרייה. הקובץ המקורי בטלפון שלכם לא ישתנה.</string>
     <string name="payload_loader_port">פורט של Loader</string>
     <string name="payload_shelf_title">ספריית payload</string>
-    <string name="payload_shelf_empty">עדיין לא נשמר דבר. הוסיפו payload שבהם אתם משתמשים לעיתים קרובות (שרת FTP, etaHEN, ...) ושלחו כל אחד בהקשה אחת. אפשר גם לשמור אחד ישירות מהלשונית אינטרנט בזמן ההורדה.</string>
+    <string name="payload_shelf_empty">עדיין לא נשמר דבר. הוסיפו payload שבהם אתם משתמשים לעיתים קרובות (שרת FTP, %1$s, ...) ושלחו כל אחד בהקשה אחת. אפשר גם לשמור אחד ישירות מהלשונית אינטרנט בזמן ההורדה.</string>
     <string name="payload_sending">שולח את %1$s…</string>
     <string name="payload_result">‏%1$s: %2$s</string>
     <string name="payload_add">הוספת payload לספרייה</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">שליחת payload</string>
 
     <!-- consoles -->
-    <string name="profile_default">ה-PS5 שלי</string>
+    <string name="profile_default">ה-%1$s שלי</string>
     <string name="profile_new">קונסולה %1$d</string>
     <string name="profile_fallback">קונסולה</string>
     <string name="consoles_title">קונסולות</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">כתובת ה-IP והפורטים השמורים שלה יוסרו. שאר הקונסולות שלכם לא יושפעו.</string>
     <string name="console_no_ip">עדיין אין כתובת IP</string>
     <string name="console_color_of">הצבע של %1$s</string>
+    <string name="console_type_of">סוג הקונסולה של %1$s</string>
     <string name="console_use_color">שימוש ב-%1$s</string>
     <string name="console_add">הוספת קונסולה</string>
     <string name="language_button">שפה</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">הועתק</string>
     <string name="help_unreachable_title">אי אפשר להגיע לקונסולה</string>
     <string name="help_unreachable_what">אף אחד לא עונה בכתובת של הקונסולה.</string>
-    <string name="help_unreachable_try">• בדקו את כתובת ה-IP ב-PS5 (Settings &gt; Network &gt; Connection Status). היא עשויה להשתנות לאחר הפעלה מחדש.\n• העירו את הקונסולה לגמרי. מצב מנוחה מכבה לעיתים קרובות את הרשת.\n• השתמשו באותה רשת Wi-Fi בשני המכשירים. רשתות אורחים ו-VPN חוסמים את החיבור.</string>
+    <string name="help_unreachable_try">• בדקו את כתובת ה-IP ב-%1$s (Settings &gt; Network &gt; Connection Status). היא עשויה להשתנות לאחר הפעלה מחדש.\n• העירו את הקונסולה לגמרי. מצב מנוחה מכבה לעיתים קרובות את הרשת.\n• השתמשו באותה רשת Wi-Fi בשני המכשירים. רשתות אורחים ו-VPN חוסמים את החיבור.</string>
     <string name="help_port_title">השירות הזה לא פועל</string>
     <string name="help_port_what">הקונסולה ענתה, אבל שום דבר לא מאזין בפורט הזה.</string>
     <string name="help_port_try">• הפעילו את etaHEN בקונסולה. הוא מספק את Installer (12800), את Loader (9021) ואת FTP (1337).\n• payload נפרד של FTP משתמש בדרך כלל ב-2121. הזינו כאן את אותו פורט.\n• בכרטיס הקונסולה, נורה כבויה מראה מה חסר.</string>
+    <string name="help_port_try_ps4">• הפעילו את GoldHEN בקונסולה. הוא מספק את Loader (9090) ואת FTP (2121).\n• כדי להתקין חבילות, הפעילו בקונסולה גם את Remote Package Installer של flatz (12800).\n• בכרטיס הקונסולה, נורה כבויה מראה מה חסר.</string>
     <string name="help_login_title">כניסת FTP נדחתה</string>
     <string name="help_login_what">שרת ה-FTP של הקונסולה דחה את שם המשתמש או את הסיסמה.</string>
-    <string name="help_login_try">• etaHEN מקבל את שם המשתמש anonymous עם כל סיסמה.\n• אם הגדרתם כניסה בקונסולה, הזינו אותה בלשונית העלאה.\n• הסיסמה לא נשמרת. הזינו אותה שוב לאחר הפעלה מחדש של האפליקציה.</string>
+    <string name="help_login_try">• %2$s מקבל את שם המשתמש anonymous עם כל סיסמה.\n• אם הגדרתם כניסה בקונסולה, הזינו אותה בלשונית העלאה.\n• הסיסמה לא נשמרת. הזינו אותה שוב לאחר הפעלה מחדש של האפליקציה.</string>
     <string name="help_dropped_title">החיבור נותק</string>
     <string name="help_dropped_what">הקשר עם הקונסולה נפסק או שהנתונים הפסיקו לזרום. האפליקציה מנסה שוב וממשיכה מהמקום שבו נעצרה.</string>
     <string name="help_dropped_try">• השאירו את הטלפון קרוב לנתב ואת הקונסולה ערה.\n• השהו הורדות גדולות אחרות ברשת.\n• אם זה ממשיך להיכשל, המתינו רגע והקישו על ניסיון חוזר.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">הבדיקה שואלת את GitHub מהי הגרסה האחרונה, לכל היותר פעם ביום. שום מידע עליכם או על הקונסולות שלכם לא נשלח; GitHub רואה את כתובת ה-IP שלכם, כמו כל אתר.</string>
 
     <!-- find my console -->
-    <string name="find_button">איתור ה-PS5 שלי</string>
+    <string name="find_button">איתור ה-%1$s שלי</string>
     <string name="find_scanning">מתבצע חיפוש של הקונסולה ברשת %1$s…</string>
     <string name="find_again">סריקה חוזרת</string>
     <string name="find_none">לא נמצאה קונסולה.</string>
-    <string name="find_none_try">• הפעילו את הקונסולה לגמרי (לא במצב מנוחה) והפעילו את etaHEN.\n• השתמשו באותה רשת Wi-Fi בטלפון ובקונסולה. רשתות אורחים ו-VPN מפרידות בין המכשירים.\n• ואז סרקו שוב.</string>
+    <string name="find_none_try">• הפעילו את הקונסולה לגמרי (לא במצב מנוחה) והפעילו את %1$s.\n• השתמשו באותה רשת Wi-Fi בטלפון ובקונסולה. רשתות אורחים ו-VPN מפרידות בין המכשירים.\n• ואז סרקו שוב.</string>
     <string name="find_no_wifi">הטלפון הזה אינו מחובר לרשת Wi-Fi. חברו אותו לאותה רשת Wi-Fi שאליה מחוברת הקונסולה, ואז סרקו שוב.</string>
     <string name="find_pick">הקישו על “שימוש” כדי להגדיר את הכתובת של %1$s.</string>
     <string name="find_saved">כתובת שמורה</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">בודק את התיקיות…</string>
     <string name="files_dl_confirm_title">להוריד לטלפון?</string>
-    <string name="files_dl_confirm_text">קבצים: %1$d, בסך הכול %2$s. הם נשמרים ב-Downloads/PS5, באותן תיקיות כמו בקונסולה.</string>
+    <string name="files_dl_confirm_text">קבצים: %1$d, בסך הכול %2$s. הם נשמרים ב-Downloads/%3$s, באותן תיקיות כמו בקונסולה.</string>
     <string name="files_dl_links">קישורים שבתוך תיקיות לא יורדים: %1$d.</string>
     <string name="files_dl_truncated">קבצים שנלקחו: %1$d. בתיקיות יש יותר מזה, או שהן עמוקות יותר ממה שהאפליקציה עוקבת אחריו.</string>
     <string name="files_dl_none">אין בבחירה קובץ להורדה.</string>

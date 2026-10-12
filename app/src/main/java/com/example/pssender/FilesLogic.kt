@@ -106,8 +106,12 @@ fun safeLocalName(name: String): String {
 fun saveInParts(saveIn: String): List<String> =
     saveIn.split('/').map { it.trim() }.filter { it.isNotEmpty() && it != "." && it != ".." }.map { safeLocalName(it) }
 
-/** The folder on the phone that a download goes into, the way MediaStore wants it: Download/PS5 and below it the folders of [saveIn]. */
-fun downloadFolder(saveIn: String): String = "Download/PS5" + saveInParts(saveIn).joinToString("") { "/$it" }
+/**
+ * The folder on the phone that a download goes into, the way MediaStore wants it: Download/PS5 (Download/PS4 for a PS4,
+ * [root]) and below it the folders of [saveIn].
+ */
+fun downloadFolder(saveIn: String, root: String = "PS5"): String =
+    "Download/" + safeLocalName(root) + saveInParts(saveIn).joinToString("") { "/$it" }
 
 /** The file as the message "Saved to Downloads/PS5" names it: with the folders it was saved in ("Games/Sub/a.pkg"). */
 fun savedAs(saveIn: String, name: String): String = (saveInParts(saveIn) + name).joinToString("/")

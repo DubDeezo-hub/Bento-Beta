@@ -33,14 +33,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">Iestatiet PS5 IP adresi</string>
+    <string name="status_set_ip">Iestatiet %1$s IP adresi</string>
     <string name="status_checking">Notiek pārbaude…</string>
     <string name="status_ready">Gatavs</string>
     <string name="status_partly">Daļēji gatavs</string>
     <string name="status_partly_off">Daļēji gatavs · neatbild: %1$s</string>
     <string name="status_offline">Nevar sazināties ar konsoli</string>
     <string name="status_hint_unset">Atrodiet to PS5 sadaļā Settings &gt; Network &gt; Connection Status &gt; View Connection Status. Pieskarieties šeit, lai to ievadītu.</string>
-    <string name="status_hint_offline">Šajā adresē neviens neatbild. Pārbaudiet IP adresi, vai konsole ir ieslēgta un pieslēgta tam pašam Wi-Fi tīklam un vai darbojas etaHEN.</string>
+    <string name="status_hint_unset_ps4">Atrodiet to PS4 sadaļā Settings &gt; Network &gt; View Connection Status. Pieskarieties šeit, lai to ievadītu.</string>
+    <string name="status_hint_offline">Šajā adresē neviens neatbild. Pārbaudiet IP adresi, vai %1$s ir ieslēgta un pieslēgta tam pašam Wi-Fi tīklam un vai darbojas %2$s.</string>
     <string name="status_hint_one">Neatbild: %1$s. Palaidiet šo pakalpojumu konsolē vai pārbaudiet tā portu.</string>
     <string name="status_hint_many">Neatbild: %1$s. Palaidiet šos pakalpojumus konsolē vai pārbaudiet to portus.</string>
     <string name="console_switch">Pārslēgt konsoli</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">Konsoles IP adrese</string>
     <string name="console_ip_label">IP adrese</string>
     <string name="console_ip_help">Atrodiet to PS5 sadaļā Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+    <string name="console_ip_help_ps4">Atrodiet to PS4 sadaļā Settings &gt; Network &gt; View Connection Status.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">Pārsūtīšana</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">Pārsūtīšanas rindā</string>
     <string name="queue_clear">Noņemt visu</string>
     <string name="queue_empty">Rindā nekā nav.</string>
-    <string name="notif_channel">PS5 pārsūtīšanas</string>
+    <string name="notif_channel">PS4/PS5 pārsūtīšanas</string>
     <string name="notif_sent">Nosūtīts: %1$s</string>
     <string name="notif_received">Saņemts: %1$s</string>
     <string name="percent_value">%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">Pievienots rindai. Rindā: %1$d.</string>
     <string name="msg_set_ip_first">Vispirms iestatiet konsoles IP adresi. Pieskarieties kartei augšā.</string>
-    <string name="msg_sending_link">Sūta saiti uz PS5…</string>
+    <string name="msg_sending_link">Sūta saiti uz %1$s…</string>
     <string name="msg_check_ip_ftp">Pārbaudiet konsoles IP adresi un FTP portu.</string>
     <string name="msg_adding_to_shelf_link">Pievieno payload bibliotēkai…</string>
     <string name="status_idle">Dīkstāve</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">Pamest šo vietni?</string>
     <string name="offsite_text">Lapa vēlas atvērt %1$s. To bieži izraisa reklāmas, kad pieskaraties saitei, tāpēc turpiniet tikai tad, ja to gaidījāt.</string>
-    <string name="choose_install">Nosūtīt saiti PS5 Installer</string>
-    <string name="choose_ftp">Augšupielādēt PS5 (FTP)</string>
+    <string name="choose_install">Nosūtīt saiti %1$s Installer</string>
+    <string name="choose_ftp">Augšupielādēt %1$s (FTP)</string>
     <string name="choose_shelf">Saglabāt payload bibliotēkā</string>
     <string name="choose_phone">Saglabāt tālrunī</string>
     <string name="choose_help">Installer ir nepieciešama tieša saite uz pakotni, ko konsole var atvērt bez pieteikšanās. FTP darbojas ar jebkuru failu un saglabā jūsu pieteikšanās sesiju. Tālrunis pārsūta datus fonā, un norise tiek rādīta virs apakšējās joslas un paziņojumā. Payload bibliotēka lietotnē glabā nelielu payload (līdz %1$s) cilnei Payload.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Installer ports (etaHEN: 12800)</string>
+    <string name="install_port_label">Installer ports (%1$s: 12800)</string>
     <string name="install_accepted">Installer to pieņēma: %1$s</string>
     <string name="install_not_accepted">Nav pieņemts (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">Neizdevās: %1$s</string>
     <string name="ftp_port_hint">Nevar sazināties ar FTP serveri. Pārbaudiet konsoles IP un FTP portu (etaHEN iebūvētais FTP izmanto 1337, FTP payload izmanto 2121).</string>
+    <string name="ftp_port_hint_ps4">Nevar sazināties ar FTP serveri. Pārbaudiet konsoles IP un FTP portu (GoldHEN FTP izmanto 2121).</string>
     <string name="err_login">Neizdevās pieteikties FTP</string>
     <string name="err_cant_open">nevar atvērt %1$s (%2$s)</string>
     <string name="err_rename">pārdēvēšana neizdevās (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">Pienāca tikai %1$s no %2$s.</string>
     <string name="err_empty_file">Fails ir tukšs</string>
     <string name="err_save">Neizdevās saglabāt %1$s</string>
-    <string name="sent_to_ps5">Nosūtīts uz PS5: %1$s</string>
-    <string name="saved_to_downloads">Saglabāts mapē Downloads/PS5: %1$s</string>
+    <string name="sent_to_ps5">Nosūtīts uz %2$s: %1$s</string>
+    <string name="saved_to_downloads">Saglabāts mapē Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Lejupielāde neizdevās: HTTP %1$s</string>
     <string name="dl_empty">Lejupielāde neizdevās: tukša atbilde</string>
     <string name="dl_cut_short">Savienojums tika aizvērts, pirms pienāca viss fails.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">Tas tiks izdzēsts no bibliotēkas. Oriģinālais fails jūsu tālrunī netiek skarts.</string>
     <string name="payload_loader_port">Loader ports</string>
     <string name="payload_shelf_title">Payload bibliotēka</string>
-    <string name="payload_shelf_empty">Vēl nekas nav saglabāts. Pievienojiet payload, ko bieži izmantojat (FTP serveris, etaHEN, ...), un sūtiet katru ar vienu pieskārienu. Varat arī saglabāt tieši no cilnes Tīmeklis, kad to lejupielādējat.</string>
+    <string name="payload_shelf_empty">Vēl nekas nav saglabāts. Pievienojiet payload, ko bieži izmantojat (FTP serveris, %1$s, ...), un sūtiet katru ar vienu pieskārienu. Varat arī saglabāt tieši no cilnes Tīmeklis, kad to lejupielādējat.</string>
     <string name="payload_sending">Sūta %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Pievienot payload bibliotēkai</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Sūtīt payload</string>
 
     <!-- consoles -->
-    <string name="profile_default">Mana PS5</string>
+    <string name="profile_default">Mana %1$s</string>
     <string name="profile_new">Konsole %1$d</string>
     <string name="profile_fallback">Konsole</string>
     <string name="consoles_title">Konsoles</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">Tās saglabātā IP adrese un porti tiks noņemti. Citas jūsu konsoles netiek skartas.</string>
     <string name="console_no_ip">vēl nav IP adreses</string>
     <string name="console_color_of">%1$s krāsa</string>
+    <string name="console_type_of">%1$s konsoles veids</string>
     <string name="console_use_color">Izmantot %1$s</string>
     <string name="console_add">Pievienot konsoli</string>
     <string name="language_button">Valoda</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">Nokopēts</string>
     <string name="help_unreachable_title">Konsoli nevar sasniegt</string>
     <string name="help_unreachable_what">Konsoles adresē neviens neatbild.</string>
-    <string name="help_unreachable_try">• Pārbaudiet IP adresi PS5 ierīcē (Settings &gt; Network &gt; Connection Status). Pēc restartēšanas tā var mainīties.\n• Pilnībā pamodiniet konsoli. Miega režīms bieži izslēdz tīklu.\n• Abās ierīcēs izmantojiet vienu un to pašu Wi-Fi. Viesu tīkli un VPN to bloķē.</string>
+    <string name="help_unreachable_try">• Pārbaudiet IP adresi %1$s ierīcē (Settings &gt; Network &gt; Connection Status). Pēc restartēšanas tā var mainīties.\n• Pilnībā pamodiniet konsoli. Miega režīms bieži izslēdz tīklu.\n• Abās ierīcēs izmantojiet vienu un to pašu Wi-Fi. Viesu tīkli un VPN to bloķē.</string>
     <string name="help_port_title">Šis pakalpojums nedarbojas</string>
     <string name="help_port_what">Konsole atbildēja, taču šajā portā neviens neklausās.</string>
     <string name="help_port_try">• Palaidiet etaHEN konsolē. Tas nodrošina Installer (12800), Loader (9021) un FTP (1337).\n• Atsevišķs FTP payload parasti izmanto 2121. Ievadiet šeit to pašu portu.\n• Konsoles kartītē izslēgta gaismiņa parāda, kas trūkst.</string>
+    <string name="help_port_try_ps4">• Palaidiet GoldHEN konsolē. Tas nodrošina Loader (9090) un FTP (2121).\n• Lai instalētu pakotnes, konsolē palaidiet arī flatz Remote Package Installer (12800).\n• Konsoles kartītē izslēgta gaismiņa parāda, kas trūkst.</string>
     <string name="help_login_title">FTP pieteikšanās noraidīta</string>
     <string name="help_login_what">Konsoles FTP serveris noraidīja lietotājvārdu vai paroli.</string>
-    <string name="help_login_try">• etaHEN pieņem lietotājvārdu anonymous ar jebkuru paroli.\n• Ja konsolē iestatījāt pieteikšanos, ievadiet to sadaļā Sūtīt.\n• Parole netiek saglabāta. Pēc lietotnes restartēšanas ievadiet to vēlreiz.</string>
+    <string name="help_login_try">• %2$s pieņem lietotājvārdu anonymous ar jebkuru paroli.\n• Ja konsolē iestatījāt pieteikšanos, ievadiet to sadaļā Sūtīt.\n• Parole netiek saglabāta. Pēc lietotnes restartēšanas ievadiet to vēlreiz.</string>
     <string name="help_dropped_title">Savienojums pārtrūka</string>
     <string name="help_dropped_what">Saite ar konsoli pārtrūka vai dati vairs netiek pārsūtīti. Lietotne mēģina vēlreiz un turpina no vietas, kur apstājās.</string>
     <string name="help_dropped_try">• Turiet tālruni tuvu maršrutētājam, bet konsoli – nomodā.\n• Apturiet citas lielas lejupielādes tīklā.\n• Ja tas turpina neizdoties, mazliet uzgaidiet un pieskarieties Mēģināt vēlreiz.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">Pārbaude pajautā GitHub jaunāko izlaidi ne biežāk kā reizi dienā. Nekas par jums vai jūsu konsolēm netiek sūtīts; GitHub redz jūsu IP adresi, tāpat kā jebkura vietne.</string>
 
     <!-- find my console -->
-    <string name="find_button">Atrast manu PS5</string>
+    <string name="find_button">Atrast manu %1$s</string>
     <string name="find_scanning">Meklē jūsu konsoli tīklā %1$s…</string>
     <string name="find_again">Skenēt vēlreiz</string>
     <string name="find_none">Konsole netika atrasta.</string>
-    <string name="find_none_try">• Pilnībā ieslēdziet konsoli (nevis miega režīmā) un palaidiet etaHEN.\n• Tālrunī un konsolē izmantojiet vienu un to pašu Wi-Fi. Viesu tīkli un VPN notur ierīces atsevišķi.\n• Pēc tam skenējiet vēlreiz.</string>
+    <string name="find_none_try">• Pilnībā ieslēdziet konsoli (nevis miega režīmā) un palaidiet %1$s.\n• Tālrunī un konsolē izmantojiet vienu un to pašu Wi-Fi. Viesu tīkli un VPN notur ierīces atsevišķi.\n• Pēc tam skenējiet vēlreiz.</string>
     <string name="find_no_wifi">Šis tālrunis nav pieslēgts Wi-Fi tīklam. Pievienojiet to tam pašam Wi-Fi tīklam kā konsoli un skenējiet vēlreiz.</string>
     <string name="find_pick">Pieskarieties Izmantot, lai iestatītu konsoles „%1$s” adresi.</string>
     <string name="find_saved">Saglabātā adrese</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">Mapes tiek pārskatītas…</string>
     <string name="files_dl_confirm_title">Lejupielādēt tālrunī?</string>
-    <string name="files_dl_confirm_text">Faili: %1$d, kopā %2$s. Tie tiek saglabāti mapē Downloads/PS5, tajās pašās mapēs kā konsolē.</string>
+    <string name="files_dl_confirm_text">Faili: %1$d, kopā %2$s. Tie tiek saglabāti mapē Downloads/%3$s, tajās pašās mapēs kā konsolē.</string>
     <string name="files_dl_links">Saites mapju iekšienē netiek lejupielādētas: %1$d.</string>
     <string name="files_dl_truncated">Iekļautie faili: %1$d. Mapēs to ir vairāk vai tie atrodas dziļāk, nekā lietotne seko.</string>
     <string name="files_dl_none">Atlasē nav neviena lejupielādējama faila.</string>

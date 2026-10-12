@@ -49,19 +49,22 @@ class ScanPorts(val installer: List<Int>, val loader: List<Int>, val ftp: List<I
     }
 }
 
-/** The ports to try for [profile]: its own three, and the usual ones (12800 installer, 9021 loader, 1337 and 2121 FTP). */
+/**
+ * The ports to try for [profile]: its own three, and the usual ones of both consoles (12800 installer; 9021 loader on a
+ * PS5, 9090 on a PS4; 1337 and 2121 FTP), so a scan finds a PS4 and a PS5 alike.
+ */
 fun scanPortsFor(profile: Profile): ScanPorts {
     fun own(text: String): List<Int> = listOfNotNull(text.trim().toIntOrNull()?.takeIf { it in 1..65535 })
     return ScanPorts(
         installer = (own(profile.installPort) + 12800).distinct(),
-        loader = (own(profile.payloadPort) + 9021).distinct(),
+        loader = (own(profile.payloadPort) + listOf(9021, 9090)).distinct(),
         ftp = (own(profile.ftpPort) + listOf(1337, 2121)).distinct()
     )
 }
 
 /** An address of the network that answered on some of the console's ports. */
 class ScanHit(val host: String, val ports: List<Int>, val services: List<ScanService>) {
-    /** True when the installer or the loader answered: that is what a console running etaHEN looks like. FTP alone could be any device. */
+    /** True when the installer or the loader answered: that is what a console running etaHEN or GoldHEN looks like. FTP alone could be any device. */
     val strong: Boolean get() = ScanService.INSTALLER in services || ScanService.LOADER in services
 }
 

@@ -15,7 +15,8 @@ const val FALLBACK_UA =
  * to the phone's Downloads/PS5 folder; [remoteSize] is the size from the folder listing, or -1 when unknown. For a
  * download [dir] names the folders inside Downloads/PS5 that it goes into ("Games/Sub"); it is empty for Downloads/PS5 itself.
  * [console] is the name of the console it was started for (shown on the transfer card), [profileId] which saved console
- * that is (a transfer picked up again after the app was closed finds the console's address of the day by it).
+ * that is (a transfer picked up again after the app was closed finds the console's address of the day by it), and [model]
+ * whether it is a PS5 or a PS4 (a download from a PS4 goes to Downloads/PS4).
  */
 data class TransferRequest(
     val name: String,
@@ -31,7 +32,8 @@ data class TransferRequest(
     val remotePath: String? = null,
     val remoteSize: Long = -1L,
     val console: String = "",
-    val profileId: String = ""
+    val profileId: String = "",
+    val model: String = "PS5"
 )
 
 /**

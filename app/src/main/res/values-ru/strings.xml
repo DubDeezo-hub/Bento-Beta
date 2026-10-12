@@ -33,14 +33,15 @@
     <string name="service_installer">Установщик</string>
     <string name="service_loader">Загрузчик</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">Укажите IP-адрес PS5</string>
+    <string name="status_set_ip">Укажите IP-адрес %1$s</string>
     <string name="status_checking">Проверка…</string>
     <string name="status_ready">Готова</string>
     <string name="status_partly">Готова частично</string>
     <string name="status_partly_off">Готова частично · нет ответа: %1$s</string>
     <string name="status_offline">Консоль недоступна</string>
     <string name="status_hint_unset">Его можно найти на PS5: Настройки &gt; Сеть &gt; Состояние подключения &gt; Просмотреть состояние подключения. Нажмите здесь, чтобы ввести его.</string>
-    <string name="status_hint_offline">По этому адресу никто не отвечает. Проверьте IP, включена ли PS5 и подключена ли она к той же сети Wi-Fi, а также запущен ли etaHEN.</string>
+    <string name="status_hint_unset_ps4">Его можно найти на PS4: Настройки &gt; Сеть &gt; Просмотреть состояние подключения. Нажмите здесь, чтобы ввести его.</string>
+    <string name="status_hint_offline">По этому адресу никто не отвечает. Проверьте IP, включена ли %1$s и подключена ли она к той же сети Wi-Fi, а также запущен ли %2$s.</string>
     <string name="status_hint_one">Нет ответа: %1$s. Запустите его на консоли или проверьте порт.</string>
     <string name="status_hint_many">Нет ответа: %1$s. Запустите их на консоли или проверьте порты.</string>
     <string name="console_switch">Сменить консоль</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">IP-адрес консоли</string>
     <string name="console_ip_label">IP-адрес</string>
     <string name="console_ip_help">Его можно найти на PS5: Настройки &gt; Сеть &gt; Состояние подключения &gt; Просмотреть состояние подключения.</string>
+    <string name="console_ip_help_ps4">Его можно найти на PS4: Настройки &gt; Сеть &gt; Просмотреть состояние подключения.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">Передача</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">Передачи в очереди</string>
     <string name="queue_clear">Убрать все</string>
     <string name="queue_empty">Очередь пуста.</string>
-    <string name="notif_channel">Передачи на PS5</string>
+    <string name="notif_channel">Передачи на PS4/PS5</string>
     <string name="notif_sent">Отправлено: %1$s</string>
     <string name="notif_received">Получено: %1$s</string>
     <string name="percent_value">%1$d %%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">Добавлено в очередь. В очереди: %1$d.</string>
     <string name="msg_set_ip_first">Сначала укажите IP-адрес консоли. Нажмите на карточку вверху.</string>
-    <string name="msg_sending_link">Отправка ссылки на PS5…</string>
+    <string name="msg_sending_link">Отправка ссылки на %1$s…</string>
     <string name="msg_check_ip_ftp">Проверьте IP-адрес консоли и порт FTP.</string>
     <string name="msg_adding_to_shelf_link">Добавление в библиотеку пейлоадов…</string>
     <string name="status_idle">Ожидание</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">Покинуть этот сайт?</string>
     <string name="offsite_text">Страница хочет открыть %1$s. Часто это вызывает реклама при нажатии на ссылку, поэтому продолжайте, только если вы этого ждали.</string>
-    <string name="choose_install">Отправить ссылку установщику PS5</string>
-    <string name="choose_ftp">Загрузить на PS5 (FTP)</string>
+    <string name="choose_install">Отправить ссылку установщику %1$s</string>
+    <string name="choose_ftp">Загрузить на %1$s (FTP)</string>
     <string name="choose_shelf">Сохранить в библиотеку пейлоадов</string>
     <string name="choose_phone">Сохранить на телефон</string>
     <string name="choose_help">Установщику нужна прямая ссылка на пакет, которую консоль сможет открыть без входа в аккаунт. FTP подходит для любых файлов и сохраняет ваш сеанс. Телефон передаёт данные в фоне: ход выполнения виден над нижней панелью и в уведомлении. Библиотека пейлоадов хранит небольшой пейлоад (до %1$s) внутри приложения для вкладки «Пейлоад».</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Порт установщика (etaHEN: 12800)</string>
+    <string name="install_port_label">Порт установщика (%1$s: 12800)</string>
     <string name="install_accepted">Установщик принял: %1$s</string>
     <string name="install_not_accepted">Не принято (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">Ошибка: %1$s</string>
     <string name="ftp_port_hint">Не удаётся подключиться к FTP-серверу. Проверьте IP консоли и порт FTP (встроенный FTP etaHEN использует 1337, FTP-пейлоад — 2121).</string>
+    <string name="ftp_port_hint_ps4">Не удаётся подключиться к FTP-серверу. Проверьте IP консоли и порт FTP (FTP в GoldHEN использует 2121).</string>
     <string name="err_login">Не удалось войти по FTP</string>
     <string name="err_cant_open">не удаётся открыть %1$s (%2$s)</string>
     <string name="err_rename">не удалось переименовать (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">Получено только %1$s из %2$s.</string>
     <string name="err_empty_file">Файл пуст</string>
     <string name="err_save">Не удалось сохранить %1$s</string>
-    <string name="sent_to_ps5">Отправлено на PS5: %1$s</string>
-    <string name="saved_to_downloads">Сохранено в «Загрузки/PS5»: %1$s</string>
+    <string name="sent_to_ps5">Отправлено на %2$s: %1$s</string>
+    <string name="saved_to_downloads">Сохранено в «Загрузки/%2$s»: %1$s</string>
     <string name="dl_http_failed">Ошибка скачивания: HTTP %1$s</string>
     <string name="dl_empty">Ошибка скачивания: пустой ответ</string>
     <string name="dl_cut_short">Соединение закрылось раньше, чем файл был получен целиком.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">Он будет удалён из библиотеки. Исходный файл на телефоне не затрагивается.</string>
     <string name="payload_loader_port">Порт загрузчика</string>
     <string name="payload_shelf_title">Библиотека пейлоадов</string>
-    <string name="payload_shelf_empty">Пока ничего не сохранено. Добавьте пейлоады, которые вы часто используете (FTP-сервер, etaHEN, ...), и отправляйте каждый одним касанием. Также можно сохранить пейлоад прямо при скачивании на вкладке «Веб».</string>
+    <string name="payload_shelf_empty">Пока ничего не сохранено. Добавьте пейлоады, которые вы часто используете (FTP-сервер, %1$s, ...), и отправляйте каждый одним касанием. Также можно сохранить пейлоад прямо при скачивании на вкладке «Веб».</string>
     <string name="payload_sending">Отправка %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Добавить пейлоад в библиотеку</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Отправить пейлоад</string>
 
     <!-- consoles -->
-    <string name="profile_default">Моя PS5</string>
+    <string name="profile_default">Моя %1$s</string>
     <string name="profile_new">Консоль %1$d</string>
     <string name="profile_fallback">Консоль</string>
     <string name="consoles_title">Консоли</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">Сохранённые для неё IP-адрес и порты будут удалены. Ваши другие консоли не затрагиваются.</string>
     <string name="console_no_ip">IP-адрес ещё не указан</string>
     <string name="console_color_of">Цвет: %1$s</string>
+    <string name="console_type_of">Тип консоли: %1$s</string>
     <string name="console_use_color">Выбрать цвет: %1$s</string>
     <string name="console_add">Добавить консоль</string>
     <string name="language_button">Язык</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">Скопировано</string>
     <string name="help_unreachable_title">Консоль недоступна</string>
     <string name="help_unreachable_what">По адресу консоли никто не отвечает.</string>
-    <string name="help_unreachable_try">• Проверьте IP-адрес на PS5 (Настройки &gt; Сеть &gt; Состояние подключения). После перезагрузки он может измениться.\n• Полностью выведите консоль из режима покоя. Режим покоя часто отключает сеть.\n• Используйте одну и ту же сеть Wi-Fi на обоих устройствах. Гостевые сети и VPN блокируют подключение.</string>
+    <string name="help_unreachable_try">• Проверьте IP-адрес на %1$s (Настройки &gt; Сеть &gt; Состояние подключения). После перезагрузки он может измениться.\n• Полностью выведите консоль из режима покоя. Режим покоя часто отключает сеть.\n• Используйте одну и ту же сеть Wi-Fi на обоих устройствах. Гостевые сети и VPN блокируют подключение.</string>
     <string name="help_port_title">Эта служба не запущена</string>
     <string name="help_port_what">Консоль ответила, но на этом порту ничего не слушает.</string>
     <string name="help_port_try">• Запустите etaHEN на консоли. Он предоставляет Установщик (12800), Загрузчик (9021) и FTP (1337).\n• Отдельный FTP-пейлоад обычно использует порт 2121. Введите здесь тот же порт.\n• На карточке консоли погасший индикатор показывает, чего не хватает.</string>
+    <string name="help_port_try_ps4">• Запустите GoldHEN на консоли. Он предоставляет Загрузчик (9090) и FTP (2121).\n• Для установки пакетов запустите на консоли также Remote Package Installer от flatz (12800).\n• На карточке консоли погасший индикатор показывает, чего не хватает.</string>
     <string name="help_login_title">Вход по FTP отклонён</string>
     <string name="help_login_what">FTP-сервер консоли отклонил имя пользователя или пароль.</string>
-    <string name="help_login_try">• etaHEN принимает имя пользователя anonymous с любым паролем.\n• Если вы задали логин на консоли, введите его на вкладке «Отправка».\n• Пароль не сохраняется. Введите его снова после перезапуска приложения.</string>
+    <string name="help_login_try">• %2$s принимает имя пользователя anonymous с любым паролем.\n• Если вы задали логин на консоли, введите его на вкладке «Отправка».\n• Пароль не сохраняется. Введите его снова после перезапуска приложения.</string>
     <string name="help_dropped_title">Соединение прервано</string>
     <string name="help_dropped_what">Связь с консолью оборвалась, или данные перестали передаваться. Приложение повторяет попытку и продолжает с того места, где остановилось.</string>
     <string name="help_dropped_try">• Держите телефон рядом с роутером, а консоль — в активном режиме.\n• Приостановите другие крупные загрузки в сети.\n• Если ошибка повторяется, подождите немного и нажмите «Повторить».</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">При проверке у GitHub запрашивается последний релиз, не чаще раза в сутки. Ничего о вас и ваших консолях не отправляется; GitHub видит ваш IP-адрес, как и любой сайт.</string>
 
     <!-- find my console -->
-    <string name="find_button">Найти мою PS5</string>
+    <string name="find_button">Найти мою %1$s</string>
     <string name="find_scanning">Поиск консоли в сети %1$s…</string>
     <string name="find_again">Искать снова</string>
     <string name="find_none">Консоль не найдена.</string>
-    <string name="find_none_try">• Полностью включите консоль (не режим покоя) и запустите etaHEN.\n• Используйте одну и ту же сеть Wi-Fi на телефоне и на консоли. Гостевые сети и VPN разделяют устройства.\n• Затем повторите поиск.</string>
+    <string name="find_none_try">• Полностью включите консоль (не режим покоя) и запустите %1$s.\n• Используйте одну и ту же сеть Wi-Fi на телефоне и на консоли. Гостевые сети и VPN разделяют устройства.\n• Затем повторите поиск.</string>
     <string name="find_no_wifi">Этот телефон не подключён к сети Wi-Fi. Подключите его к той же сети Wi-Fi, что и консоль, и повторите поиск.</string>
     <string name="find_pick">Нажмите «Использовать», чтобы задать адрес консоли «%1$s».</string>
     <string name="find_saved">Сохранённый адрес</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">Просмотр папок…</string>
     <string name="files_dl_confirm_title">Скачать на телефон?</string>
-    <string name="files_dl_confirm_text">Файлов: %1$d, всего %2$s. Они сохраняются в Downloads/PS5, в тех же папках, что и на консоли.</string>
+    <string name="files_dl_confirm_text">Файлов: %1$d, всего %2$s. Они сохраняются в Downloads/%3$s, в тех же папках, что и на консоли.</string>
     <string name="files_dl_links">Ссылки внутри папок не скачиваются: %1$d.</string>
     <string name="files_dl_truncated">Включено файлов: %1$d. В папках их больше, или они лежат глубже, чем приложение заходит.</string>
     <string name="files_dl_none">В выбранном нет файлов для скачивания.</string>

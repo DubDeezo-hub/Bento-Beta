@@ -33,14 +33,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">Stel jou PS5 se IP-adres</string>
+    <string name="status_set_ip">Stel jou %1$s se IP-adres</string>
     <string name="status_checking">Kontroleer tans…</string>
     <string name="status_ready">Gereed</string>
     <string name="status_partly">Gedeeltelik gereed</string>
     <string name="status_partly_off">Gedeeltelik gereed · geen reaksie: %1$s</string>
     <string name="status_offline">Kan nie die konsole bereik nie</string>
     <string name="status_hint_unset">Vind dit op die PS5 by Settings &gt; Network &gt; Connection Status &gt; View Connection Status. Tik hier om dit in te voer.</string>
-    <string name="status_hint_offline">Niks reageer by hierdie adres nie. Kontroleer die IP, of die konsole aan is en op dieselfde Wi-Fi is, en of etaHEN loop.</string>
+    <string name="status_hint_unset_ps4">Vind dit op die PS4 by Settings &gt; Network &gt; View Connection Status. Tik hier om dit in te voer.</string>
+    <string name="status_hint_offline">Niks reageer by hierdie adres nie. Kontroleer die IP, of die %1$s aan is en op dieselfde Wi-Fi is, en of %2$s loop.</string>
     <string name="status_hint_one">Geen reaksie: %1$s. Begin dit op die konsole of kontroleer sy poort.</string>
     <string name="status_hint_many">Geen reaksie: %1$s. Begin hulle op die konsole of kontroleer hul poorte.</string>
     <string name="console_switch">Wissel konsole</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">Konsole se IP-adres</string>
     <string name="console_ip_label">IP-adres</string>
     <string name="console_ip_help">Vind dit op die PS5 by Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+    <string name="console_ip_help_ps4">Vind dit op die PS4 by Settings &gt; Network &gt; View Connection Status.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">Oordrag</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">Oordragte wat wag</string>
     <string name="queue_clear">Verwyder alles</string>
     <string name="queue_empty">Niks wag nie.</string>
-    <string name="notif_channel">PS5-oordragte</string>
+    <string name="notif_channel">PS4/PS5-oordragte</string>
     <string name="notif_sent">Gestuur: %1$s</string>
     <string name="notif_received">Ontvang: %1$s</string>
     <string name="percent_value">%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">By die tou gevoeg. %1$d wag.</string>
     <string name="msg_set_ip_first">Stel eers die konsole se IP-adres. Tik die kaart bo-aan.</string>
-    <string name="msg_sending_link">Stuur tans die skakel na die PS5…</string>
+    <string name="msg_sending_link">Stuur tans die skakel na die %1$s…</string>
     <string name="msg_check_ip_ftp">Kontroleer die konsole se IP-adres en die FTP-poort.</string>
     <string name="msg_adding_to_shelf_link">Voeg tans by die payload-biblioteek…</string>
     <string name="status_idle">Onaktief</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">Hierdie werf verlaat?</string>
     <string name="offsite_text">Die bladsy wil %1$s oopmaak. Advertensies veroorsaak dit dikwels wanneer jy op ’n skakel tik, so gaan net voort as jy dit verwag het.</string>
-    <string name="choose_install">Stuur skakel na die PS5 se Installer</string>
-    <string name="choose_ftp">Laai op na die PS5 (FTP)</string>
+    <string name="choose_install">Stuur skakel na die %1$s se Installer</string>
+    <string name="choose_ftp">Laai op na die %1$s (FTP)</string>
     <string name="choose_shelf">Stoor in die payload-biblioteek</string>
     <string name="choose_phone">Stoor op die foon</string>
     <string name="choose_help">Die Installer het ’n direkte skakel na die pakket nodig wat die konsole sonder aanmelding kan oopmaak. FTP werk met enige lêer en behou jou aanmeldsessie. Die foon gee die data op die agtergrond deur, met vordering bo die onderste balk en in ’n kennisgewing. Die payload-biblioteek hou ’n klein payload (tot %1$s) binne die toepassing vir die Payload-oortjie.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Installer-poort (etaHEN: 12800)</string>
+    <string name="install_port_label">Installer-poort (%1$s: 12800)</string>
     <string name="install_accepted">Die Installer het dit aanvaar: %1$s</string>
     <string name="install_not_accepted">Nie aanvaar nie (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">Het misluk: %1$s</string>
     <string name="ftp_port_hint">Kan nie die FTP-bediener bereik nie. Kontroleer die konsole se IP en die FTP-poort (etaHEN se ingeboude FTP gebruik 1337, die FTP-payload gebruik 2121).</string>
+    <string name="ftp_port_hint_ps4">Kan nie die FTP-bediener bereik nie. Kontroleer die konsole se IP en die FTP-poort (GoldHEN se FTP gebruik 2121).</string>
     <string name="err_login">FTP-aanmelding het misluk</string>
     <string name="err_cant_open">kan %1$s nie oopmaak nie (%2$s)</string>
     <string name="err_rename">hernoeming het misluk (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">Net %1$s van %2$s het aangekom.</string>
     <string name="err_empty_file">Die lêer is leeg</string>
     <string name="err_save">Kan %1$s nie stoor nie</string>
-    <string name="sent_to_ps5">Na die PS5 gestuur: %1$s</string>
-    <string name="saved_to_downloads">Gestoor in Downloads/PS5: %1$s</string>
+    <string name="sent_to_ps5">Na die %2$s gestuur: %1$s</string>
+    <string name="saved_to_downloads">Gestoor in Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Aflaai het misluk: HTTP %1$s</string>
     <string name="dl_empty">Aflaai het misluk: leë antwoord</string>
     <string name="dl_cut_short">Die verbinding het gesluit voordat die hele lêer aangekom het.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">Dit word uit die biblioteek uitgevee. Die oorspronklike lêer op jou foon bly onaangeraak.</string>
     <string name="payload_loader_port">Loader-poort</string>
     <string name="payload_shelf_title">Payload-biblioteek</string>
-    <string name="payload_shelf_empty">Niks gestoor nie. Voeg payloads by wat jy dikwels gebruik (FTP-bediener, etaHEN, ...) en stuur elkeen met een tik. Jy kan dit ook direk vanaf die Web-oortjie stoor terwyl jy dit aflaai.</string>
+    <string name="payload_shelf_empty">Niks gestoor nie. Voeg payloads by wat jy dikwels gebruik (FTP-bediener, %1$s, ...) en stuur elkeen met een tik. Jy kan dit ook direk vanaf die Web-oortjie stoor terwyl jy dit aflaai.</string>
     <string name="payload_sending">Stuur tans %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Voeg payload by die biblioteek</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Stuur payload</string>
 
     <!-- consoles -->
-    <string name="profile_default">My PS5</string>
+    <string name="profile_default">My %1$s</string>
     <string name="profile_new">Konsole %1$d</string>
     <string name="profile_fallback">Konsole</string>
     <string name="consoles_title">Konsoles</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">Sy gestoorde IP-adres en poorte word verwyder. Jou ander konsoles word nie geraak nie.</string>
     <string name="console_no_ip">nog geen IP-adres nie</string>
     <string name="console_color_of">Kleur van %1$s</string>
+    <string name="console_type_of">Konsoletipe van %1$s</string>
     <string name="console_use_color">Gebruik %1$s</string>
     <string name="console_add">Voeg konsole by</string>
     <string name="language_button">Taal</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">Gekopieer</string>
     <string name="help_unreachable_title">Kan nie die konsole bereik nie</string>
     <string name="help_unreachable_what">Niks antwoord by die konsole se adres nie.</string>
-    <string name="help_unreachable_try">• Kontroleer die IP-adres op die PS5 (Settings &gt; Network &gt; Connection Status). Dit kan ná \'n herbegin verander.\n• Maak die konsole heeltemal wakker. Rusmodus skakel dikwels die netwerk af.\n• Gebruik dieselfde Wi-Fi op albei. Gasnetwerke en VPN\'s blokkeer dit.</string>
+    <string name="help_unreachable_try">• Kontroleer die IP-adres op die %1$s (Settings &gt; Network &gt; Connection Status). Dit kan ná \'n herbegin verander.\n• Maak die konsole heeltemal wakker. Rusmodus skakel dikwels die netwerk af.\n• Gebruik dieselfde Wi-Fi op albei. Gasnetwerke en VPN\'s blokkeer dit.</string>
     <string name="help_port_title">Daardie diens loop nie</string>
     <string name="help_port_what">Die konsole het geantwoord, maar niks luister op daardie poort nie.</string>
     <string name="help_port_try">• Begin etaHEN op die konsole. Dit verskaf die Installer (12800), die Loader (9021) en FTP (1337).\n• \'n Aparte FTP-payload gebruik gewoonlik 2121. Voer dieselfde poort hier in.\n• Op die konsolekaart wys die lig wat af is wat ontbreek.</string>
+    <string name="help_port_try_ps4">• Begin GoldHEN op die konsole. Dit verskaf die Loader (9090) en FTP (2121).\n• Om pakkette te installeer, laat ook flatz se Remote Package Installer op die konsole loop (12800).\n• Op die konsolekaart wys die lig wat af is wat ontbreek.</string>
     <string name="help_login_title">FTP-aanmelding geweier</string>
     <string name="help_login_what">Die konsole se FTP-bediener het die gebruikersnaam of wagwoord verwerp.</string>
-    <string name="help_login_try">• etaHEN aanvaar die gebruikersnaam anonymous met enige wagwoord.\n• As jy \'n aanmelding op die konsole ingestel het, voer dit onder Laai op in.\n• Die wagwoord word nie gestoor nie. Voer dit weer in nadat jy die toepassing herbegin het.</string>
+    <string name="help_login_try">• %2$s aanvaar die gebruikersnaam anonymous met enige wagwoord.\n• As jy \'n aanmelding op die konsole ingestel het, voer dit onder Laai op in.\n• Die wagwoord word nie gestoor nie. Voer dit weer in nadat jy die toepassing herbegin het.</string>
     <string name="help_dropped_title">Die verbinding het verbreek</string>
     <string name="help_dropped_what">Die skakel na die konsole het gebreek of opgehou data skuif. Die toepassing probeer weer en gaan voort waar dit opgehou het.</string>
     <string name="help_dropped_try">• Hou die foon naby die router en die konsole wakker.\n• Onderbreek ander groot aflaaie op die netwerk.\n• As dit aanhou misluk, wag \'n oomblik en tik Probeer weer.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">Die kontrole vra GitHub vir die nuutste vrystelling, hoogstens een keer per dag. Niks oor jou of jou konsoles word gestuur nie; GitHub sien jou IP-adres, soos enige webwerf.</string>
 
     <!-- find my console -->
-    <string name="find_button">Soek my PS5</string>
+    <string name="find_button">Soek my %1$s</string>
     <string name="find_scanning">Soek tans na jou konsole op %1$s…</string>
     <string name="find_again">Soek weer</string>
     <string name="find_none">Geen konsole gevind nie.</string>
-    <string name="find_none_try">• Skakel die konsole heeltemal aan (nie rusmodus nie) en begin etaHEN.\n• Gebruik dieselfde Wi-Fi op die foon en die konsole. Gasnetwerke en VPN\'s hou toestelle van mekaar af.\n• Soek dan weer.</string>
+    <string name="find_none_try">• Skakel die konsole heeltemal aan (nie rusmodus nie) en begin %1$s.\n• Gebruik dieselfde Wi-Fi op die foon en die konsole. Gasnetwerke en VPN\'s hou toestelle van mekaar af.\n• Soek dan weer.</string>
     <string name="find_no_wifi">Hierdie foon is nie op \'n Wi-Fi-netwerk nie. Koppel dit aan dieselfde Wi-Fi as die konsole en soek dan weer.</string>
     <string name="find_pick">Tik Gebruik om die adres van %1$s te stel.</string>
     <string name="find_saved">Gestoorde adres</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">Gaan deur die gidse…</string>
     <string name="files_dl_confirm_title">Laai af op die foon?</string>
-    <string name="files_dl_confirm_text">Lêers: %1$d, saam %2$s. Hulle word in Downloads/PS5 gestoor, in dieselfde gidse as op die konsole.</string>
+    <string name="files_dl_confirm_text">Lêers: %1$d, saam %2$s. Hulle word in Downloads/%3$s gestoor, in dieselfde gidse as op die konsole.</string>
     <string name="files_dl_links">Skakels binne gidse word nie afgelaai nie: %1$d.</string>
     <string name="files_dl_truncated">Lêers ingesluit: %1$d. Die gidse bevat meer, of gaan dieper as wat die toep volg.</string>
     <string name="files_dl_none">Daar is geen lêer om af te laai in die keuse nie.</string>

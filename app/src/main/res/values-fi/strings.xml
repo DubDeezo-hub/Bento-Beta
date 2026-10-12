@@ -33,14 +33,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">Aseta PS5:n IP-osoite</string>
+    <string name="status_set_ip">Aseta %1$s:n IP-osoite</string>
     <string name="status_checking">Tarkistetaan…</string>
     <string name="status_ready">Valmis</string>
     <string name="status_partly">Osittain valmis</string>
     <string name="status_partly_off">Osittain valmis · ei vastaa: %1$s</string>
     <string name="status_offline">Konsoliin ei saada yhteyttä</string>
     <string name="status_hint_unset">Löydät sen PS5:ltä kohdasta Asetukset &gt; Verkko &gt; Yhteyden tila &gt; Näytä yhteyden tila. Napauta tästä ja kirjoita se.</string>
-    <string name="status_hint_offline">Tässä osoitteessa ei vastaa mikään. Tarkista IP-osoite, että PS5 on päällä ja samassa Wi-Fi-verkossa ja että etaHEN on käynnissä.</string>
+    <string name="status_hint_unset_ps4">Löydät sen PS4:ltä kohdasta Asetukset &gt; Verkko &gt; Näytä yhteyden tila. Napauta tästä ja kirjoita se.</string>
+    <string name="status_hint_offline">Tässä osoitteessa ei vastaa mikään. Tarkista IP-osoite, että %1$s on päällä ja samassa Wi-Fi-verkossa ja että %2$s on käynnissä.</string>
     <string name="status_hint_one">Ei vastaa: %1$s. Käynnistä palvelu konsolilla tai tarkista sen portti.</string>
     <string name="status_hint_many">Ei vastaa: %1$s. Käynnistä palvelut konsolilla tai tarkista niiden portit.</string>
     <string name="console_switch">Vaihda konsolia</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">Konsolin IP-osoite</string>
     <string name="console_ip_label">IP-osoite</string>
     <string name="console_ip_help">Löydät sen PS5:ltä kohdasta Asetukset &gt; Verkko &gt; Yhteyden tila &gt; Näytä yhteyden tila.</string>
+    <string name="console_ip_help_ps4">Löydät sen PS4:ltä kohdasta Asetukset &gt; Verkko &gt; Näytä yhteyden tila.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">Siirto</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">Odottavat siirrot</string>
     <string name="queue_clear">Poista kaikki</string>
     <string name="queue_empty">Mikään ei odota.</string>
-    <string name="notif_channel">PS5-siirrot</string>
+    <string name="notif_channel">PS4/PS5-siirrot</string>
     <string name="notif_sent">Lähetetty: %1$s</string>
     <string name="notif_received">Vastaanotettu: %1$s</string>
     <string name="percent_value">%1$d %%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">Lisätty jonoon. %1$d odottaa.</string>
     <string name="msg_set_ip_first">Aseta ensin konsolin IP-osoite. Napauta ylhäällä olevaa korttia.</string>
-    <string name="msg_sending_link">Lähetetään linkkiä PS5:lle…</string>
+    <string name="msg_sending_link">Lähetetään linkkiä %1$s:lle…</string>
     <string name="msg_check_ip_ftp">Tarkista konsolin IP-osoite ja FTP-portti.</string>
     <string name="msg_adding_to_shelf_link">Lisätään payload-kirjastoon…</string>
     <string name="status_idle">Ei toimintaa</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">Poistutaanko tältä sivustolta?</string>
     <string name="offsite_text">Sivu haluaa avata osoitteen %1$s. Mainokset aiheuttavat tämän usein, kun napautat linkkiä, joten jatka vain, jos odotit tätä.</string>
-    <string name="choose_install">Lähetä linkki PS5:n Installer-palveluun</string>
-    <string name="choose_ftp">Lähetä PS5:lle (FTP)</string>
+    <string name="choose_install">Lähetä linkki %1$s:n Installer-palveluun</string>
+    <string name="choose_ftp">Lähetä %1$s:lle (FTP)</string>
     <string name="choose_shelf">Tallenna payload-kirjastoon</string>
     <string name="choose_phone">Tallenna puhelimeen</string>
     <string name="choose_help">Installer tarvitsee suoran pakettilinkin, jonka konsoli voi avata kirjautumatta. FTP toimii kaikille tiedostoille ja säilyttää kirjautumisistuntosi. Puhelin välittää tiedot taustalla, ja edistyminen näkyy alapalkin yläpuolella sekä ilmoituksessa. Payload-kirjasto säilyttää sovelluksessa pienen payloadin (enintään %1$s) Payload-välilehteä varten.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Installerin portti (etaHEN: 12800)</string>
+    <string name="install_port_label">Installerin portti (%1$s: 12800)</string>
     <string name="install_accepted">Installer hyväksyi sen: %1$s</string>
     <string name="install_not_accepted">Ei hyväksytty (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">Epäonnistui: %1$s</string>
     <string name="ftp_port_hint">FTP-palvelimeen ei saada yhteyttä. Tarkista konsolin IP-osoite ja FTP-portti (etaHENin sisäänrakennettu FTP käyttää porttia 1337, FTP-payload porttia 2121).</string>
+    <string name="ftp_port_hint_ps4">FTP-palvelimeen ei saada yhteyttä. Tarkista konsolin IP-osoite ja FTP-portti (GoldHENin FTP käyttää porttia 2121).</string>
     <string name="err_login">FTP-kirjautuminen epäonnistui</string>
     <string name="err_cant_open">ei voi avata: %1$s (%2$s)</string>
     <string name="err_rename">uudelleennimeäminen epäonnistui (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">Perille tuli vain %1$s (koko %2$s).</string>
     <string name="err_empty_file">Tiedosto on tyhjä</string>
     <string name="err_save">Tallennus epäonnistui: %1$s</string>
-    <string name="sent_to_ps5">Lähetetty PS5:lle: %1$s</string>
-    <string name="saved_to_downloads">Tallennettu kansioon Downloads/PS5: %1$s</string>
+    <string name="sent_to_ps5">Lähetetty %2$s:lle: %1$s</string>
+    <string name="saved_to_downloads">Tallennettu kansioon Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Lataus epäonnistui: HTTP %1$s</string>
     <string name="dl_empty">Lataus epäonnistui: tyhjä vastaus</string>
     <string name="dl_cut_short">Yhteys sulkeutui ennen kuin koko tiedosto oli perillä.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">Se poistetaan kirjastosta. Puhelimessa oleva alkuperäinen tiedosto säilyy koskemattomana.</string>
     <string name="payload_loader_port">Loaderin portti</string>
     <string name="payload_shelf_title">Payload-kirjasto</string>
-    <string name="payload_shelf_empty">Mitään ei ole vielä tallennettu. Lisää usein käyttämäsi payloadit (FTP-palvelin, etaHEN, ...) ja lähetä jokainen yhdellä napautuksella. Voit tallentaa payloadin myös suoraan Web-välilehdeltä, kun lataat sen.</string>
+    <string name="payload_shelf_empty">Mitään ei ole vielä tallennettu. Lisää usein käyttämäsi payloadit (FTP-palvelin, %1$s, ...) ja lähetä jokainen yhdellä napautuksella. Voit tallentaa payloadin myös suoraan Web-välilehdeltä, kun lataat sen.</string>
     <string name="payload_sending">Lähetetään: %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Lisää payload kirjastoon</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Lähetä payload</string>
 
     <!-- consoles -->
-    <string name="profile_default">Oma PS5</string>
+    <string name="profile_default">Oma %1$s</string>
     <string name="profile_new">Konsoli %1$d</string>
     <string name="profile_fallback">Konsoli</string>
     <string name="consoles_title">Konsolit</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">Sen tallennettu IP-osoite ja portit poistetaan. Muihin konsoleihisi tämä ei vaikuta.</string>
     <string name="console_no_ip">ei vielä IP-osoitetta</string>
     <string name="console_color_of">Väri: %1$s</string>
+    <string name="console_type_of">Konsolin tyyppi: %1$s</string>
     <string name="console_use_color">Käytä: %1$s</string>
     <string name="console_add">Lisää konsoli</string>
     <string name="language_button">Kieli</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">Kopioitu</string>
     <string name="help_unreachable_title">Konsoliin ei saada yhteyttä</string>
     <string name="help_unreachable_what">Konsolin osoitteessa ei vastaa mikään.</string>
-    <string name="help_unreachable_try">• Tarkista IP-osoite PS5:ltä (Asetukset &gt; Verkko &gt; Yhteyden tila). Se voi muuttua uudelleenkäynnistyksen jälkeen.\n• Herätä konsoli kokonaan. Lepotila katkaisee verkon usein.\n• Käytä molemmissa samaa Wi-Fiä. Vierasverkot ja VPN estävät yhteyden.</string>
+    <string name="help_unreachable_try">• Tarkista IP-osoite %1$s:ltä (Asetukset &gt; Verkko &gt; Yhteyden tila). Se voi muuttua uudelleenkäynnistyksen jälkeen.\n• Herätä konsoli kokonaan. Lepotila katkaisee verkon usein.\n• Käytä molemmissa samaa Wi-Fiä. Vierasverkot ja VPN estävät yhteyden.</string>
     <string name="help_port_title">Kyseinen palvelu ei ole käynnissä</string>
     <string name="help_port_what">Konsoli vastasi, mutta kyseisessä portissa ei kuuntele mikään.</string>
     <string name="help_port_try">• Käynnistä etaHEN konsolilla. Se tarjoaa Installerin (12800), Loaderin (9021) ja FTP:n (1337).\n• Erillinen FTP-payload käyttää yleensä porttia 2121. Anna tähän sama portti.\n• Konsolikortissa sammunut valo näyttää, mikä puuttuu.</string>
+    <string name="help_port_try_ps4">• Käynnistä GoldHEN konsolilla. Se tarjoaa Loaderin (9090) ja FTP:n (2121).\n• Pakettien asentamiseen konsolilla on oltava käynnissä myös flatzin Remote Package Installer (12800).\n• Konsolikortissa sammunut valo näyttää, mikä puuttuu.</string>
     <string name="help_login_title">FTP-kirjautuminen evättiin</string>
     <string name="help_login_what">Konsolin FTP-palvelin hylkäsi käyttäjänimen tai salasanan.</string>
-    <string name="help_login_try">• etaHEN hyväksyy käyttäjänimen anonymous millä tahansa salasanalla.\n• Jos asetit konsolille kirjautumistiedot, anna ne kohdassa Lähetys.\n• Salasanaa ei tallenneta. Anna se uudelleen sovelluksen käynnistyksen jälkeen.</string>
+    <string name="help_login_try">• %2$s hyväksyy käyttäjänimen anonymous millä tahansa salasanalla.\n• Jos asetit konsolille kirjautumistiedot, anna ne kohdassa Lähetys.\n• Salasanaa ei tallenneta. Anna se uudelleen sovelluksen käynnistyksen jälkeen.</string>
     <string name="help_dropped_title">Yhteys katkesi</string>
     <string name="help_dropped_what">Yhteys konsoliin katkesi tai tiedonsiirto pysähtyi. Sovellus yrittää uudelleen ja jatkaa siitä, mihin jäi.</string>
     <string name="help_dropped_try">• Pidä puhelin lähellä reititintä ja konsoli hereillä.\n• Keskeytä muut suuret lataukset verkossa.\n• Jos epäonnistuminen jatkuu, odota hetki ja napauta Yritä uudelleen.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">Tarkistus kysyy GitHubilta uusinta julkaisua enintään kerran päivässä. Sinusta tai konsoleistasi ei lähetetä mitään; GitHub näkee IP-osoitteesi kuten mikä tahansa verkkosivusto.</string>
 
     <!-- find my console -->
-    <string name="find_button">Etsi oma PS5</string>
+    <string name="find_button">Etsi oma %1$s</string>
     <string name="find_scanning">Etsitään konsoliasi verkosta %1$s…</string>
     <string name="find_again">Skannaa uudelleen</string>
     <string name="find_none">Konsolia ei löytynyt.</string>
-    <string name="find_none_try">• Kytke konsoli kokonaan päälle (ei lepotilaan) ja käynnistä etaHEN.\n• Käytä puhelimessa ja konsolissa samaa Wi-Fiä. Vierasverkot ja VPN pitävät laitteet erillään.\n• Skannaa sitten uudelleen.</string>
+    <string name="find_none_try">• Kytke konsoli kokonaan päälle (ei lepotilaan) ja käynnistä %1$s.\n• Käytä puhelimessa ja konsolissa samaa Wi-Fiä. Vierasverkot ja VPN pitävät laitteet erillään.\n• Skannaa sitten uudelleen.</string>
     <string name="find_no_wifi">Tämä puhelin ei ole Wi-Fi-verkossa. Yhdistä se samaan Wi-Fi-verkkoon kuin konsoli ja skannaa sitten uudelleen.</string>
     <string name="find_pick">Aseta osoite napauttamalla Käytä (%1$s).</string>
     <string name="find_saved">Tallennettu osoite</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">Käydään kansioita läpi…</string>
     <string name="files_dl_confirm_title">Ladataanko puhelimeen?</string>
-    <string name="files_dl_confirm_text">Tiedostoja: %1$d, yhteensä %2$s. Ne tallennetaan kansioon Downloads/PS5 samoihin kansioihin kuin konsolilla.</string>
+    <string name="files_dl_confirm_text">Tiedostoja: %1$d, yhteensä %2$s. Ne tallennetaan kansioon Downloads/%3$s samoihin kansioihin kuin konsolilla.</string>
     <string name="files_dl_links">Kansioiden sisällä olevia linkkejä ei ladata: %1$d.</string>
     <string name="files_dl_truncated">Mukaan otetut tiedostot: %1$d. Kansioissa on enemmän, tai ne ulottuvat syvemmälle kuin sovellus seuraa.</string>
     <string name="files_dl_none">Valinnassa ei ole ladattavaa tiedostoa.</string>

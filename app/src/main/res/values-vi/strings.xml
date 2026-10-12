@@ -33,14 +33,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">Đặt địa chỉ IP của PS5</string>
+    <string name="status_set_ip">Đặt địa chỉ IP của %1$s</string>
     <string name="status_checking">Đang kiểm tra…</string>
     <string name="status_ready">Sẵn sàng</string>
     <string name="status_partly">Sẵn sàng một phần</string>
     <string name="status_partly_off">Sẵn sàng một phần · không phản hồi: %1$s</string>
     <string name="status_offline">Không thể kết nối với console</string>
     <string name="status_hint_unset">Bạn có thể xem trên PS5 tại Cài đặt &gt; Mạng &gt; Trạng thái kết nối &gt; Xem trạng thái kết nối. Nhấn vào đây để nhập.</string>
-    <string name="status_hint_offline">Không có phản hồi tại địa chỉ này. Hãy kiểm tra địa chỉ IP, PS5 đã bật và cùng mạng Wi-Fi chưa, và etaHEN có đang chạy không.</string>
+    <string name="status_hint_unset_ps4">Bạn có thể xem trên PS4 tại Cài đặt &gt; Mạng &gt; Xem trạng thái kết nối. Nhấn vào đây để nhập.</string>
+    <string name="status_hint_offline">Không có phản hồi tại địa chỉ này. Hãy kiểm tra địa chỉ IP, %1$s đã bật và cùng mạng Wi-Fi chưa, và %2$s có đang chạy không.</string>
     <string name="status_hint_one">Không phản hồi: %1$s. Hãy khởi động dịch vụ trên console hoặc kiểm tra cổng của nó.</string>
     <string name="status_hint_many">Không phản hồi: %1$s. Hãy khởi động các dịch vụ trên console hoặc kiểm tra cổng của chúng.</string>
     <string name="console_switch">Đổi console</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">Địa chỉ IP của console</string>
     <string name="console_ip_label">Địa chỉ IP</string>
     <string name="console_ip_help">Bạn có thể xem trên PS5 tại Cài đặt &gt; Mạng &gt; Trạng thái kết nối &gt; Xem trạng thái kết nối.</string>
+    <string name="console_ip_help_ps4">Bạn có thể xem trên PS4 tại Cài đặt &gt; Mạng &gt; Xem trạng thái kết nối.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">Truyền tệp</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">Các lượt truyền đang chờ</string>
     <string name="queue_clear">Gỡ bỏ tất cả</string>
     <string name="queue_empty">Không có gì đang chờ.</string>
-    <string name="notif_channel">Truyền tệp PS5</string>
+    <string name="notif_channel">Truyền tệp PS4/PS5</string>
     <string name="notif_sent">Đã gửi: %1$s</string>
     <string name="notif_received">Đã nhận: %1$s</string>
     <string name="percent_value">%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">Đã thêm vào hàng đợi. %1$d đang chờ.</string>
     <string name="msg_set_ip_first">Hãy đặt địa chỉ IP của console trước. Nhấn vào thẻ ở trên cùng.</string>
-    <string name="msg_sending_link">Đang gửi liên kết đến PS5…</string>
+    <string name="msg_sending_link">Đang gửi liên kết đến %1$s…</string>
     <string name="msg_check_ip_ftp">Hãy kiểm tra địa chỉ IP của console và cổng FTP.</string>
     <string name="msg_adding_to_shelf_link">Đang thêm vào thư viện payload…</string>
     <string name="status_idle">Nhàn rỗi</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">Rời khỏi trang web này?</string>
     <string name="offsite_text">Trang muốn mở %1$s. Quảng cáo thường gây ra điều này khi bạn nhấn vào liên kết, vì vậy chỉ tiếp tục nếu bạn đã dự đoán trước.</string>
-    <string name="choose_install">Gửi liên kết đến Installer của PS5</string>
-    <string name="choose_ftp">Tải lên PS5 (FTP)</string>
+    <string name="choose_install">Gửi liên kết đến Installer của %1$s</string>
+    <string name="choose_ftp">Tải lên %1$s (FTP)</string>
     <string name="choose_shelf">Lưu vào thư viện payload</string>
     <string name="choose_phone">Lưu vào điện thoại</string>
     <string name="choose_help">Installer cần một liên kết gói trực tiếp mà console có thể mở mà không cần đăng nhập. FTP hoạt động với mọi tệp và giữ phiên đăng nhập của bạn. Điện thoại chuyển tiếp dữ liệu trong nền, với tiến trình hiển thị phía trên thanh dưới cùng và trong một thông báo. Thư viện payload lưu một payload nhỏ (tối đa %1$s) trong ứng dụng cho tab Payload.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Cổng Installer (etaHEN: 12800)</string>
+    <string name="install_port_label">Cổng Installer (%1$s: 12800)</string>
     <string name="install_accepted">Installer đã chấp nhận: %1$s</string>
     <string name="install_not_accepted">Không được chấp nhận (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">Thất bại: %1$s</string>
     <string name="ftp_port_hint">Không thể kết nối với máy chủ FTP. Hãy kiểm tra địa chỉ IP của console và cổng FTP (FTP tích hợp của etaHEN dùng cổng 1337, payload FTP dùng cổng 2121).</string>
+    <string name="ftp_port_hint_ps4">Không thể kết nối với máy chủ FTP. Hãy kiểm tra địa chỉ IP của console và cổng FTP (FTP của GoldHEN dùng cổng 2121).</string>
     <string name="err_login">Đăng nhập FTP thất bại</string>
     <string name="err_cant_open">không thể mở %1$s (%2$s)</string>
     <string name="err_rename">đổi tên thất bại (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">Chỉ nhận được %1$s trên %2$s.</string>
     <string name="err_empty_file">Tệp trống</string>
     <string name="err_save">Không thể lưu %1$s</string>
-    <string name="sent_to_ps5">Đã gửi đến PS5: %1$s</string>
-    <string name="saved_to_downloads">Đã lưu vào Downloads/PS5: %1$s</string>
+    <string name="sent_to_ps5">Đã gửi đến %2$s: %1$s</string>
+    <string name="saved_to_downloads">Đã lưu vào Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Tải xuống thất bại: HTTP %1$s</string>
     <string name="dl_empty">Tải xuống thất bại: phản hồi trống</string>
     <string name="dl_cut_short">Kết nối đã đóng trước khi nhận đủ cả tệp.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">Nó sẽ bị xóa khỏi thư viện. Tệp gốc trên điện thoại của bạn không bị ảnh hưởng.</string>
     <string name="payload_loader_port">Cổng Loader</string>
     <string name="payload_shelf_title">Thư viện payload</string>
-    <string name="payload_shelf_empty">Chưa lưu gì. Hãy thêm các payload bạn dùng thường xuyên (máy chủ FTP, etaHEN, ...) và gửi từng cái chỉ với một lần nhấn. Bạn cũng có thể lưu trực tiếp từ tab Web khi tải xuống.</string>
+    <string name="payload_shelf_empty">Chưa lưu gì. Hãy thêm các payload bạn dùng thường xuyên (máy chủ FTP, %1$s, ...) và gửi từng cái chỉ với một lần nhấn. Bạn cũng có thể lưu trực tiếp từ tab Web khi tải xuống.</string>
     <string name="payload_sending">Đang gửi %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Thêm payload vào thư viện</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Gửi payload</string>
 
     <!-- consoles -->
-    <string name="profile_default">PS5 của tôi</string>
+    <string name="profile_default">%1$s của tôi</string>
     <string name="profile_new">Console %1$d</string>
     <string name="profile_fallback">Console</string>
     <string name="consoles_title">Console</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">Địa chỉ IP và các cổng đã lưu của nó sẽ bị xóa. Các console khác của bạn không bị ảnh hưởng.</string>
     <string name="console_no_ip">chưa có địa chỉ IP</string>
     <string name="console_color_of">Màu của %1$s</string>
+    <string name="console_type_of">Loại console của %1$s</string>
     <string name="console_use_color">Dùng %1$s</string>
     <string name="console_add">Thêm console</string>
     <string name="language_button">Ngôn ngữ</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">Đã sao chép</string>
     <string name="help_unreachable_title">Không kết nối được với console</string>
     <string name="help_unreachable_what">Không có gì phản hồi tại địa chỉ của console.</string>
-    <string name="help_unreachable_try">• Kiểm tra địa chỉ IP trên PS5 (Cài đặt &gt; Mạng &gt; Trạng thái kết nối). Địa chỉ này có thể thay đổi sau khi khởi động lại.\n• Đánh thức console hoàn toàn. Chế độ nghỉ thường tắt mạng.\n• Dùng cùng một mạng Wi-Fi cho cả hai. Mạng khách và VPN sẽ chặn kết nối.</string>
+    <string name="help_unreachable_try">• Kiểm tra địa chỉ IP trên %1$s (Cài đặt &gt; Mạng &gt; Trạng thái kết nối). Địa chỉ này có thể thay đổi sau khi khởi động lại.\n• Đánh thức console hoàn toàn. Chế độ nghỉ thường tắt mạng.\n• Dùng cùng một mạng Wi-Fi cho cả hai. Mạng khách và VPN sẽ chặn kết nối.</string>
     <string name="help_port_title">Dịch vụ đó chưa chạy</string>
     <string name="help_port_what">Console đã phản hồi, nhưng không có gì lắng nghe ở cổng đó.</string>
     <string name="help_port_try">• Khởi động etaHEN trên console. Nó cung cấp Installer (12800), Loader (9021) và FTP (1337).\n• Một payload FTP riêng thường dùng cổng 2121. Hãy nhập cùng cổng đó ở đây.\n• Trên thẻ console, đèn đang tắt cho biết thiếu gì.</string>
+    <string name="help_port_try_ps4">• Khởi động GoldHEN trên console. Nó cung cấp Loader (9090) và FTP (2121).\n• Để cài gói, hãy chạy thêm Remote Package Installer của flatz trên console (12800).\n• Trên thẻ console, đèn đang tắt cho biết thiếu gì.</string>
     <string name="help_login_title">Đăng nhập FTP bị từ chối</string>
     <string name="help_login_what">Máy chủ FTP của console đã từ chối tên người dùng hoặc mật khẩu.</string>
-    <string name="help_login_try">• etaHEN chấp nhận tên người dùng anonymous với mật khẩu bất kỳ.\n• Nếu bạn đã đặt thông tin đăng nhập trên console, hãy nhập ở mục Tải lên.\n• Mật khẩu không được lưu. Hãy nhập lại sau khi khởi động lại ứng dụng.</string>
+    <string name="help_login_try">• %2$s chấp nhận tên người dùng anonymous với mật khẩu bất kỳ.\n• Nếu bạn đã đặt thông tin đăng nhập trên console, hãy nhập ở mục Tải lên.\n• Mật khẩu không được lưu. Hãy nhập lại sau khi khởi động lại ứng dụng.</string>
     <string name="help_dropped_title">Kết nối bị ngắt</string>
     <string name="help_dropped_what">Liên kết với console bị đứt hoặc dữ liệu ngừng truyền. Ứng dụng sẽ thử lại và tiếp tục từ chỗ đã dừng.</string>
     <string name="help_dropped_try">• Để điện thoại gần bộ định tuyến và giữ console luôn thức.\n• Tạm dừng các lượt tải xuống lớn khác trên mạng.\n• Nếu vẫn lỗi, hãy chờ một lát rồi nhấn Thử lại.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">Việc kiểm tra hỏi GitHub về bản phát hành mới nhất, nhiều nhất một lần mỗi ngày. Không có thông tin nào về bạn hay các console của bạn được gửi đi; GitHub thấy địa chỉ IP của bạn, như mọi trang web.</string>
 
     <!-- find my console -->
-    <string name="find_button">Tìm PS5 của tôi</string>
+    <string name="find_button">Tìm %1$s của tôi</string>
     <string name="find_scanning">Đang tìm console của bạn trên mạng %1$s…</string>
     <string name="find_again">Quét lại</string>
     <string name="find_none">Không tìm thấy console nào.</string>
-    <string name="find_none_try">• Bật console hoàn toàn (không phải chế độ nghỉ) và khởi động etaHEN.\n• Dùng cùng một mạng Wi-Fi cho điện thoại và console. Mạng khách và VPN sẽ tách các thiết bị khỏi nhau.\n• Sau đó quét lại.</string>
+    <string name="find_none_try">• Bật console hoàn toàn (không phải chế độ nghỉ) và khởi động %1$s.\n• Dùng cùng một mạng Wi-Fi cho điện thoại và console. Mạng khách và VPN sẽ tách các thiết bị khỏi nhau.\n• Sau đó quét lại.</string>
     <string name="find_no_wifi">Điện thoại này không ở trong mạng Wi-Fi nào. Hãy kết nối nó với cùng mạng Wi-Fi với console, rồi quét lại.</string>
     <string name="find_pick">Nhấn Dùng để đặt địa chỉ cho console “%1$s”.</string>
     <string name="find_saved">Địa chỉ đã lưu</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">Đang xem qua các thư mục…</string>
     <string name="files_dl_confirm_title">Tải xuống điện thoại?</string>
-    <string name="files_dl_confirm_text">Số tệp: %1$d, tổng cộng %2$s. Các tệp được lưu trong Downloads/PS5, trong cùng các thư mục như trên console.</string>
+    <string name="files_dl_confirm_text">Số tệp: %1$d, tổng cộng %2$s. Các tệp được lưu trong Downloads/%3$s, trong cùng các thư mục như trên console.</string>
     <string name="files_dl_links">Liên kết bên trong thư mục không được tải xuống: %1$d.</string>
     <string name="files_dl_truncated">Số tệp đã lấy: %1$d. Các thư mục chứa nhiều hơn thế, hoặc nằm sâu hơn mức ứng dụng theo dõi.</string>
     <string name="files_dl_none">Không có tệp nào để tải xuống trong phần đã chọn.</string>

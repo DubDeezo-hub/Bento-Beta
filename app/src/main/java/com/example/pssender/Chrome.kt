@@ -141,7 +141,8 @@ fun ConsoleCard(
     compact: Boolean,
     onEdit: () -> Unit,
     modifier: Modifier = Modifier,
-    onFind: (() -> Unit)? = null
+    onFind: (() -> Unit)? = null,
+    type: ConsoleType = ConsoleType.PS5
 ) {
     val cs = MaterialTheme.colorScheme
     val sc = statusColors()
@@ -152,7 +153,7 @@ fun ConsoleCard(
         else -> cs.onSurfaceVariant
     }
     val down = checks.filter { it.port != null && it.up == false }.map { it.label }
-    val hint = consoleHint(level, down)
+    val hint = consoleHint(level, down, type)
     val shape = RoundedCornerShape(16.dp)
     Column(
         modifier = modifier
@@ -167,7 +168,7 @@ fun ConsoleCard(
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             StatusDot(tone)
             Text(
-                consoleHeadline(level, down, compact),
+                consoleHeadline(level, down, compact, type),
                 color = tone,
                 style = MaterialTheme.typography.titleMedium,
                 maxLines = if (compact) 2 else 1, // the short card may need a second line to name what is off
@@ -202,23 +203,35 @@ fun ConsoleCard(
             }
             // With no address, or an address nothing answers at, the quickest way on is to look for the console
             if (onFind != null && (level == ConsoleLevel.UNSET || level == ConsoleLevel.OFFLINE)) {
-                TextButton(onClick = onFind) { Text(str(R.string.find_button)) }
+                TextButton(onClick = onFind) { Text(str(R.string.find_button, type.model)) }
             }
         }
     }
 }
 
-/** Asks for the console's IP address. The change is saved as you type. [onFind] opens the window that looks for the console. */
+/**
+ * Asks for the console's IP address. The change is saved as you type. [onFind] opens the window that looks for the console.
+ * [type] says where the console shows its address (the menus of a PS5 and a PS4 differ).
+ */
 @Composable
-fun ConsoleEditDialog(host: String, onHostChange: (String) -> Unit, onFind: () -> Unit, onClose: () -> Unit) {
+fun ConsoleEditDialog(
+    host: String,
+    onHostChange: (String) -> Unit,
+    onFind: () -> Unit,
+    onClose: () -> Unit,
+    type: ConsoleType = ConsoleType.PS5
+) {
     AlertDialog(
         onDismissRequest = onClose,
         title = { Text(str(R.string.console_ip_title)) },
         text = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Field(str(R.string.console_ip_label), host, onHostChange)
-                Text(str(R.string.console_ip_help), style = MaterialTheme.typography.bodySmall)
-                TextButton(onClick = onFind) { Text(str(R.string.find_button)) }
+                Text(
+                    str(if (type == ConsoleType.PS4) R.string.console_ip_help_ps4 else R.string.console_ip_help),
+                    style = MaterialTheme.typography.bodySmall
+                )
+                TextButton(onClick = onFind) { Text(str(R.string.find_button, type.model)) }
             }
         },
         confirmButton = { TextButton(onClick = onClose) { Text(str(R.string.action_done)) } }

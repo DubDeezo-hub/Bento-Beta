@@ -135,7 +135,7 @@ fun ChainEditDialog(
             title = { Text(str(R.string.chain_pick_title)) },
             text = {
                 Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
-                    if (shelf.isEmpty()) Text(str(R.string.payload_shelf_empty), style = MaterialTheme.typography.bodySmall)
+                    if (shelf.isEmpty()) Text(str(R.string.payload_shelf_empty, ActiveConsole.type.hen), style = MaterialTheme.typography.bodySmall)
                     shelf.forEach { item ->
                         Text(
                             item.name,

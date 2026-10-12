@@ -33,14 +33,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">Tetapkan alamat IP PS5 anda</string>
+    <string name="status_set_ip">Tetapkan alamat IP %1$s anda</string>
     <string name="status_checking">Menyemak…</string>
     <string name="status_ready">Sedia</string>
     <string name="status_partly">Sebahagian sedia</string>
     <string name="status_partly_off">Sebahagian sedia · tiada respons: %1$s</string>
     <string name="status_offline">Tidak dapat menghubungi konsol</string>
     <string name="status_hint_unset">Cari di PS5 pada Settings &gt; Network &gt; Connection Status &gt; View Connection Status. Ketik di sini untuk memasukkannya.</string>
-    <string name="status_hint_offline">Tiada respons pada alamat ini. Semak alamat IP, sama ada konsol dihidupkan dan berada pada rangkaian Wi-Fi yang sama, dan sama ada etaHEN sedang berjalan.</string>
+    <string name="status_hint_unset_ps4">Cari di PS4 pada Settings &gt; Network &gt; View Connection Status. Ketik di sini untuk memasukkannya.</string>
+    <string name="status_hint_offline">Tiada respons pada alamat ini. Semak alamat IP, sama ada %1$s dihidupkan dan berada pada rangkaian Wi-Fi yang sama, dan sama ada %2$s sedang berjalan.</string>
     <string name="status_hint_one">Tiada respons: %1$s. Mulakan perkhidmatan itu pada konsol atau semak portnya.</string>
     <string name="status_hint_many">Tiada respons: %1$s. Mulakan perkhidmatan itu pada konsol atau semak port masing-masing.</string>
     <string name="console_switch">Tukar konsol</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">Alamat IP konsol</string>
     <string name="console_ip_label">Alamat IP</string>
     <string name="console_ip_help">Cari di PS5 pada Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+    <string name="console_ip_help_ps4">Cari di PS4 pada Settings &gt; Network &gt; View Connection Status.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">Pemindahan</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">Pemindahan yang menunggu</string>
     <string name="queue_clear">Alih keluar semua</string>
     <string name="queue_empty">Tiada apa yang menunggu.</string>
-    <string name="notif_channel">Pemindahan PS5</string>
+    <string name="notif_channel">Pemindahan PS4/PS5</string>
     <string name="notif_sent">Dihantar: %1$s</string>
     <string name="notif_received">Diterima: %1$s</string>
     <string name="percent_value">%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">Ditambahkan ke baris gilir. %1$d menunggu.</string>
     <string name="msg_set_ip_first">Tetapkan alamat IP konsol dahulu. Ketik kad di bahagian atas.</string>
-    <string name="msg_sending_link">Menghantar pautan ke PS5…</string>
+    <string name="msg_sending_link">Menghantar pautan ke %1$s…</string>
     <string name="msg_check_ip_ftp">Semak alamat IP konsol dan port FTP.</string>
     <string name="msg_adding_to_shelf_link">Menambah ke pustaka payload…</string>
     <string name="status_idle">Tidak aktif</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">Tinggalkan tapak ini?</string>
     <string name="offsite_text">Halaman ingin membuka %1$s. Iklan sering menyebabkan ini apabila anda mengetik pautan, jadi teruskan hanya jika anda menjangkakannya.</string>
-    <string name="choose_install">Hantar pautan ke Installer PS5</string>
-    <string name="choose_ftp">Muat naik ke PS5 (FTP)</string>
+    <string name="choose_install">Hantar pautan ke Installer %1$s</string>
+    <string name="choose_ftp">Muat naik ke %1$s (FTP)</string>
     <string name="choose_shelf">Simpan ke pustaka payload</string>
     <string name="choose_phone">Simpan ke telefon</string>
     <string name="choose_help">Installer memerlukan pautan terus ke pakej yang boleh dibuka oleh konsol tanpa log masuk. FTP berfungsi dengan mana-mana fail dan mengekalkan sesi log masuk anda. Telefon menyampaikan data di latar belakang, dengan kemajuan dipaparkan di atas bar bawah dan dalam pemberitahuan. Pustaka payload menyimpan payload kecil (sehingga %1$s) di dalam apl untuk tab Payload.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Port Installer (etaHEN: 12800)</string>
+    <string name="install_port_label">Port Installer (%1$s: 12800)</string>
     <string name="install_accepted">Installer menerimanya: %1$s</string>
     <string name="install_not_accepted">Tidak diterima (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">Gagal: %1$s</string>
     <string name="ftp_port_hint">Tidak dapat menghubungi pelayan FTP. Semak IP konsol dan port FTP (FTP terbina dalam etaHEN menggunakan 1337, payload FTP menggunakan 2121).</string>
+    <string name="ftp_port_hint_ps4">Tidak dapat menghubungi pelayan FTP. Semak IP konsol dan port FTP (FTP GoldHEN menggunakan 2121).</string>
     <string name="err_login">Log masuk FTP gagal</string>
     <string name="err_cant_open">tidak dapat membuka %1$s (%2$s)</string>
     <string name="err_rename">penamaan semula gagal (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">Hanya %1$s daripada %2$s yang sampai.</string>
     <string name="err_empty_file">Fail kosong</string>
     <string name="err_save">Tidak dapat menyimpan %1$s</string>
-    <string name="sent_to_ps5">Dihantar ke PS5: %1$s</string>
-    <string name="saved_to_downloads">Disimpan ke Downloads/PS5: %1$s</string>
+    <string name="sent_to_ps5">Dihantar ke %2$s: %1$s</string>
+    <string name="saved_to_downloads">Disimpan ke Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Muat turun gagal: HTTP %1$s</string>
     <string name="dl_empty">Muat turun gagal: respons kosong</string>
     <string name="dl_cut_short">Sambungan ditutup sebelum seluruh fail sampai.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">Ia akan dipadam daripada pustaka. Fail asal pada telefon anda tidak diusik.</string>
     <string name="payload_loader_port">Port Loader</string>
     <string name="payload_shelf_title">Pustaka payload</string>
-    <string name="payload_shelf_empty">Belum ada yang disimpan. Tambah payload yang kerap anda gunakan (pelayan FTP, etaHEN, ...) dan hantar setiap satu dengan satu ketikan. Anda juga boleh menyimpannya terus daripada tab Web semasa memuat turunnya.</string>
+    <string name="payload_shelf_empty">Belum ada yang disimpan. Tambah payload yang kerap anda gunakan (pelayan FTP, %1$s, ...) dan hantar setiap satu dengan satu ketikan. Anda juga boleh menyimpannya terus daripada tab Web semasa memuat turunnya.</string>
     <string name="payload_sending">Menghantar %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Tambah payload ke pustaka</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Hantar payload</string>
 
     <!-- consoles -->
-    <string name="profile_default">PS5 saya</string>
+    <string name="profile_default">%1$s saya</string>
     <string name="profile_new">Konsol %1$d</string>
     <string name="profile_fallback">Konsol</string>
     <string name="consoles_title">Konsol</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">Alamat IP dan port yang disimpannya akan dialih keluar. Konsol anda yang lain tidak terjejas.</string>
     <string name="console_no_ip">belum ada alamat IP</string>
     <string name="console_color_of">Warna untuk %1$s</string>
+    <string name="console_type_of">Jenis konsol untuk %1$s</string>
     <string name="console_use_color">Gunakan %1$s</string>
     <string name="console_add">Tambah konsol</string>
     <string name="language_button">Bahasa</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">Disalin</string>
     <string name="help_unreachable_title">Konsol tidak dapat dicapai</string>
     <string name="help_unreachable_what">Tiada yang menjawab pada alamat konsol.</string>
-    <string name="help_unreachable_try">• Semak alamat IP pada PS5 (Settings &gt; Network &gt; Connection Status). Alamat ini boleh berubah selepas dimulakan semula.\n• Bangunkan konsol sepenuhnya. Mod rehat sering mematikan rangkaian.\n• Gunakan Wi-Fi yang sama pada kedua-duanya. Rangkaian tetamu dan VPN menyekatnya.</string>
+    <string name="help_unreachable_try">• Semak alamat IP pada %1$s (Settings &gt; Network &gt; Connection Status). Alamat ini boleh berubah selepas dimulakan semula.\n• Bangunkan konsol sepenuhnya. Mod rehat sering mematikan rangkaian.\n• Gunakan Wi-Fi yang sama pada kedua-duanya. Rangkaian tetamu dan VPN menyekatnya.</string>
     <string name="help_port_title">Perkhidmatan itu tidak berjalan</string>
     <string name="help_port_what">Konsol menjawab, tetapi tiada apa-apa yang mendengar pada port itu.</string>
     <string name="help_port_try">• Mulakan etaHEN pada konsol. Ia menyediakan Installer (12800), Loader (9021) dan FTP (1337).\n• Payload FTP yang berasingan biasanya menggunakan 2121. Masukkan port yang sama di sini.\n• Pada kad konsol, lampu yang padam menunjukkan apa yang tiada.</string>
+    <string name="help_port_try_ps4">• Mulakan GoldHEN pada konsol. Ia menyediakan Loader (9090) dan FTP (2121).\n• Untuk memasang pakej, jalankan juga Remote Package Installer oleh flatz pada konsol (12800).\n• Pada kad konsol, lampu yang padam menunjukkan apa yang tiada.</string>
     <string name="help_login_title">Log masuk FTP ditolak</string>
     <string name="help_login_what">Pelayan FTP konsol menolak nama pengguna atau kata laluan.</string>
-    <string name="help_login_try">• etaHEN menerima nama pengguna anonymous dengan sebarang kata laluan.\n• Jika anda menetapkan log masuk pada konsol, masukkannya di Muat naik.\n• Kata laluan tidak disimpan. Masukkan semula selepas aplikasi dimulakan semula.</string>
+    <string name="help_login_try">• %2$s menerima nama pengguna anonymous dengan sebarang kata laluan.\n• Jika anda menetapkan log masuk pada konsol, masukkannya di Muat naik.\n• Kata laluan tidak disimpan. Masukkan semula selepas aplikasi dimulakan semula.</string>
     <string name="help_dropped_title">Sambungan terputus</string>
     <string name="help_dropped_what">Pautan ke konsol terputus atau data berhenti bergerak. Aplikasi mencuba semula dan menyambung dari tempat ia berhenti.</string>
     <string name="help_dropped_try">• Letakkan telefon berhampiran penghala dan pastikan konsol terjaga.\n• Jeda muat turun besar yang lain pada rangkaian.\n• Jika terus gagal, tunggu seketika dan ketik Cuba lagi.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">Semakan ini bertanya kepada GitHub tentang keluaran terbaharu, paling kerap sekali sehari. Tiada apa-apa tentang anda atau konsol anda dihantar; GitHub melihat alamat IP anda, seperti mana-mana laman web.</string>
 
     <!-- find my console -->
-    <string name="find_button">Cari PS5 saya</string>
+    <string name="find_button">Cari %1$s saya</string>
     <string name="find_scanning">Mencari konsol anda pada rangkaian %1$s…</string>
     <string name="find_again">Imbas semula</string>
     <string name="find_none">Tiada konsol ditemui.</string>
-    <string name="find_none_try">• Hidupkan konsol sepenuhnya (bukan mod rehat) dan mulakan etaHEN.\n• Gunakan Wi-Fi yang sama pada telefon dan konsol. Rangkaian tetamu dan VPN mengasingkan peranti antara satu sama lain.\n• Kemudian imbas semula.</string>
+    <string name="find_none_try">• Hidupkan konsol sepenuhnya (bukan mod rehat) dan mulakan %1$s.\n• Gunakan Wi-Fi yang sama pada telefon dan konsol. Rangkaian tetamu dan VPN mengasingkan peranti antara satu sama lain.\n• Kemudian imbas semula.</string>
     <string name="find_no_wifi">Telefon ini tidak berada pada rangkaian Wi-Fi. Sambungkan telefon ke Wi-Fi yang sama dengan konsol, kemudian imbas semula.</string>
     <string name="find_pick">Ketik Guna untuk menetapkan alamat %1$s.</string>
     <string name="find_saved">Alamat disimpan</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">Menyemak folder…</string>
     <string name="files_dl_confirm_title">Muat turun ke telefon?</string>
-    <string name="files_dl_confirm_text">Fail: %1$d, jumlah %2$s. Fail disimpan dalam Downloads/PS5, dalam folder yang sama seperti pada konsol.</string>
+    <string name="files_dl_confirm_text">Fail: %1$d, jumlah %2$s. Fail disimpan dalam Downloads/%3$s, dalam folder yang sama seperti pada konsol.</string>
     <string name="files_dl_links">Pautan di dalam folder tidak dimuat turun: %1$d.</string>
     <string name="files_dl_truncated">Fail diambil: %1$d. Folder mengandungi lebih daripada itu, atau lebih dalam daripada yang diikuti apl.</string>
     <string name="files_dl_none">Tiada fail untuk dimuat turun dalam pilihan ini.</string>

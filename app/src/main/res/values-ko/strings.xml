@@ -33,14 +33,15 @@
     <string name="service_installer">설치 프로그램</string>
     <string name="service_loader">로더</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">PS5의 IP 주소를 설정하세요</string>
+    <string name="status_set_ip">%1$s의 IP 주소를 설정하세요</string>
     <string name="status_checking">확인 중…</string>
     <string name="status_ready">준비됨</string>
     <string name="status_partly">일부만 준비됨</string>
     <string name="status_partly_off">일부만 준비됨 · 응답 없음: %1$s</string>
     <string name="status_offline">콘솔에 연결할 수 없음</string>
     <string name="status_hint_unset">PS5의 설정 &gt; 네트워크 &gt; 연결 상태 &gt; 연결 상태 보기에서 확인할 수 있습니다. 여기를 눌러 입력하세요.</string>
-    <string name="status_hint_offline">이 주소에서 응답이 없습니다. IP 주소를 확인하고, PS5가 같은 Wi-Fi에 연결되어 켜져 있는지, etaHEN이 실행 중인지 확인하세요.</string>
+    <string name="status_hint_unset_ps4">PS4의 설정 &gt; 네트워크 &gt; 연결 상태 보기에서 확인할 수 있습니다. 여기를 눌러 입력하세요.</string>
+    <string name="status_hint_offline">이 주소에서 응답이 없습니다. IP 주소를 확인하고, %1$s가 같은 Wi-Fi에 연결되어 켜져 있는지, %2$s이 실행 중인지 확인하세요.</string>
     <string name="status_hint_one">응답 없음: %1$s. 콘솔에서 실행하거나 포트를 확인하세요.</string>
     <string name="status_hint_many">응답 없음: %1$s. 콘솔에서 실행하거나 포트를 확인하세요.</string>
     <string name="console_switch">콘솔 전환</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">콘솔 IP 주소</string>
     <string name="console_ip_label">IP 주소</string>
     <string name="console_ip_help">PS5의 설정 &gt; 네트워크 &gt; 연결 상태 &gt; 연결 상태 보기에서 확인할 수 있습니다.</string>
+    <string name="console_ip_help_ps4">PS4의 설정 &gt; 네트워크 &gt; 연결 상태 보기에서 확인할 수 있습니다.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">전송</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">대기 중인 전송</string>
     <string name="queue_clear">모두 제거</string>
     <string name="queue_empty">대기 중인 항목이 없습니다.</string>
-    <string name="notif_channel">PS5 전송</string>
+    <string name="notif_channel">PS4/PS5 전송</string>
     <string name="notif_sent">보냄: %1$s</string>
     <string name="notif_received">받음: %1$s</string>
     <string name="percent_value">%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">대기열에 추가했습니다. %1$d개 대기 중.</string>
     <string name="msg_set_ip_first">먼저 콘솔의 IP 주소를 설정하세요. 위쪽 카드를 누르세요.</string>
-    <string name="msg_sending_link">PS5로 링크를 보내는 중…</string>
+    <string name="msg_sending_link">%1$s로 링크를 보내는 중…</string>
     <string name="msg_check_ip_ftp">콘솔의 IP 주소와 FTP 포트를 확인하세요.</string>
     <string name="msg_adding_to_shelf_link">페이로드 보관함에 추가하는 중…</string>
     <string name="status_idle">대기 중</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">이 사이트에서 나갈까요?</string>
     <string name="offsite_text">페이지에서 다음 주소를 열려고 합니다: %1$s. 링크를 누를 때 광고 때문에 이런 일이 자주 생기니, 예상한 경우에만 계속하세요.</string>
-    <string name="choose_install">PS5 설치 프로그램에 링크 보내기</string>
-    <string name="choose_ftp">PS5로 업로드(FTP)</string>
+    <string name="choose_install">%1$s 설치 프로그램에 링크 보내기</string>
+    <string name="choose_ftp">%1$s로 업로드(FTP)</string>
     <string name="choose_shelf">페이로드 보관함에 저장</string>
     <string name="choose_phone">휴대폰에 저장</string>
     <string name="choose_help">설치 프로그램에는 콘솔이 로그인 없이 열 수 있는 직접 패키지 링크가 필요합니다. FTP는 모든 파일에 사용할 수 있고 로그인 세션을 유지합니다. 휴대폰이 백그라운드에서 데이터를 중계하며, 진행 상황은 하단 바 위와 알림에 표시됩니다. 페이로드 보관함은 작은 페이로드(최대 %1$s)를 앱 안에 보관해 페이로드 탭에서 쓸 수 있게 합니다.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">설치 프로그램 포트(etaHEN: 12800)</string>
+    <string name="install_port_label">설치 프로그램 포트(%1$s: 12800)</string>
     <string name="install_accepted">설치 프로그램이 받아들였습니다: %1$s</string>
     <string name="install_not_accepted">받아들여지지 않음(upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">실패: %1$s</string>
     <string name="ftp_port_hint">FTP 서버에 연결할 수 없습니다. 콘솔 IP와 FTP 포트를 확인하세요(etaHEN 내장 FTP는 1337, FTP 페이로드는 2121을 사용합니다).</string>
+    <string name="ftp_port_hint_ps4">FTP 서버에 연결할 수 없습니다. 콘솔 IP와 FTP 포트를 확인하세요(GoldHEN의 FTP는 2121을 사용합니다).</string>
     <string name="err_login">FTP 로그인 실패</string>
     <string name="err_cant_open">%1$s 열기 불가(%2$s)</string>
     <string name="err_rename">이름 변경 실패(%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">%2$s 중 %1$s만 도착했습니다.</string>
     <string name="err_empty_file">파일이 비어 있습니다</string>
     <string name="err_save">%1$s 저장 실패</string>
-    <string name="sent_to_ps5">PS5로 보냄: %1$s</string>
-    <string name="saved_to_downloads">다운로드/PS5에 저장됨: %1$s</string>
+    <string name="sent_to_ps5">%2$s로 보냄: %1$s</string>
+    <string name="saved_to_downloads">다운로드/%2$s에 저장됨: %1$s</string>
     <string name="dl_http_failed">다운로드 실패: HTTP %1$s</string>
     <string name="dl_empty">다운로드 실패: 빈 응답</string>
     <string name="dl_cut_short">파일 전체가 도착하기 전에 연결이 닫혔습니다.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">보관함에서 삭제됩니다. 휴대폰의 원본 파일은 그대로 유지됩니다.</string>
     <string name="payload_loader_port">로더 포트</string>
     <string name="payload_shelf_title">페이로드 보관함</string>
-    <string name="payload_shelf_empty">아직 저장된 항목이 없습니다. 자주 쓰는 페이로드(FTP 서버, etaHEN 등)를 추가하면 한 번의 탭으로 보낼 수 있습니다. 웹 탭에서 다운로드할 때 바로 저장할 수도 있습니다.</string>
+    <string name="payload_shelf_empty">아직 저장된 항목이 없습니다. 자주 쓰는 페이로드(FTP 서버, %1$s 등)를 추가하면 한 번의 탭으로 보낼 수 있습니다. 웹 탭에서 다운로드할 때 바로 저장할 수도 있습니다.</string>
     <string name="payload_sending">%1$s 보내는 중…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">보관함에 페이로드 추가</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">페이로드 보내기</string>
 
     <!-- consoles -->
-    <string name="profile_default">내 PS5</string>
+    <string name="profile_default">내 %1$s</string>
     <string name="profile_new">콘솔 %1$d</string>
     <string name="profile_fallback">콘솔</string>
     <string name="consoles_title">콘솔</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">저장된 IP 주소와 포트가 삭제됩니다. 다른 콘솔에는 영향이 없습니다.</string>
     <string name="console_no_ip">IP 주소 없음</string>
     <string name="console_color_of">%1$s의 색상</string>
+    <string name="console_type_of">%1$s의 콘솔 종류</string>
     <string name="console_use_color">%1$s 사용</string>
     <string name="console_add">콘솔 추가</string>
     <string name="language_button">언어</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">복사됨</string>
     <string name="help_unreachable_title">콘솔에 연결할 수 없습니다</string>
     <string name="help_unreachable_what">콘솔 주소에서 응답이 없습니다.</string>
-    <string name="help_unreachable_try">• PS5에서 IP 주소를 확인하세요(설정 &gt; 네트워크 &gt; 연결 상태). 재시작 후 바뀔 수 있습니다.\n• 콘솔을 완전히 깨우세요. 휴식 모드에서는 네트워크가 꺼지는 경우가 많습니다.\n• 두 기기에서 같은 Wi-Fi를 사용하세요. 게스트 네트워크와 VPN은 연결을 막습니다.</string>
+    <string name="help_unreachable_try">• %1$s에서 IP 주소를 확인하세요(설정 &gt; 네트워크 &gt; 연결 상태). 재시작 후 바뀔 수 있습니다.\n• 콘솔을 완전히 깨우세요. 휴식 모드에서는 네트워크가 꺼지는 경우가 많습니다.\n• 두 기기에서 같은 Wi-Fi를 사용하세요. 게스트 네트워크와 VPN은 연결을 막습니다.</string>
     <string name="help_port_title">해당 서비스가 실행 중이 아닙니다</string>
     <string name="help_port_what">콘솔은 응답했지만 해당 포트에서 수신 대기 중인 것이 없습니다.</string>
     <string name="help_port_try">• 콘솔에서 etaHEN을 실행하세요. 설치 프로그램(12800), 로더(9021), FTP(1337)를 제공합니다.\n• 별도의 FTP 페이로드는 보통 2121을 사용합니다. 여기에 같은 포트를 입력하세요.\n• 콘솔 카드에서 꺼진 표시등이 없는 항목을 알려 줍니다.</string>
+    <string name="help_port_try_ps4">• 콘솔에서 GoldHEN을 실행하세요. 로더(9090)와 FTP(2121)를 제공합니다.\n• 패키지를 설치하려면 콘솔에서 flatz의 Remote Package Installer도 실행하세요(12800).\n• 콘솔 카드에서 꺼진 표시등이 없는 항목을 알려 줍니다.</string>
     <string name="help_login_title">FTP 로그인이 거부되었습니다</string>
     <string name="help_login_what">콘솔의 FTP 서버가 사용자 이름 또는 비밀번호를 거부했습니다.</string>
-    <string name="help_login_try">• etaHEN은 사용자 이름 anonymous를 어떤 비밀번호로도 받아들입니다.\n• 콘솔에서 로그인을 설정했다면 업로드에서 입력하세요.\n• 비밀번호는 저장되지 않습니다. 앱을 다시 시작한 후 다시 입력하세요.</string>
+    <string name="help_login_try">• %2$s은 사용자 이름 anonymous를 어떤 비밀번호로도 받아들입니다.\n• 콘솔에서 로그인을 설정했다면 업로드에서 입력하세요.\n• 비밀번호는 저장되지 않습니다. 앱을 다시 시작한 후 다시 입력하세요.</string>
     <string name="help_dropped_title">연결이 끊어졌습니다</string>
     <string name="help_dropped_what">콘솔과의 연결이 끊어졌거나 데이터 전송이 멈췄습니다. 앱이 다시 시도하며 멈춘 지점부터 이어서 진행합니다.</string>
     <string name="help_dropped_try">• 휴대전화를 공유기 가까이에 두고 콘솔을 켠 상태로 유지하세요.\n• 네트워크의 다른 대용량 다운로드를 일시 중지하세요.\n• 계속 실패하면 잠시 기다렸다가 다시 시도를 누르세요.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">이 확인은 GitHub에 최신 릴리스를 문의하며, 하루에 최대 한 번만 실행됩니다. 사용자나 콘솔에 대한 정보는 전송되지 않으며, 다른 웹사이트와 마찬가지로 GitHub는 IP 주소를 볼 수 있습니다.</string>
 
     <!-- find my console -->
-    <string name="find_button">내 PS5 찾기</string>
+    <string name="find_button">내 %1$s 찾기</string>
     <string name="find_scanning">%1$s 네트워크에서 콘솔을 찾는 중…</string>
     <string name="find_again">다시 검색</string>
     <string name="find_none">콘솔을 찾지 못했습니다.</string>
-    <string name="find_none_try">• 콘솔을 완전히 켜고(휴식 모드가 아니라) etaHEN을 실행하세요.\n• 휴대폰과 콘솔에서 같은 Wi-Fi를 사용하세요. 게스트 네트워크와 VPN은 기기들을 서로 분리합니다.\n• 그런 다음 다시 검색하세요.</string>
+    <string name="find_none_try">• 콘솔을 완전히 켜고(휴식 모드가 아니라) %1$s을 실행하세요.\n• 휴대폰과 콘솔에서 같은 Wi-Fi를 사용하세요. 게스트 네트워크와 VPN은 기기들을 서로 분리합니다.\n• 그런 다음 다시 검색하세요.</string>
     <string name="find_no_wifi">이 휴대폰은 Wi-Fi 네트워크에 연결되어 있지 않습니다. 콘솔과 같은 Wi-Fi에 연결한 다음 다시 검색하세요.</string>
     <string name="find_pick">‘사용’을 눌러 %1$s의 주소를 설정하세요.</string>
     <string name="find_saved">저장된 주소</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">폴더를 살펴보는 중…</string>
     <string name="files_dl_confirm_title">휴대폰으로 다운로드?</string>
-    <string name="files_dl_confirm_text">파일 %1$d개, 합계 %2$s. 콘솔과 같은 폴더 구조로 Downloads/PS5에 저장됩니다.</string>
+    <string name="files_dl_confirm_text">파일 %1$d개, 합계 %2$s. 콘솔과 같은 폴더 구조로 Downloads/%3$s에 저장됩니다.</string>
     <string name="files_dl_links">폴더 안의 링크는 다운로드하지 않습니다: %1$d개.</string>
     <string name="files_dl_truncated">가져온 파일: %1$d개. 폴더에 이보다 더 많이 있거나 앱이 따라가는 깊이보다 더 깊습니다.</string>
     <string name="files_dl_none">선택한 항목 중 다운로드할 파일이 없습니다.</string>

@@ -33,14 +33,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">Stel het IP-adres van je PS5 in</string>
+    <string name="status_set_ip">Stel het IP-adres van je %1$s in</string>
     <string name="status_checking">Controleren…</string>
     <string name="status_ready">Gereed</string>
     <string name="status_partly">Deels gereed</string>
     <string name="status_partly_off">Deels gereed · geen reactie: %1$s</string>
     <string name="status_offline">Console niet bereikbaar</string>
     <string name="status_hint_unset">Je vindt het op de PS5 onder Instellingen &gt; Netwerk &gt; Verbindingsstatus &gt; Verbindingsstatus weergeven. Tik hier om het in te voeren.</string>
-    <string name="status_hint_offline">Er reageert niets op dit adres. Controleer het IP-adres, of de PS5 aanstaat en op hetzelfde wifi-netwerk zit, en of etaHEN draait.</string>
+    <string name="status_hint_unset_ps4">Je vindt het op de PS4 onder Instellingen &gt; Netwerk &gt; Verbindingsstatus weergeven. Tik hier om het in te voeren.</string>
+    <string name="status_hint_offline">Er reageert niets op dit adres. Controleer het IP-adres, of de %1$s aanstaat en op hetzelfde wifi-netwerk zit, en of %2$s draait.</string>
     <string name="status_hint_one">Geen reactie van: %1$s. Start de service op de console of controleer de poort.</string>
     <string name="status_hint_many">Geen reactie van: %1$s. Start de services op de console of controleer de poorten.</string>
     <string name="console_switch">Van console wisselen</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">IP-adres van de console</string>
     <string name="console_ip_label">IP-adres</string>
     <string name="console_ip_help">Je vindt het op de PS5 onder Instellingen &gt; Netwerk &gt; Verbindingsstatus &gt; Verbindingsstatus weergeven.</string>
+    <string name="console_ip_help_ps4">Je vindt het op de PS4 onder Instellingen &gt; Netwerk &gt; Verbindingsstatus weergeven.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">Overdracht</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">Wachtende overdrachten</string>
     <string name="queue_clear">Alles weghalen</string>
     <string name="queue_empty">Er wacht niets.</string>
-    <string name="notif_channel">PS5-overdrachten</string>
+    <string name="notif_channel">PS4/PS5-overdrachten</string>
     <string name="notif_sent">%1$s verzonden</string>
     <string name="notif_received">%1$s ontvangen</string>
     <string name="percent_value">%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">Aan de wachtrij toegevoegd. %1$d wachtend.</string>
     <string name="msg_set_ip_first">Stel eerst het IP-adres van de console in. Tik bovenaan op de kaart.</string>
-    <string name="msg_sending_link">Link naar PS5 verzenden…</string>
+    <string name="msg_sending_link">Link naar %1$s verzenden…</string>
     <string name="msg_check_ip_ftp">Controleer het IP-adres van de console en de FTP-poort.</string>
     <string name="msg_adding_to_shelf_link">Toevoegen aan de payload-bibliotheek…</string>
     <string name="status_idle">Inactief</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">Deze site verlaten?</string>
     <string name="offsite_text">De pagina wil %1$s openen. Advertenties veroorzaken dit vaak als je op een link tikt, dus ga alleen verder als je dit verwachtte.</string>
-    <string name="choose_install">Link naar PS5-installer sturen</string>
-    <string name="choose_ftp">Uploaden naar PS5 (FTP)</string>
+    <string name="choose_install">Link naar %1$s-installer sturen</string>
+    <string name="choose_ftp">Uploaden naar %1$s (FTP)</string>
     <string name="choose_shelf">Opslaan in payload-bibliotheek</string>
     <string name="choose_phone">Opslaan op telefoon</string>
     <string name="choose_help">De installer heeft een directe pakketlink nodig die de console zonder inloggen kan openen. FTP werkt voor elk bestand en behoudt je inlogsessie. De telefoon geeft de gegevens op de achtergrond door, met de voortgang boven de onderste balk en in een melding. De payload-bibliotheek bewaart een kleine payload (tot %1$s) in de app voor het tabblad Payload.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Installer-poort (etaHEN: 12800)</string>
+    <string name="install_port_label">Installer-poort (%1$s: 12800)</string>
     <string name="install_accepted">De installer heeft het geaccepteerd: %1$s</string>
     <string name="install_not_accepted">Niet geaccepteerd (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">Mislukt: %1$s</string>
     <string name="ftp_port_hint">De FTP-server is niet bereikbaar. Controleer het IP-adres van de console en de FTP-poort (de ingebouwde FTP van etaHEN gebruikt 1337, de FTP-payload gebruikt 2121).</string>
+    <string name="ftp_port_hint_ps4">De FTP-server is niet bereikbaar. Controleer het IP-adres van de console en de FTP-poort (de FTP van GoldHEN gebruikt 2121).</string>
     <string name="err_login">FTP-aanmelding mislukt</string>
     <string name="err_cant_open">kan %1$s niet openen (%2$s)</string>
     <string name="err_rename">hernoemen mislukt (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">Slechts %1$s van %2$s is aangekomen.</string>
     <string name="err_empty_file">Het bestand is leeg</string>
     <string name="err_save">Kon %1$s niet opslaan</string>
-    <string name="sent_to_ps5">Naar PS5 verzonden: %1$s</string>
-    <string name="saved_to_downloads">Opgeslagen in Downloads/PS5: %1$s</string>
+    <string name="sent_to_ps5">Naar %2$s verzonden: %1$s</string>
+    <string name="saved_to_downloads">Opgeslagen in Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Download mislukt: HTTP %1$s</string>
     <string name="dl_empty">Download mislukt: leeg antwoord</string>
     <string name="dl_cut_short">De verbinding werd gesloten voordat het hele bestand binnen was.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">Het wordt uit de bibliotheek verwijderd. Het originele bestand op je telefoon blijft ongemoeid.</string>
     <string name="payload_loader_port">Loader-poort</string>
     <string name="payload_shelf_title">Payload-bibliotheek</string>
-    <string name="payload_shelf_empty">Nog niets opgeslagen. Voeg de payloads toe die je vaak gebruikt (een FTP-server, etaHEN, ...) en verstuur ze met één tik. Je kunt er ook een rechtstreeks vanuit het tabblad Web opslaan wanneer je hem downloadt.</string>
+    <string name="payload_shelf_empty">Nog niets opgeslagen. Voeg de payloads toe die je vaak gebruikt (een FTP-server, %1$s, ...) en verstuur ze met één tik. Je kunt er ook een rechtstreeks vanuit het tabblad Web opslaan wanneer je hem downloadt.</string>
     <string name="payload_sending">%1$s verzenden…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Payload aan bibliotheek toevoegen</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Payload verzenden</string>
 
     <!-- consoles -->
-    <string name="profile_default">Mijn PS5</string>
+    <string name="profile_default">Mijn %1$s</string>
     <string name="profile_new">Console %1$d</string>
     <string name="profile_fallback">Console</string>
     <string name="consoles_title">Consoles</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">Het opgeslagen IP-adres en de poorten worden verwijderd. Je andere consoles blijven ongewijzigd.</string>
     <string name="console_no_ip">nog geen IP-adres</string>
     <string name="console_color_of">Kleur van %1$s</string>
+    <string name="console_type_of">Consoletype van %1$s</string>
     <string name="console_use_color">%1$s gebruiken</string>
     <string name="console_add">Console toevoegen</string>
     <string name="language_button">Taal</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">Gekopieerd</string>
     <string name="help_unreachable_title">Console niet bereikbaar</string>
     <string name="help_unreachable_what">Er reageert niets op het adres van de console.</string>
-    <string name="help_unreachable_try">• Controleer het IP-adres op de PS5 (Instellingen &gt; Netwerk &gt; Verbindingsstatus). Het kan na een herstart veranderen.\n• Maak de console helemaal wakker. De rustmodus schakelt het netwerk vaak uit.\n• Gebruik op beide hetzelfde Wi-Fi-netwerk. Gastnetwerken en VPN\'s blokkeren dit.</string>
+    <string name="help_unreachable_try">• Controleer het IP-adres op de %1$s (Instellingen &gt; Netwerk &gt; Verbindingsstatus). Het kan na een herstart veranderen.\n• Maak de console helemaal wakker. De rustmodus schakelt het netwerk vaak uit.\n• Gebruik op beide hetzelfde Wi-Fi-netwerk. Gastnetwerken en VPN\'s blokkeren dit.</string>
     <string name="help_port_title">Die service draait niet</string>
     <string name="help_port_what">De console reageerde, maar er luistert niets op die poort.</string>
     <string name="help_port_try">• Start etaHEN op de console. Die levert de Installer (12800), de Loader (9021) en FTP (1337).\n• Een aparte FTP-payload gebruikt meestal 2121. Vul hier dezelfde poort in.\n• Op de consolekaart laat het lampje dat uit is zien wat er ontbreekt.</string>
+    <string name="help_port_try_ps4">• Start GoldHEN op de console. Die levert de Loader (9090) en FTP (2121).\n• Om pakketten te installeren moet ook de Remote Package Installer van flatz op de console draaien (12800).\n• Op de consolekaart laat het lampje dat uit is zien wat er ontbreekt.</string>
     <string name="help_login_title">FTP-login geweigerd</string>
     <string name="help_login_what">De FTP-server van de console heeft de gebruikersnaam of het wachtwoord geweigerd.</string>
-    <string name="help_login_try">• etaHEN accepteert de gebruikersnaam anonymous met elk wachtwoord.\n• Als je op de console een login hebt ingesteld, vul je die in bij Upload.\n• Het wachtwoord wordt niet opgeslagen. Voer het opnieuw in nadat je de app opnieuw hebt gestart.</string>
+    <string name="help_login_try">• %2$s accepteert de gebruikersnaam anonymous met elk wachtwoord.\n• Als je op de console een login hebt ingesteld, vul je die in bij Upload.\n• Het wachtwoord wordt niet opgeslagen. Voer het opnieuw in nadat je de app opnieuw hebt gestart.</string>
     <string name="help_dropped_title">De verbinding is verbroken</string>
     <string name="help_dropped_what">De verbinding met de console is verbroken of er stroomt geen data meer. De app probeert het opnieuw en gaat verder waar hij gebleven was.</string>
     <string name="help_dropped_try">• Houd de telefoon dicht bij de router en de console wakker.\n• Pauzeer andere grote downloads op het netwerk.\n• Blijft het mislukken? Wacht even en tik op Opnieuw proberen.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">De controle vraagt GitHub naar de nieuwste release, hooguit één keer per dag. Er wordt niets over jou of je consoles verzonden; GitHub ziet je IP-adres, net als elke website.</string>
 
     <!-- find my console -->
-    <string name="find_button">Mijn PS5 zoeken</string>
+    <string name="find_button">Mijn %1$s zoeken</string>
     <string name="find_scanning">Console zoeken op netwerk %1$s…</string>
     <string name="find_again">Opnieuw scannen</string>
     <string name="find_none">Geen console gevonden.</string>
-    <string name="find_none_try">• Zet de console helemaal aan (niet in rustmodus) en start etaHEN.\n• Gebruik op de telefoon en de console hetzelfde wifi-netwerk. Gastnetwerken en VPN\'s houden apparaten gescheiden.\n• Scan daarna opnieuw.</string>
+    <string name="find_none_try">• Zet de console helemaal aan (niet in rustmodus) en start %1$s.\n• Gebruik op de telefoon en de console hetzelfde wifi-netwerk. Gastnetwerken en VPN\'s houden apparaten gescheiden.\n• Scan daarna opnieuw.</string>
     <string name="find_no_wifi">Deze telefoon zit niet op een wifi-netwerk. Verbind de telefoon met hetzelfde wifi-netwerk als de console en scan daarna opnieuw.</string>
     <string name="find_pick">Tik op Gebruiken om het adres van %1$s in te stellen.</string>
     <string name="find_saved">Opgeslagen adres</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">Mappen doorzoeken…</string>
     <string name="files_dl_confirm_title">Downloaden naar telefoon?</string>
-    <string name="files_dl_confirm_text">Bestanden: %1$d, samen %2$s. Ze worden opgeslagen in Downloads/PS5, in dezelfde mappen als op de console.</string>
+    <string name="files_dl_confirm_text">Bestanden: %1$d, samen %2$s. Ze worden opgeslagen in Downloads/%3$s, in dezelfde mappen als op de console.</string>
     <string name="files_dl_links">Links in mappen worden niet gedownload: %1$d.</string>
     <string name="files_dl_truncated">Meegenomen bestanden: %1$d. De mappen bevatten meer, of gaan dieper dan de app volgt.</string>
     <string name="files_dl_none">In de selectie staat geen bestand om te downloaden.</string>

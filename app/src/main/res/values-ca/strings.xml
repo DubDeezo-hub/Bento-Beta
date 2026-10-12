@@ -33,14 +33,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">Defineix l\'adreça IP de la PS5</string>
+    <string name="status_set_ip">Defineix l\'adreça IP de la %1$s</string>
     <string name="status_checking">S\'està comprovant…</string>
     <string name="status_ready">A punt</string>
     <string name="status_partly">Parcialment a punt</string>
     <string name="status_partly_off">Parcialment a punt · no respon: %1$s</string>
     <string name="status_offline">No es pot accedir a la consola</string>
     <string name="status_hint_unset">La trobaràs a la PS5 a Settings &gt; Network &gt; Connection Status &gt; View Connection Status. Toca aquí per introduir-la.</string>
-    <string name="status_hint_offline">No hi ha cap resposta en aquesta adreça. Comprova l\'adreça IP, que la consola estigui encesa i a la mateixa xarxa Wi-Fi i que etaHEN s\'estigui executant.</string>
+    <string name="status_hint_unset_ps4">La trobaràs a la PS4 a Settings &gt; Network &gt; View Connection Status. Toca aquí per introduir-la.</string>
+    <string name="status_hint_offline">No hi ha cap resposta en aquesta adreça. Comprova l\'adreça IP, que la %1$s estigui encesa i a la mateixa xarxa Wi-Fi i que %2$s s\'estigui executant.</string>
     <string name="status_hint_one">No respon: %1$s. Inicia aquest servei a la consola o comprova\'n el port.</string>
     <string name="status_hint_many">No responen: %1$s. Inicia aquests serveis a la consola o comprova\'n els ports.</string>
     <string name="console_switch">Canvia de consola</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">Adreça IP de la consola</string>
     <string name="console_ip_label">Adreça IP</string>
     <string name="console_ip_help">La trobaràs a la PS5 a Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+    <string name="console_ip_help_ps4">La trobaràs a la PS4 a Settings &gt; Network &gt; View Connection Status.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">Transferència</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">Transferències en espera</string>
     <string name="queue_clear">Elimina-ho tot</string>
     <string name="queue_empty">No hi ha res en espera.</string>
-    <string name="notif_channel">Transferències de la PS5</string>
+    <string name="notif_channel">Transferències de la PS4/PS5</string>
     <string name="notif_sent">S\'ha enviat %1$s</string>
     <string name="notif_received">S\'ha rebut %1$s</string>
     <string name="percent_value">%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">S\'ha afegit a la cua. %1$d en espera.</string>
     <string name="msg_set_ip_first">Primer defineix l\'adreça IP de la consola. Toca la targeta de la part superior.</string>
-    <string name="msg_sending_link">S\'està enviant l\'enllaç a la PS5…</string>
+    <string name="msg_sending_link">S\'està enviant l\'enllaç a la %1$s…</string>
     <string name="msg_check_ip_ftp">Comprova l\'adreça IP de la consola i el port FTP.</string>
     <string name="msg_adding_to_shelf_link">S\'està afegint a la biblioteca de payloads…</string>
     <string name="status_idle">Inactiu</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">Vols sortir d\'aquest lloc?</string>
     <string name="offsite_text">La pàgina vol obrir %1$s. Sovint són els anuncis els que ho provoquen quan toques un enllaç, així que continua només si ho esperaves.</string>
-    <string name="choose_install">Envia l\'enllaç a l\'Installer de la PS5</string>
-    <string name="choose_ftp">Penja a la PS5 (FTP)</string>
+    <string name="choose_install">Envia l\'enllaç a l\'Installer de la %1$s</string>
+    <string name="choose_ftp">Penja a la %1$s (FTP)</string>
     <string name="choose_shelf">Desa a la biblioteca de payloads</string>
     <string name="choose_phone">Desa al telèfon</string>
     <string name="choose_help">L\'Installer necessita un enllaç directe al paquet que la consola pugui obrir sense iniciar la sessió. L\'FTP funciona amb qualsevol fitxer i manté la teva sessió. El telèfon retransmet les dades en segon pla, amb el progrés a sobre de la barra inferior i en una notificació. La biblioteca de payloads guarda dins de l\'aplicació un payload petit (fins a %1$s) per a la pestanya Payload.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Port de l\'Installer (etaHEN: 12800)</string>
+    <string name="install_port_label">Port de l\'Installer (%1$s: 12800)</string>
     <string name="install_accepted">L\'Installer l\'ha acceptat: %1$s</string>
     <string name="install_not_accepted">No acceptat (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">Ha fallat: %1$s</string>
     <string name="ftp_port_hint">No es pot accedir al servidor FTP. Comprova l\'IP de la consola i el port FTP (l\'FTP integrat d\'etaHEN utilitza el 1337 i el payload FTP, el 2121).</string>
+    <string name="ftp_port_hint_ps4">No es pot accedir al servidor FTP. Comprova l\'IP de la consola i el port FTP (l\'FTP de GoldHEN utilitza el 2121).</string>
     <string name="err_login">Ha fallat l\'inici de sessió FTP</string>
     <string name="err_cant_open">no es pot obrir %1$s (%2$s)</string>
     <string name="err_rename">ha fallat el canvi de nom (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">Només han arribat %1$s de %2$s.</string>
     <string name="err_empty_file">El fitxer és buit</string>
     <string name="err_save">No s\'ha pogut desar %1$s</string>
-    <string name="sent_to_ps5">S\'ha enviat a la PS5: %1$s</string>
-    <string name="saved_to_downloads">S\'ha desat a Downloads/PS5: %1$s</string>
+    <string name="sent_to_ps5">S\'ha enviat a la %2$s: %1$s</string>
+    <string name="saved_to_downloads">S\'ha desat a Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Ha fallat la baixada: HTTP %1$s</string>
     <string name="dl_empty">Ha fallat la baixada: resposta buida</string>
     <string name="dl_cut_short">La connexió s\'ha tancat abans que arribés tot el fitxer.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">S\'elimina de la biblioteca. El fitxer original del teu telèfon no es toca.</string>
     <string name="payload_loader_port">Port del Loader</string>
     <string name="payload_shelf_title">Biblioteca de payloads</string>
-    <string name="payload_shelf_empty">Encara no hi ha res desat. Afegeix els payloads que fas servir sovint (un servidor FTP, etaHEN, ...) i envia\'ls amb un sol toc. També en pots desar un directament des de la pestanya Web quan el baixes.</string>
+    <string name="payload_shelf_empty">Encara no hi ha res desat. Afegeix els payloads que fas servir sovint (un servidor FTP, %1$s, ...) i envia\'ls amb un sol toc. També en pots desar un directament des de la pestanya Web quan el baixes.</string>
     <string name="payload_sending">S\'està enviant %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Afegeix un payload a la biblioteca</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Envia el payload</string>
 
     <!-- consoles -->
-    <string name="profile_default">La meva PS5</string>
+    <string name="profile_default">La meva %1$s</string>
     <string name="profile_new">Consola %1$d</string>
     <string name="profile_fallback">Consola</string>
     <string name="consoles_title">Consoles</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">L\'adreça IP i els ports que té desats s\'eliminen. Les altres consoles no es veuen afectades.</string>
     <string name="console_no_ip">encara sense adreça IP</string>
     <string name="console_color_of">Color de %1$s</string>
+    <string name="console_type_of">Tipus de consola de %1$s</string>
     <string name="console_use_color">Utilitza %1$s</string>
     <string name="console_add">Afegeix una consola</string>
     <string name="language_button">Idioma</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">Copiat</string>
     <string name="help_unreachable_title">No es pot arribar a la consola</string>
     <string name="help_unreachable_what">Ningú respon a l\'adreça de la consola.</string>
-    <string name="help_unreachable_try">• Comprova l\'adreça IP a la PS5 (Settings &gt; Network &gt; Connection Status). Pot canviar després de reiniciar.\n• Desperta del tot la consola. El mode de repòs sovint desactiva la xarxa.\n• Utilitza la mateixa Wi-Fi als dos dispositius. Les xarxes de convidats i les VPN ho bloquegen.</string>
+    <string name="help_unreachable_try">• Comprova l\'adreça IP a la %1$s (Settings &gt; Network &gt; Connection Status). Pot canviar després de reiniciar.\n• Desperta del tot la consola. El mode de repòs sovint desactiva la xarxa.\n• Utilitza la mateixa Wi-Fi als dos dispositius. Les xarxes de convidats i les VPN ho bloquegen.</string>
     <string name="help_port_title">Aquest servei no s\'està executant</string>
     <string name="help_port_what">La consola ha respost, però res no escolta en aquest port.</string>
     <string name="help_port_try">• Inicia etaHEN a la consola. Ofereix l\'Installer (12800), el Loader (9021) i l\'FTP (1337).\n• Un payload d\'FTP independent sol utilitzar el 2121. Introdueix aquí el mateix port.\n• A la targeta de la consola, el llum apagat mostra què falta.</string>
+    <string name="help_port_try_ps4">• Inicia GoldHEN a la consola. Ofereix el Loader (9090) i l\'FTP (2121).\n• Per instal·lar paquets, executa també el Remote Package Installer de flatz a la consola (12800).\n• A la targeta de la consola, el llum apagat mostra què falta.</string>
     <string name="help_login_title">Inici de sessió FTP rebutjat</string>
     <string name="help_login_what">El servidor FTP de la consola ha rebutjat el nom d\'usuari o la contrasenya.</string>
-    <string name="help_login_try">• etaHEN accepta el nom d\'usuari anonymous amb qualsevol contrasenya.\n• Si has definit un inici de sessió a la consola, introdueix-lo a Penja.\n• La contrasenya no es desa. Torna a introduir-la després de reiniciar l\'aplicació.</string>
+    <string name="help_login_try">• %2$s accepta el nom d\'usuari anonymous amb qualsevol contrasenya.\n• Si has definit un inici de sessió a la consola, introdueix-lo a Penja.\n• La contrasenya no es desa. Torna a introduir-la després de reiniciar l\'aplicació.</string>
     <string name="help_dropped_title">S\'ha perdut la connexió</string>
     <string name="help_dropped_what">L\'enllaç amb la consola s\'ha trencat o ha deixat de moure dades. L\'aplicació ho torna a provar i continua pel punt on havia quedat.</string>
     <string name="help_dropped_try">• Mantén el telèfon a prop del router i la consola desperta.\n• Atura altres baixades grans a la xarxa.\n• Si segueix fallant, espera un moment i toca Torna-ho a provar.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">La comprovació demana a GitHub l\'última versió, com a màxim un cop al dia. No s\'envia res sobre tu ni sobre les teves consoles; GitHub veu la teva adreça IP, com qualsevol web.</string>
 
     <!-- find my console -->
-    <string name="find_button">Troba la meva PS5</string>
+    <string name="find_button">Troba la meva %1$s</string>
     <string name="find_scanning">S\'està cercant la consola a la xarxa %1$s…</string>
     <string name="find_again">Torna a cercar</string>
     <string name="find_none">No s\'ha trobat cap consola.</string>
-    <string name="find_none_try">• Encén del tot la consola (no en mode de repòs) i inicia etaHEN.\n• Utilitza la mateixa Wi-Fi al telèfon i a la consola. Les xarxes de convidats i les VPN mantenen els dispositius separats.\n• Després torna a cercar.</string>
+    <string name="find_none_try">• Encén del tot la consola (no en mode de repòs) i inicia %1$s.\n• Utilitza la mateixa Wi-Fi al telèfon i a la consola. Les xarxes de convidats i les VPN mantenen els dispositius separats.\n• Després torna a cercar.</string>
     <string name="find_no_wifi">Aquest telèfon no està connectat a cap xarxa Wi-Fi. Connecta\'l a la mateixa Wi-Fi que la consola i torna a cercar.</string>
     <string name="find_pick">Toca Utilitza per definir l\'adreça de %1$s.</string>
     <string name="find_saved">Adreça desada</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">Revisant les carpetes…</string>
     <string name="files_dl_confirm_title">Vols baixar-ho al telèfon?</string>
-    <string name="files_dl_confirm_text">Fitxers: %1$d, en total %2$s. Es desen a Downloads/PS5, a les mateixes carpetes que a la consola.</string>
+    <string name="files_dl_confirm_text">Fitxers: %1$d, en total %2$s. Es desen a Downloads/%3$s, a les mateixes carpetes que a la consola.</string>
     <string name="files_dl_links">Els enllaços dins de les carpetes no es baixen: %1$d.</string>
     <string name="files_dl_truncated">Fitxers inclosos: %1$d. Les carpetes en contenen més, o van més endins del que l’aplicació segueix.</string>
     <string name="files_dl_none">A la selecció no hi ha cap fitxer per baixar.</string>

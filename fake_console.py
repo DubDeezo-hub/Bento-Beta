@@ -3,11 +3,14 @@
 
 Run it in Termux on the same phone. In the app, tap the card at the top and enter 127.0.0.1
 as the console's IP address; the three lights on the card turn green once this is running.
-  Install tab : port 12800 -> mimics etaHEN (/upload) and RPI (/api/install), prints the URL.
+It stands in for both consoles: a PS5 (etaHEN) and a PS4 (GoldHEN) reach the same ports here.
+  Install tab : port 12800 -> mimics etaHEN (/upload) and the Remote Package Installer (/api/install),
+                prints the URL. On a PS5 the installer is etaHEN's; on a PS4 it is flatz's RPI app.
                 When the URL comes from "Install from this phone" (the phone's own file server), this fake
-                console downloads it like a PS5 would (HEAD, a few byte ranges, then the whole file, up to
+                console downloads it like a console would (HEAD, a few byte ranges, then the whole file, up to
                 64 MB; set FAKE_PS5_FULL=1 for no limit) and prints the result: "self-test PASSED".
-  Payload tab : port 9021  -> saves received bytes to ~/fake_ps5/payloads/
+  Payload tab : port 9021 (PS5 etaHEN) and port 9090 (PS4 GoldHEN) -> saves received bytes to
+                ~/fake_ps5/payloads/. The loader port on the console card decides which one the app uses.
   Upload tab  : port 2121  -> user "anonymous", empty password, remote folder /data
                               files land in ~/fake_ps5/ftp/data/
   Files tab   : same FTP server (2121). A few sample folders and files are created in
@@ -222,9 +225,10 @@ def main():
     threading.Thread(
         target=HTTPServer(("0.0.0.0", 12800), InstallHandler).serve_forever, daemon=True
     ).start()
-    threading.Thread(
-        target=ReusableTCPServer(("0.0.0.0", 9021), PayloadHandler).serve_forever, daemon=True
-    ).start()
+    for loader_port in (9021, 9090):  # 9021 is the PS5's etaHEN loader, 9090 the PS4's GoldHEN loader
+        threading.Thread(
+            target=ReusableTCPServer(("0.0.0.0", loader_port), PayloadHandler).serve_forever, daemon=True
+        ).start()
 
     class QuietChecks(logging.Filter):
         """Hides the connect/disconnect lines of the app's status lights (they never log in)."""
@@ -238,7 +242,7 @@ def main():
     authorizer.add_anonymous(f"{BASE}/ftp", perm="elradfmwMT")
     handler = FTPHandler
     handler.authorizer = authorizer
-    print("Fake console running: install 12800, payload 9021, ftp 2121. Ctrl+C to stop.", flush=True)
+    print("Fake console running: install 12800, payload 9021/9090, ftp 2121. Ctrl+C to stop.", flush=True)
     FTPServer(("0.0.0.0", 2121), handler).serve_forever()
 
 

@@ -33,14 +33,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">Atur alamat IP PS5 Anda</string>
+    <string name="status_set_ip">Atur alamat IP %1$s Anda</string>
     <string name="status_checking">Memeriksa…</string>
     <string name="status_ready">Siap</string>
     <string name="status_partly">Sebagian siap</string>
     <string name="status_partly_off">Sebagian siap · tidak merespons: %1$s</string>
     <string name="status_offline">Tidak dapat terhubung ke konsol</string>
     <string name="status_hint_unset">Temukan di PS5 pada Pengaturan &gt; Jaringan &gt; Status Koneksi &gt; Lihat Status Koneksi. Ketuk di sini untuk memasukkannya.</string>
-    <string name="status_hint_offline">Tidak ada yang merespons di alamat ini. Periksa alamat IP, pastikan PS5 menyala dan berada di jaringan Wi-Fi yang sama, serta etaHEN berjalan.</string>
+    <string name="status_hint_unset_ps4">Temukan di PS4 pada Pengaturan &gt; Jaringan &gt; Lihat Status Koneksi. Ketuk di sini untuk memasukkannya.</string>
+    <string name="status_hint_offline">Tidak ada yang merespons di alamat ini. Periksa alamat IP, pastikan %1$s menyala dan berada di jaringan Wi-Fi yang sama, serta %2$s berjalan.</string>
     <string name="status_hint_one">Tidak merespons: %1$s. Jalankan layanan itu di konsol atau periksa port-nya.</string>
     <string name="status_hint_many">Tidak merespons: %1$s. Jalankan layanan tersebut di konsol atau periksa port masing-masing.</string>
     <string name="console_switch">Ganti konsol</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">Alamat IP konsol</string>
     <string name="console_ip_label">Alamat IP</string>
     <string name="console_ip_help">Temukan di PS5 pada Pengaturan &gt; Jaringan &gt; Status Koneksi &gt; Lihat Status Koneksi.</string>
+    <string name="console_ip_help_ps4">Temukan di PS4 pada Pengaturan &gt; Jaringan &gt; Lihat Status Koneksi.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">Transfer</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">Transfer yang menunggu</string>
     <string name="queue_clear">Keluarkan semua</string>
     <string name="queue_empty">Tidak ada yang menunggu.</string>
-    <string name="notif_channel">Transfer PS5</string>
+    <string name="notif_channel">Transfer PS4/PS5</string>
     <string name="notif_sent">Terkirim: %1$s</string>
     <string name="notif_received">Diterima: %1$s</string>
     <string name="percent_value">%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">Ditambahkan ke antrean. %1$d menunggu.</string>
     <string name="msg_set_ip_first">Atur alamat IP konsol terlebih dahulu. Ketuk kartu di bagian atas.</string>
-    <string name="msg_sending_link">Mengirim tautan ke PS5…</string>
+    <string name="msg_sending_link">Mengirim tautan ke %1$s…</string>
     <string name="msg_check_ip_ftp">Periksa alamat IP konsol dan port FTP.</string>
     <string name="msg_adding_to_shelf_link">Menambahkan ke pustaka payload…</string>
     <string name="status_idle">Siaga</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">Tinggalkan situs ini?</string>
     <string name="offsite_text">Halaman ingin membuka %1$s. Iklan sering memicu hal ini saat Anda mengetuk tautan, jadi lanjutkan hanya jika Anda memang mengharapkannya.</string>
-    <string name="choose_install">Kirim tautan ke Installer PS5</string>
-    <string name="choose_ftp">Unggah ke PS5 (FTP)</string>
+    <string name="choose_install">Kirim tautan ke Installer %1$s</string>
+    <string name="choose_ftp">Unggah ke %1$s (FTP)</string>
     <string name="choose_shelf">Simpan ke pustaka payload</string>
     <string name="choose_phone">Simpan ke ponsel</string>
     <string name="choose_help">Installer membutuhkan tautan paket langsung yang dapat dibuka konsol tanpa login. FTP berfungsi untuk file apa pun dan mempertahankan sesi login Anda. Ponsel meneruskan data di latar belakang, dengan kemajuan ditampilkan di atas bilah bawah dan dalam notifikasi. Pustaka payload menyimpan payload kecil (hingga %1$s) di dalam aplikasi untuk tab Payload.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Port Installer (etaHEN: 12800)</string>
+    <string name="install_port_label">Port Installer (%1$s: 12800)</string>
     <string name="install_accepted">Installer menerimanya: %1$s</string>
     <string name="install_not_accepted">Tidak diterima (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">Gagal: %1$s</string>
     <string name="ftp_port_hint">Tidak dapat terhubung ke server FTP. Periksa IP konsol dan port FTP (FTP bawaan etaHEN memakai 1337, payload FTP memakai 2121).</string>
+    <string name="ftp_port_hint_ps4">Tidak dapat terhubung ke server FTP. Periksa IP konsol dan port FTP (FTP GoldHEN memakai 2121).</string>
     <string name="err_login">Login FTP gagal</string>
     <string name="err_cant_open">tidak dapat membuka %1$s (%2$s)</string>
     <string name="err_rename">penggantian nama gagal (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">Hanya %1$s dari %2$s yang sampai.</string>
     <string name="err_empty_file">File kosong</string>
     <string name="err_save">Tidak dapat menyimpan %1$s</string>
-    <string name="sent_to_ps5">Terkirim ke PS5: %1$s</string>
-    <string name="saved_to_downloads">Disimpan di Downloads/PS5: %1$s</string>
+    <string name="sent_to_ps5">Terkirim ke %2$s: %1$s</string>
+    <string name="saved_to_downloads">Disimpan di Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Unduhan gagal: HTTP %1$s</string>
     <string name="dl_empty">Unduhan gagal: respons kosong</string>
     <string name="dl_cut_short">Koneksi ditutup sebelum seluruh file sampai.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">Payload akan dihapus dari pustaka. File asli di ponsel Anda tidak tersentuh.</string>
     <string name="payload_loader_port">Port Loader</string>
     <string name="payload_shelf_title">Pustaka payload</string>
-    <string name="payload_shelf_empty">Belum ada yang disimpan. Tambahkan payload yang sering Anda pakai (server FTP, etaHEN, ...) dan kirim masing-masing dengan satu ketukan. Anda juga dapat menyimpannya langsung dari tab Web saat mengunduhnya.</string>
+    <string name="payload_shelf_empty">Belum ada yang disimpan. Tambahkan payload yang sering Anda pakai (server FTP, %1$s, ...) dan kirim masing-masing dengan satu ketukan. Anda juga dapat menyimpannya langsung dari tab Web saat mengunduhnya.</string>
     <string name="payload_sending">Mengirim %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Tambahkan payload ke pustaka</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Kirim payload</string>
 
     <!-- consoles -->
-    <string name="profile_default">PS5 saya</string>
+    <string name="profile_default">%1$s saya</string>
     <string name="profile_new">Konsol %1$d</string>
     <string name="profile_fallback">Konsol</string>
     <string name="consoles_title">Konsol</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">Alamat IP dan port yang tersimpan akan dihapus. Konsol Anda yang lain tidak terpengaruh.</string>
     <string name="console_no_ip">belum ada alamat IP</string>
     <string name="console_color_of">Warna untuk %1$s</string>
+    <string name="console_type_of">Jenis konsol untuk %1$s</string>
     <string name="console_use_color">Gunakan %1$s</string>
     <string name="console_add">Tambah konsol</string>
     <string name="language_button">Bahasa</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">Disalin</string>
     <string name="help_unreachable_title">Konsol tidak dapat dijangkau</string>
     <string name="help_unreachable_what">Tidak ada yang menjawab di alamat konsol.</string>
-    <string name="help_unreachable_try">• Periksa alamat IP di PS5 (Pengaturan &gt; Jaringan &gt; Status Koneksi). Alamat ini bisa berubah setelah dimulai ulang.\n• Bangunkan konsol sepenuhnya. Mode istirahat sering mematikan jaringan.\n• Gunakan Wi-Fi yang sama di keduanya. Jaringan tamu dan VPN memblokirnya.</string>
+    <string name="help_unreachable_try">• Periksa alamat IP di %1$s (Pengaturan &gt; Jaringan &gt; Status Koneksi). Alamat ini bisa berubah setelah dimulai ulang.\n• Bangunkan konsol sepenuhnya. Mode istirahat sering mematikan jaringan.\n• Gunakan Wi-Fi yang sama di keduanya. Jaringan tamu dan VPN memblokirnya.</string>
     <string name="help_port_title">Layanan itu tidak berjalan</string>
     <string name="help_port_what">Konsol menjawab, tetapi tidak ada yang mendengarkan di port itu.</string>
     <string name="help_port_try">• Jalankan etaHEN di konsol. Ia menyediakan Installer (12800), Loader (9021), dan FTP (1337).\n• Payload FTP terpisah biasanya memakai 2121. Masukkan port yang sama di sini.\n• Pada kartu konsol, lampu yang mati menunjukkan apa yang kurang.</string>
+    <string name="help_port_try_ps4">• Jalankan GoldHEN di konsol. Ia menyediakan Loader (9090) dan FTP (2121).\n• Untuk memasang paket, jalankan juga Remote Package Installer buatan flatz di konsol (12800).\n• Pada kartu konsol, lampu yang mati menunjukkan apa yang kurang.</string>
     <string name="help_login_title">Login FTP ditolak</string>
     <string name="help_login_what">Server FTP konsol menolak nama pengguna atau kata sandi.</string>
-    <string name="help_login_try">• etaHEN menerima nama pengguna anonymous dengan kata sandi apa pun.\n• Jika Anda mengatur login di konsol, masukkan di Unggah.\n• Kata sandi tidak disimpan. Masukkan lagi setelah aplikasi dimulai ulang.</string>
+    <string name="help_login_try">• %2$s menerima nama pengguna anonymous dengan kata sandi apa pun.\n• Jika Anda mengatur login di konsol, masukkan di Unggah.\n• Kata sandi tidak disimpan. Masukkan lagi setelah aplikasi dimulai ulang.</string>
     <string name="help_dropped_title">Koneksi terputus</string>
     <string name="help_dropped_what">Tautan ke konsol terputus atau data berhenti mengalir. Aplikasi mencoba lagi dan melanjutkan dari titik terhenti.</string>
     <string name="help_dropped_try">• Dekatkan ponsel ke router dan jaga konsol tetap aktif.\n• Jeda unduhan besar lainnya di jaringan.\n• Jika terus gagal, tunggu sebentar lalu ketuk Coba lagi.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">Pemeriksaan ini menanyakan rilis terbaru ke GitHub, paling banyak sekali sehari. Tidak ada informasi tentang Anda atau konsol Anda yang dikirim; GitHub melihat alamat IP Anda, seperti situs web mana pun.</string>
 
     <!-- find my console -->
-    <string name="find_button">Temukan PS5 saya</string>
+    <string name="find_button">Temukan %1$s saya</string>
     <string name="find_scanning">Mencari konsol di jaringan %1$s…</string>
     <string name="find_again">Pindai lagi</string>
     <string name="find_none">Tidak ada konsol yang ditemukan.</string>
-    <string name="find_none_try">• Nyalakan konsol sepenuhnya (bukan mode istirahat) dan jalankan etaHEN.\n• Gunakan Wi-Fi yang sama di ponsel dan konsol. Jaringan tamu dan VPN memisahkan perangkat satu sama lain.\n• Lalu pindai lagi.</string>
+    <string name="find_none_try">• Nyalakan konsol sepenuhnya (bukan mode istirahat) dan jalankan %1$s.\n• Gunakan Wi-Fi yang sama di ponsel dan konsol. Jaringan tamu dan VPN memisahkan perangkat satu sama lain.\n• Lalu pindai lagi.</string>
     <string name="find_no_wifi">Ponsel ini tidak terhubung ke jaringan Wi-Fi. Hubungkan ke Wi-Fi yang sama dengan konsol, lalu pindai lagi.</string>
     <string name="find_pick">Ketuk Gunakan untuk mengatur alamat %1$s.</string>
     <string name="find_saved">Alamat tersimpan</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">Memeriksa folder…</string>
     <string name="files_dl_confirm_title">Unduh ke ponsel?</string>
-    <string name="files_dl_confirm_text">File: %1$d, totalnya %2$s. File disimpan di Downloads/PS5, dalam folder yang sama seperti di konsol.</string>
+    <string name="files_dl_confirm_text">File: %1$d, totalnya %2$s. File disimpan di Downloads/%3$s, dalam folder yang sama seperti di konsol.</string>
     <string name="files_dl_links">Tautan di dalam folder tidak diunduh: %1$d.</string>
     <string name="files_dl_truncated">File yang diambil: %1$d. Folder berisi lebih banyak dari itu, atau lebih dalam daripada yang diikuti aplikasi.</string>
     <string name="files_dl_none">Tidak ada file untuk diunduh dalam pilihan ini.</string>

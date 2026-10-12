@@ -36,14 +36,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">Set your PS5\'s IP address</string>
+    <string name="status_set_ip">Set your %1$s\'s IP address</string>
     <string name="status_checking">Checking…</string>
     <string name="status_ready">Ready</string>
     <string name="status_partly">Partly ready</string>
     <string name="status_partly_off">Partly ready · off: %1$s</string>
     <string name="status_offline">Can\'t reach the console</string>
     <string name="status_hint_unset">Find it on the PS5 under Settings &gt; Network &gt; Connection Status &gt; View Connection Status. Tap here to enter it.</string>
-    <string name="status_hint_offline">Nothing answers at this address. Check the IP, that the PS5 is awake on the same Wi-Fi, and that etaHEN is running.</string>
+    <string name="status_hint_unset_ps4">Find it on the PS4 under Settings &gt; Network &gt; View Connection Status. Tap here to enter it.</string>
+    <string name="status_hint_offline">Nothing answers at this address. Check the IP, that the %1$s is awake on the same Wi-Fi, and that %2$s is running.</string>
     <string name="status_hint_one">Not answering: %1$s. Start it on the console, or check its port.</string>
     <string name="status_hint_many">Not answering: %1$s. Start them on the console, or check their ports.</string>
     <string name="console_switch">Switch console</string>
@@ -51,6 +52,7 @@
     <string name="console_ip_title">Console IP address</string>
     <string name="console_ip_label">IP address</string>
     <string name="console_ip_help">Find it on the PS5 under Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+    <string name="console_ip_help_ps4">Find it on the PS4 under Settings &gt; Network &gt; View Connection Status.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">Transfer</string>
@@ -70,7 +72,7 @@
     <string name="queue_title">Waiting transfers</string>
     <string name="queue_clear">Clear all</string>
     <string name="queue_empty">Nothing is waiting.</string>
-    <string name="notif_channel">PS5 transfers</string>
+    <string name="notif_channel">PS4/PS5 transfers</string>
     <string name="notif_sent">%1$s sent</string>
     <string name="notif_received">%1$s received</string>
     <string name="percent_value">%1$d%%</string>
@@ -81,7 +83,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">Added to the queue. %1$d waiting.</string>
     <string name="msg_set_ip_first">Set the console\'s IP address first. Tap the card at the top.</string>
-    <string name="msg_sending_link">Sending link to PS5…</string>
+    <string name="msg_sending_link">Sending link to %1$s…</string>
     <string name="msg_check_ip_ftp">Check the console\'s IP address and the FTP port.</string>
     <string name="msg_adding_to_shelf_link">Adding to the payload shelf…</string>
     <string name="status_idle">Idle</string>
@@ -90,14 +92,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">Leave this site?</string>
     <string name="offsite_text">The page wants to open %1$s. Ads often trigger this when you tap a link, so only continue if you expected it.</string>
-    <string name="choose_install">Send link to PS5 installer</string>
-    <string name="choose_ftp">Upload to PS5 (FTP)</string>
+    <string name="choose_install">Send link to %1$s installer</string>
+    <string name="choose_ftp">Upload to %1$s (FTP)</string>
     <string name="choose_shelf">Save to payload shelf</string>
     <string name="choose_phone">Save to phone</string>
     <string name="choose_help">The installer needs a direct package link the console can open without logging in. FTP works for any file and keeps your login session. The phone relays the data in the background, with progress above the bottom bar and in a notification. The payload shelf keeps a small payload (up to %1$s) inside the app for the Payload tab.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Installer port (etaHEN: 12800)</string>
+    <string name="install_port_label">Installer port (%1$s: 12800)</string>
     <string name="install_accepted">Installer accepted it: %1$s</string>
     <string name="install_not_accepted">Not accepted (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -167,6 +169,7 @@
     <!-- results and errors -->
     <string name="err_failed">Failed: %1$s</string>
     <string name="ftp_port_hint">Can\'t reach the FTP server. Check the console IP and the FTP port (etaHEN\'s built-in FTP uses 1337, the FTP payload uses 2121).</string>
+    <string name="ftp_port_hint_ps4">Can\'t reach the FTP server. Check the console IP and the FTP port (GoldHEN\'s FTP uses 2121).</string>
     <string name="err_login">FTP login failed</string>
     <string name="err_cant_open">can\'t open %1$s (%2$s)</string>
     <string name="err_rename">rename failed (%1$s)</string>
@@ -183,8 +186,8 @@
     <string name="err_short_download">Only %1$s of %2$s arrived.</string>
     <string name="err_empty_file">The file is empty</string>
     <string name="err_save">Couldn\'t save %1$s</string>
-    <string name="sent_to_ps5">Sent to PS5: %1$s</string>
-    <string name="saved_to_downloads">Saved to Downloads/PS5: %1$s</string>
+    <string name="sent_to_ps5">Sent to %2$s: %1$s</string>
+    <string name="saved_to_downloads">Saved to Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Download failed: HTTP %1$s</string>
     <string name="dl_empty">Download failed: empty response</string>
     <string name="dl_cut_short">The connection closed before the whole file arrived.</string>
@@ -202,7 +205,7 @@
     <string name="payload_remove_text">It is deleted from the shelf. The original file on your phone isn\'t touched.</string>
     <string name="payload_loader_port">Loader port</string>
     <string name="payload_shelf_title">Payload shelf</string>
-    <string name="payload_shelf_empty">Nothing saved yet. Add the payloads you use often (an FTP server, etaHEN, ...) and send each with one tap. You can also save one straight from the Web tab when you download it.</string>
+    <string name="payload_shelf_empty">Nothing saved yet. Add the payloads you use often (an FTP server, %1$s, ...) and send each with one tap. You can also save one straight from the Web tab when you download it.</string>
     <string name="payload_sending">Sending %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Add payload to shelf</string>
@@ -211,7 +214,7 @@
     <string name="payload_send">Send payload</string>
 
     <!-- consoles -->
-    <string name="profile_default">My PS5</string>
+    <string name="profile_default">My %1$s</string>
     <string name="profile_new">Console %1$d</string>
     <string name="profile_fallback">Console</string>
     <string name="consoles_title">Consoles</string>
@@ -221,6 +224,7 @@
     <string name="console_delete_text">Its saved IP address and ports are removed. Your other consoles are not affected.</string>
     <string name="console_no_ip">no IP address yet</string>
     <string name="console_color_of">Color of %1$s</string>
+    <string name="console_type_of">Console type of %1$s</string>
     <string name="console_use_color">Use %1$s</string>
     <string name="console_add">Add console</string>
     <string name="language_button">Language</string>
@@ -262,13 +266,14 @@
     <string name="help_copied">Copied</string>
     <string name="help_unreachable_title">Can\'t reach the console</string>
     <string name="help_unreachable_what">Nothing answers at the console\'s address.</string>
-    <string name="help_unreachable_try">• Check the IP address on the PS5 (Settings &gt; Network &gt; Connection Status). It can change after a restart.\n• Wake the console fully. Rest mode often turns the network off.\n• Use the same Wi-Fi on both. Guest networks and VPNs block it.</string>
+    <string name="help_unreachable_try">• Check the IP address on the %1$s (Settings &gt; Network &gt; Connection Status). It can change after a restart.\n• Wake the console fully. Rest mode often turns the network off.\n• Use the same Wi-Fi on both. Guest networks and VPNs block it.</string>
     <string name="help_port_title">That service isn\'t running</string>
     <string name="help_port_what">The console answered, but nothing listens on that port.</string>
     <string name="help_port_try">• Start etaHEN on the console. It provides the installer (12800), the loader (9021) and FTP (1337).\n• A separate FTP payload usually uses 2121. Enter the same port here.\n• On the console card, the light that is off shows what is missing.</string>
+    <string name="help_port_try_ps4">• Start GoldHEN on the console. It provides the loader (9090) and FTP (2121).\n• To install packages, also run flatz\'s Remote Package Installer on the console (12800).\n• On the console card, the light that is off shows what is missing.</string>
     <string name="help_login_title">FTP login refused</string>
     <string name="help_login_what">The console\'s FTP server rejected the user name or password.</string>
-    <string name="help_login_try">• etaHEN accepts the user name anonymous with any password.\n• If you set a login on the console, enter it under Upload.\n• The password isn\'t saved. Enter it again after restarting the app.</string>
+    <string name="help_login_try">• %2$s accepts the user name anonymous with any password.\n• If you set a login on the console, enter it under Upload.\n• The password isn\'t saved. Enter it again after restarting the app.</string>
     <string name="help_dropped_title">The connection dropped</string>
     <string name="help_dropped_what">The link to the console broke or stopped moving data. The app retries and continues where it stopped.</string>
     <string name="help_dropped_try">• Keep the phone near the router and the console awake.\n• Pause other big downloads on the network.\n• If it keeps failing, wait a moment and tap Try again.</string>
@@ -300,11 +305,11 @@
     <string name="update_privacy">The check asks GitHub for the newest release, at most once a day. Nothing about you or your consoles is sent; GitHub sees your IP address, as any website does.</string>
 
     <!-- find my console -->
-    <string name="find_button">Find my PS5</string>
+    <string name="find_button">Find my %1$s</string>
     <string name="find_scanning">Looking for your console on %1$s…</string>
     <string name="find_again">Scan again</string>
     <string name="find_none">No console found.</string>
-    <string name="find_none_try">• Turn the console fully on (not rest mode) and start etaHEN.\n• Use the same Wi-Fi on the phone and the console. Guest networks and VPNs keep devices apart.\n• Then scan again.</string>
+    <string name="find_none_try">• Turn the console fully on (not rest mode) and start %1$s.\n• Use the same Wi-Fi on the phone and the console. Guest networks and VPNs keep devices apart.\n• Then scan again.</string>
     <string name="find_no_wifi">This phone isn\'t on a Wi-Fi network. Connect it to the same Wi-Fi as the console, then scan again.</string>
     <string name="find_pick">Tap Use to set the address of %1$s.</string>
     <string name="find_saved">Saved address</string>
@@ -412,7 +417,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">Looking through the folders…</string>
     <string name="files_dl_confirm_title">Download to phone?</string>
-    <string name="files_dl_confirm_text">Files: %1$d, together %2$s. They are saved in Downloads/PS5, in the same folders as on the console.</string>
+    <string name="files_dl_confirm_text">Files: %1$d, together %2$s. They are saved in Downloads/%3$s, in the same folders as on the console.</string>
     <string name="files_dl_links">Links inside folders are not downloaded: %1$d.</string>
     <string name="files_dl_truncated">Files taken: %1$d. The folders hold more than that, or go deeper than the app follows.</string>
     <string name="files_dl_none">There is no file to download in the selection.</string>

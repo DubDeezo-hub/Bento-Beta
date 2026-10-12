@@ -33,14 +33,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">Nustatykite PS5 IP adresą</string>
+    <string name="status_set_ip">Nustatykite %1$s IP adresą</string>
     <string name="status_checking">Tikrinama…</string>
     <string name="status_ready">Paruošta</string>
     <string name="status_partly">Iš dalies paruošta</string>
     <string name="status_partly_off">Iš dalies paruošta · neatsako: %1$s</string>
     <string name="status_offline">Nepavyksta pasiekti konsolės</string>
     <string name="status_hint_unset">Rasite jį PS5 skiltyje Settings &gt; Network &gt; Connection Status &gt; View Connection Status. Palieskite čia, kad įvestumėte.</string>
-    <string name="status_hint_offline">Šiuo adresu niekas neatsako. Patikrinkite IP adresą, ar konsolė įjungta ir prijungta prie to paties Wi-Fi tinklo, ir ar veikia etaHEN.</string>
+    <string name="status_hint_unset_ps4">Rasite jį PS4 skiltyje Settings &gt; Network &gt; View Connection Status. Palieskite čia, kad įvestumėte.</string>
+    <string name="status_hint_offline">Šiuo adresu niekas neatsako. Patikrinkite IP adresą, ar %1$s įjungta ir prijungta prie to paties Wi-Fi tinklo, ir ar veikia %2$s.</string>
     <string name="status_hint_one">Neatsako: %1$s. Paleiskite šią paslaugą konsolėje arba patikrinkite jos prievadą.</string>
     <string name="status_hint_many">Neatsako: %1$s. Paleiskite šias paslaugas konsolėje arba patikrinkite jų prievadus.</string>
     <string name="console_switch">Perjungti konsolę</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">Konsolės IP adresas</string>
     <string name="console_ip_label">IP adresas</string>
     <string name="console_ip_help">Rasite jį PS5 skiltyje Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+    <string name="console_ip_help_ps4">Rasite jį PS4 skiltyje Settings &gt; Network &gt; View Connection Status.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">Perkėlimas</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">Perkėlimai eilėje</string>
     <string name="queue_clear">Pašalinti viską</string>
     <string name="queue_empty">Eilėje nieko nėra.</string>
-    <string name="notif_channel">PS5 perkėlimai</string>
+    <string name="notif_channel">PS4/PS5 perkėlimai</string>
     <string name="notif_sent">Išsiųsta: %1$s</string>
     <string name="notif_received">Gauta: %1$s</string>
     <string name="percent_value">%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">Įtraukta į eilę. Eilėje: %1$d.</string>
     <string name="msg_set_ip_first">Pirmiausia nustatykite konsolės IP adresą. Palieskite viršuje esančią kortelę.</string>
-    <string name="msg_sending_link">Siunčiama nuoroda į PS5…</string>
+    <string name="msg_sending_link">Siunčiama nuoroda į %1$s…</string>
     <string name="msg_check_ip_ftp">Patikrinkite konsolės IP adresą ir FTP prievadą.</string>
     <string name="msg_adding_to_shelf_link">Pridedama į payload biblioteką…</string>
     <string name="status_idle">Neveikia</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">Palikti šią svetainę?</string>
     <string name="offsite_text">Puslapis nori atidaryti %1$s. Dažnai tai sukelia skelbimai, kai paliečiate nuorodą, todėl tęskite tik jei to tikėjotės.</string>
-    <string name="choose_install">Siųsti nuorodą į PS5 Installer</string>
-    <string name="choose_ftp">Įkelti į PS5 (FTP)</string>
+    <string name="choose_install">Siųsti nuorodą į %1$s Installer</string>
+    <string name="choose_ftp">Įkelti į %1$s (FTP)</string>
     <string name="choose_shelf">Išsaugoti payload bibliotekoje</string>
     <string name="choose_phone">Išsaugoti telefone</string>
     <string name="choose_help">Installer reikia tiesioginės paketo nuorodos, kurią konsolė gali atidaryti neprisijungusi. FTP veikia su bet kuriuo failu ir išlaiko jūsų prisijungimo seansą. Telefonas perduoda duomenis fone, o eiga rodoma virš apatinės juostos ir pranešime. Payload biblioteka programoje saugo nedidelį payload (iki %1$s) kortelei Payload.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Installer prievadas (etaHEN: 12800)</string>
+    <string name="install_port_label">Installer prievadas (%1$s: 12800)</string>
     <string name="install_accepted">Installer jį priėmė: %1$s</string>
     <string name="install_not_accepted">Nepriimta (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">Nepavyko: %1$s</string>
     <string name="ftp_port_hint">Nepavyksta pasiekti FTP serverio. Patikrinkite konsolės IP ir FTP prievadą (integruotas etaHEN FTP naudoja 1337, FTP payload naudoja 2121).</string>
+    <string name="ftp_port_hint_ps4">Nepavyksta pasiekti FTP serverio. Patikrinkite konsolės IP ir FTP prievadą (GoldHEN FTP naudoja 2121).</string>
     <string name="err_login">Nepavyko prisijungti prie FTP</string>
     <string name="err_cant_open">nepavyksta atidaryti %1$s (%2$s)</string>
     <string name="err_rename">nepavyko pervardyti (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">Atkeliavo tik %1$s iš %2$s.</string>
     <string name="err_empty_file">Failas tuščias</string>
     <string name="err_save">Nepavyko išsaugoti %1$s</string>
-    <string name="sent_to_ps5">Išsiųsta į PS5: %1$s</string>
-    <string name="saved_to_downloads">Išsaugota aplanke Downloads/PS5: %1$s</string>
+    <string name="sent_to_ps5">Išsiųsta į %2$s: %1$s</string>
+    <string name="saved_to_downloads">Išsaugota aplanke Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Atsisiuntimas nepavyko: HTTP %1$s</string>
     <string name="dl_empty">Atsisiuntimas nepavyko: tuščias atsakymas</string>
     <string name="dl_cut_short">Ryšys buvo uždarytas dar neatkeliavus visam failui.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">Jis bus ištrintas iš bibliotekos. Originalus failas jūsų telefone nebus paliestas.</string>
     <string name="payload_loader_port">Loader prievadas</string>
     <string name="payload_shelf_title">Payload biblioteka</string>
-    <string name="payload_shelf_empty">Dar nieko neišsaugota. Pridėkite dažnai naudojamus payload (FTP serverį, etaHEN, ...) ir siųskite kiekvieną vienu palietimu. Taip pat galite išsaugoti tiesiai iš kortelės Naršyklė, kai jį atsisiunčiate.</string>
+    <string name="payload_shelf_empty">Dar nieko neišsaugota. Pridėkite dažnai naudojamus payload (FTP serverį, %1$s, ...) ir siųskite kiekvieną vienu palietimu. Taip pat galite išsaugoti tiesiai iš kortelės Naršyklė, kai jį atsisiunčiate.</string>
     <string name="payload_sending">Siunčiama %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Pridėti payload į biblioteką</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Siųsti payload</string>
 
     <!-- consoles -->
-    <string name="profile_default">Mano PS5</string>
+    <string name="profile_default">Mano %1$s</string>
     <string name="profile_new">Konsolė %1$d</string>
     <string name="profile_fallback">Konsolė</string>
     <string name="consoles_title">Konsolės</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">Jos išsaugotas IP adresas ir prievadai bus pašalinti. Kitoms jūsų konsolėms tai įtakos neturės.</string>
     <string name="console_no_ip">dar nėra IP adreso</string>
     <string name="console_color_of">%1$s spalva</string>
+    <string name="console_type_of">%1$s konsolės tipas</string>
     <string name="console_use_color">Naudoti %1$s</string>
     <string name="console_add">Pridėti konsolę</string>
     <string name="language_button">Kalba</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">Nukopijuota</string>
     <string name="help_unreachable_title">Nepavyksta pasiekti konsolės</string>
     <string name="help_unreachable_what">Konsolės adresu niekas neatsako.</string>
-    <string name="help_unreachable_try">• Patikrinkite IP adresą PS5 įrenginyje (Settings &gt; Network &gt; Connection Status). Jis gali pasikeisti paleidus iš naujo.\n• Visiškai pažadinkite konsolę. Ramybės režimas dažnai išjungia tinklą.\n• Abiem įrenginiams naudokite tą patį Wi-Fi. Svečių tinklai ir VPN tai blokuoja.</string>
+    <string name="help_unreachable_try">• Patikrinkite IP adresą %1$s įrenginyje (Settings &gt; Network &gt; Connection Status). Jis gali pasikeisti paleidus iš naujo.\n• Visiškai pažadinkite konsolę. Ramybės režimas dažnai išjungia tinklą.\n• Abiem įrenginiams naudokite tą patį Wi-Fi. Svečių tinklai ir VPN tai blokuoja.</string>
     <string name="help_port_title">Ši paslauga neveikia</string>
     <string name="help_port_what">Konsolė atsakė, bet tame prievade niekas neklauso.</string>
     <string name="help_port_try">• Paleiskite etaHEN konsolėje. Jis teikia Installer (12800), Loader (9021) ir FTP (1337).\n• Atskiras FTP payload paprastai naudoja 2121. Čia įveskite tą patį prievadą.\n• Konsolės kortelėje užgesusi lemputė rodo, ko trūksta.</string>
+    <string name="help_port_try_ps4">• Paleiskite GoldHEN konsolėje. Jis teikia Loader (9090) ir FTP (2121).\n• Norėdami diegti paketus, konsolėje paleiskite ir flatz Remote Package Installer (12800).\n• Konsolės kortelėje užgesusi lemputė rodo, ko trūksta.</string>
     <string name="help_login_title">FTP prisijungimas atmestas</string>
     <string name="help_login_what">Konsolės FTP serveris atmetė naudotojo vardą arba slaptažodį.</string>
-    <string name="help_login_try">• etaHEN priima naudotojo vardą anonymous su bet kokiu slaptažodžiu.\n• Jei konsolėje nustatėte prisijungimą, įveskite jį skiltyje Įkelti.\n• Slaptažodis neišsaugomas. Iš naujo paleidę programėlę, įveskite jį dar kartą.</string>
+    <string name="help_login_try">• %2$s priima naudotojo vardą anonymous su bet kokiu slaptažodžiu.\n• Jei konsolėje nustatėte prisijungimą, įveskite jį skiltyje Įkelti.\n• Slaptažodis neišsaugomas. Iš naujo paleidę programėlę, įveskite jį dar kartą.</string>
     <string name="help_dropped_title">Ryšys nutrūko</string>
     <string name="help_dropped_what">Ryšys su konsole nutrūko arba duomenys nebeperduodami. Programėlė bando dar kartą ir tęsia nuo ten, kur sustojo.</string>
     <string name="help_dropped_try">• Laikykite telefoną arti maršrutizatoriaus, o konsolę – pažadintą.\n• Pristabdykite kitus didelius atsisiuntimus tinkle.\n• Jei vis tiek nepavyksta, šiek tiek palaukite ir palieskite Bandyti dar kartą.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">Patikra paklausia GitHub apie naujausią leidimą ne dažniau kaip kartą per dieną. Nieko apie jus ar jūsų konsoles nesiunčiama; GitHub mato jūsų IP adresą, kaip ir bet kuri svetainė.</string>
 
     <!-- find my console -->
-    <string name="find_button">Rasti mano PS5</string>
+    <string name="find_button">Rasti mano %1$s</string>
     <string name="find_scanning">Ieškoma jūsų konsolės tinkle %1$s…</string>
     <string name="find_again">Skenuoti iš naujo</string>
     <string name="find_none">Konsolė nerasta.</string>
-    <string name="find_none_try">• Visiškai įjunkite konsolę (ne ramybės režimu) ir paleiskite etaHEN.\n• Telefone ir konsolėje naudokite tą patį Wi-Fi. Svečių tinklai ir VPN laiko įrenginius atskirtus.\n• Tada skenuokite iš naujo.</string>
+    <string name="find_none_try">• Visiškai įjunkite konsolę (ne ramybės režimu) ir paleiskite %1$s.\n• Telefone ir konsolėje naudokite tą patį Wi-Fi. Svečių tinklai ir VPN laiko įrenginius atskirtus.\n• Tada skenuokite iš naujo.</string>
     <string name="find_no_wifi">Šis telefonas neprijungtas prie Wi-Fi tinklo. Prijunkite jį prie to paties Wi-Fi tinklo kaip konsolę, tada skenuokite iš naujo.</string>
     <string name="find_pick">Palieskite Naudoti, kad nustatytumėte konsolės „%1$s“ adresą.</string>
     <string name="find_saved">Išsaugotas adresas</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">Peržiūrimi aplankai…</string>
     <string name="files_dl_confirm_title">Atsisiųsti į telefoną?</string>
-    <string name="files_dl_confirm_text">Failų: %1$d, iš viso %2$s. Jie išsaugomi Downloads/PS5, tuose pačiuose aplankuose kaip konsolėje.</string>
+    <string name="files_dl_confirm_text">Failų: %1$d, iš viso %2$s. Jie išsaugomi Downloads/%3$s, tuose pačiuose aplankuose kaip konsolėje.</string>
     <string name="files_dl_links">Nuorodos aplankų viduje neatsisiunčiamos: %1$d.</string>
     <string name="files_dl_truncated">Įtraukta failų: %1$d. Aplankuose jų yra daugiau arba jie sudėti giliau, nei programa seka.</string>
     <string name="files_dl_none">Pasirinkime nėra failo, kurį būtų galima atsisiųsti.</string>

@@ -33,14 +33,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">Weka anwani ya IP ya PS5 yako</string>
+    <string name="status_set_ip">Weka anwani ya IP ya %1$s yako</string>
     <string name="status_checking">Inakagua…</string>
     <string name="status_ready">Tayari</string>
     <string name="status_partly">Tayari kwa kiasi</string>
     <string name="status_partly_off">Tayari kwa kiasi · haijibu: %1$s</string>
     <string name="status_offline">Haiwezi kufikia konsoli</string>
     <string name="status_hint_unset">Ipate kwenye PS5 katika Settings &gt; Network &gt; Connection Status &gt; View Connection Status. Gusa hapa kuiingiza.</string>
-    <string name="status_hint_offline">Hakuna kinachojibu kwenye anwani hii. Angalia IP, kama konsoli imewashwa na iko kwenye Wi-Fi ileile, na kama etaHEN inafanya kazi.</string>
+    <string name="status_hint_unset_ps4">Ipate kwenye PS4 katika Settings &gt; Network &gt; View Connection Status. Gusa hapa kuiingiza.</string>
+    <string name="status_hint_offline">Hakuna kinachojibu kwenye anwani hii. Angalia IP, kama %1$s imewashwa na iko kwenye Wi-Fi ileile, na kama %2$s inafanya kazi.</string>
     <string name="status_hint_one">Haijibu: %1$s. Iwashe kwenye konsoli au angalia mlango wake.</string>
     <string name="status_hint_many">Hazijibu: %1$s. Ziwashe kwenye konsoli au angalia milango yake.</string>
     <string name="console_switch">Badilisha konsoli</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">Anwani ya IP ya konsoli</string>
     <string name="console_ip_label">Anwani ya IP</string>
     <string name="console_ip_help">Ipate kwenye PS5 katika Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+    <string name="console_ip_help_ps4">Ipate kwenye PS4 katika Settings &gt; Network &gt; View Connection Status.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">Uhamishaji</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">Uhamishaji unaosubiri</string>
     <string name="queue_clear">Ondoa zote</string>
     <string name="queue_empty">Hakuna kinachosubiri.</string>
-    <string name="notif_channel">Uhamishaji wa PS5</string>
+    <string name="notif_channel">Uhamishaji wa PS4/PS5</string>
     <string name="notif_sent">Imetumwa: %1$s</string>
     <string name="notif_received">Imepokelewa: %1$s</string>
     <string name="percent_value">%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">Imeongezwa kwenye foleni. Zinazosubiri: %1$d.</string>
     <string name="msg_set_ip_first">Weka kwanza anwani ya IP ya konsoli. Gusa kadi iliyo juu.</string>
-    <string name="msg_sending_link">Inatuma kiungo kwa PS5…</string>
+    <string name="msg_sending_link">Inatuma kiungo kwa %1$s…</string>
     <string name="msg_check_ip_ftp">Angalia anwani ya IP ya konsoli na mlango wa FTP.</string>
     <string name="msg_adding_to_shelf_link">Inaongeza kwenye maktaba ya payload…</string>
     <string name="status_idle">Hakuna shughuli</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">Kuondoka kwenye tovuti hii?</string>
     <string name="offsite_text">Ukurasa unataka kufungua %1$s. Matangazo mara nyingi husababisha hili unapogusa kiungo, kwa hiyo endelea tu kama ulilitarajia.</string>
-    <string name="choose_install">Tuma kiungo kwa Installer ya PS5</string>
-    <string name="choose_ftp">Pakia kwenye PS5 (FTP)</string>
+    <string name="choose_install">Tuma kiungo kwa Installer ya %1$s</string>
+    <string name="choose_ftp">Pakia kwenye %1$s (FTP)</string>
     <string name="choose_shelf">Hifadhi kwenye maktaba ya payload</string>
     <string name="choose_phone">Hifadhi kwenye simu</string>
     <string name="choose_help">Installer inahitaji kiungo cha moja kwa moja cha kifurushi ambacho konsoli inaweza kufungua bila kuingia kwenye akaunti. FTP inafanya kazi na faili yoyote na inahifadhi kipindi chako cha kuingia. Simu inapitisha data chinichini, na maendeleo yanaonyeshwa juu ya upau wa chini na kwenye arifa. Maktaba ya payload inahifadhi payload ndogo (hadi %1$s) ndani ya programu kwa ajili ya kichupo cha Payload.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Mlango wa Installer (etaHEN: 12800)</string>
+    <string name="install_port_label">Mlango wa Installer (%1$s: 12800)</string>
     <string name="install_accepted">Installer imekubali: %1$s</string>
     <string name="install_not_accepted">Haikukubaliwa (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">Imeshindwa: %1$s</string>
     <string name="ftp_port_hint">Haiwezi kufikia seva ya FTP. Angalia IP ya konsoli na mlango wa FTP (FTP iliyojengewa ndani ya etaHEN hutumia 1337, payload ya FTP hutumia 2121).</string>
+    <string name="ftp_port_hint_ps4">Haiwezi kufikia seva ya FTP. Angalia IP ya konsoli na mlango wa FTP (FTP ya GoldHEN hutumia 2121).</string>
     <string name="err_login">Kuingia kwenye FTP kumeshindwa</string>
     <string name="err_cant_open">imeshindwa kufungua %1$s (%2$s)</string>
     <string name="err_rename">kubadilisha jina kumeshindwa (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">Ni %1$s pekee kati ya %2$s zilizofika.</string>
     <string name="err_empty_file">Faili ni tupu</string>
     <string name="err_save">Imeshindwa kuhifadhi %1$s</string>
-    <string name="sent_to_ps5">Imetumwa kwa PS5: %1$s</string>
-    <string name="saved_to_downloads">Imehifadhiwa katika Downloads/PS5: %1$s</string>
+    <string name="sent_to_ps5">Imetumwa kwa %2$s: %1$s</string>
+    <string name="saved_to_downloads">Imehifadhiwa katika Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Upakuaji umeshindwa: HTTP %1$s</string>
     <string name="dl_empty">Upakuaji umeshindwa: jibu tupu</string>
     <string name="dl_cut_short">Muunganisho ulifungwa kabla faili lote halijafika.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">Itafutwa kwenye maktaba. Faili asili kwenye simu yako haitaguswa.</string>
     <string name="payload_loader_port">Mlango wa Loader</string>
     <string name="payload_shelf_title">Maktaba ya payload</string>
-    <string name="payload_shelf_empty">Hakuna kilichohifadhiwa bado. Ongeza payload unazotumia mara kwa mara (seva ya FTP, etaHEN, ...) na utume kila moja kwa mguso mmoja. Unaweza pia kuzihifadhi moja kwa moja kutoka kichupo cha Wavuti unapozipakua.</string>
+    <string name="payload_shelf_empty">Hakuna kilichohifadhiwa bado. Ongeza payload unazotumia mara kwa mara (seva ya FTP, %1$s, ...) na utume kila moja kwa mguso mmoja. Unaweza pia kuzihifadhi moja kwa moja kutoka kichupo cha Wavuti unapozipakua.</string>
     <string name="payload_sending">Inatuma %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Ongeza payload kwenye maktaba</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Tuma payload</string>
 
     <!-- consoles -->
-    <string name="profile_default">PS5 yangu</string>
+    <string name="profile_default">%1$s yangu</string>
     <string name="profile_new">Konsoli %1$d</string>
     <string name="profile_fallback">Konsoli</string>
     <string name="consoles_title">Konsoli</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">Anwani ya IP na milango iliyohifadhiwa ya konsoli hii vitaondolewa. Konsoli zako nyingine hazitaathiriwa.</string>
     <string name="console_no_ip">bado haina anwani ya IP</string>
     <string name="console_color_of">Rangi ya %1$s</string>
+    <string name="console_type_of">Aina ya konsoli ya %1$s</string>
     <string name="console_use_color">Tumia %1$s</string>
     <string name="console_add">Ongeza konsoli</string>
     <string name="language_button">Lugha</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">Imenakiliwa</string>
     <string name="help_unreachable_title">Haiwezekani kufikia konsoli</string>
     <string name="help_unreachable_what">Hakuna kinachojibu kwenye anwani ya konsoli.</string>
-    <string name="help_unreachable_try">• Angalia anwani ya IP kwenye PS5 (Settings &gt; Network &gt; Connection Status). Inaweza kubadilika baada ya kuwasha upya.\n• Amsha konsoli kikamilifu. Hali ya kupumzika mara nyingi huzima mtandao.\n• Tumia Wi-Fi ile ile kwenye vyote viwili. Mitandao ya wageni na VPN huizuia.</string>
+    <string name="help_unreachable_try">• Angalia anwani ya IP kwenye %1$s (Settings &gt; Network &gt; Connection Status). Inaweza kubadilika baada ya kuwasha upya.\n• Amsha konsoli kikamilifu. Hali ya kupumzika mara nyingi huzima mtandao.\n• Tumia Wi-Fi ile ile kwenye vyote viwili. Mitandao ya wageni na VPN huizuia.</string>
     <string name="help_port_title">Huduma hiyo haifanyi kazi</string>
     <string name="help_port_what">Konsoli ilijibu, lakini hakuna kinachosikiliza kwenye mlango huo.</string>
     <string name="help_port_try">• Anzisha etaHEN kwenye konsoli. Inatoa Installer (12800), Loader (9021) na FTP (1337).\n• Payload tofauti ya FTP kwa kawaida hutumia 2121. Weka mlango ule ule hapa.\n• Kwenye kadi ya konsoli, taa iliyozimwa inaonyesha kinachokosekana.</string>
+    <string name="help_port_try_ps4">• Anzisha GoldHEN kwenye konsoli. Inatoa Loader (9090) na FTP (2121).\n• Ili kusakinisha vifurushi, endesha pia Remote Package Installer ya flatz kwenye konsoli (12800).\n• Kwenye kadi ya konsoli, taa iliyozimwa inaonyesha kinachokosekana.</string>
     <string name="help_login_title">Kuingia kwa FTP kumekataliwa</string>
     <string name="help_login_what">Seva ya FTP ya konsoli ilikataa jina la mtumiaji au nenosiri.</string>
-    <string name="help_login_try">• etaHEN hukubali jina la mtumiaji anonymous na nenosiri lolote.\n• Ikiwa uliweka kuingia kwenye konsoli, liweke chini ya Pakia.\n• Nenosiri halihifadhiwi. Liweke tena baada ya kuwasha upya programu.</string>
+    <string name="help_login_try">• %2$s hukubali jina la mtumiaji anonymous na nenosiri lolote.\n• Ikiwa uliweka kuingia kwenye konsoli, liweke chini ya Pakia.\n• Nenosiri halihifadhiwi. Liweke tena baada ya kuwasha upya programu.</string>
     <string name="help_dropped_title">Muunganisho umekatika</string>
     <string name="help_dropped_what">Kiungo cha konsoli kimekatika au data imeacha kusonga. Programu hujaribu tena na kuendelea pale ilipoishia.</string>
     <string name="help_dropped_try">• Weka simu karibu na kipanga njia na konsoli iwe macho.\n• Sitisha vipakuliwa vingine vikubwa kwenye mtandao.\n• Ikiendelea kushindwa, subiri kidogo kisha gusa Jaribu tena.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">Ukaguzi huuliza GitHub kuhusu toleo jipya zaidi, mara moja kwa siku kwa kiwango cha juu. Hakuna kinachotumwa kukuhusu wewe au konsoli zako; GitHub huona anwani yako ya IP, kama tovuti yoyote.</string>
 
     <!-- find my console -->
-    <string name="find_button">Tafuta PS5 yangu</string>
+    <string name="find_button">Tafuta %1$s yangu</string>
     <string name="find_scanning">Inatafuta konsoli yako kwenye mtandao %1$s…</string>
     <string name="find_again">Changanua tena</string>
     <string name="find_none">Hakuna konsoli iliyopatikana.</string>
-    <string name="find_none_try">• Washa konsoli kikamilifu (si hali ya kupumzika) na uanzishe etaHEN.\n• Tumia Wi-Fi ileile kwenye simu na kwenye konsoli. Mitandao ya wageni na VPN hutenganisha vifaa.\n• Kisha changanua tena.</string>
+    <string name="find_none_try">• Washa konsoli kikamilifu (si hali ya kupumzika) na uanzishe %1$s.\n• Tumia Wi-Fi ileile kwenye simu na kwenye konsoli. Mitandao ya wageni na VPN hutenganisha vifaa.\n• Kisha changanua tena.</string>
     <string name="find_no_wifi">Simu hii haiko kwenye mtandao wa Wi-Fi. Iunganishe kwenye Wi-Fi ileile ya konsoli, kisha changanua tena.</string>
     <string name="find_pick">Gusa Tumia ili kuweka anwani ya konsoli “%1$s”.</string>
     <string name="find_saved">Anwani iliyohifadhiwa</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">Inapitia folda…</string>
     <string name="files_dl_confirm_title">Pakua kwenye simu?</string>
-    <string name="files_dl_confirm_text">Faili: %1$d, jumla %2$s. Zinahifadhiwa katika Downloads/PS5, katika folda zile zile kama kwenye konsoli.</string>
+    <string name="files_dl_confirm_text">Faili: %1$d, jumla %2$s. Zinahifadhiwa katika Downloads/%3$s, katika folda zile zile kama kwenye konsoli.</string>
     <string name="files_dl_links">Viungo vilivyo ndani ya folda havipakuliwi: %1$d.</string>
     <string name="files_dl_truncated">Faili zilizojumuishwa: %1$d. Folda zina zaidi ya hizo, au zinaenda ndani zaidi kuliko programu inavyofuata.</string>
     <string name="files_dl_none">Hakuna faili ya kupakua kwenye uteuzi.</string>

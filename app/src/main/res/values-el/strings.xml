@@ -33,14 +33,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">Ορίστε τη διεύθυνση IP του PS5 σας</string>
+    <string name="status_set_ip">Ορίστε τη διεύθυνση IP του %1$s σας</string>
     <string name="status_checking">Έλεγχος…</string>
     <string name="status_ready">Έτοιμο</string>
     <string name="status_partly">Εν μέρει έτοιμο</string>
     <string name="status_partly_off">Εν μέρει έτοιμο · καμία απάντηση: %1$s</string>
     <string name="status_offline">Δεν είναι δυνατή η σύνδεση με την κονσόλα</string>
     <string name="status_hint_unset">Θα τη βρείτε στο PS5 στις Ρυθμίσεις &gt; Δίκτυο &gt; Κατάσταση σύνδεσης &gt; Προβολή κατάστασης σύνδεσης. Πατήστε εδώ για να την εισαγάγετε.</string>
-    <string name="status_hint_offline">Τίποτα δεν ανταποκρίνεται σε αυτή τη διεύθυνση. Ελέγξτε τη διεύθυνση IP, αν το PS5 είναι ενεργοποιημένο και στο ίδιο δίκτυο Wi-Fi, και αν εκτελείται το etaHEN.</string>
+    <string name="status_hint_unset_ps4">Θα τη βρείτε στο PS4 στις Ρυθμίσεις &gt; Δίκτυο &gt; Προβολή κατάστασης σύνδεσης. Πατήστε εδώ για να την εισαγάγετε.</string>
+    <string name="status_hint_offline">Τίποτα δεν ανταποκρίνεται σε αυτή τη διεύθυνση. Ελέγξτε τη διεύθυνση IP, αν το %1$s είναι ενεργοποιημένο και στο ίδιο δίκτυο Wi-Fi, και αν εκτελείται το %2$s.</string>
     <string name="status_hint_one">Καμία απάντηση: %1$s. Ξεκινήστε την υπηρεσία στην κονσόλα ή ελέγξτε τη θύρα της.</string>
     <string name="status_hint_many">Καμία απάντηση: %1$s. Ξεκινήστε τις υπηρεσίες στην κονσόλα ή ελέγξτε τις θύρες τους.</string>
     <string name="console_switch">Αλλαγή κονσόλας</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">Διεύθυνση IP της κονσόλας</string>
     <string name="console_ip_label">Διεύθυνση IP</string>
     <string name="console_ip_help">Θα τη βρείτε στο PS5 στις Ρυθμίσεις &gt; Δίκτυο &gt; Κατάσταση σύνδεσης &gt; Προβολή κατάστασης σύνδεσης.</string>
+    <string name="console_ip_help_ps4">Θα τη βρείτε στο PS4 στις Ρυθμίσεις &gt; Δίκτυο &gt; Προβολή κατάστασης σύνδεσης.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">Μεταφορά</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">Μεταφορές σε αναμονή</string>
     <string name="queue_clear">Αφαίρεση όλων</string>
     <string name="queue_empty">Τίποτα δεν περιμένει.</string>
-    <string name="notif_channel">Μεταφορές PS5</string>
+    <string name="notif_channel">Μεταφορές PS4/PS5</string>
     <string name="notif_sent">Στάλθηκε: %1$s</string>
     <string name="notif_received">Ελήφθη: %1$s</string>
     <string name="percent_value">%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">Προστέθηκε στην ουρά. %1$d σε αναμονή.</string>
     <string name="msg_set_ip_first">Ορίστε πρώτα τη διεύθυνση IP της κονσόλας. Πατήστε την κάρτα στο επάνω μέρος.</string>
-    <string name="msg_sending_link">Αποστολή συνδέσμου στο PS5…</string>
+    <string name="msg_sending_link">Αποστολή συνδέσμου στο %1$s…</string>
     <string name="msg_check_ip_ftp">Ελέγξτε τη διεύθυνση IP της κονσόλας και τη θύρα FTP.</string>
     <string name="msg_adding_to_shelf_link">Προσθήκη στη βιβλιοθήκη payload…</string>
     <string name="status_idle">Αδράνεια</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">Έξοδος από αυτόν τον ιστότοπο;</string>
     <string name="offsite_text">Η σελίδα θέλει να ανοίξει το %1$s. Οι διαφημίσεις το προκαλούν συχνά όταν πατάτε έναν σύνδεσμο, οπότε συνεχίστε μόνο αν το περιμένατε.</string>
-    <string name="choose_install">Αποστολή συνδέσμου στον Installer του PS5</string>
-    <string name="choose_ftp">Αποστολή στο PS5 (FTP)</string>
+    <string name="choose_install">Αποστολή συνδέσμου στον Installer του %1$s</string>
+    <string name="choose_ftp">Αποστολή στο %1$s (FTP)</string>
     <string name="choose_shelf">Αποθήκευση στη βιβλιοθήκη payload</string>
     <string name="choose_phone">Αποθήκευση στο τηλέφωνο</string>
     <string name="choose_help">Ο Installer χρειάζεται έναν άμεσο σύνδεσμο πακέτου που η κονσόλα μπορεί να ανοίξει χωρίς σύνδεση. Το FTP λειτουργεί με οποιοδήποτε αρχείο και διατηρεί τη συνεδρία σύνδεσής σας. Το τηλέφωνο προωθεί τα δεδομένα στο παρασκήνιο, με την πρόοδο πάνω από τη γραμμή στο κάτω μέρος και σε μια ειδοποίηση. Η βιβλιοθήκη payload κρατά στην εφαρμογή ένα μικρό payload (έως %1$s) για την καρτέλα Payload.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Θύρα του Installer (etaHEN: 12800)</string>
+    <string name="install_port_label">Θύρα του Installer (%1$s: 12800)</string>
     <string name="install_accepted">Ο Installer το αποδέχτηκε: %1$s</string>
     <string name="install_not_accepted">Δεν έγινε αποδεκτό (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">Αποτυχία: %1$s</string>
     <string name="ftp_port_hint">Δεν είναι δυνατή η σύνδεση με τον διακομιστή FTP. Ελέγξτε τη διεύθυνση IP της κονσόλας και τη θύρα FTP (το ενσωματωμένο FTP του etaHEN χρησιμοποιεί το 1337, το payload FTP το 2121).</string>
+    <string name="ftp_port_hint_ps4">Δεν είναι δυνατή η σύνδεση με τον διακομιστή FTP. Ελέγξτε τη διεύθυνση IP της κονσόλας και τη θύρα FTP (το FTP του GoldHEN χρησιμοποιεί το 2121).</string>
     <string name="err_login">Η σύνδεση FTP απέτυχε</string>
     <string name="err_cant_open">αδυναμία ανοίγματος του %1$s (%2$s)</string>
     <string name="err_rename">η μετονομασία απέτυχε (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">Έφτασαν μόνο %1$s από %2$s.</string>
     <string name="err_empty_file">Το αρχείο είναι κενό</string>
     <string name="err_save">Δεν ήταν δυνατή η αποθήκευση του %1$s</string>
-    <string name="sent_to_ps5">Στάλθηκε στο PS5: %1$s</string>
-    <string name="saved_to_downloads">Αποθηκεύτηκε στο Downloads/PS5: %1$s</string>
+    <string name="sent_to_ps5">Στάλθηκε στο %2$s: %1$s</string>
+    <string name="saved_to_downloads">Αποθηκεύτηκε στο Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Η λήψη απέτυχε: HTTP %1$s</string>
     <string name="dl_empty">Η λήψη απέτυχε: κενή απάντηση</string>
     <string name="dl_cut_short">Η σύνδεση έκλεισε πριν φτάσει ολόκληρο το αρχείο.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">Διαγράφεται από τη βιβλιοθήκη. Το αρχικό αρχείο στο τηλέφωνό σας δεν επηρεάζεται.</string>
     <string name="payload_loader_port">Θύρα του Loader</string>
     <string name="payload_shelf_title">Βιβλιοθήκη payload</string>
-    <string name="payload_shelf_empty">Δεν έχει αποθηκευτεί τίποτα ακόμη. Προσθέστε τα payload που χρησιμοποιείτε συχνά (έναν διακομιστή FTP, το etaHEN, ...) και στείλτε το καθένα με ένα πάτημα. Μπορείτε επίσης να αποθηκεύσετε ένα απευθείας από την καρτέλα Web όταν το κατεβάζετε.</string>
+    <string name="payload_shelf_empty">Δεν έχει αποθηκευτεί τίποτα ακόμη. Προσθέστε τα payload που χρησιμοποιείτε συχνά (έναν διακομιστή FTP, το %1$s, ...) και στείλτε το καθένα με ένα πάτημα. Μπορείτε επίσης να αποθηκεύσετε ένα απευθείας από την καρτέλα Web όταν το κατεβάζετε.</string>
     <string name="payload_sending">Αποστολή του %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Προσθήκη payload στη βιβλιοθήκη</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Αποστολή payload</string>
 
     <!-- consoles -->
-    <string name="profile_default">Το PS5 μου</string>
+    <string name="profile_default">Το %1$s μου</string>
     <string name="profile_new">Κονσόλα %1$d</string>
     <string name="profile_fallback">Κονσόλα</string>
     <string name="consoles_title">Κονσόλες</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">Η αποθηκευμένη διεύθυνση IP και οι θύρες της αφαιρούνται. Οι άλλες κονσόλες σας δεν επηρεάζονται.</string>
     <string name="console_no_ip">δεν υπάρχει ακόμη διεύθυνση IP</string>
     <string name="console_color_of">Χρώμα για «%1$s»</string>
+    <string name="console_type_of">Τύπος κονσόλας για «%1$s»</string>
     <string name="console_use_color">Χρήση: %1$s</string>
     <string name="console_add">Προσθήκη κονσόλας</string>
     <string name="language_button">Γλώσσα</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">Αντιγράφηκε</string>
     <string name="help_unreachable_title">Δεν είναι δυνατή η σύνδεση με την κονσόλα</string>
     <string name="help_unreachable_what">Κανείς δεν απαντά στη διεύθυνση της κονσόλας.</string>
-    <string name="help_unreachable_try">• Ελέγξτε τη διεύθυνση IP στο PS5 (Ρυθμίσεις &gt; Δίκτυο &gt; Κατάσταση σύνδεσης). Μπορεί να αλλάξει μετά από επανεκκίνηση.\n• Ξυπνήστε πλήρως την κονσόλα. Η λειτουργία ανάπαυσης συχνά απενεργοποιεί το δίκτυο.\n• Χρησιμοποιήστε το ίδιο Wi-Fi και στις δύο συσκευές. Τα δίκτυα επισκεπτών και τα VPN το μπλοκάρουν.</string>
+    <string name="help_unreachable_try">• Ελέγξτε τη διεύθυνση IP στο %1$s (Ρυθμίσεις &gt; Δίκτυο &gt; Κατάσταση σύνδεσης). Μπορεί να αλλάξει μετά από επανεκκίνηση.\n• Ξυπνήστε πλήρως την κονσόλα. Η λειτουργία ανάπαυσης συχνά απενεργοποιεί το δίκτυο.\n• Χρησιμοποιήστε το ίδιο Wi-Fi και στις δύο συσκευές. Τα δίκτυα επισκεπτών και τα VPN το μπλοκάρουν.</string>
     <string name="help_port_title">Η υπηρεσία δεν εκτελείται</string>
     <string name="help_port_what">Η κονσόλα απάντησε, αλλά καμία υπηρεσία δεν ακούει σε αυτή τη θύρα.</string>
     <string name="help_port_try">• Εκκινήστε το etaHEN στην κονσόλα. Παρέχει τον Installer (12800), τον Loader (9021) και το FTP (1337).\n• Ένα ξεχωριστό FTP payload χρησιμοποιεί συνήθως το 2121. Εισαγάγετε εδώ την ίδια θύρα.\n• Στην κάρτα της κονσόλας, η φωτεινή ένδειξη που είναι σβηστή δείχνει τι λείπει.</string>
+    <string name="help_port_try_ps4">• Εκκινήστε το GoldHEN στην κονσόλα. Παρέχει τον Loader (9090) και το FTP (2121).\n• Για εγκατάσταση πακέτων, εκτελέστε επίσης στην κονσόλα το Remote Package Installer του flatz (12800).\n• Στην κάρτα της κονσόλας, η φωτεινή ένδειξη που είναι σβηστή δείχνει τι λείπει.</string>
     <string name="help_login_title">Η σύνδεση FTP απορρίφθηκε</string>
     <string name="help_login_what">Ο διακομιστής FTP της κονσόλας απέρριψε το όνομα χρήστη ή τον κωδικό πρόσβασης.</string>
-    <string name="help_login_try">• Το etaHEN δέχεται το όνομα χρήστη anonymous με οποιονδήποτε κωδικό.\n• Αν ορίσατε στοιχεία σύνδεσης στην κονσόλα, εισαγάγετέ τα στην Αποστολή.\n• Ο κωδικός δεν αποθηκεύεται. Εισαγάγετέ τον ξανά μετά την επανεκκίνηση της εφαρμογής.</string>
+    <string name="help_login_try">• Το %2$s δέχεται το όνομα χρήστη anonymous με οποιονδήποτε κωδικό.\n• Αν ορίσατε στοιχεία σύνδεσης στην κονσόλα, εισαγάγετέ τα στην Αποστολή.\n• Ο κωδικός δεν αποθηκεύεται. Εισαγάγετέ τον ξανά μετά την επανεκκίνηση της εφαρμογής.</string>
     <string name="help_dropped_title">Η σύνδεση διακόπηκε</string>
     <string name="help_dropped_what">Η σύνδεση με την κονσόλα διακόπηκε ή σταμάτησε η μεταφορά δεδομένων. Η εφαρμογή ξαναδοκιμάζει και συνεχίζει από εκεί που σταμάτησε.</string>
     <string name="help_dropped_try">• Κρατήστε το τηλέφωνο κοντά στο router και την κονσόλα ξύπνια.\n• Θέστε σε παύση άλλες μεγάλες λήψεις στο δίκτυο.\n• Αν συνεχίσει να αποτυγχάνει, περιμένετε λίγο και πατήστε Επανάληψη.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">Ο έλεγχος ρωτά το GitHub για την πιο πρόσφατη κυκλοφορία, το πολύ μία φορά την ημέρα. Δεν στέλνεται τίποτα για εσάς ή τις κονσόλες σας· το GitHub βλέπει τη διεύθυνση IP σας, όπως κάθε ιστότοπος.</string>
 
     <!-- find my console -->
-    <string name="find_button">Εύρεση του PS5 μου</string>
+    <string name="find_button">Εύρεση του %1$s μου</string>
     <string name="find_scanning">Αναζήτηση της κονσόλας σας στο δίκτυο %1$s…</string>
     <string name="find_again">Νέα σάρωση</string>
     <string name="find_none">Δεν βρέθηκε κονσόλα.</string>
-    <string name="find_none_try">• Ενεργοποιήστε πλήρως την κονσόλα (όχι σε λειτουργία ανάπαυσης) και ξεκινήστε το etaHEN.\n• Χρησιμοποιήστε το ίδιο Wi-Fi στο τηλέφωνο και στην κονσόλα. Τα δίκτυα επισκεπτών και τα VPN κρατούν τις συσκευές χωριστά.\n• Έπειτα σαρώστε ξανά.</string>
+    <string name="find_none_try">• Ενεργοποιήστε πλήρως την κονσόλα (όχι σε λειτουργία ανάπαυσης) και ξεκινήστε το %1$s.\n• Χρησιμοποιήστε το ίδιο Wi-Fi στο τηλέφωνο και στην κονσόλα. Τα δίκτυα επισκεπτών και τα VPN κρατούν τις συσκευές χωριστά.\n• Έπειτα σαρώστε ξανά.</string>
     <string name="find_no_wifi">Αυτό το τηλέφωνο δεν είναι συνδεδεμένο σε δίκτυο Wi-Fi. Συνδέστε το στο ίδιο Wi-Fi με την κονσόλα και σαρώστε ξανά.</string>
     <string name="find_pick">Πατήστε Χρήση για να ορίσετε τη διεύθυνση της κονσόλας «%1$s».</string>
     <string name="find_saved">Αποθηκευμένη διεύθυνση</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">Έλεγχος των φακέλων…</string>
     <string name="files_dl_confirm_title">Λήψη στο τηλέφωνο;</string>
-    <string name="files_dl_confirm_text">Αρχεία: %1$d, συνολικά %2$s. Αποθηκεύονται στο Downloads/PS5, στους ίδιους φακέλους όπως στην κονσόλα.</string>
+    <string name="files_dl_confirm_text">Αρχεία: %1$d, συνολικά %2$s. Αποθηκεύονται στο Downloads/%3$s, στους ίδιους φακέλους όπως στην κονσόλα.</string>
     <string name="files_dl_links">Οι σύνδεσμοι μέσα σε φακέλους δεν λαμβάνονται: %1$d.</string>
     <string name="files_dl_truncated">Αρχεία που περιλήφθηκαν: %1$d. Οι φάκελοι περιέχουν περισσότερα ή φτάνουν πιο βαθιά απ’ όσο ακολουθεί η εφαρμογή.</string>
     <string name="files_dl_none">Στην επιλογή δεν υπάρχει αρχείο για λήψη.</string>

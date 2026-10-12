@@ -144,7 +144,7 @@ class TransferService : Service() {
     private fun runTransfer(entry: QueueEntry<TransferRequest>): TransferResult {
         val req = entry.item
         val memory = TransferState.memoryFor(entry.id)
-        val settings = FtpSettings(req.host, req.port, req.user, req.pass)
+        val settings = FtpSettings(req.host, req.port, req.user, req.pass, req.model)
         return when {
             req.remotePath != null ->
                 ftpDownloadToPhone(contentResolver, req.remotePath, req.name, req.remoteSize, settings, memory, TransferState, req.dir)

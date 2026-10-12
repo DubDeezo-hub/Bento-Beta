@@ -753,7 +753,7 @@ fun ftpUpload(
     mem: ResumeMemory, hooks: TransferHooks, policy: TransferPolicy = TransferPolicy()
 ): TransferResult {
     val remote = remoteDir.trimEnd('/') + "/" + remoteName
-    val okMessage = AppText.get(R.string.sent_to_ps5, remote)
+    val okMessage = AppText.get(R.string.sent_to_ps5, remote, s.model)
     val cancelMessage = AppText.get(R.string.err_cancelled_upload, remote)
     return runWithRetries(hooks, policy, mem, cancelMessage) { h, resume ->
         runFtpAttempt(h, policy, okMessage, cancelMessage, { source.abort() }) { session, watchdog ->

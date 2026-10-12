@@ -33,14 +33,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">ตั้งค่าที่อยู่ IP ของ PS5</string>
+    <string name="status_set_ip">ตั้งค่าที่อยู่ IP ของ %1$s</string>
     <string name="status_checking">กำลังตรวจสอบ…</string>
     <string name="status_ready">พร้อมใช้งาน</string>
     <string name="status_partly">พร้อมบางส่วน</string>
     <string name="status_partly_off">พร้อมบางส่วน · ไม่ตอบสนอง: %1$s</string>
     <string name="status_offline">เชื่อมต่อกับคอนโซลไม่ได้</string>
     <string name="status_hint_unset">ดูได้ที่ PS5 ในการตั้งค่า &gt; เครือข่าย &gt; สถานะการเชื่อมต่อ &gt; ดูสถานะการเชื่อมต่อ แตะที่นี่เพื่อป้อน</string>
-    <string name="status_hint_offline">ไม่มีการตอบสนองที่ที่อยู่นี้ ตรวจสอบที่อยู่ IP ว่า PS5 เปิดอยู่และอยู่ในเครือข่าย Wi-Fi เดียวกัน และ etaHEN ทำงานอยู่</string>
+    <string name="status_hint_unset_ps4">ดูได้ที่ PS4 ในการตั้งค่า &gt; เครือข่าย &gt; ดูสถานะการเชื่อมต่อ แตะที่นี่เพื่อป้อน</string>
+    <string name="status_hint_offline">ไม่มีการตอบสนองที่ที่อยู่นี้ ตรวจสอบที่อยู่ IP ว่า %1$s เปิดอยู่และอยู่ในเครือข่าย Wi-Fi เดียวกัน และ %2$s ทำงานอยู่</string>
     <string name="status_hint_one">ไม่ตอบสนอง: %1$s เริ่มบริการนี้บนคอนโซล หรือตรวจสอบพอร์ตของบริการ</string>
     <string name="status_hint_many">ไม่ตอบสนอง: %1$s เริ่มบริการเหล่านี้บนคอนโซล หรือตรวจสอบพอร์ตของบริการ</string>
     <string name="console_switch">สลับคอนโซล</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">ที่อยู่ IP ของคอนโซล</string>
     <string name="console_ip_label">ที่อยู่ IP</string>
     <string name="console_ip_help">ดูได้ที่ PS5 ในการตั้งค่า &gt; เครือข่าย &gt; สถานะการเชื่อมต่อ &gt; ดูสถานะการเชื่อมต่อ</string>
+    <string name="console_ip_help_ps4">ดูได้ที่ PS4 ในการตั้งค่า &gt; เครือข่าย &gt; ดูสถานะการเชื่อมต่อ</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">การถ่ายโอน</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">การถ่ายโอนที่รออยู่</string>
     <string name="queue_clear">นำออกทั้งหมด</string>
     <string name="queue_empty">ไม่มีรายการที่รออยู่</string>
-    <string name="notif_channel">การถ่ายโอน PS5</string>
+    <string name="notif_channel">การถ่ายโอน PS4/PS5</string>
     <string name="notif_sent">ส่งแล้ว: %1$s</string>
     <string name="notif_received">รับแล้ว: %1$s</string>
     <string name="percent_value">%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">เพิ่มในคิวแล้ว รออยู่ %1$d รายการ</string>
     <string name="msg_set_ip_first">ตั้งค่าที่อยู่ IP ของคอนโซลก่อน แตะการ์ดด้านบน</string>
-    <string name="msg_sending_link">กำลังส่งลิงก์ไปยัง PS5…</string>
+    <string name="msg_sending_link">กำลังส่งลิงก์ไปยัง %1$s…</string>
     <string name="msg_check_ip_ftp">ตรวจสอบที่อยู่ IP ของคอนโซลและพอร์ต FTP</string>
     <string name="msg_adding_to_shelf_link">กำลังเพิ่มลงในคลัง payload…</string>
     <string name="status_idle">ว่าง</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">ออกจากเว็บไซต์นี้หรือไม่</string>
     <string name="offsite_text">หน้านี้ต้องการเปิด %1$s โฆษณามักทำให้เกิดเหตุการณ์นี้เมื่อคุณแตะลิงก์ ดังนั้นดำเนินการต่อเฉพาะเมื่อคุณคาดไว้แล้วเท่านั้น</string>
-    <string name="choose_install">ส่งลิงก์ไปยัง Installer ของ PS5</string>
-    <string name="choose_ftp">อัปโหลดไปยัง PS5 (FTP)</string>
+    <string name="choose_install">ส่งลิงก์ไปยัง Installer ของ %1$s</string>
+    <string name="choose_ftp">อัปโหลดไปยัง %1$s (FTP)</string>
     <string name="choose_shelf">บันทึกลงคลัง payload</string>
     <string name="choose_phone">บันทึกลงโทรศัพท์</string>
     <string name="choose_help">Installer ต้องใช้ลิงก์แพ็กเกจโดยตรงที่คอนโซลเปิดได้โดยไม่ต้องเข้าสู่ระบบ FTP ใช้ได้กับไฟล์ทุกชนิดและคงเซสชันการเข้าสู่ระบบของคุณไว้ โทรศัพท์จะส่งต่อข้อมูลในเบื้องหลัง โดยแสดงความคืบหน้าเหนือแถบด้านล่างและในการแจ้งเตือน คลัง payload เก็บ payload ขนาดเล็ก (ไม่เกิน %1$s) ไว้ในแอปสำหรับแท็บ Payload</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">พอร์ตของ Installer (etaHEN: 12800)</string>
+    <string name="install_port_label">พอร์ตของ Installer (%1$s: 12800)</string>
     <string name="install_accepted">Installer ยอมรับแล้ว: %1$s</string>
     <string name="install_not_accepted">ไม่ยอมรับ (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">ไม่สำเร็จ: %1$s</string>
     <string name="ftp_port_hint">เชื่อมต่อกับเซิร์ฟเวอร์ FTP ไม่ได้ ตรวจสอบที่อยู่ IP ของคอนโซลและพอร์ต FTP (FTP ในตัวของ etaHEN ใช้พอร์ต 1337 ส่วน payload FTP ใช้พอร์ต 2121)</string>
+    <string name="ftp_port_hint_ps4">เชื่อมต่อกับเซิร์ฟเวอร์ FTP ไม่ได้ ตรวจสอบที่อยู่ IP ของคอนโซลและพอร์ต FTP (FTP ของ GoldHEN ใช้พอร์ต 2121)</string>
     <string name="err_login">เข้าสู่ระบบ FTP ไม่สำเร็จ</string>
     <string name="err_cant_open">เปิด %1$s ไม่ได้ (%2$s)</string>
     <string name="err_rename">เปลี่ยนชื่อไม่สำเร็จ (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">มาถึงเพียง %1$s จาก %2$s</string>
     <string name="err_empty_file">ไฟล์ว่างเปล่า</string>
     <string name="err_save">บันทึก %1$s ไม่ได้</string>
-    <string name="sent_to_ps5">ส่งไปยัง PS5 แล้ว: %1$s</string>
-    <string name="saved_to_downloads">บันทึกใน Downloads/PS5 แล้ว: %1$s</string>
+    <string name="sent_to_ps5">ส่งไปยัง %2$s แล้ว: %1$s</string>
+    <string name="saved_to_downloads">บันทึกใน Downloads/%2$s แล้ว: %1$s</string>
     <string name="dl_http_failed">ดาวน์โหลดไม่สำเร็จ: HTTP %1$s</string>
     <string name="dl_empty">ดาวน์โหลดไม่สำเร็จ: การตอบกลับว่างเปล่า</string>
     <string name="dl_cut_short">การเชื่อมต่อถูกปิดก่อนที่ไฟล์จะมาถึงครบ</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">ระบบจะลบออกจากคลัง ไฟล์ต้นฉบับในโทรศัพท์ของคุณจะไม่ได้รับผลกระทบ</string>
     <string name="payload_loader_port">พอร์ตของ Loader</string>
     <string name="payload_shelf_title">คลัง payload</string>
-    <string name="payload_shelf_empty">ยังไม่มีอะไรที่บันทึกไว้ เพิ่ม payload ที่คุณใช้บ่อย (เช่น เซิร์ฟเวอร์ FTP, etaHEN, ...) แล้วส่งแต่ละรายการได้ด้วยการแตะครั้งเดียว คุณยังบันทึกจากแท็บเว็บได้โดยตรงเมื่อดาวน์โหลด</string>
+    <string name="payload_shelf_empty">ยังไม่มีอะไรที่บันทึกไว้ เพิ่ม payload ที่คุณใช้บ่อย (เช่น เซิร์ฟเวอร์ FTP, %1$s, ...) แล้วส่งแต่ละรายการได้ด้วยการแตะครั้งเดียว คุณยังบันทึกจากแท็บเว็บได้โดยตรงเมื่อดาวน์โหลด</string>
     <string name="payload_sending">กำลังส่ง %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">เพิ่ม payload ลงในคลัง</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">ส่ง payload</string>
 
     <!-- consoles -->
-    <string name="profile_default">PS5 ของฉัน</string>
+    <string name="profile_default">%1$s ของฉัน</string>
     <string name="profile_new">คอนโซล %1$d</string>
     <string name="profile_fallback">คอนโซล</string>
     <string name="consoles_title">คอนโซล</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">ที่อยู่ IP และพอร์ตที่บันทึกไว้จะถูกลบ คอนโซลเครื่องอื่นของคุณจะไม่ได้รับผลกระทบ</string>
     <string name="console_no_ip">ยังไม่มีที่อยู่ IP</string>
     <string name="console_color_of">สีของ %1$s</string>
+    <string name="console_type_of">ประเภทคอนโซลของ %1$s</string>
     <string name="console_use_color">ใช้ %1$s</string>
     <string name="console_add">เพิ่มคอนโซล</string>
     <string name="language_button">ภาษา</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">คัดลอกแล้ว</string>
     <string name="help_unreachable_title">เข้าถึงคอนโซลไม่ได้</string>
     <string name="help_unreachable_what">ไม่มีอะไรตอบกลับที่ที่อยู่ของคอนโซล</string>
-    <string name="help_unreachable_try">• ตรวจสอบที่อยู่ IP บน PS5 (การตั้งค่า &gt; เครือข่าย &gt; สถานะการเชื่อมต่อ) ที่อยู่นี้อาจเปลี่ยนหลังรีสตาร์ท\n• ปลุกคอนโซลให้ตื่นเต็มที่ โหมดพักมักปิดเครือข่าย\n• ใช้ Wi-Fi เดียวกันทั้งสองเครื่อง เครือข่ายสำหรับแขกและ VPN จะบล็อกการเชื่อมต่อ</string>
+    <string name="help_unreachable_try">• ตรวจสอบที่อยู่ IP บน %1$s (การตั้งค่า &gt; เครือข่าย &gt; สถานะการเชื่อมต่อ) ที่อยู่นี้อาจเปลี่ยนหลังรีสตาร์ท\n• ปลุกคอนโซลให้ตื่นเต็มที่ โหมดพักมักปิดเครือข่าย\n• ใช้ Wi-Fi เดียวกันทั้งสองเครื่อง เครือข่ายสำหรับแขกและ VPN จะบล็อกการเชื่อมต่อ</string>
     <string name="help_port_title">บริการนั้นไม่ได้ทำงานอยู่</string>
     <string name="help_port_what">คอนโซลตอบกลับ แต่ไม่มีอะไรรับฟังที่พอร์ตนั้น</string>
     <string name="help_port_try">• เริ่ม etaHEN บนคอนโซล ซึ่งให้บริการ Installer (12800), Loader (9021) และ FTP (1337)\n• payload FTP แยกต่างหากมักใช้พอร์ต 2121 ให้ป้อนพอร์ตเดียวกันที่นี่\n• บนการ์ดของคอนโซล ไฟที่ดับอยู่จะบอกว่าขาดอะไร</string>
+    <string name="help_port_try_ps4">• เริ่ม GoldHEN บนคอนโซล ซึ่งให้บริการ Loader (9090) และ FTP (2121)\n• หากต้องการติดตั้งแพ็กเกจ ให้เปิด Remote Package Installer ของ flatz บนคอนโซลด้วย (12800)\n• บนการ์ดของคอนโซล ไฟที่ดับอยู่จะบอกว่าขาดอะไร</string>
     <string name="help_login_title">การเข้าสู่ระบบ FTP ถูกปฏิเสธ</string>
     <string name="help_login_what">เซิร์ฟเวอร์ FTP ของคอนโซลปฏิเสธชื่อผู้ใช้หรือรหัสผ่าน</string>
-    <string name="help_login_try">• etaHEN ยอมรับชื่อผู้ใช้ anonymous กับรหัสผ่านอะไรก็ได้\n• หากคุณตั้งการเข้าสู่ระบบไว้บนคอนโซล ให้ป้อนในส่วนอัปโหลด\n• รหัสผ่านไม่ถูกบันทึก ป้อนอีกครั้งหลังเปิดแอปใหม่</string>
+    <string name="help_login_try">• %2$s ยอมรับชื่อผู้ใช้ anonymous กับรหัสผ่านอะไรก็ได้\n• หากคุณตั้งการเข้าสู่ระบบไว้บนคอนโซล ให้ป้อนในส่วนอัปโหลด\n• รหัสผ่านไม่ถูกบันทึก ป้อนอีกครั้งหลังเปิดแอปใหม่</string>
     <string name="help_dropped_title">การเชื่อมต่อหลุด</string>
     <string name="help_dropped_what">การเชื่อมต่อกับคอนโซลขาดหรือข้อมูลหยุดไหล แอปจะลองใหม่และทำต่อจากจุดที่หยุด</string>
     <string name="help_dropped_try">• วางโทรศัพท์ไว้ใกล้เราเตอร์ และให้คอนโซลตื่นอยู่\n• หยุดการดาวน์โหลดขนาดใหญ่อื่น ๆ ในเครือข่ายชั่วคราว\n• หากยังล้มเหลวอีก ให้รอสักครู่แล้วแตะ ลองอีกครั้ง</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">การตรวจสอบจะถาม GitHub เกี่ยวกับรุ่นล่าสุด อย่างมากวันละครั้ง ไม่มีข้อมูลเกี่ยวกับคุณหรือคอนโซลของคุณถูกส่งออกไป GitHub จะเห็นที่อยู่ IP ของคุณ เหมือนเว็บไซต์ทั่วไป</string>
 
     <!-- find my console -->
-    <string name="find_button">ค้นหา PS5 ของฉัน</string>
+    <string name="find_button">ค้นหา %1$s ของฉัน</string>
     <string name="find_scanning">กำลังค้นหาคอนโซลของคุณในเครือข่าย %1$s…</string>
     <string name="find_again">สแกนอีกครั้ง</string>
     <string name="find_none">ไม่พบคอนโซล</string>
-    <string name="find_none_try">• เปิดคอนโซลให้ทำงานเต็มที่ (ไม่ใช่โหมดพัก) แล้วเริ่ม etaHEN\n• ใช้ Wi-Fi เดียวกันทั้งบนโทรศัพท์และคอนโซล เครือข่ายสำหรับแขกและ VPN จะแยกอุปกรณ์ออกจากกัน\n• จากนั้นสแกนอีกครั้ง</string>
+    <string name="find_none_try">• เปิดคอนโซลให้ทำงานเต็มที่ (ไม่ใช่โหมดพัก) แล้วเริ่ม %1$s\n• ใช้ Wi-Fi เดียวกันทั้งบนโทรศัพท์และคอนโซล เครือข่ายสำหรับแขกและ VPN จะแยกอุปกรณ์ออกจากกัน\n• จากนั้นสแกนอีกครั้ง</string>
     <string name="find_no_wifi">โทรศัพท์เครื่องนี้ไม่ได้เชื่อมต่อกับเครือข่าย Wi-Fi ให้เชื่อมต่อกับ Wi-Fi เดียวกับคอนโซล แล้วสแกนอีกครั้ง</string>
     <string name="find_pick">แตะ ใช้ เพื่อตั้งค่าที่อยู่ของ %1$s</string>
     <string name="find_saved">ที่อยู่ที่บันทึกไว้</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">กำลังดูในโฟลเดอร์…</string>
     <string name="files_dl_confirm_title">ดาวน์โหลดลงโทรศัพท์หรือไม่</string>
-    <string name="files_dl_confirm_text">ไฟล์: %1$d รวม %2$s จะบันทึกไว้ใน Downloads/PS5 ในโฟลเดอร์เดียวกับบนคอนโซล</string>
+    <string name="files_dl_confirm_text">ไฟล์: %1$d รวม %2$s จะบันทึกไว้ใน Downloads/%3$s ในโฟลเดอร์เดียวกับบนคอนโซล</string>
     <string name="files_dl_links">ลิงก์ที่อยู่ในโฟลเดอร์จะไม่ถูกดาวน์โหลด: %1$d</string>
     <string name="files_dl_truncated">ไฟล์ที่นำมา: %1$d โฟลเดอร์มีมากกว่านั้น หรืออยู่ลึกกว่าที่แอปตามไป</string>
     <string name="files_dl_none">ไม่มีไฟล์ให้ดาวน์โหลดในรายการที่เลือก</string>

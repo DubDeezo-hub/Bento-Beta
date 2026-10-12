@@ -33,14 +33,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">Nastavte IP adresu své PS5</string>
+    <string name="status_set_ip">Nastavte IP adresu své %1$s</string>
     <string name="status_checking">Kontrola…</string>
     <string name="status_ready">Připraveno</string>
     <string name="status_partly">Částečně připraveno</string>
     <string name="status_partly_off">Částečně připraveno · bez odpovědi: %1$s</string>
     <string name="status_offline">Konzoli se nepodařilo najít</string>
     <string name="status_hint_unset">Najdete ji na PS5 v Nastavení &gt; Síť &gt; Stav připojení &gt; Zobrazit stav připojení. Klepnutím sem ji zadáte.</string>
-    <string name="status_hint_offline">Na této adrese nic neodpovídá. Zkontrolujte IP adresu, zda je PS5 zapnutá a ve stejné síti Wi-Fi a zda běží etaHEN.</string>
+    <string name="status_hint_unset_ps4">Najdete ji na PS4 v Nastavení &gt; Síť &gt; Zobrazit stav připojení. Klepnutím sem ji zadáte.</string>
+    <string name="status_hint_offline">Na této adrese nic neodpovídá. Zkontrolujte IP adresu, zda je %1$s zapnutá a ve stejné síti Wi-Fi a zda běží %2$s.</string>
     <string name="status_hint_one">Bez odpovědi: %1$s. Spusťte službu na konzoli nebo zkontrolujte její port.</string>
     <string name="status_hint_many">Bez odpovědi: %1$s. Spusťte služby na konzoli nebo zkontrolujte jejich porty.</string>
     <string name="console_switch">Přepnout konzoli</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">IP adresa konzole</string>
     <string name="console_ip_label">IP adresa</string>
     <string name="console_ip_help">Najdete ji na PS5 v Nastavení &gt; Síť &gt; Stav připojení &gt; Zobrazit stav připojení.</string>
+    <string name="console_ip_help_ps4">Najdete ji na PS4 v Nastavení &gt; Síť &gt; Zobrazit stav připojení.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">Přenos</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">Přenosy ve frontě</string>
     <string name="queue_clear">Odebrat vše</string>
     <string name="queue_empty">Ve frontě nic není.</string>
-    <string name="notif_channel">Přenosy PS5</string>
+    <string name="notif_channel">Přenosy PS4/PS5</string>
     <string name="notif_sent">Odesláno: %1$s</string>
     <string name="notif_received">Přijato: %1$s</string>
     <string name="percent_value">%1$d %%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">Přidáno do fronty. Ve frontě: %1$d.</string>
     <string name="msg_set_ip_first">Nejprve nastavte IP adresu konzole. Klepněte na kartu nahoře.</string>
-    <string name="msg_sending_link">Odesílání odkazu do PS5…</string>
+    <string name="msg_sending_link">Odesílání odkazu do %1$s…</string>
     <string name="msg_check_ip_ftp">Zkontrolujte IP adresu konzole a port FTP.</string>
     <string name="msg_adding_to_shelf_link">Přidávání do knihovny payloadů…</string>
     <string name="status_idle">Nečinné</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">Opustit tento web?</string>
     <string name="offsite_text">Stránka chce otevřít %1$s. Reklamy to často způsobují po klepnutí na odkaz, takže pokračujte, jen pokud jste to očekávali.</string>
-    <string name="choose_install">Odeslat odkaz do Installeru na PS5</string>
-    <string name="choose_ftp">Nahrát na PS5 (FTP)</string>
+    <string name="choose_install">Odeslat odkaz do Installeru na %1$s</string>
+    <string name="choose_ftp">Nahrát na %1$s (FTP)</string>
     <string name="choose_shelf">Uložit do knihovny payloadů</string>
     <string name="choose_phone">Uložit do telefonu</string>
     <string name="choose_help">Installer potřebuje přímý odkaz na balíček, který konzole otevře bez přihlášení. FTP funguje pro jakýkoli soubor a zachová vaše přihlášení. Telefon data přeposílá na pozadí a průběh se zobrazuje nad spodní lištou a v oznámení. Knihovna payloadů uchovává v aplikaci malý payload (do %1$s) pro kartu Payload.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Port Installeru (etaHEN: 12800)</string>
+    <string name="install_port_label">Port Installeru (%1$s: 12800)</string>
     <string name="install_accepted">Installer to přijal: %1$s</string>
     <string name="install_not_accepted">Nepřijato (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">Selhalo: %1$s</string>
     <string name="ftp_port_hint">K serveru FTP se nelze připojit. Zkontrolujte IP adresu konzole a port FTP (vestavěné FTP v etaHEN používá 1337, payload FTP používá 2121).</string>
+    <string name="ftp_port_hint_ps4">K serveru FTP se nelze připojit. Zkontrolujte IP adresu konzole a port FTP (FTP v GoldHEN používá 2121).</string>
     <string name="err_login">Přihlášení k FTP selhalo</string>
     <string name="err_cant_open">nelze otevřít %1$s (%2$s)</string>
     <string name="err_rename">přejmenování selhalo (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">Dorazilo jen %1$s z %2$s.</string>
     <string name="err_empty_file">Soubor je prázdný</string>
     <string name="err_save">Soubor %1$s se nepodařilo uložit</string>
-    <string name="sent_to_ps5">Odesláno do PS5: %1$s</string>
-    <string name="saved_to_downloads">Uloženo do Downloads/PS5: %1$s</string>
+    <string name="sent_to_ps5">Odesláno do %2$s: %1$s</string>
+    <string name="saved_to_downloads">Uloženo do Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Stahování selhalo: HTTP %1$s</string>
     <string name="dl_empty">Stahování selhalo: prázdná odpověď</string>
     <string name="dl_cut_short">Připojení se zavřelo dřív, než dorazil celý soubor.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">Odebere se z knihovny. Původní soubor v telefonu zůstane nedotčen.</string>
     <string name="payload_loader_port">Port Loaderu</string>
     <string name="payload_shelf_title">Knihovna payloadů</string>
-    <string name="payload_shelf_empty">Zatím nic není uloženo. Přidejte payloady, které používáte často (server FTP, etaHEN, ...), a odesílejte je jedním klepnutím. Payload můžete uložit také přímo z karty Web při jeho stahování.</string>
+    <string name="payload_shelf_empty">Zatím nic není uloženo. Přidejte payloady, které používáte často (server FTP, %1$s, ...), a odesílejte je jedním klepnutím. Payload můžete uložit také přímo z karty Web při jeho stahování.</string>
     <string name="payload_sending">Odesílání: %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Přidat payload do knihovny</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Odeslat payload</string>
 
     <!-- consoles -->
-    <string name="profile_default">Moje PS5</string>
+    <string name="profile_default">Moje %1$s</string>
     <string name="profile_new">Konzole %1$d</string>
     <string name="profile_fallback">Konzole</string>
     <string name="consoles_title">Konzole</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">Uložená IP adresa a porty budou odstraněny. Vaše ostatní konzole nejsou dotčeny.</string>
     <string name="console_no_ip">zatím bez IP adresy</string>
     <string name="console_color_of">Barva: %1$s</string>
+    <string name="console_type_of">Typ konzole: %1$s</string>
     <string name="console_use_color">Použít: %1$s</string>
     <string name="console_add">Přidat konzoli</string>
     <string name="language_button">Jazyk</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">Zkopírováno</string>
     <string name="help_unreachable_title">Konzoli se nedaří kontaktovat</string>
     <string name="help_unreachable_what">Na adrese konzole nikdo neodpovídá.</string>
-    <string name="help_unreachable_try">• Zkontrolujte IP adresu na PS5 (Nastavení &gt; Síť &gt; Stav připojení). Po restartu se může změnit.\n• Konzoli úplně probuďte. Klidový režim často vypíná síť.\n• Používejte na obou zařízeních stejnou Wi-Fi. Sítě pro hosty a VPN to blokují.</string>
+    <string name="help_unreachable_try">• Zkontrolujte IP adresu na %1$s (Nastavení &gt; Síť &gt; Stav připojení). Po restartu se může změnit.\n• Konzoli úplně probuďte. Klidový režim často vypíná síť.\n• Používejte na obou zařízeních stejnou Wi-Fi. Sítě pro hosty a VPN to blokují.</string>
     <string name="help_port_title">Tato služba neběží</string>
     <string name="help_port_what">Konzole odpověděla, ale na tomto portu nic neposlouchá.</string>
     <string name="help_port_try">• Spusťte na konzoli etaHEN. Poskytuje Installer (12800), Loader (9021) a FTP (1337).\n• Samostatný FTP payload obvykle používá port 2121. Zadejte tady stejný port.\n• Na kartě konzole ukazuje zhasnutá kontrolka, co chybí.</string>
+    <string name="help_port_try_ps4">• Spusťte na konzoli GoldHEN. Poskytuje Loader (9090) a FTP (2121).\n• Pro instalaci balíčků spusťte na konzoli také Remote Package Installer od flatze (12800).\n• Na kartě konzole ukazuje zhasnutá kontrolka, co chybí.</string>
     <string name="help_login_title">Přihlášení k FTP bylo odmítnuto</string>
     <string name="help_login_what">FTP server konzole odmítl uživatelské jméno nebo heslo.</string>
-    <string name="help_login_try">• etaHEN přijme uživatelské jméno anonymous s libovolným heslem.\n• Pokud jste na konzoli nastavili přihlášení, zadejte ho v části Nahrát.\n• Heslo se neukládá. Po restartu aplikace ho zadejte znovu.</string>
+    <string name="help_login_try">• %2$s přijme uživatelské jméno anonymous s libovolným heslem.\n• Pokud jste na konzoli nastavili přihlášení, zadejte ho v části Nahrát.\n• Heslo se neukládá. Po restartu aplikace ho zadejte znovu.</string>
     <string name="help_dropped_title">Spojení se přerušilo</string>
     <string name="help_dropped_what">Spojení s konzolí se přerušilo nebo přestala proudit data. Aplikace to zkouší znovu a pokračuje tam, kde skončila.</string>
     <string name="help_dropped_try">• Mějte telefon blízko routeru a konzoli probuzenou.\n• Pozastavte jiná velká stahování v síti.\n• Pokud to stále selhává, chvíli počkejte a klepněte na Zkusit znovu.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">Kontrola se ptá GitHubu na nejnovější vydání nejvýše jednou denně. Nic o vás ani o vašich konzolích se neodesílá; GitHub vidí vaši IP adresu jako každý web.</string>
 
     <!-- find my console -->
-    <string name="find_button">Najít moji PS5</string>
+    <string name="find_button">Najít moji %1$s</string>
     <string name="find_scanning">Hledání vaší konzole v síti %1$s…</string>
     <string name="find_again">Hledat znovu</string>
     <string name="find_none">Nebyla nalezena žádná konzole.</string>
-    <string name="find_none_try">• Konzoli úplně zapněte (ne klidový režim) a spusťte etaHEN.\n• Používejte na telefonu i na konzoli stejnou Wi-Fi. Sítě pro hosty a VPN zařízení od sebe oddělují.\n• Pak hledejte znovu.</string>
+    <string name="find_none_try">• Konzoli úplně zapněte (ne klidový režim) a spusťte %1$s.\n• Používejte na telefonu i na konzoli stejnou Wi-Fi. Sítě pro hosty a VPN zařízení od sebe oddělují.\n• Pak hledejte znovu.</string>
     <string name="find_no_wifi">Tento telefon není připojen k síti Wi-Fi. Připojte jej ke stejné síti Wi-Fi jako konzole a pak hledejte znovu.</string>
     <string name="find_pick">Klepnutím na Použít nastavíte adresu konzole %1$s.</string>
     <string name="find_saved">Uložená adresa</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">Prohlížím složky…</string>
     <string name="files_dl_confirm_title">Stáhnout do telefonu?</string>
-    <string name="files_dl_confirm_text">Soubory: %1$d, dohromady %2$s. Uloží se do Downloads/PS5, ve stejných složkách jako na konzoli.</string>
+    <string name="files_dl_confirm_text">Soubory: %1$d, dohromady %2$s. Uloží se do Downloads/%3$s, ve stejných složkách jako na konzoli.</string>
     <string name="files_dl_links">Odkazy uvnitř složek se nestahují: %1$d.</string>
     <string name="files_dl_truncated">Zahrnuté soubory: %1$d. Složky jich obsahují víc, nebo jdou hlouběji, než aplikace sleduje.</string>
     <string name="files_dl_none">Ve výběru není žádný soubor ke stažení.</string>

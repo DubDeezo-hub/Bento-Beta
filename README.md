@@ -5,15 +5,15 @@
 <h1 align="center">Bento</h1>
 
 <p align="center">
-  <b>Send games, payloads and files from your Android phone to a jailbroken PS5.</b><br>
+  <b>Send games, payloads and files from your Android phone to a jailbroken PS4 or PS5.</b><br>
   by DubDeezo
 </p>
 
-Bento is an Android app that talks to the services a jailbroken PS5 already runs: etaHEN's package installer and ELF loader, and an FTP server. From one screen you can install game packages, send a payload (or a whole chain of them), upload and manage files, or browse the web and push a download straight to the console. Bento can also look for the console on your Wi-Fi, so you don't have to type its address. Nothing has to be installed on the PS5 for Bento itself. It needs Android 10 or newer.
+Bento is an Android app that talks to the services a jailbroken PS5 or PS4 already runs. On a PS5 that is etaHEN's package installer and ELF loader with an FTP server; on a PS4 it is GoldHEN's loader and FTP server, with flatz's Remote Package Installer for packages. From one screen you can install game packages, send a payload (or a whole chain of them), upload and manage files, or browse the web and push a download straight to the console. Each saved console is marked as a PS5 or a PS4, and the app uses the right services and ports for it. Bento can also look for the console on your Wi-Fi, so you don't have to type its address. Nothing has to be installed on the console for Bento itself. It needs Android 10 or newer.
 
 The name and the icon are a bento box: several different things, each in its own compartment.
 
-> **Status:** Bento builds on GitHub Actions, runs on an Android phone and has been tried against a fake console ([`fake_console.py`](fake_console.py)), but it has **not been confirmed on a real PS5 yet**. The author's console runs firmware 10.40 with etaHEN. The newest features (see [Status and known limits](#status-and-known-limits)) have been checked on a computer but are not confirmed on a phone yet.
+> **Status:** Bento builds on GitHub Actions, runs on an Android phone and has been tried against a fake console ([`fake_console.py`](fake_console.py)). FTP uploads have been confirmed against the author's real PS4 on GoldHEN; the rest of the PS4 path and the whole PS5 path have **not been confirmed on a real console yet**. The author's PS5 runs firmware 10.40 with etaHEN. The newest features (see [Status and known limits](#status-and-known-limits)) have been checked on a computer but are not confirmed on a phone yet.
 
 ## Contents
 
@@ -22,10 +22,10 @@ The name and the icon are a bento box: several different things, each in its own
 - [Get the app](#get-the-app)
 - [First run](#first-run)
 - [How it works](#how-it-works)
-  - [The console card](#the-console-card) · [Find my PS5](#find-my-ps5) · [Consoles](#consoles) · [Install tab](#install-tab) · [Install from this phone](#install-from-this-phone) · [Payload tab](#payload-tab) · [Upload tab](#upload-tab) · [Files tab](#files-tab) · [Web tab](#web-tab) · [Share sheet](#share-sheet) · [Transfers](#transfers) · [Errors that say what to do](#errors-that-say-what-to-do) · [About, updates and backup](#about-updates-and-backup) · [Languages and look](#languages-and-look)
+  - [The console card](#the-console-card) · [Find my console](#find-my-console) · [Consoles](#consoles) · [Install tab](#install-tab) · [Install from this phone](#install-from-this-phone) · [Payload tab](#payload-tab) · [Upload tab](#upload-tab) · [Files tab](#files-tab) · [Web tab](#web-tab) · [Share sheet](#share-sheet) · [Transfers](#transfers) · [Errors that say what to do](#errors-that-say-what-to-do) · [About, updates and backup](#about-updates-and-backup) · [Languages and look](#languages-and-look)
 - [Under the hood](#under-the-hood)
 - [Build, signing and releases](#build-signing-and-releases)
-- [Testing without a PS5](#testing-without-a-ps5)
+- [Testing without a console](#testing-without-a-console)
 - [Troubleshooting](#troubleshooting)
 - [Status and known limits](#status-and-known-limits)
 - [Privacy and security](#privacy-and-security)
@@ -40,12 +40,12 @@ The name and the icon are a bento box: several different things, each in its own
 | **Payload** | Send `.elf` and `.bin` payloads to the console's ELF loader. Keep the ones you use often on a shelf and send them with one tap, or line several up in a **chain** that you can start from the app icon. |
 | **Upload** | Upload files from your phone to the console over FTP, in the background. |
 | **Files** | Browse the console's files over FTP: open folders, select several things at once, download whole folders to the phone, rename, delete, create folders, upload here, sort, search, and pin the folders you use often. |
-| **Web** | A built-in browser with tabs, ad blocking, bookmarks, find in page and a desktop-site switch. Any download, or any link you press for a while, can go to the PS5 installer, to the console over FTP, to the payload shelf, or to the phone. |
+| **Web** | A built-in browser with tabs, ad blocking, bookmarks, find in page and a desktop-site switch. Any download, or any link you press for a while, can go to the console's installer, to the console over FTP, to the payload shelf, or to the phone. |
 
 Across the app:
 
-- A **console card** shows live which of the console's services are answering. **Find my PS5** looks for the console on your Wi-Fi when you don't know its address.
-- **Several consoles**, each with its own address, ports, FTP login and color.
+- A **console card** shows live which of the console's services are answering. **Find my console** looks for the console on your Wi-Fi when you don't know its address.
+- **Several consoles**, each marked as a PS5 or a PS4, with its own address, ports, FTP login and color.
 - A **background queue** for FTP transfers: one at a time, with speed and time left, **pause and resume**, an optional **speed limit**, a summary when a run is over, a notification, automatic resume after a dropped connection, and a card that offers the transfers again if the app closed before they were done.
 - **Errors that say what to do:** a problem message has a **What can I do?** button with the likely cause and a few things to try.
 - A **share-sheet target**: share a link from any app to Bento to send it to the console.
@@ -57,17 +57,17 @@ Across the app:
 You need:
 
 - an Android phone with Android 10 or newer,
-- a jailbroken PS5 running etaHEN (the author's is on firmware 10.40),
-- the phone and the PS5 on the same Wi-Fi network (not a guest network),
-- the PS5's IP address: **Settings > Network > Connection Status > View Connection Status** (or let [Find my PS5](#find-my-ps5) look for it).
+- a jailbroken console: a PS5 running etaHEN, or a PS4 running GoldHEN,
+- the phone and the console on the same Wi-Fi network (not a guest network),
+- the console's IP address. On a PS5: **Settings > Network > Connection Status > View Connection Status**. On a PS4: **Settings > Network > View Connection Status**. Or let [Find my console](#find-my-console) look for it.
 
 Bento uses up to three services on the console. You only need the ones for the tabs you use, and the console card shows which are answering.
 
-| Service (default port) | Bento uses it for | Provided by |
-| --- | --- | --- |
-| Package installer (`12800`) | The Install tab and "Send link to PS5 installer" | etaHEN's Direct Package Installer V2, or flatz's Remote Package Installer |
-| ELF loader (`9021`) | The Payload tab and payload chains | etaHEN, or ps5-payload-dev's `elfldr` |
-| FTP server (`2121`, or `1337` for etaHEN's own) | The Upload and Files tabs, and FTP relay from the Web tab | ps5-payload-dev's `ftpsrv`, or etaHEN's built-in FTP |
+| Service (default port) | Bento uses it for | On a PS5 | On a PS4 |
+| --- | --- | --- | --- |
+| Package installer (`12800`) | The Install tab and the Web tab's "Send link to the console installer" | etaHEN's Direct Package Installer V2 | flatz's Remote Package Installer |
+| ELF loader (PS5 `9021`, PS4 `9090`) | The Payload tab and payload chains | etaHEN, or ps5-payload-dev's `elfldr` | GoldHEN's loader |
+| FTP server (`2121`, or `1337` for etaHEN's own) | The Upload and Files tabs, and FTP relay from the Web tab | ps5-payload-dev's `ftpsrv`, or etaHEN's built-in FTP | GoldHEN's FTP |
 
 "Install from this phone" works the other way round: the console downloads from a small server on your phone (port 8000 if it is free).
 
@@ -85,7 +85,7 @@ More in [Build, signing and releases](#build-signing-and-releases).
 
 ## First run
 
-1. Open Bento and tap the card at the top. Enter the console's IP address and tap **Done**, or tap **Find my PS5** to let Bento look for it on your Wi-Fi.
+1. Open Bento and tap the card at the top. Enter the console's IP address and tap **Done**, or tap **Find my console** to let Bento look for it on your Wi-Fi.
 2. Look at the three lights on the card: **Installer**, **Loader** and **FTP**. A filled light means the service answers, a hollow ring means it doesn't. Start what is missing on the console; the card names it.
 3. Pick a tab at the bottom and use it. On Android 13 and newer, allow notifications when asked, so background transfers can show their progress.
 
@@ -104,16 +104,16 @@ The card at the top says whether the console can be reached.
 - Checks pause while a transfer runs, because the console is busy, and stop when the app is not on screen.
 - A light only means the port accepts connections. It does not prove the service will accept your request.
 - On the Files and Web tabs the card is shorter, to leave room for the list and the page: it shows the overall state and the address but not the three service lights, so a console that is partly ready is shown with what is off (for example `Partly ready · off: FTP`).
-- Tap the card to change the address. With no address, or when nothing answers at it, the full card (on the Install, Payload and Upload tabs) also has a **Find my PS5** button, and the address window has one too.
+- Tap the card to change the address. With no address, or when nothing answers at it, the full card (on the Install, Payload and Upload tabs) also has a **Find my console** button, and the address window has one too.
 
-### Find my PS5
+### Find my console
 
 When you don't know the console's address, or it has changed (a router can hand out a new one after a restart), Bento can look for the console on your Wi-Fi.
 
-1. Tap **Find my PS5**. The button is on the console card while there is no address or nothing answers at it, in the window where you type the address, and on the help page of a "Can't reach the console" message.
-2. Bento works out which network the phone is on and tries to connect to every address in it. For each address it tries the console's ports (the ones saved for the selected console, plus the usual 12800, 9021, 1337 and 2121), up to 64 attempts at the same time, and gives each attempt 0.45 seconds. A progress bar shows how far it is, and addresses appear in the list as they answer.
+1. Tap **Find my console**. The button is on the console card while there is no address or nothing answers at it, in the window where you type the address, and on the help page of a "Can't reach the console" message.
+2. Bento works out which network the phone is on and tries to connect to every address in it. For each address it tries the console's ports (the ones saved for the selected console, plus the usual 12800, 9021, 9090, 1337 and 2121), up to 64 attempts at the same time, and gives each attempt 0.45 seconds. A progress bar shows how far it is, and addresses appear in the list as they answer.
 3. Each address that answered is listed with the services that answered on it (Installer, Loader, FTP). The likeliest console comes first: an address where the installer or the loader answers is ranked above one that only has an FTP server. Tap **Use** to save the address for the selected console. An address that is saved already is marked, and one that belongs to another of your consoles says so.
-4. **Stop** ends the scan early and **Scan again** starts another. If nothing was found, the window says what to check: the console fully on (not in rest mode) with etaHEN started, and the phone and the console on the same Wi-Fi.
+4. **Stop** ends the scan early and **Scan again** starts another. If nothing was found, the window says what to check: the console fully on (not in rest mode) with etaHEN (PS5) or GoldHEN (PS4) started, and the phone and the console on the same Wi-Fi.
 
 What the scan does and doesn't do:
 
@@ -125,7 +125,7 @@ What the scan does and doesn't do:
 
 Tap the console name at the top right to open the switcher.
 
-- Each console keeps its own name (up to 16 characters), IP address, installer port, loader port, FTP port, FTP user, FTP start folder and one of six colors: blue, orange, green, pink, purple or teal. The ports default to 12800, 9021 and 2121, the FTP user to `anonymous` and the start folder to `/data`. The whole app takes the color of the selected console, and a running transfer says which console it belongs to.
+- Each console is set as a **PS5 or a PS4** (the switch is in the console's editor) and keeps its own name (up to 16 characters), IP address, installer port, loader port, FTP port, FTP user, FTP start folder and one of six colors: blue, orange, green, pink, purple or teal. The installer and FTP ports default to 12800 and 2121; the loader port defaults to 9021 on a PS5 and 9090 on a PS4. The FTP user defaults to `anonymous` and the start folder to `/data`. Changing a console's type moves any port still left at the old default to the new default. The whole app takes the color of the selected console, and a running transfer says which console it belongs to.
 - You can add, rename, recolor and delete consoles (never the last one), and open the language settings or **About & backup**, from the same dialog.
 - Settings stay on the phone. The FTP password is not saved: it is kept in memory only, so it is forgotten when the app closes. The default login is `anonymous` with no password.
 
@@ -141,12 +141,12 @@ Type or paste one or more package links into **Package links** and tap **Send**.
 
 For each link, Bento posts it to the console's installer (the installer port field, default 12800) and reads the answer. It tries two request styles, in this order:
 
-1. **etaHEN style.** `POST /upload` as a multipart form with a `url` field. If the reply contains `SUCCESS:`, the installer accepted it.
-2. **Remote Package Installer style.** `POST /api/install` with `{"type":"direct","packages":["<url-encoded link>"]}`. In this style an `https` link is sent as `http`. If the reply contains `success`, the installer accepted it.
+1. **etaHEN style** (a PS5's installer). `POST /upload` as a multipart form with a `url` field. If the reply contains `SUCCESS:`, the installer accepted it.
+2. **Remote Package Installer style** (a PS4's installer). `POST /api/install` with `{"type":"direct","packages":["<link>"]}`. The link goes as it is, not URL-encoded, the way flatz's README shows it, except that an `https` link is sent as `http`. If the reply contains `success`, the installer accepted it.
 
 If neither works, the status line shows both HTTP codes and the first 80 characters of each reply, for example `Not accepted (upload 200: …; api 404: …)`, so you can see what the console really said. When a message has a likely cause, a **What can I do?** button explains it (see [Errors that say what to do](#errors-that-say-what-to-do)).
 
-Both styles come from the public documentation of existing installer tools (see [Credits](#credits)). The replies a real console gives have not been confirmed yet (see [Status and known limits](#status-and-known-limits)).
+Bento tries both styles on either console, so one app works on a PS5 and a PS4. Both styles come from the public documentation of existing installer tools (see [Credits](#credits)). The replies a real console gives have not been confirmed yet (see [Status and known limits](#status-and-known-limits)).
 
 ### Install from this phone
 
@@ -166,7 +166,7 @@ The phone and the console must be on the same network. Guest Wi-Fi often stops d
 
 ### Payload tab
 
-Payloads (`.elf` and `.bin`) go to the console's ELF loader, which listens on the **Loader port** (default 9021).
+Payloads (`.elf` and `.bin`) go to the console's ELF loader, which listens on the **Loader port** (default 9021 on a PS5, 9090 on a PS4).
 
 - **Send.** Bento opens a TCP connection to the loader, streams the file in 64 KB pieces, then closes its sending side so the loader sees the end of the file. It reports `Sent 1.5 MB` (or the error).
 - **Payload shelf.** Keeps the payloads you use often inside the app, each one tap from **Send**. **Add payload to shelf** copies a file in, and the Web tab's download chooser can save straight to the shelf too. A file may be up to 64 MiB. Adding a file with the same name replaces the old one, but only after the new copy is complete (it is written to a temporary file and then renamed), so a failed copy never damages a working payload. **Remove** deletes it from the shelf only, not the original on your phone.
@@ -193,7 +193,7 @@ Uploads files from your phone to the console's FTP server.
 
 Every file becomes a queue item and is stored as `<remote folder>/<file name>`. A new FTP connection is made for each try, in passive mode with binary transfers. When the console says it has the file, Bento asks it for the stored size and compares that with what was sent, because a console can report success for a connection that broke or a disk that filled up. Files are read through Android's document picker, so Bento needs no storage permission; read access is kept, as far as the system allows, so files waiting in the queue can still be opened later.
 
-The FTP server is the FTP payload (port 2121 by default) or etaHEN's built-in one (port 1337). Set the port to match. How the queue handles dropped connections is under [Transfers](#transfers).
+The FTP server is the FTP payload (port 2121 by default), etaHEN's built-in one on a PS5 (port 1337), or GoldHEN's on a PS4 (port 2121). Set the port to match. How the queue handles dropped connections is under [Transfers](#transfers).
 
 ### Files tab
 
@@ -204,8 +204,8 @@ A file browser for the console over FTP. It opens the folder you were last in on
 - **Select several things.** Press and hold a row to start selecting, then tap rows to tick or untick them. The bar shows how many are selected and has **Cancel**, **Select all** (or **Select none**), **Download to phone** and **Delete**. Back leaves the selection first.
 - **Names** are checked before anything is sent: not empty, not `.` or `..`, no slashes, no control characters, and not already used in that folder.
 - **Delete** asks first. Deleting a folder removes everything inside it and can't be undone: Bento walks down the folder (up to 40 levels), deletes the files, and removes each folder on the way back out. Links are removed, never followed. When several things are selected, one that can't be deleted doesn't stop the others; the message says how many were deleted, how many were not, and what the first problem was.
-- **Download to phone** is a queued background transfer into `Downloads/PS5` on the phone. The file stays hidden from other apps until it is complete, and a download that is cancelled or fails for good leaves nothing behind.
-- **Download folders.** Select folders (or a mix of folders and files) and tap **Download to phone**, or choose **Download to phone** in a folder's ⋮ menu. Bento first looks through the folders, then asks you to confirm, showing how many files there are and their total size. Every file is saved in `Downloads/PS5` in the same folders as on the console, as its own item in the transfer queue. Bento follows folders up to 12 levels deep and takes at most 2,000 files from at most 1,000 folders; if there is more than that, the confirmation says so. Links inside folders are not followed (a link can lead anywhere, even back to the folder it is in); the confirmation says how many were skipped.
+- **Download to phone** is a queued background transfer into `Downloads/PS5` or `Downloads/PS4` on the phone. The file stays hidden from other apps until it is complete, and a download that is cancelled or fails for good leaves nothing behind.
+- **Download folders.** Select folders (or a mix of folders and files) and tap **Download to phone**, or choose **Download to phone** in a folder's ⋮ menu. Bento first looks through the folders, then asks you to confirm, showing how many files there are and their total size. Every file is saved in `Downloads/PS5` or `Downloads/PS4` in the same folders as on the console, as its own item in the transfer queue. Bento follows folders up to 12 levels deep and takes at most 2,000 files from at most 1,000 folders; if there is more than that, the confirmation says so. Links inside folders are not followed (a link can lead anywhere, even back to the folder it is in); the confirmation says how many were skipped.
 - **Sort** by name, by size (largest first) or by date (newest first). Folders always come first, and the choice is remembered.
 - **Search** filters the folder you are viewing as you type: every word you type has to be somewhere in the name, in any order and whatever the case.
 - **Pinned folders.** **Pin this folder** adds a 📌 button for it under the toolbar (up to 12 per console); tap it to jump straight there. **Unpin this folder** removes it. If a pinned folder can't be opened (it was renamed or deleted), the app says so and offers to unpin it.
@@ -227,8 +227,8 @@ A built-in browser (Android's WebView) that can send downloads to the console. I
 - **Leave this site?** If a tap would take the page to a different site than the one you are on, which is what ad redirects do, Bento asks first. **Open** allows that site for this session, **Block** stays put. A "site" is the registered domain; endings such as `.co.uk` are understood.
 - **Ad block.** A list of 57 well-known ad and pop-up network domains, plus your own (one per line). Requests for parts of a page (scripts, images, frames) from those domains or their subdomains get an empty answer, and a counter shows how many were blocked. The page you are opening is never blocked. Reload after changing the list. It is a domain list, not a full content blocker.
 - **Downloads** open a chooser with four choices:
-  - **Send link to PS5 installer.** The same request as the Install tab, with the download's address. The installer needs a direct link it can open without logging in.
-  - **Upload to PS5 (FTP).** The phone downloads the file and streams it to the console's FTP server without keeping a copy. The browser's cookies and user agent go with the request, so links that need your login session work. If the connection drops, Bento continues with a `Range` request (with `If-Range`, so a file that changed isn't mixed with the old one).
+  - **Send link to the console installer.** The same request as the Install tab, with the download's address. The installer needs a direct link it can open without logging in.
+  - **Upload to the console (FTP).** The phone downloads the file and streams it to the console's FTP server without keeping a copy. The browser's cookies and user agent go with the request, so links that need your login session work. If the connection drops, Bento continues with a `Range` request (with `If-Range`, so a file that changed isn't mixed with the old one).
   - **Save to payload shelf.** For payloads up to 64 MiB.
   - **Save to phone.** Android's download manager puts it in `Downloads`.
 
@@ -264,7 +264,7 @@ Many problem messages (on the status line, the transfer card, the Files tab and 
 
 | Page | When it appears |
 | --- | --- |
-| Can't reach the console | Nothing answers at the console's address (unknown host, no route, a connection that never opens). It has a **Find my PS5** button. |
+| Can't reach the console | Nothing answers at the console's address (unknown host, no route, a connection that never opens). It has a **Find my console** button. |
 | That service isn't running | The console answered, but the port refuses connections. |
 | FTP login refused | The FTP server turned the user name or password down. |
 | The connection dropped | The link broke or stopped moving data. |
@@ -303,13 +303,13 @@ Afrikaans, Arabic, Bengali, Bulgarian, Catalan, Chinese (Simplified), Chinese (T
 
 ## Under the hood
 
-Bento is Kotlin with Jetpack Compose and Material 3: 43 source files, about 12,200 lines, in one module (`app`).
+Bento is Kotlin with Jetpack Compose and Material 3: 43 source files, about 12,300 lines, in one module (`app`).
 
 ### Design notes
 
 - **Shared state.** The screen and the services share a few objects: `TransferState` and `ServeState` for transfers and sharing, `ChainRunner` for payload chains. The services update them, and the screen watches their `StateFlow`s.
 - **Services do the long work.** Transfers, sharing and payload chains run in foreground services (type `dataSync`), so they survive leaving the app.
-- **No storage permission.** Files are picked with Android's document picker and kept readable with persistable URI permissions. Downloads to the phone go through MediaStore into `Downloads/PS5`.
+- **No storage permission.** Files are picked with Android's document picker and kept readable with persistable URI permissions. Downloads to the phone go through MediaStore into `Downloads/PS5` or `Downloads/PS4`.
 - **The engine is separate from the app.** `Engine.kt` doesn't touch the screen or the phone's storage; the app plugs those in through small interfaces (`TransferHooks`, `ResumableSource`, `ResumableSink`). The files `Engine.kt`, `Queue.kt`, `Speed.kt`, `Tally.kt`, `TransferState.kt`, `Unfinished.kt`, `Scan.kt`, `Status.kt`, `HttpSource.kt`, `FileServer.kt`, `ServeSupport.kt`, `ServeState.kt`, `BrowserLogic.kt` and `Basics.kt` don't import any `android.*` classes at all.
 - **Decisions first, screens second.** What can be decided without a phone is kept in plain Kotlin so it can be tested on a computer: how a folder is sorted and searched and what a download of folders comes to (`FilesLogic.kt`), what a chain does (`Chains.kt`), which addresses the Wi-Fi scan tries (`Scan.kt`), how links are picked out of text (`Links.kt`), how a backup is read (`Backup.kt`), how the speed limit paces a transfer (`SpeedLimit.kt`), which tabs are open and what they are called (`BrowserLogic.kt`).
 - **The browser talks to pages through three small interfaces.** `BrowserModel` in `Browser.kt` holds the tabs and the find bar, and works with a page (`TabPage`), the news a page sends (`PageEvents`) and the frame that shows it (`Stage`). `BrowserWeb.kt` is the one place that turns those into real web views, which keeps the rules of the browser testable without Android.
@@ -331,7 +331,7 @@ Paths are relative to [`app/src/main/java/com/example/pssender/`](app/src/main/j
 - `ChainUi.kt`: the list of chains, the chain editor and the card of a running chain.
 - `Serve.kt`: the "Install from this phone" section.
 - `Profiles.kt`: consoles, how they are saved, and the switcher dialog.
-- `Find.kt`: the "Find my PS5" window.
+- `Find.kt`: the "Find my console" window.
 - `About.kt`: the About window: updates, speed limit, backup and restore, the bug report text.
 - `UnfinishedUi.kt`: the card that offers the unfinished transfers again.
 - `Help.kt`: the "What can I do?" pages and the notes that say which page a message gets.
@@ -343,7 +343,7 @@ Paths are relative to [`app/src/main/java/com/example/pssender/`](app/src/main/j
 
 - `Net.kt`: install requests, payload sending, FTP browsing and file operations, and the glue between transfers and the phone's storage.
 - `Status.kt`: the console check (which ports answer) and the card's states.
-- `Scan.kt`: the Wi-Fi scan behind "Find my PS5".
+- `Scan.kt`: the Wi-Fi scan behind "Find my console".
 - `HttpSource.kt`: a web link as a source that can continue after a break.
 - `Links.kt`: finding web links in text, sending several one after another, the recent links.
 - `Update.kt`: the update check, the notice, and the update part of the About window.
@@ -393,11 +393,11 @@ Beside the code: `AndroidManifest.xml` (permissions, services, the share-sheet e
 - `sendBytesToLoader` (`Net.kt`): Streams a payload over TCP, then closes the sending side.
 - `runChain` (`Chains.kt`): Sends the payloads of a chain with their pauses, and tries a loader that isn't ready again.
 - `isPortOpen`, `checkConsole` (`Net.kt`, `Status.kt`): The port checks behind the console card.
-- `scanNetworks`, `scanWifi`, `sortHits` (`Scan.kt`): Which addresses "Find my PS5" tries, trying them, and putting the likeliest console first.
+- `scanNetworks`, `scanWifi`, `sortHits` (`Scan.kt`): Which addresses "Find my console" tries, trying them, and putting the likeliest console first.
 - `ftpList`, `ftpRename`, `ftpMakeDir`, `ftpDelete` (`Net.kt`): Short FTP sessions for the Files tab.
 - `arrangeEntries`, `planDownload`, `deleteEach` (`FilesLogic.kt`): Sorting and searching a folder, planning a download of folders, deleting several things.
 - `ftpUpload`, `ftpDownload` (`Engine.kt`): Upload and download that resume after a drop.
-- `ftpDownloadToPhone` (`Net.kt`): Downloads into `Downloads/PS5` through MediaStore.
+- `ftpDownloadToPhone` (`Net.kt`): Downloads into `Downloads/PS5` or `Downloads/PS4` through MediaStore.
 - `runWithRetries` (`Engine.kt`): The retry loop: waits, resumes, gives up.
 - `runAcrossPauses` (`TransferState.kt`): Runs a transfer across the user's pauses.
 - `settledSizeOf` (`Engine.kt`): Waits until the console's partial file stops growing.
@@ -434,10 +434,10 @@ Beside the code: `AndroidManifest.xml` (permissions, services, the share-sheet e
 
 | What | Value |
 | --- | --- |
-| Installer, loader and FTP ports | 12800, 9021, 2121 |
+| Installer, loader and FTP ports | 12800; loader 9021 (PS5) or 9090 (PS4); 2121 |
 | FTP login and start folder | `anonymous` (no password), `/data` |
 | Console check | every 6 s, 1.5 s per port |
-| Find my PS5 | up to 2 networks of at most 254 addresses; 64 attempts at a time, 0.45 s each; ports: yours plus 12800, 9021, 1337, 2121 |
+| Find my console | up to 2 networks of at most 254 addresses; 64 attempts at a time, 0.45 s each; ports: yours plus 12800, 9021, 9090, 1337, 2121 |
 | Install request | 5 s to connect, 10 s to read |
 | Install box | up to 50 links per send; 10 recent links |
 | Payload send | 5 s to connect, 64 KB pieces |
@@ -466,14 +466,14 @@ Beside the code: `AndroidManifest.xml` (permissions, services, the share-sheet e
 
 ## Build, signing and releases
 
-- **Where the code is.** The Android project is in this repository as plain files: [`app/`](app/) holds the code, the texts in every language and the icon drawables, with `build.gradle.kts`, `settings.gradle.kts` and `gradle.properties` at the top. Beside it are `.github/workflows/main.yml` (the build), [`fake_console.py`](fake_console.py) (a stand-in console for testing, see [Testing without a PS5](#testing-without-a-ps5)), the [license](LICENSE) and this README with its icon, `bento-icon.png`. The project started as "PS5 Sender", which is why the package (`com.example.pssender`) keeps that name while the app is called Bento.
+- **Where the code is.** The Android project is in this repository as plain files: [`app/`](app/) holds the code, the texts in every language and the icon drawables, with `build.gradle.kts`, `settings.gradle.kts` and `gradle.properties` at the top. Beside it are `.github/workflows/main.yml` (the build), [`fake_console.py`](fake_console.py) (a stand-in console for testing, see [Testing without a console](#testing-without-a-console)), the [license](LICENSE) and this README with its icon, `bento-icon.png`. The project started as "PS5 Sender", which is why the package (`com.example.pssender`) keeps that name while the app is called Bento.
 - **The workflow** (`main.yml`, named *Build APK*) runs when you start it by hand or push to `main`. It checks out the repository, sets up Temurin JDK 17 and Gradle 8.9, accepts the Android SDK licenses, runs `gradle assembleDebug`, and names the result `Bento-1.N.apk`, where N is the run number.
 - **Releases.** The APK is kept as the run's `bento-debug-apk` artifact and published as a release tagged `v1.N` ("Bento 1.N"). The app's `versionCode` is N too, so every build counts as an update of the one before it and Android installs it over the old one. The update check inside the app compares that number with the newest release's tag.
 - **Signing.** Every build is signed with the same key, `app/pssender-debug.keystore`. Otherwise a GitHub build machine would make a new random key on every run, and Android refuses to install an app over a copy signed with a different key. **Don't replace that file**: the next build wouldn't install over the old ones, and you would have to uninstall first and lose your saved settings. It is a public debug key, so it can't prove who built an APK. Install builds you made yourself or got from this repository's Releases.
 - **Building from your own repository.** The update check looks at the Releases page of `DubDeezo-hub/Bento-Beta` (the constant `UPDATE_REPO` in `Update.kt`). If you build Bento from a repository of your own, change that line, or switch the check off in the About window.
 - **Toolchain.** Android Gradle Plugin 8.5.2, Kotlin 2.0.20 with the Compose compiler plugin, Gradle 8.9, JDK 17, `compileSdk` and `targetSdk` 34, `minSdk` 29 (Android 10). Dependencies: Compose BOM 2024.09.00, `androidx.activity:activity-compose` 1.9.2, Material 3, AndroidX SwipeRefreshLayout 1.1.0 (pull down to reload in the Web tab), OkHttp 4.12.0 and Apache Commons Net 3.11.1.
 
-## Testing without a PS5
+## Testing without a console
 
 [`fake_console.py`](fake_console.py) pretends to be a console on the same phone, so you can try every tab before you go near the real one. Install Termux, then:
 
@@ -488,24 +488,24 @@ In Bento, tap the console card and enter `127.0.0.1`. The three lights turn on.
 | Tab | What the fake console does |
 | --- | --- |
 | Install | Listens on 12800, understands both request styles (`/upload` and `/api/install`) and prints the link. For a link from **Install from this phone** it then downloads the file the way a console would: `HEAD`, a few byte ranges, a range past the end (which must be refused with `416`), then the whole file, capped at 64 MB unless you set `FAKE_PS5_FULL=1`. It prints `self-test PASSED`, or why it failed. |
-| Payload | Listens on 9021 and saves what it receives to `~/fake_ps5/payloads/`, one file per payload. Payload chains send to it the same way. |
+| Payload | Listens on 9021 (a PS5's loader) and 9090 (a PS4's), saving what it receives to `~/fake_ps5/payloads/`, one file per payload. Payload chains send to it the same way. |
 | Upload and Files | An anonymous FTP server on 2121 rooted at `~/fake_ps5/ftp`, with a few sample files and folders to open, rename, download and delete. Uploads land in `~/fake_ps5/ftp/data/`. |
 
-**Try Find my PS5.** The fake console listens on all of the phone's addresses, so with the phone on Wi-Fi, **Find my PS5** finds the phone itself, with Installer, Loader and FTP answering. Tap **Use** and the console card turns green. (On a phone that isn't on Wi-Fi the window says so.)
+**Try Find my console.** The fake console listens on all of the phone's addresses, so with the phone on Wi-Fi, **Find my console** finds the phone itself, with Installer, Loader and FTP answering. Tap **Use** and the console card turns green. (On a phone that isn't on Wi-Fi the window says so.)
 
-It shows that the phone side works. It can't show that a real PS5 accepts the same requests.
+It shows that the phone side works. It can't show that a real console accepts the same requests.
 
 ## Troubleshooting
 
-- **"Can't reach the console".** Nothing answers at that address. Check the IP, that the PS5 is awake on the same Wi-Fi, and that etaHEN is running. If the address may have changed, tap **Find my PS5**.
-- **"Find my PS5" finds nothing.** Turn the console fully on (rest mode often turns the network off), start etaHEN, and use the same Wi-Fi on the phone and the console. Guest networks and VPNs keep devices apart. Then scan again, or type the address.
+- **"Can't reach the console".** Nothing answers at that address. Check the IP, that the console is awake on the same Wi-Fi, and that etaHEN (PS5) or GoldHEN (PS4) is running. If the address may have changed, tap **Find my console**.
+- **"Find my console" finds nothing.** Turn the console fully on (rest mode often turns the network off), start etaHEN (PS5) or GoldHEN (PS4), and use the same Wi-Fi on the phone and the console. Guest networks and VPNs keep devices apart. Then scan again, or type the address.
 - **"Partly ready · off: Installer" (or Loader, FTP).** That service isn't answering. Start it on the console, or fix its port: the installer and loader ports are on the Install and Payload tabs, the FTP port is in the FTP settings of the Upload and Files tabs.
-- **"Not accepted (upload … ; api …)".** The console answered, but not in a way Bento recognizes. If `upload` shows `200`, the console may have accepted the first request anyway, so look for a new task on the PS5. If both show errors such as `404`, that port isn't an installer: check the installer port field and that the installer service is running.
+- **"Not accepted (upload … ; api …)".** The console answered, but not in a way Bento recognizes. If `upload` shows `200`, the console may have accepted the first request anyway, so look for a new task on the console. If both show errors such as `404`, that port isn't an installer: check the installer port field and that the installer service is running.
 - **"Installer accepted it", but nothing installs.** The console couldn't fetch the link. It has to be a direct link that needs no login and is reachable from the console. Try **Install from this phone**, or send the file over FTP.
 - **Some links in the Install box were not sent.** Only addresses that start with `http://` or `https://` are sent. The note under the box says how many words were left out; check that the links are complete.
 - **Install from this phone never starts downloading.** The Wi-Fi may be stopping devices from reaching each other (guest networks often do). Use the main network, and let Bento run in the background. To test the link, tap **Copy link** and open it from another device on the same network.
 - **"Can't find this phone's Wi-Fi address".** Connect the phone to the same Wi-Fi as the console.
-- **"Can't reach the FTP server…".** Wrong FTP port. etaHEN's built-in FTP uses 1337, the FTP payload uses 2121.
+- **"Can't reach the FTP server…".** Wrong FTP port. On a PS5, etaHEN's built-in FTP uses 1337 and the FTP payload uses 2121; on a PS4, GoldHEN's FTP uses 2121.
 - **"FTP login failed".** Check **Username** and **Password**. The default is `anonymous` with no password. The password isn't saved, so type it again after restarting the app.
 - **"Gave up after the connection kept failing".** The Wi-Fi dropped, or the console went to sleep, for longer than the retries lasted. Tap **Try again**: it continues from where it stopped.
 - **"The console kept only X of the Y that were sent".** The console isn't storing everything it receives. Check that it has free space, then try again.
@@ -524,15 +524,15 @@ It shows that the phone side works. It can't show that a real PS5 accepts the sa
 
 ## Status and known limits
 
-- **Not confirmed on a real PS5 yet.** It has been tried on a phone against the fake console, but never against a real one. Still to check: installs, payloads, FTP and downloads on a real console, and a real PS5 pulling a package from the phone's server.
-- **The newest features are not confirmed on a phone yet.** Find my PS5, payload chains and their shortcuts, pausing and the speed limit, the offer to continue unfinished transfers, the update check, backup and restore, and the newer parts of the Files tab (selecting, folder downloads, sort, search, pinned folders) and of the Web tab (tabs, the link menu, find in page, the desktop-site switch, pull to reload) were written together with automated tests and checked on a computer: the logic against test servers and fake pages, and the whole app against stand-ins for the Android libraries. That is not the same as using them on a phone, so some rough edges are possible. **Copy report** in the About window helps with a bug report.
+- **Mostly not confirmed on a real console yet.** FTP uploads have been confirmed on the author's real PS4 (GoldHEN). Everything else has been tried on a phone only against the fake console: installs, payloads and downloads on a real console, the whole PS5 path, and a real console pulling a package from the phone's server.
+- **The newest features are not confirmed on a phone yet.** Find my console, payload chains and their shortcuts, pausing and the speed limit, the offer to continue unfinished transfers, the update check, backup and restore, and the newer parts of the Files tab (selecting, folder downloads, sort, search, pinned folders) and of the Web tab (tabs, the link menu, find in page, the desktop-site switch, pull to reload) were written together with automated tests and checked on a computer: the logic against test servers and fake pages, and the whole app against stand-ins for the Android libraries. That is not the same as using them on a phone, so some rough edges are possible. **Copy report** in the About window helps with a bug report.
 - **The install requests are based on documentation.** The two styles and the replies Bento looks for come from the public documentation of existing tools, not from watching a real console. If **Install > Send** says "Not accepted", the status line shows what the console actually replied.
-- **How the PS5 downloads from the phone is unconfirmed.** The server supports `HEAD` and byte ranges, but what a real console sends hasn't been observed.
-- **Wi-Fi can get in the way.** A guest or isolated network can stop the console from reaching the phone, and can hide the console from **Find my PS5**.
+- **How the console downloads from the phone is unconfirmed.** The server supports `HEAD` and byte ranges, but what a real console sends hasn't been observed.
+- **Wi-Fi can get in the way.** A guest or isolated network can stop the console from reaching the phone, and can hide the console from **Find my console**.
 - **Nothing is encrypted.** FTP and the install requests are plain text on your local network, and the app allows cleartext traffic for that reason.
 - **Translations are unreviewed.** They have not been checked by native speakers, so some wording may be off.
 - **Debug-signed, outside Google Play.** Bento tells you when a newer build is on the Releases page, but it can't install it by itself: you download the APK and open it.
-- **Find my PS5 is a best guess.** It lists the devices on your Wi-Fi that answer on the console's usual ports. A device that only has an FTP server could be anything, so check the address. There is no list of the games installed on the console; Bento sends things to the console, it doesn't manage its library.
+- **Find my console is a best guess.** It lists the devices on your Wi-Fi that answer on the console's usual ports. A device that only has an FTP server could be anything, so check the address. There is no list of the games installed on the console; Bento sends things to the console, it doesn't manage its library.
 - **Continuing after the app was closed starts again from the beginning.** The resume described under [Transfers](#transfers) is for dropped connections and pauses while the app is running. The list of unfinished transfers holds at most 200.
 - **Downloading folders has limits.** At most 2,000 files from 1,000 folders, 12 levels deep; links inside folders are skipped. A folder that can't be read stops the whole plan, with an error that names it.
 - **Browser tabs are not saved when the app is closed.** They survive rotating the phone, but not closing the app. The pages of tabs in the background are paused where Android allows, not frozen.
@@ -543,11 +543,11 @@ It shows that the phone side works. It can't show that a real PS5 accepts the sa
 ## Privacy and security
 
 - Bento has no accounts, no analytics and no ads of its own. It talks to the console you set up, to the web pages you open in the Web tab, to the links you ask it to fetch, and, for the update check, to GitHub.
-- Permissions: internet access; foreground service (for background transfers, sharing and payload chains); notifications (Android 13 and newer); and wake lock (to keep the processor and Wi-Fi awake during a transfer, while sharing from the phone and while a payload chain runs). It does not ask for storage, location, contacts or the camera. **Find my PS5** needs no extra permission.
+- Permissions: internet access; foreground service (for background transfers, sharing and payload chains); notifications (Android 13 and newer); and wake lock (to keep the processor and Wi-Fi awake during a transfer, while sharing from the phone and while a payload chain runs). It does not ask for storage, location, contacts or the camera. **Find my console** needs no extra permission.
 - Settings are stored in the app's private storage: consoles and their ports, the FTP user name and folder, bookmarks, the homepage, the ad-block switch and your ad-block list, the desktop-site switch, payload chains, pinned folders, the folder last viewed on each console, the sort order, the speed limit, the ten recent install links, and the update-check settings. The FTP password is never saved. The payload shelf is also in private storage.
 - **Unfinished transfers** are written to a file (`unfinished-transfers.json`) in the app's private storage that Android leaves out of its backups. It holds the names, console addresses, FTP user names, folders, file locations and download links of transfers that were not finished, never a password or a cookie, and it is emptied when the queue is.
 - **The update check** asks GitHub for the newest release of this repository: when the app opens, at most once a day, while the switch in the About window is on, and whenever you tap **Check now**. GitHub sees your IP address and the app's name, as any website would. Nothing about you or your consoles is sent.
-- **Find my PS5** only runs when you tap it. It opens a connection to a few console ports on the addresses of your own Wi-Fi network and closes it again. Nothing is sent, and nothing leaves your network.
+- **Find my console** only runs when you tap it. It opens a connection to a few console ports on the addresses of your own Wi-Fi network and closes it again. Nothing is sent, and nothing leaves your network.
 - **Backups** are plain files that you save yourself. They hold your consoles' names, addresses and FTP user names, bookmarks, ad-block list, payloads, chains and pinned folders, never FTP passwords. Keep the file where you keep other private things.
 - **The bug report** (About window, **Copy report**) leaves out web links and IP addresses, and it is shown on screen before you paste it anywhere.
 - The browser's open tabs (their addresses and titles) are held in memory, in the state Android keeps while the screen is rebuilt. Bento doesn't write them to its storage.
@@ -561,7 +561,7 @@ Bento is a tool for moving data to **your own** console. It doesn't contain or h
 
 Sending a payload or deleting files on a console can have consequences: a bad payload can crash it, and a deleted file stays deleted. Use Bento at your own risk. It is provided as is, without warranty.
 
-PlayStation and PS5 are trademarks of Sony Interactive Entertainment Inc. Android is a trademark of Google LLC. Bento is an independent hobby project and is not affiliated with, endorsed by or sponsored by either company.
+PlayStation, PS4 and PS5 are trademarks of Sony Interactive Entertainment Inc. Android is a trademark of Google LLC. Bento is an independent hobby project and is not affiliated with, endorsed by or sponsored by either company.
 
 **License.** Bento is released under the [MIT License](LICENSE): you may use, copy, change and share it, as long as the copyright notice and the license text go along with it. The libraries and tools in the credits keep their own licenses.
 
@@ -571,19 +571,20 @@ Bento exists because of other people's work. Thank you to everyone below.
 
 **Made by** DubDeezo.
 
-### On the PS5: what Bento talks to
+### On the console: what Bento talks to
 
 Bento is only a client. Everything it connects to on the console was made by others, and none of it is part of Bento.
 
-- **[etaHEN](https://github.com/etaHEN/etaHEN)** by **LightningMods** and contributors (see its README for the full list), GPL-3.0. Its Direct Package Installer (the V2 web interface on port 12800), its ELF loader and its built-in FTP server are what Bento's Install, Payload, Upload and Files tabs talk to.
+- **[etaHEN](https://github.com/etaHEN/etaHEN)** by **LightningMods** and contributors (see its README for the full list), GPL-3.0. Its Direct Package Installer (the V2 web interface on port 12800), its ELF loader and its built-in FTP server are what Bento's Install, Payload, Upload and Files tabs talk to on a PS5.
 - **[ps5-payload-dev/elfldr](https://github.com/ps5-payload-dev/elfldr)** and **[ps5-payload-dev/ftpsrv](https://github.com/ps5-payload-dev/ftpsrv)** by **John Törnblom** and contributors, GPLv3+: the ELF loader (port 9021) and the FTP server (default port 2121).
-- **[flatz/ps4_remote_pkg_installer](https://github.com/flatz/ps4_remote_pkg_installer)**, the Remote Package Installer by **flatz**. Its `/api/install` request with `{"type":"direct","packages":[…]}` is the second style Bento tries.
+- **[GoldHEN](https://github.com/GoldHEN/GoldHEN)** by **SiSTR0** and contributors, GPL-3.0: on a PS4 its ELF loader (port 9090) and FTP server (port 2121) are what Bento's Payload, Upload and Files tabs talk to.
+- **[flatz/ps4_remote_pkg_installer](https://github.com/flatz/ps4_remote_pkg_installer)**, the Remote Package Installer by **flatz**: the package installer Bento talks to on a PS4, and the second style it tries on a PS5. Its `/api/install` request takes `{"type":"direct","packages":[…]}` with the link as plain text.
 - **[MaxMilu/ps5-direct-package-installer](https://github.com/MaxMilu/ps5-direct-package-installer)**, an unofficial derivative of etaHEN's installer (GPL-3.0-or-later). Its documentation of the port 12800 web interface (`POST /upload` with a `url` field) matches the first request Bento sends.
 - Wololo.net: [etaHEN 1.7b adds Remote Package Install support](https://wololo.net/2024/02/26/ps5-release-etahen-1-7b-adds-remote-package-install-support/) (26 February 2024), where etaHEN's installer and its public API were announced, and [etaHEN 2.0b and ItemzFlow 1.09 released + PKG install Writeup by LightningMods](https://wololo.net/2025/03/31/ps5-etahen-2-0b-and-itemzflow-1-09-released-pkg-install-writeup-by-lightningmods/) (31 March 2025), which added the Direct Package Installer V2 (web GUI version) to etaHEN's services menu.
 
 ### Inspiration
 
-- **NovaPS**, a PS4 homebrew app, on its [Dekazeta page](https://www.dekazeta.net/foro/files/file/4906-novaps/). Bento was inspired by it. It is a separate project written from scratch for the PS5 and contains no NovaPS code.
+- **NovaPS**, a PS4 homebrew app, on its [Dekazeta page](https://www.dekazeta.net/foro/files/file/4906-novaps/). Bento was inspired by it. It is a separate project written from scratch for the PS5 and the PS4 and contains no NovaPS code.
 
 ### Built into the app
 

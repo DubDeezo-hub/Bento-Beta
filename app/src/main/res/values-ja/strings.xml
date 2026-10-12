@@ -33,14 +33,15 @@
     <string name="service_installer">インストーラー</string>
     <string name="service_loader">ローダー</string>
     <string name="list_separator">、</string>
-    <string name="status_set_ip">PS5のIPアドレスを設定してください</string>
+    <string name="status_set_ip">%1$sのIPアドレスを設定してください</string>
     <string name="status_checking">確認中…</string>
     <string name="status_ready">準備完了</string>
     <string name="status_partly">一部のみ準備完了</string>
     <string name="status_partly_off">一部のみ準備完了 · 応答なし: %1$s</string>
     <string name="status_offline">コンソールに接続できません</string>
     <string name="status_hint_unset">PS5の「設定 &gt; ネットワーク &gt; 接続状況 &gt; 接続状況を見る」で確認できます。ここをタップして入力してください。</string>
-    <string name="status_hint_offline">このアドレスから応答がありません。IPアドレス、PS5が同じWi-Fiに接続された電源オンの状態か、etaHENが動作しているかを確認してください。</string>
+    <string name="status_hint_unset_ps4">PS4の「設定 &gt; ネットワーク &gt; 接続状況を見る」で確認できます。ここをタップして入力してください。</string>
+    <string name="status_hint_offline">このアドレスから応答がありません。IPアドレス、%1$sが同じWi-Fiに接続された電源オンの状態か、%2$sが動作しているかを確認してください。</string>
     <string name="status_hint_one">応答なし: %1$s。コンソールで起動するか、ポートを確認してください。</string>
     <string name="status_hint_many">応答なし: %1$s。コンソールで起動するか、ポートを確認してください。</string>
     <string name="console_switch">コンソールを切り替え</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">コンソールのIPアドレス</string>
     <string name="console_ip_label">IPアドレス</string>
     <string name="console_ip_help">PS5の「設定 &gt; ネットワーク &gt; 接続状況 &gt; 接続状況を見る」で確認できます。</string>
+    <string name="console_ip_help_ps4">PS4の「設定 &gt; ネットワーク &gt; 接続状況を見る」で確認できます。</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">転送</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">待機中の転送</string>
     <string name="queue_clear">すべて削除</string>
     <string name="queue_empty">待機中の項目はありません。</string>
-    <string name="notif_channel">PS5への転送</string>
+    <string name="notif_channel">PS4/PS5への転送</string>
     <string name="notif_sent">送信済み: %1$s</string>
     <string name="notif_received">受信済み: %1$s</string>
     <string name="percent_value">%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">キューに追加しました。%1$d件待機中。</string>
     <string name="msg_set_ip_first">先にコンソールのIPアドレスを設定してください。上部のカードをタップします。</string>
-    <string name="msg_sending_link">PS5へリンクを送信中…</string>
+    <string name="msg_sending_link">%1$sへリンクを送信中…</string>
     <string name="msg_check_ip_ftp">コンソールのIPアドレスとFTPポートを確認してください。</string>
     <string name="msg_adding_to_shelf_link">ペイロードライブラリに追加中…</string>
     <string name="status_idle">待機中</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">このサイトを離れますか？</string>
     <string name="offsite_text">このページは%1$sを開こうとしています。リンクをタップしたときに広告が原因でこうなることが多いので、予想していた場合のみ続行してください。</string>
-    <string name="choose_install">PS5のインストーラーにリンクを送信</string>
-    <string name="choose_ftp">PS5にアップロード（FTP）</string>
+    <string name="choose_install">%1$sのインストーラーにリンクを送信</string>
+    <string name="choose_ftp">%1$sにアップロード（FTP）</string>
     <string name="choose_shelf">ペイロードライブラリに保存</string>
     <string name="choose_phone">スマートフォンに保存</string>
     <string name="choose_help">インストーラーには、コンソールがログインなしで開ける直接のパッケージリンクが必要です。FTPはどんなファイルにも使え、ログインセッションも保持されます。スマートフォンがバックグラウンドでデータを中継し、進行状況は下部バーの上と通知に表示されます。ペイロードライブラリは、小さなペイロード（%1$sまで）をアプリ内に保存し、ペイロードタブで使えます。</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">インストーラーのポート（etaHEN: 12800）</string>
+    <string name="install_port_label">インストーラーのポート（%1$s: 12800）</string>
     <string name="install_accepted">インストーラーが受け付けました: %1$s</string>
     <string name="install_not_accepted">受け付けられませんでした（upload %1$s: %2$s; api %3$s: %4$s）</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">失敗: %1$s</string>
     <string name="ftp_port_hint">FTPサーバーに接続できません。コンソールのIPアドレスとFTPポートを確認してください（etaHENの内蔵FTPは1337、FTPペイロードは2121を使用します）。</string>
+    <string name="ftp_port_hint_ps4">FTPサーバーに接続できません。コンソールのIPアドレスとFTPポートを確認してください（GoldHENのFTPは2121を使用します）。</string>
     <string name="err_login">FTPログインに失敗しました</string>
     <string name="err_cant_open">%1$sを開けません（%2$s）</string>
     <string name="err_rename">名前の変更に失敗しました（%1$s）</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">%2$sのうち%1$sしか届きませんでした。</string>
     <string name="err_empty_file">ファイルが空です</string>
     <string name="err_save">%1$sを保存できませんでした</string>
-    <string name="sent_to_ps5">PS5に送信しました: %1$s</string>
-    <string name="saved_to_downloads">ダウンロード/PS5に保存しました: %1$s</string>
+    <string name="sent_to_ps5">%2$sに送信しました: %1$s</string>
+    <string name="saved_to_downloads">ダウンロード/%2$sに保存しました: %1$s</string>
     <string name="dl_http_failed">ダウンロードに失敗しました: HTTP %1$s</string>
     <string name="dl_empty">ダウンロードに失敗しました: 応答が空です</string>
     <string name="dl_cut_short">ファイル全体が届く前に接続が閉じられました。</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">ライブラリから削除されます。スマートフォン上の元のファイルはそのままです。</string>
     <string name="payload_loader_port">ローダーのポート</string>
     <string name="payload_shelf_title">ペイロードライブラリ</string>
-    <string name="payload_shelf_empty">まだ何も保存されていません。よく使うペイロード（FTPサーバー、etaHENなど）を追加すると、ワンタップで送信できます。Webタブでダウンロードするときに直接保存することもできます。</string>
+    <string name="payload_shelf_empty">まだ何も保存されていません。よく使うペイロード（FTPサーバー、%1$sなど）を追加すると、ワンタップで送信できます。Webタブでダウンロードするときに直接保存することもできます。</string>
     <string name="payload_sending">%1$sを送信中…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">ライブラリにペイロードを追加</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">ペイロードを送信</string>
 
     <!-- consoles -->
-    <string name="profile_default">マイPS5</string>
+    <string name="profile_default">マイ%1$s</string>
     <string name="profile_new">コンソール%1$d</string>
     <string name="profile_fallback">コンソール</string>
     <string name="consoles_title">コンソール</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">保存されているIPアドレスとポートが削除されます。ほかのコンソールには影響しません。</string>
     <string name="console_no_ip">IPアドレス未設定</string>
     <string name="console_color_of">%1$sの色</string>
+    <string name="console_type_of">%1$sの本体の種類</string>
     <string name="console_use_color">%1$sを使用</string>
     <string name="console_add">コンソールを追加</string>
     <string name="language_button">言語</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">コピーしました</string>
     <string name="help_unreachable_title">コンソールに接続できません</string>
     <string name="help_unreachable_what">コンソールのアドレスから応答がありません。</string>
-    <string name="help_unreachable_try">• PS5でIPアドレスを確認してください（設定 &gt; ネットワーク &gt; 接続状況）。再起動後に変わることがあります。\n• コンソールを完全に起動してください。レストモードではネットワークがオフになることがよくあります。\n• 両方で同じWi-Fiを使ってください。ゲストネットワークやVPNは接続を妨げます。</string>
+    <string name="help_unreachable_try">• %1$sでIPアドレスを確認してください（設定 &gt; ネットワーク &gt; 接続状況）。再起動後に変わることがあります。\n• コンソールを完全に起動してください。レストモードではネットワークがオフになることがよくあります。\n• 両方で同じWi-Fiを使ってください。ゲストネットワークやVPNは接続を妨げます。</string>
     <string name="help_port_title">そのサービスが動作していません</string>
     <string name="help_port_what">コンソールは応答しましたが、そのポートで待ち受けているものがありません。</string>
     <string name="help_port_try">• コンソールでetaHENを起動してください。インストーラー（12800）、ローダー（9021）、FTP（1337）が提供されます。\n• 別のFTPペイロードは通常2121を使います。ここに同じポートを入力してください。\n• コンソールのカードでは、消灯しているライトが足りないものを示します。</string>
+    <string name="help_port_try_ps4">• コンソールでGoldHENを起動してください。ローダー（9090）とFTP（2121）が提供されます。\n• パッケージをインストールするには、flatzのRemote Package Installerもコンソールで起動してください（12800）。\n• コンソールのカードでは、消灯しているライトが足りないものを示します。</string>
     <string name="help_login_title">FTPログインが拒否されました</string>
     <string name="help_login_what">コンソールのFTPサーバーがユーザー名またはパスワードを拒否しました。</string>
-    <string name="help_login_try">• etaHENはユーザー名anonymousを任意のパスワードで受け付けます。\n• コンソールでログインを設定した場合は、アップロードで入力してください。\n• パスワードは保存されません。アプリを再起動した後にもう一度入力してください。</string>
+    <string name="help_login_try">• %2$sはユーザー名anonymousを任意のパスワードで受け付けます。\n• コンソールでログインを設定した場合は、アップロードで入力してください。\n• パスワードは保存されません。アプリを再起動した後にもう一度入力してください。</string>
     <string name="help_dropped_title">接続が切れました</string>
     <string name="help_dropped_what">コンソールとの接続が切れたか、データが流れなくなりました。アプリは再試行し、止まったところから再開します。</string>
     <string name="help_dropped_try">• スマートフォンをルーターの近くに置き、コンソールを起動したままにしてください。\n• ネットワーク上の他の大きなダウンロードを一時停止してください。\n• 失敗が続く場合は、少し待ってから「再試行」をタップしてください。</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">確認ではGitHubに最新リリースを問い合わせます（1日に最大1回）。あなたやコンソールに関する情報は送信されません。ほかのウェブサイトと同様に、GitHubにはIPアドレスが見えます。</string>
 
     <!-- find my console -->
-    <string name="find_button">PS5を探す</string>
+    <string name="find_button">%1$sを探す</string>
     <string name="find_scanning">ネットワーク %1$s でコンソールを探しています…</string>
     <string name="find_again">もう一度スキャン</string>
     <string name="find_none">コンソールが見つかりませんでした。</string>
-    <string name="find_none_try">• コンソールを完全に起動し（レストモードではなく）、etaHENを開始してください。\n• スマートフォンとコンソールで同じWi-Fiを使ってください。ゲストネットワークやVPNは機器どうしを分離します。\n• そのうえで、もう一度スキャンしてください。</string>
+    <string name="find_none_try">• コンソールを完全に起動し（レストモードではなく）、%1$sを開始してください。\n• スマートフォンとコンソールで同じWi-Fiを使ってください。ゲストネットワークやVPNは機器どうしを分離します。\n• そのうえで、もう一度スキャンしてください。</string>
     <string name="find_no_wifi">このスマートフォンはWi-Fiネットワークに接続されていません。コンソールと同じWi-Fiに接続してから、もう一度スキャンしてください。</string>
     <string name="find_pick">「使用」をタップすると、%1$s のアドレスを設定します。</string>
     <string name="find_saved">保存済みのアドレス</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">フォルダーの中を調べています…</string>
     <string name="files_dl_confirm_title">スマートフォンにダウンロードしますか？</string>
-    <string name="files_dl_confirm_text">ファイル%1$d件、合計%2$s。コンソールと同じフォルダー構成で Downloads/PS5 に保存されます。</string>
+    <string name="files_dl_confirm_text">ファイル%1$d件、合計%2$s。コンソールと同じフォルダー構成で Downloads/%3$s に保存されます。</string>
     <string name="files_dl_links">フォルダー内のリンクはダウンロードされません: %1$d件。</string>
     <string name="files_dl_truncated">取得したファイル: %1$d件。フォルダーにはそれ以上の数が入っているか、アプリがたどる深さより深くなっています。</string>
     <string name="files_dl_none">選択した項目にダウンロードできるファイルがありません。</string>

@@ -33,14 +33,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">Imposta l’indirizzo IP della PS5</string>
+    <string name="status_set_ip">Imposta l’indirizzo IP della %1$s</string>
     <string name="status_checking">Verifica in corso…</string>
     <string name="status_ready">Pronta</string>
     <string name="status_partly">Parzialmente pronta</string>
     <string name="status_partly_off">Parzialmente pronta · senza risposta: %1$s</string>
     <string name="status_offline">Console non raggiungibile</string>
     <string name="status_hint_unset">Lo trovi sulla PS5 in Impostazioni &gt; Rete &gt; Stato connessione &gt; Visualizza stato connessione. Tocca qui per inserirlo.</string>
-    <string name="status_hint_offline">Nessuna risposta a questo indirizzo. Controlla l’IP, che la PS5 sia accesa sulla stessa rete Wi-Fi e che etaHEN sia in esecuzione.</string>
+    <string name="status_hint_unset_ps4">Lo trovi sulla PS4 in Impostazioni &gt; Rete &gt; Visualizza stato connessione. Tocca qui per inserirlo.</string>
+    <string name="status_hint_offline">Nessuna risposta a questo indirizzo. Controlla l’IP, che la %1$s sia accesa sulla stessa rete Wi-Fi e che %2$s sia in esecuzione.</string>
     <string name="status_hint_one">Nessuna risposta da: %1$s. Avvialo sulla console o controlla la sua porta.</string>
     <string name="status_hint_many">Nessuna risposta da: %1$s. Avviali sulla console o controlla le loro porte.</string>
     <string name="console_switch">Cambia console</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">Indirizzo IP della console</string>
     <string name="console_ip_label">Indirizzo IP</string>
     <string name="console_ip_help">Lo trovi sulla PS5 in Impostazioni &gt; Rete &gt; Stato connessione &gt; Visualizza stato connessione.</string>
+    <string name="console_ip_help_ps4">Lo trovi sulla PS4 in Impostazioni &gt; Rete &gt; Visualizza stato connessione.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">Trasferimento</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">Trasferimenti in attesa</string>
     <string name="queue_clear">Rimuovi tutto</string>
     <string name="queue_empty">Niente in attesa.</string>
-    <string name="notif_channel">Trasferimenti verso PS5</string>
+    <string name="notif_channel">Trasferimenti verso PS4/PS5</string>
     <string name="notif_sent">Inviato: %1$s</string>
     <string name="notif_received">Ricevuto: %1$s</string>
     <string name="percent_value">%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">Aggiunto alla coda. %1$d in attesa.</string>
     <string name="msg_set_ip_first">Imposta prima l’indirizzo IP della console. Tocca la scheda in alto.</string>
-    <string name="msg_sending_link">Invio del link alla PS5…</string>
+    <string name="msg_sending_link">Invio del link alla %1$s…</string>
     <string name="msg_check_ip_ftp">Controlla l’indirizzo IP della console e la porta FTP.</string>
     <string name="msg_adding_to_shelf_link">Aggiunta alla libreria di payload…</string>
     <string name="status_idle">Inattivo</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">Lasciare questo sito?</string>
     <string name="offsite_text">La pagina vuole aprire %1$s. Le pubblicità spesso lo causano quando tocchi un link, quindi continua solo se te lo aspettavi.</string>
-    <string name="choose_install">Invia il link all’installer della PS5</string>
-    <string name="choose_ftp">Carica sulla PS5 (FTP)</string>
+    <string name="choose_install">Invia il link all’installer della %1$s</string>
+    <string name="choose_ftp">Carica sulla %1$s (FTP)</string>
     <string name="choose_shelf">Salva nella libreria di payload</string>
     <string name="choose_phone">Salva sul telefono</string>
     <string name="choose_help">L’installer richiede un link diretto al pacchetto che la console possa aprire senza accedere. L’FTP funziona con qualsiasi file e mantiene la tua sessione. Il telefono inoltra i dati in background, con l’avanzamento sopra la barra in basso e in una notifica. La libreria di payload conserva un piccolo payload (fino a %1$s) nell’app per la scheda Payload.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Porta dell’installer (etaHEN: 12800)</string>
+    <string name="install_port_label">Porta dell’installer (%1$s: 12800)</string>
     <string name="install_accepted">L’installer l’ha accettato: %1$s</string>
     <string name="install_not_accepted">Non accettato (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">Errore: %1$s</string>
     <string name="ftp_port_hint">Impossibile raggiungere il server FTP. Controlla l’IP della console e la porta FTP (l’FTP integrato di etaHEN usa la 1337, il payload FTP usa la 2121).</string>
+    <string name="ftp_port_hint_ps4">Impossibile raggiungere il server FTP. Controlla l’IP della console e la porta FTP (l’FTP di GoldHEN usa la 2121).</string>
     <string name="err_login">Accesso FTP non riuscito</string>
     <string name="err_cant_open">impossibile aprire %1$s (%2$s)</string>
     <string name="err_rename">rinomina non riuscita (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">Ricevuti solo %1$s su %2$s.</string>
     <string name="err_empty_file">Il file è vuoto</string>
     <string name="err_save">Impossibile salvare %1$s</string>
-    <string name="sent_to_ps5">Inviato alla PS5: %1$s</string>
-    <string name="saved_to_downloads">Salvato in Download/PS5: %1$s</string>
+    <string name="sent_to_ps5">Inviato alla %2$s: %1$s</string>
+    <string name="saved_to_downloads">Salvato in Download/%2$s: %1$s</string>
     <string name="dl_http_failed">Download non riuscito: HTTP %1$s</string>
     <string name="dl_empty">Download non riuscito: risposta vuota</string>
     <string name="dl_cut_short">La connessione si è chiusa prima che arrivasse tutto il file.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">Viene eliminato dalla libreria. Il file originale sul telefono non viene toccato.</string>
     <string name="payload_loader_port">Porta del loader</string>
     <string name="payload_shelf_title">Libreria di payload</string>
-    <string name="payload_shelf_empty">Ancora niente di salvato. Aggiungi i payload che usi spesso (un server FTP, etaHEN, ...) e inviali con un tocco. Puoi anche salvarne uno direttamente dalla scheda Web quando lo scarichi.</string>
+    <string name="payload_shelf_empty">Ancora niente di salvato. Aggiungi i payload che usi spesso (un server FTP, %1$s, ...) e inviali con un tocco. Puoi anche salvarne uno direttamente dalla scheda Web quando lo scarichi.</string>
     <string name="payload_sending">Invio di %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Aggiungi payload alla libreria</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Invia payload</string>
 
     <!-- consoles -->
-    <string name="profile_default">La mia PS5</string>
+    <string name="profile_default">La mia %1$s</string>
     <string name="profile_new">Console %1$d</string>
     <string name="profile_fallback">Console</string>
     <string name="consoles_title">Console</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">Il suo indirizzo IP e le sue porte salvati vengono rimossi. Le altre console non sono interessate.</string>
     <string name="console_no_ip">ancora nessun indirizzo IP</string>
     <string name="console_color_of">Colore di %1$s</string>
+    <string name="console_type_of">Tipo di console di %1$s</string>
     <string name="console_use_color">Usa %1$s</string>
     <string name="console_add">Aggiungi console</string>
     <string name="language_button">Lingua</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">Copiato</string>
     <string name="help_unreachable_title">Console non raggiungibile</string>
     <string name="help_unreachable_what">Nessuno risponde all’indirizzo della console.</string>
-    <string name="help_unreachable_try">• Controlla l’indirizzo IP sulla PS5 (Impostazioni &gt; Rete &gt; Stato connessione). Può cambiare dopo un riavvio.\n• Riattiva completamente la console. La modalità riposo spesso disattiva la rete.\n• Usa lo stesso Wi-Fi su entrambi. Le reti ospiti e le VPN lo bloccano.</string>
+    <string name="help_unreachable_try">• Controlla l’indirizzo IP sulla %1$s (Impostazioni &gt; Rete &gt; Stato connessione). Può cambiare dopo un riavvio.\n• Riattiva completamente la console. La modalità riposo spesso disattiva la rete.\n• Usa lo stesso Wi-Fi su entrambi. Le reti ospiti e le VPN lo bloccano.</string>
     <string name="help_port_title">Quel servizio non è in esecuzione</string>
     <string name="help_port_what">La console ha risposto, ma nessuno è in ascolto su quella porta.</string>
     <string name="help_port_try">• Avvia etaHEN sulla console. Fornisce l’Installer (12800), il Loader (9021) e l’FTP (1337).\n• Un payload FTP separato di solito usa la 2121. Inserisci qui la stessa porta.\n• Sulla scheda della console, la spia spenta mostra cosa manca.</string>
+    <string name="help_port_try_ps4">• Avvia GoldHEN sulla console. Fornisce il Loader (9090) e l’FTP (2121).\n• Per installare pacchetti, avvia anche il Remote Package Installer di flatz sulla console (12800).\n• Sulla scheda della console, la spia spenta mostra cosa manca.</string>
     <string name="help_login_title">Accesso FTP rifiutato</string>
     <string name="help_login_what">Il server FTP della console ha rifiutato il nome utente o la password.</string>
-    <string name="help_login_try">• etaHEN accetta il nome utente anonymous con qualsiasi password.\n• Se hai impostato un accesso sulla console, inseriscilo in Carica.\n• La password non viene salvata. Inseriscila di nuovo dopo aver riavviato l’app.</string>
+    <string name="help_login_try">• %2$s accetta il nome utente anonymous con qualsiasi password.\n• Se hai impostato un accesso sulla console, inseriscilo in Carica.\n• La password non viene salvata. Inseriscila di nuovo dopo aver riavviato l’app.</string>
     <string name="help_dropped_title">La connessione è caduta</string>
     <string name="help_dropped_what">Il collegamento con la console si è interrotto o i dati non scorrono più. L’app riprova e continua da dove si era fermata.</string>
     <string name="help_dropped_try">• Tieni il telefono vicino al router e la console attiva.\n• Metti in pausa gli altri download pesanti sulla rete.\n• Se continua a fallire, attendi un momento e tocca Riprova.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">Il controllo chiede a GitHub l’ultima release, al massimo una volta al giorno. Non viene inviato nulla su di te o sulle tue console; GitHub vede il tuo indirizzo IP, come qualsiasi sito web.</string>
 
     <!-- find my console -->
-    <string name="find_button">Trova la mia PS5</string>
+    <string name="find_button">Trova la mia %1$s</string>
     <string name="find_scanning">Ricerca della tua console sulla rete %1$s…</string>
     <string name="find_again">Cerca di nuovo</string>
     <string name="find_none">Nessuna console trovata.</string>
-    <string name="find_none_try">• Accendi completamente la console (non in modalità riposo) e avvia etaHEN.\n• Usa lo stesso Wi-Fi sul telefono e sulla console. Le reti ospiti e le VPN tengono separati i dispositivi.\n• Poi cerca di nuovo.</string>
+    <string name="find_none_try">• Accendi completamente la console (non in modalità riposo) e avvia %1$s.\n• Usa lo stesso Wi-Fi sul telefono e sulla console. Le reti ospiti e le VPN tengono separati i dispositivi.\n• Poi cerca di nuovo.</string>
     <string name="find_no_wifi">Questo telefono non è collegato a una rete Wi-Fi. Collegalo alla stessa rete Wi-Fi della console, poi cerca di nuovo.</string>
     <string name="find_pick">Tocca Usa per impostare l’indirizzo della console «%1$s».</string>
     <string name="find_saved">Indirizzo salvato</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">Controllo delle cartelle…</string>
     <string name="files_dl_confirm_title">Scaricare sul telefono?</string>
-    <string name="files_dl_confirm_text">File: %1$d, in totale %2$s. Vengono salvati in Downloads/PS5, nelle stesse cartelle della console.</string>
+    <string name="files_dl_confirm_text">File: %1$d, in totale %2$s. Vengono salvati in Downloads/%3$s, nelle stesse cartelle della console.</string>
     <string name="files_dl_links">I collegamenti dentro le cartelle non vengono scaricati: %1$d.</string>
     <string name="files_dl_truncated">File presi: %1$d. Le cartelle ne contengono di più, oppure vanno più in profondità di quanto l’app segua.</string>
     <string name="files_dl_none">Nella selezione non c’è nessun file da scaricare.</string>

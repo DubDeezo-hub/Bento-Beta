@@ -33,14 +33,15 @@
     <string name="service_installer">Kurulum</string>
     <string name="service_loader">Yükleyici</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">PS5’in IP adresini ayarla</string>
+    <string name="status_set_ip">%1$s’in IP adresini ayarla</string>
     <string name="status_checking">Denetleniyor…</string>
     <string name="status_ready">Hazır</string>
     <string name="status_partly">Kısmen hazır</string>
     <string name="status_partly_off">Kısmen hazır · yanıt yok: %1$s</string>
     <string name="status_offline">Konsola ulaşılamıyor</string>
     <string name="status_hint_unset">PS5’te Ayarlar &gt; Ağ &gt; Bağlantı Durumu &gt; Bağlantı Durumunu Görüntüle yolunda bulabilirsin. Girmek için buraya dokun.</string>
-    <string name="status_hint_offline">Bu adresten yanıt gelmiyor. IP’yi, PS5’in aynı Wi-Fi ağında açık olduğunu ve etaHEN’in çalıştığını kontrol et.</string>
+    <string name="status_hint_unset_ps4">PS4’te Ayarlar &gt; Ağ &gt; Bağlantı Durumunu Görüntüle yolunda bulabilirsin. Girmek için buraya dokun.</string>
+    <string name="status_hint_offline">Bu adresten yanıt gelmiyor. IP’yi, %1$s’in aynı Wi-Fi ağında açık olduğunu ve %2$s’in çalıştığını kontrol et.</string>
     <string name="status_hint_one">Yanıt yok: %1$s. Konsolda başlat veya bağlantı noktasını kontrol et.</string>
     <string name="status_hint_many">Yanıt yok: %1$s. Konsolda başlat veya bağlantı noktalarını kontrol et.</string>
     <string name="console_switch">Konsolu değiştir</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">Konsolun IP adresi</string>
     <string name="console_ip_label">IP adresi</string>
     <string name="console_ip_help">PS5’te Ayarlar &gt; Ağ &gt; Bağlantı Durumu &gt; Bağlantı Durumunu Görüntüle yolunda bulabilirsin.</string>
+    <string name="console_ip_help_ps4">PS4’te Ayarlar &gt; Ağ &gt; Bağlantı Durumunu Görüntüle yolunda bulabilirsin.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">Aktarım</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">Bekleyen aktarımlar</string>
     <string name="queue_clear">Tümünü kaldır</string>
     <string name="queue_empty">Bekleyen bir şey yok.</string>
-    <string name="notif_channel">PS5 aktarımları</string>
+    <string name="notif_channel">PS4/PS5 aktarımları</string>
     <string name="notif_sent">Gönderildi: %1$s</string>
     <string name="notif_received">Alındı: %1$s</string>
     <string name="percent_value">%%%1$d</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">Kuyruğa eklendi. %1$d bekliyor.</string>
     <string name="msg_set_ip_first">Önce konsolun IP adresini ayarla. Üstteki karta dokun.</string>
-    <string name="msg_sending_link">Bağlantı PS5’e gönderiliyor…</string>
+    <string name="msg_sending_link">Bağlantı %1$s’e gönderiliyor…</string>
     <string name="msg_check_ip_ftp">Konsolun IP adresini ve FTP bağlantı noktasını kontrol et.</string>
     <string name="msg_adding_to_shelf_link">Payload kitaplığına ekleniyor…</string>
     <string name="status_idle">Boşta</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">Siteden ayrılmak istiyor musun?</string>
     <string name="offsite_text">Sayfa %1$s adresini açmak istiyor. Bir bağlantıya dokunduğunda bunu çoğu zaman reklamlar tetikler; bu yüzden yalnızca beklediğin bir şeyse devam et.</string>
-    <string name="choose_install">Bağlantıyı PS5 yükleyicisine gönder</string>
-    <string name="choose_ftp">PS5’e yükle (FTP)</string>
+    <string name="choose_install">Bağlantıyı %1$s yükleyicisine gönder</string>
+    <string name="choose_ftp">%1$s’e yükle (FTP)</string>
     <string name="choose_shelf">Payload kitaplığına kaydet</string>
     <string name="choose_phone">Telefona kaydet</string>
     <string name="choose_help">Yükleyici, konsolun oturum açmadan açabileceği doğrudan bir paket bağlantısı ister. FTP her dosyayla çalışır ve oturumunu korur. Telefon verileri arka planda aktarır; ilerleme alt çubuğun üstünde ve bir bildirimde görünür. Payload kitaplığı, küçük bir payload’u (en fazla %1$s) uygulamanın içinde saklar ve Payload sekmesinde kullanılır.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Yükleyici bağlantı noktası (etaHEN: 12800)</string>
+    <string name="install_port_label">Yükleyici bağlantı noktası (%1$s: 12800)</string>
     <string name="install_accepted">Yükleyici kabul etti: %1$s</string>
     <string name="install_not_accepted">Kabul edilmedi (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">Başarısız: %1$s</string>
     <string name="ftp_port_hint">FTP sunucusuna ulaşılamıyor. Konsolun IP adresini ve FTP bağlantı noktasını kontrol et (etaHEN’in yerleşik FTP’si 1337, FTP payload’u 2121 kullanır).</string>
+    <string name="ftp_port_hint_ps4">FTP sunucusuna ulaşılamıyor. Konsolun IP adresini ve FTP bağlantı noktasını kontrol et (GoldHEN’in FTP’si 2121 kullanır).</string>
     <string name="err_login">FTP oturumu açılamadı</string>
     <string name="err_cant_open">%1$s açılamıyor (%2$s)</string>
     <string name="err_rename">yeniden adlandırma başarısız (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">%2$s içinden yalnızca %1$s ulaştı.</string>
     <string name="err_empty_file">Dosya boş</string>
     <string name="err_save">%1$s kaydedilemedi</string>
-    <string name="sent_to_ps5">PS5’e gönderildi: %1$s</string>
-    <string name="saved_to_downloads">İndirilenler/PS5 içine kaydedildi: %1$s</string>
+    <string name="sent_to_ps5">%2$s’e gönderildi: %1$s</string>
+    <string name="saved_to_downloads">İndirilenler/%2$s içine kaydedildi: %1$s</string>
     <string name="dl_http_failed">İndirme başarısız: HTTP %1$s</string>
     <string name="dl_empty">İndirme başarısız: boş yanıt</string>
     <string name="dl_cut_short">Dosyanın tamamı ulaşmadan bağlantı kapandı.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">Kitaplıktan silinir. Telefonundaki özgün dosyaya dokunulmaz.</string>
     <string name="payload_loader_port">Yükleyici bağlantı noktası</string>
     <string name="payload_shelf_title">Payload kitaplığı</string>
-    <string name="payload_shelf_empty">Henüz bir şey kaydedilmedi. Sık kullandığın payload’ları (bir FTP sunucusu, etaHEN vb.) ekle ve her birini tek dokunuşla gönder. Web sekmesinde indirirken doğrudan da kaydedebilirsin.</string>
+    <string name="payload_shelf_empty">Henüz bir şey kaydedilmedi. Sık kullandığın payload’ları (bir FTP sunucusu, %1$s vb.) ekle ve her birini tek dokunuşla gönder. Web sekmesinde indirirken doğrudan da kaydedebilirsin.</string>
     <string name="payload_sending">%1$s gönderiliyor…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Kitaplığa payload ekle</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Payload gönder</string>
 
     <!-- consoles -->
-    <string name="profile_default">PS5’im</string>
+    <string name="profile_default">%1$s’im</string>
     <string name="profile_new">Konsol %1$d</string>
     <string name="profile_fallback">Konsol</string>
     <string name="consoles_title">Konsollar</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">Kayıtlı IP adresi ve bağlantı noktaları kaldırılır. Diğer konsolların etkilenmez.</string>
     <string name="console_no_ip">henüz IP adresi yok</string>
     <string name="console_color_of">%1$s rengi</string>
+    <string name="console_type_of">%1$s konsol türü</string>
     <string name="console_use_color">Kullan: %1$s</string>
     <string name="console_add">Konsol ekle</string>
     <string name="language_button">Dil</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">Kopyalandı</string>
     <string name="help_unreachable_title">Konsola ulaşılamıyor</string>
     <string name="help_unreachable_what">Konsolun adresinde hiçbir şey yanıt vermiyor.</string>
-    <string name="help_unreachable_try">• PS5’teki IP adresini kontrol et (Ayarlar &gt; Ağ &gt; Bağlantı Durumu). Yeniden başlatmadan sonra değişebilir.\n• Konsolu tamamen uyandır. Dinlenme modu çoğu zaman ağı kapatır.\n• İkisinde de aynı Wi-Fi ağını kullan. Misafir ağları ve VPN’ler bunu engeller.</string>
+    <string name="help_unreachable_try">• %1$s’teki IP adresini kontrol et (Ayarlar &gt; Ağ &gt; Bağlantı Durumu). Yeniden başlatmadan sonra değişebilir.\n• Konsolu tamamen uyandır. Dinlenme modu çoğu zaman ağı kapatır.\n• İkisinde de aynı Wi-Fi ağını kullan. Misafir ağları ve VPN’ler bunu engeller.</string>
     <string name="help_port_title">Bu hizmet çalışmıyor</string>
     <string name="help_port_what">Konsol yanıt verdi, ancak o bağlantı noktasında dinleyen bir şey yok.</string>
     <string name="help_port_try">• Konsolda etaHEN’i başlat. Kurulum (12800), Yükleyici (9021) ve FTP (1337) hizmetlerini sağlar.\n• Ayrı bir FTP payload’u genellikle 2121 kullanır. Aynı bağlantı noktasını buraya gir.\n• Konsol kartında sönük olan ışık neyin eksik olduğunu gösterir.</string>
+    <string name="help_port_try_ps4">• Konsolda GoldHEN’i başlat. Yükleyici (9090) ve FTP (2121) hizmetlerini sağlar.\n• Paket kurmak için konsolda flatz’ın Remote Package Installer uygulamasını da çalıştır (12800).\n• Konsol kartında sönük olan ışık neyin eksik olduğunu gösterir.</string>
     <string name="help_login_title">FTP girişi reddedildi</string>
     <string name="help_login_what">Konsolun FTP sunucusu kullanıcı adını veya parolayı reddetti.</string>
-    <string name="help_login_try">• etaHEN, herhangi bir parolayla anonymous kullanıcı adını kabul eder.\n• Konsolda bir giriş ayarladıysan bunu Yükle sekmesine gir.\n• Parola kaydedilmez. Uygulamayı yeniden başlattıktan sonra tekrar gir.</string>
+    <string name="help_login_try">• %2$s, herhangi bir parolayla anonymous kullanıcı adını kabul eder.\n• Konsolda bir giriş ayarladıysan bunu Yükle sekmesine gir.\n• Parola kaydedilmez. Uygulamayı yeniden başlattıktan sonra tekrar gir.</string>
     <string name="help_dropped_title">Bağlantı koptu</string>
     <string name="help_dropped_what">Konsolla bağlantı koptu veya veri akışı durdu. Uygulama yeniden dener ve kaldığı yerden devam eder.</string>
     <string name="help_dropped_try">• Telefonu yönlendiriciye yakın, konsolu da uyanık tut.\n• Ağdaki diğer büyük indirmeleri duraklat.\n• Yine de olmuyorsa biraz bekle ve Tekrar dene’ye dokun.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">Denetim, GitHub’a en yeni sürümü sorar; günde en fazla bir kez. Senin veya konsolların hakkında hiçbir şey gönderilmez; GitHub, her web sitesi gibi IP adresini görür.</string>
 
     <!-- find my console -->
-    <string name="find_button">PS5’imi bul</string>
+    <string name="find_button">%1$s’imi bul</string>
     <string name="find_scanning">Konsolun %1$s ağında aranıyor…</string>
     <string name="find_again">Yeniden tara</string>
     <string name="find_none">Konsol bulunamadı.</string>
-    <string name="find_none_try">• Konsolu tamamen aç (dinlenme modunda olmasın) ve etaHEN’i başlat.\n• Telefonda ve konsolda aynı Wi-Fi ağını kullan. Misafir ağları ve VPN’ler cihazları birbirinden ayırır.\n• Sonra yeniden tara.</string>
+    <string name="find_none_try">• Konsolu tamamen aç (dinlenme modunda olmasın) ve %1$s’i başlat.\n• Telefonda ve konsolda aynı Wi-Fi ağını kullan. Misafir ağları ve VPN’ler cihazları birbirinden ayırır.\n• Sonra yeniden tara.</string>
     <string name="find_no_wifi">Bu telefon bir Wi-Fi ağına bağlı değil. Telefonu konsolla aynı Wi-Fi ağına bağla, sonra yeniden tara.</string>
     <string name="find_pick">“%1$s” konsolunun adresini ayarlamak için Kullan’a dokun.</string>
     <string name="find_saved">Kayıtlı adres</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">Klasörler taranıyor…</string>
     <string name="files_dl_confirm_title">Telefona indirilsin mi?</string>
-    <string name="files_dl_confirm_text">Dosyalar: %1$d, toplam %2$s. Downloads/PS5 içine, konsoldakiyle aynı klasörlerde kaydedilir.</string>
+    <string name="files_dl_confirm_text">Dosyalar: %1$d, toplam %2$s. Downloads/%3$s içine, konsoldakiyle aynı klasörlerde kaydedilir.</string>
     <string name="files_dl_links">Klasörlerin içindeki bağlantılar indirilmez: %1$d.</string>
     <string name="files_dl_truncated">Alınan dosyalar: %1$d. Klasörlerde daha fazlası var ya da uygulamanın izlediğinden daha derine iniyor.</string>
     <string name="files_dl_none">Seçimde indirilecek dosya yok.</string>

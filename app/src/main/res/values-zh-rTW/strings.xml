@@ -33,14 +33,15 @@
     <string name="service_installer">安裝程式</string>
     <string name="service_loader">載入器</string>
     <string name="list_separator">、</string>
-    <string name="status_set_ip">請設定 PS5 的 IP 位址</string>
+    <string name="status_set_ip">請設定 %1$s 的 IP 位址</string>
     <string name="status_checking">檢查中…</string>
     <string name="status_ready">已就緒</string>
     <string name="status_partly">部分就緒</string>
     <string name="status_partly_off">部分就緒 · 無回應：%1$s</string>
     <string name="status_offline">無法連線到主機</string>
     <string name="status_hint_unset">可在 PS5 的「設定 &gt; 網路 &gt; 連線狀態 &gt; 檢視連線狀態」中找到。點一下這裡來輸入。</string>
-    <string name="status_hint_offline">此位址沒有回應。請檢查 IP 位址、PS5 是否已開機並連上同一個 Wi-Fi，以及 etaHEN 是否正在執行。</string>
+    <string name="status_hint_unset_ps4">可在 PS4 的「設定 &gt; 網路 &gt; 檢視連線狀態」中找到。點一下這裡來輸入。</string>
+    <string name="status_hint_offline">此位址沒有回應。請檢查 IP 位址、%1$s 是否已開機並連上同一個 Wi-Fi，以及 %2$s 是否正在執行。</string>
     <string name="status_hint_one">無回應：%1$s。請在主機上啟動它，或檢查它的連接埠。</string>
     <string name="status_hint_many">無回應：%1$s。請在主機上啟動它們，或檢查它們的連接埠。</string>
     <string name="console_switch">切換主機</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">主機 IP 位址</string>
     <string name="console_ip_label">IP 位址</string>
     <string name="console_ip_help">可在 PS5 的「設定 &gt; 網路 &gt; 連線狀態 &gt; 檢視連線狀態」中找到。</string>
+    <string name="console_ip_help_ps4">可在 PS4 的「設定 &gt; 網路 &gt; 檢視連線狀態」中找到。</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">傳輸</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">等待中的傳輸</string>
     <string name="queue_clear">全部移除</string>
     <string name="queue_empty">沒有等待中的項目。</string>
-    <string name="notif_channel">PS5 傳輸</string>
+    <string name="notif_channel">PS4/PS5 傳輸</string>
     <string name="notif_sent">已傳送：%1$s</string>
     <string name="notif_received">已接收：%1$s</string>
     <string name="percent_value">%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">已加入佇列。%1$d 個等待中。</string>
     <string name="msg_set_ip_first">請先設定主機的 IP 位址。點一下頂端的卡片。</string>
-    <string name="msg_sending_link">正在傳送連結到 PS5…</string>
+    <string name="msg_sending_link">正在傳送連結到 %1$s…</string>
     <string name="msg_check_ip_ftp">請檢查主機的 IP 位址和 FTP 連接埠。</string>
     <string name="msg_adding_to_shelf_link">正在加入 Payload 庫…</string>
     <string name="status_idle">閒置</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">要離開這個網站嗎？</string>
     <string name="offsite_text">該頁面想要開啟 %1$s。點選連結時，廣告常會觸發這種情況，所以只有在你預期會這樣時才繼續。</string>
-    <string name="choose_install">將連結傳送到 PS5 安裝程式</string>
-    <string name="choose_ftp">上傳到 PS5（FTP）</string>
+    <string name="choose_install">將連結傳送到 %1$s 安裝程式</string>
+    <string name="choose_ftp">上傳到 %1$s（FTP）</string>
     <string name="choose_shelf">儲存到 Payload 庫</string>
     <string name="choose_phone">儲存到手機</string>
     <string name="choose_help">安裝程式需要一個主機不必登入就能開啟的直接套件連結。FTP 適用於任何檔案，並會保留你的登入工作階段。手機會在背景中繼資料，進度顯示在底部列上方和通知中。Payload 庫會在 App 內儲存小型 Payload（最大 %1$s），供 Payload 分頁使用。</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">安裝程式連接埠（etaHEN：12800）</string>
+    <string name="install_port_label">安裝程式連接埠（%1$s：12800）</string>
     <string name="install_accepted">安裝程式已接受：%1$s</string>
     <string name="install_not_accepted">未被接受（upload %1$s：%2$s；api %3$s：%4$s）</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">失敗：%1$s</string>
     <string name="ftp_port_hint">無法連線到 FTP 伺服器。請檢查主機 IP 和 FTP 連接埠（etaHEN 內建的 FTP 使用 1337，FTP Payload 使用 2121）。</string>
+    <string name="ftp_port_hint_ps4">無法連線到 FTP 伺服器。請檢查主機 IP 和 FTP 連接埠（GoldHEN 的 FTP 使用 2121）。</string>
     <string name="err_login">FTP 登入失敗</string>
     <string name="err_cant_open">無法開啟 %1$s（%2$s）</string>
     <string name="err_rename">重新命名失敗（%1$s）</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">%2$s 中只收到了 %1$s。</string>
     <string name="err_empty_file">檔案是空的</string>
     <string name="err_save">無法儲存 %1$s</string>
-    <string name="sent_to_ps5">已傳送到 PS5：%1$s</string>
-    <string name="saved_to_downloads">已儲存到「下載/PS5」：%1$s</string>
+    <string name="sent_to_ps5">已傳送到 %2$s：%1$s</string>
+    <string name="saved_to_downloads">已儲存到「下載/%2$s」：%1$s</string>
     <string name="dl_http_failed">下載失敗：HTTP %1$s</string>
     <string name="dl_empty">下載失敗：回應是空的</string>
     <string name="dl_cut_short">整個檔案抵達之前連線就關閉了。</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">它會從庫中刪除。手機上的原始檔案不受影響。</string>
     <string name="payload_loader_port">載入器連接埠</string>
     <string name="payload_shelf_title">Payload 庫</string>
-    <string name="payload_shelf_empty">還沒有儲存任何內容。加入你常用的 Payload（FTP 伺服器、etaHEN 等），即可一鍵傳送。你也可以在「網頁」分頁下載時直接儲存。</string>
+    <string name="payload_shelf_empty">還沒有儲存任何內容。加入你常用的 Payload（FTP 伺服器、%1$s 等），即可一鍵傳送。你也可以在「網頁」分頁下載時直接儲存。</string>
     <string name="payload_sending">正在傳送 %1$s…</string>
     <string name="payload_result">%1$s：%2$s</string>
     <string name="payload_add">將 Payload 加入庫</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">傳送 Payload</string>
 
     <!-- consoles -->
-    <string name="profile_default">我的 PS5</string>
+    <string name="profile_default">我的 %1$s</string>
     <string name="profile_new">主機 %1$d</string>
     <string name="profile_fallback">主機</string>
     <string name="consoles_title">主機</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">它儲存的 IP 位址和連接埠會被移除。你的其他主機不受影響。</string>
     <string name="console_no_ip">尚無 IP 位址</string>
     <string name="console_color_of">%1$s 的顏色</string>
+    <string name="console_type_of">%1$s 的主機類型</string>
     <string name="console_use_color">使用 %1$s</string>
     <string name="console_add">新增主機</string>
     <string name="language_button">語言</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">已複製</string>
     <string name="help_unreachable_title">無法連線到主機</string>
     <string name="help_unreachable_what">主機的位址沒有任何回應。</string>
-    <string name="help_unreachable_try">• 在 PS5 上檢查 IP 位址（設定 &gt; 網路 &gt; 連線狀態）。重新啟動後它可能會改變。\n• 讓主機完全喚醒。休息模式通常會關閉網路。\n• 兩台裝置使用同一個 Wi-Fi。訪客網路和 VPN 會封鎖連線。</string>
+    <string name="help_unreachable_try">• 在 %1$s 上檢查 IP 位址（設定 &gt; 網路 &gt; 連線狀態）。重新啟動後它可能會改變。\n• 讓主機完全喚醒。休息模式通常會關閉網路。\n• 兩台裝置使用同一個 Wi-Fi。訪客網路和 VPN 會封鎖連線。</string>
     <string name="help_port_title">該服務未執行</string>
     <string name="help_port_what">主機有回應，但該連接埠上沒有任何程式在監聽。</string>
     <string name="help_port_try">• 在主機上啟動 etaHEN。它提供安裝程式（12800）、載入器（9021）和 FTP（1337）。\n• 獨立的 FTP Payload 通常使用 2121。請在這裡輸入相同的連接埠。\n• 在主機卡片上，熄滅的指示燈表示缺少的服務。</string>
+    <string name="help_port_try_ps4">• 在主機上啟動 GoldHEN。它提供載入器（9090）和 FTP（2121）。\n• 若要安裝套件，還需在主機上執行 flatz 的 Remote Package Installer（12800）。\n• 在主機卡片上，熄滅的指示燈表示缺少的服務。</string>
     <string name="help_login_title">FTP 登入被拒絕</string>
     <string name="help_login_what">主機的 FTP 伺服器拒絕了該使用者名稱或密碼。</string>
-    <string name="help_login_try">• etaHEN 接受使用者名稱 anonymous 和任意密碼。\n• 如果你在主機上設定了登入資訊，請在「上傳」分頁中輸入。\n• 密碼不會被儲存。重新啟動 App 後請重新輸入。</string>
+    <string name="help_login_try">• %2$s 接受使用者名稱 anonymous 和任意密碼。\n• 如果你在主機上設定了登入資訊，請在「上傳」分頁中輸入。\n• 密碼不會被儲存。重新啟動 App 後請重新輸入。</string>
     <string name="help_dropped_title">連線已中斷</string>
     <string name="help_dropped_what">與主機的連線中斷，或資料不再傳輸。App 會重試，並從中斷處繼續。</string>
     <string name="help_dropped_try">• 讓手機靠近路由器，並保持主機處於喚醒狀態。\n• 暫停網路上的其他大型下載。\n• 如果仍然失敗，請稍等片刻，然後點一下「重試」。</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">檢查時會向 GitHub 詢問最新發行版，每天最多一次。不會傳送任何與你或你的主機有關的資訊；和任何網站一樣，GitHub 會看到你的 IP 位址。</string>
 
     <!-- find my console -->
-    <string name="find_button">尋找我的 PS5</string>
+    <string name="find_button">尋找我的 %1$s</string>
     <string name="find_scanning">正在網路 %1$s 上尋找您的主機…</string>
     <string name="find_again">重新掃描</string>
     <string name="find_none">找不到主機。</string>
-    <string name="find_none_try">• 讓主機完全開機（不要處於休息模式），並啟動 etaHEN。\n• 手機和主機使用同一個 Wi-Fi。訪客網路和 VPN 會把裝置彼此隔開。\n• 然後重新掃描。</string>
+    <string name="find_none_try">• 讓主機完全開機（不要處於休息模式），並啟動 %1$s。\n• 手機和主機使用同一個 Wi-Fi。訪客網路和 VPN 會把裝置彼此隔開。\n• 然後重新掃描。</string>
     <string name="find_no_wifi">這支手機未連上 Wi-Fi 網路。請將它連上與主機相同的 Wi-Fi，然後重新掃描。</string>
     <string name="find_pick">點一下「使用」即可設定主機「%1$s」的位址。</string>
     <string name="find_saved">已儲存的位址</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">正在查看各個資料夾…</string>
     <string name="files_dl_confirm_title">要下載到手機嗎？</string>
-    <string name="files_dl_confirm_text">檔案：%1$d，共 %2$s。這些檔案會儲存在 Downloads/PS5 中，資料夾結構與主機上相同。</string>
+    <string name="files_dl_confirm_text">檔案：%1$d，共 %2$s。這些檔案會儲存在 Downloads/%3$s 中，資料夾結構與主機上相同。</string>
     <string name="files_dl_links">資料夾內的連結不會下載：%1$d。</string>
     <string name="files_dl_truncated">已取得的檔案：%1$d。這些資料夾裡還有更多檔案，或層級比 App 追蹤的更深。</string>
     <string name="files_dl_none">所選內容中沒有可下載的檔案。</string>

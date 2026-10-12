@@ -33,14 +33,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">તમારા PS5 નું IP સરનામું સેટ કરો</string>
+    <string name="status_set_ip">તમારા %1$s નું IP સરનામું સેટ કરો</string>
     <string name="status_checking">તપાસી રહ્યું છે…</string>
     <string name="status_ready">તૈયાર</string>
     <string name="status_partly">આંશિક રીતે તૈયાર</string>
     <string name="status_partly_off">આંશિક રીતે તૈયાર · પ્રતિસાદ નથી: %1$s</string>
     <string name="status_offline">કન્સોલ સુધી પહોંચી શકાતું નથી</string>
     <string name="status_hint_unset">PS5 પર Settings &gt; Network &gt; Connection Status &gt; View Connection Status માં તે શોધો. તે દાખલ કરવા માટે અહીં ટૅપ કરો.</string>
-    <string name="status_hint_offline">આ સરનામે કંઈ પ્રતિસાદ આપતું નથી. IP તપાસો, કન્સોલ ચાલુ છે અને તે જ Wi-Fi પર છે કે કેમ તે જુઓ, અને etaHEN ચાલી રહ્યું છે કે કેમ તે તપાસો.</string>
+    <string name="status_hint_unset_ps4">PS4 પર Settings &gt; Network &gt; View Connection Status માં તે શોધો. તે દાખલ કરવા માટે અહીં ટૅપ કરો.</string>
+    <string name="status_hint_offline">આ સરનામે કંઈ પ્રતિસાદ આપતું નથી. IP તપાસો, %1$s ચાલુ છે અને તે જ Wi-Fi પર છે કે કેમ તે જુઓ, અને %2$s ચાલી રહ્યું છે કે કેમ તે તપાસો.</string>
     <string name="status_hint_one">પ્રતિસાદ નથી: %1$s. તેને કન્સોલ પર શરૂ કરો અથવા તેનો પોર્ટ તપાસો.</string>
     <string name="status_hint_many">પ્રતિસાદ નથી: %1$s. તેમને કન્સોલ પર શરૂ કરો અથવા તેમના પોર્ટ તપાસો.</string>
     <string name="console_switch">કન્સોલ બદલો</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">કન્સોલનું IP સરનામું</string>
     <string name="console_ip_label">IP સરનામું</string>
     <string name="console_ip_help">PS5 પર Settings &gt; Network &gt; Connection Status &gt; View Connection Status માં તે શોધો.</string>
+    <string name="console_ip_help_ps4">PS4 પર Settings &gt; Network &gt; View Connection Status માં તે શોધો.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">ટ્રાન્સફર</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">રાહ જોતા ટ્રાન્સફર</string>
     <string name="queue_clear">બધું દૂર કરો</string>
     <string name="queue_empty">કંઈ પણ રાહ જોઈ રહ્યું નથી.</string>
-    <string name="notif_channel">PS5 ટ્રાન્સફર</string>
+    <string name="notif_channel">PS4/PS5 ટ્રાન્સફર</string>
     <string name="notif_sent">મોકલ્યું: %1$s</string>
     <string name="notif_received">પ્રાપ્ત થયું: %1$s</string>
     <string name="percent_value">%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">કતારમાં ઉમેર્યું. રાહ જોઈ રહેલા: %1$d.</string>
     <string name="msg_set_ip_first">પહેલા કન્સોલનું IP સરનામું સેટ કરો. ઉપરના કાર્ડ પર ટૅપ કરો.</string>
-    <string name="msg_sending_link">PS5 ને લિંક મોકલી રહ્યું છે…</string>
+    <string name="msg_sending_link">%1$s ને લિંક મોકલી રહ્યું છે…</string>
     <string name="msg_check_ip_ftp">કન્સોલનું IP સરનામું અને FTP પોર્ટ તપાસો.</string>
     <string name="msg_adding_to_shelf_link">payload લાઇબ્રેરીમાં ઉમેરી રહ્યું છે…</string>
     <string name="status_idle">નિષ્ક્રિય</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">આ સાઇટ છોડવી છે?</string>
     <string name="offsite_text">પેજ આ ખોલવા માંગે છે: %1$s. તમે લિંક પર ટૅપ કરો ત્યારે જાહેરાતોને કારણે ઘણીવાર આવું થાય છે, તેથી આની અપેક્ષા હોય તો જ આગળ વધો.</string>
-    <string name="choose_install">PS5 ના Installer ને લિંક મોકલો</string>
-    <string name="choose_ftp">PS5 પર અપલોડ કરો (FTP)</string>
+    <string name="choose_install">%1$s ના Installer ને લિંક મોકલો</string>
+    <string name="choose_ftp">%1$s પર અપલોડ કરો (FTP)</string>
     <string name="choose_shelf">payload લાઇબ્રેરીમાં સાચવો</string>
     <string name="choose_phone">ફોન પર સાચવો</string>
     <string name="choose_help">Installer ને પૅકેજની સીધી લિંક જોઈએ, જે કન્સોલ લૉગિન વિના ખોલી શકે. FTP કોઈપણ ફાઇલ સાથે કામ કરે છે અને તમારું લૉગિન સત્ર જાળવી રાખે છે. ફોન ડેટા પૃષ્ઠભૂમિમાં પહોંચાડે છે; પ્રગતિ નીચેની બારની ઉપર અને એક સૂચનામાં બતાવાય છે. payload લાઇબ્રેરી Payload ટૅબ માટે એક નાનું payload (%1$s સુધી) ઍપમાં રાખે છે.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Installer પોર્ટ (etaHEN: 12800)</string>
+    <string name="install_port_label">Installer પોર્ટ (%1$s: 12800)</string>
     <string name="install_accepted">Installer એ સ્વીકાર્યું: %1$s</string>
     <string name="install_not_accepted">સ્વીકાર્યું નહીં (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">નિષ્ફળ: %1$s</string>
     <string name="ftp_port_hint">FTP સર્વર સુધી પહોંચી શકાયું નથી. કન્સોલનું IP અને FTP પોર્ટ તપાસો (etaHEN નું બિલ્ટ-ઇન FTP પોર્ટ 1337 વાપરે છે, FTP payload પોર્ટ 2121 વાપરે છે).</string>
+    <string name="ftp_port_hint_ps4">FTP સર્વર સુધી પહોંચી શકાયું નથી. કન્સોલનું IP અને FTP પોર્ટ તપાસો (GoldHEN નું FTP પોર્ટ 2121 વાપરે છે).</string>
     <string name="err_login">FTP લૉગિન નિષ્ફળ ગયું</string>
     <string name="err_cant_open">ખોલી શકાયું નથી: %1$s (%2$s)</string>
     <string name="err_rename">નામ બદલવું નિષ્ફળ ગયું (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">%2$s માંથી ફક્ત %1$s પહોંચ્યું.</string>
     <string name="err_empty_file">ફાઇલ ખાલી છે</string>
     <string name="err_save">સાચવી શકાયું નથી: %1$s</string>
-    <string name="sent_to_ps5">PS5 ને મોકલ્યું: %1$s</string>
-    <string name="saved_to_downloads">Downloads/PS5 માં સાચવ્યું: %1$s</string>
+    <string name="sent_to_ps5">%2$s ને મોકલ્યું: %1$s</string>
+    <string name="saved_to_downloads">Downloads/%2$s માં સાચવ્યું: %1$s</string>
     <string name="dl_http_failed">ડાઉનલોડ નિષ્ફળ ગયું: HTTP %1$s</string>
     <string name="dl_empty">ડાઉનલોડ નિષ્ફળ ગયું: ખાલી પ્રતિસાદ</string>
     <string name="dl_cut_short">આખી ફાઇલ પહોંચે તે પહેલાં કનેક્શન બંધ થઈ ગયું.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">તે લાઇબ્રેરીમાંથી કાઢી નાખવામાં આવશે. તમારા ફોન પરની મૂળ ફાઇલ જેમની તેમ રહેશે.</string>
     <string name="payload_loader_port">Loader પોર્ટ</string>
     <string name="payload_shelf_title">Payload લાઇબ્રેરી</string>
-    <string name="payload_shelf_empty">હજી કંઈ સાચવ્યું નથી. તમે વારંવાર વાપરો છો તે payload (FTP સર્વર, etaHEN, ...) ઉમેરો અને દરેકને એક ટૅપથી મોકલો. વેબ ટૅબમાં ડાઉનલોડ કરતી વખતે તમે તેમને સીધા સાચવી પણ શકો છો.</string>
+    <string name="payload_shelf_empty">હજી કંઈ સાચવ્યું નથી. તમે વારંવાર વાપરો છો તે payload (FTP સર્વર, %1$s, ...) ઉમેરો અને દરેકને એક ટૅપથી મોકલો. વેબ ટૅબમાં ડાઉનલોડ કરતી વખતે તમે તેમને સીધા સાચવી પણ શકો છો.</string>
     <string name="payload_sending">%1$s મોકલી રહ્યું છે…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">લાઇબ્રેરીમાં payload ઉમેરો</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Payload મોકલો</string>
 
     <!-- consoles -->
-    <string name="profile_default">મારું PS5</string>
+    <string name="profile_default">મારું %1$s</string>
     <string name="profile_new">કન્સોલ %1$d</string>
     <string name="profile_fallback">કન્સોલ</string>
     <string name="consoles_title">કન્સોલ</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">તેનું સાચવેલું IP સરનામું અને પોર્ટ દૂર કરવામાં આવશે. તમારા અન્ય કન્સોલને અસર થશે નહીં.</string>
     <string name="console_no_ip">હજી IP સરનામું નથી</string>
     <string name="console_color_of">%1$s નો રંગ</string>
+    <string name="console_type_of">%1$s નો કન્સોલ પ્રકાર</string>
     <string name="console_use_color">%1$s વાપરો</string>
     <string name="console_add">કન્સોલ ઉમેરો</string>
     <string name="language_button">ભાષા</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">કૉપિ થયું</string>
     <string name="help_unreachable_title">કન્સોલ સુધી પહોંચી શકાતું નથી</string>
     <string name="help_unreachable_what">કન્સોલના સરનામે કોઈ જવાબ આપતું નથી.</string>
-    <string name="help_unreachable_try">• PS5 પર IP સરનામું તપાસો (Settings &gt; Network &gt; Connection Status). રીસ્ટાર્ટ પછી તે બદલાઈ શકે છે.\n• કન્સોલને સંપૂર્ણપણે જગાડો. રેસ્ટ મોડ ઘણી વાર નેટવર્ક બંધ કરી દે છે.\n• બંને પર એક જ Wi-Fi વાપરો. ગેસ્ટ નેટવર્ક અને VPN તેને અવરોધે છે.</string>
+    <string name="help_unreachable_try">• %1$s પર IP સરનામું તપાસો (Settings &gt; Network &gt; Connection Status). રીસ્ટાર્ટ પછી તે બદલાઈ શકે છે.\n• કન્સોલને સંપૂર્ણપણે જગાડો. રેસ્ટ મોડ ઘણી વાર નેટવર્ક બંધ કરી દે છે.\n• બંને પર એક જ Wi-Fi વાપરો. ગેસ્ટ નેટવર્ક અને VPN તેને અવરોધે છે.</string>
     <string name="help_port_title">તે સેવા ચાલતી નથી</string>
     <string name="help_port_what">કન્સોલે જવાબ આપ્યો, પણ તે પોર્ટ પર કંઈ સાંભળતું નથી.</string>
     <string name="help_port_try">• કન્સોલ પર etaHEN શરૂ કરો. તે Installer (12800), Loader (9021) અને FTP (1337) પૂરા પાડે છે.\n• અલગ FTP payload સામાન્ય રીતે 2121 વાપરે છે. અહીં એ જ પોર્ટ દાખલ કરો.\n• કન્સોલ કાર્ડ પર, બંધ લાઇટ બતાવે છે કે શું ખૂટે છે.</string>
+    <string name="help_port_try_ps4">• કન્સોલ પર GoldHEN શરૂ કરો. તે Loader (9090) અને FTP (2121) પૂરા પાડે છે.\n• પેકેજ ઇન્સ્ટોલ કરવા માટે કન્સોલ પર flatz નું Remote Package Installer પણ ચલાવો (12800).\n• કન્સોલ કાર્ડ પર, બંધ લાઇટ બતાવે છે કે શું ખૂટે છે.</string>
     <string name="help_login_title">FTP લૉગિન નકાર્યું</string>
     <string name="help_login_what">કન્સોલના FTP સર્વરે વપરાશકર્તા નામ અથવા પાસવર્ડ નકાર્યો.</string>
-    <string name="help_login_try">• etaHEN વપરાશકર્તા નામ anonymous કોઈપણ પાસવર્ડ સાથે સ્વીકારે છે.\n• જો તમે કન્સોલ પર લૉગિન સેટ કર્યું હોય, તો તે અપલોડમાં દાખલ કરો.\n• પાસવર્ડ સાચવવામાં આવતો નથી. ઍપ ફરી શરૂ કર્યા પછી તેને ફરી દાખલ કરો.</string>
+    <string name="help_login_try">• %2$s વપરાશકર્તા નામ anonymous કોઈપણ પાસવર્ડ સાથે સ્વીકારે છે.\n• જો તમે કન્સોલ પર લૉગિન સેટ કર્યું હોય, તો તે અપલોડમાં દાખલ કરો.\n• પાસવર્ડ સાચવવામાં આવતો નથી. ઍપ ફરી શરૂ કર્યા પછી તેને ફરી દાખલ કરો.</string>
     <string name="help_dropped_title">કનેક્શન તૂટી ગયું</string>
     <string name="help_dropped_what">કન્સોલ સાથેની લિંક તૂટી ગઈ અથવા ડેટા ચાલવાનું બંધ થયું. ઍપ ફરી પ્રયાસ કરે છે અને જ્યાં અટક્યું હતું ત્યાંથી આગળ વધે છે.</string>
     <string name="help_dropped_try">• ફોનને રાઉટર પાસે અને કન્સોલને જાગતું રાખો.\n• નેટવર્ક પરના અન્ય મોટા ડાઉનલોડ થોભાવો.\n• જો તે નિષ્ફળ થતું રહે, તો થોડી વાર રાહ જુઓ અને ફરી પ્રયાસ કરો પર ટૅપ કરો.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">આ તપાસ GitHub પાસે નવીનતમ રિલીઝ માગે છે, દિવસમાં વધુમાં વધુ એક વાર. તમારા વિશે કે તમારા કન્સોલ વિશે કંઈ મોકલવામાં આવતું નથી; કોઈ પણ વેબસાઇટની જેમ GitHub તમારું IP સરનામું જુએ છે.</string>
 
     <!-- find my console -->
-    <string name="find_button">મારું PS5 શોધો</string>
+    <string name="find_button">મારું %1$s શોધો</string>
     <string name="find_scanning">%1$s નેટવર્ક પર તમારું કન્સોલ શોધી રહ્યા છીએ…</string>
     <string name="find_again">ફરી સ્કેન કરો</string>
     <string name="find_none">કોઈ કન્સોલ મળ્યું નથી.</string>
-    <string name="find_none_try">• કન્સોલને સંપૂર્ણપણે ચાલુ કરો (રેસ્ટ મોડમાં નહીં) અને etaHEN શરૂ કરો.\n• ફોન અને કન્સોલ પર એક જ Wi-Fi વાપરો. ગેસ્ટ નેટવર્ક અને VPN ઉપકરણોને એકબીજાથી અલગ રાખે છે.\n• પછી ફરી સ્કેન કરો.</string>
+    <string name="find_none_try">• કન્સોલને સંપૂર્ણપણે ચાલુ કરો (રેસ્ટ મોડમાં નહીં) અને %1$s શરૂ કરો.\n• ફોન અને કન્સોલ પર એક જ Wi-Fi વાપરો. ગેસ્ટ નેટવર્ક અને VPN ઉપકરણોને એકબીજાથી અલગ રાખે છે.\n• પછી ફરી સ્કેન કરો.</string>
     <string name="find_no_wifi">આ ફોન Wi-Fi નેટવર્ક પર નથી. કન્સોલ જે Wi-Fi પર છે તેની સાથે ફોનને જોડો, પછી ફરી સ્કેન કરો.</string>
     <string name="find_pick">%1$s નું સરનામું સેટ કરવા માટે વાપરો પર ટૅપ કરો.</string>
     <string name="find_saved">સાચવેલું સરનામું</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">ફોલ્ડર જોવાઈ રહ્યા છે…</string>
     <string name="files_dl_confirm_title">ફોન પર ડાઉનલોડ કરવું છે?</string>
-    <string name="files_dl_confirm_text">ફાઇલો: %1$d, કુલ %2$s. તે Downloads/PS5 માં, કન્સોલ પર છે તે જ ફોલ્ડરમાં સાચવવામાં આવે છે.</string>
+    <string name="files_dl_confirm_text">ફાઇલો: %1$d, કુલ %2$s. તે Downloads/%3$s માં, કન્સોલ પર છે તે જ ફોલ્ડરમાં સાચવવામાં આવે છે.</string>
     <string name="files_dl_links">ફોલ્ડરની અંદરની લિંક ડાઉનલોડ થતી નથી: %1$d.</string>
     <string name="files_dl_truncated">લીધેલી ફાઇલો: %1$d. ફોલ્ડરમાં તેનાથી વધુ છે, અથવા ઍપ જેટલું અનુસરે છે તેનાથી વધુ ઊંડા છે.</string>
     <string name="files_dl_none">પસંદગીમાં ડાઉનલોડ કરવા માટે કોઈ ફાઇલ નથી.</string>

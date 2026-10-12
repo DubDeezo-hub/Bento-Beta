@@ -33,14 +33,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">നിങ്ങളുടെ PS5-ന്റെ IP വിലാസം സജ്ജീകരിക്കുക</string>
+    <string name="status_set_ip">നിങ്ങളുടെ %1$s-ന്റെ IP വിലാസം സജ്ജീകരിക്കുക</string>
     <string name="status_checking">പരിശോധിക്കുന്നു…</string>
     <string name="status_ready">തയ്യാർ</string>
     <string name="status_partly">ഭാഗികമായി തയ്യാർ</string>
     <string name="status_partly_off">ഭാഗികമായി തയ്യാർ · പ്രതികരണമില്ല: %1$s</string>
     <string name="status_offline">കൺസോളിൽ എത്താൻ കഴിയുന്നില്ല</string>
     <string name="status_hint_unset">PS5-ൽ Settings &gt; Network &gt; Connection Status &gt; View Connection Status എന്നതിൽ ഇത് കണ്ടെത്തുക. നൽകാൻ ഇവിടെ ടാപ്പ് ചെയ്യുക.</string>
-    <string name="status_hint_offline">ഈ വിലാസത്തിൽ ഒന്നും പ്രതികരിക്കുന്നില്ല. IP ശരിയാണോ, കൺസോൾ ഓണാണോ, അതേ Wi-Fi-യിലാണോ, etaHEN പ്രവർത്തിക്കുന്നുണ്ടോ എന്നിവ പരിശോധിക്കുക.</string>
+    <string name="status_hint_unset_ps4">PS4-ൽ Settings &gt; Network &gt; View Connection Status എന്നതിൽ ഇത് കണ്ടെത്തുക. നൽകാൻ ഇവിടെ ടാപ്പ് ചെയ്യുക.</string>
+    <string name="status_hint_offline">ഈ വിലാസത്തിൽ ഒന്നും പ്രതികരിക്കുന്നില്ല. IP ശരിയാണോ, %1$s ഓണാണോ, അതേ Wi-Fi-യിലാണോ, %2$s പ്രവർത്തിക്കുന്നുണ്ടോ എന്നിവ പരിശോധിക്കുക.</string>
     <string name="status_hint_one">പ്രതികരിക്കുന്നില്ല: %1$s. അത് കൺസോളിൽ ആരംഭിക്കുക അല്ലെങ്കിൽ അതിന്റെ പോർട്ട് പരിശോധിക്കുക.</string>
     <string name="status_hint_many">പ്രതികരിക്കുന്നില്ല: %1$s. അവ കൺസോളിൽ ആരംഭിക്കുക അല്ലെങ്കിൽ അവയുടെ പോർട്ടുകൾ പരിശോധിക്കുക.</string>
     <string name="console_switch">കൺസോൾ മാറ്റുക</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">കൺസോളിന്റെ IP വിലാസം</string>
     <string name="console_ip_label">IP വിലാസം</string>
     <string name="console_ip_help">PS5-ൽ Settings &gt; Network &gt; Connection Status &gt; View Connection Status എന്നതിൽ ഇത് കണ്ടെത്തുക.</string>
+    <string name="console_ip_help_ps4">PS4-ൽ Settings &gt; Network &gt; View Connection Status എന്നതിൽ ഇത് കണ്ടെത്തുക.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">കൈമാറ്റം</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">കാത്തിരിക്കുന്ന കൈമാറ്റങ്ങൾ</string>
     <string name="queue_clear">എല്ലാം നീക്കം ചെയ്യുക</string>
     <string name="queue_empty">ഒന്നും കാത്തിരിക്കുന്നില്ല.</string>
-    <string name="notif_channel">PS5 കൈമാറ്റങ്ങൾ</string>
+    <string name="notif_channel">PS4/PS5 കൈമാറ്റങ്ങൾ</string>
     <string name="notif_sent">അയച്ചു: %1$s</string>
     <string name="notif_received">ലഭിച്ചു: %1$s</string>
     <string name="percent_value">%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">ക്യൂവിൽ ചേർത്തു. കാത്തിരിക്കുന്നവ: %1$d.</string>
     <string name="msg_set_ip_first">ആദ്യം കൺസോളിന്റെ IP വിലാസം സജ്ജീകരിക്കുക. മുകളിലുള്ള കാർഡിൽ ടാപ്പ് ചെയ്യുക.</string>
-    <string name="msg_sending_link">PS5-ലേക്ക് ലിങ്ക് അയയ്ക്കുന്നു…</string>
+    <string name="msg_sending_link">%1$s-ലേക്ക് ലിങ്ക് അയയ്ക്കുന്നു…</string>
     <string name="msg_check_ip_ftp">കൺസോളിന്റെ IP വിലാസവും FTP പോർട്ടും പരിശോധിക്കുക.</string>
     <string name="msg_adding_to_shelf_link">payload ലൈബ്രറിയിലേക്ക് ചേർക്കുന്നു…</string>
     <string name="status_idle">നിഷ്ക്രിയം</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">ഈ സൈറ്റ് വിടണോ?</string>
     <string name="offsite_text">പേജ് ഇത് തുറക്കാൻ ആഗ്രഹിക്കുന്നു: %1$s. നിങ്ങൾ ഒരു ലിങ്കിൽ ടാപ്പ് ചെയ്യുമ്പോൾ പരസ്യങ്ങൾ കാരണമാണ് ഇത് മിക്കപ്പോഴും സംഭവിക്കുന്നത്, അതിനാൽ ഇത് പ്രതീക്ഷിച്ചതാണെങ്കിൽ മാത്രം തുടരുക.</string>
-    <string name="choose_install">PS5-ന്റെ Installer-ലേക്ക് ലിങ്ക് അയയ്ക്കുക</string>
-    <string name="choose_ftp">PS5-ലേക്ക് അപ്‌ലോഡ് ചെയ്യുക (FTP)</string>
+    <string name="choose_install">%1$s-ന്റെ Installer-ലേക്ക് ലിങ്ക് അയയ്ക്കുക</string>
+    <string name="choose_ftp">%1$s-ലേക്ക് അപ്‌ലോഡ് ചെയ്യുക (FTP)</string>
     <string name="choose_shelf">payload ലൈബ്രറിയിൽ സംരക്ഷിക്കുക</string>
     <string name="choose_phone">ഫോണിൽ സംരക്ഷിക്കുക</string>
     <string name="choose_help">ലോഗിൻ ഇല്ലാതെ കൺസോളിന് തുറക്കാൻ കഴിയുന്ന പാക്കേജിന്റെ നേരിട്ടുള്ള ലിങ്ക് Installer-ന് ആവശ്യമാണ്. FTP ഏത് ഫയലിലും പ്രവർത്തിക്കുകയും നിങ്ങളുടെ ലോഗിൻ സെഷൻ നിലനിർത്തുകയും ചെയ്യുന്നു. ഫോൺ ഡാറ്റ പശ്ചാത്തലത്തിൽ കൈമാറുന്നു; പുരോഗതി താഴത്തെ ബാറിന് മുകളിലും ഒരു അറിയിപ്പിലും കാണിക്കും. Payload ടാബിനായി ഒരു ചെറിയ payload (%1$s വരെ) payload ലൈബ്രറി ആപ്പിനുള്ളിൽ സൂക്ഷിക്കുന്നു.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Installer പോർട്ട് (etaHEN: 12800)</string>
+    <string name="install_port_label">Installer പോർട്ട് (%1$s: 12800)</string>
     <string name="install_accepted">Installer സ്വീകരിച്ചു: %1$s</string>
     <string name="install_not_accepted">സ്വീകരിച്ചില്ല (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">പരാജയപ്പെട്ടു: %1$s</string>
     <string name="ftp_port_hint">FTP സെർവറിൽ എത്താൻ കഴിഞ്ഞില്ല. കൺസോൾ IP-യും FTP പോർട്ടും പരിശോധിക്കുക (etaHEN-ന്റെ ഇൻബിൽറ്റ് FTP പോർട്ട് 1337-ഉം FTP payload പോർട്ട് 2121-ഉം ഉപയോഗിക്കുന്നു).</string>
+    <string name="ftp_port_hint_ps4">FTP സെർവറിൽ എത്താൻ കഴിഞ്ഞില്ല. കൺസോൾ IP-യും FTP പോർട്ടും പരിശോധിക്കുക (GoldHEN-ന്റെ FTP പോർട്ട് 2121 ഉപയോഗിക്കുന്നു).</string>
     <string name="err_login">FTP ലോഗിൻ പരാജയപ്പെട്ടു</string>
     <string name="err_cant_open">തുറക്കാൻ കഴിഞ്ഞില്ല: %1$s (%2$s)</string>
     <string name="err_rename">പേരുമാറ്റൽ പരാജയപ്പെട്ടു (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">%2$s-ൽ %1$s മാത്രമേ എത്തിയുള്ളൂ.</string>
     <string name="err_empty_file">ഫയൽ ശൂന്യമാണ്</string>
     <string name="err_save">സംരക്ഷിക്കാൻ കഴിഞ്ഞില്ല: %1$s</string>
-    <string name="sent_to_ps5">PS5-ലേക്ക് അയച്ചു: %1$s</string>
-    <string name="saved_to_downloads">Downloads/PS5-ൽ സംരക്ഷിച്ചു: %1$s</string>
+    <string name="sent_to_ps5">%2$s-ലേക്ക് അയച്ചു: %1$s</string>
+    <string name="saved_to_downloads">Downloads/%2$s-ൽ സംരക്ഷിച്ചു: %1$s</string>
     <string name="dl_http_failed">ഡൗൺലോഡ് പരാജയപ്പെട്ടു: HTTP %1$s</string>
     <string name="dl_empty">ഡൗൺലോഡ് പരാജയപ്പെട്ടു: ശൂന്യമായ പ്രതികരണം</string>
     <string name="dl_cut_short">മുഴുവൻ ഫയലും എത്തുന്നതിന് മുമ്പ് കണക്ഷൻ അടഞ്ഞു.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">ഇത് ലൈബ്രറിയിൽ നിന്ന് ഇല്ലാതാക്കപ്പെടും. നിങ്ങളുടെ ഫോണിലെ യഥാർത്ഥ ഫയലിന് മാറ്റമൊന്നും ഉണ്ടാകില്ല.</string>
     <string name="payload_loader_port">Loader പോർട്ട്</string>
     <string name="payload_shelf_title">Payload ലൈബ്രറി</string>
-    <string name="payload_shelf_empty">ഇതുവരെ ഒന്നും സംരക്ഷിച്ചിട്ടില്ല. നിങ്ങൾ പതിവായി ഉപയോഗിക്കുന്ന payload-കൾ (FTP സെർവർ, etaHEN, ...) ചേർത്ത് ഓരോന്നും ഒറ്റ ടാപ്പിൽ അയയ്ക്കുക. വെബ് ടാബിൽ ഡൗൺലോഡ് ചെയ്യുമ്പോൾത്തന്നെ അവ നേരിട്ട് സംരക്ഷിക്കാനും കഴിയും.</string>
+    <string name="payload_shelf_empty">ഇതുവരെ ഒന്നും സംരക്ഷിച്ചിട്ടില്ല. നിങ്ങൾ പതിവായി ഉപയോഗിക്കുന്ന payload-കൾ (FTP സെർവർ, %1$s, ...) ചേർത്ത് ഓരോന്നും ഒറ്റ ടാപ്പിൽ അയയ്ക്കുക. വെബ് ടാബിൽ ഡൗൺലോഡ് ചെയ്യുമ്പോൾത്തന്നെ അവ നേരിട്ട് സംരക്ഷിക്കാനും കഴിയും.</string>
     <string name="payload_sending">%1$s അയയ്ക്കുന്നു…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">ലൈബ്രറിയിലേക്ക് payload ചേർക്കുക</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Payload അയയ്ക്കുക</string>
 
     <!-- consoles -->
-    <string name="profile_default">എന്റെ PS5</string>
+    <string name="profile_default">എന്റെ %1$s</string>
     <string name="profile_new">കൺസോൾ %1$d</string>
     <string name="profile_fallback">കൺസോൾ</string>
     <string name="consoles_title">കൺസോളുകൾ</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">അതിന്റെ സംരക്ഷിച്ച IP വിലാസവും പോർട്ടുകളും നീക്കം ചെയ്യപ്പെടും. നിങ്ങളുടെ മറ്റ് കൺസോളുകളെ ഇത് ബാധിക്കില്ല.</string>
     <string name="console_no_ip">ഇതുവരെ IP വിലാസമില്ല</string>
     <string name="console_color_of">%1$s-ന്റെ നിറം</string>
+    <string name="console_type_of">%1$s-ന്റെ കൺസോൾ തരം</string>
     <string name="console_use_color">%1$s ഉപയോഗിക്കുക</string>
     <string name="console_add">കൺസോൾ ചേർക്കുക</string>
     <string name="language_button">ഭാഷ</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">പകർത്തി</string>
     <string name="help_unreachable_title">കൺസോളിലേക്ക് എത്താനാകുന്നില്ല</string>
     <string name="help_unreachable_what">കൺസോളിന്റെ വിലാസത്തിൽ ആരും പ്രതികരിക്കുന്നില്ല.</string>
-    <string name="help_unreachable_try">• PS5-ൽ IP വിലാസം പരിശോധിക്കുക (Settings &gt; Network &gt; Connection Status). റീസ്റ്റാർട്ട് ചെയ്താൽ അത് മാറാം.\n• കൺസോളിനെ പൂർണ്ണമായും ഉണർത്തുക. റെസ്റ്റ് മോഡ് പലപ്പോഴും നെറ്റ്‌വർക്ക് ഓഫാക്കും.\n• രണ്ടിലും ഒരേ Wi-Fi ഉപയോഗിക്കുക. ഗസ്റ്റ് നെറ്റ്‌വർക്കുകളും VPN-ഉം ഇതിനെ തടയും.</string>
+    <string name="help_unreachable_try">• %1$s-ൽ IP വിലാസം പരിശോധിക്കുക (Settings &gt; Network &gt; Connection Status). റീസ്റ്റാർട്ട് ചെയ്താൽ അത് മാറാം.\n• കൺസോളിനെ പൂർണ്ണമായും ഉണർത്തുക. റെസ്റ്റ് മോഡ് പലപ്പോഴും നെറ്റ്‌വർക്ക് ഓഫാക്കും.\n• രണ്ടിലും ഒരേ Wi-Fi ഉപയോഗിക്കുക. ഗസ്റ്റ് നെറ്റ്‌വർക്കുകളും VPN-ഉം ഇതിനെ തടയും.</string>
     <string name="help_port_title">ആ സേവനം പ്രവർത്തിക്കുന്നില്ല</string>
     <string name="help_port_what">കൺസോൾ പ്രതികരിച്ചു, പക്ഷേ ആ പോർട്ടിൽ ഒന്നും കേൾക്കുന്നില്ല.</string>
     <string name="help_port_try">• കൺസോളിൽ etaHEN ആരംഭിക്കുക. ഇത് Installer (12800), Loader (9021), FTP (1337) എന്നിവ നൽകുന്നു.\n• പ്രത്യേക FTP payload സാധാരണയായി 2121 ഉപയോഗിക്കുന്നു. അതേ പോർട്ട് ഇവിടെ നൽകുക.\n• കൺസോൾ കാർഡിൽ, ഓഫായ ലൈറ്റ് എന്താണ് ഇല്ലാത്തതെന്ന് കാണിക്കുന്നു.</string>
+    <string name="help_port_try_ps4">• കൺസോളിൽ GoldHEN ആരംഭിക്കുക. ഇത് Loader (9090), FTP (2121) എന്നിവ നൽകുന്നു.\n• പാക്കേജുകൾ ഇൻസ്റ്റാൾ ചെയ്യാൻ കൺസോളിൽ flatz-ന്റെ Remote Package Installer-ഉം പ്രവർത്തിപ്പിക്കുക (12800).\n• കൺസോൾ കാർഡിൽ, ഓഫായ ലൈറ്റ് എന്താണ് ഇല്ലാത്തതെന്ന് കാണിക്കുന്നു.</string>
     <string name="help_login_title">FTP ലോഗിൻ നിരസിച്ചു</string>
     <string name="help_login_what">കൺസോളിന്റെ FTP സെർവർ ഉപയോക്തൃനാമമോ പാസ്‌വേഡോ നിരസിച്ചു.</string>
-    <string name="help_login_try">• etaHEN ഏത് പാസ്‌വേഡിനൊപ്പവും ഉപയോക്തൃനാമം anonymous സ്വീകരിക്കും.\n• കൺസോളിൽ ലോഗിൻ സജ്ജമാക്കിയിട്ടുണ്ടെങ്കിൽ, അത് അപ്‌ലോഡിൽ നൽകുക.\n• പാസ്‌വേഡ് സംരക്ഷിക്കില്ല. ആപ്പ് റീസ്റ്റാർട്ട് ചെയ്ത ശേഷം വീണ്ടും നൽകുക.</string>
+    <string name="help_login_try">• %2$s ഏത് പാസ്‌വേഡിനൊപ്പവും ഉപയോക്തൃനാമം anonymous സ്വീകരിക്കും.\n• കൺസോളിൽ ലോഗിൻ സജ്ജമാക്കിയിട്ടുണ്ടെങ്കിൽ, അത് അപ്‌ലോഡിൽ നൽകുക.\n• പാസ്‌വേഡ് സംരക്ഷിക്കില്ല. ആപ്പ് റീസ്റ്റാർട്ട് ചെയ്ത ശേഷം വീണ്ടും നൽകുക.</string>
     <string name="help_dropped_title">കണക്ഷൻ വിച്ഛേദിക്കപ്പെട്ടു</string>
     <string name="help_dropped_what">കൺസോളുമായുള്ള ലിങ്ക് തകർന്നു അല്ലെങ്കിൽ ഡാറ്റ നീങ്ങുന്നത് നിലച്ചു. ആപ്പ് വീണ്ടും ശ്രമിക്കുകയും നിർത്തിയിടത്തുനിന്ന് തുടരുകയും ചെയ്യും.</string>
     <string name="help_dropped_try">• ഫോൺ റൂട്ടറിന് സമീപവും കൺസോൾ ഉണർന്നും വയ്ക്കുക.\n• നെറ്റ്‌വർക്കിലെ മറ്റ് വലിയ ഡൗൺലോഡുകൾ താൽക്കാലികമായി നിർത്തുക.\n• പരാജയപ്പെട്ടുകൊണ്ടിരുന്നാൽ, അൽപ്പം കാത്തിരുന്ന് വീണ്ടും ശ്രമിക്കുക ടാപ്പ് ചെയ്യുക.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">ഈ പരിശോധന GitHub-നോട് ഏറ്റവും പുതിയ റിലീസ് ചോദിക്കുന്നു, ദിവസത്തിൽ ഒരിക്കലിൽ കൂടുതൽ ഇല്ല. നിങ്ങളെക്കുറിച്ചോ നിങ്ങളുടെ കൺസോളുകളെക്കുറിച്ചോ ഒന്നും അയയ്ക്കുന്നില്ല; ഏതൊരു വെബ്‌സൈറ്റിനെയും പോലെ GitHub നിങ്ങളുടെ IP വിലാസം കാണുന്നു.</string>
 
     <!-- find my console -->
-    <string name="find_button">എന്റെ PS5 കണ്ടെത്തുക</string>
+    <string name="find_button">എന്റെ %1$s കണ്ടെത്തുക</string>
     <string name="find_scanning">%1$s നെറ്റ്‌വർക്കിൽ നിങ്ങളുടെ കൺസോൾ തിരയുന്നു…</string>
     <string name="find_again">വീണ്ടും സ്കാൻ ചെയ്യുക</string>
     <string name="find_none">കൺസോൾ ഒന്നും കണ്ടെത്തിയില്ല.</string>
-    <string name="find_none_try">• കൺസോൾ പൂർണ്ണമായും ഓണാക്കുക (റെസ്റ്റ് മോഡിൽ അല്ല), etaHEN ആരംഭിക്കുക.\n• ഫോണിലും കൺസോളിലും ഒരേ Wi-Fi ഉപയോഗിക്കുക. ഗസ്റ്റ് നെറ്റ്‌വർക്കുകളും VPN-ഉം ഉപകരണങ്ങളെ പരസ്പരം വേർതിരിക്കും.\n• എന്നിട്ട് വീണ്ടും സ്കാൻ ചെയ്യുക.</string>
+    <string name="find_none_try">• കൺസോൾ പൂർണ്ണമായും ഓണാക്കുക (റെസ്റ്റ് മോഡിൽ അല്ല), %1$s ആരംഭിക്കുക.\n• ഫോണിലും കൺസോളിലും ഒരേ Wi-Fi ഉപയോഗിക്കുക. ഗസ്റ്റ് നെറ്റ്‌വർക്കുകളും VPN-ഉം ഉപകരണങ്ങളെ പരസ്പരം വേർതിരിക്കും.\n• എന്നിട്ട് വീണ്ടും സ്കാൻ ചെയ്യുക.</string>
     <string name="find_no_wifi">ഈ ഫോൺ Wi-Fi നെറ്റ്‌വർക്കിൽ അല്ല. കൺസോൾ ഉള്ള അതേ Wi-Fi-യിലേക്ക് ഇത് ബന്ധിപ്പിച്ച ശേഷം വീണ്ടും സ്കാൻ ചെയ്യുക.</string>
     <string name="find_pick">%1$s ന്റെ വിലാസം സജ്ജമാക്കാൻ ഉപയോഗിക്കുക ടാപ്പ് ചെയ്യുക.</string>
     <string name="find_saved">സംരക്ഷിച്ച വിലാസം</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">ഫോൾഡറുകൾ പരിശോധിക്കുന്നു…</string>
     <string name="files_dl_confirm_title">ഫോണിലേക്ക് ഡൗൺലോഡ് ചെയ്യണോ?</string>
-    <string name="files_dl_confirm_text">ഫയലുകൾ: %1$d, ആകെ %2$s. കൺസോളിലുള്ള അതേ ഫോൾഡറുകളിൽ Downloads/PS5-ൽ ഇവ സേവ് ചെയ്യും.</string>
+    <string name="files_dl_confirm_text">ഫയലുകൾ: %1$d, ആകെ %2$s. കൺസോളിലുള്ള അതേ ഫോൾഡറുകളിൽ Downloads/%3$s-ൽ ഇവ സേവ് ചെയ്യും.</string>
     <string name="files_dl_links">ഫോൾഡറുകൾക്കുള്ളിലെ ലിങ്കുകൾ ഡൗൺലോഡ് ചെയ്യില്ല: %1$d.</string>
     <string name="files_dl_truncated">എടുത്ത ഫയലുകൾ: %1$d. ഫോൾഡറുകളിൽ അതിലധികം ഉണ്ട്, അല്ലെങ്കിൽ ആപ്പ് പിന്തുടരുന്നതിനേക്കാൾ ആഴത്തിലാണ്.</string>
     <string name="files_dl_none">തിരഞ്ഞെടുപ്പിൽ ഡൗൺലോഡ് ചെയ്യാൻ ഫയൽ ഒന്നുമില്ല.</string>

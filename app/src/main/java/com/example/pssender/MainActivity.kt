@@ -41,6 +41,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -227,6 +228,8 @@ fun SenderApp(
 
     // The selected console. Everything below reads its IP, ports and FTP login from here.
     val active = profiles.firstOrNull { it.id == activeId } ?: profiles.first()
+    // Texts made where no console is at hand (help pages, error messages) name the selected console's type
+    SideEffect { ActiveConsole.type = active.type }
     val host = active.host
     val ftpPass = passwords[active.id] ?: ""
     val setFtpPass: (String) -> Unit = { passwords = passwords + (activeId to it) }
@@ -235,7 +238,7 @@ fun SenderApp(
         ProfileStore.save(ctx, profiles)
     }
     val ftpSettings: FtpSettings? = active.ftpPort.trim().toIntOrNull()?.let { port ->
-        if (active.host.isBlank()) null else FtpSettings(active.host.trim(), port, active.ftpUser.trim(), ftpPass)
+        if (active.host.isBlank()) null else FtpSettings(active.host.trim(), port, active.ftpUser.trim(), ftpPass, active.type.model)
     }
     val switchConsole: (String) -> Unit = { id ->
         if (id != activeId) {
@@ -329,7 +332,7 @@ fun SenderApp(
         if (reqs.isNotEmpty()) {
             askNotificationsIfNeeded()
             var startsNow = false
-            for (req in reqs) startsNow = TransferService.enqueue(ctx, req.copy(console = active.name, profileId = active.id))
+            for (req in reqs) startsNow = TransferService.enqueue(ctx, req.copy(console = active.name, profileId = active.id, model = active.type.model))
             statusLine = if (startsNow) "" else AppText.get(R.string.msg_queued, TransferState.queue.waitingCount)
         }
     }
@@ -413,7 +416,8 @@ fun SenderApp(
                     compact = tab == TAB_FILES || tab == TAB_WEB, // these two need the room
                     onEdit = { showAddress = true },
                     modifier = Modifier.padding(horizontal = 16.dp),
-                    onFind = { showFind = true }
+                    onFind = { showFind = true },
+                    type = active.type
                 )
                 Column(
                     modifier = Modifier.weight(1f).padding(start = 16.dp, top = 12.dp, end = 16.dp, bottom = 4.dp),
@@ -445,7 +449,7 @@ fun SenderApp(
                                 verticalArrangement = Arrangement.spacedBy(12.dp)
                             ) {
                                 when (tab) {
-                                    0 -> InstallTab(host, active.installPort, { v -> updateActive { it.copy(installPort = v) } }, active.name, installLinks, changeInstallLinks, askNotificationsIfNeeded)
+                                    0 -> InstallTab(host, active.installPort, { v -> updateActive { it.copy(installPort = v) } }, active.name, installLinks, changeInstallLinks, askNotificationsIfNeeded, active.type)
                                     1 -> PayloadTab(
                                         host, active.payloadPort, { v -> updateActive { it.copy(payloadPort = v) } }, shelfVersion,
                                         chains = chains,
@@ -503,6 +507,7 @@ fun SenderApp(
                         }
                     },
                     onColor = { c -> updateActive { it.copy(color = c) } },
+                    onType = { t -> updateActive { it.withType(t) } },
                     onLanguage = { openLanguageSettings(ctx) },
                     onAbout = {
                         showConsoles = false
@@ -543,7 +548,8 @@ fun SenderApp(
                         showAddress = false
                         showFind = true
                     },
-                    onClose = { showAddress = false }
+                    onClose = { showAddress = false },
+                    type = active.type
                 )
             }
 
@@ -558,7 +564,8 @@ fun SenderApp(
                         statusLine = AppText.get(R.string.find_updated, active.name, found)
                         showFind = false
                     },
-                    onClose = { showFind = false }
+                    onClose = { showFind = false },
+                    type = active.type
                 )
             }
 
@@ -615,7 +622,7 @@ fun SenderApp(
                                     if (host.isBlank()) {
                                         statusLine = AppText.get(R.string.msg_set_ip_first)
                                     } else {
-                                        statusLine = AppText.get(R.string.msg_sending_link)
+                                        statusLine = AppText.get(R.string.msg_sending_link, active.type.model)
                                         scope.launch {
                                             val reply = installRequest(host.trim(), active.installPort.trim(), d.url)
                                             statusLine = reply.text
@@ -623,7 +630,7 @@ fun SenderApp(
                                         }
                                     }
                                 }
-                            ) { Text(str(R.string.choose_install)) }
+                            ) { Text(str(R.string.choose_install, active.type.model)) }
                             Button(
                                 modifier = Modifier.fillMaxWidth(),
                                 onClick = {
@@ -647,7 +654,7 @@ fun SenderApp(
                                         )
                                     }
                                 }
-                            ) { Text(str(R.string.choose_ftp)) }
+                            ) { Text(str(R.string.choose_ftp, active.type.model)) }
                             Button(
                                 modifier = Modifier.fillMaxWidth(),
                                 onClick = {
@@ -734,7 +741,8 @@ fun InstallTab(
     consoleName: String,
     links: String,
     changeLinks: ((String) -> String) -> Unit,
-    onBeforeServe: () -> Unit
+    onBeforeServe: () -> Unit,
+    type: ConsoleType = ConsoleType.PS5
 ) {
     val ctx = LocalContext.current
     val scope = rememberCoroutineScope()
@@ -747,7 +755,7 @@ fun InstallTab(
     val leftOut = skippedWords(links).size
 
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        Field(str(R.string.install_port_label), port, onPortChange) // etaHEN installer service port
+        Field(str(R.string.install_port_label, type.installerName), port, onPortChange) // etaHEN's installer, or the RPI app on a PS4
         LinesField(str(R.string.install_links_label), links, 3) { v -> changeLinks { v } }
         Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
             TextButton(onClick = {

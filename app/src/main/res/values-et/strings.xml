@@ -33,14 +33,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">Määrake PS5 IP-aadress</string>
+    <string name="status_set_ip">Määrake %1$s IP-aadress</string>
     <string name="status_checking">Kontrollimine…</string>
     <string name="status_ready">Valmis</string>
     <string name="status_partly">Osaliselt valmis</string>
     <string name="status_partly_off">Osaliselt valmis · ei vasta: %1$s</string>
     <string name="status_offline">Konsooliga ei saa ühendust</string>
     <string name="status_hint_unset">Leiate selle PS5-st menüüst Settings &gt; Network &gt; Connection Status &gt; View Connection Status. Puudutage siin, et see sisestada.</string>
-    <string name="status_hint_offline">Sellel aadressil ei vasta keegi. Kontrollige IP-aadressi, et konsool oleks sisse lülitatud ja samas Wi-Fi-võrgus ning et etaHEN töötaks.</string>
+    <string name="status_hint_unset_ps4">Leiate selle PS4-st menüüst Settings &gt; Network &gt; View Connection Status. Puudutage siin, et see sisestada.</string>
+    <string name="status_hint_offline">Sellel aadressil ei vasta keegi. Kontrollige IP-aadressi, et %1$s oleks sisse lülitatud ja samas Wi-Fi-võrgus ning et %2$s töötaks.</string>
     <string name="status_hint_one">Ei vasta: %1$s. Käivitage see teenus konsoolis või kontrollige selle porti.</string>
     <string name="status_hint_many">Ei vasta: %1$s. Käivitage need teenused konsoolis või kontrollige nende porte.</string>
     <string name="console_switch">Vaheta konsooli</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">Konsooli IP-aadress</string>
     <string name="console_ip_label">IP-aadress</string>
     <string name="console_ip_help">Leiate selle PS5-st menüüst Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+    <string name="console_ip_help_ps4">Leiate selle PS4-st menüüst Settings &gt; Network &gt; View Connection Status.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">Ülekanne</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">Ootel ülekanded</string>
     <string name="queue_clear">Eemalda kõik</string>
     <string name="queue_empty">Midagi ei ole ootel.</string>
-    <string name="notif_channel">PS5 ülekanded</string>
+    <string name="notif_channel">PS4/PS5 ülekanded</string>
     <string name="notif_sent">Saadetud: %1$s</string>
     <string name="notif_received">Vastu võetud: %1$s</string>
     <string name="percent_value">%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">Lisatud järjekorda. Ootel: %1$d.</string>
     <string name="msg_set_ip_first">Määrake esmalt konsooli IP-aadress. Puudutage ülaosas olevat kaarti.</string>
-    <string name="msg_sending_link">Lingi saatmine PS5-le…</string>
+    <string name="msg_sending_link">Lingi saatmine %1$s-le…</string>
     <string name="msg_check_ip_ftp">Kontrollige konsooli IP-aadressi ja FTP porti.</string>
     <string name="msg_adding_to_shelf_link">Lisamine payloadide kogusse…</string>
     <string name="status_idle">Ootel</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">Kas lahkuda sellelt saidilt?</string>
     <string name="offsite_text">Leht soovib avada %1$s. Seda põhjustavad sageli reklaamid, kui puudutate linki, seega jätkake ainult siis, kui seda ootasite.</string>
-    <string name="choose_install">Saada link PS5 Installerile</string>
-    <string name="choose_ftp">Laadi PS5-le üles (FTP)</string>
+    <string name="choose_install">Saada link %1$s Installerile</string>
+    <string name="choose_ftp">Laadi %1$s-le üles (FTP)</string>
     <string name="choose_shelf">Salvesta payloadide kogusse</string>
     <string name="choose_phone">Salvesta telefoni</string>
     <string name="choose_help">Installer vajab otselinki paketile, mille konsool saab avada ilma sisselogimata. FTP töötab mis tahes failiga ja säilitab teie sisselogimise seansi. Telefon edastab andmed taustal ning edenemist näidatakse alumise riba kohal ja teavituses. Payloadide kogu hoiab rakenduses väikest payloadi (kuni %1$s) vahekaardi Payload jaoks.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Installeri port (etaHEN: 12800)</string>
+    <string name="install_port_label">Installeri port (%1$s: 12800)</string>
     <string name="install_accepted">Installer võttis selle vastu: %1$s</string>
     <string name="install_not_accepted">Vastu võtmata (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">Ebaõnnestus: %1$s</string>
     <string name="ftp_port_hint">FTP-serveriga ei saa ühendust. Kontrollige konsooli IP-aadressi ja FTP porti (etaHENi sisseehitatud FTP kasutab porti 1337, FTP payload porti 2121).</string>
+    <string name="ftp_port_hint_ps4">FTP-serveriga ei saa ühendust. Kontrollige konsooli IP-aadressi ja FTP porti (GoldHENi FTP kasutab porti 2121).</string>
     <string name="err_login">FTP-sisselogimine ebaõnnestus</string>
     <string name="err_cant_open">ei saa avada %1$s (%2$s)</string>
     <string name="err_rename">ümbernimetamine ebaõnnestus (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">Kohale jõudis vaid %1$s (kokku %2$s).</string>
     <string name="err_empty_file">Fail on tühi</string>
     <string name="err_save">%1$s salvestamine ebaõnnestus</string>
-    <string name="sent_to_ps5">PS5-le saadetud: %1$s</string>
-    <string name="saved_to_downloads">Salvestatud kausta Downloads/PS5: %1$s</string>
+    <string name="sent_to_ps5">%2$s-le saadetud: %1$s</string>
+    <string name="saved_to_downloads">Salvestatud kausta Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Allalaadimine ebaõnnestus: HTTP %1$s</string>
     <string name="dl_empty">Allalaadimine ebaõnnestus: tühi vastus</string>
     <string name="dl_cut_short">Ühendus suleti enne, kui kogu fail kohale jõudis.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">See kustutatakse kogust. Algne fail teie telefonis jääb puutumata.</string>
     <string name="payload_loader_port">Loaderi port</string>
     <string name="payload_shelf_title">Payloadide kogu</string>
-    <string name="payload_shelf_empty">Veel pole midagi salvestatud. Lisage payloadid, mida sageli kasutate (FTP-server, etaHEN, ...), ja saatke igaüks ühe puudutusega. Selle saate salvestada ka otse vahekaardilt Veeb, kui seda alla laadite.</string>
+    <string name="payload_shelf_empty">Veel pole midagi salvestatud. Lisage payloadid, mida sageli kasutate (FTP-server, %1$s, ...), ja saatke igaüks ühe puudutusega. Selle saate salvestada ka otse vahekaardilt Veeb, kui seda alla laadite.</string>
     <string name="payload_sending">Saatmine: %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Lisa payload kogusse</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Saada payload</string>
 
     <!-- consoles -->
-    <string name="profile_default">Minu PS5</string>
+    <string name="profile_default">Minu %1$s</string>
     <string name="profile_new">Konsool %1$d</string>
     <string name="profile_fallback">Konsool</string>
     <string name="consoles_title">Konsoolid</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">Selle salvestatud IP-aadress ja pordid eemaldatakse. Teisi teie konsoole see ei mõjuta.</string>
     <string name="console_no_ip">IP-aadressi veel pole</string>
     <string name="console_color_of">%1$s värv</string>
+    <string name="console_type_of">%1$s konsooli tüüp</string>
     <string name="console_use_color">Kasuta %1$s</string>
     <string name="console_add">Lisa konsool</string>
     <string name="language_button">Keel</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">Kopeeritud</string>
     <string name="help_unreachable_title">Konsooliga ei saa ühendust</string>
     <string name="help_unreachable_what">Konsooli aadressil ei vasta keegi.</string>
-    <string name="help_unreachable_try">• Kontrollige PS5-s IP-aadressi (Settings &gt; Network &gt; Connection Status). See võib pärast taaskäivitust muutuda.\n• Äratage konsool täielikult. Puhkerežiim lülitab võrgu sageli välja.\n• Kasutage mõlemal seadmel sama Wi-Fi-t. Külaliste võrgud ja VPN blokeerivad ühenduse.</string>
+    <string name="help_unreachable_try">• Kontrollige %1$s-s IP-aadressi (Settings &gt; Network &gt; Connection Status). See võib pärast taaskäivitust muutuda.\n• Äratage konsool täielikult. Puhkerežiim lülitab võrgu sageli välja.\n• Kasutage mõlemal seadmel sama Wi-Fi-t. Külaliste võrgud ja VPN blokeerivad ühenduse.</string>
     <string name="help_port_title">See teenus ei tööta</string>
     <string name="help_port_what">Konsool vastas, kuid sellel pordil ei kuula miski.</string>
     <string name="help_port_try">• Käivitage konsoolis etaHEN. See pakub Installerit (12800), Loaderit (9021) ja FTP-d (1337).\n• Eraldi FTP payload kasutab tavaliselt porti 2121. Sisestage siia sama port.\n• Konsooli kaardil näitab kustunud tuli, mis puudub.</string>
+    <string name="help_port_try_ps4">• Käivitage konsoolis GoldHEN. See pakub Loaderit (9090) ja FTP-d (2121).\n• Pakettide paigaldamiseks käivitage konsoolis ka flatzi Remote Package Installer (12800).\n• Konsooli kaardil näitab kustunud tuli, mis puudub.</string>
     <string name="help_login_title">FTP sisselogimine keelati</string>
     <string name="help_login_what">Konsooli FTP-server lükkas kasutajanime või parooli tagasi.</string>
-    <string name="help_login_try">• etaHEN võtab vastu kasutajanime anonymous mis tahes parooliga.\n• Kui seadsite konsoolis sisselogimise, sisestage see jaotises Laadi üles.\n• Parooli ei salvestata. Sisestage see pärast rakenduse taaskäivitamist uuesti.</string>
+    <string name="help_login_try">• %2$s võtab vastu kasutajanime anonymous mis tahes parooliga.\n• Kui seadsite konsoolis sisselogimise, sisestage see jaotises Laadi üles.\n• Parooli ei salvestata. Sisestage see pärast rakenduse taaskäivitamist uuesti.</string>
     <string name="help_dropped_title">Ühendus katkes</string>
     <string name="help_dropped_what">Ühendus konsooliga katkes või andmed enam ei liigu. Rakendus proovib uuesti ja jätkab sealt, kus pooleli jäi.</string>
     <string name="help_dropped_try">• Hoidke telefon ruuteri lähedal ja konsool ärkvel.\n• Peatage muud suured allalaadimised võrgus.\n• Kui see jätkuvalt ebaõnnestub, oodake hetk ja puudutage Proovi uuesti.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">Kontroll küsib GitHubilt uusimat väljalaset kõige rohkem kord päevas. Teie ega teie konsoolide kohta ei saadeta midagi; GitHub näeb teie IP-aadressi nagu iga veebisait.</string>
 
     <!-- find my console -->
-    <string name="find_button">Leia minu PS5</string>
+    <string name="find_button">Leia minu %1$s</string>
     <string name="find_scanning">Konsooli otsimine võrgust %1$s…</string>
     <string name="find_again">Skanni uuesti</string>
     <string name="find_none">Ühtegi konsooli ei leitud.</string>
-    <string name="find_none_try">• Lülitage konsool täielikult sisse (mitte puhkerežiimi) ja käivitage etaHEN.\n• Kasutage telefonis ja konsoolis sama Wi-Fi-t. Külaliste võrgud ja VPN hoiavad seadmed lahus.\n• Seejärel skannige uuesti.</string>
+    <string name="find_none_try">• Lülitage konsool täielikult sisse (mitte puhkerežiimi) ja käivitage %1$s.\n• Kasutage telefonis ja konsoolis sama Wi-Fi-t. Külaliste võrgud ja VPN hoiavad seadmed lahus.\n• Seejärel skannige uuesti.</string>
     <string name="find_no_wifi">See telefon ei ole Wi-Fi-võrgus. Ühendage see samasse Wi-Fi-võrku, kus on konsool, ja skannige uuesti.</string>
     <string name="find_pick">Konsooli %1$s aadressi määramiseks puudutage Kasuta.</string>
     <string name="find_saved">Salvestatud aadress</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">Kaustu vaadatakse läbi…</string>
     <string name="files_dl_confirm_title">Kas laadida telefoni alla?</string>
-    <string name="files_dl_confirm_text">Faile: %1$d, kokku %2$s. Need salvestatakse kausta Downloads/PS5 samadesse kaustadesse nagu konsoolis.</string>
+    <string name="files_dl_confirm_text">Faile: %1$d, kokku %2$s. Need salvestatakse kausta Downloads/%3$s samadesse kaustadesse nagu konsoolis.</string>
     <string name="files_dl_links">Kaustades olevaid linke ei laadita alla: %1$d.</string>
     <string name="files_dl_truncated">Kaasatud failid: %1$d. Kaustades on rohkem või need ulatuvad sügavamale, kui rakendus jälgib.</string>
     <string name="files_dl_none">Valikus pole ühtegi allalaaditavat faili.</string>

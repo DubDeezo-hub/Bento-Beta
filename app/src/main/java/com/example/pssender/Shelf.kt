@@ -183,7 +183,7 @@ fun PayloadTab(
 
         Text(str(R.string.payload_shelf_title), style = MaterialTheme.typography.titleMedium)
         if (shelf.isEmpty()) {
-            Text(str(R.string.payload_shelf_empty), style = MaterialTheme.typography.bodySmall)
+            Text(str(R.string.payload_shelf_empty, ActiveConsole.type.hen), style = MaterialTheme.typography.bodySmall)
         }
         shelf.forEach { item ->
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {

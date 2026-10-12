@@ -328,7 +328,7 @@ fun FilesTab(
                     TransferRequest(
                         name = f.name,
                         host = settings.host, port = settings.port, user = settings.user, pass = settings.pass,
-                        dir = f.saveIn, // for a download: the folder inside Downloads/PS5
+                        dir = f.saveIn, // for a download: the folder inside Downloads/PS5 (or Downloads/PS4)
                         remotePath = f.remotePath,
                         remoteSize = f.size
                     )
@@ -497,7 +497,7 @@ fun FilesTab(
                     if (plan.files.isEmpty()) {
                         Text(str(R.string.files_dl_none))
                     } else {
-                        Text(str(R.string.files_dl_confirm_text, plan.files.size, fmtBytes(plan.totalBytes)))
+                        Text(str(R.string.files_dl_confirm_text, plan.files.size, fmtBytes(plan.totalBytes), profile.type.model))
                     }
                     if (plan.skippedLinks > 0) Text(str(R.string.files_dl_links, plan.skippedLinks), style = MaterialTheme.typography.bodySmall)
                     if (plan.truncated) Text(str(R.string.files_dl_truncated, plan.files.size), style = MaterialTheme.typography.bodySmall)

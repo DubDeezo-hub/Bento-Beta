@@ -33,14 +33,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">Ange IP-adressen till din PS5</string>
+    <string name="status_set_ip">Ange IP-adressen till din %1$s</string>
     <string name="status_checking">Kontrollerar…</string>
     <string name="status_ready">Redo</string>
     <string name="status_partly">Delvis redo</string>
     <string name="status_partly_off">Delvis redo · svarar inte: %1$s</string>
     <string name="status_offline">Det går inte att nå konsolen</string>
     <string name="status_hint_unset">Du hittar den på PS5 under Inställningar &gt; Nätverk &gt; Anslutningsstatus &gt; Visa anslutningsstatus. Tryck här för att ange den.</string>
-    <string name="status_hint_offline">Inget svarar på den här adressen. Kontrollera IP-adressen, att PS5 är påslagen och på samma Wi-Fi-nätverk, och att etaHEN körs.</string>
+    <string name="status_hint_unset_ps4">Du hittar den på PS4 under Inställningar &gt; Nätverk &gt; Visa anslutningsstatus. Tryck här för att ange den.</string>
+    <string name="status_hint_offline">Inget svarar på den här adressen. Kontrollera IP-adressen, att %1$s är påslagen och på samma Wi-Fi-nätverk, och att %2$s körs.</string>
     <string name="status_hint_one">Svarar inte: %1$s. Starta tjänsten på konsolen eller kontrollera dess port.</string>
     <string name="status_hint_many">Svarar inte: %1$s. Starta tjänsterna på konsolen eller kontrollera deras portar.</string>
     <string name="console_switch">Byt konsol</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">Konsolens IP-adress</string>
     <string name="console_ip_label">IP-adress</string>
     <string name="console_ip_help">Du hittar den på PS5 under Inställningar &gt; Nätverk &gt; Anslutningsstatus &gt; Visa anslutningsstatus.</string>
+    <string name="console_ip_help_ps4">Du hittar den på PS4 under Inställningar &gt; Nätverk &gt; Visa anslutningsstatus.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">Överföring</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">Väntande överföringar</string>
     <string name="queue_clear">Ta bort alla</string>
     <string name="queue_empty">Inget väntar.</string>
-    <string name="notif_channel">PS5-överföringar</string>
+    <string name="notif_channel">PS4/PS5-överföringar</string>
     <string name="notif_sent">%1$s skickades</string>
     <string name="notif_received">%1$s togs emot</string>
     <string name="percent_value">%1$d %%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">Lades till i kön. %1$d väntar.</string>
     <string name="msg_set_ip_first">Ange konsolens IP-adress först. Tryck på kortet högst upp.</string>
-    <string name="msg_sending_link">Skickar länk till PS5…</string>
+    <string name="msg_sending_link">Skickar länk till %1$s…</string>
     <string name="msg_check_ip_ftp">Kontrollera konsolens IP-adress och FTP-porten.</string>
     <string name="msg_adding_to_shelf_link">Lägger till i payload-biblioteket…</string>
     <string name="status_idle">Inaktiv</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">Lämna den här webbplatsen?</string>
     <string name="offsite_text">Sidan vill öppna %1$s. Annonser orsakar ofta detta när man trycker på en länk, så fortsätt bara om du väntade dig det.</string>
-    <string name="choose_install">Skicka länk till PS5:ns installer</string>
-    <string name="choose_ftp">Ladda upp till PS5 (FTP)</string>
+    <string name="choose_install">Skicka länk till %1$s:ns installer</string>
+    <string name="choose_ftp">Ladda upp till %1$s (FTP)</string>
     <string name="choose_shelf">Spara i payload-biblioteket</string>
     <string name="choose_phone">Spara på telefonen</string>
     <string name="choose_help">Installern behöver en direkt paketlänk som konsolen kan öppna utan inloggning. FTP fungerar för alla filer och behåller din inloggningssession. Telefonen vidarebefordrar data i bakgrunden, och förloppet visas ovanför det nedre fältet och i en avisering. Payload-biblioteket sparar en liten payload (upp till %1$s) i appen för fliken Payload.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Installer-port (etaHEN: 12800)</string>
+    <string name="install_port_label">Installer-port (%1$s: 12800)</string>
     <string name="install_accepted">Installern godtog det: %1$s</string>
     <string name="install_not_accepted">Godtogs inte (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">Misslyckades: %1$s</string>
     <string name="ftp_port_hint">Det går inte att nå FTP-servern. Kontrollera konsolens IP-adress och FTP-porten (etaHENs inbyggda FTP använder 1337, FTP-payloaden använder 2121).</string>
+    <string name="ftp_port_hint_ps4">Det går inte att nå FTP-servern. Kontrollera konsolens IP-adress och FTP-porten (GoldHENs FTP använder 2121).</string>
     <string name="err_login">FTP-inloggningen misslyckades</string>
     <string name="err_cant_open">kan inte öppna %1$s (%2$s)</string>
     <string name="err_rename">det gick inte att byta namn (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">Bara %1$s av %2$s kom fram.</string>
     <string name="err_empty_file">Filen är tom</string>
     <string name="err_save">Det gick inte att spara %1$s</string>
-    <string name="sent_to_ps5">Skickat till PS5: %1$s</string>
-    <string name="saved_to_downloads">Sparad i Downloads/PS5: %1$s</string>
+    <string name="sent_to_ps5">Skickat till %2$s: %1$s</string>
+    <string name="saved_to_downloads">Sparad i Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Nedladdningen misslyckades: HTTP %1$s</string>
     <string name="dl_empty">Nedladdningen misslyckades: tomt svar</string>
     <string name="dl_cut_short">Anslutningen stängdes innan hela filen kom fram.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">Den tas bort från biblioteket. Originalfilen på telefonen påverkas inte.</string>
     <string name="payload_loader_port">Loader-port</string>
     <string name="payload_shelf_title">Payload-bibliotek</string>
-    <string name="payload_shelf_empty">Inget sparat än. Lägg till payloads som du använder ofta (en FTP-server, etaHEN, ...) och skicka var och en med ett tryck. Du kan också spara en direkt från fliken Webb när du hämtar den.</string>
+    <string name="payload_shelf_empty">Inget sparat än. Lägg till payloads som du använder ofta (en FTP-server, %1$s, ...) och skicka var och en med ett tryck. Du kan också spara en direkt från fliken Webb när du hämtar den.</string>
     <string name="payload_sending">Skickar %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Lägg till payload i biblioteket</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Skicka payload</string>
 
     <!-- consoles -->
-    <string name="profile_default">Min PS5</string>
+    <string name="profile_default">Min %1$s</string>
     <string name="profile_new">Konsol %1$d</string>
     <string name="profile_fallback">Konsol</string>
     <string name="consoles_title">Konsoler</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">Dess sparade IP-adress och portar tas bort. Dina andra konsoler påverkas inte.</string>
     <string name="console_no_ip">ingen IP-adress än</string>
     <string name="console_color_of">Färg för %1$s</string>
+    <string name="console_type_of">Konsoltyp för %1$s</string>
     <string name="console_use_color">Använd %1$s</string>
     <string name="console_add">Lägg till konsol</string>
     <string name="language_button">Språk</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">Kopierat</string>
     <string name="help_unreachable_title">Det går inte att nå konsolen</string>
     <string name="help_unreachable_what">Ingenting svarar på konsolens adress.</string>
-    <string name="help_unreachable_try">• Kontrollera IP-adressen på PS5 (Inställningar &gt; Nätverk &gt; Anslutningsstatus). Den kan ändras efter en omstart.\n• Väck konsolen helt. Viloläget stänger ofta av nätverket.\n• Använd samma Wi-Fi på båda. Gästnätverk och VPN blockerar det.</string>
+    <string name="help_unreachable_try">• Kontrollera IP-adressen på %1$s (Inställningar &gt; Nätverk &gt; Anslutningsstatus). Den kan ändras efter en omstart.\n• Väck konsolen helt. Viloläget stänger ofta av nätverket.\n• Använd samma Wi-Fi på båda. Gästnätverk och VPN blockerar det.</string>
     <string name="help_port_title">Den tjänsten körs inte</string>
     <string name="help_port_what">Konsolen svarade, men ingenting lyssnar på den porten.</string>
     <string name="help_port_try">• Starta etaHEN på konsolen. Den tillhandahåller Installer (12800), Loader (9021) och FTP (1337).\n• En separat FTP-payload använder oftast 2121. Ange samma port här.\n• På konsolkortet visar lampan som är släckt vad som saknas.</string>
+    <string name="help_port_try_ps4">• Starta GoldHEN på konsolen. Den tillhandahåller Loader (9090) och FTP (2121).\n• För att installera paket måste även flatz Remote Package Installer köras på konsolen (12800).\n• På konsolkortet visar lampan som är släckt vad som saknas.</string>
     <string name="help_login_title">FTP-inloggningen nekades</string>
     <string name="help_login_what">Konsolens FTP-server avvisade användarnamnet eller lösenordet.</string>
-    <string name="help_login_try">• etaHEN accepterar användarnamnet anonymous med vilket lösenord som helst.\n• Om du har angett en inloggning på konsolen anger du den under Ladda upp.\n• Lösenordet sparas inte. Ange det igen efter att du har startat om appen.</string>
+    <string name="help_login_try">• %2$s accepterar användarnamnet anonymous med vilket lösenord som helst.\n• Om du har angett en inloggning på konsolen anger du den under Ladda upp.\n• Lösenordet sparas inte. Ange det igen efter att du har startat om appen.</string>
     <string name="help_dropped_title">Anslutningen bröts</string>
     <string name="help_dropped_what">Länken till konsolen bröts eller så slutade data att flöda. Appen försöker igen och fortsätter där den avbröts.</string>
     <string name="help_dropped_try">• Håll telefonen nära routern och konsolen vaken.\n• Pausa andra stora nedladdningar på nätverket.\n• Om det fortsätter att misslyckas, vänta en stund och tryck på Försök igen.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">Kontrollen frågar GitHub efter den senaste versionen, högst en gång per dag. Ingenting om dig eller dina konsoler skickas; GitHub ser din IP-adress, som alla webbplatser.</string>
 
     <!-- find my console -->
-    <string name="find_button">Hitta min PS5</string>
+    <string name="find_button">Hitta min %1$s</string>
     <string name="find_scanning">Söker efter din konsol på %1$s…</string>
     <string name="find_again">Skanna igen</string>
     <string name="find_none">Ingen konsol hittades.</string>
-    <string name="find_none_try">• Starta konsolen helt (inte viloläge) och starta etaHEN.\n• Använd samma Wi-Fi på telefonen och konsolen. Gästnätverk och VPN håller enheterna isär.\n• Skanna sedan igen.</string>
+    <string name="find_none_try">• Starta konsolen helt (inte viloläge) och starta %1$s.\n• Använd samma Wi-Fi på telefonen och konsolen. Gästnätverk och VPN håller enheterna isär.\n• Skanna sedan igen.</string>
     <string name="find_no_wifi">Den här telefonen är inte ansluten till ett Wi-Fi-nätverk. Anslut den till samma Wi-Fi som konsolen och skanna sedan igen.</string>
     <string name="find_pick">Tryck på Använd för att ange adressen för %1$s.</string>
     <string name="find_saved">Sparad adress</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">Går igenom mapparna…</string>
     <string name="files_dl_confirm_title">Hämta till telefonen?</string>
-    <string name="files_dl_confirm_text">Filer: %1$d, tillsammans %2$s. De sparas i Downloads/PS5, i samma mappar som på konsolen.</string>
+    <string name="files_dl_confirm_text">Filer: %1$d, tillsammans %2$s. De sparas i Downloads/%3$s, i samma mappar som på konsolen.</string>
     <string name="files_dl_links">Länkar i mappar hämtas inte: %1$d.</string>
     <string name="files_dl_truncated">Medtagna filer: %1$d. Mapparna innehåller mer än så, eller går djupare än appen följer.</string>
     <string name="files_dl_none">Det finns ingen fil att hämta i markeringen.</string>

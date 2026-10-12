@@ -35,11 +35,41 @@ import org.json.JSONObject
 import java.util.UUID
 
 // ---------------------------------------------------------------------------------------------
-// Console profiles: each console keeps its own IP, ports and FTP login/folder
+// Console profiles: each console keeps its own type (PS5 or PS4), IP, ports and FTP login/folder
 // ---------------------------------------------------------------------------------------------
 
 /** Longest name a console can be given (it has to fit in the button at the top of the screen). */
 const val PROFILE_NAME_MAX = 16
+
+/**
+ * Which console a saved console is: what it is called ([model]), the homebrew enabler that runs on it ([hen]), what its
+ * package installer is called in the port field ([installerName]) and the ports its usual services listen on. A PS5 runs
+ * etaHEN, which brings the installer and the loader; a PS4 runs GoldHEN (loader on 9090, FTP on 2121) and installs
+ * packages through flatz's Remote Package Installer (RPI) on 12800.
+ */
+enum class ConsoleType(
+    val id: String,
+    val model: String,
+    val hen: String,
+    val installerName: String,
+    val installPort: String,
+    val loaderPort: String,
+    val ftpPort: String
+) {
+    PS5("ps5", "PS5", "etaHEN", "etaHEN", "12800", "9021", "2121"),
+    PS4("ps4", "PS4", "GoldHEN", "RPI", "12800", "9090", "2121");
+
+    companion object {
+        /** The type saved as [id]: a PS5 when it is missing or unknown (consoles saved before there were types). */
+        fun of(id: String?): ConsoleType = values().firstOrNull { it.id == id } ?: PS5
+    }
+}
+
+/** The type of the console that is selected, for texts made where no console is at hand (help pages, error messages). */
+object ActiveConsole {
+    @Volatile
+    var type: ConsoleType = ConsoleType.PS5
+}
 
 /** One saved console. Ports are kept as text because they are typed into text fields. */
 data class Profile(
@@ -52,8 +82,27 @@ data class Profile(
     val ftpUser: String = "anonymous",
     val ftpDir: String = "/data",
     /** Which accent color (a position in [ACCENTS]) this console uses across the app. */
-    val color: Int = 0
+    val color: Int = 0,
+    /** Which console it is, a PS5 or a PS4. */
+    val type: ConsoleType = ConsoleType.PS5
 )
+
+/**
+ * This console as a [to]. A port that is still the old type's usual one becomes the new type's (a port typed by hand
+ * stays as it is), and a name that is still the app's own first name ("My PS5") follows the type ("My PS4").
+ */
+fun Profile.withType(to: ConsoleType): Profile {
+    if (to == type) return this
+    fun swap(current: String, old: String, new: String): String = if (current.trim() == old) new else current
+    val usualName = AppText.get(R.string.profile_default, type.model)
+    return copy(
+        type = to,
+        installPort = swap(installPort, type.installPort, to.installPort),
+        payloadPort = swap(payloadPort, type.loaderPort, to.loaderPort),
+        ftpPort = swap(ftpPort, type.ftpPort, to.ftpPort),
+        name = if (name == usualName) AppText.get(R.string.profile_default, to.model) else name
+    )
+}
 
 fun newProfileId(): String = UUID.randomUUID().toString()
 
@@ -82,6 +131,7 @@ fun profilesToJson(list: List<Profile>): String {
                 .put("ftpUser", p.ftpUser)
                 .put("ftpDir", p.ftpDir)
                 .put("color", p.color)
+                .put("type", p.type.id)
         )
     }
     return arr.toString()
@@ -108,7 +158,9 @@ fun parseProfiles(json: String?): List<Profile> {
                     ftpUser = o.optString("ftpUser", "anonymous"),
                     ftpDir = o.optString("ftpDir", "/data"),
                     // Consoles saved before colors existed get one each, in order, so they look different
-                    color = o.optInt("color", i % ACCENTS.size)
+                    color = o.optInt("color", i % ACCENTS.size),
+                    // Consoles saved before there were types are PS5s
+                    type = ConsoleType.of(o.optString("type", ""))
                 )
             }
         }
@@ -120,7 +172,7 @@ fun parseProfiles(json: String?): List<Profile> {
 /** The single set of settings from before profiles existed, turned into the first profile. */
 fun legacyProfile(get: (String, String) -> String, id: String = newProfileId()): Profile = Profile(
     id = id,
-    name = AppText.get(R.string.profile_default),
+    name = AppText.get(R.string.profile_default, ConsoleType.PS5.model),
     host = get("host", ""),
     installPort = get("install_port", "12800"),
     payloadPort = get("payload_port", "9021"),
@@ -166,8 +218,8 @@ object ProfileStore {
 // ---------------------------------------------------------------------------------------------
 
 /**
- * Lists the consoles; tap one to switch. Also adds, renames, recolors and deletes consoles, and opens the language
- * settings ([onLanguage]).
+ * Lists the consoles; tap one to switch. Also adds, renames, recolors and deletes consoles, sets whether the selected one
+ * is a PS5 or a PS4 ([onType]), and opens the language settings ([onLanguage]).
  */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -179,6 +231,7 @@ fun ConsolesDialog(
     onRename: (String) -> Unit,
     onDelete: () -> Unit,
     onColor: (Int) -> Unit,
+    onType: (ConsoleType) -> Unit,
     onLanguage: () -> Unit,
     onAbout: () -> Unit,
     onClose: () -> Unit
@@ -245,7 +298,7 @@ fun ConsolesDialog(
                         if (p.id == activeId) StatusDot(accentColor(p.color), 14.dp) else StatusRing(accentColor(p.color), 14.dp)
                         Column {
                             Text(p.name)
-                            Text(p.host.ifBlank { str(R.string.console_no_ip) }, style = MaterialTheme.typography.bodySmall)
+                            Text(p.type.model + " · " + p.host.ifBlank { str(R.string.console_no_ip) }, style = MaterialTheme.typography.bodySmall)
                         }
                     }
                 }
@@ -265,6 +318,24 @@ fun ConsolesDialog(
                         ) {
                             Box(Modifier.fillMaxSize().background(accentColor(i), CircleShape))
                         }
+                    }
+                }
+                // PS5 or PS4: the ports that are still the usual ones change along (see Profile.withType)
+                Text(str(R.string.console_type_of, active.name), style = MaterialTheme.typography.labelMedium, modifier = Modifier.padding(top = 12.dp))
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    ConsoleType.values().forEach { t ->
+                        val picked = t == active.type
+                        val cs = MaterialTheme.colorScheme
+                        Text(
+                            t.model,
+                            style = MaterialTheme.typography.labelLarge,
+                            color = if (picked) cs.onPrimary else cs.onSurface,
+                            modifier = Modifier
+                                .clip(CircleShape)
+                                .background(if (picked) cs.primary else cs.surfaceVariant)
+                                .clickable { onType(t) }
+                                .padding(horizontal = 18.dp, vertical = 10.dp)
+                        )
                     }
                 }
                 // The actions wrap onto a second line when a language needs more room

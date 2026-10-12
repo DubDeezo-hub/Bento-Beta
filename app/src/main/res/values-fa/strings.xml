@@ -33,14 +33,15 @@
     <string name="service_installer">‏Installer</string>
     <string name="service_loader">‏Loader</string>
     <string name="list_separator">"، "</string>
-    <string name="status_set_ip">نشانی IP کنسول PS5 خود را تنظیم کنید</string>
+    <string name="status_set_ip">نشانی IP کنسول %1$s خود را تنظیم کنید</string>
     <string name="status_checking">در حال بررسی…</string>
     <string name="status_ready">آماده</string>
     <string name="status_partly">تا حدی آماده</string>
     <string name="status_partly_off">تا حدی آماده · بدون پاسخ: %1$s</string>
     <string name="status_offline">دسترسی به کنسول ممکن نیست</string>
     <string name="status_hint_unset">آن را در PS5 در مسیر Settings &gt; Network &gt; Connection Status &gt; View Connection Status پیدا کنید. برای وارد کردن اینجا ضربه بزنید.</string>
-    <string name="status_hint_offline">هیچ پاسخی در این نشانی نیست. نشانی IP را بررسی کنید، همچنین اینکه کنسول روشن و در همان شبکه Wi-Fi است و etaHEN در حال اجراست.</string>
+    <string name="status_hint_unset_ps4">آن را در PS4 در مسیر Settings &gt; Network &gt; View Connection Status پیدا کنید. برای وارد کردن اینجا ضربه بزنید.</string>
+    <string name="status_hint_offline">هیچ پاسخی در این نشانی نیست. نشانی IP را بررسی کنید، همچنین اینکه %1$s روشن و در همان شبکه Wi-Fi است و %2$s در حال اجراست.</string>
     <string name="status_hint_one">پاسخ نمی‌دهد: %1$s. آن را در کنسول راه‌اندازی کنید یا پورت آن را بررسی کنید.</string>
     <string name="status_hint_many">پاسخ نمی‌دهند: %1$s. آن‌ها را در کنسول راه‌اندازی کنید یا پورت آن‌ها را بررسی کنید.</string>
     <string name="console_switch">تغییر کنسول</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">نشانی IP کنسول</string>
     <string name="console_ip_label">نشانی IP</string>
     <string name="console_ip_help">آن را در PS5 در مسیر Settings &gt; Network &gt; Connection Status &gt; View Connection Status پیدا کنید.</string>
+    <string name="console_ip_help_ps4">آن را در PS4 در مسیر Settings &gt; Network &gt; View Connection Status پیدا کنید.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">انتقال</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">انتقال‌های در انتظار</string>
     <string name="queue_clear">برداشتن همه</string>
     <string name="queue_empty">چیزی در انتظار نیست.</string>
-    <string name="notif_channel">انتقال‌های PS5</string>
+    <string name="notif_channel">انتقال‌های PS4/PS5</string>
     <string name="notif_sent">ارسال شد: %1$s</string>
     <string name="notif_received">دریافت شد: %1$s</string>
     <string name="percent_value">‏%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">به صف اضافه شد. %1$d در انتظار.</string>
     <string name="msg_set_ip_first">ابتدا نشانی IP کنسول را تنظیم کنید. روی کارت بالای صفحه ضربه بزنید.</string>
-    <string name="msg_sending_link">در حال ارسال پیوند به PS5…</string>
+    <string name="msg_sending_link">در حال ارسال پیوند به %1$s…</string>
     <string name="msg_check_ip_ftp">نشانی IP کنسول و پورت FTP را بررسی کنید.</string>
     <string name="msg_adding_to_shelf_link">در حال افزودن به کتابخانه payload…</string>
     <string name="status_idle">غیرفعال</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">از این سایت خارج می‌شوید؟</string>
     <string name="offsite_text">صفحه می‌خواهد %1$s را باز کند. وقتی روی پیوندی ضربه می‌زنید، اغلب تبلیغات باعث این کار می‌شوند؛ پس فقط در صورتی ادامه دهید که انتظارش را داشتید.</string>
-    <string name="choose_install">ارسال پیوند به Installer در PS5</string>
-    <string name="choose_ftp">آپلود در PS5 (FTP)</string>
+    <string name="choose_install">ارسال پیوند به Installer در %1$s</string>
+    <string name="choose_ftp">آپلود در %1$s (FTP)</string>
     <string name="choose_shelf">ذخیره در کتابخانه payload</string>
     <string name="choose_phone">ذخیره در تلفن</string>
     <string name="choose_help">‏Installer به یک پیوند مستقیم بسته نیاز دارد که کنسول بدون ورود به سیستم بتواند آن را باز کند. FTP با هر فایلی کار می‌کند و نشست ورود شما را حفظ می‌کند. تلفن داده‌ها را در پس‌زمینه منتقل می‌کند و پیشرفت بالای نوار پایین و در یک اعلان نمایش داده می‌شود. کتابخانه payload یک payload کوچک (تا %1$s) را برای زبانه Payload داخل برنامه نگه می‌دارد.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">پورت Installer (etaHEN: 12800)</string>
+    <string name="install_port_label">پورت Installer (%1$s: 12800)</string>
     <string name="install_accepted">‏Installer آن را پذیرفت: %1$s</string>
     <string name="install_not_accepted">پذیرفته نشد (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">ناموفق: %1$s</string>
     <string name="ftp_port_hint">دسترسی به سرور FTP ممکن نیست. IP کنسول و پورت FTP را بررسی کنید (FTP داخلی etaHEN از 1337 استفاده می‌کند و payload FTP از 2121).</string>
+    <string name="ftp_port_hint_ps4">دسترسی به سرور FTP ممکن نیست. IP کنسول و پورت FTP را بررسی کنید (FTP در GoldHEN از 2121 استفاده می‌کند).</string>
     <string name="err_login">ورود به FTP ناموفق بود</string>
     <string name="err_cant_open">باز کردن %1$s ممکن نیست (%2$s)</string>
     <string name="err_rename">تغییر نام ناموفق بود (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">فقط %1$s از %2$s رسید.</string>
     <string name="err_empty_file">فایل خالی است</string>
     <string name="err_save">ذخیره %1$s ممکن نشد</string>
-    <string name="sent_to_ps5">به PS5 ارسال شد: %1$s</string>
-    <string name="saved_to_downloads">در Downloads/PS5 ذخیره شد: %1$s</string>
+    <string name="sent_to_ps5">به %2$s ارسال شد: %1$s</string>
+    <string name="saved_to_downloads">در Downloads/%2$s ذخیره شد: %1$s</string>
     <string name="dl_http_failed">دانلود ناموفق بود: HTTP %1$s</string>
     <string name="dl_empty">دانلود ناموفق بود: پاسخ خالی</string>
     <string name="dl_cut_short">اتصال پیش از رسیدن کامل فایل بسته شد.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">از کتابخانه حذف می‌شود. فایل اصلی روی تلفن شما دست‌نخورده می‌ماند.</string>
     <string name="payload_loader_port">پورت Loader</string>
     <string name="payload_shelf_title">کتابخانه payload</string>
-    <string name="payload_shelf_empty">هنوز چیزی ذخیره نشده است. payload‌هایی را که زیاد استفاده می‌کنید (سرور FTP، etaHEN، ...) اضافه کنید و هرکدام را با یک ضربه ارسال کنید. هنگام دانلود می‌توانید آن را مستقیماً از زبانه وب هم ذخیره کنید.</string>
+    <string name="payload_shelf_empty">هنوز چیزی ذخیره نشده است. payload‌هایی را که زیاد استفاده می‌کنید (سرور FTP، %1$s، ...) اضافه کنید و هرکدام را با یک ضربه ارسال کنید. هنگام دانلود می‌توانید آن را مستقیماً از زبانه وب هم ذخیره کنید.</string>
     <string name="payload_sending">در حال ارسال %1$s…</string>
     <string name="payload_result">‏%1$s: %2$s</string>
     <string name="payload_add">افزودن payload به کتابخانه</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">ارسال payload</string>
 
     <!-- consoles -->
-    <string name="profile_default">‏PS5 من</string>
+    <string name="profile_default">‏%1$s من</string>
     <string name="profile_new">کنسول %1$d</string>
     <string name="profile_fallback">کنسول</string>
     <string name="consoles_title">کنسول‌ها</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">نشانی IP و پورت‌های ذخیره‌شده آن حذف می‌شوند. سایر کنسول‌های شما بی‌تأثیر می‌مانند.</string>
     <string name="console_no_ip">هنوز نشانی IP ندارد</string>
     <string name="console_color_of">رنگ %1$s</string>
+    <string name="console_type_of">نوع کنسول %1$s</string>
     <string name="console_use_color">استفاده از %1$s</string>
     <string name="console_add">افزودن کنسول</string>
     <string name="language_button">زبان</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">کپی شد</string>
     <string name="help_unreachable_title">دسترسی به کنسول ممکن نیست</string>
     <string name="help_unreachable_what">هیچ پاسخی از نشانی کنسول نمی‌آید.</string>
-    <string name="help_unreachable_try">• نشانی IP را روی PS5 بررسی کنید (Settings &gt; Network &gt; Connection Status). ممکن است پس از راه‌اندازی مجدد تغییر کند.\n• کنسول را کاملاً بیدار کنید. حالت استراحت اغلب شبکه را خاموش می‌کند.\n• روی هر دو دستگاه از یک Wi-Fi استفاده کنید. شبکه‌های مهمان و VPN مانع اتصال می‌شوند.</string>
+    <string name="help_unreachable_try">• نشانی IP را روی %1$s بررسی کنید (Settings &gt; Network &gt; Connection Status). ممکن است پس از راه‌اندازی مجدد تغییر کند.\n• کنسول را کاملاً بیدار کنید. حالت استراحت اغلب شبکه را خاموش می‌کند.\n• روی هر دو دستگاه از یک Wi-Fi استفاده کنید. شبکه‌های مهمان و VPN مانع اتصال می‌شوند.</string>
     <string name="help_port_title">آن سرویس در حال اجرا نیست</string>
     <string name="help_port_what">کنسول پاسخ داد، اما هیچ چیزی روی آن پورت گوش نمی‌دهد.</string>
     <string name="help_port_try">• etaHEN را روی کنسول اجرا کنید. این برنامه Installer (12800)، Loader (9021) و FTP (1337) را فراهم می‌کند.\n• یک payload جداگانهٔ FTP معمولاً از 2121 استفاده می‌کند. همان پورت را اینجا وارد کنید.\n• در کارت کنسول، چراغ خاموش نشان می‌دهد چه چیزی کم است.</string>
+    <string name="help_port_try_ps4">• GoldHEN را روی کنسول اجرا کنید. این برنامه Loader (9090) و FTP (2121) را فراهم می‌کند.\n• برای نصب بسته‌ها، Remote Package Installer ساختهٔ flatz را هم روی کنسول اجرا کنید (12800).\n• در کارت کنسول، چراغ خاموش نشان می‌دهد چه چیزی کم است.</string>
     <string name="help_login_title">ورود به FTP رد شد</string>
     <string name="help_login_what">سرور FTP کنسول نام کاربری یا گذرواژه را نپذیرفت.</string>
-    <string name="help_login_try">• etaHEN نام کاربری anonymous را با هر گذرواژه‌ای می‌پذیرد.\n• اگر روی کنسول ورود تعریف کرده‌اید، آن را در آپلود وارد کنید.\n• گذرواژه ذخیره نمی‌شود. پس از راه‌اندازی مجدد برنامه دوباره آن را وارد کنید.</string>
+    <string name="help_login_try">• %2$s نام کاربری anonymous را با هر گذرواژه‌ای می‌پذیرد.\n• اگر روی کنسول ورود تعریف کرده‌اید، آن را در آپلود وارد کنید.\n• گذرواژه ذخیره نمی‌شود. پس از راه‌اندازی مجدد برنامه دوباره آن را وارد کنید.</string>
     <string name="help_dropped_title">اتصال قطع شد</string>
     <string name="help_dropped_what">ارتباط با کنسول قطع شد یا انتقال داده متوقف شد. برنامه دوباره تلاش می‌کند و از همان جایی که متوقف شد ادامه می‌دهد.</string>
     <string name="help_dropped_try">• گوشی را نزدیک مودم نگه دارید و کنسول را بیدار نگه دارید.\n• دانلودهای بزرگ دیگر را در شبکه متوقف کنید.\n• اگر باز هم ناموفق بود، کمی صبر کنید و روی تلاش دوباره بزنید.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">این بررسی حداکثر روزی یک بار از GitHub آخرین نسخه را می‌پرسد. هیچ اطلاعاتی دربارهٔ شما یا کنسول‌هایتان فرستاده نمی‌شود؛ GitHub مانند هر وب‌سایتی نشانی IP شما را می‌بیند.</string>
 
     <!-- find my console -->
-    <string name="find_button">پیدا کردن PS5 من</string>
+    <string name="find_button">پیدا کردن %1$s من</string>
     <string name="find_scanning">در حال جست‌وجوی کنسول شما در شبکهٔ %1$s…</string>
     <string name="find_again">اسکن دوباره</string>
     <string name="find_none">کنسولی پیدا نشد.</string>
-    <string name="find_none_try">• کنسول را کاملاً روشن کنید (نه در حالت استراحت) و etaHEN را اجرا کنید.\n• در گوشی و کنسول از یک Wi-Fi استفاده کنید. شبکه‌های مهمان و VPN دستگاه‌ها را از هم جدا نگه می‌دارند.\n• سپس دوباره اسکن کنید.</string>
+    <string name="find_none_try">• کنسول را کاملاً روشن کنید (نه در حالت استراحت) و %1$s را اجرا کنید.\n• در گوشی و کنسول از یک Wi-Fi استفاده کنید. شبکه‌های مهمان و VPN دستگاه‌ها را از هم جدا نگه می‌دارند.\n• سپس دوباره اسکن کنید.</string>
     <string name="find_no_wifi">این گوشی به شبکهٔ Wi-Fi وصل نیست. آن را به همان Wi-Fi کنسول وصل کنید و دوباره اسکن کنید.</string>
     <string name="find_pick">برای تنظیم نشانی %1$s روی «استفاده» بزنید.</string>
     <string name="find_saved">نشانی ذخیره‌شده</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">در حال بررسی پوشه‌ها…</string>
     <string name="files_dl_confirm_title">در تلفن دانلود شود؟</string>
-    <string name="files_dl_confirm_text">فایل‌ها: %1$d، در مجموع %2$s. آن‌ها در Downloads/PS5 و در همان پوشه‌هایی ذخیره می‌شوند که روی کنسول هستند.</string>
+    <string name="files_dl_confirm_text">فایل‌ها: %1$d، در مجموع %2$s. آن‌ها در Downloads/%3$s و در همان پوشه‌هایی ذخیره می‌شوند که روی کنسول هستند.</string>
     <string name="files_dl_links">پیوندهای داخل پوشه‌ها دانلود نمی‌شوند: %1$d.</string>
     <string name="files_dl_truncated">فایل‌های برداشته‌شده: %1$d. پوشه‌ها بیشتر از این دارند، یا عمیق‌تر از حدی هستند که برنامه دنبال می‌کند.</string>
     <string name="files_dl_none">در موارد انتخاب‌شده فایلی برای دانلود وجود ندارد.</string>

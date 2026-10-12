@@ -33,14 +33,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">Подесите IP адресу PS5 конзоле</string>
+    <string name="status_set_ip">Подесите IP адресу %1$s конзоле</string>
     <string name="status_checking">Провера…</string>
     <string name="status_ready">Спремно</string>
     <string name="status_partly">Делимично спремно</string>
     <string name="status_partly_off">Делимично спремно · не одговара: %1$s</string>
     <string name="status_offline">Конзола није доступна</string>
     <string name="status_hint_unset">Пронађите је на PS5 у Settings &gt; Network &gt; Connection Status &gt; View Connection Status. Додирните овде да бисте је унели.</string>
-    <string name="status_hint_offline">Ништа не одговара на овој адреси. Проверите IP адресу, да ли је конзола укључена и на истој Wi-Fi мрежи и да ли etaHEN ради.</string>
+    <string name="status_hint_unset_ps4">Пронађите је на PS4 у Settings &gt; Network &gt; View Connection Status. Додирните овде да бисте је унели.</string>
+    <string name="status_hint_offline">Ништа не одговара на овој адреси. Проверите IP адресу, да ли је %1$s укључена и на истој Wi-Fi мрежи и да ли %2$s ради.</string>
     <string name="status_hint_one">Не одговара: %1$s. Покрените ту услугу на конзоли или проверите њен порт.</string>
     <string name="status_hint_many">Не одговарају: %1$s. Покрените те услуге на конзоли или проверите њихове портове.</string>
     <string name="console_switch">Промени конзолу</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">IP адреса конзоле</string>
     <string name="console_ip_label">IP адреса</string>
     <string name="console_ip_help">Пронађите је на PS5 у Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+    <string name="console_ip_help_ps4">Пронађите је на PS4 у Settings &gt; Network &gt; View Connection Status.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">Пренос</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">Преноси на чекању</string>
     <string name="queue_clear">Уклони све</string>
     <string name="queue_empty">Ништа није на чекању.</string>
-    <string name="notif_channel">Преноси на PS5</string>
+    <string name="notif_channel">Преноси на PS4/PS5</string>
     <string name="notif_sent">Послато: %1$s</string>
     <string name="notif_received">Примљено: %1$s</string>
     <string name="percent_value">%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">Додато у ред. На чекању: %1$d.</string>
     <string name="msg_set_ip_first">Прво подесите IP адресу конзоле. Додирните картицу на врху.</string>
-    <string name="msg_sending_link">Слање везе на PS5…</string>
+    <string name="msg_sending_link">Слање везе на %1$s…</string>
     <string name="msg_check_ip_ftp">Проверите IP адресу конзоле и FTP порт.</string>
     <string name="msg_adding_to_shelf_link">Додавање у библиотеку payload-а…</string>
     <string name="status_idle">Мирује</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">Напустити овај сајт?</string>
     <string name="offsite_text">Страница жели да отвори %1$s. Огласи то често покрећу када додирнете везу, па наставите само ако сте то очекивали.</string>
-    <string name="choose_install">Пошаљи везу у Installer на PS5</string>
-    <string name="choose_ftp">Отпреми на PS5 (FTP)</string>
+    <string name="choose_install">Пошаљи везу у Installer на %1$s</string>
+    <string name="choose_ftp">Отпреми на %1$s (FTP)</string>
     <string name="choose_shelf">Сачувај у библиотеци payload-а</string>
     <string name="choose_phone">Сачувај на телефон</string>
     <string name="choose_help">Installer захтева директну везу ка пакету коју конзола може да отвори без пријављивања. FTP ради са било којом датотеком и задржава вашу сесију пријаве. Телефон преусмерава податке у позадини, а напредак се приказује изнад доње траке и у обавештењу. Библиотека payload-а чува мали payload (до %1$s) унутар апликације за картицу Payload.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Порт за Installer (etaHEN: 12800)</string>
+    <string name="install_port_label">Порт за Installer (%1$s: 12800)</string>
     <string name="install_accepted">Installer га је прихватио: %1$s</string>
     <string name="install_not_accepted">Није прихваћено (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">Неуспех: %1$s</string>
     <string name="ftp_port_hint">FTP сервер није доступан. Проверите IP конзоле и FTP порт (уграђени FTP у etaHEN-у користи 1337, FTP payload користи 2121).</string>
+    <string name="ftp_port_hint_ps4">FTP сервер није доступан. Проверите IP конзоле и FTP порт (FTP у GoldHEN-у користи 2121).</string>
     <string name="err_login">Пријава на FTP није успела</string>
     <string name="err_cant_open">није могуће отворити %1$s (%2$s)</string>
     <string name="err_rename">преименовање није успело (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">Стигло је само %1$s од %2$s.</string>
     <string name="err_empty_file">Датотека је празна</string>
     <string name="err_save">Није могуће сачувати %1$s</string>
-    <string name="sent_to_ps5">Послато на PS5: %1$s</string>
-    <string name="saved_to_downloads">Сачувано у Downloads/PS5: %1$s</string>
+    <string name="sent_to_ps5">Послато на %2$s: %1$s</string>
+    <string name="saved_to_downloads">Сачувано у Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Преузимање није успело: HTTP %1$s</string>
     <string name="dl_empty">Преузимање није успело: празан одговор</string>
     <string name="dl_cut_short">Веза је затворена пре него што је стигла цела датотека.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">Биће избрисан из библиотеке. Оригинална датотека на вашем телефону остаје нетакнута.</string>
     <string name="payload_loader_port">Порт за Loader</string>
     <string name="payload_shelf_title">Библиотека payload-а</string>
-    <string name="payload_shelf_empty">Још ништа није сачувано. Додајте payload-е које често користите (FTP сервер, etaHEN, ...) и пошаљите сваки једним додиром. Можете га сачувати и директно са картице Веб док га преузимате.</string>
+    <string name="payload_shelf_empty">Још ништа није сачувано. Додајте payload-е које често користите (FTP сервер, %1$s, ...) и пошаљите сваки једним додиром. Можете га сачувати и директно са картице Веб док га преузимате.</string>
     <string name="payload_sending">Слање %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Додај payload у библиотеку</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Пошаљи payload</string>
 
     <!-- consoles -->
-    <string name="profile_default">Моја PS5</string>
+    <string name="profile_default">Моја %1$s</string>
     <string name="profile_new">Конзола %1$d</string>
     <string name="profile_fallback">Конзола</string>
     <string name="consoles_title">Конзоле</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">Њена сачувана IP адреса и портови биће уклоњени. Остале ваше конзоле нису погођене.</string>
     <string name="console_no_ip">још нема IP адресе</string>
     <string name="console_color_of">Боја за %1$s</string>
+    <string name="console_type_of">Врста конзоле за %1$s</string>
     <string name="console_use_color">Користи %1$s</string>
     <string name="console_add">Додај конзолу</string>
     <string name="language_button">Језик</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">Копирано</string>
     <string name="help_unreachable_title">Конзола није доступна</string>
     <string name="help_unreachable_what">Ништа не одговара на адреси конзоле.</string>
-    <string name="help_unreachable_try">• Проверите IP адресу на PS5 (Settings &gt; Network &gt; Connection Status). Може се променити након поновног покретања.\n• Потпуно пробудите конзолу. Режим мировања често искључује мрежу.\n• Користите исти Wi-Fi на оба уређаја. Мреже за госте и VPN га блокирају.</string>
+    <string name="help_unreachable_try">• Проверите IP адресу на %1$s (Settings &gt; Network &gt; Connection Status). Може се променити након поновног покретања.\n• Потпуно пробудите конзолу. Режим мировања често искључује мрежу.\n• Користите исти Wi-Fi на оба уређаја. Мреже за госте и VPN га блокирају.</string>
     <string name="help_port_title">Та услуга не ради</string>
     <string name="help_port_what">Конзола је одговорила, али ништа не слуша на том порту.</string>
     <string name="help_port_try">• Покрените etaHEN на конзоли. Он пружа Installer (12800), Loader (9021) и FTP (1337).\n• Посебан FTP payload обично користи 2121. Унесите овде исти порт.\n• На картици конзоле угашено светло показује шта недостаје.</string>
+    <string name="help_port_try_ps4">• Покрените GoldHEN на конзоли. Он пружа Loader (9090) и FTP (2121).\n• За инсталирање пакета на конзоли покрените и Remote Package Installer аутора flatz (12800).\n• На картици конзоле угашено светло показује шта недостаје.</string>
     <string name="help_login_title">FTP пријава је одбијена</string>
     <string name="help_login_what">FTP сервер конзоле одбио је корисничко име или лозинку.</string>
-    <string name="help_login_try">• etaHEN прихвата корисничко име anonymous са било којом лозинком.\n• Ако сте на конзоли подесили пријаву, унесите је у одељку Слање.\n• Лозинка се не чува. Унесите је поново након поновног покретања апликације.</string>
+    <string name="help_login_try">• %2$s прихвата корисничко име anonymous са било којом лозинком.\n• Ако сте на конзоли подесили пријаву, унесите је у одељку Слање.\n• Лозинка се не чува. Унесите је поново након поновног покретања апликације.</string>
     <string name="help_dropped_title">Веза је прекинута</string>
     <string name="help_dropped_what">Веза са конзолом се прекинула или подаци више не теку. Апликација покушава поново и наставља одатле где је стала.</string>
     <string name="help_dropped_try">• Држите телефон близу рутера, а конзолу будном.\n• Паузирајте остала велика преузимања на мрежи.\n• Ако и даље не успева, сачекајте тренутак и додирните Покушај поново.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">Провера пита GitHub за најновије издање, највише једном дневно. Ништа о вама или вашим конзолама се не шаље; GitHub види вашу IP адресу, као и сваки веб-сајт.</string>
 
     <!-- find my console -->
-    <string name="find_button">Пронађи моју PS5</string>
+    <string name="find_button">Пронађи моју %1$s</string>
     <string name="find_scanning">Тражење ваше конзоле на мрежи %1$s…</string>
     <string name="find_again">Скенирај поново</string>
     <string name="find_none">Конзола није пронађена.</string>
-    <string name="find_none_try">• Потпуно укључите конзолу (не у режиму мировања) и покрените etaHEN.\n• Користите исти Wi-Fi на телефону и на конзоли. Мреже за госте и VPN држе уређаје одвојеним.\n• Затим поново скенирајте.</string>
+    <string name="find_none_try">• Потпуно укључите конзолу (не у режиму мировања) и покрените %1$s.\n• Користите исти Wi-Fi на телефону и на конзоли. Мреже за госте и VPN држе уређаје одвојеним.\n• Затим поново скенирајте.</string>
     <string name="find_no_wifi">Овај телефон није на Wi-Fi мрежи. Повежите га на исту Wi-Fi мрежу као и конзолу, а затим поново скенирајте.</string>
     <string name="find_pick">Додирните Користи да подесите адресу конзоле „%1$s“.</string>
     <string name="find_saved">Сачувана адреса</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">Прегледање фолдера…</string>
     <string name="files_dl_confirm_title">Преузети на телефон?</string>
-    <string name="files_dl_confirm_text">Датотеке: %1$d, укупно %2$s. Чувају се у Downloads/PS5, у истим фолдерима као на конзоли.</string>
+    <string name="files_dl_confirm_text">Датотеке: %1$d, укупно %2$s. Чувају се у Downloads/%3$s, у истим фолдерима као на конзоли.</string>
     <string name="files_dl_links">Везе унутар фолдера се не преузимају: %1$d.</string>
     <string name="files_dl_truncated">Укључене датотеке: %1$d. Фолдери их садрже више или иду дубље него што их апликација прати.</string>
     <string name="files_dl_none">У избору нема датотеке за преузимање.</string>

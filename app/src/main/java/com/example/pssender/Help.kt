@@ -160,10 +160,19 @@ fun topicForHttp(code: Int): HelpTopic? = if (code >= 400) HelpTopic.DOWNLOAD_LI
 // Screens
 // ---------------------------------------------------------------------------------------------
 
+/**
+ * The advice for [topic] on a console of [type]. A PS4 has its own advice for a service that isn't running (GoldHEN brings
+ * the loader and FTP, and the installer is a separate app); the other pages name the console and its HEN through %1$s and
+ * %2$s (see [HelpDialog]).
+ */
+fun remedyFor(topic: HelpTopic, type: ConsoleType): Int =
+    if (type == ConsoleType.PS4 && topic == HelpTopic.PORT_CLOSED) R.string.help_port_try_ps4 else topic.remedy
+
 /** The explanation of one kind of problem. [details] is the message as it was shown, which can be copied. */
 @Composable
 fun HelpDialog(topic: HelpTopic, details: String, onClose: () -> Unit) {
     val ctx = LocalContext.current
+    val type = ActiveConsole.type
     AlertDialog(
         onDismissRequest = onClose,
         title = { Text(str(topic.title)) },
@@ -175,7 +184,8 @@ fun HelpDialog(topic: HelpTopic, details: String, onClose: () -> Unit) {
                 Text(str(R.string.help_what), style = MaterialTheme.typography.labelLarge)
                 Text(str(topic.what))
                 Text(str(R.string.help_try), style = MaterialTheme.typography.labelLarge, modifier = Modifier.padding(top = 6.dp))
-                Text(str(topic.remedy))
+                // The advice may name the console (%1$s, "PS5") and its homebrew enabler (%2$s, "etaHEN")
+                Text(str(remedyFor(topic, type), type.model, type.hen))
                 Text(str(R.string.help_details), style = MaterialTheme.typography.labelLarge, modifier = Modifier.padding(top = 6.dp))
                 Text(
                     details,
@@ -190,7 +200,7 @@ fun HelpDialog(topic: HelpTopic, details: String, onClose: () -> Unit) {
                             onClose()
                         },
                         modifier = Modifier.padding(top = 6.dp)
-                    ) { Text(str(R.string.find_button)) }
+                    ) { Text(str(R.string.find_button, type.model)) }
                 }
             }
         },

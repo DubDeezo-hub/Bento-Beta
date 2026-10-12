@@ -67,9 +67,9 @@ fun consoleLevel(target: ConsoleTarget, status: ConsoleStatus?): ConsoleLevel {
 fun downServices(status: ConsoleStatus?): List<String> =
     status?.checks?.filter { it.port != null && it.up == false }?.map { it.label } ?: emptyList()
 
-/** The short title of the console card. */
-fun consoleHeadline(level: ConsoleLevel, down: List<String>, compact: Boolean): String = when (level) {
-    ConsoleLevel.UNSET -> AppText.get(R.string.status_set_ip)
+/** The short title of the console card. [type] says which console it is ("Set your PS4's IP address"). */
+fun consoleHeadline(level: ConsoleLevel, down: List<String>, compact: Boolean, type: ConsoleType = ConsoleType.PS5): String = when (level) {
+    ConsoleLevel.UNSET -> AppText.get(R.string.status_set_ip, type.model)
     ConsoleLevel.CHECKING -> AppText.get(R.string.status_checking)
     ConsoleLevel.READY -> AppText.get(R.string.status_ready)
     ConsoleLevel.PARTIAL ->
@@ -77,10 +77,13 @@ fun consoleHeadline(level: ConsoleLevel, down: List<String>, compact: Boolean): 
     ConsoleLevel.OFFLINE -> AppText.get(R.string.status_offline)
 }
 
-/** The advice under the card's title, or null when there is nothing to add. */
-fun consoleHint(level: ConsoleLevel, down: List<String>): String? = when (level) {
-    ConsoleLevel.UNSET -> AppText.get(R.string.status_hint_unset)
-    ConsoleLevel.OFFLINE -> AppText.get(R.string.status_hint_offline)
+/**
+ * The advice under the card's title, or null when there is nothing to add. [type] says where the console shows its address
+ * and which homebrew enabler should be running on it.
+ */
+fun consoleHint(level: ConsoleLevel, down: List<String>, type: ConsoleType = ConsoleType.PS5): String? = when (level) {
+    ConsoleLevel.UNSET -> AppText.get(if (type == ConsoleType.PS4) R.string.status_hint_unset_ps4 else R.string.status_hint_unset)
+    ConsoleLevel.OFFLINE -> AppText.get(R.string.status_hint_offline, type.model, type.hen)
     ConsoleLevel.PARTIAL -> when {
         down.isEmpty() -> null
         down.size == 1 -> AppText.get(R.string.status_hint_one, down[0])

@@ -33,14 +33,15 @@
     <string name="service_installer">المثبّت</string>
     <string name="service_loader">المحمّل</string>
     <string name="list_separator">"، "</string>
-    <string name="status_set_ip">عيّن عنوان IP لجهاز PS5</string>
+    <string name="status_set_ip">عيّن عنوان IP لجهاز %1$s</string>
     <string name="status_checking">جارٍ التحقق…</string>
     <string name="status_ready">جاهز</string>
     <string name="status_partly">جاهز جزئيًا</string>
     <string name="status_partly_off">جاهز جزئيًا · لا استجابة: %1$s</string>
     <string name="status_offline">تعذّر الوصول إلى الجهاز</string>
     <string name="status_hint_unset">ستجده على PS5 في الإعدادات &gt; الشبكة &gt; حالة الاتصال &gt; عرض حالة الاتصال. المس هنا لإدخاله.</string>
-    <string name="status_hint_offline">لا توجد استجابة على هذا العنوان. تحقق من عنوان IP، ومن أن PS5 قيد التشغيل ومتصل بشبكة Wi-Fi نفسها، ومن أن etaHEN يعمل.</string>
+    <string name="status_hint_unset_ps4">ستجده على PS4 في الإعدادات &gt; الشبكة &gt; عرض حالة الاتصال. المس هنا لإدخاله.</string>
+    <string name="status_hint_offline">لا توجد استجابة على هذا العنوان. تحقق من عنوان IP، ومن أن %1$s قيد التشغيل ومتصل بشبكة Wi-Fi نفسها، ومن أن %2$s يعمل.</string>
     <string name="status_hint_one">لا استجابة من: %1$s. شغّله على الجهاز أو تحقق من منفذه.</string>
     <string name="status_hint_many">لا استجابة من: %1$s. شغّلها على الجهاز أو تحقق من منافذها.</string>
     <string name="console_switch">تبديل الجهاز</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">عنوان IP للجهاز</string>
     <string name="console_ip_label">عنوان IP</string>
     <string name="console_ip_help">ستجده على PS5 في الإعدادات &gt; الشبكة &gt; حالة الاتصال &gt; عرض حالة الاتصال.</string>
+    <string name="console_ip_help_ps4">ستجده على PS4 في الإعدادات &gt; الشبكة &gt; عرض حالة الاتصال.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">نقل</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">عمليات النقل المنتظرة</string>
     <string name="queue_clear">إزالة الكل</string>
     <string name="queue_empty">لا شيء في الانتظار.</string>
-    <string name="notif_channel">عمليات النقل إلى PS5</string>
+    <string name="notif_channel">عمليات النقل إلى PS4/PS5</string>
     <string name="notif_sent">تم الإرسال: %1$s</string>
     <string name="notif_received">تم الاستقبال: %1$s</string>
     <string name="percent_value">‏%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">أُضيف إلى قائمة الانتظار. %1$d في الانتظار.</string>
     <string name="msg_set_ip_first">عيّن عنوان IP للجهاز أولًا. المس البطاقة في الأعلى.</string>
-    <string name="msg_sending_link">جارٍ إرسال الرابط إلى PS5…</string>
+    <string name="msg_sending_link">جارٍ إرسال الرابط إلى %1$s…</string>
     <string name="msg_check_ip_ftp">تحقق من عنوان IP للجهاز ومنفذ FTP.</string>
     <string name="msg_adding_to_shelf_link">جارٍ الإضافة إلى مكتبة Payload…</string>
     <string name="status_idle">خامل</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">مغادرة هذا الموقع؟</string>
     <string name="offsite_text">تريد الصفحة فتح %1$s. غالبًا ما تتسبب الإعلانات في ذلك عند لمس رابط، لذا تابع فقط إذا كنت تتوقع ذلك.</string>
-    <string name="choose_install">إرسال الرابط إلى مثبّت PS5</string>
-    <string name="choose_ftp">رفع إلى PS5 (FTP)</string>
+    <string name="choose_install">إرسال الرابط إلى مثبّت %1$s</string>
+    <string name="choose_ftp">رفع إلى %1$s (FTP)</string>
     <string name="choose_shelf">حفظ في مكتبة Payload</string>
     <string name="choose_phone">حفظ على الهاتف</string>
     <string name="choose_help">يحتاج المثبّت إلى رابط مباشر للحزمة يستطيع الجهاز فتحه دون تسجيل الدخول. يعمل FTP مع أي ملف ويحتفظ بجلسة تسجيل دخولك. يمرّر الهاتف البيانات في الخلفية، ويظهر التقدم فوق الشريط السفلي وفي إشعار. تحتفظ مكتبة Payload بملف Payload صغير (حتى %1$s) داخل التطبيق لاستخدامه في تبويب Payload.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">منفذ المثبّت (etaHEN: 12800)</string>
+    <string name="install_port_label">منفذ المثبّت (%1$s: 12800)</string>
     <string name="install_accepted">قبِله المثبّت: %1$s</string>
     <string name="install_not_accepted">لم يُقبل (upload %1$s: %2$s؛ api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">فشل: %1$s</string>
     <string name="ftp_port_hint">تعذّر الوصول إلى خادم FTP. تحقق من عنوان IP للجهاز ومنفذ FTP (يستخدم FTP المدمج في etaHEN المنفذ 1337، ويستخدم Payload الخاص بـ FTP المنفذ 2121).</string>
+    <string name="ftp_port_hint_ps4">تعذّر الوصول إلى خادم FTP. تحقق من عنوان IP للجهاز ومنفذ FTP (يستخدم FTP في GoldHEN المنفذ 2121).</string>
     <string name="err_login">فشل تسجيل الدخول إلى FTP</string>
     <string name="err_cant_open">تعذّر فتح %1$s (%2$s)</string>
     <string name="err_rename">فشلت إعادة التسمية (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">وصل %1$s فقط من أصل %2$s.</string>
     <string name="err_empty_file">الملف فارغ</string>
     <string name="err_save">تعذّر حفظ %1$s</string>
-    <string name="sent_to_ps5">تم الإرسال إلى PS5: %1$s</string>
-    <string name="saved_to_downloads">تم الحفظ في التنزيلات/PS5: %1$s</string>
+    <string name="sent_to_ps5">تم الإرسال إلى %2$s: %1$s</string>
+    <string name="saved_to_downloads">تم الحفظ في التنزيلات/%2$s: %1$s</string>
     <string name="dl_http_failed">فشل التنزيل: HTTP %1$s</string>
     <string name="dl_empty">فشل التنزيل: استجابة فارغة</string>
     <string name="dl_cut_short">أُغلق الاتصال قبل وصول الملف كاملًا.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">سيتم حذفه من المكتبة. لن يتأثر الملف الأصلي على هاتفك.</string>
     <string name="payload_loader_port">منفذ المحمّل</string>
     <string name="payload_shelf_title">مكتبة Payload</string>
-    <string name="payload_shelf_empty">لم يتم حفظ أي شيء بعد. أضف ملفات Payload التي تستخدمها كثيرًا (خادم FTP أو etaHEN وغيرها) وأرسل كل واحد بلمسة. يمكنك أيضًا حفظ أحدها مباشرة من تبويب الويب عند تنزيله.</string>
+    <string name="payload_shelf_empty">لم يتم حفظ أي شيء بعد. أضف ملفات Payload التي تستخدمها كثيرًا (خادم FTP أو %1$s وغيرها) وأرسل كل واحد بلمسة. يمكنك أيضًا حفظ أحدها مباشرة من تبويب الويب عند تنزيله.</string>
     <string name="payload_sending">جارٍ إرسال %1$s…</string>
     <string name="payload_result">‏%1$s: %2$s</string>
     <string name="payload_add">إضافة Payload إلى المكتبة</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">إرسال Payload</string>
 
     <!-- consoles -->
-    <string name="profile_default">جهازي PS5</string>
+    <string name="profile_default">جهازي %1$s</string>
     <string name="profile_new">الجهاز %1$d</string>
     <string name="profile_fallback">جهاز</string>
     <string name="consoles_title">الأجهزة</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">سيتم حذف عنوان IP والمنافذ المحفوظة له. لن تتأثر أجهزتك الأخرى.</string>
     <string name="console_no_ip">لا يوجد عنوان IP بعد</string>
     <string name="console_color_of">لون %1$s</string>
+    <string name="console_type_of">نوع جهاز %1$s</string>
     <string name="console_use_color">استخدام %1$s</string>
     <string name="console_add">إضافة جهاز</string>
     <string name="language_button">اللغة</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">تم النسخ</string>
     <string name="help_unreachable_title">تعذّر الوصول إلى الجهاز</string>
     <string name="help_unreachable_what">لا يوجد ردّ على عنوان الجهاز.</string>
-    <string name="help_unreachable_try">• تحقّق من عنوان IP على PS5 (الإعدادات &gt; الشبكة &gt; حالة الاتصال). قد يتغيّر بعد إعادة التشغيل.\n• أيقظ الجهاز بالكامل. غالبًا ما يوقف وضع الراحة الشبكة.\n• استخدم شبكة Wi-Fi نفسها على الجهازين. شبكات الضيوف وشبكات VPN تمنع الاتصال.</string>
+    <string name="help_unreachable_try">• تحقّق من عنوان IP على %1$s (الإعدادات &gt; الشبكة &gt; حالة الاتصال). قد يتغيّر بعد إعادة التشغيل.\n• أيقظ الجهاز بالكامل. غالبًا ما يوقف وضع الراحة الشبكة.\n• استخدم شبكة Wi-Fi نفسها على الجهازين. شبكات الضيوف وشبكات VPN تمنع الاتصال.</string>
     <string name="help_port_title">هذه الخدمة غير قيد التشغيل</string>
     <string name="help_port_what">ردّ الجهاز، لكن لا شيء يستمع على هذا المنفذ.</string>
     <string name="help_port_try">• شغّل etaHEN على الجهاز. فهو يوفّر المثبّت (12800) والمحمّل (9021) وFTP (1337).\n• يستخدم Payload منفصل لـ FTP عادةً المنفذ 2121. أدخل المنفذ نفسه هنا.\n• في بطاقة الجهاز، يوضّح المؤشر المطفأ الخدمة الناقصة.</string>
+    <string name="help_port_try_ps4">• شغّل GoldHEN على الجهاز. فهو يوفّر المحمّل (9090) وFTP (2121).\n• لتثبيت الحزم، شغّل أيضًا Remote Package Installer من flatz على الجهاز (12800).\n• في بطاقة الجهاز، يوضّح المؤشر المطفأ الخدمة الناقصة.</string>
     <string name="help_login_title">تم رفض تسجيل الدخول إلى FTP</string>
     <string name="help_login_what">رفض خادم FTP في الجهاز اسم المستخدم أو كلمة المرور.</string>
-    <string name="help_login_try">• يقبل etaHEN اسم المستخدم anonymous مع أي كلمة مرور.\n• إذا حدّدت بيانات دخول على الجهاز، فأدخلها ضمن رفع.\n• لا تُحفظ كلمة المرور. أدخلها مجددًا بعد إعادة تشغيل التطبيق.</string>
+    <string name="help_login_try">• يقبل %2$s اسم المستخدم anonymous مع أي كلمة مرور.\n• إذا حدّدت بيانات دخول على الجهاز، فأدخلها ضمن رفع.\n• لا تُحفظ كلمة المرور. أدخلها مجددًا بعد إعادة تشغيل التطبيق.</string>
     <string name="help_dropped_title">انقطع الاتصال</string>
     <string name="help_dropped_what">انقطع الاتصال بالجهاز أو توقّف نقل البيانات. يعيد التطبيق المحاولة ويتابع من حيث توقّف.</string>
     <string name="help_dropped_try">• أبقِ الهاتف قريبًا من الراوتر وأبقِ الجهاز مستيقظًا.\n• أوقف التنزيلات الكبيرة الأخرى على الشبكة مؤقتًا.\n• إذا تكرّر الفشل، انتظر قليلًا ثم اضغط إعادة المحاولة.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">يطلب الفحص من GitHub أحدث إصدار مرة واحدة في اليوم على الأكثر. لا يُرسل أي شيء عنك أو عن أجهزتك؛ يرى GitHub عنوان IP الخاص بك كما يفعل أي موقع.</string>
 
     <!-- find my console -->
-    <string name="find_button">ابحث عن PS5 الخاص بي</string>
+    <string name="find_button">ابحث عن %1$s الخاص بي</string>
     <string name="find_scanning">جارٍ البحث عن جهازك على الشبكة %1$s…</string>
     <string name="find_again">ابحث مرة أخرى</string>
     <string name="find_none">لم يُعثر على أي جهاز.</string>
-    <string name="find_none_try">• شغّل الجهاز بالكامل (وليس وضع الراحة) وابدأ etaHEN.\n• استخدم شبكة Wi-Fi نفسها على الهاتف وعلى الجهاز. شبكات الضيوف وشبكات VPN تفصل الأجهزة بعضها عن بعض.\n• ثم ابحث مرة أخرى.</string>
+    <string name="find_none_try">• شغّل الجهاز بالكامل (وليس وضع الراحة) وابدأ %1$s.\n• استخدم شبكة Wi-Fi نفسها على الهاتف وعلى الجهاز. شبكات الضيوف وشبكات VPN تفصل الأجهزة بعضها عن بعض.\n• ثم ابحث مرة أخرى.</string>
     <string name="find_no_wifi">هذا الهاتف غير متصل بشبكة Wi-Fi. وصّله بشبكة Wi-Fi نفسها المتصل بها الجهاز، ثم ابحث مرة أخرى.</string>
     <string name="find_pick">اضغط على استخدام لتعيين عنوان %1$s.</string>
     <string name="find_saved">العنوان المحفوظ</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">جارٍ فحص المجلدات…</string>
     <string name="files_dl_confirm_title">التنزيل إلى الهاتف؟</string>
-    <string name="files_dl_confirm_text">الملفات: %1$d، بحجم إجمالي %2$s. تُحفظ في Downloads/PS5 وفي المجلدات نفسها الموجودة على الجهاز.</string>
+    <string name="files_dl_confirm_text">الملفات: %1$d، بحجم إجمالي %2$s. تُحفظ في Downloads/%3$s وفي المجلدات نفسها الموجودة على الجهاز.</string>
     <string name="files_dl_links">الروابط داخل المجلدات لا تُنزَّل: %1$d.</string>
     <string name="files_dl_truncated">الملفات المأخوذة: %1$d. تحتوي المجلدات على أكثر من ذلك، أو تمتد أعمق مما يتتبعه التطبيق.</string>
     <string name="files_dl_none">لا يوجد ملف للتنزيل في التحديد.</string>

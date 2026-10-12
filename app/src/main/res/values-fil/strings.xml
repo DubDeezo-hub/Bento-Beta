@@ -33,14 +33,15 @@
     <string name="service_installer">Installer</string>
     <string name="service_loader">Loader</string>
     <string name="list_separator">", "</string>
-    <string name="status_set_ip">Itakda ang IP address ng iyong PS5</string>
+    <string name="status_set_ip">Itakda ang IP address ng iyong %1$s</string>
     <string name="status_checking">Sinusuri…</string>
     <string name="status_ready">Handa na</string>
     <string name="status_partly">Bahagyang handa</string>
     <string name="status_partly_off">Bahagyang handa · walang sagot: %1$s</string>
     <string name="status_offline">Hindi maabot ang console</string>
     <string name="status_hint_unset">Hanapin ito sa PS5 sa Settings &gt; Network &gt; Connection Status &gt; View Connection Status. I-tap dito para ilagay.</string>
-    <string name="status_hint_offline">Walang sumasagot sa address na ito. Tingnan ang IP, kung gising ang console at nasa parehong Wi-Fi, at kung tumatakbo ang etaHEN.</string>
+    <string name="status_hint_unset_ps4">Hanapin ito sa PS4 sa Settings &gt; Network &gt; View Connection Status. I-tap dito para ilagay.</string>
+    <string name="status_hint_offline">Walang sumasagot sa address na ito. Tingnan ang IP, kung gising ang %1$s at nasa parehong Wi-Fi, at kung tumatakbo ang %2$s.</string>
     <string name="status_hint_one">Walang sagot: %1$s. Simulan ito sa console o tingnan ang port nito.</string>
     <string name="status_hint_many">Walang sagot: %1$s. Simulan ang mga ito sa console o tingnan ang mga port nila.</string>
     <string name="console_switch">Magpalit ng console</string>
@@ -48,6 +49,7 @@
     <string name="console_ip_title">IP address ng console</string>
     <string name="console_ip_label">IP address</string>
     <string name="console_ip_help">Hanapin ito sa PS5 sa Settings &gt; Network &gt; Connection Status &gt; View Connection Status.</string>
+    <string name="console_ip_help_ps4">Hanapin ito sa PS4 sa Settings &gt; Network &gt; View Connection Status.</string>
 
     <!-- transfer card and notification -->
     <string name="transfer_default_name">Paglilipat</string>
@@ -67,7 +69,7 @@
     <string name="queue_title">Mga paglilipat na naghihintay</string>
     <string name="queue_clear">Alisin lahat</string>
     <string name="queue_empty">Walang naghihintay.</string>
-    <string name="notif_channel">Mga paglilipat sa PS5</string>
+    <string name="notif_channel">Mga paglilipat sa PS4/PS5</string>
     <string name="notif_sent">Naipadala: %1$s</string>
     <string name="notif_received">Natanggap: %1$s</string>
     <string name="percent_value">%1$d%%</string>
@@ -78,7 +80,7 @@
     <!-- messages on the status line -->
     <string name="msg_queued">Idinagdag sa pila. %1$d ang naghihintay.</string>
     <string name="msg_set_ip_first">Itakda muna ang IP address ng console. I-tap ang card sa itaas.</string>
-    <string name="msg_sending_link">Ipinapadala ang link sa PS5…</string>
+    <string name="msg_sending_link">Ipinapadala ang link sa %1$s…</string>
     <string name="msg_check_ip_ftp">Tingnan ang IP address ng console at ang FTP port.</string>
     <string name="msg_adding_to_shelf_link">Idinadagdag sa payload library…</string>
     <string name="status_idle">Walang ginagawa</string>
@@ -87,14 +89,14 @@
     <!-- leaving a site, and the download chooser -->
     <string name="offsite_title">Iwan ang site na ito?</string>
     <string name="offsite_text">Gustong buksan ng page ang %1$s. Madalas itong ma-trigger ng mga ad kapag nag-tap ka ng link, kaya magpatuloy lang kung inaasahan mo ito.</string>
-    <string name="choose_install">Ipadala ang link sa Installer ng PS5</string>
-    <string name="choose_ftp">I-upload sa PS5 (FTP)</string>
+    <string name="choose_install">Ipadala ang link sa Installer ng %1$s</string>
+    <string name="choose_ftp">I-upload sa %1$s (FTP)</string>
     <string name="choose_shelf">I-save sa payload library</string>
     <string name="choose_phone">I-save sa telepono</string>
     <string name="choose_help">Kailangan ng Installer ng direktang link ng package na mabubuksan ng console nang hindi nagla-log in. Gumagana ang FTP sa anumang file at pinananatili ang iyong login session. Ipinapasa ng telepono ang data sa background, at makikita ang progress sa ibabaw ng bottom bar at sa isang notification. Nag-iingat ang payload library ng maliit na payload (hanggang %1$s) sa loob ng app para sa Payload tab.</string>
 
     <!-- Install tab -->
-    <string name="install_port_label">Port ng Installer (etaHEN: 12800)</string>
+    <string name="install_port_label">Port ng Installer (%1$s: 12800)</string>
     <string name="install_accepted">Tinanggap ito ng Installer: %1$s</string>
     <string name="install_not_accepted">Hindi tinanggap (upload %1$s: %2$s; api %3$s: %4$s)</string>
 
@@ -164,6 +166,7 @@
     <!-- results and errors -->
     <string name="err_failed">Nabigo: %1$s</string>
     <string name="ftp_port_hint">Hindi maabot ang FTP server. Tingnan ang IP ng console at ang FTP port (1337 ang gamit ng built-in na FTP ng etaHEN, 2121 naman ang gamit ng FTP payload).</string>
+    <string name="ftp_port_hint_ps4">Hindi maabot ang FTP server. Tingnan ang IP ng console at ang FTP port (2121 ang gamit ng FTP ng GoldHEN).</string>
     <string name="err_login">Nabigo ang pag-log in sa FTP</string>
     <string name="err_cant_open">hindi mabuksan ang %1$s (%2$s)</string>
     <string name="err_rename">nabigo ang pagpapalit ng pangalan (%1$s)</string>
@@ -180,8 +183,8 @@
     <string name="err_short_download">%1$s lang sa %2$s ang dumating.</string>
     <string name="err_empty_file">Walang laman ang file</string>
     <string name="err_save">Hindi ma-save ang %1$s</string>
-    <string name="sent_to_ps5">Naipadala sa PS5: %1$s</string>
-    <string name="saved_to_downloads">Na-save sa Downloads/PS5: %1$s</string>
+    <string name="sent_to_ps5">Naipadala sa %2$s: %1$s</string>
+    <string name="saved_to_downloads">Na-save sa Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Nabigo ang pag-download: HTTP %1$s</string>
     <string name="dl_empty">Nabigo ang pag-download: walang laman ang tugon</string>
     <string name="dl_cut_short">Nagsara ang koneksyon bago dumating ang buong file.</string>
@@ -199,7 +202,7 @@
     <string name="payload_remove_text">Made-delete ito sa library. Hindi magagalaw ang orihinal na file sa iyong telepono.</string>
     <string name="payload_loader_port">Port ng Loader</string>
     <string name="payload_shelf_title">Payload library</string>
-    <string name="payload_shelf_empty">Wala pang naka-save. Magdagdag ng mga payload na madalas mong gamitin (FTP server, etaHEN, ...) at ipadala ang bawat isa sa isang tap. Puwede mo rin itong direktang i-save mula sa Web tab habang dina-download.</string>
+    <string name="payload_shelf_empty">Wala pang naka-save. Magdagdag ng mga payload na madalas mong gamitin (FTP server, %1$s, ...) at ipadala ang bawat isa sa isang tap. Puwede mo rin itong direktang i-save mula sa Web tab habang dina-download.</string>
     <string name="payload_sending">Ipinapadala ang %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Magdagdag ng payload sa library</string>
@@ -208,7 +211,7 @@
     <string name="payload_send">Ipadala ang payload</string>
 
     <!-- consoles -->
-    <string name="profile_default">Aking PS5</string>
+    <string name="profile_default">Aking %1$s</string>
     <string name="profile_new">Console %1$d</string>
     <string name="profile_fallback">Console</string>
     <string name="consoles_title">Mga console</string>
@@ -218,6 +221,7 @@
     <string name="console_delete_text">Aalisin ang naka-save nitong IP address at mga port. Hindi maaapektuhan ang iba mong console.</string>
     <string name="console_no_ip">wala pang IP address</string>
     <string name="console_color_of">Kulay ng %1$s</string>
+    <string name="console_type_of">Uri ng console ng %1$s</string>
     <string name="console_use_color">Gamitin ang %1$s</string>
     <string name="console_add">Magdagdag ng console</string>
     <string name="language_button">Wika</string>
@@ -259,13 +263,14 @@
     <string name="help_copied">Nakopya na</string>
     <string name="help_unreachable_title">Hindi maabot ang console</string>
     <string name="help_unreachable_what">Walang sumasagot sa address ng console.</string>
-    <string name="help_unreachable_try">• Tingnan ang IP address sa PS5 (Settings &gt; Network &gt; Connection Status). Maaari itong magbago pagkatapos mag-restart.\n• Gisingin nang buo ang console. Madalas na pinapatay ng rest mode ang network.\n• Gamitin ang parehong Wi-Fi sa dalawa. Hinaharangan ito ng mga guest network at VPN.</string>
+    <string name="help_unreachable_try">• Tingnan ang IP address sa %1$s (Settings &gt; Network &gt; Connection Status). Maaari itong magbago pagkatapos mag-restart.\n• Gisingin nang buo ang console. Madalas na pinapatay ng rest mode ang network.\n• Gamitin ang parehong Wi-Fi sa dalawa. Hinaharangan ito ng mga guest network at VPN.</string>
     <string name="help_port_title">Hindi tumatakbo ang serbisyong iyon</string>
     <string name="help_port_what">Sumagot ang console, pero walang nakikinig sa port na iyon.</string>
     <string name="help_port_try">• Simulan ang etaHEN sa console. Ibinibigay nito ang Installer (12800), ang Loader (9021) at ang FTP (1337).\n• Karaniwang 2121 ang gamit ng hiwalay na FTP payload. Ilagay dito ang parehong port.\n• Sa card ng console, ipinapakita ng ilaw na patay kung ano ang kulang.</string>
+    <string name="help_port_try_ps4">• Simulan ang GoldHEN sa console. Ibinibigay nito ang Loader (9090) at ang FTP (2121).\n• Para mag-install ng mga package, patakbuhin din sa console ang Remote Package Installer ni flatz (12800).\n• Sa card ng console, ipinapakita ng ilaw na patay kung ano ang kulang.</string>
     <string name="help_login_title">Tinanggihan ang FTP login</string>
     <string name="help_login_what">Tinanggihan ng FTP server ng console ang user name o password.</string>
-    <string name="help_login_try">• Tinatanggap ng etaHEN ang user name na anonymous na may anumang password.\n• Kung nagtakda ka ng login sa console, ilagay ito sa I-upload.\n• Hindi sine-save ang password. Ilagay itong muli pagkatapos i-restart ang app.</string>
+    <string name="help_login_try">• Tinatanggap ng %2$s ang user name na anonymous na may anumang password.\n• Kung nagtakda ka ng login sa console, ilagay ito sa I-upload.\n• Hindi sine-save ang password. Ilagay itong muli pagkatapos i-restart ang app.</string>
     <string name="help_dropped_title">Naputol ang koneksyon</string>
     <string name="help_dropped_what">Naputol ang link sa console o huminto ang paggalaw ng data. Susubukan ulit ng app at magpapatuloy ito kung saan ito huminto.</string>
     <string name="help_dropped_try">• Ilapit ang telepono sa router at panatilihing gising ang console.\n• I-pause ang iba pang malalaking download sa network.\n• Kung patuloy na pumapalya, maghintay sandali at i-tap ang Subukan muli.</string>
@@ -297,11 +302,11 @@
     <string name="update_privacy">Tinatanong ng check ang GitHub tungkol sa pinakabagong release, hanggang isang beses lang sa isang araw. Walang ipinapadalang impormasyon tungkol sa iyo o sa mga console mo; nakikita ng GitHub ang IP address mo, tulad ng anumang website.</string>
 
     <!-- find my console -->
-    <string name="find_button">Hanapin ang PS5 ko</string>
+    <string name="find_button">Hanapin ang %1$s ko</string>
     <string name="find_scanning">Hinahanap ang iyong console sa %1$s…</string>
     <string name="find_again">I-scan muli</string>
     <string name="find_none">Walang nakitang console.</string>
-    <string name="find_none_try">• Buksan nang buo ang console (hindi rest mode) at simulan ang etaHEN.\n• Gamitin ang parehong Wi-Fi sa telepono at sa console. Pinaghihiwalay ng mga guest network at VPN ang mga device.\n• Pagkatapos ay mag-scan muli.</string>
+    <string name="find_none_try">• Buksan nang buo ang console (hindi rest mode) at simulan ang %1$s.\n• Gamitin ang parehong Wi-Fi sa telepono at sa console. Pinaghihiwalay ng mga guest network at VPN ang mga device.\n• Pagkatapos ay mag-scan muli.</string>
     <string name="find_no_wifi">Hindi nakakonekta sa Wi-Fi network ang teleponong ito. Ikonekta ito sa parehong Wi-Fi ng console, pagkatapos ay mag-scan muli.</string>
     <string name="find_pick">I-tap ang Gamitin para itakda ang address ng %1$s.</string>
     <string name="find_saved">Naka-save na address</string>
@@ -409,7 +414,7 @@
     <!-- files tab: downloading folders -->
     <string name="files_dl_planning">Tinitingnan ang mga folder…</string>
     <string name="files_dl_confirm_title">I-download sa telepono?</string>
-    <string name="files_dl_confirm_text">Mga file: %1$d, kabuuang %2$s. Sine-save ang mga ito sa Downloads/PS5, sa parehong mga folder tulad ng sa console.</string>
+    <string name="files_dl_confirm_text">Mga file: %1$d, kabuuang %2$s. Sine-save ang mga ito sa Downloads/%3$s, sa parehong mga folder tulad ng sa console.</string>
     <string name="files_dl_links">Hindi dina-download ang mga link sa loob ng mga folder: %1$d.</string>
     <string name="files_dl_truncated">Mga file na kinuha: %1$d. Mas marami ang laman ng mga folder, o mas malalim ang mga ito kaysa sa sinusundan ng app.</string>
     <string name="files_dl_none">Walang file na ma-download sa napili.</string>
