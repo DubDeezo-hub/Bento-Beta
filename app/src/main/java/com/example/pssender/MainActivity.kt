@@ -194,7 +194,7 @@ fun SenderApp(
     var activeId by remember { mutableStateOf(ProfileStore.activeId(ctx, profiles)) }
     var passwords by remember { mutableStateOf(mapOf<String, String>()) } // FTP passwords: not saved, kept for this session only
     var homeUrl by rememberPref("home_url_v2", DEFAULT_HOME)
-    var tab by remember { mutableStateOf(0) }
+    var tab by rememberSaveable { mutableStateOf(0) } // the open tab; it stays when the phone is turned or the screen is rebuilt
     var savedTabs by rememberSaveable { mutableStateOf("") } // the open browser tabs, written as text; they come back when the screen is rebuilt
     var linkMenu by remember { mutableStateOf<String?>(null) } // the web address of a link that was pressed for a while in the Web tab
     var pending by remember { mutableStateOf<PendingDownload?>(null) }
