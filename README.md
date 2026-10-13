@@ -315,6 +315,10 @@ Bento is Kotlin with Jetpack Compose and Material 3: 43 source files, about 12,3
 - **The browser talks to pages through three small interfaces.** `BrowserModel` in `Browser.kt` holds the tabs and the find bar, and works with a page (`TabPage`), the news a page sends (`PageEvents`) and the frame that shows it (`Stage`). `BrowserWeb.kt` is the one place that turns those into real web views, which keeps the rules of the browser testable without Android.
 - **What must survive is kept where it can.** The list of unfinished transfers is a small file in the app's no-backup storage. The open browser tabs are kept as text in the state Android holds while the screen is rebuilt, so they survive a rotation but not closing the app.
 
+### Checking the build
+
+GitHub builds every push (`.github/workflows/main.yml`) and puts the APK on the Releases page. A second workflow, `.github/workflows/tests.yml` ("Phone test"), runs the app on a virtual Android 14 phone: it installs the two newest releases one over the other (so a wrong signing key shows up at once), opens every tab, turns the screen, leaves the app and comes back, shares a link into it and switches through all 53 languages. Each time it checks that the app is still running, has not crashed or stopped responding, and shows its five tabs (in the right order, and not cut off, in right-to-left languages too). The results are on the run's page under Actions: a table of every check, an annotation for each failure, and the screenshots and the phone's log under Artifacts. The script is `.github/scripts/ui_smoke.sh`.
+
 ### Source map
 
 Paths are relative to [`app/src/main/java/com/example/pssender/`](app/src/main/java/com/example/pssender/).
