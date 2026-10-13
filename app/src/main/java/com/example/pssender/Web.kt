@@ -61,9 +61,10 @@ import java.io.ByteArrayInputStream
 /** Starting homepage for the Web tab. It can be changed inside the app. */
 const val DEFAULT_HOME = "https://www.superpsx.com/category/ps5/ps5-games/"
 
+/** [input] as a web address: "example.com" becomes "https://example.com", and an address that has http:// or https:// (in any case) is kept. */
 fun normalizeUrl(input: String): String {
     val t = input.trim()
-    return if (t.startsWith("http://") || t.startsWith("https://")) t else "https://$t"
+    return if (t.startsWith("http://", ignoreCase = true) || t.startsWith("https://", ignoreCase = true)) t else "https://$t"
 }
 
 /** Sites the user has agreed to open during this session (plus the homepage's own site). */
@@ -73,6 +74,8 @@ val allowedSites = mutableSetOf<String>()
 fun siteOf(host: String?): String {
     val parts = (host ?: "").lowercase().split('.')
     if (parts.size <= 2) return parts.joinToString(".")
+    // An address such as 192.168.1.5 is its own site (not its last two numbers)
+    if (parts.size == 4 && parts.all { p -> p.isNotEmpty() && p.length <= 3 && p.all { it in '0'..'9' } }) return parts.joinToString(".")
     val secondLevel = setOf("co", "com", "org", "net", "gov", "ac")
     val keep = if (parts.last().length == 2 && parts[parts.size - 2] in secondLevel) 3 else 2
     return parts.takeLast(keep).joinToString(".")
@@ -128,13 +131,18 @@ fun hostMatches(host: String, domains: Set<String>): Boolean {
 }
 
 /**
- * Turns the text typed into the block-list editor into domain names: one per line, "#" starts a comment, and a
- * pasted address like https://ads.example.com/page becomes ads.example.com. Lines that aren't a domain are ignored.
+ * Turns the text typed into the block-list editor into domain names: one per line, "#" starts a comment (also after a
+ * domain), a pasted address like https://ads.example.com/page becomes ads.example.com, and a line of a hosts file
+ * ("0.0.0.0 ads.example.com") gives the domain after the address. Lines that aren't a domain are ignored.
  */
 fun parseHosts(text: String): Set<String> =
     text.lineSequence()
-        .map { it.trim().lowercase() }
-        .filter { it.isNotEmpty() && !it.startsWith("#") }
+        .map { it.substringBefore('#').trim().lowercase() }
+        .filter { it.isNotEmpty() }
+        .map { line ->
+            val words = line.split(Regex("\\s+"))
+            if (words.size == 2 && parseIpv4(words[0]) != null) words[1] else line
+        }
         .map {
             it.removePrefix("http://").removePrefix("https://")
                 .substringBefore('/').substringBefore(':')

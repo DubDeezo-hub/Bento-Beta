@@ -2,12 +2,19 @@ package com.example.pssender // change to match your project's package name
 
 // Small helpers shared by the network code and the screens. No Android parts, so they can be tested on their own.
 
-/** Human-readable size, e.g. 1.50 GB. */
-fun fmtBytes(n: Long): String = when {
-    n >= 1L shl 30 -> "%.2f GB".format(n / 1073741824.0)
-    n >= 1L shl 20 -> "%.1f MB".format(n / 1048576.0)
-    n >= 1L shl 10 -> "%.0f KB".format(n / 1024.0)
-    else -> "$n B"
+/**
+ * Human-readable size, e.g. 1.50 GB. A size that would show as "1024.0 MB" or "1024 KB" once rounded is shown in the
+ * next unit up ("1.00 GB", "1.0 MB"), so the numbers never reach 1024.
+ */
+fun fmtBytes(n: Long): String {
+    val kb = n / 1024.0
+    val mb = n / 1048576.0
+    return when {
+        Math.round(mb * 10) >= 10240L -> "%.2f GB".format(n / 1073741824.0)
+        Math.round(kb) >= 1024L -> "%.1f MB".format(mb)
+        n >= 1L shl 10 -> "%.0f KB".format(kb)
+        else -> "$n B"
+    }
 }
 
 /**
