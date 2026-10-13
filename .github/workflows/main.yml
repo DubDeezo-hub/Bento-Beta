@@ -11,7 +11,8 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # Pinned so a change of the "latest" image (Ubuntu 26 from 19 October 2026) cannot break the build
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v5
 
