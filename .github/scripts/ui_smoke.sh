@@ -251,6 +251,19 @@ tab_keys() { # what each tab shows on a fresh install (any of these texts will d
   esac
 }
 
+# Is any of the tab's own texts on screen (in $XML)? Prints the one it found.
+content_visible() { # nav key
+  local k v
+  for k in $(tab_keys "$1"); do
+    v="$(ui string "$k")" || continue
+    case "$v" in
+      *%*) if ui findfmt "$XML" "$v" > /dev/null; then echo "$v"; return 0; fi ;;
+      *) if ui find "$XML" "$v" > /dev/null; then echo "$v"; return 0; fi ;;
+    esac
+  done
+  return 1
+}
+
 visit_tab() { # nav key, values folder, label prefix
   local key="$1" dir="${2:-values}" prefix="${3:-}" label texts k v
   label="$(nav_label "$key" "$dir")"
@@ -268,22 +281,11 @@ visit_tab() { # nav key, values folder, label prefix
     return
   fi
   if [ "$dir" = values ]; then
-    texts=""
-    for k in $(tab_keys "$key"); do
-      v="$(ui string "$k")" || continue
-      case "$v" in *%*) continue ;; esac
-      texts="$texts
-$v"
-    done
-    local hit="" t
-    while IFS= read -r t; do
-      [ -z "$t" ] && continue
-      if ui find "$XML" "$t" > /dev/null; then hit="$t"; break; fi
-    done <<< "$texts"
-    if [ -n "$hit" ]; then
+    local hit
+    if hit="$(content_visible "$key")"; then
       pass "${prefix}tab \"$label\" shows its screen (\"$hit\")"
     else
-      fail "${prefix}tab \"$label\" shows its screen" "none of the expected texts. Seen: $(ui texts "$XML" 2> /dev/null)"
+      fail "${prefix}tab \"$label\" shows its screen" "none of the expected texts. Layout: $(ui layout "$XML" 2> /dev/null)"
       shot "fail-tab-$key"
     fi
   fi
@@ -309,6 +311,11 @@ echo "== turning, leaving, restarting"
 adb logcat -c > /dev/null 2>&1
 rotate 1
 healthy "the Web tab on its side"
+if hit="$(content_visible nav_web)"; then
+  pass "the Web tab still shows its own controls on its side (\"$hit\")"
+else
+  fail "the Web tab still shows its own controls on its side" "Layout: $(ui layout "$XML" 2> /dev/null)"
+fi
 shot "web-landscape"
 rotate 0
 healthy "the Web tab upright again"
@@ -319,6 +326,11 @@ sleep 2
 adb logcat -c > /dev/null 2>&1
 rotate 1
 healthy "the Install tab on its side"
+if hit="$(content_visible nav_install)"; then
+  pass "the Install tab still shows its own fields on its side (\"$hit\")"
+else
+  fail "the Install tab still shows its own fields on its side" "Layout: $(ui layout "$XML" 2> /dev/null)"
+fi
 shot "install-landscape"
 rotate 0
 healthy "the Install tab upright again"

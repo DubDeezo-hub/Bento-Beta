@@ -52,6 +52,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.semantics.Role
@@ -65,6 +66,9 @@ import kotlinx.coroutines.withContext
 
 private const val TAB_FILES = 3
 private const val TAB_WEB = 4
+
+/** A screen lower than this (in dp) counts as short: a phone held sideways. */
+private const val SHORT_SCREEN_DP = 480
 
 /** How often the console card rechecks the console while the app is on screen. */
 private const val CHECK_EVERY_MS = 6000L
@@ -211,6 +215,8 @@ fun SenderApp(
     val version = remember { appVersion(ctx) }
     var update by remember { mutableStateOf(UpdatePrefs.waiting(ctx, version.code)) } // a newer version found earlier
     var showAbout by remember { mutableStateOf(false) }
+    // A phone on its side has little height: the console card shrinks to one line and the update banner waits, so the tab and the bottom bar keep their room
+    val shortScreen = LocalConfiguration.current.screenHeightDp < SHORT_SCREEN_DP
     var installLinks by rememberSaveable { mutableStateOf("") } // what is typed in the Install box; kept when the tab changes
     val changeInstallLinks: ((String) -> String) -> Unit = { change -> installLinks = change(installLinks) }
     val files = remember { FilesModel() }
@@ -398,7 +404,7 @@ fun SenderApp(
         Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
             Column(modifier = Modifier.fillMaxSize()) {
                 AppHeader(active.name, accentColor(active.color), onAbout = { showAbout = true }) { showConsoles = true }
-                update?.let { u ->
+                update?.takeIf { !shortScreen }?.let { u ->
                     UpdateBanner(
                         release = u,
                         onDownload = { openLink(ctx, u.apkUrl ?: u.pageUrl) },
@@ -413,7 +419,7 @@ fun SenderApp(
                     host = host.trim(),
                     level = level,
                     checks = checks,
-                    compact = tab == TAB_FILES || tab == TAB_WEB, // these two need the room
+                    compact = tab == TAB_FILES || tab == TAB_WEB || shortScreen, // these two need the room, and so does a phone on its side
                     onEdit = { showAddress = true },
                     modifier = Modifier.padding(horizontal = 16.dp),
                     onFind = { showFind = true },
