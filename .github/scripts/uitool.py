@@ -5,6 +5,7 @@
   uitool.py findfmt <dump.xml> <format string>      the same for a text with %1$s style blanks, e.g. "Version %1$s is available"
   uitool.py haspkg <dump.xml> <package>             exit 0 when something on screen belongs to the package
   uitool.py texts  <dump.xml>                       the texts on screen, for the failure messages
+  uitool.py layout <dump.xml>                       the screen size and every text with its top and bottom edge, to see what fits
   uitool.py string <key> [<values dir>]             the text of a string resource (default: the English one)
   uitool.py resdir <language tag>                   the resource folder Android uses for that language, e.g. he -> values-iw
   uitool.py langs                                   the language tags the app is translated into (from locales_config.xml)
@@ -97,6 +98,21 @@ def cmd_texts(argv):
     return 0
 
 
+def cmd_layout(argv):
+    nodes = screen_nodes(argv[0])
+    if not nodes:
+        print("empty dump")
+        return 0
+    x1, y1, x2, y2 = nodes[0]["box"]
+    parts = ["screen %dx%d" % (x2 - x1, y2 - y1)]
+    for n in nodes[1:]:
+        t = n["text"] or n["desc"]
+        if t:
+            parts.append("%s@%d-%d" % (t[:28], n["box"][1], n["box"][3]))
+    print("; ".join(parts)[:1400])
+    return 0
+
+
 def unescape(s):
     s = s.strip()
     if len(s) >= 2 and s[0] == '"' and s[-1] == '"':
@@ -152,7 +168,7 @@ def cmd_langs(argv):
 
 
 COMMANDS = {
-    "find": (cmd_find, 2), "findfmt": (cmd_findfmt, 2), "haspkg": (cmd_haspkg, 2), "texts": (cmd_texts, 1),
+    "find": (cmd_find, 2), "findfmt": (cmd_findfmt, 2), "haspkg": (cmd_haspkg, 2), "texts": (cmd_texts, 1), "layout": (cmd_layout, 1),
     "string": (cmd_string, 1), "resdir": (cmd_resdir, 1), "langs": (cmd_langs, 0),
 }
 

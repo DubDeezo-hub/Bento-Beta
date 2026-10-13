@@ -41,7 +41,7 @@ ui() { python3 -I "$HERE/uitool.py" "$@"; }
 # Recording results
 # ---------------------------------------------------------------------------------------------
 
-clean() { printf '%s' "$1" | tr '\r\n' '  ' | sed 's/%/%25/g' | cut -c1-600; }
+clean() { printf '%s' "$1" | tr '\r\n' '  ' | sed 's/%/%25/g' | cut -c1-1800; }
 
 pass() {
   PASS=$((PASS + 1))
@@ -142,7 +142,7 @@ healthy() { # name [values folder]
       pass "$1"
     else
       dump > /dev/null 2>&1
-      fail "$1" "the bottom bar is not on screen. Seen: $(ui texts "$XML" 2> /dev/null)"
+      fail "$1" "the bottom bar is not on screen. Layout: $(ui layout "$XML" 2> /dev/null)"
       shot "fail-$(echo "$1" | tr -c 'A-Za-z0-9' '-' | cut -c1-40)"
     fi
   else
@@ -245,7 +245,7 @@ tab_keys() { # what each tab shows on a fresh install (any of these texts will d
   case "$1" in
     nav_install) echo "install_links_label install_paste install_port_label" ;;
     nav_payload) echo "payload_shelf_title payload_loader_port" ;;
-    nav_upload) echo "upload_choose upload_start upload_help" ;;
+    nav_upload) echo "ftp_port ftp_user ftp_password upload_choose upload_start upload_help" ;;
     nav_files) echo "files_ftp_settings files_refresh files_need_ip files_up" ;;
     nav_web) echo "web_add web_bookmarks web_find web_reload" ;;
   esac
@@ -341,8 +341,16 @@ healthy "the app starts again after being stopped completely"
 adb logcat -c > /dev/null 2>&1
 adb shell am start -a android.intent.action.SEND -t text/plain --es android.intent.extra.TEXT "https://example.com/a.pkg" -n "$ACT" > /dev/null 2>&1
 sleep 4
-healthy "a link shared from another app is accepted"
+dump || true
+if ui findfmt "$XML" "$(ui string choose_install)" > /dev/null; then
+  pass "a link shared from another app opens the \"Send link to ... installer\" choice"
+else
+  fail "a link shared from another app opens the \"Send link to ... installer\" choice" "Layout: $(ui layout "$XML" 2> /dev/null)"
+fi
 shot "shared-link"
+adb shell input keyevent KEYCODE_BACK
+sleep 2
+healthy "the app is fine after closing that choice"
 
 # ---------------------------------------------------------------------------------------------
 # 5. All the languages
