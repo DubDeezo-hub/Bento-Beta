@@ -28,6 +28,7 @@
     <string name="nav_upload">העלאה</string>
     <string name="nav_files">קבצים</string>
     <string name="nav_web">אינטרנט</string>
+    <string name="nav_memory">זיכרון</string>
 
     <!-- console card and status -->
     <string name="service_installer">‏Installer</string>

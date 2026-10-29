@@ -28,6 +28,7 @@
     <string name="nav_upload">Ladda upp</string>
     <string name="nav_files">Filer</string>
     <string name="nav_web">Webb</string>
+    <string name="nav_memory">Minne</string>
 
     <!-- console card and status -->
     <string name="service_installer">Installer</string>

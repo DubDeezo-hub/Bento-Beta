@@ -28,6 +28,7 @@
     <string name="nav_upload">I-upload</string>
     <string name="nav_files">Mga file</string>
     <string name="nav_web">Web</string>
+    <string name="nav_memory">Memory</string>
 
     <!-- console card and status -->
     <string name="service_installer">Installer</string>

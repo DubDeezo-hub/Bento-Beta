@@ -28,6 +28,7 @@
     <string name="nav_upload">อัปโหลด</string>
     <string name="nav_files">ไฟล์</string>
     <string name="nav_web">เว็บ</string>
+    <string name="nav_memory">หน่วยความจำ</string>
 
     <!-- console card and status -->
     <string name="service_installer">Installer</string>

@@ -28,6 +28,7 @@
     <string name="nav_upload">అప్‌లోడ్</string>
     <string name="nav_files">ఫైళ్లు</string>
     <string name="nav_web">వెబ్</string>
+    <string name="nav_memory">మెమరీ</string>
 
     <!-- console card and status -->
     <string name="service_installer">Installer</string>

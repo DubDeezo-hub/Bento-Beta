@@ -28,6 +28,7 @@
     <string name="nav_upload">Αποστολή</string>
     <string name="nav_files">Αρχεία</string>
     <string name="nav_web">Web</string>
+    <string name="nav_memory">Μνήμη</string>
 
     <!-- console card and status -->
     <string name="service_installer">Installer</string>

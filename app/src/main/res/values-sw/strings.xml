@@ -28,6 +28,7 @@
     <string name="nav_upload">Pakia</string>
     <string name="nav_files">Faili</string>
     <string name="nav_web">Wavuti</string>
+    <string name="nav_memory">Kumbukumbu</string>
 
     <!-- console card and status -->
     <string name="service_installer">Installer</string>

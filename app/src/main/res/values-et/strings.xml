@@ -28,6 +28,7 @@
     <string name="nav_upload">Laadi üles</string>
     <string name="nav_files">Failid</string>
     <string name="nav_web">Veeb</string>
+    <string name="nav_memory">Mälu</string>
 
     <!-- console card and status -->
     <string name="service_installer">Installer</string>

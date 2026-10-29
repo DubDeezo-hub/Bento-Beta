@@ -28,6 +28,7 @@
     <string name="nav_upload">上传</string>
     <string name="nav_files">文件</string>
     <string name="nav_web">网页</string>
+    <string name="nav_memory">内存</string>
 
     <!-- console card and status -->
     <string name="service_installer">安装程序</string>

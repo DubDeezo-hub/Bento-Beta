@@ -28,6 +28,7 @@
     <string name="nav_upload">பதிவேற்று</string>
     <string name="nav_files">கோப்புகள்</string>
     <string name="nav_web">இணையம்</string>
+    <string name="nav_memory">நினைவகம்</string>
 
     <!-- console card and status -->
     <string name="service_installer">Installer</string>

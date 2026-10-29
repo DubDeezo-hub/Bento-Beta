@@ -28,6 +28,7 @@
     <string name="nav_upload">آپلود</string>
     <string name="nav_files">فایل‌ها</string>
     <string name="nav_web">وب</string>
+    <string name="nav_memory">حافظه</string>
 
     <!-- console card and status -->
     <string name="service_installer">‏Installer</string>

@@ -28,6 +28,7 @@
     <string name="nav_upload">上傳</string>
     <string name="nav_files">檔案</string>
     <string name="nav_web">網頁</string>
+    <string name="nav_memory">記憶體</string>
 
     <!-- console card and status -->
     <string name="service_installer">安裝程式</string>

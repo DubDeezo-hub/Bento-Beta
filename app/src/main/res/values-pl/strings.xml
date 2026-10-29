@@ -28,6 +28,7 @@
     <string name="nav_upload">Prześlij</string>
     <string name="nav_files">Pliki</string>
     <string name="nav_web">Web</string>
+    <string name="nav_memory">Pamięć</string>
 
     <!-- console card and status -->
     <string name="service_installer">Installer</string>

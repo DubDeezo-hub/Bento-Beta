@@ -28,6 +28,7 @@
     <string name="nav_upload">اپ لوڈ</string>
     <string name="nav_files">فائلیں</string>
     <string name="nav_web">ویب</string>
+    <string name="nav_memory">میموری</string>
 
     <!-- console card and status -->
     <string name="service_installer">‏Installer</string>

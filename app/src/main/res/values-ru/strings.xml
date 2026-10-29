@@ -28,6 +28,7 @@
     <string name="nav_upload">Отправка</string>
     <string name="nav_files">Файлы</string>
     <string name="nav_web">Веб</string>
+    <string name="nav_memory">Память</string>
 
     <!-- console card and status -->
     <string name="service_installer">Установщик</string>

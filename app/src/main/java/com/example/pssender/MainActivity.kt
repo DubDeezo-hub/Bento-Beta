@@ -66,6 +66,7 @@ import kotlinx.coroutines.withContext
 
 private const val TAB_FILES = 3
 private const val TAB_WEB = 4
+private const val TAB_MEMORY = 5
 
 /** A screen lower than this (in dp) counts as short: a phone held sideways. */
 private const val SHORT_SCREEN_DP = 480
@@ -85,7 +86,8 @@ private val NAV_ITEMS = listOf(
     NavItem(R.string.nav_payload, PayloadIcon),
     NavItem(R.string.nav_upload, UploadIcon),
     NavItem(R.string.nav_files, FilesIcon),
-    NavItem(R.string.nav_web, WebIcon)
+    NavItem(R.string.nav_web, WebIcon),
+    NavItem(R.string.nav_memory, MemoryIcon)
 )
 
 class MainActivity : ComponentActivity() {
@@ -419,7 +421,7 @@ fun SenderApp(
                     host = host.trim(),
                     level = level,
                     checks = checks,
-                    compact = tab == TAB_FILES || tab == TAB_WEB || shortScreen, // these two need the room, and so does a phone on its side
+                    compact = tab == TAB_FILES || tab == TAB_WEB || tab == TAB_MEMORY || shortScreen, // these need the room, and so does a phone on its side
                     onEdit = { showAddress = true },
                     modifier = Modifier.padding(horizontal = 16.dp),
                     onFind = { showFind = true },
@@ -448,6 +450,7 @@ fun SenderApp(
                             { allowedSites.add(siteOf(Uri.parse(it).host)); homeUrl = it },
                             Modifier.weight(1f)
                         )
+                        TAB_MEMORY -> MemoryTab(host, Modifier.weight(1f))
                         else -> {
                             // The form tabs scroll, so nothing is cut off on small screens
                             Column(

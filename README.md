@@ -22,7 +22,7 @@ The name and the icon are a bento box: several different things, each in its own
 - [Get the app](#get-the-app)
 - [First run](#first-run)
 - [How it works](#how-it-works)
-  - [The console card](#the-console-card) · [Find my console](#find-my-console) · [Consoles](#consoles) · [Install tab](#install-tab) · [Install from this phone](#install-from-this-phone) · [Payload tab](#payload-tab) · [Upload tab](#upload-tab) · [Files tab](#files-tab) · [Web tab](#web-tab) · [Share sheet](#share-sheet) · [Transfers](#transfers) · [Errors that say what to do](#errors-that-say-what-to-do) · [About, updates and backup](#about-updates-and-backup) · [Languages and look](#languages-and-look)
+  - [The console card](#the-console-card) · [Find my console](#find-my-console) · [Consoles](#consoles) · [Install tab](#install-tab) · [Install from this phone](#install-from-this-phone) · [Payload tab](#payload-tab) · [Upload tab](#upload-tab) · [Files tab](#files-tab) · [Web tab](#web-tab) · [Memory tab](#memory-tab) · [Share sheet](#share-sheet) · [Transfers](#transfers) · [Errors that say what to do](#errors-that-say-what-to-do) · [About, updates and backup](#about-updates-and-backup) · [Languages and look](#languages-and-look)
 - [Under the hood](#under-the-hood)
 - [Build, signing and releases](#build-signing-and-releases)
 - [Testing without a console](#testing-without-a-console)
@@ -232,7 +232,16 @@ A built-in browser (Android's WebView) that can send downloads to the console. I
   - **Save to payload shelf.** For payloads up to 64 MiB.
   - **Save to phone.** Android's download manager puts it in `Downloads`.
 
-### Share sheet
+### Memory tab
+
+A memory viewer for games on a PS5, the first part of a cheat-engine-style editor. It talks to [ps5debug-NG](https://github.com/Pharaoh2k/ps5debug-NG), a debugger payload that runs inside the console's system shell (firmware 3.00 to 13.60, 10.40 included) and listens on port `744`.
+
+- **Start the debugger.** Send `ps5debug-NG.elf` from the Payload tab (or keep it on the payload shelf). The console shows a "ps5debug-NG ... loaded!" notification.
+- **Connect.** Shows the debugger's version, the console's firmware, the game in the foreground (name, title ID, version) and every process.
+- **Open a process** to list its memory regions (start address, size, `rwx` rights; writable ones are tinted). Tap a readable region to see its bytes in a hex view, 256 at a time, with **Previous**, **Refresh** and **Next**.
+- It only reads for now. Searching for a value and changing or freezing it come next.
+- **Offline games only.** Changing memory in an online game can get the account banned, and it spoils the game for others.
+
 
 Share a link from any app (a browser, a chat, a note) and choose **Bento**. The first `http://` or `https://` address in the shared text opens the same chooser as a Web-tab download. If Bento is already open, the link goes to the running app.
 
@@ -317,7 +326,7 @@ Bento is Kotlin with Jetpack Compose and Material 3: 43 source files, about 12,3
 
 ### Checking the build
 
-GitHub builds every push (`.github/workflows/main.yml`) and puts the APK on the Releases page. A second workflow, `.github/workflows/tests.yml` ("Phone test"), runs the app on a virtual Android 14 phone: it installs the two newest releases one over the other (so a wrong signing key shows up at once), opens every tab, turns the screen, leaves the app and comes back, shares a link into it and switches through all 53 languages. Each time it checks that the app is still running, has not crashed or stopped responding, and shows its five tabs (in the right order, and not cut off, in right-to-left languages too). The results are on the run's page under Actions: a table of every check, an annotation for each failure, and the screenshots and the phone's log under Artifacts. The script is `.github/scripts/ui_smoke.sh`.
+GitHub builds every push (`.github/workflows/main.yml`) and puts the APK on the Releases page. A second workflow, `.github/workflows/tests.yml` ("Phone test"), runs the app on a virtual Android 14 phone: it installs the two newest releases one over the other (so a wrong signing key shows up at once), opens every tab, turns the screen, leaves the app and comes back, shares a link into it and switches through all 53 languages. Each time it checks that the app is still running, has not crashed or stopped responding, and shows its six tabs (in the right order, and not cut off, in right-to-left languages too). The results are on the run's page under Actions: a table of every check, an annotation for each failure, and the screenshots and the phone's log under Artifacts. The script is `.github/scripts/ui_smoke.sh`.
 
 ### Source map
 
@@ -341,6 +350,7 @@ Paths are relative to [`app/src/main/java/com/example/pssender/`](app/src/main/j
 - `Help.kt`: the "What can I do?" pages and the notes that say which page a message gets.
 - `Theme.kt`: dark and light colors, and the six accents.
 - `Icons.kt`: the few icons, drawn in code so no icon library is needed.
+- `Memory.kt`: the Memory tab: connect, current game, process list, memory regions, hex view.
 - `Texts.kt`: the app class, text lookup for code that has no screen, right-to-left isolation, language settings.
 
 #### Console and network
@@ -351,6 +361,7 @@ Paths are relative to [`app/src/main/java/com/example/pssender/`](app/src/main/j
 - `HttpSource.kt`: a web link as a source that can continue after a break.
 - `Links.kt`: finding web links in text, sending several one after another, the recent links.
 - `Update.kt`: the update check, the notice, and the update part of the About window.
+- `Ps5Debug.kt`: the ps5debug-NG wire protocol (port 744): process list, current game, memory maps, read, write, notifications; and the hex view lines.
 
 #### Transfer engine
 
@@ -493,6 +504,7 @@ In Bento, tap the console card and enter `127.0.0.1`. The three lights turn on.
 | --- | --- |
 | Install | Listens on 12800, understands both request styles (`/upload` and `/api/install`) and prints the link. For a link from **Install from this phone** it then downloads the file the way a console would: `HEAD`, a few byte ranges, a range past the end (which must be refused with `416`), then the whole file, capped at 64 MB unless you set `FAKE_PS5_FULL=1`. It prints `self-test PASSED`, or why it failed. |
 | Payload | Listens on 9021 (a PS5's loader) and 9090 (a PS4's), saving what it receives to `~/fake_ps5/payloads/`, one file per payload. Payload chains send to it the same way. |
+| Memory | A fake ps5debug-NG on **7744** (Android does not let Termux open port 744, so set the Memory tab's port to 7744). It runs a pretend game, *Fake Game* (pid 91), with a heap whose health counts down by 7 every 4 seconds. |
 | Upload and Files | An anonymous FTP server on 2121 rooted at `~/fake_ps5/ftp`, with a few sample files and folders to open, rename, download and delete. Uploads land in `~/fake_ps5/ftp/data/`. |
 
 **Try Find my console.** The fake console listens on all of the phone's addresses, so with the phone on Wi-Fi, **Find my console** finds the phone itself, with Installer, Loader and FTP answering. Tap **Use** and the console card turns green. (On a phone that isn't on Wi-Fi the window says so.)

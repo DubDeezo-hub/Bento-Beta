@@ -185,3 +185,30 @@ val CloseIcon: ImageVector by lazy {
         lineTo(6f, 18f)
     }
 }
+
+/** A memory chip: a square with pins on each side. */
+val MemoryIcon: ImageVector by lazy {
+    outlineIcon("Memory") {
+        moveTo(8f, 6f)
+        lineTo(16f, 6f)
+        arcTo(2f, 2f, 0f, false, true, 18f, 8f)
+        lineTo(18f, 16f)
+        arcTo(2f, 2f, 0f, false, true, 16f, 18f)
+        lineTo(8f, 18f)
+        arcTo(2f, 2f, 0f, false, true, 6f, 16f)
+        lineTo(6f, 8f)
+        arcTo(2f, 2f, 0f, false, true, 8f, 6f)
+        close()
+        for (p in floatArrayOf(9.5f, 14.5f)) {
+            moveTo(p, 6f); lineTo(p, 3f)
+            moveTo(p, 18f); lineTo(p, 21f)
+            moveTo(6f, p); lineTo(3f, p)
+            moveTo(18f, p); lineTo(21f, p)
+        }
+        moveTo(10f, 10f)
+        lineTo(14f, 10f)
+        lineTo(14f, 14f)
+        lineTo(10f, 14f)
+        close()
+    }
+}

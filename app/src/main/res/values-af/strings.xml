@@ -28,6 +28,7 @@
     <string name="nav_upload">Laai op</string>
     <string name="nav_files">Lêers</string>
     <string name="nav_web">Web</string>
+    <string name="nav_memory">Geheue</string>
 
     <!-- console card and status -->
     <string name="service_installer">Installer</string>

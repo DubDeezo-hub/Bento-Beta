@@ -28,6 +28,7 @@
     <string name="nav_upload">Įkelti</string>
     <string name="nav_files">Failai</string>
     <string name="nav_web">Naršyklė</string>
+    <string name="nav_memory">Atmintis</string>
 
     <!-- console card and status -->
     <string name="service_installer">Installer</string>

@@ -28,6 +28,7 @@
     <string name="nav_upload">Încărcare</string>
     <string name="nav_files">Fișiere</string>
     <string name="nav_web">Web</string>
+    <string name="nav_memory">Memorie</string>
 
     <!-- console card and status -->
     <string name="service_installer">Installer</string>

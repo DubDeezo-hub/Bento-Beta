@@ -28,6 +28,7 @@
     <string name="nav_upload">Надсилання</string>
     <string name="nav_files">Файли</string>
     <string name="nav_web">Веб</string>
+    <string name="nav_memory">Пам\'ять</string>
 
     <!-- console card and status -->
     <string name="service_installer">Installer</string>

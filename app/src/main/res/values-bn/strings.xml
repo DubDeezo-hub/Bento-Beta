@@ -28,6 +28,7 @@
     <string name="nav_upload">আপলোড</string>
     <string name="nav_files">ফাইল</string>
     <string name="nav_web">ওয়েব</string>
+    <string name="nav_memory">মেমরি</string>
 
     <!-- console card and status -->
     <string name="service_installer">Installer</string>

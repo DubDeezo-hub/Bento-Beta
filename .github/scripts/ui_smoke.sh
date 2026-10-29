@@ -109,9 +109,9 @@ tap_text() { # taps the lowest thing on screen that shows one of the texts
   adb shell input tap "$1" "$2"
 }
 
-NAV_KEYS="nav_install nav_payload nav_upload nav_files nav_web"
+NAV_KEYS="nav_install nav_payload nav_upload nav_files nav_web nav_memory"
 
-# The five names on the bottom bar, in the language of the folder given (default English)
+# The six names on the bottom bar, in the language of the folder given (default English)
 nav_label() { ui string "$1" "${2:-values}" || ui string "$1"; }
 
 bar_visible() { # [values folder]: the screen is in $XML (dump first)
@@ -215,7 +215,7 @@ case "$r" in
 esac
 
 launch
-healthy "the app starts and shows its five tabs"
+healthy "the app starts and shows its six tabs"
 shot "01-start"
 
 # The "Version x is available" banner: this build has a small version number, so a published release is newer
@@ -248,6 +248,7 @@ tab_keys() { # what each tab shows on a fresh install (any of these texts will d
     nav_upload) echo "ftp_port ftp_user ftp_password upload_choose upload_start upload_help" ;;
     nav_files) echo "files_ftp_settings files_refresh files_need_ip files_up" ;;
     nav_web) echo "web_add web_bookmarks web_find web_reload" ;;
+    nav_memory) echo "memory_connect memory_port memory_intro" ;;
   esac
 }
 
@@ -393,7 +394,7 @@ for tag in $(ui langs); do
   done
   [ -n "$missing" ] && problems="${problems}tab names not on screen:$missing. "
   # Right-to-left languages put the first tab on the right, the others on the left
-  first="$(ui find "$XML" "$(nav_label nav_install "$dir")")" && last="$(ui find "$XML" "$(nav_label nav_web "$dir")")"
+  first="$(ui find "$XML" "$(nav_label nav_install "$dir")")" && last="$(ui find "$XML" "$(nav_label nav_memory "$dir")")"
   if [ -n "$first" ] && [ -n "$last" ]; then
     fx="${first%% *}"
     lx="${last%% *}"
@@ -430,7 +431,7 @@ for tag in $(ui langs); do
   esac
 done
 if [ "$LANG_BAD" -eq 0 ]; then
-  pass "all $LANG_OK languages show the five tabs correctly (right order, nothing cut off, no crash)"
+  pass "all $LANG_OK languages show the six tabs correctly (right order, nothing cut off, no crash)"
 fi
 adb shell cmd locale set-app-locales "$PKG" --locales en > /dev/null 2>&1
 

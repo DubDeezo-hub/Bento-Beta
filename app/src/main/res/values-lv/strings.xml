@@ -28,6 +28,7 @@
     <string name="nav_upload">Sūtīt</string>
     <string name="nav_files">Faili</string>
     <string name="nav_web">Tīmeklis</string>
+    <string name="nav_memory">Atmiņa</string>
 
     <!-- console card and status -->
     <string name="service_installer">Installer</string>
