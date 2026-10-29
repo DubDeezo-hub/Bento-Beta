@@ -115,7 +115,7 @@ fun parseAddress(text: String): Long? {
 }
 
 /** The three parts of the Memory tab. */
-enum class MemoryView { SCAN, CHEATS, BROWSE }
+enum class MemoryView { SCAN, CHEATS, BROWSE, LOG }
 
 /** What one tap of Connect brings back. */
 class MemorySnapshot(val info: DbgInfo, val game: DbgApp, val processes: List<DbgProcess>)
@@ -138,6 +138,8 @@ object MemorySession {
 
     /** How long a scan may wait for the console: a big region with few matches sends nothing for a while. */
     private const val SCAN_TIMEOUT_MS = 300_000
+    private const val PROBE_TIMEOUT_MS = 3_000
+    private const val DEFAULT_TIMEOUT_MS = 8_000
 
     /** Survivors fetched per request when a search kept on the console is brought over. */
     private const val GET_BATCH = 8192
@@ -409,8 +411,24 @@ object MemorySession {
 
     fun connect() {
         val fresh = snapshot == null
-        perform(work = { d ->
-            val info = d.info()
+        val h = host
+        val p = portOrNull() ?: 0
+        perform(work = { first ->
+            // Older debuggers (ps4debug 1.1, the first ps5debug) don't know the name request: they close the
+            // connection or never answer. Then a new connection carries on with what they do know.
+            var d = first
+            var extra: Ps5Debug? = null
+            val info = try {
+                d.setTimeout(PROBE_TIMEOUT_MS)
+                d.info().also { d.setTimeout(DEFAULT_TIMEOUT_MS) }
+            } catch (e: Exception) {
+                if (cancelRequested) throw e
+                d = Ps5Debug(h, p)
+                extra = d
+                current = d
+                DbgInfo(brand = "", protocol = try { d.protocolVersion() } catch (_: Exception) { "" }, firmware = "")
+            }
+            try {
             val procs = d.processes()
             // Only ps5debug-NG knows the foreground app; with an older debugger the game is the eboot.bin process
             val game = if (info.isNg) {
@@ -423,6 +441,9 @@ object MemorySession {
                 try { d.notify(AppText.get(R.string.memory_console_hello)) } catch (_: Exception) {}
             }
             MemorySnapshot(info, game, procs)
+            } finally {
+                extra?.close()
+            }
         }) { s ->
             val before = snapshot?.game
             snapshot = s
@@ -894,7 +915,10 @@ object MemorySession {
         }
         perform(work = { d ->
             val file = CheatFiles.parse(fetch(src + "json/" + entry.file))
-            val base = CheatFiles.baseOf(d.maps(pid), file.process, d.firstMapStart(pid))
+            val maps = d.maps(pid)
+            // ps4debug has no load-address request; there the lowest region is the eboot's
+            val fallback = if (snapshot?.info?.isPs4 == true) maps.minOfOrNull { it.start } ?: 0L else d.firstMapStart(pid)
+            val base = CheatFiles.baseOf(maps, file.process, fallback)
             file to base
         }) { (file, base) ->
             cheatFile = file

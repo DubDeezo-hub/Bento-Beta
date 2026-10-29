@@ -65,7 +65,13 @@ enum class Tip(val title: Int, val body: Int) {
     MEM_MY_CHEATS(R.string.tip_mem_my_cheats_title, R.string.tip_mem_my_cheats),
     MEM_FREEZE(R.string.tip_mem_freeze_title, R.string.tip_mem_freeze),
     MEM_FIND_AGAIN(R.string.tip_mem_find_again_title, R.string.tip_mem_find_again),
-    MEM_BROWSE(R.string.tip_mem_browse_title, R.string.tip_mem_browse)
+    MEM_BROWSE(R.string.tip_mem_browse_title, R.string.tip_mem_browse),
+    MEM_LOG(R.string.tip_mem_log_title, R.string.tip_mem_log),
+    APPS(R.string.tip_apps_title, R.string.tip_apps),
+    SAVES(R.string.tip_saves_title, R.string.tip_saves),
+    MEDIA(R.string.tip_media_title, R.string.tip_media),
+    SYNC(R.string.tip_sync_title, R.string.tip_sync),
+    PKG_INFO(R.string.tip_pkg_info_title, R.string.tip_pkg_info)
 }
 
 /** A small round "?" that opens [tip]. */

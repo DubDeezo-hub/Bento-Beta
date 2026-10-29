@@ -17,6 +17,7 @@ import okhttp3.MultipartBody
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
+import org.apache.commons.net.ftp.FTP
 import org.apache.commons.net.ftp.FTPClient
 import org.apache.commons.net.ftp.FTPClientConfig
 import java.io.File
@@ -364,6 +365,129 @@ fun ftpMakeDir(s: FtpSettings, dir: String, name: String) {
     }
 }
 
+// ---------------------------------------------------------------------------------------------
+// FTP: small reads and folder trees (installed games, saves, folder sync)
+// ---------------------------------------------------------------------------------------------
+
+/** Reads a small file from an open connection; null when it is missing, unreadable or larger than [max] bytes. */
+private fun readSmall(ftp: FTPClient, path: String, max: Int): ByteArray? {
+    ftp.setFileType(FTP.BINARY_FILE_TYPE)
+    val input = ftp.retrieveFileStream(path) ?: return null
+    val out = java.io.ByteArrayOutputStream()
+    var tooBig = false
+    try {
+        val buf = ByteArray(16 * 1024)
+        while (true) {
+            val n = input.read(buf)
+            if (n < 0) break
+            out.write(buf, 0, n)
+            if (out.size() > max) {
+                tooBig = true
+                break
+            }
+        }
+    } finally {
+        try { input.close() } catch (_: Exception) {}
+    }
+    // Ends the transfer; when it was cut short the server may report an error, which is fine here
+    try { ftp.completePendingCommand() } catch (_: Exception) {}
+    return if (tooBig) null else out.toByteArray()
+}
+
+/** Reads the small file [path] on the console (null when it isn't there or is larger than [max] bytes). */
+fun ftpReadSmall(s: FtpSettings, path: String, max: Int = 1 shl 20): ByteArray? = withFtp(s) { ftp -> readSmall(ftp, path, max) }
+
+/**
+ * Reads several small files over one connection. For each of [paths], [each] gets its bytes (null when it could not be
+ * read). [stop] ends early (the screen was left).
+ */
+fun ftpReadEach(
+    s: FtpSettings, paths: List<String>, max: Int = 1 shl 20,
+    stop: () -> Boolean = { false }, each: (String, ByteArray?) -> Unit
+) {
+    withFtp(s) { ftp ->
+        for (path in paths) {
+            if (stop()) break
+            val data = try { readSmall(ftp, path, max) } catch (e: IOException) {
+                if (!ftp.isConnected) throw e
+                null
+            }
+            each(path, data)
+        }
+    }
+}
+
+/** Lists [path] on the console; an empty list when it can't be opened (a folder that may not exist). */
+fun ftpListOrEmpty(s: FtpSettings, path: String): List<FtpEntry> = withFtp(s) { ftp ->
+    try { listFolder(ftp, path).entries } catch (_: IOException) { emptyList() }
+}
+
+/** Lists several folders over one connection; a folder that can't be opened gives an empty list. */
+fun ftpListMany(s: FtpSettings, paths: List<String>): Map<String, List<FtpEntry>> = withFtp(s) { ftp ->
+    paths.associateWith { p -> try { listFolder(ftp, p).entries } catch (_: IOException) { emptyList() } }
+}
+
+/**
+ * Every file under [dir] on the console, by its path relative to [dir] ("a/b.bin"), with its size. Folders that can't be
+ * opened are left out; links are not followed. Gives up after [maxFiles] files (then [RemoteTree.truncated] is set).
+ */
+class RemoteTree(val files: Map<String, Long>, val folders: Set<String>, val exists: Boolean, val truncated: Boolean)
+
+fun ftpTree(s: FtpSettings, dir: String, maxFiles: Int = 20_000): RemoteTree = withFtp(s) { ftp ->
+    val files = HashMap<String, Long>()
+    val folders = HashSet<String>()
+    var truncated = false
+    val top = try { listFolder(ftp, dir).entries } catch (_: IOException) { return@withFtp RemoteTree(emptyMap(), emptySet(), false, false) }
+    fun walk(entries: List<FtpEntry>, rel: String, depth: Int) {
+        for (e in entries) {
+            if (files.size >= maxFiles) { truncated = true; return }
+            val r = if (rel.isEmpty()) e.name else "$rel/${e.name}"
+            when {
+                e.isLink -> {}
+                e.isDir -> {
+                    folders.add(r)
+                    if (depth < 16) {
+                        val inner = try { listFolder(ftp, joinPath(dir, r)).entries } catch (_: IOException) { emptyList() }
+                        walk(inner, r, depth + 1)
+                    }
+                }
+                else -> files[r] = e.size
+            }
+        }
+    }
+    walk(top, "", 0)
+    RemoteTree(files, folders, true, truncated)
+}
+
+/**
+ * Creates [dir] and the folders [relDirs] inside it (paths relative to [dir], parents before children), skipping the ones
+ * in [existing]. Returns how many were made.
+ */
+fun ftpMakeDirs(s: FtpSettings, dir: String, relDirs: List<String>, existing: Set<String> = emptySet(), makeTop: Boolean = false): Int =
+    withFtp(s) { ftp ->
+        var made = 0
+        if (makeTop) {
+            // Each step of the path, so a deep new folder works too
+            var at = ""
+            for (part in dir.split('/').filter { it.isNotEmpty() }) {
+                at += "/$part"
+                if (!ftp.changeWorkingDirectory(at)) {
+                    if (!ftp.makeDirectory(at)) throw IOException(deniedText(R.string.err_mkdir, ftp))
+                    made++
+                }
+            }
+        }
+        for (rel in relDirs.sortedBy { it.count { c -> c == '/' } }) {
+            if (rel in existing) continue
+            val full = joinPath(dir, rel)
+            if (!ftp.changeWorkingDirectory(full)) {
+                if (!ftp.makeDirectory(full)) throw IOException(deniedText(R.string.err_mkdir, ftp))
+                made++
+            }
+        }
+        made
+    }
+
 /** Deletes a folder with everything inside it. Links are removed, never followed. Returns the number of items removed. */
 private fun deleteTree(ftp: FTPClient, path: String, depth: Int): Int {
     if (depth > 40) throw IOException(AppText.get(R.string.err_too_deep))
@@ -579,4 +703,116 @@ fun ftpDownloadToPhone(
         mem.discard = null
     }
     return result
+}
+
+// ---------------------------------------------------------------------------------------------
+// Reading parts of a package (its name and icon) without downloading all of it
+// ---------------------------------------------------------------------------------------------
+
+/** Reads pieces of a web link with Range requests. Refuses servers that only send whole files (packages are huge). */
+class HttpRangeReader(private val url: String) : RangeReader {
+    override var size: Long = -1L
+        private set
+
+    override fun read(offset: Long, length: Int): ByteArray {
+        val req = Request.Builder().url(url).header("Range", "bytes=$offset-${offset + length - 1}").build()
+        http.newCall(req).execute().use { resp ->
+            if (!resp.isSuccessful) throw IOException("HTTP ${resp.code}")
+            val body = resp.body ?: throw IOException("empty reply")
+            if (resp.code == 206) {
+                resp.header("Content-Range")?.substringAfterLast('/')?.toLongOrNull()?.let { size = it }
+            } else {
+                // The whole file is coming: fine for its start, not for anything further in
+                if (size < 0L) size = body.contentLength()
+                if (offset > 0L) throw IOException(AppText.get(R.string.meta_no_ranges))
+            }
+            val out = ByteArray(length)
+            var got = 0
+            val input = body.byteStream()
+            while (got < length) {
+                val n = input.read(out, got, length - got)
+                if (n < 0) break
+                got += n
+            }
+            return if (got == length) out else out.copyOf(got)
+        }
+    }
+}
+
+/** Reads pieces of a file on the phone. */
+class UriRangeReader(private val cr: ContentResolver, private val uri: Uri) : RangeReader {
+    override val size: Long = fileSize(cr, uri)
+
+    override fun read(offset: Long, length: Int): ByteArray {
+        val pfd = cr.openFileDescriptor(uri, "r") ?: throw IOException(phoneFileProblem())
+        pfd.use {
+            FileInputStream(it.fileDescriptor).use { input ->
+                val ch = input.channel
+                ch.position(offset)
+                val buf = java.nio.ByteBuffer.allocate(length)
+                while (buf.hasRemaining()) {
+                    if (ch.read(buf) < 0) break
+                }
+                return buf.array().copyOf(buf.position())
+            }
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------------------------
+// A folder on the phone, picked with the system's folder picker
+// ---------------------------------------------------------------------------------------------
+
+/** Reads the picked folder [tree] all the way down (at most [maxFiles] files). Not for the main thread. */
+fun walkPhoneTree(cr: ContentResolver, tree: Uri, maxFiles: Int = 20_000): PhoneTree {
+    val rootId = android.provider.DocumentsContract.getTreeDocumentId(tree)
+    val files = ArrayList<PhoneFile>()
+    val folders = ArrayList<String>()
+    var truncated = false
+    val cols = arrayOf(
+        android.provider.DocumentsContract.Document.COLUMN_DOCUMENT_ID,
+        android.provider.DocumentsContract.Document.COLUMN_DISPLAY_NAME,
+        android.provider.DocumentsContract.Document.COLUMN_MIME_TYPE,
+        android.provider.DocumentsContract.Document.COLUMN_SIZE
+    )
+    var rootName = ""
+    try {
+        cr.query(android.provider.DocumentsContract.buildDocumentUriUsingTree(tree, rootId), cols, null, null, null)?.use { c ->
+            if (c.moveToFirst()) rootName = c.getString(1).orEmpty()
+        }
+    } catch (_: Exception) {
+    }
+    fun walk(docId: String, rel: String, depth: Int) {
+        val children = android.provider.DocumentsContract.buildChildDocumentsUriUsingTree(tree, docId)
+        val found = ArrayList<Triple<String, String, Pair<Boolean, Long>>>()
+        cr.query(children, cols, null, null, null)?.use { c ->
+            while (c.moveToNext()) {
+                val id = c.getString(0) ?: continue
+                val name = c.getString(1) ?: continue
+                val isDir = c.getString(2) == android.provider.DocumentsContract.Document.MIME_TYPE_DIR
+                val size = if (c.isNull(3)) -1L else c.getLong(3)
+                found.add(Triple(id, name, isDir to size))
+            }
+        }
+        for ((id, name, info) in found) {
+            if (files.size >= maxFiles) { truncated = true; return }
+            val r = if (rel.isEmpty()) name else "$rel/$name"
+            if (info.first) {
+                folders.add(r)
+                if (depth < 16) walk(id, r, depth + 1) else truncated = true
+            } else {
+                files.add(PhoneFile(r, android.provider.DocumentsContract.buildDocumentUriUsingTree(tree, id).toString(), info.second))
+            }
+        }
+    }
+    walk(rootId, "", 0)
+    return PhoneTree(rootName, files, folders, truncated)
+}
+
+/** Keeps the right to read a picked folder after the screen that picked it is gone. */
+fun keepTreeAccess(cr: ContentResolver, tree: Uri) {
+    try {
+        cr.takePersistableUriPermission(tree, Intent.FLAG_GRANT_READ_URI_PERMISSION)
+    } catch (_: Exception) {
+    }
 }

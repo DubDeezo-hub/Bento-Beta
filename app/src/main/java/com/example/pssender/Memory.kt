@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -148,20 +149,37 @@ fun MemoryTab(host: String, modifier: Modifier = Modifier) {
     }
 
     val s = m.snapshot
-    LazyColumn(modifier = modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        item { Header(s) }
-        if (s != null) {
-            item {
-                ChipRow {
+    KernelLog.attach(ctx)
+    val listState = rememberLazyListState()
+    // The console log keeps its newest line in sight while Follow is on
+    val logCount = KernelLog.lines.size
+    LaunchedEffect(logCount, m.view, KernelLog.follow) {
+        if (m.view == MemoryView.LOG && KernelLog.follow && logCount > 0) {
+            listState.scrollToItem(listState.layoutInfo.totalItemsCount.coerceAtLeast(1) - 1)
+        }
+    }
+    LazyColumn(state = listState, modifier = modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        if (m.view != MemoryView.LOG || s == null) item { Header(s) }
+        item {
+            ChipRow {
+                if (s != null) {
                     Chip(str(R.string.memory_view_scan), m.view == MemoryView.SCAN) { m.view = MemoryView.SCAN }
                     Chip(str(R.string.memory_view_cheats, m.cheats.size), m.view == MemoryView.CHEATS) { m.view = MemoryView.CHEATS }
                     Chip(str(R.string.memory_view_browse), m.view == MemoryView.BROWSE) { m.view = MemoryView.BROWSE }
                 }
+                Chip(str(R.string.memory_view_log), m.view == MemoryView.LOG) {
+                    m.view = if (m.view == MemoryView.LOG && s == null) MemoryView.SCAN else MemoryView.LOG
+                }
             }
+        }
+        if (m.view == MemoryView.LOG) {
+            logItems(host, ctx)
+        } else if (s != null) {
             when (m.view) {
                 MemoryView.SCAN -> scanItems(s) { dialog = it }
                 MemoryView.CHEATS -> cheatItems(s, ctx) { dialog = it }
                 MemoryView.BROWSE -> browseItems(s) { dialog = it }
+                MemoryView.LOG -> {}
             }
         }
     }
@@ -203,7 +221,7 @@ private fun Header(s: MemorySnapshot?) {
                         overflow = TextOverflow.Ellipsis
                     )
                     Text(
-                        if (s.game.pid == 0) str(R.string.memory_connected, s.info.brand, s.info.firmware)
+                        if (s.game.pid == 0) str(R.string.memory_connected, s.info.shownName, s.info.firmware.ifBlank { "?" })
                         else str(R.string.memory_game_detail, s.game.titleId.ifBlank { "?" }, s.game.version.ifBlank { "?" }, s.game.pid),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -884,7 +902,7 @@ private fun SourceDialog(onClose: () -> Unit) {
 // ---------------------------------------------------------------------------------------------
 
 @Composable
-private fun ChipRow(content: @Composable () -> Unit) {
+internal fun ChipRow(content: @Composable () -> Unit) {
     Row(
         modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
         horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -893,7 +911,7 @@ private fun ChipRow(content: @Composable () -> Unit) {
 
 /** A rounded button that shows whether it is the chosen one. */
 @Composable
-private fun Chip(label: String, selected: Boolean, enabled: Boolean = true, onClick: () -> Unit) {
+internal fun Chip(label: String, selected: Boolean, enabled: Boolean = true, onClick: () -> Unit) {
     val cs = MaterialTheme.colorScheme
     Text(
         label,
@@ -914,7 +932,7 @@ private fun Chip(label: String, selected: Boolean, enabled: Boolean = true, onCl
 
 /** A rounded box in the card color, like the console card at the top. */
 @Composable
-private fun Panel(content: @Composable ColumnScope.() -> Unit) {
+internal fun Panel(content: @Composable ColumnScope.() -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -928,7 +946,7 @@ private fun Panel(content: @Composable ColumnScope.() -> Unit) {
 
 /** One tappable line of a list: a name and a smaller detail under it. */
 @Composable
-private fun ListRow(title: String, detail: String, highlight: Boolean, enabled: Boolean, mono: Boolean = false, onClick: () -> Unit) {
+internal fun ListRow(title: String, detail: String, highlight: Boolean, enabled: Boolean, mono: Boolean = false, onClick: () -> Unit) {
     val cs = MaterialTheme.colorScheme
     Column(
         modifier = Modifier

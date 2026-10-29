@@ -44,8 +44,14 @@ data class DbgMap(val name: String, val start: Long, val end: Long, val offset: 
 
 /** What the debugger says about itself: its name and version, the protocol version and the console's firmware. */
 data class DbgInfo(val brand: String, val protocol: String, val firmware: String, val capability: String = "") {
-    /** Whether this is ps5debug-NG (not the older ps5debug), which has the foreground-app command. */
-    val isNg: Boolean get() = brand.contains("ps5debug-NG", ignoreCase = true)
+    /** Whether this is ps5debug-NG or ps4debug-NG (not the older debuggers), which have the foreground-app command. */
+    val isNg: Boolean get() = brand.contains("debug-NG", ignoreCase = true)
+
+    /** Whether the debugger runs on a PS4 (ps4debug), which has no load-address command. */
+    val isPs4: Boolean get() = brand.contains("ps4debug", ignoreCase = true)
+
+    /** The name shown for the debugger: its brand, or "debugger" for an old one that has none. */
+    val shownName: String get() = brand.substringBefore(" by ").ifEmpty { "debugger $protocol".trim() }
 
     /** The version in the brand ("v1.3.2" gives 1.3), or 0.0 when there is none. */
     val version: Double

@@ -48,6 +48,8 @@ import kotlinx.coroutines.withContext
 // ---------------------------------------------------------------------------------------------
 
 class FilesModel {
+    /** Browsing, the games list or the saves. */
+    var view by mutableStateOf(FilesView.BROWSE)
     var path by mutableStateOf("")
     var entries by mutableStateOf<List<FtpEntry>>(emptyList())
     var busy by mutableStateOf(false)
@@ -59,6 +61,8 @@ class FilesModel {
     /** Forgets everything (used when another console is selected). */
     fun reset() {
         generation++
+        ConsoleApps.forget()
+        ConsoleSaves.forget()
         path = ""
         entries = emptyList()
         busy = false
@@ -315,10 +319,12 @@ fun FilesTab(
     }
 
     // The system Back button goes up one folder, or ends picking first
-    BackHandler(enabled = settings != null && model.path.isNotEmpty() && model.path != "/" && !model.busy) {
+    BackHandler(enabled = model.view == FilesView.BROWSE && settings != null && model.path.isNotEmpty() && model.path != "/" && !model.busy) {
         if (settings != null) model.open(scope, settings, parentPath(model.path))
     }
     BackHandler(enabled = picking) { selected = emptySet() }
+    // ...and from the games list or the saves back to the folders
+    BackHandler(enabled = model.view != FilesView.BROWSE) { model.view = FilesView.BROWSE }
 
     // Puts these files in the download queue
     val queueDownloads: (List<PlannedFile>) -> Unit = { files ->
@@ -617,7 +623,25 @@ fun FilesTab(
 
     // ---- screen ----
 
+    // Games, saves and the folder browser share the tab
+    val openFolder: (String) -> Unit = { folder ->
+        model.view = FilesView.BROWSE
+        if (settings != null) model.open(scope, settings, folder)
+    }
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(4.dp)) {
+        ChipRow {
+            Chip(str(R.string.files_view_browse), model.view == FilesView.BROWSE) { model.view = FilesView.BROWSE }
+            Chip(str(R.string.files_view_apps), model.view == FilesView.APPS) { model.view = FilesView.APPS }
+            Chip(str(R.string.files_view_saves), model.view == FilesView.SAVES) { ConsoleSaves.only = ""; model.view = FilesView.SAVES }
+        }
+        if (model.view == FilesView.APPS) {
+            AppsView(settings, onOpenFolder = openFolder, onSaves = { id ->
+                ConsoleSaves.only = id
+                model.view = FilesView.SAVES
+            }, modifier = Modifier.fillMaxWidth().weight(1f))
+        } else if (model.view == FilesView.SAVES) {
+            SavesView(settings, onOpenFolder = openFolder, onStartMany = onStartMany, modifier = Modifier.fillMaxWidth().weight(1f))
+        } else {
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
             Text(
                 if (hasFolder) model.path else str(R.string.files_not_loaded),
@@ -670,8 +694,16 @@ fun FilesTab(
                 ) { Text(str(if (pinned) R.string.files_unpin else R.string.files_pin)) }
                 TextButton(onClick = { showSettings = true }) { Text(str(R.string.files_ftp_settings)) }
             }
+            val labels = pinLabels(pins)
+            FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.Center) {
+                // Screenshots and video clips: where the console keeps what the Create button captured
+                OutlinedButton(
+                    enabled = ready,
+                    onClick = { if (settings != null) model.open(scope, settings, ConsolePaths.MEDIA) }
+                ) { Text(str(R.string.files_media), maxLines = 1) }
+                TipButton(Tip.MEDIA, modifier = Modifier.align(Alignment.CenterVertically))
+            }
             if (pins.isNotEmpty()) {
-                val labels = pinLabels(pins)
                 FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     pins.forEachIndexed { i, folder ->
                         OutlinedButton(
@@ -723,5 +755,6 @@ fun FilesTab(
                 }
             }
         }
+    }
     }
 }

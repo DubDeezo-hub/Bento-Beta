@@ -22,6 +22,10 @@ It stands in for both consoles: a PS5 (etaHEN) and a PS4 (GoldHEN) reach the sam
                 every 4 seconds, gold 500 at 0x20002000, a float 1.0 at 0x20003000. Scans, the scan unlock,
                 reads and writes behave like the real debugger, so you can find the health and freeze it.
                 Unknown-value scans, pattern search ("Find again") and write-many are faked too.
+  Games, saves: the FTP server has two pretend games (CUSA01234, PPSA01234) with names, icons and saves, and a few
+                screenshots, for the Files tab's Games & apps, Saves and Screenshots & videos.
+  Check       : http://127.0.0.1:12800/sample.pkg is a pretend PS4 package for the Install tab's Check button.
+  Console log : port 3232 -> a made-up kernel log, a line a second (the Memory tab's Console log view).
   Cheat files : http://127.0.0.1:12800/cheats/ as the Memory tab's cheat source serves a cheat file for
                 Fake Game: "Infinite Health" stops the health from going down.
 Setup:  pkg install python && pip install pyftpdlib
@@ -48,6 +52,77 @@ os.makedirs(f"{BASE}/ftp/data", exist_ok=True)
 os.makedirs(f"{BASE}/payloads", exist_ok=True)
 
 
+def make_sfo(values):
+    """A PS4 param.sfo with the given keys: text values (utf-8) and whole numbers."""
+    keys = sorted(values)
+    key_table = b""
+    key_offsets = []
+    for k in keys:
+        key_offsets.append(len(key_table))
+        key_table += k.encode() + b"\0"
+    while len(key_table) % 4:
+        key_table += b"\0"
+    data_table = b""
+    entries = b""
+    for k, ko in zip(keys, key_offsets):
+        v = values[k]
+        if isinstance(v, int):
+            raw, fmt, used, room = struct.pack("<I", v), 0x0404, 4, 4
+        else:
+            raw = v.encode() + b"\0"
+            used = len(raw)
+            room = (used + 3) // 4 * 4
+            raw = raw.ljust(room, b"\0")
+            fmt = 0x0204
+        entries += struct.pack("<HHIII", ko, fmt, used, room, len(data_table))
+        data_table += raw
+    key_start = 20 + len(entries)
+    data_start = key_start + len(key_table)
+    head = struct.pack("<4sIIII", b"\0PSF", 0x101, key_start, data_start, len(keys))
+    return head + entries + key_table + data_table
+
+
+def make_png(rgb, size=32):
+    """A small PNG of one color: the icon of a pretend game."""
+    import zlib
+
+    def chunk(kind, data):
+        return struct.pack(">I", len(data)) + kind + data + struct.pack(">I", zlib.crc32(kind + data) & 0xFFFFFFFF)
+
+    row = b"\0" + bytes(rgb) * size
+    return (b"\x89PNG\r\n\x1a\n" + chunk(b"IHDR", struct.pack(">IIBBBBB", size, size, 8, 2, 0, 0, 0))
+            + chunk(b"IDAT", zlib.compress(row * size)) + chunk(b"IEND", b""))
+
+
+def make_pkg(sfo, icon, filler=2 * 1024 * 1024):
+    """A PS4-style package (\\x7FCNT header, entry table, param.sfo and icon0.png) with [filler] bytes of padding."""
+    table_off = 0x2000
+    entries = [(0x1000, sfo), (0x1200, icon)]
+    data_off = table_off + 32 * len(entries)
+    table = b""
+    blobs = b""
+    for eid, blob in entries:
+        table += struct.pack(">IIIIIIQ", eid, 0, 0, 0, data_off + len(blobs), len(blob), 0)
+        blobs += blob + b"\0" * ((16 - len(blob) % 16) % 16)
+    head = bytearray(0x2000)
+    struct.pack_into(">IIIIIHHII", head, 0, 0x7F434E54, 0, 0, len(entries), len(entries), 0, len(entries), table_off, 0)
+    head[0x40:0x40 + 36] = b"EP0000-CUSA01234_00-FAKEGAME00000000"
+    return bytes(head) + table + blobs + bytes(filler)
+
+
+FAKE_SFO = make_sfo({"TITLE": "Fake Game", "TITLE_ID": "CUSA01234", "APP_VER": "01.05", "VERSION": "01.00",
+                     "CATEGORY": "gd", "CONTENT_ID": "EP0000-CUSA01234_00-FAKEGAME00000000", "SYSTEM_VER": 0x09000000})
+FAKE_ICON_PS4 = make_png((230, 120, 40))
+FAKE_ICON_PS5 = make_png((40, 140, 230))
+FAKE_PARAM_JSON = json.dumps({
+    "titleId": "PPSA01234", "contentId": "EP0000-PPSA01234_00-FAKEGAMEPS50000",
+    "contentVersion": "01.000.000", "applicationCategoryType": 0,
+    "requiredSystemSoftwareVersion": "0x0400000000000000",
+    "localizedParameters": {"defaultLanguage": "en-US", "en-US": {"titleName": "Fake Game (PS5)"}},
+}, indent=2).encode()
+FAKE_PKG = make_pkg(FAKE_SFO, FAKE_ICON_PS4)
+
+
 def seed_samples():
     """Creates a few sample files for the app's Files tab (only the ones that are missing)."""
     samples = {
@@ -55,6 +130,21 @@ def seed_samples():
         "data/notes.txt": b"Rename me, download me, or delete me.\n",
         "data/sample.bin": bytes(range(256)) * 1024,
         "user/home/hello.txt": b"A file inside nested folders.\n",
+        # Installed games (Files tab > Games & apps)
+        "user/appmeta/CUSA01234/param.sfo": FAKE_SFO,
+        "user/appmeta/CUSA01234/icon0.png": FAKE_ICON_PS4,
+        "user/appmeta/PPSA01234/param.json": FAKE_PARAM_JSON,
+        "user/appmeta/PPSA01234/icon0.png": FAKE_ICON_PS5,
+        "user/app/CUSA01234/app.pkg": bytes(64 * 1024),
+        "user/app/PPSA01234/eboot.bin": bytes(16 * 1024),
+        "user/patch/CUSA01234/patch.pkg": bytes(16 * 1024),
+        # Saves (Files tab > Saves)
+        "user/home/1a2b3c4d/savedata_prospero/PPSA01234/sdimg_SAVE0000": bytes(range(256)) * 64,
+        "user/home/1a2b3c4d/savedata_prospero/PPSA01234/sce_sys/icon0.png": FAKE_ICON_PS5,
+        "user/home/1a2b3c4d/savedata/CUSA01234/sdimg_SAVEDATA00": bytes(range(256)) * 32,
+        # Screenshots and clips (Files tab > Screenshots & videos)
+        "user/av_contents/photo/Fake Game/Fake Game_20261029120000.jpg": b"\xff\xd8\xff\xe0" + bytes(4096),
+        "user/av_contents/video/Fake Game/Fake Game_20261029120500.mp4": bytes(8192),
     }
     for rel, content in samples.items():
         path = os.path.join(BASE, "ftp", rel)
@@ -177,6 +267,8 @@ FAKE_CHEAT_FILE = json.dumps({
 class InstallHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         """Cheat files for the Memory tab: http://127.0.0.1:12800/cheats/ as the cheat source."""
+        if self.path.split("?")[0] == "/sample.pkg":
+            return self.send_pkg()
         files = {"/cheats/json.txt": FAKE_CHEAT_INDEX, "/cheats/json/PPSA01234_01.000.json": FAKE_CHEAT_FILE}
         body = files.get(self.path.split("?")[0])
         if body is None:
@@ -190,6 +282,31 @@ class InstallHandler(BaseHTTPRequestHandler):
         self.send_header("Content-Length", str(len(data)))
         self.end_headers()
         self.wfile.write(data)
+
+    def send_pkg(self):
+        """A sample package for the Install tab's Check button, with byte ranges like a real web server."""
+        data = FAKE_PKG
+        rng = self.headers.get("Range", "")
+        if rng.startswith("bytes="):
+            a, _, b = rng[6:].partition("-")
+            start = int(a or 0)
+            end = min(int(b) if b else len(data) - 1, len(data) - 1)
+            part = data[start:end + 1]
+            print(f"[pkg] sent bytes {start}-{end}", flush=True)
+            self.send_response(206)
+            self.send_header("Content-Range", f"bytes {start}-{end}/{len(data)}")
+        else:
+            part = data
+            self.send_response(200)
+        self.send_header("Accept-Ranges", "bytes")
+        self.send_header("Content-Length", str(len(part)))
+        self.end_headers()
+        self.wfile.write(part)
+
+    def do_HEAD(self):
+        self.send_response(200 if self.path.split("?")[0] == "/sample.pkg" else 404)
+        self.send_header("Content-Length", str(len(FAKE_PKG)))
+        self.end_headers()
 
     def do_POST(self):
         body = self.rfile.read(int(self.headers.get("Content-Length", 0)))
@@ -711,8 +828,46 @@ def start_fake_debugger():
     threading.Thread(target=server.serve_forever, daemon=True).start()
 
 
+KLOG_PORT = int(os.environ.get("FAKE_KLOG_PORT", "3232"))
+
+
+class KlogHandler(socketserver.BaseRequestHandler):
+    """Sends a made-up kernel log, a line every second or so, like ps5debug-NG's log on port 3232."""
+
+    LINES = [
+        "[SceShellCore] app focus changed: PPSA01234",
+        "[etaHEN] ftp: client connected",
+        "[ps5debug-NG] client connected from the phone",
+        "[Fake Game] player took 7 damage",
+        "[SceLncService] launching app PPSA01234",
+        "<118>[KERNEL] dmem: allocated 0x200000 bytes",
+    ]
+
+    def handle(self):
+        n = 0
+        try:
+            while True:
+                stamp = time.strftime("%H:%M:%S")
+                line = f"{stamp} {self.LINES[n % len(self.LINES)]}\n"
+                self.request.sendall(line.encode())
+                n += 1
+                time.sleep(0.4 + random.random())
+        except OSError:
+            pass
+
+
+def start_fake_klog():
+    try:
+        server = ReusableTCPServer(("0.0.0.0", KLOG_PORT), KlogHandler)
+    except OSError as e:
+        print(f"[log] could not open port {KLOG_PORT} ({e})", flush=True)
+        return
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+
+
 def main():
     start_fake_debugger()
+    start_fake_klog()
     threading.Thread(
         target=HTTPServer(("0.0.0.0", 12800), InstallHandler).serve_forever, daemon=True
     ).start()
@@ -733,7 +888,7 @@ def main():
     authorizer.add_anonymous(f"{BASE}/ftp", perm="elradfmwMT")
     handler = FTPHandler
     handler.authorizer = authorizer
-    print(f"Fake console running: install 12800, payload 9021/9090, ftp 2121, memory {DEBUG_PORT}. Ctrl+C to stop.", flush=True)
+    print(f"Fake console running: install 12800, payload 9021/9090, ftp 2121, memory {DEBUG_PORT}, log {KLOG_PORT}. Ctrl+C to stop.", flush=True)
     FTPServer(("0.0.0.0", 2121), handler).serve_forever()
 
 

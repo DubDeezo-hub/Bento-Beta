@@ -290,3 +290,56 @@ object FilesStore {
         prefs(ctx).edit().putString("files_sort", by.name).apply()
     }
 }
+
+// ----- copying a phone folder to the console (folder sync, restoring a save) -----
+
+/** A file inside a folder on the phone: its path inside that folder ("a/b.bin"), where to read it, its size (-1 unknown). */
+data class PhoneFile(val rel: String, val uri: String, val size: Long)
+
+/** A folder on the phone, read all the way down: its [files] and the [folders] inside it ("a", "a/b"). */
+class PhoneTree(val name: String, val files: List<PhoneFile>, val folders: List<String>, val truncated: Boolean)
+
+/**
+ * What a sync comes to: the files to send ([copy]: [fresh] of them are not on the console yet, the rest differ in size),
+ * how many are the same already ([same]), and the folders to make on the console first ([makeDirs]).
+ */
+class SyncPlan(val copy: List<PhoneFile>, val fresh: Int, val same: Int, val makeDirs: List<String>) {
+    val changed: Int get() = copy.size - fresh
+    val bytes: Long get() = copy.sumOf { it.size.coerceAtLeast(0L) }
+}
+
+/**
+ * Compares a phone folder with the console's copy of it: a file is sent when the console has none by that path, or one
+ * of another size (a size the phone does not know counts as different). With [everything], every file is sent.
+ * Folders the console lacks are listed parents first.
+ */
+fun planSync(phone: PhoneTree, remoteFiles: Map<String, Long>, remoteFolders: Set<String>, everything: Boolean = false): SyncPlan {
+    val copy = ArrayList<PhoneFile>()
+    var fresh = 0
+    var same = 0
+    for (f in phone.files) {
+        val there = remoteFiles[f.rel]
+        when {
+            there == null -> { copy.add(f); fresh++ }
+            everything || f.size < 0L || there != f.size -> copy.add(f)
+            else -> same++
+        }
+    }
+    // Every folder a sent file lies in, and the empty ones too
+    val need = LinkedHashSet<String>()
+    fun addWithParents(dir: String) {
+        val parts = dir.split('/').filter { it.isNotEmpty() }
+        for (i in 1..parts.size) need.add(parts.take(i).joinToString("/"))
+    }
+    for (d in phone.folders) addWithParents(d)
+    for (f in copy) if ('/' in f.rel) addWithParents(f.rel.substringBeforeLast('/'))
+    val makeDirs = need.filter { it !in remoteFolders }.sortedBy { it.count { c -> c == '/' } }
+    return SyncPlan(copy, fresh, same, makeDirs)
+}
+
+/** The folder a file of a sync goes to on the console: [base] plus the folders it lies in on the phone. */
+fun syncTargetDir(base: String, rel: String): String =
+    if ('/' in rel) joinPath(base.trimEnd('/').ifEmpty { "/" }, rel.substringBeforeLast('/')) else base.trimEnd('/').ifEmpty { "/" }
+
+/** The name of a phone file inside a sync ("b.bin" for "a/b.bin"). */
+fun syncFileName(rel: String): String = rel.substringAfterLast('/')

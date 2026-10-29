@@ -478,7 +478,7 @@ fun SenderApp(
                                         onDeleteChain = { c -> saveChains(chains.filter { it.id != c.id }, listOf(c.id)) },
                                         onPinChain = { c -> if (!ChainShortcuts.pin(ctx, c)) statusLine = AppText.get(R.string.chain_pin_unsupported) }
                                     )
-                                    else -> UploadTab(host, active, updateActive, ftpPass, setFtpPass, startTransfer)
+                                    else -> UploadTab(host, active, updateActive, ftpPass, setFtpPass, startTransfer, ftpSettings, startTransfers)
                                 }
                             }
                         }
@@ -776,6 +776,12 @@ fun InstallTab(
     var recent by remember { mutableStateOf(RecentLinkStore.load(ctx)) }
     val found = linksIn(links)
     val leftOut = skippedWords(links).size
+    // Looking inside packages: the links in the box, or a file on the phone
+    var checkLinks by remember { mutableStateOf<List<String>?>(null) }
+    var checkFile by remember { mutableStateOf<Uri?>(null) }
+    val pkgPicker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { u -> if (u != null) checkFile = u }
+    checkLinks?.let { l -> PkgInfoDialog(l.take(20), null) { checkLinks = null } }
+    checkFile?.let { f -> PkgInfoDialog(emptyList(), f) { checkFile = null } }
 
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         TipTitle(str(R.string.tip_install_links_title), Tip.INSTALL_LINKS)
@@ -790,6 +796,7 @@ fun InstallTab(
                 }
             }) { Text(str(R.string.install_paste)) }
             TextButton(enabled = links.isNotEmpty(), onClick = { changeLinks { "" } }) { Text(str(R.string.action_clear)) }
+            TextButton(enabled = found.isNotEmpty(), onClick = { checkLinks = found }) { Text(str(R.string.meta_check)) }
         }
         if (leftOut > 0) {
             Text(str(R.string.install_links_skipped, leftOut), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.error)
@@ -851,6 +858,7 @@ fun InstallTab(
         HelpLink(status)
         TipTitle(str(R.string.tip_install_phone_title), Tip.INSTALL_PHONE)
         ServeSection(consoleName, host, port, onBeforeServe)
+        TextButton(onClick = { pkgPicker.launch(arrayOf("*/*")) }) { Text(str(R.string.meta_check_phone)) }
         // Set once and then left alone: folded away
         Foldable(str(R.string.settings_section), Tip.INSTALL_PORT, summary = str(R.string.settings_port_summary, port)) {
             Field(str(R.string.install_port_label, type.installerName), port, onPortChange) // etaHEN's installer, or the RPI app on a PS4
@@ -865,7 +873,9 @@ fun UploadTab(
     update: ((Profile) -> Profile) -> Unit,
     pass: String,
     onPassChange: (String) -> Unit,
-    onStart: (TransferRequest) -> Unit
+    onStart: (TransferRequest) -> Unit,
+    settings: FtpSettings? = null,
+    onStartMany: (List<TransferRequest>) -> Unit = { it.forEach(onStart) }
 ) {
     val ctx = LocalContext.current
     var uris by remember { mutableStateOf<List<Uri>>(emptyList()) }
@@ -909,6 +919,7 @@ fun UploadTab(
             }
         ) { Text(str(R.string.upload_start)) }
         Text(str(R.string.upload_help), style = MaterialTheme.typography.bodySmall)
+        FolderSyncSection(settings, profile, onStartMany)
         Foldable(str(R.string.files_ftp_settings), Tip.FTP, summary = str(R.string.settings_ftp_summary, profile.ftpPort, profile.ftpDir)) {
             FtpSettingsFields(profile, update, pass, onPassChange)
         }
