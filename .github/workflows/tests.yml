@@ -43,7 +43,14 @@ jobs:
         run: yes | sdkmanager --licenses > /dev/null || true
 
       - name: Build the debug APK
-        run: gradle assembleDebug --no-daemon
+        # A failed build puts the compiler's errors on the run page, so they can be read without opening the log
+        run: |
+          set -o pipefail
+          if ! gradle assembleDebug --no-daemon 2>&1 | tee build.log; then
+            msg="$(grep -E '^e: |error:|What went wrong' -A3 build.log | head -40 | sed 's/%/%25/g' | sed ':a;N;$!ba;s/\n/%0A/g')"
+            echo "::error title=Build failed::${msg:-see the log}"
+            exit 1
+          fi
 
       # To test updating: the two newest releases, installed one over the other like you do on your phone
       - name: Get the two newest releases

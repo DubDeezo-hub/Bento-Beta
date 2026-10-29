@@ -62,7 +62,7 @@ fun sortProcesses(list: List<DbgProcess>, gamePid: Int): List<DbgProcess> =
 
 /** A match the user tapped, or a cheat being added or edited. */
 private sealed class MemoryDialog {
-    class Hit(val hit: ScanHit, val type: ValueType) : MemoryDialog()
+    class Hit(val hit: MemoryHit, val type: ValueType) : MemoryDialog()
     class EditCheat(val cheat: Cheat) : MemoryDialog()
     class NewCheat(val address: Long?, val type: ValueType, val value: String) : MemoryDialog()
 }

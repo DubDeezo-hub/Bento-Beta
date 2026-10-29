@@ -130,7 +130,7 @@ class ScanSegment(val base: Long, val length: Int) {
 }
 
 /** One match to show in the list. [previous] is its value at the scan before, when there was one. */
-class ScanHit(val address: Long, val value: ByteArray, val previous: ByteArray?)
+class MemoryHit(val address: Long, val value: ByteArray, val previous: ByteArray?)
 
 /** The scan was stopped because it found more than [limit] matches. */
 class TooManyResults(val limit: Int) : Exception("more than $limit matches")
@@ -140,8 +140,8 @@ class ScanResults(val pid: Int, val type: ValueType, val segments: List<ScanSegm
     val total: Long = segments.sumOf { it.count.toLong() }
 
     /** The first [limit] matches, with their value at the scan before when [before] is given. */
-    fun hits(limit: Int, before: ScanResults? = null): List<ScanHit> {
-        val out = ArrayList<ScanHit>()
+    fun hits(limit: Int, before: ScanResults? = null): List<MemoryHit> {
+        val out = ArrayList<MemoryHit>()
         for (seg in segments) {
             val old = before?.segments?.firstOrNull { it.base == seg.base }
             for (i in 0 until seg.count) {
@@ -149,7 +149,7 @@ class ScanResults(val pid: Int, val type: ValueType, val segments: List<ScanSegm
                 val v = seg.values.copyOfRange(i * type.size, (i + 1) * type.size)
                 val j = old?.indexOf(seg.offsets[i]) ?: -1
                 val p = if (old != null && j >= 0) old.values.copyOfRange(j * type.size, (j + 1) * type.size) else null
-                out.add(ScanHit(seg.base + seg.offsets[i], v, p))
+                out.add(MemoryHit(seg.base + seg.offsets[i], v, p))
             }
         }
         return out
@@ -239,10 +239,10 @@ object Scanner {
     }
 
     /** Current values of [hits], read in one request (needs an unlocked connection). */
-    fun refresh(dbg: Ps5Debug, pid: Int, type: ValueType, hits: List<ScanHit>): List<ScanHit> {
+    fun refresh(dbg: Ps5Debug, pid: Int, type: ValueType, hits: List<MemoryHit>): List<MemoryHit> {
         if (hits.isEmpty()) return hits
         val addrs = LongArray(hits.size) { hits[it].address }
         val raw = dbg.readMany(pid, addrs, hits.size, type.size)
-        return hits.mapIndexed { i, h -> ScanHit(h.address, raw.copyOfRange(i * type.size, (i + 1) * type.size), h.value) }
+        return hits.mapIndexed { i, h -> MemoryHit(h.address, raw.copyOfRange(i * type.size, (i + 1) * type.size), h.value) }
     }
 }

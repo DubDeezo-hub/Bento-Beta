@@ -29,7 +29,14 @@ jobs:
         run: yes | sdkmanager --licenses > /dev/null || true
 
       - name: Build debug APK
-        run: gradle assembleDebug --no-daemon
+        # A failed build puts the compiler's errors on the run page, so they can be read without opening the log
+        run: |
+          set -o pipefail
+          if ! gradle assembleDebug --no-daemon 2>&1 | tee build.log; then
+            msg="$(grep -E '^e: |error:|What went wrong' -A3 build.log | head -40 | sed 's/%/%25/g' | sed ':a;N;$!ba;s/\n/%0A/g')"
+            echo "::error title=Build failed::${msg:-see the log}"
+            exit 1
+          fi
 
       - name: Name the APK after its build number
         run: cp app/build/outputs/apk/debug/app-debug.apk "Bento-1.${{ github.run_number }}.apk"

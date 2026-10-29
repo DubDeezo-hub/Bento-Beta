@@ -128,7 +128,7 @@ object MemorySession {
     var value2 by mutableStateOf("")
     var results by mutableStateOf<ScanResults?>(null)
         private set
-    var hits by mutableStateOf<List<ScanHit>>(emptyList())
+    var hits by mutableStateOf<List<MemoryHit>>(emptyList())
         private set
     var progressDone by mutableStateOf(0L)
         private set
@@ -351,7 +351,7 @@ object MemorySession {
                     }
                 }
                 // Keep the previous value of the scan, so "was" stays what it was at the last scan
-                if (results === r && hits === shown) hits = fresh.mapIndexed { i, f -> ScanHit(f.address, f.value, shown[i].previous) }
+                if (results === r && hits === shown) hits = fresh.mapIndexed { i, f -> MemoryHit(f.address, f.value, shown[i].previous) }
             } catch (e: CancellationException) {
                 throw e
             } catch (_: Exception) {
