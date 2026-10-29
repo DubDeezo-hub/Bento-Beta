@@ -618,8 +618,8 @@
     <string name="tip_payload_port">जिथे कन्सोल payloads ची वाट पाहतो: PS5 वर etaHEN साठी 9021, PS4 वर GoldHEN साठी 9090.</string>
     <string name="tip_payload_shelf_title">Payload लायब्ररी</string>
     <string name="tip_payload_shelf">तुम्ही वारंवार वापरता ते payloads Bento मध्ये ठेवले जातात: फाइल एकदा जोडा, मग एका टॅपने पाठवा. «काढा» ते फक्त लायब्ररीतून काढते, फोनवरून नाही.</string>
-    <string name="tip_payload_chains_title">साखळ्या</string>
-    <string name="tip_payload_chains">साखळी अनेक payloads एकामागून एक, मध्ये विराम देऊन पाठवते (जसे जेलब्रेक payload, मग etaHEN, मग एखादे साधन). साखळी होम स्क्रीनवर पिन करा म्हणजे तिथूनच चालेल.</string>
+    <string name="tip_payload_chains_title">चेन</string>
+    <string name="tip_payload_chains">चेन अनेक payloads एकामागून एक, मध्ये विराम देऊन पाठवते (जसे जेलब्रेक payload, मग etaHEN, मग एखादे साधन). चेन होम स्क्रीनवर पिन करा म्हणजे तिथूनच चालेल.</string>
     <string name="tip_ftp_title">FTP सेटिंग्ज</string>
     <string name="tip_ftp">Bento कन्सोलच्या FTP सर्व्हरने फाइल्स हलवतो. etaHEN पोर्ट 1337 (किंवा ftpsrv साठी 2121) आणि GoldHEN 2121 वापरतो. वापरकर्ता सहसा anonymous असतो, पासवर्डशिवाय. फोल्डर म्हणजे जिथे अपलोड जातात.</string>
     <string name="tip_upload_title">कन्सोलला फाइल्स पाठवा</string>
@@ -818,5 +818,5 @@
     <string name="tip_store_title">payloads मिळवा</string>
     <string name="tip_store">ओळखीच्या payloads ची छोटी यादी. Bento प्रत्येकाच्या GitHub Releases पानाला नवीनतम आवृत्ती विचारतो आणि तिची फाइल तुमच्या लायब्ररीत ठेवतो, गरज असल्यास zip मधून काढून. Payload टॅब उघडल्यावर Bento अशा प्रकारे मिळवलेले payloads तपासतो आणि नवी आवृत्ती असल्यास सांगतो. हे इतरांनी बनवले आहेत: पाठवण्यापूर्वी payload तुमच्या कन्सोलच्या फर्मवेअरशी जुळतो का ते तपासा.</string>
     <string name="side_activity">क्रियाकलाप</string>
-    <string name="side_activity_hint">हस्तांतरणे, payload साखळ्या आणि संदेश इथे दिसतात.</string>
+    <string name="side_activity_hint">हस्तांतरणे, payload चेन आणि संदेश इथे दिसतात.</string>
 </resources>
