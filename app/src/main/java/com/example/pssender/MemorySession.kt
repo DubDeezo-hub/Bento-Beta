@@ -163,6 +163,10 @@ object MemorySession {
 
     private var host = ""
 
+    /** A live refresh is on its way; the next one waits for it rather than piling up. */
+    @Volatile
+    private var refreshing = false
+
     /** Call once from the screen, so the session can save settings and cheats. */
     fun attach(ctx: Context) {
         if (app == null) {
@@ -171,10 +175,21 @@ object MemorySession {
         }
     }
 
+    /** The console's address from the console card. Another console means starting over: nothing here applies to it. */
     fun setHost(h: String) {
         if (h.trim() != host) {
+            val first = host.isEmpty() && snapshot == null
             host = h.trim()
             stopFreezing()
+            if (!first) {
+                cancel()
+                snapshot = null
+                newSearch()
+                openProc = null
+                hexAt = -1L
+                cheats = emptyList()
+                status = ""
+            }
         }
     }
 
@@ -341,7 +356,8 @@ object MemorySession {
         val shown = hits
         val h = host
         val p = portOrNull() ?: return
-        if (scanning || shown.isEmpty() || h.isEmpty()) return
+        if (scanning || refreshing || shown.isEmpty() || h.isEmpty()) return
+        refreshing = true
         scope.launch {
             try {
                 val fresh = withContext(Dispatchers.IO) {
@@ -355,6 +371,8 @@ object MemorySession {
             } catch (e: CancellationException) {
                 throw e
             } catch (_: Exception) {
+            } finally {
+                refreshing = false
             }
         }
     }
