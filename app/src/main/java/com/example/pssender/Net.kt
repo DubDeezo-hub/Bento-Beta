@@ -816,3 +816,20 @@ fun keepTreeAccess(cr: ContentResolver, tree: Uri) {
     } catch (_: Exception) {
     }
 }
+
+/** Saves [text] as Downloads/<root>/<folder>/<name> on the phone. Gives where it went, or null when it couldn't. */
+fun saveTextToDownloads(cr: ContentResolver, root: String, folder: String, name: String, text: String): String? =
+    try {
+        val values = ContentValues().apply {
+            put(MediaStore.MediaColumns.DISPLAY_NAME, name)
+            put(MediaStore.MediaColumns.MIME_TYPE, if (name.endsWith(".json")) "application/json" else "text/plain")
+            put(MediaStore.MediaColumns.RELATIVE_PATH, downloadFolder(folder, root))
+        }
+        val uri = cr.insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, values)
+        if (uri == null) null else {
+            cr.openOutputStream(uri)?.use { it.write(text.toByteArray(Charsets.UTF_8)) } ?: throw IOException("no output")
+            "Download/" + root + "/" + folder + "/" + name
+        }
+    } catch (_: Exception) {
+        null
+    }

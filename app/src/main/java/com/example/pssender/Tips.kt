@@ -67,6 +67,8 @@ enum class Tip(val title: Int, val body: Int) {
     MEM_FIND_AGAIN(R.string.tip_mem_find_again_title, R.string.tip_mem_find_again),
     MEM_BROWSE(R.string.tip_mem_browse_title, R.string.tip_mem_browse),
     MEM_LOG(R.string.tip_mem_log_title, R.string.tip_mem_log),
+    MEM_POINTERS(R.string.tip_mem_pointers_title, R.string.tip_mem_pointers),
+    MEM_EXPORT(R.string.tip_mem_export_title, R.string.tip_mem_export),
     APPS(R.string.tip_apps_title, R.string.tip_apps),
     SAVES(R.string.tip_saves_title, R.string.tip_saves),
     MEDIA(R.string.tip_media_title, R.string.tip_media),

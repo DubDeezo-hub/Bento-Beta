@@ -7,6 +7,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
@@ -119,6 +120,7 @@ private sealed class MemoryDialog {
     class HexLine(val address: Long, val bytes: ByteArray) : MemoryDialog()
     class WatchMenu(val watch: Watch) : MemoryDialog()
     object Import : MemoryDialog()
+    class CheatFileOut(val name: String, val text: String, val inside: Int, val outside: Int) : MemoryDialog()
     object Source : MemoryDialog()
 }
 
@@ -192,6 +194,7 @@ fun MemoryTab(host: String, modifier: Modifier = Modifier) {
         is MemoryDialog.HexLine -> HexLineDialog(d, close)
         is MemoryDialog.WatchMenu -> WatchDialog(d.watch, onClose = close, onOpen = { dialog = it })
         MemoryDialog.Import -> ImportDialog(ctx, close)
+        is MemoryDialog.CheatFileOut -> CheatFileOutDialog(d, close)
         MemoryDialog.Source -> SourceDialog(close)
         null -> {}
     }
@@ -412,6 +415,12 @@ private fun LazyListScope.cheatItems(s: MemorySnapshot, ctx: Context, open: (Mem
         }
     }
 
+    // --- pointer paths found for one cheat ---
+    val target = m.pointerFor
+    if (target != null) {
+        item { PointerPanel(target, playing) }
+    }
+
     // --- your own cheats ---
     item {
         Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -421,10 +430,13 @@ private fun LazyListScope.cheatItems(s: MemorySnapshot, ctx: Context, open: (Mem
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 OutlinedButton(enabled = playing, onClick = { open(MemoryDialog.NewCheat(null, m.type, "")) }) { Text(str(R.string.memory_cheat_add)) }
-                OutlinedButton(enabled = playing && !m.busy && m.cheats.any { it.signature != null }, onClick = { m.findAgain() }) {
+                OutlinedButton(enabled = playing && !m.busy && m.cheats.any { it.findable }, onClick = { m.findAgain() }) {
                     Text(str(R.string.memory_find_again_all))
                 }
                 OutlinedButton(enabled = m.cheats.isNotEmpty(), onClick = { shareText(ctx, m.exportText()) }) { Text(str(R.string.memory_export)) }
+                OutlinedButton(enabled = playing && !m.busy && m.cheats.isNotEmpty(), onClick = {
+                    m.exportCheatFile { name, text, inside, outside -> open(MemoryDialog.CheatFileOut(name, text, inside, outside)) }
+                }) { Text(str(R.string.export_cheat_file)) }
                 OutlinedButton(onClick = { open(MemoryDialog.Import) }) { Text(str(R.string.memory_import)) }
                 TipButton(Tip.MEM_FIND_AGAIN, modifier = Modifier.align(Alignment.CenterVertically))
             }
@@ -457,7 +469,7 @@ private fun CheatRow(c: Cheat, playing: Boolean, onOpen: () -> Unit) {
         Column(modifier = Modifier.weight(1f)) {
             Text(c.name, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Medium, maxLines = 1, overflow = TextOverflow.Ellipsis)
             Text(
-                hexAddr(c.address) + " · " + str(c.type.res) + " · " + c.value.ifBlank { "—" },
+                (if (c.pointer != null) "🔗 " else "") + hexAddr(c.address) + " · " + str(c.type.res) + " · " + c.value.ifBlank { "—" },
                 style = MaterialTheme.typography.bodySmall,
                 fontFamily = FontFamily.Monospace,
                 color = cs.onSurfaceVariant,
@@ -473,6 +485,94 @@ private fun CheatRow(c: Cheat, playing: Boolean, onOpen: () -> Unit) {
             }
         }
     }
+}
+
+/** The pointer paths found for [target]: use one, or narrow them down after the game restarted. */
+@Composable
+private fun PointerPanel(target: Cheat, playing: Boolean) {
+    val m = MemorySession
+    var addressNow by remember(target.id) { mutableStateOf(hexAddr(target.address)) }
+    var picked by remember { mutableStateOf<PointerPath?>(null) }
+    val paths = m.pointerPaths
+    Panel {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            TipTitle(str(R.string.ptr_title, target.name), Tip.MEM_POINTERS, modifier = Modifier.weight(1f))
+            TextButton(onClick = { m.forgetPointers() }) { Text(str(R.string.action_close)) }
+        }
+        if (m.scanning && paths.isEmpty()) {
+            Text(str(R.string.ptr_searching), style = MaterialTheme.typography.bodySmall)
+        } else {
+            Text(str(R.string.ptr_count, paths.size), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        }
+        if (paths.size > 1) {
+            Text(str(R.string.ptr_narrow_help), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Box(modifier = Modifier.weight(1f)) { Field(str(R.string.ptr_address_now), addressNow) { addressNow = it } }
+                val a = parseAddress(addressNow)
+                Button(enabled = playing && !m.busy && a != null, onClick = { if (a != null) m.checkPointers(a) }) { Text(str(R.string.ptr_keep)) }
+            }
+        }
+        paths.take(40).forEach { p ->
+            ListRow(
+                title = p.text(),
+                detail = str(R.string.ptr_depth, p.depth),
+                highlight = target.ptr == p.encode(),
+                enabled = !m.busy,
+                mono = true
+            ) { picked = p }
+        }
+        if (paths.size > 40) Text(str(R.string.ptr_more, paths.size - 40), style = MaterialTheme.typography.bodySmall)
+    }
+    picked?.let { p ->
+        AlertDialog(
+            onDismissRequest = { picked = null },
+            title = { Text(str(R.string.ptr_use_title)) },
+            text = {
+                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text(p.text(), fontFamily = FontFamily.Monospace)
+                    Text(str(R.string.ptr_use_text, target.name), style = MaterialTheme.typography.bodySmall)
+                }
+            },
+            confirmButton = {
+                TextButton(onClick = {
+                    m.usePointer(p)
+                    picked = null
+                }) { Text(str(R.string.ptr_use)) }
+            },
+            dismissButton = { TextButton(onClick = { picked = null }) { Text(str(R.string.action_cancel)) } }
+        )
+    }
+}
+
+/** A cheat file made from the cheats: share it, save it to Downloads or copy it. */
+@Composable
+private fun CheatFileOutDialog(d: MemoryDialog.CheatFileOut, onClose: () -> Unit) {
+    val ctx = LocalContext.current
+    var saved by remember { mutableStateOf("") }
+    AlertDialog(
+        onDismissRequest = onClose,
+        title = { TipTitle(str(R.string.export_title), Tip.MEM_EXPORT) },
+        text = {
+            Column(modifier = Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                Text(d.name, fontFamily = FontFamily.Monospace, style = MaterialTheme.typography.bodyMedium)
+                Text(str(R.string.export_made, d.inside, d.outside), style = MaterialTheme.typography.bodySmall)
+                if (d.outside > 0) Text(str(R.string.export_outside_help), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                if (d.inside > 0) {
+                    Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                        TextButton(onClick = { shareText(ctx, d.text) }) { Text(str(R.string.memory_export)) }
+                        TextButton(onClick = {
+                            val root = if (MemorySession.snapshot?.info?.isPs4 == true) "PS4" else "PS5"
+                            saved = saveTextToDownloads(ctx.contentResolver, root, "Cheats", d.name, d.text)?.let { AppText.get(R.string.export_saved, it) }
+                                ?: AppText.get(R.string.export_save_failed)
+                        }) { Text(str(R.string.export_save)) }
+                        TextButton(onClick = { copyText(ctx, "cheat file", d.text, AppText.get(R.string.help_copied)) }) { Text(str(R.string.klog_copy)) }
+                    }
+                }
+                if (saved.isNotEmpty()) Text(saved, style = MaterialTheme.typography.bodySmall)
+            }
+        },
+        confirmButton = { TextButton(onClick = onClose) { Text(str(R.string.action_close)) } }
+    )
 }
 
 /** Opens the phone's share sheet with [text]. */
@@ -755,6 +855,10 @@ private fun CheatDialog(cheat: Cheat?, new: MemoryDialog.NewCheat?, onClose: () 
                                 onClose()
                             }) { Text(str(R.string.memory_make_findable)) }
                         }
+                        TextButton(enabled = !m.busy, onClick = {
+                            m.findPointers(cheat)
+                            onClose()
+                        }) { Text(str(R.string.ptr_find)) }
                         TextButton(onClick = {
                             m.watch(cheat.address, cheat.type)
                             onClose()

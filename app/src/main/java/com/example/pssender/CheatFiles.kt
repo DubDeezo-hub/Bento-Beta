@@ -107,6 +107,54 @@ object CheatFiles {
     }
 
     /** The load address of the game: the lowest region named like its process, else [fallback]. */
+    // --- writing a cheat file (Bento's own cheats, exported) ---
+
+    private fun jsonText(s: String): String {
+        val sb = StringBuilder("\"")
+        for (ch in s) {
+            when {
+                ch == '"' -> sb.append("\\\"")
+                ch == '\\' -> sb.append("\\\\")
+                ch == '\n' -> sb.append("\\n")
+                ch < ' ' -> sb.append("\\u%04x".format(ch.code))
+                else -> sb.append(ch)
+            }
+        }
+        return sb.append('"').toString()
+    }
+
+    private fun hexBytes(b: ByteArray): String = b.joinToString("") { "%02X".format(it.toInt() and 0xFF) }
+
+    /** One switchable mod writing [on] at [offset] from the eboot's start (and [off] back when switched off). */
+    fun modJson(name: String, offset: Long, on: ByteArray, off: ByteArray): String =
+        "    {\n" +
+            "      \"name\": ${jsonText(name)},\n" +
+            "      \"hint\": null,\n" +
+            "      \"type\": \"checkbox\",\n" +
+            "      \"memory\": [\n" +
+            "        {\n" +
+            "          \"offset\": \"${java.lang.Long.toHexString(offset)}\",\n" +
+            "          \"on\": \"${hexBytes(on)}\",\n" +
+            "          \"off\": \"${hexBytes(off)}\"\n" +
+            "        }\n" +
+            "      ]\n" +
+            "    }"
+
+    /** A whole cheat file in the PS5_Cheats layout, with the [mods] made by [modJson]. */
+    fun fileJson(game: String, titleId: String, version: String, process: String, mods: List<String>): String =
+        "{\n" +
+            "  \"name\": ${jsonText(game.ifBlank { titleId })},\n" +
+            "  \"id\": ${jsonText(titleId)},\n" +
+            "  \"version\": ${jsonText(version.trim())},\n" +
+            "  \"process\": ${jsonText(process)},\n" +
+            "  \"mods\": [\n" + mods.joinToString(",\n") + "\n  ],\n" +
+            "  \"credits\": [\n    \"Made with Bento\"\n  ]\n" +
+            "}\n"
+
+    /** "PPSA01234_01.000.json": the name the cheat folders use. */
+    fun fileName(titleId: String, version: String): String =
+        titleId.ifBlank { "UNKNOWN" } + "_" + version.trim().ifBlank { "00.00" } + ".json"
+
     fun baseOf(maps: List<DbgMap>, process: String, fallback: Long): Long =
         maps.filter { it.name.contains(process.substringBefore('.'), ignoreCase = true) }.minOfOrNull { it.start } ?: fallback
 }

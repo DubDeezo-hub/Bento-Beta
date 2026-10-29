@@ -45,9 +45,15 @@ data class Cheat(
     /** The bytes around the address, to find it again after a restart (hex), the bytes that count ("1"/"0"), where the value is. */
     val sigHex: String = "",
     val sigMask: String = "",
-    val sigAt: Int = 0
+    val sigAt: Int = 0,
+    /** A pointer path from the eboot to the value (see [PointerPath.encode]); "" when there is none. */
+    val ptr: String = ""
 ) {
     val signature: Signature? get() = if (sigHex.isEmpty()) null else Signature.parse(sigHex, sigMask, sigAt)
+    val pointer: PointerPath? get() = PointerPath.decode(ptr)
+
+    /** Whether "Find again" can find it after a restart (by its bytes or by its pointer path). */
+    val findable: Boolean get() = signature != null || pointer != null
 }
 
 /** An address shown at the top of Scan with its live value. */
@@ -71,7 +77,7 @@ fun cheatsToJson(list: List<Cheat>): String {
         arr.put(
             JSONObject().put("id", c.id).put("name", c.name).put("address", java.lang.Long.toHexString(c.address))
                 .put("type", c.type.name).put("value", c.value).put("group", c.group)
-                .put("sig", c.sigHex).put("sigMask", c.sigMask).put("sigAt", c.sigAt)
+                .put("sig", c.sigHex).put("sigMask", c.sigMask).put("sigAt", c.sigAt).put("ptr", c.ptr)
         )
     }
     return arr.toString()
@@ -98,7 +104,8 @@ fun parseCheats(json: String?): List<Cheat> {
             group = o["group"]?.toString().orEmpty(),
             sigHex = o["sig"]?.toString().orEmpty(),
             sigMask = o["sigMask"]?.toString().orEmpty(),
-            sigAt = (o["sigAt"] as? Number)?.toInt() ?: o["sigAt"]?.toString()?.toIntOrNull() ?: 0
+            sigAt = (o["sigAt"] as? Number)?.toInt() ?: o["sigAt"]?.toString()?.toIntOrNull() ?: 0,
+            ptr = o["ptr"]?.toString().orEmpty()
         )
     }
 }
@@ -395,6 +402,7 @@ object MemorySession {
     /** Everything that belongs to one run of one game. */
     private fun forgetGame() {
         stopFreezing()
+        forgetPointers()
         newSearch()
         openProc = null
         hexAt = -1L
@@ -452,6 +460,7 @@ object MemorySession {
                 forgetGame()
                 cheats = app?.let { CheatStore.load(it, s.game.titleId) } ?: emptyList()
             }
+            followPointersQuietly()
         }
     }
 
@@ -722,17 +731,26 @@ object MemorySession {
     fun findAgain(only: Cheat? = null) {
         val pid = gamePid
         val info = snapshot?.info
-        val todo = (if (only != null) listOf(only) else cheats).filter { it.signature != null }
+        val todo = (if (only != null) listOf(only) else cheats).filter { it.findable }
         if (pid == 0 || todo.isEmpty()) {
             status = AppText.get(R.string.memory_find_none)
             return
         }
         scanning = true
         perform(scan = true, work = { d ->
-            val regions = Scanner.segments(regionsToSearch(d, pid, info))
-            val all = regions.sumOf { it.length.toLong() } * todo.size
+            // Cheats with a pointer path: follow it (quick); the others: look for their bytes
+            val byPointer = todo.filter { it.pointer != null }
+            val followed = if (byPointer.isEmpty()) emptyMap() else {
+                val image = PointerScan.imageOf(d.maps(pid))
+                val at = if (image == null) LongArray(byPointer.size) else
+                    PointerScan.resolve(memoryFor(d, pid, info, image), image.base, byPointer.map { it.pointer!! })
+                byPointer.indices.associate { i -> byPointer[i].id to at[i].takeIf { it != 0L } }
+            }
+            val bySig = todo.filter { it.pointer == null }
+            val regions = if (bySig.isEmpty()) emptyList() else Scanner.segments(regionsToSearch(d, pid, info))
+            val all = regions.sumOf { it.length.toLong() } * bySig.size
             var done = 0L
-            todo.associate { c ->
+            followed + bySig.associate { c ->
                 val sig = c.signature!!
                 val found = ArrayList<Long>()
                 for (seg in regions) {
@@ -785,6 +803,150 @@ object MemorySession {
             .map { it.copy(id = UUID.randomUUID().toString(), frozen = false) }
         saveCheats(cheats + fresh)
         status = AppText.get(R.string.memory_imported, fresh.size, found.size - fresh.size)
+    }
+
+    // --- pointers ---
+
+    /** The cheat the pointer paths below were found for. */
+    var pointerFor by mutableStateOf<Cheat?>(null)
+        private set
+    var pointerPaths by mutableStateOf<List<PointerPath>>(emptyList())
+        private set
+
+    /** The debugger as the pointer search sees it. */
+    private fun memoryFor(d: Ps5Debug, pid: Int, info: DbgInfo?, image: PointerScan.Image): PointerScan.Memory {
+        val all by lazy { regionsToSearch(d, pid, info) }
+        return object : PointerScan.Memory {
+            override fun pointersBetween(low: Long, high: Long, staticOnly: Boolean): List<PointerHit> {
+                val regions = if (staticOnly) all.filter { it.start < image.end && it.end > image.base } else all
+                if (regions.isEmpty()) return emptyList()
+                val data = java.nio.ByteBuffer.allocate(16).order(java.nio.ByteOrder.LITTLE_ENDIAN).putLong(low).putLong(high).array()
+                val r = try {
+                    Scanner.first(d, pid, regions, ValueType.LONG, ScanCompare.BETWEEN, data) { cancelRequested }
+                } catch (_: TooManyResults) {
+                    return emptyList() // far too many: this window is no use
+                }
+                return r.hits(PointerScan.MAX_LEVEL * 4).map {
+                    PointerHit(it.address, java.nio.ByteBuffer.wrap(it.value).order(java.nio.ByteOrder.LITTLE_ENDIAN).long)
+                }
+            }
+
+            override fun read64(addresses: LongArray): LongArray = readLongs(d, pid, addresses)
+            override fun progress(step: Int, steps: Int) = MemorySession.progress(step.toLong(), steps.toLong())
+            override fun cancelled(): Boolean = cancelRequested
+        }
+    }
+
+    /** The 8-byte values at [addresses], many per request. */
+    private fun readLongs(d: Ps5Debug, pid: Int, addresses: LongArray): LongArray {
+        val out = LongArray(addresses.size)
+        var i = 0
+        while (i < addresses.size) {
+            val n = minOf(4096, addresses.size - i)
+            val chunk = addresses.copyOfRange(i, i + n)
+            val raw = d.readMany(pid, chunk, n, 8)
+            val b = java.nio.ByteBuffer.wrap(raw).order(java.nio.ByteOrder.LITTLE_ENDIAN)
+            for (k in 0 until n) out[i + k] = if (raw.size >= (k + 1) * 8) b.getLong(k * 8) else 0L
+            i += n
+        }
+        return out
+    }
+
+    /** Looks for pointer paths from the game's eboot to [c]'s address, up to [depth] pointers long. */
+    fun findPointers(c: Cheat, depth: Int = 3) {
+        val pid = gamePid
+        val info = snapshot?.info
+        if (pid == 0) {
+            status = AppText.get(R.string.memory_no_game)
+            return
+        }
+        pointerFor = c
+        pointerPaths = emptyList()
+        scanning = true
+        perform(scan = true, work = { d ->
+            val image = PointerScan.imageOf(d.maps(pid)) ?: throw DebuggerException(AppText.get(R.string.ptr_no_eboot))
+            PointerScan.find(memoryFor(d, pid, info, image), c.address, image, depth)
+        }) { paths ->
+            pointerPaths = paths
+            status = if (paths.isEmpty()) AppText.get(R.string.ptr_none) else AppText.get(R.string.ptr_found, paths.size)
+        }
+        if (!busy) scanning = false
+    }
+
+    /** Keeps only the paths that lead to [address] now (after the game restarted and the value was found again). */
+    fun checkPointers(address: Long) {
+        val pid = gamePid
+        val info = snapshot?.info
+        val paths = pointerPaths
+        if (pid == 0 || paths.isEmpty()) return
+        perform(scan = true, work = { d ->
+            val image = PointerScan.imageOf(d.maps(pid)) ?: throw DebuggerException(AppText.get(R.string.ptr_no_eboot))
+            val at = PointerScan.resolve(memoryFor(d, pid, info, image), image.base, paths)
+            paths.filterIndexed { i, _ -> at[i] == address }
+        }) { kept ->
+            status = AppText.get(R.string.ptr_checked, kept.size, paths.size)
+            pointerPaths = kept
+        }
+    }
+
+    /** Gives the cheat the paths were found for this [path], so Find again follows it after a restart. */
+    fun usePointer(path: PointerPath) {
+        val target = pointerFor ?: return
+        val now = cheats.firstOrNull { it.id == target.id } ?: return
+        updateCheat(now.copy(ptr = path.encode()))
+        status = AppText.get(R.string.ptr_used, now.name, path.text())
+    }
+
+    fun forgetPointers() {
+        pointerFor = null
+        pointerPaths = emptyList()
+    }
+
+    /** Moves cheats with a pointer path to where their path leads now (quietly, after connecting). */
+    private fun followPointersQuietly() {
+        val pid = gamePid
+        val info = snapshot?.info
+        val withPath = cheats.filter { it.pointer != null }
+        if (pid == 0 || withPath.isEmpty()) return
+        scope.launch {
+            val moved = quietly(unlock = true) { d ->
+                val image = PointerScan.imageOf(d.maps(pid)) ?: return@quietly null
+                val at = PointerScan.resolve(memoryFor(d, pid, info, image), image.base, withPath.map { it.pointer!! })
+                withPath.indices.associate { withPath[it].id to at[it] }.filterValues { it != 0L }
+            } ?: return@launch
+            if (moved.isNotEmpty()) saveCheats(cheats.map { c -> moved[c.id]?.let { c.copy(address = it) } ?: c })
+        }
+    }
+
+    // --- cheat file export ---
+
+    /**
+     * Turns the cheats that lie inside the game's eboot into a cheat file in the PS5_Cheats format (etaHEN's): offsets
+     * from the eboot's load address, the cheat's value as "on" and the bytes there now as "off". Hands [done] the file's
+     * name, its text, how many cheats went in and how many could not (they live outside the eboot, on the heap).
+     */
+    fun exportCheatFile(done: (name: String, text: String, inside: Int, outside: Int) -> Unit) {
+        val pid = gamePid
+        val game = snapshot?.game
+        if (pid == 0 || game == null) {
+            status = AppText.get(R.string.memory_no_game)
+            return
+        }
+        val list = cheats
+        perform(work = { d ->
+            val image = PointerScan.imageOf(d.maps(pid)) ?: throw DebuggerException(AppText.get(R.string.ptr_no_eboot))
+            val inside = list.filter { c -> c.address in image && c.type.parse(c.value) != null }
+            val mods = inside.map { c ->
+                val on = c.type.parse(c.value)!!
+                val off = d.read(pid, c.address, on.size)
+                CheatFiles.modJson(c.name, c.address - image.base, on, off)
+            }
+            Triple(CheatFiles.fileJson(game.name, game.titleId, game.version, "eboot.bin", mods), inside.size, list.size - inside.size)
+        }) { (text, inside, outside) ->
+            val name = CheatFiles.fileName(game.titleId, game.version)
+            status = AppText.get(R.string.export_made, inside, outside)
+            done(name, text, inside, outside)
+        }
     }
 
     // --- freezing ---

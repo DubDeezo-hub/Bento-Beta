@@ -409,10 +409,19 @@ class FakeGame:
         noise = random.Random(1234)  # some small numbers so not everything is zero (the same every run)
         for i in range(0, 0x10000, 4):
             heap[i:i + 4] = noise.randrange(0, 256).to_bytes(4, "little")
+        data = bytearray(0x2000)  # the game's own variables (writable, part of its eboot)
+        bss = bytearray(0x1000)  # zeroed data right after it, without a name, like on the console
         self.regions = [  # name, start, bytes, prot
-            ["executable", 0x00400000, exe, 5],
+            ["eboot.bin", 0x00400000, exe, 5],
+            ["eboot.bin", 0x00404000, data, 3],
+            ["", 0x00406000, bss, 3],
             ["heap", 0x20000000, heap, 3],
         ]
+        # A pointer path to the health, as games have: the eboot's data holds the world (0x20008000), the world
+        # holds the player at +0x10 (0x20001200), and the health is the player's +0x34.
+        #   [eboot+0x5100] +0x10 -> +0x34  ==  0x20001234
+        self.put(0x00405100, (0x20008000).to_bytes(8, "little"))
+        self.put(0x20008000 + 0x10, (0x20001200).to_bytes(8, "little"))
         self.put(self.HEALTH, (100).to_bytes(4, "little"))
         self.put(self.MAX_HEALTH, (100).to_bytes(4, "little"))
         self.put(self.GOLD, (500).to_bytes(4, "little"))
