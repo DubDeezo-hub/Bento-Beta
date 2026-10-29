@@ -68,6 +68,33 @@ object MemoryPrefs {
     fun setCheatSource(ctx: Context, v: String) = prefs(ctx).edit().putString(CHEAT_SOURCE, v).apply()
 }
 
+/** The name of a kind of value, in the app's language. */
+val ValueType.res: Int
+    get() = when (this) {
+        ValueType.BYTE -> R.string.memory_type_1
+        ValueType.SHORT -> R.string.memory_type_2
+        ValueType.INT -> R.string.memory_type_4
+        ValueType.LONG -> R.string.memory_type_8
+        ValueType.FLOAT -> R.string.memory_type_float
+        ValueType.DOUBLE -> R.string.memory_type_double
+    }
+
+/** The name of a scan type, in the app's language. */
+val ScanCompare.res: Int
+    get() = when (this) {
+        ScanCompare.EXACT -> R.string.memory_cmp_exact
+        ScanCompare.BIGGER -> R.string.memory_cmp_bigger
+        ScanCompare.SMALLER -> R.string.memory_cmp_smaller
+        ScanCompare.BETWEEN -> R.string.memory_cmp_between
+        ScanCompare.UNKNOWN -> R.string.memory_scan_unknown
+        ScanCompare.INCREASED -> R.string.memory_cmp_increased
+        ScanCompare.INCREASED_BY -> R.string.memory_cmp_increased_by
+        ScanCompare.DECREASED -> R.string.memory_cmp_decreased
+        ScanCompare.DECREASED_BY -> R.string.memory_cmp_decreased_by
+        ScanCompare.CHANGED -> R.string.memory_cmp_changed
+        ScanCompare.UNCHANGED -> R.string.memory_cmp_unchanged
+    }
+
 /** The game first, then the rest by process number. */
 fun sortProcesses(list: List<DbgProcess>, gamePid: Int): List<DbgProcess> =
     list.sortedWith(compareBy<DbgProcess>({ if (it.pid == gamePid && gamePid != 0) 0 else 1 }, { it.pid }))
@@ -239,7 +266,7 @@ private fun LazyListScope.scanItems(s: MemorySnapshot, open: (MemoryDialog) -> U
             TipTitle(str(R.string.memory_value_type), Tip.MEM_VALUE_TYPE, style = MaterialTheme.typography.labelLarge)
             ChipRow {
                 ValueType.entries.forEach { vt ->
-                    Chip(vt.label, t == vt, enabled = !searching && !m.busy) { m.type = vt }
+                    Chip(str(vt.res), t == vt, enabled = !searching && !m.busy) { m.type = vt }
                 }
             }
             TipTitle(str(R.string.memory_scan_type), Tip.MEM_SCAN_TYPE, style = MaterialTheme.typography.labelLarge)
@@ -297,9 +324,9 @@ private fun LazyListScope.scanItems(s: MemorySnapshot, open: (MemoryDialog) -> U
     }
 }
 
-/** A scan type's name; "Unknown value" says what it is for. */
+/** A scan type's name. */
 @Composable
-private fun scanLabel(c: ScanCompare): String = if (c == ScanCompare.UNKNOWN) str(R.string.memory_scan_unknown) else c.label
+private fun scanLabel(c: ScanCompare): String = str(c.res)
 
 // ---------------------------------------------------------------------------------------------
 // Cheats
@@ -412,7 +439,7 @@ private fun CheatRow(c: Cheat, playing: Boolean, onOpen: () -> Unit) {
         Column(modifier = Modifier.weight(1f)) {
             Text(c.name, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Medium, maxLines = 1, overflow = TextOverflow.Ellipsis)
             Text(
-                hexAddr(c.address) + " · " + c.type.label + " · " + c.value.ifBlank { "—" },
+                hexAddr(c.address) + " · " + str(c.type.res) + " · " + c.value.ifBlank { "—" },
                 style = MaterialTheme.typography.bodySmall,
                 fontFamily = FontFamily.Monospace,
                 color = cs.onSurfaceVariant,
@@ -596,7 +623,7 @@ private fun HitDialog(d: MemoryDialog.Hit, onClose: () -> Unit, onOpen: (MemoryD
                 modifier = Modifier.verticalScroll(rememberScrollState()),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                Text(str(R.string.memory_hit_now, d.type.label, current), style = MaterialTheme.typography.bodyMedium)
+                Text(str(R.string.memory_hit_now, str(d.type.res), current), style = MaterialTheme.typography.bodyMedium)
                 Field(str(R.string.memory_new_value), value) { value = it }
                 AllTypes(peek)
                 Row(
@@ -641,7 +668,7 @@ private fun AllTypes(bytes: ByteArray?) {
         } else {
             ValueType.entries.forEach { vt ->
                 Row {
-                    Text(vt.label, style = MaterialTheme.typography.bodySmall, modifier = Modifier.weight(1f))
+                    Text(str(vt.res), style = MaterialTheme.typography.bodySmall, modifier = Modifier.weight(1f))
                     Text(vt.format(bytes), style = MaterialTheme.typography.bodySmall, fontFamily = FontFamily.Monospace)
                 }
             }
@@ -678,11 +705,11 @@ private fun CheatDialog(cheat: Cheat?, new: MemoryDialog.NewCheat?, onClose: () 
                     Text(str(R.string.memory_bad_address), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.error)
                 }
                 ChipRow {
-                    ValueType.entries.forEach { t -> Chip(t.label, type == t) { type = t } }
+                    ValueType.entries.forEach { t -> Chip(str(t.res), type == t) { type = t } }
                 }
                 Field(str(R.string.memory_value), value) { value = it }
                 if (!valueOk) {
-                    Text(str(R.string.memory_bad_value, type.label), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.error)
+                    Text(str(R.string.memory_bad_value, str(type.res)), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.error)
                 }
                 if (cheat != null) {
                     Text(
@@ -780,7 +807,7 @@ private fun WatchDialog(w: Watch, onClose: () -> Unit, onOpen: (MemoryDialog) ->
         title = { Text(hexAddr(w.address), fontFamily = FontFamily.Monospace) },
         text = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text(str(R.string.memory_hit_now, w.type.label, now.ifBlank { "…" }), style = MaterialTheme.typography.bodyMedium)
+                Text(str(R.string.memory_hit_now, str(w.type.res), now.ifBlank { "…" }), style = MaterialTheme.typography.bodyMedium)
                 Field(str(R.string.memory_new_value), value) { value = it }
                 Row(
                     modifier = Modifier.horizontalScroll(rememberScrollState()),

@@ -449,7 +449,7 @@ object MemorySession {
     /** The value(s) typed, as bytes for the scan; sets the status and gives null when they are missing or wrong. */
     private fun scanBytes(t: ValueType): ByteArray? {
         val data = Scanner.scanData(t, compare, value1, value2)
-        if (data == null) status = AppText.get(R.string.memory_bad_value, t.label)
+        if (data == null) status = AppText.get(R.string.memory_bad_value, AppText.get(t.res))
         return data
     }
 
@@ -625,7 +625,7 @@ object MemorySession {
     fun writeValue(address: Long, t: ValueType, text: String, onDone: () -> Unit = {}) {
         val bytes = t.parse(text)
         if (bytes == null) {
-            status = AppText.get(R.string.memory_bad_value, t.label)
+            status = AppText.get(R.string.memory_bad_value, AppText.get(t.res))
             return
         }
         writeBytes(address, bytes) {
@@ -675,7 +675,7 @@ object MemorySession {
 
     fun setFrozen(c: Cheat, on: Boolean) {
         if (on && c.type.parse(c.value) == null) {
-            status = AppText.get(R.string.memory_bad_value, c.type.label)
+            status = AppText.get(R.string.memory_bad_value, AppText.get(c.type.res))
             return
         }
         updateCheat(c.copy(frozen = on))
