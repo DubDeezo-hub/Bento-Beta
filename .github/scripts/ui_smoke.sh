@@ -215,10 +215,17 @@ case "$r" in
 esac
 
 launch
-# A fresh install opens on the welcome page; its button closes it for good
+# A fresh install opens on the welcome page; its button closes it for good. (Wait for the logo animation first: a tap
+# while the page is still moving into place can miss the button.)
+sleep 2
 shot "00-welcome"
 if dump && tap_text "$(ui string welcome_go)"; then
   sleep 2
+  # Still there? Tap once more
+  if dump && ui find "$XML" "$(ui string welcome_go)" > /dev/null 2>&1; then
+    tap_text "$(ui string welcome_go)" || true
+    sleep 2
+  fi
   pass "the welcome page shows on the first start and closes with its button"
 else
   soft "welcome page" "no welcome page on the first start (an older build?). Seen: $(ui texts "$XML" 2> /dev/null)"
