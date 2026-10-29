@@ -61,6 +61,54 @@ object DbgProtocol {
     val CMD_PROC_MAPS = 0xBDAA0004.toInt()
     val CMD_NOTIFY = 0xBDDD0004.toInt()
     val CMD_FOREGROUND_APP = 0xBDDD0006.toInt()
+    val CMD_PROC_AUTH = 0xBDAACCFF.toInt()
+    val CMD_SCAN_START = 0xBDAACC01.toInt()
+    val CMD_SCAN_COUNT = 0xBDAACC02.toInt()
+    val CMD_SCAN_GET = 0xBDAACC03.toInt()
+
+    /** The magic of the scan unlock (CMD_PROC_AUTH), sent as is. */
+    val AUTH_MAGIC = 0xBB40E64D.toInt()
+
+    /** A u64 of all ones ends every streamed list. */
+    const val SENTINEL = -1L
+
+    /** The most bytes of candidates the server takes in one piece of a next scan. */
+    const val COUNT_CHUNK = 0x40000
+
+    // Which compare types the server reads a value for, per compare type 0..12 (scan_compare.c)
+    private val NEEDS_VALUE = booleanArrayOf(true, true, true, true, true, false, true, false, true, false, false, false, true)
+    private val NEEDS_EXTRA = booleanArrayOf(false, false, false, false, true, false, false, false, false, false, false, false, false)
+    private val NEEDS_PREVIOUS = booleanArrayOf(false, false, false, false, false, true, true, true, true, true, true, false, false)
+
+    /** Whether a first scan (SCAN_START) reads a value for [cmp]. It must match the server, or the stream gets out of step. */
+    fun startNeedsValue(cmp: Int): Boolean = ((1 shl cmp) and 0x114F) != 0 || cmp == 4
+
+    /** Whether a next scan (SCAN_COUNT) reads a value for [cmp]. */
+    fun countNeedsValue(cmp: Int): Boolean = NEEDS_VALUE[cmp] || NEEDS_EXTRA[cmp]
+
+    /** Whether a next scan wants each candidate's previous value after its offset. */
+    fun countNeedsPrevious(cmp: Int): Boolean = NEEDS_PREVIOUS[cmp]
+
+    /** The 256-byte keystream of the scan unlock: xorshift seeded with 200, 300, 400, 500 (auth.c). */
+    fun authKeystream(): ByteArray {
+        var s1 = 200
+        var s2 = 300
+        var s3 = 400
+        var s4 = 500
+        return ByteArray(256) {
+            s1 = ((s1 shl 18) and 0xFFF80000.toInt()) xor ((s1 xor (s1 shl 6)) ushr 13)
+            s2 = ((s2 shl 2) and 0xFFFFFFE0.toInt()) xor ((s2 xor (s2 shl 2)) ushr 27)
+            s3 = ((s3 shl 7) and 0xFFFFF800.toInt()) xor ((s3 xor (s3 shl 13)) ushr 21)
+            s4 = ((s4 shl 13) and 0xFFF00000.toInt()) xor ((s4 xor (s4 shl 3)) ushr 12)
+            (s1 xor s2 xor s3 xor s4).toByte()
+        }
+    }
+
+    /** The answer to the server's challenge: each byte XOR the keystream. */
+    fun authResponse(challenge: ByteArray): ByteArray {
+        val k = authKeystream()
+        return ByteArray(challenge.size) { (challenge[it].toInt() xor k[it and 0xFF].toInt()).toByte() }
+    }
 
     // Status words as they arrive (already bit-swapped by the server)
     val STATUS_SUCCESS = 0x80000000.toInt()
@@ -270,6 +318,121 @@ class Ps5Debug(host: String, port: Int = DEBUG_PORT, timeoutMs: Int = 8000) : Cl
         val body = DbgProtocol.le(8).putInt(222).putInt(msg.size).array()
         send(DbgProtocol.CMD_NOTIFY, body, datalen = body.size, trailing = msg)
         expectOk("notification")
+    }
+
+    /** How long a read may wait for the server. Scans of big regions send nothing for a while, so they wait longer. */
+    fun setTimeout(ms: Int) {
+        sock.soTimeout = ms
+    }
+
+    /**
+     * Unlocks the scan commands (SCAN_START, SCAN_COUNT, SCAN_GET): the server sends a 64-byte challenge and expects
+     * it back XORed with a fixed keystream. The unlock is global on the console, but doing it again is harmless.
+     */
+    fun unlockScans() {
+        val body = DbgProtocol.le(8).putInt(DbgProtocol.AUTH_MAGIC).putInt(2).array()
+        send(DbgProtocol.CMD_PROC_AUTH, body)
+        expectOk("scan unlock")
+        val len = u16()
+        if (len <= 0 || len > 4096) throw DebuggerException("scan unlock: implausible challenge length $len")
+        val challenge = bytes(len)
+        output.write(DbgProtocol.authResponse(challenge))
+        output.flush()
+        expectOk("scan unlock (answer refused)")
+    }
+
+    /**
+     * First scan of [length] bytes from [address] in process [pid]. [data] is what the compare type needs (the value,
+     * or low then high for "between"); it is only sent when the server reads it. Every match goes to [onMatch] as its
+     * offset from [address] and the buffer holding its current value at [at]. Needs [unlockScans] first.
+     */
+    fun scanStart(
+        pid: Int, address: Long, length: Int, type: ValueType, cmp: Int, data: ByteArray,
+        onMatch: (offset: Int, buf: ByteArray, at: Int) -> Unit
+    ) {
+        val sendValue = DbgProtocol.startNeedsValue(cmp)
+        val lenData = if (sendValue) data.size else type.size // never 0: the server refuses that
+        val body = DbgProtocol.le(23).putInt(pid).putLong(address).putInt(length)
+            .put(type.wire.toByte()).put(cmp.toByte()).put(type.size.toByte()).putInt(lenData).array()
+        send(DbgProtocol.CMD_SCAN_START, body)
+        expectOk("scan")
+        if (sendValue) {
+            output.write(data)
+            output.flush()
+        }
+        expectOk("scan")
+        readBlocks(type.size, onMatch)
+        expectOk("scan")
+    }
+
+    /**
+     * Next scan: the server re-reads each candidate and keeps the ones that still match. [offsets] (ascending, from
+     * [base]) and, when the compare type needs them, [previous] values (type.size bytes each, in the same order) are
+     * the candidates. [count] of them are used. Survivors go to [onMatch] with their new value.
+     */
+    fun scanCount(
+        pid: Int, base: Long, type: ValueType, cmp: Int, data: ByteArray,
+        offsets: IntArray, previous: ByteArray, count: Int,
+        onMatch: (offset: Int, buf: ByteArray, at: Int) -> Unit
+    ) {
+        val sendValue = DbgProtocol.countNeedsValue(cmp)
+        val withPrev = DbgProtocol.countNeedsPrevious(cmp)
+        val lenData = if (sendValue) data.size else 0
+        val body = DbgProtocol.le(18).putInt(pid).putLong(base).put(type.wire.toByte()).put(cmp.toByte()).putInt(lenData).array()
+        send(DbgProtocol.CMD_SCAN_COUNT, body)
+        expectOk("next scan")
+        if (sendValue && lenData > 0) output.write(data)
+        val entry = if (withPrev) 4 + type.size else 4
+        val perChunk = DbgProtocol.COUNT_CHUNK / entry
+        var i = 0
+        while (i < count) {
+            val n = minOf(perChunk, count - i)
+            val chunk = DbgProtocol.le(4 + n * entry)
+            chunk.putInt(n * entry)
+            for (k in i until i + n) {
+                chunk.putInt(offsets[k])
+                if (withPrev) chunk.put(previous, k * type.size, type.size)
+            }
+            output.write(chunk.array())
+            output.flush()
+            readBlocks(type.size, onMatch)
+            i += n
+        }
+        output.write(DbgProtocol.le(4).putInt(-1).array()) // no more candidates
+        output.flush()
+        expectOk("next scan")
+    }
+
+    /** Result blocks: u64 length, then (u32 offset, value) records, until the all-ones sentinel. */
+    private fun readBlocks(valueSize: Int, onMatch: (Int, ByteArray, Int) -> Unit) {
+        val rec = 4 + valueSize
+        while (true) {
+            val len = wrap(8).long
+            if (len == DbgProtocol.SENTINEL) return
+            if (len < 0 || len > 0x100000 || len % rec != 0L) throw DebuggerException("scan: garbled result block ($len bytes)")
+            val block = bytes(len.toInt())
+            val buf = ByteBuffer.wrap(block).order(ByteOrder.LITTLE_ENDIAN)
+            var at = 0
+            while (at < block.size) {
+                onMatch(buf.getInt(at), block, at + 4)
+                at += rec
+            }
+        }
+    }
+
+    /** Reads [size] bytes at each of the first [count] [addresses] in one request. Needs [unlockScans] first. */
+    fun readMany(pid: Int, addresses: LongArray, count: Int, size: Int): ByteArray {
+        if (count == 0) return ByteArray(0)
+        val body = DbgProtocol.le(8).putInt(pid).putInt(count).array()
+        send(DbgProtocol.CMD_SCAN_GET, body)
+        expectOk("read values")
+        val list = DbgProtocol.le(12 * count)
+        for (k in 0 until count) list.putLong(addresses[k]).putInt(size)
+        output.write(list.array())
+        output.flush()
+        val out = bytes(count * size)
+        if (wrap(8).long != DbgProtocol.SENTINEL) throw DebuggerException("read values: garbled reply")
+        return out
     }
 }
 

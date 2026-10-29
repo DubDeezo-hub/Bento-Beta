@@ -234,14 +234,16 @@ A built-in browser (Android's WebView) that can send downloads to the console. I
 
 ### Memory tab
 
-A memory viewer for games on a PS5, the first part of a cheat-engine-style editor. It talks to [ps5debug-NG](https://github.com/Pharaoh2k/ps5debug-NG), a debugger payload that runs inside the console's system shell (firmware 3.00 to 13.60, 10.40 included) and listens on port `744`.
+A cheat engine for games on a PS5. It talks to [ps5debug-NG](https://github.com/Pharaoh2k/ps5debug-NG), a debugger payload that runs inside the console's system shell (firmware 3.00 to 13.60, 10.40 included) and listens on port `744`. The console does the searching; only the matches come over Wi-Fi.
 
-- **Start the debugger.** Send `ps5debug-NG.elf` from the Payload tab (or keep it on the payload shelf). The console shows a "ps5debug-NG ... loaded!" notification.
-- **Connect.** Shows the debugger's version, the console's firmware, the game in the foreground (name, title ID, version) and every process.
-- **Open a process** to list its memory regions (start address, size, `rwx` rights; writable ones are tinted). Tap a readable region to see its bytes in a hex view, 256 at a time, with **Previous**, **Refresh** and **Next**.
-- It only reads for now. Searching for a value and changing or freezing it come next.
+- **Start the debugger.** Send `ps5debug-NG.elf` from the Payload tab (or keep it on the payload shelf). The console shows a "ps5debug-NG ... loaded!" notification. Then tap **Connect**: the tab shows the game in the foreground (name, title ID, version, pid).
+- **Scan.** Pick the kind of value (1, 2, 4 or 8 bytes, Float, Double; 4 bytes is the usual one) and search the game's writable memory for it: **Exact value**, **Bigger than**, **Smaller than** or **Between**. Then change the value in the game and narrow it down with **Next scan**: Exact value, Increased, Decreased, Increased by, Decreased by, Changed or Unchanged. The first 200 matches are listed with their value and their value at the scan before; once 200 or fewer are left they update live. Tap a match to write a new value, add it to Cheats or show it in memory. **Cancel** stops a scan at once. A first scan that finds more than 3 million matches stops and asks for a more unusual value.
+- **Cheats.** Saved addresses for the current game (kept by title ID): a name, the address, the kind of value and the value. Tap one to change it, write it once or remove it. **Freeze** writes the value again five times a second, so it stays (health that never goes down). Addresses can move when the game restarts; scan again if a cheat stops working.
+- **Browse.** Every process, the memory regions of one (start, size, `rwx`; writable ones are tinted) and a hex view of 256 bytes at a time with **Previous**, **Refresh**, **Next** and **Go to address**. **Add as cheat** saves the address on screen.
+- Everything stays while you switch tabs, and frozen values stay frozen.
 - **Offline games only.** Changing memory in an online game can get the account banned, and it spoils the game for others.
 
+### Share sheet
 
 Share a link from any app (a browser, a chat, a note) and choose **Bento**. The first `http://` or `https://` address in the shared text opens the same chooser as a Web-tab download. If Bento is already open, the link goes to the running app.
 
@@ -350,7 +352,8 @@ Paths are relative to [`app/src/main/java/com/example/pssender/`](app/src/main/j
 - `Help.kt`: the "What can I do?" pages and the notes that say which page a message gets.
 - `Theme.kt`: dark and light colors, and the six accents.
 - `Icons.kt`: the few icons, drawn in code so no icon library is needed.
-- `Memory.kt`: the Memory tab: connect, current game, process list, memory regions, hex view.
+- `Memory.kt`: the Memory tab's screens: Scan, Cheats and Browse, and their dialogs.
+- `MemorySession.kt`: what the Memory tab keeps while the app runs: the connection, the search, the cheats (saved per game) and the freeze loop.
 - `Texts.kt`: the app class, text lookup for code that has no screen, right-to-left isolation, language settings.
 
 #### Console and network
@@ -361,7 +364,8 @@ Paths are relative to [`app/src/main/java/com/example/pssender/`](app/src/main/j
 - `HttpSource.kt`: a web link as a source that can continue after a break.
 - `Links.kt`: finding web links in text, sending several one after another, the recent links.
 - `Update.kt`: the update check, the notice, and the update part of the About window.
-- `Ps5Debug.kt`: the ps5debug-NG wire protocol (port 744): process list, current game, memory maps, read, write, notifications; and the hex view lines.
+- `Ps5Debug.kt`: the ps5debug-NG wire protocol (port 744): process list, current game, memory maps, read, write, the scan unlock, first and next scans, bulk reads; and the hex view lines.
+- `Scanner.kt`: value types and scan types, and the search itself (first scan, next scan, live values).
 
 #### Transfer engine
 
@@ -504,7 +508,7 @@ In Bento, tap the console card and enter `127.0.0.1`. The three lights turn on.
 | --- | --- |
 | Install | Listens on 12800, understands both request styles (`/upload` and `/api/install`) and prints the link. For a link from **Install from this phone** it then downloads the file the way a console would: `HEAD`, a few byte ranges, a range past the end (which must be refused with `416`), then the whole file, capped at 64 MB unless you set `FAKE_PS5_FULL=1`. It prints `self-test PASSED`, or why it failed. |
 | Payload | Listens on 9021 (a PS5's loader) and 9090 (a PS4's), saving what it receives to `~/fake_ps5/payloads/`, one file per payload. Payload chains send to it the same way. |
-| Memory | A fake ps5debug-NG on **7744** (Android does not let Termux open port 744, so set the Memory tab's port to 7744). It runs a pretend game, *Fake Game* (pid 91), with a heap whose health counts down by 7 every 4 seconds. |
+| Memory | A fake ps5debug-NG on **7744** (Android does not let Termux open port 744, so set the Memory tab's port to 7744). It runs a pretend game, *Fake Game* (pid 91), with a heap whose health (4 bytes at `20001234`) counts down by 7 every 4 seconds, gold 500 at `20002000` and a float 1.0 at `20003000`. Scans work like the real ones, so you can find the health, freeze it and watch it stop going down. |
 | Upload and Files | An anonymous FTP server on 2121 rooted at `~/fake_ps5/ftp`, with a few sample files and folders to open, rename, download and delete. Uploads land in `~/fake_ps5/ftp/data/`. |
 
 **Try Find my console.** The fake console listens on all of the phone's addresses, so with the phone on Wi-Fi, **Find my console** finds the phone itself, with Installer, Loader and FTP answering. Tap **Use** and the console card turns green. (On a phone that isn't on Wi-Fi the window says so.)

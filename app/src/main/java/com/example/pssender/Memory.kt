@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
@@ -11,18 +12,24 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -33,21 +40,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import java.net.ConnectException
-import java.net.NoRouteToHostException
-import java.net.SocketTimeoutException
+import kotlinx.coroutines.delay
 
 // ---------------------------------------------------------------------------------------------
-// The Memory tab: a memory viewer for games on the console, through ps5debug-NG (see Ps5Debug.kt).
-// Stage 1 only reads: it connects, shows the debugger and firmware, the current game and the process list, and lets
-// you open a process's memory regions and look at their bytes. Searching and changing values come next.
+// The Memory tab: a cheat engine for games on the console, through ps5debug-NG (Ps5Debug.kt, Scanner.kt).
+// Three parts: Scan (find a value, narrow it down, change it), Cheats (saved addresses, set or freeze them) and
+// Browse (processes, memory regions and a hex view). The state lives in MemorySession, so it survives tab switches.
 // ---------------------------------------------------------------------------------------------
-
-/** How many bytes the hex view shows at a time. */
-private const val HEX_PAGE = 256
 
 /** The debugger port is kept for the whole app (it is 744 on every PS5; the fake console uses 7744). */
 object MemoryPrefs {
@@ -57,216 +56,482 @@ object MemoryPrefs {
     fun setPort(ctx: Context, v: String) = prefs(ctx).edit().putString(PORT, v).apply()
 }
 
-/** What one tap of Connect brings back. */
-private class MemorySnapshot(val info: DbgInfo, val game: DbgApp, val processes: List<DbgProcess>)
-
 /** The game first, then the rest by process number. */
 fun sortProcesses(list: List<DbgProcess>, gamePid: Int): List<DbgProcess> =
     list.sortedWith(compareBy<DbgProcess>({ if (it.pid == gamePid && gamePid != 0) 0 else 1 }, { it.pid }))
 
-/** A message for a connection that failed: a missing debugger gets advice, anything else the usual "Failed: ...". */
-private fun memoryError(e: Exception, port: Int): String = when (e) {
-    is ConnectException, is SocketTimeoutException, is NoRouteToHostException -> AppText.get(R.string.memory_err_no_debugger, port)
-    else -> failedText(e)
+/** A match the user tapped, or a cheat being added or edited. */
+private sealed class MemoryDialog {
+    class Hit(val hit: ScanHit, val type: ValueType) : MemoryDialog()
+    class EditCheat(val cheat: Cheat) : MemoryDialog()
+    class NewCheat(val address: Long?, val type: ValueType, val value: String) : MemoryDialog()
 }
 
 @Composable
 fun MemoryTab(host: String, modifier: Modifier = Modifier) {
     val ctx = LocalContext.current
-    val scope = rememberCoroutineScope()
-    var port by remember { mutableStateOf(MemoryPrefs.port(ctx)) }
-    var busy by remember { mutableStateOf(false) }
-    var status by remember { mutableStateOf("") }
-    var snapshot by remember { mutableStateOf<MemorySnapshot?>(null) }
-    var openProc by remember { mutableStateOf<DbgProcess?>(null) }
-    var maps by remember { mutableStateOf<List<DbgMap>>(emptyList()) }
-    var openMap by remember { mutableStateOf<DbgMap?>(null) }
-    var hexAt by remember { mutableStateOf(0L) }
-    var hexLines by remember { mutableStateOf<List<String>>(emptyList()) }
-
-    /** Runs [work] on a fresh connection in the background, then [done] with its result on the screen. */
-    fun <T> ask(work: (Ps5Debug) -> T, done: (T) -> Unit) {
-        val h = host.trim()
-        val p = port.trim().toIntOrNull()
-        if (h.isEmpty()) {
-            status = AppText.get(R.string.memory_need_ip)
-            return
-        }
-        if (p == null || p !in 1..65535) {
-            status = AppText.get(R.string.memory_bad_port)
-            return
-        }
-        busy = true
-        status = AppText.get(R.string.memory_loading)
-        scope.launch {
-            try {
-                val result = withContext(Dispatchers.IO) { withDebugger(h, p, work) }
-                status = ""
-                done(result)
-            } catch (e: Exception) {
-                status = memoryError(e, p)
-            } finally {
-                busy = false
-            }
-        }
-    }
-
-    fun connect() = ask({ d -> MemorySnapshot(d.info(), d.foregroundApp(), d.processes()) }) { s ->
-        snapshot = s
-        openProc = null
-        openMap = null
-    }
-
-    fun openProcess(p: DbgProcess) = ask({ d -> d.maps(p.pid) }) { m ->
-        maps = m
-        openProc = p
-        openMap = null
-    }
-
-    fun showHex(p: DbgProcess, m: DbgMap, at: Long) {
-        val from = at.coerceIn(m.start, maxOf(m.start, m.end - 1))
-        val len = minOf(HEX_PAGE.toLong(), m.end - from).toInt()
-        ask({ d -> d.read(p.pid, from, len) }) { bytes ->
-            openMap = m
-            hexAt = from
-            hexLines = hexDump(from, bytes)
-        }
-    }
+    val m = MemorySession
+    m.attach(ctx)
+    LaunchedEffect(host) { m.setHost(host) }
+    var dialog by remember { mutableStateOf<MemoryDialog?>(null) }
 
     // Back steps out of the hex view, then out of the process, before it leaves the tab
-    BackHandler(enabled = openMap != null || openProc != null) {
-        if (openMap != null) openMap = null else openProc = null
+    BackHandler(enabled = m.view == MemoryView.BROWSE && (m.hexAt >= 0 || m.openProc != null)) {
+        if (m.hexAt >= 0) m.closeHex() else m.closeProcess()
     }
 
-    val s = snapshot
-    val proc = openProc
-    val region = openMap
+    // While the matches fit on the list, keep their values live
+    val results = m.results
+    LaunchedEffect(results, m.view) {
+        if (results != null && results.total <= MemorySession.SHOWN && m.view == MemoryView.SCAN) {
+            while (true) {
+                delay(MemorySession.LIVE_MS)
+                m.refreshQuietly()
+            }
+        }
+    }
+
+    val s = m.snapshot
     LazyColumn(modifier = modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        item {
-            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                NumberField(str(R.string.memory_port), port) { v ->
-                    port = v
-                    MemoryPrefs.setPort(ctx, v)
+        item { Header(s) }
+        if (s != null) {
+            item {
+                ChipRow {
+                    Chip(str(R.string.memory_view_scan), m.view == MemoryView.SCAN) { m.view = MemoryView.SCAN }
+                    Chip(str(R.string.memory_view_cheats, m.cheats.size), m.view == MemoryView.CHEATS) { m.view = MemoryView.CHEATS }
+                    Chip(str(R.string.memory_view_browse), m.view == MemoryView.BROWSE) { m.view = MemoryView.BROWSE }
                 }
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
-                    Button(enabled = !busy, onClick = { connect() }) {
-                        Text(str(if (s == null) R.string.memory_connect else R.string.memory_refresh))
-                    }
-                    if (s != null) {
-                        Text(
-                            str(R.string.memory_connected, s.info.brand, s.info.firmware),
-                            style = MaterialTheme.typography.bodySmall,
-                            maxLines = 2,
-                            overflow = TextOverflow.Ellipsis
-                        )
-                    }
-                }
-                if (status.isNotEmpty()) {
-                    Text(status, style = MaterialTheme.typography.bodySmall)
-                    HelpLink(status)
-                }
-                if (s == null) {
-                    Text(str(R.string.memory_intro), style = MaterialTheme.typography.bodySmall)
-                    Text(str(R.string.memory_test_hint), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                }
+            }
+            when (m.view) {
+                MemoryView.SCAN -> scanItems(s) { dialog = it }
+                MemoryView.CHEATS -> cheatItems(s) { dialog = it }
+                MemoryView.BROWSE -> browseItems(s) { dialog = it }
             }
         }
+    }
 
-        if (s != null && proc == null) {
-            // --- the current game and the process list ---
-            item {
-                Panel {
-                    Text(str(R.string.memory_game_title), style = MaterialTheme.typography.labelLarge)
-                    if (s.game.pid == 0) {
-                        Text(str(R.string.memory_no_game), style = MaterialTheme.typography.bodyMedium)
-                    } else {
-                        Text(s.game.name.ifBlank { s.game.titleId }, style = MaterialTheme.typography.titleMedium)
-                        Text(
-                            str(R.string.memory_game_detail, s.game.titleId, s.game.version.ifBlank { "?" }, s.game.pid),
-                            style = MaterialTheme.typography.bodySmall
-                        )
-                        OutlinedButton(enabled = !busy, onClick = {
-                            val p = s.processes.firstOrNull { it.pid == s.game.pid } ?: DbgProcess("eboot.bin", s.game.pid)
-                            openProcess(p)
-                        }) { Text(str(R.string.memory_open_game)) }
-                    }
-                }
-            }
-            item {
-                Text(str(R.string.memory_processes, s.processes.size), style = MaterialTheme.typography.labelLarge)
-            }
-            items(sortProcesses(s.processes, s.game.pid)) { p ->
-                ListRow(
-                    title = p.name.ifBlank { "?" },
-                    detail = "pid ${p.pid}",
-                    highlight = p.pid == s.game.pid && p.pid != 0,
-                    enabled = !busy
-                ) { openProcess(p) }
-            }
+    when (val d = dialog) {
+        is MemoryDialog.Hit -> HitDialog(d, onClose = { dialog = null }, onAddCheat = { dialog = it })
+        is MemoryDialog.EditCheat -> CheatDialog(d.cheat, null) { dialog = null }
+        is MemoryDialog.NewCheat -> CheatDialog(null, d) { dialog = null }
+        null -> {}
+    }
+}
+
+// ---------------------------------------------------------------------------------------------
+// Header: port, connect, what is on the console
+// ---------------------------------------------------------------------------------------------
+
+@Composable
+private fun Header(s: MemorySnapshot?) {
+    val m = MemorySession
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        if (s == null) {
+            NumberField(str(R.string.memory_port), m.port) { m.changePort(it) }
         }
-
-        if (proc != null && region == null) {
-            // --- one process's memory regions ---
-            item {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    TextButton(onClick = { openProc = null }) { Text(str(R.string.memory_back)) }
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+            Button(enabled = !m.busy, onClick = { m.connect() }) {
+                Text(str(if (s == null) R.string.memory_connect else R.string.memory_refresh))
+            }
+            if (s != null) {
+                Column(modifier = Modifier.padding(start = 4.dp)) {
                     Text(
-                        str(R.string.memory_maps_title, proc.name, proc.pid, maps.size),
-                        style = MaterialTheme.typography.labelLarge,
+                        if (s.game.pid == 0) str(R.string.memory_no_game) else s.game.name.ifBlank { s.game.titleId.ifBlank { "eboot.bin" } },
+                        style = MaterialTheme.typography.titleSmall,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                    Text(
+                        if (s.game.pid == 0) str(R.string.memory_connected, s.info.brand, s.info.firmware)
+                        else str(R.string.memory_game_detail, s.game.titleId.ifBlank { "?" }, s.game.version.ifBlank { "?" }, s.game.pid),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis
                     )
                 }
             }
-            if (maps.isEmpty()) {
-                item { Text(str(R.string.memory_no_maps), style = MaterialTheme.typography.bodySmall) }
-            }
-            items(maps) { m ->
-                ListRow(
-                    title = m.name.ifBlank { "—" } + "  " + m.protText,
-                    detail = hexAddr(m.start) + " · " + fmtBytes(m.size),
-                    highlight = m.writable,
-                    enabled = !busy && m.readable,
-                    mono = true
-                ) { showHex(proc, m, m.start) }
-            }
         }
+        if (m.status.isNotEmpty()) {
+            Text(m.status, style = MaterialTheme.typography.bodySmall)
+            HelpLink(m.status)
+        }
+        if (s == null) {
+            Text(str(R.string.memory_intro), style = MaterialTheme.typography.bodySmall)
+            Text(str(R.string.memory_test_hint), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        }
+    }
+}
 
-        if (proc != null && region != null) {
-            // --- the bytes of one region ---
-            item {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    TextButton(onClick = { openMap = null }) { Text(str(R.string.memory_back)) }
-                    Text(
-                        str(R.string.memory_hex_title, region.name.ifBlank { "—" }, hexAddr(hexAt)),
-                        style = MaterialTheme.typography.labelLarge,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
-                    )
+// ---------------------------------------------------------------------------------------------
+// Scan
+// ---------------------------------------------------------------------------------------------
+
+private fun LazyListScope.scanItems(s: MemorySnapshot, open: (MemoryDialog) -> Unit) {
+    val m = MemorySession
+    val r = m.results
+    if (s.game.pid == 0) {
+        item { Text(str(R.string.memory_scan_needs_game), style = MaterialTheme.typography.bodySmall) }
+        return
+    }
+    item {
+        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            // The kind of value is fixed for a search; a new search can change it
+            Text(str(R.string.memory_value_type), style = MaterialTheme.typography.labelLarge)
+            ChipRow {
+                ValueType.entries.forEach { t ->
+                    val chosen = (r?.type ?: m.type) == t
+                    Chip(t.label, chosen, enabled = r == null && !m.busy) { m.type = t }
                 }
             }
-            item {
-                Panel {
-                    hexLines.forEach { line ->
-                        Text(line, fontFamily = FontFamily.Monospace, fontSize = 12.sp, maxLines = 1, softWrap = false)
-                    }
+            Text(str(R.string.memory_scan_type), style = MaterialTheme.typography.labelLarge)
+            ChipRow {
+                ScanCompare.entries.filter { r != null || it.first }.forEach { c ->
+                    Chip(c.label, m.compare == c, enabled = !m.busy) { m.compare = c }
                 }
             }
-            item {
+            if (m.compare.values >= 1) {
+                Field(str(if (m.compare.values == 2) R.string.memory_value_from else R.string.memory_value), m.value1) { m.value1 = it }
+            }
+            if (m.compare.values == 2) {
+                Field(str(R.string.memory_value_to), m.value2) { m.value2 = it }
+            }
+            if (m.scanning) {
+                val all = m.progressAll
+                LinearProgressIndicator(
+                    progress = { if (all > 0) (m.progressDone.toFloat() / all).coerceIn(0f, 1f) else 0f },
+                    modifier = Modifier.fillMaxWidth()
+                )
+                OutlinedButton(onClick = { m.cancel() }) { Text(str(R.string.action_cancel)) }
+            } else {
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    OutlinedButton(enabled = !busy && hexAt > region.start, onClick = { showHex(proc, region, hexAt - HEX_PAGE) }) {
-                        Text(str(R.string.memory_prev))
+                    if (r == null) {
+                        Button(enabled = !m.busy, onClick = { m.firstScan() }) { Text(str(R.string.memory_first_scan)) }
+                    } else {
+                        Button(enabled = !m.busy, onClick = { m.nextScan() }) { Text(str(R.string.memory_next_scan)) }
+                        OutlinedButton(enabled = !m.busy, onClick = { m.newSearch() }) { Text(str(R.string.memory_new_search)) }
                     }
-                    OutlinedButton(enabled = !busy, onClick = { showHex(proc, region, hexAt) }) {
-                        Text(str(R.string.memory_refresh))
-                    }
-                    OutlinedButton(enabled = !busy && hexAt + HEX_PAGE < region.end, onClick = { showHex(proc, region, hexAt + HEX_PAGE) }) {
-                        Text(str(R.string.memory_next))
-                    }
+                }
+            }
+            if (r == null) {
+                Text(str(R.string.memory_scan_help), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            } else {
+                Text(str(R.string.memory_results, r.total, r.scans), style = MaterialTheme.typography.labelLarge)
+                if (r.total > MemorySession.SHOWN) {
+                    Text(str(R.string.memory_results_more, MemorySession.SHOWN), style = MaterialTheme.typography.bodySmall)
                 }
             }
         }
     }
+    if (r != null) {
+        items(m.hits) { h ->
+            ListRow(
+                title = hexAddr(h.address),
+                detail = if (h.previous != null) str(R.string.memory_hit_was, r.type.format(h.value), r.type.format(h.previous))
+                else r.type.format(h.value),
+                highlight = h.previous != null && !h.previous.contentEquals(h.value),
+                enabled = !m.busy,
+                mono = true
+            ) { open(MemoryDialog.Hit(h, r.type)) }
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------------------------
+// Cheats
+// ---------------------------------------------------------------------------------------------
+
+private fun LazyListScope.cheatItems(s: MemorySnapshot, open: (MemoryDialog) -> Unit) {
+    val m = MemorySession
+    item {
+        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            OutlinedButton(enabled = s.game.pid != 0, onClick = { open(MemoryDialog.NewCheat(null, m.type, "")) }) {
+                Text(str(R.string.memory_cheat_add))
+            }
+            Text(
+                str(if (m.cheats.isEmpty()) R.string.memory_cheats_empty else R.string.memory_cheats_note),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+    }
+    items(m.cheats) { c ->
+        val cs = MaterialTheme.colorScheme
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clip(RoundedCornerShape(12.dp))
+                .background(if (c.frozen) cs.primary.copy(alpha = 0.10f) else cs.surfaceContainerLow)
+                .clickable { open(MemoryDialog.EditCheat(c)) }
+                .padding(start = 12.dp, end = 8.dp, top = 6.dp, bottom = 6.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Column(modifier = Modifier.weight(1f)) {
+                Text(c.name, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Medium, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                Text(
+                    hexAddr(c.address) + " · " + c.type.label + " · " + c.value.ifBlank { "—" },
+                    style = MaterialTheme.typography.bodySmall,
+                    fontFamily = FontFamily.Monospace,
+                    color = cs.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+            }
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Switch(checked = c.frozen, onCheckedChange = { m.setFrozen(c, it) }, enabled = s.game.pid != 0)
+                Text(str(R.string.memory_freeze), style = MaterialTheme.typography.labelSmall, color = cs.onSurfaceVariant)
+            }
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------------------------
+// Browse
+// ---------------------------------------------------------------------------------------------
+
+private fun LazyListScope.browseItems(s: MemorySnapshot, open: (MemoryDialog) -> Unit) {
+    val m = MemorySession
+    val proc = m.openProc
+    if (proc == null) {
+        // --- go to, and the process list ---
+        if (s.game.pid != 0) {
+            item {
+                Panel {
+                    GoToRow { m.browseTo(it) }
+                    OutlinedButton(enabled = !m.busy, onClick = {
+                        m.openProcess(s.processes.firstOrNull { it.pid == s.game.pid } ?: DbgProcess("eboot.bin", s.game.pid))
+                    }) { Text(str(R.string.memory_open_game)) }
+                }
+            }
+        }
+        item { Text(str(R.string.memory_processes, s.processes.size), style = MaterialTheme.typography.labelLarge) }
+        items(sortProcesses(s.processes, s.game.pid)) { p ->
+            ListRow(
+                title = p.name.ifBlank { "?" },
+                detail = "pid ${p.pid}",
+                highlight = p.pid == s.game.pid && p.pid != 0,
+                enabled = !m.busy
+            ) { m.openProcess(p) }
+        }
+        return
+    }
+    if (m.hexAt < 0) {
+        // --- one process's memory regions ---
+        item {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                TextButton(onClick = { m.closeProcess() }) { Text(str(R.string.memory_back)) }
+                Text(
+                    str(R.string.memory_maps_title, proc.name, proc.pid, m.maps.size),
+                    style = MaterialTheme.typography.labelLarge,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+            }
+        }
+        if (m.maps.isEmpty()) {
+            item { Text(str(R.string.memory_no_maps), style = MaterialTheme.typography.bodySmall) }
+        }
+        items(m.maps) { r ->
+            ListRow(
+                title = r.name.ifBlank { "—" } + "  " + r.protText,
+                detail = hexAddr(r.start) + " · " + fmtBytes(r.size),
+                highlight = r.writable,
+                enabled = !m.busy && r.readable,
+                mono = true
+            ) { m.showHex(r.start) }
+        }
+        return
+    }
+    // --- the bytes at one address ---
+    val at = m.hexAt
+    val region = m.regionOf(at)
+    item {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            TextButton(onClick = { m.closeHex() }) { Text(str(R.string.memory_back)) }
+            Text(
+                str(R.string.memory_hex_title, region?.name?.ifBlank { "—" } ?: proc.name, hexAddr(at)),
+                style = MaterialTheme.typography.labelLarge,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
+            )
+        }
+    }
+    item {
+        Panel {
+            GoToRow { m.showHex(it and 0xFL.inv()) }
+            if (region == null) {
+                Text(str(R.string.memory_outside_regions), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.error)
+            }
+        }
+    }
+    item {
+        Panel {
+            hexDump(at, m.hexData).forEach { line ->
+                Text(line, fontFamily = FontFamily.Monospace, fontSize = 12.sp, maxLines = 1, softWrap = false)
+            }
+        }
+    }
+    item {
+        Row(
+            modifier = Modifier.horizontalScroll(rememberScrollState()),
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            OutlinedButton(enabled = !m.busy && at >= 256, onClick = { m.showHex(at - 256) }) { Text(str(R.string.memory_prev)) }
+            OutlinedButton(enabled = !m.busy, onClick = { m.showHex(at) }) { Text(str(R.string.memory_refresh)) }
+            OutlinedButton(enabled = !m.busy, onClick = { m.showHex(at + 256) }) { Text(str(R.string.memory_next)) }
+            if (proc.pid == s.game.pid) {
+                OutlinedButton(enabled = !m.busy, onClick = { open(MemoryDialog.NewCheat(at, m.type, "")) }) {
+                    Text(str(R.string.memory_cheat_here))
+                }
+            }
+        }
+    }
+}
+
+/** An address box and a Go button. */
+@Composable
+private fun GoToRow(onGo: (Long) -> Unit) {
+    var text by remember { mutableStateOf("") }
+    var bad by remember { mutableStateOf(false) }
+    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+        Column(modifier = Modifier.weight(1f)) {
+            Field(str(R.string.memory_goto), text) {
+                text = it
+                bad = false
+            }
+        }
+        Button(enabled = !MemorySession.busy && text.isNotBlank(), onClick = {
+            val a = parseAddress(text)
+            if (a == null) bad = true else onGo(a)
+        }) { Text(str(R.string.memory_go)) }
+    }
+    if (bad) Text(str(R.string.memory_bad_address), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.error)
+}
+
+// ---------------------------------------------------------------------------------------------
+// Dialogs
+// ---------------------------------------------------------------------------------------------
+
+@Composable
+private fun HitDialog(d: MemoryDialog.Hit, onClose: () -> Unit, onAddCheat: (MemoryDialog) -> Unit) {
+    val m = MemorySession
+    val current = d.type.format(d.hit.value)
+    var value by remember { mutableStateOf(current) }
+    AlertDialog(
+        onDismissRequest = onClose,
+        title = { Text(hexAddr(d.hit.address), fontFamily = FontFamily.Monospace) },
+        text = {
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                Text(str(R.string.memory_hit_now, d.type.label, current), style = MaterialTheme.typography.bodyMedium)
+                Field(str(R.string.memory_new_value), value) { value = it }
+                Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                    TextButton(onClick = { onAddCheat(MemoryDialog.NewCheat(d.hit.address, d.type, value)) }) {
+                        Text(str(R.string.memory_cheat_add_short))
+                    }
+                    TextButton(onClick = {
+                        onClose()
+                        m.browseTo(d.hit.address)
+                    }) { Text(str(R.string.memory_show_memory)) }
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(enabled = !m.busy && d.type.parse(value) != null, onClick = {
+                m.writeValue(d.hit.address, d.type, value)
+                onClose()
+            }) { Text(str(R.string.memory_write)) }
+        },
+        dismissButton = { TextButton(onClick = onClose) { Text(str(R.string.action_close)) } }
+    )
+}
+
+/** Adds a cheat ([new] set) or edits one ([cheat] set). */
+@Composable
+private fun CheatDialog(cheat: Cheat?, new: MemoryDialog.NewCheat?, onClose: () -> Unit) {
+    val m = MemorySession
+    var name by remember { mutableStateOf(cheat?.name ?: "") }
+    var address by remember { mutableStateOf(cheat?.address?.let { java.lang.Long.toHexString(it).uppercase() } ?: new?.address?.let { java.lang.Long.toHexString(it).uppercase() } ?: "") }
+    var type by remember { mutableStateOf(cheat?.type ?: new?.type ?: ValueType.INT) }
+    var value by remember { mutableStateOf(cheat?.value ?: new?.value ?: "") }
+    val addr = parseAddress(address)
+    val valueOk = value.isBlank() || type.parse(value) != null
+    AlertDialog(
+        onDismissRequest = onClose,
+        title = { Text(str(if (cheat == null) R.string.memory_cheat_add else R.string.memory_cheat_edit)) },
+        text = {
+            Column(
+                modifier = Modifier.verticalScroll(rememberScrollState()),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                Field(str(R.string.memory_cheat_name), name) { name = it }
+                Field(str(R.string.memory_cheat_address), address) { address = it }
+                if (addr == null && address.isNotBlank()) {
+                    Text(str(R.string.memory_bad_address), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.error)
+                }
+                ChipRow {
+                    ValueType.entries.forEach { t -> Chip(t.label, type == t) { type = t } }
+                }
+                Field(str(R.string.memory_value), value) { value = it }
+                if (!valueOk) {
+                    Text(str(R.string.memory_bad_value, type.label), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.error)
+                }
+                Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                    TextButton(enabled = !m.busy && addr != null && value.isNotBlank() && valueOk, onClick = {
+                        if (addr != null) m.writeValue(addr, type, value)
+                    }) { Text(str(R.string.memory_write_now)) }
+                    if (cheat != null) {
+                        TextButton(onClick = {
+                            m.removeCheat(cheat)
+                            onClose()
+                        }) { Text(str(R.string.action_remove)) }
+                    }
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(enabled = addr != null && valueOk, onClick = {
+                if (addr != null) {
+                    if (cheat == null) m.addCheat(name, addr, type, value)
+                    else m.updateCheat(cheat.copy(name = name.trim().ifBlank { cheat.name }, address = addr, type = type, value = value.trim()))
+                }
+                onClose()
+            }) { Text(str(R.string.action_save)) }
+        },
+        dismissButton = { TextButton(onClick = onClose) { Text(str(R.string.action_cancel)) } }
+    )
+}
+
+// ---------------------------------------------------------------------------------------------
+// Small parts
+// ---------------------------------------------------------------------------------------------
+
+@Composable
+private fun ChipRow(content: @Composable () -> Unit) {
+    Row(
+        modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
+        horizontalArrangement = Arrangement.spacedBy(8.dp)
+    ) { content() }
+}
+
+/** A rounded button that shows whether it is the chosen one. */
+@Composable
+private fun Chip(label: String, selected: Boolean, enabled: Boolean = true, onClick: () -> Unit) {
+    val cs = MaterialTheme.colorScheme
+    Text(
+        label,
+        style = MaterialTheme.typography.labelLarge,
+        color = when {
+            selected -> cs.onPrimary
+            enabled -> cs.onSurface
+            else -> cs.onSurfaceVariant.copy(alpha = 0.6f)
+        },
+        maxLines = 1,
+        modifier = Modifier
+            .clip(RoundedCornerShape(50))
+            .background(if (selected) cs.primary else cs.surfaceContainerHigh)
+            .clickable(enabled = enabled, onClick = onClick)
+            .padding(horizontal = 14.dp, vertical = 8.dp)
+    )
 }
 
 /** A rounded box in the card color, like the console card at the top. */

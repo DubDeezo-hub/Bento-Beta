@@ -18,8 +18,9 @@ It stands in for both consoles: a PS5 (etaHEN) and a PS4 (GoldHEN) reach the sam
                 Downloads from the app land in the phone's Downloads/PS5 folder.
   Memory tab  : port 7744 -> mimics ps5debug-NG (the real one is on port 744, but Android does not let an app
                 like Termux open a port below 1024, so set the Memory tab's port to 7744 for this fake).
-                It runs a pretend game, "Fake Game" (pid 91), whose health counts down every few seconds,
-                so there is something to find and change.
+                It runs a pretend game, "Fake Game" (pid 91): health (4 bytes) at 0x20001234 counts down by 7
+                every 4 seconds, gold 500 at 0x20002000, a float 1.0 at 0x20003000. Scans, the scan unlock,
+                reads and writes behave like the real debugger, so you can find the health and freeze it.
 Setup:  pkg install python && pip install pyftpdlib
 """
 import http.client
@@ -298,6 +299,73 @@ def fixed(text, size):
     return text.encode()[:size].ljust(size, b"\x00")
 
 
+# Scanning, as ps5debug-NG's scan.c and scan_compare.c do it
+SCAN_FORMATS = {0: "<B", 1: "<b", 2: "<H", 3: "<h", 4: "<I", 5: "<i", 6: "<Q", 7: "<q", 8: "<f", 9: "<d"}
+NEEDS_VALUE = [1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1]
+NEEDS_EXTRA = [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+NEEDS_PREVIOUS = [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0]
+
+
+def wrap_int(value, fmt):
+    """What C does when a sum overflows the value type."""
+    if fmt[-1] in "fd":
+        return value
+    bits = struct.calcsize(fmt) * 8
+    value &= (1 << bits) - 1
+    if fmt[-1].islower() and value >= 1 << (bits - 1):
+        value -= 1 << bits
+    return value
+
+
+def scan_compare(cmp, vtype, scan, mem, prev):
+    fmt = SCAN_FORMATS[vtype]
+    m = struct.unpack(fmt, mem)[0]
+    if cmp == 0:
+        if vtype in (8, 9):
+            sv = struct.unpack(fmt, scan)[0]
+            if scan == bytes(len(scan)):
+                return mem == bytes(len(mem))
+            return abs(sv - m) <= abs(sv) * 1e-6  # close to the server's fuzzy compare
+        return scan == mem
+    if cmp in (2, 3):
+        sv = struct.unpack(fmt, scan)[0]
+        return m > sv if cmp == 2 else m < sv
+    if prev is None:
+        return False
+    if cmp == 4:
+        lo, hi = struct.unpack(fmt, scan)[0], struct.unpack(fmt, prev)[0]
+        return lo <= m <= hi if hi > lo else hi <= m <= lo
+    p = struct.unpack(fmt, prev)[0]
+    if cmp == 5:
+        return m > p
+    if cmp == 7:
+        return m < p
+    if cmp in (6, 8):
+        d = struct.unpack(fmt, scan)[0]
+        return m == wrap_int(p + d if cmp == 6 else p - d, fmt)
+    if cmp == 9:
+        return m != p
+    if cmp == 10:
+        return m == p
+    return False
+
+
+def lfsr_keystream():
+    s1, s2, s3, s4 = 200, 300, 400, 500
+    out = bytearray()
+    for _ in range(256):
+        s1 = ((s1 << 18) & 0xFFF80000) ^ (((s1 ^ (s1 << 6)) & 0xFFFFFFFF) >> 13)
+        s2 = ((s2 << 2) & 0xFFFFFFE0) ^ (((s2 ^ (s2 << 2)) & 0xFFFFFFFF) >> 27)
+        s3 = ((s3 << 7) & 0xFFFFF800) ^ (((s3 ^ (s3 << 13)) & 0xFFFFFFFF) >> 21)
+        s4 = ((s4 << 13) & 0xFFF00000) ^ (((s4 ^ (s4 << 3)) & 0xFFFFFFFF) >> 12)
+        out.append((s1 ^ s2 ^ s3 ^ s4) & 0xFF)
+    return bytes(out)
+
+
+KEYSTREAM = lfsr_keystream()
+SENTINEL = b"\xff" * 8
+
+
 class DebugHandler(socketserver.BaseRequestHandler):
     def recv_exact(self, n):
         buf = b""
@@ -355,8 +423,9 @@ class DebugHandler(socketserver.BaseRequestHandler):
                     pid, addr, length = struct.unpack("<IQI", body[:16])
                     self.u32(DBG_OK)
                     data = self.recv_exact(length)
+                    changed = game.get(addr, length) != data
                     ok = pid == GAME_PID and game.put(addr, data)
-                    if ok:
+                    if ok and changed:  # a frozen value is written again and again; only print real changes
                         print(f"[memory] wrote {length} bytes at 0x{addr:X}: {data.hex(' ')}", flush=True)
                     self.u32(DBG_OK if ok else DBG_ERROR)
                 elif cmd == 0xBDDD0004:  # notify: the text follows the 8-byte body
@@ -364,11 +433,109 @@ class DebugHandler(socketserver.BaseRequestHandler):
                     text = self.recv_exact(length).rstrip(b"\x00").decode(errors="replace")
                     print(f"[memory] notification on the console: {text}", flush=True)
                     self.u32(DBG_OK)
+                elif cmd == 0xBDAACCFF:  # scan unlock: challenge, answer = challenge XOR keystream
+                    magic2, flags = struct.unpack("<II", body[:8])
+                    if magic2 != 0xBB40E64D:
+                        self.u32(0xF0000003)
+                        continue
+                    self.u32(DBG_OK)
+                    challenge = os.urandom(64)
+                    send(struct.pack("<H", 64) + challenge)
+                    answer = self.recv_exact(64)
+                    good = answer == bytes(c ^ KEYSTREAM[i] for i, c in enumerate(challenge))
+                    if good and flags & 2:
+                        self.unlocked = True
+                    self.u32(DBG_OK if good else 0xF0000003)
+                elif cmd == 0xBDAACC01:  # first scan
+                    self.scan_start(game, body)
+                elif cmd == 0xBDAACC02:  # next scan
+                    self.scan_count(game, body)
+                elif cmd == 0xBDAACC03:  # read many
+                    pid, count = struct.unpack("<II", body[:8])
+                    if not getattr(self, "unlocked", False):
+                        self.u32(0xF0000003)
+                        continue
+                    self.u32(DBG_OK)
+                    entries = self.recv_exact(12 * count)
+                    for i in range(count):
+                        addr, length = struct.unpack("<QI", entries[12 * i:12 * i + 12])
+                        data = game.get(addr, length) if pid == GAME_PID else None
+                        send(data if data is not None else bytes(length))
+                    send(SENTINEL)
                 else:
                     print(f"[memory] command 0x{cmd:08X} is not faked; answering with an error", flush=True)
                     self.u32(DBG_ERROR)
         except (ConnectionError, OSError):
             return
+
+
+def _send_blocks(send, records):
+    """Result blocks: u64 length + records, at most 0x3FFE8 bytes each, then the sentinel."""
+    block = bytearray()
+    for r in records:
+        if len(block) + len(r) > 0x3FFE8:
+            send(struct.pack("<Q", len(block)) + block)
+            block = bytearray()
+        block += r
+    if block:
+        send(struct.pack("<Q", len(block)) + block)
+    send(SENTINEL)
+
+
+def _scan_start(self, game, body):
+    pid, address, length, vtype, cmp, align, len_data = struct.unpack("<IQIBBBI", body[:23])
+    if not getattr(self, "unlocked", False) or cmp > 12 or len_data == 0 or vtype not in SCAN_FORMATS:
+        self.u32(0xF0000003)
+        return
+    size = struct.calcsize(SCAN_FORMATS[vtype])
+    needs = ((1 << cmp) & 0x114F) != 0 or cmp == 4
+    self.u32(DBG_OK)
+    pattern = self.recv_exact(len_data) if needs else b""
+    self.u32(DBG_OK)
+    step = align or size
+    mem = (game.get(address, length) if pid == GAME_PID else None) or bytes(length)
+    scan = pattern[:size]
+    hi = pattern[size:2 * size] if cmp == 4 else None
+    records = []
+    for j in range(0, length - size + 1, step):
+        v = mem[j:j + size]
+        if scan_compare(cmp, vtype, scan, v, hi):
+            records.append(struct.pack("<I", j) + v)
+    _send_blocks(self.request.sendall, records)
+    self.u32(DBG_OK)
+
+
+def _scan_count(self, game, body):
+    pid, base, vtype, cmp, len_data = struct.unpack("<IQBBI", body[:18])
+    if not getattr(self, "unlocked", False) or cmp > 12 or vtype not in SCAN_FORMATS:
+        self.u32(0xF0000003)
+        return
+    size = struct.calcsize(SCAN_FORMATS[vtype])
+    self.u32(DBG_OK)
+    needs = NEEDS_VALUE[cmp] or NEEDS_EXTRA[cmp]
+    pattern = self.recv_exact(len_data) if needs and len_data else b""
+    with_prev = NEEDS_PREVIOUS[cmp]
+    entry = 4 + size if with_prev else 4
+    scan = pattern[:size]
+    hi = pattern[size:2 * size] if cmp == 4 and len(pattern) >= 2 * size else None
+    while True:
+        (chunk_len,) = struct.unpack("<I", self.recv_exact(4))
+        if chunk_len == 0xFFFFFFFF:
+            break
+        chunk = self.recv_exact(chunk_len)
+        records = []
+        for off in range(0, chunk_len - entry + 1, entry):
+            (o,) = struct.unpack("<I", chunk[off:off + 4])
+            prev = chunk[off + 4:off + 4 + size] if with_prev else hi
+            v = (game.get(base + o, size) if pid == GAME_PID else None) or bytes(size)
+            if scan_compare(cmp, vtype, scan, v, prev):
+                records.append(struct.pack("<I", o) + v)
+        _send_blocks(self.request.sendall, records)
+    self.u32(DBG_OK)
+
+
+DebugHandler.scan_start = _scan_start
+DebugHandler.scan_count = _scan_count
 
 
 def start_fake_debugger():
