@@ -223,7 +223,7 @@ fun ConsoleEditDialog(
 ) {
     AlertDialog(
         onDismissRequest = onClose,
-        title = { Text(str(R.string.console_ip_title)) },
+        title = { TipTitle(str(R.string.console_ip_title), Tip.CONSOLE, style = MaterialTheme.typography.titleLarge) },
         text = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Field(str(R.string.console_ip_label), host, onHostChange)

@@ -179,9 +179,7 @@ fun PayloadTab(
     }
 
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        Field(str(R.string.payload_loader_port), port, onPortChange)
-
-        Text(str(R.string.payload_shelf_title), style = MaterialTheme.typography.titleMedium)
+        TipTitle(str(R.string.payload_shelf_title), Tip.PAYLOAD_SHELF, style = MaterialTheme.typography.titleMedium)
         if (shelf.isEmpty()) {
             Text(str(R.string.payload_shelf_empty, ActiveConsole.type.hen), style = MaterialTheme.typography.bodySmall)
         }
@@ -228,5 +226,9 @@ fun PayloadTab(
         ) { Text(str(R.string.payload_send)) }
         Text(status)
         HelpLink(status)
+        // Set once and then left alone: folded away
+        Foldable(str(R.string.settings_section), Tip.PAYLOAD_PORT, summary = str(R.string.settings_port_summary, port)) {
+            Field(str(R.string.payload_loader_port), port, onPortChange)
+        }
     }
 }

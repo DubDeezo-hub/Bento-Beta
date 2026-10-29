@@ -45,6 +45,12 @@
             android:exported="false"
             android:foregroundServiceType="dataSync" />
 
+        <!-- Keeps frozen Memory-tab values frozen while the app is in the background -->
+        <service
+            android:name=".FreezeService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+
         <!-- Shares packages from the phone with the console ("Install from this phone") -->
         <service
             android:name=".ServeService"

@@ -80,6 +80,7 @@ enum class ScanCompare(val wire: Int, val label: String, val first: Boolean, val
     BIGGER(2, "Bigger than", true, 1),
     SMALLER(3, "Smaller than", true, 1),
     BETWEEN(4, "Between", true, 2),
+    UNKNOWN(11, "Unknown value", true, 0),
     INCREASED(5, "Increased", false, 0),
     INCREASED_BY(6, "Increased by", false, 1),
     DECREASED(7, "Decreased", false, 0),
@@ -166,6 +167,31 @@ object Scanner {
     /** The regions worth searching: readable and writable, the way a game keeps its health, money and so on. */
     fun searchable(maps: List<DbgMap>): List<DbgMap> = maps.filter { it.readable && it.writable && it.size > 0 }
 
+    /** Regions this big and this slow (graphics memory, mostly) take ages to scan and hardly ever hold game values. */
+    const val SLOW_MIN_BYTES = 64L shl 20
+    const val SLOW_MBPS = 100
+
+    /** [maps] without the big slow regions [speeds] reports (uncached, or slower than [SLOW_MBPS]). */
+    fun withoutSlow(maps: List<DbgMap>, speeds: List<DbgRegionSpeed>): List<DbgMap> = maps.filter { m ->
+        val sp = speeds.firstOrNull { it.start == m.start } ?: return@filter true
+        !(m.size >= SLOW_MIN_BYTES && (sp.uncached || sp.mbps in 0 until SLOW_MBPS))
+    }
+
+    /** Survivors of a search the console kept, as ordinary results (offsets within the original pieces). */
+    fun fromSurvivors(pid: Int, type: ValueType, pieces: List<ScanSegment>, survivors: List<DbgSurvivor>, scans: Int): ScanResults {
+        val segs = pieces.map { ScanSegment(it.base, it.length) }
+        val sorted = survivors.sortedBy { it.address }
+        var k = 0
+        for (sv in sorted) {
+            while (k < segs.size && sv.address >= segs[k].base + segs[k].length) k++
+            if (k >= segs.size) break
+            val seg = segs[k]
+            if (sv.address < seg.base) continue
+            seg.add((sv.address - seg.base).toInt(), sv.value, 0, type.size)
+        }
+        return ScanResults(pid, type, segs.filter { it.count > 0 }, scans)
+    }
+
     /** [maps] cut into pieces of at most 1 GB, in address order. */
     fun segments(maps: List<DbgMap>): List<ScanSegment> {
         val out = ArrayList<ScanSegment>()
@@ -199,7 +225,7 @@ object Scanner {
         dbg: Ps5Debug, pid: Int, maps: List<DbgMap>, type: ValueType, cmp: ScanCompare, data: ByteArray,
         progress: (Long, Long) -> Unit = { _, _ -> }, cancelled: () -> Boolean = { false }
     ): ScanResults {
-        require(cmp.first) { "${cmp.label} can't start a search" }
+        require(cmp.first && cmp != ScanCompare.UNKNOWN) { "${cmp.label} can't start a search here" }
         val segs = segments(maps)
         val all = segs.sumOf { it.length.toLong() }
         var done = 0L
@@ -244,5 +270,52 @@ object Scanner {
         val addrs = LongArray(hits.size) { hits[it].address }
         val raw = dbg.readMany(pid, addrs, hits.size, type.size)
         return hits.mapIndexed { i, h -> MemoryHit(h.address, raw.copyOfRange(i * type.size, (i + 1) * type.size), h.value) }
+    }
+}
+
+/**
+ * A byte pattern around a saved address, to find it again after the game restarts and its memory moves ("Find
+ * again"). The value itself, and anything that looks like an address (it changes from run to run), is left out.
+ */
+class Signature(val pattern: ByteArray, val mask: ByteArray, val valueAt: Int) {
+    fun patternHex(): String = pattern.joinToString("") { "%02X".format(it.toInt() and 0xFF) }
+    fun maskText(): String = mask.joinToString("") { if (it.toInt() == 1) "1" else "0" }
+
+    companion object {
+        const val BEFORE = 24
+        const val AFTER = 24
+
+        /** At least this many bytes must be kept, or the pattern would match almost anywhere. */
+        private const val MIN_KEPT = 8
+
+        /**
+         * The pattern for a [size]-byte value at [address], from [window] (the bytes from address - BEFORE to
+         * address + size + AFTER). [maps] tell which 8-byte numbers are addresses. Null when too little is left.
+         */
+        fun make(address: Long, size: Int, window: ByteArray, maps: List<DbgMap>): Signature? {
+            val start = address - BEFORE
+            if (window.size < BEFORE + size + AFTER) return null
+            val mask = ByteArray(window.size) { 1 }
+            for (i in BEFORE until BEFORE + size) mask[i] = 0
+            // Every 8-byte aligned number that points into mapped memory is a pointer: it moves with the memory
+            var a = (start + 7) and 7L.inv()
+            while (a + 8 <= start + window.size) {
+                val i = (a - start).toInt()
+                var v = 0L
+                for (k in 7 downTo 0) v = (v shl 8) or (window[i + k].toLong() and 0xFF)
+                if (v != 0L && maps.any { v >= it.start && v < it.end }) for (k in 0 until 8) mask[i + k] = 0
+                a += 8
+            }
+            // Zero bytes say little; if almost everything is zero the pattern would match everywhere
+            val kept = (window.indices).count { mask[it].toInt() == 1 && window[it] != 0.toByte() }
+            if (kept < MIN_KEPT) return null
+            return Signature(window, mask, BEFORE)
+        }
+
+        fun parse(patternHex: String, maskText: String, valueAt: Int): Signature? {
+            val p = CheatFiles.hex(patternHex) ?: return null
+            if (maskText.length != p.size || p.isEmpty()) return null
+            return Signature(p, ByteArray(p.size) { if (maskText[it] == '1') 1 else 0 }, valueAt)
+        }
     }
 }

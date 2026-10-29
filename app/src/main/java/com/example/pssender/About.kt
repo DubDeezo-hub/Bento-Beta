@@ -173,6 +173,10 @@ fun AboutDialog(
                         copyText(ctx, "Bento", report, AppText.get(R.string.about_report_copied))
                     }) { Text(str(R.string.about_report)) }
                     TextButton(onClick = { openLink(ctx, RELEASES_URL) }) { Text(str(R.string.about_releases)) }
+                    TextButton(onClick = {
+                        onClose()
+                        WelcomeState.showing = true
+                    }) { Text(str(R.string.welcome_open)) }
                 }
                 Text(
                     str(R.string.about_report_help),

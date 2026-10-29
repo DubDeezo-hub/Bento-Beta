@@ -24,6 +24,10 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Toast
 import androidx.compose.foundation.clickable
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -517,7 +521,6 @@ fun AdBlockDialog(onClose: () -> Unit) {
 @Composable
 fun WebTab(browser: BrowserModel, container: View, homeUrl: String, onHomeChange: (String) -> Unit, modifier: Modifier = Modifier) {
     val ctx = LocalContext.current
-    var edit by remember(homeUrl) { mutableStateOf(homeUrl) }
     var bookmarks by remember { mutableStateOf(BookmarkStore.load(ctx)) }
     var showBookmarks by remember { mutableStateOf(false) }
     var showAds by remember { mutableStateOf(false) }
@@ -546,59 +549,84 @@ fun WebTab(browser: BrowserModel, container: View, homeUrl: String, onHomeChange
     if (showAds) AdBlockDialog { showAds = false }
     if (showTabs) TabsDialog(browser) { showTabs = false }
 
-    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(4.dp)) {
-        // The buttons wrap onto a second line when a language needs more room than the screen is wide
-        FlowRow(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-            TextButton(onClick = { browser.load(homeUrl) }) { Text(str(R.string.action_home)) }
-            TextButton(onClick = { browser.reload() }) { Text(str(R.string.web_reload)) }
-            TextButton(onClick = {
-                val url: String? = browser.currentUrl
-                if (url.isNullOrBlank() || !(url.startsWith("http://") || url.startsWith("https://"))) {
-                    Toast.makeText(ctx, AppText.get(R.string.web_open_first), Toast.LENGTH_SHORT).show()
-                } else {
-                    val title = (browser.currentTitle ?: "").ifBlank { Uri.parse(url).host ?: url }
-                    val (list, added) = withBookmark(bookmarks, Bookmark(title.take(80), url))
-                    bookmarks = list
-                    BookmarkStore.save(ctx, list)
-                    Toast.makeText(
-                        ctx,
-                        AppText.get(if (added) R.string.web_bookmark_saved else R.string.web_bookmark_exists),
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-            }) { Text(str(R.string.web_add)) }
-            TextButton(onClick = { showBookmarks = true }) { Text(str(R.string.web_bookmarks)) }
-            TextButton(onClick = { showTabs = true }) { Text(str(R.string.web_tabs, browser.state.tabs.size)) }
-            TextButton(onClick = { if (browser.findOpen) browser.endFind() else browser.startFind() }) { Text(str(R.string.web_find)) }
-        }
-        if (browser.findOpen) {
-            // While searching the page the room goes to the page
-            FindBar(browser)
+    var showMenu by remember { mutableStateOf(false) }
+    var showHome by remember { mutableStateOf(false) }
+    if (showHome) {
+        HomePageDialog(homeUrl, onSave = { url ->
+            onHomeChange(url)
+            browser.load(url)
+        }) { showHome = false }
+    }
+
+    /** Bookmarks the page on screen. */
+    fun bookmarkThisPage() {
+        val url: String? = browser.currentUrl
+        if (url.isNullOrBlank() || !(url.startsWith("http://") || url.startsWith("https://"))) {
+            Toast.makeText(ctx, AppText.get(R.string.web_open_first), Toast.LENGTH_SHORT).show()
         } else {
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
-                OutlinedTextField(
-                    value = edit, onValueChange = { edit = it },
-                    label = { Text(str(R.string.web_homepage_label)) }, singleLine = true,
-                    modifier = Modifier.weight(1f)
-                )
-                Button(onClick = {
-                    val url = normalizeUrl(edit)
-                    onHomeChange(url)
-                    browser.load(url)
-                }) { Text(str(R.string.action_set)) }
-            }
-            FlowRow(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                TextButton(onClick = { showAds = true }) {
-                    Text(
-                        str(if (adsOn) R.string.adblock_on else R.string.adblock_off, blocked),
-                        style = MaterialTheme.typography.bodySmall
+            val title = (browser.currentTitle ?: "").ifBlank { Uri.parse(url).host ?: url }
+            val (list, added) = withBookmark(bookmarks, Bookmark(title.take(80), url))
+            bookmarks = list
+            BookmarkStore.save(ctx, list)
+            Toast.makeText(
+                ctx,
+                AppText.get(if (added) R.string.web_bookmark_saved else R.string.web_bookmark_exists),
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+    }
+
+    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(2.dp)) {
+        // One short row of the buttons used all the time; the rest is under More, so the page gets the room
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            TextButton(onClick = { browser.load(homeUrl) }) { Text(str(R.string.action_home), maxLines = 1) }
+            TextButton(onClick = { browser.reload() }) { Text(str(R.string.web_reload), maxLines = 1) }
+            TextButton(onClick = { showTabs = true }) { Text(str(R.string.web_tabs, browser.state.tabs.size), maxLines = 1) }
+            Spacer(modifier = Modifier.weight(1f))
+            Box {
+                TextButton(onClick = { showMenu = true }) { Text(str(R.string.web_more), maxLines = 1) }
+                DropdownMenu(expanded = showMenu, onDismissRequest = { showMenu = false }) {
+                    DropdownMenuItem(text = { Text(str(R.string.web_add)) }, onClick = {
+                        showMenu = false
+                        bookmarkThisPage()
+                    })
+                    DropdownMenuItem(text = { Text(str(R.string.web_bookmarks)) }, onClick = {
+                        showMenu = false
+                        showBookmarks = true
+                    })
+                    DropdownMenuItem(text = { Text(str(R.string.web_find)) }, onClick = {
+                        showMenu = false
+                        if (browser.findOpen) browser.endFind() else browser.startFind()
+                    })
+                    DropdownMenuItem(text = { Text(str(R.string.web_homepage_label)) }, onClick = {
+                        showMenu = false
+                        showHome = true
+                    })
+                    DropdownMenuItem(text = { Text(str(if (adsOn) R.string.adblock_on else R.string.adblock_off, blocked)) }, onClick = {
+                        showMenu = false
+                        showAds = true
+                    })
+                    DropdownMenuItem(
+                        text = {
+                            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                                Text(str(R.string.web_desktop))
+                                Switch(checked = browser.desktop, onCheckedChange = {
+                                    showMenu = false
+                                    browser.switchDesktop(it)
+                                })
+                            }
+                        },
+                        onClick = {
+                            showMenu = false
+                            browser.switchDesktop(!browser.desktop)
+                        }
                     )
                 }
-                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text(str(R.string.web_desktop), style = MaterialTheme.typography.bodySmall)
-                    Switch(checked = browser.desktop, onCheckedChange = { browser.switchDesktop(it) })
-                }
             }
+            TipButton(Tip.WEB, modifier = Modifier.padding(end = 4.dp))
+        }
+        if (browser.findOpen) {
+            FindBar(browser)
         }
         // The browser keeps its view for as long as the app runs; if the screen that held it before still does, it is taken from there first
         AndroidView(
@@ -609,4 +637,28 @@ fun WebTab(browser: BrowserModel, container: View, homeUrl: String, onHomeChange
             modifier = Modifier.fillMaxWidth().weight(1f)
         )
     }
+}
+
+/** The home page: the page Home opens, and the first one when the app starts. */
+@Composable
+private fun HomePageDialog(current: String, onSave: (String) -> Unit, onClose: () -> Unit) {
+    var edit by remember { mutableStateOf(current) }
+    AlertDialog(
+        onDismissRequest = onClose,
+        title = { TipTitle(str(R.string.web_homepage_label), Tip.WEB_HOME, style = MaterialTheme.typography.titleLarge) },
+        text = {
+            OutlinedTextField(
+                value = edit, onValueChange = { edit = it },
+                label = { Text(str(R.string.web_homepage_label)) }, singleLine = true,
+                modifier = Modifier.fillMaxWidth()
+            )
+        },
+        confirmButton = {
+            TextButton(onClick = {
+                onSave(normalizeUrl(edit))
+                onClose()
+            }) { Text(str(R.string.action_set)) }
+        },
+        dismissButton = { TextButton(onClick = onClose) { Text(str(R.string.action_cancel)) } }
+    )
 }

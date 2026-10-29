@@ -21,6 +21,9 @@ It stands in for both consoles: a PS5 (etaHEN) and a PS4 (GoldHEN) reach the sam
                 It runs a pretend game, "Fake Game" (pid 91): health (4 bytes) at 0x20001234 counts down by 7
                 every 4 seconds, gold 500 at 0x20002000, a float 1.0 at 0x20003000. Scans, the scan unlock,
                 reads and writes behave like the real debugger, so you can find the health and freeze it.
+                Unknown-value scans, pattern search ("Find again") and write-many are faked too.
+  Cheat files : http://127.0.0.1:12800/cheats/ as the Memory tab's cheat source serves a cheat file for
+                Fake Game: "Infinite Health" stops the health from going down.
 Setup:  pkg install python && pip install pyftpdlib
 """
 import http.client
@@ -28,6 +31,7 @@ import ipaddress
 import json
 import logging
 import os
+import random
 import socketserver
 import struct
 import threading
@@ -155,7 +159,38 @@ def start_self_test(url):
         threading.Thread(target=self_test_download, args=(url,), daemon=True).start()
 
 
+FAKE_CHEAT_INDEX = "PPSA01234_01.000.json=Fake Game\n"
+FAKE_CHEAT_FILE = json.dumps({
+    "name": "Fake Game", "id": "PPSA01234", "version": "01.000", "process": "eboot.bin",
+    "mods": [
+        {"name": "Infinite Health", "type": "checkbox",
+         "memory": [{"offset": "200", "on": "90909090", "off": "29C88907"}]},
+        {"name": "Max Gold", "type": "button",
+         "memory": [{"offset": "1FC02000", "on": "9F860100", "off": "F4010000"}]},
+        {"name": "Needs a section (not supported)", "type": "checkbox",
+         "memory": [{"section": "2", "offset": "10", "on": "90", "off": "00"}]},
+    ],
+    "credits": ["fake_console.py"],
+}, indent=2)
+
+
 class InstallHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        """Cheat files for the Memory tab: http://127.0.0.1:12800/cheats/ as the cheat source."""
+        files = {"/cheats/json.txt": FAKE_CHEAT_INDEX, "/cheats/json/PPSA01234_01.000.json": FAKE_CHEAT_FILE}
+        body = files.get(self.path.split("?")[0])
+        if body is None:
+            self.send_response(404)
+            self.end_headers()
+            return
+        data = body.encode()
+        print(f"[cheats] sent {self.path}", flush=True)
+        self.send_response(200)
+        self.send_header("Content-Type", "application/json" if self.path.endswith(".json") else "text/plain")
+        self.send_header("Content-Length", str(len(data)))
+        self.end_headers()
+        self.wfile.write(data)
+
     def do_POST(self):
         body = self.rfile.read(int(self.headers.get("Content-Length", 0)))
         if self.path == "/upload":  # etaHEN style: multipart form with a "url" field
@@ -243,6 +278,7 @@ class FakeGame:
     """A pretend game's memory: an executable region and a heap with a few values worth cheating on."""
 
     HEALTH = 0x20001234  # int32, counts down by 7 every 4 seconds, back to 100 when it reaches 0
+    MAX_HEALTH = 0x20001238  # int32 100, right after health (as games often keep them)
     GOLD = 0x20002000  # int32, 500
     STAMINA = 0x20003000  # float, 1.0
 
@@ -251,14 +287,17 @@ class FakeGame:
         exe = bytearray(0x4000)
         exe[0:16] = b"\x7fELF\x02\x01\x01\x09" + bytes(8)
         exe[0x100:0x110] = b"Fake Game v1.00\x00"
+        exe[0x200:0x204] = bytes.fromhex("29C88907")  # "sub eax, ecx; mov [rdi], eax": the code that takes damage
         heap = bytearray(0x10000)
-        for i in range(0, 0x10000, 4):  # some noise so not everything is zero
-            heap[i:i + 4] = ((i * 2654435761) & 0xFF).to_bytes(4, "little")
+        noise = random.Random(1234)  # some small numbers so not everything is zero (the same every run)
+        for i in range(0, 0x10000, 4):
+            heap[i:i + 4] = noise.randrange(0, 256).to_bytes(4, "little")
         self.regions = [  # name, start, bytes, prot
             ["executable", 0x00400000, exe, 5],
             ["heap", 0x20000000, heap, 3],
         ]
         self.put(self.HEALTH, (100).to_bytes(4, "little"))
+        self.put(self.MAX_HEALTH, (100).to_bytes(4, "little"))
         self.put(self.GOLD, (500).to_bytes(4, "little"))
         self.put(self.STAMINA, struct.pack("<f", 1.0))
         threading.Thread(target=self.take_damage, daemon=True).start()
@@ -285,6 +324,8 @@ class FakeGame:
     def take_damage(self):
         while True:
             time.sleep(4)
+            if self.get(0x00400200, 1) == b"\x90":  # the "Infinite Health" cheat replaced the code with NOPs
+                continue
             hp = int.from_bytes(self.get(self.HEALTH, 4), "little", signed=True)
             hp = 100 if hp <= 7 else hp - 7
             self.put(self.HEALTH, hp.to_bytes(4, "little", signed=True))
@@ -446,6 +487,63 @@ class DebugHandler(socketserver.BaseRequestHandler):
                     if good and flags & 2:
                         self.unlocked = True
                     self.u32(DBG_OK if good else 0xF0000003)
+                elif cmd == 0xBDAA000D:  # first map: where the game is loaded
+                    (pid,) = struct.unpack("<I", body[:4])
+                    self.u32(DBG_OK)
+                    send(struct.pack("<Q", game.regions[0][1] if pid == GAME_PID else 0))
+                elif cmd == 0xBDAACC04:  # write many: ack, entries, then the result
+                    pid, count, flags = struct.unpack("<III", body[:12])
+                    self.u32(DBG_OK)
+                    ok = True
+                    for _ in range(count):
+                        addr, length = struct.unpack("<QI", self.recv_exact(12))
+                        data = self.recv_exact(length)
+                        ok = (pid == GAME_PID and game.put(addr, data)) and ok
+                    self.u32(DBG_OK if ok else DBG_ERROR)
+                elif cmd == 0xBDAA0501:  # pattern search: the address if it occurs exactly once
+                    pid, addr, length, max_matches, stop, plen = struct.unpack("<IQIBBI", body[:22])
+                    self.u32(DBG_OK)
+                    pattern = self.recv_exact(plen)
+                    mask = self.recv_exact(plen)
+                    self.u32(DBG_OK)
+                    mem = (game.get(addr, length) if pid == GAME_PID else None) or bytes(length)
+                    keep = [i for i in range(plen) if mask[i] == 1]
+                    found = [j for j in range(0, length - plen + 1) if all(mem[j + i] == pattern[i] for i in keep)]
+                    send(struct.pack("<Q", addr + found[0] if len(found) == 1 else 0))
+                    self.u32(DBG_OK)
+                elif cmd == 0xBDAACC10:  # turbo scan engines: resident, snapshot, segments
+                    self.u32(DBG_OK)
+                    send(struct.pack("<IIII", 1, 0x04 | 0x08 | 0x10, 1, 0))
+                elif cmd == 0xBDAACC16:  # region speeds
+                    pid = struct.unpack("<I", body[:4])[0]
+                    if not getattr(self, "unlocked", False):
+                        self.u32(0xF0000003)
+                        continue
+                    regions = game.regions if pid == GAME_PID else []
+                    self.u32(DBG_OK)
+                    self.u32(len(regions))
+                    for name, start, data, prot in regions:
+                        send(struct.pack("<QQIIII", start, start + len(data), prot, 0, 2000, 0))
+                    self.u32(DBG_OK)
+                elif cmd == 0xBDAACC11:  # turbo first scan (only the snapshot kind is faked)
+                    self.turbo_start(game, body)
+                elif cmd == 0xBDAACC12:  # turbo next scan of the kept search
+                    self.turbo_count(game, body)
+                elif cmd == 0xBDAACC13:  # survivors of the kept search
+                    start, count, _ = struct.unpack("<III", body[:12])
+                    sess = getattr(self, "session", None)
+                    self.u32(DBG_OK)
+                    if not sess:
+                        self.u32(0)
+                    else:
+                        size, items = sess
+                        part = items[start:start + count]
+                        self.u32(len(part))
+                        send(b"".join(struct.pack("<Q", a) + cur + prev for a, cur, prev in part))
+                    self.u32(DBG_OK)
+                elif cmd == 0xBDAACC14:  # end the kept search
+                    self.session = None
+                    self.u32(DBG_OK)
                 elif cmd == 0xBDAACC01:  # first scan
                     self.scan_start(game, body)
                 elif cmd == 0xBDAACC02:  # next scan
@@ -534,6 +632,70 @@ def _scan_count(self, game, body):
     self.u32(DBG_OK)
 
 
+def _turbo_start(self, game, body):
+    pid, address, length, vtype, cmp, align, len_data, flags = struct.unpack("<IQIBBBII", body[:27])
+    if not getattr(self, "unlocked", False) or not flags & 0x04 or vtype not in SCAN_FORMATS:
+        self.u32(0xF0000003)
+        return
+    size = struct.calcsize(SCAN_FORMATS[vtype])
+    self.u32(DBG_OK)
+    self.u32(DBG_OK)
+    segs = []
+    if flags & 0x10:
+        (n,) = struct.unpack("<I", self.recv_exact(4))
+        for _ in range(n):
+            segs.append(struct.unpack("<QI", self.recv_exact(12)))
+    else:
+        segs = [(address, length)]
+    total = sum(l for _, l in segs)
+    send = self.request.sendall
+    send(struct.pack("<QQ", total // size, total))
+    items = []
+    done = 0
+    for a, l in segs:
+        mem = (game.get(a, l) if pid == GAME_PID else None) or bytes(l)
+        for j in range(0, l - size + 1, align or size):
+            v = mem[j:j + size]
+            if v != bytes(size):  # the real one leaves out zeros too
+                items.append((a + j, v, v))
+        done += l
+        send(struct.pack("<Q", done))
+    send(SENTINEL)
+    self.session = (size, items)
+    print(f"[memory] snapshot of {len(items)} values", flush=True)
+    send(struct.pack("<IQ", 1, len(items)))
+    self.u32(DBG_OK)
+
+
+def _turbo_count(self, game, body):
+    pid, base, vtype, cmp, len_data, flags = struct.unpack("<IQBBII", body[:22])
+    sess = getattr(self, "session", None)
+    if not getattr(self, "unlocked", False) or vtype not in SCAN_FORMATS:
+        self.u32(0xF0000003)
+        return
+    self.u32(DBG_OK)
+    needs = NEEDS_VALUE[cmp] or NEEDS_EXTRA[cmp]
+    pattern = self.recv_exact(len_data) if needs and len_data else b""
+    send = self.request.sendall
+    if not sess:
+        send(SENTINEL + struct.pack("<Q", 0))
+        self.u32(DBG_OK)
+        return
+    size, items = sess
+    scan = pattern[:size]
+    hi = pattern[size:2 * size] if cmp == 4 else None
+    kept = []
+    for a, cur, _ in items:
+        now = (game.get(a, size) if pid == GAME_PID else None) or bytes(size)
+        if scan_compare(cmp, vtype, scan, now, hi if cmp == 4 else cur):
+            kept.append((a, now, cur))
+    self.session = (size, kept)
+    send(SENTINEL + struct.pack("<Q", len(kept)))
+    self.u32(DBG_OK)
+
+
+DebugHandler.turbo_start = _turbo_start
+DebugHandler.turbo_count = _turbo_count
 DebugHandler.scan_start = _scan_start
 DebugHandler.scan_count = _scan_count
 

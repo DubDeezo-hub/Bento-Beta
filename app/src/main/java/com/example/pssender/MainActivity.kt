@@ -114,7 +114,13 @@ class MainActivity : ComponentActivity() {
             readShare(intent)
             readChainRequest(intent)
         }
-        setContent { SenderApp(sharedLink, { sharedLink = null }, timesShown, chainRequest, { chainRequest = null }) { onScreen } }
+        // The logo opening plays on a fresh start only, not when the screen is rebuilt (the phone turned)
+        val fresh = savedInstanceState == null
+        setContent {
+            IntroHost(play = fresh) {
+                SenderApp(sharedLink, { sharedLink = null }, timesShown, chainRequest, { chainRequest = null }) { onScreen }
+            }
+        }
     }
 
     override fun onStart() {
@@ -380,6 +386,7 @@ fun SenderApp(
 
     // The shortcuts on the app icon follow the saved chains (a restore rebuilds the screen, so they follow that, too)
     LaunchedEffect(Unit) { ChainShortcuts.publish(ctx, chains) }
+    LaunchedEffect(Unit) { WelcomeState.check(ctx) }
 
     // A chain asked for from the app icon or the home screen: show the Payload tab and start it
     LaunchedEffect(chainRequest) {
@@ -417,7 +424,8 @@ fun SenderApp(
                         modifier = Modifier.padding(start = 16.dp, end = 16.dp, bottom = 8.dp)
                     )
                 }
-                ConsoleCard(
+                // On the Web tab the page gets the room: the console card is left out there
+                if (tab != TAB_WEB) ConsoleCard(
                     host = host.trim(),
                     level = level,
                     checks = checks,
@@ -428,7 +436,7 @@ fun SenderApp(
                     type = active.type
                 )
                 Column(
-                    modifier = Modifier.weight(1f).padding(start = 16.dp, top = 12.dp, end = 16.dp, bottom = 4.dp),
+                    modifier = Modifier.weight(1f).padding(start = 16.dp, top = if (tab == TAB_WEB) 4.dp else 12.dp, end = 16.dp, bottom = 4.dp),
                     verticalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
                     when (tab) {
@@ -492,6 +500,12 @@ fun SenderApp(
                     onQueue = { showQueue = true }
                 )
                 BottomBar(NAV_ITEMS, tab) { tab = it }
+            }
+
+            // The welcome page, on the first start (and from the About window)
+            if (WelcomeState.showing) {
+                BackHandler { WelcomeState.done(ctx) }
+                WelcomeScreen { WelcomeState.done(ctx) }
             }
 
             if (showConsoles) {
@@ -764,7 +778,7 @@ fun InstallTab(
     val leftOut = skippedWords(links).size
 
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        Field(str(R.string.install_port_label, type.installerName), port, onPortChange) // etaHEN's installer, or the RPI app on a PS4
+        TipTitle(str(R.string.tip_install_links_title), Tip.INSTALL_LINKS)
         LinesField(str(R.string.install_links_label), links, 3) { v -> changeLinks { v } }
         Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
             TextButton(onClick = {
@@ -835,7 +849,12 @@ fun InstallTab(
         }
         Text(status)
         HelpLink(status)
+        TipTitle(str(R.string.tip_install_phone_title), Tip.INSTALL_PHONE)
         ServeSection(consoleName, host, port, onBeforeServe)
+        // Set once and then left alone: folded away
+        Foldable(str(R.string.settings_section), Tip.INSTALL_PORT, summary = str(R.string.settings_port_summary, port)) {
+            Field(str(R.string.install_port_label, type.installerName), port, onPortChange) // etaHEN's installer, or the RPI app on a PS4
+        }
     }
 }
 
@@ -859,7 +878,7 @@ fun UploadTab(
     val port = profile.ftpPort.trim().toIntOrNull()
 
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        FtpSettingsFields(profile, update, pass, onPassChange)
+        TipTitle(str(R.string.tip_upload_title), Tip.UPLOAD)
         Button(onClick = { picker.launch(arrayOf("*/*")) }) { Text(str(R.string.upload_choose)) }
         Text(
             when (uris.size) {
@@ -890,5 +909,8 @@ fun UploadTab(
             }
         ) { Text(str(R.string.upload_start)) }
         Text(str(R.string.upload_help), style = MaterialTheme.typography.bodySmall)
+        Foldable(str(R.string.files_ftp_settings), Tip.FTP, summary = str(R.string.settings_ftp_summary, profile.ftpPort, profile.ftpDir)) {
+            FtpSettingsFields(profile, update, pass, onPassChange)
+        }
     }
 }

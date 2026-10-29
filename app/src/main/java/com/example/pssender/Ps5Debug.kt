@@ -43,7 +43,28 @@ data class DbgMap(val name: String, val start: Long, val end: Long, val offset: 
 }
 
 /** What the debugger says about itself: its name and version, the protocol version and the console's firmware. */
-data class DbgInfo(val brand: String, val protocol: String, val firmware: String)
+data class DbgInfo(val brand: String, val protocol: String, val firmware: String, val capability: String = "") {
+    /** Whether this is ps5debug-NG (not the older ps5debug), which has the foreground-app command. */
+    val isNg: Boolean get() = brand.contains("ps5debug-NG", ignoreCase = true)
+
+    /** The version in the brand ("v1.3.2" gives 1.3), or 0.0 when there is none. */
+    val version: Double
+        get() = Regex("""v(\d+)\.(\d+)""").find(brand)?.let { m ->
+            (m.groupValues[1] + "." + m.groupValues[2].padStart(2, '0')).toDoubleOrNull()
+        } ?: 0.0
+
+    /** Turbo scans (unknown starting value, region speeds) came with ps5debug-NG 1.3. */
+    val hasTurbo: Boolean get() = isNg && version >= 1.03
+
+    /** Several writes in one request came with capability level 1.0. */
+    val hasWriteMulti: Boolean get() = isNg && (capability.toDoubleOrNull() ?: 0.0) >= 1.0
+}
+
+/** How fast a region reads, from ps5debug-NG's region check. [uncached] memory (the GPU's) is the slow kind. */
+data class DbgRegionSpeed(val start: Long, val end: Long, val prot: Int, val uncached: Boolean, val mbps: Int)
+
+/** One survivor of a server-side search: where it is, its value now and at the scan before. */
+class DbgSurvivor(val address: Long, val value: ByteArray, val previous: ByteArray)
 
 /** The debugger answered, but with an error (or something this app could not understand). */
 class DebuggerException(message: String) : IOException(message)
@@ -65,6 +86,28 @@ object DbgProtocol {
     val CMD_SCAN_START = 0xBDAACC01.toInt()
     val CMD_SCAN_COUNT = 0xBDAACC02.toInt()
     val CMD_SCAN_GET = 0xBDAACC03.toInt()
+    val CMD_WRITE_MULTI = 0xBDAACC04.toInt()
+    val CMD_FIRST_MAP = 0xBDAA000D.toInt()
+    val CMD_SCAN_AOB = 0xBDAA0501.toInt()
+    val CMD_TURBO_CAPS = 0xBDAACC10.toInt()
+    val CMD_TURBO_START = 0xBDAACC11.toInt()
+    val CMD_TURBO_COUNT = 0xBDAACC12.toInt()
+    val CMD_TURBO_GET = 0xBDAACC13.toInt()
+    val CMD_TURBO_END = 0xBDAACC14.toInt()
+    val CMD_TURBO_REGIONS = 0xBDAACC16.toInt()
+
+    // Turbo scan flags (protocol.h)
+    const val TS_SERVER_RESIDENT = 0x02
+    const val TS_SNAPSHOT = 0x04
+    const val TS_SNAPSHOT_SEGMENTS = 0x10
+
+    // Turbo engine bits from the capability probe
+    const val TSE_SERVER_RESIDENT = 0x04
+    const val TSE_SNAPSHOT = 0x08
+    const val TSE_SNAPSHOT_SEGMENTS = 0x10
+
+    /** Compare type of a first scan that remembers every value (the "unknown starting value" search). */
+    const val CMP_UNKNOWN = 11
 
     /** The magic of the scan unlock (CMD_PROC_AUTH), sent as is. */
     val AUTH_MAGIC = 0xBB40E64D.toInt()
@@ -225,15 +268,21 @@ class Ps5Debug(host: String, port: Int = DEBUG_PORT, timeoutMs: Int = 8000) : Cl
         return u16()
     }
 
-    /** "ps5debug-NG by OSR v1.3.2 [...]". Anything after a zero byte is a capability level and is left out. (No status word.) */
-    fun branding(): String {
+    /** "ps5debug-NG by OSR v1.3.2 [...]" and, after a zero byte, a capability level such as "1.1". (No status word.) */
+    fun branding(): Pair<String, String> {
         send(DbgProtocol.CMD_BRANDING)
         val len = count("branding", 4096)
         val b = bytes(len)
-        return DbgProtocol.cString(b, 0, b.size)
+        val brand = DbgProtocol.cString(b, 0, b.size)
+        val zero = b.indexOf(0.toByte())
+        val cap = if (zero >= 0 && zero + 1 < b.size) String(b, zero + 1, b.size - zero - 1, Charsets.UTF_8).trim() else ""
+        return brand to cap
     }
 
-    fun info(): DbgInfo = DbgInfo(brand = branding(), protocol = protocolVersion(), firmware = DbgProtocol.firmwareText(firmware()))
+    fun info(): DbgInfo {
+        val (brand, cap) = branding()
+        return DbgInfo(brand = brand, protocol = protocolVersion(), firmware = DbgProtocol.firmwareText(firmware()), capability = cap)
+    }
 
     /** Every process on the console. */
     fun processes(): List<DbgProcess> {
@@ -418,6 +467,145 @@ class Ps5Debug(host: String, port: Int = DEBUG_PORT, timeoutMs: Int = 8000) : Cl
                 at += rec
             }
         }
+    }
+
+    /** Writes several (address, bytes) pairs in one request (capability 1.0 and newer). Throws if any failed. */
+    fun writeMulti(pid: Int, entries: List<Pair<Long, ByteArray>>) {
+        if (entries.isEmpty()) return
+        send(DbgProtocol.CMD_WRITE_MULTI, DbgProtocol.le(12).putInt(pid).putInt(entries.size).putInt(0).array())
+        expectOk("write")
+        for ((addr, data) in entries) {
+            output.write(DbgProtocol.le(12).putLong(addr).putInt(data.size).array())
+            output.write(data)
+        }
+        output.flush()
+        expectOk("write")
+    }
+
+    /** Where process [pid]'s first mapped region starts: the load address of a game's eboot.bin. */
+    fun firstMapStart(pid: Int): Long {
+        send(DbgProtocol.CMD_FIRST_MAP, DbgProtocol.le(4).putInt(pid).array())
+        expectOk("load address")
+        return wrap(8).long
+    }
+
+    /**
+     * Looks for [pattern] (bytes where [mask] is 1 must match; the rest may be anything) in [length] bytes from
+     * [address]. Gives the address when it occurs exactly once there, 0 when it doesn't occur or occurs more often.
+     */
+    fun findUnique(pid: Int, address: Long, length: Int, pattern: ByteArray, mask: ByteArray): Long {
+        val body = DbgProtocol.le(22).putInt(pid).putLong(address).putInt(length).put(1.toByte()).put(1.toByte()).putInt(pattern.size).array()
+        send(DbgProtocol.CMD_SCAN_AOB, body)
+        expectOk("pattern search")
+        output.write(pattern)
+        output.write(mask)
+        output.flush()
+        expectOk("pattern search")
+        val found = wrap(8).long
+        expectOk("pattern search")
+        return found
+    }
+
+    /** The turbo engines the server has (TSE_* bits), or 0. Only ask ps5debug-NG 1.3 and newer: older ones never answer. */
+    fun turboEngines(): Int {
+        send(DbgProtocol.CMD_TURBO_CAPS)
+        expectOk("scan engines")
+        val b = wrap(16)
+        b.int // version
+        return b.int
+    }
+
+    /** Every readable region of [pid] with its measured read speed (needs [unlockScans]). */
+    fun regionSpeeds(pid: Int): List<DbgRegionSpeed> {
+        send(DbgProtocol.CMD_TURBO_REGIONS, DbgProtocol.le(16).putInt(pid).putInt(8192).putInt(0).putInt(0).array())
+        expectOk("region speeds")
+        val n = count("region speeds", 8192)
+        val raw = bytes(n * 32)
+        expectOk("region speeds")
+        val b = ByteBuffer.wrap(raw).order(ByteOrder.LITTLE_ENDIAN)
+        return (0 until n).map { i ->
+            val at = i * 32
+            DbgRegionSpeed(b.getLong(at), b.getLong(at + 8), b.getInt(at + 16), b.getInt(at + 20) and 1 != 0, b.getInt(at + 24))
+        }
+    }
+
+    /**
+     * Remembers every non-zero [type] value in [segments] of process [pid] on the console (an "unknown starting
+     * value" search). The values stay on the console, tied to this connection. Gives how many were remembered,
+     * or -1 when the console could not keep them (out of space).
+     */
+    fun snapshotStart(pid: Int, type: ValueType, segments: List<ScanSegment>, progress: (Long, Long) -> Unit): Long {
+        val flags = DbgProtocol.TS_SNAPSHOT or DbgProtocol.TS_SNAPSHOT_SEGMENTS
+        val body = DbgProtocol.le(27).putInt(pid).putLong(0).putInt(0)
+            .put(type.wire.toByte()).put(DbgProtocol.CMP_UNKNOWN.toByte()).put(type.size.toByte()).putInt(0).putInt(flags).array()
+        send(DbgProtocol.CMD_TURBO_START, body)
+        expectOk("snapshot")
+        expectOk("snapshot")
+        val list = DbgProtocol.le(4 + 12 * segments.size).putInt(segments.size)
+        for (seg in segments) list.putLong(seg.base).putInt(seg.length)
+        output.write(list.array())
+        output.flush()
+        val plan = wrap(16)
+        plan.long // slots
+        val total = plan.long
+        while (true) {
+            val done = wrap(8).long
+            if (done == DbgProtocol.SENTINEL) break
+            progress(done, total)
+        }
+        val sum = wrap(12)
+        val ok = sum.int
+        val survivors = sum.long
+        expectOk("snapshot")
+        return if (ok == 0) -1 else survivors
+    }
+
+    /** Narrows the search kept on the console with [cmp] (and its [data]). Gives how many are left. */
+    fun residentNext(pid: Int, type: ValueType, cmp: Int, data: ByteArray): Long {
+        val sendValue = DbgProtocol.countNeedsValue(cmp)
+        val lenData = if (sendValue) data.size else 0
+        val body = DbgProtocol.le(22).putInt(pid).putLong(0).put(type.wire.toByte()).put(cmp.toByte()).putInt(lenData)
+            .putInt(DbgProtocol.TS_SERVER_RESIDENT).array()
+        send(DbgProtocol.CMD_TURBO_COUNT, body)
+        expectOk("next scan")
+        if (lenData > 0) {
+            output.write(data)
+            output.flush()
+        }
+        while (wrap(8).long != DbgProtocol.SENTINEL) {
+            // progress records; the count comes after them
+        }
+        val left = wrap(8).long
+        expectOk("next scan")
+        return left
+    }
+
+    /** [count] survivors of the search kept on the console, from number [start]. */
+    fun residentGet(start: Int, count: Int, type: ValueType): List<DbgSurvivor> {
+        send(DbgProtocol.CMD_TURBO_GET, DbgProtocol.le(12).putInt(start).putInt(count).putInt(0).array())
+        expectOk("matches")
+        val hdr = u32()
+        val n = hdr and 0x7FFFFFFF
+        val values = if (hdr and 0x80000000.toInt() != 0) 3 else 2
+        if (n > count) throw DebuggerException("matches: got $n, asked for $count")
+        val rec = 8 + values * type.size
+        val raw = bytes(n * rec)
+        expectOk("matches")
+        val b = ByteBuffer.wrap(raw).order(ByteOrder.LITTLE_ENDIAN)
+        return (0 until n).map { i ->
+            val at = i * rec
+            DbgSurvivor(
+                b.getLong(at),
+                raw.copyOfRange(at + 8, at + 8 + type.size),
+                raw.copyOfRange(at + 8 + type.size, at + 8 + 2 * type.size)
+            )
+        }
+    }
+
+    /** Lets the console forget the search it kept for this connection. */
+    fun residentEnd() {
+        send(DbgProtocol.CMD_TURBO_END)
+        expectOk("end search")
     }
 
     /** Reads [size] bytes at each of the first [count] [addresses] in one request. Needs [unlockScans] first. */

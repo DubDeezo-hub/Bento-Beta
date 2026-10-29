@@ -70,7 +70,7 @@ fun ChainsSection(
     val open = editing
 
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        Text(str(R.string.chains_title), style = MaterialTheme.typography.titleMedium)
+        TipTitle(str(R.string.chains_title), Tip.PAYLOAD_CHAINS, style = MaterialTheme.typography.titleMedium)
         Text(str(R.string.chains_hint), style = MaterialTheme.typography.bodySmall)
         chains.forEach { chain ->
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {

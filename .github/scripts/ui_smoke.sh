@@ -215,6 +215,14 @@ case "$r" in
 esac
 
 launch
+# A fresh install opens on the welcome page; its button closes it for good
+shot "00-welcome"
+if dump && tap_text "$(ui string welcome_go)"; then
+  sleep 2
+  pass "the welcome page shows on the first start and closes with its button"
+else
+  soft "welcome page" "no welcome page on the first start (an older build?). Seen: $(ui texts "$XML" 2> /dev/null)"
+fi
 healthy "the app starts and shows its six tabs"
 shot "01-start"
 
@@ -309,6 +317,10 @@ rotate() { # 0 = upright, 1 = on its side
 }
 
 echo "== turning, leaving, restarting"
+# The tour ends on the last tab (Memory); this part turns the Web tab
+dump || true
+tap_text "$(nav_label nav_web)" || true
+sleep 2
 adb logcat -c > /dev/null 2>&1
 rotate 1
 healthy "the Web tab on its side"

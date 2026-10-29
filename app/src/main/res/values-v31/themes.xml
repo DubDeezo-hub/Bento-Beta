@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Light mode on Android 12 and newer: the same as values/themes.xml, plus the system launch screen in the page
+        color. Its logo sits where the app's opening (Intro.kt) starts, so the hand-over does not jump.
+    -->
+    <style name="Theme.PSSender" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">#F4F6FB</item>
+        <item name="android:statusBarColor">#F4F6FB</item>
+        <item name="android:navigationBarColor">#F4F6FB</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowSplashScreenBackground">#F4F6FB</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+    </style>
+</resources>

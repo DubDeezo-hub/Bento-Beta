@@ -618,7 +618,16 @@ fun FilesTab(
     // ---- screen ----
 
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(4.dp)) {
-        Text(if (hasFolder) model.path else str(R.string.files_not_loaded), style = MaterialTheme.typography.titleMedium)
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+            Text(
+                if (hasFolder) model.path else str(R.string.files_not_loaded),
+                style = MaterialTheme.typography.titleMedium,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.weight(1f)
+            )
+            TipButton(Tip.FILES)
+        }
         if (picking) {
             Text(str(R.string.files_selected, selected.size), style = MaterialTheme.typography.titleSmall)
             FlowRow(horizontalArrangement = Arrangement.spacedBy(4.dp)) {

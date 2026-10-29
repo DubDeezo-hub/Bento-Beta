@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark mode on Android 12 and newer: values-night/themes.xml plus the launch screen in the dark page color. -->
+    <style name="Theme.PSSender" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">#0E1320</item>
+        <item name="android:statusBarColor">#0E1320</item>
+        <item name="android:navigationBarColor">#0E1320</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowSplashScreenBackground">#0E1320</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+    </style>
+</resources>
