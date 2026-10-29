@@ -73,7 +73,8 @@ enum class Tip(val title: Int, val body: Int) {
     SAVES(R.string.tip_saves_title, R.string.tip_saves),
     MEDIA(R.string.tip_media_title, R.string.tip_media),
     SYNC(R.string.tip_sync_title, R.string.tip_sync),
-    PKG_INFO(R.string.tip_pkg_info_title, R.string.tip_pkg_info)
+    PKG_INFO(R.string.tip_pkg_info_title, R.string.tip_pkg_info),
+    STORE(R.string.tip_store_title, R.string.tip_store)
 }
 
 /** A small round "?" that opens [tip]. */

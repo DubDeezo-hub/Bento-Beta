@@ -711,8 +711,8 @@ fun ftpDownloadToPhone(
 
 /** Reads pieces of a web link with Range requests. Refuses servers that only send whole files (packages are huge). */
 class HttpRangeReader(private val url: String) : RangeReader {
-    override var size: Long = -1L
-        private set
+    private var known = -1L
+    override val size: Long get() = known
 
     override fun read(offset: Long, length: Int): ByteArray {
         val req = Request.Builder().url(url).header("Range", "bytes=$offset-${offset + length - 1}").build()
@@ -720,10 +720,10 @@ class HttpRangeReader(private val url: String) : RangeReader {
             if (!resp.isSuccessful) throw IOException("HTTP ${resp.code}")
             val body = resp.body ?: throw IOException("empty reply")
             if (resp.code == 206) {
-                resp.header("Content-Range")?.substringAfterLast('/')?.toLongOrNull()?.let { size = it }
+                resp.header("Content-Range")?.substringAfterLast('/')?.toLongOrNull()?.let { known = it }
             } else {
                 // The whole file is coming: fine for its start, not for anything further in
-                if (size < 0L) size = body.contentLength()
+                if (known < 0L) known = body.contentLength()
                 if (offset > 0L) throw IOException(AppText.get(R.string.meta_no_ranges))
             }
             val out = ByteArray(length)

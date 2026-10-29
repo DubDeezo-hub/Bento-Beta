@@ -252,9 +252,9 @@ fi
 tab_keys() { # what each tab shows on a fresh install (any of these texts will do)
   case "$1" in
     nav_install) echo "install_links_label install_paste install_port_label" ;;
-    nav_payload) echo "payload_shelf_title payload_loader_port" ;;
-    nav_upload) echo "ftp_port ftp_user ftp_password upload_choose upload_start upload_help" ;;
-    nav_files) echo "files_ftp_settings files_refresh files_need_ip files_up" ;;
+    nav_payload) echo "payload_shelf_title payload_loader_port store_open" ;;
+    nav_upload) echo "ftp_port ftp_user ftp_password upload_choose upload_start upload_help sync_title" ;;
+    nav_files) echo "files_ftp_settings files_refresh files_need_ip files_up files_view_apps" ;;
     nav_web) echo "web_add web_bookmarks web_find web_reload" ;;
     nav_memory) echo "memory_connect memory_port memory_intro" ;;
   esac

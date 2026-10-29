@@ -575,7 +575,7 @@ private fun backUp(scope: CoroutineScope, s: FtpSettings, sv: SaveEntry, onStart
                         model = s.model
                     )
                 })
-                ConsoleSaves.message = AppText.get(R.string.saves_backup_queued, plan.files.size, savedAs(folder, ""), s.model)
+                ConsoleSaves.message = AppText.get(R.string.saves_backup_queued, plan.files.size, folder, s.model)
             }
         } catch (e: Exception) {
             ConsoleSaves.message = ftpFailureMessage(e)

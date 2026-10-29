@@ -150,6 +150,8 @@ For each link, Bento posts it to the console's installer (the installer port und
 
 If neither works, the status line shows both HTTP codes and the first 80 characters of each reply, for example `Not accepted (upload 200: …; api 404: …)`, so you can see what the console really said. When a message has a likely cause, a **What can I do?** button explains it (see [Errors that say what to do](#errors-that-say-what-to-do)).
 
+**Check** (next to Paste and Clear) shows what each package is before you send it: its icon, name, title ID, version, kind (game, update or add-on), the lowest firmware it needs and its content ID. For a web link Bento reads only a few small pieces (the package header, its file table, `param.sfo` and `icon0.png`) with byte-range requests, so a 40 GB package costs a few kilobytes; a site that only sends whole files is reported instead. **Check a package on this phone** does the same for a file you pick. PS4 packages (`\x7FCNT`) are fully read. PS5 packages keep this encrypted, so only their size is shown.
+
 Bento tries both styles on either console, so one app works on a PS5 and a PS4. Both styles come from the public documentation of existing installer tools (see [Credits](#credits)). The replies a real console gives have not been confirmed yet (see [Status and known limits](#status-and-known-limits)).
 
 ### Install from this phone
@@ -178,6 +180,10 @@ Payloads (`.elf` and `.bin`) go to the console's ELF loader, which listens on th
 
 Sending a payload is a single action with a status line. It is not part of the transfer queue.
 
+#### Get payloads
+
+**Get payloads** lists well-known payloads for the console type of the selected console: on a PS5 etaHEN, ps5debug-NG, ftpsrv, websrv, shsrv, klogsrv and kstuff; on a PS4 ps4debug-NG and GoldHEN. For each one Bento asks the project's own GitHub Releases page for its newest version (GitHub's API, from the phone) and shows it. **Add to shelf** downloads the payload file of that release onto the shelf; when a release only has a zip, Bento takes the `.elf` or `.bin` out of it. Bento remembers which version came from the store, so the list says **On your shelf: v1.2, the newest** or offers **Update**, and an update replaces the old file. When you open the Payload tab, Bento checks the payloads you got this way once per start of the app and says under the shelf buttons when a newer one is out. **Page** opens the release page. The payloads are made by other people; check that one suits your console's firmware before you send it.
+
 #### Chains
 
 A chain sends several payloads from the shelf one after the other, with a pause after each, so a start-up you repeat (a payload, then another one a few seconds later) takes one tap.
@@ -199,6 +205,10 @@ Every file becomes a queue item and is stored as `<remote folder>/<file name>`. 
 
 The FTP server is the FTP payload (port 2121 by default), etaHEN's built-in one on a PS5 (port 1337), or GoldHEN's on a PS4 (port 2121). Set the port to match. How the queue handles dropped connections is under [Transfers](#transfers).
 
+#### Keep a folder in sync
+
+For a folder you keep adding to (your packages, your homebrew). **Add a folder…** picks a folder on the phone and asks where it goes on the console (the remote folder plus the folder's name, to start with). **Sync** reads the phone folder all the way down and the console folder too, then sends only the files the console doesn't have, or has with a different size; it says first how many are new, changed and already there, and how much that is. Missing folders are made on the console first. Nothing is ever deleted on either side. Up to 6 folders are remembered for each console; ✕ forgets one. Up to 20,000 files are compared.
+
 ### Files tab
 
 A file browser for the console over FTP. It opens the folder you were last in on this console, or the **Remote folder** from the FTP settings the first time (and when the folder you were last in can't be opened any more).
@@ -215,6 +225,12 @@ A file browser for the console over FTP. It opens the folder you were last in on
 - **Pinned folders.** **Pin this folder** adds a 📌 button for it under the toolbar (up to 12 per console); tap it to jump straight there. **Unpin this folder** removes it. If a pinned folder can't be opened (it was renamed or deleted), the app says so and offers to unpin it.
 - **Pull down to refresh.** Pulling the list down when it is at its top loads the folder again, the same as **Refresh**.
 - File commands use a short FTP session each, with 30-second timeouts. The listing reloads after every change and after a transfer ends.
+- **📷 Screenshots & videos** opens `/user/av_contents`, where the console keeps what the Create (or Share) button captured. Tick what you want and download it.
+
+The chips at the top switch between **Folders** (the browser above), **Games & apps** and **Saves**:
+
+- **Games & apps.** Everything in `/user/appmeta`: Bento reads each title's `param.json` (PS5) or `param.sfo` (PS4) and `icon0.png` over one FTP connection, and shows the name (in the phone's language when the game has it), title ID and version, and whether an update is installed (`/user/patch`). Icons are kept on the phone, so the list is quicker the next time. Tap a game to open its folder (`/user/app/<title ID>`), see its saves or copy its title ID.
+- **Saves.** The saves of each user in `/user/home/<user>/savedata_prospero` (PS5) and `savedata` (PS4), with the game's name and icon from the games list. **Back up to this phone** downloads a game's save folder into `Downloads/PS5/Saves/<title ID> <date time>`. **Put a backup back…** picks a folder on the phone and sends its files into the game's save folder (replacing files with the same name), after asking. Saves are locked to the console and the account that made them, so a backup only works on the same console for the same user. Close the game before putting a save back.
 
 ### Web tab
 
@@ -238,7 +254,7 @@ A built-in browser (Android's WebView) that can send downloads to the console. I
 
 ### Memory tab
 
-A cheat engine for games on a PS5. It talks to [ps5debug-NG](https://github.com/Pharaoh2k/ps5debug-NG), a debugger payload that runs inside the console's system shell (firmware 3.00 to 13.60, 10.40 included) and listens on port `744`. The console does the searching; only the matches come over Wi-Fi. Send `ps5debug-NG.elf` from the Payload tab, then tap **Connect**: the tab shows the game in the foreground (name, title ID, version, pid) and the console shows "Bento connected". Three parts sit under the header:
+A cheat engine for games on a PS5 or a PS4. It talks to [ps5debug-NG](https://github.com/Pharaoh2k/ps5debug-NG), a debugger payload that runs inside the PS5's system shell (firmware 3.00 to 13.60, 10.40 included), or on a PS4 to [ps4debug-NG](https://github.com/Pharaoh2k/ps4debug-NG) (firmware 5.05 to 13.52), which speaks the same protocol. Both listen on port `744`. Older debuggers (Ctn's ps4debug 1.1, the first ps5debug) work too: they don't answer the name request, so Bento asks again without it and leaves out what they lack (the foreground game, fast unknown-value scans). The console does the searching; only the matches come over Wi-Fi. Send `ps5debug-NG.elf` from the Payload tab, then tap **Connect**: the tab shows the game in the foreground (name, title ID, version, pid) and the console shows "Bento connected". Three parts sit under the header:
 
 **Scan**
 
@@ -256,6 +272,12 @@ A cheat engine for games on a PS5. It talks to [ps5debug-NG](https://github.com/
 - **Freeze** writes the value again five times a second (several at once with ps5debug-NG capability 1.0+). It keeps going while Bento is in the background, with a notification and a **Stop** button, and when the console goes away (rest mode, Wi-Fi) it retries for three minutes and carries on once it is back.
 - **Find all again.** When a cheat is saved from a match, Bento keeps the 24 bytes on each side of it, leaving out the value and anything that looks like an address. After the game restarts, this looks for those bytes (they must occur exactly once) and moves each cheat to where they are now.
 - **Share** sends the game's cheats as text; **Import** adds a shared list (cheats already there are skipped).
+- **Find pointer** (in a cheat's window). Most values sit somewhere new every time the game starts. A pointer path starts at a fixed place in the game's own file and follows pointers to the value, like `[eboot+1A2B0] +18 → +40`. Bento searches backwards from the cheat's address: places holding a pointer at most 0x1000 below it, places pointing just below those, and so on, up to three pointers, until it reaches the game's eboot (its code, data and the unnamed data right after it). Each step is a search on the console for 8-byte values in a window, so it can take a few minutes. Many paths only lead there by chance: restart the game, find the value again, type its new address and tap **Keep**, and only the paths that still lead to it stay. **Use it** gives the cheat that path; from then on it moves to where its path leads each time you connect and on **Find all again** (🔗 marks such cheats).
+- **Make cheat file** turns your cheats into a cheat file in the PS5_Cheats layout (offsets from the eboot's load address, your value as "on" and the bytes there now as "off"), named like `PPSA01234_01.000.000.json`. Only cheats inside the eboot can go in; values on the heap can't, and the window says how many were left out. **Share**, **Save** (to `Downloads/PS5/Cheats`) or **Copy** it.
+
+**Console log**
+
+- Shows the console's kernel log as it is written: ps5debug-NG serves it on port `3232` (the port can be changed). **Start**, **Stop**, **Pause** (the screen holds still while lines keep coming in), **Follow** (keeps the newest line in sight), a filter that shows only lines with the text you type, **Copy** and **Clear**. The last 4,000 lines are kept. This view works without connecting the debugger first.
 
 **Browse**
 
@@ -372,7 +394,12 @@ Paths are relative to [`app/src/main/java/com/example/pssender/`](app/src/main/j
 - `Help.kt`: the "What can I do?" pages and the notes that say which page a message gets.
 - `Theme.kt`: dark and light colors, and the six accents.
 - `Icons.kt`: the few icons, drawn in code so no icon library is needed.
-- `Memory.kt`: the Memory tab's screens: Scan, Cheats and Browse, and their dialogs.
+- `Memory.kt`: the Memory tab's screens: Scan, Cheats and Browse, and their dialogs (pointer paths, cheat file).
+- `Pointers.kt`: pointer paths: the backwards search from an address to the eboot, and following a path.
+- `Klog.kt`: the console log view (port 3232).
+- `ConsoleMeta.kt`: reading `param.sfo`, `param.json` and the header of a PS4 package.
+- `ConsoleTools.kt`: the Files tab's Games & apps and Saves, the package check, and folder sync.
+- `Store.kt`: Get payloads: the payload list, GitHub releases, zips, update notices.
 - `MemorySession.kt`: what the Memory tab keeps while the app runs: the connection, the search, the cheats (saved per game) and the freeze loop.
 - `CheatFiles.kt`: reading the community cheat files (and a small JSON reader).
 - `FreezeService.kt`: keeps frozen values frozen while the app is in the background.
@@ -533,8 +560,9 @@ In Bento, tap the console card and enter `127.0.0.1`. The three lights turn on.
 | --- | --- |
 | Install | Listens on 12800, understands both request styles (`/upload` and `/api/install`) and prints the link. For a link from **Install from this phone** it then downloads the file the way a console would: `HEAD`, a few byte ranges, a range past the end (which must be refused with `416`), then the whole file, capped at 64 MB unless you set `FAKE_PS5_FULL=1`. It prints `self-test PASSED`, or why it failed. |
 | Payload | Listens on 9021 (a PS5's loader) and 9090 (a PS4's), saving what it receives to `~/fake_ps5/payloads/`, one file per payload. Payload chains send to it the same way. |
-| Memory | A fake ps5debug-NG on **7744** (Android does not let Termux open port 744, so set the Memory tab's port to 7744). It runs a pretend game, *Fake Game* (pid 91), with a heap whose health (4 bytes at `20001234`) counts down by 7 every 4 seconds, gold 500 at `20002000` and a float 1.0 at `20003000`. Scans work like the real ones, so you can find the health, freeze it and watch it stop going down. |
-| Upload and Files | An anonymous FTP server on 2121 rooted at `~/fake_ps5/ftp`, with a few sample files and folders to open, rename, download and delete. Uploads land in `~/fake_ps5/ftp/data/`. |
+| Memory | A fake ps5debug-NG on **7744** (Android does not let Termux open port 744, so set the Memory tab's port to 7744). It runs a pretend game, *Fake Game* (pid 91), with a heap whose health (4 bytes at `20001234`) counts down by 7 every 4 seconds, gold 500 at `20002000` and a float 1.0 at `20003000`. Scans work like the real ones, so you can find the health, freeze it and watch it stop going down. Its eboot holds a pointer path to the health, `[eboot+5100] +10 → +34`, for **Find pointer**. A made-up console log comes out of port 3232. |
+| Upload and Files | An anonymous FTP server on 2121 rooted at `~/fake_ps5/ftp`, with a few sample files and folders to open, rename, download and delete. Uploads land in `~/fake_ps5/ftp/data/`. Two pretend games (`CUSA01234` with a `param.sfo`, `PPSA01234` with a `param.json`) with icons, saves for both, and a screenshot and a clip in `/user/av_contents`. |
+| Check | `http://127.0.0.1:12800/sample.pkg` is a pretend PS4 package (name, icon, version, firmware) served with byte ranges, for the Install tab's **Check**. |
 
 **Try Find my console.** The fake console listens on all of the phone's addresses, so with the phone on Wi-Fi, **Find my console** finds the phone itself, with Installer, Loader and FTP answering. Tap **Use** and the console card turns green. (On a phone that isn't on Wi-Fi the window says so.)
 

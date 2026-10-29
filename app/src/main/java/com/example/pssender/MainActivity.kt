@@ -21,6 +21,9 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -70,6 +73,10 @@ private const val TAB_MEMORY = 5
 
 /** A screen lower than this (in dp) counts as short: a phone held sideways. */
 private const val SHORT_SCREEN_DP = 480
+
+/** From this width on (a tablet), the tabs go down the left side and the transfers get a pane on the right. */
+private const val WIDE_SCREEN_DP = 840
+private const val SIDE_PANE_DP = 360
 
 /** How often the console card rechecks the console while the app is on screen. */
 private const val CHECK_EVERY_MS = 6000L
@@ -225,6 +232,8 @@ fun SenderApp(
     var showAbout by remember { mutableStateOf(false) }
     // A phone on its side has little height: the console card shrinks to one line and the update banner waits, so the tab and the bottom bar keep their room
     val shortScreen = LocalConfiguration.current.screenHeightDp < SHORT_SCREEN_DP
+    // Wide enough for the tabs on the side and the transfers in a pane of their own
+    val wide = LocalConfiguration.current.screenWidthDp >= WIDE_SCREEN_DP && !shortScreen
     var installLinks by rememberSaveable { mutableStateOf("") } // what is typed in the Install box; kept when the tab changes
     val changeInstallLinks: ((String) -> String) -> Unit = { change -> installLinks = change(installLinks) }
     val files = remember { FilesModel() }
@@ -424,82 +433,109 @@ fun SenderApp(
                         modifier = Modifier.padding(start = 16.dp, end = 16.dp, bottom = 8.dp)
                     )
                 }
-                // On the Web tab the page gets the room: the console card is left out there
-                if (tab != TAB_WEB) ConsoleCard(
-                    host = host.trim(),
-                    level = level,
-                    checks = checks,
-                    compact = tab == TAB_FILES || tab == TAB_WEB || tab == TAB_MEMORY || shortScreen, // these need the room, and so does a phone on its side
-                    onEdit = { showAddress = true },
-                    modifier = Modifier.padding(horizontal = 16.dp),
-                    onFind = { showFind = true },
-                    type = active.type
-                )
-                Column(
-                    modifier = Modifier.weight(1f).padding(start = 16.dp, top = if (tab == TAB_WEB) 4.dp else 12.dp, end = 16.dp, bottom = 4.dp),
-                    verticalArrangement = Arrangement.spacedBy(12.dp)
-                ) {
-                    when (tab) {
-                        TAB_FILES -> FilesTab(
-                            model = files,
-                            scope = scope,
-                            settings = ftpSettings,
-                            profile = active,
-                            pass = ftpPass,
-                            onPassChange = setFtpPass,
-                            onUpdateProfile = updateActive,
-                            transferActive = transfer.active,
-                            onStart = startTransfer,
-                            onStartMany = startTransfers,
-                            modifier = Modifier.weight(1f)
-                        )
-                        TAB_WEB -> WebTab(
-                            browser, web.container, homeUrl,
-                            { allowedSites.add(siteOf(Uri.parse(it).host)); homeUrl = it },
-                            Modifier.weight(1f)
-                        )
-                        TAB_MEMORY -> MemoryTab(host, Modifier.weight(1f))
-                        else -> {
-                            // The form tabs scroll, so nothing is cut off on small screens
-                            Column(
-                                modifier = Modifier.weight(1f).verticalScroll(rememberScrollState()),
-                                verticalArrangement = Arrangement.spacedBy(12.dp)
-                            ) {
-                                when (tab) {
-                                    0 -> InstallTab(host, active.installPort, { v -> updateActive { it.copy(installPort = v) } }, active.name, installLinks, changeInstallLinks, askNotificationsIfNeeded, active.type)
-                                    1 -> PayloadTab(
-                                        host, active.payloadPort, { v -> updateActive { it.copy(payloadPort = v) } }, shelfVersion,
-                                        chains = chains,
-                                        chainBusy = chainState.active,
-                                        onRunChain = runChain,
-                                        onSaveChain = { c ->
-                                            saveChains(if (chains.any { it.id == c.id }) chains.map { if (it.id == c.id) c else it } else chains + c, emptyList())
-                                        },
-                                        onDeleteChain = { c -> saveChains(chains.filter { it.id != c.id }, listOf(c.id)) },
-                                        onPinChain = { c -> if (!ChainShortcuts.pin(ctx, c)) statusLine = AppText.get(R.string.chain_pin_unsupported) }
-                                    )
-                                    else -> UploadTab(host, active, updateActive, ftpPass, setFtpPass, startTransfer, ftpSettings, startTransfers)
+                // A tablet (or a big phone on its side) gets the tabs down the left side and the transfers on the right
+                val mainPane: @Composable ColumnScope.() -> Unit = {
+                    // On the Web tab the page gets the room: the console card is left out there
+                    if (tab != TAB_WEB) ConsoleCard(
+                        host = host.trim(),
+                        level = level,
+                        checks = checks,
+                        compact = tab == TAB_FILES || tab == TAB_WEB || tab == TAB_MEMORY || shortScreen, // these need the room, and so does a phone on its side
+                        onEdit = { showAddress = true },
+                        modifier = Modifier.padding(horizontal = 16.dp),
+                        onFind = { showFind = true },
+                        type = active.type
+                    )
+                    Column(
+                        modifier = Modifier.weight(1f).padding(start = 16.dp, top = if (tab == TAB_WEB) 4.dp else 12.dp, end = 16.dp, bottom = 4.dp),
+                        verticalArrangement = Arrangement.spacedBy(12.dp)
+                    ) {
+                        when (tab) {
+                            TAB_FILES -> FilesTab(
+                                model = files,
+                                scope = scope,
+                                settings = ftpSettings,
+                                profile = active,
+                                pass = ftpPass,
+                                onPassChange = setFtpPass,
+                                onUpdateProfile = updateActive,
+                                transferActive = transfer.active,
+                                onStart = startTransfer,
+                                onStartMany = startTransfers,
+                                modifier = Modifier.weight(1f)
+                            )
+                            TAB_WEB -> WebTab(
+                                browser, web.container, homeUrl,
+                                { allowedSites.add(siteOf(Uri.parse(it).host)); homeUrl = it },
+                                Modifier.weight(1f)
+                            )
+                            TAB_MEMORY -> MemoryTab(host, Modifier.weight(1f))
+                            else -> {
+                                // The form tabs scroll, so nothing is cut off on small screens
+                                Column(
+                                    modifier = Modifier.weight(1f).verticalScroll(rememberScrollState()),
+                                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                                ) {
+                                    when (tab) {
+                                        0 -> InstallTab(host, active.installPort, { v -> updateActive { it.copy(installPort = v) } }, active.name, installLinks, changeInstallLinks, askNotificationsIfNeeded, active.type)
+                                        1 -> PayloadTab(
+                                            host, active.payloadPort, { v -> updateActive { it.copy(payloadPort = v) } }, shelfVersion,
+                                            chains = chains,
+                                            chainBusy = chainState.active,
+                                            onRunChain = runChain,
+                                            onSaveChain = { c ->
+                                                saveChains(if (chains.any { it.id == c.id }) chains.map { if (it.id == c.id) c else it } else chains + c, emptyList())
+                                            },
+                                            onDeleteChain = { c -> saveChains(chains.filter { it.id != c.id }, listOf(c.id)) },
+                                            onPinChain = { c -> if (!ChainShortcuts.pin(ctx, c)) statusLine = AppText.get(R.string.chain_pin_unsupported) }
+                                        )
+                                        else -> UploadTab(host, active, updateActive, ftpPass, setFtpPass, startTransfer, ftpSettings, startTransfers)
+                                    }
                                 }
                             }
                         }
                     }
                 }
-                if (statusLine.isNotEmpty()) {
-                    StatusStrip(statusLine) { statusLine = "" }
+                val cards: @Composable ColumnScope.() -> Unit = {
+                    if (statusLine.isNotEmpty()) {
+                        StatusStrip(statusLine) { statusLine = "" }
+                    }
+                    UnfinishedCard(leftovers, onContinue = continueLeftovers, onDiscard = { TransferState.discardUnfinished() })
+                    ChainCard(chainState, onStop = { ChainRunner.requestStop() }, onDismiss = { ChainRunner.dismiss() })
+                    TransferCard(
+                        transfer, waiting.size, speedLimit,
+                        onCancel = { TransferState.requestCancel() },
+                        onPauseResume = { if (transfer.paused) TransferState.resumeTransfer() else TransferState.pauseTransfer() },
+                        onLimit = { showLimit = true },
+                        onDismiss = { TransferState.clear() },
+                        onRetry = { TransferService.retry(ctx) },
+                        onSkip = { TransferService.skip(ctx) },
+                        onQueue = { showQueue = true }
+                    )
                 }
-                UnfinishedCard(leftovers, onContinue = continueLeftovers, onDiscard = { TransferState.discardUnfinished() })
-                ChainCard(chainState, onStop = { ChainRunner.requestStop() }, onDismiss = { ChainRunner.dismiss() })
-                TransferCard(
-                    transfer, waiting.size, speedLimit,
-                    onCancel = { TransferState.requestCancel() },
-                    onPauseResume = { if (transfer.paused) TransferState.resumeTransfer() else TransferState.pauseTransfer() },
-                    onLimit = { showLimit = true },
-                    onDismiss = { TransferState.clear() },
-                    onRetry = { TransferService.retry(ctx) },
-                    onSkip = { TransferService.skip(ctx) },
-                    onQueue = { showQueue = true }
-                )
-                BottomBar(NAV_ITEMS, tab) { tab = it }
+                if (wide) {
+                    Row(modifier = Modifier.weight(1f).fillMaxWidth()) {
+                        SideRail(NAV_ITEMS, tab) { tab = it }
+                        Column(modifier = Modifier.weight(1f).fillMaxHeight()) { mainPane() }
+                        Column(
+                            modifier = Modifier.width(SIDE_PANE_DP.dp).fillMaxHeight().verticalScroll(rememberScrollState()).padding(top = 12.dp, end = 8.dp),
+                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            Text(str(R.string.side_activity), style = MaterialTheme.typography.titleSmall, modifier = Modifier.padding(horizontal = 16.dp))
+                            cards()
+                            Text(
+                                str(R.string.side_activity_hint),
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.padding(horizontal = 16.dp)
+                            )
+                        }
+                    }
+                } else {
+                    mainPane()
+                    cards()
+                    BottomBar(NAV_ITEMS, tab) { tab = it }
+                }
             }
 
             // The welcome page, on the first start (and from the About window)

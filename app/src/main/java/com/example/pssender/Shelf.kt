@@ -10,6 +10,8 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -161,6 +163,15 @@ fun PayloadTab(
         }
     }
     val oneOffPicker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { oneOff = it }
+    var showStore by remember { mutableStateOf(false) }
+    val type = ActiveConsole.type
+    LaunchedEffect(type) { StoreUpdates.check(ctx, type) }
+    if (showStore) {
+        StoreDialog(type, onAdded = { shelf = shelfList(shelfDir(ctx)) }, onClose = {
+            showStore = false
+            StoreUpdates.seen()
+        })
+    }
 
     removing?.let { item ->
         AlertDialog(
@@ -202,7 +213,17 @@ fun PayloadTab(
                 TextButton(onClick = { removing = item }) { Text(str(R.string.action_remove)) }
             }
         }
-        Button(onClick = { adder.launch(arrayOf("*/*")) }) { Text(str(R.string.payload_add)) }
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+            Button(onClick = { adder.launch(arrayOf("*/*")) }) { Text(str(R.string.payload_add)) }
+            OutlinedButton(onClick = { showStore = true }) { Text(str(R.string.store_open)) }
+        }
+        if (StoreUpdates.newer.isNotEmpty()) {
+            Text(
+                str(R.string.store_updates_out, StoreUpdates.newer.joinToString(", ")),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.primary
+            )
+        }
 
         ChainsSection(
             chains = chains,

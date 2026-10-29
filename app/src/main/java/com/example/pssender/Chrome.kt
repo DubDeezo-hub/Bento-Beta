@@ -1,5 +1,7 @@
 package com.example.pssender // change to match your project's package name
 
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -280,6 +282,55 @@ fun BottomBar(items: List<NavItem>, selected: Int, onSelect: (Int) -> Unit) {
                 }
             }
         }
+    }
+}
+
+/** The tabs down the left side, for wide screens: the same buttons as [BottomBar], one above the other. */
+@Composable
+fun SideRail(items: List<NavItem>, selected: Int, onSelect: (Int) -> Unit) {
+    val cs = MaterialTheme.colorScheme
+    Row(modifier = Modifier.fillMaxHeight()) {
+        Column(
+            modifier = Modifier
+                .fillMaxHeight()
+                .width(92.dp)
+                .background(cs.surfaceContainer)
+                .verticalScroll(rememberScrollState())
+                .padding(vertical = 12.dp, horizontal = 6.dp),
+            verticalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
+            items.forEachIndexed { i, item ->
+                val on = i == selected
+                val tint = if (on) cs.primary else cs.onSurfaceVariant
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clip(RoundedCornerShape(16.dp))
+                        .selectable(selected = on, role = Role.Tab, onClick = { onSelect(i) })
+                        .padding(vertical = 6.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .clip(CircleShape)
+                            .background(if (on) cs.primary.copy(alpha = 0.16f) else Color.Transparent)
+                            .padding(horizontal = 18.dp, vertical = 4.dp)
+                    ) {
+                        Icon(item.icon, contentDescription = null, tint = tint, modifier = Modifier.size(24.dp))
+                    }
+                    Text(
+                        str(item.label),
+                        color = tint,
+                        fontSize = 12.sp,
+                        fontWeight = if (on) FontWeight.Medium else FontWeight.Normal,
+                        textAlign = TextAlign.Center,
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                }
+            }
+        }
+        Box(Modifier.fillMaxHeight().width(1.dp).background(cs.outlineVariant))
     }
 }
 
