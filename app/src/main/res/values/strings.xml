@@ -325,7 +325,7 @@
     <string name="about_version">Version %1$s</string>
     <string name="about_button">About &amp; backup</string>
     <string name="about_report">Copy debug info</string>
-    <string name="about_report_help">Copies what a helper needs, ready to paste into a bug report or a forum post: the app and phone, the console type and firmware, the debugger, payloads from the store, the last connection check and recent problems. IP addresses and links are left out.</string>
+    <string name="about_report_help">Copies what a helper needs, ready to paste into a bug report or a forum post: the app and phone, the console type and firmware, the debugger, the payloads you got from Get payloads, the last connection check and recent problems. IP addresses and links are left out.</string>
     <string name="about_report_copied">Debug info copied</string>
     <string name="about_releases">Releases page</string>
     <string name="backup_title">Backup</string>

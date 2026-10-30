@@ -76,9 +76,6 @@ private const val SHORT_SCREEN_DP = 480
 
 /** From this width on (a tablet), the tabs go down the left side and the transfers get a pane on the right. */
 private const val WIDE_SCREEN_DP = 840
-
-/** From this width a short screen (a phone on its side) shows its tabs down the side. */
-private const val SIDEWAYS_DP = 600
 private const val SIDE_PANE_DP = 360
 
 /** How often the console card rechecks the console while the app is on screen. */
@@ -249,8 +246,6 @@ fun SenderApp(
     val shortScreen = LocalConfiguration.current.screenHeightDp < SHORT_SCREEN_DP
     // Wide enough for the tabs on the side and the transfers in a pane of their own
     val wide = LocalConfiguration.current.screenWidthDp >= WIDE_SCREEN_DP && !shortScreen
-    // A phone turned sideways: too short for a bar at the bottom, so the tabs go down the side instead
-    val sideways = !wide && shortScreen && LocalConfiguration.current.screenWidthDp >= SIDEWAYS_DP
     var installLinks by rememberSaveable { mutableStateOf("") } // what is typed in the Install box; kept when the tab changes
     val changeInstallLinks: ((String) -> String) -> Unit = { change -> installLinks = change(installLinks) }
     val files = remember { FilesModel() }
@@ -605,14 +600,6 @@ fun SenderApp(
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 modifier = Modifier.padding(horizontal = 16.dp)
                             )
-                        }
-                    }
-                } else if (sideways) {
-                    Row(modifier = Modifier.weight(1f).fillMaxWidth()) {
-                        SideRail(NAV_ITEMS, tab) { tab = it }
-                        Column(modifier = Modifier.weight(1f).fillMaxHeight()) {
-                            mainPane()
-                            cards()
                         }
                     }
                 } else {
