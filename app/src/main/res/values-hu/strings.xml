@@ -183,7 +183,7 @@
     <string name="err_short_upload">A konzol csak %1$s adatot tartott meg az elküldött %2$s mennyiségből.</string>
     <string name="err_short_download">Az összesen %2$s mennyiségből csak %1$s érkezett meg.</string>
     <string name="err_empty_file">A fájl üres</string>
-    <string name="err_save">Nem sikerült menteni: %1$s</string>
+    <string name="err_save">Nem sikerült menteni: %1$s (%2$s)</string>
     <string name="sent_to_ps5">Elküldve a %2$s-re: %1$s</string>
     <string name="saved_to_downloads">Mentve ide: Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">A letöltés sikertelen: HTTP %1$s</string>

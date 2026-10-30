@@ -183,7 +183,7 @@
     <string name="err_short_upload">അയച്ച %2$s-ൽ കൺസോൾ %1$s മാത്രമേ സൂക്ഷിച്ചുള്ളൂ.</string>
     <string name="err_short_download">%2$s-ൽ %1$s മാത്രമേ എത്തിയുള്ളൂ.</string>
     <string name="err_empty_file">ഫയൽ ശൂന്യമാണ്</string>
-    <string name="err_save">സംരക്ഷിക്കാൻ കഴിഞ്ഞില്ല: %1$s</string>
+    <string name="err_save">സംരക്ഷിക്കാൻ കഴിഞ്ഞില്ല: %1$s (%2$s)</string>
     <string name="sent_to_ps5">%2$s-ലേക്ക് അയച്ചു: %1$s</string>
     <string name="saved_to_downloads">Downloads/%2$s-ൽ സംരക്ഷിച്ചു: %1$s</string>
     <string name="dl_http_failed">ഡൗൺലോഡ് പരാജയപ്പെട്ടു: HTTP %1$s</string>

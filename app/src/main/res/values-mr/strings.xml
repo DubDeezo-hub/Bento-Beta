@@ -183,7 +183,7 @@
     <string name="err_short_upload">पाठवलेल्या %2$s पैकी कन्सोलने फक्त %1$s ठेवले.</string>
     <string name="err_short_download">%2$s पैकी फक्त %1$s पोहोचले.</string>
     <string name="err_empty_file">फाइल रिकामी आहे</string>
-    <string name="err_save">जतन करता आले नाही: %1$s</string>
+    <string name="err_save">जतन करता आले नाही: %1$s (%2$s)</string>
     <string name="sent_to_ps5">%2$s ला पाठवले: %1$s</string>
     <string name="saved_to_downloads">Downloads/%2$s मध्ये जतन केले: %1$s</string>
     <string name="dl_http_failed">डाउनलोड अयशस्वी झाले: HTTP %1$s</string>

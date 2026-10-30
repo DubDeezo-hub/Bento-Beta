@@ -183,7 +183,7 @@
     <string name="err_short_upload">Од послатих %2$s конзола је задржала само %1$s.</string>
     <string name="err_short_download">Стигло је само %1$s од %2$s.</string>
     <string name="err_empty_file">Датотека је празна</string>
-    <string name="err_save">Није могуће сачувати %1$s</string>
+    <string name="err_save">Није могуће сачувати %1$s (%2$s)</string>
     <string name="sent_to_ps5">Послато на %2$s: %1$s</string>
     <string name="saved_to_downloads">Сачувано у Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Преузимање није успело: HTTP %1$s</string>

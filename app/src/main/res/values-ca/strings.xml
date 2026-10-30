@@ -183,7 +183,7 @@
     <string name="err_short_upload">De %2$s enviats, la consola només n\'ha conservat %1$s.</string>
     <string name="err_short_download">Només han arribat %1$s de %2$s.</string>
     <string name="err_empty_file">El fitxer és buit</string>
-    <string name="err_save">No s\'ha pogut desar %1$s</string>
+    <string name="err_save">No s\'ha pogut desar %1$s (%2$s)</string>
     <string name="sent_to_ps5">S\'ha enviat a la %2$s: %1$s</string>
     <string name="saved_to_downloads">S\'ha desat a Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Ha fallat la baixada: HTTP %1$s</string>

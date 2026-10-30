@@ -183,7 +183,7 @@
     <string name="err_short_upload">З надісланих %2$s консоль зберегла лише %1$s.</string>
     <string name="err_short_download">Отримано лише %1$s із %2$s.</string>
     <string name="err_empty_file">Файл порожній</string>
-    <string name="err_save">Не вдалося зберегти %1$s</string>
+    <string name="err_save">Не вдалося зберегти %1$s (%2$s)</string>
     <string name="sent_to_ps5">Надіслано на %2$s: %1$s</string>
     <string name="saved_to_downloads">Збережено в Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Не вдалося завантажити: HTTP %1$s</string>

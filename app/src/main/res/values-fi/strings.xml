@@ -183,7 +183,7 @@
     <string name="err_short_upload">Lähetetystä määrästä (%2$s) konsoli säilytti vain %1$s.</string>
     <string name="err_short_download">Perille tuli vain %1$s (koko %2$s).</string>
     <string name="err_empty_file">Tiedosto on tyhjä</string>
-    <string name="err_save">Tallennus epäonnistui: %1$s</string>
+    <string name="err_save">Tallennus epäonnistui: %1$s (%2$s)</string>
     <string name="sent_to_ps5">Lähetetty %2$s:lle: %1$s</string>
     <string name="saved_to_downloads">Tallennettu kansioon Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Lataus epäonnistui: HTTP %1$s</string>

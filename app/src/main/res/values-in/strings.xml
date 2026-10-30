@@ -183,7 +183,7 @@
     <string name="err_short_upload">Dari %2$s yang dikirim, konsol hanya menyimpan %1$s.</string>
     <string name="err_short_download">Hanya %1$s dari %2$s yang sampai.</string>
     <string name="err_empty_file">File kosong</string>
-    <string name="err_save">Tidak dapat menyimpan %1$s</string>
+    <string name="err_save">Tidak dapat menyimpan %1$s (%2$s)</string>
     <string name="sent_to_ps5">Terkirim ke %2$s: %1$s</string>
     <string name="saved_to_downloads">Disimpan di Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Unduhan gagal: HTTP %1$s</string>

@@ -183,7 +183,7 @@
     <string name="err_short_upload">ಕಳುಹಿಸಿದ %2$s ರಲ್ಲಿ ಕನ್ಸೋಲ್ ಕೇವಲ %1$s ಅನ್ನು ಉಳಿಸಿಕೊಂಡಿದೆ.</string>
     <string name="err_short_download">%2$s ರಲ್ಲಿ ಕೇವಲ %1$s ತಲುಪಿದೆ.</string>
     <string name="err_empty_file">ಫೈಲ್ ಖಾಲಿಯಾಗಿದೆ</string>
-    <string name="err_save">ಉಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ: %1$s</string>
+    <string name="err_save">ಉಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ: %1$s (%2$s)</string>
     <string name="sent_to_ps5">%2$s ಗೆ ಕಳುಹಿಸಲಾಗಿದೆ: %1$s</string>
     <string name="saved_to_downloads">Downloads/%2$s ನಲ್ಲಿ ಉಳಿಸಲಾಗಿದೆ: %1$s</string>
     <string name="dl_http_failed">ಡೌನ್‌ಲೋಡ್ ವಿಫಲವಾಯಿತು: HTTP %1$s</string>

@@ -183,7 +183,7 @@
     <string name="err_short_upload">Kati ya %2$s zilizotumwa, konsoli ilihifadhi %1$s pekee.</string>
     <string name="err_short_download">Ni %1$s pekee kati ya %2$s zilizofika.</string>
     <string name="err_empty_file">Faili ni tupu</string>
-    <string name="err_save">Imeshindwa kuhifadhi %1$s</string>
+    <string name="err_save">Imeshindwa kuhifadhi %1$s (%2$s)</string>
     <string name="sent_to_ps5">Imetumwa kwa %2$s: %1$s</string>
     <string name="saved_to_downloads">Imehifadhiwa katika Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Upakuaji umeshindwa: HTTP %1$s</string>
@@ -943,7 +943,7 @@
     <string name="memory_back_done">Umerudi kwenye uchanganuzi uliopita: zinazolingana %1$d</string>
     <string name="memory_neighbors">Majirani</string>
     <string name="memory_neighbors_hide">Ficha majirani</string>
-    <string name="memory_neighbors_help">Thamani zilizo kabla na baada ya hii, zikisomwa kwa njia ile ile. Tumia huweka moja kwenye Thamani mpya.</string>
+    <string name="memory_neighbors_help">Thamani zilizo kabla na baada ya hii, zikisomwa kwa njia ile ile. Kitufe cha Tumia huweka moja kwenye Thamani mpya.</string>
     <string name="memory_neighbors_this">hii</string>
     <string name="memory_neighbors_use">Tumia</string>
     <string name="tip_mem_neighbors_title">Majirani</string>

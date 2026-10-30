@@ -183,7 +183,7 @@
     <string name="err_short_upload">Консоль сохранила только %1$s из отправленных %2$s.</string>
     <string name="err_short_download">Получено только %1$s из %2$s.</string>
     <string name="err_empty_file">Файл пуст</string>
-    <string name="err_save">Не удалось сохранить %1$s</string>
+    <string name="err_save">Не удалось сохранить %1$s (%2$s)</string>
     <string name="sent_to_ps5">Отправлено на %2$s: %1$s</string>
     <string name="saved_to_downloads">Сохранено в «Загрузки/%2$s»: %1$s</string>
     <string name="dl_http_failed">Ошибка скачивания: HTTP %1$s</string>

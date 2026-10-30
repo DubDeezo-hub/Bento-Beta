@@ -183,7 +183,7 @@
     <string name="err_short_upload">भेजे गए %2$s में से कंसोल ने केवल %1$s रखा।</string>
     <string name="err_short_download">%2$s में से केवल %1$s पहुँचा।</string>
     <string name="err_empty_file">फ़ाइल खाली है</string>
-    <string name="err_save">%1$s सहेजा नहीं जा सका</string>
+    <string name="err_save">%1$s सहेजा नहीं जा सका (%2$s)</string>
     <string name="sent_to_ps5">%2$s को भेजा गया: %1$s</string>
     <string name="saved_to_downloads">Downloads/%2$s में सहेजा गया: %1$s</string>
     <string name="dl_http_failed">डाउनलोड विफल रहा: HTTP %1$s</string>

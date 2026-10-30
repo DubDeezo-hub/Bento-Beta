@@ -183,7 +183,7 @@
     <string name="err_short_upload">Konsollen beholdt kun %1$s af de %2$s, der blev sendt.</string>
     <string name="err_short_download">Kun %1$s af %2$s nåede frem.</string>
     <string name="err_empty_file">Filen er tom</string>
-    <string name="err_save">Kunne ikke gemme %1$s</string>
+    <string name="err_save">Kunne ikke gemme %1$s (%2$s)</string>
     <string name="sent_to_ps5">Sendt til %2$s: %1$s</string>
     <string name="saved_to_downloads">Gemt i Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Download mislykkedes: HTTP %1$s</string>

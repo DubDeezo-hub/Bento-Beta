@@ -183,7 +183,7 @@
     <string name="err_short_upload">A consola guardou apenas %1$s dos %2$s enviados.</string>
     <string name="err_short_download">Só chegaram %1$s de %2$s.</string>
     <string name="err_empty_file">O ficheiro está vazio</string>
-    <string name="err_save">Não foi possível guardar %1$s</string>
+    <string name="err_save">Não foi possível guardar %1$s (%2$s)</string>
     <string name="sent_to_ps5">Enviado para a %2$s: %1$s</string>
     <string name="saved_to_downloads">Guardado em Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Falha na transferência: HTTP %1$s</string>

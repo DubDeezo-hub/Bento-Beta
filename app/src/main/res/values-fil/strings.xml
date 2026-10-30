@@ -183,7 +183,7 @@
     <string name="err_short_upload">Sa ipinadalang %2$s, %1$s lang ang itinabi ng console.</string>
     <string name="err_short_download">%1$s lang sa %2$s ang dumating.</string>
     <string name="err_empty_file">Walang laman ang file</string>
-    <string name="err_save">Hindi ma-save ang %1$s</string>
+    <string name="err_save">Hindi ma-save ang %1$s (%2$s)</string>
     <string name="sent_to_ps5">Naipadala sa %2$s: %1$s</string>
     <string name="saved_to_downloads">Na-save sa Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Nabigo ang pag-download: HTTP %1$s</string>

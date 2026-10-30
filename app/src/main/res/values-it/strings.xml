@@ -183,7 +183,7 @@
     <string name="err_short_upload">La console ha conservato solo %1$s dei %2$s inviati.</string>
     <string name="err_short_download">Ricevuti solo %1$s su %2$s.</string>
     <string name="err_empty_file">Il file è vuoto</string>
-    <string name="err_save">Impossibile salvare %1$s</string>
+    <string name="err_save">Impossibile salvare %1$s (%2$s)</string>
     <string name="sent_to_ps5">Inviato alla %2$s: %1$s</string>
     <string name="saved_to_downloads">Salvato in Download/%2$s: %1$s</string>
     <string name="dl_http_failed">Download non riuscito: HTTP %1$s</string>

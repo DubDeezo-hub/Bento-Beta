@@ -183,7 +183,7 @@
     <string name="err_short_upload">Trong %2$s đã gửi, console chỉ giữ lại %1$s.</string>
     <string name="err_short_download">Chỉ nhận được %1$s trên %2$s.</string>
     <string name="err_empty_file">Tệp trống</string>
-    <string name="err_save">Không thể lưu %1$s</string>
+    <string name="err_save">Không thể lưu %1$s (%2$s)</string>
     <string name="sent_to_ps5">Đã gửi đến %2$s: %1$s</string>
     <string name="saved_to_downloads">Đã lưu vào Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Tải xuống thất bại: HTTP %1$s</string>

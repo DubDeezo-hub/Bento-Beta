@@ -183,7 +183,7 @@
     <string name="err_short_upload">Daripada %2$s yang dihantar, konsol hanya menyimpan %1$s.</string>
     <string name="err_short_download">Hanya %1$s daripada %2$s yang sampai.</string>
     <string name="err_empty_file">Fail kosong</string>
-    <string name="err_save">Tidak dapat menyimpan %1$s</string>
+    <string name="err_save">Tidak dapat menyimpan %1$s (%2$s)</string>
     <string name="sent_to_ps5">Dihantar ke %2$s: %1$s</string>
     <string name="saved_to_downloads">Disimpan ke Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Muat turun gagal: HTTP %1$s</string>

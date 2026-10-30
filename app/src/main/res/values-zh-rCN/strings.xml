@@ -183,7 +183,7 @@
     <string name="err_short_upload">在发送的 %2$s 中，主机只保存了 %1$s。</string>
     <string name="err_short_download">%2$s 中只收到了 %1$s。</string>
     <string name="err_empty_file">文件为空</string>
-    <string name="err_save">无法保存 %1$s</string>
+    <string name="err_save">无法保存 %1$s (%2$s)</string>
     <string name="sent_to_ps5">已发送到 %2$s：%1$s</string>
     <string name="saved_to_downloads">已保存到“下载/%2$s”：%1$s</string>
     <string name="dl_http_failed">下载失败：HTTP %1$s</string>

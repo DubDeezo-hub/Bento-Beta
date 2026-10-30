@@ -183,7 +183,7 @@
     <string name="err_short_upload">Saadetud andmemahust (%2$s) säilitas konsool vaid %1$s.</string>
     <string name="err_short_download">Kohale jõudis vaid %1$s (kokku %2$s).</string>
     <string name="err_empty_file">Fail on tühi</string>
-    <string name="err_save">%1$s salvestamine ebaõnnestus</string>
+    <string name="err_save">%1$s salvestamine ebaõnnestus (%2$s)</string>
     <string name="sent_to_ps5">%2$s-le saadetud: %1$s</string>
     <string name="saved_to_downloads">Salvestatud kausta Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Allalaadimine ebaõnnestus: HTTP %1$s</string>

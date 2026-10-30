@@ -183,7 +183,7 @@
     <string name="err_short_upload">จาก %2$s ที่ส่งไป คอนโซลเก็บไว้เพียง %1$s</string>
     <string name="err_short_download">มาถึงเพียง %1$s จาก %2$s</string>
     <string name="err_empty_file">ไฟล์ว่างเปล่า</string>
-    <string name="err_save">บันทึก %1$s ไม่ได้</string>
+    <string name="err_save">บันทึก %1$s ไม่ได้ (%2$s)</string>
     <string name="sent_to_ps5">ส่งไปยัง %2$s แล้ว: %1$s</string>
     <string name="saved_to_downloads">บันทึกใน Downloads/%2$s แล้ว: %1$s</string>
     <string name="dl_http_failed">ดาวน์โหลดไม่สำเร็จ: HTTP %1$s</string>

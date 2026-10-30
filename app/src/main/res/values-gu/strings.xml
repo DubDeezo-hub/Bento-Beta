@@ -183,7 +183,7 @@
     <string name="err_short_upload">મોકલેલા %2$s માંથી કન્સોલે ફક્ત %1$s રાખ્યું.</string>
     <string name="err_short_download">%2$s માંથી ફક્ત %1$s પહોંચ્યું.</string>
     <string name="err_empty_file">ફાઇલ ખાલી છે</string>
-    <string name="err_save">સાચવી શકાયું નથી: %1$s</string>
+    <string name="err_save">સાચવી શકાયું નથી: %1$s (%2$s)</string>
     <string name="sent_to_ps5">%2$s ને મોકલ્યું: %1$s</string>
     <string name="saved_to_downloads">Downloads/%2$s માં સાચવ્યું: %1$s</string>
     <string name="dl_http_failed">ડાઉનલોડ નિષ્ફળ ગયું: HTTP %1$s</string>

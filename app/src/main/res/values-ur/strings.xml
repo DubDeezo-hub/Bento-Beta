@@ -183,7 +183,7 @@
     <string name="err_short_upload">بھیجے گئے %2$s میں سے کنسول نے صرف %1$s رکھا۔</string>
     <string name="err_short_download">‏%2$s میں سے صرف %1$s پہنچا۔</string>
     <string name="err_empty_file">فائل خالی ہے</string>
-    <string name="err_save">‏%1$s محفوظ نہیں کیا جا سکا</string>
+    <string name="err_save">‏%1$s محفوظ نہیں کیا جا سکا (%2$s)</string>
     <string name="sent_to_ps5">‏%2$s کو بھیج دیا گیا: %1$s</string>
     <string name="saved_to_downloads">‏Downloads/%2$s میں محفوظ کر دیا گیا: %1$s</string>
     <string name="dl_http_failed">ڈاؤن لوڈ ناکام ہو گیا: HTTP %1$s</string>

@@ -183,7 +183,7 @@
     <string name="err_short_upload">পাঠানো %2$s-এর মধ্যে কনসোল শুধু %1$s রেখেছে।</string>
     <string name="err_short_download">%2$s-এর মধ্যে মাত্র %1$s পৌঁছেছে।</string>
     <string name="err_empty_file">ফাইলটি খালি</string>
-    <string name="err_save">%1$s সংরক্ষণ করা যায়নি</string>
+    <string name="err_save">%1$s সংরক্ষণ করা যায়নি (%2$s)</string>
     <string name="sent_to_ps5">%2$s-এ পাঠানো হয়েছে: %1$s</string>
     <string name="saved_to_downloads">Downloads/%2$s-এ সংরক্ষিত হয়েছে: %1$s</string>
     <string name="dl_http_failed">ডাউনলোড ব্যর্থ হয়েছে: HTTP %1$s</string>

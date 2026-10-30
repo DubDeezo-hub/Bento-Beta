@@ -183,7 +183,7 @@
     <string name="err_short_upload">Konsolen behöll bara %1$s av de %2$s som skickades.</string>
     <string name="err_short_download">Bara %1$s av %2$s kom fram.</string>
     <string name="err_empty_file">Filen är tom</string>
-    <string name="err_save">Det gick inte att spara %1$s</string>
+    <string name="err_save">Det gick inte att spara %1$s (%2$s)</string>
     <string name="sent_to_ps5">Skickat till %2$s: %1$s</string>
     <string name="saved_to_downloads">Sparad i Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Nedladdningen misslyckades: HTTP %1$s</string>

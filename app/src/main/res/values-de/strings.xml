@@ -183,7 +183,7 @@
     <string name="err_short_upload">Die Konsole hat von den gesendeten %2$s nur %1$s behalten.</string>
     <string name="err_short_download">Nur %1$s von %2$s sind angekommen.</string>
     <string name="err_empty_file">Die Datei ist leer</string>
-    <string name="err_save">%1$s konnte nicht gespeichert werden</string>
+    <string name="err_save">%1$s konnte nicht gespeichert werden (%2$s)</string>
     <string name="sent_to_ps5">An die %2$s gesendet: %1$s</string>
     <string name="saved_to_downloads">Gespeichert in Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Download fehlgeschlagen: HTTP %1$s</string>

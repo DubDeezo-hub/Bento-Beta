@@ -183,7 +183,7 @@
     <string name="err_short_upload">احتفظ الجهاز بما حجمه %1$s فقط من %2$s التي أُرسلت.</string>
     <string name="err_short_download">وصل %1$s فقط من أصل %2$s.</string>
     <string name="err_empty_file">الملف فارغ</string>
-    <string name="err_save">تعذّر حفظ %1$s</string>
+    <string name="err_save">تعذّر حفظ %1$s (%2$s)</string>
     <string name="sent_to_ps5">تم الإرسال إلى %2$s: %1$s</string>
     <string name="saved_to_downloads">تم الحفظ في التنزيلات/%2$s: %1$s</string>
     <string name="dl_http_failed">فشل التنزيل: HTTP %1$s</string>

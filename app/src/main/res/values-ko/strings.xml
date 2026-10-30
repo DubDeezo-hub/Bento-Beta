@@ -183,7 +183,7 @@
     <string name="err_short_upload">보낸 %2$s 중 콘솔이 저장한 것은 %1$s뿐입니다.</string>
     <string name="err_short_download">%2$s 중 %1$s만 도착했습니다.</string>
     <string name="err_empty_file">파일이 비어 있습니다</string>
-    <string name="err_save">%1$s 저장 실패</string>
+    <string name="err_save">%1$s 저장 실패 (%2$s)</string>
     <string name="sent_to_ps5">%2$s로 보냄: %1$s</string>
     <string name="saved_to_downloads">다운로드/%2$s에 저장됨: %1$s</string>
     <string name="dl_http_failed">다운로드 실패: HTTP %1$s</string>

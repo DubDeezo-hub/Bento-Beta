@@ -183,7 +183,7 @@
     <string name="err_short_upload">Van die %2$s wat gestuur is, het die konsole net %1$s behou.</string>
     <string name="err_short_download">Net %1$s van %2$s het aangekom.</string>
     <string name="err_empty_file">Die lêer is leeg</string>
-    <string name="err_save">Kan %1$s nie stoor nie</string>
+    <string name="err_save">Kan %1$s nie stoor nie (%2$s)</string>
     <string name="sent_to_ps5">Na die %2$s gestuur: %1$s</string>
     <string name="saved_to_downloads">Gestoor in Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Aflaai het misluk: HTTP %1$s</string>
@@ -943,7 +943,7 @@
     <string name="memory_back_done">Terug na die vorige skandering: %1$d treffers</string>
     <string name="memory_neighbors">Bure</string>
     <string name="memory_neighbors_hide">Versteek bure</string>
-    <string name="memory_neighbors_help">Die waardes net voor en ná hierdie een, op dieselfde manier gelees. Gebruik sit een in Nuwe waarde.</string>
+    <string name="memory_neighbors_help">Die waardes net voor en ná hierdie een, op dieselfde manier gelees. Die Gebruik-knoppie sit een in Nuwe waarde.</string>
     <string name="memory_neighbors_this">hierdie</string>
     <string name="memory_neighbors_use">Gebruik</string>
     <string name="tip_mem_neighbors_title">Bure</string>

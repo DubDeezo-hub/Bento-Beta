@@ -183,7 +183,7 @@
     <string name="err_short_upload">De console heeft slechts %1$s bewaard van de %2$s die zijn verzonden.</string>
     <string name="err_short_download">Slechts %1$s van %2$s is aangekomen.</string>
     <string name="err_empty_file">Het bestand is leeg</string>
-    <string name="err_save">Kon %1$s niet opslaan</string>
+    <string name="err_save">Kon %1$s niet opslaan (%2$s)</string>
     <string name="sent_to_ps5">Naar %2$s verzonden: %1$s</string>
     <string name="saved_to_downloads">Opgeslagen in Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Download mislukt: HTTP %1$s</string>

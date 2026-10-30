@@ -183,7 +183,7 @@
     <string name="err_short_upload">Από τα %2$s που στάλθηκαν, η κονσόλα κράτησε μόνο %1$s.</string>
     <string name="err_short_download">Έφτασαν μόνο %1$s από %2$s.</string>
     <string name="err_empty_file">Το αρχείο είναι κενό</string>
-    <string name="err_save">Δεν ήταν δυνατή η αποθήκευση του %1$s</string>
+    <string name="err_save">Δεν ήταν δυνατή η αποθήκευση του %1$s (%2$s)</string>
     <string name="sent_to_ps5">Στάλθηκε στο %2$s: %1$s</string>
     <string name="saved_to_downloads">Αποθηκεύτηκε στο Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Η λήψη απέτυχε: HTTP %1$s</string>

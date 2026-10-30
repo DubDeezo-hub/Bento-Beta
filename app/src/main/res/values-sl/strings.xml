@@ -183,7 +183,7 @@
     <string name="err_short_upload">Od poslanih %2$s je konzola obdržala le %1$s.</string>
     <string name="err_short_download">Prispelo je le %1$s od %2$s.</string>
     <string name="err_empty_file">Datoteka je prazna</string>
-    <string name="err_save">Datoteke %1$s ni bilo mogoče shraniti</string>
+    <string name="err_save">Datoteke %1$s ni bilo mogoče shraniti (%2$s)</string>
     <string name="sent_to_ps5">Poslano v %2$s: %1$s</string>
     <string name="saved_to_downloads">Shranjeno v Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Prenos ni uspel: HTTP %1$s</string>

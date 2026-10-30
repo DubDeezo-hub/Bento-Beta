@@ -183,7 +183,7 @@
     <string name="err_short_upload">No nosūtītajiem %2$s konsole saglabāja tikai %1$s.</string>
     <string name="err_short_download">Pienāca tikai %1$s no %2$s.</string>
     <string name="err_empty_file">Fails ir tukšs</string>
-    <string name="err_save">Neizdevās saglabāt %1$s</string>
+    <string name="err_save">Neizdevās saglabāt %1$s (%2$s)</string>
     <string name="sent_to_ps5">Nosūtīts uz %2$s: %1$s</string>
     <string name="saved_to_downloads">Saglabāts mapē Downloads/%2$s: %1$s</string>
     <string name="dl_http_failed">Lejupielāde neizdevās: HTTP %1$s</string>

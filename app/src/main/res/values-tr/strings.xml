@@ -183,7 +183,7 @@
     <string name="err_short_upload">Gönderilen %2$s içinden konsol yalnızca %1$s sakladı.</string>
     <string name="err_short_download">%2$s içinden yalnızca %1$s ulaştı.</string>
     <string name="err_empty_file">Dosya boş</string>
-    <string name="err_save">%1$s kaydedilemedi</string>
+    <string name="err_save">%1$s kaydedilemedi (%2$s)</string>
     <string name="sent_to_ps5">%2$s’e gönderildi: %1$s</string>
     <string name="saved_to_downloads">İndirilenler/%2$s içine kaydedildi: %1$s</string>
     <string name="dl_http_failed">İndirme başarısız: HTTP %1$s</string>

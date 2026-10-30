@@ -183,7 +183,7 @@
     <string name="err_short_upload">送信した%2$sのうち、コンソールに保存されたのは%1$sだけです。</string>
     <string name="err_short_download">%2$sのうち%1$sしか届きませんでした。</string>
     <string name="err_empty_file">ファイルが空です</string>
-    <string name="err_save">%1$sを保存できませんでした</string>
+    <string name="err_save">%1$sを保存できませんでした (%2$s)</string>
     <string name="sent_to_ps5">%2$sに送信しました: %1$s</string>
     <string name="saved_to_downloads">ダウンロード/%2$sに保存しました: %1$s</string>
     <string name="dl_http_failed">ダウンロードに失敗しました: HTTP %1$s</string>

@@ -183,7 +183,7 @@
     <string name="err_short_upload">کنسول از %2$s ارسال‌شده فقط %1$s را نگه داشت.</string>
     <string name="err_short_download">فقط %1$s از %2$s رسید.</string>
     <string name="err_empty_file">فایل خالی است</string>
-    <string name="err_save">ذخیره %1$s ممکن نشد</string>
+    <string name="err_save">ذخیره %1$s ممکن نشد (%2$s)</string>
     <string name="sent_to_ps5">به %2$s ارسال شد: %1$s</string>
     <string name="saved_to_downloads">در Downloads/%2$s ذخیره شد: %1$s</string>
     <string name="dl_http_failed">دانلود ناموفق بود: HTTP %1$s</string>
