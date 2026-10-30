@@ -95,6 +95,10 @@ object DbgProtocol {
     val CMD_WRITE_MULTI = 0xBDAACC04.toInt()
     val CMD_FIRST_MAP = 0xBDAA000D.toInt()
     val CMD_SCAN_AOB = 0xBDAA0501.toInt()
+
+    /** The value type for a byte pattern (with a mask) in a search. */
+    const val TYPE_BYTES = 10
+
     val CMD_TURBO_CAPS = 0xBDAACC10.toInt()
     val CMD_TURBO_START = 0xBDAACC11.toInt()
     val CMD_TURBO_COUNT = 0xBDAACC12.toInt()
@@ -473,6 +477,25 @@ class Ps5Debug(host: String, port: Int = DEBUG_PORT, timeoutMs: Int = 8000) : Cl
                 at += rec
             }
         }
+    }
+
+    /**
+     * Every place in [address]..+[length] of [pid] where [pattern] is (bytes whose [mask] is 0 may be anything), at
+     * any byte offset. [onMatch] gets each offset from [address]. Needs the debugger-NG servers (they take the mask)
+     * and a connection whose scans are unlocked.
+     */
+    fun scanBytes(pid: Int, address: Long, length: Int, pattern: ByteArray, mask: ByteArray, onMatch: (offset: Int) -> Unit) {
+        require(pattern.isNotEmpty() && mask.size == pattern.size)
+        val body = DbgProtocol.le(23).putInt(pid).putLong(address).putInt(length)
+            .put(DbgProtocol.TYPE_BYTES.toByte()).put(0.toByte()).put(1.toByte()).putInt(pattern.size).array()
+        send(DbgProtocol.CMD_SCAN_START, body)
+        expectOk("text search")
+        output.write(pattern)
+        output.write(mask)
+        output.flush()
+        expectOk("text search")
+        readBlocks(pattern.size) { off, _, _ -> onMatch(off) }
+        expectOk("text search")
     }
 
     /** Writes several (address, bytes) pairs in one request (capability 1.0 and newer). Throws if any failed. */

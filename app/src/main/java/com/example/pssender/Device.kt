@@ -46,6 +46,16 @@ fun appVersion(ctx: Context): AppVersion =
         AppVersion("?", 0L)
     }
 
+/** Opens the phone's share sheet with [text] under [title]; when nothing can share it, it is copied instead. */
+fun shareText(ctx: Context, text: String, title: String, copiedMessage: String? = null) {
+    try {
+        val send = Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, text)
+        ctx.startActivity(Intent.createChooser(send, title).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+    } catch (_: Exception) {
+        copyText(ctx, "Bento", text, copiedMessage)
+    }
+}
+
 /** Opens a web address in the phone's browser. Returns false when nothing could open it. */
 fun openLink(ctx: Context, url: String): Boolean =
     try {

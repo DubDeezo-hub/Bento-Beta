@@ -74,7 +74,11 @@ enum class Tip(val title: Int, val body: Int) {
     MEDIA(R.string.tip_media_title, R.string.tip_media),
     SYNC(R.string.tip_sync_title, R.string.tip_sync),
     PKG_INFO(R.string.tip_pkg_info_title, R.string.tip_pkg_info),
-    STORE(R.string.tip_store_title, R.string.tip_store)
+    STORE(R.string.tip_store_title, R.string.tip_store),
+    DIAGNOSE(R.string.tip_diag_title, R.string.tip_diag),
+    FIRMWARE(R.string.tip_fw_title, R.string.tip_fw),
+    MEM_UNDO(R.string.tip_undo_title, R.string.tip_undo),
+    MEM_TEXT(R.string.tip_mem_text_title, R.string.tip_mem_text)
 }
 
 /** A small round "?" that opens [tip]. */

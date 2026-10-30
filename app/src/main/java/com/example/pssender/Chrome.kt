@@ -144,7 +144,8 @@ fun ConsoleCard(
     onEdit: () -> Unit,
     modifier: Modifier = Modifier,
     onFind: (() -> Unit)? = null,
-    type: ConsoleType = ConsoleType.PS5
+    type: ConsoleType = ConsoleType.PS5,
+    onCheck: (() -> Unit)? = null
 ) {
     val cs = MaterialTheme.colorScheme
     val sc = statusColors()
@@ -204,8 +205,13 @@ fun ConsoleCard(
                 Text(hint, color = cs.onSurfaceVariant, style = MaterialTheme.typography.bodySmall)
             }
             // With no address, or an address nothing answers at, the quickest way on is to look for the console
-            if (onFind != null && (level == ConsoleLevel.UNSET || level == ConsoleLevel.OFFLINE)) {
-                TextButton(onClick = onFind) { Text(str(R.string.find_button, type.model)) }
+            val findIt = onFind != null && (level == ConsoleLevel.UNSET || level == ConsoleLevel.OFFLINE)
+            val checkIt = onCheck != null && (level == ConsoleLevel.PARTIAL || level == ConsoleLevel.OFFLINE)
+            if (findIt || checkIt) {
+                Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                    if (checkIt) TextButton(onClick = onCheck!!) { Text(str(R.string.diag_button)) }
+                    if (findIt) TextButton(onClick = onFind!!) { Text(str(R.string.find_button, type.model)) }
+                }
             }
         }
     }
@@ -221,7 +227,8 @@ fun ConsoleEditDialog(
     onHostChange: (String) -> Unit,
     onFind: () -> Unit,
     onClose: () -> Unit,
-    type: ConsoleType = ConsoleType.PS5
+    type: ConsoleType = ConsoleType.PS5,
+    onCheck: (() -> Unit)? = null
 ) {
     AlertDialog(
         onDismissRequest = onClose,
@@ -233,7 +240,10 @@ fun ConsoleEditDialog(
                     str(if (type == ConsoleType.PS4) R.string.console_ip_help_ps4 else R.string.console_ip_help),
                     style = MaterialTheme.typography.bodySmall
                 )
-                TextButton(onClick = onFind) { Text(str(R.string.find_button, type.model)) }
+                Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                    TextButton(onClick = onFind) { Text(str(R.string.find_button, type.model)) }
+                    if (onCheck != null && host.isNotBlank()) TextButton(onClick = onCheck) { Text(str(R.string.diag_button)) }
+                }
             }
         },
         confirmButton = { TextButton(onClick = onClose) { Text(str(R.string.action_done)) } }

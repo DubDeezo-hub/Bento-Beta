@@ -1,5 +1,6 @@
 package com.example.pssender // change to match your project's package name
 
+import android.content.Context
 import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -51,14 +52,61 @@ fun scrubForReport(text: String): String =
  * The text of the report: the app, the phone, how many consoles are set up and the last message that was shown.
  * It is for the person who reads the bug report, so it is always in English.
  */
-fun buildReport(version: AppVersion, phone: String, consoleCount: Int, lastMessage: String): String {
+fun buildReport(version: AppVersion, phone: String, consoleCount: Int, lastMessage: String, extras: ReportExtras = ReportExtras()): String {
     val lines = ArrayList<String>()
     lines.add("Bento ${version.name} (${version.code})")
     lines.add(phone)
+    if (extras.language.isNotEmpty()) lines.add("App language: " + extras.language)
     lines.add("Consoles: $consoleCount")
+    if (extras.console.isNotEmpty()) lines.add("Console: " + extras.console + if (extras.firmware.isNotEmpty()) ", firmware " + extras.firmware else "")
+    if (extras.debugger.isNotEmpty()) lines.add("Debugger: " + scrubForReport(extras.debugger))
+    if (extras.payloads.isNotEmpty()) lines.add("From the store: " + extras.payloads.joinToString(", "))
+    if (extras.check.isNotEmpty()) {
+        lines.add("Last connection check:")
+        extras.check.forEach { lines.add("  " + scrubForReport(it)) }
+    }
     val message = scrubForReport(lastMessage).trim()
     if (message.isNotEmpty()) lines.add("Last message: " + message.take(REPORT_MESSAGE_MAX))
+    val recent = extras.recent.map { scrubForReport(it).trim().take(REPORT_MESSAGE_MAX) }.filter { it.isNotEmpty() && it != message.take(REPORT_MESSAGE_MAX) }
+    if (recent.isNotEmpty()) {
+        lines.add("Recent problems:")
+        recent.forEach { lines.add("  - $it") }
+    }
     return lines.joinToString("\n")
+}
+
+/** What else goes into the debug info: the console, its firmware, the debugger, the store's payloads, recent problems. */
+class ReportExtras(
+    val language: String = "",
+    val console: String = "",
+    val firmware: String = "",
+    val debugger: String = "",
+    val payloads: List<String> = emptyList(),
+    val check: List<String> = emptyList(),
+    val recent: List<String> = emptyList()
+)
+
+/** The debug info as it stands now, to paste into a bug report or a forum post. */
+object DebugInfo {
+    /** How many recent problem messages go in. */
+    private const val RECENT = 5
+
+    fun extras(ctx: Context): ReportExtras {
+        val type = ActiveConsole.type
+        val snap = MemorySession.snapshot
+        return ReportExtras(
+            language = AppLanguage.current(ctx).ifEmpty { "phone's" },
+            console = type.model,
+            firmware = ConsoleFirmware.get(ctx, ActiveConsole.id),
+            debugger = snap?.info?.let { i -> listOf(i.brand, i.protocol.ifBlank { null }?.let { "protocol $it" }, i.firmware.ifBlank { null }?.let { "firmware $it" }).filterNotNull().filter { it.isNotBlank() }.joinToString(", ") } ?: "",
+            payloads = Store.entries.filter { it.console == type }.mapNotNull { e -> Store.installedTag(ctx, e).ifEmpty { null }?.let { "${e.name} $it" } },
+            check = Diagnose.lastSummary,
+            recent = Hints.recent(RECENT)
+        )
+    }
+
+    fun build(ctx: Context, lastMessage: String = ""): String =
+        buildReport(appVersion(ctx), phoneSummary(), ProfileStore.load(ctx).size, lastMessage, extras(ctx))
 }
 
 /**
@@ -169,9 +217,13 @@ fun AboutDialog(
                     horizontalArrangement = Arrangement.spacedBy(4.dp)
                 ) {
                     TextButton(onClick = {
-                        report = buildReport(version, phoneSummary(), consoleCount, lastMessage)
+                        report = buildReport(version, phoneSummary(), consoleCount, lastMessage, DebugInfo.extras(ctx))
                         copyText(ctx, "Bento", report, AppText.get(R.string.about_report_copied))
                     }) { Text(str(R.string.about_report)) }
+                    TextButton(onClick = {
+                        report = buildReport(version, phoneSummary(), consoleCount, lastMessage, DebugInfo.extras(ctx))
+                        shareText(ctx, report, AppText.get(R.string.about_report_share))
+                    }) { Text(str(R.string.about_report_share)) }
                     TextButton(onClick = { openLink(ctx, RELEASES_URL) }) { Text(str(R.string.about_releases)) }
                     TextButton(onClick = {
                         onClose()

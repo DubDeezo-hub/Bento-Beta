@@ -41,9 +41,12 @@ object AppText {
     @Volatile
     private var reader: ((Int, Array<out Any>) -> String)? = null
 
-    /** Reads the texts from the app's resources. [App] calls this when the app process starts. */
-    fun init(ctx: Context) {
-        val app = ctx.applicationContext
+    /**
+     * Reads the texts from the app's resources. [App] calls this when the app process starts; [texts] is the context
+     * in the chosen language when the app picks its own (see [AppLanguage]).
+     */
+    fun init(ctx: Context, texts: Context = ctx.applicationContext) {
+        val app = texts
         reader = { id, args ->
             if (args.isEmpty()) {
                 app.getString(id)
@@ -69,6 +72,10 @@ object AppText {
  * date in a file that is not part of the phone's backups (it holds addresses and links).
  */
 class App : Application() {
+    override fun attachBaseContext(base: Context) {
+        super.attachBaseContext(AppLanguage.wrap(base))
+    }
+
     override fun onCreate() {
         super.onCreate()
         AppText.init(this)

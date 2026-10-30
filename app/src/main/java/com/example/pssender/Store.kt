@@ -11,7 +11,9 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -24,9 +26,11 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -51,23 +55,25 @@ data class StoreEntry(
     /** The console it runs on. */
     val console: ConsoleType,
     /** The file name to take from a release (or from the zip in it); case does not matter. */
-    val file: String
+    val file: String,
+    /** A plain tool (a server, a logger) that runs on any firmware where payloads can be loaded at all. */
+    val anyFirmware: Boolean = false
 )
 
 /** A file in a release. */
 data class StoreAsset(val name: String, val url: String, val size: Long)
 
 /** The newest release of a payload. */
-data class StoreRelease(val tag: String, val page: String, val date: String, val assets: List<StoreAsset>)
+data class StoreRelease(val tag: String, val page: String, val date: String, val assets: List<StoreAsset>, val notes: String = "")
 
 object Store {
     val entries = listOf(
         StoreEntry("etaHEN/etaHEN", "etaHEN", R.string.store_about_etahen, ConsoleType.PS5, "etaHEN.bin"),
         StoreEntry("Pharaoh2k/ps5debug-NG", "ps5debug-NG", R.string.store_about_ps5debug, ConsoleType.PS5, "ps5debug-NG.elf"),
-        StoreEntry("ps5-payload-dev/ftpsrv", "ftpsrv", R.string.store_about_ftpsrv, ConsoleType.PS5, "ftpsrv.elf"),
-        StoreEntry("ps5-payload-dev/websrv", "websrv", R.string.store_about_websrv, ConsoleType.PS5, "websrv.elf"),
-        StoreEntry("ps5-payload-dev/shsrv", "shsrv", R.string.store_about_shsrv, ConsoleType.PS5, "shsrv.elf"),
-        StoreEntry("ps5-payload-dev/klogsrv", "klogsrv", R.string.store_about_klogsrv, ConsoleType.PS5, "klogsrv.elf"),
+        StoreEntry("ps5-payload-dev/ftpsrv", "ftpsrv", R.string.store_about_ftpsrv, ConsoleType.PS5, "%s.elf", anyFirmware = true),
+        StoreEntry("ps5-payload-dev/websrv", "websrv", R.string.store_about_websrv, ConsoleType.PS5, "%s.elf", anyFirmware = true),
+        StoreEntry("ps5-payload-dev/shsrv", "shsrv", R.string.store_about_shsrv, ConsoleType.PS5, "%s.elf", anyFirmware = true),
+        StoreEntry("ps5-payload-dev/klogsrv", "klogsrv", R.string.store_about_klogsrv, ConsoleType.PS5, "%s.elf", anyFirmware = true),
         StoreEntry("EchoStretch/kstuff", "kstuff", R.string.store_about_kstuff, ConsoleType.PS5, "kstuff.elf"),
         StoreEntry("Pharaoh2k/ps4debug-NG", "ps4debug-NG", R.string.store_about_ps4debug, ConsoleType.PS4, "ps4debug-ng.bin"),
         StoreEntry("GoldHEN/GoldHEN_Releases", "GoldHEN", R.string.store_about_goldhen, ConsoleType.PS4, "goldhen.bin")
@@ -91,7 +97,8 @@ object Store {
                 tag = o["tag_name"] as? String ?: "",
                 page = o["html_url"] as? String ?: "",
                 date = (o["published_at"] as? String ?: "").take(10),
-                assets = assets
+                assets = assets,
+                notes = o["body"] as? String ?: ""
             )
         }
         return null
@@ -152,6 +159,36 @@ object Store {
         return parseReleases(reply.body) ?: throw java.io.IOException(AppText.get(R.string.store_no_releases))
     }
 
+    /**
+     * The firmware lines of [e]'s README, kept for a few days so opening the store does not cost an extra GitHub call
+     * per payload each time. Blocking; empty when the README cannot be read.
+     */
+    fun readmeFirmwareLines(ctx: Context, e: StoreEntry): String {
+        val p = prefs(ctx)
+        val key = "store_fwtext_" + e.repo
+        val kept = p.getString(key, null)
+        val now = System.currentTimeMillis()
+        if (kept != null) {
+            val time = kept.substringBefore('\n').toLongOrNull() ?: 0L
+            if (now - time in 0..README_KEEP_MS) return kept.substringAfter('\n', "")
+        }
+        return try {
+            val reply = webGet("https://api.github.com/repos/${e.repo}/readme", true, "application/vnd.github.raw")
+            if (reply.code != 200 && reply.code != 404) return kept?.substringAfter('\n', "") ?: ""
+            val lines = if (reply.code == 200) FirmwareSupport.relevantLines(reply.body).joinToString("\n").take(8000) else ""
+            p.edit().putString(key, "$now\n$lines").apply()
+            lines
+        } catch (_: Exception) {
+            kept?.substringAfter('\n', "") ?: ""
+        }
+    }
+
+    /** What [e]'s README and the notes of [release] say about firmware. Blocking. */
+    fun firmwareClaims(ctx: Context, e: StoreEntry, release: StoreRelease?): FwClaims =
+        FirmwareSupport.claims(readmeFirmwareLines(ctx, e) + "\n" + (release?.notes ?: ""))
+
+    private const val README_KEEP_MS = 3L * 24 * 60 * 60 * 1000
+
     /** Downloads [asset] of [release] onto the shelf. Gives the message to show. Blocking. */
     fun install(ctx: Context, e: StoreEntry, release: StoreRelease, asset: StoreAsset): String {
         val c = URL(asset.url).openConnection() as HttpURLConnection
@@ -184,7 +221,13 @@ object Store {
 }
 
 /** What the store shows for one payload. */
-private class StoreRow(val entry: StoreEntry, val release: StoreRelease? = null, val problem: String = "", val loading: Boolean = true)
+private class StoreRow(
+    val entry: StoreEntry,
+    val release: StoreRelease? = null,
+    val problem: String = "",
+    val loading: Boolean = true,
+    val claims: FwClaims? = null
+)
 
 @Composable
 fun StoreDialog(type: ConsoleType, onAdded: () -> Unit, onClose: () -> Unit) {
@@ -194,11 +237,16 @@ fun StoreDialog(type: ConsoleType, onAdded: () -> Unit, onClose: () -> Unit) {
     var rows by remember(type) { mutableStateOf(list.map { StoreRow(it) }) }
     var busy by remember { mutableStateOf("") }
     var message by remember { mutableStateOf("") }
+    val profileId = ActiveConsole.id
+    var firmware by remember(profileId) { mutableStateOf(ConsoleFirmware.get(ctx, profileId)) }
+    var editingFw by remember { mutableStateOf(false) }
+    var fwText by remember { mutableStateOf("") }
     LaunchedEffect(type) {
         list.forEachIndexed { i, e ->
             val row = withContext(Dispatchers.IO) {
                 try {
-                    StoreRow(e, Store.latest(e), loading = false)
+                    val r = Store.latest(e)
+                    StoreRow(e, r, loading = false, claims = if (e.anyFirmware) null else Store.firmwareClaims(ctx, e, r))
                 } catch (x: Exception) {
                     StoreRow(e, problem = x.message ?: x.javaClass.simpleName, loading = false)
                 }
@@ -212,6 +260,42 @@ fun StoreDialog(type: ConsoleType, onAdded: () -> Unit, onClose: () -> Unit) {
         text = {
             Column(modifier = Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 Text(str(R.string.store_intro), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                // The console's firmware, which the firmware notes below are measured against
+                if (editingFw) {
+                    val ok = ConsoleFirmware.normalize(fwText) != null
+                    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                        OutlinedTextField(
+                            value = fwText,
+                            onValueChange = { fwText = it.take(6) },
+                            singleLine = true,
+                            label = { Text(str(R.string.store_fw_label)) },
+                            placeholder = { Text("10.40") },
+                            isError = fwText.isNotBlank() && !ok,
+                            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
+                            modifier = Modifier.weight(1f)
+                        )
+                        TextButton(enabled = ok || fwText.isBlank(), onClick = {
+                            if (fwText.isBlank()) ConsoleFirmware.clear(ctx, profileId) else ConsoleFirmware.set(ctx, profileId, fwText)
+                            firmware = ConsoleFirmware.get(ctx, profileId)
+                            editingFw = false
+                        }) { Text(str(R.string.action_save)) }
+                    }
+                } else {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        TipTitle(
+                            if (firmware.isEmpty()) str(R.string.store_fw_none) else str(R.string.store_fw_console, firmware),
+                            Tip.FIRMWARE,
+                            modifier = Modifier.weight(1f),
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                        if (profileId.isNotEmpty()) {
+                            TextButton(onClick = {
+                                fwText = firmware
+                                editingFw = true
+                            }) { Text(str(if (firmware.isEmpty()) R.string.action_set else R.string.action_edit)) }
+                        }
+                    }
+                }
                 if (message.isNotEmpty()) {
                     Text(message, style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.Medium)
                     HelpLink(message)
@@ -221,9 +305,17 @@ fun StoreDialog(type: ConsoleType, onAdded: () -> Unit, onClose: () -> Unit) {
                     val rel = row.release
                     val have = Store.installedTag(ctx, e)
                     val asset = rel?.let { Store.pick(e, it) }
+                    val fwNumber = ConsoleFirmware.number(firmware)
+                    val fit = when {
+                        e.anyFirmware -> FwFit.ANY
+                        row.claims == null -> null
+                        fwNumber == null -> null
+                        else -> row.claims.fit(fwNumber)
+                    }
                     Column(
                         modifier = Modifier
                             .fillMaxWidth()
+                            .alpha(if (fit == FwFit.NOT_LISTED) 0.6f else 1f)
                             .clip(RoundedCornerShape(12.dp))
                             .background(MaterialTheme.colorScheme.surfaceContainerLow)
                             .padding(10.dp),
@@ -244,6 +336,17 @@ fun StoreDialog(type: ConsoleType, onAdded: () -> Unit, onClose: () -> Unit) {
                             style = MaterialTheme.typography.bodySmall,
                             color = if (rel != null && have.isNotEmpty() && have != rel.tag) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant
                         )
+                        firmwareNote(e, row.claims, fit, firmware)?.let { (text, good) ->
+                            Text(
+                                text,
+                                style = MaterialTheme.typography.bodySmall,
+                                color = when (good) {
+                                    true -> statusColors().good
+                                    false -> statusColors().bad
+                                    null -> MaterialTheme.colorScheme.onSurfaceVariant
+                                }
+                            )
+                        }
                         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                             if (rel != null && asset != null) {
                                 Button(enabled = busy.isEmpty(), onClick = {
@@ -277,6 +380,22 @@ fun StoreDialog(type: ConsoleType, onAdded: () -> Unit, onClose: () -> Unit) {
         },
         confirmButton = { TextButton(onClick = onClose) { Text(str(R.string.action_close)) } }
     )
+}
+
+/** The firmware line under a payload, and whether it is good news (true), a warning (false) or neutral (null). */
+@Composable
+private fun firmwareNote(e: StoreEntry, claims: FwClaims?, fit: FwFit?, firmware: String): Pair<String, Boolean?>? {
+    if (e.anyFirmware) return str(R.string.store_fw_any) to null
+    if (claims == null) return null
+    val low = claims.lowest
+    val high = claims.highest
+    return when (fit) {
+        FwFit.LISTED -> str(R.string.store_fw_listed, firmware) to true
+        FwFit.NOT_LISTED -> str(R.string.store_fw_not_listed, firmware, low ?: "?", high ?: "?") to false
+        FwFit.UNKNOWN -> str(R.string.store_fw_unknown) to null
+        FwFit.ANY -> str(R.string.store_fw_any) to null
+        null -> if (claims.isEmpty || low == null || high == null) str(R.string.store_fw_unknown) to null else str(R.string.store_fw_range, low, high) to null
+    }
 }
 
 /** Newer versions of payloads that came from the store, looked for once per start of the app. */

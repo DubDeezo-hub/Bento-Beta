@@ -113,6 +113,11 @@ class MainActivity : ComponentActivity() {
     /** Goes up each time the app comes on screen, which makes the screen start its console checks again. */
     private var timesShown by mutableStateOf(0)
 
+    /** On Android 12 and older, the language picked in the app (newer versions apply it themselves). */
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(AppLanguage.wrap(newBase))
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         TransferState.setSpeedLimit(SpeedLimits.load(this)) // the saved speed limit applies from the first transfer on
@@ -217,6 +222,9 @@ fun SenderApp(
     var statusLine by remember { mutableStateOf("") }
     var showConsoles by remember { mutableStateOf(false) }
     var showAddress by remember { mutableStateOf(false) }
+    var showDiagnose by remember { mutableStateOf(false) }
+    var showStore by remember { mutableStateOf(false) }
+    var showLanguage by remember { mutableStateOf(false) }
     var showFind by rememberSaveable { mutableStateOf(false) } // the "Find my PS5" window; it scans again when the screen is rebuilt
     val findAsked by FindConsole.asked.collectAsState()
     var shelfVersion by remember { mutableStateOf(0) }
@@ -252,7 +260,15 @@ fun SenderApp(
     // The selected console. Everything below reads its IP, ports and FTP login from here.
     val active = profiles.firstOrNull { it.id == activeId } ?: profiles.first()
     // Texts made where no console is at hand (help pages, error messages) name the selected console's type
-    SideEffect { ActiveConsole.type = active.type }
+    SideEffect {
+        ActiveConsole.type = active.type
+        ActiveConsole.id = active.id
+    }
+    // The debugger tells us the console's firmware; the store uses it to say which payloads fit
+    val seenFirmware = MemorySession.snapshot?.info?.firmware.orEmpty()
+    LaunchedEffect(seenFirmware, active.id) {
+        if (seenFirmware.isNotEmpty() && seenFirmware != "?" && MemorySession.host == active.host.trim()) ConsoleFirmware.set(ctx, active.id, seenFirmware)
+    }
     val host = active.host
     val ftpPass = passwords[active.id] ?: ""
     val setFtpPass: (String) -> Unit = { passwords = passwords + (activeId to it) }
@@ -444,7 +460,8 @@ fun SenderApp(
                         onEdit = { showAddress = true },
                         modifier = Modifier.padding(horizontal = 16.dp),
                         onFind = { showFind = true },
-                        type = active.type
+                        type = active.type,
+                        onCheck = { showDiagnose = true }
                     )
                     Column(
                         modifier = Modifier.weight(1f).padding(start = 16.dp, top = if (tab == TAB_WEB) 4.dp else 12.dp, end = 16.dp, bottom = 4.dp),
@@ -477,7 +494,7 @@ fun SenderApp(
                                     verticalArrangement = Arrangement.spacedBy(12.dp)
                                 ) {
                                     when (tab) {
-                                        0 -> InstallTab(host, active.installPort, { v -> updateActive { it.copy(installPort = v) } }, active.name, installLinks, changeInstallLinks, askNotificationsIfNeeded, active.type)
+                                        0 -> InstallTab(host, active.installPort, { v -> updateActive { it.copy(installPort = v) } }, active.name, installLinks, changeInstallLinks, askNotificationsIfNeeded, active.type, ftpSettings)
                                         1 -> PayloadTab(
                                             host, active.payloadPort, { v -> updateActive { it.copy(payloadPort = v) } }, shelfVersion,
                                             chains = chains,
@@ -567,7 +584,10 @@ fun SenderApp(
                     },
                     onColor = { c -> updateActive { it.copy(color = c) } },
                     onType = { t -> updateActive { it.withType(t) } },
-                    onLanguage = { openLanguageSettings(ctx) },
+                    onLanguage = {
+                        showConsoles = false
+                        showLanguage = true
+                    },
                     onAbout = {
                         showConsoles = false
                         showAbout = true
@@ -608,8 +628,45 @@ fun SenderApp(
                         showFind = true
                     },
                     onClose = { showAddress = false },
-                    type = active.type
+                    type = active.type,
+                    onCheck = {
+                        showAddress = false
+                        showDiagnose = true
+                    }
                 )
+            }
+
+            if (showDiagnose) {
+                DiagnoseDialog(
+                    profile = active,
+                    debuggerPort = MemorySession.port.trim().toIntOrNull(),
+                    onFix = { fix ->
+                        when (fix) {
+                            is DiagFix.UsePort -> updateActive {
+                                when (fix.service) {
+                                    DiagService.INSTALLER -> it.copy(installPort = fix.port.toString())
+                                    DiagService.LOADER -> it.copy(payloadPort = fix.port.toString())
+                                    DiagService.FTP -> it.copy(ftpPort = fix.port.toString())
+                                    DiagService.DEBUGGER -> it
+                                }
+                            }
+                            DiagFix.GetPayloads -> {
+                                showDiagnose = false
+                                showStore = true
+                            }
+                            DiagFix.FindConsole -> {
+                                showDiagnose = false
+                                showFind = true
+                            }
+                        }
+                    },
+                    onClose = { showDiagnose = false }
+                )
+            }
+
+            if (showLanguage) LanguageDialog(onClose = { showLanguage = false })
+            if (showStore) {
+                StoreDialog(type = active.type, onAdded = {}, onClose = { showStore = false })
             }
 
             if (showFind) {
@@ -801,7 +858,8 @@ fun InstallTab(
     links: String,
     changeLinks: ((String) -> String) -> Unit,
     onBeforeServe: () -> Unit,
-    type: ConsoleType = ConsoleType.PS5
+    type: ConsoleType = ConsoleType.PS5,
+    ftp: FtpSettings? = null
 ) {
     val ctx = LocalContext.current
     val scope = rememberCoroutineScope()
@@ -816,8 +874,8 @@ fun InstallTab(
     var checkLinks by remember { mutableStateOf<List<String>?>(null) }
     var checkFile by remember { mutableStateOf<Uri?>(null) }
     val pkgPicker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { u -> if (u != null) checkFile = u }
-    checkLinks?.let { l -> PkgInfoDialog(l.take(20), null) { checkLinks = null } }
-    checkFile?.let { f -> PkgInfoDialog(emptyList(), f) { checkFile = null } }
+    checkLinks?.let { l -> PkgInfoDialog(l.take(20), null, ftp, type) { checkLinks = null } }
+    checkFile?.let { f -> PkgInfoDialog(emptyList(), f, ftp, type) { checkFile = null } }
 
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         TipTitle(str(R.string.tip_install_links_title), Tip.INSTALL_LINKS)

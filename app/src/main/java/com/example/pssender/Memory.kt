@@ -1,7 +1,6 @@
 package com.example.pssender // change to match your project's package name
 
 import android.content.Context
-import android.content.Intent
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -122,6 +121,8 @@ private sealed class MemoryDialog {
     object Import : MemoryDialog()
     class CheatFileOut(val name: String, val text: String, val inside: Int, val outside: Int) : MemoryDialog()
     object Source : MemoryDialog()
+    object Undo : MemoryDialog()
+    class Text(val hit: TextHit) : MemoryDialog()
 }
 
 @Composable
@@ -161,7 +162,7 @@ fun MemoryTab(host: String, modifier: Modifier = Modifier) {
         }
     }
     LazyColumn(state = listState, modifier = modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        if (m.view != MemoryView.LOG || s == null) item { Header(s) }
+        if (m.view != MemoryView.LOG || s == null) item { Header(s) { dialog = it } }
         item {
             ChipRow {
                 if (s != null) {
@@ -196,6 +197,8 @@ fun MemoryTab(host: String, modifier: Modifier = Modifier) {
         MemoryDialog.Import -> ImportDialog(ctx, close)
         is MemoryDialog.CheatFileOut -> CheatFileOutDialog(d, close)
         MemoryDialog.Source -> SourceDialog(close)
+        MemoryDialog.Undo -> UndoDialog(close)
+        is MemoryDialog.Text -> TextHitDialog(d.hit, close)
         null -> {}
     }
 }
@@ -205,7 +208,7 @@ fun MemoryTab(host: String, modifier: Modifier = Modifier) {
 // ---------------------------------------------------------------------------------------------
 
 @Composable
-private fun Header(s: MemorySnapshot?) {
+private fun Header(s: MemorySnapshot?, onDialog: (MemoryDialog) -> Unit) {
     val m = MemorySession
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         if (s == null) {
@@ -237,6 +240,22 @@ private fun Header(s: MemorySnapshot?) {
         if (m.status.isNotEmpty()) {
             Text(m.status, style = MaterialTheme.typography.bodySmall)
             HelpLink(m.status)
+        }
+        // Undo: the newest change, one tap from being put back
+        val last = m.undoSteps.lastOrNull()
+        if (s != null && last != null) {
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                OutlinedButton(enabled = !m.busy, onClick = { m.undoLast() }) { Text(str(R.string.undo_button)) }
+                Text(
+                    str(R.string.undo_last, last.label),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f)
+                )
+                TextButton(onClick = { onDialog(MemoryDialog.Undo) }) { Text(str(R.string.undo_history, m.undoSteps.size)) }
+            }
         }
         if (m.scanning) {
             val all = m.progressAll
@@ -287,8 +306,16 @@ private fun LazyListScope.scanItems(s: MemorySnapshot, open: (MemoryDialog) -> U
             TipTitle(str(R.string.memory_value_type), Tip.MEM_VALUE_TYPE, style = MaterialTheme.typography.labelLarge)
             ChipRow {
                 ValueType.entries.forEach { vt ->
-                    Chip(str(vt.res), t == vt, enabled = !searching && !m.busy) { m.type = vt }
+                    Chip(str(vt.res), t == vt && !m.textMode, enabled = !searching && !m.busy) {
+                        m.textMode = false
+                        m.type = vt
+                    }
                 }
+                Chip(str(R.string.memory_text_chip), m.textMode, enabled = !searching && !m.busy) { m.textMode = true }
+            }
+            if (m.textMode) {
+                TextSearchPanel(s)
+                return@Column
             }
             TipTitle(str(R.string.memory_scan_type), Tip.MEM_SCAN_TYPE, style = MaterialTheme.typography.labelLarge)
             ChipRow {
@@ -330,6 +357,17 @@ private fun LazyListScope.scanItems(s: MemorySnapshot, open: (MemoryDialog) -> U
                 }
             }
         }
+    }
+    if (m.textMode) {
+        items(m.textHits) { h ->
+            ListRow(
+                title = hexAddr(h.address) + "  ·  " + h.encoding.label,
+                detail = h.before + "[" + (h.written ?: m.textQuery) + "]" + h.after,
+                highlight = h.written != null,
+                enabled = !m.busy
+            ) { open(MemoryDialog.Text(h)) }
+        }
+        return
     }
     if (searching) {
         items(m.hits) { h ->
@@ -575,14 +613,9 @@ private fun CheatFileOutDialog(d: MemoryDialog.CheatFileOut, onClose: () -> Unit
     )
 }
 
-/** Opens the phone's share sheet with [text]. */
+/** Opens the phone's share sheet with cheats as [text]. */
 private fun shareText(ctx: Context, text: String) {
-    try {
-        val send = Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, text)
-        ctx.startActivity(Intent.createChooser(send, AppText.get(R.string.memory_export)).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
-    } catch (_: Exception) {
-        copyText(ctx, "cheats", text, AppText.get(R.string.memory_export_copied))
-    }
+    shareText(ctx, text, AppText.get(R.string.memory_export), AppText.get(R.string.memory_export_copied))
 }
 
 // ---------------------------------------------------------------------------------------------
@@ -975,6 +1008,112 @@ private fun ImportDialog(ctx: Context, onClose: () -> Unit) {
         },
         dismissButton = { TextButton(onClick = onClose) { Text(str(R.string.action_cancel)) } }
     )
+}
+
+/** The word to look for, how it may be stored, and the search button. */
+@Composable
+private fun TextSearchPanel(s: MemorySnapshot) {
+    val m = MemorySession
+    TipTitle(str(R.string.memory_text_title), Tip.MEM_TEXT, style = MaterialTheme.typography.labelLarge)
+    if (!s.info.isNg) {
+        Text(str(R.string.memory_text_needs_ng), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        return
+    }
+    Field(str(R.string.memory_text_field), m.textQuery) { m.textQuery = it }
+    ChipRow {
+        TextEncoding.entries.forEach { e ->
+            val on = e in m.textEncodings
+            Chip(e.label, on, enabled = !m.busy) {
+                // At least one stays chosen
+                m.textEncodings = if (on) (m.textEncodings - e).ifEmpty { setOf(e) } else m.textEncodings + e
+            }
+        }
+    }
+    Text(str(R.string.memory_text_help), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+    if (!m.scanning) {
+        Button(enabled = !m.busy && m.textQuery.isNotEmpty(), onClick = { m.textSearch() }) { Text(str(R.string.memory_text_search)) }
+    }
+    val total = m.textTotal
+    if (total >= 0) {
+        Text(
+            if (total > m.textHits.size) str(R.string.memory_text_more, total, m.textHits.size) else str(R.string.memory_text_found, total),
+            style = MaterialTheme.typography.labelLarge
+        )
+    }
+}
+
+/** One place the text was found: see it in memory, or write new text over it. */
+@Composable
+private fun TextHitDialog(hit: TextHit, onClose: () -> Unit) {
+    val m = MemorySession
+    val ctx = LocalContext.current
+    val now = m.textHits.firstOrNull { it.address == hit.address && it.encoding == hit.encoding } ?: hit
+    var text by remember { mutableStateOf(now.written ?: m.textQuery) }
+    val room = hit.length / hit.encoding.unit
+    val fits = TextSearch.replacement(text, hit.encoding, hit.length) != null
+    AlertDialog(
+        onDismissRequest = onClose,
+        title = { Text(hexAddr(hit.address), fontFamily = FontFamily.Monospace) },
+        text = {
+            Column(modifier = Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                Text(hit.encoding.label, style = MaterialTheme.typography.labelLarge)
+                Text(now.before + "[" + (now.written ?: m.textQuery) + "]" + now.after, style = MaterialTheme.typography.bodyMedium)
+                Field(str(R.string.memory_text_new), text) { text = it }
+                Text(
+                    if (fits) str(R.string.memory_text_room, room) else str(R.string.memory_text_too_long, room),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = if (fits) MaterialTheme.colorScheme.onSurfaceVariant else MaterialTheme.colorScheme.error
+                )
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    OutlinedButton(onClick = {
+                        m.browseTo(hit.address)
+                        onClose()
+                    }) { Text(str(R.string.memory_text_show)) }
+                    TextButton(onClick = { copyText(ctx, "address", hexAddr(hit.address), AppText.get(R.string.memory_address_copied)) }) { Text(str(R.string.memory_copy_address)) }
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(enabled = fits && text.isNotEmpty() && !m.busy, onClick = { m.writeText(hit, text, onClose) }) {
+                Text(str(R.string.memory_text_write))
+            }
+        },
+        dismissButton = { TextButton(onClick = onClose) { Text(str(R.string.action_close)) } }
+    )
+}
+
+/** Every change this session can take back, newest first. */
+@Composable
+private fun UndoDialog(onClose: () -> Unit) {
+    val m = MemorySession
+    val steps = m.undoSteps
+    val clock = remember { java.text.DateFormat.getTimeInstance(java.text.DateFormat.SHORT) }
+    AlertDialog(
+        onDismissRequest = onClose,
+        title = { TipTitle(str(R.string.undo_title), Tip.MEM_UNDO) },
+        text = {
+            Column(modifier = Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                Text(str(R.string.undo_intro), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                steps.asReversed().forEachIndexed { i, step ->
+                    ListRow(
+                        title = step.label,
+                        detail = clock.format(java.util.Date(step.time)) + "  ·  " + step.parts.take(3).joinToString(", ") { hexAddr(it.address) } + (if (step.parts.size > 3) " …" else ""),
+                        highlight = i == 0,
+                        enabled = i == 0 && !m.busy,
+                        mono = false
+                    ) { m.undoLast() }
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(enabled = steps.isNotEmpty() && !m.busy, onClick = {
+                m.undoAll()
+                onClose()
+            }) { Text(str(R.string.undo_all)) }
+        },
+        dismissButton = { TextButton(onClick = onClose) { Text(str(R.string.action_close)) } }
+    )
+    if (steps.isEmpty()) LaunchedEffect(Unit) { onClose() }
 }
 
 @Composable

@@ -398,6 +398,8 @@ class FakeGame:
     MAX_HEALTH = 0x20001238  # int32 100, right after health (as games often keep them)
     GOLD = 0x20002000  # int32, 500
     STAMINA = 0x20003000  # float, 1.0
+    NAME_UTF8 = 0x20004000  # "Hero: Aerith" (UTF-8)
+    NAME_UTF16 = 0x20004100  # "Aerith" (UTF-16)
 
     def __init__(self):
         self.lock = threading.Lock()
@@ -426,6 +428,9 @@ class FakeGame:
         self.put(self.MAX_HEALTH, (100).to_bytes(4, "little"))
         self.put(self.GOLD, (500).to_bytes(4, "little"))
         self.put(self.STAMINA, struct.pack("<f", 1.0))
+        # The hero's name, as games keep text: once as UTF-8 and once as UTF-16 (for Memory > Text)
+        self.put(self.NAME_UTF8, b"Hero: Aerith\x00")
+        self.put(self.NAME_UTF16, "Aerith".encode("utf-16-le") + b"\x00\x00")
         threading.Thread(target=self.take_damage, daemon=True).start()
 
     def find(self, addr, length):
@@ -708,6 +713,9 @@ def _send_blocks(send, records):
 
 def _scan_start(self, game, body):
     pid, address, length, vtype, cmp, align, len_data = struct.unpack("<IQIBBBI", body[:23])
+    if vtype == 10:  # a byte pattern with a mask (text search)
+        _scan_start_bytes(self, game, pid, address, length, cmp, align, len_data)
+        return
     if not getattr(self, "unlocked", False) or cmp > 12 or len_data == 0 or vtype not in SCAN_FORMATS:
         self.u32(0xF0000003)
         return
@@ -724,6 +732,26 @@ def _scan_start(self, game, body):
     for j in range(0, length - size + 1, step):
         v = mem[j:j + size]
         if scan_compare(cmp, vtype, scan, v, hi):
+            records.append(struct.pack("<I", j) + v)
+    _send_blocks(self.request.sendall, records)
+    self.u32(DBG_OK)
+
+
+def _scan_start_bytes(self, game, pid, address, length, cmp, align, len_data):
+    # As scan.c does for valueType 10: the pattern, then a mask (1 = must match), then the matches at every step
+    if not getattr(self, "unlocked", False) or cmp != 0 or len_data == 0:
+        self.u32(0xF0000003)
+        return
+    self.u32(DBG_OK)
+    pattern = self.recv_exact(len_data)
+    mask = self.recv_exact(len_data)
+    self.u32(DBG_OK)
+    step = align or len_data
+    mem = (game.get(address, length) if pid == GAME_PID else None) or bytes(length)
+    records = []
+    for j in range(0, length - len_data + 1, step):
+        v = mem[j:j + len_data]
+        if all(v[k] == pattern[k] or mask[k] != 1 for k in range(len_data)):
             records.append(struct.pack("<I", j) + v)
     _send_blocks(self.request.sendall, records)
     self.u32(DBG_OK)

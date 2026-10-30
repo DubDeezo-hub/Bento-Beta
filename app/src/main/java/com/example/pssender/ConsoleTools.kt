@@ -606,8 +606,11 @@ class PkgLook(val label: String, val info: PkgInfo? = null, val icon: ImageBitma
 
 /** Reads what each of [links] (web links) or [file] (a package on the phone) says about itself, and shows it. */
 @Composable
-fun PkgInfoDialog(links: List<String>, file: Uri?, onClose: () -> Unit) {
+fun PkgInfoDialog(links: List<String>, file: Uri?, ftp: FtpSettings? = null, type: ConsoleType = ActiveConsole.type, onClose: () -> Unit) {
     val ctx = LocalContext.current
+    // What the console has, to say whether each package is new, an update or already there (over FTP)
+    LaunchedEffect(ftp) { if (ftp != null) ConsoleApps.load(ctx, ftp) }
+    val firmware = remember { ConsoleFirmware.get(ctx, ActiveConsole.id) }
     var looks by remember(links, file) {
         mutableStateOf(
             if (file != null) listOf(PkgLook(ctx.contentResolver.displayName(file)))
@@ -634,7 +637,28 @@ fun PkgInfoDialog(links: List<String>, file: Uri?, onClose: () -> Unit) {
         title = { TipTitle(str(R.string.meta_title), Tip.PKG_INFO) },
         text = {
             Column(modifier = Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(14.dp)) {
-                looks.forEach { look -> PkgLookCard(look) }
+                looks.forEach { look ->
+                    val info = look.info
+                    val compare = when {
+                        ftp == null || info == null || info.kind == PkgInfo.Kind.UNKNOWN -> null
+                        ConsoleApps.loading && ConsoleApps.apps.isEmpty() -> listOf(PkgNote(PkgNoteLevel.INFO, R.string.meta_installed_checking))
+                        ConsoleApps.apps.isEmpty() -> listOf(PkgNote(PkgNoteLevel.INFO, R.string.meta_installed_cant_see))
+                        else -> {
+                            val id = info.title?.titleId?.ifBlank { null } ?: PkgCheck.titleIdOf(info.title?.contentId?.ifBlank { null } ?: info.contentId)
+                            PkgCheck.notes(
+                                titleId = id,
+                                version = info.title?.version.orEmpty(),
+                                category = info.title?.category.orEmpty(),
+                                installed = ConsoleApps.apps.firstOrNull { it.id == id },
+                                pkgIsPs5 = info.kind == PkgInfo.Kind.PS5,
+                                consoleIsPs5 = type == ConsoleType.PS5,
+                                needsFirmware = info.title?.needsFirmware.orEmpty(),
+                                consoleFirmware = firmware
+                            )
+                        }
+                    }
+                    PkgLookCard(look, compare.orEmpty())
+                }
             }
         },
         confirmButton = { TextButton(onClick = onClose) { Text(str(R.string.action_close)) } }
@@ -642,7 +666,7 @@ fun PkgInfoDialog(links: List<String>, file: Uri?, onClose: () -> Unit) {
 }
 
 @Composable
-private fun PkgLookCard(look: PkgLook) {
+private fun PkgLookCard(look: PkgLook, notes: List<PkgNote> = emptyList()) {
     val small = MaterialTheme.typography.bodySmall
     Row(horizontalArrangement = Arrangement.spacedBy(12.dp), verticalAlignment = Alignment.Top) {
         AppIcon(look.icon, 56)
@@ -667,6 +691,19 @@ private fun PkgLookCard(look: PkgLook) {
                     if (info.title != null) MetaLines(info.title)
                     else if (info.contentId.isNotBlank()) Text(str(R.string.meta_content_id, info.contentId), style = small)
                     if (info.kind == PkgInfo.Kind.PS5) Text(str(R.string.meta_ps5_note), style = small, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    val colors = statusColors()
+                    notes.forEach { n ->
+                        Text(
+                            str(n.res, *n.args.toTypedArray()),
+                            style = small,
+                            fontWeight = if (n.level == PkgNoteLevel.INFO) null else FontWeight.Medium,
+                            color = when (n.level) {
+                                PkgNoteLevel.GOOD -> colors.good
+                                PkgNoteLevel.WARN -> colors.warn
+                                PkgNoteLevel.INFO -> MaterialTheme.colorScheme.onSurfaceVariant
+                            }
+                        )
+                    }
                 }
             }
         }

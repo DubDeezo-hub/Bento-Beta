@@ -69,6 +69,10 @@ enum class ConsoleType(
 object ActiveConsole {
     @Volatile
     var type: ConsoleType = ConsoleType.PS5
+
+    /** The saved console's id, for things remembered per console (like its firmware). */
+    @Volatile
+    var id: String = ""
 }
 
 /** One saved console. Ports are kept as text because they are typed into text fields. */

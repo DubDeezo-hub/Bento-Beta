@@ -88,6 +88,9 @@ object Hints {
         return text
     }
 
+    /** The last [n] problem messages, newest first. */
+    fun recent(n: Int): List<String> = synchronized(seen) { seen.keys.toList().takeLast(n).asReversed() }
+
     /**
      * The kind of problem [text] describes, or null when it isn't a message that was noted. A message may have been
      * put inside a longer one ("Sending x: Failed: ..."), so a noted message found inside [text] counts too; the

@@ -59,6 +59,23 @@ data class Cheat(
 /** An address shown at the top of Scan with its live value. */
 data class Watch(val address: Long, val type: ValueType, val value: ByteArray? = null)
 
+/** One place a write changed: what was there before and what was written. */
+class UndoPart(val address: Long, val before: ByteArray, val after: ByteArray)
+
+/**
+ * One change that can be taken back: a value or bytes written, a cheat-file mod switched, or a cheat frozen. [cheatId] is
+ * the frozen cheat (undoing it also unfreezes it); [modIndex] and [modWasOn] put a cheat-file mod's switch back.
+ */
+class UndoStep(
+    val pid: Int,
+    val label: String,
+    val parts: List<UndoPart>,
+    val cheatId: String? = null,
+    val modIndex: Int = -1,
+    val modWasOn: Boolean = false,
+    val time: Long = System.currentTimeMillis()
+)
+
 /** The cheats of each game, saved by title ID in the app's settings. (Frozen is not saved: a game starts unfrozen.) */
 object CheatStore {
     private fun prefs(ctx: Context) = ctx.getSharedPreferences("memory_cheats", Context.MODE_PRIVATE)
@@ -137,6 +154,12 @@ object MemorySession {
     /** Matches and watches are re-read this often while they can all be shown. */
     const val LIVE_MS = 1500L
 
+    /** Text previews read per request. */
+    private const val PREVIEW_BATCH = 200
+
+    /** How many changes the undo history keeps. */
+    const val UNDO_MAX = 50
+
     /** A frozen value is written again this often. */
     private const val FREEZE_MS = 200L
 
@@ -197,6 +220,21 @@ object MemorySession {
     var watches by mutableStateOf<List<Watch>>(emptyList())
         private set
 
+    // --- text search ---
+    var textMode by mutableStateOf(false)
+    var textQuery by mutableStateOf("")
+    var textEncodings by mutableStateOf(setOf(TextEncoding.UTF8, TextEncoding.UTF16))
+    var textHits by mutableStateOf<List<TextHit>>(emptyList())
+        private set
+
+    /** How many places the last text search found (more than are kept when it is over [TextSearch.MAX_HITS]), or -1. */
+    var textTotal by mutableStateOf(-1L)
+        private set
+
+    // --- undo: what each write replaced, newest last ---
+    var undoSteps by mutableStateOf<List<UndoStep>>(emptyList())
+        private set
+
     // --- browse ---
     var openProc by mutableStateOf<DbgProcess?>(null)
     var maps by mutableStateOf<List<DbgMap>>(emptyList())
@@ -235,7 +273,9 @@ object MemorySession {
     @Volatile
     private var freezeTargets: List<Pair<Long, ByteArray>> = emptyList()
 
-    private var host = ""
+    /** The console the debugger is talking to. */
+    var host = ""
+        private set
 
     /** A live refresh is on its way; the next one waits for it rather than piling up. */
     @Volatile
@@ -413,6 +453,9 @@ object MemorySession {
         cheatFileEntry = null
         modsOn = emptySet()
         masterDone = false
+        undoSteps = emptyList()
+        textHits = emptyList()
+        textTotal = -1
     }
 
     // --- connect ---
@@ -546,6 +589,100 @@ object MemorySession {
         if (!busy) scanning = false
     }
 
+    // --- text search ---
+
+    /** Looks for [textQuery] in the game's memory in each chosen encoding, at any byte. */
+    fun textSearch() {
+        val pid = gamePid
+        if (pid == 0) {
+            status = AppText.get(R.string.memory_no_game)
+            return
+        }
+        val info = snapshot?.info
+        if (info?.isNg != true) {
+            status = AppText.get(R.string.memory_text_needs_ng)
+            return
+        }
+        val query = textQuery
+        val pats = TextSearch.patterns(query, textEncodings.sortedBy { it.ordinal }).filter { it.second.size >= TextSearch.MIN_BYTES }
+        if (pats.isEmpty()) {
+            status = AppText.get(R.string.memory_text_too_short)
+            return
+        }
+        scanning = true
+        perform(scan = true, work = { d ->
+            val maps = regionsToSearch(d, pid, info)
+            val pieces = TextSearch.pieces(maps, pats.maxOf { it.second.size } - 1)
+            val all = pieces.sumOf { it.second.toLong() } * pats.size
+            var done = 0L
+            var total = 0L
+            val found = ArrayList<TextHit>()
+            progress(0, all)
+            for ((enc, pat) in pats) {
+                // Pieces overlap, so a match in the overlap comes back twice
+                val seen = HashSet<Long>()
+                val mask = ByteArray(pat.size) { 1 }
+                for ((start, len) in pieces) {
+                    if (cancelRequested) break
+                    d.scanBytes(pid, start, len, pat, mask) { off ->
+                        val a = start + off
+                        if (seen.add(a)) {
+                            total++
+                            if (found.size < TextSearch.MAX_HITS) found.add(TextHit(a, enc, pat.size))
+                        }
+                    }
+                    done += len
+                    progress(done, all)
+                }
+            }
+            found.sortBy { it.address }
+            total to withPreviews(d, pid, found)
+        }) { (total, list) ->
+            textHits = list
+            textTotal = total
+            status = AppText.get(R.string.memory_text_found, total)
+        }
+        if (!busy) scanning = false
+    }
+
+    /** [hits] with the readable text just before and after each, read in batches. */
+    private fun withPreviews(d: Ps5Debug, pid: Int, hits: List<TextHit>): List<TextHit> {
+        val out = ArrayList<TextHit>(hits.size)
+        val c = TextSearch.CONTEXT
+        for (batch in hits.chunked(PREVIEW_BATCH)) {
+            val size = c + batch.maxOf { it.length } + c
+            val raw = try {
+                d.readMany(pid, LongArray(batch.size) { batch[it].address - c }, batch.size, size)
+            } catch (e: DebuggerException) {
+                null
+            }
+            batch.forEachIndexed { i, h ->
+                if (raw == null) {
+                    out.add(h)
+                    return@forEachIndexed
+                }
+                val at = i * size
+                val before = raw.copyOfRange(at, at + c)
+                val after = raw.copyOfRange(at + c + h.length, at + size)
+                out.add(h.copy(before = TextSearch.readable(before, h.encoding, fromEnd = true), after = TextSearch.readable(after, h.encoding, fromEnd = false)))
+            }
+        }
+        return out
+    }
+
+    /** Replaces the text at [hit] with [text] (no longer than what is there), as one change that can be undone. */
+    fun writeText(hit: TextHit, text: String, onDone: () -> Unit = {}) {
+        val bytes = TextSearch.replacement(text, hit.encoding, hit.length)
+        if (bytes == null) {
+            status = AppText.get(R.string.memory_text_too_long, hit.length / hit.encoding.unit)
+            return
+        }
+        writeBytes(hit.address, bytes, label = AppText.get(R.string.undo_label_text, text, hexAddr(hit.address))) {
+            textHits = textHits.map { if (it.address == hit.address && it.encoding == hit.encoding) it.copy(written = text) else it }
+            onDone()
+        }
+    }
+
     fun nextScan() {
         val cmp = compare
         if (keptTotal >= 0) {
@@ -658,23 +795,28 @@ object MemorySession {
             status = AppText.get(R.string.memory_bad_value, AppText.get(t.res))
             return
         }
-        writeBytes(address, bytes) {
+        writeBytes(address, bytes, label = AppText.get(R.string.undo_label_value, t.format(bytes), hexAddr(address))) {
             status = AppText.get(R.string.memory_written, t.format(bytes), hexAddr(address))
             onDone()
         }
     }
 
     /** Writes raw [bytes] at [address] in the game (or the open process in Browse when [inOpen]). */
-    fun writeBytes(address: Long, bytes: ByteArray, inOpen: Boolean = false, onDone: () -> Unit = {}) {
+    fun writeBytes(address: Long, bytes: ByteArray, inOpen: Boolean = false, label: String = "", onDone: () -> Unit = {}) {
         val pid = if (inOpen) openProc?.pid ?: 0 else gamePid
         if (pid == 0) {
             status = AppText.get(R.string.memory_no_game)
             return
         }
         perform(work = { d ->
+            // What was there, so the write can be undone
+            val before = try { d.read(pid, address, bytes.size) } catch (_: Exception) { null }
             d.write(pid, address, bytes)
-            if (hexAt >= 0 && inOpen) d.read(pid, hexAt, 256) else null
-        }) { fresh ->
+            before to (if (hexAt >= 0 && inOpen) d.read(pid, hexAt, 256) else null)
+        }) { (before, fresh) ->
+            if (before != null && before.size == bytes.size) {
+                record(UndoStep(pid, label.ifEmpty { AppText.get(R.string.undo_label_bytes, bytes.size, hexAddr(address)) }, listOf(UndoPart(address, before, bytes))))
+            }
             if (fresh != null) hexData = fresh
             status = AppText.get(R.string.memory_written_bytes, bytes.size, hexAddr(address))
             onDone()
@@ -704,11 +846,65 @@ object MemorySession {
     fun removeCheat(c: Cheat) = saveCheats(cheats.filter { it.id != c.id })
 
     fun setFrozen(c: Cheat, on: Boolean) {
-        if (on && c.type.parse(c.value) == null) {
+        val bytes = c.type.parse(c.value)
+        if (on && bytes == null) {
             status = AppText.get(R.string.memory_bad_value, AppText.get(c.type.res))
             return
         }
-        updateCheat(c.copy(frozen = on))
+        if (!on || bytes == null) {
+            updateCheat(c.copy(frozen = on))
+            return
+        }
+        // Keep the value it had before freezing, so undo can put it back; freezing starts either way
+        val pid = gamePid
+        scope.launch {
+            val before = if (pid == 0) null else quietly(unlock = false) { d -> d.read(pid, c.address, bytes.size) }
+            if (before != null && before.size == bytes.size && gamePid == pid) {
+                record(UndoStep(pid, AppText.get(R.string.undo_label_freeze, c.name), listOf(UndoPart(c.address, before, bytes)), cheatId = c.id))
+            }
+            cheats.firstOrNull { it.id == c.id }?.let { now -> updateCheat(now.copy(frozen = true)) }
+        }
+    }
+
+    // --- undo ---
+
+    private fun record(step: UndoStep) {
+        undoSteps = (undoSteps + step).takeLast(UNDO_MAX)
+    }
+
+    /** Puts back what the newest change replaced. */
+    fun undoLast() {
+        val step = undoSteps.lastOrNull() ?: return
+        restore(listOf(step))
+    }
+
+    /** Puts back everything changed since the game started (or since the history began), newest first. */
+    fun undoAll() {
+        if (undoSteps.isNotEmpty()) restore(undoSteps.reversed())
+    }
+
+    /** Writes back [steps] in the order given (newest first), then unfreezes their cheats and resets their mods. */
+    private fun restore(steps: List<UndoStep>) {
+        if (busy) return
+        // A frozen value would be written straight over the restored one, so those cheats stop first
+        val unfreeze = steps.mapNotNull { it.cheatId }.toSet()
+        if (unfreeze.isNotEmpty() && cheats.any { it.id in unfreeze && it.frozen }) {
+            saveCheats(cheats.map { if (it.id in unfreeze) it.copy(frozen = false) else it })
+        }
+        perform(work = { d ->
+            for (step in steps) for (part in step.parts.asReversed()) d.write(step.pid, part.address, part.before)
+            if (hexAt >= 0 && openProc != null) d.read(openProc!!.pid, hexAt, 256) else null
+        }) { fresh ->
+            if (fresh != null) hexData = fresh
+            // The oldest step of each mod says how it was before any of them
+            var mods = modsOn
+            for (step in steps) if (step.modIndex >= 0) mods = if (step.modWasOn) mods + step.modIndex else mods - step.modIndex
+            modsOn = mods
+            val gone = steps.toSet()
+            undoSteps = undoSteps.filter { it !in gone }
+            status = if (steps.size == 1) AppText.get(R.string.undo_done, steps[0].label) else AppText.get(R.string.undo_all_done, steps.size)
+            refreshQuietly()
+        }
     }
 
     /** Reads the bytes around a cheat's address and keeps them as its signature (quietly; a failure just leaves none). */
@@ -1111,22 +1307,36 @@ object MemorySession {
         val base = cheatBase
         if (!mod.supported || pid == 0) return
         val needMaster = on && !masterDone && file.master.isNotEmpty()
+        val wasOn = index in modsOn
         perform(work = { d ->
-            if (needMaster) for (pt in file.master) d.write(pid, base + pt.offset, pt.on)
-            for (pt in mod.patches) {
+            val parts = ArrayList<UndoPart>()
+            fun put(addr: Long, bytes: ByteArray) {
+                val before = d.read(pid, addr, bytes.size)
+                d.write(pid, addr, bytes)
+                if (before.size == bytes.size) parts.add(UndoPart(addr, before, bytes))
+            }
+            // Check every patch before writing any, so a mismatch leaves the game untouched
+            val plan = mod.patches.map { pt ->
                 val addr = base + pt.offset
                 val now = d.read(pid, addr, maxOf(pt.on.size, pt.off.size))
                 val isOn = now.copyOf(pt.on.size).contentEquals(pt.on)
                 val isOff = pt.off.isNotEmpty() && now.copyOf(pt.off.size).contentEquals(pt.off)
                 // Only touch code that is what the file expects: anything else means another game version
                 if (!mod.button && !isOn && !isOff) throw CheatMismatch()
-                if (on) {
-                    if (!isOn) d.write(pid, addr, pt.on)
-                } else if (pt.off.isNotEmpty() && !isOff) {
-                    d.write(pid, addr, pt.off)
+                when {
+                    on && !isOn -> addr to pt.on
+                    !on && pt.off.isNotEmpty() && !isOff -> addr to pt.off
+                    else -> null
                 }
             }
-        }) {
+            if (needMaster) for (pt in file.master) put(base + pt.offset, pt.on)
+            for (w in plan) if (w != null) put(w.first, w.second)
+            parts
+        }) { parts ->
+            if (parts.isNotEmpty()) {
+                val label = AppText.get(if (mod.button) R.string.undo_label_mod_applied else if (on) R.string.undo_label_mod_on else R.string.undo_label_mod_off, mod.name)
+                record(UndoStep(pid, label, parts, modIndex = if (mod.button) -1 else index, modWasOn = wasOn))
+            }
             if (needMaster) masterDone = true
             modsOn = if (on && !mod.button) modsOn + index else modsOn - index
             status = AppText.get(if (mod.button) R.string.memory_mod_applied else if (on) R.string.memory_mod_on else R.string.memory_mod_off, mod.name)
