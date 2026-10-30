@@ -224,6 +224,13 @@ fun PayloadTab(
                 color = MaterialTheme.colorScheme.primary
             )
         }
+        if (StoreUpdates.fresh.isNotEmpty()) {
+            Text(
+                str(R.string.store_new_out, StoreUpdates.fresh.take(6).joinToString(", ") + if (StoreUpdates.fresh.size > 6) " …" else ""),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.primary
+            )
+        }
 
         ChainsSection(
             chains = chains,

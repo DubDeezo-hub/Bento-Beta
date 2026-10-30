@@ -1,0 +1,69 @@
+{
+  "_readme": "Bento's own list of vetted payloads. Every copy of the app reads this file (at most every few hours) and shows these under Get payloads > Bento's picks. Add an entry to offer a new payload without an app update; set \"hidden\": true to take one off. Fields: repo (GitHub owner/repo with Releases), name, console (ps5 or ps4), file (the file to take from a release or from the zip in it), anyFirmware (true for plain tools that run on any firmware), about (text, or {\"en\": ..., \"de\": ...} per language; built-in entries keep their translated text).",
+  "version": 1,
+  "payloads": [
+    {
+      "repo": "etaHEN/etaHEN",
+      "name": "etaHEN",
+      "console": "ps5",
+      "file": "etaHEN.bin",
+      "anyFirmware": false
+    },
+    {
+      "repo": "Pharaoh2k/ps5debug-NG",
+      "name": "ps5debug-NG",
+      "console": "ps5",
+      "file": "ps5debug-NG.elf",
+      "anyFirmware": false
+    },
+    {
+      "repo": "ps5-payload-dev/ftpsrv",
+      "name": "ftpsrv",
+      "console": "ps5",
+      "file": "ftpsrv.elf",
+      "anyFirmware": true
+    },
+    {
+      "repo": "ps5-payload-dev/websrv",
+      "name": "websrv",
+      "console": "ps5",
+      "file": "websrv.elf",
+      "anyFirmware": true
+    },
+    {
+      "repo": "ps5-payload-dev/shsrv",
+      "name": "shsrv",
+      "console": "ps5",
+      "file": "shsrv.elf",
+      "anyFirmware": true
+    },
+    {
+      "repo": "ps5-payload-dev/klogsrv",
+      "name": "klogsrv",
+      "console": "ps5",
+      "file": "klogsrv.elf",
+      "anyFirmware": true
+    },
+    {
+      "repo": "EchoStretch/kstuff",
+      "name": "kstuff",
+      "console": "ps5",
+      "file": "kstuff.elf",
+      "anyFirmware": false
+    },
+    {
+      "repo": "Pharaoh2k/ps4debug-NG",
+      "name": "ps4debug-NG",
+      "console": "ps4",
+      "file": "ps4debug-ng.bin",
+      "anyFirmware": false
+    },
+    {
+      "repo": "GoldHEN/GoldHEN_Releases",
+      "name": "GoldHEN",
+      "console": "ps4",
+      "file": "goldhen.bin",
+      "anyFirmware": false
+    }
+  ]
+}

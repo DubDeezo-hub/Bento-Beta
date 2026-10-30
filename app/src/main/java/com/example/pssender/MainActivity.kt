@@ -266,6 +266,8 @@ fun SenderApp(
     }
     // The debugger tells us the console's firmware; the store uses it to say which payloads fit
     val seenFirmware = MemorySession.snapshot?.info?.firmware.orEmpty()
+    // New payloads and newer versions are looked for once each time the app starts (and again for another console type)
+    LaunchedEffect(active.type) { StoreUpdates.check(ctx, active.type) }
     LaunchedEffect(seenFirmware, active.id) {
         if (seenFirmware.isNotEmpty() && seenFirmware != "?" && MemorySession.host == active.host.trim()) ConsoleFirmware.set(ctx, active.id, seenFirmware)
     }
@@ -666,7 +668,10 @@ fun SenderApp(
 
             if (showLanguage) LanguageDialog(onClose = { showLanguage = false })
             if (showStore) {
-                StoreDialog(type = active.type, onAdded = {}, onClose = { showStore = false })
+                StoreDialog(type = active.type, onAdded = {}, onClose = {
+                    showStore = false
+                    StoreUpdates.seen()
+                })
             }
 
             if (showFind) {

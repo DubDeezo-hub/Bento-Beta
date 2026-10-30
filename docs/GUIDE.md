@@ -108,6 +108,7 @@ The card at the top says whether the console can be reached.
 - Checks pause while a transfer runs, because the console is busy, and stop when the app is not on screen.
 - A light only means the port accepts connections. It does not prove the service will accept your request.
 - On the Files and Web tabs the card is shorter, to leave room for the list and the page: it shows the overall state and the address but not the three service lights, so a console that is partly ready is shown with what is off (for example `Partly ready · off: FTP`).
+- When some or all services are off, the full card has a **What's wrong?** button (see [Connection check](#connection-check)); the address window has one too.
 - Tap the card to change the address. With no address, or when nothing answers at it, the full card (on the Install, Payload and Upload tabs) also has a **Find my console** button, and the address window has one too.
 
 ### Find my console
@@ -125,12 +126,22 @@ What the scan does and doesn't do:
 - It opens a connection to a port and closes it again. Nothing is sent, and nothing leaves your local network.
 - A device that only has an FTP server open could be anything, so check the address before you trust it.
 
+### Connection check
+
+**What's wrong?** looks closer than the card's lights and says what to do, one finding per line with a colored dot (green fine, grey information, amber attention, red a problem).
+
+- It checks whether the phone is on Wi-Fi and whether the console's address is in the phone's network (a different network usually means a changed address or a guest network), pings the address, and opens a connection to each service's port (1.5 seconds each, all at once): the installer, the loader, FTP and the Memory tab's debugger (port 744). Nothing is sent.
+- A connection that is refused means the console is on but that service isn't running; no answer at all means the console is off, asleep, at another address, or kept apart by the router.
+- For each service that doesn't answer it also tries the other ports that service often uses (loader 9020/9021 on a PS5 and 9090 on a PS4, FTP 1337 for etaHEN and 2121 for ftpsrv and GoldHEN). When one answers, **Use port N** saves it for this console.
+- Other fixes are one tap too: **Get payloads** (for a missing FTP server or debugger) and **Find my console** (when nothing answers).
+- **Copy debug info** copies the same report as About (see below), including a short English summary of this check.
+
 ### Consoles
 
 Tap the console name at the top right to open the switcher.
 
 - Each console is set as a **PS5 or a PS4** (the switch is in the console's editor) and keeps its own name (up to 16 characters), IP address, installer port, loader port, FTP port, FTP user, FTP start folder and one of six colors: blue, orange, green, pink, purple or teal. The installer and FTP ports default to 12800 and 2121; the loader port defaults to 9021 on a PS5 and 9090 on a PS4. The FTP user defaults to `anonymous` and the start folder to `/data`. Changing a console's type moves any port still left at the old default to the new default. The whole app takes the color of the selected console, and a running transfer says which console it belongs to.
-- You can add, rename, recolor and delete consoles (never the last one), and open the language settings or **About & backup**, from the same dialog.
+- You can add, rename, recolor and delete consoles (never the last one), and pick the app's **Language**, or open **About & backup**, from the same dialog.
 - Settings stay on the phone. The FTP password is not saved: it is kept in memory only, so it is forgotten when the app closes. The default login is `anonymous` with no password.
 
 ### Install tab
@@ -151,6 +162,8 @@ For each link, Bento posts it to the console's installer (the installer port und
 If neither works, the status line shows both HTTP codes and the first 80 characters of each reply, for example `Not accepted (upload 200: …; api 404: …)`, so you can see what the console really said. When a message has a likely cause, a **What can I do?** button explains it (see [Errors that say what to do](#errors-that-say-what-to-do)).
 
 **Check** (next to Paste and Clear) shows what each package is before you send it: its icon, name, title ID, version, kind (game, update or add-on), the lowest firmware it needs and its content ID. For a web link Bento reads only a few small pieces (the package header, its file table, `param.sfo` and `icon0.png`) with byte-range requests, so a 40 GB package costs a few kilobytes; a site that only sends whole files is reported instead. **Check a package on this phone** does the same for a file you pick. PS4 packages (`\x7FCNT`) are fully read. PS5 packages keep this encrypted, so only their size is shown.
+
+When the console's FTP server answers, the check also compares each package with what is installed (the same list as Games & apps): **Not on this console yet**, **Already installed (v1.02)**, **This is an update: v1.02 on the console, v1.05 here**, an older version than the one installed, or an update or add-on for a game that isn't installed. A PS4 package checked for a PS4 also says when it needs newer firmware than the console has, and a PS5 package checked for a PS4 says that it can't be installed there.
 
 Bento tries both styles on either console, so one app works on a PS5 and a PS4. Both styles come from the public documentation of existing installer tools (see [Credits](#credits)). The replies a real console gives have not been confirmed yet (see [Status and known limits](#status-and-known-limits)).
 
@@ -182,7 +195,19 @@ Sending a payload is a single action with a status line. It is not part of the t
 
 #### Get payloads
 
-**Get payloads** lists well-known payloads for the console type of the selected console: on a PS5 etaHEN, ps5debug-NG, ftpsrv, websrv, shsrv, klogsrv and kstuff; on a PS4 ps4debug-NG and GoldHEN. For each one Bento asks the project's own GitHub Releases page for its newest version (GitHub's API, from the phone) and shows it. **Add to shelf** downloads the payload file of that release onto the shelf; when a release only has a zip, Bento takes the `.elf` or `.bin` out of it. Bento remembers which version came from the store, so the list says **On your shelf: v1.2, the newest** or offers **Update**, and an update replaces the old file. When you open the Payload tab, Bento checks the payloads you got this way once per start of the app and says under the shelf buttons when a newer one is out. **Page** opens the release page. The payloads are made by other people; check that one suits your console's firmware before you send it.
+**Get payloads** finds payloads for the console type of the selected console in three places:
+
+- **Bento's picks.** Well-known payloads Bento uses: on a PS5 etaHEN, ps5debug-NG, ftpsrv, websrv, shsrv, klogsrv and kstuff; on a PS4 ps4debug-NG and GoldHEN. The list is built in, and the app also reads [`payloads/index.json`](../payloads/index.json) from this repository (at most every 6 hours), so a payload can be added or taken off for everyone without an app update. For each one Bento asks the project's own GitHub Releases page for its newest version.
+- **From the community list** (PS5). The [PS5 Payloads Mirror](https://github.com/itsPLK/ps5-payloads-mirror) keeps a daily-updated list of 30+ payloads (ps5upload, PKG-Manager, ShadowMountPlus, zftpd, BackPork, the app dumper and more) with the makers' own descriptions, versions and SHA-256 checksums. Bento shows them grouped by kind, with a filter box. **Add to shelf** takes the file from the maker's own release when it is a plain `.elf`/`.bin`, else the list's copy (the list unpacks zips), and keeps it only if it matches the list's checksum.
+- **Found on GitHub.** Only when you tap **Search GitHub**: repositories that call themselves PS5 or PS4 payloads (by topic or in their name or description), not forks or archived, with at least 5 stars and pushed in the last 18 months, sorted by stars and minus everything above. Nobody has reviewed these, so the section says so; **Look for a release** checks the newest release for a payload file.
+
+**Add to shelf** downloads the payload onto the shelf; when a release only has a zip, Bento takes the `.elf` or `.bin` out of it. Bento remembers which version came from the store, so the list says **On your shelf: v1.2, the newest** or offers **Update**, and an update replaces the old file. **Page** opens the project's page.
+
+**New payloads and updates.** When the app starts (and when you switch to a console of the other type), Bento reads the lists and checks the payloads you got this way. Under the shelf buttons it says which have a newer version and which payloads are new since you last opened Get payloads; those are marked **New** and listed first. **Check for new payloads** reads the lists again right away. The first start counts everything as seen, so nothing is called new then.
+
+**Firmware.** At the top is the console's firmware. It fills in by itself when the Memory tab connects (the debugger reports it) and can be typed in (**Set**). Bento reads each pick's README and newest release notes, and each community entry's description, for the firmware versions they name (single versions, ranges like 3.00–13.60, families like 10.xx). A payload that names yours says so in green; one that names others but not yours is dimmed with a red note and the range it names; one whose page says nothing says that. Plain servers (ftpsrv, websrv, shsrv, klogsrv) run on any firmware that runs payloads. A long list of exact versions counts as the whole list, so a summary range next to it doesn't hide a missing version. Nothing is blocked: pages can be out of date.
+
+The payloads are made by other people; check that one suits your console before you send it.
 
 #### Chains
 
@@ -264,6 +289,11 @@ A cheat engine for games on a PS5 or a PS4. It talks to [ps5debug-NG](https://gi
 - **Skip slow memory** (on by default, ps5debug-NG 1.3+): leaves out regions of 64 MB or more that are uncached or read slower than 100 MB/s (graphics memory). Turn it off if a value is not found.
 - **Matches:** the first 200, with the value now and at the scan before; with 200 or fewer they update every 1.5 seconds. A search that started with an unknown value stays on the console while it has more than 3 million survivors, then comes over to the phone. A first scan that finds more than 3 million matches stops and asks for a more unusual value. **Cancel** stops any scan at once.
 - **Tap a match** to write a value, see its 8 bytes read as every type, **Add to cheats**, **Watch** it (it stays at the top of Scan with its live value) or **Show in memory**.
+- **Text** (the last value type) finds words: a character's name, an item, a line of dialogue. Type it exactly as the game shows it (capitals count, at least 3 bytes); the console checks every byte offset, in UTF-8 and UTF-16 (either can be turned off), about as long as a first scan. Each match shows the text around it. Tap one to open it in Browse, copy the address, or write new text over it: new text can't be longer than the old (a shorter one is ended with zeros), and the write can be undone. Needs ps5debug-NG or ps4debug-NG (the byte-pattern search with a mask).
+
+**Undo**
+
+- Before every write (a value, bytes in Browse, a cheat-file mod switched, text) Bento reads the bytes that are there, and when a cheat is frozen it keeps the value it had before. Under the header, **Undo** puts back the newest change and **History** lists the last 50 for the running game, newest first, with **Restore everything** to put all of them back. Undoing a freeze also stops it; undoing a cheat-file mod also sets its switch back. Undo writes the old bytes exactly, so if the game changed the value in between, the old value replaces the new one. The history is cleared when the game closes.
 
 **Cheats**
 
@@ -336,12 +366,12 @@ Tap the app name at the top (or **About & backup** in the console switcher) to o
 - **Updates.** The window shows the installed version. Bento can check the Releases page for a newer build: it asks GitHub for the newest release of this repository, and when that release's number is higher than the installed one, a notice **Version 1.N is available** appears at the top of the screen. **Download** opens the APK in your browser (you install it by hand), and **Later** hides the notice for that version. **Check now** checks right away. **Check for updates when the app opens** is on by default and means at most one check a day; you can switch it off in the same window. If GitHub's API refuses (a shared connection can use up its small allowance), Bento falls back to the website's "latest release" page. A check that fails isn't counted as done, so the next start tries again. Nothing about you or your consoles is sent; GitHub sees your IP address, as any website does.
 - **Speed limit.** The same setting as the **Speed limit** button on the transfer card.
 - **Backup.** **Save backup** writes one file (`bento-backup-<date>.json`) to a place you choose. It holds your consoles (without their FTP passwords), the homepage, the bookmarks, the ad-block switch and list, the payloads on the shelf (up to 16 MB together; any left out are counted), your payload chains and your pinned folders. **Restore backup** reads such a file and shows what is in it and when it was made, then asks before it changes anything. Restoring replaces your consoles, homepage, bookmarks and ad-block settings with the ones in the file, adds its payloads to the shelf (a payload with the same name is replaced), merges its chains with yours (a chain with the same id is replaced), and sets the pinned folders of the consoles the file has some for. A part that the file doesn't have is left as it is. A file that isn't a Bento backup, or that comes from a newer version of Bento, is refused with a message. The screen starts again afterwards to show the restored settings, and you type the FTP passwords again.
-- **Copy report.** Copies a few lines for a bug report: the app version, the phone model, Android version and language, how many consoles are set up, and the last message the app showed, cut to 600 characters, with web links replaced by `(link)` and IP addresses by `x.x.x.x`. The text appears in the window too, so you can see what you would share. It is always in English.
+- **Copy debug info** and **Share debug info.** A report for a bug report or a forum post: the app version, the phone model, Android version and language, the app's language, how many consoles are set up, the selected console's type and firmware, the debugger's name, protocol and firmware (when the Memory tab is connected), the payloads you got from the store and their versions, a short summary of the last connection check, the last message the app showed and the last five problem messages, each cut to 600 characters, with web links replaced by `(link)` and IP addresses by `x.x.x.x`. The text appears in the window too, so you can see what you would share. The labels are in English; messages are as the app showed them.
 - **Releases page** opens the Releases page in the browser.
 
 ### Languages and look
 
-- **53 languages:** English plus 52 translations (list below), chosen with Android's per-app language setting. The **Language** button in the console switcher opens it on Android 13 and newer, and the phone's language list on older versions.
+- **53 languages:** English plus 52 translations (list below), chosen with the **Language** button in the console switcher: every language is listed in its own name, plus **Phone's language**. On Android 13 and newer this is the same per-app language as in the phone's settings; on older versions Bento keeps the choice and applies it itself.
 - **Right-to-left** languages (Arabic, Persian, Hebrew, Urdu) mirror the layout. Values such as paths and addresses are wrapped in Unicode isolates so they keep their own order inside a right-to-left sentence.
 - **Dark and light** themes follow the phone, with one accent color per console.
 - **The icon** is an adaptive icon with a themed (monochrome) version for Android 13 and newer.
@@ -389,7 +419,9 @@ Paths are relative to [`app/src/main/java/com/example/pssender/`](app/src/main/j
 - `Serve.kt`: the "Install from this phone" section.
 - `Profiles.kt`: consoles, how they are saved, and the switcher dialog.
 - `Find.kt`: the "Find my console" window.
-- `About.kt`: the About window: updates, speed limit, backup and restore, the bug report text.
+- `About.kt`: the About window: updates, speed limit, backup and restore, the debug info.
+- `Diagnose.kt`: **What's wrong?**: the connection measurements, the findings and fixes, and its window.
+- `Language.kt`: the in-app language picker and how the choice is applied on older Android versions.
 - `UnfinishedUi.kt`: the card that offers the unfinished transfers again.
 - `Help.kt`: the "What can I do?" pages and the notes that say which page a message gets.
 - `Theme.kt`: dark and light colors, and the six accents.
@@ -399,8 +431,12 @@ Paths are relative to [`app/src/main/java/com/example/pssender/`](app/src/main/j
 - `Klog.kt`: the console log view (port 3232).
 - `ConsoleMeta.kt`: reading `param.sfo`, `param.json` and the header of a PS4 package.
 - `ConsoleTools.kt`: the Files tab's Games & apps and Saves, the package check, and folder sync.
-- `Store.kt`: Get payloads: the payload list, GitHub releases, zips, update notices.
-- `MemorySession.kt`: what the Memory tab keeps while the app runs: the connection, the search, the cheats (saved per game) and the freeze loop.
+- `Store.kt`: Get payloads: the payload lists, GitHub releases, zips, checksums, firmware notes, notices of new payloads and updates.
+- `StoreIndex.kt`: where payloads come from: Bento's online list, the community list, the GitHub search, and which ones are new.
+- `Firmware.kt`: each console's firmware, and reading which firmware a payload's page names.
+- `PkgCheck.kt`: a checked package against what the console has installed.
+- `MemorySession.kt`: what the Memory tab keeps while the app runs: the connection, the search, text search, the cheats (saved per game), the freeze loop and the undo history.
+- `MemoryText.kt`: text search: encodings, overlapping pieces, previews and replacement text.
 - `CheatFiles.kt`: reading the community cheat files (and a small JSON reader).
 - `FreezeService.kt`: keeps frozen values frozen while the app is in the background.
 - `Tips.kt`: the ? buttons, their how-tos, and the folding Settings rows.
@@ -529,6 +565,10 @@ Beside the code: `AndroidManifest.xml` (permissions, services, the share-sheet e
 | Web tab | up to 8 tabs; bookmarks: up to 100 |
 | Built-in ad domains | 57 |
 | Update check | at most once a day on its own; 8 s timeouts |
+| Connection check | 1.5 s per port, all at once; one ping of 1 s |
+| Get payloads | lists read at most every 6 hours (or on request); README firmware lines kept 3 days; GitHub search: up to 20 results, at least 5 stars, pushed in the last 18 months |
+| Memory undo | last 50 changes per running game |
+| Text search | at least 3 bytes; up to 1,000 matches kept (all counted); 32 bytes of context each side |
 | Backup | payloads up to 16 MB together |
 | Console name | up to 16 characters |
 | Finished transfer card | hides after 15 s (if it worked) |

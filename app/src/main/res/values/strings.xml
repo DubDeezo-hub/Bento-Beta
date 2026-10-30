@@ -795,7 +795,7 @@
     <string name="tip_mem_export">Turns your cheats into a cheat file in the same layout as the community cheat files (PS5_Cheats), so etaHEN\'s cheat menu or a friend can use it. Only cheats inside the game\'s own code and data can go in, because a cheat file stores places as distances from the game\'s start. Share it, or save it to Downloads.</string>
     <string name="store_open">Get payloads</string>
     <string name="store_title">Payloads for the %1$s</string>
-    <string name="store_intro">Well-known payloads, fetched from their makers\' own GitHub pages straight onto your shelf. Bento shows when a newer version is out.</string>
+    <string name="store_intro">Payloads from their makers\' own pages, straight onto your shelf. Each time the app starts, Bento looks for new payloads and for newer versions of the ones you have.</string>
     <string name="store_checking">Looking for the newest version…</string>
     <string name="store_problem">Could not check: %1$s</string>
     <string name="store_latest">Newest: %1$s (%2$s)</string>
@@ -821,7 +821,7 @@
     <string name="store_about_ps4debug">The PS4 debugger the Memory tab uses (port 744).</string>
     <string name="store_about_goldhen">The PS4 homebrew enabler. Usually loaded by the jailbreak itself; here for its payload file.</string>
     <string name="tip_store_title">Get payloads</string>
-    <string name="tip_store">A short list of well-known payloads. Bento asks each one\'s GitHub Releases page for the newest version and puts its file on your shelf, unpacking it from a zip when needed. When you open the Payload tab, Bento checks the ones you got this way and tells you when one has a newer version. They are made by other people: check that a payload suits your console\'s firmware before you send it.</string>
+    <string name="tip_store">Three lists in one place. Bento\'s picks are well-known payloads Bento knows how to use. The community list (PS5) is a larger, maintained list with the makers\' descriptions. Found on GitHub searches for anything else, on request, and is not reviewed.\n\nBento takes each payload from its maker\'s GitHub Releases page and puts it on your shelf, unpacking it from a zip when needed. When the app starts it looks for new payloads and newer versions and tells you on the Payload tab. They are made by other people: check that a payload suits your console\'s firmware before you send it.</string>
     <string name="side_activity">Activity</string>
     <string name="side_activity_hint">Transfers, payload chains and messages show up here.</string>
     <string name="diag_button">What\'s wrong?</string>
@@ -923,4 +923,24 @@
     <string name="language_title">Language</string>
     <string name="language_phone">Phone\'s language</string>
     <string name="language_phone_detail">Follows the phone\'s settings</string>
+    <string name="store_refresh">Check for new payloads</string>
+    <string name="store_refreshing">Checking…</string>
+    <string name="store_refreshed">Lists are up to date.</string>
+    <string name="store_section_picks">Bento\'s picks</string>
+    <string name="store_section_community">From the community list</string>
+    <string name="store_community_note">Dozens more PS5 payloads, kept up to date by the PS5 Payloads Mirror. The descriptions are the makers\' own. Bento takes each file from its maker\'s release when it can and checks it against the list\'s checksum.</string>
+    <string name="store_community_page">About this list</string>
+    <string name="store_community_failed">Couldn\'t load the community list. Check the phone\'s internet connection and try Check for new payloads.</string>
+    <string name="store_filter">Filter</string>
+    <string name="store_section_github">Found on GitHub</string>
+    <string name="store_github_note">Repositories that call themselves %1$s payloads, sorted by stars. Nobody has reviewed these: read the page before you send one.</string>
+    <string name="store_github_search">Search GitHub</string>
+    <string name="store_github_searching">Searching…</string>
+    <string name="store_github_none">Nothing else found on GitHub.</string>
+    <string name="store_github_busy">GitHub is limiting searches right now. Try again in a minute.</string>
+    <string name="store_github_check">Look for a release</string>
+    <string name="store_stars">★ %1$d · updated %2$s</string>
+    <string name="store_new">New</string>
+    <string name="store_new_out">New in Get payloads: %1$s</string>
+    <string name="store_checksum_bad">The download didn\'t match the list\'s checksum, so it wasn\'t kept.</string>
 </resources>

@@ -20,14 +20,14 @@
 
 | Tab | |
 | --- | --- |
-| **Install** | Install `.pkg` files from a web link (or a whole list), or straight from your phone. **Check** shows a package's name, icon, version and needed firmware first. |
-| **Payload** | Send `.elf` / `.bin` payloads. Keep favourites on a shelf, run several in a row as a **chain**, and **get payloads** (etaHEN, ps5debug-NG, ftpsrv…) from their GitHub pages, with update notices. |
+| **Install** | Install `.pkg` files from a web link (or a whole list), or straight from your phone. **Check** shows a package's name, icon, version and needed firmware first, and whether it is new, an update or already installed. |
+| **Payload** | Send `.elf` / `.bin` payloads. Keep favourites on a shelf, run several in a row as a **chain**, and **get payloads** from their makers' GitHub pages: Bento's picks (etaHEN, ps5debug-NG, ftpsrv…), a community list of 30+ PS5 payloads and a GitHub search. Bento checks for new payloads and updates when it starts and marks which ones list your firmware. |
 | **Upload** | Copy files from your phone to the console over FTP, in the background. **Keep a folder in sync**: only new or changed files are sent. |
 | **Files** | Browse the console's files (download, rename, delete, search, pin). See your **installed games** with names and icons, **back up and restore saves**, and grab **screenshots & videos**. |
 | **Web** | A browser for homebrew sites, with tabs, bookmarks and ad block. Send any link to the console or download it. |
-| **Memory** | A cheat engine for PS5 and PS4: find a value (health, money), change or **freeze** it, find **pointer paths** that survive a restart, switch on ready-made cheats, **make your own cheat file**, and read the **console log**. |
+| **Memory** | A cheat engine for PS5 and PS4: find a value (health, money), change or **freeze** it, find **pointer paths** that survive a restart, switch on ready-made cheats, **make your own cheat file**, **find text** (names, items), **undo** any change, and read the **console log**. |
 
-Every option has a small **?** that explains it, and a welcome page walks you through the first start.
+Every option has a small **?** that explains it, and a welcome page walks you through the first start. Something not working? **What's wrong?** on the console card tests each part of the connection and says how to fix it. The app's language can be picked inside the app (53 languages).
 
 ## What you need
 
@@ -46,6 +46,7 @@ Every option has a small **?** that explains it, and a welcome page walks you th
 
 ## Troubleshooting
 
+- **Not sure what's wrong:** tap **What's wrong?** on the console card. It checks the phone's Wi-Fi, the network, each service's port and the debugger, and offers a fix (such as using the port that answers). **Copy debug info** gives a helper everything they need, without IP addresses or links.
 - **Can't reach the console:** check the IP, that the console is awake (not in rest mode) and that etaHEN / GoldHEN is running. **Find my console** finds a changed address.
 - **A light stays off:** that service isn't running on the console, or its port is different. Ports are under **Settings** at the bottom of each tab.
 - **Installer accepted it, but nothing installs:** the link must be a direct download the console can open without logging in. Try **Install from this phone**.
