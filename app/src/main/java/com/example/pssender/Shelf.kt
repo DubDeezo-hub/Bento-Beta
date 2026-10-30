@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 import android.content.Context
 import android.net.Uri
@@ -7,6 +7,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.clickable
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
@@ -25,6 +26,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.text.font.FontFamily
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -164,6 +166,7 @@ fun PayloadTab(
     }
     val oneOffPicker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { oneOff = it }
     var showStore by remember { mutableStateOf(false) }
+    var details by remember { mutableStateOf<ShelfItem?>(null) }
     val type = ActiveConsole.type
     LaunchedEffect(type) { StoreUpdates.check(ctx, type) }
     if (showStore) {
@@ -181,11 +184,38 @@ fun PayloadTab(
             confirmButton = {
                 TextButton(onClick = {
                     shelfRemove(shelfDir(ctx), item.name)
+                    ShelfChecks.forget(ctx, item.name)
                     shelf = shelfList(shelfDir(ctx))
                     removing = null
                 }) { Text(str(R.string.action_remove)) }
             },
             dismissButton = { TextButton(onClick = { removing = null }) { Text(str(R.string.action_cancel)) } }
+        )
+    }
+
+    // A payload's checksum, and whether it still matches the one it was verified against
+    details?.let { item ->
+        var sha by remember(item.name) { mutableStateOf("") }
+        LaunchedEffect(item.name) { sha = withContext(Dispatchers.IO) { ShelfChecks.sha256Of(File(shelfDir(ctx), item.name)) } }
+        val checked = ShelfChecks.verified(ctx, item.name)
+        AlertDialog(
+            onDismissRequest = { details = null },
+            title = { Text(item.name) },
+            text = {
+                Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                    Text(fmtBytes(item.size), style = MaterialTheme.typography.bodySmall)
+                    Text("SHA-256", style = MaterialTheme.typography.labelLarge)
+                    Text(sha.ifEmpty { "…" }, style = MaterialTheme.typography.bodySmall, fontFamily = FontFamily.Monospace)
+                    when {
+                        checked == null -> Text(str(R.string.shelf_not_verified), style = MaterialTheme.typography.bodySmall)
+                        sha.isEmpty() -> {}
+                        sha == checked.first -> Text(str(R.string.shelf_verified_by, checked.second), style = MaterialTheme.typography.bodySmall, color = statusColors().good)
+                        else -> Text(str(R.string.shelf_changed), style = MaterialTheme.typography.bodySmall, color = statusColors().bad)
+                    }
+                }
+            },
+            confirmButton = { TextButton(onClick = { details = null }) { Text(str(R.string.action_close)) } },
+            dismissButton = { TextButton(enabled = sha.isNotEmpty(), onClick = { copyText(ctx, "sha256", sha, AppText.get(R.string.help_copied)) }) { Text(str(R.string.shelf_copy_sha)) } }
         )
     }
 
@@ -196,9 +226,14 @@ fun PayloadTab(
         }
         shelf.forEach { item ->
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
-                Column(modifier = Modifier.weight(1f)) {
+                Column(modifier = Modifier.weight(1f).clickable { details = item }) {
                     Text(item.name, maxLines = 1, overflow = TextOverflow.Ellipsis)
-                    Text(fmtBytes(item.size), style = MaterialTheme.typography.bodySmall)
+                    val checked = remember(item.name, item.size) { ShelfChecks.verified(ctx, item.name) }
+                    Text(
+                        fmtBytes(item.size) + if (checked != null) " · " + str(R.string.shelf_verified) else "",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = if (checked != null) statusColors().good else MaterialTheme.colorScheme.onSurfaceVariant
+                    )
                 }
                 Button(
                     enabled = canSend,

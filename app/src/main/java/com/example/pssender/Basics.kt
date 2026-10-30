@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 // Small helpers shared by the network code and the screens. No Android parts, so they can be tested on their own.
 

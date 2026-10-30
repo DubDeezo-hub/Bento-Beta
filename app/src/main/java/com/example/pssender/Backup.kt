@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 import android.content.Context
 import android.net.Uri
@@ -282,4 +282,26 @@ fun restoreMessage(failedPayloads: Int): String {
     var message = AppText.get(R.string.restore_done)
     if (failedPayloads > 0) message += "\n" + AppText.get(R.string.restore_payloads_failed, failedPayloads)
     return message
+}
+
+/**
+ * A backup made by itself: when switched on, once a week when the app opens, into Downloads/Bento/Backups on the phone
+ * (a new file each time, so older ones stay until you delete them).
+ */
+object AutoBackup {
+    private const val EVERY_MS = 7L * 24 * 60 * 60 * 1000
+    private fun prefs(ctx: Context) = ctx.getSharedPreferences("settings", Context.MODE_PRIVATE)
+
+    fun isOn(ctx: Context): Boolean = prefs(ctx).getBoolean("auto_backup", false)
+    fun setOn(ctx: Context, on: Boolean) = prefs(ctx).edit().putBoolean("auto_backup", on).apply()
+    fun last(ctx: Context): Long = prefs(ctx).getLong("auto_backup_last", 0L)
+
+    /** Makes a backup when one is due. Gives where it went, or null when none was made. Blocking. */
+    fun runIfDue(ctx: Context, versionName: String, now: Long = System.currentTimeMillis()): String? {
+        if (!isOn(ctx) || now - last(ctx) in 0 until EVERY_MS) return null
+        val text = backupToJson(collectBackup(ctx), versionName)
+        val where = saveTextToDownloads(ctx.contentResolver, "Bento", "Backups", backupFileName(), text) ?: return null
+        prefs(ctx).edit().putLong("auto_backup_last", now).apply()
+        return where
+    }
 }

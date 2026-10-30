@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
+import androidx.compose.material3.Switch
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -245,6 +246,10 @@ fun FilesTab(
 ) {
     val ctx = LocalContext.current
     var menuFor by remember { mutableStateOf<FtpEntry?>(null) }
+    var editing by remember { mutableStateOf<String?>(null) }
+    var zipping by remember { mutableStateOf(false) }
+    var zipCancel by remember { mutableStateOf(false) }
+    var showEtaHen by remember { mutableStateOf(false) }
     var renameFor by remember { mutableStateOf<FtpEntry?>(null) }
     var deleteFor by remember { mutableStateOf<FtpEntry?>(null) }
     var deleteMany by remember { mutableStateOf<List<FtpEntry>?>(null) }
@@ -394,6 +399,53 @@ fun FilesTab(
                             startDownload(listOf(e))
                         }
                     ) { Text(str(R.string.files_download)) }
+                    // A folder as one zip on the phone (a game's saves, a set of screenshots)
+                    if (e.isDir && settings != null) {
+                        Button(
+                            modifier = Modifier.fillMaxWidth(),
+                            enabled = !zipping,
+                            onClick = {
+                                menuFor = null
+                                zipping = true
+                                zipCancel = false
+                                scope.launch {
+                                    model.message = AppText.get(R.string.zip_planning)
+                                    model.message = withContext(Dispatchers.IO) {
+                                        try {
+                                            val plan = ftpPlanDownload(settings, model.path, listOf(e))
+                                            val total = plan.totalBytes
+                                            if (plan.files.isEmpty()) AppText.get(R.string.zip_empty)
+                                            else {
+                                                var shown = 0L
+                                                val where = ftpZipToPhone(ctx.contentResolver, settings, plan, safeLocalName(e.name) + ".zip",
+                                                    progress = { n, b ->
+                                                        val now = System.currentTimeMillis()
+                                                        if (now - shown > 250 || n == plan.files.size) {
+                                                            shown = now
+                                                            model.message = AppText.get(R.string.zip_progress, n, plan.files.size, fmtBytes(b), fmtBytes(total))
+                                                        }
+                                                    },
+                                                    cancelled = { zipCancel })
+                                                AppText.get(R.string.zip_done, where) + if (plan.truncated) "\n" + AppText.get(R.string.zip_truncated) else ""
+                                            }
+                                        } catch (x: Exception) {
+                                            failedText(x)
+                                        }
+                                    }
+                                    zipping = false
+                                }
+                            }
+                        ) { Text(str(R.string.zip_download)) }
+                    }
+                    if (!e.isDir && !e.isLink && isEditableText(e.name) && e.size <= TEXT_EDIT_MAX) {
+                        Button(
+                            modifier = Modifier.fillMaxWidth(),
+                            onClick = {
+                                menuFor = null
+                                editing = joinPath(model.path, e.name)
+                            }
+                        ) { Text(str(R.string.text_edit_open)) }
+                    }
                     Button(
                         modifier = Modifier.fillMaxWidth(),
                         onClick = {
@@ -414,6 +466,14 @@ fun FilesTab(
             dismissButton = { TextButton(onClick = { menuFor = null }) { Text(str(R.string.action_close)) } }
         )
     }
+
+    editing?.let { p ->
+        if (settings != null) TextFileDialog(settings, p) {
+            editing = null
+            model.open(scope, settings, model.path)
+        } else editing = null
+    }
+    if (showEtaHen && settings != null) EtaHenSettingsDialog(settings) { showEtaHen = false }
 
     renameFor?.let { e ->
         var newName by remember(e) { mutableStateOf(e.name) }
@@ -701,7 +761,42 @@ fun FilesTab(
                     enabled = ready,
                     onClick = { if (settings != null) model.open(scope, settings, ConsolePaths.MEDIA) }
                 ) { Text(str(R.string.files_media), maxLines = 1) }
+                // New captures straight to the phone (each one only once)
+                OutlinedButton(
+                    enabled = ready,
+                    onClick = {
+                        if (settings != null) scope.launch {
+                            model.message = AppText.get(R.string.captures_looking)
+                            val plan = withContext(Dispatchers.IO) {
+                                try { CaptureSync.plan(ctx, settings, profile.id, firstTimeAll = true) } catch (e: Exception) { null }
+                            }
+                            model.message = when {
+                                plan == null -> AppText.get(R.string.captures_failed)
+                                plan.isEmpty() -> AppText.get(R.string.captures_none)
+                                else -> {
+                                    queueDownloads(plan)
+                                    CaptureSync.markCopied(ctx, profile.id, plan.map { it.remotePath })
+                                    AppText.get(R.string.captures_queued, plan.size, CaptureSync.FOLDER)
+                                }
+                            }
+                        }
+                    }
+                ) { Text(str(R.string.captures_copy), maxLines = 1) }
                 TipButton(Tip.MEDIA, modifier = Modifier.align(Alignment.CenterVertically))
+                // etaHEN's own settings file, as switches (PS5)
+                if (profile.type == ConsoleType.PS5) {
+                    OutlinedButton(enabled = ready, onClick = { showEtaHen = true }) { Text(str(R.string.etahen_title), maxLines = 1) }
+                }
+            }
+            run {
+                var auto by remember(profile.id) { mutableStateOf(CaptureSync.autoOn(ctx, profile.id)) }
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(str(R.string.captures_auto), style = MaterialTheme.typography.bodySmall, modifier = Modifier.weight(1f))
+                    Switch(checked = auto, onCheckedChange = {
+                        auto = it
+                        CaptureSync.setAuto(ctx, profile.id, it)
+                    })
+                }
             }
             if (pins.isNotEmpty()) {
                 FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -721,6 +816,7 @@ fun FilesTab(
         } else if (model.message.isNotEmpty()) {
             Text(model.message, style = MaterialTheme.typography.bodySmall)
             HelpLink(model.message)
+            if (zipping) TextButton(onClick = { zipCancel = true }) { Text(str(R.string.action_cancel)) }
         }
         if (query.isNotBlank() && model.entries.isNotEmpty() && shown.isEmpty()) {
             Text(str(R.string.files_no_match), style = MaterialTheme.typography.bodySmall)

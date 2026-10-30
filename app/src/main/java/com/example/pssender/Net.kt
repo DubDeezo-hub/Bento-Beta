@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 import android.content.ContentResolver
 import android.content.ContentValues
@@ -396,6 +396,18 @@ private fun readSmall(ftp: FTPClient, path: String, max: Int): ByteArray? {
 
 /** Reads the small file [path] on the console (null when it isn't there or is larger than [max] bytes). */
 fun ftpReadSmall(s: FtpSettings, path: String, max: Int = 1 shl 20): ByteArray? = withFtp(s) { ftp -> readSmall(ftp, path, max) }
+
+/**
+ * Writes [data] as the file [path] on the console, replacing it. With [backup], what was there is kept first as
+ * "<path>.bak" (a settings file edited by hand can be put back).
+ */
+fun ftpWriteSmall(s: FtpSettings, path: String, data: ByteArray, backup: Boolean = true) {
+    withFtp(s) { ftp ->
+        ftp.setFileType(FTP.BINARY_FILE_TYPE)
+        if (backup) readSmall(ftp, path, 4 shl 20)?.let { old -> ftp.storeFile("$path.bak", old.inputStream()) }
+        if (!ftp.storeFile(path, data.inputStream())) throw IOException(deniedText(R.string.err_save, ftp, path))
+    }
+}
 
 /**
  * Reads several small files over one connection. For each of [paths], [each] gets its bytes (null when it could not be
@@ -814,6 +826,57 @@ fun keepTreeAccess(cr: ContentResolver, tree: Uri) {
     try {
         cr.takePersistableUriPermission(tree, Intent.FLAG_GRANT_READ_URI_PERMISSION)
     } catch (_: Exception) {
+    }
+}
+
+/**
+ * Downloads every file of [plan] into one zip, Downloads/<PS5 or PS4>/[zipName], keeping their folders inside it. Gives
+ * where it went. Blocking; [progress] gets the files and bytes done; [cancelled] stops it, and a zip that wasn't
+ * finished is removed.
+ */
+fun ftpZipToPhone(
+    cr: ContentResolver, s: FtpSettings, plan: DownloadPlan, zipName: String,
+    progress: (files: Int, bytes: Long) -> Unit, cancelled: () -> Boolean
+): String {
+    val values = ContentValues().apply {
+        put(MediaStore.MediaColumns.DISPLAY_NAME, zipName)
+        put(MediaStore.MediaColumns.MIME_TYPE, "application/zip")
+        put(MediaStore.MediaColumns.RELATIVE_PATH, downloadFolder("", s.model))
+        put(MediaStore.MediaColumns.IS_PENDING, 1)
+    }
+    val uri = cr.insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, values) ?: throw IOException(AppText.get(R.string.dl_create_failed))
+    try {
+        val out = cr.openOutputStream(uri) ?: throw IOException(AppText.get(R.string.dl_create_failed))
+        java.util.zip.ZipOutputStream(out.buffered(256 * 1024)).use { zip ->
+            withFtp(s) { ftp ->
+                ftp.setFileType(FTP.BINARY_FILE_TYPE)
+                var bytes = 0L
+                val buf = ByteArray(256 * 1024)
+                plan.files.forEachIndexed { i, f ->
+                    if (cancelled()) throw IOException(AppText.get(R.string.zip_cancelled))
+                    zip.putNextEntry(java.util.zip.ZipEntry(savedAs(f.saveIn, f.name)))
+                    val input = ftp.retrieveFileStream(f.remotePath) ?: throw IOException(deniedText(R.string.err_cant_open, ftp, f.remotePath))
+                    input.use {
+                        while (true) {
+                            if (cancelled()) throw IOException(AppText.get(R.string.zip_cancelled))
+                            val n = it.read(buf)
+                            if (n < 0) break
+                            zip.write(buf, 0, n)
+                            bytes += n
+                            progress(i, bytes)
+                        }
+                    }
+                    if (!ftp.completePendingCommand()) throw IOException(deniedText(R.string.err_cant_open, ftp, f.remotePath))
+                    zip.closeEntry()
+                    progress(i + 1, bytes)
+                }
+            }
+        }
+        cr.update(uri, ContentValues().apply { put(MediaStore.MediaColumns.IS_PENDING, 0) }, null, null)
+        return downloadFolder("", s.model) + "/" + zipName
+    } catch (e: Exception) {
+        try { cr.delete(uri, null, null) } catch (_: Exception) {}
+        throw e
     }
 }
 

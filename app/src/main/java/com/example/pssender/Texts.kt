@@ -1,11 +1,7 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 import android.app.Application
 import android.content.Context
-import android.content.Intent
-import android.net.Uri
-import android.os.Build
-import android.provider.Settings
 import android.view.View
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalLayoutDirection
@@ -79,6 +75,7 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         AppText.init(this)
+        AppLook.load(this)
         val store = UnfinishedFile(File(noBackupFilesDir, "unfinished-transfers.json"))
         TransferState.adoptUnfinished(store.load())
         TransferState.journal = FileJournal(store)
@@ -95,28 +92,3 @@ fun str(id: Int, vararg args: Any): String {
 
 /** "A, B, C" with the separator of the current language. */
 fun joinList(items: List<String>): String = items.joinToString(AppText.get(R.string.list_separator))
-
-/**
- * Opens the system page where this app's language is chosen (Android 13 and newer), or the phone's language list
- * on older versions. The app follows the language that is picked there.
- */
-fun openLanguageSettings(ctx: Context) {
-    val pages = ArrayList<Intent>()
-    if (Build.VERSION.SDK_INT >= 33) {
-        pages.add(Intent(Settings.ACTION_APP_LOCALE_SETTINGS, Uri.fromParts("package", ctx.packageName, null)))
-    }
-    pages.add(Intent(Settings.ACTION_LOCALE_SETTINGS))
-    for (page in pages) {
-        // From an activity the page opens on top of the app, so Back returns to it; other contexts need a new task
-        try {
-            ctx.startActivity(page)
-            return
-        } catch (_: Exception) {
-        }
-        try {
-            ctx.startActivity(Intent(page).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
-            return
-        } catch (_: Exception) {
-        }
-    }
-}

@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 import android.content.Context
 import android.graphics.BitmapFactory
@@ -195,6 +195,19 @@ object ConsoleApps {
         }
     }
 
+    /** The versions of the patches installed for PS4 titles (from /user/patch/<id>/sce_sys/param.sfo). Blocking. */
+    fun patchVersions(s: FtpSettings): Map<String, String> {
+        val ids = apps.filter { it.hasPatch && it.id.startsWith("CUSA") }.map { it.id }
+        if (ids.isEmpty()) return emptyMap()
+        val out = HashMap<String, String>()
+        ftpReadEach(s, ids.map { joinPath(joinPath(joinPath(ConsolePaths.PATCHES, it), "sce_sys"), "param.sfo") }, 512 * 1024) { path, data ->
+            val id = path.removePrefix(ConsolePaths.PATCHES + "/").substringBefore('/')
+            val v = try { data?.let { TitleMeta.fromSfo(Sfo.parse(it)).version } } catch (_: Exception) { null }
+            if (!v.isNullOrEmpty()) out[id] = v
+        }
+        return out
+    }
+
     /** Shows the details found so far (from any thread). */
     private fun publish(found: Map<String, TitleInfo>, key: String) {
         val copy = HashMap(found)
@@ -253,27 +266,86 @@ private fun appDetail(a: AppEntry): String {
     parts.add(a.id)
     a.info?.version?.takeIf { it.isNotBlank() }?.let { parts.add("v$it") }
     if (a.hasPatch) parts.add(str(R.string.apps_patched))
+    GameSizes.sizes[a.id]?.let { parts.add(fmtBytes(it)) }
+    when (val u = GameUpdates.results[a.id]) {
+        is UpdateState.Available -> parts.add(str(R.string.apps_update_new, u.update.version))
+        is UpdateState.UpToDate -> parts.add(str(R.string.apps_update_current))
+        else -> {}
+    }
     return parts.joinToString(" · ")
 }
 
 @Composable
 fun AppsView(settings: FtpSettings?, onOpenFolder: (String) -> Unit, onSaves: (String) -> Unit, modifier: Modifier = Modifier) {
     val ctx = LocalContext.current
+    val scope = rememberCoroutineScope()
     val c = ConsoleApps
     var query by remember { mutableStateOf("") }
     var open by remember { mutableStateOf<AppEntry?>(null) }
     LaunchedEffect(settings?.host, settings?.port) {
-        if (settings != null) c.load(ctx, settings)
+        if (settings != null) {
+            GameUpdates.keepOnly("${settings.host}:${settings.port}")
+            GameSizes.keepOnly("${settings.host}:${settings.port}")
+            c.load(ctx, settings)
+        }
     }
-    val shown = remember(c.apps, query) {
+    var bySize by remember { mutableStateOf(false) }
+    val sizes = GameSizes.sizes
+    val shown = remember(c.apps, query, bySize, sizes) {
         val q = query.trim()
-        if (q.isEmpty()) c.apps else c.apps.filter { it.shownName.contains(q, true) || it.id.contains(q, true) }
+        val list = if (q.isEmpty()) c.apps else c.apps.filter { it.shownName.contains(q, true) || it.id.contains(q, true) }
+        if (bySize) list.sortedByDescending { sizes[it.id] ?: -1L } else list
     }
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(6.dp)) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             TipTitle(str(R.string.apps_title, c.apps.size), Tip.APPS, modifier = Modifier.weight(1f), style = MaterialTheme.typography.titleMedium)
             TextButton(enabled = settings != null && !c.loading, onClick = { if (settings != null) c.load(ctx, settings, force = true) }) {
                 Text(str(R.string.files_refresh))
+            }
+        }
+        // How much space the games take
+        if (settings != null && c.apps.isNotEmpty() && !c.loading) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                val g = GameSizes
+                Text(
+                    when {
+                        g.counting -> str(R.string.apps_sizes_counting, g.done, g.total)
+                        g.sizes.isEmpty() -> str(R.string.apps_sizes_hint)
+                        else -> str(if (g.partial) R.string.apps_sizes_total_partial else R.string.apps_sizes_total, fmtBytes(g.totalBytes))
+                    },
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.weight(1f)
+                )
+                if (g.sizes.isNotEmpty()) Chip(str(R.string.apps_sizes_sort), bySize) { bySize = !bySize }
+                TextButton(enabled = !g.counting, onClick = {
+                    scope.launch { GameSizes.count("${settings.host}:${settings.port}", settings, c.apps) }
+                }) { Text(str(R.string.apps_sizes_count)) }
+            }
+        }
+        // Which games have a newer patch than the one installed
+        if (settings != null && c.apps.isNotEmpty() && !c.loading) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                val u = GameUpdates
+                Text(
+                    when {
+                        u.checking -> str(R.string.apps_updates_checking, u.done, u.total)
+                        u.results.isEmpty() -> str(R.string.apps_updates_hint)
+                        u.available > 0 -> str(R.string.apps_updates_found, u.available)
+                        else -> str(R.string.apps_updates_none)
+                    },
+                    style = MaterialTheme.typography.bodySmall,
+                    color = if (u.available > 0) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.weight(1f)
+                )
+                TipButton(Tip.APP_UPDATES)
+                TextButton(enabled = !u.checking, onClick = {
+                    scope.launch {
+                        val key = "${settings.host}:${settings.port}"
+                        val patches = withContext(Dispatchers.IO) { try { c.patchVersions(settings) } catch (_: Exception) { emptyMap() } }
+                        GameUpdates.check(key, c.apps, patches, ConsoleFirmware.get(ctx, ActiveConsole.id), ActiveConsole.type == ConsoleType.PS5)
+                    }
+                }) { Text(str(R.string.apps_updates_check)) }
             }
         }
         if (c.apps.size > 6) Field(str(R.string.files_search_hint), query) { query = it }
@@ -300,6 +372,26 @@ fun AppsView(settings: FtpSettings?, onOpenFolder: (String) -> Unit, onSaves: (S
                 Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
                     MetaLines(a.info, a.id)
                     if (a.hasPatch) Text(str(R.string.apps_patched), style = MaterialTheme.typography.bodySmall)
+                    when (val u = GameUpdates.results[a.id]) {
+                        is UpdateState.Available -> {
+                            Text(
+                                if (u.update.needsFirmware.isNotEmpty()) str(R.string.apps_update_detail_fw, u.update.version, u.update.needsFirmware)
+                                else str(R.string.apps_update_detail, u.update.version),
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.primary,
+                                fontWeight = FontWeight.Medium
+                            )
+                            // The newest one the console's firmware can take, when that is an older one
+                            val fits = u.update.newestForFirmware
+                            if (fits.isNotEmpty() && fits != u.update.version) {
+                                Text(str(R.string.apps_update_fits, fits), style = MaterialTheme.typography.bodySmall)
+                            }
+                            TextButton(onClick = { openLink(ctx, GameUpdates.siteFor(a.id) + "/" + a.id) }) { Text(str(R.string.apps_update_page)) }
+                        }
+                        is UpdateState.UpToDate -> Text(str(R.string.apps_update_current), style = MaterialTheme.typography.bodySmall)
+                        UpdateState.Unknown -> Text(str(R.string.apps_update_unknown), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        null -> {}
+                    }
                     OutlinedButton(onClick = { open = null; onOpenFolder(joinPath(ConsolePaths.APPS, a.id)) }) { Text(str(R.string.apps_open_folder)) }
                     OutlinedButton(onClick = { open = null; onSaves(a.id) }) { Text(str(R.string.apps_its_saves)) }
                     TextButton(onClick = { copyText(ctx, "title id", a.id, AppText.get(R.string.help_copied)) }) { Text(str(R.string.apps_copy_id)) }

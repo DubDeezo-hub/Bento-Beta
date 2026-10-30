@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -77,7 +77,9 @@ class DiagInput(
     /** The port each service is set to (null when the field isn't a number). */
     val ports: Map<DiagService, Int?>,
     /** Every port that was tried and how it went. */
-    val probes: Map<Int, PortState>
+    val probes: Map<Int, PortState>,
+    /** Recent lines of the console's log that look like problems (a payload that crashed, a refused request). */
+    val logProblems: List<String> = emptyList()
 )
 
 /** One fix the check can offer. */
@@ -87,6 +89,9 @@ sealed class DiagFix {
 
     /** Open the payload store. */
     object GetPayloads : DiagFix()
+
+    /** Open etaHEN's settings (its FTP answers, so they can be changed from here). */
+    object EtaHenSettings : DiagFix()
 
     /** Look for the console on the network. */
     object FindConsole : DiagFix()
@@ -187,7 +192,10 @@ object Diagnose {
                     )
                 )
             } else {
-                out.add(DiagFinding(DiagLevel.BAD, AppText.get(R.string.diag_down_title, name(s), port), adviceFor(i.type, s, port), fixFor(i.type, s)))
+                // etaHEN's installer is a setting in its settings file, which can be changed while its FTP answers
+                val ftpUp = i.ports[DiagService.FTP]?.let { open(it) } == true
+                val fix = if (s == DiagService.INSTALLER && i.type == ConsoleType.PS5 && ftpUp) DiagFix.EtaHenSettings else fixFor(i.type, s)
+                out.add(DiagFinding(DiagLevel.BAD, AppText.get(R.string.diag_down_title, name(s), port), adviceFor(i.type, s, port), fix))
             }
         }
 
@@ -199,7 +207,36 @@ object Diagnose {
                 AppText.get(R.string.diag_debugger_off, if (i.type == ConsoleType.PS4) "ps4debug-NG" else "ps5debug-NG"), DiagFix.GetPayloads
             )
         )
+        if (i.logProblems.isNotEmpty()) {
+            out.add(DiagFinding(DiagLevel.WARN, AppText.get(R.string.diag_log_title, i.logProblems.size), i.logProblems.joinToString("\n")))
+        }
         if (allGood) out.add(0, DiagFinding(DiagLevel.GOOD, AppText.get(R.string.diag_all_good_title), AppText.get(R.string.diag_all_good)))
+        return out
+    }
+
+    /** Lines of a console log that look like a problem. */
+    private val PROBLEM = Regex("""\b(error|failed|failure|fail|panic|crash(ed)?|exception|denied|refused|segfault|fault|abort(ed)?|unable|cannot|can't|fatal|timed? ?out)\b""", RegexOption.IGNORE_CASE)
+
+    /** The last few problem lines of [lines], newest last, without repeats (each cut to a readable length). */
+    fun problemsIn(lines: List<String>, max: Int = 5): List<String> =
+        lines.filter { PROBLEM.containsMatchIn(it) }.map { it.trim().take(160) }.distinct().takeLast(max)
+
+    /** What the console's log says right now: lines arriving on [port] for [ms] milliseconds. Blocking; empty when nothing answers. */
+    fun listenToLog(host: String, port: Int, ms: Long = 2000): List<String> {
+        val out = ArrayList<String>()
+        try {
+            java.net.Socket().use { s ->
+                s.connect(java.net.InetSocketAddress(host, port), 1000)
+                s.soTimeout = 250
+                val reader = s.getInputStream().bufferedReader()
+                val end = System.currentTimeMillis() + ms
+                while (System.currentTimeMillis() < end && out.size < 2000) {
+                    val line = try { reader.readLine() } catch (_: java.net.SocketTimeoutException) { continue } ?: break
+                    out.add(line)
+                }
+            }
+        } catch (_: Exception) {
+        }
         return out
     }
 
@@ -273,13 +310,18 @@ object Diagnose {
         val tries = portsToTry(profile.type, ports)
         val probes = tries.map { p -> async(Dispatchers.IO) { p to probe(host, p) } }
         val pinged = async(Dispatchers.IO) { ping(host) }
+        // The console log: what Bento's log view already has, plus whatever arrives in two seconds now
+        val seen = KernelLog.lines.toList()
+        val logPort = KernelLog.port.trim().toIntOrNull() ?: KernelLog.DEFAULT_PORT
+        val heard = async(Dispatchers.IO) { if (KernelLog.running) emptyList() else listenToLog(host, logPort) }
         DiagInput(
             profile.type, host,
             onWifi = networks.isNotEmpty() || (target?.isLoopbackAddress == true),
             otherNetwork = other,
             pinged = pinged.await(),
             ports = ports,
-            probes = probes.awaitAll().toMap()
+            probes = probes.awaitAll().toMap(),
+            logProblems = problemsIn(seen + heard.await())
         )
     }
 
@@ -357,6 +399,7 @@ private fun FindingRow(f: DiagFinding, type: ConsoleType, onFix: (DiagFix) -> Un
             when (val fix = f.fix) {
                 is DiagFix.UsePort -> TextButton(onClick = { onFix(fix) }) { Text(str(R.string.diag_use_port, fix.port)) }
                 DiagFix.GetPayloads -> TextButton(onClick = { onFix(fix) }) { Text(str(R.string.store_open)) }
+                DiagFix.EtaHenSettings -> TextButton(onClick = { onFix(fix) }) { Text(str(R.string.etahen_title)) }
                 DiagFix.FindConsole -> TextButton(onClick = { onFix(fix) }) { Text(str(R.string.find_button, type.model)) }
                 null -> {}
             }

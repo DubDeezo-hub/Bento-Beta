@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 import android.content.Context
 import androidx.activity.compose.BackHandler
@@ -130,7 +130,7 @@ fun MemoryTab(host: String, modifier: Modifier = Modifier) {
     val ctx = LocalContext.current
     val m = MemorySession
     m.attach(ctx)
-    LaunchedEffect(host) { m.setHost(host) }
+    LaunchedEffect(host) { m.setConsoleHost(host) }
     var dialog by remember { mutableStateOf<MemoryDialog?>(null) }
 
     // Back steps out of the hex view, then out of the process, before it leaves the tab
@@ -173,16 +173,22 @@ fun MemoryTab(host: String, modifier: Modifier = Modifier) {
                 Chip(str(R.string.memory_view_log), m.view == MemoryView.LOG) {
                     m.view = if (m.view == MemoryView.LOG && s == null) MemoryView.SCAN else MemoryView.LOG
                 }
+                Chip(str(R.string.memory_view_learn), m.view == MemoryView.LEARN) {
+                    m.view = if (m.view == MemoryView.LEARN && s == null) MemoryView.SCAN else MemoryView.LEARN
+                }
             }
         }
+        if (LearnCoach.lesson != null) item { LearnCoachBar() }
         if (m.view == MemoryView.LOG) {
             logItems(host, ctx)
+        } else if (m.view == MemoryView.LEARN) {
+            learnItems()
         } else if (s != null) {
             when (m.view) {
                 MemoryView.SCAN -> scanItems(s) { dialog = it }
                 MemoryView.CHEATS -> cheatItems(s, ctx) { dialog = it }
                 MemoryView.BROWSE -> browseItems(s) { dialog = it }
-                MemoryView.LOG -> {}
+                MemoryView.LOG, MemoryView.LEARN -> {}
             }
         }
     }
@@ -335,11 +341,12 @@ private fun LazyListScope.scanItems(s: MemorySnapshot, open: (MemoryDialog) -> U
                 }
             }
             if (!m.scanning) {
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Row(modifier = Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     if (!searching) {
                         Button(enabled = !m.busy, onClick = { m.firstScan() }) { Text(str(R.string.memory_first_scan)) }
                     } else {
                         Button(enabled = !m.busy, onClick = { m.nextScan() }) { Text(str(R.string.memory_next_scan)) }
+                        if (m.canGoBack) OutlinedButton(enabled = !m.busy, onClick = { m.backOneScan() }) { Text(str(R.string.memory_back_scan)) }
                         OutlinedButton(enabled = !m.busy, onClick = { m.newSearch() }) { Text(str(R.string.memory_new_search)) }
                     }
                 }
@@ -411,7 +418,11 @@ private fun LazyListScope.cheatItems(s: MemorySnapshot, ctx: Context, open: (Mem
                     choices.forEach { e ->
                         ListRow(
                             title = e.game.ifBlank { e.titleId },
-                            detail = str(R.string.memory_cheatfile_version, e.version),
+                            detail = str(R.string.memory_cheatfile_version, e.version) + when (e.source) {
+                                CheatFiles.GOLDHEN_SOURCE -> " · GoldHEN"
+                                CheatFiles.DEFAULT_SOURCE -> " · etaHEN"
+                                else -> ""
+                            },
                             highlight = CheatFiles.sameVersion(e.version, s.game.version),
                             enabled = !m.busy
                         ) { m.openCheatFile(e) }
@@ -765,7 +776,16 @@ private fun HitDialog(d: MemoryDialog.Hit, onClose: () -> Unit, onOpen: (MemoryD
     val current = d.type.format(d.hit.value)
     var value by remember { mutableStateOf(current) }
     var peek by remember { mutableStateOf<ByteArray?>(null) }
+    var neighbors by remember { mutableStateOf<ByteArray?>(null) }
+    var showNeighbors by remember { mutableStateOf(false) }
+    val span = NEIGHBOR_SPAN
     LaunchedEffect(d.hit.address) { peek = m.peek(d.hit.address, 8) }
+    LaunchedEffect(showNeighbors) {
+        if (showNeighbors) {
+            m.neighborsOpened++
+            neighbors = m.peek(d.hit.address - span, span * 2 + d.type.size)
+        }
+    }
     AlertDialog(
         onDismissRequest = onClose,
         title = { Text(hexAddr(d.hit.address), fontFamily = FontFamily.Monospace) },
@@ -776,7 +796,17 @@ private fun HitDialog(d: MemoryDialog.Hit, onClose: () -> Unit, onOpen: (MemoryD
             ) {
                 Text(str(R.string.memory_hit_now, str(d.type.res), current), style = MaterialTheme.typography.bodyMedium)
                 Field(str(R.string.memory_new_value), value) { value = it }
+                ValuePresets(d.type) { value = it }
                 AllTypes(peek)
+                // The values around it: games keep related values together (health, then max health)
+                TextButton(onClick = { showNeighbors = !showNeighbors }) {
+                    TipTitle(str(if (showNeighbors) R.string.memory_neighbors_hide else R.string.memory_neighbors), Tip.MEM_NEIGHBORS, style = MaterialTheme.typography.labelLarge)
+                }
+                if (showNeighbors) {
+                    Neighbors(d.type, neighbors, span) { v ->
+                        value = v
+                    }
+                }
                 Row(
                     modifier = Modifier.horizontalScroll(rememberScrollState()),
                     horizontalArrangement = Arrangement.spacedBy(4.dp)
@@ -794,13 +824,82 @@ private fun HitDialog(d: MemoryDialog.Hit, onClose: () -> Unit, onOpen: (MemoryD
             }
         },
         confirmButton = {
+            val ctx = LocalContext.current
             TextButton(enabled = !m.busy && d.type.parse(value) != null, onClick = {
+                ValueFavorites.remember(ctx, value)
                 m.writeValue(d.hit.address, d.type, value)
                 onClose()
             }) { Text(str(R.string.memory_write)) }
         },
         dismissButton = { TextButton(onClick = onClose) { Text(str(R.string.action_close)) } }
     )
+}
+
+/** How far the neighbor view looks on each side of a match, in bytes. */
+private const val NEIGHBOR_SPAN = 0x20
+
+/**
+ * The values just before and after a match, read as its type, with their distance from it. [onUse] puts a neighbor's
+ * value into the new-value field (to fill health up to the max health beside it, say).
+ */
+@Composable
+private fun Neighbors(type: ValueType, bytes: ByteArray?, span: Int, onUse: (String) -> Unit) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(12.dp))
+            .background(MaterialTheme.colorScheme.surfaceContainerHigh)
+            .padding(10.dp),
+        verticalArrangement = Arrangement.spacedBy(2.dp)
+    ) {
+        if (bytes == null) {
+            Text("…", style = MaterialTheme.typography.bodySmall)
+            return@Column
+        }
+        Text(str(R.string.memory_neighbors_help), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        var off = -span
+        while (off <= span) {
+            val at = off + span
+            if (at + type.size <= bytes.size) {
+                val v = type.format(bytes.copyOfRange(at, at + type.size))
+                val label = if (off == 0) str(R.string.memory_neighbors_this) else (if (off < 0) "-" else "+") + "0x%X".format(kotlin.math.abs(off))
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(label, style = MaterialTheme.typography.bodySmall, fontFamily = FontFamily.Monospace, modifier = Modifier.weight(0.4f))
+                    Text(v, style = MaterialTheme.typography.bodySmall, fontFamily = FontFamily.Monospace, fontWeight = if (off == 0) FontWeight.Bold else null, modifier = Modifier.weight(0.6f))
+                    if (off != 0) TextButton(onClick = { onUse(v) }) { Text(str(R.string.memory_neighbors_use)) }
+                }
+            }
+            off += type.size
+        }
+    }
+}
+
+/** Quick values to write (0, 1, 99, 999, 9999 and the last ones used), one tap each. */
+@Composable
+internal fun ValuePresets(type: ValueType, onPick: (String) -> Unit) {
+    val ctx = LocalContext.current
+    val recent = remember { ValueFavorites.load(ctx) }
+    val fixed = if (type == ValueType.BYTE) listOf("0", "1", "99", "255") else listOf("0", "1", "99", "999", "9999")
+    val all = (recent.filter { type.parse(it) != null } + fixed).distinct().take(8)
+    Row(modifier = Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+        all.forEach { v -> Chip(v, selected = false) { onPick(v) } }
+    }
+}
+
+/** The values written most recently, kept so they are one tap away next time. */
+object ValueFavorites {
+    private const val KEY = "memory_recent_values"
+    private const val KEEP = 4
+
+    fun load(ctx: Context): List<String> =
+        (ctx.getSharedPreferences("settings", Context.MODE_PRIVATE).getString(KEY, "") ?: "").split('\n').filter { it.isNotBlank() }
+
+    fun remember(ctx: Context, value: String) {
+        val v = value.trim()
+        if (v.isEmpty() || v.length > 24) return
+        val list = (listOf(v) + load(ctx).filter { it != v }).take(KEEP)
+        ctx.getSharedPreferences("settings", Context.MODE_PRIVATE).edit().putString(KEY, list.joinToString("\n")).apply()
+    }
 }
 
 /** The 8 bytes at an address read as every kind of value, for when the kind was guessed wrong. */
@@ -859,6 +958,7 @@ private fun CheatDialog(cheat: Cheat?, new: MemoryDialog.NewCheat?, onClose: () 
                     ValueType.entries.forEach { t -> Chip(str(t.res), type == t) { type = t } }
                 }
                 Field(str(R.string.memory_value), value) { value = it }
+                ValuePresets(type) { value = it }
                 if (!valueOk) {
                     Text(str(R.string.memory_bad_value, str(type.res)), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.error)
                 }

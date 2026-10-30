@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.LinearProgressIndicator
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -25,6 +26,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -32,7 +34,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 // ---------------------------------------------------------------------------------------------
 // "Install from this phone": the packages stay on the phone and the console downloads them over Wi-Fi.
@@ -40,6 +45,54 @@ import kotlinx.coroutines.delay
 
 /** A file the person picked to share. [size] is -1 when it can't be told; such a file can't be shared. */
 private class PickedFile(val uri: Uri, val name: String, val size: Long)
+
+/** At most this many packages are taken from one folder. */
+private const val SERVE_FOLDER_MAX = 50
+
+/** The last few sets of packages installed from this phone, kept so a set can be picked again. */
+object ServeHistory {
+    private const val KEY = "serve_history"
+    private const val KEEP = 8
+
+    class Entry(val name: String, val uri: String, val size: Long)
+    class Batch(val time: Long, val files: List<Entry>) {
+        fun label(): String {
+            val date = java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT).format(java.util.Date(time))
+            val names = files.take(2).joinToString(", ") { it.name } + if (files.size > 2) " +" + (files.size - 2) else ""
+            return "$date · $names"
+        }
+    }
+
+    private fun prefs(ctx: android.content.Context) = ctx.getSharedPreferences("settings", android.content.Context.MODE_PRIVATE)
+
+    fun load(ctx: android.content.Context): List<Batch> = try {
+        val arr = org.json.JSONArray(prefs(ctx).getString(KEY, "[]") ?: "[]")
+        (0 until arr.length()).mapNotNull { i ->
+            val o = arr.optJSONObject(i) ?: return@mapNotNull null
+            val f = o.optJSONArray("files") ?: return@mapNotNull null
+            Batch(o.optLong("time"), (0 until f.length()).mapNotNull { j ->
+                val e = f.optJSONObject(j) ?: return@mapNotNull null
+                Entry(e.optString("name"), e.optString("uri"), e.optLong("size"))
+            })
+        }
+    } catch (_: Exception) {
+        emptyList()
+    }
+
+    fun add(ctx: android.content.Context, files: List<Entry>) {
+        if (files.isEmpty()) return
+        // The same set again moves to the top instead of being listed twice
+        val same = files.map { it.uri }.toSet()
+        val list = listOf(Batch(System.currentTimeMillis(), files)) + load(ctx).filter { b -> b.files.map { it.uri }.toSet() != same }
+        val arr = org.json.JSONArray()
+        list.take(KEEP).forEach { b ->
+            val f = org.json.JSONArray()
+            b.files.forEach { e -> f.put(org.json.JSONObject().put("name", e.name).put("uri", e.uri).put("size", e.size)) }
+            arr.put(org.json.JSONObject().put("time", b.time).put("files", f))
+        }
+        prefs(ctx).edit().putString(KEY, arr.toString()).apply()
+    }
+}
 
 /** What to say about one shared file: whether the console has asked for it yet, how far it got, or that it is done. */
 private fun fileStatus(f: ServeFileInfo): String = when {
@@ -83,6 +136,30 @@ fun ServeSection(consoleName: String, host: String, installPort: String, onBefor
             }
         }
     }
+    // A whole folder of packages: every .pkg in it and its folders, in name order
+    val scope = rememberCoroutineScope()
+    var folderNote by remember { mutableStateOf("") }
+    val folderPicker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocumentTree()) { tree ->
+        if (tree != null) scope.launch {
+            folderNote = AppText.get(R.string.serve_folder_looking)
+            val found = withContext(Dispatchers.IO) {
+                try {
+                    keepTreeAccess(ctx.contentResolver, tree)
+                    walkPhoneTree(ctx.contentResolver, tree).files.filter { it.rel.endsWith(".pkg", true) }.sortedBy { it.rel.lowercase() }
+                } catch (_: Exception) {
+                    null
+                }
+            }
+            folderNote = when {
+                found == null -> AppText.get(R.string.serve_folder_failed)
+                found.isEmpty() -> AppText.get(R.string.serve_folder_none)
+                else -> ""
+            }
+            if (!found.isNullOrEmpty()) picked = found.take(SERVE_FOLDER_MAX).map { PickedFile(Uri.parse(it.uri), it.rel.substringAfterLast('/'), it.size) }
+            if ((found?.size ?: 0) > SERVE_FOLDER_MAX) folderNote = AppText.get(R.string.serve_folder_capped, SERVE_FOLDER_MAX)
+        }
+    }
+    var history by remember { mutableStateOf(ServeHistory.load(ctx)) }
     // "Link copied" goes back to "Copy link" after a moment
     LaunchedEffect(copied) {
         if (copied >= 0) {
@@ -104,7 +181,11 @@ fun ServeSection(consoleName: String, host: String, installPort: String, onBefor
         Text(str(R.string.serve_title), style = MaterialTheme.typography.titleMedium)
         if (!info.running) {
             Text(str(R.string.serve_intro), color = cs.onSurfaceVariant, style = MaterialTheme.typography.bodySmall)
-            Button(onClick = { picker.launch(arrayOf("*/*")) }) { Text(str(R.string.serve_choose)) }
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Button(onClick = { picker.launch(arrayOf("*/*")) }) { Text(str(R.string.serve_choose)) }
+                OutlinedButton(onClick = { folderPicker.launch(null) }) { Text(str(R.string.serve_choose_folder)) }
+            }
+            if (folderNote.isNotEmpty()) Text(folderNote, style = MaterialTheme.typography.bodySmall, color = cs.onSurfaceVariant)
             if (picked.isEmpty()) {
                 Text(str(R.string.serve_none))
             } else {
@@ -122,12 +203,39 @@ fun ServeSection(consoleName: String, host: String, installPort: String, onBefor
                 enabled = host.isNotBlank() && picked.isNotEmpty() && picked.all { it.size > 0L },
                 onClick = {
                     onBeforeStart()
+                    ServeHistory.add(ctx, picked.map { ServeHistory.Entry(it.name, it.uri.toString(), it.size) })
+                    history = ServeHistory.load(ctx)
                     val items = picked.map { ServeItem(it.name, it.size, PhoneFileSource(ctx.contentResolver, it.uri)) }
                     ServeService.start(ctx, ServeRequest(consoleName, host.trim(), installPort.trim(), items))
                 }
             ) { Text(str(R.string.serve_start)) }
             if (info.message.isNotEmpty()) {
                 Text(info.message, color = sc.warn, style = MaterialTheme.typography.bodySmall)
+            }
+            // Earlier installs from this phone, one tap from being picked again
+            if (history.isNotEmpty()) {
+                Text(str(R.string.serve_history), style = MaterialTheme.typography.labelLarge)
+                history.forEach { batch ->
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Text(
+                            batch.label(),
+                            style = MaterialTheme.typography.bodySmall,
+                            maxLines = 2,
+                            overflow = TextOverflow.Ellipsis,
+                            modifier = Modifier.weight(1f)
+                        )
+                        TextButton(onClick = {
+                            // A file that was moved or deleted since has no size any more, and is left out
+                            val again = batch.files.mapNotNull { e ->
+                                val u = Uri.parse(e.uri)
+                                val size = try { exactSize(ctx.contentResolver, u) } catch (_: Exception) { -1L }
+                                if (size > 0) PickedFile(u, e.name, size) else null
+                            }
+                            picked = again
+                            folderNote = if (again.size < batch.files.size) AppText.get(R.string.serve_history_missing, batch.files.size - again.size) else ""
+                        }) { Text(str(R.string.serve_history_again)) }
+                    }
+                }
             }
         } else {
             info.files.forEachIndexed { index, f ->

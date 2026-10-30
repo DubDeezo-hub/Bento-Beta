@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 import android.Manifest
 import android.content.Context
@@ -76,6 +76,9 @@ private const val SHORT_SCREEN_DP = 480
 
 /** From this width on (a tablet), the tabs go down the left side and the transfers get a pane on the right. */
 private const val WIDE_SCREEN_DP = 840
+
+/** From this width a short screen (a phone on its side) shows its tabs down the side. */
+private const val SIDEWAYS_DP = 600
 private const val SIDE_PANE_DP = 360
 
 /** How often the console card rechecks the console while the app is on screen. */
@@ -83,6 +86,9 @@ private const val CHECK_EVERY_MS = 6000L
 
 /** How long the result of a successful transfer stays above the bottom bar before it hides itself. */
 private const val RESULT_VISIBLE_MS = 15000L
+
+/** How long the automatic chain waits after the loader comes up, so the jailbreak can finish. */
+private const val AUTO_CHAIN_DELAY_MS = 3000L
 
 /** A transfer that ended longer ago than this no longer buzzes (for example when you open the app much later). */
 private const val BUZZ_WINDOW_MS = 3000L
@@ -225,6 +231,7 @@ fun SenderApp(
     var showDiagnose by remember { mutableStateOf(false) }
     var showStore by remember { mutableStateOf(false) }
     var showLanguage by remember { mutableStateOf(false) }
+    var showEtaHen by remember { mutableStateOf(false) }
     var showFind by rememberSaveable { mutableStateOf(false) } // the "Find my PS5" window; it scans again when the screen is rebuilt
     val findAsked by FindConsole.asked.collectAsState()
     var shelfVersion by remember { mutableStateOf(0) }
@@ -242,6 +249,8 @@ fun SenderApp(
     val shortScreen = LocalConfiguration.current.screenHeightDp < SHORT_SCREEN_DP
     // Wide enough for the tabs on the side and the transfers in a pane of their own
     val wide = LocalConfiguration.current.screenWidthDp >= WIDE_SCREEN_DP && !shortScreen
+    // A phone turned sideways: too short for a bar at the bottom, so the tabs go down the side instead
+    val sideways = !wide && shortScreen && LocalConfiguration.current.screenWidthDp >= SIDEWAYS_DP
     var installLinks by rememberSaveable { mutableStateOf("") } // what is typed in the Install box; kept when the tab changes
     val changeInstallLinks: ((String) -> String) -> Unit = { change -> installLinks = change(installLinks) }
     val files = remember { FilesModel() }
@@ -303,6 +312,8 @@ fun SenderApp(
         )
     )
     val level = consoleLevel(target, consoleStatus)
+    // The loader's last known state, to notice it coming up (a jailbreak just ran) for the console's automatic chain
+    var loaderWasUp by remember(target) { mutableStateOf<Boolean?>(null) }
     val checks = consoleStatus?.takeIf { it.target == target }?.checks ?: pendingChecks(target)
 
     // Checks the console now and then, but only while the app is on screen and an address is set. The loop ends
@@ -409,6 +420,52 @@ fun SenderApp(
         chains = list
         ChainStore.save(ctx, list)
         ChainShortcuts.publish(ctx, list, removed)
+    }
+
+    // When the loader starts answering after it didn't, the console's automatic chain (if any) runs
+    LaunchedEffect(consoleStatus) {
+        val s = consoleStatus ?: return@LaunchedEffect
+        if (s.target != target) return@LaunchedEffect
+        val up = s.checks.firstOrNull { it.label == loaderName }?.up ?: return@LaunchedEffect
+        val was = loaderWasUp
+        loaderWasUp = up
+        val chainId = AutoChain.get(ctx, active.id)
+        if (chainId.isEmpty() || chainState.active) return@LaunchedEffect
+        if (AutoChain.due(active.id, was, up)) {
+            val chain = chains.firstOrNull { it.id == chainId } ?: return@LaunchedEffect
+            delay(AUTO_CHAIN_DELAY_MS) // let the loader settle after the jailbreak
+            tab = 1
+            runChain(chain)
+        }
+    }
+
+    // The weekly backup, when it is switched on (About)
+    LaunchedEffect(Unit) {
+        val where = withContext(Dispatchers.IO) { try { AutoBackup.runIfDue(ctx, version.name) } catch (_: Exception) { null } }
+        if (where != null) statusLine = AppText.get(R.string.backup_auto_done, where)
+    }
+
+    // New screenshots and clips go to the phone by themselves, once per start, when the console's FTP answers (if on)
+    var capturesChecked by remember { mutableStateOf(setOf<String>()) }
+    LaunchedEffect(consoleStatus) {
+        val s = consoleStatus ?: return@LaunchedEffect
+        if (s.target != target) return@LaunchedEffect
+        val settings = ftpSettings ?: return@LaunchedEffect
+        if (s.checks.firstOrNull { it.label == ftpName }?.up != true) return@LaunchedEffect
+        if (active.id in capturesChecked || !CaptureSync.autoOn(ctx, active.id)) return@LaunchedEffect
+        capturesChecked = capturesChecked + active.id
+        val plan = withContext(Dispatchers.IO) {
+            try { CaptureSync.plan(ctx, settings, active.id, firstTimeAll = false) } catch (_: Exception) { emptyList() }
+        }
+        if (plan.isNotEmpty()) {
+            startTransfers(plan.map {
+                TransferRequest(
+                    name = it.name, host = settings.host, port = settings.port, user = settings.user, pass = settings.pass,
+                    dir = it.saveIn, remotePath = it.remotePath, remoteSize = it.size
+                )
+            })
+            CaptureSync.markCopied(ctx, active.id, plan.map { it.remotePath })
+        }
     }
 
     // The shortcuts on the app icon follow the saved chains (a restore rebuilds the screen, so they follow that, too)
@@ -550,6 +607,14 @@ fun SenderApp(
                             )
                         }
                     }
+                } else if (sideways) {
+                    Row(modifier = Modifier.weight(1f).fillMaxWidth()) {
+                        SideRail(NAV_ITEMS, tab) { tab = it }
+                        Column(modifier = Modifier.weight(1f).fillMaxHeight()) {
+                            mainPane()
+                            cards()
+                        }
+                    }
                 } else {
                     mainPane()
                     cards()
@@ -652,6 +717,10 @@ fun SenderApp(
                                     DiagService.DEBUGGER -> it
                                 }
                             }
+                            DiagFix.EtaHenSettings -> {
+                                showDiagnose = false
+                                showEtaHen = true
+                            }
                             DiagFix.GetPayloads -> {
                                 showDiagnose = false
                                 showStore = true
@@ -667,6 +736,7 @@ fun SenderApp(
             }
 
             if (showLanguage) LanguageDialog(onClose = { showLanguage = false })
+            if (showEtaHen && ftpSettings != null) EtaHenSettingsDialog(ftpSettings) { showEtaHen = false }
             if (showStore) {
                 StoreDialog(type = active.type, onAdded = {}, onClose = {
                     showStore = false

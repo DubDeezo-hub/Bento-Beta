@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 import android.content.Context
 import androidx.compose.runtime.getValue
@@ -139,7 +139,7 @@ fun parseAddress(text: String): Long? {
 }
 
 /** The three parts of the Memory tab. */
-enum class MemoryView { SCAN, CHEATS, BROWSE, LOG }
+enum class MemoryView { SCAN, CHEATS, BROWSE, LOG, LEARN }
 
 /** What one tap of Connect brings back. */
 class MemorySnapshot(val info: DbgInfo, val game: DbgApp, val processes: List<DbgProcess>)
@@ -153,6 +153,10 @@ object MemorySession {
 
     /** Matches and watches are re-read this often while they can all be shown. */
     const val LIVE_MS = 1500L
+
+    /** "Back one scan" keeps this many earlier results, each with at most this many matches. */
+    private const val HISTORY_DEPTH = 3
+    private const val HISTORY_MAX_MATCHES = 500_000L
 
     /** Text previews read per request. */
     private const val PREVIEW_BATCH = 200
@@ -231,6 +235,26 @@ object MemorySession {
     var textTotal by mutableStateOf(-1L)
         private set
 
+    // --- the practice game (Learn) ---
+
+    /** Connected to the practice game on this phone instead of the console. */
+    var practicing by mutableStateOf(false)
+        private set
+    private var realHost = ""
+    private var realPort = ""
+
+    // --- counters the lessons watch ---
+    var writes by mutableStateOf(0)
+        private set
+    var undos by mutableStateOf(0)
+        private set
+    var neighborsOpened by mutableStateOf(0)
+
+    /** Earlier results of this search, newest last, for "Back one scan" (only searches kept on the phone). */
+    private var history: List<ScanResults> = emptyList()
+    var canGoBack by mutableStateOf(false)
+        private set
+
     // --- undo: what each write replaced, newest last ---
     var undoSteps by mutableStateOf<List<UndoStep>>(emptyList())
         private set
@@ -291,8 +315,44 @@ object MemorySession {
         }
     }
 
+    /** The console card's address, from the screen. While the practice game is on, it is kept for afterwards. */
+    fun setConsoleHost(h: String) {
+        if (practicing) realHost = h.trim() else setHost(h)
+    }
+
+    /** Connects the Memory tab to the practice game on this phone (the console's address and port are kept). */
+    fun startPractice() {
+        if (practicing) return
+        val p = try {
+            PracticeConsole.start()
+        } catch (e: Exception) {
+            status = failedText(e)
+            return
+        }
+        realHost = host
+        realPort = port
+        setHost("127.0.0.1")
+        port = p.toString()
+        practicing = true
+        connect()
+    }
+
+    /** Back to the console: the practice game's search and cheats are put away. */
+    fun stopPractice() {
+        if (!practicing) return
+        practicing = false
+        cancel()
+        port = realPort
+        val back = realHost
+        host = ""
+        setHost(back)
+        forgetGame()
+        snapshot = null
+        status = ""
+    }
+
     /** The console's address from the console card. Another console means starting over: nothing here applies to it. */
-    fun setHost(h: String) {
+    private fun setHost(h: String) {
         if (h.trim() != host) {
             val first = host.isEmpty() && snapshot == null
             host = h.trim()
@@ -308,7 +368,7 @@ object MemorySession {
 
     fun changePort(v: String) {
         port = v
-        app?.let { MemoryPrefs.setPort(it, v) }
+        if (!practicing) app?.let { MemoryPrefs.setPort(it, v) }
     }
 
     fun changeSkipSlow(on: Boolean) {
@@ -510,6 +570,8 @@ object MemorySession {
     // --- search ---
 
     fun newSearch() {
+        history = emptyList()
+        canGoBack = false
         results = null
         hits = emptyList()
         progressDone = 0
@@ -693,6 +755,9 @@ object MemorySession {
         val data = scanBytes(prev.type) ?: return
         scanning = true
         perform(scan = true, work = { d -> Scanner.next(d, prev, cmp, data, ::progress) { cancelRequested } }) { r ->
+            // Kept for "Back one scan" (a few, and only when small enough not to fill the phone's memory)
+            history = if (prev.total <= HISTORY_MAX_MATCHES) (history + prev).takeLast(HISTORY_DEPTH) else emptyList()
+            canGoBack = history.isNotEmpty()
             results = r
             hits = r.hits(SHOWN, prev)
             status = AppText.get(R.string.memory_found, r.total)
@@ -728,6 +793,8 @@ object MemorySession {
         }) { (left, r, first) ->
             if (r != null) {
                 dropKept()
+                history = emptyList()
+                canGoBack = false
                 results = r
                 hits = first.map { MemoryHit(it.address, it.value, it.previous) }
                 keptScans = 0
@@ -739,6 +806,18 @@ object MemorySession {
             status = AppText.get(R.string.memory_found, left)
         }
         if (!busy) scanning = false
+    }
+
+    /** Puts the search back to how it was before the last Next scan. */
+    fun backOneScan() {
+        val prev = history.lastOrNull() ?: return
+        if (busy || scanning) return
+        history = history.dropLast(1)
+        canGoBack = history.isNotEmpty()
+        results = prev
+        hits = prev.hits(SHOWN)
+        status = AppText.get(R.string.memory_back_done, prev.total)
+        refreshQuietly()
     }
 
     /** Re-reads the shown matches and the watches without blocking the screen; errors are ignored (the next try may work). */
@@ -870,6 +949,7 @@ object MemorySession {
 
     private fun record(step: UndoStep) {
         undoSteps = (undoSteps + step).takeLast(UNDO_MAX)
+        writes++
     }
 
     /** Puts back what the newest change replaced. */
@@ -902,6 +982,7 @@ object MemorySession {
             modsOn = mods
             val gone = steps.toSet()
             undoSteps = undoSteps.filter { it !in gone }
+            undos++
             status = if (steps.size == 1) AppText.get(R.string.undo_done, steps[0].label) else AppText.get(R.string.undo_all_done, steps.size)
             refreshQuietly()
         }
@@ -1248,7 +1329,25 @@ object MemorySession {
         scope.launch {
             var exact: CheatIndexEntry? = null
             try {
-                val choices = withContext(Dispatchers.IO) { CheatFiles.forGame(CheatFiles.parseIndex(fetch(src + "json.txt")), g.titleId, g.version) }
+                val choices = withContext(Dispatchers.IO) {
+                    // A PS4 game is looked up in GoldHEN's repository too; one that can't be read is skipped if another can
+                    val sources = CheatFiles.sourcesFor(src, g.titleId)
+                    var failure: Exception? = null
+                    val lists = sources.mapNotNull { s ->
+                        try {
+                            CheatFiles.forGame(CheatFiles.parseIndex(fetch(s + "json.txt")), g.titleId, g.version)
+                                .map { CheatIndexEntry(it.file, it.game, s) }
+                        } catch (e: CancellationException) {
+                            throw e
+                        } catch (e: Exception) {
+                            failure = e
+                            null
+                        }
+                    }
+                    if (lists.isEmpty()) throw failure ?: java.io.IOException("json.txt")
+                    // The exact version first, whichever repository has it
+                    CheatFiles.mergeChoices(lists).sortedBy { if (CheatFiles.sameVersion(it.version, g.version)) 0 else 1 }
+                }
                 cheatChoices = choices
                 status = if (choices.isEmpty()) AppText.get(R.string.memory_cheatfile_none, g.titleId) else ""
                 exact = choices.firstOrNull { CheatFiles.sameVersion(it.version, g.version) }
@@ -1266,7 +1365,7 @@ object MemorySession {
     /** Downloads [entry] and finds where the game is loaded, so its mods can be switched. */
     fun openCheatFile(entry: CheatIndexEntry) {
         val pid = gamePid
-        val src = cheatSource
+        val src = entry.source.ifEmpty { cheatSource }
         if (pid == 0) {
             status = AppText.get(R.string.memory_no_game)
             return

@@ -1,17 +1,24 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
+import android.content.Context
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.unit.Density
 
 // ---------------------------------------------------------------------------------------------
-// Look of the app: a deep navy theme for dark mode, a soft white one for light mode, and one accent
-// color per console. The page colors are repeated in res/values/themes.xml and res/values-night/themes.xml
+// Look of the app: a deep navy theme for dark mode (or pure black, for OLED screens), a soft white one for light mode,
+// and one accent color per console. The text can be made larger than the phone's own size. The page colors are repeated in res/values/themes.xml and res/values-night/themes.xml
 // so the status bar and the first frame match the screen.
 // ---------------------------------------------------------------------------------------------
 
@@ -109,10 +116,57 @@ fun appColorScheme(accent: Accent, dark: Boolean): ColorScheme =
         )
     }
 
+/** How the app looks beyond the phone's light or dark setting: pure black in dark mode, and a larger text size. */
+object AppLook {
+    /** The text sizes on offer, as a factor on the phone's own text size. */
+    val SCALES = listOf(1.0f, 1.15f, 1.3f)
+
+    var black by mutableStateOf(false)
+        private set
+    var textScale by mutableStateOf(1.0f)
+        private set
+
+    private fun prefs(ctx: Context) = ctx.getSharedPreferences("settings", Context.MODE_PRIVATE)
+
+    fun load(ctx: Context) {
+        black = prefs(ctx).getBoolean("look_black", false)
+        textScale = prefs(ctx).getFloat("look_text", 1.0f).takeIf { it in SCALES } ?: 1.0f
+    }
+
+    fun setBlack(ctx: Context, on: Boolean) {
+        black = on
+        prefs(ctx).edit().putBoolean("look_black", on).apply()
+    }
+
+    fun setTextScale(ctx: Context, scale: Float) {
+        textScale = scale
+        prefs(ctx).edit().putFloat("look_text", scale).apply()
+    }
+}
+
+/** [scheme] with black pages and near-black cards, for OLED screens (dark mode only). */
+fun blackScheme(scheme: ColorScheme): ColorScheme = scheme.copy(
+    background = Color.Black,
+    surface = Color.Black,
+    surfaceDim = Color.Black,
+    surfaceContainerLowest = Color.Black,
+    surfaceContainerLow = Color(0xFF0A0A0C),
+    surfaceContainer = Color(0xFF111114),
+    surfaceContainerHigh = Color(0xFF18181C),
+    surfaceContainerHighest = Color(0xFF202026),
+    surfaceVariant = Color(0xFF1A1A1F),
+    surfaceBright = Color(0xFF26262C)
+)
+
 /** Wraps the whole screen: dark or light by the phone's setting, tinted with the accent of the selected console. */
 @Composable
 fun AppTheme(accentIndex: Int, content: @Composable () -> Unit) {
-    MaterialTheme(colorScheme = appColorScheme(accentAt(accentIndex), isSystemInDarkTheme()), content = content)
+    val dark = isSystemInDarkTheme()
+    val scheme = appColorScheme(accentAt(accentIndex), dark).let { if (dark && AppLook.black) blackScheme(it) else it }
+    val d = LocalDensity.current
+    CompositionLocalProvider(LocalDensity provides Density(d.density, d.fontScale * AppLook.textScale)) {
+        MaterialTheme(colorScheme = scheme, content = content)
+    }
 }
 
 /** Colors that mean the same thing on every screen: all good, careful, and bad. */

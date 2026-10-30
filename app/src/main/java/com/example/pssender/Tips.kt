@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -78,7 +78,13 @@ enum class Tip(val title: Int, val body: Int) {
     DIAGNOSE(R.string.tip_diag_title, R.string.tip_diag),
     FIRMWARE(R.string.tip_fw_title, R.string.tip_fw),
     MEM_UNDO(R.string.tip_undo_title, R.string.tip_undo),
-    MEM_TEXT(R.string.tip_mem_text_title, R.string.tip_mem_text)
+    MEM_TEXT(R.string.tip_mem_text_title, R.string.tip_mem_text),
+    MEM_NEIGHBORS(R.string.tip_mem_neighbors_title, R.string.tip_mem_neighbors),
+    MEM_LEARN(R.string.tip_mem_learn_title, R.string.tip_mem_learn),
+    MEM_PRACTICE(R.string.tip_mem_practice_title, R.string.tip_mem_practice),
+    CHAIN_AUTO(R.string.tip_chain_auto_title, R.string.tip_chain_auto),
+    APP_UPDATES(R.string.tip_app_updates_title, R.string.tip_app_updates),
+    ETAHEN_SETTINGS(R.string.etahen_title, R.string.tip_etahen)
 }
 
 /** A small round "?" that opens [tip]. */

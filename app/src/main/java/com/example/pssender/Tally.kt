@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 // ---------------------------------------------------------------------------------------------
 // What a run of transfers amounted to. A run is everything the queue works through from the moment it starts until it

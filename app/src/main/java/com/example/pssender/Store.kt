@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 import android.content.Context
 import androidx.compose.foundation.background
@@ -67,7 +67,7 @@ data class StoreEntry(
 )
 
 /** A file in a release. */
-data class StoreAsset(val name: String, val url: String, val size: Long)
+data class StoreAsset(val name: String, val url: String, val size: Long, /** "sha256:…" as GitHub lists it, or "". */ val digest: String = "")
 
 /** The newest release of a payload. */
 data class StoreRelease(val tag: String, val page: String, val date: String, val assets: List<StoreAsset>, val notes: String = "")
@@ -101,7 +101,7 @@ object Store {
                 val m = a as? Map<*, *> ?: return@mapNotNull null
                 val name = m["name"] as? String ?: return@mapNotNull null
                 val url = m["browser_download_url"] as? String ?: return@mapNotNull null
-                StoreAsset(name, url, (m["size"] as? Number)?.toLong() ?: -1L)
+                StoreAsset(name, url, (m["size"] as? Number)?.toLong() ?: -1L, (m["digest"] as? String).orEmpty())
             }
             return StoreRelease(
                 tag = o["tag_name"] as? String ?: "",
@@ -213,6 +213,7 @@ object Store {
                 continue
             }
             val added = shelfAdd(shelfDir(ctx), name, payload.inputStream())
+            if (f.sha256.isNotEmpty()) ShelfChecks.markVerified(ctx, added.name, f.sha256, "PS5 Payloads Mirror")
             replaceOld(ctx, f.key, f.version.ifEmpty { f.updated }, added)
             return AppText.get(R.string.store_added, added.name, f.version.ifEmpty { f.updated })
         }
@@ -277,6 +278,16 @@ object Store {
                 } else {
                     shelfAdd(dir, asset.name, input)
                 }
+            }
+            // A file GitHub lists a checksum for must match it (a zip is checked before unpacking, by GitHub's own digest)
+            val want = asset.digest.removePrefix("sha256:").lowercase()
+            if (want.length == 64 && !asset.name.endsWith(".zip", true)) {
+                val got = StoreIndex.sha256(File(dir, added.name).readBytes())
+                if (got != want) {
+                    File(dir, added.name).delete()
+                    throw java.io.IOException(AppText.get(R.string.store_checksum_bad_github))
+                }
+                ShelfChecks.markVerified(ctx, added.name, got, "GitHub")
             }
             // An older version under another name goes, so the shelf keeps one copy
             replaceOld(ctx, e.repo, release.tag, added)

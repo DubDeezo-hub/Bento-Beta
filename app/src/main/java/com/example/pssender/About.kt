@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 import android.content.Context
 import android.widget.Toast
@@ -9,6 +9,9 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.padding
+import androidx.compose.ui.Alignment
+import androidx.compose.material3.Switch
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
@@ -192,6 +195,18 @@ fun AboutDialog(
                 )
                 UpdateSection(version, onUpdateFound)
 
+                // How the app looks: pure black for dark mode, and a larger text size
+                Text(str(R.string.look_title), style = MaterialTheme.typography.titleSmall, modifier = Modifier.padding(top = 6.dp))
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(str(R.string.look_black), style = MaterialTheme.typography.bodySmall, modifier = Modifier.weight(1f))
+                    Switch(checked = AppLook.black, onCheckedChange = { AppLook.setBlack(ctx, it) })
+                }
+                Text(str(R.string.look_text), style = MaterialTheme.typography.bodySmall)
+                ChipRow {
+                    listOf(R.string.look_text_normal, R.string.look_text_large, R.string.look_text_larger).forEachIndexed { i, label ->
+                        Chip(str(label), AppLook.textScale == AppLook.SCALES[i]) { AppLook.setTextScale(ctx, AppLook.SCALES[i]) }
+                    }
+                }
                 Text(str(R.string.speed_limit_title), style = MaterialTheme.typography.titleSmall, modifier = Modifier.padding(top = 6.dp))
                 Text(str(R.string.speed_limit_hint), style = MaterialTheme.typography.bodySmall)
                 TextButton(onClick = { showLimit = true }) {
@@ -206,6 +221,15 @@ fun AboutDialog(
                 ) {
                     Button(onClick = { saveFile.launch(backupFileName()) }) { Text(str(R.string.backup_save)) }
                     Button(onClick = { openFile.launch(arrayOf("*/*")) }) { Text(str(R.string.backup_restore)) }
+                }
+                // A backup by itself once a week, into Downloads/Bento/Backups
+                var autoBackup by remember { mutableStateOf(AutoBackup.isOn(ctx)) }
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(str(R.string.backup_auto), style = MaterialTheme.typography.bodySmall, modifier = Modifier.weight(1f))
+                    Switch(checked = autoBackup, onCheckedChange = {
+                        autoBackup = it
+                        AutoBackup.setOn(ctx, it)
+                    })
                 }
                 if (status.isNotEmpty()) {
                     Text(status, style = MaterialTheme.typography.bodySmall)

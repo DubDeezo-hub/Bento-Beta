@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 // ---------------------------------------------------------------------------------------------
 // Pointers: a value that moves every time the game starts (health on the heap, say) is usually reached from a fixed

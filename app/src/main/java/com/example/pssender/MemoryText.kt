@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 // ---------------------------------------------------------------------------------------------
 // Text search in a game's memory: a word (a character's name, an item, a line of dialogue) as UTF-8 and as UTF-16,

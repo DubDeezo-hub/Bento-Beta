@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 import org.apache.commons.net.DefaultSocketFactory
 import org.apache.commons.net.ftp.FTP

@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 // ---------------------------------------------------------------------------------------------
 // Ready-made cheats: the community cheat files that etaHEN and GoldHEN use (github.com/etaHEN/PS5_Cheats), found by
@@ -26,8 +26,8 @@ class CheatFile(
     val credits: List<String>
 )
 
-/** An entry of the repository's list: the file name and the game's name. */
-class CheatIndexEntry(val file: String, val game: String) {
+/** An entry of the repository's list: the file name, the game's name, and which repository it came from ("" for the set one). */
+class CheatIndexEntry(val file: String, val game: String, val source: String = "") {
     val titleId: String get() = file.substringBefore('_')
     val version: String get() = CheatFiles.versionOf(file)
 }
@@ -35,6 +35,19 @@ class CheatIndexEntry(val file: String, val game: String) {
 object CheatFiles {
     /** Where the files are read from; a different one can be set (the fake console serves its own). */
     const val DEFAULT_SOURCE = "https://raw.githubusercontent.com/etaHEN/PS5_Cheats/main/"
+
+    /** GoldHEN's own repository of PS4 cheats (the same layout); asked too for a PS4 game while the usual source is set. */
+    const val GOLDHEN_SOURCE = "https://raw.githubusercontent.com/GoldHEN/GoldHEN_Cheat_Repository/main/"
+
+    /** Where to look for [titleId]'s cheats when [source] is set: a PS4 game also looks in GoldHEN's repository. */
+    fun sourcesFor(source: String, titleId: String): List<String> =
+        if (source == DEFAULT_SOURCE && titleId.startsWith("CUSA")) listOf(GOLDHEN_SOURCE, DEFAULT_SOURCE) else listOf(source)
+
+    /** The entries of several lists, each file once (the first list that has it wins). */
+    fun mergeChoices(lists: List<List<CheatIndexEntry>>): List<CheatIndexEntry> {
+        val seen = HashSet<String>()
+        return lists.flatten().filter { seen.add(it.file.lowercase()) }
+    }
 
     /** "json.txt": one "file=game name" line per cheat file. */
     fun parseIndex(text: String): List<CheatIndexEntry> = text.lineSequence()

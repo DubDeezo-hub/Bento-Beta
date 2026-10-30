@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

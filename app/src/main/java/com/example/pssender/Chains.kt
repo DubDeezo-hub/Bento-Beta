@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 import android.content.Context
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -120,6 +120,33 @@ fun mergeChains(existing: List<Chain>, incoming: List<Chain>): List<Chain> {
 }
 
 /** Saves and loads the chains in the app's settings. */
+/**
+ * A chain that runs by itself when a console becomes ready: when its loader starts answering after it didn't (a
+ * jailbreak just ran), while Bento is on screen. One chain per console; at most once in [COOLDOWN_MS].
+ */
+object AutoChain {
+    private const val COOLDOWN_MS = 10L * 60 * 1000
+    private val lastRun = HashMap<String, Long>()
+
+    private fun prefs(ctx: Context) = ctx.getSharedPreferences("settings", Context.MODE_PRIVATE)
+
+    /** The chain set for [profileId], or "" for none. */
+    fun get(ctx: Context, profileId: String): String = prefs(ctx).getString("auto_chain_$profileId", "") ?: ""
+
+    fun set(ctx: Context, profileId: String, chainId: String) {
+        prefs(ctx).edit().putString("auto_chain_$profileId", chainId).apply()
+    }
+
+    /** Whether the loader coming up ([wasUp] false, [nowUp] true) should start the chain now. Notes the run. */
+    fun due(profileId: String, wasUp: Boolean?, nowUp: Boolean?, now: Long = System.currentTimeMillis()): Boolean {
+        if (wasUp != false || nowUp != true) return false
+        val last = lastRun[profileId] ?: 0L
+        if (now - last < COOLDOWN_MS) return false
+        lastRun[profileId] = now
+        return true
+    }
+}
+
 object ChainStore {
     private const val KEY = "chains_v1"
 

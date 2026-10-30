@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 /**
  * Measures how fast a transfer goes: bytes per second over the last few seconds, and from that the time left.

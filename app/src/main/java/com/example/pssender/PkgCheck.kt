@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 // ---------------------------------------------------------------------------------------------
 // A package checked before installing, set against what the console already has: is the game there, is this an

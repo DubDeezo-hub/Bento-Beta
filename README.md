@@ -20,12 +20,12 @@
 
 | Tab | |
 | --- | --- |
-| **Install** | Install `.pkg` files from a web link (or a whole list), or straight from your phone. **Check** shows a package's name, icon, version and needed firmware first, and whether it is new, an update or already installed. |
-| **Payload** | Send `.elf` / `.bin` payloads. Keep favourites on a shelf, run several in a row as a **chain**, and **get payloads** from their makers' GitHub pages: Bento's picks (etaHEN, ps5debug-NG, ftpsrv…), a community list of 30+ PS5 payloads and a GitHub search. Bento checks for new payloads and updates when it starts and marks which ones list your firmware. |
+| **Install** | Install `.pkg` files from a web link (or a whole list), or straight from your phone (a few or a **whole folder**, with a history to pick again). **Check** shows a package's name, icon, version and needed firmware first, and whether it is new, an update or already installed. |
+| **Payload** | Send `.elf` / `.bin` payloads. Keep favourites on a shelf, run several in a row as a **chain**, and **get payloads** from their makers' GitHub pages: Bento's picks (etaHEN, ps5debug-NG, ftpsrv…), a community list of 30+ PS5 payloads and a GitHub search. Bento checks for new payloads and updates when it starts, marks which ones list your firmware and which downloads matched a published checksum, and can **run a chain by itself** right after a jailbreak. |
 | **Upload** | Copy files from your phone to the console over FTP, in the background. **Keep a folder in sync**: only new or changed files are sent. |
-| **Files** | Browse the console's files (download, rename, delete, search, pin). See your **installed games** with names and icons, **back up and restore saves**, and grab **screenshots & videos**. |
+| **Files** | Browse the console's files (download, rename, delete, search, pin, **edit text files**, **download a folder as a zip**). See your **installed games** with names, icons, **sizes** and **available updates** (from the community patch sites, never Sony), **back up and restore saves**, **copy new screenshots & videos** to the phone, and edit **etaHEN's settings**. |
 | **Web** | A browser for homebrew sites, with tabs, bookmarks and ad block. Send any link to the console or download it. |
-| **Memory** | A cheat engine for PS5 and PS4: find a value (health, money), change or **freeze** it, find **pointer paths** that survive a restart, switch on ready-made cheats, **make your own cheat file**, **find text** (names, items), **undo** any change, and read the **console log**. |
+| **Memory** | A cheat engine for PS5 and PS4: find a value (health, money), change or **freeze** it, find **pointer paths** that survive a restart, switch on ready-made cheats, **make your own cheat file**, **find text** (names, items), **undo** any change, and read the **console log**. **Learn** teaches it from easy to expert on a built-in **practice game**, no console needed. |
 
 Every option has a small **?** that explains it, and a welcome page walks you through the first start. Something not working? **What's wrong?** on the console card tests each part of the connection and says how to fix it. The app's language can be picked inside the app (53 languages).
 
@@ -75,7 +75,7 @@ Fork the repo, open **Actions**, run **Build APK**. The APK lands on your Releas
 
 ## Good to know
 
-- **Status:** FTP is confirmed on a real PS4. The PS5 paths, the Memory tab, the games list, saves and the payload store have been tested against the fake console and the published formats and protocols, not yet on a real console.
+- **Status:** FTP is confirmed on a real PS4. The PS5 paths, the Memory tab, the games list, saves and Get payloads have been tested against the fake console and the published formats and protocols, not yet on a real console.
 - **Tablets:** on a wide screen the tabs move to the left side and transfers get their own pane on the right.
 - **Online games:** use the Memory tab offline only. Changing memory in online games can get your account banned.
 - **Privacy:** no accounts, no analytics, no ads. Bento talks only to your console, the pages you open and GitHub (update check). Nothing is encrypted on your local network (FTP is plain text). [More](docs/GUIDE.md#privacy-and-security).

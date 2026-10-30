@@ -1,4 +1,4 @@
-package com.example.pssender // change to match your project's package name
+package com.example.pssender
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -29,6 +29,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -86,6 +87,25 @@ fun ChainsSection(
             enabled = chains.size < CHAINS_MAX,
             onClick = { editing = Chain(newChainId(), "", emptyList()) }
         ) { Text(str(R.string.chain_new)) }
+        // A chain that runs by itself when this console becomes ready (after a jailbreak)
+        if (chains.isNotEmpty()) {
+            val ctx = LocalContext.current
+            val profileId = ActiveConsole.id
+            var auto by remember(profileId) { mutableStateOf(AutoChain.get(ctx, profileId)) }
+            TipTitle(str(R.string.chain_auto_title, ActiveConsole.type.model), Tip.CHAIN_AUTO, style = MaterialTheme.typography.labelLarge)
+            ChipRow {
+                Chip(str(R.string.chain_auto_off), auto.isEmpty() || chains.none { it.id == auto }) {
+                    auto = ""
+                    AutoChain.set(ctx, profileId, "")
+                }
+                chains.forEach { c ->
+                    Chip(c.name, auto == c.id) {
+                        auto = c.id
+                        AutoChain.set(ctx, profileId, c.id)
+                    }
+                }
+            }
+        }
     }
 
     if (open != null) {
