@@ -512,7 +512,7 @@
     <string name="memory_mod_apply">I-apply</string>
     <string name="memory_mod_off">Naka-off ang «%1$s».</string>
     <string name="memory_mod_on">Naka-on ang «%1$s».</string>
-    <string name="memory_mod_unsupported">Hindi pa suportado (gumagamit ng code cave).</string>
+    <string name="memory_mod_unsupported">Hindi pa suportado (gumagamit ng bahagi ng code).</string>
     <string name="memory_my_cheats">Mga cheat ko</string>
     <string name="memory_type_1">1 byte</string>
     <string name="memory_type_2">2 byte</string>
