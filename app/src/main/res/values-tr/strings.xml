@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">Kopya bulunamadı (aynı ad ve boyutta 1 MB üstü dosyalar).</string>
     <string name="files_dupes_extra">Fazla kopyalar %1$s yer kaplıyor.</string>
     <string name="files_dupes_hint">Aynı ad ve aynı boyut. Her birinden birini tutun, gerekmeyenleri silin.</string>
+    <string name="memory_cheat_note">Not (isteğe bağlı): ne yapar, hangi oyun sürümü</string>
 </resources>

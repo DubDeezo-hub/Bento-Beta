@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">کوئی نقل نہیں ملی (ایک ہی نام اور سائز کی 1 MB سے بڑی فائلیں)۔</string>
     <string name="files_dupes_extra">اضافی نقلیں %1$s جگہ لیتی ہیں۔</string>
     <string name="files_dupes_hint">ایک ہی نام اور سائز۔ ہر ایک کی ایک رکھیں اور غیر ضروری حذف کریں۔</string>
+    <string name="memory_cheat_note">نوٹ (اختیاری): یہ کیا کرتا ہے، گیم کا کون سا ورژن</string>
 </resources>

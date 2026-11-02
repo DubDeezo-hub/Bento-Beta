@@ -1208,4 +1208,5 @@
     <string name="files_dupes_none">Inga kopior hittades (filer över 1 MB med samma namn och storlek).</string>
     <string name="files_dupes_extra">De extra kopiorna tar %1$s.</string>
     <string name="files_dupes_hint">Samma namn och storlek. Behåll en av varje och radera de du inte behöver.</string>
+    <string name="memory_cheat_note">Anteckning (valfri): vad den gör, vilken spelversion</string>
 </resources>

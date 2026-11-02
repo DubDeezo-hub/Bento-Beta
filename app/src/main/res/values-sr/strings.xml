@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">Нису пронађене копије (датотеке веће од 1 MB са истим именом и величином).</string>
     <string name="files_dupes_extra">Вишак копија заузима %1$s.</string>
     <string name="files_dupes_hint">Исто име и величина. Задржите по једну и обришите оне које вам не требају.</string>
+    <string name="memory_cheat_note">Белешка (опционо): шта ради, за коју верзију игре</string>
 </resources>

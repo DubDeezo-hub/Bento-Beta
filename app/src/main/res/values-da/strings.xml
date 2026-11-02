@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">Ingen kopier fundet (filer over 1 MB med samme navn og størrelse).</string>
     <string name="files_dupes_extra">De ekstra kopier fylder %1$s.</string>
     <string name="files_dupes_hint">Samme navn og størrelse. Behold én af hver, og slet dem, du ikke har brug for.</string>
+    <string name="memory_cheat_note">Note (valgfri): hvad den gør, hvilken spilversion</string>
 </resources>

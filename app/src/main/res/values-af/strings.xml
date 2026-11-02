@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">Geen kopieë gevind nie (lêers oor 1 MB met dieselfde naam en grootte).</string>
     <string name="files_dupes_extra">Die ekstra kopieë neem %1$s in.</string>
     <string name="files_dupes_hint">Dieselfde naam en grootte. Hou een van elk en vee die ander uit wat jy nie nodig het nie.</string>
+    <string name="memory_cheat_note">Nota (opsioneel): wat dit doen, watter speletjie-weergawe</string>
 </resources>

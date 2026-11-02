@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">No s\'han trobat còpies (fitxers de més d\'1 MB amb el mateix nom i mida).</string>
     <string name="files_dupes_extra">Les còpies sobrants ocupen %1$s.</string>
     <string name="files_dupes_hint">Mateix nom i mateixa mida. Conserva\'n una de cada i esborra les que no necessitis.</string>
+    <string name="memory_cheat_note">Nota (opcional): què fa, quina versió del joc</string>
 </resources>

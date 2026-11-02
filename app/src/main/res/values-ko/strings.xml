@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">사본이 없습니다(이름과 크기가 같은 1MB 이상 파일).</string>
     <string name="files_dupes_extra">남는 사본이 %1$s를 차지합니다.</string>
     <string name="files_dupes_hint">이름과 크기가 같습니다. 하나씩 남기고 필요 없는 것은 삭제하세요.</string>
+    <string name="memory_cheat_note">메모(선택): 하는 일, 게임 버전</string>
 </resources>

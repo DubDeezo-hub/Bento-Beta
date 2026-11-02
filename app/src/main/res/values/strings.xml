@@ -1212,4 +1212,5 @@
     <string name="files_dupes_none">No copies found (files over 1 MB with the same name and size).</string>
     <string name="files_dupes_extra">The extra copies take %1$s.</string>
     <string name="files_dupes_hint">Same name and same size. Keep one of each and delete the others you don\'t need.</string>
+    <string name="memory_cheat_note">Note (optional): what it does, which game version</string>
 </resources>

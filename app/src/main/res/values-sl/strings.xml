@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">Ni najdenih kopij (datoteke nad 1 MB z enakim imenom in velikostjo).</string>
     <string name="files_dupes_extra">Odvečne kopije zasedajo %1$s.</string>
     <string name="files_dupes_hint">Enako ime in velikost. Obdržite po eno in izbrišite tiste, ki jih ne potrebujete.</string>
+    <string name="memory_cheat_note">Opomba (neobvezno): kaj naredi, za katero različico igre</string>
 </resources>

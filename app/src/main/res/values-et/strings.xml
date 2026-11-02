@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">Koopiaid ei leitud (üle 1 MB failid sama nime ja suurusega).</string>
     <string name="files_dupes_extra">Lisakoopiad võtavad %1$s.</string>
     <string name="files_dupes_hint">Sama nimi ja suurus. Jäta igast üks alles ja kustuta need, mida pole vaja.</string>
+    <string name="memory_cheat_note">Märkus (valikuline): mida teeb, milline mänguversioon</string>
 </resources>

@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">نسخه‌ای پیدا نشد (فایل‌های بیش از ۱ مگابایت با نام و اندازه یکسان).</string>
     <string name="files_dupes_extra">نسخه‌های اضافه %1$s جا گرفته‌اند.</string>
     <string name="files_dupes_hint">نام و اندازه یکسان. از هر کدام یکی را نگه دارید و بقیه را که لازم ندارید حذف کنید.</string>
+    <string name="memory_cheat_note">یادداشت (اختیاری): چه می‌کند، کدام نسخه بازی</string>
 </resources>

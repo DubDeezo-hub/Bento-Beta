@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">कोई कॉपी नहीं मिली (एक ही नाम और आकार की 1 MB से बड़ी फ़ाइलें)।</string>
     <string name="files_dupes_extra">अतिरिक्त कॉपियाँ %1$s जगह लेती हैं।</string>
     <string name="files_dupes_hint">एक ही नाम और आकार। हर एक की एक रखें और जिनकी ज़रूरत नहीं उन्हें मिटाएँ।</string>
+    <string name="memory_cheat_note">नोट (वैकल्पिक): यह क्या करता है, गेम का कौन सा संस्करण</string>
 </resources>

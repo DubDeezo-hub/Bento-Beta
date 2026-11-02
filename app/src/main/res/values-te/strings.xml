@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">కాపీలు ఏవీ కనబడలేదు (ఒకే పేరు, పరిమాణం ఉన్న 1 MB కంటే పెద్ద ఫైళ్లు).</string>
     <string name="files_dupes_extra">అదనపు కాపీలు %1$s తీసుకుంటున్నాయి.</string>
     <string name="files_dupes_hint">ఒకే పేరు, ఒకే పరిమాణం. ఒక్కోదాంట్లో ఒకటి ఉంచి అవసరం లేనివి తొలగించండి.</string>
+    <string name="memory_cheat_note">నోట్ (ఐచ్ఛికం): ఏం చేస్తుంది, ఏ ఆట వెర్షన్</string>
 </resources>

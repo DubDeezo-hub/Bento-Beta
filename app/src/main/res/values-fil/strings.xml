@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">Walang nakitang kopya (mga file na higit 1 MB na may parehong pangalan at laki).</string>
     <string name="files_dupes_extra">Ang mga sobrang kopya ay kumukuha ng %1$s.</string>
     <string name="files_dupes_hint">Parehong pangalan at laki. Magtira ng isa sa bawat isa at burahin ang hindi mo kailangan.</string>
+    <string name="memory_cheat_note">Tala (opsyonal): ano ang ginagawa, aling bersyon ng laro</string>
 </resources>

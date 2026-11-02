@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">Fant ingen kopier (filer over 1 MB med samme navn og størrelse).</string>
     <string name="files_dupes_extra">De ekstra kopiene tar %1$s.</string>
     <string name="files_dupes_hint">Samme navn og størrelse. Behold én av hver og slett de du ikke trenger.</string>
+    <string name="memory_cheat_note">Notat (valgfritt): hva den gjør, hvilken spillversjon</string>
 </resources>

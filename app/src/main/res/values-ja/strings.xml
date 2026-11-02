@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">コピーは見つかりませんでした（名前とサイズが同じ 1 MB 以上のファイル）。</string>
     <string name="files_dupes_extra">余分なコピーが %1$s 使っています。</string>
     <string name="files_dupes_hint">名前もサイズも同じです。それぞれ 1 つ残し、不要なものを削除してください。</string>
+    <string name="memory_cheat_note">メモ（任意）：何をするか、どのゲームバージョンか</string>
 </resources>

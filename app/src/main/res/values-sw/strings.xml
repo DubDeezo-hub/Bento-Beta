@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">Hakuna nakala zilizopatikana (faili zaidi ya 1 MB zenye jina na ukubwa sawa).</string>
     <string name="files_dupes_extra">Nakala za ziada zinachukua %1$s.</string>
     <string name="files_dupes_hint">Jina na ukubwa sawa. Bakiza moja ya kila moja na ufute usizohitaji.</string>
+    <string name="memory_cheat_note">Dokezo (hiari): kinachofanya, toleo gani la mchezo</string>
 </resources>

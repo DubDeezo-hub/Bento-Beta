@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">Не са намерени копия (файлове над 1 MB с еднакво име и размер).</string>
     <string name="files_dupes_extra">Излишните копия заемат %1$s.</string>
     <string name="files_dupes_hint">Еднакво име и размер. Запазете по едно и изтрийте ненужните.</string>
+    <string name="memory_cheat_note">Бележка (по желание): какво прави, за коя версия на играта</string>
 </resources>

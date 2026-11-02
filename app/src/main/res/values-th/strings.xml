@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">ไม่พบสำเนา (ไฟล์เกิน 1 MB ที่ชื่อและขนาดเหมือนกัน)</string>
     <string name="files_dupes_extra">สำเนาส่วนเกินใช้พื้นที่ %1$s</string>
     <string name="files_dupes_hint">ชื่อและขนาดเหมือนกัน เก็บไว้อย่างละหนึ่งแล้วลบที่ไม่ต้องการ</string>
+    <string name="memory_cheat_note">บันทึก (ไม่บังคับ): ทำอะไร ใช้กับเกมเวอร์ชันไหน</string>
 </resources>

@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">কোনো কপি পাওয়া যায়নি (একই নাম ও আকারের ১ MB-এর বেশি ফাইল)।</string>
     <string name="files_dupes_extra">অতিরিক্ত কপিগুলো %1$s জায়গা নেয়।</string>
     <string name="files_dupes_hint">একই নাম ও আকার। প্রতিটির একটি রাখুন, দরকার নেই এমনগুলো মুছুন।</string>
+    <string name="memory_cheat_note">নোট (ঐচ্ছিক): কী করে, গেমের কোন সংস্করণ</string>
 </resources>

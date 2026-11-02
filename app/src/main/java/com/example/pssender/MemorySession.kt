@@ -824,9 +824,9 @@ object MemorySession {
     }
 
     /** Adds a cheat; with [findable] the bytes around it are kept too, so "Find again" can find it after a restart. */
-    fun addCheat(name: String, address: Long, t: ValueType, value: String, group: String = "", findable: Boolean = true) {
+    fun addCheat(name: String, address: Long, t: ValueType, value: String, group: String = "", findable: Boolean = true, note: String = "") {
         val n = name.trim().ifBlank { AppText.get(R.string.memory_cheat_default, cheats.size + 1) }
-        val c = Cheat(UUID.randomUUID().toString(), n, address, t, value.trim(), group = group.trim())
+        val c = Cheat(UUID.randomUUID().toString(), n, address, t, value.trim(), group = group.trim(), note = note.trim().take(CHEAT_NOTE_MAX))
         saveCheats(cheats + c)
         status = AppText.get(R.string.memory_cheat_added, n)
         if (findable) captureSignature(c)

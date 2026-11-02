@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">ਕੋਈ ਕਾਪੀ ਨਹੀਂ ਮਿਲੀ (ਇੱਕੋ ਨਾਂ ਅਤੇ ਆਕਾਰ ਦੀਆਂ 1 MB ਤੋਂ ਵੱਡੀਆਂ ਫ਼ਾਈਲਾਂ)।</string>
     <string name="files_dupes_extra">ਵਾਧੂ ਕਾਪੀਆਂ %1$s ਥਾਂ ਲੈਂਦੀਆਂ ਹਨ।</string>
     <string name="files_dupes_hint">ਇੱਕੋ ਨਾਂ ਅਤੇ ਆਕਾਰ। ਹਰੇਕ ਦੀ ਇੱਕ ਰੱਖੋ ਅਤੇ ਬੇਲੋੜੀਆਂ ਮਿਟਾਓ।</string>
+    <string name="memory_cheat_note">ਨੋਟ (ਵਿਕਲਪਿਕ): ਇਹ ਕੀ ਕਰਦਾ ਹੈ, ਗੇਮ ਦਾ ਕਿਹੜਾ ਸੰਸਕਰਣ</string>
 </resources>

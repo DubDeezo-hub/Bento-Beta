@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">ನಕಲುಗಳು ಸಿಗಲಿಲ್ಲ (ಒಂದೇ ಹೆಸರು ಮತ್ತು ಗಾತ್ರದ 1 MB ಗಿಂತ ದೊಡ್ಡ ಫೈಲ್‌ಗಳು).</string>
     <string name="files_dupes_extra">ಹೆಚ್ಚುವರಿ ನಕಲುಗಳು %1$s ಜಾಗ ತೆಗೆದುಕೊಳ್ಳುತ್ತವೆ.</string>
     <string name="files_dupes_hint">ಒಂದೇ ಹೆಸರು ಮತ್ತು ಗಾತ್ರ. ಪ್ರತಿಯೊಂದರಲ್ಲಿ ಒಂದನ್ನು ಇಟ್ಟು ಬೇಡದವನ್ನು ಅಳಿಸಿ.</string>
+    <string name="memory_cheat_note">ಟಿಪ್ಪಣಿ (ಐಚ್ಛಿಕ): ಏನು ಮಾಡುತ್ತದೆ, ಆಟದ ಯಾವ ಆವೃತ್ತಿ</string>
 </resources>

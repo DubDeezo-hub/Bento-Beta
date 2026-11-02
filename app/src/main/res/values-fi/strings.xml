@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">Kopioita ei löytynyt (yli 1 Mt:n tiedostot, joilla sama nimi ja koko).</string>
     <string name="files_dupes_extra">Ylimääräiset kopiot vievät %1$s.</string>
     <string name="files_dupes_hint">Sama nimi ja koko. Pidä yksi kustakin ja poista ne, joita et tarvitse.</string>
+    <string name="memory_cheat_note">Huomautus (valinnainen): mitä tekee, mikä peliversio</string>
 </resources>

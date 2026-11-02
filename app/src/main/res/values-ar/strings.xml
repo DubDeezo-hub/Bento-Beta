@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">لم توجد نسخ (ملفات فوق 1 ميغابايت بنفس الاسم والحجم).</string>
     <string name="files_dupes_extra">تشغل النسخ الزائدة %1$s.</string>
     <string name="files_dupes_hint">الاسم نفسه والحجم نفسه. أبقِ واحدة من كل منها واحذف ما لا تحتاجه.</string>
+    <string name="memory_cheat_note">ملاحظة (اختيارية): ماذا يفعل، وأي إصدار من اللعبة</string>
 </resources>

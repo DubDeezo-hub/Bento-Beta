@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">לא נמצאו עותקים (קבצים מעל 1 MB עם אותו שם ואותו גודל).</string>
     <string name="files_dupes_extra">העותקים העודפים תופסים %1$s.</string>
     <string name="files_dupes_hint">אותו שם ואותו גודל. השאירו אחד מכל אחד ומחקו את המיותרים.</string>
+    <string name="memory_cheat_note">הערה (לא חובה): מה זה עושה, לאיזו גרסת משחק</string>
 </resources>

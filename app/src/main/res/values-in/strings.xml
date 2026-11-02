@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">Tidak ada salinan (file di atas 1 MB dengan nama dan ukuran sama).</string>
     <string name="files_dupes_extra">Salinan berlebih memakan %1$s.</string>
     <string name="files_dupes_hint">Nama dan ukuran sama. Simpan satu dari masing-masing dan hapus yang tidak diperlukan.</string>
+    <string name="memory_cheat_note">Catatan (opsional): fungsinya, versi game yang mana</string>
 </resources>

@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">நகல்கள் எதுவும் இல்லை (ஒரே பெயரும் அளவும் கொண்ட 1 MB-க்கு மேற்பட்ட கோப்புகள்).</string>
     <string name="files_dupes_extra">கூடுதல் நகல்கள் %1$s எடுக்கின்றன.</string>
     <string name="files_dupes_hint">ஒரே பெயர், ஒரே அளவு. ஒவ்வொன்றிலும் ஒன்றை வைத்து தேவையற்றவற்றை நீக்கவும்.</string>
+    <string name="memory_cheat_note">குறிப்பு (விருப்பம்): என்ன செய்கிறது, எந்த விளையாட்டுப் பதிப்பு</string>
 </resources>

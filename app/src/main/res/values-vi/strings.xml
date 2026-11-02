@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">Không thấy bản sao (tệp trên 1 MB có cùng tên và dung lượng).</string>
     <string name="files_dupes_extra">Các bản sao thừa chiếm %1$s.</string>
     <string name="files_dupes_hint">Cùng tên và cùng dung lượng. Giữ lại một bản mỗi loại và xóa những bản không cần.</string>
+    <string name="memory_cheat_note">Ghi chú (không bắt buộc): làm gì, phiên bản game nào</string>
 </resources>

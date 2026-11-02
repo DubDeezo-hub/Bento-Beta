@@ -1208,4 +1208,5 @@
     <string name="files_dupes_none">Nenhuma cópia encontrada (arquivos acima de 1 MB com o mesmo nome e tamanho).</string>
     <string name="files_dupes_extra">As cópias extras ocupam %1$s.</string>
     <string name="files_dupes_hint">Mesmo nome e mesmo tamanho. Mantenha uma de cada e exclua as que você não precisa.</string>
+    <string name="memory_cheat_note">Nota (opcional): o que faz, qual versão do jogo</string>
 </resources>

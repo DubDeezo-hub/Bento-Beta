@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">Nenašli sa žiadne kópie (súbory nad 1 MB s rovnakým názvom a veľkosťou).</string>
     <string name="files_dupes_extra">Nadbytočné kópie zaberajú %1$s.</string>
     <string name="files_dupes_hint">Rovnaký názov aj veľkosť. Nechajte si po jednej a nepotrebné odstráňte.</string>
+    <string name="memory_cheat_note">Poznámka (voliteľná): čo robí, pre akú verziu hry</string>
 </resources>

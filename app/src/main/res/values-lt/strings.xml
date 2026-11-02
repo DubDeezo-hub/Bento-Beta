@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">Kopijų nerasta (didesni nei 1 MB failai tuo pačiu pavadinimu ir dydžiu).</string>
     <string name="files_dupes_extra">Perteklinės kopijos užima %1$s.</string>
     <string name="files_dupes_hint">Tas pats pavadinimas ir dydis. Palikite po vieną, kitas nereikalingas ištrinkite.</string>
+    <string name="memory_cheat_note">Pastaba (neprivaloma): ką daro, kuriai žaidimo versijai</string>
 </resources>

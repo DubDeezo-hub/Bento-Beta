@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">Nincs másolat (1 MB-nál nagyobb, azonos nevű és méretű fájlok).</string>
     <string name="files_dupes_extra">A felesleges másolatok %1$s helyet foglalnak.</string>
     <string name="files_dupes_hint">Azonos név és méret. Mindegyikből tarts meg egyet, a fölöslegeseket töröld.</string>
+    <string name="memory_cheat_note">Megjegyzés (nem kötelező): mit csinál, melyik játékverzió</string>
 </resources>

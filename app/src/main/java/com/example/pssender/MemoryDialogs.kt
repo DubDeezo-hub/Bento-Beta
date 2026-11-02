@@ -60,6 +60,7 @@ internal fun CheatDialog(cheat: Cheat?, new: MemoryDialog.NewCheat?, onClose: ()
     }
     var type by remember { mutableStateOf(cheat?.type ?: new?.type ?: ValueType.INT) }
     var value by remember { mutableStateOf(cheat?.value ?: new?.value ?: "") }
+    var note by remember { mutableStateOf(cheat?.note ?: "") }
     val addr = parseAddress(address)
     val valueOk = value.isBlank() || type.parse(value) != null
     AlertDialog(
@@ -81,6 +82,8 @@ internal fun CheatDialog(cheat: Cheat?, new: MemoryDialog.NewCheat?, onClose: ()
                 }
                 Field(str(R.string.memory_value), value) { value = it }
                 ValuePresets(type) { value = it }
+                // The person's own words about it: what it does, which game version it works on
+                Field(str(R.string.memory_cheat_note), note) { note = it.take(CHEAT_NOTE_MAX) }
                 if (!valueOk) {
                     Text(str(R.string.memory_bad_value, str(type.res)), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.error)
                 }
@@ -130,10 +133,10 @@ internal fun CheatDialog(cheat: Cheat?, new: MemoryDialog.NewCheat?, onClose: ()
             TextButton(enabled = addr != null && valueOk, onClick = {
                 if (addr != null) {
                     if (cheat == null) {
-                        m.addCheat(name, addr, type, value, group)
+                        m.addCheat(name, addr, type, value, group, note = note)
                     } else {
                         val moved = addr != cheat.address || type != cheat.type
-                        val c = cheat.copy(name = name.trim().ifBlank { cheat.name }, address = addr, type = type, value = value.trim(), group = group.trim())
+                        val c = cheat.copy(name = name.trim().ifBlank { cheat.name }, address = addr, type = type, value = value.trim(), group = group.trim(), note = note.trim())
                         // A cheat moved by hand no longer matches its old signature
                         m.updateCheat(if (moved) c.copy(sigHex = "", sigMask = "", sigAt = 0) else c)
                     }

@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">કોઈ નકલ મળી નથી (એક જ નામ અને કદની 1 MB થી મોટી ફાઇલો).</string>
     <string name="files_dupes_extra">વધારાની નકલો %1$s રોકે છે.</string>
     <string name="files_dupes_hint">એક જ નામ અને કદ. દરેકમાંથી એક રાખો અને જરૂર ન હોય તે કાઢી નાખો.</string>
+    <string name="memory_cheat_note">નોંધ (વૈકલ્પિક): શું કરે છે, રમતની કઈ આવૃત્તિ</string>
 </resources>

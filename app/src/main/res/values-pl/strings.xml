@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">Nie znaleziono kopii (pliki powyżej 1 MB o tej samej nazwie i rozmiarze).</string>
     <string name="files_dupes_extra">Nadmiarowe kopie zajmują %1$s.</string>
     <string name="files_dupes_hint">Ta sama nazwa i rozmiar. Zostaw po jednej, a niepotrzebne usuń.</string>
+    <string name="memory_cheat_note">Notatka (opcjonalna): co robi, która wersja gry</string>
 </resources>

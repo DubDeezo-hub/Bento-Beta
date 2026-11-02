@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">Копій не знайдено (файли понад 1 МБ з однаковою назвою та розміром).</string>
     <string name="files_dupes_extra">Зайві копії займають %1$s.</string>
     <string name="files_dupes_hint">Однакова назва й розмір. Залиште по одній, а непотрібні видаліть.</string>
+    <string name="memory_cheat_note">Нотатка (необов\'язково): що робить, для якої версії гри</string>
 </resources>

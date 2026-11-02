@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">Копий не найдено (файлы больше 1 МБ с одинаковым именем и размером).</string>
     <string name="files_dupes_extra">Лишние копии занимают %1$s.</string>
     <string name="files_dupes_hint">Одинаковое имя и размер. Оставьте по одной, а ненужные удалите.</string>
+    <string name="memory_cheat_note">Заметка (необязательно): что делает, для какой версии игры</string>
 </resources>

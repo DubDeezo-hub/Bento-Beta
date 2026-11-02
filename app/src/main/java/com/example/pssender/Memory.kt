@@ -517,6 +517,7 @@ internal fun CheatRow(c: Cheat, playing: Boolean, onOpen: () -> Unit) {
     ) {
         Column(modifier = Modifier.weight(1f)) {
             Text(c.name, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Medium, maxLines = 1, overflow = TextOverflow.Ellipsis)
+            if (c.note.isNotBlank()) Text(c.note, style = MaterialTheme.typography.bodySmall, maxLines = 2, overflow = TextOverflow.Ellipsis)
             Text(
                 (if (c.pointer != null) "🔗 " else "") + hexAddr(c.address) + " · " + str(c.type.res) + " · " + c.value.ifBlank { "—" },
                 style = MaterialTheme.typography.bodySmall,

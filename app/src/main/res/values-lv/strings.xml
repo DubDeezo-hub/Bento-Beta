@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">Kopijas nav atrastas (faili virs 1 MB ar vienādu nosaukumu un izmēru).</string>
     <string name="files_dupes_extra">Liekās kopijas aizņem %1$s.</string>
     <string name="files_dupes_hint">Vienāds nosaukums un izmērs. Paturiet pa vienai, pārējās nevajadzīgās izdzēsiet.</string>
+    <string name="memory_cheat_note">Piezīme (neobligāti): ko tā dara, kurai spēles versijai</string>
 </resources>

@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">Δεν βρέθηκαν αντίγραφα (αρχεία άνω του 1 MB με ίδιο όνομα και μέγεθος).</string>
     <string name="files_dupes_extra">Τα επιπλέον αντίγραφα πιάνουν %1$s.</string>
     <string name="files_dupes_hint">Ίδιο όνομα και μέγεθος. Κρατήστε ένα από το καθένα και διαγράψτε όσα δεν χρειάζεστε.</string>
+    <string name="memory_cheat_note">Σημείωση (προαιρετική): τι κάνει, ποια έκδοση παιχνιδιού</string>
 </resources>

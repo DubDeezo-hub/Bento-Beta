@@ -45,7 +45,9 @@ data class Cheat(
     val sigMask: String = "",
     val sigAt: Int = 0,
     /** A pointer path from the eboot to the value (see [PointerPath.encode]); "" when there is none. */
-    val ptr: String = ""
+    val ptr: String = "",
+    /** The person's own note: what it does, which game version it works on ("" when none). */
+    val note: String = ""
 ) {
     val signature: Signature? get() = if (sigHex.isEmpty()) null else Signature.parse(sigHex, sigMask, sigAt)
     val pointer: PointerPath? get() = PointerPath.decode(ptr)
@@ -108,6 +110,7 @@ fun cheatsToJson(list: List<Cheat>): String {
             JSONObject().put("id", c.id).put("name", c.name).put("address", java.lang.Long.toHexString(c.address))
                 .put("type", c.type.name).put("value", c.value).put("group", c.group)
                 .put("sig", c.sigHex).put("sigMask", c.sigMask).put("sigAt", c.sigAt).put("ptr", c.ptr)
+                .apply { if (c.note.isNotBlank()) put("note", c.note) }
         )
     }
     return arr.toString()
@@ -135,10 +138,14 @@ fun parseCheats(json: String?): List<Cheat> {
             sigHex = o["sig"]?.toString().orEmpty(),
             sigMask = o["sigMask"]?.toString().orEmpty(),
             sigAt = (o["sigAt"] as? Number)?.toInt() ?: o["sigAt"]?.toString()?.toIntOrNull() ?: 0,
-            ptr = o["ptr"]?.toString().orEmpty()
+            ptr = o["ptr"]?.toString().orEmpty(),
+            note = o["note"]?.toString().orEmpty().take(CHEAT_NOTE_MAX)
         )
     }
 }
+
+/** The longest note a cheat keeps. */
+const val CHEAT_NOTE_MAX = 200
 
 /** An address typed by the user: hex, with or without 0x. Null when it is not one. */
 fun parseAddress(text: String): Long? {

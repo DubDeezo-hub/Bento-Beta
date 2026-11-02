@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">找不到副本（名稱和大小相同、超過 1 MB 的檔案）。</string>
     <string name="files_dupes_extra">多餘的副本佔用 %1$s。</string>
     <string name="files_dupes_hint">名稱和大小都相同。每組保留一個，刪除不需要的。</string>
+    <string name="memory_cheat_note">備註（選填）：作用、適用的遊戲版本</string>
 </resources>

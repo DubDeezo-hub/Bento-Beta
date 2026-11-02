@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">പകർപ്പുകളൊന്നും കണ്ടില്ല (ഒരേ പേരും വലുപ്പവുമുള്ള 1 MB-യിൽ കൂടുതലുള്ള ഫയലുകൾ).</string>
     <string name="files_dupes_extra">അധിക പകർപ്പുകൾ %1$s എടുക്കുന്നു.</string>
     <string name="files_dupes_hint">ഒരേ പേരും വലുപ്പവും. ഓരോന്നിൽ നിന്നും ഒന്ന് സൂക്ഷിച്ച് ആവശ്യമില്ലാത്തവ മായ്ക്കുക.</string>
+    <string name="memory_cheat_note">കുറിപ്പ് (ഐച്ഛികം): എന്ത് ചെയ്യുന്നു, ഗെയിമിന്റെ ഏത് പതിപ്പ്</string>
 </resources>

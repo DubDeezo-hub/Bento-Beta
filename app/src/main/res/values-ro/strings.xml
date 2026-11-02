@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">Nu s-au găsit copii (fișiere peste 1 MB cu același nume și dimensiune).</string>
     <string name="files_dupes_extra">Copiile în plus ocupă %1$s.</string>
     <string name="files_dupes_hint">Același nume și aceeași dimensiune. Păstrează câte una și șterge-le pe cele de care nu ai nevoie.</string>
+    <string name="memory_cheat_note">Notă (opțională): ce face, ce versiune a jocului</string>
 </resources>

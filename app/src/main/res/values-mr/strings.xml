@@ -1207,4 +1207,5 @@
     <string name="files_dupes_none">प्रती सापडल्या नाहीत (एकाच नावाच्या व आकाराच्या 1 MB पेक्षा मोठ्या फाइल्स).</string>
     <string name="files_dupes_extra">जास्तीच्या प्रती %1$s जागा घेतात.</string>
     <string name="files_dupes_hint">एकच नाव आणि आकार. प्रत्येकी एक ठेवा आणि गरज नसलेल्या हटवा.</string>
+    <string name="memory_cheat_note">टीप (ऐच्छिक): हे काय करते, खेळाची कोणती आवृत्ती</string>
 </resources>
