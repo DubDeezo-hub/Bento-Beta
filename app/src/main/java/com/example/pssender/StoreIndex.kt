@@ -60,9 +60,15 @@ object StoreIndex {
         return m.groupValues[1] + "/" + m.groupValues[2].removeSuffix(".git")
     }
 
+    /**
+     * [text] read as JSON, or null when it isn't JSON. A list can arrive as something else (a Wi-Fi login page, a
+     * download cut short), and that must not stop the store or the app from opening.
+     */
+    private fun readJson(text: String): Any? = try { MiniJson.parse(text) } catch (_: Exception) { null }
+
     /** Bento's own list: entries to add to (or change in) the built-in ones. */
     fun parseCurated(json: String, lang: String = Locale.getDefault().language): List<StoreEntry> {
-        val root = MiniJson.parse(json) as? Map<*, *> ?: return emptyList()
+        val root = readJson(json) as? Map<*, *> ?: return emptyList()
         return (root["payloads"] as? List<*>).orEmpty().mapNotNull { x ->
             val o = x as? Map<*, *> ?: return@mapNotNull null
             val repo = (o["repo"] as? String)?.trim().orEmpty()
@@ -100,7 +106,7 @@ object StoreIndex {
 
     /** The community list (PS5 payloads). */
     fun parseCommunity(json: String): List<FoundPayload> {
-        val root = MiniJson.parse(json)
+        val root = readJson(json)
         val list = (root as? List<*>) ?: ((root as? Map<*, *>)?.get("payloads") as? List<*>) ?: return emptyList()
         return list.mapNotNull { x ->
             val o = x as? Map<*, *> ?: return@mapNotNull null
@@ -125,7 +131,7 @@ object StoreIndex {
 
     /** GitHub's search reply as payloads (only plausible ones: not forks, not archived). */
     fun parseSearch(json: String): List<FoundPayload> {
-        val root = MiniJson.parse(json) as? Map<*, *> ?: return emptyList()
+        val root = readJson(json) as? Map<*, *> ?: return emptyList()
         return (root["items"] as? List<*>).orEmpty().mapNotNull { x ->
             val o = x as? Map<*, *> ?: return@mapNotNull null
             if (o["fork"] == true || o["archived"] == true) return@mapNotNull null
@@ -143,16 +149,19 @@ object StoreIndex {
 
     // --- fetching, with a short-lived copy ---
 
-    /** The text at [url], from the kept copy when it is fresh enough (or when the network fails). Blocking. */
+    /**
+     * The text at [url], from the kept copy when it is fresh enough (or when the network fails). Blocking. Only a reply
+     * that reads as JSON is kept or used; anything else counts as a failed download.
+     */
     private fun fetch(ctx: Context, key: String, url: String, force: Boolean): String? {
         val p = prefs(ctx)
-        val kept = p.getString(key, null)
+        val kept = p.getString(key, null)?.takeIf { readJson(it.substringAfter('\n')) != null }
         val time = kept?.substringBefore('\n')?.toLongOrNull() ?: 0L
         val now = System.currentTimeMillis()
         if (!force && kept != null && now - time in 0..KEEP_MS) return kept.substringAfter('\n')
         return try {
             val reply = webGet(url, true, "application/json", 10_000)
-            if (reply.code != 200) return kept?.substringAfter('\n')
+            if (reply.code != 200 || readJson(reply.body) == null) return kept?.substringAfter('\n')
             p.edit().putString(key, "$now\n" + reply.body).apply()
             reply.body
         } catch (_: Exception) {

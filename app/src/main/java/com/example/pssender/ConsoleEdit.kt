@@ -118,6 +118,16 @@ object EtaHenConfig {
 fun isEditableText(name: String): Boolean =
     Regex("""\.(txt|ini|cfg|conf|json|xml|log|md|lua|sh|csv|yml|yaml|toml|properties|list)$""", RegexOption.IGNORE_CASE).containsMatchIn(name)
 
+/** [bytes] as UTF-8 text, or null when they aren't valid UTF-8 (decoding would replace what it can't read). */
+fun strictUtf8(bytes: ByteArray): String? = try {
+    Charsets.UTF_8.newDecoder()
+        .onMalformedInput(java.nio.charset.CodingErrorAction.REPORT)
+        .onUnmappableCharacter(java.nio.charset.CodingErrorAction.REPORT)
+        .decode(java.nio.ByteBuffer.wrap(bytes)).toString()
+} catch (_: java.nio.charset.CharacterCodingException) {
+    null
+}
+
 /** Files larger than this aren't opened for editing. */
 const val TEXT_EDIT_MAX = 256 * 1024
 
@@ -227,8 +237,10 @@ fun TextFileDialog(settings: FtpSettings, path: String, onClose: () -> Unit) {
         when {
             bytes == null && message.isEmpty() -> message = AppText.get(R.string.text_edit_too_big, fmtBytes(TEXT_EDIT_MAX.toLong()))
             bytes != null && bytes.take(4096).any { it.toInt() == 0 } -> message = AppText.get(R.string.text_edit_binary)
+            // Text in another encoding would come back changed after saving, so it is not offered for editing
+            bytes != null && strictUtf8(bytes) == null -> message = AppText.get(R.string.text_edit_binary)
             bytes != null -> {
-                original = String(bytes, Charsets.UTF_8)
+                original = strictUtf8(bytes)
                 text = original.orEmpty()
             }
         }

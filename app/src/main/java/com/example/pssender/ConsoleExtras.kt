@@ -97,9 +97,12 @@ object CaptureSync {
     private fun copied(ctx: Context, profileId: String): Set<String> =
         (prefs(ctx).getString(key(profileId), "") ?: "").split('\n').filter { it.isNotEmpty() }.toSet()
 
-    /** Notes [paths] as copied (the list keeps the newest 5,000). */
+    /**
+     * Notes [paths] as copied. The list holds as many as a sync looks through: a shorter one would drop older captures
+     * that are still on the console, and the next sync would copy them again (and again, each time).
+     */
     fun markCopied(ctx: Context, profileId: String, paths: Collection<String>) {
-        val all = (copied(ctx, profileId) + paths).toList().takeLast(5_000)
+        val all = (copied(ctx, profileId) + paths).toList().takeLast(MAX_FILES)
         prefs(ctx).edit().putString(key(profileId), all.joinToString("\n")).apply()
     }
 
@@ -120,7 +123,14 @@ object CaptureSync {
             markCopied(ctx, profileId, media.keys.map { joinPath(ConsolePaths.MEDIA, it) })
             return emptyList()
         }
-        val done = copied(ctx, profileId)
+        val onConsole = media.keys.map { joinPath(ConsolePaths.MEDIA, it) }.toSet()
+        val noted = copied(ctx, profileId)
+        val done = noted.filter { it in onConsole }.toSet()
+        // Captures deleted on the console are forgotten, so the list doesn't keep growing (only when the whole folder
+        // was looked through: a cut-short look doesn't show everything that is still there)
+        if (!tree.truncated && done.size < noted.size) {
+            prefs(ctx).edit().putString(key(profileId), done.joinToString("\n")).apply()
+        }
         return media.mapNotNull { (rel, size) ->
             val remote = joinPath(ConsolePaths.MEDIA, rel)
             if (remote in done) return@mapNotNull null

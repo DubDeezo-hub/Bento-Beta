@@ -829,6 +829,18 @@ fun keepTreeAccess(cr: ContentResolver, tree: Uri) {
     }
 }
 
+/** [name], or "name (2).ext", "name (3).ext"... when [used] already has it; the result is added to [used]. */
+fun uniqueEntryName(name: String, used: MutableSet<String>): String {
+    if (used.add(name.lowercase())) return name
+    val dot = name.lastIndexOf('.').takeIf { it > name.lastIndexOf('/') + 1 } ?: name.length
+    var n = 2
+    while (true) {
+        val candidate = name.substring(0, dot) + " ($n)" + name.substring(dot)
+        if (used.add(candidate.lowercase())) return candidate
+        n++
+    }
+}
+
 /**
  * Downloads every file of [plan] into one zip, Downloads/<PS5 or PS4>/[zipName], keeping their folders inside it. Gives
  * where it went. Blocking; [progress] gets the files and bytes done; [cancelled] stops it, and a zip that wasn't
@@ -852,9 +864,11 @@ fun ftpZipToPhone(
                 ftp.setFileType(FTP.BINARY_FILE_TYPE)
                 var bytes = 0L
                 val buf = ByteArray(256 * 1024)
+                // Names made safe for the phone can come out the same; a zip refuses a second entry of one name
+                val used = HashSet<String>()
                 plan.files.forEachIndexed { i, f ->
                     if (cancelled()) throw IOException(AppText.get(R.string.zip_cancelled))
-                    zip.putNextEntry(java.util.zip.ZipEntry(savedAs(f.saveIn, f.name)))
+                    zip.putNextEntry(java.util.zip.ZipEntry(uniqueEntryName(savedAs(f.saveIn, f.name), used)))
                     val input = ftp.retrieveFileStream(f.remotePath) ?: throw IOException(deniedText(R.string.err_cant_open, ftp, f.remotePath))
                     input.use {
                         while (true) {
@@ -873,7 +887,15 @@ fun ftpZipToPhone(
             }
         }
         cr.update(uri, ContentValues().apply { put(MediaStore.MediaColumns.IS_PENDING, 0) }, null, null)
-        return downloadFolder("", s.model) + "/" + zipName
+        // The phone renames it ("name (1).zip") when the name is taken; say where it really went
+        val savedName = try {
+            cr.query(uri, arrayOf(MediaStore.MediaColumns.DISPLAY_NAME), null, null, null)?.use { c ->
+                if (c.moveToFirst()) c.getString(0) else null
+            }
+        } catch (_: Exception) {
+            null
+        }
+        return downloadFolder("", s.model) + "/" + (savedName ?: zipName)
     } catch (e: Exception) {
         try { cr.delete(uri, null, null) } catch (_: Exception) {}
         throw e

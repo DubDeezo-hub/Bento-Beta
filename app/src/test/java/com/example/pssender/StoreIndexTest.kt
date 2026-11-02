@@ -49,6 +49,16 @@ class StoreIndexTest {
     }
 
     @Test
+    fun aReplyThatIsNotJsonGivesAnEmptyListInsteadOfAnError() {
+        // A Wi-Fi login page or a download cut short must not stop the store (or the app) from opening
+        val page = "<html><body>Please log in to the Wi-Fi</body></html>"
+        assertTrue(StoreIndex.parseCurated(page, "en").isEmpty())
+        assertTrue(StoreIndex.parseCommunity(page).isEmpty())
+        assertTrue(StoreIndex.parseSearch(page).isEmpty())
+        assertTrue(StoreIndex.parseCurated("{\"payloads\": [{\"repo\": ", "en").isEmpty())
+    }
+
+    @Test
     fun theRealListInTheRepositoryReads() {
         // payloads/index.json is read by every installed copy of the app: it must stay readable
         val file = listOf(File("../payloads/index.json"), File("payloads/index.json")).first { it.exists() }

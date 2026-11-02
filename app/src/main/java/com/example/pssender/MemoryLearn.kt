@@ -46,9 +46,10 @@ enum class LearnLevel(val label: Int, val look: Int) {
 }
 
 /** What the session looked like when a step began, so a step can tell that something new happened since. */
-class LearnBase(val writes: Int, val undos: Int, val cheats: Int, val neighbors: Int) {
+class LearnBase(val writes: Int, val undos: Int, val cheats: Int, val neighbors: Int, val frozenIds: Set<String> = emptySet()) {
     companion object {
-        fun now(m: MemorySession) = LearnBase(m.writes, m.undos, m.cheats.size, m.neighborsOpened)
+        fun now(m: MemorySession) =
+            LearnBase(m.writes, m.undos, m.cheats.size, m.neighborsOpened, m.cheats.filter { it.frozen }.map { it.id }.toSet())
     }
 }
 
@@ -63,7 +64,8 @@ object Lessons {
     private val wrote: (MemorySession, LearnBase) -> Boolean = { m, b -> m.writes > b.writes }
     private val undid: (MemorySession, LearnBase) -> Boolean = { m, b -> m.undos > b.undos }
     private val added: (MemorySession, LearnBase) -> Boolean = { m, b -> m.cheats.size > b.cheats }
-    private val frozen: (MemorySession, LearnBase) -> Boolean = { m, _ -> m.cheats.any { it.frozen } }
+    // Only a cheat frozen during this step counts: one left frozen from an earlier lesson would tick it off at once
+    private val frozen: (MemorySession, LearnBase) -> Boolean = { m, b -> m.cheats.any { it.frozen && it.id !in b.frozenIds } }
     private fun few(m: MemorySession) = m.searching && m.total in 1..5
 
     val all = listOf(

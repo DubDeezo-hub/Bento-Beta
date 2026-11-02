@@ -313,7 +313,11 @@ object Diagnose {
         // The console log: what Bento's log view already has, plus whatever arrives in two seconds now
         val seen = KernelLog.lines.toList()
         val logPort = KernelLog.port.trim().toIntOrNull() ?: KernelLog.DEFAULT_PORT
-        val heard = async(Dispatchers.IO) { if (KernelLog.running) emptyList() else listenToLog(host, logPort) }
+        // ps5debug-NG's log (3232) or etaHEN's (9081): the first that has something to say
+        val heard = async(Dispatchers.IO) {
+            if (KernelLog.running) emptyList()
+            else klogPorts(logPort).asSequence().map { listenToLog(host, it) }.firstOrNull { it.isNotEmpty() }.orEmpty()
+        }
         DiagInput(
             profile.type, host,
             onWifi = networks.isNotEmpty() || (target?.isLoopbackAddress == true),
