@@ -168,7 +168,8 @@ object AdBlock {
         "smaato.net", "mopub.com", "applovin.com", "a-ads.com", "bidvertiser.com",
         // pop-up / pop-under networks, the usual source of tap hijacks and surprise redirects
         "popads.net", "popcash.net", "propellerads.com", "adcash.com", "exoclick.com", "exosrv.com",
-        "juicyads.com", "clickadu.com", "hilltopads.net", "adsterra.com", "trafficjunky.net", "onclickads.net"
+        "juicyads.com", "clickadu.com", "hilltopads.net", "adsterra.com", "trafficjunky.net", "onclickads.net",
+        "monetag.com", "galaksion.com", "ad-maven.com", "popmyads.com", "clickaine.com", "realsrv.com"
     )
 
     val enabled = MutableStateFlow(true)
@@ -315,9 +316,11 @@ fun buildWebView(ctx: Context, hooks: WebHooks): WebView {
         override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
             val uri = request?.url ?: return false
             if (uri.scheme == "http" || uri.scheme == "https") {
-                // Ads often hijack a tap and bounce to another site: ask before leaving the current one
-                if (request?.isForMainFrame == true && isOffSite(view, uri)) {
-                    hooks.offSite(uri.toString())
+                // Only a jump to an ad or pop-up network is stopped (quietly, counted with the blocked ads). Everything
+                // else goes through, other sites too: a download button often bounces to the file's own server (GitHub
+                // to its file host, a file site to its download server), and asking there broke real downloads.
+                if (request?.isForMainFrame == true && AdBlock.shouldBlock(uri.host)) {
+                    AdBlock.blockedCount.update { it + 1 }
                     return true
                 }
                 return false
@@ -379,7 +382,8 @@ fun buildWebView(ctx: Context, hooks: WebHooks): WebView {
             popup.webViewClient = object : WebViewClient() {
                 override fun shouldOverrideUrlLoading(v: WebView?, request: WebResourceRequest?): Boolean {
                     request?.url?.let { u ->
-                        if (isOffSite(main, u)) hooks.offSite(u.toString()) else main.loadUrl(u.toString())
+                        // A tapped link that opens a new window: ad networks are dropped, anything else opens here
+                        if (AdBlock.shouldBlock(u.host)) AdBlock.blockedCount.update { it + 1 } else main.loadUrl(u.toString())
                     }
                     v?.destroy()
                     return true

@@ -753,6 +753,51 @@ PY
   # Back to the folder view, so later visits to Files start where they expect
   dump && tap_text "$(ui string files_view_browse)" || true
   sleep 2
+  # Web: a download button whose link bounces to another server (like a file site), sent straight to the console
+  open_web
+  # The browser's own "More" (the bottom bar has a "More" too, lower down): the highest one
+  if dump && pos="$(ui findtop "$XML" "$(ui string web_more)")"; then
+    # shellcheck disable=SC2086
+    set -- $pos
+    adb shell input tap "$1" "$2"
+  fi
+  sleep 2
+  dump && tap_text "$(ui string web_homepage_label)" || true
+  sleep 2
+  if dump && pos="$(ui find "$XML" "$(ui string web_homepage_label)")"; then
+    # shellcheck disable=SC2086
+    set -- $pos
+    adb shell input tap "$1" "$2" # the address field (its label is the lowest match, under the title)
+    sleep 1
+    adb shell input keyevent KEYCODE_MOVE_END
+    # shellcheck disable=SC2046
+    adb shell input keyevent $(printf '67 %.0s' $(seq 1 80))
+    adb shell input text "http://10.0.2.2:8088/"
+    sleep 1
+    dump && tap_text "$(ui string action_set)" || true
+    sleep 6
+    if wait_text 20 "Download the test file" && tap_text "Download the test file"; then
+      if wait_fmt 20 "$(ui string choose_ftp)" && pos="$(ui findfmt "$XML" "$(ui string choose_ftp)")"; then
+        # shellcheck disable=SC2086
+        set -- $pos
+        adb shell input tap "$1" "$2"
+        if wait_log 60 "[ftp] received bento-web-test.bin"; then
+          pass "a download from the browser goes through the site's redirect straight to the console"
+        else
+          soft "web download" "the file did not reach the console's FTP. Its log: $(tail -4 "$FAKE_LOG" | tr '\n' ' ')"
+        fi
+      else
+        soft "web download" "no download choices after tapping the link. Seen: $(ui texts "$XML" 2> /dev/null)"
+      fi
+    else
+      soft "web download" "the test page or its link did not show. Seen: $(ui texts "$XML" 2> /dev/null)"
+    fi
+  else
+    soft "web download" "no home page field. Seen: $(ui texts "$XML" 2> /dev/null)"
+  fi
+  shot "fake-web-download"
+  adb shell input keyevent KEYCODE_BACK # leaves the browser
+  sleep 2
   healthy "the app is fine after the newer checks"
 else
   soft "pretend console" "not running (FAKE_CONSOLE_LOG unset or the console did not start), so nothing was used for real"

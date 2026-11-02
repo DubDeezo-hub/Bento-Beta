@@ -2,6 +2,7 @@
 """Small helpers for ui_smoke.sh. Reads a `uiautomator dump` of the phone screen and the app's own string files.
 
   uitool.py find   <dump.xml> <text> [<text> ...]   prints "centerX centerY left right" of the lowest node showing one of the texts
+  uitool.py findtop <dump.xml> <text> [<text> ...]   the same, for the highest node showing one of the texts
   uitool.py findfmt <dump.xml> <format string>      the same for a text with %1$s style blanks, e.g. "Version %1$s is available"
   uitool.py haspkg <dump.xml> <package>             exit 0 when something on screen belongs to the package
   uitool.py texts  <dump.xml>                       the texts on screen, for the failure messages
@@ -71,6 +72,17 @@ def cmd_find(argv):
         return 1
     # The bottom bar is the lowest thing on screen, so when a word shows up twice the lowest one is the tab
     print_hit(max(hits, key=lambda n: (n["box"][1] + n["box"][3])))
+    return 0
+
+
+def cmd_findtop(argv):
+    """Like find, but the highest match on screen (a page's own button when the bottom bar has one of the same name)."""
+    wanted = {squash(a) for a in argv[1:] if squash(a)}
+    hits = [n for n in screen_nodes(argv[0])
+            if wanted & (pieces(n["text"]) | pieces(n["desc"]))]
+    if not hits:
+        return 1
+    print_hit(min(hits, key=lambda n: (n["box"][1] + n["box"][3])))
     return 0
 
 
@@ -168,7 +180,7 @@ def cmd_langs(argv):
 
 
 COMMANDS = {
-    "find": (cmd_find, 2), "findfmt": (cmd_findfmt, 2), "haspkg": (cmd_haspkg, 2), "texts": (cmd_texts, 1), "layout": (cmd_layout, 1),
+    "find": (cmd_find, 2), "findtop": (cmd_findtop, 2), "findfmt": (cmd_findfmt, 2), "haspkg": (cmd_haspkg, 2), "texts": (cmd_texts, 1), "layout": (cmd_layout, 1),
     "string": (cmd_string, 1), "resdir": (cmd_resdir, 1), "langs": (cmd_langs, 0),
 }
 

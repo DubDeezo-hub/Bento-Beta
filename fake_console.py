@@ -906,12 +906,72 @@ def start_fake_klog():
     threading.Thread(target=server.serve_forever, daemon=True).start()
 
 
+WEB_TEST_FILE = bytes(range(256)) * 256  # 64 KiB, the "download" the Web tab test sends to the console
+
+
+class WebPageHandler(BaseHTTPRequestHandler):
+    """Port 8088: a page with a download button whose link bounces to another server (8089), like a file site."""
+
+    def do_GET(self):
+        path = self.path.split("?")[0]
+        if path == "/":
+            page = (b"<html><head><meta name=viewport content='width=device-width'></head><body style='font-size:22px'>"
+                    b"<h1>Bento web test</h1><p><a href='/get/bento-web-test.bin' style='font-size:28px'>"
+                    b"Download the test file</a></p></body></html>")
+            self.send_response(200)
+            self.send_header("Content-Type", "text/html")
+            self.send_header("Content-Length", str(len(page)))
+            self.end_headers()
+            self.wfile.write(page)
+        elif path.startswith("/get/"):
+            # The server's own redirect to the file's host, which the browser must follow (not block)
+            host = (self.headers.get("Host") or "127.0.0.1").split(":")[0]
+            print(f"[web] redirect {path}", flush=True)
+            self.send_response(302)
+            self.send_header("Location", f"http://{host}:8089/files/bento-web-test.bin")
+            self.end_headers()
+        else:
+            self.send_response(404)
+            self.end_headers()
+
+    def log_message(self, *args):
+        pass
+
+
+class FileHostHandler(BaseHTTPRequestHandler):
+    """Port 8089: the "file host" the download bounces to; it sends the file as an attachment."""
+
+    def do_GET(self):
+        if self.path.split("?")[0] != "/files/bento-web-test.bin":
+            self.send_response(404)
+            self.end_headers()
+            return
+        print(f"[web] file sent to {self.client_address[0]}", flush=True)
+        self.send_response(200)
+        self.send_header("Content-Type", "application/octet-stream")
+        self.send_header("Content-Disposition", "attachment; filename=\"bento-web-test.bin\"")
+        self.send_header("Content-Length", str(len(WEB_TEST_FILE)))
+        self.end_headers()
+        self.wfile.write(WEB_TEST_FILE)
+
+    def do_HEAD(self):
+        self.send_response(200)
+        self.send_header("Content-Type", "application/octet-stream")
+        self.send_header("Content-Length", str(len(WEB_TEST_FILE)))
+        self.end_headers()
+
+    def log_message(self, *args):
+        pass
+
+
 def main():
     start_fake_debugger()
     start_fake_klog()
     threading.Thread(
         target=HTTPServer(("0.0.0.0", 12800), InstallHandler).serve_forever, daemon=True
     ).start()
+    for web_port, web_handler in ((8088, WebPageHandler), (8089, FileHostHandler)):
+        threading.Thread(target=HTTPServer(("0.0.0.0", web_port), web_handler).serve_forever, daemon=True).start()
     for loader_port in (9021, 9090):  # 9021 is the PS5's etaHEN loader, 9090 the PS4's GoldHEN loader
         threading.Thread(
             target=ReusableTCPServer(("0.0.0.0", loader_port), PayloadHandler).serve_forever, daemon=True
@@ -927,13 +987,19 @@ def main():
 
     authorizer = DummyAuthorizer()
     authorizer.add_anonymous(f"{BASE}/ftp", perm="elradfmwMT")
-    handler = FTPHandler
+    class LoggingFTP(FTPHandler):
+        """Says when a file has arrived, so the phone test can check that an upload reached the console."""
+
+        def on_file_received(self, file):
+            print(f"[ftp] received {os.path.basename(file)}", flush=True)
+
+    handler = LoggingFTP
     handler.authorizer = authorizer
     # The address the FTP server tells the phone to fetch file lists and files from. Only needed when the phone
     # reaches this machine under another address than the one it sees itself on (an Android emulator: 10.0.2.2)
     if os.environ.get("FAKE_FTP_ADDRESS"):
         handler.masquerade_address = os.environ["FAKE_FTP_ADDRESS"]
-    print(f"Fake console running: install 12800, payload 9021/9090, ftp 2121, memory {DEBUG_PORT}, log {KLOG_PORT}. Ctrl+C to stop.", flush=True)
+    print(f"Fake console running: install 12800, payload 9021/9090, ftp 2121, web 8088/8089, memory {DEBUG_PORT}, log {KLOG_PORT}. Ctrl+C to stop.", flush=True)
     FTPServer(("0.0.0.0", 2121), handler).serve_forever()
 
 
