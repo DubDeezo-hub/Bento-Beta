@@ -481,6 +481,30 @@ wait_fmt() { # seconds format
   return 1
 }
 
+# Like wait_text, but scrolls the screen down a little between looks (the emulator's screen is small)
+scroll_find() { # tries text...
+  local tries="$1" i
+  shift
+  for ((i = 0; i < tries; i++)); do
+    if dump && ui find "$XML" "$@" > /dev/null; then return 0; fi
+    adb shell input swipe 160 460 160 220 400 > /dev/null 2>&1
+    sleep 1.5
+  done
+  return 1
+}
+
+# The Files tab remembers its last view: back to the folder view, scrolled to the top
+files_folders() {
+  dump || true
+  tap_text "$(nav_label nav_files)" || true
+  sleep 3
+  dump && tap_text "$(ui string files_view_browse)" || true
+  sleep 3
+  adb shell input swipe 160 220 160 600 300 > /dev/null 2>&1
+  adb shell input swipe 160 220 160 600 300 > /dev/null 2>&1
+  sleep 1
+}
+
 wait_log() { # seconds text: waits for the pretend console to print a line with the text
   local i
   for ((i = 0; i < $1; i += 2)); do
@@ -529,13 +553,13 @@ PY
   healthy "the app starts with the pretend console selected"
 
   # Files: the console's /data folder over FTP
-  dump || true
-  tap_text "$(nav_label nav_files)" || true
-  sleep 3
-  if ! wait_text 8 notes.txt sample.bin; then
+  files_folders
+  if ! scroll_find 6 notes.txt sample.bin; then
+    files_folders
     dump && tap_text "$(ui string files_refresh)" || true
+    sleep 4
   fi
-  if wait_text 20 notes.txt sample.bin; then
+  if scroll_find 8 notes.txt sample.bin; then
     pass "Files shows the console's /data folder over FTP"
   else
     fail "Files shows the console's /data folder over FTP" "Seen: $(ui texts "$XML" 2> /dev/null)"
@@ -586,7 +610,8 @@ PY
   sleep 3
   if wait_text 10 "$(ui string memory_connect)"; then
     tap_text "$(ui string memory_connect)" || true
-    if wait_fmt 20 "$(ui string memory_connected)"; then
+    # Connected shows the game the pretend console runs (and its firmware line, when it fits on screen)
+    if wait_text 20 "Fake Game" || wait_fmt 4 "$(ui string memory_connected)"; then
       pass "Memory connects to the console's debugger"
     else
       fail "Memory connects to the console's debugger" "Seen: $(ui texts "$XML" 2> /dev/null)"
@@ -619,10 +644,8 @@ PY
   shot "fake-payload"
 
   # etaHEN settings: read from the console over FTP and shown as switches
-  dump || true
-  tap_text "$(nav_label nav_files)" || true
-  sleep 3
-  if wait_text 10 "$(ui string etahen_title)" && tap_text "$(ui string etahen_title)"; then
+  files_folders
+  if scroll_find 8 "$(ui string etahen_title)" && tap_text "$(ui string etahen_title)"; then
     if wait_text 15 "$(ui string etahen_ftp)"; then
       pass "etaHEN settings are read from the console and shown"
     else
@@ -636,9 +659,10 @@ PY
   fi
 
   # Zip: the /data folder downloaded as one zip (go up to /, hold "data", Download as zip)
+  files_folders
   dump && tap_text "$(ui string files_up)" || true
   sleep 3
-  if wait_text 10 data user && pos="$(ui find "$XML" data)"; then
+  if scroll_find 8 data user && pos="$(ui find "$XML" data)"; then
     # shellcheck disable=SC2086
     set -- $pos
     adb shell input swipe "$1" "$2" "$1" "$2" 900
