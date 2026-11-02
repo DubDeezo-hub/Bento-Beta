@@ -39,6 +39,10 @@ jobs:
         with:
           gradle-version: 8.9
 
+      - name: Check the translations
+        # Every language against English: missing keys, %1$s blanks that differ, unescaped apostrophes
+        run: python3 .github/scripts/check_strings.py
+
       - name: Accept Android SDK licenses
         run: yes | sdkmanager --licenses > /dev/null || true
 
