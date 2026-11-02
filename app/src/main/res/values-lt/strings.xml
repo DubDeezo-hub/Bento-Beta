@@ -1181,4 +1181,6 @@
     <string name="online_channel">Pultas prisijungęs</string>
     <string name="online_title">%1$s prisijungęs</string>
     <string name="online_text">Dabar atsako jūsų tinkle. Palieskite, kad atidarytumėte Bento.</string>
+    <string name="store_whats_new">Kas naujo</string>
+    <string name="store_whats_new_title">%1$s %2$s: kas naujo</string>
 </resources>

@@ -1181,4 +1181,6 @@
     <string name="online_channel">Konsole aanlyn</string>
     <string name="online_title">%1$s is aanlyn</string>
     <string name="online_text">Dit antwoord nou op jou netwerk. Tik om Bento oop te maak.</string>
+    <string name="store_whats_new">Wat is nuut</string>
+    <string name="store_whats_new_title">%1$s %2$s: wat is nuut</string>
 </resources>

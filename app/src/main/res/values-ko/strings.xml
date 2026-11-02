@@ -1181,4 +1181,6 @@
     <string name="online_channel">콘솔 온라인</string>
     <string name="online_title">%1$s 온라인</string>
     <string name="online_text">이제 네트워크에서 응답합니다. 탭하여 Bento를 여세요.</string>
+    <string name="store_whats_new">새로운 내용</string>
+    <string name="store_whats_new_title">%1$s %2$s: 새로운 내용</string>
 </resources>

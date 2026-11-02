@@ -1181,4 +1181,6 @@
     <string name="online_channel">Konzole online</string>
     <string name="online_title">%1$s je online</string>
     <string name="online_text">Teď odpovídá ve vaší síti. Klepnutím otevřete Bento.</string>
+    <string name="store_whats_new">Co je nového</string>
+    <string name="store_whats_new_title">%1$s %2$s: co je nového</string>
 </resources>

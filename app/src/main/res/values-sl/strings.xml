@@ -1181,4 +1181,6 @@
     <string name="online_channel">Konzola na spletu</string>
     <string name="online_title">%1$s je na spletu</string>
     <string name="online_text">Zdaj se odziva v vašem omrežju. Tapnite, da odprete Bento.</string>
+    <string name="store_whats_new">Kaj je novega</string>
+    <string name="store_whats_new_title">%1$s %2$s: kaj je novega</string>
 </resources>

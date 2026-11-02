@@ -1181,4 +1181,6 @@
     <string name="online_channel">কনসোল অনলাইন</string>
     <string name="online_title">%1$s অনলাইন</string>
     <string name="online_text">এটি এখন আপনার নেটওয়ার্কে সাড়া দিচ্ছে। Bento খুলতে ট্যাপ করুন।</string>
+    <string name="store_whats_new">নতুন কী</string>
+    <string name="store_whats_new_title">%1$s %2$s: নতুন কী</string>
 </resources>

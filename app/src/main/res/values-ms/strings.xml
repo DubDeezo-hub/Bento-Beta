@@ -1181,4 +1181,6 @@
     <string name="online_channel">Konsol dalam talian</string>
     <string name="online_title">%1$s dalam talian</string>
     <string name="online_text">Ia kini menjawab dalam rangkaian anda. Ketik untuk membuka Bento.</string>
+    <string name="store_whats_new">Apa yang baharu</string>
+    <string name="store_whats_new_title">%1$s %2$s: apa yang baharu</string>
 </resources>

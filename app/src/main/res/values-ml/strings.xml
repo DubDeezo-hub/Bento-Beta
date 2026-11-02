@@ -1181,4 +1181,6 @@
     <string name="online_channel">കൺസോൾ ഓൺലൈൻ</string>
     <string name="online_title">%1$s ഓൺലൈനാണ്</string>
     <string name="online_text">ഇപ്പോൾ നിങ്ങളുടെ നെറ്റ്‌വർക്കിൽ പ്രതികരിക്കുന്നു. Bento തുറക്കാൻ ടാപ്പ് ചെയ്യുക.</string>
+    <string name="store_whats_new">പുതിയതെന്ത്</string>
+    <string name="store_whats_new_title">%1$s %2$s: പുതിയതെന്ത്</string>
 </resources>

@@ -1181,4 +1181,6 @@
     <string name="online_channel">เครื่องออนไลน์</string>
     <string name="online_title">%1$s ออนไลน์แล้ว</string>
     <string name="online_text">ตอนนี้ตอบสนองในเครือข่ายของคุณแล้ว แตะเพื่อเปิด Bento</string>
+    <string name="store_whats_new">มีอะไรใหม่</string>
+    <string name="store_whats_new_title">%1$s %2$s: มีอะไรใหม่</string>
 </resources>

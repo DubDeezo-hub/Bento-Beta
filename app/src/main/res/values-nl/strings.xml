@@ -1182,4 +1182,6 @@
     <string name="online_channel">Console online</string>
     <string name="online_title">%1$s is online</string>
     <string name="online_text">Hij antwoordt nu op je netwerk. Tik om Bento te openen.</string>
+    <string name="store_whats_new">Wat is er nieuw</string>
+    <string name="store_whats_new_title">%1$s %2$s: wat is er nieuw</string>
 </resources>

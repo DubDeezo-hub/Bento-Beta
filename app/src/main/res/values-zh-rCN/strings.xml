@@ -1181,4 +1181,6 @@
     <string name="online_channel">主机上线</string>
     <string name="online_title">%1$s 已上线</string>
     <string name="online_text">它现在在你的网络中有响应。点按打开 Bento。</string>
+    <string name="store_whats_new">新内容</string>
+    <string name="store_whats_new_title">%1$s %2$s：新内容</string>
 </resources>

@@ -1181,4 +1181,6 @@
     <string name="online_channel">Κονσόλα σε σύνδεση</string>
     <string name="online_title">Το %1$s είναι σε σύνδεση</string>
     <string name="online_text">Απαντά τώρα στο δίκτυό σας. Πατήστε για να ανοίξει το Bento.</string>
+    <string name="store_whats_new">Τι νέο υπάρχει</string>
+    <string name="store_whats_new_title">%1$s %2$s: τι νέο υπάρχει</string>
 </resources>

@@ -1181,4 +1181,6 @@
     <string name="online_channel">Konzola na mreži</string>
     <string name="online_title">%1$s je na mreži</string>
     <string name="online_text">Sada odgovara na tvojoj mreži. Dodirni za otvaranje Bentoa.</string>
+    <string name="store_whats_new">Što je novo</string>
+    <string name="store_whats_new_title">%1$s %2$s: što je novo</string>
 </resources>

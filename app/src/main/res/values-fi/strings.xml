@@ -1181,4 +1181,6 @@
     <string name="online_channel">Konsoli verkossa</string>
     <string name="online_title">%1$s on verkossa</string>
     <string name="online_text">Se vastaa nyt verkossasi. Avaa Bento napauttamalla.</string>
+    <string name="store_whats_new">Mitä uutta</string>
+    <string name="store_whats_new_title">%1$s %2$s: mitä uutta</string>
 </resources>

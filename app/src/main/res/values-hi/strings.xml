@@ -1181,4 +1181,6 @@
     <string name="online_channel">कंसोल ऑनलाइन</string>
     <string name="online_title">%1$s ऑनलाइन है</string>
     <string name="online_text">यह अब आपके नेटवर्क पर जवाब दे रहा है। Bento खोलने के लिए टैप करें।</string>
+    <string name="store_whats_new">नया क्या है</string>
+    <string name="store_whats_new_title">%1$s %2$s: नया क्या है</string>
 </resources>

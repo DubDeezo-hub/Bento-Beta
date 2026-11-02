@@ -1181,4 +1181,6 @@
     <string name="online_channel">Consolă online</string>
     <string name="online_title">%1$s este online</string>
     <string name="online_text">Acum răspunde în rețeaua ta. Atinge pentru a deschide Bento.</string>
+    <string name="store_whats_new">Ce este nou</string>
+    <string name="store_whats_new_title">%1$s %2$s: ce este nou</string>
 </resources>

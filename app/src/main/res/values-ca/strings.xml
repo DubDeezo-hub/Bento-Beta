@@ -1181,4 +1181,6 @@
     <string name="online_channel">Consola en línia</string>
     <string name="online_title">%1$s està en línia</string>
     <string name="online_text">Ara respon a la teva xarxa. Toca per obrir Bento.</string>
+    <string name="store_whats_new">Novetats</string>
+    <string name="store_whats_new_title">%1$s %2$s: novetats</string>
 </resources>

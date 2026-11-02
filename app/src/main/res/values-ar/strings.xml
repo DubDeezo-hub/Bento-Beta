@@ -1181,4 +1181,6 @@
     <string name="online_channel">الجهاز متصل</string>
     <string name="online_title">‏%1$s متصل</string>
     <string name="online_text">يستجيب الآن على شبكتك. اضغط لفتح Bento.</string>
+    <string name="store_whats_new">ما الجديد</string>
+    <string name="store_whats_new_title">‏%1$s %2$s: ما الجديد</string>
 </resources>

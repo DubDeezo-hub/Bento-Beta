@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
@@ -33,6 +34,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -299,6 +301,9 @@ object Store {
 }
 
 /** What the store shows for one payload. */
+/** Release notes being read, from "What's new"; [update] starts the update from there (null when it isn't one). */
+private class NotesAsk(val title: String, val text: String, val update: (() -> Unit)?)
+
 private class StoreRow(
     val entry: StoreEntry,
     val release: StoreRelease? = null,
@@ -339,6 +344,7 @@ fun StoreDialog(type: ConsoleType, onAdded: () -> Unit, onClose: () -> Unit) {
     var github by remember(type) { mutableStateOf<List<FoundRow>?>(null) }
     var searching by remember { mutableStateOf(false) }
     var githubProblem by remember(type) { mutableStateOf("") }
+    var notes by remember { mutableStateOf<NotesAsk?>(null) }
 
     LaunchedEffect(type, refreshRun) {
         val force = refreshRun > 0
@@ -466,6 +472,15 @@ fun StoreDialog(type: ConsoleType, onAdded: () -> Unit, onClose: () -> Unit) {
                         }
                         StateLine(state, highlight = rel != null && have.isNotEmpty() && have != rel.tag)
                         firmwareNote(e, row.claims, fit, firmware)?.let { (text, good) -> FirmwareLine(text, good) }
+                        // What the maker says changed, before taking the update
+                        val whatsNew = remember(rel) { rel?.let { plainReleaseNotes(it.notes) }.orEmpty() }
+                        if (rel != null && whatsNew.isNotEmpty()) {
+                            val title = str(R.string.store_whats_new_title, e.name, rel.tag)
+                            val isUpdate = asset != null && have.isNotEmpty() && have != rel.tag
+                            TextButton(onClick = {
+                                notes = NotesAsk(title, whatsNew, if (isUpdate && asset != null) ({ get(e.repo, asset.name) { Store.install(ctx, e, rel, asset) } }) else null)
+                            }) { Text(str(R.string.store_whats_new)) }
+                        }
                         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                             if (rel != null && asset != null) {
                                 Button(enabled = busy.isEmpty(), onClick = { get(e.repo, asset.name) { Store.install(ctx, e, rel, asset) } }) {
@@ -566,6 +581,14 @@ fun StoreDialog(type: ConsoleType, onAdded: () -> Unit, onClose: () -> Unit) {
                                 else -> str(R.string.store_latest, rel.tag, rel.date)
                             }
                             if (state.isNotEmpty()) StateLine(state, highlight = false)
+                            val whatsNew = remember(rel) { rel?.let { plainReleaseNotes(it.notes) }.orEmpty() }
+                            if (rel != null && whatsNew.isNotEmpty()) {
+                                val title = str(R.string.store_whats_new_title, f.repo, rel.tag)
+                                val isUpdate = asset != null && have.isNotEmpty() && have != rel.tag
+                                TextButton(onClick = {
+                                    notes = NotesAsk(title, whatsNew, if (isUpdate && asset != null) ({ get(f.repo, asset.name) { Store.install(ctx, fr.entry, rel, asset) } }) else null)
+                                }) { Text(str(R.string.store_whats_new)) }
+                            }
                             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                                 when {
                                     rel != null && asset != null -> Button(enabled = busy.isEmpty(), onClick = { get(f.repo, asset.name) { Store.install(ctx, fr.entry, rel, asset) } }) {
@@ -596,6 +619,24 @@ fun StoreDialog(type: ConsoleType, onAdded: () -> Unit, onClose: () -> Unit) {
         },
         confirmButton = { TextButton(onClick = onClose) { Text(str(R.string.action_close)) } }
     )
+
+    notes?.let { n ->
+        AlertDialog(
+            onDismissRequest = { notes = null },
+            title = { Text(n.title, maxLines = 2, overflow = TextOverflow.Ellipsis) },
+            text = {
+                Column(modifier = Modifier.heightIn(max = 420.dp).verticalScroll(rememberScrollState())) {
+                    Text(n.text, style = MaterialTheme.typography.bodySmall)
+                }
+            },
+            confirmButton = {
+                val go = n.update
+                if (go != null) TextButton(onClick = { notes = null; go() }) { Text(str(R.string.store_get_update)) }
+                else TextButton(onClick = { notes = null }) { Text(str(R.string.action_close)) }
+            },
+            dismissButton = { if (n.update != null) TextButton(onClick = { notes = null }) { Text(str(R.string.action_close)) } }
+        )
+    }
 }
 
 @Composable

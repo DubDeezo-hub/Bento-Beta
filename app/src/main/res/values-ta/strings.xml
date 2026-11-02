@@ -1181,4 +1181,6 @@
     <string name="online_channel">கன்சோல் ஆன்லைன்</string>
     <string name="online_title">%1$s ஆன்லைனில் உள்ளது</string>
     <string name="online_text">இப்போது உங்கள் நெட்வொர்க்கில் பதிலளிக்கிறது. Bento-ஐத் திறக்கத் தட்டவும்.</string>
+    <string name="store_whats_new">புதியது என்ன</string>
+    <string name="store_whats_new_title">%1$s %2$s: புதியது என்ன</string>
 </resources>

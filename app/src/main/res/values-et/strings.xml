@@ -1181,4 +1181,6 @@
     <string name="online_channel">Konsool võrgus</string>
     <string name="online_title">%1$s on võrgus</string>
     <string name="online_text">See vastab nüüd sinu võrgus. Puuduta, et Bento avada.</string>
+    <string name="store_whats_new">Mis on uut</string>
+    <string name="store_whats_new_title">%1$s %2$s: mis on uut</string>
 </resources>

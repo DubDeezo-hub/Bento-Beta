@@ -1181,4 +1181,6 @@
     <string name="online_channel">Консоль у мережі</string>
     <string name="online_title">%1$s у мережі</string>
     <string name="online_text">Тепер вона відповідає у вашій мережі. Торкніться, щоб відкрити Bento.</string>
+    <string name="store_whats_new">Що нового</string>
+    <string name="store_whats_new_title">%1$s %2$s: що нового</string>
 </resources>

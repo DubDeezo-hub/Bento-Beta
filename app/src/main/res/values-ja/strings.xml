@@ -1181,4 +1181,6 @@
     <string name="online_channel">本体がオンライン</string>
     <string name="online_title">%1$s がオンラインです</string>
     <string name="online_text">ネットワークで応答しています。タップして Bento を開きます。</string>
+    <string name="store_whats_new">新機能</string>
+    <string name="store_whats_new_title">%1$s %2$s の新機能</string>
 </resources>

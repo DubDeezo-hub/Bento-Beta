@@ -1181,4 +1181,6 @@
     <string name="online_channel">הקונסולה מחוברת</string>
     <string name="online_title">‏%1$s מחוברת</string>
     <string name="online_text">היא עונה עכשיו ברשת שלך. הקישו כדי לפתוח את Bento.</string>
+    <string name="store_whats_new">מה חדש</string>
+    <string name="store_whats_new_title">‏%1$s %2$s: מה חדש</string>
 </resources>

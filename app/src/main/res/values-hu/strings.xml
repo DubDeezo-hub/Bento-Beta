@@ -1181,4 +1181,6 @@
     <string name="online_channel">Konzol elérhető</string>
     <string name="online_title">%1$s elérhető</string>
     <string name="online_text">Most válaszol a hálózatodon. Koppints a Bento megnyitásához.</string>
+    <string name="store_whats_new">Újdonságok</string>
+    <string name="store_whats_new_title">%1$s %2$s: újdonságok</string>
 </resources>

@@ -1181,4 +1181,6 @@
     <string name="online_channel">Máy trực tuyến</string>
     <string name="online_title">%1$s đang trực tuyến</string>
     <string name="online_text">Máy đã phản hồi trong mạng của bạn. Nhấn để mở Bento.</string>
+    <string name="store_whats_new">Có gì mới</string>
+    <string name="store_whats_new_title">%1$s %2$s: có gì mới</string>
 </resources>

@@ -1181,4 +1181,6 @@
     <string name="online_channel">Online ang console</string>
     <string name="online_title">Online na ang %1$s</string>
     <string name="online_text">Sumasagot na ito sa network mo. I-tap para buksan ang Bento.</string>
+    <string name="store_whats_new">Ano ang bago</string>
+    <string name="store_whats_new_title">%1$s %2$s: ano ang bago</string>
 </resources>

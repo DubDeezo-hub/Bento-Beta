@@ -1181,4 +1181,6 @@
     <string name="online_channel">Konsoll på nett</string>
     <string name="online_title">%1$s er på nett</string>
     <string name="online_text">Den svarer nå på nettverket ditt. Trykk for å åpne Bento.</string>
+    <string name="store_whats_new">Hva er nytt</string>
+    <string name="store_whats_new_title">%1$s %2$s: hva er nytt</string>
 </resources>

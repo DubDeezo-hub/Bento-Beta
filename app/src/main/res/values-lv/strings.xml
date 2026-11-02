@@ -1181,4 +1181,6 @@
     <string name="online_channel">Konsole tiešsaistē</string>
     <string name="online_title">%1$s ir tiešsaistē</string>
     <string name="online_text">Tagad tā atbild jūsu tīklā. Pieskarieties, lai atvērtu Bento.</string>
+    <string name="store_whats_new">Kas jauns</string>
+    <string name="store_whats_new_title">%1$s %2$s: kas jauns</string>
 </resources>

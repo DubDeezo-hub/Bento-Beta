@@ -1181,4 +1181,6 @@
     <string name="online_channel">Konsol online</string>
     <string name="online_title">%1$s er online</string>
     <string name="online_text">Den svarer nu på dit netværk. Tryk for at åbne Bento.</string>
+    <string name="store_whats_new">Nyheder</string>
+    <string name="store_whats_new_title">%1$s %2$s: nyheder</string>
 </resources>

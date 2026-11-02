@@ -1182,4 +1182,6 @@
     <string name="online_channel">Consola en línea</string>
     <string name="online_title">%1$s está en línea</string>
     <string name="online_text">Ya responde en tu red. Toca para abrir Bento.</string>
+    <string name="store_whats_new">Novedades</string>
+    <string name="store_whats_new_title">%1$s %2$s: novedades</string>
 </resources>

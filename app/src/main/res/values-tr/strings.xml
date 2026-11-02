@@ -1181,4 +1181,6 @@
     <string name="online_channel">Konsol çevrimiçi</string>
     <string name="online_title">%1$s çevrimiçi</string>
     <string name="online_text">Artık ağınızda yanıt veriyor. Bento\'yu açmak için dokunun.</string>
+    <string name="store_whats_new">Yenilikler</string>
+    <string name="store_whats_new_title">%1$s %2$s: yenilikler</string>
 </resources>
