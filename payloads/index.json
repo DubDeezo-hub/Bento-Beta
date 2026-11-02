@@ -64,6 +64,22 @@
       "console": "ps4",
       "file": "goldhen.bin",
       "anyFirmware": false
+    },
+    {
+      "repo": "EchoStretch/ps5-app-dumper",
+      "name": "ps5-app-dumper",
+      "console": "ps5",
+      "file": "ps5-app-dumper.elf",
+      "anyFirmware": true,
+      "about": "Copies an installed game's files to a USB drive plugged into the console."
+    },
+    {
+      "repo": "itsPLK/ps5-pkg-manager",
+      "name": "PKG-Manager",
+      "console": "ps5",
+      "file": "pkg-manager.elf",
+      "anyFirmware": true,
+      "about": "Installs .pkg files on the console itself, from a USB drive, a disc or a network share."
     }
   ]
 }

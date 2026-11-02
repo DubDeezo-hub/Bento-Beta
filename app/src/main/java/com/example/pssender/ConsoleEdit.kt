@@ -233,7 +233,8 @@ fun TextFileDialog(settings: FtpSettings, path: String, onClose: () -> Unit) {
     var message by remember { mutableStateOf("") }
     var busy by remember { mutableStateOf(true) }
     LaunchedEffect(path) {
-        val bytes = withContext(Dispatchers.IO) { try { ftpReadSmall(settings, path, TEXT_EDIT_MAX) } catch (e: Exception) { message = failedText(e); null } }
+        // A file that can't be opened says why; only one that is too big comes back empty
+        val bytes = withContext(Dispatchers.IO) { try { ftpReadSmall(settings, path, TEXT_EDIT_MAX, mustExist = true) } catch (e: Exception) { message = failedText(e); null } }
         when {
             bytes == null && message.isEmpty() -> message = AppText.get(R.string.text_edit_too_big, fmtBytes(TEXT_EDIT_MAX.toLong()))
             bytes != null && bytes.take(4096).any { it.toInt() == 0 } -> message = AppText.get(R.string.text_edit_binary)

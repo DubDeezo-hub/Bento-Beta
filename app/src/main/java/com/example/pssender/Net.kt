@@ -370,9 +370,10 @@ fun ftpMakeDir(s: FtpSettings, dir: String, name: String) {
 // ---------------------------------------------------------------------------------------------
 
 /** Reads a small file from an open connection; null when it is missing, unreadable or larger than [max] bytes. */
-private fun readSmall(ftp: FTPClient, path: String, max: Int): ByteArray? {
+private fun readSmall(ftp: FTPClient, path: String, max: Int, mustExist: Boolean = false): ByteArray? {
     ftp.setFileType(FTP.BINARY_FILE_TYPE)
-    val input = ftp.retrieveFileStream(path) ?: return null
+    val input = ftp.retrieveFileStream(path)
+        ?: if (mustExist) throw IOException(deniedText(R.string.err_cant_open, ftp, path)) else return null
     val out = java.io.ByteArrayOutputStream()
     var tooBig = false
     try {
@@ -394,8 +395,12 @@ private fun readSmall(ftp: FTPClient, path: String, max: Int): ByteArray? {
     return if (tooBig) null else out.toByteArray()
 }
 
-/** Reads the small file [path] on the console (null when it isn't there or is larger than [max] bytes). */
-fun ftpReadSmall(s: FtpSettings, path: String, max: Int = 1 shl 20): ByteArray? = withFtp(s) { ftp -> readSmall(ftp, path, max) }
+/**
+ * The file [path] on the console, or null when it is bigger than [max] bytes. A file that can't be opened gives null
+ * too, or with [mustExist] an error that says why (the server's own words).
+ */
+fun ftpReadSmall(s: FtpSettings, path: String, max: Int = 1 shl 20, mustExist: Boolean = false): ByteArray? =
+    withFtp(s) { ftp -> readSmall(ftp, path, max, mustExist) }
 
 /**
  * Writes [data] as the file [path] on the console, replacing it. With [backup], what was there is kept first as

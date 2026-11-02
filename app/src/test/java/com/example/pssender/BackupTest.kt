@@ -18,7 +18,13 @@ class BackupTest {
         adblockCustom = "ads.example.com",
         shelf = listOf(ShelfFile("a.elf", byteArrayOf(1, 2, 3))),
         chains = listOf(Chain("c1", "Start", listOf(ChainStep("a.elf", 5)))),
-        pins = mapOf("p1" to listOf("/data/homebrew"))
+        pins = mapOf("p1" to listOf("/data/homebrew")),
+        cheats = mapOf("PPSA01234" to listOf(gold))
+    )
+
+    private val gold = Cheat(
+        "g1", "Gold", 0x20002000L, ValueType.INT, "9999", group = "Money",
+        sigHex = "0102030405060708", sigMask = "11110000", sigAt = 4, ptr = "5100:10,34"
     )
 
     @Test
@@ -36,6 +42,7 @@ class BackupTest {
         assertArrayEquals(byteArrayOf(1, 2, 3), d.shelf.single().bytes)
         assertEquals(sample().chains, d.chains)
         assertEquals(mapOf("p1" to listOf("/data/homebrew")), d.pins)
+        assertEquals(mapOf("PPSA01234" to listOf(gold)), d.cheats)
         assertEquals("2026-11-02", backupDay(d))
     }
 
@@ -45,8 +52,21 @@ class BackupTest {
         assertNull(d.bookmarks)
         assertNull(d.chains)
         assertNull(d.pins)
+        assertNull(d.cheats)
         assertNull(d.adblockOn)
         assertNull(backupDay(d))
+    }
+
+    @Test
+    fun restoredCheatsJoinTheOnesOnThePhone() {
+        val onPhone = listOf(gold.copy(value = "1", frozen = true), Cheat("h1", "Health", 0x10L, ValueType.FLOAT, "100"))
+        val fromFile = listOf(gold, Cheat("a1", "Ammo", 0x20L, ValueType.INT, "30", frozen = true))
+        val merged = mergeCheats(onPhone, fromFile)
+        assertEquals(listOf("g1", "h1", "a1"), merged.map { it.id })
+        // The file's value wins; whether it is frozen stays as it is on the phone, and nothing new starts frozen
+        assertEquals("9999", merged[0].value)
+        assertEquals(true, merged[0].frozen)
+        assertEquals(false, merged[2].frozen)
     }
 
     @Test

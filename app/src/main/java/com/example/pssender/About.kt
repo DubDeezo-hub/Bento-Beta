@@ -167,6 +167,8 @@ fun AboutDialog(
                     restoring = null
                     scope.launch {
                         val failed = withContext(Dispatchers.IO) { applyBackup(ctx, data) }
+                        // The game open in the Memory tab picks up the restored cheats (its list would otherwise be saved over them)
+                        MemorySession.reloadCheats()
                         Toast.makeText(ctx, restoreMessage(failed), Toast.LENGTH_LONG).show()
                         // The screen reads its settings when it starts, so it starts again to show the restored ones
                         findActivity(ctx)?.recreate()

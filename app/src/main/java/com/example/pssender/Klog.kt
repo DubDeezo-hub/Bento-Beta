@@ -145,7 +145,7 @@ object KernelLog {
                 withContext(Dispatchers.IO) {
                     val ports = klogPorts(p)
                     var s: Socket? = null
-                    var used = p
+                    var used: Int = p
                     for ((i, port) in ports.withIndex()) {
                         val attempt = Socket()
                         socket = attempt

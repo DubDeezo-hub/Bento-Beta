@@ -86,6 +86,21 @@ object CheatStore {
     fun save(ctx: Context, titleId: String, list: List<Cheat>) {
         prefs(ctx).edit().putString(key(titleId), cheatsToJson(list)).apply()
     }
+
+    /** Every game's cheats, by title ID ("unknown" for cheats saved without one); games without cheats are left out. */
+    fun all(ctx: Context): Map<String, List<Cheat>> =
+        prefs(ctx).all.entries.filter { it.key.startsWith("t_") }.mapNotNull { (k, v) ->
+            val list = parseCheats(v as? String)
+            if (list.isEmpty()) null else k.removePrefix("t_") to list
+        }.toMap()
+}
+
+/** [incoming] cheats put among the [existing] ones: one with the same id is replaced where it stands, new ones go at the end. */
+fun mergeCheats(existing: List<Cheat>, incoming: List<Cheat>): List<Cheat> {
+    val byId = incoming.associateBy { it.id }
+    val merged = existing.map { byId[it.id]?.copy(frozen = it.frozen) ?: it }.toMutableList()
+    for (c in incoming) if (merged.none { it.id == c.id }) merged.add(c.copy(frozen = false))
+    return merged
 }
 
 fun cheatsToJson(list: List<Cheat>): String {
@@ -904,6 +919,18 @@ object MemorySession {
     }
 
     // --- cheats ---
+
+    /**
+     * Reads the open game's cheats again from what is saved (after a restore put more there), keeping the ones that
+     * are frozen frozen.
+     */
+    fun reloadCheats() {
+        val ctx = app ?: return
+        if (snapshot == null) return
+        val frozen = cheats.filter { it.frozen }.map { it.id }.toSet()
+        cheats = CheatStore.load(ctx, titleId).map { if (it.id in frozen) it.copy(frozen = true) else it }
+        updateFreezing()
+    }
 
     private fun saveCheats(list: List<Cheat>) {
         cheats = list

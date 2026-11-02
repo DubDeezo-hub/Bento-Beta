@@ -44,6 +44,8 @@ class BackupData(
     val chains: List<Chain>? = null,
     /** The folders pinned in the Files tab, by console id; null when the file has none, so restoring leaves the ones on the phone alone. */
     val pins: Map<String, List<String>>? = null,
+    /** The Memory tab's saved cheats, by game (title ID); null when the file has none, so restoring leaves the ones on the phone alone. */
+    val cheats: Map<String, List<Cheat>>? = null,
     /** When the backup was made ("2026-10-11T12:34:56Z"), as written in the file. */
     val savedAt: String = "",
     /** Payloads that were left out because the backup would have become too large. */
@@ -113,6 +115,11 @@ fun backupToJson(data: BackupData, versionName: String, savedAt: String = nowSta
         for ((id, folders) in all) if (folders.isNotEmpty()) pins.put(id, JSONArray(folders))
         o.put("pins", pins)
     }
+    data.cheats?.let { all ->
+        val games = JSONObject()
+        for ((titleId, list) in all) if (list.isNotEmpty()) games.put(titleId, JSONArray(cheatsToJson(list)))
+        o.put("cheats", games)
+    }
     return o.toString(2)
 }
 
@@ -156,9 +163,20 @@ fun parseBackup(text: String): BackupRead {
         shelf = shelf,
         chains = if (o.has("chains")) parseChains(o.optJSONArray("chains")?.toString()) else null,
         pins = o.optJSONObject("pins")?.let { readPins(it) },
+        cheats = o.optJSONObject("cheats")?.let { readCheats(it) },
         savedAt = o.optString("saved", "")
     )
     return BackupRead(data, null)
+}
+
+/** The cheats of each game in [o] (title ID -> a list of cheats); games with no readable cheat are left out. */
+private fun readCheats(o: JSONObject): Map<String, List<Cheat>> {
+    val found = LinkedHashMap<String, List<Cheat>>()
+    for (titleId in o.keys()) {
+        val list = parseCheats(o.optJSONArray(titleId)?.toString())
+        if (titleId.isNotBlank() && list.isNotEmpty()) found[titleId] = list
+    }
+    return found
 }
 
 /** The pinned folders of each console in [o] (console id -> a list of folders); entries that are no list of folders are left out. */
@@ -194,13 +212,14 @@ fun collectBackup(ctx: Context): BackupData {
         shelf = kept,
         chains = ChainStore.load(ctx),
         pins = FilesStore.allPins(ctx, consoles.map { it.id }),
+        cheats = CheatStore.all(ctx),
         skipped = skipped
     )
 }
 
 /**
  * Puts a backup on the phone: the consoles, homepage, bookmarks and ad list are replaced (a part the file doesn't have
- * stays as it is), and the payloads are added to the shelf (a payload with the same name is replaced; the others stay).
+ * stays as it is), chains and cheats are added to the ones on the phone, and the payloads are added to the shelf (a payload with the same name is replaced; the others stay).
  * The screen has to be rebuilt afterwards. Returns how many payloads could not be stored.
  */
 fun applyBackup(ctx: Context, data: BackupData): Int {
@@ -216,6 +235,8 @@ fun applyBackup(ctx: Context, data: BackupData): Int {
     data.chains?.let { ChainStore.save(ctx, mergeChains(ChainStore.load(ctx), it)) }
     // Pinned folders are set for the consoles that the file has some for; the other consoles keep theirs
     data.pins?.forEach { (id, folders) -> FilesStore.savePins(ctx, id, folders) }
+    // Cheats are put among each game's own (one with the same id is replaced), so none made on this phone is lost
+    data.cheats?.forEach { (titleId, list) -> CheatStore.save(ctx, titleId, mergeCheats(CheatStore.load(ctx, titleId), list)) }
     if (data.adblockOn != null || data.adblockCustom != null) {
         AdBlock.load(ctx)
         AdBlock.save(ctx, data.adblockOn ?: AdBlock.enabled.value, data.adblockCustom ?: AdBlock.customText(ctx))
