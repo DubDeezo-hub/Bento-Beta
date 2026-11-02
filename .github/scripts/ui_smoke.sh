@@ -713,12 +713,10 @@ PY
   dump && tap_text "⋯ ▴" && sleep 2 || true
   dump && tap_text "$(ui string files_up)" || true
   sleep 3
-  if scroll_find 8 data user && pos="$(ui find "$XML" data)"; then
-    # shellcheck disable=SC2086
-    set -- $pos
-    # The zip option is in the row's "⋮" menu at the right end (holding the row instead picks it for multi-download).
-    # $2 is the row's middle; tap near the right edge at that height.
-    adb shell input tap "$((WIDTH - 15))" "$2"
+  if scroll_find 8 data user; then
+    # The zip option is in a folder row's "⋮" menu (holding the row instead picks it for multi-download).
+    # Tap the menu dot itself (the row list is inset from the screen edge, so a right-edge tap misses it).
+    dump && tap_text "⋮" || true
     sleep 2
     if wait_text 6 "$(ui string zip_download)" && tap_text "$(ui string zip_download)"; then
       if wait_fmt 40 "$(ui string zip_done)"; then
