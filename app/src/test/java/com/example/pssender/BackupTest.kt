@@ -1,0 +1,78 @@
+package com.example.pssender
+
+import org.junit.Assert.assertArrayEquals
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNull
+import org.junit.Test
+import java.util.Date
+
+class BackupTest {
+    private val console = Profile(id = "p1", name = "Living room", host = "192.168.1.20", ftpPort = "2121", type = ConsoleType.PS4, color = 3)
+
+    private fun sample() = BackupData(
+        consoles = listOf(console),
+        activeId = "p1",
+        home = "https://example.com",
+        bookmarks = listOf(Bookmark("Site", "https://site.com")),
+        adblockOn = false,
+        adblockCustom = "ads.example.com",
+        shelf = listOf(ShelfFile("a.elf", byteArrayOf(1, 2, 3))),
+        chains = listOf(Chain("c1", "Start", listOf(ChainStep("a.elf", 5)))),
+        pins = mapOf("p1" to listOf("/data/homebrew"))
+    )
+
+    @Test
+    fun aBackupReadsBackTheSame() {
+        val text = backupToJson(sample(), "1.99", savedAt = "2026-11-02T10:00:00Z")
+        val read = parseBackup(text)
+        assertNull(read.problem)
+        val d = read.data!!
+        assertEquals(listOf(console), d.consoles)
+        assertEquals("p1", d.activeId)
+        assertEquals("https://example.com", d.home)
+        assertEquals(listOf(Bookmark("Site", "https://site.com")), d.bookmarks)
+        assertEquals(false, d.adblockOn)
+        assertEquals("ads.example.com", d.adblockCustom)
+        assertArrayEquals(byteArrayOf(1, 2, 3), d.shelf.single().bytes)
+        assertEquals(sample().chains, d.chains)
+        assertEquals(mapOf("p1" to listOf("/data/homebrew")), d.pins)
+        assertEquals("2026-11-02", backupDay(d))
+    }
+
+    @Test
+    fun partsMissingFromTheFileAreLeftAlone() {
+        val d = parseBackup("""{"app": "Bento", "format": 1, "consoles": []}""").data!!
+        assertNull(d.bookmarks)
+        assertNull(d.chains)
+        assertNull(d.pins)
+        assertNull(d.adblockOn)
+        assertNull(backupDay(d))
+    }
+
+    @Test
+    fun otherFilesAreRefused() {
+        assertEquals(BackupProblem.NOT_A_BACKUP, parseBackup("hello").problem)
+        assertEquals(BackupProblem.NOT_A_BACKUP, parseBackup("""{"app": "Other"}""").problem)
+        assertEquals(BackupProblem.TOO_NEW, parseBackup("""{"app": "Bento", "format": 99}""").problem)
+    }
+
+    @Test
+    fun anUnknownActiveConsoleFallsBackToTheFirst() {
+        val text = backupToJson(sample().let { BackupData(it.consoles, "gone", it.home, null, null, null, emptyList()) }, "1", "x")
+        assertEquals("p1", parseBackup(text).data!!.activeId)
+    }
+
+    @Test
+    fun theShelfIsCutToSize() {
+        val files = listOf(ShelfFile("a", ByteArray(6)), ShelfFile("b", ByteArray(6)), ShelfFile("c", ByteArray(3)))
+        val (kept, skipped) = fitShelf(files, 10)
+        assertEquals(listOf("a", "c"), kept.map { it.name })
+        assertEquals(1, skipped)
+    }
+
+    @Test
+    fun fileName() {
+        assertEquals("bento-backup-", backupFileName(Date()).take(13))
+        assertEquals(true, backupFileName().endsWith(".json"))
+    }
+}
