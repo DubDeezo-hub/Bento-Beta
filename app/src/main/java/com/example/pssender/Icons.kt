@@ -239,3 +239,18 @@ val MoreIcon: ImageVector by lazy {
         }
     }
 }
+
+/** A page with a folded corner: a file. */
+val FileIcon: ImageVector by lazy {
+    outlineIcon("File") {
+        moveTo(14f, 3f)
+        lineTo(6.5f, 3f)
+        lineTo(6.5f, 21f)
+        lineTo(17.5f, 21f)
+        lineTo(17.5f, 6.5f)
+        close()
+        moveTo(14f, 3f)
+        lineTo(14f, 6.5f)
+        lineTo(17.5f, 6.5f)
+    }
+}

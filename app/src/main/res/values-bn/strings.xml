@@ -614,7 +614,7 @@
     <string name="welcome_step2">কার্ডের বাতিগুলো সবুজ হলে কনসোল প্রস্তুত। একটি ট্যাব বেছে নিয়ে শুরু করুন। কোনো বাতি বন্ধ থাকলে কার্ডের «কী সমস্যা?» কারণ জানায়।</string>
     <string name="welcome_step3">কোনো কিছু কী করে নিশ্চিত নন? পাশের ছোট ? চিহ্নে ট্যাপ করুন।</string>
     <string name="welcome_go">শুরু করুন</string>
-    <string name="welcome_again">এই পাতাটি আবার «Bento সম্পর্কে» (উপরে Bento নাম) থেকে খোলা যায়।</string>
+    <string name="welcome_again">এই পেজটি আবার খুলতে পারেন About থেকে (উপরের গোল i বোতাম)।</string>
     <string name="welcome_open">স্বাগত পাতা</string>
     <string name="tip_console_title">আপনার কনসোল</string>
     <string name="tip_console">Bento-র দরকার আপনার Wi-Fi-তে কনসোলের IP ঠিকানা। PS5-এ: সেটিংস → নেটওয়ার্ক → সংযোগের অবস্থা দেখুন → IPv4 ঠিকানা। অথবা «আমার কনসোল খুঁজুন» চাপুন। কার্ডের তিনটি বাতি দেখায় কী সাড়া দিচ্ছে: ইনস্টলার, payload লোডার এবং FTP।</string>

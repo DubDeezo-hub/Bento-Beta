@@ -614,7 +614,7 @@
     <string name="welcome_step2">Când luminile de pe card devin verzi, consola e gata. Alege o filă și începe. Dacă una rămâne stinsă, Ce nu merge? de pe card îți spune de ce.</string>
     <string name="welcome_step3">Nu știi ce face ceva? Atinge micul ? de lângă.</string>
     <string name="welcome_go">Să începem</string>
-    <string name="welcome_again">Poți redeschide această pagină din Despre (numele Bento de sus).</string>
+    <string name="welcome_again">Poți redeschide această pagină din Despre (butonul rotund i de sus).</string>
     <string name="welcome_open">Pagina de bun venit</string>
     <string name="tip_console_title">Consola ta</string>
     <string name="tip_console">Bento are nevoie de adresa IP a consolei în rețeaua ta Wi-Fi. Pe PS5: Setări → Rețea → Vezi starea conexiunii → Adresa IPv4. Sau atinge Găsește consola mea ca s-o caute. Cele trei lumini de pe card arată ce răspunde: instalatorul, încărcătorul de payload-uri și FTP-ul.</string>

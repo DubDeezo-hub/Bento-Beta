@@ -615,7 +615,7 @@
     <string name="welcome_step2">Quando as luzes do cartão ficarem verdes, a consola está pronta. Escolha um separador e avance. Se alguma ficar apagada, O que se passa? no cartão diz porquê.</string>
     <string name="welcome_step3">Não sabe o que algo faz? Toque no pequeno ? ao lado.</string>
     <string name="welcome_go">Começar</string>
-    <string name="welcome_again">Você pode abrir esta página de novo em Sobre (o nome Bento no topo).</string>
+    <string name="welcome_again">Pode abrir esta página de novo em Acerca (o i redondo no topo).</string>
     <string name="welcome_open">Página de boas-vindas</string>
     <string name="tip_console_title">Seu console</string>
     <string name="tip_console">O Bento precisa do endereço IP do console no seu Wi-Fi. No PS5: Definições → Rede → Ver status da conexão → Endereço IPv4. Ou toque em Encontrar meu console. As três luzes do cartão mostram o que responde: o instalador, o carregador de payloads e o FTP.</string>

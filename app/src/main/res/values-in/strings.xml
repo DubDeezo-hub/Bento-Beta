@@ -614,7 +614,7 @@
     <string name="welcome_step2">Saat lampu di kartu menyala hijau, konsol siap. Pilih tab dan mulai. Jika ada yang tetap mati, «Ada masalah apa?» di kartu memberi tahu penyebabnya.</string>
     <string name="welcome_step3">Tidak yakin fungsi sesuatu? Ketuk ? kecil di sebelahnya.</string>
     <string name="welcome_go">Mulai</string>
-    <string name="welcome_again">Halaman ini bisa dibuka lagi dari «Tentang Bento» (nama Bento di bagian atas).</string>
+    <string name="welcome_again">Kamu bisa membuka halaman ini lagi dari Tentang (tombol bulat i di atas).</string>
     <string name="welcome_open">Halaman sambutan</string>
     <string name="tip_console_title">Konsol Anda</string>
     <string name="tip_console">Bento membutuhkan IP konsol di Wi-Fi Anda. Di PS5: Pengaturan → Jaringan → Lihat status koneksi → Alamat IPv4. Atau ketuk «Cari konsol saya». Tiga lampu di kartu menunjukkan apa yang menjawab: penginstal, pemuat payload, dan FTP.</string>

@@ -610,7 +610,7 @@ private fun PayloadCard(name: String, isNew: Boolean, about: String, dim: Boolea
         modifier = Modifier
             .fillMaxWidth()
             .alpha(if (dim) 0.6f else 1f)
-            .clip(RoundedCornerShape(12.dp))
+            .clip(RoundedCornerShape(24.dp))
             .background(MaterialTheme.colorScheme.surfaceContainerLow)
             .padding(10.dp),
         verticalArrangement = Arrangement.spacedBy(4.dp)

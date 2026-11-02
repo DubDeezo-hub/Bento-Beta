@@ -614,7 +614,7 @@
     <string name="welcome_step2">Wanneer die kaart se ligte groen word, is die konsole gereed. Kies ’n oortjie en begin. As een af bly, sê Wat is fout? op die kaart vir jou hoekom.</string>
     <string name="welcome_step3">Nie seker wat iets doen nie? Tik die klein ? langsaan.</string>
     <string name="welcome_go">Begin</string>
-    <string name="welcome_again">Jy kan hierdie bladsy weer oopmaak vanaf «Oor Bento» (die Bento-naam bo-aan).</string>
+    <string name="welcome_again">Jy kan hierdie bladsy weer oopmaak vanaf Oor (die ronde i bo-aan).</string>
     <string name="welcome_open">Welkomsbladsy</string>
     <string name="tip_console_title">Jou konsole</string>
     <string name="tip_console">Bento het die konsole se IP op jou Wi-Fi nodig. Op die PS5: Settings → Network → View Connection Status → IPv4 Address. Of tik «Vind my konsole». Die drie ligte op die kaart wys wat antwoord: die installeerder, die payload-laaier en FTP.</string>

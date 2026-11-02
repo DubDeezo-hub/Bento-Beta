@@ -619,7 +619,7 @@
     <string name="welcome_step2">When the lights on the card turn green, the console is ready. Pick a tab and go. If one stays off, What\'s wrong? on the card tells you why.</string>
     <string name="welcome_step3">Not sure what something does? Tap the small ? next to it.</string>
     <string name="welcome_go">Get started</string>
-    <string name="welcome_again">You can open this page again from About (the Bento name at the top).</string>
+    <string name="welcome_again">You can open this page again from About (the round i at the top).</string>
     <string name="welcome_open">Welcome page</string>
     <string name="tip_console_title">Your console</string>
     <string name="tip_console">Bento needs the console\'s IP address on your Wi-Fi. On a PS5: Settings → Network → View Connection Status → IPv4 Address. Or tap Find my console to search for it. The three lights on the card show what answers: the installer, the payload loader and FTP.</string>

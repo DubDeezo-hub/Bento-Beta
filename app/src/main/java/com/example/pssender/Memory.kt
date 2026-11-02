@@ -509,7 +509,7 @@ internal fun CheatRow(c: Cheat, playing: Boolean, onOpen: () -> Unit) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(12.dp))
+            .clip(RoundedCornerShape(24.dp))
             .background(if (c.frozen) cs.primary.copy(alpha = 0.10f) else cs.surfaceContainerLow)
             .clickable(onClick = onOpen)
             .padding(start = 12.dp, end = 8.dp, top = 6.dp, bottom = 6.dp),
@@ -847,7 +847,7 @@ internal fun Neighbors(type: ValueType, bytes: ByteArray?, span: Int, onUse: (St
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(12.dp))
+            .clip(RoundedCornerShape(24.dp))
             .background(MaterialTheme.colorScheme.surfaceContainerHigh)
             .padding(10.dp),
         verticalArrangement = Arrangement.spacedBy(2.dp)
@@ -908,7 +908,7 @@ internal fun AllTypes(bytes: ByteArray?) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(12.dp))
+            .clip(RoundedCornerShape(24.dp))
             .background(MaterialTheme.colorScheme.surfaceContainerHigh)
             .padding(10.dp)
     ) {

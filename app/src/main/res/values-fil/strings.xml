@@ -614,7 +614,7 @@
     <string name="welcome_step2">Kapag naging berde ang mga ilaw ng card, handa na ang console. Pumili ng tab at magsimula. Kung may nananatiling patay, sasabihin ng «Ano ang problema?» sa card kung bakit.</string>
     <string name="welcome_step3">Hindi sigurado kung ano ang ginagawa ng isang bagay? I-tap ang maliit na ? sa tabi nito.</string>
     <string name="welcome_go">Magsimula</string>
-    <string name="welcome_again">Mabubuksan ulit ang page na ito mula sa «Tungkol sa Bento» (ang pangalang Bento sa itaas).</string>
+    <string name="welcome_again">Mabubuksan mo ulit ang page na ito mula sa About (ang bilog na i sa itaas).</string>
     <string name="welcome_open">Welcome page</string>
     <string name="tip_console_title">Ang console mo</string>
     <string name="tip_console">Kailangan ng Bento ang IP ng console sa Wi-Fi mo. Sa PS5: Settings → Network → View Connection Status → IPv4 Address. O i-tap ang «Hanapin ang console ko». Ipinapakita ng tatlong ilaw sa card kung ano ang sumasagot: installer, payload loader at FTP.</string>

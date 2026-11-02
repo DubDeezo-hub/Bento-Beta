@@ -614,7 +614,7 @@
     <string name="welcome_step2">Khi đèn trên thẻ chuyển xanh, console đã sẵn sàng. Chọn một thẻ và bắt đầu. Nếu có đèn vẫn tắt, «Có vấn đề gì?» trên thẻ sẽ cho bạn biết lý do.</string>
     <string name="welcome_step3">Không chắc một thứ làm gì? Nhấn dấu ? nhỏ bên cạnh nó.</string>
     <string name="welcome_go">Bắt đầu</string>
-    <string name="welcome_again">Có thể mở lại trang này từ «Giới thiệu Bento» (tên Bento ở trên cùng).</string>
+    <string name="welcome_again">Bạn có thể mở lại trang này từ Giới thiệu (nút tròn i ở trên cùng).</string>
     <string name="welcome_open">Trang chào mừng</string>
     <string name="tip_console_title">Console của bạn</string>
     <string name="tip_console">Bento cần IP của console trên Wi-Fi của bạn. Trên PS5: Cài đặt → Mạng → Xem trạng thái kết nối → Địa chỉ IPv4. Hoặc nhấn «Tìm console của tôi». Ba đèn trên thẻ cho biết cái gì đang phản hồi: trình cài đặt, trình nạp payload và FTP.</string>

@@ -614,7 +614,7 @@
     <string name="welcome_step2">Taa za kadi zikiwa kijani, konsoli iko tayari. Chagua kichupo na uanze. Ikiwa moja inabaki imezimwa, Kuna tatizo gani? kwenye kadi inakuambia kwa nini.</string>
     <string name="welcome_step3">Huna uhakika kitu kinafanya nini? Gusa ? ndogo iliyo kando yake.</string>
     <string name="welcome_go">Anza</string>
-    <string name="welcome_again">Ukurasa huu unaweza kufunguliwa tena kutoka «Kuhusu Bento» (jina la Bento juu).</string>
+    <string name="welcome_again">Unaweza kufungua ukurasa huu tena kutoka Kuhusu (kitufe cha mviringo i juu).</string>
     <string name="welcome_open">Ukurasa wa kukaribisha</string>
     <string name="tip_console_title">Konsoli yako</string>
     <string name="tip_console">Bento inahitaji IP ya konsoli kwenye Wi-Fi yako. Kwenye PS5: Mipangilio → Mtandao → Tazama hali ya muunganisho → Anwani ya IPv4. Au gusa «Tafuta konsoli yangu». Taa tatu kwenye kadi zinaonyesha kinachojibu: kisakinishi, kipakiaji cha payload na FTP.</string>

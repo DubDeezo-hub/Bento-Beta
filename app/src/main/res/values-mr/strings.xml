@@ -614,7 +614,7 @@
     <string name="welcome_step2">कार्डचे दिवे हिरवे झाले की कन्सोल तयार आहे. एखादा टॅब निवडा आणि सुरू करा. एखादा दिवा बंदच राहिला, तर कार्डवरील «काय चुकले?» कारण सांगते.</string>
     <string name="welcome_step3">एखादी गोष्ट काय करते याची खात्री नाही? तिच्या शेजारच्या छोट्या ? वर टॅप करा.</string>
     <string name="welcome_go">सुरू करा</string>
-    <string name="welcome_again">हे पान «Bento बद्दल» (वर Bento नाव) मधून पुन्हा उघडता येते.</string>
+    <string name="welcome_again">हे पेज About मधून पुन्हा उघडू शकता (वरचे गोल i बटण).</string>
     <string name="welcome_open">स्वागत पान</string>
     <string name="tip_console_title">तुमचा कन्सोल</string>
     <string name="tip_console">Bento ला तुमच्या Wi-Fi वरील कन्सोलचा IP पत्ता लागतो. PS5 वर: सेटिंग्ज → नेटवर्क → कनेक्शन स्थिती पाहा → IPv4 पत्ता. किंवा «माझा कन्सोल शोधा» दाबा. कार्डवरील तीन दिवे दाखवतात की काय उत्तर देते: इंस्टॉलर, payload लोडर आणि FTP.</string>

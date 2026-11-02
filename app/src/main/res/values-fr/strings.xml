@@ -615,7 +615,7 @@
     <string name="welcome_step2">Quand les voyants de la carte passent au vert, la console est prête. Choisis un onglet et c’est parti. Si l’un reste éteint, Qu’est-ce qui ne va pas ? sur la carte t’explique pourquoi.</string>
     <string name="welcome_step3">Tu ne sais pas à quoi sert quelque chose ? Touche le petit ? à côté.</string>
     <string name="welcome_go">Commencer</string>
-    <string name="welcome_again">Tu peux rouvrir cette page depuis À propos (le nom Bento en haut).</string>
+    <string name="welcome_again">Vous pouvez rouvrir cette page depuis À propos (le i rond en haut).</string>
     <string name="welcome_open">Page d’accueil</string>
     <string name="tip_console_title">Ta console</string>
     <string name="tip_console">Bento a besoin de l’adresse IP de la console sur ton Wi-Fi. Sur PS5 : Paramètres → Réseau → Afficher l’état de la connexion → Adresse IPv4. Ou touche Trouver ma console. Les trois voyants de la carte montrent ce qui répond : l’installateur, le chargeur de payloads et le FTP.</string>

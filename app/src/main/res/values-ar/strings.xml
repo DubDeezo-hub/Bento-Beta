@@ -614,7 +614,7 @@
     <string name="welcome_step2">عندما تصبح الأضواء على البطاقة خضراء، يكون الجهاز جاهزًا. اختر تبويبًا وابدأ. إن بقي أحدها مطفأً، فزر «ما المشكلة؟» على البطاقة يخبرك بالسبب.</string>
     <string name="welcome_step3">لست متأكدًا مما يفعله شيء ما؟ اضغط علامة ? الصغيرة بجانبه.</string>
     <string name="welcome_go">لنبدأ</string>
-    <string name="welcome_again">يمكنك فتح هذه الصفحة مجددًا من «حول» (اسم Bento في الأعلى).</string>
+    <string name="welcome_again">يمكنك فتح هذه الصفحة مرة أخرى من «حول» (الزر الدائري i في الأعلى).</string>
     <string name="welcome_open">صفحة الترحيب</string>
     <string name="tip_console_title">جهازك</string>
     <string name="tip_console">يحتاج Bento عنوان IP للجهاز على شبكة Wi-Fi لديك. على PS5: الإعدادات ← الشبكة ← عرض حالة الاتصال ← عنوان IPv4. أو اضغط «ابحث عن جهازي» للبحث عنه. تُظهر الأضواء الثلاثة على البطاقة ما يستجيب: المثبّت ومحمّل Payload وFTP.</string>

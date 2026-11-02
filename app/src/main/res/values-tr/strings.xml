@@ -614,7 +614,7 @@
     <string name="welcome_step2">Karttaki ışıklar yeşile döndüğünde konsol hazırdır. Bir sekme seç ve başla. Biri sönük kalırsa karttaki Sorun ne? nedenini söyler.</string>
     <string name="welcome_step3">Bir şeyin ne yaptığından emin değil misin? Yanındaki küçük ?\'ye dokun.</string>
     <string name="welcome_go">Başlayalım</string>
-    <string name="welcome_again">Bu sayfayı Hakkında\'dan (üstteki Bento adı) yeniden açabilirsin.</string>
+    <string name="welcome_again">Bu sayfayı Hakkında\'dan yeniden açabilirsin (üstteki yuvarlak i).</string>
     <string name="welcome_open">Hoş geldin sayfası</string>
     <string name="tip_console_title">Konsolun</string>
     <string name="tip_console">Bento\'nun konsolun Wi-Fi\'ndeki IP adresine ihtiyacı var. PS5\'te: Ayarlar → Ağ → Bağlantı durumunu görüntüle → IPv4 adresi. Ya da aramak için Konsolumu bul\'a dokun. Karttaki üç ışık neyin yanıt verdiğini gösterir: yükleyici, payload yükleyici ve FTP.</string>

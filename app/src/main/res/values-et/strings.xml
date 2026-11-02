@@ -614,7 +614,7 @@
     <string name="welcome_step2">Kui kaardi tuled lähevad roheliseks, on konsool valmis. Vali vahekaart ja alusta. Kui mõni jääb kustu, ütleb kaardil olev «Mis viga?» sulle, miks.</string>
     <string name="welcome_step3">Pole kindel, mida miski teeb? Puuduta selle kõrval olevat väikest ?.</string>
     <string name="welcome_go">Alusta</string>
-    <string name="welcome_again">Selle lehe saab uuesti avada jaotisest «Teave: Bento» (Bento nimi üleval).</string>
+    <string name="welcome_again">Selle lehe saad uuesti avada jaotisest Teave (ümmargune i üleval).</string>
     <string name="welcome_open">Tervitusleht</string>
     <string name="tip_console_title">Sinu konsool</string>
     <string name="tip_console">Bento vajab konsooli IP-d sinu Wi-Fi-võrgus. PS5-l: Seaded → Võrk → Kuva ühenduse olek → IPv4-aadress. Või puuduta «Leia minu konsool». Kolm tuld kaardil näitavad, mis vastab: installer, payloadi laadija ja FTP.</string>

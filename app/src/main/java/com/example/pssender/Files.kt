@@ -1,5 +1,15 @@
 package com.example.pssender
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.material3.Icon
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -33,6 +43,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -206,17 +217,38 @@ private fun EntryRow(
     onHold: () -> Unit,
     onMenu: () -> Unit
 ) {
+    val cs = MaterialTheme.colorScheme
+    // A capsule: a round icon (folders lit red), the name and details, and the menu
     Row(
-        modifier = Modifier.fillMaxWidth().combinedClickable(onClick = onTap, onLongClick = onHold).padding(vertical = 4.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 3.dp)
+            .clip(RoundedCornerShape(30.dp))
+            .background(if (ticked) cs.primaryContainer else cs.surfaceContainer)
+            .combinedClickable(onClick = onTap, onLongClick = onHold)
+            .padding(start = 6.dp, end = 4.dp, top = 6.dp, bottom = 6.dp),
+        horizontalArrangement = Arrangement.spacedBy(12.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         if (picking) Checkbox(checked = ticked, onCheckedChange = { onTap() })
-        Text(if (e.isDir) "📁" else if (e.isLink) "🔗" else "📄")
+        Box(
+            modifier = Modifier
+                .size(42.dp)
+                .clip(CircleShape)
+                .background(if (e.isDir) bloodGradient else Brush.linearGradient(listOf(cs.surface, cs.surface))),
+            contentAlignment = Alignment.Center
+        ) {
+            Icon(
+                if (e.isDir) FilesIcon else if (e.isLink) WebIcon else FileIcon,
+                contentDescription = null,
+                tint = if (e.isDir) Color.White else cs.onSurfaceVariant,
+                modifier = Modifier.size(20.dp)
+            )
+        }
         Column(modifier = Modifier.weight(1f)) {
-            Text(e.name, maxLines = 1, overflow = TextOverflow.Ellipsis)
+            Text(e.name, maxLines = 1, overflow = TextOverflow.Ellipsis, fontWeight = FontWeight.SemiBold)
             val detail = entryDetail(e)
-            if (detail.isNotEmpty()) Text(detail, style = MaterialTheme.typography.bodySmall)
+            if (detail.isNotEmpty()) Text(detail, style = MaterialTheme.typography.bodySmall, color = cs.onSurfaceVariant)
         }
         if (!picking) TextButton(onClick = onMenu) { Text("⋮") }
     }
@@ -727,6 +759,7 @@ fun FilesTab(
             }
         } else {
             // The buttons wrap onto a second line when a language needs more room than the screen is wide
+            var tools by rememberSaveable { mutableStateOf(false) }
             FlowRow(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                 TextButton(
                     enabled = ready && hasFolder && model.path != "/",
@@ -742,8 +775,10 @@ fun FilesTab(
                         if (!searching) query = ""
                     }
                 ) { Text(str(R.string.files_search)) }
+                // The less-used actions fold away, so the folder's list keeps the room (small phones above all)
+                TextButton(onClick = { tools = !tools }) { Text(if (tools) "⋯ ▴" else "⋯", fontWeight = FontWeight.ExtraBold) }
             }
-            FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            if (tools) FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 Button(
                     enabled = ready && hasFolder,
                     onClick = { uploadPicker.launch(arrayOf("*/*")) }
@@ -758,7 +793,7 @@ fun FilesTab(
                 TextButton(onClick = { showSettings = true }) { Text(str(R.string.files_ftp_settings)) }
             }
             val labels = pinLabels(pins)
-            FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.Center) {
+            if (tools) FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.Center) {
                 // Screenshots and video clips: where the console keeps what the Create button captured
                 OutlinedButton(
                     enabled = ready,
@@ -791,7 +826,7 @@ fun FilesTab(
                     OutlinedButton(enabled = ready, onClick = { showEtaHen = true }) { Text(str(R.string.etahen_title), maxLines = 1) }
                 }
             }
-            run {
+            if (tools) run {
                 var auto by remember(profile.id) { mutableStateOf(CaptureSync.autoOn(ctx, profile.id)) }
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Text(str(R.string.captures_auto), style = MaterialTheme.typography.bodySmall, modifier = Modifier.weight(1f))

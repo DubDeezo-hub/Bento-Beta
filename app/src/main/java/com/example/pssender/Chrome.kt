@@ -72,20 +72,27 @@ fun StatusRing(color: Color, size: Dp = 10.dp) {
 @Composable
 fun ConsoleChip(name: String, accent: Color, onClick: () -> Unit) {
     val cs = MaterialTheme.colorScheme
+    // A pill: the console's first letter in a red circle (ringed in the console's own color), its name, and ▾
     Row(
         modifier = Modifier
-            .widthIn(max = 190.dp)
+            .widthIn(max = 240.dp)
             .clip(CircleShape)
-            .border(1.dp, cs.outlineVariant, CircleShape)
+            .background(cs.surfaceContainer)
             .clickable(onClickLabel = str(R.string.console_switch), onClick = onClick)
-            .padding(horizontal = 12.dp, vertical = 10.dp),
+            .padding(start = 6.dp, end = 14.dp, top = 6.dp, bottom = 6.dp),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(8.dp)
+        horizontalArrangement = Arrangement.spacedBy(10.dp)
     ) {
-        StatusDot(accent)
+        Box(
+            modifier = Modifier.size(34.dp).border(2.dp, accent, CircleShape).padding(3.dp).clip(CircleShape).background(bloodGradient),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(name.trim().take(1).uppercase().ifEmpty { "?" }, color = Color.White, fontWeight = FontWeight.ExtraBold, fontSize = 14.sp)
+        }
         Text(
             name,
-            style = MaterialTheme.typography.labelLarge,
+            style = MaterialTheme.typography.titleSmall,
+            fontWeight = FontWeight.SemiBold,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
             modifier = Modifier.weight(1f, fill = false)
@@ -94,23 +101,28 @@ fun ConsoleChip(name: String, accent: Color, onClick: () -> Unit) {
     }
 }
 
-/** The title with the credit under it, and the selected console on the other side. */
+/** The top of every screen: the console switcher on one side, About & settings as a round button on the other. */
 @Composable
 fun AppHeader(consoleName: String, accent: Color, onAbout: () -> Unit, onConsoles: () -> Unit) {
+    val cs = MaterialTheme.colorScheme
     Row(
         modifier = Modifier.fillMaxWidth().padding(start = 16.dp, top = 12.dp, end = 16.dp, bottom = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        Column(modifier = Modifier.weight(1f).clickable(onClickLabel = str(R.string.about_button), onClick = onAbout)) {
-            Text(str(R.string.app_name), style = MaterialTheme.typography.titleLarge)
-            Text(
-                str(R.string.credit_line, str(R.string.credit_name)),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
+        Box(Modifier.weight(1f)) { ConsoleChip(consoleName, accent, onConsoles) }
+        val about = str(R.string.about_button)
+        Box(
+            modifier = Modifier
+                .size(46.dp)
+                .clip(CircleShape)
+                .background(cs.surfaceContainer)
+                .clickable(onClick = onAbout)
+                .semantics { contentDescription = about },
+            contentAlignment = Alignment.Center
+        ) {
+            Text("i", color = BLOOD_BRIGHT, fontWeight = FontWeight.ExtraBold, fontSize = 18.sp)
         }
-        ConsoleChip(consoleName, accent, onConsoles)
     }
 }
 
@@ -160,7 +172,7 @@ fun ConsoleCard(
     }
     val down = checks.filter { it.port != null && it.up == false }.map { it.label }
     val hint = consoleHint(level, down, type)
-    val shape = RoundedCornerShape(16.dp)
+    val shape = RoundedCornerShape(28.dp)
     Column(
         modifier = modifier
             .fillMaxWidth()
@@ -306,29 +318,31 @@ fun SideRail(items: List<NavItem>, selected: Int, onSelect: (Int) -> Unit) {
             modifier = Modifier
                 .fillMaxHeight()
                 .width(92.dp)
-                .background(cs.surfaceContainer)
+                .background(cs.surfaceContainerLow)
                 .verticalScroll(rememberScrollState())
                 .padding(vertical = 12.dp, horizontal = 6.dp),
             verticalArrangement = Arrangement.spacedBy(6.dp)
         ) {
             items.forEachIndexed { i, item ->
                 val on = i == selected
-                val tint = if (on) cs.primary else cs.onSurfaceVariant
+                val tint = if (on) cs.onSurface else cs.onSurfaceVariant
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .clip(RoundedCornerShape(16.dp))
+                        .clip(RoundedCornerShape(28.dp))
                         .selectable(selected = on, role = Role.Tab, onClick = { onSelect(i) })
                         .padding(vertical = 6.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
+                    // The same round button as the bottom bar: a red circle when it is the open place
                     Box(
                         modifier = Modifier
+                            .size(48.dp)
                             .clip(CircleShape)
-                            .background(if (on) cs.primary.copy(alpha = 0.16f) else Color.Transparent)
-                            .padding(horizontal = 18.dp, vertical = 4.dp)
+                            .then(if (on) Modifier.background(bloodGradient) else Modifier),
+                        contentAlignment = Alignment.Center
                     ) {
-                        Icon(item.icon, contentDescription = null, tint = tint, modifier = Modifier.size(24.dp))
+                        Icon(item.icon, contentDescription = null, tint = if (on) Color.White else cs.onSurfaceVariant, modifier = Modifier.size(24.dp))
                     }
                     Text(
                         str(item.label),
@@ -385,7 +399,7 @@ fun TransferCard(
     if (t.label.isEmpty()) return
     val cs = MaterialTheme.colorScheme
     val sc = statusColors()
-    val shape = RoundedCornerShape(16.dp)
+    val shape = RoundedCornerShape(28.dp)
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -600,7 +614,7 @@ fun StatusStrip(text: String, onDismiss: () -> Unit) {
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 12.dp, vertical = 4.dp)
-            .clip(RoundedCornerShape(12.dp))
+            .clip(RoundedCornerShape(24.dp))
             .background(cs.surfaceVariant)
             .clickable(onClickLabel = str(R.string.status_hide), onClick = onDismiss)
             .padding(horizontal = 14.dp, vertical = 10.dp),

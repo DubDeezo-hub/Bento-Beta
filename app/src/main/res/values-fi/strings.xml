@@ -614,7 +614,7 @@
     <string name="welcome_step2">Kun kortin valot muuttuvat vihreiksi, konsoli on valmis. Valitse välilehti ja aloita. Jos jokin jää sammuksiin, kortin Mikä on vialla? kertoo miksi.</string>
     <string name="welcome_step3">Etkö ole varma, mitä jokin tekee? Napauta sen vieressä olevaa pientä ?-merkkiä.</string>
     <string name="welcome_go">Aloita</string>
-    <string name="welcome_again">Voit avata tämän sivun uudelleen kohdasta Tietoja (Bento-nimi ylhäällä).</string>
+    <string name="welcome_again">Voit avata tämän sivun uudelleen kohdasta Tietoja (pyöreä i ylhäällä).</string>
     <string name="welcome_open">Tervetulosivu</string>
     <string name="tip_console_title">Konsolisi</string>
     <string name="tip_console">Bento tarvitsee konsolin IP-osoitteen Wi-Fi-verkossasi. PS5:ssä: Asetukset → Verkko → Näytä yhteyden tila → IPv4-osoite. Tai napauta Etsi konsolini etsiäksesi sen. Kortin kolme valoa näyttävät, mikä vastaa: asennusohjelma, payload-lataaja ja FTP.</string>

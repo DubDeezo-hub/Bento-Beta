@@ -31,7 +31,7 @@ import androidx.compose.ui.unit.dp
 fun UnfinishedCard(items: List<TransferRequest>, onContinue: () -> Unit, onDiscard: () -> Unit) {
     if (items.isEmpty()) return
     val cs = MaterialTheme.colorScheme
-    val shape = RoundedCornerShape(16.dp)
+    val shape = RoundedCornerShape(28.dp)
     val (names, more) = unfinishedNames(items)
     Column(
         modifier = Modifier

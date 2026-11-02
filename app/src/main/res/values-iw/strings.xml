@@ -614,7 +614,7 @@
     <string name="welcome_step2">כשהנורות בכרטיס נהיות ירוקות, הקונסולה מוכנה. בחרו לשונית והתחילו. אם אחת נשארת כבויה, \"מה הבעיה?\" בכרטיס יגיד לכם למה.</string>
     <string name="welcome_step3">לא בטוחים מה משהו עושה? הקישו על ה-? הקטן לידו.</string>
     <string name="welcome_go">בואו נתחיל</string>
-    <string name="welcome_again">אפשר לפתוח את הדף הזה שוב מ\"אודות\" (השם Bento למעלה).</string>
+    <string name="welcome_again">אפשר לפתוח את הדף הזה שוב מ\'אודות\' (ה-i העגול למעלה).</string>
     <string name="welcome_open">דף הפתיחה</string>
     <string name="tip_console_title">הקונסולה שלכם</string>
     <string name="tip_console">‏Bento צריך את כתובת ה-IP של הקונסולה ברשת ה-Wi-Fi שלכם. ב-PS5: הגדרות ← רשת ← הצגת מצב החיבור ← כתובת IPv4. או הקישו \"מצא את הקונסולה שלי\" כדי לחפש אותה. שלוש הנורות בכרטיס מראות מה עונה: המתקין, טוען ה-payloads ו-FTP.</string>

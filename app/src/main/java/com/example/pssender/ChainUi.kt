@@ -258,7 +258,7 @@ fun ChainCard(s: ChainState, onStop: () -> Unit, onDismiss: () -> Unit) {
     if (s.name.isEmpty()) return
     val cs = MaterialTheme.colorScheme
     val sc = statusColors()
-    val shape = RoundedCornerShape(16.dp)
+    val shape = RoundedCornerShape(28.dp)
     Column(
         modifier = Modifier
             .fillMaxWidth()

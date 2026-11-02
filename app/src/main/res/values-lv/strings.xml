@@ -614,7 +614,7 @@
     <string name="welcome_step2">Kad kartes indikatori kļūst zaļi, konsole ir gatava. Izvēlieties cilni un sāciet. Ja kāds paliek izslēgts, kartē esošais «Kas par vainu?» pateiks, kāpēc.</string>
     <string name="welcome_step3">Neesat pārliecināts, ko kaut kas dara? Pieskarieties mazajai ? blakus.</string>
     <string name="welcome_go">Sākt</string>
-    <string name="welcome_again">Šo lapu var atvērt vēlreiz sadaļā «Par Bento» (Bento nosaukums augšā).</string>
+    <string name="welcome_again">Šo lapu var atkal atvērt sadaļā Par (apaļais i augšā).</string>
     <string name="welcome_open">Sveiciena lapa</string>
     <string name="tip_console_title">Jūsu konsole</string>
     <string name="tip_console">Bento nepieciešams konsoles IP jūsu Wi-Fi tīklā. PS5: Iestatījumi → Tīkls → Skatīt savienojuma statusu → IPv4 adrese. Vai pieskarieties «Atrast manu konsoli». Trīs indikatori kartē rāda, kas atbild: instalētājs, payload ielādētājs un FTP.</string>

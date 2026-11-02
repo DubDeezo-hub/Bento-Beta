@@ -254,7 +254,7 @@ object UpdatePrefs {
 @Composable
 fun UpdateBanner(release: ReleaseInfo, onDownload: () -> Unit, onLater: () -> Unit, modifier: Modifier = Modifier) {
     val cs = MaterialTheme.colorScheme
-    val shape = RoundedCornerShape(16.dp)
+    val shape = RoundedCornerShape(28.dp)
     Column(
         modifier = modifier
             .fillMaxWidth()

@@ -614,7 +614,7 @@
     <string name="welcome_step2">Ha a kártya lámpái zöldre váltanak, a konzol kész. Válassz egy lapot, és rajta. Ha valamelyik nem gyullad ki, a kártyán a Mi a baj? megmondja, miért.</string>
     <string name="welcome_step3">Nem tudod, mit csinál valami? Koppints a mellette lévő kis ?-re.</string>
     <string name="welcome_go">Kezdés</string>
-    <string name="welcome_again">Ezt az oldalt újra megnyithatod a Névjegyből (a Bento név fent).</string>
+    <string name="welcome_again">Ezt az oldalt a Névjegyből nyithatod meg újra (a kerek i fent).</string>
     <string name="welcome_open">Üdvözlőoldal</string>
     <string name="tip_console_title">A konzolod</string>
     <string name="tip_console">A Bentónak szüksége van a konzol IP-címére a Wi-Fi-hálózatodon. PS5-ön: Beállítások → Hálózat → Kapcsolat állapotának megtekintése → IPv4-cím. Vagy koppints a Konzolom keresésére. A kártya három lámpája mutatja, mi válaszol: a telepítő, a payload-betöltő és az FTP.</string>

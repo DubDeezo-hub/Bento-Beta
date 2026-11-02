@@ -152,7 +152,7 @@ fun Foldable(title: String, tip: Tip? = null, summary: String = "", startOpen: B
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(14.dp))
+            .clip(RoundedCornerShape(26.dp))
             .background(cs.surfaceContainerLow)
     ) {
         Row(

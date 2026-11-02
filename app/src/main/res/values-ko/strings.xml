@@ -614,7 +614,7 @@
     <string name="welcome_step2">카드의 표시등이 초록색이 되면 콘솔이 준비된 것입니다. 탭을 골라 시작하세요. 꺼진 표시등이 있으면 카드의 무엇이 문제인가요?에서 이유를 알려줍니다.</string>
     <string name="welcome_step3">기능이 헷갈리면 옆에 있는 작은 ?를 누르세요.</string>
     <string name="welcome_go">시작하기</string>
-    <string name="welcome_again">이 페이지는 «Bento 정보»(위쪽의 Bento 이름)에서 다시 열 수 있습니다.</string>
+    <string name="welcome_again">이 페이지는 정보에서 다시 열 수 있습니다(위쪽의 동그란 i 버튼).</string>
     <string name="welcome_open">환영 페이지</string>
     <string name="tip_console_title">내 콘솔</string>
     <string name="tip_console">Bento에는 Wi-Fi에서 콘솔의 IP가 필요합니다. PS5에서는 설정 → 네트워크 → 연결 상태 보기 → IPv4 주소입니다. 또는 «내 콘솔 찾기»를 누르세요. 카드의 표시등 세 개는 설치 프로그램, 페이로드 로더, FTP 중 무엇이 응답하는지 보여줍니다.</string>

@@ -614,7 +614,7 @@
     <string name="welcome_step2">ਜਦੋਂ ਕਾਰਡ ਦੀਆਂ ਬੱਤੀਆਂ ਹਰੀਆਂ ਹੋ ਜਾਣ, ਕੰਸੋਲ ਤਿਆਰ ਹੈ। ਕੋਈ ਟੈਬ ਚੁਣੋ ਅਤੇ ਸ਼ੁਰੂ ਕਰੋ। ਜੇ ਕੋਈ ਬੱਤੀ ਬੰਦ ਰਹੇ, ਤਾਂ ਕਾਰਡ \'ਤੇ «ਕੀ ਗੜਬੜ ਹੈ?» ਕਾਰਨ ਦੱਸਦਾ ਹੈ।</string>
     <string name="welcome_step3">ਪੱਕਾ ਨਹੀਂ ਕਿ ਕੋਈ ਚੀਜ਼ ਕੀ ਕਰਦੀ ਹੈ? ਉਸਦੇ ਕੋਲ ਵਾਲੇ ਛੋਟੇ ? ਉੱਤੇ ਟੈਪ ਕਰੋ।</string>
     <string name="welcome_go">ਸ਼ੁਰੂ ਕਰੋ</string>
-    <string name="welcome_again">ਇਹ ਪੰਨਾ «Bento ਬਾਰੇ» (ਉੱਪਰ Bento ਨਾਮ) ਤੋਂ ਦੁਬਾਰਾ ਖੋਲ੍ਹਿਆ ਜਾ ਸਕਦਾ ਹੈ।</string>
+    <string name="welcome_again">ਇਹ ਪੰਨਾ ਤੁਸੀਂ About ਤੋਂ ਦੁਬਾਰਾ ਖੋਲ੍ਹ ਸਕਦੇ ਹੋ (ਉੱਪਰ ਦਾ ਗੋਲ i ਬਟਨ)।</string>
     <string name="welcome_open">ਸੁਆਗਤ ਪੰਨਾ</string>
     <string name="tip_console_title">ਤੁਹਾਡਾ ਕੰਸੋਲ</string>
     <string name="tip_console">Bento ਨੂੰ ਤੁਹਾਡੇ Wi-Fi ਉੱਤੇ ਕੰਸੋਲ ਦਾ IP ਪਤਾ ਚਾਹੀਦਾ ਹੈ। PS5 ਉੱਤੇ: ਸੈਟਿੰਗਾਂ → ਨੈੱਟਵਰਕ → ਕਨੈਕਸ਼ਨ ਸਥਿਤੀ ਦੇਖੋ → IPv4 ਪਤਾ। ਜਾਂ «ਮੇਰਾ ਕੰਸੋਲ ਲੱਭੋ» ਦਬਾਓ। ਕਾਰਡ ਉੱਤੇ ਤਿੰਨ ਬੱਤੀਆਂ ਦੱਸਦੀਆਂ ਹਨ ਕਿ ਕੀ ਜਵਾਬ ਦੇ ਰਿਹਾ ਹੈ: ਇੰਸਟਾਲਰ, payload ਲੋਡਰ ਅਤੇ FTP।</string>

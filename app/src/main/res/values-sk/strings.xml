@@ -614,7 +614,7 @@
     <string name="welcome_step2">Keď kontrolky na karte zozelenajú, konzola je pripravená. Vyberte kartu a do toho. Ak niektorá zostane zhasnutá, Čo je zle? na karte vám povie prečo.</string>
     <string name="welcome_step3">Neviete, čo niečo robí? Ťuknite na malý ? vedľa.</string>
     <string name="welcome_go">Začať</string>
-    <string name="welcome_again">Túto stránku môžete znova otvoriť z O aplikácii (názov Bento hore).</string>
+    <string name="welcome_again">Túto stránku môžete znova otvoriť v časti O aplikácii (okrúhle i hore).</string>
     <string name="welcome_open">Uvítacia stránka</string>
     <string name="tip_console_title">Vaša konzola</string>
     <string name="tip_console">Bento potrebuje IP adresu konzoly vo vašej sieti Wi-Fi. Na PS5: Nastavenia → Sieť → Zobraziť stav pripojenia → Adresa IPv4. Alebo ťuknite na Nájsť moju konzolu a nechajte ju vyhľadať. Tri kontrolky na karte ukazujú, čo odpovedá: inštalátor, zavádzač payloadov a FTP.</string>

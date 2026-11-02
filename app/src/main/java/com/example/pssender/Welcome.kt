@@ -61,7 +61,7 @@ object WelcomeState {
 fun WelcomeScreen(onDone: () -> Unit) {
     val cs = MaterialTheme.colorScheme
     Column(
-        modifier = Modifier.fillMaxSize().background(cs.background),
+        modifier = Modifier.fillMaxSize().background(pageBackground(AppLook.black)),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Column(
@@ -85,12 +85,13 @@ fun WelcomeScreen(onDone: () -> Unit) {
             }
 
             WelcomeCard(str(R.string.welcome_tabs_title)) {
-                WelcomeTab(InstallIcon, R.string.nav_install, R.string.welcome_tab_install)
+                // The places of the bottom bar (installing from links is on Home, uploading in Files, the browser in More)
+                WelcomeTab(HomeIcon, R.string.nav_home, R.string.welcome_tab_install)
                 WelcomeTab(PayloadIcon, R.string.nav_payload, R.string.welcome_tab_payload)
                 WelcomeTab(UploadIcon, R.string.nav_upload, R.string.welcome_tab_upload)
                 WelcomeTab(FilesIcon, R.string.nav_files, R.string.welcome_tab_files)
-                WelcomeTab(WebIcon, R.string.nav_web, R.string.welcome_tab_web)
                 WelcomeTab(MemoryIcon, R.string.nav_memory, R.string.welcome_tab_memory)
+                WelcomeTab(MoreIcon, R.string.nav_more, R.string.welcome_tab_web)
             }
 
             WelcomeCard(str(R.string.welcome_start_title)) {
@@ -114,7 +115,7 @@ private fun WelcomeCard(title: String, content: @Composable () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(18.dp))
+            .clip(RoundedCornerShape(30.dp))
             .background(MaterialTheme.colorScheme.surfaceContainer)
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(10.dp)

@@ -615,7 +615,7 @@
     <string name="welcome_step2">När lamporna på kortet blir gröna är konsolen redo. Välj en flik och kör. Om en förblir släckt berättar Vad är fel? på kortet varför.</string>
     <string name="welcome_step3">Osäker på vad något gör? Tryck på det lilla ? bredvid.</string>
     <string name="welcome_go">Kom igång</string>
-    <string name="welcome_again">Du kan öppna sidan igen från Om (namnet Bento högst upp).</string>
+    <string name="welcome_again">Du kan öppna den här sidan igen från Om (det runda i:et högst upp).</string>
     <string name="welcome_open">Välkomstsida</string>
     <string name="tip_console_title">Din konsol</string>
     <string name="tip_console">Bento behöver konsolens IP-adress på ditt wifi. På en PS5: Inställningar → Nätverk → Visa anslutningsstatus → IPv4-adress. Eller tryck på Hitta min konsol. De tre lamporna på kortet visar vad som svarar: installeraren, payload-laddaren och FTP.</string>

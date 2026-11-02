@@ -614,7 +614,7 @@
     <string name="welcome_step2">కార్డ్ లైట్లు ఆకుపచ్చగా మారినప్పుడు కన్సోల్ సిద్ధం. ఒక ట్యాబ్ ఎంచుకుని ప్రారంభించండి. ఏదైనా ఆఫ్‌లోనే ఉంటే, కార్డ్‌పై ఉన్న «ఏమి సమస్య?» ఎందుకో చెబుతుంది.</string>
     <string name="welcome_step3">ఏదైనా ఏమి చేస్తుందో ఖచ్చితంగా తెలియదా? దాని పక్కన ఉన్న చిన్న ?ను నొక్కండి.</string>
     <string name="welcome_go">ప్రారంభించండి</string>
-    <string name="welcome_again">ఈ పేజీని «Bento గురించి» (పైన Bento పేరు) నుండి మళ్లీ తెరవవచ్చు.</string>
+    <string name="welcome_again">ఈ పేజీని About నుండి మళ్లీ తెరవవచ్చు (పైన ఉన్న గుండ్రని i).</string>
     <string name="welcome_open">స్వాగత పేజీ</string>
     <string name="tip_console_title">మీ కన్సోల్</string>
     <string name="tip_console">Bentoకి మీ Wi-Fiలో కన్సోల్ IP చిరునామా కావాలి. PS5లో: సెట్టింగ్‌లు → నెట్‌వర్క్ → కనెక్షన్ స్థితిని చూడండి → IPv4 చిరునామా. లేదా «నా కన్సోల్‌ను కనుగొను» నొక్కండి. కార్డ్‌పై ఉన్న మూడు లైట్లు ఏది సమాధానం ఇస్తుందో చూపుతాయి: ఇన్‌స్టాలర్, payload లోడర్, FTP.</string>

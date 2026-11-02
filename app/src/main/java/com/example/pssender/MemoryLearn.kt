@@ -212,7 +212,7 @@ fun LearnCoachBar() {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(16.dp))
+            .clip(RoundedCornerShape(28.dp))
             .background(cs.primary.copy(alpha = 0.12f))
             .padding(12.dp),
         verticalArrangement = Arrangement.spacedBy(6.dp)
@@ -322,7 +322,7 @@ private fun PracticeCard() {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .clip(RoundedCornerShape(12.dp))
+                .clip(RoundedCornerShape(24.dp))
                 .background(MaterialTheme.colorScheme.surfaceContainerHigh)
                 .padding(10.dp),
             verticalArrangement = Arrangement.spacedBy(4.dp)

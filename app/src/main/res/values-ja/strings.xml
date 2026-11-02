@@ -614,7 +614,7 @@
     <string name="welcome_step2">カードのランプが緑になれば、コンソールの準備は完了です。タブを選んで始めましょう。消えたままのランプがあれば、カードの「どこがおかしい？」で理由がわかります。</string>
     <string name="welcome_step3">機能がわからないときは、横の小さな ? をタップしてください。</string>
     <string name="welcome_go">はじめる</string>
-    <string name="welcome_again">このページは「Bentoについて」（上部の Bento の名前）からいつでも開けます。</string>
+    <string name="welcome_again">このページは「情報」からもう一度開けます（上の丸い i ボタン）。</string>
     <string name="welcome_open">ようこそページ</string>
     <string name="tip_console_title">コンソール</string>
     <string name="tip_console">Bento には Wi-Fi 上のコンソールの IP が必要です。PS5 では 設定 → ネットワーク → 接続状態を見る → IPv4 アドレス。または「コンソールを探す」をタップしてください。カードの 3 つのランプは、インストーラー、ペイロードローダー、FTP のどれが応答しているかを示します。</string>

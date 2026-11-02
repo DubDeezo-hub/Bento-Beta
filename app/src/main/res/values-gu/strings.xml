@@ -614,7 +614,7 @@
     <string name="welcome_step2">કાર્ડની લાઇટો લીલી થાય ત્યારે કન્સોલ તૈયાર છે. કોઈ ટૅબ પસંદ કરો અને શરૂ કરો. કોઈ લાઇટ બંધ રહે, તો કાર્ડ પરનું «શું ખોટું છે?» કારણ જણાવે છે.</string>
     <string name="welcome_step3">કંઈક શું કરે છે તે ખાતરી નથી? તેની બાજુના નાના ? પર ટૅપ કરો.</string>
     <string name="welcome_go">શરૂ કરો</string>
-    <string name="welcome_again">આ પેજ «Bento વિશે» (ઉપર Bento નામ) માંથી ફરી ખોલી શકાય છે.</string>
+    <string name="welcome_again">તમે આ પેજ ફરી About માંથી ખોલી શકો છો (ઉપરનું ગોળ i બટન).</string>
     <string name="welcome_open">સ્વાગત પેજ</string>
     <string name="tip_console_title">તમારું કન્સોલ</string>
     <string name="tip_console">Bento ને તમારા Wi-Fi પર કન્સોલનું IP સરનામું જોઈએ. PS5 પર: સેટિંગ્સ → નેટવર્ક → કનેક્શન સ્થિતિ જુઓ → IPv4 સરનામું. અથવા «મારું કન્સોલ શોધો» દબાવો. કાર્ડ પરની ત્રણ લાઇટો બતાવે છે કે શું જવાબ આપે છે: ઇન્સ્ટૉલર, payload લોડર અને FTP.</string>

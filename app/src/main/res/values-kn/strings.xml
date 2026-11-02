@@ -614,7 +614,7 @@
     <string name="welcome_step2">ಕಾರ್ಡ್‌ನ ದೀಪಗಳು ಹಸಿರಾದಾಗ ಕನ್ಸೋಲ್ ಸಿದ್ಧ. ಒಂದು ಟ್ಯಾಬ್ ಆರಿಸಿ ಪ್ರಾರಂಭಿಸಿ. ಯಾವುದಾದರೂ ಆಫ್ ಆಗಿಯೇ ಉಳಿದರೆ, ಕಾರ್ಡ್‌ನಲ್ಲಿರುವ «ಏನು ಸಮಸ್ಯೆ?» ಕಾರಣ ಹೇಳುತ್ತದೆ.</string>
     <string name="welcome_step3">ಯಾವುದಾದರೂ ಏನು ಮಾಡುತ್ತದೆ ಎಂದು ಖಚಿತವಿಲ್ಲವೇ? ಅದರ ಪಕ್ಕದ ಸಣ್ಣ ? ಟ್ಯಾಪ್ ಮಾಡಿ.</string>
     <string name="welcome_go">ಪ್ರಾರಂಭಿಸಿ</string>
-    <string name="welcome_again">ಈ ಪುಟವನ್ನು «Bento ಕುರಿತು» (ಮೇಲಿರುವ Bento ಹೆಸರು) ನಿಂದ ಮತ್ತೆ ತೆರೆಯಬಹುದು.</string>
+    <string name="welcome_again">ಈ ಪುಟವನ್ನು About ನಿಂದ ಮತ್ತೆ ತೆರೆಯಬಹುದು (ಮೇಲಿನ ವೃತ್ತಾಕಾರದ i).</string>
     <string name="welcome_open">ಸ್ವಾಗತ ಪುಟ</string>
     <string name="tip_console_title">ನಿಮ್ಮ ಕನ್ಸೋಲ್</string>
     <string name="tip_console">Bento ಗೆ ನಿಮ್ಮ Wi-Fi ನಲ್ಲಿ ಕನ್ಸೋಲ್‌ನ IP ವಿಳಾಸ ಬೇಕು. PS5 ನಲ್ಲಿ: ಸೆಟ್ಟಿಂಗ್‌ಗಳು → ನೆಟ್‌ವರ್ಕ್ → ಸಂಪರ್ಕ ಸ್ಥಿತಿ ವೀಕ್ಷಿಸಿ → IPv4 ವಿಳಾಸ. ಅಥವಾ «ನನ್ನ ಕನ್ಸೋಲ್ ಹುಡುಕಿ» ಒತ್ತಿ. ಕಾರ್ಡ್‌ನ ಮೂರು ದೀಪಗಳು ಏನು ಉತ್ತರಿಸುತ್ತಿದೆ ಎಂದು ತೋರಿಸುತ್ತವೆ: ಇನ್‌ಸ್ಟಾಲರ್, payload ಲೋಡರ್ ಮತ್ತು FTP.</string>

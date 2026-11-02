@@ -614,7 +614,7 @@
     <string name="welcome_step2">Kad svjetla na kartici pozelene, konzola je spremna. Odaberite karticu i krenite. Ako neko ostane ugašeno, Što ne valja? na kartici reći će vam zašto.</string>
     <string name="welcome_step3">Niste sigurni što nešto radi? Dodirnite mali ? pokraj toga.</string>
     <string name="welcome_go">Započni</string>
-    <string name="welcome_again">Ovu stranicu možete ponovno otvoriti iz O aplikaciji (naziv Bento na vrhu).</string>
+    <string name="welcome_again">Ovu stranicu možeš ponovno otvoriti iz izbornika O aplikaciji (okrugli i na vrhu).</string>
     <string name="welcome_open">Stranica dobrodošlice</string>
     <string name="tip_console_title">Vaša konzola</string>
     <string name="tip_console">Bento treba IP adresu konzole na vašoj Wi-Fi mreži. Na PS5: Postavke → Mreža → Prikaži status veze → IPv4 adresa. Ili dodirnite Pronađi moju konzolu da je potražite. Tri svjetla na kartici pokazuju što se javlja: instalacijski program, učitavač payloada i FTP.</string>

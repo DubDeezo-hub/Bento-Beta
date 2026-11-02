@@ -615,7 +615,7 @@
     <string name="welcome_step2">Quando le luci sulla scheda diventano verdi, la console è pronta. Scegli una scheda e via. Se una resta spenta, Cosa non va? sulla scheda ti dice perché.</string>
     <string name="welcome_step3">Non sai a cosa serve qualcosa? Tocca il piccolo ? accanto.</string>
     <string name="welcome_go">Inizia</string>
-    <string name="welcome_again">Puoi riaprire questa pagina da Info (il nome Bento in alto).</string>
+    <string name="welcome_again">Puoi riaprire questa pagina da Info (la i rotonda in alto).</string>
     <string name="welcome_open">Pagina di benvenuto</string>
     <string name="tip_console_title">La tua console</string>
     <string name="tip_console">Bento ha bisogno dell’indirizzo IP della console sulla tua rete Wi-Fi. Su PS5: Impostazioni → Rete → Visualizza stato connessione → Indirizzo IPv4. Oppure tocca Trova la mia console. Le tre luci sulla scheda mostrano cosa risponde: l’installer, il loader dei payload e l’FTP.</string>

@@ -614,7 +614,7 @@
     <string name="welcome_step2">Apabila lampu kad bertukar hijau, konsol sudah sedia. Pilih tab dan mulakan. Jika ada yang kekal padam, «Apa masalahnya?» pada kad memberitahu sebabnya.</string>
     <string name="welcome_step3">Tidak pasti fungsi sesuatu? Ketik ? kecil di sebelahnya.</string>
     <string name="welcome_go">Mula</string>
-    <string name="welcome_again">Halaman ini boleh dibuka semula dari «Perihal Bento» (nama Bento di bahagian atas).</string>
+    <string name="welcome_again">Anda boleh buka halaman ini semula dari Perihal (butang bulat i di atas).</string>
     <string name="welcome_open">Halaman alu-aluan</string>
     <string name="tip_console_title">Konsol anda</string>
     <string name="tip_console">Bento memerlukan IP konsol pada Wi-Fi anda. Pada PS5: Tetapan → Rangkaian → Lihat status sambungan → Alamat IPv4. Atau ketik «Cari konsol saya». Tiga lampu pada kad menunjukkan apa yang menjawab: pemasang, pemuat payload dan FTP.</string>

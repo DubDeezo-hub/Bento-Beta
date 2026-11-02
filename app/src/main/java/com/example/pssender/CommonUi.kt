@@ -69,24 +69,25 @@ internal fun Chip(label: String, selected: Boolean, enabled: Boolean = true, onC
             else -> cs.onSurfaceVariant.copy(alpha = 0.6f)
         },
         maxLines = 1,
+        // A pill: red into black when chosen
         modifier = Modifier
             .clip(RoundedCornerShape(50))
-            .background(if (selected) cs.primary else cs.surfaceContainerHigh)
+            .then(if (selected) Modifier.background(bloodGradient) else Modifier.background(cs.surfaceContainerHigh))
             .clickable(enabled = enabled, onClick = onClick)
-            .padding(horizontal = 14.dp, vertical = 8.dp)
+            .padding(horizontal = 16.dp, vertical = 9.dp)
     )
 }
 
-/** A rounded box in the card color, like the console card at the top. */
+/** A round-cornered panel in the card color (red-tinted black), with room around what's in it. */
 @Composable
 internal fun Panel(content: @Composable ColumnScope.() -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(16.dp))
+            .clip(RoundedCornerShape(32.dp))
             .background(MaterialTheme.colorScheme.surfaceContainer)
-            .padding(12.dp),
-        verticalArrangement = Arrangement.spacedBy(4.dp),
+            .padding(horizontal = 18.dp, vertical = 16.dp),
+        verticalArrangement = Arrangement.spacedBy(6.dp),
         content = content
     )
 }
@@ -98,10 +99,10 @@ internal fun ListRow(title: String, detail: String, highlight: Boolean, enabled:
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(12.dp))
-            .background(if (highlight) cs.primary.copy(alpha = 0.10f) else cs.surfaceContainerLow)
+            .clip(RoundedCornerShape(28.dp))
+            .background(if (highlight) cs.primaryContainer else cs.surfaceContainerLow)
             .clickable(enabled = enabled, onClick = onClick)
-            .padding(horizontal = 12.dp, vertical = 8.dp)
+            .padding(horizontal = 18.dp, vertical = 10.dp)
     ) {
         Text(
             title,

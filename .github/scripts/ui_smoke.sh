@@ -692,6 +692,9 @@ PY
 
   # etaHEN settings: read from the console over FTP and shown as switches
   files_folders
+  # etaHEN settings sit among the folded-away actions ("⋯")
+  dump && tap_text "⋯" || true
+  sleep 2
   if scroll_find 8 "$(ui string etahen_title)" && tap_text "$(ui string etahen_title)"; then
     if wait_text 15 "$(ui string etahen_ftp)"; then
       pass "etaHEN settings are read from the console and shown"

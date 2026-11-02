@@ -599,7 +599,7 @@
     <string name="welcome_step2">Wenn die Lichter auf der Karte grün werden, ist die Konsole bereit. Wähle einen Tab und leg los. Bleibt eines aus, sagt dir „Was ist los?“ auf der Karte, warum.</string>
     <string name="welcome_step3">Nicht sicher, was etwas macht? Tippe auf das kleine ? daneben.</string>
     <string name="welcome_go">Los geht’s</string>
-    <string name="welcome_again">Du kannst diese Seite unter „Über“ wieder öffnen (der Name Bento oben).</string>
+    <string name="welcome_again">Du kannst diese Seite unter „Über“ wieder öffnen (das runde i oben).</string>
     <string name="welcome_open">Willkommensseite</string>
     <string name="tip_console_title">Deine Konsole</string>
     <string name="tip_console">Bento braucht die IP-Adresse der Konsole in deinem WLAN. Auf einer PS5: Einstellungen → Netzwerk → Verbindungsstatus anzeigen → IPv4-Adresse. Oder tippe auf „Meine Konsole finden“. Die drei Lichter auf der Karte zeigen, was antwortet: der Installer, der Payload-Loader und FTP.</string>

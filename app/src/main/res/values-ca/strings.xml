@@ -614,7 +614,7 @@
     <string name="welcome_step2">Quan els llums de la targeta es posen verds, la consola està a punt. Tria una pestanya i comença. Si un es queda apagat, Què passa? a la targeta et diu per què.</string>
     <string name="welcome_step3">No saps segur què fa alguna cosa? Toca el petit ? del costat.</string>
     <string name="welcome_go">Comença</string>
-    <string name="welcome_again">Pots tornar a obrir aquesta pàgina des de «Quant a Bento» (el nom de Bento a dalt).</string>
+    <string name="welcome_again">Pots tornar a obrir aquesta pàgina des de Quant a (la i rodona de dalt).</string>
     <string name="welcome_open">Pàgina de benvinguda</string>
     <string name="tip_console_title">La teva consola</string>
     <string name="tip_console">Bento necessita la IP de la consola a la teva Wi-Fi. A la PS5: Configuració → Xarxa → Mostra l’estat de la connexió → Adreça IPv4. O toca «Troba la meva consola». Els tres llums de la targeta mostren què respon: l’instal·lador, el carregador de payloads i l’FTP.</string>

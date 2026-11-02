@@ -8,6 +8,23 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.sp
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
@@ -133,6 +150,7 @@ suspend fun shelfAddFromUri(ctx: Context, uri: Uri): String =
  * The shelf (saved payloads with one-tap Send), the payload chains, and the old "pick a file and send it once" flow.
  * [shelfVersion] changes whenever something else adds to the shelf, so the list reloads.
  */
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun PayloadTab(
     host: String,
@@ -232,7 +250,12 @@ fun PayloadTab(
                 }
             },
             confirmButton = { TextButton(onClick = { details = null }) { Text(str(R.string.action_close)) } },
-            dismissButton = { TextButton(enabled = sha.isNotEmpty(), onClick = { copyText(ctx, "sha256", sha, AppText.get(R.string.help_copied)) }) { Text(str(R.string.shelf_copy_sha)) } }
+            dismissButton = {
+                Row {
+                    TextButton(onClick = { removing = item; details = null }) { Text(str(R.string.action_remove)) }
+                    TextButton(enabled = sha.isNotEmpty(), onClick = { copyText(ctx, "sha256", sha, AppText.get(R.string.help_copied)) }) { Text(str(R.string.shelf_copy_sha)) }
+                }
+            }
         )
     }
 
@@ -241,20 +264,20 @@ fun PayloadTab(
         if (shelf.isEmpty()) {
             Text(str(R.string.payload_shelf_empty, ActiveConsole.type.hen), style = MaterialTheme.typography.bodySmall)
         }
-        shelf.forEach { item ->
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
-                Column(modifier = Modifier.weight(1f).clickable { details = item }) {
-                    Text(item.name, maxLines = 1, overflow = TextOverflow.Ellipsis)
-                    val checked = remember(item.name, item.size) { ShelfChecks.verified(ctx, item.name) }
-                    Text(
-                        fmtBytes(item.size) + if (checked != null) " · " + str(R.string.shelf_verified) else "",
-                        style = MaterialTheme.typography.bodySmall,
-                        color = if (checked != null) statusColors().good else MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-                Button(
-                    enabled = canSend,
-                    onClick = {
+        // The shelf as round tiles: tap a tile for its details (checksum, Remove), Send under it
+        FlowRow(
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            shelf.forEach { item ->
+                val checked = remember(item.name, item.size) { ShelfChecks.verified(ctx, item.name) }
+                ShelfTile(
+                    item = item,
+                    verified = checked != null,
+                    canSend = canSend,
+                    onDetails = { details = item },
+                    onSend = {
                         guarded(item.name) {
                             status = AppText.get(R.string.payload_sending, item.name)
                             scope.launch {
@@ -264,8 +287,7 @@ fun PayloadTab(
                             }
                         }
                     }
-                ) { Text(str(R.string.action_send)) }
-                TextButton(onClick = { removing = item }) { Text(str(R.string.action_remove)) }
+                )
             }
         }
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
@@ -321,5 +343,45 @@ fun PayloadTab(
         Foldable(str(R.string.settings_section), Tip.PAYLOAD_PORT, summary = str(R.string.settings_port_summary, port)) {
             Field(str(R.string.payload_loader_port), port, onPortChange)
         }
+    }
+}
+
+/** One payload on the shelf: a round tile with its first letter (a small red tick when verified), its name and size, Send. */
+@Composable
+private fun ShelfTile(item: ShelfItem, verified: Boolean, canSend: Boolean, onDetails: () -> Unit, onSend: () -> Unit) {
+    val cs = MaterialTheme.colorScheme
+    val big = ReloadGuard.kindOf(item.name) != null
+    Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.width(96.dp)) {
+        Box(contentAlignment = Alignment.BottomEnd) {
+            Box(
+                modifier = Modifier
+                    .size(80.dp)
+                    .clip(CircleShape)
+                    .background(Brush.radialGradient(listOf(Color(0xFF2A0A10), cs.surface)))
+                    .border(2.dp, if (big) BLOOD_BRIGHT else cs.outlineVariant, CircleShape)
+                    .clickable(onClick = onDetails),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(item.name.take(1).lowercase(), fontSize = 26.sp, fontWeight = FontWeight.ExtraBold)
+            }
+            if (verified) {
+                Box(
+                    modifier = Modifier.size(22.dp).clip(CircleShape).background(BLOOD_BRIGHT),
+                    contentAlignment = Alignment.Center
+                ) { Text("✓", color = Color(0xFF1A0206), fontWeight = FontWeight.ExtraBold, fontSize = 12.sp) }
+            }
+        }
+        Text(item.name, style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold, maxLines = 2, overflow = TextOverflow.Ellipsis, textAlign = TextAlign.Center, modifier = Modifier.padding(top = 6.dp))
+        Text(fmtBytes(item.size), style = MaterialTheme.typography.labelSmall, color = cs.onSurfaceVariant)
+        Box(
+            modifier = Modifier
+                .padding(top = 6.dp)
+                .height(36.dp)
+                .clip(CircleShape)
+                .background(if (canSend) bloodGradient else Brush.linearGradient(listOf(cs.surfaceContainerHigh, cs.surfaceContainerHigh)))
+                .clickable(enabled = canSend, onClick = onSend)
+                .padding(horizontal = 20.dp),
+            contentAlignment = Alignment.Center
+        ) { Text(str(R.string.action_send), color = if (canSend) Color.White else cs.onSurfaceVariant, fontWeight = FontWeight.Bold) }
     }
 }

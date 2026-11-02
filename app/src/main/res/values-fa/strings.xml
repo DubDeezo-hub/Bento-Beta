@@ -614,7 +614,7 @@
     <string name="welcome_step2">وقتی چراغ‌های کارت سبز شدند، کنسول آماده است. یک زبانه را انتخاب کنید و شروع کنید. اگر یکی خاموش ماند، «مشکل چیست؟» روی کارت دلیلش را می‌گوید.</string>
     <string name="welcome_step3">مطمئن نیستید چیزی چه می‌کند؟ روی ? کوچک کنارش بزنید.</string>
     <string name="welcome_go">شروع</string>
-    <string name="welcome_again">می‌توانید این صفحه را دوباره از «درباره» (نام Bento در بالا) باز کنید.</string>
+    <string name="welcome_again">می‌توانید این صفحه را دوباره از «درباره» باز کنید (دکمهٔ گرد i در بالا).</string>
     <string name="welcome_open">صفحه خوشامد</string>
     <string name="tip_console_title">کنسول شما</string>
     <string name="tip_console">‏Bento نشانی IP کنسول را در Wi-Fi شما لازم دارد. روی PS5: تنظیمات ← شبکه ← مشاهده وضعیت اتصال ← نشانی IPv4. یا «یافتن کنسول من» را بزنید تا پیدایش کند. سه چراغ روی کارت نشان می‌دهند چه چیزی پاسخ می‌دهد: نصب‌کننده، بارگذار payload و FTP.</string>

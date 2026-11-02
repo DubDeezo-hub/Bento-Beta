@@ -614,7 +614,7 @@
     <string name="welcome_step2">เมื่อไฟบนการ์ดเป็นสีเขียว คอนโซลก็พร้อมแล้ว เลือกแท็บแล้วเริ่มได้เลย หากมีไฟดวงใดไม่ติด «มีปัญหาอะไร?» บนการ์ดจะบอกสาเหตุ</string>
     <string name="welcome_step3">ไม่แน่ใจว่าอะไรทำอะไร? แตะ ? เล็ก ๆ ที่อยู่ข้าง ๆ</string>
     <string name="welcome_go">เริ่มต้น</string>
-    <string name="welcome_again">เปิดหน้านี้อีกครั้งได้จาก «เกี่ยวกับ Bento» (ชื่อ Bento ด้านบน)</string>
+    <string name="welcome_again">เปิดหน้านี้อีกครั้งได้จากเกี่ยวกับ (ปุ่ม i วงกลมด้านบน)</string>
     <string name="welcome_open">หน้าต้อนรับ</string>
     <string name="tip_console_title">คอนโซลของคุณ</string>
     <string name="tip_console">Bento ต้องใช้ IP ของคอนโซลบน Wi-Fi ของคุณ บน PS5: การตั้งค่า → เครือข่าย → ดูสถานะการเชื่อมต่อ → ที่อยู่ IPv4 หรือกด «ค้นหาคอนโซลของฉัน» ไฟสามดวงบนการ์ดแสดงว่าอะไรตอบกลับ: ตัวติดตั้ง ตัวโหลด payload และ FTP</string>

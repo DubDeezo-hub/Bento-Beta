@@ -614,7 +614,7 @@
     <string name="welcome_step2">جب کارڈ کی بتیاں سبز ہو جائیں تو کنسول تیار ہے۔ کوئی ٹیب چنیں اور شروع کریں۔ اگر کوئی بتی بند رہے تو کارڈ پر «کیا مسئلہ ہے؟» وجہ بتاتا ہے۔</string>
     <string name="welcome_step3">یقین نہیں کہ کوئی چیز کیا کرتی ہے؟ اس کے ساتھ والے چھوٹے ? پر ٹیپ کریں۔</string>
     <string name="welcome_go">شروع کریں</string>
-    <string name="welcome_again">یہ صفحہ «بارے میں» (اوپر Bento کا نام) سے دوبارہ کھولا جا سکتا ہے۔</string>
+    <string name="welcome_again">آپ یہ صفحہ About سے دوبارہ کھول سکتے ہیں (اوپر کا گول i بٹن)۔</string>
     <string name="welcome_open">خوش آمدید صفحہ</string>
     <string name="tip_console_title">آپ کا کنسول</string>
     <string name="tip_console">‏Bento کو آپ کے Wi-Fi پر کنسول کا IP ایڈریس چاہیے۔ PS5 پر: سیٹنگز ← نیٹ ورک ← کنکشن کی حالت دیکھیں ← IPv4 ایڈریس۔ یا «میرا کنسول تلاش کریں» دبائیں۔ کارڈ پر تین بتیاں دکھاتی ہیں کہ کیا جواب دے رہا ہے: انسٹالر، payload لوڈر اور FTP۔</string>

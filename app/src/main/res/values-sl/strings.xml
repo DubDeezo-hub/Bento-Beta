@@ -614,7 +614,7 @@
     <string name="welcome_step2">Ko lučke na kartici postanejo zelene, je konzola pripravljena. Izberite zavihek in začnite. Če kakšna ostane ugasnjena, vam Kaj je narobe? na kartici pove, zakaj.</string>
     <string name="welcome_step3">Niste prepričani, kaj nekaj počne? Tapnite majhen ? zraven.</string>
     <string name="welcome_go">Začni</string>
-    <string name="welcome_again">To stran lahko znova odprete v O aplikaciji (ime Bento na vrhu).</string>
+    <string name="welcome_again">To stran lahko znova odpreš v razdelku O aplikaciji (okrogli i na vrhu).</string>
     <string name="welcome_open">Pozdravna stran</string>
     <string name="tip_console_title">Vaša konzola</string>
     <string name="tip_console">Bento potrebuje naslov IP konzole v vašem omrežju Wi-Fi. Na PS5: Nastavitve → Omrežje → Prikaži stanje povezave → Naslov IPv4. Ali tapnite Najdi mojo konzolo, da jo poiščete. Tri lučke na kartici kažejo, kaj se odziva: namestitveni program, nalagalnik payloadov in FTP.</string>

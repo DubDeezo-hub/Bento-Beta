@@ -614,7 +614,7 @@
     <string name="welcome_step2">Kai kortelės lemputės tampa žalios, konsolė paruošta. Pasirinkite skirtuką ir pradėkite. Jei kuri nors lieka užgesusi, kortelėje esantis «Kas negerai?» paaiškins kodėl.</string>
     <string name="welcome_step3">Nesate tikri, ką kas daro? Palieskite šalia esantį mažą ?.</string>
     <string name="welcome_go">Pradėti</string>
-    <string name="welcome_again">Šį puslapį vėl galite atidaryti per «Apie Bento» (Bento pavadinimas viršuje).</string>
+    <string name="welcome_again">Šį puslapį vėl atidarysite skiltyje Apie (apvalus i viršuje).</string>
     <string name="welcome_open">Sveikinimo puslapis</string>
     <string name="tip_console_title">Jūsų konsolė</string>
     <string name="tip_console">Bento reikia konsolės IP jūsų Wi-Fi tinkle. PS5: Nustatymai → Tinklas → Peržiūrėti ryšio būseną → IPv4 adresas. Arba palieskite «Rasti mano konsolę». Trys lemputės kortelėje rodo, kas atsako: diegimo programa, payload įkėlimo programa ir FTP.</string>

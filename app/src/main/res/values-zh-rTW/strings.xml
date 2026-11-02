@@ -614,7 +614,7 @@
     <string name="welcome_step2">卡片上的指示燈變綠時，主機就準備好了。選一個分頁開始吧。如果有指示燈一直不亮，卡片上的「哪裡出問題了？」會告訴你原因。</string>
     <string name="welcome_step3">不確定某個功能的作用？點旁邊的小 ?。</string>
     <string name="welcome_go">開始</string>
-    <string name="welcome_again">可從「關於 Bento」（上方的 Bento 名稱）再次開啟此頁。</string>
+    <string name="welcome_again">可以在「關於」中再次開啟此頁面（頂部的圓形 i 按鈕）。</string>
     <string name="welcome_open">歡迎頁面</string>
     <string name="tip_console_title">你的主機</string>
     <string name="tip_console">Bento 需要主機在你的 Wi-Fi 上的 IP。PS5 上：設定 → 網路 → 檢視連線狀態 → IPv4 位址。或點「尋找我的主機」。卡片上的三盞燈顯示哪些服務有回應：安裝程式、Payload 載入器和 FTP。</string>

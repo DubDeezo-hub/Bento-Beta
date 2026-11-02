@@ -1,5 +1,6 @@
 package com.example.pssender
 
+import android.content.res.Configuration
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -38,6 +39,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
@@ -206,7 +208,9 @@ fun HomeTab(
         }
     }
 
-    Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+    // Upright: one column. On its side (wide and low): the ring on the left, the rest on the right
+    val wide = LocalConfiguration.current.orientation == Configuration.ORIENTATION_LANDSCAPE
+    val ringPart: @Composable () -> Unit = {
         Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxWidth().padding(top = 4.dp)) {
             StatusRing(up, counted.size, consoleHeadline(level, down, true, type), host.trim(), onEdit)
             Row(
@@ -245,6 +249,8 @@ fun HomeTab(
             }
         }
 
+    }
+    val restPart: @Composable () -> Unit = {
         SectionTitle(str(R.string.home_quick_send))
         if (shelf.isEmpty()) {
             Text(str(R.string.payload_shelf_empty, type.hen), style = MaterialTheme.typography.bodySmall, color = cs.onSurfaceVariant)
@@ -265,5 +271,16 @@ fun HomeTab(
 
         // The old Install tab: it brings its own title
         Box(Modifier.padding(top = 12.dp)) { install() }
+    }
+    if (wide) {
+        Row(horizontalArrangement = Arrangement.spacedBy(20.dp), verticalAlignment = Alignment.Top) {
+            Column(Modifier.weight(0.45f)) { ringPart() }
+            Column(Modifier.weight(0.55f), verticalArrangement = Arrangement.spacedBy(10.dp)) { restPart() }
+        }
+    } else {
+        Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            ringPart()
+            restPart()
+        }
     }
 }

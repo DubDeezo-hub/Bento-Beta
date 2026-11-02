@@ -168,7 +168,7 @@ fun ServeSection(consoleName: String, host: String, installPort: String, onBefor
         }
     }
 
-    val shape = RoundedCornerShape(16.dp)
+    val shape = RoundedCornerShape(28.dp)
     Column(
         modifier = Modifier
             .fillMaxWidth()
