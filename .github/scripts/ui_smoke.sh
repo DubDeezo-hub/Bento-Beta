@@ -784,16 +784,16 @@ PY
         if wait_log 60 "[ftp] received bento-web-test.bin"; then
           pass "a download from the browser goes through the site's redirect straight to the console"
         else
-          soft "web download" "the file did not reach the console's FTP. Its log: $(tail -4 "$FAKE_LOG" | tr '\n' ' ')"
+          fail "web download" "the file did not reach the console's FTP. Its log: $(tail -4 "$FAKE_LOG" | tr '\n' ' ')"
         fi
       else
-        soft "web download" "no download choices after tapping the link. Seen: $(ui texts "$XML" 2> /dev/null)"
+        fail "web download" "no download choices after tapping the link. Seen: $(ui texts "$XML" 2> /dev/null)"
       fi
     else
-      soft "web download" "the test page or its link did not show. Seen: $(ui texts "$XML" 2> /dev/null)"
+      fail "web download" "the test page or its link did not show. Seen: $(ui texts "$XML" 2> /dev/null)"
     fi
   else
-    soft "web download" "no home page field. Seen: $(ui texts "$XML" 2> /dev/null)"
+    fail "web download" "no home page field. Seen: $(ui texts "$XML" 2> /dev/null)"
   fi
   shot "fake-web-download"
   adb shell input keyevent KEYCODE_BACK # leaves the browser
