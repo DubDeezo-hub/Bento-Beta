@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="bento-icon.png" width="128" height="128" alt="Bento app icon: a cyan and black bento box">
+  <img src="bento-icon.png" width="128" height="128" alt="Bento app icon: a blood-red and black bento box">
 </p>
 
 <h1 align="center">Bento</h1>

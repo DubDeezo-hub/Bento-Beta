@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../bento-icon.png" width="128" height="128" alt="Bento app icon: a cyan and black bento box with five compartments">
+  <img src="../bento-icon.png" width="128" height="128" alt="Bento app icon: a blood-red and black bento box with five compartments">
 </p>
 
 <h1 align="center">Bento: the full guide</h1>

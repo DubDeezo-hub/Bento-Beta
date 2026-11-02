@@ -1,5 +1,9 @@
 package com.example.pssender
 
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.tween
+import androidx.compose.ui.graphics.graphicsLayer
 import android.Manifest
 import android.content.Context
 import android.content.Intent
@@ -554,6 +558,27 @@ fun SenderApp(
                         modifier = Modifier.padding(start = 16.dp, end = 16.dp, bottom = 8.dp)
                     )
                 }
+                // Changing places: the new screen slides in from the side it lies on in the bar (right when going right)
+                // and fades up, in about a quarter of a second
+                val enter = remember { Animatable(1f) }
+                var lastPlace by remember { mutableStateOf(tab) }
+                var slideFrom by remember { mutableStateOf(0f) }
+                var firstPlace by remember { mutableStateOf(true) }
+                LaunchedEffect(tab, onWeb) {
+                    // The first screen comes in with the opening (Intro.kt); only later changes slide
+                    if (firstPlace) {
+                        firstPlace = false
+                        return@LaunchedEffect
+                    }
+                    slideFrom = when {
+                        tab > lastPlace -> 1f
+                        tab < lastPlace -> -1f
+                        else -> 0f
+                    }
+                    lastPlace = tab
+                    enter.snapTo(0f)
+                    enter.animateTo(1f, tween(240, easing = FastOutSlowInEasing))
+                }
                 // A tablet (or a big phone on its side) gets the tabs down the left side and the transfers on the right
                 val mainPane: @Composable ColumnScope.() -> Unit = {
                     // Home shows the console in its ring, and the web page and More need the room: the card is left out there
@@ -569,7 +594,15 @@ fun SenderApp(
                         onCheck = { showDiagnose = true }
                     )
                     Column(
-                        modifier = Modifier.weight(1f).padding(start = 16.dp, top = if (onWeb) 4.dp else 12.dp, end = 16.dp, bottom = 4.dp),
+                        modifier = Modifier
+                            .weight(1f)
+                            .graphicsLayer {
+                                val left = 1f - enter.value
+                                alpha = 1f - left * 0.85f
+                                translationX = slideFrom * left * 28.dp.toPx()
+                                translationY = (if (slideFrom == 0f) left else 0f) * 18.dp.toPx()
+                            }
+                            .padding(start = 16.dp, top = if (onWeb) 4.dp else 12.dp, end = 16.dp, bottom = 4.dp),
                         verticalArrangement = Arrangement.spacedBy(12.dp)
                     ) {
                         // Files: the console's folders, or uploading to it
