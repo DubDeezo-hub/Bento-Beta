@@ -569,7 +569,7 @@ fun SenderApp(
                                 onStartMany = startTransfers,
                                 modifier = Modifier.weight(1f)
                             )
-                            tab == TAB_MEMORY -> MemoryTab(host, Modifier.weight(1f))
+                            tab == TAB_MEMORY -> MemoryTab(host, active.name, Modifier.weight(1f))
                             else -> {
                                 // The form tabs scroll, so nothing is cut off on small screens
                                 Column(

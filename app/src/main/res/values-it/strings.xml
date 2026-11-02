@@ -1167,4 +1167,9 @@
     <string name="look_text_large">Grande</string>
     <string name="look_text_larger">Più grande</string>
     <string name="diag_log_title">Il log della console mostra %1$d problemi recenti</string>
+    <string name="crashdiary_title">Diario dei crash</string>
+    <string name="crashdiary_desc">Quando la console smette di rispondere (probabilmente un crash), Bento annota l\'ora, le ultime righe del log e cosa hai inviato poco prima. Le note restano sul telefono.</string>
+    <string name="crashdiary_empty">Ancora nessun crash annotato. Attiva il log della console in Memoria e lascialo attivo mentre giochi.</string>
+    <string name="crashdiary_share">Condividi</string>
+    <string name="crashdiary_clear_all">Elimina tutto</string>
 </resources>

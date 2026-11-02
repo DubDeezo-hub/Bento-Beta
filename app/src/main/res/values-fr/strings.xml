@@ -1167,4 +1167,9 @@
     <string name="look_text_large">Grande</string>
     <string name="look_text_larger">Plus grande</string>
     <string name="diag_log_title">Le journal de la console montre %1$d problèmes récents</string>
+    <string name="crashdiary_title">Journal des plantages</string>
+    <string name="crashdiary_desc">Quand la console cesse de répondre (sans doute un plantage), Bento note l\'heure, les dernières lignes du journal et ce que vous avez envoyé juste avant. Les notes restent sur le téléphone.</string>
+    <string name="crashdiary_empty">Aucun plantage noté pour l\'instant. Activez le journal de la console dans Mémoire et laissez-le tourner pendant que vous jouez.</string>
+    <string name="crashdiary_share">Partager</string>
+    <string name="crashdiary_clear_all">Tout supprimer</string>
 </resources>

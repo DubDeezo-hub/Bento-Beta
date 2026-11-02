@@ -1166,4 +1166,9 @@
     <string name="look_text_large">크게</string>
     <string name="look_text_larger">더 크게</string>
     <string name="diag_log_title">콘솔 로그에 최근 문제 %1$d개가 있습니다</string>
+    <string name="crashdiary_title">충돌 기록</string>
+    <string name="crashdiary_desc">콘솔이 응답을 멈추면(충돌일 가능성) Bento는 시간, 로그의 마지막 줄, 그리고 바로 전에 보낸 것을 기록합니다. 기록은 휴대폰에 남습니다.</string>
+    <string name="crashdiary_empty">아직 기록된 충돌이 없습니다. 메모리에서 콘솔 로그를 켜고 플레이하는 동안 켜 두세요.</string>
+    <string name="crashdiary_share">공유</string>
+    <string name="crashdiary_clear_all">모두 삭제</string>
 </resources>

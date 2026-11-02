@@ -1166,4 +1166,9 @@
     <string name="look_text_large">كبير</string>
     <string name="look_text_larger">أكبر</string>
     <string name="diag_log_title">يُظهر سجل الجهاز %1$d مشكلات حديثة</string>
+    <string name="crashdiary_title">سجل الأعطال</string>
+    <string name="crashdiary_desc">عندما يتوقف الجهاز عن الاستجابة (على الأرجح عطل)، يسجّل Bento الوقت وآخر أسطر السجل وما أرسلته قبل ذلك مباشرة. تبقى الملاحظات على الهاتف.</string>
+    <string name="crashdiary_empty">لا توجد أعطال مسجّلة بعد. شغّل سجل الجهاز في الذاكرة واتركه يعمل أثناء اللعب.</string>
+    <string name="crashdiary_share">مشاركة</string>
+    <string name="crashdiary_clear_all">حذف الكل</string>
 </resources>

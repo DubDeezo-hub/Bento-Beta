@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Suuri</string>
     <string name="look_text_larger">Suurempi</string>
     <string name="diag_log_title">Konsolin lokissa on %1$d viimeaikaista ongelmaa</string>
+    <string name="crashdiary_title">Kaatumispäiväkirja</string>
+    <string name="crashdiary_desc">Kun konsoli lakkaa vastaamasta (todennäköisesti kaatuminen), Bento merkitsee ajan, lokin viimeiset rivit ja sen, mitä lähetit juuri ennen. Merkinnät pysyvät puhelimessa.</string>
+    <string name="crashdiary_empty">Kaatumisia ei ole vielä merkitty. Ota konsolin loki käyttöön Muistissa ja jätä se käyntiin pelatessasi.</string>
+    <string name="crashdiary_share">Jaa</string>
+    <string name="crashdiary_clear_all">Poista kaikki</string>
 </resources>

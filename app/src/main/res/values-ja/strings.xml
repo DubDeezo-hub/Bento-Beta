@@ -1166,4 +1166,9 @@
     <string name="look_text_large">大</string>
     <string name="look_text_larger">特大</string>
     <string name="diag_log_title">コンソールのログに最近の問題が %1$d 件あります</string>
+    <string name="crashdiary_title">クラッシュ記録</string>
+    <string name="crashdiary_desc">本体が応答しなくなったとき（おそらくクラッシュ）、Bento は時刻、ログの最後の行、その直前に送ったものを記録します。記録は電話内に残ります。</string>
+    <string name="crashdiary_empty">まだ記録されたクラッシュはありません。メモリで本体ログをオンにし、プレイ中はそのままにしてください。</string>
+    <string name="crashdiary_share">共有</string>
+    <string name="crashdiary_clear_all">すべて削除</string>
 </resources>

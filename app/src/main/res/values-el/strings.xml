@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Μεγάλο</string>
     <string name="look_text_larger">Μεγαλύτερο</string>
     <string name="diag_log_title">Το αρχείο καταγραφής της κονσόλας δείχνει %1$d πρόσφατα προβλήματα</string>
+    <string name="crashdiary_title">Ημερολόγιο σφαλμάτων</string>
+    <string name="crashdiary_desc">Όταν η κονσόλα σταματά να απαντά (πιθανό σφάλμα), το Bento σημειώνει την ώρα, τις τελευταίες γραμμές του αρχείου και τι στείλατε λίγο πριν. Οι σημειώσεις μένουν στο τηλέφωνο.</string>
+    <string name="crashdiary_empty">Δεν έχουν σημειωθεί σφάλματα ακόμη. Ενεργοποιήστε το αρχείο κονσόλας στη Μνήμη και αφήστε το να τρέχει όσο παίζετε.</string>
+    <string name="crashdiary_share">Κοινή χρήση</string>
+    <string name="crashdiary_clear_all">Διαγραφή όλων</string>
 </resources>

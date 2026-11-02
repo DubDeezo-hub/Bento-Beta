@@ -1168,4 +1168,9 @@
     <string name="look_text_large">Groß</string>
     <string name="look_text_larger">Größer</string>
     <string name="diag_log_title">Das Konsolen-Log zeigt %1$d letzte Probleme</string>
+    <string name="crashdiary_title">Absturz-Tagebuch</string>
+    <string name="crashdiary_desc">Wenn die Konsole nicht mehr antwortet (wahrscheinlich ein Absturz), notiert Bento die Uhrzeit, die letzten Protokollzeilen und was du kurz davor gesendet hast. Die Notizen bleiben auf dem Telefon.</string>
+    <string name="crashdiary_empty">Noch keine Abstürze notiert. Schalte das Konsolenprotokoll im Speicher ein und lass es beim Spielen laufen.</string>
+    <string name="crashdiary_share">Teilen</string>
+    <string name="crashdiary_clear_all">Alle löschen</string>
 </resources>

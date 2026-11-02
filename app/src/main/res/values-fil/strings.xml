@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Malaki</string>
     <string name="look_text_larger">Mas malaki</string>
     <string name="diag_log_title">May %1$d kamakailang problema sa log ng console</string>
+    <string name="crashdiary_title">Talaan ng pag-crash</string>
+    <string name="crashdiary_desc">Kapag huminto sa pagtugon ang console (malamang na pag-crash), itatala ng Bento ang oras, ang huling mga linya ng log, at kung ano ang ipinadala mo bago iyon. Nananatili sa telepono ang mga tala.</string>
+    <string name="crashdiary_empty">Wala pang naitatalang pag-crash. I-on ang console log sa Memory at hayaang tumakbo habang naglalaro.</string>
+    <string name="crashdiary_share">Ibahagi</string>
+    <string name="crashdiary_clear_all">Burahin lahat</string>
 </resources>

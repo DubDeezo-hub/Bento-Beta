@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Veľká</string>
     <string name="look_text_larger">Väčšia</string>
     <string name="diag_log_title">Log konzoly ukazuje nedávne problémy: %1$d</string>
+    <string name="crashdiary_title">Denník pádov</string>
+    <string name="crashdiary_desc">Keď konzola prestane odpovedať (pravdepodobne pád), Bento zaznamená čas, posledné riadky protokolu a to, čo ste odoslali tesne predtým. Poznámky zostávajú v telefóne.</string>
+    <string name="crashdiary_empty">Zatiaľ nie sú zaznamenané žiadne pády. Zapnite protokol konzoly v Pamäti a nechajte ho bežať počas hrania.</string>
+    <string name="crashdiary_share">Zdieľať</string>
+    <string name="crashdiary_clear_all">Odstrániť všetko</string>
 </resources>

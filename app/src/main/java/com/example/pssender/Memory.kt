@@ -126,7 +126,7 @@ internal sealed class MemoryDialog {
 }
 
 @Composable
-fun MemoryTab(host: String, modifier: Modifier = Modifier) {
+fun MemoryTab(host: String, label: String, modifier: Modifier = Modifier) {
     val ctx = LocalContext.current
     val m = MemorySession
     m.attach(ctx)
@@ -180,7 +180,7 @@ fun MemoryTab(host: String, modifier: Modifier = Modifier) {
         }
         if (LearnCoach.lesson != null) item { LearnCoachBar() }
         if (m.view == MemoryView.LOG) {
-            logItems(host, ctx)
+            logItems(host, label, ctx)
         } else if (m.view == MemoryView.LEARN) {
             learnItems()
         } else if (s != null) {

@@ -80,13 +80,16 @@ fun MoreTab(
     onAbout: () -> Unit
 ) {
     var showLanguage by remember { mutableStateOf(false) }
+    var showDiary by remember { mutableStateOf(false) }
     if (showLanguage) LanguageDialog { showLanguage = false }
+    if (showDiary) CrashDiaryDialog { showDiary = false }
     Column(verticalArrangement = Arrangement.spacedBy(10.dp), modifier = Modifier.padding(top = 4.dp)) {
         Text(str(R.string.nav_more), fontSize = 28.sp, fontWeight = FontWeight.ExtraBold, modifier = Modifier.padding(bottom = 8.dp))
         RoundRow(str(R.string.nav_web), icon = WebIcon, onClick = onWeb)
         RoundRow(str(R.string.nav_upload), icon = UploadIcon, onClick = onUpload)
         RoundRow(str(R.string.etahen_title), letter = "e", enabled = onEtaHen != null, onClick = { onEtaHen?.invoke() })
         RoundRow(str(R.string.consoles_title), letter = "C", onClick = onConsoles)
+        RoundRow(str(R.string.crashdiary_title), letter = "!", onClick = { showDiary = true })
         RoundRow(str(R.string.language_title), letter = "A", onClick = { showLanguage = true })
         RoundRow(str(R.string.about_button), letter = "i", onClick = onAbout)
     }

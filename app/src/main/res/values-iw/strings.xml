@@ -1166,4 +1166,9 @@
     <string name="look_text_large">גדול</string>
     <string name="look_text_larger">גדול יותר</string>
     <string name="diag_log_title">יומן הקונסולה מציג %1$d בעיות אחרונות</string>
+    <string name="crashdiary_title">יומן קריסות</string>
+    <string name="crashdiary_desc">כשהקונסולה מפסיקה להגיב (כנראה קריסה), Bento רושם את השעה, את השורות האחרונות ביומן ואת מה ששלחת ממש לפני כן. ההערות נשארות בטלפון.</string>
+    <string name="crashdiary_empty">עדיין לא נרשמו קריסות. הפעילו את יומן הקונסולה בזיכרון והשאירו אותו פועל בזמן המשחק.</string>
+    <string name="crashdiary_share">שיתוף</string>
+    <string name="crashdiary_clear_all">מחק הכול</string>
 </resources>

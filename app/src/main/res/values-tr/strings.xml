@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Büyük</string>
     <string name="look_text_larger">Daha büyük</string>
     <string name="diag_log_title">Konsol günlüğü %1$d yakın tarihli sorun gösteriyor</string>
+    <string name="crashdiary_title">Çökme günlüğü</string>
+    <string name="crashdiary_desc">Konsol yanıt vermeyi bıraktığında (büyük olasılıkla çökme), Bento saati, günlüğün son satırlarını ve hemen öncesinde gönderdiğinizi not eder. Notlar telefonda kalır.</string>
+    <string name="crashdiary_empty">Henüz not edilmiş çökme yok. Bellek bölümünde konsol günlüğünü açın ve oynarken çalışır durumda bırakın.</string>
+    <string name="crashdiary_share">Paylaş</string>
+    <string name="crashdiary_clear_all">Tümünü sil</string>
 </resources>

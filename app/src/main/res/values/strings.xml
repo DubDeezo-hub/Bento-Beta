@@ -701,6 +701,11 @@
     <string name="klog_stopped">Stopped.</string>
     <string name="klog_empty">No lines yet. Tap Start, then do something on the console.</string>
     <string name="klog_no_match">No line matches the filter.</string>
+    <string name="crashdiary_title">Crash diary</string>
+    <string name="crashdiary_desc">When the console stops answering (a likely crash), Bento notes the time, the last log lines and what you sent just before. The notes stay on the phone.</string>
+    <string name="crashdiary_empty">No crashes noted yet. Turn on the console log in Memory and leave it running while you play.</string>
+    <string name="crashdiary_share">Share</string>
+    <string name="crashdiary_clear_all">Delete all</string>
     <string name="tip_mem_log_title">Console log</string>
     <string name="tip_mem_log">Shows the console\'s own log as it is written: messages from the system, from etaHEN and from payloads. Start connects to port 3232 (ps5debug-NG serves it). Pause holds the screen still while lines keep coming in; Follow keeps the newest line in sight. Type in the filter to see only lines with that text, and Copy to paste the lines into a bug report.</string>
     <string name="files_view_browse">Folders</string>

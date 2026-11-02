@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Mare</string>
     <string name="look_text_larger">Mai mare</string>
     <string name="diag_log_title">Jurnalul consolei arată %1$d probleme recente</string>
+    <string name="crashdiary_title">Jurnal de blocări</string>
+    <string name="crashdiary_desc">Când consola nu mai răspunde (probabil o blocare), Bento notează ora, ultimele linii din jurnal și ce ai trimis chiar înainte. Notele rămân pe telefon.</string>
+    <string name="crashdiary_empty">Nicio blocare notată încă. Activează jurnalul consolei în Memorie și lasă-l pornit în timp ce joci.</string>
+    <string name="crashdiary_share">Distribuie</string>
+    <string name="crashdiary_clear_all">Șterge tot</string>
 </resources>

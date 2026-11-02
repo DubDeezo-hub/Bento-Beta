@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Besar</string>
     <string name="look_text_larger">Lebih besar</string>
     <string name="diag_log_title">Log konsol menunjukkan %1$d masalah terkini</string>
+    <string name="crashdiary_title">Diari ranap</string>
+    <string name="crashdiary_desc">Apabila konsol berhenti bertindak balas (berkemungkinan ranap), Bento mencatat masa, baris log terakhir, dan apa yang anda hantar sebelum itu. Catatan kekal pada telefon.</string>
+    <string name="crashdiary_empty">Belum ada ranap dicatat. Hidupkan log konsol dalam Memori dan biarkan ia berjalan semasa anda bermain.</string>
+    <string name="crashdiary_share">Kongsi</string>
+    <string name="crashdiary_clear_all">Padam semua</string>
 </resources>

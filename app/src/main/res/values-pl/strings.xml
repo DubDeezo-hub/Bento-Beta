@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Duży</string>
     <string name="look_text_larger">Większy</string>
     <string name="diag_log_title">Log konsoli pokazuje ostatnie problemy: %1$d</string>
+    <string name="crashdiary_title">Dziennik awarii</string>
+    <string name="crashdiary_desc">Gdy konsola przestaje odpowiadać (prawdopodobnie awaria), Bento zapisuje godzinę, ostatnie wiersze dziennika oraz to, co wysłano tuż przedtem. Notatki pozostają w telefonie.</string>
+    <string name="crashdiary_empty">Nie zapisano jeszcze żadnych awarii. Włącz dziennik konsoli w Pamięci i zostaw go uruchomionego podczas grania.</string>
+    <string name="crashdiary_share">Udostępnij</string>
+    <string name="crashdiary_clear_all">Usuń wszystko</string>
 </resources>

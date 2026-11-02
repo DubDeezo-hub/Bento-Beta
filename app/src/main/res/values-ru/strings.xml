@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Крупный</string>
     <string name="look_text_larger">Ещё крупнее</string>
     <string name="diag_log_title">Журнал консоли показывает недавние проблемы: %1$d</string>
+    <string name="crashdiary_title">Журнал сбоев</string>
+    <string name="crashdiary_desc">Когда консоль перестаёт отвечать (вероятно, сбой), Bento записывает время, последние строки журнала и то, что вы отправили прямо перед этим. Записи остаются на телефоне.</string>
+    <string name="crashdiary_empty">Сбоев пока не записано. Включите журнал консоли в разделе «Память» и оставьте его работать во время игры.</string>
+    <string name="crashdiary_share">Поделиться</string>
+    <string name="crashdiary_clear_all">Удалить все</string>
 </resources>

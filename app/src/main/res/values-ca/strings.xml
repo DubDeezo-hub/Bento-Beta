@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Gran</string>
     <string name="look_text_larger">Més gran</string>
     <string name="diag_log_title">El registre de la consola mostra %1$d problemes recents</string>
+    <string name="crashdiary_title">Diari de fallades</string>
+    <string name="crashdiary_desc">Quan la consola deixa de respondre (probablement una fallada), Bento anota l\'hora, les darreres línies del registre i què havies enviat just abans. Les notes es queden al telèfon.</string>
+    <string name="crashdiary_empty">Encara no hi ha fallades anotades. Activa el registre de la consola a Memòria i deixa\'l funcionant mentre jugues.</string>
+    <string name="crashdiary_share">Comparteix</string>
+    <string name="crashdiary_clear_all">Esborra-ho tot</string>
 </resources>

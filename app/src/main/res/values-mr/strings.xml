@@ -1166,4 +1166,9 @@
     <string name="look_text_large">मोठा</string>
     <string name="look_text_larger">आणखी मोठा</string>
     <string name="diag_log_title">कन्सोल लॉगमध्ये अलीकडील %1$d अडचणी आहेत</string>
+    <string name="crashdiary_title">क्रॅश डायरी</string>
+    <string name="crashdiary_desc">कन्सोल प्रतिसाद देणे थांबवते तेव्हा (बहुधा क्रॅश), Bento वेळ, लॉगच्या शेवटच्या ओळी आणि त्याच्या आधी तुम्ही काय पाठवले ते नोंदवते. नोंदी फोनवरच राहतात.</string>
+    <string name="crashdiary_empty">अजून कोणताही क्रॅश नोंदवलेला नाही. मेमरीमध्ये कन्सोल लॉग चालू करा आणि खेळताना तो चालू ठेवा.</string>
+    <string name="crashdiary_share">शेअर करा</string>
+    <string name="crashdiary_clear_all">सर्व हटवा</string>
 </resources>

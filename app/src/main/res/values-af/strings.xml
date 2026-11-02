@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Groot</string>
     <string name="look_text_larger">Groter</string>
     <string name="diag_log_title">Die konsolelog wys %1$d onlangse probleme</string>
+    <string name="crashdiary_title">Ongeluk-dagboek</string>
+    <string name="crashdiary_desc">Wanneer die konsole ophou antwoord (waarskynlik \'n fout), noteer Bento die tyd, die laaste log-reels en wat jy net daarvoor gestuur het. Die notas bly op die foon.</string>
+    <string name="crashdiary_empty">Nog geen ongelukke genoteer nie. Skakel die konsole-log in Geheue aan en laat dit loop terwyl jy speel.</string>
+    <string name="crashdiary_share">Deel</string>
+    <string name="crashdiary_clear_all">Vee alles uit</string>
 </resources>

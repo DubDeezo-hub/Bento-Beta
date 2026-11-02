@@ -121,6 +121,9 @@ object KernelLog {
     private var loaded = false
     private var appCtx: Context? = null
 
+    /** The name of the console the log is from, kept for a crash-diary note. */
+    private var consoleLabel = ""
+
     fun attach(ctx: Context) {
         if (loaded) return
         loaded = true
@@ -146,8 +149,9 @@ object KernelLog {
         return if (f.isEmpty()) lines else lines.filter { it.contains(f, ignoreCase = true) }
     }
 
-    fun start(host: String) {
+    fun start(host: String, label: String = "") {
         if (running) return
+        consoleLabel = label
         val p = port.toIntOrNull()?.takeIf { it in 1..65535 }
         if (host.isBlank()) {
             status = AppText.get(R.string.memory_need_ip)
@@ -217,6 +221,9 @@ object KernelLog {
                                 if (!consoleAnswers(host.trim(), used)) {
                                     silent = true
                                     synchronized(lock) { pending.add(AppText.get(R.string.klog_silent, clock(now))) }
+                                    // Note what the console printed last and what was sent just before it went down
+                                    val tail = lines.toList()
+                                    ctx?.let { CrashDiary.record(it, host.trim(), consoleLabel, tail, now) }
                                 }
                             }
                             continue
@@ -295,7 +302,7 @@ object KernelLog {
 }
 
 /** The "Console log" view of the Memory tab. */
-fun LazyListScope.logItems(host: String, ctx: Context) {
+fun LazyListScope.logItems(host: String, label: String, ctx: Context) {
     val k = KernelLog
     item {
         Panel {
@@ -319,7 +326,7 @@ fun LazyListScope.logItems(host: String, ctx: Context) {
                     Button(onClick = { k.stop() }) { Text(str(R.string.klog_stop)) }
                     OutlinedButton(onClick = { k.togglePause() }) { Text(str(if (k.paused) R.string.klog_resume else R.string.klog_pause)) }
                 } else {
-                    Button(onClick = { k.start(host) }) { Text(str(R.string.klog_start)) }
+                    Button(onClick = { k.start(host, label) }) { Text(str(R.string.klog_start)) }
                 }
             }
             if (k.status.isNotEmpty()) {

@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Velika</string>
     <string name="look_text_larger">Veća</string>
     <string name="diag_log_title">Zapisnik konzole prikazuje nedavne probleme: %1$d</string>
+    <string name="crashdiary_title">Dnevnik rušenja</string>
+    <string name="crashdiary_desc">Kada konzola prestane odgovarati (vjerojatno rušenje), Bento bilježi vrijeme, posljednje retke zapisa i što ste poslali neposredno prije. Bilješke ostaju na telefonu.</string>
+    <string name="crashdiary_empty">Još nema zabilježenih rušenja. Uključite zapis konzole u Memoriji i ostavite ga da radi dok igrate.</string>
+    <string name="crashdiary_share">Podijeli</string>
+    <string name="crashdiary_clear_all">Izbriši sve</string>
 </resources>

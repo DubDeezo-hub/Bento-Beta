@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Liels</string>
     <string name="look_text_larger">Lielāks</string>
     <string name="diag_log_title">Konsoles žurnālā redzamas nesenas problēmas: %1$d</string>
+    <string name="crashdiary_title">Avāriju žurnāls</string>
+    <string name="crashdiary_desc">Kad konsole pārstāj atbildēt (visticamāk, avārija), Bento pieraksta laiku, pēdējās žurnāla rindas un to, ko nosūtījāt tieši pirms tam. Piezīmes paliek tālrunī.</string>
+    <string name="crashdiary_empty">Vēl nav pierakstītu avāriju. Ieslēdziet konsoles žurnālu sadaļā Atmiņa un atstājiet to darbojamies spēlēšanas laikā.</string>
+    <string name="crashdiary_share">Kopīgot</string>
+    <string name="crashdiary_clear_all">Dzēst visu</string>
 </resources>

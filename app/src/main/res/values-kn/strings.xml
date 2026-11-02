@@ -1166,4 +1166,9 @@
     <string name="look_text_large">ದೊಡ್ಡದು</string>
     <string name="look_text_larger">ಇನ್ನೂ ದೊಡ್ಡದು</string>
     <string name="diag_log_title">ಕನ್ಸೋಲ್ ಲಾಗ್ %1$d ಇತ್ತೀಚಿನ ಸಮಸ್ಯೆಗಳನ್ನು ತೋರಿಸುತ್ತಿದೆ</string>
+    <string name="crashdiary_title">ಕ್ರ್ಯಾಶ್ ಡೈರಿ</string>
+    <string name="crashdiary_desc">ಕನ್ಸೋಲ್ ಪ್ರತಿಕ್ರಿಯೆ ನಿಲ್ಲಿಸಿದಾಗ (ಬಹುಶಃ ಕ್ರ್ಯಾಶ್), Bento ಸಮಯ, ಲಾಗ್‌ನ ಕೊನೆಯ ಸಾಲುಗಳು ಮತ್ತು ಅದಕ್ಕೂ ಮೊದಲು ನೀವು ಕಳುಹಿಸಿದ್ದನ್ನು ದಾಖಲಿಸುತ್ತದೆ. ಟಿಪ್ಪಣಿಗಳು ಫೋನ್‌ನಲ್ಲೇ ಉಳಿಯುತ್ತವೆ.</string>
+    <string name="crashdiary_empty">ಇನ್ನೂ ಯಾವುದೇ ಕ್ರ್ಯಾಶ್ ದಾಖಲಾಗಿಲ್ಲ. ಮೆಮೊರಿಯಲ್ಲಿ ಕನ್ಸೋಲ್ ಲಾಗ್ ಆನ್ ಮಾಡಿ, ಆಡುವಾಗ ಅದನ್ನು ಚಾಲನೆಯಲ್ಲಿ ಇರಿಸಿ.</string>
+    <string name="crashdiary_share">ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="crashdiary_clear_all">ಎಲ್ಲವನ್ನೂ ಅಳಿಸಿ</string>
 </resources>

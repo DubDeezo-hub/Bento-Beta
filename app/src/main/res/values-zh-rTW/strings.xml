@@ -1166,4 +1166,9 @@
     <string name="look_text_large">大</string>
     <string name="look_text_larger">更大</string>
     <string name="diag_log_title">主機記錄顯示最近有 %1$d 個問題</string>
+    <string name="crashdiary_title">當機記錄</string>
+    <string name="crashdiary_desc">當主機停止回應（很可能是當機）時，Bento 會記下時間、日誌的最後幾行，以及你在那之前送出的內容。記錄會保留在手機上。</string>
+    <string name="crashdiary_empty">尚未記錄到當機。在「記憶體」中開啟主機日誌，並在遊玩時讓它持續執行。</string>
+    <string name="crashdiary_share">分享</string>
+    <string name="crashdiary_clear_all">全部刪除</string>
 </resources>

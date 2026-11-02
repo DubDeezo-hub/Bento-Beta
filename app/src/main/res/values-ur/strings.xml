@@ -1166,4 +1166,9 @@
     <string name="look_text_large">بڑا</string>
     <string name="look_text_larger">اور بڑا</string>
     <string name="diag_log_title">کنسول لاگ %1$d حالیہ مسائل دکھاتا ہے</string>
+    <string name="crashdiary_title">کریش ڈائری</string>
+    <string name="crashdiary_desc">جب کنسول جواب دینا بند کر دے (غالباً کریش)، تو Bento وقت، لاگ کی آخری سطریں اور اس سے ٹھیک پہلے آپ نے جو بھیجا وہ نوٹ کر لیتا ہے۔ نوٹ فون ہی میں رہتے ہیں۔</string>
+    <string name="crashdiary_empty">ابھی تک کوئی کریش نوٹ نہیں ہوا۔ میموری میں کنسول لاگ آن کریں اور کھیلتے وقت چلنے دیں۔</string>
+    <string name="crashdiary_share">شیئر کریں</string>
+    <string name="crashdiary_clear_all">سب حذف کریں</string>
 </resources>

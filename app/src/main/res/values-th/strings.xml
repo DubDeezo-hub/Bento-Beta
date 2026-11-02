@@ -1166,4 +1166,9 @@
     <string name="look_text_large">ใหญ่</string>
     <string name="look_text_larger">ใหญ่ขึ้น</string>
     <string name="diag_log_title">บันทึกของคอนโซลแสดงปัญหาล่าสุด %1$d รายการ</string>
+    <string name="crashdiary_title">บันทึกการแครช</string>
+    <string name="crashdiary_desc">เมื่อเครื่องหยุดตอบสนอง (อาจเป็นการแครช) Bento จะจดเวลา บรรทัดสุดท้ายของบันทึก และสิ่งที่คุณส่งก่อนหน้านั้น บันทึกจะอยู่ในโทรศัพท์</string>
+    <string name="crashdiary_empty">ยังไม่มีการแครชที่บันทึกไว้ เปิดบันทึกของเครื่องในหน่วยความจำ แล้วปล่อยให้ทำงานขณะเล่น</string>
+    <string name="crashdiary_share">แชร์</string>
+    <string name="crashdiary_clear_all">ลบทั้งหมด</string>
 </resources>

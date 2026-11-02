@@ -1166,4 +1166,9 @@
     <string name="look_text_large">बड़ा</string>
     <string name="look_text_larger">और बड़ा</string>
     <string name="diag_log_title">कंसोल लॉग में हाल की %1$d समस्याएँ हैं</string>
+    <string name="crashdiary_title">क्रैश डायरी</string>
+    <string name="crashdiary_desc">जब कंसोल जवाब देना बंद कर दे (शायद क्रैश), तो Bento समय, लॉग की आखिरी पंक्तियाँ और उससे ठीक पहले आपने क्या भेजा, यह नोट कर लेता है। नोट फ़ोन में ही रहते हैं।</string>
+    <string name="crashdiary_empty">अभी तक कोई क्रैश नोट नहीं हुआ है। मेमोरी में कंसोल लॉग चालू करें और खेलते समय उसे चलता रहने दें।</string>
+    <string name="crashdiary_share">साझा करें</string>
+    <string name="crashdiary_clear_all">सब मिटाएँ</string>
 </resources>

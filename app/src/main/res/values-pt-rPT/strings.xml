@@ -1167,4 +1167,9 @@
     <string name="look_text_large">Grande</string>
     <string name="look_text_larger">Maior</string>
     <string name="diag_log_title">O registo da consola mostra %1$d problemas recentes</string>
+    <string name="crashdiary_title">Diário de falhas</string>
+    <string name="crashdiary_desc">Quando a consola deixa de responder (provavelmente uma falha), o Bento regista a hora, as últimas linhas do registo e o que enviou mesmo antes. As notas ficam no telemóvel.</string>
+    <string name="crashdiary_empty">Ainda não há falhas registadas. Ative o registo da consola em Memória e deixe-o a funcionar enquanto joga.</string>
+    <string name="crashdiary_share">Partilhar</string>
+    <string name="crashdiary_clear_all">Eliminar tudo</string>
 </resources>

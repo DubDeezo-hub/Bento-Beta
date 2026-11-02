@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Velika</string>
     <string name="look_text_larger">Večja</string>
     <string name="diag_log_title">Dnevnik konzole kaže nedavne težave: %1$d</string>
+    <string name="crashdiary_title">Dnevnik sesutij</string>
+    <string name="crashdiary_desc">Ko se konzola neha odzivati (verjetno sesutje), Bento zabeleži čas, zadnje vrstice dnevnika in kaj ste poslali tik pred tem. Zapiski ostanejo v telefonu.</string>
+    <string name="crashdiary_empty">Sesutij še ni zabeleženih. Vklopite dnevnik konzole v Pomnilniku in ga pustite teči med igranjem.</string>
+    <string name="crashdiary_share">Deli</string>
+    <string name="crashdiary_clear_all">Izbriši vse</string>
 </resources>

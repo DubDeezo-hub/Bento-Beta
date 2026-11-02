@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Stor</string>
     <string name="look_text_larger">Større</string>
     <string name="diag_log_title">Konsolloggen viser %1$d nylige problemer</string>
+    <string name="crashdiary_title">Nedbrudslog</string>
+    <string name="crashdiary_desc">Når konsollen holder op med at svare (sandsynligvis et nedbrud), noterer Bento tidspunktet, de sidste loglinjer og hvad du sendte lige før. Noterne bliver på telefonen.</string>
+    <string name="crashdiary_empty">Ingen nedbrud noteret endnu. Slå konsol-loggen til i Hukommelse, og lad den køre, mens du spiller.</string>
+    <string name="crashdiary_share">Del</string>
+    <string name="crashdiary_clear_all">Slet alt</string>
 </resources>

@@ -1167,4 +1167,9 @@
     <string name="look_text_large">Groot</string>
     <string name="look_text_larger">Groter</string>
     <string name="diag_log_title">Het consolelog toont %1$d recente problemen</string>
+    <string name="crashdiary_title">Crashdagboek</string>
+    <string name="crashdiary_desc">Als de console niet meer reageert (waarschijnlijk een crash), noteert Bento het tijdstip, de laatste logregels en wat je er net voor hebt verstuurd. De notities blijven op de telefoon.</string>
+    <string name="crashdiary_empty">Nog geen crashes genoteerd. Zet het consolelogboek aan bij Geheugen en laat het draaien terwijl je speelt.</string>
+    <string name="crashdiary_share">Delen</string>
+    <string name="crashdiary_clear_all">Alles verwijderen</string>
 </resources>

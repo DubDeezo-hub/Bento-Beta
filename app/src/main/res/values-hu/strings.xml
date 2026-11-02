@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Nagy</string>
     <string name="look_text_larger">Nagyobb</string>
     <string name="diag_log_title">A konzolnapló %1$d friss problémát mutat</string>
+    <string name="crashdiary_title">Összeomlási napló</string>
+    <string name="crashdiary_desc">Amikor a konzol nem válaszol többé (valószínűleg összeomlás), a Bento feljegyzi az időt, a napló utolsó sorait és azt, amit közvetlenül előtte küldtél. A jegyzetek a telefonon maradnak.</string>
+    <string name="crashdiary_empty">Még nincs feljegyzett összeomlás. Kapcsold be a konzolnaplót a Memóriában, és hagyd futni játék közben.</string>
+    <string name="crashdiary_share">Megosztás</string>
+    <string name="crashdiary_clear_all">Összes törlése</string>
 </resources>

@@ -1166,4 +1166,9 @@
     <string name="look_text_large">بزرگ</string>
     <string name="look_text_larger">بزرگ‌تر</string>
     <string name="diag_log_title">گزارش کنسول %1$d مشکل اخیر نشان می‌دهد</string>
+    <string name="crashdiary_title">دفترچه خرابی</string>
+    <string name="crashdiary_desc">وقتی کنسول دیگر پاسخ نمی‌دهد (احتمالاً خرابی)، Bento زمان، آخرین خط‌های گزارش و آنچه را درست پیش از آن فرستادید یادداشت می‌کند. یادداشت‌ها روی گوشی می‌مانند.</string>
+    <string name="crashdiary_empty">هنوز خرابی‌ای ثبت نشده است. گزارش کنسول را در بخش حافظه روشن کنید و هنگام بازی روشن بگذارید.</string>
+    <string name="crashdiary_share">هم‌رسانی</string>
+    <string name="crashdiary_clear_all">حذف همه</string>
 </resources>

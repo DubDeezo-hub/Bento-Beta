@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Stor</string>
     <string name="look_text_larger">Større</string>
     <string name="diag_log_title">Konsolloggen viser %1$d nylige problemer</string>
+    <string name="crashdiary_title">Krasjlogg</string>
+    <string name="crashdiary_desc">Når konsollen slutter å svare (sannsynligvis et krasj), noterer Bento tidspunktet, de siste logglinjene og hva du sendte like før. Notatene blir på telefonen.</string>
+    <string name="crashdiary_empty">Ingen krasj notert ennå. Slå på kons-loggen i Minne, og la den gå mens du spiller.</string>
+    <string name="crashdiary_share">Del</string>
+    <string name="crashdiary_clear_all">Slett alt</string>
 </resources>

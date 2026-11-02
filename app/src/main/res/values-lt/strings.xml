@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Didelis</string>
     <string name="look_text_larger">Didesnis</string>
     <string name="diag_log_title">Konsolės žurnale rodomos naujausios problemos: %1$d</string>
+    <string name="crashdiary_title">Strigčių žurnalas</string>
+    <string name="crashdiary_desc">Kai pultas nustoja atsakyti (tikriausiai strigtis), Bento užrašo laiką, paskutines žurnalo eilutes ir ką išsiuntėte prieš pat tai. Užrašai lieka telefone.</string>
+    <string name="crashdiary_empty">Strigčių dar neužfiksuota. Įjunkite pulto žurnalą skiltyje Atmintis ir palikite veikti žaisdami.</string>
+    <string name="crashdiary_share">Bendrinti</string>
+    <string name="crashdiary_clear_all">Ištrinti viską</string>
 </resources>

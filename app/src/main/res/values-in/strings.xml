@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Besar</string>
     <string name="look_text_larger">Lebih besar</string>
     <string name="diag_log_title">Log konsol menunjukkan %1$d masalah terbaru</string>
+    <string name="crashdiary_title">Catatan crash</string>
+    <string name="crashdiary_desc">Saat konsol berhenti merespons (kemungkinan crash), Bento mencatat waktu, baris log terakhir, dan apa yang Anda kirim tepat sebelumnya. Catatan tetap di ponsel.</string>
+    <string name="crashdiary_empty">Belum ada crash yang dicatat. Aktifkan log konsol di Memori dan biarkan berjalan saat Anda bermain.</string>
+    <string name="crashdiary_share">Bagikan</string>
+    <string name="crashdiary_clear_all">Hapus semua</string>
 </resources>

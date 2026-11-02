@@ -1166,4 +1166,9 @@
     <string name="look_text_large">বড়</string>
     <string name="look_text_larger">আরও বড়</string>
     <string name="diag_log_title">কনসোল লগে সাম্প্রতিক %1$d টি সমস্যা আছে</string>
+    <string name="crashdiary_title">ক্র্যাশ ডায়েরি</string>
+    <string name="crashdiary_desc">কনসোল সাড়া দেওয়া বন্ধ করলে (সম্ভবত ক্র্যাশ), Bento সময়, লগের শেষ লাইনগুলো এবং তার ঠিক আগে আপনি যা পাঠিয়েছেন তা নোট করে। নোটগুলো ফোনেই থাকে।</string>
+    <string name="crashdiary_empty">এখনও কোনো ক্র্যাশ নোট করা হয়নি। মেমরিতে কনসোল লগ চালু করে খেলার সময় চালু রাখুন।</string>
+    <string name="crashdiary_share">শেয়ার</string>
+    <string name="crashdiary_clear_all">সব মুছুন</string>
 </resources>

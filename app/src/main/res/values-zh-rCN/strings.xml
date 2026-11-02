@@ -1166,4 +1166,9 @@
     <string name="look_text_large">大</string>
     <string name="look_text_larger">更大</string>
     <string name="diag_log_title">主机日志显示最近有 %1$d 个问题</string>
+    <string name="crashdiary_title">崩溃日志</string>
+    <string name="crashdiary_desc">当主机停止响应（很可能是崩溃）时，Bento 会记下时间、日志的最后几行，以及你在那之前发送的内容。记录保留在手机上。</string>
+    <string name="crashdiary_empty">还没有记录到崩溃。在“内存”中打开主机日志，并在游戏时让它一直运行。</string>
+    <string name="crashdiary_share">分享</string>
+    <string name="crashdiary_clear_all">全部删除</string>
 </resources>

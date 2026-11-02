@@ -1166,4 +1166,9 @@
     <string name="look_text_large">பெரியது</string>
     <string name="look_text_larger">மிகப் பெரியது</string>
     <string name="diag_log_title">கன்சோல் பதிவு %1$d சமீபத்திய பிரச்சனைகளைக் காட்டுகிறது</string>
+    <string name="crashdiary_title">செயலிழப்பு நாட்குறிப்பு</string>
+    <string name="crashdiary_desc">கன்சோல் பதிலளிப்பதை நிறுத்தும்போது (பெரும்பாலும் செயலிழப்பு), நேரம், பதிவின் கடைசி வரிகள், அதற்கு முன் நீங்கள் அனுப்பியதை Bento குறித்து வைக்கிறது. குறிப்புகள் தொலைபேசியிலேயே இருக்கும்.</string>
+    <string name="crashdiary_empty">இதுவரை செயலிழப்புகள் எதுவும் பதிவாகவில்லை. நினைவகத்தில் கன்சோல் பதிவை இயக்கி, விளையாடும்போது அதை இயங்க விடுங்கள்.</string>
+    <string name="crashdiary_share">பகிர்</string>
+    <string name="crashdiary_clear_all">அனைத்தையும் நீக்கு</string>
 </resources>

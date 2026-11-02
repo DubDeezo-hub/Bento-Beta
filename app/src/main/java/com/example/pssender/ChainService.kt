@@ -71,7 +71,7 @@ class ChainService : Service() {
                 runChain(
                     steps = request.steps,
                     send = { name ->
-                        sendPayloadReply(File(shelf, name), request.host, request.port).also { if (it.ok) ReloadGuard.noteSent(request.host, name) }
+                        sendPayloadReply(File(shelf, name), request.host, request.port).also { if (it.ok) { ReloadGuard.noteSent(request.host, name); SendLog.note(request.host, name) } }
                     },
                     sleepSecond = { delay(1000L) },
                     cancelled = { ChainRunner.stopRequested },

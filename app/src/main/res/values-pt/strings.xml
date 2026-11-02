@@ -1167,4 +1167,9 @@
     <string name="look_text_large">Grande</string>
     <string name="look_text_larger">Maior</string>
     <string name="diag_log_title">O log do console mostra %1$d problemas recentes</string>
+    <string name="crashdiary_title">Diário de falhas</string>
+    <string name="crashdiary_desc">Quando o console para de responder (provavelmente uma falha), o Bento anota a hora, as últimas linhas do registro e o que você enviou logo antes. As notas ficam no telefone.</string>
+    <string name="crashdiary_empty">Ainda não há falhas anotadas. Ative o registro do console em Memória e deixe funcionando enquanto você joga.</string>
+    <string name="crashdiary_share">Compartilhar</string>
+    <string name="crashdiary_clear_all">Excluir tudo</string>
 </resources>

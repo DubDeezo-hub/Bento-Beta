@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Suur</string>
     <string name="look_text_larger">Suurem</string>
     <string name="diag_log_title">Konsooli logi näitab %1$d hiljutist probleemi</string>
+    <string name="crashdiary_title">Krahhipäevik</string>
+    <string name="crashdiary_desc">Kui konsool lakkab vastamast (tõenäoliselt krahh), märgib Bento aja, viimased logiread ja selle, mille vahetult enne saatsid. Märkmed jäävad telefoni.</string>
+    <string name="crashdiary_empty">Ühtegi krahhi pole veel märgitud. Lülita Mälus konsoolilogi sisse ja jäta see mängimise ajaks tööle.</string>
+    <string name="crashdiary_share">Jaga</string>
+    <string name="crashdiary_clear_all">Kustuta kõik</string>
 </resources>

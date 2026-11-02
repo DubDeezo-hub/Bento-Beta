@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Великий</string>
     <string name="look_text_larger">Ще більший</string>
     <string name="diag_log_title">Журнал консолі показує нещодавні проблеми: %1$d</string>
+    <string name="crashdiary_title">Журнал збоїв</string>
+    <string name="crashdiary_desc">Коли консоль перестає відповідати (імовірно, збій), Bento занотовує час, останні рядки журналу та те, що ви надіслали прямо перед цим. Нотатки лишаються на телефоні.</string>
+    <string name="crashdiary_empty">Збоїв ще не занотовано. Увімкніть журнал консолі в розділі «Памʼять» і залиште його працювати під час гри.</string>
+    <string name="crashdiary_share">Поділитися</string>
+    <string name="crashdiary_clear_all">Видалити все</string>
 </resources>

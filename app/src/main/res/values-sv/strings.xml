@@ -1167,4 +1167,9 @@
     <string name="look_text_large">Stor</string>
     <string name="look_text_larger">Större</string>
     <string name="diag_log_title">Konsolloggen visar %1$d senaste problem</string>
+    <string name="crashdiary_title">Kraschdagbok</string>
+    <string name="crashdiary_desc">När konsolen slutar svara (troligen en krasch) antecknar Bento tiden, de sista loggraderna och vad du skickade precis innan. Anteckningarna stannar på telefonen.</string>
+    <string name="crashdiary_empty">Inga krascher antecknade än. Slå på konsolloggen i Minne och låt den vara igång medan du spelar.</string>
+    <string name="crashdiary_share">Dela</string>
+    <string name="crashdiary_clear_all">Radera allt</string>
 </resources>

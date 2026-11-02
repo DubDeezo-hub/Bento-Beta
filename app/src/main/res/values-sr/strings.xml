@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Велика</string>
     <string name="look_text_larger">Већа</string>
     <string name="diag_log_title">Дневник конзоле приказује недавне проблеме: %1$d</string>
+    <string name="crashdiary_title">Дневник падова</string>
+    <string name="crashdiary_desc">Када конзола престане да одговара (вероватно пад), Bento бележи време, последње редове дневника и шта сте послали непосредно пре тога. Белешке остају на телефону.</string>
+    <string name="crashdiary_empty">Још нема забележених падова. Укључите дневник конзоле у Меморији и оставите га да ради док играте.</string>
+    <string name="crashdiary_share">Подели</string>
+    <string name="crashdiary_clear_all">Обриши све</string>
 </resources>

@@ -1166,4 +1166,9 @@
     <string name="look_text_large">મોટું</string>
     <string name="look_text_larger">વધુ મોટું</string>
     <string name="diag_log_title">કન્સોલ લૉગમાં તાજેતરની %1$d સમસ્યાઓ છે</string>
+    <string name="crashdiary_title">ક્રેશ ડાયરી</string>
+    <string name="crashdiary_desc">જ્યારે કન્સોલ જવાબ આપવાનું બંધ કરે (સંભવતઃ ક્રેશ), ત્યારે Bento સમય, લોગની છેલ્લી લીટીઓ અને તેની તરત પહેલાં તમે શું મોકલ્યું તે નોંધે છે. નોંધો ફોનમાં જ રહે છે.</string>
+    <string name="crashdiary_empty">હજી કોઈ ક્રેશ નોંધાયું નથી. મેમરીમાં કન્સોલ લોગ ચાલુ કરો અને રમતી વખતે ચાલુ રાખો.</string>
+    <string name="crashdiary_share">શેર કરો</string>
+    <string name="crashdiary_clear_all">બધું કાઢી નાખો</string>
 </resources>

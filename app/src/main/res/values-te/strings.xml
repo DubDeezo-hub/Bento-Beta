@@ -1166,4 +1166,9 @@
     <string name="look_text_large">పెద్దది</string>
     <string name="look_text_larger">ఇంకా పెద్దది</string>
     <string name="diag_log_title">కన్సోల్ లాగ్ %1$d ఇటీవలి సమస్యలను చూపుతోంది</string>
+    <string name="crashdiary_title">క్రాష్ డైరీ</string>
+    <string name="crashdiary_desc">కన్సోల్ స్పందించడం ఆపేసినప్పుడు (బహుశా క్రాష్), సమయం, లాగ్‌లోని చివరి పంక్తులు, దానికి ముందే మీరు పంపినది Bento నమోదు చేస్తుంది. నోట్లు ఫోన్‌లోనే ఉంటాయి.</string>
+    <string name="crashdiary_empty">ఇంకా ఏ క్రాష్‌లూ నమోదు కాలేదు. మెమరీలో కన్సోల్ లాగ్ ఆన్ చేసి, ఆడుతున్నప్పుడు దాన్ని నడుస్తూ ఉంచండి.</string>
+    <string name="crashdiary_share">భాగస్వామ్యం చేయి</string>
+    <string name="crashdiary_clear_all">అన్నీ తొలగించు</string>
 </resources>

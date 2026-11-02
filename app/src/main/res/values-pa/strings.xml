@@ -1166,4 +1166,9 @@
     <string name="look_text_large">ਵੱਡਾ</string>
     <string name="look_text_larger">ਹੋਰ ਵੱਡਾ</string>
     <string name="diag_log_title">ਕੰਸੋਲ ਲੌਗ ਵਿੱਚ ਹਾਲੀਆ %1$d ਸਮੱਸਿਆਵਾਂ ਹਨ</string>
+    <string name="crashdiary_title">ਕ੍ਰੈਸ਼ ਡਾਇਰੀ</string>
+    <string name="crashdiary_desc">ਜਦੋਂ ਕਨਸੋਲ ਜਵਾਬ ਦੇਣਾ ਬੰਦ ਕਰ ਦਿੰਦਾ ਹੈ (ਸ਼ਾਇਦ ਕ੍ਰੈਸ਼), ਤਾਂ Bento ਸਮਾਂ, ਲਾਗ ਦੀਆਂ ਆਖਰੀ ਲਾਈਨਾਂ ਅਤੇ ਉਸ ਤੋਂ ਠੀਕ ਪਹਿਲਾਂ ਤੁਸੀਂ ਕੀ ਭੇਜਿਆ, ਨੋਟ ਕਰ ਲੈਂਦਾ ਹੈ। ਨੋਟ ਫ਼ੋਨ ਵਿੱਚ ਹੀ ਰਹਿੰਦੇ ਹਨ।</string>
+    <string name="crashdiary_empty">ਹਾਲੇ ਕੋਈ ਕ੍ਰੈਸ਼ ਨੋਟ ਨਹੀਂ ਹੋਇਆ। ਮੈਮੋਰੀ ਵਿੱਚ ਕਨਸੋਲ ਲਾਗ ਚਾਲੂ ਕਰੋ ਅਤੇ ਖੇਡਦੇ ਵੇਲੇ ਚੱਲਦਾ ਰਹਿਣ ਦਿਓ।</string>
+    <string name="crashdiary_share">ਸਾਂਝਾ ਕਰੋ</string>
+    <string name="crashdiary_clear_all">ਸਭ ਮਿਟਾਓ</string>
 </resources>

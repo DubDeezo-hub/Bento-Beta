@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Голям</string>
     <string name="look_text_larger">По-голям</string>
     <string name="diag_log_title">Дневникът на конзолата показва скорошни проблеми: %1$d</string>
+    <string name="crashdiary_title">Дневник на сривовете</string>
+    <string name="crashdiary_desc">Когато конзолата спре да отговаря (вероятно срив), Bento записва часа, последните редове от журнала и какво сте изпратили точно преди това. Бележките остават на телефона.</string>
+    <string name="crashdiary_empty">Още няма записани сривове. Включете журнала на конзолата в Памет и го оставете да работи, докато играете.</string>
+    <string name="crashdiary_share">Споделяне</string>
+    <string name="crashdiary_clear_all">Изтрий всички</string>
 </resources>

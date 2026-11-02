@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Kubwa</string>
     <string name="look_text_larger">Kubwa zaidi</string>
     <string name="diag_log_title">Kumbukumbu za konsoli zinaonyesha matatizo %1$d ya hivi karibuni</string>
+    <string name="crashdiary_title">Shajara ya hitilafu</string>
+    <string name="crashdiary_desc">Konsoli inaposhindwa kujibu (pengine hitilafu), Bento huandika saa, mistari ya mwisho ya kumbukumbu, na ulichotuma muda mfupi kabla. Madokezo hubaki kwenye simu.</string>
+    <string name="crashdiary_empty">Bado hakuna hitilafu zilizoandikwa. Washa kumbukumbu ya konsoli katika Kumbukumbu na uiache ikiendelea unapocheza.</string>
+    <string name="crashdiary_share">Shiriki</string>
+    <string name="crashdiary_clear_all">Futa zote</string>
 </resources>

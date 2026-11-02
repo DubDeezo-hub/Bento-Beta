@@ -1166,4 +1166,9 @@
     <string name="look_text_large">Lớn</string>
     <string name="look_text_larger">Lớn hơn</string>
     <string name="diag_log_title">Nhật ký console có %1$d sự cố gần đây</string>
+    <string name="crashdiary_title">Nhật ký sự cố</string>
+    <string name="crashdiary_desc">Khi máy ngừng phản hồi (có thể là sự cố), Bento ghi lại thời điểm, các dòng nhật ký cuối và những gì bạn vừa gửi trước đó. Các ghi chú ở lại trên điện thoại.</string>
+    <string name="crashdiary_empty">Chưa ghi sự cố nào. Hãy bật nhật ký máy trong phần Bộ nhớ và để nó chạy khi bạn chơi.</string>
+    <string name="crashdiary_share">Chia sẻ</string>
+    <string name="crashdiary_clear_all">Xóa tất cả</string>
 </resources>

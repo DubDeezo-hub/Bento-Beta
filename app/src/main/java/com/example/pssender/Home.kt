@@ -204,7 +204,7 @@ fun HomeTab(
                 status = AppText.get(R.string.payload_sending, name)
                 scope.launch {
                     val r = sendPayloadReply(File(shelfDir(ctx), name), host.trim(), port)
-                    if (r.ok) ReloadGuard.noteSent(host, name)
+                    if (r.ok) { ReloadGuard.noteSent(host, name); SendLog.note(host, name) }
                     buzz(view, r.ok) // a short buzz: sent, or not
                     status = AppText.get(R.string.payload_result, name, r.text)
                 }
