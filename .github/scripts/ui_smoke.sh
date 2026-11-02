@@ -698,13 +698,13 @@ PY
     if wait_text 15 "$(ui string etahen_ftp)"; then
       pass "etaHEN settings are read from the console and shown"
     else
-      soft "etaHEN settings" "the settings did not show. Seen: $(ui texts "$XML" 2> /dev/null)"
+      fail "etaHEN settings" "the settings did not show. Seen: $(ui texts "$XML" 2> /dev/null)"
     fi
     shot "fake-etahen"
     adb shell input keyevent KEYCODE_BACK
     sleep 2
   else
-    soft "etaHEN settings" "no etaHEN settings button. Seen: $(ui texts "$XML" 2> /dev/null)"
+    fail "etaHEN settings" "no etaHEN settings button. Seen: $(ui texts "$XML" 2> /dev/null)"
   fi
 
   # Zip: the /data folder downloaded as one zip (go up to /, hold "data", Download as zip)
@@ -716,7 +716,9 @@ PY
   if scroll_find 8 data user && pos="$(ui find "$XML" data)"; then
     # shellcheck disable=SC2086
     set -- $pos
-    adb shell input swipe "$1" "$2" "$1" "$2" 900
+    # The zip option is in the row's "⋮" menu at the right end (holding the row instead picks it for multi-download).
+    # $2 is the row's middle; tap near the right edge at that height.
+    adb shell input tap "$((WIDTH - 15))" "$2"
     sleep 2
     if wait_text 6 "$(ui string zip_download)" && tap_text "$(ui string zip_download)"; then
       if wait_fmt 40 "$(ui string zip_done)"; then
