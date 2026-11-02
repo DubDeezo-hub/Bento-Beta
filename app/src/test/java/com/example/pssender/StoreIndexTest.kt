@@ -43,6 +43,34 @@ class StoreIndexTest {
     }
 
     @Test
+    fun theRightTextForEachLanguage() {
+        val texts = mapOf("en" to "English", "pt" to "Brasil", "pt-PT" to "Portugal", "zh" to "简体", "zh-TW" to "繁體", "he" to "עברית", "id" to "Indonesia")
+        assertEquals("Portugal", StoreIndex.textFor(texts, "pt", "PT"))
+        assertEquals("Brasil", StoreIndex.textFor(texts, "pt", "BR"))
+        assertEquals("繁體", StoreIndex.textFor(texts, "zh", "TW"))
+        assertEquals("简体", StoreIndex.textFor(texts, "zh", "CN"))
+        // Android's old codes for Hebrew and Indonesian
+        assertEquals("עברית", StoreIndex.textFor(texts, "iw", "IL"))
+        assertEquals("Indonesia", StoreIndex.textFor(texts, "in", ""))
+        assertEquals("English", StoreIndex.textFor(texts, "xx", "YY"))
+        assertEquals("", StoreIndex.textFor(emptyMap<String, String>(), "de"))
+    }
+
+    @Test
+    fun everyLanguageHasTheNewPayloadsText() {
+        // Entries in Bento's own list that bring their own text bring it in every language the app has
+        val file = listOf(File("../payloads/index.json"), File("payloads/index.json")).first { it.exists() }
+        val root = MiniJson.parse(file.readText()) as Map<*, *>
+        val keys = listOf("en", "es", "fr", "de", "it", "pt", "pt-PT", "ru", "ja", "ko", "zh", "zh-TW", "ar", "tr", "nl", "pl", "sv", "nb",
+            "da", "fi", "cs", "hu", "ro", "el", "uk", "bg", "hr", "he", "th", "vi", "id", "sk", "ca", "hi", "bn", "ur", "fa", "ms", "fil",
+            "sl", "sr", "lt", "lv", "et", "sw", "af", "ta", "te", "mr", "gu", "kn", "ml", "pa")
+        for (p in root["payloads"] as List<*>) {
+            val about = (p as Map<*, *>)["about"] as? Map<*, *> ?: continue
+            for (k in keys) assertTrue("${p["name"]} has no \"$k\" text", (about[k] as? String)?.isNotBlank() == true)
+        }
+    }
+
+    @Test
     fun curatedListThatIsNotJsonGivesNothing() {
         assertTrue(StoreIndex.parseCurated("[]", "en").isEmpty())
         assertTrue(StoreIndex.parseCurated("{\"payloads\": 5}", "en").isEmpty())

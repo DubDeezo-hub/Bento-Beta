@@ -66,8 +66,18 @@ object StoreIndex {
      */
     private fun readJson(text: String): Any? = try { MiniJson.parse(text) } catch (_: Exception) { null }
 
+    /**
+     * The text for the phone's language from a list's {"en": ..., "de": ...}: the full tag first ("pt-PT", "zh-TW"),
+     * then the language ("pt"), under its old Android code too ("iw" is "he", "in" is "id"), then English.
+     */
+    fun textFor(texts: Map<*, *>, lang: String, region: String = ""): String {
+        val l = when (lang) { "iw" -> "he"; "in" -> "id"; else -> lang }
+        val keys = listOfNotNull(if (region.isNotEmpty()) "$l-$region" else null, l, lang, "en")
+        return keys.firstNotNullOfOrNull { texts[it] as? String } ?: ""
+    }
+
     /** Bento's own list: entries to add to (or change in) the built-in ones. */
-    fun parseCurated(json: String, lang: String = Locale.getDefault().language): List<StoreEntry> {
+    fun parseCurated(json: String, lang: String = Locale.getDefault().language, region: String = Locale.getDefault().country): List<StoreEntry> {
         val root = readJson(json) as? Map<*, *> ?: return emptyList()
         return (root["payloads"] as? List<*>).orEmpty().mapNotNull { x ->
             val o = x as? Map<*, *> ?: return@mapNotNull null
@@ -82,7 +92,7 @@ object StoreIndex {
             if (!repo.contains('/') || name.isEmpty()) return@mapNotNull null
             val about = when (val a = o["about"]) {
                 is String -> a
-                is Map<*, *> -> (a[lang] as? String) ?: (a["en"] as? String) ?: ""
+                is Map<*, *> -> textFor(a, lang, region)
                 else -> ""
             }
             StoreEntry(
