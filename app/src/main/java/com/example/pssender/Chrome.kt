@@ -1,5 +1,8 @@
 package com.example.pssender
 
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.background
@@ -296,8 +299,11 @@ fun BottomBar(items: List<NavItem>, selected: Int, onSelect: (Int) -> Unit) {
 private fun RoundNavButton(item: NavItem, on: Boolean, onClick: () -> Unit) {
     val cs = MaterialTheme.colorScheme
     val label = str(item.label)
+    // The chosen button swells a little as it turns red
+    val scale by animateFloatAsState(if (on) 1.08f else 1f, animationSpec = tween(220), label = "nav")
     Box(
         modifier = Modifier
+            .graphicsLayer { scaleX = scale; scaleY = scale }
             .size(52.dp)
             .clip(CircleShape)
             .then(if (on) Modifier.background(bloodGradient) else Modifier)

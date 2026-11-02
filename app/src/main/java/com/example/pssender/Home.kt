@@ -1,6 +1,8 @@
 package com.example.pssender
 
 import android.content.res.Configuration
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -41,6 +43,7 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
@@ -63,7 +66,8 @@ import java.io.File
 @Composable
 fun StatusRing(up: Int, total: Int, headline: String, sub: String, onClick: () -> Unit, modifier: Modifier = Modifier) {
     val cs = MaterialTheme.colorScheme
-    val fraction = if (total <= 0) 0f else up.toFloat() / total
+    // The ring fills (and empties) smoothly as services come up or go away
+    val fraction by animateFloatAsState(if (total <= 0) 0f else up.toFloat() / total, animationSpec = tween(700), label = "ring")
     val track = cs.surfaceContainerHigh
     Box(
         modifier = modifier
@@ -169,6 +173,7 @@ fun HomeTab(
     install: @Composable () -> Unit
 ) {
     val ctx = LocalContext.current
+    val view = LocalView.current
     val scope = rememberCoroutineScope()
     val cs = MaterialTheme.colorScheme
     val counted = checks.filter { it.port != null }
@@ -200,6 +205,7 @@ fun HomeTab(
                 scope.launch {
                     val r = sendPayloadReply(File(shelfDir(ctx), name), host.trim(), port)
                     if (r.ok) ReloadGuard.noteSent(host, name)
+                    buzz(view, r.ok) // a short buzz: sent, or not
                     status = AppText.get(R.string.payload_result, name, r.text)
                 }
             }

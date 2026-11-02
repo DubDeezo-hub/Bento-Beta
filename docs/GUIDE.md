@@ -748,6 +748,7 @@ Bento is only a client. Everything it connects to on the console was made by oth
 - **[OkHttp](https://github.com/square/okhttp)** 4.12.0 by Square and contributors, Apache-2.0: install requests and web downloads.
 - **[Apache Commons Net](https://commons.apache.org/proper/commons-net/)** 3.11.1 by the Apache Software Foundation, Apache-2.0: the FTP client.
 - **[AndroidX SwipeRefreshLayout](https://developer.android.com/jetpack/androidx/releases/swiperefreshlayout)** 1.1.0 by Google, Apache-2.0: pull down to reload in the Web tab.
+- **[Inter](https://rsms.me/inter/)** 4.1 by Rasmus Andersson and the Inter Project Authors, SIL Open Font License 1.1 ([licenses/Inter-OFL.txt](../licenses/Inter-OFL.txt)): the app's typeface.
 
 ### Build and delivery
 

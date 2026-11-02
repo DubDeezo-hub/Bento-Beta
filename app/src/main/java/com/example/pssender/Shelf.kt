@@ -41,6 +41,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.text.font.FontFamily
@@ -165,6 +166,7 @@ fun PayloadTab(
     onPinChain: (Chain) -> Unit
 ) {
     val ctx = LocalContext.current
+    val view = LocalView.current
     val scope = rememberCoroutineScope()
     var shelf by remember(shelfVersion) { mutableStateOf(shelfList(shelfDir(ctx))) }
     var oneOff by remember { mutableStateOf<Uri?>(null) }
@@ -283,6 +285,7 @@ fun PayloadTab(
                             scope.launch {
                                 val sent = sendPayloadReply(File(shelfDir(ctx), item.name), host.trim(), port.trim().toInt())
                                 if (sent.ok) ReloadGuard.noteSent(host, item.name)
+                                buzz(view, sent.ok)
                                 status = AppText.get(R.string.payload_result, item.name, sent.text)
                             }
                         }

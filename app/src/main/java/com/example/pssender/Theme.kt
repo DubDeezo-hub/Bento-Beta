@@ -12,6 +12,10 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Shapes
+import androidx.compose.material3.Typography
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -229,13 +233,44 @@ val ROUND_SHAPES = Shapes(
     extraLarge = RoundedCornerShape(36.dp)
 )
 
+/** Inter (SIL Open Font License, licenses/Inter-OFL.txt), bundled so the app looks the same on every phone. Scripts it
+ * doesn't cover (Arabic, Hindi, Thai, Japanese, ...) fall back to the phone's own fonts by themselves. */
+val Inter = FontFamily(
+    Font(R.font.inter_regular, FontWeight.Normal),
+    Font(R.font.inter_medium, FontWeight.Medium),
+    Font(R.font.inter_semibold, FontWeight.SemiBold),
+    Font(R.font.inter_bold, FontWeight.Bold),
+    Font(R.font.inter_extrabold, FontWeight.ExtraBold)
+)
+
+/** Material's text styles, all in Inter; headings a little heavier. */
+val APP_TYPOGRAPHY: Typography = Typography().let { t ->
+    t.copy(
+        displayLarge = t.displayLarge.copy(fontFamily = Inter, fontWeight = FontWeight.ExtraBold),
+        displayMedium = t.displayMedium.copy(fontFamily = Inter, fontWeight = FontWeight.ExtraBold),
+        displaySmall = t.displaySmall.copy(fontFamily = Inter, fontWeight = FontWeight.ExtraBold),
+        headlineLarge = t.headlineLarge.copy(fontFamily = Inter, fontWeight = FontWeight.ExtraBold),
+        headlineMedium = t.headlineMedium.copy(fontFamily = Inter, fontWeight = FontWeight.Bold),
+        headlineSmall = t.headlineSmall.copy(fontFamily = Inter, fontWeight = FontWeight.Bold),
+        titleLarge = t.titleLarge.copy(fontFamily = Inter, fontWeight = FontWeight.Bold),
+        titleMedium = t.titleMedium.copy(fontFamily = Inter, fontWeight = FontWeight.SemiBold),
+        titleSmall = t.titleSmall.copy(fontFamily = Inter, fontWeight = FontWeight.SemiBold),
+        bodyLarge = t.bodyLarge.copy(fontFamily = Inter),
+        bodyMedium = t.bodyMedium.copy(fontFamily = Inter),
+        bodySmall = t.bodySmall.copy(fontFamily = Inter),
+        labelLarge = t.labelLarge.copy(fontFamily = Inter, fontWeight = FontWeight.SemiBold),
+        labelMedium = t.labelMedium.copy(fontFamily = Inter, fontWeight = FontWeight.SemiBold),
+        labelSmall = t.labelSmall.copy(fontFamily = Inter, fontWeight = FontWeight.Medium)
+    )
+}
+
 /** Wraps the whole screen in the blood-red look (the console's own color stays on its badge). */
 @Composable
 fun AppTheme(@Suppress("UNUSED_PARAMETER") accentIndex: Int, content: @Composable () -> Unit) {
     val scheme = bloodScheme().let { if (AppLook.black) blackScheme(it) else it }
     val d = LocalDensity.current
     CompositionLocalProvider(LocalDensity provides Density(d.density, d.fontScale * AppLook.textScale)) {
-        MaterialTheme(colorScheme = scheme, shapes = ROUND_SHAPES, content = content)
+        MaterialTheme(colorScheme = scheme, shapes = ROUND_SHAPES, typography = APP_TYPOGRAPHY, content = content)
     }
 }
 
