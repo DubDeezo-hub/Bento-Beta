@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- English (default). Every other language is in res/values-xx/strings.xml. -->
 <resources>
-    <string name="app_name" translatable="false">Bento</string>
+    <string name="app_name" translatable="false">Crimson Multitool</string>
     <string name="credit_name" translatable="false">DubDeezo</string>
     <string name="service_ftp" translatable="false">FTP</string>
 
@@ -325,7 +325,7 @@
     <string name="action_use">Use</string>
 
     <!-- about and backup -->
-    <string name="about_title">About Bento</string>
+    <string name="about_title">About Crimson Multitool</string>
     <string name="about_version">Version %1$s</string>
     <string name="about_button">About &amp; backup</string>
     <string name="about_report">Copy debug info</string>
@@ -340,8 +340,8 @@
     <string name="backup_contents">Consoles: %1$d · Bookmarks: %2$d · Payloads: %3$d</string>
     <string name="backup_made">Made on %1$s</string>
     <string name="backup_skipped">Payloads left out because the file would be too large: %1$d</string>
-    <string name="backup_bad_file">That file is not a Bento backup.</string>
-    <string name="backup_too_new">That backup was made by a newer version of Bento. Update the app, then try again.</string>
+    <string name="backup_bad_file">That file is not a Crimson Multitool backup.</string>
+    <string name="backup_too_new">That backup was made by a newer version of Crimson Multitool. Update the app, then try again.</string>
     <string name="restore_title">Restore this backup?</string>
     <string name="restore_text">Your consoles, homepage, bookmarks and ad list are replaced by the ones in the file. Payloads in the file are added to the shelf. You will need to type your FTP passwords again.</string>
     <string name="restore_button">Restore</string>
@@ -485,9 +485,9 @@
     <string name="memory_bad_port">Enter a port between 1 and 65535.</string>
     <string name="memory_err_no_debugger">Nothing answered on port %1$d. Send the debugger (ps5debug-NG or ps4debug-NG) from the Payload tab first, then tap Connect again.</string>
     <string name="memory_all_types">Read as every kind</string>
-    <string name="memory_cheat_findable">Bento kept the bytes around this address, so Find again can find it after the game restarts.</string>
+    <string name="memory_cheat_findable">Crimson Multitool kept the bytes around this address, so Find again can find it after the game restarts.</string>
     <string name="memory_cheat_group">Group (optional)</string>
-    <string name="memory_cheat_not_findable">Bento has no bytes around this address to find it again. Tap Make findable while the game runs.</string>
+    <string name="memory_cheat_not_findable">Crimson Multitool has no bytes around this address to find it again. Tap Make findable while the game runs.</string>
     <string name="memory_cheatfile_choose">Cheat files for this game (the one for your version is tinted):</string>
     <string name="memory_cheatfile_find">Find cheats for this game</string>
     <string name="memory_cheatfile_loaded">%1$d cheats. The game is loaded at %2$s.</string>
@@ -495,25 +495,25 @@
     <string name="memory_cheatfile_mismatch">Not changed: the game\'s code there is not what the cheat file expects. The file is probably for another version of the game.</string>
     <string name="memory_cheatfile_no_id">The debugger did not say which game this is (no title ID), so there is no cheat file to look up.</string>
     <string name="memory_cheatfile_none">No cheat file for %1$s yet.</string>
-    <string name="memory_cheatfile_other_version">This file is for version %1$s; the game is %2$s. Cheats may not work, and Bento refuses to change code that does not match.</string>
+    <string name="memory_cheatfile_other_version">This file is for version %1$s; the game is %2$s. Cheats may not work, and Crimson Multitool refuses to change code that does not match.</string>
     <string name="memory_cheatfile_source">Cheat source</string>
     <string name="memory_cheatfile_source_help">Where the cheat files are read from: a folder with json.txt and a json folder, like the PS5_Cheats repository. The fake console serves its own at http://127.0.0.1:12800/cheats/.</string>
     <string name="memory_cheatfile_source_reset">Use the usual one</string>
     <string name="memory_cheatfile_source_url">Address</string>
     <string name="memory_cheatfile_title">Cheat files</string>
     <string name="memory_cheatfile_version">Version %1$s</string>
-    <string name="memory_console_hello">Bento connected</string>
+    <string name="memory_console_hello">Crimson Multitool connected</string>
     <string name="memory_export">Share</string>
     <string name="memory_export_copied">Cheats copied</string>
     <string name="memory_find_again">Find again</string>
     <string name="memory_find_again_all">Find all again</string>
-    <string name="memory_find_none">No cheat has the bytes Bento needs to find it again.</string>
+    <string name="memory_find_none">No cheat has the bytes Crimson Multitool needs to find it again.</string>
     <string name="memory_find_result">Found again: %1$d moved, %2$d already right, %3$d not found.</string>
     <string name="memory_freeze_back">The console is back; freezing goes on.</string>
     <string name="memory_freeze_channel">Frozen values</string>
     <string name="memory_freeze_notif_stop">Stop</string>
     <string name="memory_freeze_notif_text">In %1$s</string>
-    <string name="memory_freeze_notif_text_plain">Bento keeps writing them</string>
+    <string name="memory_freeze_notif_text_plain">Crimson Multitool keeps writing them</string>
     <string name="memory_freeze_notif_title">%1$d values frozen</string>
     <string name="memory_freeze_retrying">Lost the console; trying again (frozen values pause until it is back)…</string>
     <string name="memory_hex_bad">Enter bytes in hex, for example 64 00 00 00.</string>
@@ -522,7 +522,7 @@
     <string name="memory_hex_tap">Tap a line to change its bytes.</string>
     <string name="memory_import">Import</string>
     <string name="memory_import_box">Cheats (text)</string>
-    <string name="memory_import_help">Paste cheats someone shared from Bento. Cheats this game has already are skipped.</string>
+    <string name="memory_import_help">Paste cheats someone shared from Crimson Multitool. Cheats this game has already are skipped.</string>
     <string name="memory_import_none">No cheats found in that text.</string>
     <string name="memory_imported">Imported %1$d cheats (%2$d were here already).</string>
     <string name="memory_kept_help">The console keeps this search because it is big. Change the value in the game and narrow it down with Decreased, Increased, Changed or Unchanged. Once few enough are left, they come over to the phone.</string>
@@ -607,10 +607,10 @@
     <string name="settings_ftp_summary">Port %1$s · %2$s</string>
     <string name="web_more">More</string>
     <string name="memory_test_title">Try it without a PS5</string>
-    <string name="welcome_title">Welcome to Bento</string>
+    <string name="welcome_title">Welcome to Crimson Multitool</string>
     <string name="welcome_intro">Your phone\'s remote for a jailbroken PS5 or PS4. Install games and apps, send payloads, move files and cheat in games, all over Wi-Fi.</string>
     <string name="welcome_need_title">What you need</string>
-    <string name="welcome_need">A jailbroken console running etaHEN (PS5) or GoldHEN (PS4), on the same Wi-Fi as this phone. Bento talks to the tools already on the console; it changes nothing on it by itself.</string>
+    <string name="welcome_need">A jailbroken console running etaHEN (PS5) or GoldHEN (PS4), on the same Wi-Fi as this phone. Crimson Multitool talks to the tools already on the console; it changes nothing on it by itself.</string>
     <string name="welcome_tabs_title">What each tab does</string>
     <string name="welcome_tab_install">Install packages (.pkg) on the console from a web link, or straight from this phone (one at a time or a whole folder). Check a package first: it says whether it\'s new, an update or already installed.</string>
     <string name="welcome_tab_payload">Send payloads (.elf, .bin) to the console. Keep favourites on a shelf, run several in a row (even by themselves after a jailbreak), and get payloads from their makers, with notices for new ones and updates.</string>
@@ -626,29 +626,29 @@
     <string name="welcome_again">You can open this page again from About (the round i at the top).</string>
     <string name="welcome_open">Welcome page</string>
     <string name="tip_console_title">Your console</string>
-    <string name="tip_console">Bento needs the console\'s IP address on your Wi-Fi. On a PS5: Settings → Network → View Connection Status → IPv4 Address. Or tap Find my console to search for it. The three lights on the card show what answers: the installer, the payload loader and FTP.</string>
+    <string name="tip_console">Crimson Multitool needs the console\'s IP address on your Wi-Fi. On a PS5: Settings → Network → View Connection Status → IPv4 Address. Or tap Find my console to search for it. The three lights on the card show what answers: the installer, the payload loader and FTP.</string>
     <string name="tip_install_links_title">Install from links</string>
     <string name="tip_install_links">Paste one or more links to .pkg files (one per line, or any text that has links in it) and tap Send. The console downloads and installs them by itself. Accepted links leave the box and show up under Recent, so you can send them again with one tap.</string>
     <string name="tip_install_port_title">Installer port</string>
     <string name="tip_install_port">The port of the package installer on the console: 12800 for etaHEN\'s installer on a PS5, and for the Remote Package Installer app on a PS4. Leave it as it is unless you changed it on the console.</string>
     <string name="tip_install_phone_title">Install from this phone</string>
-    <string name="tip_install_phone">Pick .pkg files on this phone and Bento shares them on your Wi-Fi; the console downloads them from the phone. Keep Bento open (or let it run in the background) until the console has finished.</string>
+    <string name="tip_install_phone">Pick .pkg files on this phone and Crimson Multitool shares them on your Wi-Fi; the console downloads them from the phone. Keep Crimson Multitool open (or let it run in the background) until the console has finished.</string>
     <string name="tip_payload_port_title">Payload loader port</string>
     <string name="tip_payload_port">Where the console listens for payloads: 9021 for etaHEN on a PS5, 9090 for GoldHEN on a PS4.</string>
     <string name="tip_payload_shelf_title">Payload shelf</string>
-    <string name="tip_payload_shelf">Payloads you use often, kept inside Bento: add a file once, then send it with one tap. Remove takes it off the shelf only, not from your phone.</string>
+    <string name="tip_payload_shelf">Payloads you use often, kept inside Crimson Multitool: add a file once, then send it with one tap. Remove takes it off the shelf only, not from your phone.</string>
     <string name="tip_payload_chains_title">Chains</string>
     <string name="tip_payload_chains">A chain sends several payloads in a row, with a pause between them (for example a jailbreak payload, then etaHEN, then a tool). Pin a chain to your home screen to start it from there.</string>
     <string name="tip_ftp_title">FTP settings</string>
-    <string name="tip_ftp">Bento moves files with the console\'s FTP server. etaHEN uses port 1337 (or 2121 for ftpsrv), GoldHEN 2121. The user is usually anonymous with no password. The folder is where uploads go.</string>
+    <string name="tip_ftp">Crimson Multitool moves files with the console\'s FTP server. etaHEN uses port 1337 (or 2121 for ftpsrv), GoldHEN 2121. The user is usually anonymous with no password. The folder is where uploads go.</string>
     <string name="tip_upload_title">Send files to the console</string>
     <string name="tip_upload">Choose one or more files on this phone and tap Upload; they go into the folder in FTP settings, one after the other. A transfer that breaks off can be continued later.</string>
     <string name="tip_files_title">The console\'s files</string>
     <string name="tip_files">Tap a folder to open it and a file for what you can do with it. Hold a file to pick several. Pin folders you use often. The FTP settings are the same as on the Upload tab.</string>
     <string name="tip_web_title">The browser</string>
-    <string name="tip_web">Browse homebrew sites. Tap a link to a .pkg or a payload and Bento offers to send it to the console or download it. More has bookmarks, find in page, the home page, the ad block and desktop mode.</string>
+    <string name="tip_web">Browse homebrew sites. Tap a link to a .pkg or a payload and Crimson Multitool offers to send it to the console or download it. More has bookmarks, find in page, the home page, the ad block and desktop mode.</string>
     <string name="tip_web_home_title">Home page</string>
-    <string name="tip_web_home">The page Home opens, and the first page when Bento starts.</string>
+    <string name="tip_web_home">The page Home opens, and the first page when Crimson Multitool starts.</string>
     <string name="tip_web_adblock_title">Ad block</string>
     <string name="tip_web_adblock">Leaves out ads and pop-ups, which on download sites are often fake download buttons.</string>
     <string name="tip_web_desktop_title">Desktop mode</string>
@@ -666,13 +666,13 @@
     <string name="tip_mem_watch_title">Watching</string>
     <string name="tip_mem_watch">Addresses you watch stay at the top of Scan with their live value, while you go on searching. Tap one to write a value, save it as a cheat or stop watching it.</string>
     <string name="tip_mem_cheat_files_title">Cheat files</string>
-    <string name="tip_mem_cheat_files">Ready-made cheats from the community cheat files etaHEN uses (the PS5_Cheats repository), found by the game\'s title ID and version. Switch a cheat on or off; Apply cheats run once. Bento checks the game\'s code before it changes anything, and refuses when it does not match (another game version).</string>
+    <string name="tip_mem_cheat_files">Ready-made cheats from the community cheat files etaHEN uses (the PS5_Cheats repository), found by the game\'s title ID and version. Switch a cheat on or off; Apply cheats run once. Crimson Multitool checks the game\'s code before it changes anything, and refuses when it does not match (another game version).</string>
     <string name="tip_mem_my_cheats_title">My cheats</string>
     <string name="tip_mem_my_cheats">Addresses you found and saved, for this game. Tap one to change its value, write it once, watch it or remove it. Groups keep long lists tidy. Share sends them to a friend as text; Import adds a shared list.</string>
     <string name="tip_mem_freeze_title">Freeze</string>
-    <string name="tip_mem_freeze">Writes the value again five times a second, so the game cannot change it: health that never goes down. Freezing goes on while Bento is in the background (a notification shows it), and picks up again after the console wakes from rest mode.</string>
+    <string name="tip_mem_freeze">Writes the value again five times a second, so the game cannot change it: health that never goes down. Freezing goes on while Crimson Multitool is in the background (a notification shows it), and picks up again after the console wakes from rest mode.</string>
     <string name="tip_mem_find_again_title">Find again</string>
-    <string name="tip_mem_find_again">Addresses move when a game restarts. Bento keeps the bytes around each cheat; Find all again looks for them in memory and moves each cheat to where its bytes are now. It works for most values, not all: if one is not found, search for it again.</string>
+    <string name="tip_mem_find_again">Addresses move when a game restarts. Crimson Multitool keeps the bytes around each cheat; Find all again looks for them in memory and moves each cheat to where its bytes are now. It works for most values, not all: if one is not found, search for it again.</string>
     <string name="tip_mem_browse_title">Browse</string>
     <string name="tip_mem_browse">Every process on the console. Open one to see its memory regions (rwx: read, write, run; writable ones are tinted) and a region for its bytes. Tap a line of bytes to change them, or Go to an address.</string>
     <string name="memory_view_log">Console log</string>
@@ -682,8 +682,8 @@
     <string name="klog_saving_to">Saving to %1$s</string>
     <string name="klog_save_channel">Console log</string>
     <string name="klog_save_notif_title">Saving the console log</string>
-    <string name="crash_title">Bento closed unexpectedly</string>
-    <string name="crash_text">Last time, Bento closed because of a mistake in the app. A short report of what went wrong was kept (the app\'s version, the phone\'s model and the error; no files or addresses). Sharing it helps to fix it.</string>
+    <string name="crash_title">Crimson Multitool closed unexpectedly</string>
+    <string name="crash_text">Last time, Crimson Multitool closed because of a mistake in the app. A short report of what went wrong was kept (the app\'s version, the phone\'s model and the error; no files or addresses). Sharing it helps to fix it.</string>
     <string name="crash_share">Share report</string>
     <string name="klog_silent">— %1$s: the console stopped answering (did it crash?). The lines above are the last it sent.</string>
     <string name="klog_back">— %1$s: the console answers again.</string>
@@ -706,7 +706,7 @@
     <string name="klog_empty">No lines yet. Tap Start, then do something on the console.</string>
     <string name="klog_no_match">No line matches the filter.</string>
     <string name="crashdiary_title">Crash diary</string>
-    <string name="crashdiary_desc">When the console stops answering (a likely crash), Bento notes the time, the last log lines and what you sent just before. The notes stay on the phone.</string>
+    <string name="crashdiary_desc">When the console stops answering (a likely crash), Crimson Multitool notes the time, the last log lines and what you sent just before. The notes stay on the phone.</string>
     <string name="crashdiary_empty">No crashes noted yet. Turn on the console log in Memory and leave it running while you play.</string>
     <string name="crashdiary_share">Share</string>
     <string name="crashdiary_clear_all">Delete all</string>
@@ -738,10 +738,10 @@
     <string name="meta_check_phone">Check a package on this phone</string>
     <string name="meta_reading">Reading…</string>
     <string name="meta_failed">Could not read it: %1$s</string>
-    <string name="meta_no_ranges">The site only sends whole files, so Bento can\'t look inside without downloading all of it.</string>
+    <string name="meta_no_ranges">The site only sends whole files, so Crimson Multitool can\'t look inside without downloading all of it.</string>
     <string name="meta_pkg_ps4">PS4 package</string>
     <string name="meta_pkg_ps5">PS5 package</string>
-    <string name="meta_pkg_unknown">Not a package Bento knows</string>
+    <string name="meta_pkg_unknown">Not a package Crimson Multitool knows</string>
     <string name="meta_ps5_note">A PS5 package keeps its name and icon encrypted, so only its size is shown.</string>
     <string name="saves_title">Saves</string>
     <string name="saves_user">User %1$d</string>
@@ -776,7 +776,7 @@
     <string name="sync_now">Sync</string>
     <string name="sync_comparing">Comparing the two folders…</string>
     <string name="sync_nothing">Already in sync (%1$d files).</string>
-    <string name="sync_lost_access">Bento can no longer read that folder. Remove it and add it again.</string>
+    <string name="sync_lost_access">Crimson Multitool can no longer read that folder. Remove it and add it again.</string>
     <string name="sync_confirm_title">Sync \"%1$s\"?</string>
     <string name="sync_confirm_text">%1$d new files, %2$d changed, %3$d already there. %4$s to send.</string>
     <string name="sync_confirm_dirs">%1$d folders will be made on the console.</string>
@@ -791,9 +791,9 @@
     <string name="tip_saves_title">Saves</string>
     <string name="tip_saves">Your saves, per user and game. Back up copies a game\'s save folder to Downloads on this phone. Put a backup back sends a folder you pick on the phone into the game\'s save folder. Saves are locked to the console and account that made them, so a backup only works on the same console for the same user. Close the game before you put a save back.</string>
     <string name="tip_media_title">Screenshots &amp; videos</string>
-    <string name="tip_media">Screenshots &amp; videos opens the folder where the console keeps screenshots and video clips (/user/av_contents): tick the ones you want and tap Download. Copy new to phone copies every screenshot and clip that hasn\'t been copied yet into Downloads/PS5/Captures (Downloads/PS4 for a PS4), with a folder per game, so each one comes over once. With the switch on, Bento does that by itself each time it opens and the console\'s FTP answers; the first time it only notes what is already there, so it doesn\'t copy a whole library unasked.</string>
+    <string name="tip_media">Screenshots &amp; videos opens the folder where the console keeps screenshots and video clips (/user/av_contents): tick the ones you want and tap Download. Copy new to phone copies every screenshot and clip that hasn\'t been copied yet into Downloads/PS5/Captures (Downloads/PS4 for a PS4), with a folder per game, so each one comes over once. With the switch on, Crimson Multitool does that by itself each time it opens and the console\'s FTP answers; the first time it only notes what is already there, so it doesn\'t copy a whole library unasked.</string>
     <string name="tip_sync_title">Keep a folder in sync</string>
-    <string name="tip_sync">For a folder you add to again and again, like your packages or homebrew. Add a folder from the phone and say where it goes on the console. Sync compares the two and sends only the files the console doesn\'t have, or has with another size. Nothing is ever deleted. Bento remembers the folders for each console.</string>
+    <string name="tip_sync">For a folder you add to again and again, like your packages or homebrew. Add a folder from the phone and say where it goes on the console. Sync compares the two and sends only the files the console doesn\'t have, or has with another size. Nothing is ever deleted. Crimson Multitool remembers the folders for each console.</string>
     <string name="tip_pkg_info_title">Check a package</string>
     <string name="tip_pkg_info">Shows what a .pkg is before you install it: name, icon, title ID, version, whether it is a game, an update or an add-on, and the firmware it needs. For a web link only a few small pieces are read, not the whole file. PS5 packages keep this encrypted, so for them only the size is shown.</string>
     <string name="ptr_find">Find pointer</string>
@@ -821,12 +821,12 @@
     <string name="export_saved">Saved to %1$s</string>
     <string name="export_save_failed">Could not save the file.</string>
     <string name="tip_mem_pointers_title">Pointer paths</string>
-    <string name="tip_mem_pointers">Most values (health, money) are somewhere new each time the game starts. A pointer path starts at a fixed place in the game\'s own file and follows pointers to the value, so it still works after a restart. Find pointer looks for such paths for a cheat. Then restart the game, find the value again and use Keep with its new address: the paths that still lead there are the good ones. Pick one with Use it, and Bento follows it from then on.</string>
+    <string name="tip_mem_pointers">Most values (health, money) are somewhere new each time the game starts. A pointer path starts at a fixed place in the game\'s own file and follows pointers to the value, so it still works after a restart. Find pointer looks for such paths for a cheat. Then restart the game, find the value again and use Keep with its new address: the paths that still lead there are the good ones. Pick one with Use it, and Crimson Multitool follows it from then on.</string>
     <string name="tip_mem_export_title">Make cheat file</string>
     <string name="tip_mem_export">Turns your cheats into a cheat file in the same layout as the community cheat files (PS5_Cheats), so etaHEN\'s cheat menu or a friend can use it. Only cheats inside the game\'s own code and data can go in, because a cheat file stores places as distances from the game\'s start. Share it, or save it to Downloads.</string>
     <string name="store_open">Get payloads</string>
     <string name="store_title">Payloads for the %1$s</string>
-    <string name="store_intro">Payloads from their makers\' own pages, straight onto your shelf. Each time the app starts, Bento looks for new payloads and for newer versions of the ones you have.</string>
+    <string name="store_intro">Payloads from their makers\' own pages, straight onto your shelf. Each time the app starts, Crimson Multitool looks for new payloads and for newer versions of the ones you have.</string>
     <string name="store_checking">Looking for the newest version…</string>
     <string name="store_problem">Could not check: %1$s</string>
     <string name="store_latest">Newest: %1$s (%2$s)</string>
@@ -841,7 +841,7 @@
     <string name="store_downloading">Downloading %1$s…</string>
     <string name="store_added">%1$s (%2$s) is on your shelf.</string>
     <string name="store_updates_out">Newer versions in Get payloads: %1$s</string>
-    <string name="store_note">These are made by others, not by Bento. Only send payloads that suit your firmware.</string>
+    <string name="store_note">These are made by others, not by Crimson Multitool. Only send payloads that suit your firmware.</string>
     <string name="store_about_etahen">The PS5 homebrew enabler: FTP, package installer, cheats, plugins and more.</string>
     <string name="store_about_ps5debug">The debugger the Memory tab uses (port 744), plus the console log on port 3232.</string>
     <string name="store_about_ftpsrv">A small FTP server (port 2121) for the Upload and Files tabs.</string>
@@ -852,7 +852,7 @@
     <string name="store_about_ps4debug">The PS4 debugger the Memory tab uses (port 744).</string>
     <string name="store_about_goldhen">The PS4 homebrew enabler. Usually loaded by the jailbreak itself; here for its payload file.</string>
     <string name="tip_store_title">Get payloads</string>
-    <string name="tip_store">Three lists in one place. Bento\'s picks are well-known payloads Bento knows how to use. The community list (PS5) is a larger, maintained list with the makers\' descriptions. Found on GitHub searches for anything else, on request, and is not reviewed.\n\nBento takes each payload from its maker\'s GitHub Releases page and puts it on your shelf, unpacking it from a zip when needed. When the app starts it looks for new payloads and newer versions and tells you on the Payload tab. They are made by other people: check that a payload suits your console\'s firmware before you send it.</string>
+    <string name="tip_store">Three lists in one place. Crimson Multitool\'s picks are well-known payloads Crimson Multitool knows how to use. The community list (PS5) is a larger, maintained list with the makers\' descriptions. Found on GitHub searches for anything else, on request, and is not reviewed.\n\nCrimson Multitool takes each payload from its maker\'s GitHub Releases page and puts it on your shelf, unpacking it from a zip when needed. When the app starts it looks for new payloads and newer versions and tells you on the Payload tab. They are made by other people: check that a payload suits your console\'s firmware before you send it.</string>
     <string name="side_activity">Activity</string>
     <string name="side_activity_hint">Transfers, payload chains and messages show up here.</string>
     <string name="diag_button">What\'s wrong?</string>
@@ -861,16 +861,16 @@
     <string name="diag_again">Check again</string>
     <string name="diag_use_port">Use port %1$d</string>
     <string name="diag_no_address_title">No address yet</string>
-    <string name="diag_no_address">Type the %1$s\'s IP address on the console card, or let Bento look for it.</string>
+    <string name="diag_no_address">Type the %1$s\'s IP address on the console card, or let Crimson Multitool look for it.</string>
     <string name="diag_no_wifi_title">This phone isn\'t on Wi-Fi</string>
-    <string name="diag_no_wifi">Bento reaches the console over your home network. Turn on Wi-Fi and join the network the %1$s is on.</string>
+    <string name="diag_no_wifi">Crimson Multitool reaches the console over your home network. Turn on Wi-Fi and join the network the %1$s is on.</string>
     <string name="diag_other_net_title">%1$s isn\'t on the phone\'s network</string>
     <string name="diag_other_net">The phone is on %1$s. The %2$s\'s address may have changed, or one of them is on a guest network.</string>
     <string name="diag_silent_title">Nothing answers at %1$s</string>
     <string name="diag_no_route_title">The phone can\'t reach %1$s</string>
     <string name="diag_silent">The %1$s may be off or in rest mode, or its address changed. If it was restarted, %2$s isn\'t running until you run the jailbreak again. Some routers also keep devices apart on guest Wi-Fi.</string>
     <string name="diag_no_homebrew_title">The %1$s is on, but no homebrew answers</string>
-    <string name="diag_no_homebrew">It answers on the network, but nothing Bento uses is listening. After a restart, run the jailbreak again so %1$s loads.</string>
+    <string name="diag_no_homebrew">It answers on the network, but nothing Crimson Multitool uses is listening. After a restart, run the jailbreak again so %1$s loads.</string>
     <string name="diag_bad_port_title">%1$s: the port isn\'t a number</string>
     <string name="diag_bad_port">Fix the port in the settings of the tab that uses it.</string>
     <string name="diag_ok">%1$s answers on port %2$d</string>
@@ -899,7 +899,7 @@
     <string name="store_fw_any">Runs on any firmware that can load payloads.</string>
     <string name="store_fw_range">Names firmware %1$s to %2$s</string>
     <string name="tip_fw_title">Firmware</string>
-    <string name="tip_fw">Bento reads each payload\'s own page (its README and newest release notes) for the firmware versions it names, and compares them with this console\'s firmware. A payload that doesn\'t list yours is dimmed, not blocked: pages can be behind, so check the page before you use it.\n\nThe firmware fills in by itself when the memory tools connect. You can also type it: it\'s under Console Information in the console\'s system settings.</string>
+    <string name="tip_fw">Crimson Multitool reads each payload\'s own page (its README and newest release notes) for the firmware versions it names, and compares them with this console\'s firmware. A payload that doesn\'t list yours is dimmed, not blocked: pages can be behind, so check the page before you use it.\n\nThe firmware fills in by itself when the memory tools connect. You can also type it: it\'s under Console Information in the console\'s system settings.</string>
     <string name="undo_label_value">Wrote %1$s at %2$s</string>
     <string name="undo_label_bytes">Wrote %1$d bytes at %2$s</string>
     <string name="undo_label_freeze">Froze \"%1$s\"</string>
@@ -915,7 +915,7 @@
     <string name="undo_intro">Each write keeps what was there before. Tap the newest change to undo it, or restore everything to put back all of them, newest first. The list clears when the game closes.</string>
     <string name="undo_all">Restore everything</string>
     <string name="tip_undo_title">Undo</string>
-    <string name="tip_undo">Before Bento writes to the game, it reads what\'s there so you can put it back. That covers values you write, bytes changed in Browse, cheat-file mods and frozen cheats (undoing a freeze also stops it). It keeps the last 50 changes for the game that\'s running.\n\nUndo writes the old bytes back exactly. If the game has changed that value since, the old value replaces the new one.</string>
+    <string name="tip_undo">Before Crimson Multitool writes to the game, it reads what\'s there so you can put it back. That covers values you write, bytes changed in Browse, cheat-file mods and frozen cheats (undoing a freeze also stops it). It keeps the last 50 changes for the game that\'s running.\n\nUndo writes the old bytes back exactly. If the game has changed that value since, the old value replaces the new one.</string>
     <string name="memory_text_chip">Text</string>
     <string name="memory_text_title">Find text</string>
     <string name="memory_text_field">Text to find</string>
@@ -957,9 +957,9 @@
     <string name="store_refresh">Check for new payloads</string>
     <string name="store_refreshing">Checking…</string>
     <string name="store_refreshed">Lists are up to date.</string>
-    <string name="store_section_picks">Bento\'s picks</string>
+    <string name="store_section_picks">Crimson Multitool\'s picks</string>
     <string name="store_section_community">From the community list</string>
-    <string name="store_community_note">Dozens more PS5 payloads, kept up to date by the PS5 Payloads Mirror. The descriptions are the makers\' own. Bento takes each file from its maker\'s release when it can and checks it against the list\'s checksum.</string>
+    <string name="store_community_note">Dozens more PS5 payloads, kept up to date by the PS5 Payloads Mirror. The descriptions are the makers\' own. Crimson Multitool takes each file from its maker\'s release when it can and checks it against the list\'s checksum.</string>
     <string name="store_community_page">About this list</string>
     <string name="store_community_failed">Couldn\'t load the community list. Check the phone\'s internet connection and try Check for new payloads.</string>
     <string name="store_filter">Filter</string>
@@ -987,7 +987,7 @@
     <string name="tip_mem_learn_title">What to look for</string>
     <string name="tip_mem_learn">Values differ in how hard they are to find. Easy ones are numbers the game shows. Medium ones have no number (a bar) or never stop changing (a timer). Expert ones move each time the game starts, live in the game\'s code, or are text. Each lesson says what to look for; Guide me walks you through it step by step and notices when you\'ve done each step.</string>
     <string name="tip_mem_practice_title">Practice game</string>
-    <string name="tip_mem_practice">A tiny pretend game inside Bento, with a pretend debugger in front of it, so the Memory tab can be tried without a console. It keeps its values the way real games do: gold and ammo as 4-byte numbers, health as a Float shown only as a bar, a countdown timer in seconds, a name in UTF-8 and UTF-16, a damage routine in its code, and a player record reached through pointers that moves each time the game restarts. Back to my console reconnects the Memory tab to your console.</string>
+    <string name="tip_mem_practice">A tiny pretend game inside Crimson Multitool, with a pretend debugger in front of it, so the Memory tab can be tried without a console. It keeps its values the way real games do: gold and ammo as 4-byte numbers, health as a Float shown only as a bar, a countdown timer in seconds, a name in UTF-8 and UTF-16, a damage routine in its code, and a player record reached through pointers that moves each time the game restarts. Back to my console reconnects the Memory tab to your console.</string>
     <string name="learn_intro">Learn to find and change values in games, from easy to expert. Practice on the built-in game first, or use your own offline game. Change values only in offline games.</string>
     <string name="learn_level_easy">Easy</string>
     <string name="learn_level_medium">Medium</string>
@@ -1059,7 +1059,7 @@
     <string name="learn_last_title">Make it last</string>
     <string name="learn_last_look">Save what you find: cheats keep the bytes around them, so Find all again moves them after a restart; a pointer path is even sturdier. Make cheat file turns your cheats into a file etaHEN can load, and Share sends them to a friend.</string>
     <string name="learn_practice_title">Practice game</string>
-    <string name="learn_practice_off">A tiny game inside Bento with gold, ammo, a health bar, a timer and a name, made to be cheated on. No console needed.</string>
+    <string name="learn_practice_off">A tiny game inside Crimson Multitool with gold, ammo, a health bar, a timer and a name, made to be cheated on. No console needed.</string>
     <string name="learn_practice_start">Use the practice game</string>
     <string name="learn_practice_on">The Memory tab is connected to the practice game.</string>
     <string name="learn_practice_stop">Back to my console</string>
@@ -1076,7 +1076,7 @@
     <string name="chain_auto_title">Run when the %1$s is ready</string>
     <string name="chain_auto_off">Off</string>
     <string name="tip_chain_auto_title">Run when ready</string>
-    <string name="tip_chain_auto">Pick a chain and Bento sends it by itself as soon as this console\'s loader starts answering after it didn\'t, which is what happens right after a jailbreak. It only works while Bento is open (the console is only checked then), waits 3 seconds to let the jailbreak finish, and runs at most once every 10 minutes. Each console has its own choice.</string>
+    <string name="tip_chain_auto">Pick a chain and Crimson Multitool sends it by itself as soon as this console\'s loader starts answering after it didn\'t, which is what happens right after a jailbreak. It only works while Crimson Multitool is open (the console is only checked then), waits 3 seconds to let the jailbreak finish, and runs at most once every 10 minutes. Each console has its own choice.</string>
     <string name="apps_updates_check">Check for updates</string>
     <string name="apps_updates_hint">See which games have a newer patch (from the community patch lists, not Sony).</string>
     <string name="apps_updates_checking">Looking up updates… %1$d of %2$d</string>
@@ -1088,7 +1088,7 @@
     <string name="apps_update_detail_fw">Newest patch: v%1$s (needs firmware %2$s)</string>
     <string name="apps_update_unknown">The patch lists have nothing for this title.</string>
     <string name="tip_app_updates_title">Game updates</string>
-    <string name="tip_app_updates">Bento looks up each installed game on the community patch lists, Orbis Patches (PS4 games) and Prospero Patches (PS5 games), and compares the newest patch with the version on the console (a PS4 game\'s installed patch counts). Only the title ID is sent to those sites. Sony\'s servers are never contacted, by the phone or by the console, and nothing is downloaded or installed.\n\nA newer patch may need newer firmware than your console has. When the console\'s firmware is known (Get payloads), the line also says the newest patch it can take.</string>
+    <string name="tip_app_updates">Crimson Multitool looks up each installed game on the community patch lists, Orbis Patches (PS4 games) and Prospero Patches (PS5 games), and compares the newest patch with the version on the console (a PS4 game\'s installed patch counts). Only the title ID is sent to those sites. Sony\'s servers are never contacted, by the phone or by the console, and nothing is downloaded or installed.\n\nA newer patch may need newer firmware than your console has. When the console\'s firmware is known (Get payloads), the line also says the newest patch it can take.</string>
     <string name="apps_update_fits">Newest for this console\'s firmware: v%1$s</string>
     <string name="apps_update_page">Patch history</string>
     <string name="apps_sizes_hint">See how much space each game takes.</string>
@@ -1102,7 +1102,7 @@
     <string name="captures_none">No new screenshots or clips.</string>
     <string name="captures_failed">Couldn\'t read the captures folder. Check that FTP is running.</string>
     <string name="captures_queued">%1$d new screenshots and clips are on their way to Downloads (folder %2$s).</string>
-    <string name="captures_auto">Copy new screenshots and clips each time Bento opens</string>
+    <string name="captures_auto">Copy new screenshots and clips each time Crimson Multitool opens</string>
     <string name="shelf_verified">verified</string>
     <string name="shelf_not_verified">Not checked: this file wasn\'t downloaded from a list that publishes checksums.</string>
     <string name="shelf_verified_by">Verified: it matches the checksum published by %1$s.</string>
@@ -1122,7 +1122,7 @@
     <string name="etahen_group_overlay">Game overlay</string>
     <string name="etahen_group_other">Other settings in the file</string>
     <string name="etahen_ftp">Built-in FTP server (port 1337)</string>
-    <string name="etahen_dpi">Direct PKG Installer (what Bento\'s Install tab sends to)</string>
+    <string name="etahen_dpi">Direct PKG Installer (what Crimson Multitool\'s Install tab sends to)</string>
     <string name="etahen_dpi_v2">Direct PKG Installer, version 2</string>
     <string name="etahen_klog">Kernel log</string>
     <string name="etahen_ps5debug">Load ps5debug (SiSTRo\'s) by itself</string>
@@ -1182,10 +1182,10 @@
     <string name="look_text_larger">Larger</string>
     <string name="diag_log_title">The console log shows %1$d recent problems</string>
     <string name="online_alert_switch">Tell me when it comes online</string>
-    <string name="online_alert_detail">Bento checks every 15 minutes, even while closed, and only asks this console on your network.</string>
+    <string name="online_alert_detail">Crimson Multitool checks every 15 minutes, even while closed, and only asks this console on your network.</string>
     <string name="online_channel">Console online</string>
     <string name="online_title">%1$s is online</string>
-    <string name="online_text">It answers on your network now. Tap to open Bento.</string>
+    <string name="online_text">It answers on your network now. Tap to open Crimson Multitool.</string>
     <string name="store_whats_new">What\'s new</string>
     <string name="store_whats_new_title">%1$s %2$s: what\'s new</string>
     <string name="chain_safe_title">Safe mode</string>

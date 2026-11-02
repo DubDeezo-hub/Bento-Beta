@@ -371,7 +371,7 @@ fun DiagnoseDialog(profile: Profile, debuggerPort: Int?, onFix: (DiagFix) -> Uni
                     list.forEach { f -> FindingRow(f, profile.type, onFix) }
                     // Everything a helper would ask for, ready to paste (addresses and links left out)
                     TextButton(onClick = {
-                        copyText(ctx, "Bento", DebugInfo.build(ctx), AppText.get(R.string.diag_debug_copied))
+                        copyText(ctx, "Crimson Multitool", DebugInfo.build(ctx), AppText.get(R.string.diag_debug_copied))
                     }) { Text(str(R.string.diag_debug_copy)) }
                 }
             }

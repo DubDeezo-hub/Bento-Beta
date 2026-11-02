@@ -57,7 +57,7 @@ fun scrubForReport(text: String): String =
  */
 fun buildReport(version: AppVersion, phone: String, consoleCount: Int, lastMessage: String, extras: ReportExtras = ReportExtras()): String {
     val lines = ArrayList<String>()
-    lines.add("Bento ${version.name} (${version.code})")
+    lines.add("Crimson Multitool ${version.name} (${version.code})")
     lines.add(phone)
     if (extras.language.isNotEmpty()) lines.add("App language: " + extras.language)
     lines.add("Consoles: $consoleCount")
@@ -253,7 +253,7 @@ fun AboutDialog(
                 ) {
                     TextButton(onClick = {
                         report = buildReport(version, phoneSummary(), consoleCount, lastMessage, DebugInfo.extras(ctx))
-                        copyText(ctx, "Bento", report, AppText.get(R.string.about_report_copied))
+                        copyText(ctx, "Crimson Multitool", report, AppText.get(R.string.about_report_copied))
                     }) { Text(str(R.string.about_report)) }
                     TextButton(onClick = {
                         report = buildReport(version, phoneSummary(), consoleCount, lastMessage, DebugInfo.extras(ctx))

@@ -9,8 +9,8 @@ class CrashReportsTest {
     fun aReportSaysWhenWhichVersionAndWhat() {
         val e = IllegalStateException("the shelf was empty", RuntimeException("cause"))
         val r = CrashReports.report("1.99", "main", e, Date(0))
-        assertTrue(r.startsWith("Bento crash report"))
-        assertTrue("Bento: 1.99" in r)
+        assertTrue(r.startsWith("Crimson Multitool crash report"))
+        assertTrue("Version: 1.99" in r)
         assertTrue("Thread: main" in r)
         assertTrue("IllegalStateException: the shelf was empty" in r)
         assertTrue("Caused by: java.lang.RuntimeException: cause" in r)

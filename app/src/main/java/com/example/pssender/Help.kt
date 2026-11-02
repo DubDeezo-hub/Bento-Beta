@@ -209,7 +209,7 @@ fun HelpDialog(topic: HelpTopic, details: String, onClose: () -> Unit) {
         },
         confirmButton = { TextButton(onClick = onClose) { Text(str(R.string.action_close)) } },
         dismissButton = {
-            TextButton(onClick = { copyText(ctx, "Bento", details, AppText.get(R.string.help_copied)) }) {
+            TextButton(onClick = { copyText(ctx, "Crimson Multitool", details, AppText.get(R.string.help_copied)) }) {
                 Text(str(R.string.help_copy))
             }
         }

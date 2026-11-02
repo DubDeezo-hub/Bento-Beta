@@ -73,6 +73,6 @@ jobs:
             gh release upload "$TAG" "$APK" --clobber --repo "$REPO"
           else
             gh release create "$TAG" "$APK" --repo "$REPO" --target "${{ github.sha }}" \
-              --title "Bento 1.${{ github.run_number }}" \
+              --title "Crimson Multitool 1.${{ github.run_number }}" \
               --notes "Build ${{ github.run_number }}. Download the .apk below and install it over the previous version."
           fi

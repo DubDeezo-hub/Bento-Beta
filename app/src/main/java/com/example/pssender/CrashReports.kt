@@ -50,9 +50,9 @@ object CrashReports {
     fun report(versionName: String, thread: String, e: Throwable, now: Date = Date()): String {
         val trace = StringWriter().also { e.printStackTrace(PrintWriter(it)) }.toString()
         val text = buildString {
-            append("Bento crash report\n")
+            append("Crimson Multitool crash report\n")
             append("When: ").append(SimpleDateFormat("yyyy-MM-dd HH:mm:ss Z", Locale.US).format(now)).append('\n')
-            append("Bento: ").append(versionName).append('\n')
+            append("Version: ").append(versionName).append('\n')
             append("Phone: ").append(Build.MANUFACTURER ?: "?").append(' ').append(Build.MODEL ?: "?")
                 .append(", Android ").append(Build.VERSION.RELEASE ?: "?").append(" (API ").append(Build.VERSION.SDK_INT).append(")\n")
             append("Thread: ").append(thread).append("\n\n")

@@ -27,7 +27,7 @@ import kotlin.concurrent.thread
 object PracticeGame {
     const val PID = 91
     const val TITLE_ID = "BENT00001"
-    const val NAME = "Bento Practice"
+    const val NAME = "Crimson Practice"
 
     const val EBOOT = 0x00400000L
     const val DATA = 0x00404000L
@@ -103,7 +103,7 @@ object PracticeGame {
         heapBase = 0x20000000L + ((runs * 3L) % 8) * 0x100000L
         exe.fill(0)
         byteArrayOf(0x7F, 'E'.code.toByte(), 'L'.code.toByte(), 'F'.code.toByte(), 2, 1, 1, 9).copyInto(exe)
-        "Bento Practice v1.00".toByteArray().copyInto(exe, 0x100)
+        "Crimson Practice v1.00".toByteArray().copyInto(exe, 0x100)
         DAMAGE_BYTES.copyInto(exe, DAMAGE_CODE)
         data.fill(0)
         bss.fill(0)

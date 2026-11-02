@@ -52,7 +52,7 @@ fun shareText(ctx: Context, text: String, title: String, copiedMessage: String? 
         val send = Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, text)
         ctx.startActivity(Intent.createChooser(send, title).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
     } catch (_: Exception) {
-        copyText(ctx, "Bento", text, copiedMessage)
+        copyText(ctx, "Crimson Multitool", text, copiedMessage)
     }
 }
 

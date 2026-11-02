@@ -1,13 +1,14 @@
 <p align="center">
-  <img src="bento-icon.png" width="128" height="128" alt="Bento app icon: a blood-red and black bento box">
+  <img src="bento-icon.png" width="128" height="128" alt="Crimson Multitool app icon: a crimson hex nut with a terminal prompt">
 </p>
 
-<h1 align="center">Bento</h1>
+<h1 align="center">Crimson Multitool</h1>
 
 <p align="center">
   <b>Your Android phone's remote for a jailbroken PS5 or PS4.</b><br>
   Install games and apps, send payloads, move files and cheat in games, all over Wi-Fi.<br>
-  by DubDeezo
+  by DubDeezo<br>
+  <i>Formerly called Bento.</i>
 </p>
 
 <p align="center">
@@ -21,13 +22,13 @@
 | Tab | |
 | --- | --- |
 | **Install** | Install `.pkg` files from a web link (or a whole list), or straight from your phone (a few or a **whole folder**, with a history to pick again). **Check** shows a package's name, icon, version and needed firmware first, and whether it is new, an update or already installed. |
-| **Payload** | Send `.elf` / `.bin` payloads. Keep favourites on a shelf, run several in a row as a **chain**, and **get payloads** from their makers' GitHub pages: Bento's picks (etaHEN, ps5debug-NG, ftpsrv…), a community list of 30+ PS5 payloads and a GitHub search. Bento checks for new payloads and updates when it starts, marks which ones list your firmware and which downloads matched a published checksum, can **run a chain by itself** right after a jailbreak, warns about a **load order** known to crash the console, has a **safe mode** that sends only the basics, shows **what's new** before an update and keeps the **earlier version** to go back to. |
+| **Payload** | Send `.elf` / `.bin` payloads. Keep favourites on a shelf, run several in a row as a **chain**, and **get payloads** from their makers' GitHub pages: Crimson Multitool's picks (etaHEN, ps5debug-NG, ftpsrv…), a community list of 30+ PS5 payloads and a GitHub search. Crimson Multitool checks for new payloads and updates when it starts, marks which ones list your firmware and which downloads matched a published checksum, can **run a chain by itself** right after a jailbreak, warns about a **load order** known to crash the console, has a **safe mode** that sends only the basics, shows **what's new** before an update and keeps the **earlier version** to go back to. |
 | **Upload** | Copy files from your phone to the console over FTP, in the background. **Keep a folder in sync**: only new or changed files are sent. |
 | **Files** | Browse the console's files (download, rename, delete, search, pin, **edit text files**, **download a folder as a zip**). See your **installed games** with names, icons, **sizes** and **available updates** (from the community patch sites, never Sony), **back up and restore saves**, **copy new screenshots & videos** to the phone, edit **etaHEN's settings**, see **folder sizes**, **find duplicate files**, **upload a zip as a folder** and run a **speed test**. |
 | **Web** | A browser for homebrew sites, with tabs, bookmarks and ad block. Send any link to the console or download it. |
 | **Memory** | A cheat engine for PS5 and PS4: find a value (health, money), change or **freeze** it, find **pointer paths** that survive a restart, switch on ready-made cheats, **make your own cheat file** and **put it on the console**, **graph a watched value**, **find text** (names, items), **undo** any change, and read the **console log**, with a **crash diary** that notes what happened each time the console went down. **Learn** teaches it from easy to expert on a built-in **practice game**, no console needed. |
 
-Every option has a small **?** that explains it, and a welcome page walks you through the first start. Something not working? **What's wrong?** on the console card tests each part of the connection and says how to fix it. Bento can **tell you when a console comes online** (after a jailbreak), even while it is closed, shows **what's running** on it and **how long since the last jailbreak**. The app's language can be picked inside the app (53 languages).
+Every option has a small **?** that explains it, and a welcome page walks you through the first start. Something not working? **What's wrong?** on the console card tests each part of the connection and says how to fix it. Crimson Multitool can **tell you when a console comes online** (after a jailbreak), even while it is closed, shows **what's running** on it and **how long since the last jailbreak**. The app's language can be picked inside the app (53 languages).
 
 ## What you need
 
@@ -38,8 +39,8 @@ Every option has a small **?** that explains it, and a welcome page walks you th
 
 ## Get started
 
-1. Download the newest `Bento-1.N.apk` from **[Releases](https://github.com/DubDeezo-hub/Bento-Beta/releases)** and open it on your phone. New versions install over the old one and keep your settings; Bento tells you when one is out.
-2. Open Bento and tap the card at the top. Enter the console's IP address, or tap **Find my console**.
+1. Download the newest `Bento-1.N.apk` from **[Releases](https://github.com/DubDeezo-hub/Bento-Beta/releases)** and open it on your phone. New versions install over the old one and keep your settings; Crimson Multitool tells you when one is out.
+2. Open Crimson Multitool and tap the card at the top. Enter the console's IP address, or tap **Find my console**.
 3. When the lights on the card turn green, pick a tab.
 
 **Cheating in a game, quickly:** send `ps5debug-NG.elf` (or `ps4debug-ng.bin` on a PS4) from the Payload tab → Memory → **Connect** → search the number the game shows (4 bytes, Exact value) → change it in the game → **Next scan** with the new number → tap the match that's left → write a new value or **Freeze** it.
@@ -67,7 +68,7 @@ pkg install python && pip install pyftpdlib   # in Termux
 python fake_console.py
 ```
 
-In Bento use `127.0.0.1` as the address, and port `7744` on the Memory tab. Its pretend game loses health every few seconds, so you can find it, freeze it and find its pointer path (`[eboot+5100] +10 → +34`). It also has two pretend games with saves and screenshots for the Files tab, a console log on port 3232, a sample package at `http://127.0.0.1:12800/sample.pkg` for **Check**, and a cheat file at `http://127.0.0.1:12800/cheats/`.
+In Crimson Multitool use `127.0.0.1` as the address, and port `7744` on the Memory tab. Its pretend game loses health every few seconds, so you can find it, freeze it and find its pointer path (`[eboot+5100] +10 → +34`). It also has two pretend games with saves and screenshots for the Files tab, a console log on port 3232, a sample package at `http://127.0.0.1:12800/sample.pkg` for **Check**, and a cheat file at `http://127.0.0.1:12800/cheats/`.
 
 ## Build it yourself
 
@@ -78,11 +79,11 @@ Fork the repo, open **Actions**, run **Build APK**. The APK lands on your Releas
 - **Status:** FTP is confirmed on a real PS4. The PS5 paths, the Memory tab, the games list, saves and Get payloads have been tested against the fake console and the published formats and protocols, not yet on a real console.
 - **Tablets:** on a wide screen the tabs move to the left side and transfers get their own pane on the right.
 - **Online games:** use the Memory tab offline only. Changing memory in online games can get your account banned.
-- **Privacy:** no accounts, no analytics, no ads. Bento talks only to your console, the pages you open and GitHub (update check). Nothing is encrypted on your local network (FTP is plain text). [More](docs/GUIDE.md#privacy-and-security).
-- Bento doesn't jailbreak anything and contains no games, firmware or payloads. Use it with content you have the right to use, at your own risk.
+- **Privacy:** no accounts, no analytics, no ads. Crimson Multitool talks only to your console, the pages you open and GitHub (update check). Nothing is encrypted on your local network (FTP is plain text). [More](docs/GUIDE.md#privacy-and-security).
+- Crimson Multitool doesn't jailbreak anything and contains no games, firmware or payloads. Use it with content you have the right to use, at your own risk.
 
 ## Credits
 
-Bento is only a client. It talks to **[etaHEN](https://github.com/etaHEN/etaHEN)** (LightningMods), **[GoldHEN](https://github.com/GoldHEN/GoldHEN)** (SiSTR0), **[elfldr / ftpsrv](https://github.com/ps5-payload-dev)** (John Törnblom), flatz's **[Remote Package Installer](https://github.com/flatz/ps4_remote_pkg_installer)**, **[ps5debug-NG](https://github.com/Pharaoh2k/ps5debug-NG)** and **[ps4debug-NG](https://github.com/Pharaoh2k/ps4debug-NG)** (OpenSourcereR, Pharaoh2k) and the community **[PS5_Cheats](https://github.com/etaHEN/PS5_Cheats)** files. Inspired by NovaPS. Built with Kotlin, Jetpack Compose, OkHttp and Apache Commons Net. Full list: [credits](docs/GUIDE.md#credits).
+Crimson Multitool is only a client. It talks to **[etaHEN](https://github.com/etaHEN/etaHEN)** (LightningMods), **[GoldHEN](https://github.com/GoldHEN/GoldHEN)** (SiSTR0), **[elfldr / ftpsrv](https://github.com/ps5-payload-dev)** (John Törnblom), flatz's **[Remote Package Installer](https://github.com/flatz/ps4_remote_pkg_installer)**, **[ps5debug-NG](https://github.com/Pharaoh2k/ps5debug-NG)** and **[ps4debug-NG](https://github.com/Pharaoh2k/ps4debug-NG)** (OpenSourcereR, Pharaoh2k) and the community **[PS5_Cheats](https://github.com/etaHEN/PS5_Cheats)** files. Inspired by NovaPS. Built with Kotlin, Jetpack Compose, OkHttp and Apache Commons Net. Full list: [credits](docs/GUIDE.md#credits).
 
-MIT License. PlayStation, PS4 and PS5 are trademarks of Sony Interactive Entertainment; Bento is an independent project, not affiliated with Sony.
+MIT License. PlayStation, PS4 and PS5 are trademarks of Sony Interactive Entertainment; Crimson Multitool is an independent project, not affiliated with Sony.

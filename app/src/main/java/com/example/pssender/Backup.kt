@@ -94,6 +94,7 @@ fun backupToJson(data: BackupData, versionName: String, savedAt: String = nowSta
         shelf.put(JSONObject().put("name", f.name).put("data", Base64.getEncoder().encodeToString(f.bytes)))
     }
     val o = JSONObject()
+        // Still "Bento" (the app's name before): backups stay readable by older and newer versions alike
         .put("app", "Bento")
         .put("format", BACKUP_FORMAT)
         .put("version", versionName)

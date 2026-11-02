@@ -88,7 +88,7 @@ object CrashDiary {
 
     /** The text of one note (English, like the crash report: it is made to be shared). */
     fun format(host: String, label: String, lines: List<String>, sent: List<SendLog.Send>, now: Date): String = buildString {
-        append("Bento crash diary\n")
+        append("Crimson Multitool crash diary\n")
         append("When: ").append(human.format(now)).append('\n')
         append("Console: ").append(if (label.isNotBlank()) "$label ($host)" else host).append('\n')
         append('\n')
