@@ -674,6 +674,11 @@
     <string name="klog_saving_to">Salvando em %1$s</string>
     <string name="klog_save_channel">Log do console</string>
     <string name="klog_save_notif_title">Salvando o log do console</string>
+    <string name="crash_title">O Bento fechou inesperadamente</string>
+    <string name="crash_text">Da última vez, o Bento fechou por causa de um erro no app. Um relatório curto do que deu errado foi guardado (a versão do app, o modelo do celular e o erro; sem arquivos nem endereços). Compartilhá-lo ajuda a corrigir.</string>
+    <string name="crash_share">Compartilhar relatório</string>
+    <string name="klog_silent">— %1$s: o console parou de responder (travou?). As linhas acima foram as últimas que ele enviou.</string>
+    <string name="klog_back">— %1$s: o console voltou a responder.</string>
     <string name="klog_etahen_note">O etaHEN envia na porta 9081 quando a opção Klog dele está ligada; essa porta também é testada.</string>
     <string name="klog_intro">O que o sistema do console e os payloads escrevem, ao vivo. O ps5debug-NG envia isso pela porta 3232. Útil quando um payload ou uma trapaça não funciona direito.</string>
     <string name="klog_port">Porta do log</string>

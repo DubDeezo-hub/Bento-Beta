@@ -673,6 +673,11 @@
     <string name="klog_saving_to">Menyimpan ke %1$s</string>
     <string name="klog_save_channel">Log konsol</string>
     <string name="klog_save_notif_title">Menyimpan log konsol</string>
+    <string name="crash_title">Bento tertutup tiba-tiba</string>
+    <string name="crash_text">Terakhir kali, Bento tertutup karena kesalahan di aplikasi. Laporan singkat tentang apa yang salah disimpan (versi aplikasi, model ponsel, dan errornya; tanpa file atau alamat). Membagikannya membantu memperbaikinya.</string>
+    <string name="crash_share">Bagikan laporan</string>
+    <string name="klog_silent">— %1$s: konsol berhenti merespons (crash?). Baris di atas adalah yang terakhir dikirimnya.</string>
+    <string name="klog_back">— %1$s: konsol merespons lagi.</string>
     <string name="klog_etahen_note">etaHEN mengirimnya di port 9081 saat setelan Klog-nya aktif; port itu juga dicoba.</string>
     <string name="klog_intro">Apa yang dicetak sistem konsol dan payload, secara langsung. ps5debug-NG mengirimnya di port 3232. Berguna saat payload atau cheat tidak bekerja dengan benar.</string>
     <string name="klog_port">Port log</string>

@@ -673,6 +673,11 @@
     <string name="klog_saving_to">Inahifadhi kwenye %1$s</string>
     <string name="klog_save_channel">Kumbukumbu ya konsoli</string>
     <string name="klog_save_notif_title">Inahifadhi kumbukumbu ya konsoli</string>
+    <string name="crash_title">Bento ilifungika ghafla</string>
+    <string name="crash_text">Mara iliyopita, Bento ilifungika kwa sababu ya kosa ndani ya programu. Ripoti fupi ya kilichoharibika imehifadhiwa (toleo la programu, aina ya simu na hitilafu; hakuna faili wala anwani). Kuishiriki husaidia kulirekebisha.</string>
+    <string name="crash_share">Shiriki ripoti</string>
+    <string name="klog_silent">— %1$s: konsoli imeacha kujibu (imekwama?). Mistari iliyo juu ndiyo ya mwisho iliyotuma.</string>
+    <string name="klog_back">— %1$s: konsoli inajibu tena.</string>
     <string name="klog_etahen_note">etaHEN huituma kwenye mlango 9081 mpangilio wake wa Klog ukiwa umewashwa; mlango huo pia hujaribiwa.</string>
     <string name="klog_intro">Kile ambacho mfumo wa konsoli na payloads huchapisha, moja kwa moja. ps5debug-NG huzituma kwenye mlango 3232. Ni muhimu payload au udanganyifu usipofanya kazi ipasavyo.</string>
     <string name="klog_port">Mlango wa kumbukumbu</string>

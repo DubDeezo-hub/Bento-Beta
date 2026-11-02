@@ -65,7 +65,8 @@ jobs:
         # Reports only (it doesn't stop the run): what it finds is listed on the run page and kept with the results
         run: |
           gradle lintDebug --no-daemon > lint.log 2>&1 || true
-          python3 .github/scripts/lint_summary.py app/build/reports/lint-results-debug.xml >> "$GITHUB_STEP_SUMMARY"
+          # On the run page, and in the log too (where it can be read without opening the page)
+          python3 .github/scripts/lint_summary.py app/build/reports/lint-results-debug.xml | tee -a "$GITHUB_STEP_SUMMARY"
 
       - name: Build the debug APK
         # A failed build puts the compiler's errors on the run page, so they can be read without opening the log

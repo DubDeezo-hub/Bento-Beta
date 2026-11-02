@@ -192,7 +192,15 @@ if [ -n "$OLD_APK" ] && [ -f "$OLD_APK" ] && [ -n "$NEW_APK" ] && [ -f "$NEW_APK
     *) fail "the next release installs over the older one" "$r" ;;
   esac
   launch
-  healthy "the app starts after being updated, with the data of the older release"
+  # These are two published releases (older than this build), so their screens can differ from this one: only
+  # check that the updated app runs, is in front and didn't crash
+  why=""
+  alive || why="the app is not running. "
+  focused || why="${why}the app is not in front. "
+  t="$(trouble)"
+  [ -n "$t" ] && why="${why}crash/ANR: $t. "
+  if [ -z "$why" ]; then pass "the app starts after being updated, with the data of the older release"
+  else fail "the app starts after being updated, with the data of the older release" "$why"; fi
   adb uninstall "$PKG" > /dev/null 2>&1
 else
   soft "update check skipped" "fewer than two releases to compare"
@@ -374,8 +382,9 @@ shot "web-landscape"
 rotate 0
 healthy "the Web tab upright again"
 
-adb shell input keyevent KEYCODE_BACK
-sleep 1
+# Back closes the browser (only when it is open: otherwise Back would leave the app)
+dump || true
+if content_visible nav_web > /dev/null; then adb shell input keyevent KEYCODE_BACK; sleep 1; fi
 dump || true
 tap_text "$(nav_label nav_home)" || true
 sleep 2
@@ -587,6 +596,8 @@ PY
   fi
   launch
   healthy "the app starts with the pretend console selected"
+  # The "new version" banner takes room the small emulator screen needs: put it away
+  if dump && tap_text "$(ui string update_later)"; then sleep 1; fi
 
   # Files: the console's /data folder over FTP
   files_folders

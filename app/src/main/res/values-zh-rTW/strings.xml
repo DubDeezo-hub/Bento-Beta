@@ -673,6 +673,11 @@
     <string name="klog_saving_to">正在儲存到 %1$s</string>
     <string name="klog_save_channel">主機記錄</string>
     <string name="klog_save_notif_title">正在儲存主機記錄</string>
+    <string name="crash_title">Bento 意外關閉</string>
+    <string name="crash_text">上次 Bento 因應用程式中的錯誤而關閉。已保留一份簡短報告（應用程式版本、手機型號和錯誤；不含檔案或位址）。分享它有助於修正問題。</string>
+    <string name="crash_share">分享報告</string>
+    <string name="klog_silent">— %1$s：主機停止回應（當機了？）。上面幾行是它最後傳送的內容。</string>
+    <string name="klog_back">— %1$s：主機重新回應。</string>
     <string name="klog_etahen_note">etaHEN 在其 Klog 設定開啟時透過連接埠 9081 傳送；也會嘗試該連接埠。</string>
     <string name="klog_intro">即時顯示主機系統和 Payload 輸出的內容。ps5debug-NG 透過連接埠 3232 傳送。Payload 或金手指運作不正常時很有用。</string>
     <string name="klog_port">記錄連接埠</string>

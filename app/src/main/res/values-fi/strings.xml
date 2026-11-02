@@ -673,6 +673,11 @@
     <string name="klog_saving_to">Tallennetaan: %1$s</string>
     <string name="klog_save_channel">Konsolin loki</string>
     <string name="klog_save_notif_title">Konsolin lokia tallennetaan</string>
+    <string name="crash_title">Bento sulkeutui odottamatta</string>
+    <string name="crash_text">Viime kerralla Bento sulkeutui sovelluksen virheen vuoksi. Lyhyt raportti siitä, mikä meni vikaan, tallennettiin (sovelluksen versio, puhelimen malli ja virhe; ei tiedostoja tai osoitteita). Sen jakaminen auttaa korjaamaan vian.</string>
+    <string name="crash_share">Jaa raportti</string>
+    <string name="klog_silent">— %1$s: konsoli lakkasi vastaamasta (kaatuiko se?). Yllä olevat rivit ovat viimeiset, jotka se lähetti.</string>
+    <string name="klog_back">— %1$s: konsoli vastaa taas.</string>
     <string name="klog_etahen_note">etaHEN lähettää sen porttiin 9081, kun sen Klog-asetus on päällä; myös sitä porttia kokeillaan.</string>
     <string name="klog_intro">Mitä konsolin järjestelmä ja payloadit tulostavat, reaaliajassa. ps5debug-NG lähettää sen portissa 3232. Kätevä, kun payload tai huijaus ei toimi kunnolla.</string>
     <string name="klog_port">Lokin portti</string>

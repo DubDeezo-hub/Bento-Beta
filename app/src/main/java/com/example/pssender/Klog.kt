@@ -75,6 +75,16 @@ fun klogPorts(port: Int): List<Int> = when (port) {
     else -> listOf(port)
 }
 
+/** No line for this long: Bento looks whether the console still answers. */
+private const val SILENT_MS = 20_000L
+
+/** Whether anything on the console at [host] answers: the log's own port or the usual service ports. Blocking. */
+internal fun consoleAnswers(host: String, logPort: Int): Boolean =
+    (listOf(logPort) + listOf(9021, 9090, 1337, 2121, 12800)).distinct().any { Diagnose.probe(host, it, 1500) == PortState.OPEN }
+
+/** "14:05:33" */
+private fun clock(ms: Long): String = java.text.SimpleDateFormat("HH:mm:ss", java.util.Locale.US).format(java.util.Date(ms))
+
 object KernelLog {
     const val DEFAULT_PORT = 3232
     /** Lines kept; older ones go. */
@@ -192,9 +202,31 @@ object KernelLog {
                     val input: InputStream = s.getInputStream()
                     val buf = ByteArray(16 * 1024)
                     val split = LineSplitter()
+                    // A quiet log is normal; a console that no longer answers at all most likely crashed. After a while
+                    // without a line, Bento looks whether anything on the console still answers, and notes it once.
+                    var lastData = System.currentTimeMillis()
+                    var lastLook = 0L
+                    var silent = false
                     while (isActive) {
-                        val n = try { input.read(buf) } catch (_: SocketTimeoutException) { continue }
+                        val n = try {
+                            input.read(buf)
+                        } catch (_: SocketTimeoutException) {
+                            val now = System.currentTimeMillis()
+                            if (!silent && now - lastData >= SILENT_MS && now - lastLook >= SILENT_MS) {
+                                lastLook = now
+                                if (!consoleAnswers(host.trim(), used)) {
+                                    silent = true
+                                    synchronized(lock) { pending.add(AppText.get(R.string.klog_silent, clock(now))) }
+                                }
+                            }
+                            continue
+                        }
                         if (n < 0) break
+                        lastData = System.currentTimeMillis()
+                        if (silent) {
+                            silent = false
+                            synchronized(lock) { pending.add(AppText.get(R.string.klog_back, clock(lastData))) }
+                        }
                         split.feed(buf, n) { line -> synchronized(lock) { pending.add(line) } }
                     }
                     val last = split.rest()

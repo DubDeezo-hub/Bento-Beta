@@ -673,6 +673,11 @@
     <string name="klog_saving_to">Saugoma į %1$s</string>
     <string name="klog_save_channel">Konsolės žurnalas</string>
     <string name="klog_save_notif_title">Saugomas konsolės žurnalas</string>
+    <string name="crash_title">Bento netikėtai užsidarė</string>
+    <string name="crash_text">Praėjusį kartą Bento užsidarė dėl programos klaidos. Išsaugota trumpa ataskaita apie tai, kas nutiko (programos versija, telefono modelis ir klaida; jokių failų ar adresų). Pasidalinę ja padėsite tai pataisyti.</string>
+    <string name="crash_share">Bendrinti ataskaitą</string>
+    <string name="klog_silent">— %1$s: konsolė nustojo atsakyti (užstrigo?). Eilutės aukščiau – paskutinės, kurias ji atsiuntė.</string>
+    <string name="klog_back">— %1$s: konsolė vėl atsako.</string>
     <string name="klog_etahen_note">etaHEN jį siunčia per 9081 prievadą, kai įjungtas jo Klog nustatymas; bandomas ir šis prievadas.</string>
     <string name="klog_intro">Ką konsolės sistema ir payloads išveda, tiesiogiai. ps5debug-NG jį siunčia prievadu 3232. Naudinga, kai payload ar gudrybė veikia netinkamai.</string>
     <string name="klog_port">Žurnalo prievadas</string>

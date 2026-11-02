@@ -163,6 +163,7 @@ fun HomeTab(
     onFind: () -> Unit,
     onCheck: () -> Unit,
     onOpenPayloads: () -> Unit,
+    shelfVersion: Int = 0,
     install: @Composable () -> Unit
 ) {
     val ctx = LocalContext.current
@@ -173,7 +174,8 @@ fun HomeTab(
     val down = counted.filter { it.up == false }.map { it.label }
     var status by remember { mutableStateOf("") }
     var reloadAsk by remember { mutableStateOf<Pair<String, () -> Unit>?>(null) }
-    val shelf = remember { shelfList(shelfDir(ctx)) }
+    // Read again when Home opens, and when a payload is saved while it is open
+    val shelf = remember(shelfVersion) { shelfList(shelfDir(ctx)) }
 
     // The console's games, read once when they aren't known yet
     LaunchedEffect(ftp) { if (ftp != null && ConsoleApps.apps.isEmpty()) ConsoleApps.load(ctx, ftp) }

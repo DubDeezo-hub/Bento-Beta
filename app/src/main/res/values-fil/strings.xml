@@ -673,6 +673,11 @@
     <string name="klog_saving_to">Sine-save sa %1$s</string>
     <string name="klog_save_channel">Log ng console</string>
     <string name="klog_save_notif_title">Sine-save ang log ng console</string>
+    <string name="crash_title">Biglang nagsara ang Bento</string>
+    <string name="crash_text">Noong nakaraan, nagsara ang Bento dahil sa isang mali sa app. May naitabing maikling ulat kung ano ang nangyari (bersyon ng app, modelo ng phone at ang error; walang file o address). Makakatulong sa pag-aayos kung ibabahagi mo ito.</string>
+    <string name="crash_share">Ibahagi ang ulat</string>
+    <string name="klog_silent">— %1$s: hindi na sumasagot ang console (nag-crash ba?). Ang mga linya sa itaas ang huling ipinadala nito.</string>
+    <string name="klog_back">— %1$s: sumasagot na ulit ang console.</string>
     <string name="klog_etahen_note">Ipinapadala ito ng etaHEN sa port 9081 kapag naka-on ang Klog setting nito; sinusubukan din ang port na iyon.</string>
     <string name="klog_intro">Ang ipini-print ng system ng console at mga payload, live. Ipinapadala ito ng ps5debug-NG sa port 3232. Kapaki-pakinabang kapag hindi gumagana nang tama ang isang payload o cheat.</string>
     <string name="klog_port">Port ng log</string>

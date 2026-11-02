@@ -674,6 +674,11 @@
     <string name="klog_saving_to">Guardando en %1$s</string>
     <string name="klog_save_channel">Registro de la consola</string>
     <string name="klog_save_notif_title">Guardando el registro de la consola</string>
+    <string name="crash_title">Bento se cerró de forma inesperada</string>
+    <string name="crash_text">La última vez, Bento se cerró por un error de la app. Se guardó un informe breve de lo que falló (la versión de la app, el modelo del teléfono y el error; sin archivos ni direcciones). Compartirlo ayuda a corregirlo.</string>
+    <string name="crash_share">Compartir informe</string>
+    <string name="klog_silent">— %1$s: la consola dejó de responder (¿se colgó?). Las líneas de arriba son las últimas que envió.</string>
+    <string name="klog_back">— %1$s: la consola vuelve a responder.</string>
     <string name="klog_etahen_note">etaHEN lo envía por el puerto 9081 cuando su ajuste Klog está activado; también se prueba ese puerto.</string>
     <string name="klog_intro">Lo que el sistema de la consola y los payloads escriben, en directo. ps5debug-NG lo envía por el puerto 3232. Útil cuando un payload o un truco falla.</string>
     <string name="klog_port">Puerto del registro</string>

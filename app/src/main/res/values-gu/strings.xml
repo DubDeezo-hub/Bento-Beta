@@ -673,6 +673,11 @@
     <string name="klog_saving_to">%1$s માં સાચવાય છે</string>
     <string name="klog_save_channel">કન્સોલ લૉગ</string>
     <string name="klog_save_notif_title">કન્સોલ લૉગ સાચવાય છે</string>
+    <string name="crash_title">Bento અચાનક બંધ થયું</string>
+    <string name="crash_text">છેલ્લી વખતે એપની એક ભૂલને કારણે Bento બંધ થયું હતું. શું ખોટું થયું તેનો ટૂંકો રિપોર્ટ રાખવામાં આવ્યો છે (એપનું વર્ઝન, ફોનનું મોડેલ અને ભૂલ; કોઈ ફાઇલ કે સરનામું નહીં). તેને શેર કરવાથી સુધારવામાં મદદ મળે છે.</string>
+    <string name="crash_share">રિપોર્ટ શેર કરો</string>
+    <string name="klog_silent">— %1$s: કન્સોલ જવાબ આપતું બંધ થયું (ક્રેશ થયું?). ઉપરની લાઇનો તેણે છેલ્લે મોકલી હતી.</string>
+    <string name="klog_back">— %1$s: કન્સોલ ફરી જવાબ આપે છે.</string>
     <string name="klog_etahen_note">Klog સેટિંગ ચાલુ હોય ત્યારે etaHEN તેને પોર્ટ 9081 પર મોકલે છે; તે પોર્ટ પણ અજમાવાય છે.</string>
     <string name="klog_intro">કન્સોલની સિસ્ટમ અને payloads જે છાપે છે તે, લાઇવ. ps5debug-NG તેને પોર્ટ 3232 પર મોકલે છે. કોઈ payload કે ચીટ બરાબર કામ ન કરે ત્યારે ઉપયોગી.</string>
     <string name="klog_port">લૉગ પોર્ટ</string>

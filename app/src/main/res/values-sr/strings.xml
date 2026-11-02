@@ -673,6 +673,11 @@
     <string name="klog_saving_to">Чува се у %1$s</string>
     <string name="klog_save_channel">Дневник конзоле</string>
     <string name="klog_save_notif_title">Чува се дневник конзоле</string>
+    <string name="crash_title">Bento се неочекивано затворио</string>
+    <string name="crash_text">Прошли пут Bento се затворио због грешке у апликацији. Сачуван је кратак извештај о томе шта је пошло наопако (верзија апликације, модел телефона и грешка; без датотека и адреса). Дељење помаже да се то поправи.</string>
+    <string name="crash_share">Подели извештај</string>
+    <string name="klog_silent">— %1$s: конзола је престала да одговара (пала?). Редови изнад су последњи које је послала.</string>
+    <string name="klog_back">— %1$s: конзола поново одговара.</string>
     <string name="klog_etahen_note">etaHEN га шаље на порту 9081 кад му је укључено подешавање Klog; пробава се и тај порт.</string>
     <string name="klog_intro">Шта исписују систем конзоле и payload-и, уживо. ps5debug-NG то шаље на порту 3232. Корисно кад payload или варање не ради како треба.</string>
     <string name="klog_port">Порт дневника</string>

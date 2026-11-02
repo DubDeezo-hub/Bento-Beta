@@ -673,6 +673,11 @@
     <string name="klog_saving_to">Shranjevanje v %1$s</string>
     <string name="klog_save_channel">Dnevnik konzole</string>
     <string name="klog_save_notif_title">Shranjevanje dnevnika konzole</string>
+    <string name="crash_title">Bento se je nepričakovano zaprl</string>
+    <string name="crash_text">Zadnjič se je Bento zaprl zaradi napake v aplikaciji. Shranjeno je kratko poročilo o tem, kaj je šlo narobe (različica aplikacije, model telefona in napaka; brez datotek ali naslovov). Če ga deliš, pomagaš pri popravku.</string>
+    <string name="crash_share">Deli poročilo</string>
+    <string name="klog_silent">— %1$s: konzola je nehala odgovarjati (se je zrušila?). Vrstice zgoraj so zadnje, ki jih je poslala.</string>
+    <string name="klog_back">— %1$s: konzola spet odgovarja.</string>
     <string name="klog_etahen_note">etaHEN ga pošilja na vratih 9081, ko je vklopljena njegova nastavitev Klog; poskusi se tudi ta vrata.</string>
     <string name="klog_intro">Kar izpisujejo sistem konzole in payloadi, v živo. ps5debug-NG to pošilja na vratih 3232. Priročno, ko payload ali goljufija ne deluje prav.</string>
     <string name="klog_port">Vrata dnevnika</string>

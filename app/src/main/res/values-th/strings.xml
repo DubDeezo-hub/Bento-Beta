@@ -673,6 +673,11 @@
     <string name="klog_saving_to">กำลังบันทึกไปที่ %1$s</string>
     <string name="klog_save_channel">บันทึกของเครื่อง</string>
     <string name="klog_save_notif_title">กำลังบันทึกบันทึกของเครื่อง</string>
+    <string name="crash_title">Bento ปิดไปโดยไม่คาดคิด</string>
+    <string name="crash_text">ครั้งที่แล้ว Bento ปิดไปเพราะข้อผิดพลาดในแอป เราเก็บรายงานสั้น ๆ ว่าเกิดอะไรขึ้นไว้ (เวอร์ชันแอป รุ่นโทรศัพท์ และข้อผิดพลาด ไม่มีไฟล์หรือที่อยู่) การแชร์จะช่วยให้แก้ไขได้</string>
+    <string name="crash_share">แชร์รายงาน</string>
+    <string name="klog_silent">— %1$s: เครื่องหยุดตอบสนอง (ค้างหรือเปล่า?) บรรทัดข้างบนคือสิ่งสุดท้ายที่เครื่องส่งมา</string>
+    <string name="klog_back">— %1$s: เครื่องตอบสนองอีกครั้ง</string>
     <string name="klog_etahen_note">etaHEN ส่งมาทางพอร์ต 9081 เมื่อเปิดการตั้งค่า Klog ไว้ พอร์ตนั้นจะถูกลองด้วย</string>
     <string name="klog_intro">สิ่งที่ระบบของคอนโซลและ payload พิมพ์ออกมา แบบสด ps5debug-NG ส่งมาที่พอร์ต 3232 มีประโยชน์เมื่อ payload หรือโค้ดโกงทำงานไม่ถูกต้อง</string>
     <string name="klog_port">พอร์ตบันทึก</string>

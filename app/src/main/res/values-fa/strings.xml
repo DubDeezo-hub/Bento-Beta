@@ -673,6 +673,11 @@
     <string name="klog_saving_to">در حال ذخیره در %1$s</string>
     <string name="klog_save_channel">گزارش کنسول</string>
     <string name="klog_save_notif_title">در حال ذخیرهٔ گزارش کنسول</string>
+    <string name="crash_title">‏Bento ناگهان بسته شد</string>
+    <string name="crash_text">دفعهٔ قبل Bento به‌خاطر اشتباهی در برنامه بسته شد. گزارش کوتاهی از مشکل نگه داشته شد (نسخهٔ برنامه، مدل گوشی و خطا؛ بدون فایل یا نشانی). اشتراک‌گذاری آن به رفع مشکل کمک می‌کند.</string>
+    <string name="crash_share">اشتراک گزارش</string>
+    <string name="klog_silent">‏— %1$s: کنسول دیگر پاسخ نمی‌دهد (کرش کرد؟). خطوط بالا آخرین چیزهایی است که فرستاد.</string>
+    <string name="klog_back">‏— %1$s: کنسول دوباره پاسخ می‌دهد.</string>
     <string name="klog_etahen_note">‏etaHEN وقتی تنظیم Klog آن روشن باشد آن را روی درگاه 9081 می‌فرستد؛ آن درگاه هم امتحان می‌شود.</string>
     <string name="klog_intro">آنچه سیستم کنسول و payloadها چاپ می‌کنند، به‌صورت زنده. ps5debug-NG آن را روی درگاه 3232 می‌فرستد. وقتی یک payload یا تقلب درست کار نمی‌کند به کار می‌آید.</string>
     <string name="klog_port">درگاه گزارش</string>

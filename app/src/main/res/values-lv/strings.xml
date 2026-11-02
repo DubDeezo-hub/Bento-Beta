@@ -673,6 +673,11 @@
     <string name="klog_saving_to">Saglabā: %1$s</string>
     <string name="klog_save_channel">Konsoles žurnāls</string>
     <string name="klog_save_notif_title">Saglabā konsoles žurnālu</string>
+    <string name="crash_title">Bento negaidīti aizvērās</string>
+    <string name="crash_text">Iepriekšējo reizi Bento aizvērās lietotnes kļūdas dēļ. Saglabāts īss ziņojums par notikušo (lietotnes versija, tālruņa modelis un kļūda; bez failiem vai adresēm). Tā kopīgošana palīdz to izlabot.</string>
+    <string name="crash_share">Kopīgot ziņojumu</string>
+    <string name="klog_silent">— %1$s: konsole pārstāja atbildēt (avarēja?). Augstāk esošās rindas ir pēdējās, ko tā nosūtīja.</string>
+    <string name="klog_back">— %1$s: konsole atkal atbild.</string>
     <string name="klog_etahen_note">etaHEN to sūta uz portu 9081, kad ieslēgts tā Klog iestatījums; tiek mēģināts arī šis ports.</string>
     <string name="klog_intro">Tas, ko konsoles sistēma un payloads izdrukā, reāllaikā. ps5debug-NG to sūta portā 3232. Noder, ja payload vai krāpšanās kods nedarbojas pareizi.</string>
     <string name="klog_port">Žurnāla ports</string>

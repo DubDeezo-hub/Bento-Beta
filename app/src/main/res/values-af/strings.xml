@@ -673,6 +673,11 @@
     <string name="klog_saving_to">Stoor in %1$s</string>
     <string name="klog_save_channel">Konsole-log</string>
     <string name="klog_save_notif_title">Konsole-log word gestoor</string>
+    <string name="crash_title">Bento het onverwags toegemaak</string>
+    <string name="crash_text">Die vorige keer het Bento toegemaak weens \'n fout in die app. \'n Kort verslag van wat verkeerd geloop het, is gehou (die app se weergawe, die foon se model en die fout; geen lêers of adresse nie). Om dit te deel help om dit reg te maak.</string>
+    <string name="crash_share">Deel verslag</string>
+    <string name="klog_silent">— %1$s: die konsole antwoord nie meer nie (het dit ineengestort?). Die reëls hierbo is die laaste wat dit gestuur het.</string>
+    <string name="klog_back">— %1$s: die konsole antwoord weer.</string>
     <string name="klog_etahen_note">etaHEN stuur dit op poort 9081 as sy Klog-instelling aan is; daardie poort word ook probeer.</string>
     <string name="klog_intro">Wat die konsole se stelsel en payloads uitdruk, regstreeks. ps5debug-NG stuur dit op poort 3232. Nuttig wanneer ’n payload of kul nie reg werk nie.</string>
     <string name="klog_port">Logpoort</string>

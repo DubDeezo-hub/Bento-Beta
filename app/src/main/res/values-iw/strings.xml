@@ -673,6 +673,11 @@
     <string name="klog_saving_to">נשמר ב-%1$s</string>
     <string name="klog_save_channel">יומן הקונסולה</string>
     <string name="klog_save_notif_title">שומר את יומן הקונסולה</string>
+    <string name="crash_title">‏Bento נסגר באופן בלתי צפוי</string>
+    <string name="crash_text">בפעם הקודמת Bento נסגר בגלל טעות באפליקציה. נשמר דוח קצר על מה שהשתבש (גרסת האפליקציה, דגם הטלפון והשגיאה; בלי קבצים או כתובות). שיתוף שלו עוזר לתקן את זה.</string>
+    <string name="crash_share">שיתוף הדוח</string>
+    <string name="klog_silent">‏— %1$s: הקונסולה הפסיקה לענות (קרסה?). השורות למעלה הן האחרונות ששלחה.</string>
+    <string name="klog_back">‏— %1$s: הקונסולה עונה שוב.</string>
     <string name="klog_etahen_note">‏etaHEN שולח אותו ביציאה 9081 כשהגדרת Klog שלו פועלת; גם היציאה הזו נבדקת.</string>
     <string name="klog_intro">מה שמערכת הקונסולה וה-payloads מדפיסים, בזמן אמת. ps5debug-NG שולח את זה בפורט 3232. שימושי כש-payload או צ\'יט לא מתנהגים כמו שצריך.</string>
     <string name="klog_port">פורט היומן</string>

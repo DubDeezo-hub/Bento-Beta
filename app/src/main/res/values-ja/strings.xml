@@ -673,6 +673,11 @@
     <string name="klog_saving_to">%1$s に保存中</string>
     <string name="klog_save_channel">本体ログ</string>
     <string name="klog_save_notif_title">本体ログを保存中</string>
+    <string name="crash_title">Bento が予期せず終了しました</string>
+    <string name="crash_text">前回、アプリの不具合で Bento が終了しました。何が起きたかの短いレポートを保存しています（アプリのバージョン、スマホの機種、エラーのみ。ファイルやアドレスは含みません）。共有すると修正に役立ちます。</string>
+    <string name="crash_share">レポートを共有</string>
+    <string name="klog_silent">— %1$s: 本体が応答しなくなりました（クラッシュ？）。上の行が最後に送られた内容です。</string>
+    <string name="klog_back">— %1$s: 本体が再び応答しています。</string>
     <string name="klog_etahen_note">etaHEN は Klog 設定がオンのときポート 9081 で送ります。そのポートも試します。</string>
     <string name="klog_intro">コンソールのシステムやペイロードが出力する内容をリアルタイムで表示します。ps5debug-NG がポート 3232 で送信します。ペイロードやチートが正しく動かないときに役立ちます。</string>
     <string name="klog_port">ログのポート</string>

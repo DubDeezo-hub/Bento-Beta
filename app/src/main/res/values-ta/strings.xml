@@ -673,6 +673,11 @@
     <string name="klog_saving_to">%1$s இல் சேமிக்கப்படுகிறது</string>
     <string name="klog_save_channel">கன்சோல் பதிவு</string>
     <string name="klog_save_notif_title">கன்சோல் பதிவு சேமிக்கப்படுகிறது</string>
+    <string name="crash_title">Bento எதிர்பாராமல் மூடப்பட்டது</string>
+    <string name="crash_text">கடந்த முறை ஆப்பில் ஒரு தவறால் Bento மூடப்பட்டது. என்ன தவறு நடந்தது என்ற சிறிய அறிக்கை வைக்கப்பட்டுள்ளது (ஆப் பதிப்பு, போன் மாடல், பிழை; கோப்புகள் அல்லது முகவரிகள் இல்லை). அதைப் பகிர்வது சரிசெய்ய உதவும்.</string>
+    <string name="crash_share">அறிக்கையைப் பகிர்</string>
+    <string name="klog_silent">— %1$s: கன்சோல் பதிலளிப்பதை நிறுத்தியது (கிராஷ் ஆனதா?). மேலே உள்ள வரிகள் அது கடைசியாக அனுப்பியவை.</string>
+    <string name="klog_back">— %1$s: கன்சோல் மீண்டும் பதிலளிக்கிறது.</string>
     <string name="klog_etahen_note">Klog அமைப்பு இயக்கத்தில் இருக்கும்போது etaHEN இதை போர்ட் 9081-இல் அனுப்புகிறது; அந்த போர்ட்டும் முயற்சிக்கப்படும்.</string>
     <string name="klog_intro">கன்சோலின் சிஸ்டமும் payloads-உம் அச்சிடுவது, நேரலையில். ps5debug-NG இதைப் போர்ட் 3232-இல் அனுப்பும். ஒரு payload அல்லது சீட் சரியாக வேலை செய்யாதபோது உதவும்.</string>
     <string name="klog_port">பதிவு போர்ட்</string>

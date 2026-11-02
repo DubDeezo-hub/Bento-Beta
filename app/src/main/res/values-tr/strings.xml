@@ -673,6 +673,11 @@
     <string name="klog_saving_to">%1$s konumuna kaydediliyor</string>
     <string name="klog_save_channel">Konsol günlüğü</string>
     <string name="klog_save_notif_title">Konsol günlüğü kaydediliyor</string>
+    <string name="crash_title">Bento beklenmedik şekilde kapandı</string>
+    <string name="crash_text">Geçen sefer Bento, uygulamadaki bir hata yüzünden kapandı. Neyin ters gittiğine dair kısa bir rapor saklandı (uygulama sürümü, telefon modeli ve hata; dosya veya adres yok). Paylaşmak, sorunun düzeltilmesine yardımcı olur.</string>
+    <string name="crash_share">Raporu paylaş</string>
+    <string name="klog_silent">— %1$s: konsol yanıt vermeyi bıraktı (çöktü mü?). Yukarıdaki satırlar gönderdiği son satırlar.</string>
+    <string name="klog_back">— %1$s: konsol yeniden yanıt veriyor.</string>
     <string name="klog_etahen_note">etaHEN, Klog ayarı açıkken bunu 9081 numaralı porttan gönderir; o port da denenir.</string>
     <string name="klog_intro">Konsolun sisteminin ve payload\'ların yazdıkları, canlı. ps5debug-NG bunu 3232 portundan gönderir. Bir payload ya da hile düzgün çalışmadığında işe yarar.</string>
     <string name="klog_port">Günlük portu</string>

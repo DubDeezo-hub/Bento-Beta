@@ -673,6 +673,11 @@
     <string name="klog_saving_to">Mentés ide: %1$s</string>
     <string name="klog_save_channel">Konzolnapló</string>
     <string name="klog_save_notif_title">A konzolnapló mentése</string>
+    <string name="crash_title">A Bento váratlanul bezárult</string>
+    <string name="crash_text">Legutóbb a Bento egy hiba miatt bezárult. Rövid jelentés készült arról, mi romlott el (az app verziója, a telefon típusa és a hiba; fájlok és címek nélkül). Ha megosztod, segít a javításban.</string>
+    <string name="crash_share">Jelentés megosztása</string>
+    <string name="klog_silent">— %1$s: a konzol nem válaszol (összeomlott?). A fenti sorokat küldte utoljára.</string>
+    <string name="klog_back">— %1$s: a konzol újra válaszol.</string>
     <string name="klog_etahen_note">Az etaHEN a 9081-es porton küldi, ha be van kapcsolva a Klog beállítása; ezt a portot is megpróbálja.</string>
     <string name="klog_intro">Amit a konzol rendszere és a payloadok kiírnak, élőben. A ps5debug-NG a 3232-es porton küldi. Jól jön, ha egy payload vagy csalás rosszul működik.</string>
     <string name="klog_port">Napló portja</string>

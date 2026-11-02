@@ -673,6 +673,11 @@
     <string name="klog_saving_to">Ukladá sa do %1$s</string>
     <string name="klog_save_channel">Záznam konzoly</string>
     <string name="klog_save_notif_title">Ukladá sa záznam konzoly</string>
+    <string name="crash_title">Bento sa nečakane zatvoril</string>
+    <string name="crash_text">Minule sa Bento zatvoril pre chybu v aplikácii. Uložila sa krátka správa o tom, čo sa pokazilo (verzia aplikácie, model telefónu a chyba; žiadne súbory ani adresy). Ak ju zdieľate, pomôžete chybu opraviť.</string>
+    <string name="crash_share">Zdieľať správu</string>
+    <string name="klog_silent">— %1$s: konzola prestala odpovedať (spadla?). Riadky vyššie sú posledné, ktoré poslala.</string>
+    <string name="klog_back">— %1$s: konzola opäť odpovedá.</string>
     <string name="klog_etahen_note">etaHEN ho posiela na porte 9081, keď má zapnuté nastavenie Klog; skúša sa aj tento port.</string>
     <string name="klog_intro">Čo systém konzoly a payloady vypisujú, naživo. ps5debug-NG to posiela na porte 3232. Hodí sa, keď payload alebo cheat zlobí.</string>
     <string name="klog_port">Port logu</string>

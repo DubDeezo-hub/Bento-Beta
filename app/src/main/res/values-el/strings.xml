@@ -673,6 +673,11 @@
     <string name="klog_saving_to">Αποθήκευση στο %1$s</string>
     <string name="klog_save_channel">Αρχείο καταγραφής κονσόλας</string>
     <string name="klog_save_notif_title">Αποθήκευση αρχείου καταγραφής κονσόλας</string>
+    <string name="crash_title">Το Bento έκλεισε απροσδόκητα</string>
+    <string name="crash_text">Την προηγούμενη φορά το Bento έκλεισε λόγω σφάλματος στην εφαρμογή. Κρατήθηκε μια σύντομη αναφορά για το τι πήγε στραβά (η έκδοση της εφαρμογής, το μοντέλο του τηλεφώνου και το σφάλμα· χωρίς αρχεία ή διευθύνσεις). Αν τη μοιραστείς, βοηθάς να διορθωθεί.</string>
+    <string name="crash_share">Κοινοποίηση αναφοράς</string>
+    <string name="klog_silent">— %1$s: η κονσόλα σταμάτησε να απαντά (κατέρρευσε;). Οι γραμμές από πάνω είναι οι τελευταίες που έστειλε.</string>
+    <string name="klog_back">— %1$s: η κονσόλα απαντά ξανά.</string>
     <string name="klog_etahen_note">Το etaHEN το στέλνει στη θύρα 9081 όταν είναι ενεργή η ρύθμιση Klog· δοκιμάζεται και αυτή η θύρα.</string>
     <string name="klog_intro">Ό,τι τυπώνουν το σύστημα της κονσόλας και τα payload, ζωντανά. Το ps5debug-NG το στέλνει στη θύρα 3232. Χρήσιμο όταν ένα payload ή cheat δεν δουλεύει σωστά.</string>
     <string name="klog_port">Θύρα καταγραφής</string>

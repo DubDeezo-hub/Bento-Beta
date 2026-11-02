@@ -673,6 +673,11 @@
     <string name="klog_saving_to">Đang lưu vào %1$s</string>
     <string name="klog_save_channel">Nhật ký máy</string>
     <string name="klog_save_notif_title">Đang lưu nhật ký máy</string>
+    <string name="crash_title">Bento đã đóng đột ngột</string>
+    <string name="crash_text">Lần trước Bento bị đóng vì một lỗi trong ứng dụng. Một báo cáo ngắn về sự cố đã được lưu (phiên bản ứng dụng, mẫu điện thoại và lỗi; không có tệp hay địa chỉ). Chia sẻ nó sẽ giúp sửa lỗi.</string>
+    <string name="crash_share">Chia sẻ báo cáo</string>
+    <string name="klog_silent">— %1$s: máy đã ngừng phản hồi (bị sập?). Các dòng ở trên là những gì máy gửi cuối cùng.</string>
+    <string name="klog_back">— %1$s: máy phản hồi trở lại.</string>
     <string name="klog_etahen_note">etaHEN gửi qua cổng 9081 khi bật cài đặt Klog; cổng đó cũng được thử.</string>
     <string name="klog_intro">Những gì hệ thống console và payload in ra, trực tiếp. ps5debug-NG gửi nó ở cổng 3232. Hữu ích khi một payload hoặc cheat không hoạt động đúng.</string>
     <string name="klog_port">Cổng nhật ký</string>

@@ -678,6 +678,11 @@
     <string name="klog_saving_to">Saving to %1$s</string>
     <string name="klog_save_channel">Console log</string>
     <string name="klog_save_notif_title">Saving the console log</string>
+    <string name="crash_title">Bento closed unexpectedly</string>
+    <string name="crash_text">Last time, Bento closed because of a mistake in the app. A short report of what went wrong was kept (the app\'s version, the phone\'s model and the error; no files or addresses). Sharing it helps to fix it.</string>
+    <string name="crash_share">Share report</string>
+    <string name="klog_silent">— %1$s: the console stopped answering (did it crash?). The lines above are the last it sent.</string>
+    <string name="klog_back">— %1$s: the console answers again.</string>
     <string name="klog_etahen_note">etaHEN sends it on port 9081 when its Klog setting is on; that port is tried too.</string>
     <string name="klog_intro">What the console\'s system and payloads print, live. ps5debug-NG sends it on port 3232. Handy when a payload or a cheat misbehaves.</string>
     <string name="klog_port">Log port</string>

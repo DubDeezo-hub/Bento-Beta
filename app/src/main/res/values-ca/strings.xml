@@ -673,6 +673,11 @@
     <string name="klog_saving_to">S\'està desant a %1$s</string>
     <string name="klog_save_channel">Registre de la consola</string>
     <string name="klog_save_notif_title">S\'està desant el registre de la consola</string>
+    <string name="crash_title">Bento s\'ha tancat de cop</string>
+    <string name="crash_text">L\'última vegada, Bento es va tancar per un error de l\'app. S\'ha desat un informe breu del que va fallar (la versió de l\'app, el model del telèfon i l\'error; ni fitxers ni adreces). Compartir-lo ajuda a arreglar-ho.</string>
+    <string name="crash_share">Comparteix l\'informe</string>
+    <string name="klog_silent">— %1$s: la consola ha deixat de respondre (s\'ha penjat?). Les línies de dalt són les últimes que va enviar.</string>
+    <string name="klog_back">— %1$s: la consola torna a respondre.</string>
     <string name="klog_etahen_note">etaHEN l\'envia pel port 9081 quan té activat el paràmetre Klog; també es prova aquest port.</string>
     <string name="klog_intro">El que imprimeixen el sistema de la consola i els payloads, en directe. ps5debug-NG l’envia pel port 3232. Útil quan un payload o un truc no funciona bé.</string>
     <string name="klog_port">Port del registre</string>

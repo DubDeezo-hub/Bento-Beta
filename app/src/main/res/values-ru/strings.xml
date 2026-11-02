@@ -673,6 +673,11 @@
     <string name="klog_saving_to">Сохраняется в %1$s</string>
     <string name="klog_save_channel">Журнал консоли</string>
     <string name="klog_save_notif_title">Сохранение журнала консоли</string>
+    <string name="crash_title">Bento неожиданно закрылся</string>
+    <string name="crash_text">В прошлый раз Bento закрылся из-за ошибки в приложении. Сохранён короткий отчёт о том, что пошло не так (версия приложения, модель телефона и ошибка; без файлов и адресов). Если поделиться им, это поможет исправить ошибку.</string>
+    <string name="crash_share">Поделиться отчётом</string>
+    <string name="klog_silent">— %1$s: консоль перестала отвечать (сбой?). Строки выше — последние, что она прислала.</string>
+    <string name="klog_back">— %1$s: консоль снова отвечает.</string>
     <string name="klog_etahen_note">etaHEN отправляет его на порт 9081, когда включён параметр Klog; этот порт тоже пробуется.</string>
     <string name="klog_intro">То, что выводят система консоли и пейлоады, в реальном времени. ps5debug-NG отправляет это на порт 3232. Полезно, когда пейлоад или чит работает не так.</string>
     <string name="klog_port">Порт журнала</string>

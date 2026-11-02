@@ -16,6 +16,7 @@ import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
@@ -128,6 +129,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        CrashReports.install(this, appVersion(this).name) // a crash from here on is noted, and offered on the next start
         TransferState.setSpeedLimit(SpeedLimits.load(this)) // the saved speed limit applies from the first transfer on
         // Only on a fresh start: after a rotation the same intent would otherwise be handled twice
         if (savedInstanceState == null) {
@@ -248,6 +250,8 @@ fun SenderApp(
     var consoleStatus by remember { mutableStateOf<ConsoleStatus?>(null) }
     var wasActive by remember { mutableStateOf(false) }
     val version = remember { appVersion(ctx) }
+    // A crash last time: offered once, to share or put away
+    var crashReport by remember { mutableStateOf(CrashReports.pending(ctx)) }
     var update by remember { mutableStateOf(UpdatePrefs.waiting(ctx, version.code)) } // a newer version found earlier
     var showAbout by remember { mutableStateOf(false) }
     // A phone on its side has little height: the console card shrinks to one line and the update banner waits, so the tab and the bottom bar keep their room
@@ -569,7 +573,11 @@ fun SenderApp(
                             else -> {
                                 // The form tabs scroll, so nothing is cut off on small screens
                                 Column(
-                                    modifier = Modifier.weight(1f).verticalScroll(rememberScrollState()),
+                                    // Each place keeps its own scroll position (one shared position left More scrolled
+                                    // past its first rows after scrolling down on Home)
+                                    modifier = Modifier.weight(1f).verticalScroll(
+                                        rememberSaveable(tab, filesUpload, saver = ScrollState.Saver) { ScrollState(0) }
+                                    ),
                                     verticalArrangement = Arrangement.spacedBy(12.dp)
                                 ) {
                                     when (tab) {
@@ -577,7 +585,8 @@ fun SenderApp(
                                             host = host, level = level, checks = checks, type = active.type,
                                             loaderPort = active.payloadPort, ftp = ftpSettings,
                                             onEdit = { showAddress = true }, onFind = { showFind = true }, onCheck = { showDiagnose = true },
-                                            onOpenPayloads = { tab = TAB_PAYLOADS }
+                                            onOpenPayloads = { tab = TAB_PAYLOADS },
+                                            shelfVersion = shelfVersion
                                         ) {
                                             InstallTab(host, active.installPort, { v -> updateActive { it.copy(installPort = v) } }, active.name, installLinks, changeInstallLinks, askNotificationsIfNeeded, active.type, ftpSettings)
                                         }
@@ -763,6 +772,21 @@ fun SenderApp(
 
             if (showLanguage) LanguageDialog(onClose = { showLanguage = false })
             if (showEtaHen && ftpSettings != null) EtaHenSettingsDialog(ftpSettings) { showEtaHen = false }
+            crashReport?.let { report ->
+                AlertDialog(
+                    onDismissRequest = { CrashReports.clear(ctx); crashReport = null },
+                    title = { Text(str(R.string.crash_title)) },
+                    text = { Text(str(R.string.crash_text)) },
+                    confirmButton = {
+                        TextButton(onClick = {
+                            shareText(ctx, report, AppText.get(R.string.crash_title))
+                            CrashReports.clear(ctx)
+                            crashReport = null
+                        }) { Text(str(R.string.crash_share)) }
+                    },
+                    dismissButton = { TextButton(onClick = { CrashReports.clear(ctx); crashReport = null }) { Text(str(R.string.action_close)) } }
+                )
+            }
             reloadAsk?.let { (why, go) ->
                 AlertDialog(
                     onDismissRequest = { reloadAsk = null },
