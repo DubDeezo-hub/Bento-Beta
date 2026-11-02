@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">ไม่มีเชนนั้นอีกแล้ว</string>
     <string name="notif_channel_chain">เชน payload</string>
     <string name="backup_chains">เชน: %1$d</string>
+    <string name="reload_warn_title">โหลดไว้แล้ว?</string>
+    <string name="reload_warn_running">etaHEN ตอบสนองบนเครื่องนี้อยู่แล้ว (เซิร์ฟเวอร์ FTP ที่พอร์ต %2$d ทำงานอยู่) การโหลด %1$s ซ้ำขณะที่ทำงานอยู่อาจทำให้เครื่องค้าง ส่งเฉพาะเมื่อ etaHEN หยุดทำงานแล้ว</string>
+    <string name="reload_warn_sent">%1$s ถูกส่งไปยังเครื่องนี้แล้วเมื่อ %2$s ที่แล้ว การโหลดครั้งที่สองอาจทำให้เครื่องค้าง ส่งซ้ำเฉพาะเมื่อรีสตาร์ตเครื่องไปแล้ว</string>
+    <string name="reload_send_anyway">ส่งต่อไป</string>
+    <string name="reload_auto_skipped">ลำดับอัตโนมัติไม่ได้ทำงาน: %1$s</string>
     <string name="backup_cheats">สูตรโกง: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">โปรเซสทั้งหมดบนคอนโซล เปิดโปรเซสเพื่อดูส่วนหน่วยความจำ (rwx: อ่าน เขียน รัน ส่วนที่เขียนได้จะถูกไฮไลต์) และเปิดส่วนหนึ่งเพื่อดูไบต์ แตะบรรทัดไบต์เพื่อแก้ไข หรือไปที่ที่อยู่</string>
     <string name="memory_view_log">บันทึกคอนโซล</string>
     <string name="klog_title">บันทึกคอนโซล</string>
+    <string name="klog_save">บันทึกลงโทรศัพท์</string>
+    <string name="klog_save_detail">ทุกบรรทัดจะถูกเขียนลงไฟล์ใน Downloads/Bento/Logs ทันทีที่มาถึง หลังเครื่องค้างจึงยังเห็นได้ว่าเครื่องแสดงอะไรก่อนหน้านั้น</string>
+    <string name="klog_saving_to">กำลังบันทึกไปที่ %1$s</string>
+    <string name="klog_save_channel">บันทึกของเครื่อง</string>
+    <string name="klog_save_notif_title">กำลังบันทึกบันทึกของเครื่อง</string>
     <string name="klog_etahen_note">etaHEN ส่งมาทางพอร์ต 9081 เมื่อเปิดการตั้งค่า Klog ไว้ พอร์ตนั้นจะถูกลองด้วย</string>
     <string name="klog_intro">สิ่งที่ระบบของคอนโซลและ payload พิมพ์ออกมา แบบสด ps5debug-NG ส่งมาที่พอร์ต 3232 มีประโยชน์เมื่อ payload หรือโค้ดโกงทำงานไม่ถูกต้อง</string>
     <string name="klog_port">พอร์ตบันทึก</string>

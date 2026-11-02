@@ -190,6 +190,7 @@ Payloads (`.elf` and `.bin`) go to the console's ELF loader, which listens on th
 - **Send.** Bento opens a TCP connection to the loader, streams the file in 64 KB pieces, then closes its sending side so the loader sees the end of the file. It reports `Sent 1.5 MB` (or the error).
 - **Payload shelf.** Keeps the payloads you use often inside the app, each one tap from **Send**. **Add payload to shelf** copies a file in, and the Web tab's download chooser can save straight to the shelf too. A file may be up to 64 MiB. Adding a file with the same name replaces the old one, but only after the new copy is complete (it is written to a temporary file and then renamed), so a failed copy never damages a working payload. **Remove** deletes it from the shelf only, not the original on your phone. A payload that came from Get payloads and matched a published checksum (GitHub's own digest of a release file, or the PS5 Payloads Mirror's SHA-256) is marked **verified**; tap its name to see its SHA-256 and whether it still matches.
 - **Send a file once.** **Choose payload (.elf / .bin)**, then **Send payload**, without saving it.
+- **Loading something twice.** Sending etaHEN, kstuff or GoldHEN while it already runs is a common way to crash a console. Before one of these goes out (from the shelf, once, or in a chain), Bento looks whether it already sent it to this console in the last six hours and, on a PS5, whether etaHEN's own FTP server answers on port 1337. Then it asks first (**Send anyway**). The automatic chain doesn't send it at all in that case and says why.
 
 Sending a payload is a single action with a status line. It is not part of the transfer queue.
 
@@ -313,7 +314,7 @@ A cheat engine for games on a PS5 or a PS4. It talks to [ps5debug-NG](https://gi
 
 **Console log**
 
-- Shows the console's kernel log as it is written: ps5debug-NG serves it on port `3232`, and etaHEN on `9081` when its Klog setting is on. When the one that is set doesn't answer, the other is tried (a port typed by hand is used as it is). **Start**, **Stop**, **Pause** (the screen holds still while lines keep coming in), **Follow** (keeps the newest line in sight), a filter that shows only lines with the text you type, **Copy** and **Clear**. The last 4,000 lines are kept. This view works without connecting the debugger first.
+- Shows the console's kernel log as it is written: ps5debug-NG serves it on port `3232`, and etaHEN on `9081` when its Klog setting is on. When the one that is set doesn't answer, the other is tried (a port typed by hand is used as it is). **Start**, **Stop**, **Pause** (the screen holds still while lines keep coming in), **Follow** (keeps the newest line in sight), a filter that shows only lines with the text you type, **Copy** and **Clear**. The last 4,000 lines are kept. This view works without connecting the debugger first. With **Save to phone** on, every line also goes into a new file in `Downloads/Bento/Logs` as it arrives (with the console's address and the time at the top). After a crash (a kernel panic) the lines just before it are still there, which usually tells which payload or game caused it. While it saves, a notification keeps Bento running with the phone idle, with a **Stop** button.
 
 **Learn**
 

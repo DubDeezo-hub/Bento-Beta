@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Chuỗi đó không còn tồn tại.</string>
     <string name="notif_channel_chain">Chuỗi payload</string>
     <string name="backup_chains">Chuỗi: %1$d</string>
+    <string name="reload_warn_title">Đã nạp rồi?</string>
+    <string name="reload_warn_running">etaHEN đã đang phản hồi trên máy này (máy chủ FTP của nó ở cổng %2$d đang chạy). Nạp lại %1$s khi nó đang chạy có thể làm sập máy. Chỉ gửi nếu etaHEN đã ngừng hoạt động.</string>
+    <string name="reload_warn_sent">%1$s đã được gửi tới máy này %2$s trước. Nạp lần thứ hai có thể làm sập máy. Chỉ gửi lại nếu máy đã khởi động lại kể từ đó.</string>
+    <string name="reload_send_anyway">Vẫn gửi</string>
+    <string name="reload_auto_skipped">Chuỗi tự động đã không chạy: %1$s</string>
     <string name="backup_cheats">Mã gian lận: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">Tất cả tiến trình trên console. Mở một tiến trình để xem các vùng bộ nhớ (rwx: đọc, ghi, thực thi; vùng ghi được được tô sáng), và mở một vùng để xem byte. Nhấn vào một dòng byte để sửa, hoặc đi đến một địa chỉ.</string>
     <string name="memory_view_log">Nhật ký console</string>
     <string name="klog_title">Nhật ký console</string>
+    <string name="klog_save">Lưu vào điện thoại</string>
+    <string name="klog_save_detail">Mỗi dòng cũng được ghi ngay vào một tệp trong Downloads/Bento/Logs, nên sau khi máy bị sập bạn vẫn thấy máy đã in gì ngay trước đó.</string>
+    <string name="klog_saving_to">Đang lưu vào %1$s</string>
+    <string name="klog_save_channel">Nhật ký máy</string>
+    <string name="klog_save_notif_title">Đang lưu nhật ký máy</string>
     <string name="klog_etahen_note">etaHEN gửi qua cổng 9081 khi bật cài đặt Klog; cổng đó cũng được thử.</string>
     <string name="klog_intro">Những gì hệ thống console và payload in ra, trực tiếp. ps5debug-NG gửi nó ở cổng 3232. Hữu ích khi một payload hoặc cheat không hoạt động đúng.</string>
     <string name="klog_port">Cổng nhật ký</string>

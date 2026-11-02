@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Tento řetězec už neexistuje.</string>
     <string name="notif_channel_chain">Řetězce payloadů</string>
     <string name="backup_chains">Řetězce: %1$d</string>
+    <string name="reload_warn_title">Už načteno?</string>
+    <string name="reload_warn_running">etaHEN na této konzoli už odpovídá (jeho FTP server na portu %2$d běží). Opětovné načtení %1$s, když běží, může konzoli shodit. Pošlete ho jen tehdy, když etaHEN přestal fungovat.</string>
+    <string name="reload_warn_sent">%1$s už byl do této konzole poslán před %2$s. Druhé načtení může konzoli shodit. Pošlete ho znovu jen tehdy, když se konzole mezitím restartovala.</string>
+    <string name="reload_send_anyway">Přesto poslat</string>
+    <string name="reload_auto_skipped">Automatický řetězec se nespustil: %1$s</string>
     <string name="backup_cheats">Cheaty: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">Každý proces na konzoli. Otevřete jeden a uvidíte jeho oblasti paměti (rwx: čtení, zápis, spuštění; zapisovatelné jsou zvýrazněné), oblast otevřete pro její bajty. Klepnutím na řádek bajtů je změníte, nebo Přejít na adresu.</string>
     <string name="memory_view_log">Log konzole</string>
     <string name="klog_title">Log konzole</string>
+    <string name="klog_save">Ukládat do telefonu</string>
+    <string name="klog_save_detail">Každý řádek se hned zapíše i do souboru ve Stažené/Bento/Logs, takže po pádu uvidíte, co konzole vypsala těsně před ním.</string>
+    <string name="klog_saving_to">Ukládá se do %1$s</string>
+    <string name="klog_save_channel">Protokol konzole</string>
+    <string name="klog_save_notif_title">Ukládá se protokol konzole</string>
     <string name="klog_etahen_note">etaHEN ho posílá na portu 9081, když má zapnuté nastavení Klog; zkouší se i tento port.</string>
     <string name="klog_intro">Co systém konzole a payloady vypisují, živě. ps5debug-NG to posílá na portu 3232. Hodí se, když payload nebo cheat zlobí.</string>
     <string name="klog_port">Port logu</string>

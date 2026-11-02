@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">वह चेन अब मौजूद नहीं है।</string>
     <string name="notif_channel_chain">Payload चेन</string>
     <string name="backup_chains">चेन: %1$d</string>
+    <string name="reload_warn_title">पहले से लोड है?</string>
+    <string name="reload_warn_running">इस कंसोल पर etaHEN पहले से जवाब दे रहा है (पोर्ट %2$d पर इसका FTP सर्वर चालू है)। इसके चलते हुए %1$s दोबारा लोड करने से कंसोल क्रैश हो सकता है। तभी भेजें जब etaHEN काम करना बंद कर दे।</string>
+    <string name="reload_warn_sent">%1$s इस कंसोल पर %2$s पहले भेजा जा चुका है। दूसरी बार लोड करने से कंसोल क्रैश हो सकता है। तभी दोबारा भेजें जब तब से कंसोल रीस्टार्ट हुआ हो।</string>
+    <string name="reload_send_anyway">फिर भी भेजें</string>
+    <string name="reload_auto_skipped">ऑटोमैटिक चेन नहीं चली: %1$s</string>
     <string name="backup_cheats">चीट: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">कंसोल के सभी प्रोसेस। किसी एक को खोलकर उसकी मेमोरी के हिस्से देखें (rwx: पढ़ना, लिखना, चलाना; लिखने योग्य हिस्से हाइलाइट हैं), और किसी हिस्से को खोलकर उसके बाइट्स। बाइट्स की लाइन पर टैप करके उन्हें बदलें, या किसी पते पर जाएँ।</string>
     <string name="memory_view_log">कंसोल लॉग</string>
     <string name="klog_title">कंसोल लॉग</string>
+    <string name="klog_save">फ़ोन में सेव करें</string>
+    <string name="klog_save_detail">हर लाइन आते ही Downloads/Bento/Logs की एक फ़ाइल में भी लिखी जाती है, ताकि क्रैश के बाद भी दिखे कि कंसोल ने ठीक पहले क्या दिखाया था।</string>
+    <string name="klog_saving_to">%1$s में सेव हो रहा है</string>
+    <string name="klog_save_channel">कंसोल लॉग</string>
+    <string name="klog_save_notif_title">कंसोल लॉग सेव हो रहा है</string>
     <string name="klog_etahen_note">Klog सेटिंग चालू होने पर etaHEN इसे पोर्ट 9081 पर भेजता है; वह पोर्ट भी आज़माया जाता है।</string>
     <string name="klog_intro">कंसोल का सिस्टम और payload जो कुछ प्रिंट करते हैं, लाइव। ps5debug-NG इसे पोर्ट 3232 पर भेजता है। जब कोई payload या चीट ठीक से काम न करे तब उपयोगी है।</string>
     <string name="klog_port">लॉग पोर्ट</string>

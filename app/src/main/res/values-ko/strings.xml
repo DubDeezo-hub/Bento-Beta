@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">해당 체인은 더 이상 존재하지 않습니다.</string>
     <string name="notif_channel_chain">페이로드 체인</string>
     <string name="backup_chains">체인: %1$d</string>
+    <string name="reload_warn_title">이미 불러왔나요?</string>
+    <string name="reload_warn_running">이 본체에서 etaHEN이 이미 응답하고 있습니다(포트 %2$d의 FTP 서버 작동 중). 작동 중에 %1$s을(를) 다시 불러오면 본체가 멈출 수 있습니다. etaHEN이 작동하지 않을 때만 보내세요.</string>
+    <string name="reload_warn_sent">%1$s은(는) %2$s 전에 이미 이 본체로 보냈습니다. 두 번 불러오면 본체가 멈출 수 있습니다. 그 사이 본체를 다시 시작했을 때만 다시 보내세요.</string>
+    <string name="reload_send_anyway">그래도 보내기</string>
+    <string name="reload_auto_skipped">자동 체인이 실행되지 않았습니다: %1$s</string>
     <string name="backup_cheats">치트: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">콘솔의 모든 프로세스입니다. 하나를 열면 메모리 영역이 보이고(rwx: 읽기, 쓰기, 실행. 쓰기 가능한 영역은 강조 표시), 영역을 열면 바이트가 보입니다. 바이트 줄을 눌러 바꾸거나 주소로 이동하세요.</string>
     <string name="memory_view_log">콘솔 로그</string>
     <string name="klog_title">콘솔 로그</string>
+    <string name="klog_save">휴대폰에 저장</string>
+    <string name="klog_save_detail">들어오는 줄마다 Downloads/Bento/Logs의 파일에도 바로 기록됩니다. 본체가 멈춘 뒤에도 직전에 출력된 내용을 볼 수 있습니다.</string>
+    <string name="klog_saving_to">%1$s에 저장 중</string>
+    <string name="klog_save_channel">본체 로그</string>
+    <string name="klog_save_notif_title">본체 로그 저장 중</string>
     <string name="klog_etahen_note">etaHEN은 Klog 설정이 켜져 있으면 포트 9081로 보냅니다. 이 포트도 시도합니다.</string>
     <string name="klog_intro">콘솔 시스템과 페이로드가 출력하는 내용을 실시간으로 보여줍니다. ps5debug-NG가 포트 3232로 보냅니다. 페이로드나 치트가 제대로 작동하지 않을 때 유용합니다.</string>
     <string name="klog_port">로그 포트</string>

@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">هذه السلسلة لم تعد موجودة.</string>
     <string name="notif_channel_chain">سلاسل payload</string>
     <string name="backup_chains">السلاسل: %1$d</string>
+    <string name="reload_warn_title">هل حُمّل من قبل؟</string>
+    <string name="reload_warn_running">يستجيب etaHEN بالفعل على هذا الجهاز (خادم FTP الخاص به على المنفذ %2$d يعمل). إعادة تحميل %1$s أثناء عمله قد تُسقط الجهاز. أرسله فقط إذا توقف etaHEN عن العمل.</string>
+    <string name="reload_warn_sent">أُرسل %1$s إلى هذا الجهاز قبل %2$s. تحميله مرة ثانية قد يُسقط الجهاز. أعد إرساله فقط إذا أُعيد تشغيل الجهاز منذ ذلك الحين.</string>
+    <string name="reload_send_anyway">أرسل على أي حال</string>
+    <string name="reload_auto_skipped">لم تعمل السلسلة التلقائية: %1$s</string>
     <string name="backup_cheats">الغش: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">كل العمليات على الجهاز. افتح إحداها لترى مناطق ذاكرتها (rwx: قراءة، كتابة، تشغيل؛ القابلة للكتابة مميّزة)، ومنطقةً لترى بايتاتها. اضغط سطر بايتات لتغييره، أو «اذهب» إلى عنوان.</string>
     <string name="memory_view_log">سجل الجهاز</string>
     <string name="klog_title">سجل الجهاز</string>
+    <string name="klog_save">الحفظ على الهاتف</string>
+    <string name="klog_save_detail">يُكتب كل سطر أيضًا في ملف داخل Downloads/Bento/Logs فور وصوله، فترى بعد الانهيار ما طبعه الجهاز قبله مباشرة.</string>
+    <string name="klog_saving_to">يُحفظ في %1$s</string>
+    <string name="klog_save_channel">سجل الجهاز</string>
+    <string name="klog_save_notif_title">يتم حفظ سجل الجهاز</string>
     <string name="klog_etahen_note">يرسله etaHEN على المنفذ 9081 عند تشغيل إعداد Klog فيه، ويُجرَّب هذا المنفذ أيضًا.</string>
     <string name="klog_intro">ما يطبعه نظام الجهاز وملفات Payload، مباشرة. يرسله ps5debug-NG على المنفذ 3232. مفيد حين لا يعمل Payload أو غش كما يجب.</string>
     <string name="klog_port">منفذ السجل</string>

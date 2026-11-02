@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyListScope
@@ -12,11 +13,13 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
+import androidx.compose.material3.Switch
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
@@ -97,13 +100,29 @@ object KernelLog {
         private set
     /** Keep the newest line in sight. */
     var follow by mutableStateOf(true)
+    /** Also write every line to a file in Downloads/Bento/Logs (see KlogSaver.kt). */
+    var saveToPhone by mutableStateOf(false)
+        private set
+    /** Where the log is being saved ("Download/Bento/Logs/…"), or "". */
+    var savedTo by mutableStateOf("")
+        private set
 
+    private const val SAVE_KEY = "klog_save"
     private var loaded = false
+    private var appCtx: Context? = null
 
     fun attach(ctx: Context) {
         if (loaded) return
         loaded = true
-        port = ctx.getSharedPreferences("settings", Context.MODE_PRIVATE).getString(PORT_KEY, DEFAULT_PORT.toString()) ?: DEFAULT_PORT.toString()
+        appCtx = ctx.applicationContext
+        val p = ctx.getSharedPreferences("settings", Context.MODE_PRIVATE)
+        port = p.getString(PORT_KEY, DEFAULT_PORT.toString()) ?: DEFAULT_PORT.toString()
+        saveToPhone = p.getBoolean(SAVE_KEY, false)
+    }
+
+    fun changeSave(ctx: Context, on: Boolean) {
+        saveToPhone = on
+        ctx.getSharedPreferences("settings", Context.MODE_PRIVATE).edit().putBoolean(SAVE_KEY, on).apply()
     }
 
     fun changePort(ctx: Context, v: String) {
@@ -133,12 +152,20 @@ object KernelLog {
         job = scope.launch {
             val pending = ArrayList<String>()
             val lock = Any()
-            // Lines are handed to the screen a few times a second, not one by one
+            // Saved to the phone too: the file is opened first, so even a connection that never comes is noted
+            val ctx = appCtx
+            val file = if (saveToPhone && ctx != null) withContext(Dispatchers.IO) { KlogFile.open(ctx, host.trim(), p) } else null
+            savedTo = file?.shownPath.orEmpty()
+            if (file != null && ctx != null) KlogService.update(ctx)
+            // Lines are handed to the screen a few times a second, not one by one (and to the file at the same time)
             val flusher = launch {
                 while (isActive) {
                     delay(250)
                     val batch = synchronized(lock) { ArrayList(pending).also { pending.clear() } }
-                    if (batch.isNotEmpty()) add(batch)
+                    if (batch.isNotEmpty()) {
+                        add(batch)
+                        if (file != null) withContext(Dispatchers.IO) { file.write(batch) }
+                    }
                 }
             }
             try {
@@ -189,6 +216,12 @@ object KernelLog {
                 try { socket?.close() } catch (_: Exception) {}
                 socket = null
                 running = false
+                if (file != null) {
+                    // The last lines, and how it ended, go into the file too; then the keep-alive service stops
+                    file.write(batch + listOf("# " + status))
+                    file.close()
+                    ctx?.let { KlogService.update(it) }
+                }
             }
         }
     }
@@ -238,6 +271,16 @@ fun LazyListScope.logItems(host: String, ctx: Context) {
             Text(str(R.string.klog_intro) + " " + str(R.string.klog_etahen_note), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
             if (!k.running) {
                 NumberField(str(R.string.klog_port), k.port) { k.changePort(ctx, it) }
+                // Kept on the phone as it arrives: what the console printed just before a crash is still there after it
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(str(R.string.klog_save), style = MaterialTheme.typography.bodyMedium)
+                        Text(str(R.string.klog_save_detail), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    }
+                    Switch(checked = k.saveToPhone, onCheckedChange = { k.changeSave(ctx, it) })
+                }
+            } else if (k.savedTo.isNotEmpty()) {
+                Text(str(R.string.klog_saving_to, k.savedTo), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.primary)
             }
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 if (k.running) {

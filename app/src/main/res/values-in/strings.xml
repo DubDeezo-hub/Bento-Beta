@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Rangkaian itu sudah tidak ada.</string>
     <string name="notif_channel_chain">Rangkaian payload</string>
     <string name="backup_chains">Rangkaian: %1$d</string>
+    <string name="reload_warn_title">Sudah dimuat?</string>
+    <string name="reload_warn_running">etaHEN sudah merespons di konsol ini (server FTP-nya di port %2$d aktif). Memuat %1$s lagi saat masih berjalan bisa membuat konsol crash. Kirim hanya jika etaHEN sudah berhenti bekerja.</string>
+    <string name="reload_warn_sent">%1$s sudah dikirim ke konsol ini %2$s yang lalu. Memuatnya untuk kedua kali bisa membuat konsol crash. Kirim lagi hanya jika konsol sudah dinyalakan ulang sejak itu.</string>
+    <string name="reload_send_anyway">Tetap kirim</string>
+    <string name="reload_auto_skipped">Rantai otomatis tidak berjalan: %1$s</string>
     <string name="backup_cheats">Cheat: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">Semua proses di konsol. Buka satu untuk melihat wilayah memorinya (rwx: baca, tulis, jalankan; wilayah yang bisa ditulis disorot), dan buka satu wilayah untuk melihat byte-nya. Ketuk baris byte untuk mengubahnya, atau pergi ke sebuah alamat.</string>
     <string name="memory_view_log">Log konsol</string>
     <string name="klog_title">Log konsol</string>
+    <string name="klog_save">Simpan ke ponsel</string>
+    <string name="klog_save_detail">Setiap baris juga langsung ditulis ke file di Download/Bento/Logs, jadi setelah crash kamu bisa melihat apa yang ditulis konsol tepat sebelumnya.</string>
+    <string name="klog_saving_to">Menyimpan ke %1$s</string>
+    <string name="klog_save_channel">Log konsol</string>
+    <string name="klog_save_notif_title">Menyimpan log konsol</string>
     <string name="klog_etahen_note">etaHEN mengirimnya di port 9081 saat setelan Klog-nya aktif; port itu juga dicoba.</string>
     <string name="klog_intro">Apa yang dicetak sistem konsol dan payload, secara langsung. ps5debug-NG mengirimnya di port 3232. Berguna saat payload atau cheat tidak bekerja dengan benar.</string>
     <string name="klog_port">Port log</string>

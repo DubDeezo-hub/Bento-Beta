@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Te verige ni več.</string>
     <string name="notif_channel_chain">Verige payloadov</string>
     <string name="backup_chains">Verige: %1$d</string>
+    <string name="reload_warn_title">Že naloženo?</string>
+    <string name="reload_warn_running">etaHEN na tej konzoli že odgovarja (njegov strežnik FTP na vratih %2$d deluje). Ponovno nalaganje %1$s, medtem ko deluje, lahko zruši konzolo. Pošljite ga le, če je etaHEN nehal delovati.</string>
+    <string name="reload_warn_sent">%1$s je bil tej konzoli poslan že pred %2$s. Drugo nalaganje lahko zruši konzolo. Ponovno ga pošljite le, če je bila konzola od takrat znova zagnana.</string>
+    <string name="reload_send_anyway">Vseeno pošlji</string>
+    <string name="reload_auto_skipped">Samodejna veriga se ni zagnala: %1$s</string>
     <string name="backup_cheats">Goljufije: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">Vsi procesi na konzoli. Odprite enega, da vidite njegova območja pomnilnika (rwx: branje, pisanje, zagon; zapisljiva so obarvana), in območje za njegove bajte. Tapnite vrstico bajtov, da jih spremenite, ali Pojdi na naslov.</string>
     <string name="memory_view_log">Dnevnik konzole</string>
     <string name="klog_title">Dnevnik konzole</string>
+    <string name="klog_save">Shrani v telefon</string>
+    <string name="klog_save_detail">Vsaka vrstica se ob prihodu zapiše tudi v datoteko v Prenosi/Bento/Logs, zato po zrušitvi vidite, kaj je konzola izpisala tik pred njo.</string>
+    <string name="klog_saving_to">Shranjevanje v %1$s</string>
+    <string name="klog_save_channel">Dnevnik konzole</string>
+    <string name="klog_save_notif_title">Shranjevanje dnevnika konzole</string>
     <string name="klog_etahen_note">etaHEN ga pošilja na vratih 9081, ko je vklopljena njegova nastavitev Klog; poskusi se tudi ta vrata.</string>
     <string name="klog_intro">Kar izpisujejo sistem konzole in payloadi, v živo. ps5debug-NG to pošilja na vratih 3232. Priročno, ko payload ali goljufija ne deluje prav.</string>
     <string name="klog_port">Vrata dnevnika</string>

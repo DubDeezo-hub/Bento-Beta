@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Den kedjan finns inte längre.</string>
     <string name="notif_channel_chain">Payload-kedjor</string>
     <string name="backup_chains">Kedjor: %1$d</string>
+    <string name="reload_warn_title">Redan laddad?</string>
+    <string name="reload_warn_running">etaHEN svarar redan på den här konsolen (dess FTP-server på port %2$d är igång). Att ladda %1$s igen medan den kör kan krascha konsolen. Skicka den bara om etaHEN har slutat fungera.</string>
+    <string name="reload_warn_sent">%1$s skickades redan till den här konsolen för %2$s sedan. Att ladda den en andra gång kan krascha konsolen. Skicka igen bara om konsolen har startats om sedan dess.</string>
+    <string name="reload_send_anyway">Skicka ändå</string>
+    <string name="reload_auto_skipped">Den automatiska kedjan kördes inte: %1$s</string>
     <string name="backup_cheats">Fusk: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -660,6 +665,11 @@
     <string name="tip_mem_browse">Varje process på konsolen. Öppna en för att se dess minnesområden (rwx: läsa, skriva, köra; skrivbara är markerade) och ett område för dess byte. Tryck på en rad byte för att ändra den, eller gå till en adress.</string>
     <string name="memory_view_log">Konsollogg</string>
     <string name="klog_title">Konsollogg</string>
+    <string name="klog_save">Spara på telefonen</string>
+    <string name="klog_save_detail">Varje rad skrivs också till en fil i Hämtade filer/Bento/Logs när den kommer, så efter en krasch ser du vad konsolen skrev precis innan.</string>
+    <string name="klog_saving_to">Sparar i %1$s</string>
+    <string name="klog_save_channel">Konsollogg</string>
+    <string name="klog_save_notif_title">Sparar konsolloggen</string>
     <string name="klog_etahen_note">etaHEN skickar den på port 9081 när dess Klog-inställning är på; den porten provas också.</string>
     <string name="klog_intro">Det konsolens system och payloads skriver ut, live. ps5debug-NG skickar det på port 3232. Praktiskt när en payload eller ett fusk krånglar.</string>
     <string name="klog_port">Loggport</string>

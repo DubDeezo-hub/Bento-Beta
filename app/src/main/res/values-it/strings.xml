@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Quella catena non esiste più.</string>
     <string name="notif_channel_chain">Catene di payload</string>
     <string name="backup_chains">Catene: %1$d</string>
+    <string name="reload_warn_title">Già caricato?</string>
+    <string name="reload_warn_running">etaHEN risponde già su questa console (il suo server FTP sulla porta %2$d è attivo). Caricare di nuovo %1$s mentre funziona può bloccare la console. Invialo solo se etaHEN ha smesso di funzionare.</string>
+    <string name="reload_warn_sent">%1$s è già stato inviato a questa console %2$s fa. Caricarlo una seconda volta può bloccare la console. Invialo di nuovo solo se nel frattempo la console è stata riavviata.</string>
+    <string name="reload_send_anyway">Invia comunque</string>
+    <string name="reload_auto_skipped">La catena automatica non è partita: %1$s</string>
     <string name="backup_cheats">Trucchi: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -660,6 +665,11 @@
     <string name="tip_mem_browse">Tutti i processi della console. Aprine uno per vederne le regioni di memoria (rwx: leggi, scrivi, esegui; quelle scrivibili sono evidenziate) e una regione per vederne i byte. Tocca una riga di byte per cambiarla, o vai a un indirizzo.</string>
     <string name="memory_view_log">Log della console</string>
     <string name="klog_title">Log della console</string>
+    <string name="klog_save">Salva sul telefono</string>
+    <string name="klog_save_detail">Ogni riga va anche in un file in Download/Bento/Logs appena arriva, così dopo un crash vedi cosa ha scritto la console subito prima.</string>
+    <string name="klog_saving_to">Salvataggio in %1$s</string>
+    <string name="klog_save_channel">Log della console</string>
+    <string name="klog_save_notif_title">Salvataggio del log della console</string>
     <string name="klog_etahen_note">etaHEN lo invia sulla porta 9081 quando l\'impostazione Klog è attiva; viene provata anche quella porta.</string>
     <string name="klog_intro">Ciò che il sistema della console e i payload scrivono, in diretta. ps5debug-NG lo invia sulla porta 3232. Utile quando un payload o un trucco non funziona bene.</string>
     <string name="klog_port">Porta del log</string>

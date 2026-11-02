@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">ಆ ಚೈನ್ ಇನ್ನು ಅಸ್ತಿತ್ವದಲ್ಲಿ ಇಲ್ಲ.</string>
     <string name="notif_channel_chain">Payload ಚೈನ್‌ಗಳು</string>
     <string name="backup_chains">ಚೈನ್‌ಗಳು: %1$d</string>
+    <string name="reload_warn_title">ಈಗಾಗಲೇ ಲೋಡ್ ಆಗಿದೆಯೇ?</string>
+    <string name="reload_warn_running">ಈ ಕನ್ಸೋಲ್‌ನಲ್ಲಿ etaHEN ಈಗಾಗಲೇ ಪ್ರತಿಕ್ರಿಯಿಸುತ್ತಿದೆ (ಪೋರ್ಟ್ %2$d ನಲ್ಲಿ ಅದರ FTP ಸರ್ವರ್ ಚಾಲನೆಯಲ್ಲಿದೆ). ಅದು ಚಾಲನೆಯಲ್ಲಿರುವಾಗ %1$s ಅನ್ನು ಮತ್ತೆ ಲೋಡ್ ಮಾಡಿದರೆ ಕನ್ಸೋಲ್ ಕ್ರ್ಯಾಶ್ ಆಗಬಹುದು. etaHEN ಕೆಲಸ ನಿಲ್ಲಿಸಿದಾಗ ಮಾತ್ರ ಕಳುಹಿಸಿ.</string>
+    <string name="reload_warn_sent">%1$s ಅನ್ನು %2$s ಹಿಂದೆ ಈ ಕನ್ಸೋಲ್‌ಗೆ ಈಗಾಗಲೇ ಕಳುಹಿಸಲಾಗಿದೆ. ಎರಡನೇ ಬಾರಿ ಲೋಡ್ ಮಾಡಿದರೆ ಕನ್ಸೋಲ್ ಕ್ರ್ಯಾಶ್ ಆಗಬಹುದು. ಅಂದಿನಿಂದ ಕನ್ಸೋಲ್ ಮರುಪ್ರಾರಂಭವಾಗಿದ್ದರೆ ಮಾತ್ರ ಮತ್ತೆ ಕಳುಹಿಸಿ.</string>
+    <string name="reload_send_anyway">ಆದರೂ ಕಳುಹಿಸಿ</string>
+    <string name="reload_auto_skipped">ಸ್ವಯಂ ಸರಪಳಿ ಚಲಿಸಲಿಲ್ಲ: %1$s</string>
     <string name="backup_cheats">ಚೀಟ್‌ಗಳು: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">ಕನ್ಸೋಲ್‌ನ ಎಲ್ಲಾ ಪ್ರಕ್ರಿಯೆಗಳು. ಒಂದನ್ನು ತೆರೆದು ಅದರ ಮೆಮೊರಿ ಭಾಗಗಳನ್ನು ನೋಡಿ (rwx: ಓದು, ಬರೆ, ಚಲಾಯಿಸು; ಬರೆಯಬಹುದಾದ ಭಾಗಗಳು ಹೈಲೈಟ್), ಮತ್ತು ಒಂದು ಭಾಗ ತೆರೆದು ಅದರ ಬೈಟ್‌ಗಳನ್ನು. ಬೈಟ್‌ಗಳ ಸಾಲನ್ನು ಟ್ಯಾಪ್ ಮಾಡಿ ಅವನ್ನು ಬದಲಿಸಿ, ಅಥವಾ ಒಂದು ವಿಳಾಸಕ್ಕೆ ಹೋಗಿ.</string>
     <string name="memory_view_log">ಕನ್ಸೋಲ್ ಲಾಗ್</string>
     <string name="klog_title">ಕನ್ಸೋಲ್ ಲಾಗ್</string>
+    <string name="klog_save">ಫೋನ್‌ನಲ್ಲಿ ಉಳಿಸಿ</string>
+    <string name="klog_save_detail">ಪ್ರತಿ ಸಾಲು ಬಂದ ಕೂಡಲೇ Downloads/Bento/Logs ನಲ್ಲಿನ ಫೈಲ್‌ಗೂ ಬರೆಯಲಾಗುತ್ತದೆ, ಹಾಗಾಗಿ ಕ್ರ್ಯಾಶ್ ನಂತರವೂ ಕನ್ಸೋಲ್ ಅದಕ್ಕೂ ಮುನ್ನ ಏನು ತೋರಿಸಿತು ಎಂದು ನೋಡಬಹುದು.</string>
+    <string name="klog_saving_to">%1$s ಗೆ ಉಳಿಸಲಾಗುತ್ತಿದೆ</string>
+    <string name="klog_save_channel">ಕನ್ಸೋಲ್ ಲಾಗ್</string>
+    <string name="klog_save_notif_title">ಕನ್ಸೋಲ್ ಲಾಗ್ ಉಳಿಸಲಾಗುತ್ತಿದೆ</string>
     <string name="klog_etahen_note">Klog ಸೆಟ್ಟಿಂಗ್ ಆನ್ ಇದ್ದಾಗ etaHEN ಇದನ್ನು ಪೋರ್ಟ್ 9081 ನಲ್ಲಿ ಕಳುಹಿಸುತ್ತದೆ; ಆ ಪೋರ್ಟ್ ಅನ್ನೂ ಪ್ರಯತ್ನಿಸಲಾಗುತ್ತದೆ.</string>
     <string name="klog_intro">ಕನ್ಸೋಲ್‌ನ ಸಿಸ್ಟಮ್ ಮತ್ತು payloads ಮುದ್ರಿಸುವುದು, ನೇರವಾಗಿ. ps5debug-NG ಇದನ್ನು ಪೋರ್ಟ್ 3232 ನಲ್ಲಿ ಕಳುಹಿಸುತ್ತದೆ. payload ಅಥವಾ ಚೀಟ್ ಸರಿಯಾಗಿ ಕೆಲಸ ಮಾಡದಿದ್ದಾಗ ಉಪಯುಕ್ತ.</string>
     <string name="klog_port">ಲಾಗ್ ಪೋರ್ಟ್</string>

@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">ती चेन आता अस्तित्वात नाही.</string>
     <string name="notif_channel_chain">Payload चेन</string>
     <string name="backup_chains">चेन: %1$d</string>
+    <string name="reload_warn_title">आधीच लोड केले?</string>
+    <string name="reload_warn_running">या कन्सोलवर etaHEN आधीच प्रतिसाद देत आहे (पोर्ट %2$d वर त्याचा FTP सर्व्हर चालू आहे). ते चालू असताना %1$s पुन्हा लोड केल्यास कन्सोल क्रॅश होऊ शकतो. etaHEN काम करणे थांबले असेल तरच पाठवा.</string>
+    <string name="reload_warn_sent">%1$s या कन्सोलला %2$s पूर्वी आधीच पाठवले आहे. दुसऱ्यांदा लोड केल्यास कन्सोल क्रॅश होऊ शकतो. तेव्हापासून कन्सोल रीस्टार्ट झाला असेल तरच पुन्हा पाठवा.</string>
+    <string name="reload_send_anyway">तरीही पाठवा</string>
+    <string name="reload_auto_skipped">स्वयंचलित साखळी चालली नाही: %1$s</string>
     <string name="backup_cheats">चीट्स: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">कन्सोलवरील सर्व प्रोसेस. एक उघडून तिचे मेमरी भाग पाहा (rwx: वाचणे, लिहिणे, चालवणे; लिहिता येणारे भाग ठळक), आणि एखादा भाग उघडून त्याचे बाइट्स. बाइट्सच्या ओळीवर टॅप करून ते बदला, किंवा एखाद्या पत्त्यावर जा.</string>
     <string name="memory_view_log">कन्सोल लॉग</string>
     <string name="klog_title">कन्सोल लॉग</string>
+    <string name="klog_save">फोनमध्ये सेव्ह करा</string>
+    <string name="klog_save_detail">प्रत्येक ओळ येताच Downloads/Bento/Logs मधील एका फाइलमध्येही लिहिली जाते, त्यामुळे क्रॅशनंतरही कन्सोलने अगदी आधी काय दाखवले ते पाहता येते.</string>
+    <string name="klog_saving_to">%1$s मध्ये सेव्ह होत आहे</string>
+    <string name="klog_save_channel">कन्सोल लॉग</string>
+    <string name="klog_save_notif_title">कन्सोल लॉग सेव्ह होत आहे</string>
     <string name="klog_etahen_note">Klog सेटिंग चालू असताना etaHEN ते पोर्ट 9081 वर पाठवते; तो पोर्टही वापरून पाहिला जातो.</string>
     <string name="klog_intro">कन्सोलची सिस्टम आणि payloads जे छापतात ते, थेट. ps5debug-NG ते पोर्ट 3232 वर पाठवतो. एखादा payload किंवा चीट नीट चालत नसेल तेव्हा उपयोगी.</string>
     <string name="klog_port">लॉग पोर्ट</string>

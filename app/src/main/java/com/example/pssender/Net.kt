@@ -173,13 +173,16 @@ fun sendBytesToLoader(input: InputStream, host: String, port: Int): String =
     }
 
 /** Sends a file picked with the system file picker to the payload loader. */
-suspend fun sendPayload(cr: ContentResolver, uri: Uri, host: String, port: Int): String =
+suspend fun sendPayload(cr: ContentResolver, uri: Uri, host: String, port: Int): String = sendPayloadUri(cr, uri, host, port).text
+
+/** Sends the picked file at [uri] as a payload; says whether it worked and what to show. */
+suspend fun sendPayloadUri(cr: ContentResolver, uri: Uri, host: String, port: Int): PayloadReply =
     withContext(Dispatchers.IO) {
-        val input = cr.openInputStream(uri) ?: return@withContext phoneFileProblem()
+        val input = cr.openInputStream(uri) ?: return@withContext PayloadReply(false, phoneFileProblem())
         try {
-            input.use { sendBytesToLoader(it, host, port) }
+            PayloadReply(true, input.use { sendBytesToLoader(it, host, port) })
         } catch (e: Exception) {
-            failedText(e)
+            PayloadReply(false, failedText(e))
         }
     }
 

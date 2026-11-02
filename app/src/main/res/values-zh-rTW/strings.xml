@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">該鏈已不存在。</string>
     <string name="notif_channel_chain">Payload 鏈</string>
     <string name="backup_chains">鏈：%1$d</string>
+    <string name="reload_warn_title">已經載入？</string>
+    <string name="reload_warn_running">這台主機上的 etaHEN 已在回應（連接埠 %2$d 的 FTP 伺服器正在執行）。在它執行時再次載入 %1$s 可能導致主機當機。只有在 etaHEN 停止運作時才傳送。</string>
+    <string name="reload_warn_sent">%1$s 已在 %2$s 前傳送到這台主機。第二次載入可能導致主機當機。只有在主機重新啟動過之後才再次傳送。</string>
+    <string name="reload_send_anyway">仍要傳送</string>
+    <string name="reload_auto_skipped">自動鏈沒有執行：%1$s</string>
     <string name="backup_cheats">作弊：%1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">主機上的所有處理程序。開啟一個即可查看其記憶體區域（rwx：讀取、寫入、執行；可寫入的區域會醒目標示），開啟一個區域即可查看其位元組。點選一行位元組可修改，或前往某個位址。</string>
     <string name="memory_view_log">主機記錄</string>
     <string name="klog_title">主機記錄</string>
+    <string name="klog_save">儲存到手機</string>
+    <string name="klog_save_detail">每一行送達時也會寫入 Downloads/Bento/Logs 中的檔案，主機當機後仍能看到它當機前輸出的內容。</string>
+    <string name="klog_saving_to">正在儲存到 %1$s</string>
+    <string name="klog_save_channel">主機記錄</string>
+    <string name="klog_save_notif_title">正在儲存主機記錄</string>
     <string name="klog_etahen_note">etaHEN 在其 Klog 設定開啟時透過連接埠 9081 傳送；也會嘗試該連接埠。</string>
     <string name="klog_intro">即時顯示主機系統和 Payload 輸出的內容。ps5debug-NG 透過連接埠 3232 傳送。Payload 或金手指運作不正常時很有用。</string>
     <string name="klog_port">記錄連接埠</string>

@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Tento reťazec už neexistuje.</string>
     <string name="notif_channel_chain">Reťazce payloadov</string>
     <string name="backup_chains">Reťazce: %1$d</string>
+    <string name="reload_warn_title">Už načítané?</string>
+    <string name="reload_warn_running">etaHEN na tejto konzole už odpovedá (jeho FTP server na porte %2$d beží). Opätovné načítanie %1$s, kým beží, môže konzolu zhodiť. Pošlite ho len vtedy, keď etaHEN prestal fungovať.</string>
+    <string name="reload_warn_sent">%1$s už bol do tejto konzoly poslaný pred %2$s. Druhé načítanie môže konzolu zhodiť. Pošlite ho znova len vtedy, ak sa konzola medzitým reštartovala.</string>
+    <string name="reload_send_anyway">Aj tak poslať</string>
+    <string name="reload_auto_skipped">Automatická reťaz sa nespustila: %1$s</string>
     <string name="backup_cheats">Cheaty: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">Každý proces na konzole. Otvorte jeden a uvidíte jeho oblasti pamäte (rwx: čítanie, zápis, spustenie; zapisovateľné sú zvýraznené), oblasť otvorte pre jej bajty. Ťuknutím na riadok bajtov ich zmeníte, alebo Prejsť na adresu.</string>
     <string name="memory_view_log">Log konzoly</string>
     <string name="klog_title">Log konzoly</string>
+    <string name="klog_save">Ukladať do telefónu</string>
+    <string name="klog_save_detail">Každý riadok sa hneď zapíše aj do súboru v Stiahnuté/Bento/Logs, takže po páde uvidíte, čo konzola vypísala tesne predtým.</string>
+    <string name="klog_saving_to">Ukladá sa do %1$s</string>
+    <string name="klog_save_channel">Záznam konzoly</string>
+    <string name="klog_save_notif_title">Ukladá sa záznam konzoly</string>
     <string name="klog_etahen_note">etaHEN ho posiela na porte 9081, keď má zapnuté nastavenie Klog; skúša sa aj tento port.</string>
     <string name="klog_intro">Čo systém konzoly a payloady vypisujú, naživo. ps5debug-NG to posiela na porte 3232. Hodí sa, keď payload alebo cheat zlobí.</string>
     <string name="klog_port">Port logu</string>

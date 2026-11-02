@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Ez a lánc már nem létezik.</string>
     <string name="notif_channel_chain">Payload-láncok</string>
     <string name="backup_chains">Láncok: %1$d</string>
+    <string name="reload_warn_title">Már betöltve?</string>
+    <string name="reload_warn_running">Az etaHEN már válaszol ezen a konzolon (az FTP-szervere fut a(z) %2$d porton). Ha futás közben újra betöltöd: %1$s, a konzol összeomolhat. Csak akkor küldd el, ha az etaHEN már nem működik.</string>
+    <string name="reload_warn_sent">%1$s már el lett küldve erre a konzolra %2$s ideje. Másodszori betöltése összeomlaszthatja a konzolt. Csak akkor küldd újra, ha azóta a konzol újraindult.</string>
+    <string name="reload_send_anyway">Küldés mégis</string>
+    <string name="reload_auto_skipped">Az automatikus lánc nem indult el: %1$s</string>
     <string name="backup_cheats">Csalások: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">A konzol összes folyamata. Nyiss meg egyet a memóriaterületei megtekintéséhez (rwx: olvasás, írás, futtatás; az írhatók ki vannak emelve), és egy területet a bájtjaihoz. Koppints egy bájtsorra a módosításához, vagy Ugrás egy címre.</string>
     <string name="memory_view_log">Konzolnapló</string>
     <string name="klog_title">Konzolnapló</string>
+    <string name="klog_save">Mentés a telefonra</string>
+    <string name="klog_save_detail">Minden sor beérkezéskor egy fájlba is bekerül a Letöltések/Bento/Logs mappában, így összeomlás után is látod, mit írt ki a konzol közvetlenül előtte.</string>
+    <string name="klog_saving_to">Mentés ide: %1$s</string>
+    <string name="klog_save_channel">Konzolnapló</string>
+    <string name="klog_save_notif_title">A konzolnapló mentése</string>
     <string name="klog_etahen_note">Az etaHEN a 9081-es porton küldi, ha be van kapcsolva a Klog beállítása; ezt a portot is megpróbálja.</string>
     <string name="klog_intro">Amit a konzol rendszere és a payloadok kiírnak, élőben. A ps5debug-NG a 3232-es porton küldi. Jól jön, ha egy payload vagy csalás rosszul működik.</string>
     <string name="klog_port">Napló portja</string>

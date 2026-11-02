@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">そのチェーンはもう存在しません。</string>
     <string name="notif_channel_chain">ペイロードのチェーン</string>
     <string name="backup_chains">チェーン: %1$d</string>
+    <string name="reload_warn_title">読み込み済み？</string>
+    <string name="reload_warn_running">この本体では etaHEN がすでに応答しています（ポート %2$d の FTP サーバーが動作中）。動作中に %1$s をもう一度読み込むと本体がクラッシュすることがあります。etaHEN が動かなくなった場合だけ送ってください。</string>
+    <string name="reload_warn_sent">%1$s は %2$s 前にこの本体へ送信済みです。2回読み込むと本体がクラッシュすることがあります。その後本体を再起動した場合だけ送り直してください。</string>
+    <string name="reload_send_anyway">それでも送る</string>
+    <string name="reload_auto_skipped">自動チェーンは実行されませんでした：%1$s</string>
     <string name="backup_cheats">チート: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">コンソール上のすべてのプロセスです。プロセスを開くとメモリ領域が表示され（rwx: 読み取り・書き込み・実行。書き込み可能な領域は強調表示）、領域を開くとバイトが表示されます。バイトの行をタップして変更するか、アドレスへ移動できます。</string>
     <string name="memory_view_log">コンソールログ</string>
     <string name="klog_title">コンソールログ</string>
+    <string name="klog_save">スマホに保存</string>
+    <string name="klog_save_detail">届いた行を Downloads/Bento/Logs のファイルにも書き込みます。本体がクラッシュしても、直前に出力された内容を確認できます。</string>
+    <string name="klog_saving_to">%1$s に保存中</string>
+    <string name="klog_save_channel">本体ログ</string>
+    <string name="klog_save_notif_title">本体ログを保存中</string>
     <string name="klog_etahen_note">etaHEN は Klog 設定がオンのときポート 9081 で送ります。そのポートも試します。</string>
     <string name="klog_intro">コンソールのシステムやペイロードが出力する内容をリアルタイムで表示します。ps5debug-NG がポート 3232 で送信します。ペイロードやチートが正しく動かないときに役立ちます。</string>
     <string name="klog_port">ログのポート</string>

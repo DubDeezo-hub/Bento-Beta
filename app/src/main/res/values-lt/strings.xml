@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Tokios grandinės nebėra.</string>
     <string name="notif_channel_chain">Payload grandinės</string>
     <string name="backup_chains">Grandinės: %1$d</string>
+    <string name="reload_warn_title">Jau įkelta?</string>
+    <string name="reload_warn_running">etaHEN šioje konsolėje jau atsako (jo FTP serveris per %2$d prievadą veikia). Iš naujo įkėlus %1$s, kol jis veikia, konsolė gali užstrigti. Siųskite tik jei etaHEN nustojo veikti.</string>
+    <string name="reload_warn_sent">%1$s į šią konsolę jau išsiųstas prieš %2$s. Antras įkėlimas gali užstrigdyti konsolę. Siųskite dar kartą tik jei nuo to laiko konsolė buvo paleista iš naujo.</string>
+    <string name="reload_send_anyway">Vis tiek siųsti</string>
+    <string name="reload_auto_skipped">Automatinė grandinė nepasileido: %1$s</string>
     <string name="backup_cheats">Gudrybės: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">Visi konsolės procesai. Atidarykite vieną, kad pamatytumėte jo atminties sritis (rwx: skaityti, rašyti, vykdyti; rašomos sritys paryškintos), ir atidarykite sritį, kad pamatytumėte jos baitus. Palieskite baitų eilutę, kad juos pakeistumėte, arba eikite į adresą.</string>
     <string name="memory_view_log">Konsolės žurnalas</string>
     <string name="klog_title">Konsolės žurnalas</string>
+    <string name="klog_save">Saugoti telefone</string>
+    <string name="klog_save_detail">Kiekviena eilutė vos atėjusi įrašoma ir į failą aplanke Atsisiuntimai/Bento/Logs, tad po strigties matysite, ką konsolė parašė prieš pat ją.</string>
+    <string name="klog_saving_to">Saugoma į %1$s</string>
+    <string name="klog_save_channel">Konsolės žurnalas</string>
+    <string name="klog_save_notif_title">Saugomas konsolės žurnalas</string>
     <string name="klog_etahen_note">etaHEN jį siunčia per 9081 prievadą, kai įjungtas jo Klog nustatymas; bandomas ir šis prievadas.</string>
     <string name="klog_intro">Ką konsolės sistema ir payloads išveda, tiesiogiai. ps5debug-NG jį siunčia prievadu 3232. Naudinga, kai payload ar gudrybė veikia netinkamai.</string>
     <string name="klog_port">Žurnalo prievadas</string>

@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Тази верига вече не съществува.</string>
     <string name="notif_channel_chain">Вериги от payload-и</string>
     <string name="backup_chains">Вериги: %1$d</string>
+    <string name="reload_warn_title">Вече зареден?</string>
+    <string name="reload_warn_running">etaHEN вече отговаря на тази конзола (FTP сървърът му на порт %2$d работи). Повторното зареждане на %1$s, докато работи, може да срине конзолата. Изпратете го само ако etaHEN е спрял да работи.</string>
+    <string name="reload_warn_sent">%1$s вече е изпратен на тази конзола преди %2$s. Второ зареждане може да срине конзолата. Изпратете го отново само ако конзолата е рестартирана оттогава.</string>
+    <string name="reload_send_anyway">Изпрати въпреки това</string>
+    <string name="reload_auto_skipped">Автоматичната верига не се изпълни: %1$s</string>
     <string name="backup_cheats">Чийтове: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">Всеки процес на конзолата. Отворете един, за да видите областите му в паметта (rwx: четене, запис, изпълнение; записваемите са оцветени), и област за байтовете ѝ. Докоснете ред с байтове, за да ги промените, или Отиди на адрес.</string>
     <string name="memory_view_log">Дневник на конзолата</string>
     <string name="klog_title">Дневник на конзолата</string>
+    <string name="klog_save">Запазване на телефона</string>
+    <string name="klog_save_detail">Всеки ред се записва веднага и във файл в Downloads/Bento/Logs, така че след срив виждате какво е изписала конзолата точно преди него.</string>
+    <string name="klog_saving_to">Запазва се в %1$s</string>
+    <string name="klog_save_channel">Дневник на конзолата</string>
+    <string name="klog_save_notif_title">Запазва се дневникът на конзолата</string>
     <string name="klog_etahen_note">etaHEN го изпраща на порт 9081, когато настройката му Klog е включена; и този порт се пробва.</string>
     <string name="klog_intro">Каквото пишат системата на конзолата и payload-ите, на живо. ps5debug-NG го изпраща на порт 3232. Полезно, когато payload или измама не работи както трябва.</string>
     <string name="klog_port">Порт на дневника</string>

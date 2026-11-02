@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Daardie ketting bestaan nie meer nie.</string>
     <string name="notif_channel_chain">Payload-kettings</string>
     <string name="backup_chains">Kettings: %1$d</string>
+    <string name="reload_warn_title">Reeds gelaai?</string>
+    <string name="reload_warn_running">etaHEN antwoord reeds op hierdie konsole (sy FTP-bediener op poort %2$d loop). Om %1$s weer te laai terwyl dit loop, kan die konsole laat ineenstort. Stuur dit net as etaHEN opgehou werk het.</string>
+    <string name="reload_warn_sent">%1$s is %2$s gelede reeds na hierdie konsole gestuur. \'n Tweede keer laai kan die konsole laat ineenstort. Stuur dit net weer as die konsole sedertdien herbegin is.</string>
+    <string name="reload_send_anyway">Stuur in elk geval</string>
+    <string name="reload_auto_skipped">Die outomatiese ketting het nie geloop nie: %1$s</string>
     <string name="backup_cheats">Cheats: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">Al die prosesse op die konsole. Maak een oop om sy geheuestreke te sien (rwx: lees, skryf, voer uit; skryfbare streke is uitgelig), en ’n streek om sy grepe te sien. Tik ’n reël grepe om hulle te verander, of gaan na ’n adres.</string>
     <string name="memory_view_log">Konsole-log</string>
     <string name="klog_title">Konsole-log</string>
+    <string name="klog_save">Stoor op foon</string>
+    <string name="klog_save_detail">Elke reël gaan ook dadelik na \'n lêer in Downloads/Bento/Logs, sodat jy ná \'n ineenstorting kan sien wat die konsole net daarvoor gewys het.</string>
+    <string name="klog_saving_to">Stoor in %1$s</string>
+    <string name="klog_save_channel">Konsole-log</string>
+    <string name="klog_save_notif_title">Konsole-log word gestoor</string>
     <string name="klog_etahen_note">etaHEN stuur dit op poort 9081 as sy Klog-instelling aan is; daardie poort word ook probeer.</string>
     <string name="klog_intro">Wat die konsole se stelsel en payloads uitdruk, regstreeks. ps5debug-NG stuur dit op poort 3232. Nuttig wanneer ’n payload of kul nie reg werk nie.</string>
     <string name="klog_port">Logpoort</string>

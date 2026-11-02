@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">ആ ചെയിൻ ഇനി നിലവിലില്ല.</string>
     <string name="notif_channel_chain">Payload ചെയിനുകൾ</string>
     <string name="backup_chains">ചെയിനുകൾ: %1$d</string>
+    <string name="reload_warn_title">ഇതിനകം ലോഡ് ചെയ്തോ?</string>
+    <string name="reload_warn_running">ഈ കൺസോളിൽ etaHEN ഇതിനകം പ്രതികരിക്കുന്നു (പോർട്ട് %2$d-ലെ അതിന്റെ FTP സെർവർ പ്രവർത്തിക്കുന്നു). അത് പ്രവർത്തിക്കുമ്പോൾ %1$s വീണ്ടും ലോഡ് ചെയ്താൽ കൺസോൾ ക്രാഷ് ആകാം. etaHEN പ്രവർത്തനം നിർത്തിയാൽ മാത്രം അയയ്ക്കുക.</string>
+    <string name="reload_warn_sent">%1$s %2$s മുമ്പ് ഈ കൺസോളിലേക്ക് ഇതിനകം അയച്ചിട്ടുണ്ട്. രണ്ടാമതും ലോഡ് ചെയ്താൽ കൺസോൾ ക്രാഷ് ആകാം. അതിനുശേഷം കൺസോൾ റീസ്റ്റാർട്ട് ചെയ്തെങ്കിൽ മാത്രം വീണ്ടും അയയ്ക്കുക.</string>
+    <string name="reload_send_anyway">എന്നാലും അയയ്ക്കുക</string>
+    <string name="reload_auto_skipped">ഓട്ടോമാറ്റിക് ചെയിൻ പ്രവർത്തിച്ചില്ല: %1$s</string>
     <string name="backup_cheats">ചീറ്റുകൾ: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">കൺസോളിലെ എല്ലാ പ്രോസസുകളും. ഒന്ന് തുറന്ന് അതിന്റെ മെമ്മറി ഭാഗങ്ങൾ കാണുക (rwx: വായിക്കുക, എഴുതുക, പ്രവർത്തിപ്പിക്കുക; എഴുതാവുന്ന ഭാഗങ്ങൾ ഹൈലൈറ്റ് ചെയ്തിരിക്കുന്നു), ഒരു ഭാഗം തുറന്ന് അതിന്റെ ബൈറ്റുകളും. ബൈറ്റുകളുടെ ഒരു വരിയിൽ ടാപ്പ് ചെയ്ത് അവ മാറ്റുക, അല്ലെങ്കിൽ ഒരു വിലാസത്തിലേക്ക് പോകുക.</string>
     <string name="memory_view_log">കൺസോൾ ലോഗ്</string>
     <string name="klog_title">കൺസോൾ ലോഗ്</string>
+    <string name="klog_save">ഫോണിൽ സേവ് ചെയ്യുക</string>
+    <string name="klog_save_detail">ഓരോ വരിയും എത്തുമ്പോൾത്തന്നെ Downloads/Bento/Logs-ലെ ഒരു ഫയലിലും എഴുതുന്നു, അതിനാൽ ക്രാഷിന് ശേഷവും കൺസോൾ തൊട്ടുമുമ്പ് എന്ത് കാണിച്ചെന്ന് കാണാം.</string>
+    <string name="klog_saving_to">%1$s-ലേക്ക് സേവ് ചെയ്യുന്നു</string>
+    <string name="klog_save_channel">കൺസോൾ ലോഗ്</string>
+    <string name="klog_save_notif_title">കൺസോൾ ലോഗ് സേവ് ചെയ്യുന്നു</string>
     <string name="klog_etahen_note">Klog ക്രമീകരണം ഓണായിരിക്കുമ്പോൾ etaHEN ഇത് പോർട്ട് 9081-ൽ അയയ്ക്കുന്നു; ആ പോർട്ടും പരീക്ഷിക്കും.</string>
     <string name="klog_intro">കൺസോളിന്റെ സിസ്റ്റവും payloads-ഉം പ്രിന്റ് ചെയ്യുന്നത്, തത്സമയം. ps5debug-NG ഇത് പോർട്ട് 3232-ൽ അയയ്ക്കുന്നു. ഒരു payload അല്ലെങ്കിൽ ചീറ്റ് ശരിയായി പ്രവർത്തിക്കാത്തപ്പോൾ ഉപയോഗപ്രദം.</string>
     <string name="klog_port">ലോഗ് പോർട്ട്</string>

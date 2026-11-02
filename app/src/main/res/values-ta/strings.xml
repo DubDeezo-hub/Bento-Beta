@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">அந்தச் சங்கிலி இனி இல்லை.</string>
     <string name="notif_channel_chain">Payload சங்கிலிகள்</string>
     <string name="backup_chains">சங்கிலிகள்: %1$d</string>
+    <string name="reload_warn_title">ஏற்கனவே ஏற்றப்பட்டதா?</string>
+    <string name="reload_warn_running">இந்த கன்சோலில் etaHEN ஏற்கனவே பதிலளிக்கிறது (போர்ட் %2$d இல் அதன் FTP சர்வர் இயங்குகிறது). அது இயங்கும்போது %1$s ஐ மீண்டும் ஏற்றினால் கன்சோல் கிராஷ் ஆகலாம். etaHEN வேலை செய்வதை நிறுத்தியிருந்தால் மட்டும் அனுப்புங்கள்.</string>
+    <string name="reload_warn_sent">%1$s ஏற்கனவே %2$s முன்பு இந்த கன்சோலுக்கு அனுப்பப்பட்டது. இரண்டாவது முறை ஏற்றினால் கன்சோல் கிராஷ் ஆகலாம். அதன் பிறகு கன்சோல் மறுதொடக்கம் செய்யப்பட்டிருந்தால் மட்டும் மீண்டும் அனுப்புங்கள்.</string>
+    <string name="reload_send_anyway">இருந்தாலும் அனுப்பு</string>
+    <string name="reload_auto_skipped">தானியங்கி சங்கிலி இயங்கவில்லை: %1$s</string>
     <string name="backup_cheats">ஏமாற்றுக் குறியீடுகள்: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">கன்சோலின் அனைத்துச் செயல்முறைகளும். ஒன்றைத் திறந்து அதன் நினைவகப் பகுதிகளைப் பார்க்கவும் (rwx: படி, எழுது, இயக்கு; எழுதக்கூடிய பகுதிகள் தனிப்படுத்தப்பட்டவை), ஒரு பகுதியைத் திறந்து அதன் பைட்டுகளையும். பைட்டுகளின் வரியைத் தட்டி அவற்றை மாற்றவும், அல்லது ஒரு முகவரிக்குச் செல்லவும்.</string>
     <string name="memory_view_log">கன்சோல் பதிவு</string>
     <string name="klog_title">கன்சோல் பதிவு</string>
+    <string name="klog_save">போனில் சேமி</string>
+    <string name="klog_save_detail">ஒவ்வொரு வரியும் வந்தவுடன் Downloads/Bento/Logs இல் உள்ள கோப்பிலும் எழுதப்படும், எனவே கிராஷுக்குப் பிறகும் கன்சோல் அதற்கு சற்று முன் என்ன காட்டியது என்று பார்க்கலாம்.</string>
+    <string name="klog_saving_to">%1$s இல் சேமிக்கப்படுகிறது</string>
+    <string name="klog_save_channel">கன்சோல் பதிவு</string>
+    <string name="klog_save_notif_title">கன்சோல் பதிவு சேமிக்கப்படுகிறது</string>
     <string name="klog_etahen_note">Klog அமைப்பு இயக்கத்தில் இருக்கும்போது etaHEN இதை போர்ட் 9081-இல் அனுப்புகிறது; அந்த போர்ட்டும் முயற்சிக்கப்படும்.</string>
     <string name="klog_intro">கன்சோலின் சிஸ்டமும் payloads-உம் அச்சிடுவது, நேரலையில். ps5debug-NG இதைப் போர்ட் 3232-இல் அனுப்பும். ஒரு payload அல்லது சீட் சரியாக வேலை செய்யாதபோது உதவும்.</string>
     <string name="klog_port">பதிவு போர்ட்</string>

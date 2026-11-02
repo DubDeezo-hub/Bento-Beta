@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Такого ланцюжка більше немає.</string>
     <string name="notif_channel_chain">Ланцюжки пейлоадів</string>
     <string name="backup_chains">Ланцюжки: %1$d</string>
+    <string name="reload_warn_title">Уже завантажено?</string>
+    <string name="reload_warn_running">etaHEN уже відповідає на цій консолі (його FTP-сервер на порту %2$d працює). Повторне завантаження %1$s, поки він працює, може обвалити консоль. Надсилайте, лише якщо etaHEN перестав працювати.</string>
+    <string name="reload_warn_sent">%1$s уже надсилався на цю консоль %2$s тому. Повторне завантаження може обвалити консоль. Надсилайте знову, лише якщо відтоді консоль перезапускалася.</string>
+    <string name="reload_send_anyway">Усе одно надіслати</string>
+    <string name="reload_auto_skipped">Автоматичний ланцюжок не запустився: %1$s</string>
     <string name="backup_cheats">Чити: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">Усі процеси на консолі. Відкрийте процес, щоб побачити його області пам\'яті (rwx: читання, запис, виконання; записувані виділено), а область — щоб побачити її байти. Натисніть на рядок байтів, щоб змінити їх, або «Перейти» до адреси.</string>
     <string name="memory_view_log">Журнал консолі</string>
     <string name="klog_title">Журнал консолі</string>
+    <string name="klog_save">Зберігати на телефон</string>
+    <string name="klog_save_detail">Кожен рядок одразу записується й у файл у Завантаження/Bento/Logs, тож після збою видно, що консоль вивела просто перед ним.</string>
+    <string name="klog_saving_to">Зберігається в %1$s</string>
+    <string name="klog_save_channel">Журнал консолі</string>
+    <string name="klog_save_notif_title">Збереження журналу консолі</string>
     <string name="klog_etahen_note">etaHEN надсилає його на порт 9081, коли ввімкнено параметр Klog; цей порт теж пробується.</string>
     <string name="klog_intro">Те, що виводять система консолі й пейлоади, наживо. ps5debug-NG надсилає це на порт 3232. Корисно, коли пейлоад або чит працює не так.</string>
     <string name="klog_port">Порт журналу</string>

@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">השרשרת הזו כבר לא קיימת.</string>
     <string name="notif_channel_chain">שרשראות payload</string>
     <string name="backup_chains">שרשראות: %1$d</string>
+    <string name="reload_warn_title">כבר נטען?</string>
+    <string name="reload_warn_running">‏etaHEN כבר עונה בקונסולה הזו (שרת ה-FTP שלו ביציאה %2$d פועל). טעינה חוזרת של %1$s בזמן שהוא פועל עלולה להקריס את הקונסולה. שלחו רק אם etaHEN הפסיק לעבוד.</string>
+    <string name="reload_warn_sent">‏%1$s כבר נשלח לקונסולה הזו לפני %2$s. טעינה שנייה עלולה להקריס את הקונסולה. שלחו שוב רק אם הקונסולה הופעלה מחדש מאז.</string>
+    <string name="reload_send_anyway">לשלוח בכל זאת</string>
+    <string name="reload_auto_skipped">השרשרת האוטומטית לא רצה: %1$s</string>
     <string name="backup_cheats">צ\'יטים: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">כל התהליכים בקונסולה. פתחו אחד כדי לראות את אזורי הזיכרון שלו (rwx: קריאה, כתיבה, הרצה; אזורים לכתיבה מודגשים), ואזור כדי לראות את הבייטים שלו. הקישו על שורת בייטים כדי לשנות אותם, או \"מעבר\" לכתובת.</string>
     <string name="memory_view_log">יומן הקונסולה</string>
     <string name="klog_title">יומן הקונסולה</string>
+    <string name="klog_save">שמירה בטלפון</string>
+    <string name="klog_save_detail">כל שורה נכתבת עם הגעתה גם לקובץ ב-Downloads/Bento/Logs, כך שאחרי קריסה רואים מה הקונסולה הדפיסה רגע לפניה.</string>
+    <string name="klog_saving_to">נשמר ב-%1$s</string>
+    <string name="klog_save_channel">יומן הקונסולה</string>
+    <string name="klog_save_notif_title">שומר את יומן הקונסולה</string>
     <string name="klog_etahen_note">‏etaHEN שולח אותו ביציאה 9081 כשהגדרת Klog שלו פועלת; גם היציאה הזו נבדקת.</string>
     <string name="klog_intro">מה שמערכת הקונסולה וה-payloads מדפיסים, בזמן אמת. ps5debug-NG שולח את זה בפורט 3232. שימושי כש-payload או צ\'יט לא מתנהגים כמו שצריך.</string>
     <string name="klog_port">פורט היומן</string>

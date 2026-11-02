@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Tätä ketjua ei enää ole.</string>
     <string name="notif_channel_chain">Payload-ketjut</string>
     <string name="backup_chains">Ketjut: %1$d</string>
+    <string name="reload_warn_title">Jo ladattu?</string>
+    <string name="reload_warn_running">etaHEN vastaa jo tässä konsolissa (sen FTP-palvelin portissa %2$d on käynnissä). Kohteen %1$s lataaminen uudelleen sen ollessa käynnissä voi kaataa konsolin. Lähetä vain, jos etaHEN on lakannut toimimasta.</string>
+    <string name="reload_warn_sent">%1$s lähetettiin tähän konsoliin jo %2$s sitten. Toinen lataus voi kaataa konsolin. Lähetä uudelleen vain, jos konsoli on sen jälkeen käynnistetty uudelleen.</string>
+    <string name="reload_send_anyway">Lähetä silti</string>
+    <string name="reload_auto_skipped">Automaattinen ketju ei käynnistynyt: %1$s</string>
     <string name="backup_cheats">Huijaukset: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">Kaikki konsolin prosessit. Avaa yksi nähdäksesi sen muistialueet (rwx: luku, kirjoitus, suoritus; kirjoitettavat on korostettu) ja alue nähdäksesi sen tavut. Napauta tavuriviä muuttaaksesi niitä tai Siirry osoitteeseen.</string>
     <string name="memory_view_log">Konsolin loki</string>
     <string name="klog_title">Konsolin loki</string>
+    <string name="klog_save">Tallenna puhelimeen</string>
+    <string name="klog_save_detail">Jokainen rivi kirjoitetaan saapuessaan myös tiedostoon kansioon Lataukset/Bento/Logs, joten kaatumisen jälkeen näet, mitä konsoli tulosti juuri ennen sitä.</string>
+    <string name="klog_saving_to">Tallennetaan: %1$s</string>
+    <string name="klog_save_channel">Konsolin loki</string>
+    <string name="klog_save_notif_title">Konsolin lokia tallennetaan</string>
     <string name="klog_etahen_note">etaHEN lähettää sen porttiin 9081, kun sen Klog-asetus on päällä; myös sitä porttia kokeillaan.</string>
     <string name="klog_intro">Mitä konsolin järjestelmä ja payloadit tulostavat, reaaliajassa. ps5debug-NG lähettää sen portissa 3232. Kätevä, kun payload tai huijaus ei toimi kunnolla.</string>
     <string name="klog_port">Lokin portti</string>

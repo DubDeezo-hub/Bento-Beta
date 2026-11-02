@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Тај ланац више не постоји.</string>
     <string name="notif_channel_chain">Ланци payload-а</string>
     <string name="backup_chains">Ланци: %1$d</string>
+    <string name="reload_warn_title">Већ учитано?</string>
+    <string name="reload_warn_running">etaHEN већ одговара на овој конзоли (његов FTP сервер на порту %2$d ради). Поновно учитавање %1$s док ради може да обори конзолу. Пошаљи га само ако је etaHEN престао да ради.</string>
+    <string name="reload_warn_sent">%1$s је већ послат овој конзоли пре %2$s. Друго учитавање може да обори конзолу. Пошаљи га поново само ако је конзола од тада поново покренута.</string>
+    <string name="reload_send_anyway">Ипак пошаљи</string>
+    <string name="reload_auto_skipped">Аутоматски ланац се није покренуо: %1$s</string>
     <string name="backup_cheats">Варалице: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">Сви процеси на конзоли. Отворите један да видите његове области меморије (rwx: читање, писање, покретање; уписиве су обојене), а област за њене бајтове. Додирните ред бајтова да их промените или Иди на адресу.</string>
     <string name="memory_view_log">Дневник конзоле</string>
     <string name="klog_title">Дневник конзоле</string>
+    <string name="klog_save">Сачувај на телефону</string>
+    <string name="klog_save_detail">Сваки ред се чим стигне уписује и у датотеку у Downloads/Bento/Logs, па после пада видиш шта је конзола исписала непосредно пре њега.</string>
+    <string name="klog_saving_to">Чува се у %1$s</string>
+    <string name="klog_save_channel">Дневник конзоле</string>
+    <string name="klog_save_notif_title">Чува се дневник конзоле</string>
     <string name="klog_etahen_note">etaHEN га шаље на порту 9081 кад му је укључено подешавање Klog; пробава се и тај порт.</string>
     <string name="klog_intro">Шта исписују систем конзоле и payload-и, уживо. ps5debug-NG то шаље на порту 3232. Корисно кад payload или варање не ради како треба.</string>
     <string name="klog_port">Порт дневника</string>

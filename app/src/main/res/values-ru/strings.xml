@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Такой цепочки больше нет.</string>
     <string name="notif_channel_chain">Цепочки пейлоадов</string>
     <string name="backup_chains">Цепочки: %1$d</string>
+    <string name="reload_warn_title">Уже загружен?</string>
+    <string name="reload_warn_running">etaHEN уже отвечает на этой консоли (его FTP-сервер на порту %2$d работает). Повторная загрузка %1$s, пока он работает, может обрушить консоль. Отправляйте, только если etaHEN перестал работать.</string>
+    <string name="reload_warn_sent">%1$s уже отправлялся на эту консоль %2$s назад. Повторная загрузка может обрушить консоль. Отправляйте снова, только если консоль с тех пор перезагружалась.</string>
+    <string name="reload_send_anyway">Всё равно отправить</string>
+    <string name="reload_auto_skipped">Автоматическая цепочка не запустилась: %1$s</string>
     <string name="backup_cheats">Читы: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">Все процессы на консоли. Откройте процесс, чтобы увидеть его области памяти (rwx: чтение, запись, выполнение; записываемые выделены), а область — чтобы увидеть её байты. Нажмите на строку байтов, чтобы изменить их, или «Перейти» к адресу.</string>
     <string name="memory_view_log">Журнал консоли</string>
     <string name="klog_title">Журнал консоли</string>
+    <string name="klog_save">Сохранять на телефон</string>
+    <string name="klog_save_detail">Каждая строка сразу записывается и в файл в Загрузки/Bento/Logs, так что после сбоя видно, что консоль вывела прямо перед ним.</string>
+    <string name="klog_saving_to">Сохраняется в %1$s</string>
+    <string name="klog_save_channel">Журнал консоли</string>
+    <string name="klog_save_notif_title">Сохранение журнала консоли</string>
     <string name="klog_etahen_note">etaHEN отправляет его на порт 9081, когда включён параметр Klog; этот порт тоже пробуется.</string>
     <string name="klog_intro">То, что выводят система консоли и пейлоады, в реальном времени. ps5debug-NG отправляет это на порт 3232. Полезно, когда пейлоад или чит работает не так.</string>
     <string name="klog_port">Порт журнала</string>

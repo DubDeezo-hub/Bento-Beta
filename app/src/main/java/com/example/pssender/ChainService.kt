@@ -70,7 +70,9 @@ class ChainService : Service() {
             val outcome = try {
                 runChain(
                     steps = request.steps,
-                    send = { name -> sendPayloadReply(File(shelf, name), request.host, request.port) },
+                    send = { name ->
+                        sendPayloadReply(File(shelf, name), request.host, request.port).also { if (it.ok) ReloadGuard.noteSent(request.host, name) }
+                    },
                     sleepSecond = { delay(1000L) },
                     cancelled = { ChainRunner.stopRequested },
                     onStep = ChainRunner::onStep,

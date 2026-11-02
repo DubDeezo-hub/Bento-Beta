@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Bu zincir artık yok.</string>
     <string name="notif_channel_chain">Payload zincirleri</string>
     <string name="backup_chains">Zincirler: %1$d</string>
+    <string name="reload_warn_title">Zaten yüklü mü?</string>
+    <string name="reload_warn_running">etaHEN bu konsolda zaten yanıt veriyor (%2$d numaralı porttaki FTP sunucusu açık). O çalışırken %1$s yeniden yüklemek konsolu çökertebilir. Yalnızca etaHEN çalışmayı bıraktıysa gönder.</string>
+    <string name="reload_warn_sent">%1$s bu konsola %2$s önce zaten gönderildi. İkinci kez yüklemek konsolu çökertebilir. Yalnızca konsol o zamandan beri yeniden başlatıldıysa tekrar gönder.</string>
+    <string name="reload_send_anyway">Yine de gönder</string>
+    <string name="reload_auto_skipped">Otomatik zincir çalışmadı: %1$s</string>
     <string name="backup_cheats">Hileler: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">Konsoldaki her işlem. Bellek bölgelerini görmek için birini aç (rwx: okuma, yazma, çalıştırma; yazılabilir olanlar renklidir), baytları için de bir bölge aç. Değiştirmek için bir bayt satırına dokun ya da bir adrese Git.</string>
     <string name="memory_view_log">Konsol günlüğü</string>
     <string name="klog_title">Konsol günlüğü</string>
+    <string name="klog_save">Telefona kaydet</string>
+    <string name="klog_save_detail">Her satır geldiği anda Downloads/Bento/Logs içindeki bir dosyaya da yazılır; böylece bir çökmeden sonra konsolun hemen öncesinde ne yazdığını görürsün.</string>
+    <string name="klog_saving_to">%1$s konumuna kaydediliyor</string>
+    <string name="klog_save_channel">Konsol günlüğü</string>
+    <string name="klog_save_notif_title">Konsol günlüğü kaydediliyor</string>
     <string name="klog_etahen_note">etaHEN, Klog ayarı açıkken bunu 9081 numaralı porttan gönderir; o port da denenir.</string>
     <string name="klog_intro">Konsolun sisteminin ve payload\'ların yazdıkları, canlı. ps5debug-NG bunu 3232 portundan gönderir. Bir payload ya da hile düzgün çalışmadığında işe yarar.</string>
     <string name="klog_port">Günlük portu</string>

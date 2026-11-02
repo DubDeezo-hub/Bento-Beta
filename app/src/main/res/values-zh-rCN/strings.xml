@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">该链已不存在。</string>
     <string name="notif_channel_chain">Payload 链</string>
     <string name="backup_chains">链：%1$d</string>
+    <string name="reload_warn_title">已经加载？</string>
+    <string name="reload_warn_running">这台主机上的 etaHEN 已在响应（端口 %2$d 的 FTP 服务器正在运行）。在它运行时再次加载 %1$s 可能导致主机崩溃。只有在 etaHEN 停止工作时才发送。</string>
+    <string name="reload_warn_sent">%1$s 已在 %2$s 前发送到这台主机。第二次加载可能导致主机崩溃。只有在主机重启过之后才再次发送。</string>
+    <string name="reload_send_anyway">仍然发送</string>
+    <string name="reload_auto_skipped">自动链没有运行：%1$s</string>
     <string name="backup_cheats">作弊：%1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">主机上的所有进程。打开一个即可查看其内存区域（rwx：读、写、执行；可写区域会高亮），打开一个区域即可查看其字节。点击一行字节可修改，或转到某个地址。</string>
     <string name="memory_view_log">主机日志</string>
     <string name="klog_title">主机日志</string>
+    <string name="klog_save">保存到手机</string>
+    <string name="klog_save_detail">每一行到达时也会写入 Downloads/Bento/Logs 中的文件，主机崩溃后仍能看到它崩溃前输出的内容。</string>
+    <string name="klog_saving_to">正在保存到 %1$s</string>
+    <string name="klog_save_channel">主机日志</string>
+    <string name="klog_save_notif_title">正在保存主机日志</string>
     <string name="klog_etahen_note">etaHEN 在其 Klog 设置开启时通过端口 9081 发送；也会尝试该端口。</string>
     <string name="klog_intro">实时显示主机系统和 Payload 输出的内容。ps5debug-NG 通过端口 3232 发送。Payload 或金手指工作不正常时很有用。</string>
     <string name="klog_port">日志端口</string>

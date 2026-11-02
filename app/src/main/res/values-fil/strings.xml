@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Wala na ang chain na iyon.</string>
     <string name="notif_channel_chain">Mga payload chain</string>
     <string name="backup_chains">Mga chain: %1$d</string>
+    <string name="reload_warn_title">Naka-load na?</string>
+    <string name="reload_warn_running">Sumasagot na ang etaHEN sa console na ito (tumatakbo ang FTP server nito sa port %2$d). Ang muling pag-load ng %1$s habang tumatakbo ito ay puwedeng magpa-crash sa console. Ipadala lang kung tumigil na sa paggana ang etaHEN.</string>
+    <string name="reload_warn_sent">Naipadala na ang %1$s sa console na ito %2$s ang nakalipas. Ang pangalawang pag-load ay puwedeng magpa-crash sa console. Ipadala lang ulit kung na-restart na ang console mula noon.</string>
+    <string name="reload_send_anyway">Ipadala pa rin</string>
+    <string name="reload_auto_skipped">Hindi tumakbo ang awtomatikong chain: %1$s</string>
     <string name="backup_cheats">Mga cheat: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">Lahat ng process sa console. Magbukas ng isa para makita ang mga memory region nito (rwx: read, write, execute; naka-highlight ang mga puwedeng sulatan), at magbukas ng region para makita ang mga byte nito. I-tap ang isang linya ng byte para baguhin ang mga ito, o pumunta sa isang address.</string>
     <string name="memory_view_log">Log ng console</string>
     <string name="klog_title">Log ng console</string>
+    <string name="klog_save">I-save sa phone</string>
+    <string name="klog_save_detail">Isinusulat din agad ang bawat linya sa isang file sa Downloads/Bento/Logs, kaya pagkatapos mag-crash ay makikita mo ang ipinakita ng console bago iyon.</string>
+    <string name="klog_saving_to">Sine-save sa %1$s</string>
+    <string name="klog_save_channel">Log ng console</string>
+    <string name="klog_save_notif_title">Sine-save ang log ng console</string>
     <string name="klog_etahen_note">Ipinapadala ito ng etaHEN sa port 9081 kapag naka-on ang Klog setting nito; sinusubukan din ang port na iyon.</string>
     <string name="klog_intro">Ang ipini-print ng system ng console at mga payload, live. Ipinapadala ito ng ps5debug-NG sa port 3232. Kapaki-pakinabang kapag hindi gumagana nang tama ang isang payload o cheat.</string>
     <string name="klog_port">Port ng log</string>

@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Den kæde findes ikke længere.</string>
     <string name="notif_channel_chain">Payload-kæder</string>
     <string name="backup_chains">Kæder: %1$d</string>
+    <string name="reload_warn_title">Allerede indlæst?</string>
+    <string name="reload_warn_running">etaHEN svarer allerede på denne konsol (dens FTP-server på port %2$d kører). At indlæse %1$s igen, mens den kører, kan få konsollen til at gå ned. Send den kun, hvis etaHEN er holdt op med at virke.</string>
+    <string name="reload_warn_sent">%1$s blev allerede sendt til denne konsol for %2$s siden. At indlæse den en gang til kan få konsollen til at gå ned. Send den kun igen, hvis konsollen er genstartet siden.</string>
+    <string name="reload_send_anyway">Send alligevel</string>
+    <string name="reload_auto_skipped">Den automatiske kæde kørte ikke: %1$s</string>
     <string name="backup_cheats">Snyd: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">Alle processer på konsollen. Åbn en for at se dens hukommelsesområder (rwx: læse, skrive, køre; skrivbare er farvede) og et område for dets bytes. Tryk på en linje med bytes for at ændre dem, eller Gå til en adresse.</string>
     <string name="memory_view_log">Konsollog</string>
     <string name="klog_title">Konsollog</string>
+    <string name="klog_save">Gem på telefonen</string>
+    <string name="klog_save_detail">Hver linje skrives også til en fil i Downloads/Bento/Logs, når den kommer, så du efter et nedbrud kan se, hvad konsollen skrev lige før.</string>
+    <string name="klog_saving_to">Gemmer i %1$s</string>
+    <string name="klog_save_channel">Konsollog</string>
+    <string name="klog_save_notif_title">Gemmer konsolloggen</string>
     <string name="klog_etahen_note">etaHEN sender den på port 9081, når dens Klog-indstilling er slået til; den port prøves også.</string>
     <string name="klog_intro">Det, konsollens system og payloads skriver ud, live. ps5debug-NG sender det på port 3232. Praktisk, når en payload eller et snyd driller.</string>
     <string name="klog_port">Logport</string>

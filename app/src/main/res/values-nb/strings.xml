@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Den kjeden finnes ikke lenger.</string>
     <string name="notif_channel_chain">Payload-kjeder</string>
     <string name="backup_chains">Kjeder: %1$d</string>
+    <string name="reload_warn_title">Allerede lastet?</string>
+    <string name="reload_warn_running">etaHEN svarer allerede på denne konsollen (FTP-serveren på port %2$d kjører). Å laste %1$s igjen mens den kjører kan krasje konsollen. Send den bare hvis etaHEN har sluttet å virke.</string>
+    <string name="reload_warn_sent">%1$s ble allerede sendt til denne konsollen for %2$s siden. Å laste den en gang til kan krasje konsollen. Send den igjen bare hvis konsollen er startet på nytt siden.</string>
+    <string name="reload_send_anyway">Send likevel</string>
+    <string name="reload_auto_skipped">Den automatiske kjeden kjørte ikke: %1$s</string>
     <string name="backup_cheats">Juks: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">Alle prosesser på konsollen. Åpne en for å se minneområdene (rwx: lese, skrive, kjøre; skrivbare er farget) og et område for bytene. Trykk på en linje med byte for å endre dem, eller Gå til en adresse.</string>
     <string name="memory_view_log">Konsollogg</string>
     <string name="klog_title">Konsollogg</string>
+    <string name="klog_save">Lagre på telefonen</string>
+    <string name="klog_save_detail">Hver linje skrives også til en fil i Nedlastinger/Bento/Logs når den kommer, så etter en krasj ser du hva konsollen skrev rett før.</string>
+    <string name="klog_saving_to">Lagrer i %1$s</string>
+    <string name="klog_save_channel">Konsollogg</string>
+    <string name="klog_save_notif_title">Lagrer konsolloggen</string>
     <string name="klog_etahen_note">etaHEN sender den på port 9081 når Klog-innstillingen er på; den porten prøves også.</string>
     <string name="klog_intro">Det konsollens system og payloads skriver ut, live. ps5debug-NG sender det på port 3232. Nyttig når en payload eller et juks ikke oppfører seg.</string>
     <string name="klog_port">Loggport</string>

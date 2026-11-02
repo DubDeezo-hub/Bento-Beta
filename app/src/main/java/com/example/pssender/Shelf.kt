@@ -154,6 +154,23 @@ fun PayloadTab(
     var status by remember { mutableStateOf(idle) }
     var removing by remember { mutableStateOf<ShelfItem?>(null) }
     val canSend = host.isNotBlank() && port.trim().toIntOrNull() != null
+    // A payload that would load etaHEN, kstuff or GoldHEN a second time waits for "Send anyway"
+    var reloadAsk by remember { mutableStateOf<Pair<String, () -> Unit>?>(null) }
+    val guarded: (String, () -> Unit) -> Unit = { name, go ->
+        scope.launch {
+            val why = withContext(Dispatchers.IO) { ReloadGuard.warning(host, listOf(name), ActiveConsole.type) }
+            if (why == null) go() else reloadAsk = why to go
+        }
+    }
+    reloadAsk?.let { (why, go) ->
+        AlertDialog(
+            onDismissRequest = { reloadAsk = null },
+            title = { Text(str(R.string.reload_warn_title)) },
+            text = { Text(why) },
+            confirmButton = { TextButton(onClick = { reloadAsk = null; go() }) { Text(str(R.string.reload_send_anyway)) } },
+            dismissButton = { TextButton(onClick = { reloadAsk = null }) { Text(str(R.string.action_cancel)) } }
+        )
+    }
 
     val adder = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { picked ->
         if (picked != null) {
@@ -238,10 +255,13 @@ fun PayloadTab(
                 Button(
                     enabled = canSend,
                     onClick = {
-                        status = AppText.get(R.string.payload_sending, item.name)
-                        scope.launch {
-                            val sent = sendPayloadFile(File(shelfDir(ctx), item.name), host.trim(), port.trim().toInt())
-                            status = AppText.get(R.string.payload_result, item.name, sent)
+                        guarded(item.name) {
+                            status = AppText.get(R.string.payload_sending, item.name)
+                            scope.launch {
+                                val sent = sendPayloadReply(File(shelfDir(ctx), item.name), host.trim(), port.trim().toInt())
+                                if (sent.ok) ReloadGuard.noteSent(host, item.name)
+                                status = AppText.get(R.string.payload_result, item.name, sent.text)
+                            }
                         }
                     }
                 ) { Text(str(R.string.action_send)) }
@@ -283,8 +303,16 @@ fun PayloadTab(
         Button(
             enabled = canSend && oneOff != null,
             onClick = {
-                status = AppText.get(R.string.status_sending)
-                scope.launch { status = sendPayload(ctx.contentResolver, oneOff!!, host.trim(), port.trim().toInt()) }
+                val picked = oneOff!!
+                val name = ctx.contentResolver.displayName(picked)
+                guarded(name) {
+                    status = AppText.get(R.string.status_sending)
+                    scope.launch {
+                        val sent = sendPayloadUri(ctx.contentResolver, picked, host.trim(), port.trim().toInt())
+                        if (sent.ok) ReloadGuard.noteSent(host, name)
+                        status = sent.text
+                    }
+                }
             }
         ) { Text(str(R.string.payload_send)) }
         Text(status)

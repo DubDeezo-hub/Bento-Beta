@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">آن زنجیره دیگر وجود ندارد.</string>
     <string name="notif_channel_chain">زنجیره‌های payload</string>
     <string name="backup_chains">زنجیره‌ها: %1$d</string>
+    <string name="reload_warn_title">از قبل بارگذاری شده؟</string>
+    <string name="reload_warn_running">‏etaHEN روی این کنسول از قبل پاسخ می‌دهد (سرور FTP آن روی درگاه %2$d فعال است). بارگذاری دوبارهٔ %1$s در حالی که اجرا می‌شود ممکن است کنسول را از کار بیندازد. فقط اگر etaHEN از کار افتاده بفرستید.</string>
+    <string name="reload_warn_sent">‏%1$s از %2$s پیش به این کنسول فرستاده شده است. بارگذاری دوباره ممکن است کنسول را از کار بیندازد. فقط اگر از آن موقع کنسول دوباره راه‌اندازی شده، دوباره بفرستید.</string>
+    <string name="reload_send_anyway">با این حال بفرست</string>
+    <string name="reload_auto_skipped">زنجیرهٔ خودکار اجرا نشد: %1$s</string>
     <string name="backup_cheats">تقلب‌ها: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">همه فرایندهای کنسول. یکی را باز کنید تا ناحیه‌های حافظه‌اش را ببینید (rwx: خواندن، نوشتن، اجرا؛ ناحیه‌های قابل نوشتن رنگی‌اند)، و یک ناحیه را برای دیدن بایت‌هایش. روی یک خط بایت بزنید تا تغییرشان دهید، یا به یک نشانی بروید.</string>
     <string name="memory_view_log">گزارش کنسول</string>
     <string name="klog_title">گزارش کنسول</string>
+    <string name="klog_save">ذخیره در گوشی</string>
+    <string name="klog_save_detail">هر خط هم‌زمان با رسیدن در فایلی در Downloads/Bento/Logs هم نوشته می‌شود تا بعد از کرش ببینید کنسول درست قبل از آن چه نوشته بود.</string>
+    <string name="klog_saving_to">در حال ذخیره در %1$s</string>
+    <string name="klog_save_channel">گزارش کنسول</string>
+    <string name="klog_save_notif_title">در حال ذخیرهٔ گزارش کنسول</string>
     <string name="klog_etahen_note">‏etaHEN وقتی تنظیم Klog آن روشن باشد آن را روی درگاه 9081 می‌فرستد؛ آن درگاه هم امتحان می‌شود.</string>
     <string name="klog_intro">آنچه سیستم کنسول و payloadها چاپ می‌کنند، به‌صورت زنده. ps5debug-NG آن را روی درگاه 3232 می‌فرستد. وقتی یک payload یا تقلب درست کار نمی‌کند به کار می‌آید.</string>
     <string name="klog_port">درگاه گزارش</string>

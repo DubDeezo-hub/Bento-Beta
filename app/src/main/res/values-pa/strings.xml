@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">ਉਹ ਚੇਨ ਹੁਣ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।</string>
     <string name="notif_channel_chain">Payload ਚੇਨਾਂ</string>
     <string name="backup_chains">ਚੇਨਾਂ: %1$d</string>
+    <string name="reload_warn_title">ਪਹਿਲਾਂ ਹੀ ਲੋਡ ਹੈ?</string>
+    <string name="reload_warn_running">ਇਸ ਕੰਸੋਲ \'ਤੇ etaHEN ਪਹਿਲਾਂ ਹੀ ਜਵਾਬ ਦੇ ਰਿਹਾ ਹੈ (ਪੋਰਟ %2$d \'ਤੇ ਇਸਦਾ FTP ਸਰਵਰ ਚੱਲ ਰਿਹਾ ਹੈ)। ਇਸਦੇ ਚੱਲਦਿਆਂ %1$s ਦੁਬਾਰਾ ਲੋਡ ਕਰਨ ਨਾਲ ਕੰਸੋਲ ਕ੍ਰੈਸ਼ ਹੋ ਸਕਦਾ ਹੈ। ਤਾਂ ਹੀ ਭੇਜੋ ਜੇ etaHEN ਕੰਮ ਕਰਨਾ ਬੰਦ ਕਰ ਚੁੱਕਾ ਹੋਵੇ।</string>
+    <string name="reload_warn_sent">%1$s ਇਸ ਕੰਸੋਲ ਨੂੰ %2$s ਪਹਿਲਾਂ ਭੇਜਿਆ ਜਾ ਚੁੱਕਾ ਹੈ। ਦੂਜੀ ਵਾਰ ਲੋਡ ਕਰਨ ਨਾਲ ਕੰਸੋਲ ਕ੍ਰੈਸ਼ ਹੋ ਸਕਦਾ ਹੈ। ਤਾਂ ਹੀ ਦੁਬਾਰਾ ਭੇਜੋ ਜੇ ਉਦੋਂ ਤੋਂ ਕੰਸੋਲ ਰੀਸਟਾਰਟ ਹੋਇਆ ਹੋਵੇ।</string>
+    <string name="reload_send_anyway">ਫਿਰ ਵੀ ਭੇਜੋ</string>
+    <string name="reload_auto_skipped">ਆਟੋਮੈਟਿਕ ਚੇਨ ਨਹੀਂ ਚੱਲੀ: %1$s</string>
     <string name="backup_cheats">ਚੀਟ: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">ਕੰਸੋਲ ਦੇ ਸਾਰੇ ਪ੍ਰੋਸੈੱਸ। ਇੱਕ ਖੋਲ੍ਹ ਕੇ ਉਸਦੇ ਮੈਮੋਰੀ ਹਿੱਸੇ ਦੇਖੋ (rwx: ਪੜ੍ਹਨਾ, ਲਿਖਣਾ, ਚਲਾਉਣਾ; ਲਿਖਣਯੋਗ ਹਿੱਸੇ ਉਭਾਰੇ ਹੋਏ), ਅਤੇ ਕੋਈ ਹਿੱਸਾ ਖੋਲ੍ਹ ਕੇ ਉਸਦੇ ਬਾਈਟ। ਬਾਈਟਾਂ ਦੀ ਲਾਈਨ ਉੱਤੇ ਟੈਪ ਕਰਕੇ ਉਹਨਾਂ ਨੂੰ ਬਦਲੋ, ਜਾਂ ਕਿਸੇ ਪਤੇ ਉੱਤੇ ਜਾਓ।</string>
     <string name="memory_view_log">ਕੰਸੋਲ ਲੌਗ</string>
     <string name="klog_title">ਕੰਸੋਲ ਲੌਗ</string>
+    <string name="klog_save">ਫ਼ੋਨ ਵਿੱਚ ਸੇਵ ਕਰੋ</string>
+    <string name="klog_save_detail">ਹਰ ਲਾਈਨ ਆਉਂਦਿਆਂ ਹੀ Downloads/Bento/Logs ਦੀ ਇੱਕ ਫ਼ਾਈਲ ਵਿੱਚ ਵੀ ਲਿਖੀ ਜਾਂਦੀ ਹੈ, ਤਾਂ ਜੋ ਕ੍ਰੈਸ਼ ਤੋਂ ਬਾਅਦ ਵੀ ਦਿਖੇ ਕਿ ਕੰਸੋਲ ਨੇ ਠੀਕ ਪਹਿਲਾਂ ਕੀ ਦਿਖਾਇਆ ਸੀ।</string>
+    <string name="klog_saving_to">%1$s ਵਿੱਚ ਸੇਵ ਹੋ ਰਿਹਾ ਹੈ</string>
+    <string name="klog_save_channel">ਕੰਸੋਲ ਲੌਗ</string>
+    <string name="klog_save_notif_title">ਕੰਸੋਲ ਲੌਗ ਸੇਵ ਹੋ ਰਿਹਾ ਹੈ</string>
     <string name="klog_etahen_note">Klog ਸੈਟਿੰਗ ਚਾਲੂ ਹੋਣ \'ਤੇ etaHEN ਇਸਨੂੰ ਪੋਰਟ 9081 \'ਤੇ ਭੇਜਦਾ ਹੈ; ਉਹ ਪੋਰਟ ਵੀ ਅਜ਼ਮਾਇਆ ਜਾਂਦਾ ਹੈ।</string>
     <string name="klog_intro">ਕੰਸੋਲ ਦਾ ਸਿਸਟਮ ਅਤੇ payloads ਜੋ ਛਾਪਦੇ ਹਨ, ਲਾਈਵ। ps5debug-NG ਇਸਨੂੰ ਪੋਰਟ 3232 ਉੱਤੇ ਭੇਜਦਾ ਹੈ। ਜਦੋਂ ਕੋਈ payload ਜਾਂ ਚੀਟ ਠੀਕ ਕੰਮ ਨਾ ਕਰੇ ਤਾਂ ਲਾਭਦਾਇਕ।</string>
     <string name="klog_port">ਲੌਗ ਪੋਰਟ</string>

@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Ten łańcuch już nie istnieje.</string>
     <string name="notif_channel_chain">Łańcuchy payloadów</string>
     <string name="backup_chains">Łańcuchy: %1$d</string>
+    <string name="reload_warn_title">Już wczytany?</string>
+    <string name="reload_warn_running">etaHEN już odpowiada na tej konsoli (jego serwer FTP na porcie %2$d działa). Ponowne wczytanie %1$s podczas jego pracy może zawiesić konsolę. Wysyłaj tylko, jeśli etaHEN przestał działać.</string>
+    <string name="reload_warn_sent">%1$s został już wysłany do tej konsoli %2$s temu. Drugie wczytanie może zawiesić konsolę. Wyślij ponownie tylko, jeśli konsola była od tego czasu uruchomiona ponownie.</string>
+    <string name="reload_send_anyway">Wyślij mimo to</string>
+    <string name="reload_auto_skipped">Automatyczny łańcuch się nie uruchomił: %1$s</string>
     <string name="backup_cheats">Kody: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">Każdy proces na konsoli. Otwórz jeden, by zobaczyć jego obszary pamięci (rwx: odczyt, zapis, wykonanie; zapisywalne są wyróżnione), a obszar, by zobaczyć jego bajty. Stuknij wiersz bajtów, by je zmienić, albo Przejdź do adresu.</string>
     <string name="memory_view_log">Log konsoli</string>
     <string name="klog_title">Log konsoli</string>
+    <string name="klog_save">Zapisuj na telefonie</string>
+    <string name="klog_save_detail">Każdy wiersz trafia od razu także do pliku w Pobrane/Bento/Logs, więc po awarii widać, co konsola wypisała tuż przed nią.</string>
+    <string name="klog_saving_to">Zapisywanie do %1$s</string>
+    <string name="klog_save_channel">Dziennik konsoli</string>
+    <string name="klog_save_notif_title">Zapisywanie dziennika konsoli</string>
     <string name="klog_etahen_note">etaHEN wysyła go na porcie 9081, gdy jego ustawienie Klog jest włączone; ten port też jest sprawdzany.</string>
     <string name="klog_intro">To, co wypisują system konsoli i payloady, na żywo. ps5debug-NG wysyła to na porcie 3232. Przydatne, gdy payload lub kod działa źle.</string>
     <string name="klog_port">Port logu</string>

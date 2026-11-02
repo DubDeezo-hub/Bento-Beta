@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">ওই চেইন আর নেই।</string>
     <string name="notif_channel_chain">Payload চেইন</string>
     <string name="backup_chains">চেইন: %1$d</string>
+    <string name="reload_warn_title">আগেই লোড করা?</string>
+    <string name="reload_warn_running">এই কনসোলে etaHEN আগেই সাড়া দিচ্ছে (পোর্ট %2$d-এ এর FTP সার্ভার চালু)। চলার সময় %1$s আবার লোড করলে কনসোল ক্র্যাশ করতে পারে। etaHEN কাজ করা বন্ধ করলে তবেই পাঠান।</string>
+    <string name="reload_warn_sent">%1$s এই কনসোলে %2$s আগে পাঠানো হয়েছে। দ্বিতীয়বার লোড করলে কনসোল ক্র্যাশ করতে পারে। এর মধ্যে কনসোল রিস্টার্ট হলে তবেই আবার পাঠান।</string>
+    <string name="reload_send_anyway">তবুও পাঠান</string>
+    <string name="reload_auto_skipped">স্বয়ংক্রিয় চেইন চলেনি: %1$s</string>
     <string name="backup_cheats">চিট: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">কনসোলের সব প্রসেস। একটি খুলে তার মেমরি অংশ দেখুন (rwx: পড়া, লেখা, চালানো; লেখা যায় এমন অংশ চিহ্নিত), আর একটি অংশ খুলে তার বাইট। বাইটের লাইনে ট্যাপ করে বদলান, বা একটি ঠিকানায় যান।</string>
     <string name="memory_view_log">কনসোল লগ</string>
     <string name="klog_title">কনসোল লগ</string>
+    <string name="klog_save">ফোনে সেভ করুন</string>
+    <string name="klog_save_detail">প্রতিটি লাইন আসার সঙ্গে সঙ্গে Downloads/Bento/Logs-এর একটি ফাইলেও লেখা হয়, তাই ক্র্যাশের পরেও দেখা যায় কনসোল ঠিক আগে কী দেখিয়েছিল।</string>
+    <string name="klog_saving_to">%1$s-এ সেভ হচ্ছে</string>
+    <string name="klog_save_channel">কনসোল লগ</string>
+    <string name="klog_save_notif_title">কনসোল লগ সেভ হচ্ছে</string>
     <string name="klog_etahen_note">Klog সেটিং চালু থাকলে etaHEN এটি 9081 পোর্টে পাঠায়; সেই পোর্টও চেষ্টা করা হয়।</string>
     <string name="klog_intro">কনসোলের সিস্টেম ও payload যা প্রিন্ট করে, সরাসরি। ps5debug-NG এটি পোর্ট 3232-এ পাঠায়। কোনো payload বা চিট ঠিকমতো কাজ না করলে কাজে লাগে।</string>
     <string name="klog_port">লগ পোর্ট</string>

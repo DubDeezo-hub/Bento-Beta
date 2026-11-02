@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Rantaian itu sudah tiada.</string>
     <string name="notif_channel_chain">Rantaian payload</string>
     <string name="backup_chains">Rantaian: %1$d</string>
+    <string name="reload_warn_title">Sudah dimuatkan?</string>
+    <string name="reload_warn_running">etaHEN sudah menjawab pada konsol ini (pelayan FTP-nya pada port %2$d sedang berjalan). Memuatkan %1$s semula semasa ia berjalan boleh merosakkan konsol. Hantar hanya jika etaHEN sudah berhenti berfungsi.</string>
+    <string name="reload_warn_sent">%1$s sudah dihantar ke konsol ini %2$s yang lalu. Memuatkannya kali kedua boleh merosakkan konsol. Hantar semula hanya jika konsol telah dimulakan semula sejak itu.</string>
+    <string name="reload_send_anyway">Hantar juga</string>
+    <string name="reload_auto_skipped">Rantaian automatik tidak berjalan: %1$s</string>
     <string name="backup_cheats">Tipu: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">Semua proses pada konsol. Buka satu untuk melihat kawasan memorinya (rwx: baca, tulis, laksana; kawasan boleh tulis diserlahkan), dan buka satu kawasan untuk melihat baitnya. Ketik satu baris bait untuk mengubahnya, atau pergi ke satu alamat.</string>
     <string name="memory_view_log">Log konsol</string>
     <string name="klog_title">Log konsol</string>
+    <string name="klog_save">Simpan ke telefon</string>
+    <string name="klog_save_detail">Setiap baris juga ditulis terus ke fail dalam Muat Turun/Bento/Logs, jadi selepas ranap anda boleh lihat apa yang dipaparkan konsol sejurus sebelumnya.</string>
+    <string name="klog_saving_to">Menyimpan ke %1$s</string>
+    <string name="klog_save_channel">Log konsol</string>
+    <string name="klog_save_notif_title">Menyimpan log konsol</string>
     <string name="klog_etahen_note">etaHEN menghantarnya pada port 9081 apabila tetapan Klog dihidupkan; port itu juga dicuba.</string>
     <string name="klog_intro">Apa yang dicetak oleh sistem konsol dan payload, secara langsung. ps5debug-NG menghantarnya pada port 3232. Berguna apabila payload atau tipu tidak berfungsi dengan betul.</string>
     <string name="klog_port">Port log</string>

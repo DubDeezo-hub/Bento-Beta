@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Αυτή η αλυσίδα δεν υπάρχει πια.</string>
     <string name="notif_channel_chain">Αλυσίδες payload</string>
     <string name="backup_chains">Αλυσίδες: %1$d</string>
+    <string name="reload_warn_title">Ήδη φορτωμένο;</string>
+    <string name="reload_warn_running">Το etaHEN απαντά ήδη σε αυτή την κονσόλα (ο διακομιστής FTP του στη θύρα %2$d λειτουργεί). Η επαναφόρτωση του %1$s ενώ τρέχει μπορεί να ρίξει την κονσόλα. Στείλ\' το μόνο αν το etaHEN σταμάτησε να λειτουργεί.</string>
+    <string name="reload_warn_sent">Το %1$s στάλθηκε ήδη σε αυτή την κονσόλα πριν από %2$s. Η δεύτερη φόρτωση μπορεί να ρίξει την κονσόλα. Στείλ\' το ξανά μόνο αν η κονσόλα έχει επανεκκινηθεί από τότε.</string>
+    <string name="reload_send_anyway">Αποστολή παρ\' όλα αυτά</string>
+    <string name="reload_auto_skipped">Η αυτόματη αλυσίδα δεν εκτελέστηκε: %1$s</string>
     <string name="backup_cheats">Cheats: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">Κάθε διεργασία της κονσόλας. Ανοίξτε μία για να δείτε τις περιοχές μνήμης της (rwx: ανάγνωση, εγγραφή, εκτέλεση· οι εγγράψιμες είναι χρωματισμένες) και μια περιοχή για τα byte της. Πατήστε μια γραμμή byte για να τα αλλάξετε ή Μετάβαση σε διεύθυνση.</string>
     <string name="memory_view_log">Αρχείο καταγραφής κονσόλας</string>
     <string name="klog_title">Αρχείο καταγραφής κονσόλας</string>
+    <string name="klog_save">Αποθήκευση στο τηλέφωνο</string>
+    <string name="klog_save_detail">Κάθε γραμμή γράφεται μόλις φτάσει και σε αρχείο στο Downloads/Bento/Logs, ώστε μετά από κατάρρευση να βλέπεις τι έγραψε η κονσόλα ακριβώς πριν.</string>
+    <string name="klog_saving_to">Αποθήκευση στο %1$s</string>
+    <string name="klog_save_channel">Αρχείο καταγραφής κονσόλας</string>
+    <string name="klog_save_notif_title">Αποθήκευση αρχείου καταγραφής κονσόλας</string>
     <string name="klog_etahen_note">Το etaHEN το στέλνει στη θύρα 9081 όταν είναι ενεργή η ρύθμιση Klog· δοκιμάζεται και αυτή η θύρα.</string>
     <string name="klog_intro">Ό,τι τυπώνουν το σύστημα της κονσόλας και τα payload, ζωντανά. Το ps5debug-NG το στέλνει στη θύρα 3232. Χρήσιμο όταν ένα payload ή cheat δεν δουλεύει σωστά.</string>
     <string name="klog_port">Θύρα καταγραφής</string>

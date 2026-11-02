@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Šādas ķēdes vairs nav.</string>
     <string name="notif_channel_chain">Payload ķēdes</string>
     <string name="backup_chains">Ķēdes: %1$d</string>
+    <string name="reload_warn_title">Jau ielādēts?</string>
+    <string name="reload_warn_running">etaHEN šajā konsolē jau atbild (tā FTP serveris portā %2$d darbojas). Atkārtoti ielādējot %1$s, kamēr tas darbojas, konsole var avarēt. Sūtiet tikai tad, ja etaHEN vairs nedarbojas.</string>
+    <string name="reload_warn_sent">%1$s uz šo konsoli jau tika nosūtīts pirms %2$s. Otrreizēja ielāde var izraisīt konsoles avāriju. Sūtiet vēlreiz tikai tad, ja kopš tā laika konsole ir restartēta.</string>
+    <string name="reload_send_anyway">Tomēr sūtīt</string>
+    <string name="reload_auto_skipped">Automātiskā ķēde netika palaista: %1$s</string>
     <string name="backup_cheats">Krāpšanās kodi: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">Visi konsoles procesi. Atveriet vienu, lai redzētu tā atmiņas apgabalus (rwx: lasīt, rakstīt, izpildīt; rakstāmie apgabali ir izcelti), un atveriet apgabalu, lai redzētu tā baitus. Pieskarieties baitu rindai, lai tos mainītu, vai dodieties uz adresi.</string>
     <string name="memory_view_log">Konsoles žurnāls</string>
     <string name="klog_title">Konsoles žurnāls</string>
+    <string name="klog_save">Saglabāt tālrunī</string>
+    <string name="klog_save_detail">Katra rinda, tiklīdz pienāk, tiek ierakstīta arī failā mapē Lejupielādes/Bento/Logs, tāpēc pēc avārijas var redzēt, ko konsole izvadīja tieši pirms tās.</string>
+    <string name="klog_saving_to">Saglabā: %1$s</string>
+    <string name="klog_save_channel">Konsoles žurnāls</string>
+    <string name="klog_save_notif_title">Saglabā konsoles žurnālu</string>
     <string name="klog_etahen_note">etaHEN to sūta uz portu 9081, kad ieslēgts tā Klog iestatījums; tiek mēģināts arī šis ports.</string>
     <string name="klog_intro">Tas, ko konsoles sistēma un payloads izdrukā, reāllaikā. ps5debug-NG to sūta portā 3232. Noder, ja payload vai krāpšanās kods nedarbojas pareizi.</string>
     <string name="klog_port">Žurnāla ports</string>

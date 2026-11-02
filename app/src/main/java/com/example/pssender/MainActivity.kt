@@ -411,6 +411,14 @@ fun SenderApp(
         val onShelf = shelfList(shelfDir(ctx)).map { it.name }.toSet()
         if (ChainRunner.request(chain, host, active.payloadPort, active.name, onShelf)) ChainService.start(ctx)
     }
+    // A chain that would load etaHEN, kstuff or GoldHEN a second time waits for "Send anyway"
+    var reloadAsk by remember { mutableStateOf<Pair<String, () -> Unit>?>(null) }
+    val runChainChecked: (Chain) -> Unit = { chain ->
+        scope.launch {
+            val why = withContext(Dispatchers.IO) { ReloadGuard.warning(host, chain.steps.map { it.payload }, active.type) }
+            if (why == null) runChain(chain) else reloadAsk = why to { runChain(chain) }
+        }
+    }
     val saveChains: (List<Chain>, List<String>) -> Unit = { list, removed ->
         chains = list
         ChainStore.save(ctx, list)
@@ -429,8 +437,10 @@ fun SenderApp(
         if (AutoChain.due(active.id, was, up, ctx = ctx)) {
             val chain = chains.firstOrNull { it.id == chainId } ?: return@LaunchedEffect
             delay(AUTO_CHAIN_DELAY_MS) // let the loader settle after the jailbreak
+            // Something else may have loaded etaHEN already (an autoloader on the console): then the chain doesn't run
+            val why = withContext(Dispatchers.IO) { ReloadGuard.warning(host, chain.steps.map { it.payload }, active.type) }
             tab = 1
-            runChain(chain)
+            if (why == null) runChain(chain) else statusLine = AppText.get(R.string.reload_auto_skipped, why)
         }
     }
 
@@ -473,7 +483,7 @@ fun SenderApp(
         if (id != null) {
             tab = 1
             val chain = ChainStore.load(ctx).firstOrNull { it.id == id }
-            if (chain == null) ChainRunner.rejected(AppText.get(R.string.chain_err_unknown)) else runChain(chain)
+            if (chain == null) ChainRunner.rejected(AppText.get(R.string.chain_err_unknown)) else runChainChecked(chain)
             onChainConsumed()
         }
     }
@@ -553,7 +563,7 @@ fun SenderApp(
                                             host, active.payloadPort, { v -> updateActive { it.copy(payloadPort = v) } }, shelfVersion,
                                             chains = chains,
                                             chainBusy = chainState.active,
-                                            onRunChain = runChain,
+                                            onRunChain = runChainChecked,
                                             onSaveChain = { c ->
                                                 saveChains(if (chains.any { it.id == c.id }) chains.map { if (it.id == c.id) c else it } else chains + c, emptyList())
                                             },
@@ -724,6 +734,15 @@ fun SenderApp(
 
             if (showLanguage) LanguageDialog(onClose = { showLanguage = false })
             if (showEtaHen && ftpSettings != null) EtaHenSettingsDialog(ftpSettings) { showEtaHen = false }
+            reloadAsk?.let { (why, go) ->
+                AlertDialog(
+                    onDismissRequest = { reloadAsk = null },
+                    title = { Text(str(R.string.reload_warn_title)) },
+                    text = { Text(why) },
+                    confirmButton = { TextButton(onClick = { reloadAsk = null; go() }) { Text(str(R.string.reload_send_anyway)) } },
+                    dismissButton = { TextButton(onClick = { reloadAsk = null }) { Text(str(R.string.action_cancel)) } }
+                )
+            }
             if (showStore) {
                 StoreDialog(type = active.type, onAdded = {}, onClose = {
                     showStore = false

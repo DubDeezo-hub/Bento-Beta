@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">ఆ చైన్ ఇకపై లేదు.</string>
     <string name="notif_channel_chain">Payload చైన్‌లు</string>
     <string name="backup_chains">చైన్‌లు: %1$d</string>
+    <string name="reload_warn_title">ఇప్పటికే లోడ్ అయిందా?</string>
+    <string name="reload_warn_running">ఈ కన్సోల్‌లో etaHEN ఇప్పటికే స్పందిస్తోంది (పోర్ట్ %2$d లో దాని FTP సర్వర్ నడుస్తోంది). అది నడుస్తుండగా %1$s ను మళ్లీ లోడ్ చేస్తే కన్సోల్ క్రాష్ కావచ్చు. etaHEN పని చేయడం ఆగిపోతేనే పంపండి.</string>
+    <string name="reload_warn_sent">%1$s ను ఈ కన్సోల్‌కు %2$s క్రితమే పంపారు. రెండోసారి లోడ్ చేస్తే కన్సోల్ క్రాష్ కావచ్చు. అప్పటి నుంచి కన్సోల్ రీస్టార్ట్ అయి ఉంటేనే మళ్లీ పంపండి.</string>
+    <string name="reload_send_anyway">అయినా పంపు</string>
+    <string name="reload_auto_skipped">ఆటోమేటిక్ చైన్ నడవలేదు: %1$s</string>
     <string name="backup_cheats">చీట్‌లు: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">కన్సోల్‌లోని అన్ని ప్రాసెస్‌లు. ఒకదాన్ని తెరిచి దాని మెమరీ భాగాలను చూడండి (rwx: చదవడం, రాయడం, నడపడం; రాయదగిన భాగాలు హైలైట్ చేయబడ్డాయి), ఒక భాగాన్ని తెరిచి దాని బైట్‌లను కూడా. బైట్‌ల పంక్తిని నొక్కి వాటిని మార్చండి, లేదా ఒక చిరునామాకు వెళ్లండి.</string>
     <string name="memory_view_log">కన్సోల్ లాగ్</string>
     <string name="klog_title">కన్సోల్ లాగ్</string>
+    <string name="klog_save">ఫోన్‌లో సేవ్ చేయి</string>
+    <string name="klog_save_detail">ప్రతి లైన్ వచ్చిన వెంటనే Downloads/Bento/Logs లోని ఫైల్‌లో కూడా రాయబడుతుంది, కాబట్టి క్రాష్ తర్వాత కూడా కన్సోల్ దానికి ముందు ఏమి చూపిందో చూడవచ్చు.</string>
+    <string name="klog_saving_to">%1$s లో సేవ్ అవుతోంది</string>
+    <string name="klog_save_channel">కన్సోల్ లాగ్</string>
+    <string name="klog_save_notif_title">కన్సోల్ లాగ్ సేవ్ అవుతోంది</string>
     <string name="klog_etahen_note">Klog సెట్టింగ్ ఆన్‌లో ఉన్నప్పుడు etaHEN దీన్ని పోర్ట్ 9081 లో పంపుతుంది; ఆ పోర్ట్‌ను కూడా ప్రయత్నిస్తారు.</string>
     <string name="klog_intro">కన్సోల్ సిస్టమ్, payloads ముద్రించేది, ప్రత్యక్షంగా. ps5debug-NG దీన్ని పోర్ట్ 3232లో పంపుతుంది. ఒక payload లేదా చీట్ సరిగ్గా పనిచేయనప్పుడు ఉపయోగకరం.</string>
     <string name="klog_port">లాగ్ పోర్ట్</string>

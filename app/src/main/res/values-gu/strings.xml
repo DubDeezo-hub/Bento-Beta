@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">તે ચેઇન હવે અસ્તિત્વમાં નથી.</string>
     <string name="notif_channel_chain">Payload ચેઇન</string>
     <string name="backup_chains">ચેઇન: %1$d</string>
+    <string name="reload_warn_title">પહેલેથી લોડ કરેલું?</string>
+    <string name="reload_warn_running">આ કન્સોલ પર etaHEN પહેલેથી જવાબ આપે છે (પોર્ટ %2$d પર તેનું FTP સર્વર ચાલુ છે). તે ચાલતું હોય ત્યારે %1$s ફરી લોડ કરવાથી કન્સોલ ક્રેશ થઈ શકે છે. etaHEN કામ કરતું બંધ થયું હોય ત્યારે જ મોકલો.</string>
+    <string name="reload_warn_sent">%1$s આ કન્સોલને %2$s પહેલાં મોકલાયું છે. બીજી વાર લોડ કરવાથી કન્સોલ ક્રેશ થઈ શકે છે. ત્યારથી કન્સોલ ફરી શરૂ થયું હોય તો જ ફરી મોકલો.</string>
+    <string name="reload_send_anyway">તોય મોકલો</string>
+    <string name="reload_auto_skipped">ઓટોમેટિક ચેઇન ચાલી નહીં: %1$s</string>
     <string name="backup_cheats">ચીટ્સ: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">કન્સોલની બધી પ્રોસેસ. એક ખોલી તેના મેમરી ભાગો જુઓ (rwx: વાંચો, લખો, ચલાવો; લખી શકાય તેવા ભાગો પ્રકાશિત છે), અને કોઈ ભાગ ખોલી તેના બાઇટ્સ. બાઇટ્સની લીટી પર ટૅપ કરી તેમને બદલો, અથવા કોઈ સરનામા પર જાઓ.</string>
     <string name="memory_view_log">કન્સોલ લૉગ</string>
     <string name="klog_title">કન્સોલ લૉગ</string>
+    <string name="klog_save">ફોનમાં સાચવો</string>
+    <string name="klog_save_detail">દરેક લાઇન આવતાં જ Downloads/Bento/Logs ની એક ફાઇલમાં પણ લખાય છે, એટલે ક્રેશ પછી પણ જોઈ શકો કે કન્સોલે તરત પહેલાં શું બતાવ્યું હતું.</string>
+    <string name="klog_saving_to">%1$s માં સાચવાય છે</string>
+    <string name="klog_save_channel">કન્સોલ લૉગ</string>
+    <string name="klog_save_notif_title">કન્સોલ લૉગ સાચવાય છે</string>
     <string name="klog_etahen_note">Klog સેટિંગ ચાલુ હોય ત્યારે etaHEN તેને પોર્ટ 9081 પર મોકલે છે; તે પોર્ટ પણ અજમાવાય છે.</string>
     <string name="klog_intro">કન્સોલની સિસ્ટમ અને payloads જે છાપે છે તે, લાઇવ. ps5debug-NG તેને પોર્ટ 3232 પર મોકલે છે. કોઈ payload કે ચીટ બરાબર કામ ન કરે ત્યારે ઉપયોગી.</string>
     <string name="klog_port">લૉગ પોર્ટ</string>

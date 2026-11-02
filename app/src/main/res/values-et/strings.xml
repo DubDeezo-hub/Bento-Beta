@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Seda ahelat enam ei ole.</string>
     <string name="notif_channel_chain">Payloadide ahelad</string>
     <string name="backup_chains">Ahelad: %1$d</string>
+    <string name="reload_warn_title">Juba laaditud?</string>
+    <string name="reload_warn_running">etaHEN vastab sellel konsoolil juba (tema FTP-server pordil %2$d töötab). %1$s uuesti laadimine selle töötamise ajal võib konsooli kokku jooksutada. Saada see ainult siis, kui etaHEN on lakanud töötamast.</string>
+    <string name="reload_warn_sent">%1$s saadeti sellele konsoolile juba %2$s tagasi. Teistkordne laadimine võib konsooli kokku jooksutada. Saada uuesti ainult siis, kui konsool on vahepeal taaskäivitatud.</string>
+    <string name="reload_send_anyway">Saada ikkagi</string>
+    <string name="reload_auto_skipped">Automaatne ahel ei käivitunud: %1$s</string>
     <string name="backup_cheats">Petted: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">Kõik konsooli protsessid. Ava üks, et näha selle mälupiirkondi (rwx: lugemine, kirjutamine, käivitamine; kirjutatavad piirkonnad on esile tõstetud), ja ava piirkond, et näha selle baite. Puuduta baitide rida nende muutmiseks või mine aadressile.</string>
     <string name="memory_view_log">Konsooli logi</string>
     <string name="klog_title">Konsooli logi</string>
+    <string name="klog_save">Salvesta telefoni</string>
+    <string name="klog_save_detail">Iga rida kirjutatakse saabumisel ka faili kaustas Allalaadimised/Bento/Logs, nii et pärast krahhi näed, mida konsool vahetult enne seda näitas.</string>
+    <string name="klog_saving_to">Salvestatakse: %1$s</string>
+    <string name="klog_save_channel">Konsooli logi</string>
+    <string name="klog_save_notif_title">Konsooli logi salvestatakse</string>
     <string name="klog_etahen_note">etaHEN saadab selle pordile 9081, kui tema Klog-seade on sees; proovitakse ka seda porti.</string>
     <string name="klog_intro">Mida konsooli süsteem ja payloadid välja prindivad, reaalajas. ps5debug-NG saadab selle pordile 3232. Kasulik, kui payload või petu ei tööta õigesti.</string>
     <string name="klog_port">Logi port</string>

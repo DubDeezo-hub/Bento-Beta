@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Taj lanac više ne postoji.</string>
     <string name="notif_channel_chain">Lanci payloada</string>
     <string name="backup_chains">Lanci: %1$d</string>
+    <string name="reload_warn_title">Već učitano?</string>
+    <string name="reload_warn_running">etaHEN već odgovara na ovoj konzoli (njegov FTP poslužitelj na portu %2$d radi). Ponovno učitavanje %1$s dok radi može srušiti konzolu. Pošalji ga samo ako je etaHEN prestao raditi.</string>
+    <string name="reload_warn_sent">%1$s je već poslan ovoj konzoli prije %2$s. Drugo učitavanje može srušiti konzolu. Pošalji ga ponovno samo ako je konzola u međuvremenu ponovno pokrenuta.</string>
+    <string name="reload_send_anyway">Ipak pošalji</string>
+    <string name="reload_auto_skipped">Automatski lanac nije pokrenut: %1$s</string>
     <string name="backup_cheats">Varanja: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -659,6 +664,11 @@
     <string name="tip_mem_browse">Svi procesi na konzoli. Otvorite jedan da vidite njegova područja memorije (rwx: čitanje, pisanje, pokretanje; zapisiva su obojena), a područje za njegove bajtove. Dodirnite redak bajtova da ih promijenite ili Idi na adresu.</string>
     <string name="memory_view_log">Zapisnik konzole</string>
     <string name="klog_title">Zapisnik konzole</string>
+    <string name="klog_save">Spremi na mobitel</string>
+    <string name="klog_save_detail">Svaki redak odmah ide i u datoteku u Preuzimanja/Bento/Logs, pa nakon rušenja vidiš što je konzola ispisala neposredno prije.</string>
+    <string name="klog_saving_to">Sprema se u %1$s</string>
+    <string name="klog_save_channel">Zapisnik konzole</string>
+    <string name="klog_save_notif_title">Spremanje zapisnika konzole</string>
     <string name="klog_etahen_note">etaHEN ga šalje na portu 9081 kad mu je uključena postavka Klog; isprobava se i taj port.</string>
     <string name="klog_intro">Što ispisuju sustav konzole i payloadi, uživo. ps5debug-NG to šalje na portu 3232. Korisno kad payload ili varanje ne radi kako treba.</string>
     <string name="klog_port">Port zapisnika</string>

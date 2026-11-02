@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Die keten bestaat niet meer.</string>
     <string name="notif_channel_chain">Payload-ketens</string>
     <string name="backup_chains">Ketens: %1$d</string>
+    <string name="reload_warn_title">Al geladen?</string>
+    <string name="reload_warn_running">etaHEN antwoordt al op deze console (de FTP-server op poort %2$d draait). %1$s opnieuw laden terwijl het draait kan de console laten crashen. Stuur het alleen als etaHEN niet meer werkt.</string>
+    <string name="reload_warn_sent">%1$s is %2$s geleden al naar deze console gestuurd. Een tweede keer laden kan de console laten crashen. Stuur het alleen opnieuw als de console sindsdien is herstart.</string>
+    <string name="reload_send_anyway">Toch versturen</string>
+    <string name="reload_auto_skipped">De automatische keten is niet gestart: %1$s</string>
     <string name="backup_cheats">Cheats: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -660,6 +665,11 @@
     <string name="tip_mem_browse">Elk proces op de console. Open er een om zijn geheugengebieden te zien (rwx: lezen, schrijven, uitvoeren; beschrijfbare zijn gemarkeerd) en een gebied voor de bytes. Tik op een regel bytes om ze te veranderen, of ga naar een adres.</string>
     <string name="memory_view_log">Consolelog</string>
     <string name="klog_title">Consolelog</string>
+    <string name="klog_save">Opslaan op telefoon</string>
+    <string name="klog_save_detail">Elke regel gaat bij aankomst ook naar een bestand in Downloads/Bento/Logs, zodat je na een crash ziet wat de console vlak daarvoor schreef.</string>
+    <string name="klog_saving_to">Opslaan in %1$s</string>
+    <string name="klog_save_channel">Consolelog</string>
+    <string name="klog_save_notif_title">Consolelog wordt opgeslagen</string>
     <string name="klog_etahen_note">etaHEN stuurt het op poort 9081 als de Klog-instelling aan staat; die poort wordt ook geprobeerd.</string>
     <string name="klog_intro">Wat het systeem van de console en payloads printen, live. ps5debug-NG stuurt het op poort 3232. Handig als een payload of cheat niet goed werkt.</string>
     <string name="klog_port">Logpoort</string>

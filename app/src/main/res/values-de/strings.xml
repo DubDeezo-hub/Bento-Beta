@@ -381,6 +381,11 @@
     <string name="chain_err_unknown">Diese Kette gibt es nicht mehr.</string>
     <string name="notif_channel_chain">Payload-Ketten</string>
     <string name="backup_chains">Ketten: %1$d</string>
+    <string name="reload_warn_title">Schon geladen?</string>
+    <string name="reload_warn_running">etaHEN antwortet auf dieser Konsole schon (sein FTP-Server auf Port %2$d läuft). %1$s erneut zu laden, während es läuft, kann die Konsole abstürzen lassen. Sende es nur, wenn etaHEN nicht mehr funktioniert.</string>
+    <string name="reload_warn_sent">%1$s wurde vor %2$s schon an diese Konsole gesendet. Ein zweites Laden kann die Konsole abstürzen lassen. Sende es nur erneut, wenn die Konsole inzwischen neu gestartet wurde.</string>
+    <string name="reload_send_anyway">Trotzdem senden</string>
+    <string name="reload_auto_skipped">Die automatische Kette lief nicht: %1$s</string>
     <string name="backup_cheats">Cheats: %1$d</string>
 
     <!-- unfinished transfers -->
@@ -661,6 +666,11 @@
     <string name="memory_cmp_unchanged">Unverändert</string>
     <string name="memory_view_log">Konsolen-Log</string>
     <string name="klog_title">Konsolen-Log</string>
+    <string name="klog_save">Auf dem Handy speichern</string>
+    <string name="klog_save_detail">Jede Zeile kommt beim Eintreffen auch in eine Datei in Downloads/Bento/Logs. So siehst du nach einem Absturz, was die Konsole kurz davor ausgegeben hat.</string>
+    <string name="klog_saving_to">Wird gespeichert in %1$s</string>
+    <string name="klog_save_channel">Konsolen-Log</string>
+    <string name="klog_save_notif_title">Konsolen-Log wird gespeichert</string>
     <string name="klog_etahen_note">etaHEN sendet es auf Port 9081, wenn seine Klog-Einstellung an ist; dieser Port wird auch versucht.</string>
     <string name="klog_intro">Was das System der Konsole und Payloads ausgeben, live. ps5debug-NG sendet es auf Port 3232. Praktisch, wenn eine Payload oder ein Cheat nicht richtig funktioniert.</string>
     <string name="klog_port">Log-Port</string>
