@@ -52,8 +52,9 @@ android {
         compose = true
     }
     lint {
-        // For now Lint reports and doesn't stop the build: the Phone test shows what it found on the run page
-        abortOnError = false
+        // A Lint error stops the Phone test; warnings are listed on the run page without stopping it
+        abortOnError = true
+        warningsAsErrors = false
         checkReleaseBuilds = false
         xmlReport = true
         htmlReport = true

@@ -62,11 +62,18 @@ jobs:
         run: python3 .github/scripts/unit_summary.py app/build/test-results/testDebugUnitTest >> "$GITHUB_STEP_SUMMARY"
 
       - name: Check the code with Android Lint
-        # Reports only (it doesn't stop the run): what it finds is listed on the run page and kept with the results
+        # An error stops the run; warnings are only listed. Either way the findings are on the run page, in this
+        # step's log, and in the results download
         run: |
-          gradle lintDebug --no-daemon > lint.log 2>&1 || true
-          # On the run page, and in the log too (where it can be read without opening the page)
+          set +e
+          gradle lintDebug --no-daemon > lint.log 2>&1
+          status=$?
           python3 .github/scripts/lint_summary.py app/build/reports/lint-results-debug.xml | tee -a "$GITHUB_STEP_SUMMARY"
+          if [ $status -ne 0 ]; then
+            echo "::error title=Lint found errors::$(grep -E 'Error:|errors,' lint.log | head -20 | tr '\n' ' ' | sed 's/%/%25/g')"
+            tail -40 lint.log
+            exit 1
+          fi
 
       - name: Build the debug APK
         # A failed build puts the compiler's errors on the run page, so they can be read without opening the log

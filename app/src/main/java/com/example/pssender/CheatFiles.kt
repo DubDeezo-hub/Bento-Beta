@@ -51,7 +51,7 @@ object CheatFiles {
 
     /** "json.txt": one "file=game name" line per cheat file. */
     fun parseIndex(text: String): List<CheatIndexEntry> = text.lineSequence()
-        .map { it.trim().removePrefix("﻿") }
+        .map { it.trim().removePrefix("\uFEFF") }
         .filter { it.contains('=') && it.substringBefore('=').endsWith(".json", ignoreCase = true) }
         .map { CheatIndexEntry(it.substringBefore('=').trim(), it.substringAfter('=').trim()) }
         .toList()
@@ -97,7 +97,7 @@ object CheatFiles {
 
     /** A cheat file's JSON. Throws on text that is not one. */
     fun parse(text: String): CheatFile {
-        val root = MiniJson.parse(text.removePrefix("﻿")) as? Map<*, *> ?: throw IllegalArgumentException("not a cheat file")
+        val root = MiniJson.parse(text.removePrefix("\uFEFF")) as? Map<*, *> ?: throw IllegalArgumentException("not a cheat file")
         val mods = (root["mods"] as? List<*>).orEmpty().mapNotNull { e ->
             val m = e as? Map<*, *> ?: return@mapNotNull null
             CheatMod(
