@@ -1183,4 +1183,9 @@
     <string name="online_text">يستجيب الآن على شبكتك. اضغط لفتح Bento.</string>
     <string name="store_whats_new">ما الجديد</string>
     <string name="store_whats_new_title">‏%1$s %2$s: ما الجديد</string>
+    <string name="chain_safe_title">الوضع الآمن</string>
+    <string name="chain_safe_detail">يرسل الأساسيات فقط: %1$s. إذا ظل الجهاز يتعطل مع حمولاتك المعتادة لكنه يستقر مع هذه، فالسبب في إحدى الأخرى.</string>
+    <string name="chain_safe_send">إرسال الوضع الآمن</string>
+    <string name="chain_safe_missing_ps5">يحتاج الوضع الآمن إلى kstuff و etaHEN على الرف.</string>
+    <string name="chain_safe_missing_ps4">يحتاج الوضع الآمن إلى GoldHEN على الرف.</string>
 </resources>

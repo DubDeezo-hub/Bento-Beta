@@ -1183,4 +1183,9 @@
     <string name="online_text">ಅದು ಈಗ ನಿಮ್ಮ ನೆಟ್‌ವರ್ಕ್‌ನಲ್ಲಿ ಉತ್ತರಿಸುತ್ತಿದೆ. Bento ತೆರೆಯಲು ಟ್ಯಾಪ್ ಮಾಡಿ.</string>
     <string name="store_whats_new">ಹೊಸದೇನು</string>
     <string name="store_whats_new_title">%1$s %2$s: ಹೊಸದೇನು</string>
+    <string name="chain_safe_title">ಸುರಕ್ಷಿತ ಮೋಡ್</string>
+    <string name="chain_safe_detail">ಮೂಲಭೂತವನ್ನು ಮಾತ್ರ ಕಳುಹಿಸುತ್ತದೆ: %1$s. ನಿಮ್ಮ ಸಾಮಾನ್ಯ payload ಗಳಿಂದ ಕನ್ಸೋಲ್ ಕ್ರ್ಯಾಶ್ ಆದರೆ ಇವುಗಳಿಂದ ಸ್ಥಿರವಾಗಿದ್ದರೆ, ಕಾರಣ ಬೇರೆಯದರಲ್ಲಿ ಒಂದು.</string>
+    <string name="chain_safe_send">ಸುರಕ್ಷಿತ ಮೋಡ್ ಕಳುಹಿಸಿ</string>
+    <string name="chain_safe_missing_ps5">ಸುರಕ್ಷಿತ ಮೋಡ್‌ಗೆ ಶೆಲ್ಫ್‌ನಲ್ಲಿ kstuff ಮತ್ತು etaHEN ಬೇಕು.</string>
+    <string name="chain_safe_missing_ps4">ಸುರಕ್ಷಿತ ಮೋಡ್‌ಗೆ ಶೆಲ್ಫ್‌ನಲ್ಲಿ GoldHEN ಬೇಕು.</string>
 </resources>

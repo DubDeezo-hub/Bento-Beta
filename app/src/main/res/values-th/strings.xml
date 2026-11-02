@@ -1183,4 +1183,9 @@
     <string name="online_text">ตอนนี้ตอบสนองในเครือข่ายของคุณแล้ว แตะเพื่อเปิด Bento</string>
     <string name="store_whats_new">มีอะไรใหม่</string>
     <string name="store_whats_new_title">%1$s %2$s: มีอะไรใหม่</string>
+    <string name="chain_safe_title">โหมดปลอดภัย</string>
+    <string name="chain_safe_detail">ส่งเฉพาะพื้นฐาน: %1$s ถ้าเครื่องแครชกับ payload ปกติแต่อยู่ได้กับชุดนี้ สาเหตุคือตัวใดตัวหนึ่งที่เหลือ</string>
+    <string name="chain_safe_send">ส่งโหมดปลอดภัย</string>
+    <string name="chain_safe_missing_ps5">โหมดปลอดภัยต้องมี kstuff และ etaHEN บนชั้น</string>
+    <string name="chain_safe_missing_ps4">โหมดปลอดภัยต้องมี GoldHEN บนชั้น</string>
 </resources>

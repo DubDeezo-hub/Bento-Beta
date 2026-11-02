@@ -1183,4 +1183,9 @@
     <string name="online_text">היא עונה עכשיו ברשת שלך. הקישו כדי לפתוח את Bento.</string>
     <string name="store_whats_new">מה חדש</string>
     <string name="store_whats_new_title">‏%1$s %2$s: מה חדש</string>
+    <string name="chain_safe_title">מצב בטוח</string>
+    <string name="chain_safe_detail">שולח רק את הבסיס: %1$s. אם הקונסולה קורסת עם ה-payload הרגילים שלך אבל יציבה עם אלה, הסיבה היא אחד האחרים.</string>
+    <string name="chain_safe_send">שליחת מצב בטוח</string>
+    <string name="chain_safe_missing_ps5">מצב בטוח צריך את kstuff ואת etaHEN על המדף.</string>
+    <string name="chain_safe_missing_ps4">מצב בטוח צריך את GoldHEN על המדף.</string>
 </resources>

@@ -1184,4 +1184,9 @@
     <string name="online_text">Elle répond maintenant sur votre réseau. Touchez pour ouvrir Bento.</string>
     <string name="store_whats_new">Nouveautés</string>
     <string name="store_whats_new_title">%1$s %2$s : nouveautés</string>
+    <string name="chain_safe_title">Mode sans échec</string>
+    <string name="chain_safe_detail">N\'envoie que l\'essentiel : %1$s. Si la console plante avec vos payloads habituels mais tient avec ceux-ci, la cause est l\'un des autres.</string>
+    <string name="chain_safe_send">Envoyer le mode sans échec</string>
+    <string name="chain_safe_missing_ps5">Le mode sans échec a besoin de kstuff et d\'etaHEN sur l\'étagère.</string>
+    <string name="chain_safe_missing_ps4">Le mode sans échec a besoin de GoldHEN sur l\'étagère.</string>
 </resources>

@@ -1183,4 +1183,9 @@
     <string name="online_text">ഇപ്പോൾ നിങ്ങളുടെ നെറ്റ്‌വർക്കിൽ പ്രതികരിക്കുന്നു. Bento തുറക്കാൻ ടാപ്പ് ചെയ്യുക.</string>
     <string name="store_whats_new">പുതിയതെന്ത്</string>
     <string name="store_whats_new_title">%1$s %2$s: പുതിയതെന്ത്</string>
+    <string name="chain_safe_title">സുരക്ഷിത മോഡ്</string>
+    <string name="chain_safe_detail">അടിസ്ഥാനം മാത്രം അയയ്ക്കുന്നു: %1$s. സാധാരണ payload-കൾ കൊണ്ട് കൺസോൾ ക്രാഷ് ആകുകയും ഇവ കൊണ്ട് നിലനിൽക്കുകയും ചെയ്താൽ, കാരണം മറ്റുള്ളവയിലൊന്നാണ്.</string>
+    <string name="chain_safe_send">സുരക്ഷിത മോഡ് അയയ്ക്കുക</string>
+    <string name="chain_safe_missing_ps5">സുരക്ഷിത മോഡിന് ഷെൽഫിൽ kstuff-ഉം etaHEN-ഉം വേണം.</string>
+    <string name="chain_safe_missing_ps4">സുരക്ഷിത മോഡിന് ഷെൽഫിൽ GoldHEN വേണം.</string>
 </resources>

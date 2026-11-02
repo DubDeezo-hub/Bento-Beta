@@ -1183,4 +1183,9 @@
     <string name="online_text">See vastab nüüd sinu võrgus. Puuduta, et Bento avada.</string>
     <string name="store_whats_new">Mis on uut</string>
     <string name="store_whats_new_title">%1$s %2$s: mis on uut</string>
+    <string name="chain_safe_title">Turvarežiim</string>
+    <string name="chain_safe_detail">Saadab ainult põhilise: %1$s. Kui konsool tavaliste payloadidega jookseb kokku, aga nendega püsib, on põhjus mõnes teises.</string>
+    <string name="chain_safe_send">Saada turvarežiim</string>
+    <string name="chain_safe_missing_ps5">Turvarežiim vajab riiulil kstuff\'i ja etaHEN-i.</string>
+    <string name="chain_safe_missing_ps4">Turvarežiim vajab riiulil GoldHEN-i.</string>
 </resources>

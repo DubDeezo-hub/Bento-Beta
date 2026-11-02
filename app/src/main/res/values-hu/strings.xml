@@ -1183,4 +1183,9 @@
     <string name="online_text">Most válaszol a hálózatodon. Koppints a Bento megnyitásához.</string>
     <string name="store_whats_new">Újdonságok</string>
     <string name="store_whats_new_title">%1$s %2$s: újdonságok</string>
+    <string name="chain_safe_title">Csökkentett mód</string>
+    <string name="chain_safe_detail">Csak az alapokat küldi: %1$s. Ha a konzol a szokásos payloadokkal összeomlik, de ezekkel stabil, valamelyik másik az ok.</string>
+    <string name="chain_safe_send">Csökkentett mód küldése</string>
+    <string name="chain_safe_missing_ps5">A csökkentett módhoz kstuff és etaHEN kell a polcon.</string>
+    <string name="chain_safe_missing_ps4">A csökkentett módhoz GoldHEN kell a polcon.</string>
 </resources>

@@ -1183,4 +1183,9 @@
     <string name="online_text">Sumasagot na ito sa network mo. I-tap para buksan ang Bento.</string>
     <string name="store_whats_new">Ano ang bago</string>
     <string name="store_whats_new_title">%1$s %2$s: ano ang bago</string>
+    <string name="chain_safe_title">Safe mode</string>
+    <string name="chain_safe_detail">Ipinapadala lang ang mga pangunahin: %1$s. Kung nagka-crash ang console sa karaniwan mong payload pero tumatagal sa mga ito, isa sa iba ang sanhi.</string>
+    <string name="chain_safe_send">Ipadala ang safe mode</string>
+    <string name="chain_safe_missing_ps5">Kailangan ng safe mode ang kstuff at etaHEN sa shelf.</string>
+    <string name="chain_safe_missing_ps4">Kailangan ng safe mode ang GoldHEN sa shelf.</string>
 </resources>

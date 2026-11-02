@@ -1183,4 +1183,9 @@
     <string name="online_text">Tagad tā atbild jūsu tīklā. Pieskarieties, lai atvērtu Bento.</string>
     <string name="store_whats_new">Kas jauns</string>
     <string name="store_whats_new_title">%1$s %2$s: kas jauns</string>
+    <string name="chain_safe_title">Drošais režīms</string>
+    <string name="chain_safe_detail">Sūta tikai pamatus: %1$s. Ja konsole ar ierastajiem payload avarē, bet ar šiem darbojas, cēlonis ir kāds no pārējiem.</string>
+    <string name="chain_safe_send">Sūtīt drošo režīmu</string>
+    <string name="chain_safe_missing_ps5">Drošajam režīmam plauktā vajag kstuff un etaHEN.</string>
+    <string name="chain_safe_missing_ps4">Drošajam režīmam plauktā vajag GoldHEN.</string>
 </resources>

@@ -1183,4 +1183,9 @@
     <string name="online_text">Сада одговара на вашој мрежи. Додирните да отворите Bento.</string>
     <string name="store_whats_new">Шта је ново</string>
     <string name="store_whats_new_title">%1$s %2$s: шта је ново</string>
+    <string name="chain_safe_title">Безбедни режим</string>
+    <string name="chain_safe_detail">Шаље само основно: %1$s. Ако се конзола руши са уобичајеним payload-има, а са овима ради, узрок је један од осталих.</string>
+    <string name="chain_safe_send">Пошаљи безбедни режим</string>
+    <string name="chain_safe_missing_ps5">Безбедном режиму на полици требају kstuff и etaHEN.</string>
+    <string name="chain_safe_missing_ps4">Безбедном режиму на полици треба GoldHEN.</string>
 </resources>

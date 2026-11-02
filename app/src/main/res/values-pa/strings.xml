@@ -1183,4 +1183,9 @@
     <string name="online_text">ਇਹ ਹੁਣ ਤੁਹਾਡੇ ਨੈੱਟਵਰਕ \'ਤੇ ਜਵਾਬ ਦੇ ਰਿਹਾ ਹੈ। Bento ਖੋਲ੍ਹਣ ਲਈ ਟੈਪ ਕਰੋ।</string>
     <string name="store_whats_new">ਨਵਾਂ ਕੀ ਹੈ</string>
     <string name="store_whats_new_title">%1$s %2$s: ਨਵਾਂ ਕੀ ਹੈ</string>
+    <string name="chain_safe_title">ਸੁਰੱਖਿਅਤ ਮੋਡ</string>
+    <string name="chain_safe_detail">ਸਿਰਫ਼ ਬੁਨਿਆਦੀ ਭੇਜਦਾ ਹੈ: %1$s। ਜੇ ਤੁਹਾਡੇ ਆਮ payload ਨਾਲ ਕਨਸੋਲ ਕ੍ਰੈਸ਼ ਹੁੰਦਾ ਹੈ ਪਰ ਇਹਨਾਂ ਨਾਲ ਚੱਲਦਾ ਹੈ, ਤਾਂ ਕਾਰਨ ਬਾਕੀਆਂ ਵਿੱਚੋਂ ਇੱਕ ਹੈ।</string>
+    <string name="chain_safe_send">ਸੁਰੱਖਿਅਤ ਮੋਡ ਭੇਜੋ</string>
+    <string name="chain_safe_missing_ps5">ਸੁਰੱਖਿਅਤ ਮੋਡ ਲਈ ਸ਼ੈਲਫ਼ \'ਤੇ kstuff ਅਤੇ etaHEN ਚਾਹੀਦੇ ਹਨ।</string>
+    <string name="chain_safe_missing_ps4">ਸੁਰੱਖਿਅਤ ਮੋਡ ਲਈ ਸ਼ੈਲਫ਼ \'ਤੇ GoldHEN ਚਾਹੀਦਾ ਹੈ।</string>
 </resources>

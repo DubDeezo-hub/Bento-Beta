@@ -1184,4 +1184,9 @@
     <string name="online_text">Hij antwoordt nu op je netwerk. Tik om Bento te openen.</string>
     <string name="store_whats_new">Wat is er nieuw</string>
     <string name="store_whats_new_title">%1$s %2$s: wat is er nieuw</string>
+    <string name="chain_safe_title">Veilige modus</string>
+    <string name="chain_safe_detail">Stuurt alleen de basis: %1$s. Crasht de console met je gewone payloads maar blijft hij hiermee draaien, dan ligt het aan een van de andere.</string>
+    <string name="chain_safe_send">Veilige modus sturen</string>
+    <string name="chain_safe_missing_ps5">Veilige modus heeft kstuff en etaHEN op de plank nodig.</string>
+    <string name="chain_safe_missing_ps4">Veilige modus heeft GoldHEN op de plank nodig.</string>
 </resources>

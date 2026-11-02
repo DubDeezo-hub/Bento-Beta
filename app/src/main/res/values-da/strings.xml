@@ -1183,4 +1183,9 @@
     <string name="online_text">Den svarer nu på dit netværk. Tryk for at åbne Bento.</string>
     <string name="store_whats_new">Nyheder</string>
     <string name="store_whats_new_title">%1$s %2$s: nyheder</string>
+    <string name="chain_safe_title">Sikker tilstand</string>
+    <string name="chain_safe_detail">Sender kun det grundlæggende: %1$s. Hvis konsollen crasher med dine sædvanlige payloads men holder med disse, er en af de andre årsagen.</string>
+    <string name="chain_safe_send">Send sikker tilstand</string>
+    <string name="chain_safe_missing_ps5">Sikker tilstand kræver kstuff og etaHEN på hylden.</string>
+    <string name="chain_safe_missing_ps4">Sikker tilstand kræver GoldHEN på hylden.</string>
 </resources>

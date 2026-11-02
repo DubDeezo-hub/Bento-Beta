@@ -1183,4 +1183,9 @@
     <string name="online_text">Теперь она отвечает в вашей сети. Нажмите, чтобы открыть Bento.</string>
     <string name="store_whats_new">Что нового</string>
     <string name="store_whats_new_title">%1$s %2$s: что нового</string>
+    <string name="chain_safe_title">Безопасный режим</string>
+    <string name="chain_safe_detail">Отправляет только основное: %1$s. Если с обычными пейлоадами консоль падает, а с этими работает, причина в одном из остальных.</string>
+    <string name="chain_safe_send">Отправить безопасный режим</string>
+    <string name="chain_safe_missing_ps5">Для безопасного режима на полке нужны kstuff и etaHEN.</string>
+    <string name="chain_safe_missing_ps4">Для безопасного режима на полке нужен GoldHEN.</string>
 </resources>

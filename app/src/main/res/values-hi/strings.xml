@@ -1183,4 +1183,9 @@
     <string name="online_text">यह अब आपके नेटवर्क पर जवाब दे रहा है। Bento खोलने के लिए टैप करें।</string>
     <string name="store_whats_new">नया क्या है</string>
     <string name="store_whats_new_title">%1$s %2$s: नया क्या है</string>
+    <string name="chain_safe_title">सेफ़ मोड</string>
+    <string name="chain_safe_detail">सिर्फ़ ज़रूरी चीज़ें भेजता है: %1$s। अगर आपके सामान्य payload से कंसोल क्रैश होता है पर इनसे चलता रहता है, तो वजह बाकी में से कोई है।</string>
+    <string name="chain_safe_send">सेफ़ मोड भेजें</string>
+    <string name="chain_safe_missing_ps5">सेफ़ मोड के लिए शेल्फ़ पर kstuff और etaHEN चाहिए।</string>
+    <string name="chain_safe_missing_ps4">सेफ़ मोड के लिए शेल्फ़ पर GoldHEN चाहिए।</string>
 </resources>

@@ -1183,4 +1183,9 @@
     <string name="online_text">இப்போது உங்கள் நெட்வொர்க்கில் பதிலளிக்கிறது. Bento-ஐத் திறக்கத் தட்டவும்.</string>
     <string name="store_whats_new">புதியது என்ன</string>
     <string name="store_whats_new_title">%1$s %2$s: புதியது என்ன</string>
+    <string name="chain_safe_title">பாதுகாப்பு முறை</string>
+    <string name="chain_safe_detail">அடிப்படைகளை மட்டும் அனுப்பும்: %1$s. வழக்கமான payload-களால் கன்சோல் செயலிழந்து இவற்றால் நிலைத்தால், காரணம் மற்றவற்றில் ஒன்று.</string>
+    <string name="chain_safe_send">பாதுகாப்பு முறையை அனுப்பு</string>
+    <string name="chain_safe_missing_ps5">பாதுகாப்பு முறைக்கு அலமாரியில் kstuff, etaHEN தேவை.</string>
+    <string name="chain_safe_missing_ps4">பாதுகாப்பு முறைக்கு அலமாரியில் GoldHEN தேவை.</string>
 </resources>

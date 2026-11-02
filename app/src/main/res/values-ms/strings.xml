@@ -1183,4 +1183,9 @@
     <string name="online_text">Ia kini menjawab dalam rangkaian anda. Ketik untuk membuka Bento.</string>
     <string name="store_whats_new">Apa yang baharu</string>
     <string name="store_whats_new_title">%1$s %2$s: apa yang baharu</string>
+    <string name="chain_safe_title">Mod selamat</string>
+    <string name="chain_safe_detail">Hanya menghantar asas: %1$s. Jika konsol ranap dengan payload biasa anda tetapi stabil dengan ini, puncanya salah satu yang lain.</string>
+    <string name="chain_safe_send">Hantar mod selamat</string>
+    <string name="chain_safe_missing_ps5">Mod selamat memerlukan kstuff dan etaHEN di rak.</string>
+    <string name="chain_safe_missing_ps4">Mod selamat memerlukan GoldHEN di rak.</string>
 </resources>

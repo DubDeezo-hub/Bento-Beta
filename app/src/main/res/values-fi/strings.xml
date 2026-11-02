@@ -1183,4 +1183,9 @@
     <string name="online_text">Se vastaa nyt verkossasi. Avaa Bento napauttamalla.</string>
     <string name="store_whats_new">Mitä uutta</string>
     <string name="store_whats_new_title">%1$s %2$s: mitä uutta</string>
+    <string name="chain_safe_title">Vikasietotila</string>
+    <string name="chain_safe_detail">Lähettää vain perusasiat: %1$s. Jos konsoli kaatuu tavallisilla payloadeilla mutta pysyy pystyssä näillä, syy on jossain muussa.</string>
+    <string name="chain_safe_send">Lähetä vikasietotila</string>
+    <string name="chain_safe_missing_ps5">Vikasietotila tarvitsee hyllyltä kstuffin ja etaHENin.</string>
+    <string name="chain_safe_missing_ps4">Vikasietotila tarvitsee hyllyltä GoldHENin.</string>
 </resources>

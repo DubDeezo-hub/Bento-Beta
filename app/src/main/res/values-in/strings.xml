@@ -1183,4 +1183,9 @@
     <string name="online_text">Sekarang menjawab di jaringan Anda. Ketuk untuk membuka Bento.</string>
     <string name="store_whats_new">Yang baru</string>
     <string name="store_whats_new_title">%1$s %2$s: yang baru</string>
+    <string name="chain_safe_title">Mode aman</string>
+    <string name="chain_safe_detail">Hanya mengirim yang dasar: %1$s. Jika konsol crash dengan payload biasa Anda tetapi stabil dengan ini, penyebabnya salah satu yang lain.</string>
+    <string name="chain_safe_send">Kirim mode aman</string>
+    <string name="chain_safe_missing_ps5">Mode aman memerlukan kstuff dan etaHEN di rak.</string>
+    <string name="chain_safe_missing_ps4">Mode aman memerlukan GoldHEN di rak.</string>
 </resources>

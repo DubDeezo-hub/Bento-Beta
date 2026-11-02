@@ -1183,4 +1183,9 @@
     <string name="online_text">Den svarer nå på nettverket ditt. Trykk for å åpne Bento.</string>
     <string name="store_whats_new">Hva er nytt</string>
     <string name="store_whats_new_title">%1$s %2$s: hva er nytt</string>
+    <string name="chain_safe_title">Sikker modus</string>
+    <string name="chain_safe_detail">Sender bare det grunnleggende: %1$s. Krasjer konsollen med de vanlige payloadene dine, men holder med disse, er en av de andre årsaken.</string>
+    <string name="chain_safe_send">Send sikker modus</string>
+    <string name="chain_safe_missing_ps5">Sikker modus trenger kstuff og etaHEN på hyllen.</string>
+    <string name="chain_safe_missing_ps4">Sikker modus trenger GoldHEN på hyllen.</string>
 </resources>

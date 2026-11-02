@@ -1183,4 +1183,9 @@
     <string name="online_text">یہ اب آپ کے نیٹ ورک پر جواب دے رہا ہے۔ Bento کھولنے کے لیے ٹیپ کریں۔</string>
     <string name="store_whats_new">نیا کیا ہے</string>
     <string name="store_whats_new_title">‏%1$s %2$s: نیا کیا ہے</string>
+    <string name="chain_safe_title">محفوظ موڈ</string>
+    <string name="chain_safe_detail">صرف بنیادی چیزیں بھیجتا ہے: %1$s۔ اگر آپ کے عام payload سے کنسول کریش ہو مگر ان سے چلتا رہے، تو وجہ باقیوں میں سے کوئی ہے۔</string>
+    <string name="chain_safe_send">محفوظ موڈ بھیجیں</string>
+    <string name="chain_safe_missing_ps5">محفوظ موڈ کے لیے شیلف پر kstuff اور etaHEN چاہییں۔</string>
+    <string name="chain_safe_missing_ps4">محفوظ موڈ کے لیے شیلف پر GoldHEN چاہیے۔</string>
 </resources>

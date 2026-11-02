@@ -1183,4 +1183,9 @@
     <string name="online_text">ネットワークで応答しています。タップして Bento を開きます。</string>
     <string name="store_whats_new">新機能</string>
     <string name="store_whats_new_title">%1$s %2$s の新機能</string>
+    <string name="chain_safe_title">セーフモード</string>
+    <string name="chain_safe_detail">基本だけを送ります：%1$s。いつもの payload ではクラッシュするのにこれなら安定する場合、原因は他のどれかです。</string>
+    <string name="chain_safe_send">セーフモードを送る</string>
+    <string name="chain_safe_missing_ps5">セーフモードには棚に kstuff と etaHEN が必要です。</string>
+    <string name="chain_safe_missing_ps4">セーフモードには棚に GoldHEN が必要です。</string>
 </resources>

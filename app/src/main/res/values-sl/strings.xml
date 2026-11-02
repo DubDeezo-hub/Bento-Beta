@@ -1183,4 +1183,9 @@
     <string name="online_text">Zdaj se odziva v vašem omrežju. Tapnite, da odprete Bento.</string>
     <string name="store_whats_new">Kaj je novega</string>
     <string name="store_whats_new_title">%1$s %2$s: kaj je novega</string>
+    <string name="chain_safe_title">Varni način</string>
+    <string name="chain_safe_detail">Pošlje le osnovno: %1$s. Če se konzola z običajnimi payloadi sesuje, s temi pa zdrži, je vzrok eden od drugih.</string>
+    <string name="chain_safe_send">Pošlji varni način</string>
+    <string name="chain_safe_missing_ps5">Varni način potrebuje na polici kstuff in etaHEN.</string>
+    <string name="chain_safe_missing_ps4">Varni način potrebuje na polici GoldHEN.</string>
 </resources>

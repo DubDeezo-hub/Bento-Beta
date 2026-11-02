@@ -1183,4 +1183,9 @@
     <string name="online_text">Artık ağınızda yanıt veriyor. Bento\'yu açmak için dokunun.</string>
     <string name="store_whats_new">Yenilikler</string>
     <string name="store_whats_new_title">%1$s %2$s: yenilikler</string>
+    <string name="chain_safe_title">Güvenli mod</string>
+    <string name="chain_safe_detail">Yalnızca temelleri gönderir: %1$s. Konsol her zamanki payload\'larınla çöküyor ama bunlarla ayakta kalıyorsa, neden diğerlerinden biridir.</string>
+    <string name="chain_safe_send">Güvenli modu gönder</string>
+    <string name="chain_safe_missing_ps5">Güvenli mod için rafta kstuff ve etaHEN gerekir.</string>
+    <string name="chain_safe_missing_ps4">Güvenli mod için rafta GoldHEN gerekir.</string>
 </resources>

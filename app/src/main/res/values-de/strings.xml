@@ -1185,4 +1185,9 @@
     <string name="online_text">Sie antwortet jetzt in deinem Netzwerk. Tippe, um Bento zu öffnen.</string>
     <string name="store_whats_new">Was ist neu</string>
     <string name="store_whats_new_title">%1$s %2$s: Was ist neu</string>
+    <string name="chain_safe_title">Abgesicherter Modus</string>
+    <string name="chain_safe_detail">Sendet nur das Nötigste: %1$s. Stürzt die Konsole mit deinen üblichen Payloads ab, läuft aber hiermit, liegt es an einem der anderen.</string>
+    <string name="chain_safe_send">Abgesicherten Modus senden</string>
+    <string name="chain_safe_missing_ps5">Der abgesicherte Modus braucht kstuff und etaHEN im Regal.</string>
+    <string name="chain_safe_missing_ps4">Der abgesicherte Modus braucht GoldHEN im Regal.</string>
 </resources>

@@ -1183,4 +1183,9 @@
     <string name="online_text">Dit antwoord nou op jou netwerk. Tik om Bento oop te maak.</string>
     <string name="store_whats_new">Wat is nuut</string>
     <string name="store_whats_new_title">%1$s %2$s: wat is nuut</string>
+    <string name="chain_safe_title">Veilige modus</string>
+    <string name="chain_safe_detail">Stuur net die basiese: %1$s. As die konsole met jou gewone payloads crash maar hiermee aanbly, is een van die ander die oorsaak.</string>
+    <string name="chain_safe_send">Stuur veilige modus</string>
+    <string name="chain_safe_missing_ps5">Veilige modus het kstuff en etaHEN op die rak nodig.</string>
+    <string name="chain_safe_missing_ps4">Veilige modus het GoldHEN op die rak nodig.</string>
 </resources>

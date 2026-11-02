@@ -25,6 +25,7 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -87,6 +88,21 @@ fun ChainsSection(
             enabled = chains.size < CHAINS_MAX,
             onClick = { editing = Chain(newChainId(), "", emptyList()) }
         ) { Text(str(R.string.chain_new)) }
+        // Safe mode: only the basics from the shelf, to find out whether another payload is what crashes the console
+        val type = ActiveConsole.type
+        val safe = remember(shelf, type) { safeModeNames(shelf.map { it.name }, type) }
+        val safeName = str(R.string.chain_safe_title)
+        TipTitle(safeName, Tip.PAYLOAD_CHAINS, style = MaterialTheme.typography.labelLarge)
+        if (safe != null) {
+            Text(str(R.string.chain_safe_detail, joinList(safe)), style = MaterialTheme.typography.bodySmall)
+            OutlinedButton(enabled = canSend, onClick = { onRun(safeModeChain(safe, safeName)) }) { Text(str(R.string.chain_safe_send)) }
+        } else {
+            Text(
+                str(if (type == ConsoleType.PS4) R.string.chain_safe_missing_ps4 else R.string.chain_safe_missing_ps5),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
         // A chain that runs by itself when this console becomes ready (after a jailbreak)
         if (chains.isNotEmpty()) {
             val ctx = LocalContext.current

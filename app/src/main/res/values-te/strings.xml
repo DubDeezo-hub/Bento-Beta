@@ -1183,4 +1183,9 @@
     <string name="online_text">ఇప్పుడు మీ నెట్‌వర్క్‌లో స్పందిస్తోంది. Bento తెరవడానికి నొక్కండి.</string>
     <string name="store_whats_new">కొత్తవి ఏమిటి</string>
     <string name="store_whats_new_title">%1$s %2$s: కొత్తవి ఏమిటి</string>
+    <string name="chain_safe_title">సురక్షిత మోడ్</string>
+    <string name="chain_safe_detail">ప్రాథమికాలను మాత్రమే పంపుతుంది: %1$s. మీ సాధారణ payloadలతో కన్సోల్ క్రాష్ అయి వీటితో నిలిస్తే, కారణం మిగతావాటిలో ఒకటి.</string>
+    <string name="chain_safe_send">సురక్షిత మోడ్ పంపు</string>
+    <string name="chain_safe_missing_ps5">సురక్షిత మోడ్‌కు షెల్ఫ్‌లో kstuff, etaHEN కావాలి.</string>
+    <string name="chain_safe_missing_ps4">సురక్షిత మోడ్‌కు షెల్ఫ్‌లో GoldHEN కావాలి.</string>
 </resources>

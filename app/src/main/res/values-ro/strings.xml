@@ -1183,4 +1183,9 @@
     <string name="online_text">Acum răspunde în rețeaua ta. Atinge pentru a deschide Bento.</string>
     <string name="store_whats_new">Ce este nou</string>
     <string name="store_whats_new_title">%1$s %2$s: ce este nou</string>
+    <string name="chain_safe_title">Mod sigur</string>
+    <string name="chain_safe_detail">Trimite doar ce e de bază: %1$s. Dacă consola se blochează cu payload-urile obișnuite dar rezistă cu acestea, cauza e unul dintre celelalte.</string>
+    <string name="chain_safe_send">Trimite modul sigur</string>
+    <string name="chain_safe_missing_ps5">Modul sigur are nevoie de kstuff și etaHEN pe raft.</string>
+    <string name="chain_safe_missing_ps4">Modul sigur are nevoie de GoldHEN pe raft.</string>
 </resources>

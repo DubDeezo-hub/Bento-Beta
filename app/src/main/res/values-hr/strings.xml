@@ -1183,4 +1183,9 @@
     <string name="online_text">Sada odgovara na tvojoj mreži. Dodirni za otvaranje Bentoa.</string>
     <string name="store_whats_new">Što je novo</string>
     <string name="store_whats_new_title">%1$s %2$s: što je novo</string>
+    <string name="chain_safe_title">Sigurni način</string>
+    <string name="chain_safe_detail">Šalje samo osnovno: %1$s. Ako se konzola ruši s uobičajenim payloadima, a s ovima radi, uzrok je jedan od ostalih.</string>
+    <string name="chain_safe_send">Pošalji sigurni način</string>
+    <string name="chain_safe_missing_ps5">Sigurni način treba kstuff i etaHEN na polici.</string>
+    <string name="chain_safe_missing_ps4">Sigurni način treba GoldHEN na polici.</string>
 </resources>

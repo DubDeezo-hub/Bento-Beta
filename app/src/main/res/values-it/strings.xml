@@ -1184,4 +1184,9 @@
     <string name="online_text">Ora risponde sulla tua rete. Tocca per aprire Bento.</string>
     <string name="store_whats_new">Novità</string>
     <string name="store_whats_new_title">%1$s %2$s: novità</string>
+    <string name="chain_safe_title">Modalità provvisoria</string>
+    <string name="chain_safe_detail">Invia solo l\'essenziale: %1$s. Se la console si blocca con i soliti payload ma regge con questi, la causa è uno degli altri.</string>
+    <string name="chain_safe_send">Invia modalità provvisoria</string>
+    <string name="chain_safe_missing_ps5">La modalità provvisoria richiede kstuff ed etaHEN sullo scaffale.</string>
+    <string name="chain_safe_missing_ps4">La modalità provvisoria richiede GoldHEN sullo scaffale.</string>
 </resources>

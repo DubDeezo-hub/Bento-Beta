@@ -1183,4 +1183,9 @@
     <string name="online_text">它現在在你的網路中有回應。輕觸以開啟 Bento。</string>
     <string name="store_whats_new">新內容</string>
     <string name="store_whats_new_title">%1$s %2$s：新內容</string>
+    <string name="chain_safe_title">安全模式</string>
+    <string name="chain_safe_detail">只傳送最基本的：%1$s。如果平常的酬載會讓主機當機，而這些不會，原因就在其他酬載中。</string>
+    <string name="chain_safe_send">傳送安全模式</string>
+    <string name="chain_safe_missing_ps5">安全模式需要書架上有 kstuff 和 etaHEN。</string>
+    <string name="chain_safe_missing_ps4">安全模式需要書架上有 GoldHEN。</string>
 </resources>

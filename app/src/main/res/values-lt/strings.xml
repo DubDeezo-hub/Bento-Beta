@@ -1183,4 +1183,9 @@
     <string name="online_text">Dabar atsako jūsų tinkle. Palieskite, kad atidarytumėte Bento.</string>
     <string name="store_whats_new">Kas naujo</string>
     <string name="store_whats_new_title">%1$s %2$s: kas naujo</string>
+    <string name="chain_safe_title">Saugusis režimas</string>
+    <string name="chain_safe_detail">Siunčia tik būtiniausius: %1$s. Jei su įprastais payload pultas strigo, o su šiais veikia, priežastis – vienas iš kitų.</string>
+    <string name="chain_safe_send">Siųsti saugųjį režimą</string>
+    <string name="chain_safe_missing_ps5">Saugiajam režimui lentynoje reikia kstuff ir etaHEN.</string>
+    <string name="chain_safe_missing_ps4">Saugiajam režimui lentynoje reikia GoldHEN.</string>
 </resources>

@@ -1183,4 +1183,9 @@
     <string name="online_text">Sasa inajibu kwenye mtandao wako. Gusa ili kufungua Bento.</string>
     <string name="store_whats_new">Kipya ni nini</string>
     <string name="store_whats_new_title">%1$s %2$s: kipya ni nini</string>
+    <string name="chain_safe_title">Hali salama</string>
+    <string name="chain_safe_detail">Hutuma misingi tu: %1$s. Ikiwa konsoli huanguka na payload zako za kawaida lakini hudumu na hizi, chanzo ni mojawapo ya nyingine.</string>
+    <string name="chain_safe_send">Tuma hali salama</string>
+    <string name="chain_safe_missing_ps5">Hali salama inahitaji kstuff na etaHEN kwenye rafu.</string>
+    <string name="chain_safe_missing_ps4">Hali salama inahitaji GoldHEN kwenye rafu.</string>
 </resources>

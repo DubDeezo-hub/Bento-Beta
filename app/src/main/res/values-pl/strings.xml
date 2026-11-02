@@ -1183,4 +1183,9 @@
     <string name="online_text">Teraz odpowiada w Twojej sieci. Dotknij, aby otworzyć Bento.</string>
     <string name="store_whats_new">Co nowego</string>
     <string name="store_whats_new_title">%1$s %2$s: co nowego</string>
+    <string name="chain_safe_title">Tryb awaryjny</string>
+    <string name="chain_safe_detail">Wysyła tylko podstawy: %1$s. Jeśli konsola pada przy zwykłych payloadach, a z tymi działa, przyczyną jest jeden z pozostałych.</string>
+    <string name="chain_safe_send">Wyślij tryb awaryjny</string>
+    <string name="chain_safe_missing_ps5">Tryb awaryjny wymaga kstuff i etaHEN na półce.</string>
+    <string name="chain_safe_missing_ps4">Tryb awaryjny wymaga GoldHEN na półce.</string>
 </resources>

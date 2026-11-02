@@ -92,6 +92,34 @@ object ChainOrder {
 }
 
 // ---------------------------------------------------------------------------------------------
+// Safe mode: only the basics, to find out whether one of the other payloads makes the console crash. On a PS5 that is
+// kstuff, a pause for it to settle, then etaHEN; on a PS4, GoldHEN. They are taken from the shelf.
+// ---------------------------------------------------------------------------------------------
+
+/** The pause after kstuff before etaHEN goes, in safe mode (seconds). */
+const val SAFE_MODE_WAIT = 10
+
+/** The id of the safe-mode chain (it is made on the spot, never saved). */
+const val SAFE_MODE_ID = "safe-mode"
+
+/**
+ * The payloads safe mode sends, in order, from the names on the [shelf]; null when one it needs is missing. When the
+ * shelf holds more than one version of a payload, the one whose name sorts last is taken (usually the newest).
+ */
+fun safeModeNames(shelf: List<String>, type: ConsoleType): List<String>? {
+    fun pick(kind: ReloadKind) = shelf.filter { ReloadGuard.kindOf(it) == kind }.maxWithOrNull(String.CASE_INSENSITIVE_ORDER)
+    return if (type == ConsoleType.PS4) {
+        listOf(pick(ReloadKind.GOLDHEN) ?: return null)
+    } else {
+        listOf(pick(ReloadKind.KSTUFF) ?: return null, pick(ReloadKind.ETAHEN) ?: return null)
+    }
+}
+
+/** Safe mode as a chain named [name], with the pause after each payload but the last. */
+fun safeModeChain(names: List<String>, name: String): Chain =
+    Chain(SAFE_MODE_ID, name, names.mapIndexed { i, n -> ChainStep(n, if (i < names.lastIndex) SAFE_MODE_WAIT else 0) })
+
+// ---------------------------------------------------------------------------------------------
 // Saving
 // ---------------------------------------------------------------------------------------------
 

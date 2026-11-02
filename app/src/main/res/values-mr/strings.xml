@@ -1183,4 +1183,9 @@
     <string name="online_text">ते आता तुमच्या नेटवर्कवर उत्तर देत आहे. Bento उघडण्यासाठी टॅप करा.</string>
     <string name="store_whats_new">नवीन काय</string>
     <string name="store_whats_new_title">%1$s %2$s: नवीन काय</string>
+    <string name="chain_safe_title">सुरक्षित मोड</string>
+    <string name="chain_safe_detail">फक्त मूलभूत पाठवते: %1$s. तुमच्या नेहमीच्या payload ने कन्सोल क्रॅश होत असेल पण यांनी टिकत असेल, तर कारण इतरांपैकी एक आहे.</string>
+    <string name="chain_safe_send">सुरक्षित मोड पाठवा</string>
+    <string name="chain_safe_missing_ps5">सुरक्षित मोडसाठी शेल्फवर kstuff आणि etaHEN हवेत.</string>
+    <string name="chain_safe_missing_ps4">सुरक्षित मोडसाठी शेल्फवर GoldHEN हवे.</string>
 </resources>

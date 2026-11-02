@@ -1183,4 +1183,9 @@
     <string name="online_text">اکنون در شبکه شما پاسخ می‌دهد. برای باز کردن Bento ضربه بزنید.</string>
     <string name="store_whats_new">چه چیزی تازه است</string>
     <string name="store_whats_new_title">‏%1$s %2$s: چه چیزی تازه است</string>
+    <string name="chain_safe_title">حالت امن</string>
+    <string name="chain_safe_detail">فقط موارد پایه را می‌فرستد: %1$s. اگر کنسول با payloadهای همیشگی از کار می‌افتد ولی با این‌ها پایدار است، علت یکی از بقیه است.</string>
+    <string name="chain_safe_send">ارسال حالت امن</string>
+    <string name="chain_safe_missing_ps5">حالت امن به kstuff و etaHEN روی قفسه نیاز دارد.</string>
+    <string name="chain_safe_missing_ps4">حالت امن به GoldHEN روی قفسه نیاز دارد.</string>
 </resources>

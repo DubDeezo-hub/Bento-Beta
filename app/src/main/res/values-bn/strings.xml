@@ -1183,4 +1183,9 @@
     <string name="online_text">এটি এখন আপনার নেটওয়ার্কে সাড়া দিচ্ছে। Bento খুলতে ট্যাপ করুন।</string>
     <string name="store_whats_new">নতুন কী</string>
     <string name="store_whats_new_title">%1$s %2$s: নতুন কী</string>
+    <string name="chain_safe_title">নিরাপদ মোড</string>
+    <string name="chain_safe_detail">শুধু মৌলিকগুলো পাঠায়: %1$s। আপনার সাধারণ payload-এ কনসোল ক্র্যাশ করলে কিন্তু এগুলোতে চালু থাকলে, অন্যগুলোর একটি কারণ।</string>
+    <string name="chain_safe_send">নিরাপদ মোড পাঠান</string>
+    <string name="chain_safe_missing_ps5">নিরাপদ মোডের জন্য শেলফে kstuff ও etaHEN দরকার।</string>
+    <string name="chain_safe_missing_ps4">নিরাপদ মোডের জন্য শেলফে GoldHEN দরকার।</string>
 </resources>

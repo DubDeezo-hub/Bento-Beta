@@ -1184,4 +1184,9 @@
     <string name="online_text">Já responde na sua rede. Toque para abrir o Bento.</string>
     <string name="store_whats_new">Novidades</string>
     <string name="store_whats_new_title">%1$s %2$s: novidades</string>
+    <string name="chain_safe_title">Modo seguro</string>
+    <string name="chain_safe_detail">Envia só o essencial: %1$s. Se a consola bloqueia com os payloads habituais mas aguenta com estes, a causa é um dos outros.</string>
+    <string name="chain_safe_send">Enviar modo seguro</string>
+    <string name="chain_safe_missing_ps5">O modo seguro precisa de kstuff e etaHEN na prateleira.</string>
+    <string name="chain_safe_missing_ps4">O modo seguro precisa de GoldHEN na prateleira.</string>
 </resources>

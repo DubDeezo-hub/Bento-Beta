@@ -1188,4 +1188,9 @@
     <string name="online_text">It answers on your network now. Tap to open Bento.</string>
     <string name="store_whats_new">What\'s new</string>
     <string name="store_whats_new_title">%1$s %2$s: what\'s new</string>
+    <string name="chain_safe_title">Safe mode</string>
+    <string name="chain_safe_detail">Sends only the basics: %1$s. If the console keeps crashing with your usual payloads but stays up with these, one of the others is the cause.</string>
+    <string name="chain_safe_send">Send safe mode</string>
+    <string name="chain_safe_missing_ps5">Safe mode needs kstuff and etaHEN on the shelf.</string>
+    <string name="chain_safe_missing_ps4">Safe mode needs GoldHEN on the shelf.</string>
 </resources>

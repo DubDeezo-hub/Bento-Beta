@@ -1184,4 +1184,9 @@
     <string name="online_text">Den svarar nu i ditt nätverk. Tryck för att öppna Bento.</string>
     <string name="store_whats_new">Nyheter</string>
     <string name="store_whats_new_title">%1$s %2$s: nyheter</string>
+    <string name="chain_safe_title">Felsäkert läge</string>
+    <string name="chain_safe_detail">Skickar bara det grundläggande: %1$s. Kraschar konsolen med dina vanliga payloads men håller med dessa, är någon av de andra orsaken.</string>
+    <string name="chain_safe_send">Skicka felsäkert läge</string>
+    <string name="chain_safe_missing_ps5">Felsäkert läge behöver kstuff och etaHEN på hyllan.</string>
+    <string name="chain_safe_missing_ps4">Felsäkert läge behöver GoldHEN på hyllan.</string>
 </resources>

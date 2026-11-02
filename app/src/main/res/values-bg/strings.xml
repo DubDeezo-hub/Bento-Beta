@@ -1183,4 +1183,9 @@
     <string name="online_text">Вече отговаря във вашата мрежа. Докоснете, за да отворите Bento.</string>
     <string name="store_whats_new">Какво ново</string>
     <string name="store_whats_new_title">%1$s %2$s: какво ново</string>
+    <string name="chain_safe_title">Безопасен режим</string>
+    <string name="chain_safe_detail">Изпраща само основното: %1$s. Ако конзолата се срива с обичайните ви payload, но с тези работи, причината е в някой от другите.</string>
+    <string name="chain_safe_send">Изпрати безопасен режим</string>
+    <string name="chain_safe_missing_ps5">Безопасният режим изисква kstuff и etaHEN на рафта.</string>
+    <string name="chain_safe_missing_ps4">Безопасният режим изисква GoldHEN на рафта.</string>
 </resources>

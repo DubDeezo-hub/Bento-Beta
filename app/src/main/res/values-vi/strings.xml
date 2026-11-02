@@ -1183,4 +1183,9 @@
     <string name="online_text">Máy đã phản hồi trong mạng của bạn. Nhấn để mở Bento.</string>
     <string name="store_whats_new">Có gì mới</string>
     <string name="store_whats_new_title">%1$s %2$s: có gì mới</string>
+    <string name="chain_safe_title">Chế độ an toàn</string>
+    <string name="chain_safe_detail">Chỉ gửi những thứ cơ bản: %1$s. Nếu máy treo với các payload quen dùng nhưng ổn với những cái này, nguyên nhân là một trong số còn lại.</string>
+    <string name="chain_safe_send">Gửi chế độ an toàn</string>
+    <string name="chain_safe_missing_ps5">Chế độ an toàn cần kstuff và etaHEN trên kệ.</string>
+    <string name="chain_safe_missing_ps4">Chế độ an toàn cần GoldHEN trên kệ.</string>
 </resources>

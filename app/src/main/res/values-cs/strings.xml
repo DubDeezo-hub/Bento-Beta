@@ -1183,4 +1183,9 @@
     <string name="online_text">Teď odpovídá ve vaší síti. Klepnutím otevřete Bento.</string>
     <string name="store_whats_new">Co je nového</string>
     <string name="store_whats_new_title">%1$s %2$s: co je nového</string>
+    <string name="chain_safe_title">Bezpečný režim</string>
+    <string name="chain_safe_detail">Pošle jen základ: %1$s. Pokud konzole s obvyklými payloady padá, ale s těmito vydrží, příčinou je jeden z ostatních.</string>
+    <string name="chain_safe_send">Odeslat bezpečný režim</string>
+    <string name="chain_safe_missing_ps5">Bezpečný režim potřebuje na polici kstuff a etaHEN.</string>
+    <string name="chain_safe_missing_ps4">Bezpečný režim potřebuje na polici GoldHEN.</string>
 </resources>
