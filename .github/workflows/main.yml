@@ -28,6 +28,17 @@ jobs:
       - name: Accept Android SDK licenses
         run: yes | sdkmanager --licenses > /dev/null || true
 
+      - name: Run the unit tests
+        # The logic that needs no phone (firmware, store lists, game updates, package checks, etaHEN settings, memory
+        # text search, languages) and the debugger client against the practice console. Failures show on the run page.
+        run: |
+          set -o pipefail
+          if ! gradle testDebugUnitTest --no-daemon 2>&1 | tee unit.log; then
+            msg="$(grep -E ' FAILED$|^e: |What went wrong' -A3 unit.log | head -40 | sed 's/%/%25/g' | sed ':a;N;$!ba;s/\n/%0A/g')"
+            echo "::error title=Unit tests failed::${msg:-see the log}"
+            exit 1
+          fi
+
       - name: Build debug APK
         # A failed build puts the compiler's errors on the run page, so they can be read without opening the log
         run: |

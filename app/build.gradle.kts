@@ -51,6 +51,10 @@ android {
     buildFeatures {
         compose = true
     }
+    testOptions {
+        // The tests cover plain logic; an Android call they touch by the way gives an empty answer instead of failing
+        unitTests.isReturnDefaultValues = true
+    }
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -66,4 +70,5 @@ dependencies {
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0") // pull down on a web page to load it again
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("commons-net:commons-net:3.11.1")
+    testImplementation("junit:junit:4.13.2")
 }
