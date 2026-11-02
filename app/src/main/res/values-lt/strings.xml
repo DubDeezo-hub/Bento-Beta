@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">Strigčių dar neužfiksuota. Įjunkite pulto žurnalą skiltyje Atmintis ir palikite veikti žaisdami.</string>
     <string name="crashdiary_share">Bendrinti</string>
     <string name="crashdiary_clear_all">Ištrinti viską</string>
+    <string name="chainorder_reload_twice">%1$s šioje grandinėje yra daugiau nei vieną kartą. Įkėlus du kartus konsolė gali užstrigti.</string>
+    <string name="chainorder_etahen_before_kstuff">Šioje grandinėje etaHEN yra prieš kstuff. Pirma įkelkite kstuff, paskui etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">Šioje grandinėje ShadowMountPlus yra prieš kstuff. Pirma įkelkite kstuff.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr ir etaHEN abu yra šioje grandinėje. etaHEN turi savo įkėliklį, todėl elfldr nereikalingas ir gali konfliktuoti.</string>
 </resources>

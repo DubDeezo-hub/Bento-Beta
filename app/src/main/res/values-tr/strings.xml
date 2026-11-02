@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">Henüz not edilmiş çökme yok. Bellek bölümünde konsol günlüğünü açın ve oynarken çalışır durumda bırakın.</string>
     <string name="crashdiary_share">Paylaş</string>
     <string name="crashdiary_clear_all">Tümünü sil</string>
+    <string name="chainorder_reload_twice">%1$s bu zincirde birden fazla kez var. İki kez yüklemek konsolu çökertebilir.</string>
+    <string name="chainorder_etahen_before_kstuff">Bu zincirde etaHEN, kstuff\'tan önce geliyor. Önce kstuff, sonra etaHEN yükleyin.</string>
+    <string name="chainorder_shadow_before_kstuff">Bu zincirde ShadowMountPlus, kstuff\'tan önce geliyor. Önce kstuff yükleyin.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr ve etaHEN ikisi de bu zincirde. etaHEN kendi yükleyicisiyle gelir, bu yüzden elfldr gerekmez ve çakışabilir.</string>
 </resources>

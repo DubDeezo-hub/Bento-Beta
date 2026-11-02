@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">अभी तक कोई क्रैश नोट नहीं हुआ है। मेमोरी में कंसोल लॉग चालू करें और खेलते समय उसे चलता रहने दें।</string>
     <string name="crashdiary_share">साझा करें</string>
     <string name="crashdiary_clear_all">सब मिटाएँ</string>
+    <string name="chainorder_reload_twice">%1$s इस चेन में एक से ज़्यादा बार है। इसे दो बार लोड करने से कंसोल क्रैश हो सकता है।</string>
+    <string name="chainorder_etahen_before_kstuff">इस चेन में etaHEN kstuff से पहले है। पहले kstuff, फिर etaHEN लोड करें।</string>
+    <string name="chainorder_shadow_before_kstuff">इस चेन में ShadowMountPlus kstuff से पहले है। पहले kstuff लोड करें।</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr और etaHEN दोनों इस चेन में हैं। etaHEN अपना लोडर खुद लाता है, इसलिए elfldr की ज़रूरत नहीं और टकराव हो सकता है।</string>
 </resources>

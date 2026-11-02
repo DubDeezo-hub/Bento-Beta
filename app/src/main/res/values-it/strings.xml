@@ -1172,4 +1172,8 @@
     <string name="crashdiary_empty">Ancora nessun crash annotato. Attiva il log della console in Memoria e lascialo attivo mentre giochi.</string>
     <string name="crashdiary_share">Condividi</string>
     <string name="crashdiary_clear_all">Elimina tutto</string>
+    <string name="chainorder_reload_twice">%1$s è presente più di una volta in questa catena. Caricarlo due volte può bloccare la console.</string>
+    <string name="chainorder_etahen_before_kstuff">etaHEN viene prima di kstuff in questa catena. Carica prima kstuff, poi etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">ShadowMountPlus viene prima di kstuff in questa catena. Carica prima kstuff.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr ed etaHEN sono entrambi in questa catena. etaHEN porta il proprio loader, quindi elfldr non serve e può entrare in conflitto.</string>
 </resources>

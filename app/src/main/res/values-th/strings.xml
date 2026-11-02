@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">ยังไม่มีการแครชที่บันทึกไว้ เปิดบันทึกของเครื่องในหน่วยความจำ แล้วปล่อยให้ทำงานขณะเล่น</string>
     <string name="crashdiary_share">แชร์</string>
     <string name="crashdiary_clear_all">ลบทั้งหมด</string>
+    <string name="chainorder_reload_twice">%1$s อยู่ในเชนนี้มากกว่าหนึ่งครั้ง การโหลดซ้ำอาจทำให้เครื่องแครช</string>
+    <string name="chainorder_etahen_before_kstuff">ในเชนนี้ etaHEN อยู่ก่อน kstuff โหลด kstuff ก่อน แล้วค่อย etaHEN</string>
+    <string name="chainorder_shadow_before_kstuff">ในเชนนี้ ShadowMountPlus อยู่ก่อน kstuff โหลด kstuff ก่อน</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr และ etaHEN อยู่ในเชนนี้ทั้งคู่ etaHEN มีตัวโหลดของตัวเอง จึงไม่จำเป็นต้องใช้ elfldr และอาจชนกันได้</string>
 </resources>

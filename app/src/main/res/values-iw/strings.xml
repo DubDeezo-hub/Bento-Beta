@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">עדיין לא נרשמו קריסות. הפעילו את יומן הקונסולה בזיכרון והשאירו אותו פועל בזמן המשחק.</string>
     <string name="crashdiary_share">שיתוף</string>
     <string name="crashdiary_clear_all">מחק הכול</string>
+    <string name="chainorder_reload_twice">‏%1$s מופיע יותר מפעם אחת בשרשרת הזו. טעינה שלו פעמיים עלולה לקרוס את הקונסולה.</string>
+    <string name="chainorder_etahen_before_kstuff">‏etaHEN מופיע לפני kstuff בשרשרת הזו. טענו קודם את kstuff ואז את etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">‏ShadowMountPlus מופיע לפני kstuff בשרשרת הזו. טענו קודם את kstuff.</string>
+    <string name="chainorder_elfldr_with_etahen">גם elfldr וגם etaHEN נמצאים בשרשרת הזו. ל-etaHEN יש טוען משלו, לכן elfldr מיותר ועלול להתנגש.</string>
 </resources>

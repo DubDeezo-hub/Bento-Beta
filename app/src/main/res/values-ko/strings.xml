@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">아직 기록된 충돌이 없습니다. 메모리에서 콘솔 로그를 켜고 플레이하는 동안 켜 두세요.</string>
     <string name="crashdiary_share">공유</string>
     <string name="crashdiary_clear_all">모두 삭제</string>
+    <string name="chainorder_reload_twice">%1$s이(가) 이 체인에 두 번 이상 있습니다. 두 번 로드하면 콘솔이 멈출 수 있습니다.</string>
+    <string name="chainorder_etahen_before_kstuff">이 체인에서 etaHEN이 kstuff보다 앞에 있습니다. kstuff를 먼저, 그다음 etaHEN을 로드하세요.</string>
+    <string name="chainorder_shadow_before_kstuff">이 체인에서 ShadowMountPlus가 kstuff보다 앞에 있습니다. kstuff를 먼저 로드하세요.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr과 etaHEN이 모두 이 체인에 있습니다. etaHEN은 자체 로더가 있어 elfldr은 필요 없고 충돌할 수 있습니다.</string>
 </resources>

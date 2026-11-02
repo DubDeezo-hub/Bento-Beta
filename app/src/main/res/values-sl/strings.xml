@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">Sesutij še ni zabeleženih. Vklopite dnevnik konzole v Pomnilniku in ga pustite teči med igranjem.</string>
     <string name="crashdiary_share">Deli</string>
     <string name="crashdiary_clear_all">Izbriši vse</string>
+    <string name="chainorder_reload_twice">%1$s je v tej verigi več kot enkrat. Dvojno nalaganje lahko sesuje konzolo.</string>
+    <string name="chainorder_etahen_before_kstuff">etaHEN je v tej verigi pred kstuff. Najprej naložite kstuff, nato etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">ShadowMountPlus je v tej verigi pred kstuff. Najprej naložite kstuff.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr in etaHEN sta oba v tej verigi. etaHEN ima svoj nalagalnik, zato elfldr ni potreben in lahko povzroči spor.</string>
 </resources>

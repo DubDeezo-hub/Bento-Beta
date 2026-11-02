@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">Belum ada ranap dicatat. Hidupkan log konsol dalam Memori dan biarkan ia berjalan semasa anda bermain.</string>
     <string name="crashdiary_share">Kongsi</string>
     <string name="crashdiary_clear_all">Padam semua</string>
+    <string name="chainorder_reload_twice">%1$s ada lebih daripada sekali dalam rantai ini. Memuatkannya dua kali boleh membuat konsol ranap.</string>
+    <string name="chainorder_etahen_before_kstuff">etaHEN berada sebelum kstuff dalam rantai ini. Muatkan kstuff dahulu, kemudian etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">ShadowMountPlus berada sebelum kstuff dalam rantai ini. Muatkan kstuff dahulu.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr dan etaHEN kedua-duanya ada dalam rantai ini. etaHEN membawa pemuatnya sendiri, jadi elfldr tidak diperlukan dan boleh bercanggah.</string>
 </resources>

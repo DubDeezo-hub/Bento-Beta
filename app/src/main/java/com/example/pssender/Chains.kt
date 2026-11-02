@@ -61,6 +61,37 @@ fun chainSummary(chain: Chain): String {
 }
 
 // ---------------------------------------------------------------------------------------------
+// Load order: some payloads must go in a certain order, or not together, or the console crashes. Before a chain runs,
+// Bento looks at the order of its payloads (by their file names) and warns about the orders known to cause a panic.
+// This is only about the order inside one chain; whether a payload already runs on the console is ReloadGuard's job.
+// ---------------------------------------------------------------------------------------------
+
+object ChainOrder {
+    private fun isElfldr(n: String) = "elfldr" in n.lowercase()
+    private fun isShadowMount(n: String) = "shadowmount" in n.lowercase()
+
+    /** Why sending [names] in this order could crash the console, or null when the order is fine. */
+    fun check(names: List<String>, type: ConsoleType): String? {
+        // The same homebrew enabler or kernel patch twice in one chain (any console)
+        val kinds = names.mapNotNull { ReloadGuard.kindOf(it) }
+        val twice = kinds.groupingBy { it }.eachCount().entries.firstOrNull { it.value >= 2 }
+        if (twice != null) {
+            val name = names.first { ReloadGuard.kindOf(it) == twice.key }
+            return AppText.get(R.string.chainorder_reload_twice, name)
+        }
+        // The rest are about PS5 payloads (kstuff, etaHEN, ShadowMountPlus, elfldr)
+        if (type != ConsoleType.PS5) return null
+        val firstKstuff = names.indexOfFirst { ReloadGuard.kindOf(it) == ReloadKind.KSTUFF }
+        val firstEta = names.indexOfFirst { ReloadGuard.kindOf(it) == ReloadKind.ETAHEN }
+        val firstShadow = names.indexOfFirst { isShadowMount(it) }
+        if (firstEta in 0 until firstKstuff) return AppText.get(R.string.chainorder_etahen_before_kstuff)
+        if (firstShadow in 0 until firstKstuff) return AppText.get(R.string.chainorder_shadow_before_kstuff)
+        if (firstEta >= 0 && names.any { isElfldr(it) }) return AppText.get(R.string.chainorder_elfldr_with_etahen)
+        return null
+    }
+}
+
+// ---------------------------------------------------------------------------------------------
 // Saving
 // ---------------------------------------------------------------------------------------------
 

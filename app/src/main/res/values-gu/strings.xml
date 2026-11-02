@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">હજી કોઈ ક્રેશ નોંધાયું નથી. મેમરીમાં કન્સોલ લોગ ચાલુ કરો અને રમતી વખતે ચાલુ રાખો.</string>
     <string name="crashdiary_share">શેર કરો</string>
     <string name="crashdiary_clear_all">બધું કાઢી નાખો</string>
+    <string name="chainorder_reload_twice">%1$s આ ચેઇનમાં એક કરતાં વધુ વાર છે. તેને બે વાર લોડ કરવાથી કન્સોલ ક્રેશ થઈ શકે છે.</string>
+    <string name="chainorder_etahen_before_kstuff">આ ચેઇનમાં etaHEN kstuff પહેલાં આવે છે. પહેલાં kstuff, પછી etaHEN લોડ કરો.</string>
+    <string name="chainorder_shadow_before_kstuff">આ ચેઇનમાં ShadowMountPlus kstuff પહેલાં આવે છે. પહેલાં kstuff લોડ કરો.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr અને etaHEN બંને આ ચેઇનમાં છે. etaHEN પોતાનો લોડર લાવે છે, તેથી elfldr જરૂરી નથી અને ટકરાઈ શકે છે.</string>
 </resources>

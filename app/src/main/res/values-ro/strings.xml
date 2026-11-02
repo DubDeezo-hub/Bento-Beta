@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">Nicio blocare notată încă. Activează jurnalul consolei în Memorie și lasă-l pornit în timp ce joci.</string>
     <string name="crashdiary_share">Distribuie</string>
     <string name="crashdiary_clear_all">Șterge tot</string>
+    <string name="chainorder_reload_twice">%1$s este de mai multe ori în acest lanț. Încărcarea lui de două ori poate bloca consola.</string>
+    <string name="chainorder_etahen_before_kstuff">etaHEN este înaintea lui kstuff în acest lanț. Încarcă întâi kstuff, apoi etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">ShadowMountPlus este înaintea lui kstuff în acest lanț. Încarcă întâi kstuff.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr și etaHEN sunt amândouă în acest lanț. etaHEN vine cu propriul încărcător, deci elfldr nu e necesar și poate intra în conflict.</string>
 </resources>

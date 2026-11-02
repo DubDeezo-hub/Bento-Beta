@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">Még nincs feljegyzett összeomlás. Kapcsold be a konzolnaplót a Memóriában, és hagyd futni játék közben.</string>
     <string name="crashdiary_share">Megosztás</string>
     <string name="crashdiary_clear_all">Összes törlése</string>
+    <string name="chainorder_reload_twice">A(z) %1$s egynél többször szerepel ebben a láncban. Kétszeri betöltése összeomlaszthatja a konzolt.</string>
+    <string name="chainorder_etahen_before_kstuff">A láncban az etaHEN a kstuff előtt van. Előbb a kstuffot töltsd be, aztán az etaHEN-t.</string>
+    <string name="chainorder_shadow_before_kstuff">A láncban a ShadowMountPlus a kstuff előtt van. Előbb a kstuffot töltsd be.</string>
+    <string name="chainorder_elfldr_with_etahen">Az elfldr és az etaHEN is szerepel a láncban. Az etaHEN saját betöltővel jön, így az elfldr nem kell, és ütközhet.</string>
 </resources>

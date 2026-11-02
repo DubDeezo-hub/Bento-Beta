@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">还没有记录到崩溃。在“内存”中打开主机日志，并在游戏时让它一直运行。</string>
     <string name="crashdiary_share">分享</string>
     <string name="crashdiary_clear_all">全部删除</string>
+    <string name="chainorder_reload_twice">%1$s 在此链中出现了不止一次。加载两次可能导致主机崩溃。</string>
+    <string name="chainorder_etahen_before_kstuff">此链中 etaHEN 排在 kstuff 之前。请先加载 kstuff，再加载 etaHEN。</string>
+    <string name="chainorder_shadow_before_kstuff">此链中 ShadowMountPlus 排在 kstuff 之前。请先加载 kstuff。</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr 和 etaHEN 都在此链中。etaHEN 自带加载器，因此不需要 elfldr，且可能冲突。</string>
 </resources>

@@ -1172,4 +1172,8 @@
     <string name="crashdiary_empty">Ainda não há falhas registadas. Ative o registo da consola em Memória e deixe-o a funcionar enquanto joga.</string>
     <string name="crashdiary_share">Partilhar</string>
     <string name="crashdiary_clear_all">Eliminar tudo</string>
+    <string name="chainorder_reload_twice">%1$s está mais do que uma vez nesta cadeia. Carregá-lo duas vezes pode bloquear a consola.</string>
+    <string name="chainorder_etahen_before_kstuff">etaHEN vem antes de kstuff nesta cadeia. Carregue primeiro o kstuff e depois o etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">ShadowMountPlus vem antes de kstuff nesta cadeia. Carregue primeiro o kstuff.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr e etaHEN estão ambos nesta cadeia. O etaHEN traz o seu próprio carregador, por isso o elfldr não é necessário e pode entrar em conflito.</string>
 </resources>

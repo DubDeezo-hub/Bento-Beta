@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">ابھی تک کوئی کریش نوٹ نہیں ہوا۔ میموری میں کنسول لاگ آن کریں اور کھیلتے وقت چلنے دیں۔</string>
     <string name="crashdiary_share">شیئر کریں</string>
     <string name="crashdiary_clear_all">سب حذف کریں</string>
+    <string name="chainorder_reload_twice">‏%1$s اس چین میں ایک سے زیادہ بار ہے۔ اسے دو بار لوڈ کرنے سے کنسول کریش ہو سکتا ہے۔</string>
+    <string name="chainorder_etahen_before_kstuff">اس چین میں etaHEN، kstuff سے پہلے ہے۔ پہلے kstuff، پھر etaHEN لوڈ کریں۔</string>
+    <string name="chainorder_shadow_before_kstuff">اس چین میں ShadowMountPlus، kstuff سے پہلے ہے۔ پہلے kstuff لوڈ کریں۔</string>
+    <string name="chainorder_elfldr_with_etahen">‏elfldr اور etaHEN دونوں اس چین میں ہیں۔ etaHEN اپنا لوڈر خود لاتا ہے، اس لیے elfldr کی ضرورت نہیں اور ٹکراؤ ہو سکتا ہے۔</string>
 </resources>

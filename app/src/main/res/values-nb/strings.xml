@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">Ingen krasj notert ennå. Slå på kons-loggen i Minne, og la den gå mens du spiller.</string>
     <string name="crashdiary_share">Del</string>
     <string name="crashdiary_clear_all">Slett alt</string>
+    <string name="chainorder_reload_twice">%1$s er med mer enn én gang i denne kjeden. Å laste det to ganger kan få konsollen til å krasje.</string>
+    <string name="chainorder_etahen_before_kstuff">etaHEN kommer før kstuff i denne kjeden. Last kstuff først, så etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">ShadowMountPlus kommer før kstuff i denne kjeden. Last kstuff først.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr og etaHEN er begge med i denne kjeden. etaHEN har sin egen laster, så elfldr er ikke nødvendig og kan skape konflikt.</string>
 </resources>

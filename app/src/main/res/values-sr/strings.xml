@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">Још нема забележених падова. Укључите дневник конзоле у Меморији и оставите га да ради док играте.</string>
     <string name="crashdiary_share">Подели</string>
     <string name="crashdiary_clear_all">Обриши све</string>
+    <string name="chainorder_reload_twice">%1$s се налази више од једном у овом ланцу. Двоструко учитавање може срушити конзолу.</string>
+    <string name="chainorder_etahen_before_kstuff">etaHEN је у овом ланцу пре kstuff-а. Прво учитајте kstuff, па etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">ShadowMountPlus је у овом ланцу пре kstuff-а. Прво учитајте kstuff.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr и etaHEN су оба у овом ланцу. etaHEN доноси сопствени учитавач, па elfldr није потребан и може доћи до сукоба.</string>
 </resources>

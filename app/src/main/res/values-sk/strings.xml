@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">Zatiaľ nie sú zaznamenané žiadne pády. Zapnite protokol konzoly v Pamäti a nechajte ho bežať počas hrania.</string>
     <string name="crashdiary_share">Zdieľať</string>
     <string name="crashdiary_clear_all">Odstrániť všetko</string>
+    <string name="chainorder_reload_twice">%1$s je v tomto reťazci viac než raz. Dvojité načítanie môže spôsobiť pád konzoly.</string>
+    <string name="chainorder_etahen_before_kstuff">etaHEN je v tomto reťazci pred kstuff. Načítajte najprv kstuff, potom etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">ShadowMountPlus je v tomto reťazci pred kstuff. Načítajte najprv kstuff.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr aj etaHEN sú v tomto reťazci. etaHEN má vlastný zavádzač, takže elfldr nie je potrebný a môže kolidovať.</string>
 </resources>

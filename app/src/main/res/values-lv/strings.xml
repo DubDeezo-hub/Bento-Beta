@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">Vēl nav pierakstītu avāriju. Ieslēdziet konsoles žurnālu sadaļā Atmiņa un atstājiet to darbojamies spēlēšanas laikā.</string>
     <string name="crashdiary_share">Kopīgot</string>
     <string name="crashdiary_clear_all">Dzēst visu</string>
+    <string name="chainorder_reload_twice">%1$s šajā ķēdē ir vairāk nekā vienu reizi. Ielādējot to divreiz, konsole var avarēt.</string>
+    <string name="chainorder_etahen_before_kstuff">Šajā ķēdē etaHEN ir pirms kstuff. Vispirms ielādējiet kstuff, tad etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">Šajā ķēdē ShadowMountPlus ir pirms kstuff. Vispirms ielādējiet kstuff.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr un etaHEN abi ir šajā ķēdē. etaHEN nāk ar savu ielādētāju, tāpēc elfldr nav vajadzīgs un var radīt konfliktu.</string>
 </resources>

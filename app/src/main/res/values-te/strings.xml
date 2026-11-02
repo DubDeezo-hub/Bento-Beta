@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">ఇంకా ఏ క్రాష్‌లూ నమోదు కాలేదు. మెమరీలో కన్సోల్ లాగ్ ఆన్ చేసి, ఆడుతున్నప్పుడు దాన్ని నడుస్తూ ఉంచండి.</string>
     <string name="crashdiary_share">భాగస్వామ్యం చేయి</string>
     <string name="crashdiary_clear_all">అన్నీ తొలగించు</string>
+    <string name="chainorder_reload_twice">ఈ చెయిన్‌లో %1$s ఒకటి కంటే ఎక్కువసార్లు ఉంది. దాన్ని రెండుసార్లు లోడ్ చేస్తే కన్సోల్ క్రాష్ కావచ్చు.</string>
+    <string name="chainorder_etahen_before_kstuff">ఈ చెయిన్‌లో etaHEN kstuff కంటే ముందు ఉంది. ముందు kstuff, తర్వాత etaHEN లోడ్ చేయండి.</string>
+    <string name="chainorder_shadow_before_kstuff">ఈ చెయిన్‌లో ShadowMountPlus kstuff కంటే ముందు ఉంది. ముందు kstuff లోడ్ చేయండి.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr మరియు etaHEN రెండూ ఈ చెయిన్‌లో ఉన్నాయి. etaHEN తన సొంత లోడర్‌ను తెస్తుంది, కాబట్టి elfldr అవసరం లేదు, ఘర్షణ కూడా కావచ్చు.</string>
 </resources>

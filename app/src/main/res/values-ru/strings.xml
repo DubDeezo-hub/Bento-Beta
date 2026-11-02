@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">Сбоев пока не записано. Включите журнал консоли в разделе «Память» и оставьте его работать во время игры.</string>
     <string name="crashdiary_share">Поделиться</string>
     <string name="crashdiary_clear_all">Удалить все</string>
+    <string name="chainorder_reload_twice">%1$s есть в этой цепочке более одного раза. Повторная загрузка может привести к сбою консоли.</string>
+    <string name="chainorder_etahen_before_kstuff">etaHEN идёт перед kstuff в этой цепочке. Сначала загрузите kstuff, затем etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">ShadowMountPlus идёт перед kstuff в этой цепочке. Сначала загрузите kstuff.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr и etaHEN оба в этой цепочке. У etaHEN свой загрузчик, поэтому elfldr не нужен и может конфликтовать.</string>
 </resources>

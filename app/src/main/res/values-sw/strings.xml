@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">Bado hakuna hitilafu zilizoandikwa. Washa kumbukumbu ya konsoli katika Kumbukumbu na uiache ikiendelea unapocheza.</string>
     <string name="crashdiary_share">Shiriki</string>
     <string name="crashdiary_clear_all">Futa zote</string>
+    <string name="chainorder_reload_twice">%1$s imo zaidi ya mara moja katika mnyororo huu. Kuipakia mara mbili kunaweza kuanguza konsoli.</string>
+    <string name="chainorder_etahen_before_kstuff">etaHEN iko kabla ya kstuff katika mnyororo huu. Pakia kstuff kwanza, kisha etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">ShadowMountPlus iko kabla ya kstuff katika mnyororo huu. Pakia kstuff kwanza.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr na etaHEN zote ziko katika mnyororo huu. etaHEN ina kipakiaji chake, kwa hivyo elfldr haihitajiki na inaweza kugongana.</string>
 </resources>

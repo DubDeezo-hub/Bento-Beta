@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">Ingen nedbrud noteret endnu. Slå konsol-loggen til i Hukommelse, og lad den køre, mens du spiller.</string>
     <string name="crashdiary_share">Del</string>
     <string name="crashdiary_clear_all">Slet alt</string>
+    <string name="chainorder_reload_twice">%1$s er med mere end én gang i denne kæde. At indlæse det to gange kan få konsollen til at crashe.</string>
+    <string name="chainorder_etahen_before_kstuff">etaHEN kommer før kstuff i denne kæde. Indlæs kstuff først, så etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">ShadowMountPlus kommer før kstuff i denne kæde. Indlæs kstuff først.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr og etaHEN er begge med i denne kæde. etaHEN har sin egen indlæser, så elfldr er ikke nødvendig og kan give konflikt.</string>
 </resources>

@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">এখনও কোনো ক্র্যাশ নোট করা হয়নি। মেমরিতে কনসোল লগ চালু করে খেলার সময় চালু রাখুন।</string>
     <string name="crashdiary_share">শেয়ার</string>
     <string name="crashdiary_clear_all">সব মুছুন</string>
+    <string name="chainorder_reload_twice">%1$s এই চেইনে একাধিকবার আছে। এটি দুবার লোড করলে কনসোল ক্র্যাশ করতে পারে।</string>
+    <string name="chainorder_etahen_before_kstuff">এই চেইনে etaHEN kstuff-এর আগে আছে। আগে kstuff, তারপর etaHEN লোড করুন।</string>
+    <string name="chainorder_shadow_before_kstuff">এই চেইনে ShadowMountPlus kstuff-এর আগে আছে। আগে kstuff লোড করুন।</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr এবং etaHEN দুটোই এই চেইনে আছে। etaHEN নিজের লোডার নিয়ে আসে, তাই elfldr দরকার নেই এবং সংঘাত বাধাতে পারে।</string>
 </resources>

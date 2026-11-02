@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">Δεν έχουν σημειωθεί σφάλματα ακόμη. Ενεργοποιήστε το αρχείο κονσόλας στη Μνήμη και αφήστε το να τρέχει όσο παίζετε.</string>
     <string name="crashdiary_share">Κοινή χρήση</string>
     <string name="crashdiary_clear_all">Διαγραφή όλων</string>
+    <string name="chainorder_reload_twice">Το %1$s υπάρχει πάνω από μία φορά σε αυτήν την αλυσίδα. Η διπλή φόρτωση μπορεί να κρασάρει την κονσόλα.</string>
+    <string name="chainorder_etahen_before_kstuff">Το etaHEN προηγείται του kstuff σε αυτήν την αλυσίδα. Φορτώστε πρώτα το kstuff και μετά το etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">Το ShadowMountPlus προηγείται του kstuff σε αυτήν την αλυσίδα. Φορτώστε πρώτα το kstuff.</string>
+    <string name="chainorder_elfldr_with_etahen">Το elfldr και το etaHEN είναι και τα δύο στην αλυσίδα. Το etaHEN φέρνει δικό του loader, οπότε το elfldr δεν χρειάζεται και μπορεί να έρθει σε σύγκρουση.</string>
 </resources>

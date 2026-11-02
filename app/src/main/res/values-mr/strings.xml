@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">अजून कोणताही क्रॅश नोंदवलेला नाही. मेमरीमध्ये कन्सोल लॉग चालू करा आणि खेळताना तो चालू ठेवा.</string>
     <string name="crashdiary_share">शेअर करा</string>
     <string name="crashdiary_clear_all">सर्व हटवा</string>
+    <string name="chainorder_reload_twice">%1$s या साखळीत एकापेक्षा जास्त वेळा आहे. ते दोनदा लोड केल्यास कन्सोल क्रॅश होऊ शकते.</string>
+    <string name="chainorder_etahen_before_kstuff">या साखळीत etaHEN kstuff आधी येते. आधी kstuff, मग etaHEN लोड करा.</string>
+    <string name="chainorder_shadow_before_kstuff">या साखळीत ShadowMountPlus kstuff आधी येते. आधी kstuff लोड करा.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr आणि etaHEN दोन्ही या साखळीत आहेत. etaHEN स्वतःचा लोडर आणते, त्यामुळे elfldr ची गरज नाही आणि संघर्ष होऊ शकतो.</string>
 </resources>

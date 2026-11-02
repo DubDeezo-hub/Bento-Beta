@@ -1172,4 +1172,8 @@
     <string name="crashdiary_empty">Inga krascher antecknade än. Slå på konsolloggen i Minne och låt den vara igång medan du spelar.</string>
     <string name="crashdiary_share">Dela</string>
     <string name="crashdiary_clear_all">Radera allt</string>
+    <string name="chainorder_reload_twice">%1$s finns med mer än en gång i den här kedjan. Att läsa in det två gånger kan krascha konsolen.</string>
+    <string name="chainorder_etahen_before_kstuff">etaHEN kommer före kstuff i den här kedjan. Läs in kstuff först, sedan etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">ShadowMountPlus kommer före kstuff i den här kedjan. Läs in kstuff först.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr och etaHEN finns båda i den här kedjan. etaHEN har en egen inläsare, så elfldr behövs inte och kan krocka.</string>
 </resources>

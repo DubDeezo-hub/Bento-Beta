@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">Nie zapisano jeszcze żadnych awarii. Włącz dziennik konsoli w Pamięci i zostaw go uruchomionego podczas grania.</string>
     <string name="crashdiary_share">Udostępnij</string>
     <string name="crashdiary_clear_all">Usuń wszystko</string>
+    <string name="chainorder_reload_twice">%1$s jest w tym łańcuchu więcej niż raz. Dwukrotne wczytanie może spowodować awarię konsoli.</string>
+    <string name="chainorder_etahen_before_kstuff">etaHEN jest w tym łańcuchu przed kstuff. Wczytaj najpierw kstuff, potem etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">ShadowMountPlus jest w tym łańcuchu przed kstuff. Wczytaj najpierw kstuff.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr i etaHEN są oba w tym łańcuchu. etaHEN ma własny moduł wczytujący, więc elfldr nie jest potrzebny i może powodować konflikt.</string>
 </resources>

@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">ഇതുവരെ ക്രാഷുകളൊന്നും കുറിച്ചിട്ടില്ല. മെമ്മറിയിൽ കൺസോൾ ലോഗ് ഓണാക്കി കളിക്കുമ്പോൾ അത് പ്രവർത്തിക്കാൻ വിടുക.</string>
     <string name="crashdiary_share">പങ്കിടുക</string>
     <string name="crashdiary_clear_all">എല്ലാം മായ്ക്കുക</string>
+    <string name="chainorder_reload_twice">ഈ ചെയിനിൽ %1$s ഒന്നിലധികം തവണ ഉണ്ട്. അത് രണ്ടുതവണ ലോഡ് ചെയ്താൽ കൺസോൾ ക്രാഷ് ആയേക്കാം.</string>
+    <string name="chainorder_etahen_before_kstuff">ഈ ചെയിനിൽ etaHEN kstuff-ന് മുൻപാണ്. ആദ്യം kstuff, പിന്നെ etaHEN ലോഡ് ചെയ്യുക.</string>
+    <string name="chainorder_shadow_before_kstuff">ഈ ചെയിനിൽ ShadowMountPlus kstuff-ന് മുൻപാണ്. ആദ്യം kstuff ലോഡ് ചെയ്യുക.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr-ഉം etaHEN-ഉം ഈ ചെയിനിൽ ഉണ്ട്. etaHEN-ന് സ്വന്തം ലോഡർ ഉള്ളതിനാൽ elfldr വേണ്ട, അത് കലഹിക്കാനും ഇടയുണ്ട്.</string>
 </resources>

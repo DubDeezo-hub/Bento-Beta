@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">尚未記錄到當機。在「記憶體」中開啟主機日誌，並在遊玩時讓它持續執行。</string>
     <string name="crashdiary_share">分享</string>
     <string name="crashdiary_clear_all">全部刪除</string>
+    <string name="chainorder_reload_twice">%1$s 在此鏈中出現不只一次。載入兩次可能導致主機當機。</string>
+    <string name="chainorder_etahen_before_kstuff">此鏈中 etaHEN 排在 kstuff 之前。請先載入 kstuff，再載入 etaHEN。</string>
+    <string name="chainorder_shadow_before_kstuff">此鏈中 ShadowMountPlus 排在 kstuff 之前。請先載入 kstuff。</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr 和 etaHEN 都在此鏈中。etaHEN 自帶載入器，因此不需要 elfldr，且可能衝突。</string>
 </resources>

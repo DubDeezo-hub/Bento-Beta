@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">Wala pang naitatalang pag-crash. I-on ang console log sa Memory at hayaang tumakbo habang naglalaro.</string>
     <string name="crashdiary_share">Ibahagi</string>
     <string name="crashdiary_clear_all">Burahin lahat</string>
+    <string name="chainorder_reload_twice">Nasa chain na ito nang higit sa isang beses ang %1$s. Ang pag-load nito nang dalawang beses ay maaaring mag-crash ng console.</string>
+    <string name="chainorder_etahen_before_kstuff">Nauuna ang etaHEN kaysa kstuff sa chain na ito. I-load muna ang kstuff, saka etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">Nauuna ang ShadowMountPlus kaysa kstuff sa chain na ito. I-load muna ang kstuff.</string>
+    <string name="chainorder_elfldr_with_etahen">Parehong nasa chain na ito ang elfldr at etaHEN. May sariling loader ang etaHEN, kaya hindi kailangan ang elfldr at maaaring magbanggaan.</string>
 </resources>

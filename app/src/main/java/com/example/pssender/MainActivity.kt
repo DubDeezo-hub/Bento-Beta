@@ -427,7 +427,9 @@ fun SenderApp(
     var reloadAsk by remember { mutableStateOf<Pair<String, () -> Unit>?>(null) }
     val runChainChecked: (Chain) -> Unit = { chain ->
         scope.launch {
-            val why = withContext(Dispatchers.IO) { ReloadGuard.warning(host, chain.steps.map { it.payload }, active.type) }
+            val names = chain.steps.map { it.payload }
+            // A bad load order (checked here, on the names) or a second load of a running payload both wait for "Send anyway"
+            val why = ChainOrder.check(names, active.type) ?: withContext(Dispatchers.IO) { ReloadGuard.warning(host, names, active.type) }
             if (why == null) runChain(chain) else reloadAsk = why to { runChain(chain) }
         }
     }
@@ -449,8 +451,9 @@ fun SenderApp(
         if (AutoChain.due(active.id, was, up, ctx = ctx)) {
             val chain = chains.firstOrNull { it.id == chainId } ?: return@LaunchedEffect
             delay(AUTO_CHAIN_DELAY_MS) // let the loader settle after the jailbreak
-            // Something else may have loaded etaHEN already (an autoloader on the console): then the chain doesn't run
-            val why = withContext(Dispatchers.IO) { ReloadGuard.warning(host, chain.steps.map { it.payload }, active.type) }
+            // A bad load order, or something that already loaded etaHEN (an autoloader on the console): the chain doesn't run
+            val names = chain.steps.map { it.payload }
+            val why = ChainOrder.check(names, active.type) ?: withContext(Dispatchers.IO) { ReloadGuard.warning(host, names, active.type) }
             tab = 1
             if (why == null) runChain(chain) else statusLine = AppText.get(R.string.reload_auto_skipped, why)
         }

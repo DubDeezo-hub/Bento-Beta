@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">まだ記録されたクラッシュはありません。メモリで本体ログをオンにし、プレイ中はそのままにしてください。</string>
     <string name="crashdiary_share">共有</string>
     <string name="crashdiary_clear_all">すべて削除</string>
+    <string name="chainorder_reload_twice">%1$s がこのチェーンに複数回あります。二重に読み込むと本体がクラッシュすることがあります。</string>
+    <string name="chainorder_etahen_before_kstuff">このチェーンでは etaHEN が kstuff より前にあります。先に kstuff、次に etaHEN を読み込んでください。</string>
+    <string name="chainorder_shadow_before_kstuff">このチェーンでは ShadowMountPlus が kstuff より前にあります。先に kstuff を読み込んでください。</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr と etaHEN が両方このチェーンにあります。etaHEN は独自のローダーを持つため elfldr は不要で、競合することがあります。</string>
 </resources>

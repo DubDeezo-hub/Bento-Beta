@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">Chưa ghi sự cố nào. Hãy bật nhật ký máy trong phần Bộ nhớ và để nó chạy khi bạn chơi.</string>
     <string name="crashdiary_share">Chia sẻ</string>
     <string name="crashdiary_clear_all">Xóa tất cả</string>
+    <string name="chainorder_reload_twice">%1$s có mặt nhiều hơn một lần trong chuỗi này. Nạp nó hai lần có thể làm máy treo.</string>
+    <string name="chainorder_etahen_before_kstuff">Trong chuỗi này etaHEN đứng trước kstuff. Hãy nạp kstuff trước, rồi mới etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">Trong chuỗi này ShadowMountPlus đứng trước kstuff. Hãy nạp kstuff trước.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr và etaHEN đều có trong chuỗi này. etaHEN đã có trình nạp riêng, nên không cần elfldr và có thể xung đột.</string>
 </resources>

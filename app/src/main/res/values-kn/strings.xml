@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">ಇನ್ನೂ ಯಾವುದೇ ಕ್ರ್ಯಾಶ್ ದಾಖಲಾಗಿಲ್ಲ. ಮೆಮೊರಿಯಲ್ಲಿ ಕನ್ಸೋಲ್ ಲಾಗ್ ಆನ್ ಮಾಡಿ, ಆಡುವಾಗ ಅದನ್ನು ಚಾಲನೆಯಲ್ಲಿ ಇರಿಸಿ.</string>
     <string name="crashdiary_share">ಹಂಚಿಕೊಳ್ಳಿ</string>
     <string name="crashdiary_clear_all">ಎಲ್ಲವನ್ನೂ ಅಳಿಸಿ</string>
+    <string name="chainorder_reload_twice">ಈ ಸರಣಿಯಲ್ಲಿ %1$s ಒಂದಕ್ಕಿಂತ ಹೆಚ್ಚು ಬಾರಿ ಇದೆ. ಅದನ್ನು ಎರಡು ಬಾರಿ ಲೋಡ್ ಮಾಡಿದರೆ ಕನ್ಸೋಲ್ ಕ್ರ್ಯಾಶ್ ಆಗಬಹುದು.</string>
+    <string name="chainorder_etahen_before_kstuff">ಈ ಸರಣಿಯಲ್ಲಿ etaHEN kstuff ಗಿಂತ ಮೊದಲು ಬರುತ್ತದೆ. ಮೊದಲು kstuff, ನಂತರ etaHEN ಲೋಡ್ ಮಾಡಿ.</string>
+    <string name="chainorder_shadow_before_kstuff">ಈ ಸರಣಿಯಲ್ಲಿ ShadowMountPlus kstuff ಗಿಂತ ಮೊದಲು ಬರುತ್ತದೆ. ಮೊದಲು kstuff ಲೋಡ್ ಮಾಡಿ.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr ಮತ್ತು etaHEN ಎರಡೂ ಈ ಸರಣಿಯಲ್ಲಿವೆ. etaHEN ತನ್ನದೇ ಲೋಡರ್ ತರುತ್ತದೆ, ಆದ್ದರಿಂದ elfldr ಅಗತ್ಯವಿಲ್ಲ ಮತ್ತು ಘರ್ಷಣೆಯಾಗಬಹುದು.</string>
 </resources>

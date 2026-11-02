@@ -392,6 +392,10 @@
     <string name="reload_warn_running">etaHEN already answers on this console (its FTP server on port %2$d is up). Loading %1$s again while it runs can crash the console. Send it only if etaHEN has stopped working.</string>
     <string name="reload_warn_sent">%1$s was already sent to this console %2$s ago. Loading it a second time can crash the console. Send it again only if the console has been restarted since.</string>
     <string name="reload_send_anyway">Send anyway</string>
+    <string name="chainorder_reload_twice">%1$s is in this chain more than once. Loading it twice can crash the console.</string>
+    <string name="chainorder_etahen_before_kstuff">etaHEN comes before kstuff in this chain. Load kstuff first, then etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">ShadowMountPlus comes before kstuff in this chain. Load kstuff first.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr and etaHEN are both in this chain. etaHEN brings its own loader, so elfldr is not needed and can clash.</string>
     <string name="reload_auto_skipped">The automatic chain didn\'t run: %1$s</string>
     <string name="backup_cheats">Cheats: %1$d</string>
 

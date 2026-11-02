@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">Ühtegi krahhi pole veel märgitud. Lülita Mälus konsoolilogi sisse ja jäta see mängimise ajaks tööle.</string>
     <string name="crashdiary_share">Jaga</string>
     <string name="crashdiary_clear_all">Kustuta kõik</string>
+    <string name="chainorder_reload_twice">%1$s on selles ahelas rohkem kui üks kord. Kaks korda laadimine võib konsooli kokku jooksutada.</string>
+    <string name="chainorder_etahen_before_kstuff">etaHEN on selles ahelas enne kstuff\'i. Lae kõigepealt kstuff, siis etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">ShadowMountPlus on selles ahelas enne kstuff\'i. Lae kõigepealt kstuff.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr ja etaHEN on mõlemad selles ahelas. etaHEN\'il on oma laadur, nii et elfldr pole vajalik ja võib tekitada konflikti.</string>
 </resources>

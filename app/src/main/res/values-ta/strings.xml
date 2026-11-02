@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">இதுவரை செயலிழப்புகள் எதுவும் பதிவாகவில்லை. நினைவகத்தில் கன்சோல் பதிவை இயக்கி, விளையாடும்போது அதை இயங்க விடுங்கள்.</string>
     <string name="crashdiary_share">பகிர்</string>
     <string name="crashdiary_clear_all">அனைத்தையும் நீக்கு</string>
+    <string name="chainorder_reload_twice">இந்தச் சங்கிலியில் %1$s ஒன்றுக்கு மேற்பட்ட முறை உள்ளது. அதை இருமுறை ஏற்றினால் கன்சோல் செயலிழக்கலாம்.</string>
+    <string name="chainorder_etahen_before_kstuff">இந்தச் சங்கிலியில் etaHEN kstuff-க்கு முன் உள்ளது. முதலில் kstuff, பிறகு etaHEN ஏற்றவும்.</string>
+    <string name="chainorder_shadow_before_kstuff">இந்தச் சங்கிலியில் ShadowMountPlus kstuff-க்கு முன் உள்ளது. முதலில் kstuff ஏற்றவும்.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr மற்றும் etaHEN இரண்டும் இந்தச் சங்கிலியில் உள்ளன. etaHEN தனது சொந்த ஏற்றியைக் கொண்டுவருகிறது, எனவே elfldr தேவையில்லை, மோதலும் ஏற்படலாம்.</string>
 </resources>

@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">Kaatumisia ei ole vielä merkitty. Ota konsolin loki käyttöön Muistissa ja jätä se käyntiin pelatessasi.</string>
     <string name="crashdiary_share">Jaa</string>
     <string name="crashdiary_clear_all">Poista kaikki</string>
+    <string name="chainorder_reload_twice">%1$s on tässä ketjussa useammin kuin kerran. Sen lataaminen kahdesti voi kaataa konsolin.</string>
+    <string name="chainorder_etahen_before_kstuff">etaHEN on tässä ketjussa ennen kstuffia. Lataa ensin kstuff, sitten etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">ShadowMountPlus on tässä ketjussa ennen kstuffia. Lataa ensin kstuff.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr ja etaHEN ovat molemmat tässä ketjussa. etaHENillä on oma latain, joten elfldr on tarpeeton ja voi aiheuttaa ristiriidan.</string>
 </resources>

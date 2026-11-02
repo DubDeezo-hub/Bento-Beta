@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">Nog geen ongelukke genoteer nie. Skakel die konsole-log in Geheue aan en laat dit loop terwyl jy speel.</string>
     <string name="crashdiary_share">Deel</string>
     <string name="crashdiary_clear_all">Vee alles uit</string>
+    <string name="chainorder_reload_twice">%1$s is meer as een keer in hierdie ketting. Om dit twee keer te laai kan die konsole laat crash.</string>
+    <string name="chainorder_etahen_before_kstuff">etaHEN kom voor kstuff in hierdie ketting. Laai eers kstuff, dan etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">ShadowMountPlus kom voor kstuff in hierdie ketting. Laai eers kstuff.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr en etaHEN is albei in hierdie ketting. etaHEN bring sy eie laaier, so elfldr is nie nodig nie en kan bots.</string>
 </resources>

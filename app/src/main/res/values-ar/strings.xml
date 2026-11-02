@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">لا توجد أعطال مسجّلة بعد. شغّل سجل الجهاز في الذاكرة واتركه يعمل أثناء اللعب.</string>
     <string name="crashdiary_share">مشاركة</string>
     <string name="crashdiary_clear_all">حذف الكل</string>
+    <string name="chainorder_reload_twice">‏%1$s موجود أكثر من مرة في هذه السلسلة. تحميله مرتين قد يُعطّل الجهاز.</string>
+    <string name="chainorder_etahen_before_kstuff">يأتي etaHEN قبل kstuff في هذه السلسلة. حمّل kstuff أولًا ثم etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">يأتي ShadowMountPlus قبل kstuff في هذه السلسلة. حمّل kstuff أولًا.</string>
+    <string name="chainorder_elfldr_with_etahen">كل من elfldr و etaHEN في هذه السلسلة. يأتي etaHEN بمُحمّله الخاص، لذا لا حاجة إلى elfldr وقد يتعارض.</string>
 </resources>

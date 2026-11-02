@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">Збоїв ще не занотовано. Увімкніть журнал консолі в розділі «Памʼять» і залиште його працювати під час гри.</string>
     <string name="crashdiary_share">Поділитися</string>
     <string name="crashdiary_clear_all">Видалити все</string>
+    <string name="chainorder_reload_twice">%1$s є в цьому ланцюжку більше одного разу. Повторне завантаження може спричинити збій консолі.</string>
+    <string name="chainorder_etahen_before_kstuff">etaHEN іде перед kstuff у цьому ланцюжку. Спершу завантажте kstuff, потім etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">ShadowMountPlus іде перед kstuff у цьому ланцюжку. Спершу завантажте kstuff.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr і etaHEN обидва в цьому ланцюжку. etaHEN має власний завантажувач, тож elfldr не потрібен і може конфліктувати.</string>
 </resources>

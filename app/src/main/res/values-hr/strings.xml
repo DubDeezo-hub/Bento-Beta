@@ -1171,4 +1171,8 @@
     <string name="crashdiary_empty">Još nema zabilježenih rušenja. Uključite zapis konzole u Memoriji i ostavite ga da radi dok igrate.</string>
     <string name="crashdiary_share">Podijeli</string>
     <string name="crashdiary_clear_all">Izbriši sve</string>
+    <string name="chainorder_reload_twice">%1$s je u ovom lancu više od jednom. Dvostruko učitavanje može srušiti konzolu.</string>
+    <string name="chainorder_etahen_before_kstuff">etaHEN je u ovom lancu prije kstuff-a. Učitaj prvo kstuff, pa etaHEN.</string>
+    <string name="chainorder_shadow_before_kstuff">ShadowMountPlus je u ovom lancu prije kstuff-a. Učitaj prvo kstuff.</string>
+    <string name="chainorder_elfldr_with_etahen">elfldr i etaHEN su oba u ovom lancu. etaHEN ima vlastiti učitavač, pa elfldr nije potreban i može doći do sukoba.</string>
 </resources>
