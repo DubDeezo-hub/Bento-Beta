@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus iko kabla ya kstuff katika mnyororo huu. Pakia kstuff kwanza.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr na etaHEN zote ziko katika mnyororo huu. etaHEN ina kipakiaji chake, kwa hivyo elfldr haihitajiki na inaweza kugongana.</string>
     <string name="saves_restore_locked">Hifadhi hufanya kazi tu kwenye konsoli na akaunti iliyozitengeneza. Nakala kutoka konsoli au akaunti nyingine haitapakia.</string>
+    <string name="online_alert_switch">Niambie ikiwa mtandaoni</string>
+    <string name="online_alert_detail">Bento hukagua kila dakika 15, hata ikiwa imefungwa, na huuliza konsoli hii tu kwenye mtandao wako.</string>
+    <string name="online_channel">Konsoli iko mtandaoni</string>
+    <string name="online_title">%1$s iko mtandaoni</string>
+    <string name="online_text">Sasa inajibu kwenye mtandao wako. Gusa ili kufungua Bento.</string>
 </resources>

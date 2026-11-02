@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus kommer før kstuff i denne kæde. Indlæs kstuff først.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr og etaHEN er begge med i denne kæde. etaHEN har sin egen indlæser, så elfldr er ikke nødvendig og kan give konflikt.</string>
     <string name="saves_restore_locked">Gemte data virker kun på den konsol og konto, der lavede dem. En sikkerhedskopi fra en anden konsol eller konto kan ikke indlæses.</string>
+    <string name="online_alert_switch">Sig til, når den kommer online</string>
+    <string name="online_alert_detail">Bento tjekker hvert 15. minut, også når den er lukket, og spørger kun denne konsol på dit netværk.</string>
+    <string name="online_channel">Konsol online</string>
+    <string name="online_title">%1$s er online</string>
+    <string name="online_text">Den svarer nu på dit netværk. Tryk for at åbne Bento.</string>
 </resources>

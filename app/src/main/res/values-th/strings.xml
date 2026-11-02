@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">ในเชนนี้ ShadowMountPlus อยู่ก่อน kstuff โหลด kstuff ก่อน</string>
     <string name="chainorder_elfldr_with_etahen">elfldr และ etaHEN อยู่ในเชนนี้ทั้งคู่ etaHEN มีตัวโหลดของตัวเอง จึงไม่จำเป็นต้องใช้ elfldr และอาจชนกันได้</string>
     <string name="saves_restore_locked">เซฟใช้ได้เฉพาะบนเครื่องและบัญชีที่สร้างเท่านั้น ข้อมูลสำรองจากเครื่องหรือบัญชีอื่นจะโหลดไม่ได้</string>
+    <string name="online_alert_switch">แจ้งเมื่อออนไลน์</string>
+    <string name="online_alert_detail">Bento ตรวจทุก 15 นาทีแม้ปิดอยู่ และถามเฉพาะเครื่องนี้ในเครือข่ายของคุณ</string>
+    <string name="online_channel">เครื่องออนไลน์</string>
+    <string name="online_title">%1$s ออนไลน์แล้ว</string>
+    <string name="online_text">ตอนนี้ตอบสนองในเครือข่ายของคุณแล้ว แตะเพื่อเปิด Bento</string>
 </resources>

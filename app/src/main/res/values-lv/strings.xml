@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">Šajā ķēdē ShadowMountPlus ir pirms kstuff. Vispirms ielādējiet kstuff.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr un etaHEN abi ir šajā ķēdē. etaHEN nāk ar savu ielādētāju, tāpēc elfldr nav vajadzīgs un var radīt konfliktu.</string>
     <string name="saves_restore_locked">Saglabājumi darbojas tikai tajā konsolē un kontā, kas tos izveidoja. Rezerves kopija no citas konsoles vai konta netiks ielādēta.</string>
+    <string name="online_alert_switch">Paziņo, kad tā ir tiešsaistē</string>
+    <string name="online_alert_detail">Bento pārbauda ik pēc 15 minūtēm, arī aizvērts, un vaicā tikai šai konsolei jūsu tīklā.</string>
+    <string name="online_channel">Konsole tiešsaistē</string>
+    <string name="online_title">%1$s ir tiešsaistē</string>
+    <string name="online_text">Tagad tā atbild jūsu tīklā. Pieskarieties, lai atvērtu Bento.</string>
 </resources>

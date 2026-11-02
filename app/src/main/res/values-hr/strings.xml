@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus je u ovom lancu prije kstuff-a. Učitaj prvo kstuff.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr i etaHEN su oba u ovom lancu. etaHEN ima vlastiti učitavač, pa elfldr nije potreban i može doći do sukoba.</string>
     <string name="saves_restore_locked">Spremljene igre rade samo na konzoli i računu koji su ih stvorili. Sigurnosna kopija s druge konzole ili računa neće se učitati.</string>
+    <string name="online_alert_switch">Javi mi kad bude na mreži</string>
+    <string name="online_alert_detail">Bento provjerava svakih 15 minuta, čak i zatvoren, i pita samo ovu konzolu na tvojoj mreži.</string>
+    <string name="online_channel">Konzola na mreži</string>
+    <string name="online_title">%1$s je na mreži</string>
+    <string name="online_text">Sada odgovara na tvojoj mreži. Dodirni za otvaranje Bentoa.</string>
 </resources>

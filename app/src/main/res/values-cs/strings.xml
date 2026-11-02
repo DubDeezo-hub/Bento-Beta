@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus je v tomto řetězci před kstuff. Načtěte nejdřív kstuff.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr i etaHEN jsou v tomto řetězci. etaHEN má vlastní zavaděč, takže elfldr není potřeba a může kolidovat.</string>
     <string name="saves_restore_locked">Uložené pozice fungují jen na konzoli a účtu, které je vytvořily. Záloha z jiné konzole nebo účtu se nenačte.</string>
+    <string name="online_alert_switch">Dej vědět, až bude online</string>
+    <string name="online_alert_detail">Bento kontroluje každých 15 minut, i když je zavřený, a ptá se jen této konzole ve vaší síti.</string>
+    <string name="online_channel">Konzole online</string>
+    <string name="online_title">%1$s je online</string>
+    <string name="online_text">Teď odpovídá ve vaší síti. Klepnutím otevřete Bento.</string>
 </resources>

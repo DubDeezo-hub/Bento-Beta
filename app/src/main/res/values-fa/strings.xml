@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">در این زنجیره ShadowMountPlus پیش از kstuff است. اول kstuff را بارگذاری کنید.</string>
     <string name="chainorder_elfldr_with_etahen">‏elfldr و etaHEN هر دو در این زنجیره‌اند. etaHEN بارگذار خودش را دارد، پس elfldr لازم نیست و ممکن است تداخل ایجاد کند.</string>
     <string name="saves_restore_locked">ذخیره‌ها فقط روی همان کنسول و حسابی کار می‌کنند که آن‌ها را ساخته است. پشتیبان از کنسول یا حساب دیگر بارگذاری نمی‌شود.</string>
+    <string name="online_alert_switch">وقتی آنلاین شد خبرم کن</string>
+    <string name="online_alert_detail">‏Bento هر ۱۵ دقیقه، حتی وقتی بسته است، بررسی می‌کند و فقط از همین کنسول در شبکه شما می‌پرسد.</string>
+    <string name="online_channel">کنسول آنلاین</string>
+    <string name="online_title">‏%1$s آنلاین است</string>
+    <string name="online_text">اکنون در شبکه شما پاسخ می‌دهد. برای باز کردن Bento ضربه بزنید.</string>
 </resources>

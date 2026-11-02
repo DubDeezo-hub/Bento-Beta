@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">ఈ చెయిన్‌లో ShadowMountPlus kstuff కంటే ముందు ఉంది. ముందు kstuff లోడ్ చేయండి.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr మరియు etaHEN రెండూ ఈ చెయిన్‌లో ఉన్నాయి. etaHEN తన సొంత లోడర్‌ను తెస్తుంది, కాబట్టి elfldr అవసరం లేదు, ఘర్షణ కూడా కావచ్చు.</string>
     <string name="saves_restore_locked">సేవ్‌లు వాటిని చేసిన కన్సోల్, ఖాతాలో మాత్రమే పనిచేస్తాయి. వేరే కన్సోల్ లేదా ఖాతా బ్యాకప్ లోడ్ కాదు.</string>
+    <string name="online_alert_switch">ఆన్‌లైన్‌కి వచ్చినప్పుడు నాకు చెప్పు</string>
+    <string name="online_alert_detail">Bento మూసి ఉన్నా ప్రతి 15 నిమిషాలకు చూస్తుంది, మీ నెట్‌వర్క్‌లోని ఈ కన్సోల్‌నే అడుగుతుంది.</string>
+    <string name="online_channel">కన్సోల్ ఆన్‌లైన్</string>
+    <string name="online_title">%1$s ఆన్‌లైన్‌లో ఉంది</string>
+    <string name="online_text">ఇప్పుడు మీ నెట్‌వర్క్‌లో స్పందిస్తోంది. Bento తెరవడానికి నొక్కండి.</string>
 </resources>

@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">Nauuna ang ShadowMountPlus kaysa kstuff sa chain na ito. I-load muna ang kstuff.</string>
     <string name="chainorder_elfldr_with_etahen">Parehong nasa chain na ito ang elfldr at etaHEN. May sariling loader ang etaHEN, kaya hindi kailangan ang elfldr at maaaring magbanggaan.</string>
     <string name="saves_restore_locked">Gumagana lang ang mga save sa console at account na gumawa nito. Hindi maglo-load ang backup mula sa ibang console o account.</string>
+    <string name="online_alert_switch">Sabihan ako kapag online na</string>
+    <string name="online_alert_detail">Sumusuri ang Bento bawat 15 minuto, kahit nakasara, at ang console lang na ito sa network mo ang tinatanong.</string>
+    <string name="online_channel">Online ang console</string>
+    <string name="online_title">Online na ang %1$s</string>
+    <string name="online_text">Sumasagot na ito sa network mo. I-tap para buksan ang Bento.</string>
 </resources>

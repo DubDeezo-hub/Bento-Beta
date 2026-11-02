@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">此鏈中 ShadowMountPlus 排在 kstuff 之前。請先載入 kstuff。</string>
     <string name="chainorder_elfldr_with_etahen">elfldr 和 etaHEN 都在此鏈中。etaHEN 自帶載入器，因此不需要 elfldr，且可能衝突。</string>
     <string name="saves_restore_locked">存檔只能在建立它的主機和帳號上使用。來自其他主機或帳號的備份無法讀取。</string>
+    <string name="online_alert_switch">上線時通知我</string>
+    <string name="online_alert_detail">Bento 即使關閉也會每 15 分鐘檢查一次，只詢問你網路中的這台主機。</string>
+    <string name="online_channel">主機上線</string>
+    <string name="online_title">%1$s 已上線</string>
+    <string name="online_text">它現在在你的網路中有回應。輕觸以開啟 Bento。</string>
 </resources>

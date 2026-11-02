@@ -1177,4 +1177,9 @@
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus viene prima di kstuff in questa catena. Carica prima kstuff.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr ed etaHEN sono entrambi in questa catena. etaHEN porta il proprio loader, quindi elfldr non serve e può entrare in conflitto.</string>
     <string name="saves_restore_locked">I salvataggi funzionano solo sulla console e sull\'account che li hanno creati. Un backup da un\'altra console o account non si caricherà.</string>
+    <string name="online_alert_switch">Avvisami quando è online</string>
+    <string name="online_alert_detail">Bento controlla ogni 15 minuti, anche da chiuso, e interroga solo questa console sulla tua rete.</string>
+    <string name="online_channel">Console online</string>
+    <string name="online_title">%1$s è online</string>
+    <string name="online_text">Ora risponde sulla tua rete. Tocca per aprire Bento.</string>
 </resources>

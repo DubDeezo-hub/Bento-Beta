@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus on tässä ketjussa ennen kstuffia. Lataa ensin kstuff.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr ja etaHEN ovat molemmat tässä ketjussa. etaHENillä on oma latain, joten elfldr on tarpeeton ja voi aiheuttaa ristiriidan.</string>
     <string name="saves_restore_locked">Tallennukset toimivat vain konsolissa ja tilillä, joka ne teki. Toisen konsolin tai tilin varmuuskopio ei lataudu.</string>
+    <string name="online_alert_switch">Kerro, kun se tulee verkkoon</string>
+    <string name="online_alert_detail">Bento tarkistaa 15 minuutin välein, myös suljettuna, ja kysyy vain tätä konsolia verkossasi.</string>
+    <string name="online_channel">Konsoli verkossa</string>
+    <string name="online_title">%1$s on verkossa</string>
+    <string name="online_text">Se vastaa nyt verkossasi. Avaa Bento napauttamalla.</string>
 </resources>

@@ -1181,4 +1181,9 @@
     <string name="look_text_large">Large</string>
     <string name="look_text_larger">Larger</string>
     <string name="diag_log_title">The console log shows %1$d recent problems</string>
+    <string name="online_alert_switch">Tell me when it comes online</string>
+    <string name="online_alert_detail">Bento checks every 15 minutes, even while closed, and only asks this console on your network.</string>
+    <string name="online_channel">Console online</string>
+    <string name="online_title">%1$s is online</string>
+    <string name="online_text">It answers on your network now. Tap to open Bento.</string>
 </resources>

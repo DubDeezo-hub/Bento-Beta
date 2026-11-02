@@ -1177,4 +1177,9 @@
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus kommer före kstuff i den här kedjan. Läs in kstuff först.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr och etaHEN finns båda i den här kedjan. etaHEN har en egen inläsare, så elfldr behövs inte och kan krocka.</string>
     <string name="saves_restore_locked">Sparfiler fungerar bara på konsolen och kontot som skapade dem. En säkerhetskopia från en annan konsol eller ett annat konto laddas inte.</string>
+    <string name="online_alert_switch">Säg till när den är online</string>
+    <string name="online_alert_detail">Bento kollar var 15:e minut, även när den är stängd, och frågar bara den här konsolen i ditt nätverk.</string>
+    <string name="online_channel">Konsol online</string>
+    <string name="online_title">%1$s är online</string>
+    <string name="online_text">Den svarar nu i ditt nätverk. Tryck för att öppna Bento.</string>
 </resources>

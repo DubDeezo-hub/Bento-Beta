@@ -130,6 +130,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         CrashReports.install(this, appVersion(this).name) // a crash from here on is noted, and offered on the next start
+        OnlineAlert.schedule(this) // the "console is online" check, while any console has it on
         TransferState.setSpeedLimit(SpeedLimits.load(this)) // the saved speed limit applies from the first transfer on
         // Only on a fresh start: after a rotation the same intent would otherwise be handled twice
         if (savedInstanceState == null) {
@@ -321,6 +322,8 @@ fun SenderApp(
     val level = consoleLevel(target, consoleStatus)
     // The loader's last known state, to notice it coming up (a jailbreak just ran) for the console's automatic chain
     var loaderWasUp by remember(target) { mutableStateOf<Boolean?>(null) }
+    // "Tell me when it comes online" for this console (the address dialog has the switch)
+    var onlineOn by remember(active.id) { mutableStateOf(OnlineAlert.isOn(ctx, active.id)) }
     val checks = consoleStatus?.takeIf { it.target == target }?.checks ?: pendingChecks(target)
 
     // Checks the console now and then, but only while the app is on screen and an address is set. The loop ends
@@ -446,6 +449,8 @@ fun SenderApp(
         val up = s.checks.firstOrNull { it.label == loaderName }?.up ?: return@LaunchedEffect
         val was = loaderWasUp
         loaderWasUp = up
+        // The open app keeps the "online" state current, so the background check only speaks up about a real change
+        OnlineAlert.note(ctx, active, up || s.checks.firstOrNull { it.label == ftpName }?.up == true, notify = false)
         val chainId = AutoChain.get(ctx, active.id)
         if (chainId.isEmpty() || chainState.active) return@LaunchedEffect
         if (AutoChain.due(active.id, was, up, ctx = ctx)) {
@@ -737,6 +742,12 @@ fun SenderApp(
                     onCheck = {
                         showAddress = false
                         showDiagnose = true
+                    },
+                    alertOn = onlineOn,
+                    onAlert = { on ->
+                        onlineOn = on
+                        OnlineAlert.set(ctx, active.id, on)
+                        if (on) askNotificationsIfNeeded()
                     }
                 )
             }

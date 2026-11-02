@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus іде перед kstuff у цьому ланцюжку. Спершу завантажте kstuff.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr і etaHEN обидва в цьому ланцюжку. etaHEN має власний завантажувач, тож elfldr не потрібен і може конфліктувати.</string>
     <string name="saves_restore_locked">Збереження працюють лише на тій консолі й у тому обліковому записі, де їх створено. Копія з іншої консолі чи облікового запису не завантажиться.</string>
+    <string name="online_alert_switch">Повідомити, коли з\'явиться в мережі</string>
+    <string name="online_alert_detail">Bento перевіряє щоп\'ятнадцять хвилин, навіть коли закритий, і опитує лише цю консоль у вашій мережі.</string>
+    <string name="online_channel">Консоль у мережі</string>
+    <string name="online_title">%1$s у мережі</string>
+    <string name="online_text">Тепер вона відповідає у вашій мережі. Торкніться, щоб відкрити Bento.</string>
 </resources>

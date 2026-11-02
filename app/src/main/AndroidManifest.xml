@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Keeps the "console is online" check scheduled after the phone restarts -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <!-- Keeps the processor and the Wi-Fi radio awake while a long transfer runs with the screen off -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
@@ -33,6 +35,12 @@
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
+
+        <!-- Looks every 15 minutes whether a console with "Tell me when it comes online" started answering -->
+        <service
+            android:name=".OnlineJob"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <service
             android:name=".TransferService"

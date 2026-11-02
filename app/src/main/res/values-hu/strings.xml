@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">A láncban a ShadowMountPlus a kstuff előtt van. Előbb a kstuffot töltsd be.</string>
     <string name="chainorder_elfldr_with_etahen">Az elfldr és az etaHEN is szerepel a láncban. Az etaHEN saját betöltővel jön, így az elfldr nem kell, és ütközhet.</string>
     <string name="saves_restore_locked">A mentések csak azon a konzolon és fiókon működnek, amely létrehozta őket. Más konzolról vagy fiókról származó biztonsági mentés nem töltődik be.</string>
+    <string name="online_alert_switch">Szólj, ha elérhető lesz</string>
+    <string name="online_alert_detail">A Bento 15 percenként ellenőriz, bezárva is, és csak ezt a konzolt kérdezi a hálózatodon.</string>
+    <string name="online_channel">Konzol elérhető</string>
+    <string name="online_title">%1$s elérhető</string>
+    <string name="online_text">Most válaszol a hálózatodon. Koppints a Bento megnyitásához.</string>
 </resources>

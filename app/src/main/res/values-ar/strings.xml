@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">يأتي ShadowMountPlus قبل kstuff في هذه السلسلة. حمّل kstuff أولًا.</string>
     <string name="chainorder_elfldr_with_etahen">كل من elfldr و etaHEN في هذه السلسلة. يأتي etaHEN بمُحمّله الخاص، لذا لا حاجة إلى elfldr وقد يتعارض.</string>
     <string name="saves_restore_locked">لا تعمل الحفظات إلا على الجهاز والحساب اللذين أنشآها. لن تُحمَّل نسخة احتياطية من جهاز أو حساب آخر.</string>
+    <string name="online_alert_switch">أخبرني عندما يصبح متصلًا</string>
+    <string name="online_alert_detail">يتحقق Bento كل 15 دقيقة حتى وهو مغلق، ولا يسأل إلا هذا الجهاز على شبكتك.</string>
+    <string name="online_channel">الجهاز متصل</string>
+    <string name="online_title">‏%1$s متصل</string>
+    <string name="online_text">يستجيب الآن على شبكتك. اضغط لفتح Bento.</string>
 </resources>

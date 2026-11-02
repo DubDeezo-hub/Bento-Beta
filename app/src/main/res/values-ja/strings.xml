@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">このチェーンでは ShadowMountPlus が kstuff より前にあります。先に kstuff を読み込んでください。</string>
     <string name="chainorder_elfldr_with_etahen">elfldr と etaHEN が両方このチェーンにあります。etaHEN は独自のローダーを持つため elfldr は不要で、競合することがあります。</string>
     <string name="saves_restore_locked">セーブデータは作成した本体とアカウントでしか使えません。別の本体やアカウントのバックアップは読み込めません。</string>
+    <string name="online_alert_switch">オンラインになったら知らせる</string>
+    <string name="online_alert_detail">Bento は閉じていても 15 分ごとに確認し、あなたのネットワーク上のこの本体だけに問い合わせます。</string>
+    <string name="online_channel">本体がオンライン</string>
+    <string name="online_title">%1$s がオンラインです</string>
+    <string name="online_text">ネットワークで応答しています。タップして Bento を開きます。</string>
 </resources>

@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus je v tej verigi pred kstuff. Najprej naložite kstuff.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr in etaHEN sta oba v tej verigi. etaHEN ima svoj nalagalnik, zato elfldr ni potreben in lahko povzroči spor.</string>
     <string name="saves_restore_locked">Shranjene igre delujejo le na konzoli in računu, ki sta jih ustvarila. Varnostna kopija z druge konzole ali računa se ne bo naložila.</string>
+    <string name="online_alert_switch">Obvesti me, ko bo na spletu</string>
+    <string name="online_alert_detail">Bento preverja vsakih 15 minut, tudi ko je zaprt, in sprašuje le to konzolo v vašem omrežju.</string>
+    <string name="online_channel">Konzola na spletu</string>
+    <string name="online_title">%1$s je na spletu</string>
+    <string name="online_text">Zdaj se odziva v vašem omrežju. Tapnite, da odprete Bento.</string>
 </resources>

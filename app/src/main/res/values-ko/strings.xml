@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">이 체인에서 ShadowMountPlus가 kstuff보다 앞에 있습니다. kstuff를 먼저 로드하세요.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr과 etaHEN이 모두 이 체인에 있습니다. etaHEN은 자체 로더가 있어 elfldr은 필요 없고 충돌할 수 있습니다.</string>
     <string name="saves_restore_locked">세이브는 만든 콘솔과 계정에서만 작동합니다. 다른 콘솔이나 계정의 백업은 불러올 수 없습니다.</string>
+    <string name="online_alert_switch">온라인이 되면 알려 주기</string>
+    <string name="online_alert_detail">Bento는 닫혀 있어도 15분마다 확인하며, 내 네트워크의 이 콘솔에만 물어봅니다.</string>
+    <string name="online_channel">콘솔 온라인</string>
+    <string name="online_title">%1$s 온라인</string>
+    <string name="online_text">이제 네트워크에서 응답합니다. 탭하여 Bento를 여세요.</string>
 </resources>

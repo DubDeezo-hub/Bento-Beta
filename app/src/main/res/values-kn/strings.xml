@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">ಈ ಸರಣಿಯಲ್ಲಿ ShadowMountPlus kstuff ಗಿಂತ ಮೊದಲು ಬರುತ್ತದೆ. ಮೊದಲು kstuff ಲೋಡ್ ಮಾಡಿ.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr ಮತ್ತು etaHEN ಎರಡೂ ಈ ಸರಣಿಯಲ್ಲಿವೆ. etaHEN ತನ್ನದೇ ಲೋಡರ್ ತರುತ್ತದೆ, ಆದ್ದರಿಂದ elfldr ಅಗತ್ಯವಿಲ್ಲ ಮತ್ತು ಘರ್ಷಣೆಯಾಗಬಹುದು.</string>
     <string name="saves_restore_locked">ಸೇವ್‌ಗಳು ಅವುಗಳನ್ನು ಮಾಡಿದ ಕನ್ಸೋಲ್ ಮತ್ತು ಖಾತೆಯಲ್ಲಿ ಮಾತ್ರ ಕೆಲಸ ಮಾಡುತ್ತವೆ. ಬೇರೆ ಕನ್ಸೋಲ್ ಅಥವಾ ಖಾತೆಯ ಬ್ಯಾಕಪ್ ಲೋಡ್ ಆಗುವುದಿಲ್ಲ.</string>
+    <string name="online_alert_switch">ಆನ್‌ಲೈನ್ ಬಂದಾಗ ನನಗೆ ತಿಳಿಸಿ</string>
+    <string name="online_alert_detail">Bento ಮುಚ್ಚಿದ್ದರೂ ಪ್ರತಿ 15 ನಿಮಿಷಕ್ಕೆ ಪರಿಶೀಲಿಸುತ್ತದೆ, ಮತ್ತು ನಿಮ್ಮ ನೆಟ್‌ವರ್ಕ್‌ನಲ್ಲಿ ಈ ಕನ್ಸೋಲ್ ಅನ್ನು ಮಾತ್ರ ಕೇಳುತ್ತದೆ.</string>
+    <string name="online_channel">ಕನ್ಸೋಲ್ ಆನ್‌ಲೈನ್</string>
+    <string name="online_title">%1$s ಆನ್‌ಲೈನ್‌ನಲ್ಲಿದೆ</string>
+    <string name="online_text">ಅದು ಈಗ ನಿಮ್ಮ ನೆಟ್‌ವರ್ಕ್‌ನಲ್ಲಿ ಉತ್ತರಿಸುತ್ತಿದೆ. Bento ತೆರೆಯಲು ಟ್ಯಾಪ್ ಮಾಡಿ.</string>
 </resources>

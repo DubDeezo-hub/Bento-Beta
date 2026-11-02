@@ -37,6 +37,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
+import androidx.compose.material3.Switch
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -246,7 +247,9 @@ fun ConsoleEditDialog(
     onFind: () -> Unit,
     onClose: () -> Unit,
     type: ConsoleType = ConsoleType.PS5,
-    onCheck: (() -> Unit)? = null
+    onCheck: (() -> Unit)? = null,
+    alertOn: Boolean = false,
+    onAlert: ((Boolean) -> Unit)? = null
 ) {
     AlertDialog(
         onDismissRequest = onClose,
@@ -261,6 +264,16 @@ fun ConsoleEditDialog(
                 Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                     TextButton(onClick = onFind) { Text(str(R.string.find_button, type.model)) }
                     if (onCheck != null && host.isNotBlank()) TextButton(onClick = onCheck) { Text(str(R.string.diag_button)) }
+                }
+                // A notification when this console starts answering (after a jailbreak), even while Bento is closed
+                if (onAlert != null && host.isNotBlank()) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(str(R.string.online_alert_switch), style = MaterialTheme.typography.bodyMedium)
+                            Text(str(R.string.online_alert_detail), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        }
+                        Switch(checked = alertOn, onCheckedChange = onAlert)
+                    }
                 }
             }
         },

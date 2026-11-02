@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus је у овом ланцу пре kstuff-а. Прво учитајте kstuff.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr и etaHEN су оба у овом ланцу. etaHEN доноси сопствени учитавач, па elfldr није потребан и може доћи до сукоба.</string>
     <string name="saves_restore_locked">Сачувано ради само на конзоли и налогу који су то направили. Резервна копија са друге конзоле или налога неће се учитати.</string>
+    <string name="online_alert_switch">Јави ми кад буде на мрежи</string>
+    <string name="online_alert_detail">Bento проверава на сваких 15 минута, чак и затворен, и пита само ову конзолу на вашој мрежи.</string>
+    <string name="online_channel">Конзола на мрежи</string>
+    <string name="online_title">%1$s је на мрежи</string>
+    <string name="online_text">Сада одговара на вашој мрежи. Додирните да отворите Bento.</string>
 </resources>

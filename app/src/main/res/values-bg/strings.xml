@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus е преди kstuff в тази верига. Заредете първо kstuff.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr и etaHEN са и двата в тази верига. etaHEN носи собствен зареждач, затова elfldr не е нужен и може да влезе в конфликт.</string>
     <string name="saves_restore_locked">Записите работят само на конзолата и акаунта, които са ги създали. Резервно копие от друга конзола или акаунт няма да се зареди.</string>
+    <string name="online_alert_switch">Кажи ми, когато се появи онлайн</string>
+    <string name="online_alert_detail">Bento проверява на всеки 15 минути, дори когато е затворен, и пита само тази конзола във вашата мрежа.</string>
+    <string name="online_channel">Конзолата е онлайн</string>
+    <string name="online_title">%1$s е онлайн</string>
+    <string name="online_text">Вече отговаря във вашата мрежа. Докоснете, за да отворите Bento.</string>
 </resources>

@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus on selles ahelas enne kstuff\'i. Lae kõigepealt kstuff.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr ja etaHEN on mõlemad selles ahelas. etaHEN\'il on oma laadur, nii et elfldr pole vajalik ja võib tekitada konflikti.</string>
     <string name="saves_restore_locked">Salvestused töötavad ainult konsoolis ja kontol, mis need tegi. Teise konsooli või konto varukoopia ei lae.</string>
+    <string name="online_alert_switch">Anna teada, kui see võrku tuleb</string>
+    <string name="online_alert_detail">Bento kontrollib iga 15 minuti järel ka suletuna ja küsib ainult seda konsooli sinu võrgus.</string>
+    <string name="online_channel">Konsool võrgus</string>
+    <string name="online_title">%1$s on võrgus</string>
+    <string name="online_text">See vastab nüüd sinu võrgus. Puuduta, et Bento avada.</string>
 </resources>

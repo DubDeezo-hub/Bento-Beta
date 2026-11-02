@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">Το ShadowMountPlus προηγείται του kstuff σε αυτήν την αλυσίδα. Φορτώστε πρώτα το kstuff.</string>
     <string name="chainorder_elfldr_with_etahen">Το elfldr και το etaHEN είναι και τα δύο στην αλυσίδα. Το etaHEN φέρνει δικό του loader, οπότε το elfldr δεν χρειάζεται και μπορεί να έρθει σε σύγκρουση.</string>
     <string name="saves_restore_locked">Τα αποθηκευμένα λειτουργούν μόνο στην κονσόλα και τον λογαριασμό που τα δημιούργησαν. Αντίγραφο από άλλη κονσόλα ή λογαριασμό δεν θα φορτώσει.</string>
+    <string name="online_alert_switch">Ειδοποίησέ με όταν συνδεθεί</string>
+    <string name="online_alert_detail">Το Bento ελέγχει κάθε 15 λεπτά, ακόμη και κλειστό, και ρωτά μόνο αυτήν την κονσόλα στο δίκτυό σας.</string>
+    <string name="online_channel">Κονσόλα σε σύνδεση</string>
+    <string name="online_title">Το %1$s είναι σε σύνδεση</string>
+    <string name="online_text">Απαντά τώρα στο δίκτυό σας. Πατήστε για να ανοίξει το Bento.</string>
 </resources>

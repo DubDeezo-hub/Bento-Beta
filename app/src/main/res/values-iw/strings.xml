@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">‏ShadowMountPlus מופיע לפני kstuff בשרשרת הזו. טענו קודם את kstuff.</string>
     <string name="chainorder_elfldr_with_etahen">גם elfldr וגם etaHEN נמצאים בשרשרת הזו. ל-etaHEN יש טוען משלו, לכן elfldr מיותר ועלול להתנגש.</string>
     <string name="saves_restore_locked">שמירות עובדות רק בקונסולה ובחשבון שיצרו אותן. גיבוי מקונסולה או מחשבון אחרים לא ייטען.</string>
+    <string name="online_alert_switch">תודיע לי כשהיא מתחברת</string>
+    <string name="online_alert_detail">‏Bento בודק כל 15 דקות, גם כשהוא סגור, ושואל רק את הקונסולה הזו ברשת שלך.</string>
+    <string name="online_channel">הקונסולה מחוברת</string>
+    <string name="online_title">‏%1$s מחוברת</string>
+    <string name="online_text">היא עונה עכשיו ברשת שלך. הקישו כדי לפתוח את Bento.</string>
 </resources>

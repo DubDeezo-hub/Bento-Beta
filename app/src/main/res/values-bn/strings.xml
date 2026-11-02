@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">এই চেইনে ShadowMountPlus kstuff-এর আগে আছে। আগে kstuff লোড করুন।</string>
     <string name="chainorder_elfldr_with_etahen">elfldr এবং etaHEN দুটোই এই চেইনে আছে। etaHEN নিজের লোডার নিয়ে আসে, তাই elfldr দরকার নেই এবং সংঘাত বাধাতে পারে।</string>
     <string name="saves_restore_locked">সেভ শুধু সেই কনসোল ও অ্যাকাউন্টেই কাজ করে যেখানে তৈরি হয়েছিল। অন্য কনসোল বা অ্যাকাউন্টের ব্যাকআপ লোড হবে না।</string>
+    <string name="online_alert_switch">অনলাইনে এলে আমাকে জানাও</string>
+    <string name="online_alert_detail">Bento বন্ধ থাকলেও প্রতি ১৫ মিনিটে দেখে, এবং শুধু আপনার নেটওয়ার্কের এই কনসোলকেই জিজ্ঞেস করে।</string>
+    <string name="online_channel">কনসোল অনলাইন</string>
+    <string name="online_title">%1$s অনলাইন</string>
+    <string name="online_text">এটি এখন আপনার নেটওয়ার্কে সাড়া দিচ্ছে। Bento খুলতে ট্যাপ করুন।</string>
 </resources>

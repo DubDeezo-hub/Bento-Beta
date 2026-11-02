@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">या साखळीत ShadowMountPlus kstuff आधी येते. आधी kstuff लोड करा.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr आणि etaHEN दोन्ही या साखळीत आहेत. etaHEN स्वतःचा लोडर आणते, त्यामुळे elfldr ची गरज नाही आणि संघर्ष होऊ शकतो.</string>
     <string name="saves_restore_locked">सेव्ह फक्त ते बनवणाऱ्या कन्सोल आणि खात्यावरच चालतात. दुसऱ्या कन्सोल किंवा खात्याचा बॅकअप लोड होणार नाही.</string>
+    <string name="online_alert_switch">ऑनलाइन आल्यावर मला सांगा</string>
+    <string name="online_alert_detail">Bento बंद असतानाही दर 15 मिनिटांनी तपासते, आणि फक्त तुमच्या नेटवर्कवरील याच कन्सोलला विचारते.</string>
+    <string name="online_channel">कन्सोल ऑनलाइन</string>
+    <string name="online_title">%1$s ऑनलाइन आहे</string>
+    <string name="online_text">ते आता तुमच्या नेटवर्कवर उत्तर देत आहे. Bento उघडण्यासाठी टॅप करा.</string>
 </resources>

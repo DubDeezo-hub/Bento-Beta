@@ -741,13 +741,13 @@ PY
       if wait_fmt 30 "$(ui string saves_backup_queued)"; then
         pass "a game's save folder is backed up to the phone"
       else
-        soft "save backup" "no \"on their way\" message. Seen: $(ui texts "$XML" 2> /dev/null)"
+        fail "save backup" "no \"on their way\" message. Seen: $(ui texts "$XML" 2> /dev/null)"
       fi
     else
-      soft "save backup" "no backup button for the save. Seen: $(ui texts "$XML" 2> /dev/null)"
+      fail "save backup" "no backup button for the save. Seen: $(ui texts "$XML" 2> /dev/null)"
     fi
   else
-    soft "save backup" "the pretend game's save did not show. Seen: $(ui texts "$XML" 2> /dev/null)"
+    fail "save backup" "the pretend game's save did not show. Seen: $(ui texts "$XML" 2> /dev/null)"
   fi
   shot "fake-saves"
   # Back to the folder view, so later visits to Files start where they expect

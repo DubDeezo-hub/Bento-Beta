@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">Šioje grandinėje ShadowMountPlus yra prieš kstuff. Pirma įkelkite kstuff.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr ir etaHEN abu yra šioje grandinėje. etaHEN turi savo įkėliklį, todėl elfldr nereikalingas ir gali konfliktuoti.</string>
     <string name="saves_restore_locked">Išsaugojimai veikia tik tame pulte ir paskyroje, kurie juos sukūrė. Kito pulto ar paskyros atsarginė kopija neįsikels.</string>
+    <string name="online_alert_switch">Pranešk, kai prisijungs</string>
+    <string name="online_alert_detail">Bento tikrina kas 15 minučių, net uždarytas, ir klausia tik šio pulto jūsų tinkle.</string>
+    <string name="online_channel">Pultas prisijungęs</string>
+    <string name="online_title">%1$s prisijungęs</string>
+    <string name="online_text">Dabar atsako jūsų tinkle. Palieskite, kad atidarytumėte Bento.</string>
 </resources>

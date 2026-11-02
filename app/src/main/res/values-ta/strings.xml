@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">இந்தச் சங்கிலியில் ShadowMountPlus kstuff-க்கு முன் உள்ளது. முதலில் kstuff ஏற்றவும்.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr மற்றும் etaHEN இரண்டும் இந்தச் சங்கிலியில் உள்ளன. etaHEN தனது சொந்த ஏற்றியைக் கொண்டுவருகிறது, எனவே elfldr தேவையில்லை, மோதலும் ஏற்படலாம்.</string>
     <string name="saves_restore_locked">சேமிப்புகள் அவற்றை உருவாக்கிய கன்சோல் மற்றும் கணக்கில் மட்டுமே செயல்படும். வேறு கன்சோல் அல்லது கணக்கின் காப்புப் பிரதி ஏறாது.</string>
+    <string name="online_alert_switch">ஆன்லைனில் வந்தால் சொல்</string>
+    <string name="online_alert_detail">Bento மூடியிருந்தாலும் ஒவ்வொரு 15 நிமிடமும் சரிபார்க்கும், உங்கள் நெட்வொர்க்கில் இந்தக் கன்சோலிடம் மட்டுமே கேட்கும்.</string>
+    <string name="online_channel">கன்சோல் ஆன்லைன்</string>
+    <string name="online_title">%1$s ஆன்லைனில் உள்ளது</string>
+    <string name="online_text">இப்போது உங்கள் நெட்வொர்க்கில் பதிலளிக்கிறது. Bento-ஐத் திறக்கத் தட்டவும்.</string>
 </resources>

@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">اس چین میں ShadowMountPlus، kstuff سے پہلے ہے۔ پہلے kstuff لوڈ کریں۔</string>
     <string name="chainorder_elfldr_with_etahen">‏elfldr اور etaHEN دونوں اس چین میں ہیں۔ etaHEN اپنا لوڈر خود لاتا ہے، اس لیے elfldr کی ضرورت نہیں اور ٹکراؤ ہو سکتا ہے۔</string>
     <string name="saves_restore_locked">سیو صرف اسی کنسول اور اکاؤنٹ پر چلتے ہیں جس نے انہیں بنایا۔ کسی دوسرے کنسول یا اکاؤنٹ کا بیک اپ لوڈ نہیں ہوگا۔</string>
+    <string name="online_alert_switch">آن لائن آنے پر مجھے بتائیں</string>
+    <string name="online_alert_detail">‏Bento بند ہونے پر بھی ہر 15 منٹ دیکھتا ہے، اور صرف آپ کے نیٹ ورک پر اسی کنسول سے پوچھتا ہے۔</string>
+    <string name="online_channel">کنسول آن لائن</string>
+    <string name="online_title">‏%1$s آن لائن ہے</string>
+    <string name="online_text">یہ اب آپ کے نیٹ ورک پر جواب دے رہا ہے۔ Bento کھولنے کے لیے ٹیپ کریں۔</string>
 </resources>

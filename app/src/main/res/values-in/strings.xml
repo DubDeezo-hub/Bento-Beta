@@ -1176,4 +1176,9 @@
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus berada sebelum kstuff di rantai ini. Muat kstuff dulu.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr dan etaHEN sama-sama ada di rantai ini. etaHEN membawa loader sendiri, jadi elfldr tidak diperlukan dan bisa berbenturan.</string>
     <string name="saves_restore_locked">Simpanan hanya berfungsi di konsol dan akun yang membuatnya. Cadangan dari konsol atau akun lain tidak akan termuat.</string>
+    <string name="online_alert_switch">Beri tahu saat online</string>
+    <string name="online_alert_detail">Bento memeriksa setiap 15 menit, bahkan saat ditutup, dan hanya menanyai konsol ini di jaringan Anda.</string>
+    <string name="online_channel">Konsol online</string>
+    <string name="online_title">%1$s sedang online</string>
+    <string name="online_text">Sekarang menjawab di jaringan Anda. Ketuk untuk membuka Bento.</string>
 </resources>
