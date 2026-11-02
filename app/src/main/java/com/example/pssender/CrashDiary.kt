@@ -61,6 +61,12 @@ object SendLog {
     fun clear() = synchronized(sends) { sends.clear() }
 }
 
+/** What every payload that went out is noted for: the double-load warning and the crash diary. */
+fun notePayloadSent(host: String, name: String) {
+    ReloadGuard.noteSent(host, name)
+    SendLog.note(host, name)
+}
+
 object CrashDiary {
     private const val DIR = "crash-diary"
 

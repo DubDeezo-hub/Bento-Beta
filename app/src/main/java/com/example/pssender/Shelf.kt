@@ -300,7 +300,7 @@ fun PayloadTab(
                             status = AppText.get(R.string.payload_sending, item.name)
                             scope.launch {
                                 val sent = sendPayloadReply(File(shelfDir(ctx), item.name), host.trim(), port.trim().toInt())
-                                if (sent.ok) { ReloadGuard.noteSent(host, item.name); SendLog.note(host, item.name) }
+                                if (sent.ok) notePayloadSent(host, item.name)
                                 buzz(view, sent.ok)
                                 status = AppText.get(R.string.payload_result, item.name, sent.text)
                             }
@@ -350,7 +350,9 @@ fun PayloadTab(
                     status = AppText.get(R.string.status_sending)
                     scope.launch {
                         val sent = sendPayloadUri(ctx.contentResolver, picked, host.trim(), port.trim().toInt())
-                        if (sent.ok) ReloadGuard.noteSent(host, name)
+                        // Like a send from the shelf: remembered for the double-load warning and the crash diary, and a buzz
+                        if (sent.ok) notePayloadSent(host, name)
+                        buzz(view, sent.ok)
                         status = sent.text
                     }
                 }
