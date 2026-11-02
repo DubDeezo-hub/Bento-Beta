@@ -23,6 +23,10 @@
 
     <!-- header and bottom bar -->
     <string name="credit_line">作者：%1$s</string>
+    <string name="nav_home">首頁</string>
+    <string name="nav_more">更多</string>
+    <string name="home_quick_send">快速傳送</string>
+    <string name="home_on_console">主機上</string>
     <string name="nav_install">安裝</string>
     <string name="nav_payload">Payload</string>
     <string name="nav_upload">上傳</string>

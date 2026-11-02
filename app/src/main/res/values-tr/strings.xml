@@ -23,6 +23,10 @@
 
     <!-- header and bottom bar -->
     <string name="credit_line">%1$s tarafından</string>
+    <string name="nav_home">Ana sayfa</string>
+    <string name="nav_more">Daha fazla</string>
+    <string name="home_quick_send">Hızlı gönder</string>
+    <string name="home_on_console">Konsolda</string>
     <string name="nav_install">Kur</string>
     <string name="nav_payload">Payload</string>
     <string name="nav_upload">Yükle</string>

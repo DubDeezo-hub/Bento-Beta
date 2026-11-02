@@ -23,6 +23,10 @@
 
     <!-- header and bottom bar -->
     <string name="credit_line">%1$s നിർമ്മിച്ചത്</string>
+    <string name="nav_home">ഹോം</string>
+    <string name="nav_more">കൂടുതൽ</string>
+    <string name="home_quick_send">വേഗത്തിൽ അയയ്ക്കുക</string>
+    <string name="home_on_console">കൺസോളിൽ</string>
     <string name="nav_install">ഇൻസ്റ്റാൾ</string>
     <string name="nav_payload">Payload</string>
     <string name="nav_upload">അപ്‌ലോഡ്</string>

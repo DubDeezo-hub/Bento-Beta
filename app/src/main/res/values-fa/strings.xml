@@ -23,6 +23,10 @@
 
     <!-- header and bottom bar -->
     <string name="credit_line">توسط %1$s</string>
+    <string name="nav_home">خانه</string>
+    <string name="nav_more">بیشتر</string>
+    <string name="home_quick_send">ارسال سریع</string>
+    <string name="home_on_console">روی کنسول</string>
     <string name="nav_install">نصب</string>
     <string name="nav_payload">‏Payload</string>
     <string name="nav_upload">آپلود</string>

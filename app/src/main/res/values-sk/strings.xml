@@ -23,6 +23,10 @@
 
     <!-- header and bottom bar -->
     <string name="credit_line">autor: %1$s</string>
+    <string name="nav_home">Domov</string>
+    <string name="nav_more">Ďalšie</string>
+    <string name="home_quick_send">Rýchle odoslanie</string>
+    <string name="home_on_console">Na konzole</string>
     <string name="nav_install">Inštalovať</string>
     <string name="nav_payload">Payload</string>
     <string name="nav_upload">Nahrať</string>

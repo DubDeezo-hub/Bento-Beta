@@ -23,6 +23,10 @@
 
     <!-- header and bottom bar -->
     <string name="credit_line">avtor: %1$s</string>
+    <string name="nav_home">Domov</string>
+    <string name="nav_more">Več</string>
+    <string name="home_quick_send">Hitro pošiljanje</string>
+    <string name="home_on_console">Na konzoli</string>
     <string name="nav_install">Namesti</string>
     <string name="nav_payload">Payload</string>
     <string name="nav_upload">Naloži</string>

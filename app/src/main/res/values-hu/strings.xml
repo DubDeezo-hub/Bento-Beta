@@ -23,6 +23,10 @@
 
     <!-- header and bottom bar -->
     <string name="credit_line">készítette: %1$s</string>
+    <string name="nav_home">Kezdőlap</string>
+    <string name="nav_more">Továbbiak</string>
+    <string name="home_quick_send">Gyors küldés</string>
+    <string name="home_on_console">A konzolon</string>
     <string name="nav_install">Telepítés</string>
     <string name="nav_payload">Payload</string>
     <string name="nav_upload">Feltöltés</string>

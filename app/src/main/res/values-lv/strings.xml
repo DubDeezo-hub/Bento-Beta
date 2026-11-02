@@ -23,6 +23,10 @@
 
     <!-- header and bottom bar -->
     <string name="credit_line">autors: %1$s</string>
+    <string name="nav_home">Sākums</string>
+    <string name="nav_more">Vairāk</string>
+    <string name="home_quick_send">Ātrā sūtīšana</string>
+    <string name="home_on_console">Konsolē</string>
     <string name="nav_install">Instalēt</string>
     <string name="nav_payload">Payload</string>
     <string name="nav_upload">Sūtīt</string>

@@ -23,6 +23,10 @@
 
     <!-- header and bottom bar -->
     <string name="credit_line">作者：%1$s</string>
+    <string name="nav_home">ホーム</string>
+    <string name="nav_more">その他</string>
+    <string name="home_quick_send">クイック送信</string>
+    <string name="home_on_console">本体内</string>
     <string name="nav_install">インストール</string>
     <string name="nav_payload">ペイロード</string>
     <string name="nav_upload">アップロード</string>

@@ -212,3 +212,30 @@ val MemoryIcon: ImageVector by lazy {
         close()
     }
 }
+
+/** A house: the Home screen. */
+val HomeIcon: ImageVector by lazy {
+    outlineIcon("Home") {
+        moveTo(3.5f, 10.5f)
+        lineTo(12f, 3.5f)
+        lineTo(20.5f, 10.5f)
+        lineTo(20.5f, 20f)
+        lineTo(14.5f, 20f)
+        lineTo(14.5f, 14f)
+        lineTo(9.5f, 14f)
+        lineTo(9.5f, 20f)
+        lineTo(3.5f, 20f)
+        close()
+    }
+}
+
+/** Three dots in a row: More (the web browser, consoles and the app's settings). */
+val MoreIcon: ImageVector by lazy {
+    outlineIcon("More") {
+        for (x in listOf(5f, 12f, 19f)) {
+            moveTo(x - 0.6f, 12f)
+            arcTo(0.6f, 0.6f, 0f, true, true, x + 0.6f, 12f)
+            arcTo(0.6f, 0.6f, 0f, true, true, x - 0.6f, 12f)
+        }
+    }
+}

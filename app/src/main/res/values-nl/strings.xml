@@ -23,6 +23,10 @@
 
     <!-- header and bottom bar -->
     <string name="credit_line">door %1$s</string>
+    <string name="nav_home">Start</string>
+    <string name="nav_more">Meer</string>
+    <string name="home_quick_send">Snel versturen</string>
+    <string name="home_on_console">Op de console</string>
     <string name="nav_install">Installeer</string>
     <string name="nav_payload">Payload</string>
     <string name="nav_upload">Upload</string>

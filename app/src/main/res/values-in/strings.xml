@@ -23,6 +23,10 @@
 
     <!-- header and bottom bar -->
     <string name="credit_line">oleh %1$s</string>
+    <string name="nav_home">Beranda</string>
+    <string name="nav_more">Lainnya</string>
+    <string name="home_quick_send">Kirim cepat</string>
+    <string name="home_on_console">Di konsol</string>
     <string name="nav_install">Instal</string>
     <string name="nav_payload">Payload</string>
     <string name="nav_upload">Unggah</string>

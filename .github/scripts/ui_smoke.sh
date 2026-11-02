@@ -109,9 +109,9 @@ tap_text() { # taps the lowest thing on screen that shows one of the texts
   adb shell input tap "$1" "$2"
 }
 
-NAV_KEYS="nav_install nav_payload nav_upload nav_files nav_web nav_memory"
+NAV_KEYS="nav_home nav_payload nav_files nav_memory nav_more"
 
-# The six names on the bottom bar, in the language of the folder given (default English)
+# The five names on the bottom bar (the round buttons carry them for screen readers), in the language of the folder given
 nav_label() { ui string "$1" "${2:-values}" || ui string "$1"; }
 
 bar_visible() { # [values folder]: the screen is in $XML (dump first)
@@ -230,7 +230,7 @@ if dump && tap_text "$(ui string welcome_go)"; then
 else
   soft "welcome page" "no welcome page on the first start (an older build?). Seen: $(ui texts "$XML" 2> /dev/null)"
 fi
-healthy "the app starts and shows its six tabs"
+healthy "the app starts and shows its five places"
 shot "01-start"
 
 # The "Version x is available" banner: this build has a small version number, so a published release is newer
@@ -258,12 +258,14 @@ fi
 
 tab_keys() { # what each tab shows on a fresh install (any of these texts will do)
   case "$1" in
-    nav_install) echo "install_links_label install_paste install_port_label" ;;
+    nav_home) echo "home_quick_send payload_send console_change_ip" ;;
+    nav_install) echo "install_links_label install_paste install_port_label tip_install_links_title" ;;
     nav_payload) echo "payload_shelf_title payload_loader_port store_open" ;;
     nav_upload) echo "ftp_port ftp_user ftp_password upload_choose upload_start upload_help sync_title" ;;
-    nav_files) echo "files_ftp_settings files_refresh files_need_ip files_up files_view_apps" ;;
+    nav_files) echo "files_ftp_settings files_refresh files_need_ip files_up files_view_apps files_view_browse" ;;
     nav_web) echo "web_add web_bookmarks web_find web_reload" ;;
     nav_memory) echo "memory_connect memory_port memory_intro" ;;
+    nav_more) echo "nav_web etahen_title consoles_title language_title" ;;
   esac
 }
 
@@ -313,6 +315,40 @@ for key in $NAV_KEYS; do
   visit_tab "$key" values ""
 done
 
+# What moved into the five places: uploading is in Files, installing from links on Home, the browser in More
+dump || true
+tap_text "$(nav_label nav_files)" || true
+sleep 3
+if dump && tap_text "$(ui string nav_upload)"; then
+  sleep 3
+  dump || true
+  if hit="$(content_visible nav_upload)"; then pass "Files switches to Upload (\"$hit\")"; else fail "Files switches to Upload" "Layout: $(ui layout "$XML" 2> /dev/null)"; fi
+  shot "files-upload"
+  dump && tap_text "$(ui string files_view_browse)" || true
+  sleep 2
+else
+  fail "Files has an Upload switch" "Seen: $(ui texts "$XML" 2> /dev/null)"
+fi
+dump || true
+tap_text "$(nav_label nav_home)" || true
+sleep 3
+found_install=""
+for _ in 1 2 3 4 5 6; do
+  if dump && content_visible nav_install > /dev/null; then found_install=1; break; fi
+  adb shell input swipe 160 460 160 200 400 > /dev/null 2>&1
+  sleep 1.5
+done
+if [ -n "$found_install" ]; then pass "Home has the install-from-links part"; else fail "Home has the install-from-links part" "Layout: $(ui layout "$XML" 2> /dev/null)"; fi
+shot "home-install"
+
+open_web() {
+  dump || true
+  tap_text "$(nav_label nav_more)" || true
+  sleep 3
+  dump && tap_text "$(ui string nav_web)" || true
+  sleep 3
+}
+
 # ---------------------------------------------------------------------------------------------
 # 4. Turning the phone, leaving and coming back, starting again
 # ---------------------------------------------------------------------------------------------
@@ -324,10 +360,8 @@ rotate() { # 0 = upright, 1 = on its side
 }
 
 echo "== turning, leaving, restarting"
-# The tour ends on the last tab (Memory); this part turns the Web tab
-dump || true
-tap_text "$(nav_label nav_web)" || true
-sleep 2
+# The tour ends on the last place (More); this part turns the web browser, which opens from there
+open_web
 adb logcat -c > /dev/null 2>&1
 rotate 1
 healthy "the Web tab on its side"
@@ -340,20 +374,22 @@ shot "web-landscape"
 rotate 0
 healthy "the Web tab upright again"
 
+adb shell input keyevent KEYCODE_BACK
+sleep 1
 dump || true
-tap_text "$(nav_label nav_install)" || true
+tap_text "$(nav_label nav_home)" || true
 sleep 2
 adb logcat -c > /dev/null 2>&1
 rotate 1
-healthy "the Install tab on its side"
-if hit="$(content_visible nav_install)"; then
-  pass "the Install tab still shows its own fields on its side (\"$hit\")"
+healthy "Home on its side"
+if hit="$(content_visible nav_home)"; then
+  pass "Home still shows its own things on its side (\"$hit\")"
 else
-  fail "the Install tab still shows its own fields on its side" "Layout: $(ui layout "$XML" 2> /dev/null)"
+  fail "Home still shows its own things on its side" "Layout: $(ui layout "$XML" 2> /dev/null)"
 fi
-shot "install-landscape"
+shot "home-landscape"
 rotate 0
-healthy "the Install tab upright again"
+healthy "Home upright again"
 
 # "Don't keep activities": the phone throws the screen away whenever the app is left, like a phone short on memory
 adb shell settings put global always_finish_activities 1 > /dev/null 2>&1
@@ -413,7 +449,7 @@ for tag in $(ui langs); do
   done
   [ -n "$missing" ] && problems="${problems}tab names not on screen:$missing. "
   # Right-to-left languages put the first tab on the right, the others on the left
-  first="$(ui find "$XML" "$(nav_label nav_install "$dir")")" && last="$(ui find "$XML" "$(nav_label nav_memory "$dir")")"
+  first="$(ui find "$XML" "$(nav_label nav_home "$dir")")" && last="$(ui find "$XML" "$(nav_label nav_more "$dir")")"
   if [ -n "$first" ] && [ -n "$last" ]; then
     fx="${first%% *}"
     lx="${last%% *}"
@@ -444,13 +480,13 @@ for tag in $(ui langs); do
       for k in $NAV_KEYS; do visit_tab "$k" "$dir" "[$tag] "; done
       # back to the first tab for the next language
       dump || true
-      tap_text "$(nav_label nav_install "$dir")" || true
+      tap_text "$(nav_label nav_home "$dir")" || true
       sleep 1
       ;;
   esac
 done
 if [ "$LANG_BAD" -eq 0 ]; then
-  pass "all $LANG_OK languages show the six tabs correctly (right order, nothing cut off, no crash)"
+  pass "all $LANG_OK languages show the five places correctly (right order, nothing cut off, no crash)"
 fi
 adb shell cmd locale set-app-locales "$PKG" --locales en > /dev/null 2>&1
 

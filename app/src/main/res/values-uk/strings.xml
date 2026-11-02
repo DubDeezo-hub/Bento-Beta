@@ -23,6 +23,10 @@
 
     <!-- header and bottom bar -->
     <string name="credit_line">автор: %1$s</string>
+    <string name="nav_home">Головна</string>
+    <string name="nav_more">Ще</string>
+    <string name="home_quick_send">Швидке надсилання</string>
+    <string name="home_on_console">На консолі</string>
     <string name="nav_install">Встановити</string>
     <string name="nav_payload">Пейлоад</string>
     <string name="nav_upload">Надсилання</string>

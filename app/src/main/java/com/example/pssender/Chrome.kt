@@ -41,6 +41,9 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -113,7 +116,7 @@ fun AppHeader(consoleName: String, accent: Color, onAbout: () -> Unit, onConsole
 
 /** One service on the console card: a light and its name. A filled light answers, a hollow one doesn't. */
 @Composable
-private fun ServicePill(check: ServiceCheck, level: ConsoleLevel, modifier: Modifier = Modifier) {
+internal fun ServicePill(check: ServiceCheck, level: ConsoleLevel, modifier: Modifier = Modifier) {
     val cs = MaterialTheme.colorScheme
     val sc = statusColors()
     val state: Boolean? = if (check.port == null) null else check.up
@@ -253,45 +256,44 @@ fun ConsoleEditDialog(
 /** One place the bottom bar can go to. [label] is the text of its name (an R.string value). */
 class NavItem(val label: Int, val icon: ImageVector)
 
-/** The bottom bar: one button per screen, the current one in the accent color. */
+/**
+ * The bottom bar: a floating pill of round buttons, one per screen. The current one is a red circle (red fading into
+ * black); the others are just their icon. Each button carries its screen's name for screen readers (and the tests).
+ */
 @Composable
 fun BottomBar(items: List<NavItem>, selected: Int, onSelect: (Int) -> Unit) {
     val cs = MaterialTheme.colorScheme
-    Column(modifier = Modifier.fillMaxWidth().background(cs.surfaceContainer)) {
-        Box(Modifier.fillMaxWidth().height(1.dp).background(cs.outlineVariant))
-        Row(modifier = Modifier.fillMaxWidth().padding(horizontal = 4.dp, vertical = 6.dp)) {
-            items.forEachIndexed { i, item ->
-                val on = i == selected
-                val tint = if (on) cs.primary else cs.onSurfaceVariant
-                Column(
-                    modifier = Modifier
-                        .weight(1f)
-                        .clip(RoundedCornerShape(16.dp))
-                        .selectable(selected = on, role = Role.Tab, onClick = { onSelect(i) })
-                        .padding(vertical = 4.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally
-                ) {
-                    Box(
-                        modifier = Modifier
-                            .clip(CircleShape)
-                            .background(if (on) cs.primary.copy(alpha = 0.16f) else Color.Transparent)
-                            .padding(horizontal = 18.dp, vertical = 4.dp)
-                    ) {
-                        Icon(item.icon, contentDescription = null, tint = tint, modifier = Modifier.size(24.dp))
-                    }
-                    Text(
-                        str(item.label),
-                        color = tint,
-                        fontSize = 12.sp,
-                        fontWeight = if (on) FontWeight.Medium else FontWeight.Normal,
-                        textAlign = TextAlign.Center,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
-                        modifier = Modifier.padding(horizontal = 2.dp)
-                    )
-                }
-            }
+    Box(modifier = Modifier.fillMaxWidth().padding(start = 16.dp, end = 16.dp, top = 6.dp, bottom = 12.dp)) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .shadow(14.dp, CircleShape, ambientColor = Color.Black, spotColor = Color.Black)
+                .clip(CircleShape)
+                .background(cs.surfaceContainer)
+                .padding(horizontal = 8.dp, vertical = 8.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            items.forEachIndexed { i, item -> RoundNavButton(item, i == selected) { onSelect(i) } }
         }
+    }
+}
+
+/** One round button of the bottom bar (and the side rail). */
+@Composable
+private fun RoundNavButton(item: NavItem, on: Boolean, onClick: () -> Unit) {
+    val cs = MaterialTheme.colorScheme
+    val label = str(item.label)
+    Box(
+        modifier = Modifier
+            .size(52.dp)
+            .clip(CircleShape)
+            .then(if (on) Modifier.background(bloodGradient) else Modifier)
+            .selectable(selected = on, role = Role.Tab, onClick = onClick)
+            .semantics { contentDescription = label },
+        contentAlignment = Alignment.Center
+    ) {
+        Icon(item.icon, contentDescription = null, tint = if (on) Color.White else cs.onSurfaceVariant, modifier = Modifier.size(24.dp))
     }
 }
 

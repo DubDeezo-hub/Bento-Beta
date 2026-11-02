@@ -23,6 +23,10 @@
 
     <!-- header and bottom bar -->
     <string name="credit_line">제작: %1$s</string>
+    <string name="nav_home">홈</string>
+    <string name="nav_more">더보기</string>
+    <string name="home_quick_send">빠른 보내기</string>
+    <string name="home_on_console">본체에 있는 것</string>
     <string name="nav_install">설치</string>
     <string name="nav_payload">페이로드</string>
     <string name="nav_upload">업로드</string>

@@ -23,6 +23,10 @@
 
     <!-- header and bottom bar -->
     <string name="credit_line">deur %1$s</string>
+    <string name="nav_home">Tuis</string>
+    <string name="nav_more">Meer</string>
+    <string name="home_quick_send">Vinnig stuur</string>
+    <string name="home_on_console">Op die konsole</string>
     <string name="nav_install">Installeer</string>
     <string name="nav_payload">Payload</string>
     <string name="nav_upload">Laai op</string>

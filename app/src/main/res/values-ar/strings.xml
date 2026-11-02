@@ -23,6 +23,10 @@
 
     <!-- header and bottom bar -->
     <string name="credit_line">بواسطة %1$s</string>
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_more">المزيد</string>
+    <string name="home_quick_send">إرسال سريع</string>
+    <string name="home_on_console">على الجهاز</string>
     <string name="nav_install">تثبيت</string>
     <string name="nav_payload">‏Payload</string>
     <string name="nav_upload">رفع</string>

@@ -23,6 +23,10 @@
 
     <!-- header and bottom bar -->
     <string name="credit_line">de %1$s</string>
+    <string name="nav_home">Acasă</string>
+    <string name="nav_more">Mai multe</string>
+    <string name="home_quick_send">Trimitere rapidă</string>
+    <string name="home_on_console">Pe consolă</string>
     <string name="nav_install">Instalare</string>
     <string name="nav_payload">Payload</string>
     <string name="nav_upload">Încărcare</string>

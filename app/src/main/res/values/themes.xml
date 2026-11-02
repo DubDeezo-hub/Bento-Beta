@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--
-        Light mode. The colors are the page color from Theme.kt, so the status bar, the navigation bar and the
-        first frame (before the screen is drawn) blend into the app instead of flashing white or purple.
+        Every phone setting. Bento is dark only (blood red and black, Theme.kt): the status bar takes the red glow's dark edge, the
+        navigation bar and the first frame the black page, so nothing flashes before the screen is drawn.
     -->
-    <style name="Theme.PSSender" parent="@android:style/Theme.Material.Light.NoActionBar">
-        <item name="android:windowBackground">#F4F6FB</item>
-        <item name="android:statusBarColor">#F4F6FB</item>
-        <item name="android:navigationBarColor">#F4F6FB</item>
-        <item name="android:windowLightStatusBar">true</item>
-        <item name="android:windowLightNavigationBar">true</item>
+    <style name="Theme.PSSender" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">#050304</item>
+        <item name="android:statusBarColor">#1A0206</item>
+        <item name="android:navigationBarColor">#050304</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
     </style>
 </resources>

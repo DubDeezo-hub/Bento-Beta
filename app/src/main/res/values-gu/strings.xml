@@ -23,6 +23,10 @@
 
     <!-- header and bottom bar -->
     <string name="credit_line">%1$s દ્વારા</string>
+    <string name="nav_home">હોમ</string>
+    <string name="nav_more">વધુ</string>
+    <string name="home_quick_send">ઝડપી મોકલો</string>
+    <string name="home_on_console">કન્સોલ પર</string>
     <string name="nav_install">ઇન્સ્ટૉલ</string>
     <string name="nav_payload">Payload</string>
     <string name="nav_upload">અપલોડ</string>

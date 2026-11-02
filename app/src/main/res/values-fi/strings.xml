@@ -23,6 +23,10 @@
 
     <!-- header and bottom bar -->
     <string name="credit_line">tekijä: %1$s</string>
+    <string name="nav_home">Koti</string>
+    <string name="nav_more">Lisää</string>
+    <string name="home_quick_send">Pikalähetys</string>
+    <string name="home_on_console">Konsolilla</string>
     <string name="nav_install">Asenna</string>
     <string name="nav_payload">Payload</string>
     <string name="nav_upload">Lähetys</string>

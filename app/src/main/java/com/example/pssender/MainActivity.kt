@@ -54,6 +54,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
@@ -67,9 +68,11 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-internal const val TAB_FILES = 3
-internal const val TAB_WEB = 4
-internal const val TAB_MEMORY = 5
+internal const val TAB_HOME = 0
+internal const val TAB_PAYLOADS = 1
+internal const val TAB_FILES = 2
+internal const val TAB_MEMORY = 3
+internal const val TAB_MORE = 4
 
 /** A screen lower than this (in dp) counts as short: a phone held sideways. */
 internal const val SHORT_SCREEN_DP = 480
@@ -90,14 +93,16 @@ internal const val AUTO_CHAIN_DELAY_MS = 3000L
 /** A transfer that ended longer ago than this no longer buzzes (for example when you open the app much later). */
 internal const val BUZZ_WINDOW_MS = 3000L
 
-/** The five screens, in the order of the bottom bar. The position is the tab number used below. */
+/**
+ * The five places, in the order of the bottom bar; the position is the tab number used below. Installing from links is
+ * on Home, uploading in Files, and the web browser in More.
+ */
 internal val NAV_ITEMS = listOf(
-    NavItem(R.string.nav_install, InstallIcon),
+    NavItem(R.string.nav_home, HomeIcon),
     NavItem(R.string.nav_payload, PayloadIcon),
-    NavItem(R.string.nav_upload, UploadIcon),
     NavItem(R.string.nav_files, FilesIcon),
-    NavItem(R.string.nav_web, WebIcon),
-    NavItem(R.string.nav_memory, MemoryIcon)
+    NavItem(R.string.nav_memory, MemoryIcon),
+    NavItem(R.string.nav_more, MoreIcon)
 )
 
 class MainActivity : ComponentActivity() {
@@ -218,6 +223,9 @@ fun SenderApp(
     var passwords by remember { mutableStateOf(mapOf<String, String>()) } // FTP passwords: not saved, kept for this session only
     var homeUrl by rememberPref("home_url_v2", DEFAULT_HOME)
     var tab by rememberSaveable { mutableStateOf(0) } // the open tab; it stays when the phone is turned or the screen is rebuilt
+    if (tab !in NAV_ITEMS.indices) tab = TAB_HOME // a number kept from before the bar had five places
+    var webOpen by rememberSaveable { mutableStateOf(false) } // the web browser, opened from More
+    var filesUpload by rememberSaveable { mutableStateOf(false) } // Files shows the upload screen instead of the folders
     var savedTabs by rememberSaveable { mutableStateOf("") } // the open browser tabs, written as text; they come back when the screen is rebuilt
     var linkMenu by remember { mutableStateOf<String?>(null) } // the web address of a link that was pressed for a while in the Web tab
     var pending by remember { mutableStateOf<PendingDownload?>(null) }
@@ -496,10 +504,13 @@ fun SenderApp(
         }
     }
 
-    BackHandler(enabled = tab == TAB_WEB && browser.backNeeded) { browser.back() }
+    val onWeb = tab == TAB_MORE && webOpen
+    // Back goes back in the browser first, then closes it (to More)
+    BackHandler(enabled = onWeb) { if (browser.backNeeded) browser.back() else webOpen = false }
 
     AppTheme(active.color) {
-        Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
+        // The red glow behind every screen (plain black with the black look on)
+        Surface(modifier = Modifier.fillMaxSize().background(pageBackground(AppLook.black)), color = Color.Transparent) {
             Column(modifier = Modifier.fillMaxSize()) {
                 AppHeader(active.name, accentColor(active.color), onAbout = { showAbout = true }) { showConsoles = true }
                 update?.takeIf { !shortScreen }?.let { u ->
@@ -515,12 +526,12 @@ fun SenderApp(
                 }
                 // A tablet (or a big phone on its side) gets the tabs down the left side and the transfers on the right
                 val mainPane: @Composable ColumnScope.() -> Unit = {
-                    // On the Web tab the page gets the room: the console card is left out there
-                    if (tab != TAB_WEB) ConsoleCard(
+                    // Home shows the console in its ring, and the web page and More need the room: the card is left out there
+                    if (tab != TAB_HOME && tab != TAB_MORE) ConsoleCard(
                         host = host.trim(),
                         level = level,
                         checks = checks,
-                        compact = tab == TAB_FILES || tab == TAB_WEB || tab == TAB_MEMORY || shortScreen, // these need the room, and so does a phone on its side
+                        compact = true,
                         onEdit = { showAddress = true },
                         modifier = Modifier.padding(horizontal = 16.dp),
                         onFind = { showFind = true },
@@ -528,11 +539,20 @@ fun SenderApp(
                         onCheck = { showDiagnose = true }
                     )
                     Column(
-                        modifier = Modifier.weight(1f).padding(start = 16.dp, top = if (tab == TAB_WEB) 4.dp else 12.dp, end = 16.dp, bottom = 4.dp),
+                        modifier = Modifier.weight(1f).padding(start = 16.dp, top = if (onWeb) 4.dp else 12.dp, end = 16.dp, bottom = 4.dp),
                         verticalArrangement = Arrangement.spacedBy(12.dp)
                     ) {
-                        when (tab) {
-                            TAB_FILES -> FilesTab(
+                        // Files: the console's folders, or uploading to it
+                        if (tab == TAB_FILES) {
+                            PillSwitch(listOf(str(R.string.files_view_browse), str(R.string.nav_upload)), if (filesUpload) 1 else 0) { filesUpload = it == 1 }
+                        }
+                        when {
+                            onWeb -> WebTab(
+                                browser, web.container, homeUrl,
+                                { allowedSites.add(siteOf(Uri.parse(it).host)); homeUrl = it },
+                                Modifier.weight(1f)
+                            )
+                            tab == TAB_FILES && !filesUpload -> FilesTab(
                                 model = files,
                                 scope = scope,
                                 settings = ftpSettings,
@@ -545,12 +565,7 @@ fun SenderApp(
                                 onStartMany = startTransfers,
                                 modifier = Modifier.weight(1f)
                             )
-                            TAB_WEB -> WebTab(
-                                browser, web.container, homeUrl,
-                                { allowedSites.add(siteOf(Uri.parse(it).host)); homeUrl = it },
-                                Modifier.weight(1f)
-                            )
-                            TAB_MEMORY -> MemoryTab(host, Modifier.weight(1f))
+                            tab == TAB_MEMORY -> MemoryTab(host, Modifier.weight(1f))
                             else -> {
                                 // The form tabs scroll, so nothing is cut off on small screens
                                 Column(
@@ -558,8 +573,22 @@ fun SenderApp(
                                     verticalArrangement = Arrangement.spacedBy(12.dp)
                                 ) {
                                     when (tab) {
-                                        0 -> InstallTab(host, active.installPort, { v -> updateActive { it.copy(installPort = v) } }, active.name, installLinks, changeInstallLinks, askNotificationsIfNeeded, active.type, ftpSettings)
-                                        1 -> PayloadTab(
+                                        TAB_HOME -> HomeTab(
+                                            host = host, level = level, checks = checks, type = active.type,
+                                            loaderPort = active.payloadPort, ftp = ftpSettings,
+                                            onEdit = { showAddress = true }, onFind = { showFind = true }, onCheck = { showDiagnose = true },
+                                            onOpenPayloads = { tab = TAB_PAYLOADS }
+                                        ) {
+                                            InstallTab(host, active.installPort, { v -> updateActive { it.copy(installPort = v) } }, active.name, installLinks, changeInstallLinks, askNotificationsIfNeeded, active.type, ftpSettings)
+                                        }
+                                        TAB_MORE -> MoreTab(
+                                            onWeb = { webOpen = true },
+                                            onUpload = { filesUpload = true; tab = TAB_FILES },
+                                            onEtaHen = if (ftpSettings != null) ({ showEtaHen = true }) else null,
+                                            onConsoles = { showConsoles = true },
+                                            onAbout = { showAbout = true }
+                                        )
+                                        TAB_PAYLOADS -> PayloadTab(
                                             host, active.payloadPort, { v -> updateActive { it.copy(payloadPort = v) } }, shelfVersion,
                                             chains = chains,
                                             chainBusy = chainState.active,

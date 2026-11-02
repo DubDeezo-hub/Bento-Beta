@@ -23,6 +23,10 @@
 
     <!-- header and bottom bar -->
     <string name="credit_line">autorius: %1$s</string>
+    <string name="nav_home">Pradžia</string>
+    <string name="nav_more">Daugiau</string>
+    <string name="home_quick_send">Greitas siuntimas</string>
+    <string name="home_on_console">Konsolėje</string>
     <string name="nav_install">Įdiegti</string>
     <string name="nav_payload">Payload</string>
     <string name="nav_upload">Įkelti</string>

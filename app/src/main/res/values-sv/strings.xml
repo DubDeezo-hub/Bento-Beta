@@ -23,6 +23,10 @@
 
     <!-- header and bottom bar -->
     <string name="credit_line">av %1$s</string>
+    <string name="nav_home">Hem</string>
+    <string name="nav_more">Mer</string>
+    <string name="home_quick_send">Snabbsändning</string>
+    <string name="home_on_console">På konsolen</string>
     <string name="nav_install">Installera</string>
     <string name="nav_payload">Payload</string>
     <string name="nav_upload">Ladda upp</string>

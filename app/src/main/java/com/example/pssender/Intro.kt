@@ -5,7 +5,6 @@ import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.requiredSize
@@ -39,8 +38,7 @@ private const val INTRO_HOLD_MS = 120L
 private const val INTRO_MS = 750
 
 /** The page colors of Theme.kt, which the launch screen uses too. */
-private val INTRO_DARK = Color(0xFF0E1320)
-private val INTRO_LIGHT = Color(0xFFF4F6FB)
+private val INTRO_DARK = Color(0xFF050304)
 
 @Composable
 fun IntroHost(play: Boolean, content: @Composable () -> Unit) {
@@ -55,7 +53,7 @@ fun IntroHost(play: Boolean, content: @Composable () -> Unit) {
     }
     val p = progress.value
     Box(
-        modifier = Modifier.fillMaxSize().background(if (isSystemInDarkTheme()) INTRO_DARK else INTRO_LIGHT)
+        modifier = Modifier.fillMaxSize().background(INTRO_DARK)
     ) {
         // The first screen comes in during the second part: it fades in, rising a little and growing to full size
         val c = ((p - 0.3f) / 0.7f).coerceIn(0f, 1f)

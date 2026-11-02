@@ -23,6 +23,10 @@
 
     <!-- header and bottom bar -->
     <string name="credit_line">bởi %1$s</string>
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_more">Thêm</string>
+    <string name="home_quick_send">Gửi nhanh</string>
+    <string name="home_on_console">Trên máy</string>
     <string name="nav_install">Cài đặt</string>
     <string name="nav_payload">Payload</string>
     <string name="nav_upload">Tải lên</string>
