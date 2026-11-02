@@ -1188,4 +1188,9 @@
     <string name="chain_safe_send">Güvenli modu gönder</string>
     <string name="chain_safe_missing_ps5">Güvenli mod için rafta kstuff ve etaHEN gerekir.</string>
     <string name="chain_safe_missing_ps4">Güvenli mod için rafta GoldHEN gerekir.</string>
+    <string name="shelf_version">Sürüm %1$s</string>
+    <string name="shelf_go_back">%1$s sürümüne dön</string>
+    <string name="shelf_go_back_note">Son güncellemeden önceki sürüm saklandı. Geri dönmek bunu kenara koyar, böylece yeniden değiştirebilirsiniz.</string>
+    <string name="shelf_switched">%1$s yeniden rafta (sürüm %2$s); zincirleriniz artık bunu kullanıyor.</string>
+    <string name="shelf_switch_failed">Sürüm değiştirilemedi.</string>
 </resources>

@@ -1188,4 +1188,9 @@
     <string name="chain_safe_send">பாதுகாப்பு முறையை அனுப்பு</string>
     <string name="chain_safe_missing_ps5">பாதுகாப்பு முறைக்கு அலமாரியில் kstuff, etaHEN தேவை.</string>
     <string name="chain_safe_missing_ps4">பாதுகாப்பு முறைக்கு அலமாரியில் GoldHEN தேவை.</string>
+    <string name="shelf_version">பதிப்பு %1$s</string>
+    <string name="shelf_go_back">%1$s-க்குத் திரும்பு</string>
+    <string name="shelf_go_back_note">கடைசிப் புதுப்பிப்புக்கு முந்தைய பதிப்பு வைக்கப்பட்டுள்ளது. திரும்பினால் இது ஒதுக்கி வைக்கப்படும், மீண்டும் மாற்றலாம்.</string>
+    <string name="shelf_switched">%1$s மீண்டும் அலமாரியில் (பதிப்பு %2$s); உங்கள் சங்கிலிகள் இப்போது அதைப் பயன்படுத்துகின்றன.</string>
+    <string name="shelf_switch_failed">பதிப்பை மாற்ற முடியவில்லை.</string>
 </resources>

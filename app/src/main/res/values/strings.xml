@@ -1193,4 +1193,9 @@
     <string name="chain_safe_send">Send safe mode</string>
     <string name="chain_safe_missing_ps5">Safe mode needs kstuff and etaHEN on the shelf.</string>
     <string name="chain_safe_missing_ps4">Safe mode needs GoldHEN on the shelf.</string>
+    <string name="shelf_version">Version %1$s</string>
+    <string name="shelf_go_back">Go back to %1$s</string>
+    <string name="shelf_go_back_note">The version before the last update was kept. Going back keeps this one aside, so you can switch again.</string>
+    <string name="shelf_switched">%1$s is on the shelf again (version %2$s); your chains use it now.</string>
+    <string name="shelf_switch_failed">Couldn\'t switch versions.</string>
 </resources>

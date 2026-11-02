@@ -1188,4 +1188,9 @@
     <string name="chain_safe_send">Wyślij tryb awaryjny</string>
     <string name="chain_safe_missing_ps5">Tryb awaryjny wymaga kstuff i etaHEN na półce.</string>
     <string name="chain_safe_missing_ps4">Tryb awaryjny wymaga GoldHEN na półce.</string>
+    <string name="shelf_version">Wersja %1$s</string>
+    <string name="shelf_go_back">Wróć do %1$s</string>
+    <string name="shelf_go_back_note">Wersja sprzed ostatniej aktualizacji została zachowana. Powrót odkłada tę na bok, więc możesz znów przełączyć.</string>
+    <string name="shelf_switched">%1$s znów jest na półce (wersja %2$s); Twoje łańcuchy teraz jej używają.</string>
+    <string name="shelf_switch_failed">Nie udało się przełączyć wersji.</string>
 </resources>

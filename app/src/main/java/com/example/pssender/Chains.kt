@@ -214,6 +214,9 @@ object AutoChain {
 object ChainStore {
     private const val KEY = "chains_v1"
 
+    /** Goes up when chains were changed from outside the chain editor (a payload renamed), so the screen reloads them. */
+    val changed = MutableStateFlow(0)
+
     private fun prefs(ctx: Context) = ctx.getSharedPreferences("settings", Context.MODE_PRIVATE)
 
     fun load(ctx: Context): List<Chain> = parseChains(prefs(ctx).getString(KEY, null))
@@ -221,7 +224,24 @@ object ChainStore {
     fun save(ctx: Context, list: List<Chain>) {
         prefs(ctx).edit().putString(KEY, chainsToJson(list)).apply()
     }
+
+    /** Chains that send [from] send [to] instead (a payload was updated or switched back to its earlier version). */
+    fun renamePayload(ctx: Context, from: String, to: String) {
+        val list = load(ctx)
+        val renamed = chainsWithPayloadRenamed(list, from, to)
+        if (renamed != list) {
+            save(ctx, renamed)
+            changed.update { it + 1 }
+        }
+    }
 }
+
+/** [chains] with every step that sends [from] sending [to] instead. */
+fun chainsWithPayloadRenamed(chains: List<Chain>, from: String, to: String): List<Chain> =
+    chains.map { c -> if (c.steps.none { it.payload == from }) c else c.copy(steps = c.steps.map { if (it.payload == from) it.copy(payload = to) else it }) }
+
+/** The folder a payload's earlier version is kept in: its store key, made safe as one folder name. */
+fun previousFolderName(key: String): String = key.map { if (it.isLetterOrDigit() || it in "-_.") it else '_' }.joinToString("").ifEmpty { "_" }
 
 // ---------------------------------------------------------------------------------------------
 // Running a chain

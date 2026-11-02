@@ -1188,4 +1188,9 @@
     <string name="chain_safe_send">Αποστολή ασφαλούς λειτουργίας</string>
     <string name="chain_safe_missing_ps5">Η ασφαλής λειτουργία χρειάζεται kstuff και etaHEN στο ράφι.</string>
     <string name="chain_safe_missing_ps4">Η ασφαλής λειτουργία χρειάζεται GoldHEN στο ράφι.</string>
+    <string name="shelf_version">Έκδοση %1$s</string>
+    <string name="shelf_go_back">Επιστροφή στην %1$s</string>
+    <string name="shelf_go_back_note">Η έκδοση πριν από την τελευταία ενημέρωση φυλάχτηκε. Η επιστροφή φυλάει αυτήν στην άκρη, ώστε να αλλάξετε ξανά.</string>
+    <string name="shelf_switched">Το %1$s είναι ξανά στο ράφι (έκδοση %2$s)· οι αλυσίδες σας το χρησιμοποιούν τώρα.</string>
+    <string name="shelf_switch_failed">Δεν ήταν δυνατή η αλλαγή έκδοσης.</string>
 </resources>

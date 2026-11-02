@@ -1188,4 +1188,9 @@
     <string name="chain_safe_send">안전 모드 보내기</string>
     <string name="chain_safe_missing_ps5">안전 모드에는 선반에 kstuff와 etaHEN이 있어야 합니다.</string>
     <string name="chain_safe_missing_ps4">안전 모드에는 선반에 GoldHEN이 있어야 합니다.</string>
+    <string name="shelf_version">버전 %1$s</string>
+    <string name="shelf_go_back">%1$s(으)로 되돌리기</string>
+    <string name="shelf_go_back_note">마지막 업데이트 전 버전을 보관해 두었습니다. 되돌리면 지금 것을 보관하므로 다시 바꿀 수 있습니다.</string>
+    <string name="shelf_switched">%1$s이(가) 다시 선반에 있습니다(버전 %2$s). 이제 체인이 이것을 사용합니다.</string>
+    <string name="shelf_switch_failed">버전을 바꿀 수 없습니다.</string>
 </resources>

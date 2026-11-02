@@ -1188,4 +1188,9 @@
     <string name="chain_safe_send">Saada turvarežiim</string>
     <string name="chain_safe_missing_ps5">Turvarežiim vajab riiulil kstuff\'i ja etaHEN-i.</string>
     <string name="chain_safe_missing_ps4">Turvarežiim vajab riiulil GoldHEN-i.</string>
+    <string name="shelf_version">Versioon %1$s</string>
+    <string name="shelf_go_back">Mine tagasi versioonile %1$s</string>
+    <string name="shelf_go_back_note">Viimasele uuendusele eelnenud versioon hoiti alles. Tagasi minnes hoitakse see kõrvale, nii et saad uuesti vahetada.</string>
+    <string name="shelf_switched">%1$s on taas riiulil (versioon %2$s); sinu ahelad kasutavad nüüd seda.</string>
+    <string name="shelf_switch_failed">Versiooni ei õnnestunud vahetada.</string>
 </resources>

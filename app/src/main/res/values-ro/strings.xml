@@ -1188,4 +1188,9 @@
     <string name="chain_safe_send">Trimite modul sigur</string>
     <string name="chain_safe_missing_ps5">Modul sigur are nevoie de kstuff și etaHEN pe raft.</string>
     <string name="chain_safe_missing_ps4">Modul sigur are nevoie de GoldHEN pe raft.</string>
+    <string name="shelf_version">Versiunea %1$s</string>
+    <string name="shelf_go_back">Revino la %1$s</string>
+    <string name="shelf_go_back_note">Versiunea de dinaintea ultimei actualizări a fost păstrată. Revenirea o pune deoparte pe aceasta, ca să poți schimba din nou.</string>
+    <string name="shelf_switched">%1$s este din nou pe raft (versiunea %2$s); lanțurile tale îl folosesc acum.</string>
+    <string name="shelf_switch_failed">Nu s-a putut schimba versiunea.</string>
 </resources>

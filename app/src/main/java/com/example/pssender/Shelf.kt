@@ -249,6 +249,22 @@ fun PayloadTab(
                         sha == checked.first -> Text(str(R.string.shelf_verified_by, checked.second), style = MaterialTheme.typography.bodySmall, color = statusColors().good)
                         else -> Text(str(R.string.shelf_changed), style = MaterialTheme.typography.bodySmall, color = statusColors().bad)
                     }
+                    // From the store: its version, and the one before it when that was kept (one tap to go back)
+                    val key = remember(item.name) { Store.keyOf(ctx, item.name) }
+                    if (key != null) {
+                        val tag = Store.installedTag(ctx, key)
+                        if (tag.isNotEmpty()) Text(str(R.string.shelf_version, tag), style = MaterialTheme.typography.bodySmall)
+                        if (Store.hasPrevious(ctx, key)) {
+                            val prev = Store.previousTag(ctx, key)
+                            OutlinedButton(onClick = {
+                                val now = Store.switchVersion(ctx, key)
+                                shelf = shelfList(shelfDir(ctx))
+                                details = null
+                                status = if (now != null) AppText.get(R.string.shelf_switched, now, prev) else AppText.get(R.string.shelf_switch_failed)
+                            }) { Text(str(R.string.shelf_go_back, prev)) }
+                            Text(str(R.string.shelf_go_back_note), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        }
+                    }
                 }
             },
             confirmButton = { TextButton(onClick = { details = null }) { Text(str(R.string.action_close)) } },

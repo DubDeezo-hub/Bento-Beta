@@ -1188,4 +1188,9 @@
     <string name="chain_safe_send">Пошаљи безбедни режим</string>
     <string name="chain_safe_missing_ps5">Безбедном режиму на полици требају kstuff и etaHEN.</string>
     <string name="chain_safe_missing_ps4">Безбедном режиму на полици треба GoldHEN.</string>
+    <string name="shelf_version">Верзија %1$s</string>
+    <string name="shelf_go_back">Врати на %1$s</string>
+    <string name="shelf_go_back_note">Верзија пре последњег ажурирања је сачувана. Враћање ову склања на страну, па можете поново да замените.</string>
+    <string name="shelf_switched">%1$s је поново на полици (верзија %2$s); ваши ланци сада користе њу.</string>
+    <string name="shelf_switch_failed">Није било могуће заменити верзију.</string>
 </resources>

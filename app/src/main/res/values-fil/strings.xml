@@ -1188,4 +1188,9 @@
     <string name="chain_safe_send">Ipadala ang safe mode</string>
     <string name="chain_safe_missing_ps5">Kailangan ng safe mode ang kstuff at etaHEN sa shelf.</string>
     <string name="chain_safe_missing_ps4">Kailangan ng safe mode ang GoldHEN sa shelf.</string>
+    <string name="shelf_version">Bersyon %1$s</string>
+    <string name="shelf_go_back">Bumalik sa %1$s</string>
+    <string name="shelf_go_back_note">Itinabi ang bersyon bago ang huling update. Ang pagbalik ay magtatabi rito, kaya puwede kang magpalit ulit.</string>
+    <string name="shelf_switched">Nasa shelf ulit ang %1$s (bersyon %2$s); ginagamit na ito ng mga chain mo.</string>
+    <string name="shelf_switch_failed">Hindi napalitan ang bersyon.</string>
 </resources>

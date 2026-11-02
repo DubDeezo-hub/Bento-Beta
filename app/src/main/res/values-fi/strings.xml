@@ -1188,4 +1188,9 @@
     <string name="chain_safe_send">Lähetä vikasietotila</string>
     <string name="chain_safe_missing_ps5">Vikasietotila tarvitsee hyllyltä kstuffin ja etaHENin.</string>
     <string name="chain_safe_missing_ps4">Vikasietotila tarvitsee hyllyltä GoldHENin.</string>
+    <string name="shelf_version">Versio %1$s</string>
+    <string name="shelf_go_back">Palaa versioon %1$s</string>
+    <string name="shelf_go_back_note">Viimeistä päivitystä edeltävä versio säilytettiin. Palaaminen säilyttää tämän sivussa, joten voit vaihtaa taas.</string>
+    <string name="shelf_switched">%1$s on taas hyllyssä (versio %2$s); ketjusi käyttävät sitä nyt.</string>
+    <string name="shelf_switch_failed">Versiota ei voitu vaihtaa.</string>
 </resources>

@@ -1188,4 +1188,9 @@
     <string name="chain_safe_send">ਸੁਰੱਖਿਅਤ ਮੋਡ ਭੇਜੋ</string>
     <string name="chain_safe_missing_ps5">ਸੁਰੱਖਿਅਤ ਮੋਡ ਲਈ ਸ਼ੈਲਫ਼ \'ਤੇ kstuff ਅਤੇ etaHEN ਚਾਹੀਦੇ ਹਨ।</string>
     <string name="chain_safe_missing_ps4">ਸੁਰੱਖਿਅਤ ਮੋਡ ਲਈ ਸ਼ੈਲਫ਼ \'ਤੇ GoldHEN ਚਾਹੀਦਾ ਹੈ।</string>
+    <string name="shelf_version">ਸੰਸਕਰਣ %1$s</string>
+    <string name="shelf_go_back">%1$s \'ਤੇ ਵਾਪਸ ਜਾਓ</string>
+    <string name="shelf_go_back_note">ਆਖਰੀ ਅੱਪਡੇਟ ਤੋਂ ਪਹਿਲਾਂ ਵਾਲਾ ਸੰਸਕਰਣ ਰੱਖਿਆ ਗਿਆ ਹੈ। ਵਾਪਸ ਜਾਣ \'ਤੇ ਇਹ ਪਾਸੇ ਰੱਖਿਆ ਜਾਂਦਾ ਹੈ, ਤਾਂ ਜੋ ਤੁਸੀਂ ਫਿਰ ਬਦਲ ਸਕੋ।</string>
+    <string name="shelf_switched">%1$s ਫਿਰ ਸ਼ੈਲਫ਼ \'ਤੇ ਹੈ (ਸੰਸਕਰਣ %2$s); ਤੁਹਾਡੀਆਂ ਚੇਨਾਂ ਹੁਣ ਇਹ ਵਰਤਦੀਆਂ ਹਨ।</string>
+    <string name="shelf_switch_failed">ਸੰਸਕਰਣ ਬਦਲਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ।</string>
 </resources>

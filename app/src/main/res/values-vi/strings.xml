@@ -1188,4 +1188,9 @@
     <string name="chain_safe_send">Gửi chế độ an toàn</string>
     <string name="chain_safe_missing_ps5">Chế độ an toàn cần kstuff và etaHEN trên kệ.</string>
     <string name="chain_safe_missing_ps4">Chế độ an toàn cần GoldHEN trên kệ.</string>
+    <string name="shelf_version">Phiên bản %1$s</string>
+    <string name="shelf_go_back">Quay lại %1$s</string>
+    <string name="shelf_go_back_note">Đã giữ phiên bản trước lần cập nhật gần nhất. Quay lại sẽ cất bản này, nên bạn có thể đổi lần nữa.</string>
+    <string name="shelf_switched">%1$s đã trở lại kệ (phiên bản %2$s); các chuỗi của bạn giờ dùng nó.</string>
+    <string name="shelf_switch_failed">Không thể đổi phiên bản.</string>
 </resources>

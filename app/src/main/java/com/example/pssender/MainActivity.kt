@@ -244,6 +244,9 @@ fun SenderApp(
     val findAsked by FindConsole.asked.collectAsState()
     var shelfVersion by remember { mutableStateOf(0) }
     var chains by remember { mutableStateOf(ChainStore.load(ctx)) }
+    // A payload update or a switch back to its earlier version renames it in the saved chains: show them as saved
+    val chainsChanged by ChainStore.changed.collectAsState()
+    LaunchedEffect(chainsChanged) { if (chainsChanged > 0) chains = ChainStore.load(ctx) }
     val chainState by ChainRunner.state.collectAsState()
     var showQueue by remember { mutableStateOf(false) }
     var showLimit by remember { mutableStateOf(false) }

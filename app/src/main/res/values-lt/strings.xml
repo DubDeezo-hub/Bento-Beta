@@ -1188,4 +1188,9 @@
     <string name="chain_safe_send">Siųsti saugųjį režimą</string>
     <string name="chain_safe_missing_ps5">Saugiajam režimui lentynoje reikia kstuff ir etaHEN.</string>
     <string name="chain_safe_missing_ps4">Saugiajam režimui lentynoje reikia GoldHEN.</string>
+    <string name="shelf_version">Versija %1$s</string>
+    <string name="shelf_go_back">Grįžti į %1$s</string>
+    <string name="shelf_go_back_note">Versija prieš paskutinį atnaujinimą išsaugota. Grįžus ši bus padėta į šalį, tad galėsite vėl perjungti.</string>
+    <string name="shelf_switched">%1$s vėl lentynoje (versija %2$s); jūsų grandinės dabar naudoja ją.</string>
+    <string name="shelf_switch_failed">Nepavyko perjungti versijos.</string>
 </resources>

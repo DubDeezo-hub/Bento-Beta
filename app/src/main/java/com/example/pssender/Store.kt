@@ -168,8 +168,76 @@ object Store {
     /** Puts [added] in place of the version kept under [key] before (the shelf keeps one copy) and remembers it. */
     private fun replaceOld(ctx: Context, key: String, tag: String, added: ShelfAdded) {
         val before = installedFile(ctx, key)
-        if (before.isNotEmpty() && before != added.name) File(shelfDir(ctx), before).delete()
+        val beforeTag = installedTag(ctx, key)
+        val incoming = File(keyDir(ctx, key), INCOMING)
+        // The version that was on the shelf is kept aside (one per payload), so it can be taken back in one tap
+        if (before.isNotEmpty() && beforeTag.isNotEmpty() && beforeTag != tag) {
+            val slot = keyDir(ctx, key)
+            slot.listFiles()?.filter { it.name != INCOMING }?.forEach { it.delete() }
+            val kept = if (before != added.name) File(shelfDir(ctx), before).renameTo(File(slot, before))
+            else incoming.renameTo(File(slot, before)) // same name: the copy made before the download is the old one
+            if (kept) prefs(ctx).edit().putString("store_prev_tag_$key", beforeTag).putString("store_prev_file_$key", before).apply()
+        } else if (before.isNotEmpty() && before != added.name) {
+            File(shelfDir(ctx), before).delete()
+        }
+        incoming.delete()
+        // Chains that named the old file now name the new one, so they keep working after an update
+        if (before.isNotEmpty() && before != added.name) ChainStore.renamePayload(ctx, before, added.name)
         remember(ctx, key, tag, added.name)
+    }
+
+    // --- the previous version of each payload, kept aside after an update ---
+
+    private const val INCOMING = ".incoming"
+    private fun keyDir(ctx: Context, key: String) = File(File(ctx.filesDir, "payloads-previous"), previousFolderName(key)).also { it.mkdirs() }
+
+    /** Copies the version on the shelf aside before a download may overwrite it (a new version with the same name). */
+    private fun keepCurrent(ctx: Context, key: String) {
+        val now = installedFile(ctx, key)
+        val f = File(shelfDir(ctx), now)
+        if (now.isNotEmpty() && f.isFile) try { f.copyTo(File(keyDir(ctx, key), INCOMING), overwrite = true) } catch (_: Exception) {}
+    }
+
+    fun previousTag(ctx: Context, key: String): String = prefs(ctx).getString("store_prev_tag_$key", "") ?: ""
+
+    /** The store key ("owner/repo" or a list key) whose payload is [shelfName] on the shelf, or null. */
+    fun keyOf(ctx: Context, shelfName: String): String? =
+        prefs(ctx).all.entries.firstOrNull { it.key.startsWith("store_file_") && it.value == shelfName }?.key?.removePrefix("store_file_")
+
+    /** Whether the version before [key]'s current one is still kept. */
+    fun hasPrevious(ctx: Context, key: String): Boolean {
+        val file = prefs(ctx).getString("store_prev_file_$key", "") ?: ""
+        return file.isNotEmpty() && File(keyDir(ctx, key), file).isFile
+    }
+
+    /**
+     * Swaps [key]'s payload with the version kept before it: the kept one goes on the shelf, the current one is kept
+     * aside instead (so going forward again is one tap too). Gives the name now on the shelf, or null when it couldn't.
+     */
+    fun switchVersion(ctx: Context, key: String): String? {
+        val p = prefs(ctx)
+        val prevFile = p.getString("store_prev_file_$key", "") ?: ""
+        val prevTag = p.getString("store_prev_tag_$key", "") ?: ""
+        val curFile = installedFile(ctx, key)
+        val curTag = installedTag(ctx, key)
+        val slot = keyDir(ctx, key)
+        val kept = File(slot, prevFile)
+        if (prevFile.isEmpty() || !kept.isFile) return null
+        val shelf = shelfDir(ctx)
+        val parked = File(slot, INCOMING)
+        val cur = File(shelf, curFile)
+        if (curFile.isNotEmpty() && cur.isFile && !cur.renameTo(parked)) return null
+        if (!kept.renameTo(File(shelf, prevFile))) {
+            parked.renameTo(cur) // put it back as it was
+            return null
+        }
+        if (parked.isFile) parked.renameTo(File(slot, curFile))
+        p.edit()
+            .putString("store_tag_$key", prevTag).putString("store_file_$key", prevFile)
+            .putString("store_prev_tag_$key", curTag).putString("store_prev_file_$key", curFile)
+            .apply()
+        if (curFile.isNotEmpty() && curFile != prevFile) ChainStore.renamePayload(ctx, curFile, prevFile)
+        return prevFile
     }
 
     /** The bytes at [url] (at most twice the shelf's limit). Blocking. */
@@ -214,6 +282,7 @@ object Store {
                 mismatch = true
                 continue
             }
+            keepCurrent(ctx, f.key)
             val added = shelfAdd(shelfDir(ctx), name, payload.inputStream())
             if (f.sha256.isNotEmpty()) ShelfChecks.markVerified(ctx, added.name, f.sha256, "PS5 Payloads Mirror")
             replaceOld(ctx, f.key, f.version.ifEmpty { f.updated }, added)
@@ -273,6 +342,7 @@ object Store {
             val len = c.contentLengthLong
             if (len > SHELF_MAX_BYTES * 2) throw ShelfTooLarge(SHELF_MAX_BYTES)
             val dir = shelfDir(ctx)
+            keepCurrent(ctx, e.repo)
             val added = c.inputStream.use { input ->
                 if (asset.name.endsWith(".zip", true)) {
                     val (name, bytes) = fromZip(input, e.file) ?: throw java.io.IOException(AppText.get(R.string.store_no_payload_in_zip))

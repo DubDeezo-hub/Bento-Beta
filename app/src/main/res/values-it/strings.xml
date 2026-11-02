@@ -1189,4 +1189,9 @@
     <string name="chain_safe_send">Invia modalità provvisoria</string>
     <string name="chain_safe_missing_ps5">La modalità provvisoria richiede kstuff ed etaHEN sullo scaffale.</string>
     <string name="chain_safe_missing_ps4">La modalità provvisoria richiede GoldHEN sullo scaffale.</string>
+    <string name="shelf_version">Versione %1$s</string>
+    <string name="shelf_go_back">Torna a %1$s</string>
+    <string name="shelf_go_back_note">La versione prima dell\'ultimo aggiornamento è stata conservata. Tornare indietro mette da parte questa, così puoi cambiare di nuovo.</string>
+    <string name="shelf_switched">%1$s è di nuovo sullo scaffale (versione %2$s); le tue catene ora lo usano.</string>
+    <string name="shelf_switch_failed">Impossibile cambiare versione.</string>
 </resources>

@@ -1189,4 +1189,9 @@
     <string name="chain_safe_send">Envoyer le mode sans échec</string>
     <string name="chain_safe_missing_ps5">Le mode sans échec a besoin de kstuff et d\'etaHEN sur l\'étagère.</string>
     <string name="chain_safe_missing_ps4">Le mode sans échec a besoin de GoldHEN sur l\'étagère.</string>
+    <string name="shelf_version">Version %1$s</string>
+    <string name="shelf_go_back">Revenir à %1$s</string>
+    <string name="shelf_go_back_note">La version d\'avant la dernière mise à jour a été gardée. Revenir met celle-ci de côté, vous pouvez donc rechanger.</string>
+    <string name="shelf_switched">%1$s est de nouveau sur l\'étagère (version %2$s) ; vos chaînes l\'utilisent maintenant.</string>
+    <string name="shelf_switch_failed">Impossible de changer de version.</string>
 </resources>

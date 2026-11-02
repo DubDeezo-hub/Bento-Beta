@@ -1188,4 +1188,9 @@
     <string name="chain_safe_send">Kirim mode aman</string>
     <string name="chain_safe_missing_ps5">Mode aman memerlukan kstuff dan etaHEN di rak.</string>
     <string name="chain_safe_missing_ps4">Mode aman memerlukan GoldHEN di rak.</string>
+    <string name="shelf_version">Versi %1$s</string>
+    <string name="shelf_go_back">Kembali ke %1$s</string>
+    <string name="shelf_go_back_note">Versi sebelum pembaruan terakhir disimpan. Kembali akan menyimpan yang ini, jadi Anda bisa beralih lagi.</string>
+    <string name="shelf_switched">%1$s ada di rak lagi (versi %2$s); rantai Anda kini memakainya.</string>
+    <string name="shelf_switch_failed">Tidak dapat beralih versi.</string>
 </resources>

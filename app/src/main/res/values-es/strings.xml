@@ -1189,4 +1189,9 @@
     <string name="chain_safe_send">Enviar modo seguro</string>
     <string name="chain_safe_missing_ps5">El modo seguro necesita kstuff y etaHEN en el estante.</string>
     <string name="chain_safe_missing_ps4">El modo seguro necesita GoldHEN en el estante.</string>
+    <string name="shelf_version">Versión %1$s</string>
+    <string name="shelf_go_back">Volver a %1$s</string>
+    <string name="shelf_go_back_note">Se guardó la versión anterior a la última actualización. Volver guarda esta aparte, así que puedes cambiar otra vez.</string>
+    <string name="shelf_switched">%1$s vuelve a estar en el estante (versión %2$s); tus cadenas ya lo usan.</string>
+    <string name="shelf_switch_failed">No se pudo cambiar de versión.</string>
 </resources>

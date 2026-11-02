@@ -1188,4 +1188,9 @@
     <string name="chain_safe_send">സുരക്ഷിത മോഡ് അയയ്ക്കുക</string>
     <string name="chain_safe_missing_ps5">സുരക്ഷിത മോഡിന് ഷെൽഫിൽ kstuff-ഉം etaHEN-ഉം വേണം.</string>
     <string name="chain_safe_missing_ps4">സുരക്ഷിത മോഡിന് ഷെൽഫിൽ GoldHEN വേണം.</string>
+    <string name="shelf_version">പതിപ്പ് %1$s</string>
+    <string name="shelf_go_back">%1$s-ലേക്ക് മടങ്ങുക</string>
+    <string name="shelf_go_back_note">അവസാന അപ്‌ഡേറ്റിന് മുമ്പുള്ള പതിപ്പ് സൂക്ഷിച്ചിട്ടുണ്ട്. മടങ്ങുമ്പോൾ ഇത് മാറ്റിവയ്ക്കും, വീണ്ടും മാറ്റാം.</string>
+    <string name="shelf_switched">%1$s വീണ്ടും ഷെൽഫിലുണ്ട് (പതിപ്പ് %2$s); നിങ്ങളുടെ ചെയിനുകൾ ഇപ്പോൾ അത് ഉപയോഗിക്കുന്നു.</string>
+    <string name="shelf_switch_failed">പതിപ്പ് മാറ്റാനായില്ല.</string>
 </resources>

@@ -1188,4 +1188,9 @@
     <string name="chain_safe_send">إرسال الوضع الآمن</string>
     <string name="chain_safe_missing_ps5">يحتاج الوضع الآمن إلى kstuff و etaHEN على الرف.</string>
     <string name="chain_safe_missing_ps4">يحتاج الوضع الآمن إلى GoldHEN على الرف.</string>
+    <string name="shelf_version">الإصدار %1$s</string>
+    <string name="shelf_go_back">العودة إلى %1$s</string>
+    <string name="shelf_go_back_note">احتُفظ بالإصدار السابق لآخر تحديث. العودة تحتفظ بهذا جانبًا، لتتمكن من التبديل مجددًا.</string>
+    <string name="shelf_switched">عاد %1$s إلى الرف (الإصدار %2$s)؛ سلاسلك تستخدمه الآن.</string>
+    <string name="shelf_switch_failed">تعذّر تبديل الإصدارات.</string>
 </resources>

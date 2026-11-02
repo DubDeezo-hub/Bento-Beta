@@ -1188,4 +1188,9 @@
     <string name="chain_safe_send">发送安全模式</string>
     <string name="chain_safe_missing_ps5">安全模式需要书架上有 kstuff 和 etaHEN。</string>
     <string name="chain_safe_missing_ps4">安全模式需要书架上有 GoldHEN。</string>
+    <string name="shelf_version">版本 %1$s</string>
+    <string name="shelf_go_back">退回 %1$s</string>
+    <string name="shelf_go_back_note">已保留上次更新前的版本。退回后会把当前版本保留起来，可以再换回来。</string>
+    <string name="shelf_switched">%1$s 已回到书架（版本 %2$s）；你的链现在使用它。</string>
+    <string name="shelf_switch_failed">无法切换版本。</string>
 </resources>

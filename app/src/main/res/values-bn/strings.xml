@@ -1188,4 +1188,9 @@
     <string name="chain_safe_send">নিরাপদ মোড পাঠান</string>
     <string name="chain_safe_missing_ps5">নিরাপদ মোডের জন্য শেলফে kstuff ও etaHEN দরকার।</string>
     <string name="chain_safe_missing_ps4">নিরাপদ মোডের জন্য শেলফে GoldHEN দরকার।</string>
+    <string name="shelf_version">সংস্করণ %1$s</string>
+    <string name="shelf_go_back">%1$s-এ ফিরে যান</string>
+    <string name="shelf_go_back_note">শেষ আপডেটের আগের সংস্করণ রাখা হয়েছে। ফিরে গেলে এটি আলাদা রাখা হবে, তাই আবার বদলাতে পারবেন।</string>
+    <string name="shelf_switched">%1$s আবার শেলফে (সংস্করণ %2$s); আপনার চেইন এখন এটি ব্যবহার করে।</string>
+    <string name="shelf_switch_failed">সংস্করণ বদলানো গেল না।</string>
 </resources>
