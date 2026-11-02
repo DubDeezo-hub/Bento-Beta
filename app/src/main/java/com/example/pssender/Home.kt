@@ -266,10 +266,50 @@ fun HomeTab(
             }
         }
         if (status.isNotEmpty()) Text(status, style = MaterialTheme.typography.bodySmall, color = cs.onSurfaceVariant)
+        // Newer versions of payloads on the shelf (checked when the app opens): a tap leads to Payloads, where they are
+        if (StoreUpdates.newer.isNotEmpty()) {
+            Text(
+                str(R.string.store_updates_out, StoreUpdates.newer.joinToString(", ")),
+                color = BLOOD_BRIGHT,
+                fontWeight = FontWeight.SemiBold,
+                style = MaterialTheme.typography.bodySmall,
+                modifier = Modifier.clip(CircleShape).clickable(onClick = onOpenPayloads).padding(vertical = 6.dp)
+            )
+        }
 
         val apps = ConsoleApps.apps
         if (apps.isNotEmpty()) {
             SectionTitle(str(R.string.home_on_console))
+            // Game updates, from the community patch lists (never Sony): the games with a newer patch get a red ring
+            val u = GameUpdates
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                Text(
+                    when {
+                        u.checking -> str(R.string.apps_updates_checking, u.done, u.total)
+                        u.results.isEmpty() -> str(R.string.apps_updates_hint)
+                        u.available > 0 -> str(R.string.apps_updates_found, u.available)
+                        else -> str(R.string.apps_updates_none)
+                    },
+                    style = MaterialTheme.typography.bodySmall,
+                    color = if (u.available > 0) BLOOD_BRIGHT else cs.onSurfaceVariant,
+                    modifier = Modifier.weight(1f)
+                )
+                if (ftp != null && !u.checking) {
+                    Box(
+                        modifier = Modifier
+                            .clip(CircleShape)
+                            .background(cs.surfaceContainer)
+                            .clickable {
+                                scope.launch {
+                                    val key = "${ftp.host}:${ftp.port}"
+                                    val patches = withContext(Dispatchers.IO) { try { ConsoleApps.patchVersions(ftp) } catch (_: Exception) { emptyMap() } }
+                                    GameUpdates.check(key, apps, patches, ConsoleFirmware.get(ctx, ActiveConsole.id), type == ConsoleType.PS5)
+                                }
+                            }
+                            .padding(horizontal = 16.dp, vertical = 10.dp)
+                    ) { Text(str(R.string.apps_updates_check), fontWeight = FontWeight.SemiBold, style = MaterialTheme.typography.labelLarge) }
+                }
+            }
             Row(horizontalArrangement = Arrangement.spacedBy(12.dp), modifier = Modifier.horizontalScroll(rememberScrollState())) {
                 apps.take(16).forEach { a -> GameCircle(a, GameUpdates.results[a.id] is UpdateState.Available) }
             }
