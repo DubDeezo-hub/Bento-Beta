@@ -93,8 +93,20 @@ jobs:
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
 
+      # A pretend console on this machine (fake_console.py), so the phone test can use the app for real: browse files,
+      # send a package link to the installer, connect the debugger. The emulator reaches this machine at 10.0.2.2.
+      - name: Start the pretend console
+        run: |
+          python3 -m pip install --quiet --user --break-system-packages pyftpdlib || sudo apt-get install -y -qq python3-pyftpdlib
+          mkdir -p ui-test-results
+          FAKE_FTP_ADDRESS=10.0.2.2 nohup python3 -u fake_console.py > ui-test-results/fake-console.log 2>&1 &
+          sleep 3
+          cat ui-test-results/fake-console.log
+
       - name: Run the app on a virtual phone
         uses: reactivecircus/android-emulator-runner@v2
+        env:
+          FAKE_CONSOLE_LOG: ${{ github.workspace }}/ui-test-results/fake-console.log
         with:
           api-level: 34
           target: google_apis

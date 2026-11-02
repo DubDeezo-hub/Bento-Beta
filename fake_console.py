@@ -29,6 +29,8 @@ It stands in for both consoles: a PS5 (etaHEN) and a PS4 (GoldHEN) reach the sam
   Cheat files : http://127.0.0.1:12800/cheats/ as the Memory tab's cheat source serves a cheat file for
                 Fake Game: "Infinite Health" stops the health from going down.
 Setup:  pkg install python && pip install pyftpdlib
+On an Android emulator (the phone test does this), run it on the computer with FAKE_FTP_ADDRESS=10.0.2.2 and use
+10.0.2.2 as the console's address in the app.
 """
 import http.client
 import ipaddress
@@ -925,6 +927,10 @@ def main():
     authorizer.add_anonymous(f"{BASE}/ftp", perm="elradfmwMT")
     handler = FTPHandler
     handler.authorizer = authorizer
+    # The address the FTP server tells the phone to fetch file lists and files from. Only needed when the phone
+    # reaches this machine under another address than the one it sees itself on (an Android emulator: 10.0.2.2)
+    if os.environ.get("FAKE_FTP_ADDRESS"):
+        handler.masquerade_address = os.environ["FAKE_FTP_ADDRESS"]
     print(f"Fake console running: install 12800, payload 9021/9090, ftp 2121, memory {DEBUG_PORT}, log {KLOG_PORT}. Ctrl+C to stop.", flush=True)
     FTPServer(("0.0.0.0", 2121), handler).serve_forever()
 

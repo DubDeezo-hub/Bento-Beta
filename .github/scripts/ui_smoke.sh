@@ -455,6 +455,153 @@ fi
 adb shell cmd locale set-app-locales "$PKG" --locales en > /dev/null 2>&1
 
 # ---------------------------------------------------------------------------------------------
+# 6. Using a pretend console (fake_console.py on the build machine, which the emulator reaches at 10.0.2.2)
+# ---------------------------------------------------------------------------------------------
+
+FAKE_LOG="${FAKE_CONSOLE_LOG:-}"
+FAKE_HOST=10.0.2.2
+
+# Waits until one of the texts is on screen (in $XML). Prints what it found.
+wait_text() { # seconds text...
+  local secs="$1" i
+  shift
+  for ((i = 0; i < secs; i += 2)); do
+    if dump && ui find "$XML" "$@" > /dev/null; then return 0; fi
+    sleep 2
+  done
+  return 1
+}
+
+wait_fmt() { # seconds format
+  local i
+  for ((i = 0; i < $1; i += 2)); do
+    if dump && ui findfmt "$XML" "$2" > /dev/null; then return 0; fi
+    sleep 2
+  done
+  return 1
+}
+
+wait_log() { # seconds text: waits for the pretend console to print a line with the text
+  local i
+  for ((i = 0; i < $1; i += 2)); do
+    grep -qF "$2" "$FAKE_LOG" 2> /dev/null && return 0
+    sleep 2
+  done
+  return 1
+}
+
+if [ -n "$FAKE_LOG" ] && [ -f "$FAKE_LOG" ] && grep -q "Fake console running" "$FAKE_LOG"; then
+  echo "== pretend console at $FAKE_HOST"
+  # A saved console pointing at it, written into the app's settings the way the app saves them (a debug build lets
+  # the test reach the app's own files). The app's other settings stay as they are.
+  adb shell am force-stop "$PKG"
+  adb shell run-as "$PKG" cat shared_prefs/settings.xml > "$OUT/settings-before.xml" 2> /dev/null || true
+  python3 -I - "$OUT/settings-before.xml" "$OUT/settings.xml" "$FAKE_HOST" << 'PY'
+import json, sys, xml.etree.ElementTree as ET
+src, dst, host = sys.argv[1:4]
+try:
+    root = ET.parse(src).getroot()
+    if root.tag != "map":
+        raise ValueError
+except Exception:
+    root = ET.Element("map")
+def put(kind, name, value):
+    for e in list(root):
+        if e.get("name") == name:
+            root.remove(e)
+    e = ET.SubElement(root, kind, name=name)
+    e.text = value
+console = {"id": "fake", "name": "Pretend PS5", "host": host, "installPort": "12800", "payloadPort": "9021",
+           "ftpPort": "2121", "ftpUser": "anonymous", "ftpDir": "/data", "color": 2, "type": "ps5"}
+put("string", "profiles_v1", json.dumps([console]))
+put("string", "active_profile", "fake")
+put("string", "debug_port", "7744")
+ET.ElementTree(root).write(dst, encoding="utf-8", xml_declaration=True)
+PY
+  adb push "$OUT/settings.xml" /data/local/tmp/bento-settings.xml > /dev/null 2>&1
+  adb shell "cat /data/local/tmp/bento-settings.xml | run-as $PKG sh -c 'mkdir -p shared_prefs && cat > shared_prefs/settings.xml'"
+  if adb shell run-as "$PKG" cat shared_prefs/settings.xml 2> /dev/null | grep -q "$FAKE_HOST"; then
+    pass "a console at the pretend console's address is saved in the app"
+  else
+    fail "a console at the pretend console's address is saved in the app" "run-as could not write the settings"
+  fi
+  launch
+  healthy "the app starts with the pretend console selected"
+
+  # Files: the console's /data folder over FTP
+  dump || true
+  tap_text "$(nav_label nav_files)" || true
+  sleep 3
+  if ! wait_text 8 notes.txt sample.bin; then
+    dump && tap_text "$(ui string files_refresh)" || true
+  fi
+  if wait_text 20 notes.txt sample.bin; then
+    pass "Files shows the console's /data folder over FTP"
+  else
+    fail "Files shows the console's /data folder over FTP" "Seen: $(ui texts "$XML" 2> /dev/null)"
+    shot "fail-fake-files"
+  fi
+  shot "fake-files"
+
+  # Files > Games & apps: the installed games, read from the console over FTP
+  dump && tap_text "$(ui string files_view_apps)" || true
+  if wait_text 30 "Fake Game" "Fake Game (PS5)" CUSA01234 PPSA01234; then
+    pass "Games & apps lists the console's installed games"
+  else
+    fail "Games & apps lists the console's installed games" "Seen: $(ui texts "$XML" 2> /dev/null)"
+    shot "fail-fake-apps"
+  fi
+  shot "fake-apps"
+  healthy "the app is fine after browsing the console"
+
+  # Install: a link shared from a browser, sent to the console's installer
+  LINK="http://$FAKE_HOST:12800/sample.pkg"
+  adb logcat -c > /dev/null 2>&1
+  adb shell am start -a android.intent.action.SEND -t text/plain --es android.intent.extra.TEXT "$LINK" -n "$ACT" > /dev/null 2>&1
+  sleep 4
+  if wait_fmt 10 "$(ui string choose_install)"; then
+    pos="$(ui findfmt "$XML" "$(ui string choose_install)")"
+    # shellcheck disable=SC2086
+    set -- $pos
+    adb shell input tap "$1" "$2"
+    if wait_log 20 "[install/etaHEN] url=$LINK"; then
+      pass "a shared link reaches the console's installer"
+    else
+      fail "a shared link reaches the console's installer" "the pretend console got no install request. Its log: $(tail -5 "$FAKE_LOG" | tr '\n' ' ')"
+    fi
+    if wait_fmt 15 "$(ui string install_accepted)"; then
+      pass "the app says the installer accepted it"
+    else
+      fail "the app says the installer accepted it" "Seen: $(ui texts "$XML" 2> /dev/null)"
+    fi
+    shot "fake-install"
+  else
+    fail "a shared link offers to send it to the installer" "Seen: $(ui texts "$XML" 2> /dev/null)"
+  fi
+  healthy "the app is fine after sending a link"
+
+  # Memory: connect the debugger
+  dump || true
+  tap_text "$(nav_label nav_memory)" || true
+  sleep 3
+  if wait_text 10 "$(ui string memory_connect)"; then
+    tap_text "$(ui string memory_connect)" || true
+    if wait_fmt 20 "$(ui string memory_connected)"; then
+      pass "Memory connects to the console's debugger"
+    else
+      fail "Memory connects to the console's debugger" "Seen: $(ui texts "$XML" 2> /dev/null)"
+      shot "fail-fake-memory"
+    fi
+  else
+    fail "Memory shows its Connect button" "Seen: $(ui texts "$XML" 2> /dev/null)"
+  fi
+  shot "fake-memory"
+  healthy "the app is fine after connecting the debugger"
+else
+  soft "pretend console" "not running (FAKE_CONSOLE_LOG unset or the console did not start), so nothing was used for real"
+fi
+
+# ---------------------------------------------------------------------------------------------
 # 6. Wrap up
 # ---------------------------------------------------------------------------------------------
 
