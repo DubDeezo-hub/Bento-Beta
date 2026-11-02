@@ -1176,4 +1176,5 @@
     <string name="chainorder_etahen_before_kstuff">etaHEN kommer före kstuff i den här kedjan. Läs in kstuff först, sedan etaHEN.</string>
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus kommer före kstuff i den här kedjan. Läs in kstuff först.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr och etaHEN finns båda i den här kedjan. etaHEN har en egen inläsare, så elfldr behövs inte och kan krocka.</string>
+    <string name="saves_restore_locked">Sparfiler fungerar bara på konsolen och kontot som skapade dem. En säkerhetskopia från en annan konsol eller ett annat konto laddas inte.</string>
 </resources>

@@ -613,6 +613,8 @@ fun SavesView(
                     Text(str(R.string.saves_restore_text, a.phone.files.size, a.phone.name.ifEmpty { "?" }, name))
                     if (looksOther) Text(str(R.string.saves_restore_other, a.save.id), color = MaterialTheme.colorScheme.error, style = MaterialTheme.typography.bodySmall)
                     Text(str(R.string.saves_restore_warn), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    // Saves are encrypted for one console and one account: say so right where the restore is confirmed
+                    Text(str(R.string.saves_restore_locked), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             },
             confirmButton = {

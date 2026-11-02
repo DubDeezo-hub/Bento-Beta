@@ -1175,4 +1175,5 @@
     <string name="chainorder_etahen_before_kstuff">etaHEN berada sebelum kstuff di rantai ini. Muat kstuff dulu, baru etaHEN.</string>
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus berada sebelum kstuff di rantai ini. Muat kstuff dulu.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr dan etaHEN sama-sama ada di rantai ini. etaHEN membawa loader sendiri, jadi elfldr tidak diperlukan dan bisa berbenturan.</string>
+    <string name="saves_restore_locked">Simpanan hanya berfungsi di konsol dan akun yang membuatnya. Cadangan dari konsol atau akun lain tidak akan termuat.</string>
 </resources>

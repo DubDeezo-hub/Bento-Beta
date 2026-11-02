@@ -731,6 +731,28 @@ PY
     fail "zip download" "the console's top folder did not show. Seen: $(ui texts "$XML" 2> /dev/null)"
   fi
   shot "fake-zip"
+  # Saves: the pretend PS5 game's save folder is listed and backed up to the phone
+  files_folders
+  dump && tap_text "$(ui string files_view_saves)" || true
+  sleep 3
+  if wait_text 15 "Fake Game (PS5)" && tap_text "Fake Game (PS5)"; then
+    sleep 2
+    if wait_text 6 "$(ui string saves_backup)" && tap_text "$(ui string saves_backup)"; then
+      if wait_fmt 30 "$(ui string saves_backup_queued)"; then
+        pass "a game's save folder is backed up to the phone"
+      else
+        soft "save backup" "no \"on their way\" message. Seen: $(ui texts "$XML" 2> /dev/null)"
+      fi
+    else
+      soft "save backup" "no backup button for the save. Seen: $(ui texts "$XML" 2> /dev/null)"
+    fi
+  else
+    soft "save backup" "the pretend game's save did not show. Seen: $(ui texts "$XML" 2> /dev/null)"
+  fi
+  shot "fake-saves"
+  # Back to the folder view, so later visits to Files start where they expect
+  dump && tap_text "$(ui string files_view_browse)" || true
+  sleep 2
   healthy "the app is fine after the newer checks"
 else
   soft "pretend console" "not running (FAKE_CONSOLE_LOG unset or the console did not start), so nothing was used for real"

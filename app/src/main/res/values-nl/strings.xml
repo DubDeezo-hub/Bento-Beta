@@ -1176,4 +1176,5 @@
     <string name="chainorder_etahen_before_kstuff">etaHEN staat vóór kstuff in deze keten. Laad eerst kstuff, dan etaHEN.</string>
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus staat vóór kstuff in deze keten. Laad eerst kstuff.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr en etaHEN staan allebei in deze keten. etaHEN heeft een eigen loader, dus elfldr is niet nodig en kan botsen.</string>
+    <string name="saves_restore_locked">Opgeslagen spellen werken alleen op de console en het account die ze hebben gemaakt. Een back-up van een andere console of ander account laadt niet.</string>
 </resources>

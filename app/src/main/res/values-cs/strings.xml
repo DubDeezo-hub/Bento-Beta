@@ -1175,4 +1175,5 @@
     <string name="chainorder_etahen_before_kstuff">etaHEN je v tomto řetězci před kstuff. Načtěte nejdřív kstuff, pak etaHEN.</string>
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus je v tomto řetězci před kstuff. Načtěte nejdřív kstuff.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr i etaHEN jsou v tomto řetězci. etaHEN má vlastní zavaděč, takže elfldr není potřeba a může kolidovat.</string>
+    <string name="saves_restore_locked">Uložené pozice fungují jen na konzoli a účtu, které je vytvořily. Záloha z jiné konzole nebo účtu se nenačte.</string>
 </resources>

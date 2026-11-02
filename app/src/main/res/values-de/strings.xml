@@ -1177,4 +1177,5 @@
     <string name="chainorder_etahen_before_kstuff">etaHEN kommt in dieser Kette vor kstuff. Lade zuerst kstuff, dann etaHEN.</string>
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus kommt in dieser Kette vor kstuff. Lade zuerst kstuff.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr und etaHEN sind beide in dieser Kette. etaHEN bringt einen eigenen Loader mit, daher ist elfldr unnötig und kann kollidieren.</string>
+    <string name="saves_restore_locked">Spielstände funktionieren nur auf der Konsole und mit dem Konto, die sie erstellt haben. Eine Sicherung von einer anderen Konsole oder einem anderen Konto lädt nicht.</string>
 </resources>

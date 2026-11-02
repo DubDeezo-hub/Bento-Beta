@@ -1175,4 +1175,5 @@
     <string name="chainorder_etahen_before_kstuff">此链中 etaHEN 排在 kstuff 之前。请先加载 kstuff，再加载 etaHEN。</string>
     <string name="chainorder_shadow_before_kstuff">此链中 ShadowMountPlus 排在 kstuff 之前。请先加载 kstuff。</string>
     <string name="chainorder_elfldr_with_etahen">elfldr 和 etaHEN 都在此链中。etaHEN 自带加载器，因此不需要 elfldr，且可能冲突。</string>
+    <string name="saves_restore_locked">存档只能在创建它的主机和账号上使用。来自其他主机或账号的备份无法读取。</string>
 </resources>

@@ -1175,4 +1175,5 @@
     <string name="chainorder_etahen_before_kstuff">etaHEN on selles ahelas enne kstuff\'i. Lae kõigepealt kstuff, siis etaHEN.</string>
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus on selles ahelas enne kstuff\'i. Lae kõigepealt kstuff.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr ja etaHEN on mõlemad selles ahelas. etaHEN\'il on oma laadur, nii et elfldr pole vajalik ja võib tekitada konflikti.</string>
+    <string name="saves_restore_locked">Salvestused töötavad ainult konsoolis ja kontol, mis need tegi. Teise konsooli või konto varukoopia ei lae.</string>
 </resources>

@@ -1176,4 +1176,5 @@
     <string name="chainorder_etahen_before_kstuff">etaHEN vem antes de kstuff nesta cadeia. Carregue primeiro o kstuff e depois o etaHEN.</string>
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus vem antes de kstuff nesta cadeia. Carregue primeiro o kstuff.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr e etaHEN estão ambos nesta cadeia. O etaHEN traz o seu próprio carregador, por isso o elfldr não é necessário e pode entrar em conflito.</string>
+    <string name="saves_restore_locked">Os jogos guardados só funcionam na consola e na conta que os criaram. Uma cópia de outra consola ou conta não será carregada.</string>
 </resources>

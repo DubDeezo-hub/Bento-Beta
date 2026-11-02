@@ -763,6 +763,7 @@
     <string name="saves_restore_text">%1$d files from \"%2$s\" go into the save folder of %3$s. Files with the same name there are replaced.</string>
     <string name="saves_restore_other">That folder\'s name doesn\'t start with %1$s. Make sure it is a backup of this game.</string>
     <string name="saves_restore_warn">Close the game first. Back up the current save before you replace it.</string>
+    <string name="saves_restore_locked">Saves only work on the console and account that made them. A backup from another console or account will not load.</string>
     <string name="saves_restore_go">Put it back</string>
     <string name="saves_restoring">Getting the folders ready…</string>
     <string name="saves_restore_queued">%1$d files are on their way. Start the game when the transfer is done.</string>

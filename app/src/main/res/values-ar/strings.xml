@@ -1175,4 +1175,5 @@
     <string name="chainorder_etahen_before_kstuff">يأتي etaHEN قبل kstuff في هذه السلسلة. حمّل kstuff أولًا ثم etaHEN.</string>
     <string name="chainorder_shadow_before_kstuff">يأتي ShadowMountPlus قبل kstuff في هذه السلسلة. حمّل kstuff أولًا.</string>
     <string name="chainorder_elfldr_with_etahen">كل من elfldr و etaHEN في هذه السلسلة. يأتي etaHEN بمُحمّله الخاص، لذا لا حاجة إلى elfldr وقد يتعارض.</string>
+    <string name="saves_restore_locked">لا تعمل الحفظات إلا على الجهاز والحساب اللذين أنشآها. لن تُحمَّل نسخة احتياطية من جهاز أو حساب آخر.</string>
 </resources>

@@ -1175,4 +1175,5 @@
     <string name="chainorder_etahen_before_kstuff">etaHEN kom voor kstuff in hierdie ketting. Laai eers kstuff, dan etaHEN.</string>
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus kom voor kstuff in hierdie ketting. Laai eers kstuff.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr en etaHEN is albei in hierdie ketting. etaHEN bring sy eie laaier, so elfldr is nie nodig nie en kan bots.</string>
+    <string name="saves_restore_locked">Stoorlêers werk net op die konsole en rekening wat dit gemaak het. \'n Rugsteun van \'n ander konsole of rekening sal nie laai nie.</string>
 </resources>

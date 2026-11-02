@@ -1175,4 +1175,5 @@
     <string name="chainorder_etahen_before_kstuff">etaHEN е преди kstuff в тази верига. Заредете първо kstuff, после etaHEN.</string>
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus е преди kstuff в тази верига. Заредете първо kstuff.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr и etaHEN са и двата в тази верига. etaHEN носи собствен зареждач, затова elfldr не е нужен и може да влезе в конфликт.</string>
+    <string name="saves_restore_locked">Записите работят само на конзолата и акаунта, които са ги създали. Резервно копие от друга конзола или акаунт няма да се зареди.</string>
 </resources>

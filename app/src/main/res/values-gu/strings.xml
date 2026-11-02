@@ -1175,4 +1175,5 @@
     <string name="chainorder_etahen_before_kstuff">આ ચેઇનમાં etaHEN kstuff પહેલાં આવે છે. પહેલાં kstuff, પછી etaHEN લોડ કરો.</string>
     <string name="chainorder_shadow_before_kstuff">આ ચેઇનમાં ShadowMountPlus kstuff પહેલાં આવે છે. પહેલાં kstuff લોડ કરો.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr અને etaHEN બંને આ ચેઇનમાં છે. etaHEN પોતાનો લોડર લાવે છે, તેથી elfldr જરૂરી નથી અને ટકરાઈ શકે છે.</string>
+    <string name="saves_restore_locked">સેવ ફક્ત તે જ કન્સોલ અને એકાઉન્ટ પર ચાલે છે જેણે તેને બનાવ્યું. બીજા કન્સોલ કે એકાઉન્ટનો બેકઅપ લોડ નહીં થાય.</string>
 </resources>

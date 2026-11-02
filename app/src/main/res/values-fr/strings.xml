@@ -1176,4 +1176,5 @@
     <string name="chainorder_etahen_before_kstuff">etaHEN est avant kstuff dans cette chaîne. Chargez d\'abord kstuff, puis etaHEN.</string>
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus est avant kstuff dans cette chaîne. Chargez d\'abord kstuff.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr et etaHEN sont tous deux dans cette chaîne. etaHEN apporte son propre chargeur, donc elfldr est inutile et peut entrer en conflit.</string>
+    <string name="saves_restore_locked">Les sauvegardes ne fonctionnent que sur la console et le compte qui les ont créées. Une copie d\'une autre console ou d\'un autre compte ne se chargera pas.</string>
 </resources>

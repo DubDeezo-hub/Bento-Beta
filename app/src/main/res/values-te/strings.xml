@@ -1175,4 +1175,5 @@
     <string name="chainorder_etahen_before_kstuff">ఈ చెయిన్‌లో etaHEN kstuff కంటే ముందు ఉంది. ముందు kstuff, తర్వాత etaHEN లోడ్ చేయండి.</string>
     <string name="chainorder_shadow_before_kstuff">ఈ చెయిన్‌లో ShadowMountPlus kstuff కంటే ముందు ఉంది. ముందు kstuff లోడ్ చేయండి.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr మరియు etaHEN రెండూ ఈ చెయిన్‌లో ఉన్నాయి. etaHEN తన సొంత లోడర్‌ను తెస్తుంది, కాబట్టి elfldr అవసరం లేదు, ఘర్షణ కూడా కావచ్చు.</string>
+    <string name="saves_restore_locked">సేవ్‌లు వాటిని చేసిన కన్సోల్, ఖాతాలో మాత్రమే పనిచేస్తాయి. వేరే కన్సోల్ లేదా ఖాతా బ్యాకప్ లోడ్ కాదు.</string>
 </resources>

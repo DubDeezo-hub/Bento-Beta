@@ -1175,4 +1175,5 @@
     <string name="chainorder_etahen_before_kstuff">etaHEN kommer før kstuff i denne kjeden. Last kstuff først, så etaHEN.</string>
     <string name="chainorder_shadow_before_kstuff">ShadowMountPlus kommer før kstuff i denne kjeden. Last kstuff først.</string>
     <string name="chainorder_elfldr_with_etahen">elfldr og etaHEN er begge med i denne kjeden. etaHEN har sin egen laster, så elfldr er ikke nødvendig og kan skape konflikt.</string>
+    <string name="saves_restore_locked">Lagrede spill virker bare på konsollen og kontoen som laget dem. En sikkerhetskopi fra en annen konsoll eller konto lastes ikke.</string>
 </resources>
