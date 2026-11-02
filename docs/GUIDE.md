@@ -140,7 +140,7 @@ What the scan does and doesn't do:
 
 Tap the console name at the top right to open the switcher.
 
-- Each console is set as a **PS5 or a PS4** (the switch is in the console's editor) and keeps its own name (up to 16 characters), IP address, installer port, loader port, FTP port, FTP user, FTP start folder and one of six colors: blue, orange, green, pink, purple or teal. The installer and FTP ports default to 12800 and 2121; the loader port defaults to 9021 on a PS5 and 9090 on a PS4. The FTP user defaults to `anonymous` and the start folder to `/data`. Changing a console's type moves any port still left at the old default to the new default. The whole app takes the color of the selected console, and a running transfer says which console it belongs to.
+- Each console is set as a **PS5 or a PS4** (the switch is in the console's editor) and keeps its own name (up to 16 characters), IP address, installer port, loader port, FTP port, FTP user, FTP start folder and one of six colors: blue, orange, green, pink, purple or teal. The installer port defaults to 12800; the loader port to 9021 on a PS5 and 9090 on a PS4; the FTP port to 1337 on a PS5 (etaHEN's own FTP server, on by default) and 2121 on a PS4. Consoles saved before this default changed keep their own FTP port. The FTP user defaults to `anonymous` and the start folder to `/data`. Changing a console's type moves any port still left at the old default to the new default. The whole app takes the color of the selected console, and a running transfer says which console it belongs to.
 - You can add, rename, recolor and delete consoles (never the last one), and pick the app's **Language**, or open **About & backup**, from the same dialog.
 - Settings stay on the phone. The FTP password is not saved: it is kept in memory only, so it is forgotten when the app closes. The default login is `anonymous` with no password.
 
@@ -313,7 +313,7 @@ A cheat engine for games on a PS5 or a PS4. It talks to [ps5debug-NG](https://gi
 
 **Console log**
 
-- Shows the console's kernel log as it is written: ps5debug-NG serves it on port `3232` (the port can be changed). **Start**, **Stop**, **Pause** (the screen holds still while lines keep coming in), **Follow** (keeps the newest line in sight), a filter that shows only lines with the text you type, **Copy** and **Clear**. The last 4,000 lines are kept. This view works without connecting the debugger first.
+- Shows the console's kernel log as it is written: ps5debug-NG serves it on port `3232`, and etaHEN on `9081` when its Klog setting is on. When the one that is set doesn't answer, the other is tried (a port typed by hand is used as it is). **Start**, **Stop**, **Pause** (the screen holds still while lines keep coming in), **Follow** (keeps the newest line in sight), a filter that shows only lines with the text you type, **Copy** and **Clear**. The last 4,000 lines are kept. This view works without connecting the debugger first.
 
 **Learn**
 
@@ -448,7 +448,7 @@ Paths are relative to [`app/src/main/java/com/example/pssender/`](app/src/main/j
 - `Icons.kt`: the few icons, drawn in code so no icon library is needed.
 - `Memory.kt`: the Memory tab's screens: Scan, Cheats and Browse, and their dialogs (pointer paths, cheat file).
 - `Pointers.kt`: pointer paths: the backwards search from an address to the eboot, and following a path.
-- `Klog.kt`: the console log view (port 3232).
+- `Klog.kt`: the console log view (port 3232, or etaHEN's 9081).
 - `ConsoleMeta.kt`: reading `param.sfo`, `param.json` and the header of a PS4 package.
 - `ConsoleTools.kt`: the Files tab's Games & apps and Saves, the package check, and folder sync.
 - `Store.kt`: Get payloads: the payload lists, GitHub releases, zips, checksums, firmware notes, notices of new payloads and updates.
@@ -566,7 +566,7 @@ Beside the code: `AndroidManifest.xml` (permissions, services, the share-sheet e
 
 | What | Value |
 | --- | --- |
-| Installer, loader and FTP ports | 12800; loader 9021 (PS5) or 9090 (PS4); 2121 |
+| Installer, loader and FTP ports | 12800; loader 9021 (PS5) or 9090 (PS4); FTP 1337 (PS5) or 2121 (PS4) |
 | FTP login and start folder | `anonymous` (no password), `/data` |
 | Console check | every 6 s, 1.5 s per port |
 | Find my console | up to 2 networks of at most 254 addresses; 64 attempts at a time, 0.45 s each; ports: yours plus 12800, 9021, 9090, 1337, 2121 |

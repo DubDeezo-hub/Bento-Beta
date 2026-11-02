@@ -44,8 +44,8 @@ const val PROFILE_NAME_MAX = 16
 /**
  * Which console a saved console is: what it is called ([model]), the homebrew enabler that runs on it ([hen]), what its
  * package installer is called in the port field ([installerName]) and the ports its usual services listen on. A PS5 runs
- * etaHEN, which brings the installer and the loader; a PS4 runs GoldHEN (loader on 9090, FTP on 2121) and installs
- * packages through flatz's Remote Package Installer (RPI) on 12800.
+ * etaHEN, which brings the installer, the loader and its own FTP server (1337, on by default); a PS4 runs GoldHEN
+ * (loader on 9090, FTP on 2121) and installs packages through flatz's Remote Package Installer (RPI) on 12800.
  */
 enum class ConsoleType(
     val id: String,
@@ -56,7 +56,7 @@ enum class ConsoleType(
     val loaderPort: String,
     val ftpPort: String
 ) {
-    PS5("ps5", "PS5", "etaHEN", "etaHEN", "12800", "9021", "2121"),
+    PS5("ps5", "PS5", "etaHEN", "etaHEN", "12800", "9021", "1337"),
     PS4("ps4", "PS4", "GoldHEN", "RPI", "12800", "9090", "2121");
 
     companion object {
@@ -82,7 +82,8 @@ data class Profile(
     val host: String = "",
     val installPort: String = "12800",
     val payloadPort: String = "9021",
-    val ftpPort: String = "2121",
+    // New consoles get etaHEN's own FTP port. Consoles saved before keep theirs (see parseProfiles and legacyProfile)
+    val ftpPort: String = ConsoleType.PS5.ftpPort,
     val ftpUser: String = "anonymous",
     val ftpDir: String = "/data",
     /** Which accent color (a position in [ACCENTS]) this console uses across the app. */
@@ -158,6 +159,7 @@ fun parseProfiles(json: String?): List<Profile> {
                     host = o.optString("host", ""),
                     installPort = o.optString("installPort", "12800"),
                     payloadPort = o.optString("payloadPort", "9021"),
+                    // Every saved console has its port; this only covers a damaged entry, which keeps the old default
                     ftpPort = o.optString("ftpPort", "2121"),
                     ftpUser = o.optString("ftpUser", "anonymous"),
                     ftpDir = o.optString("ftpDir", "/data"),
@@ -180,7 +182,8 @@ fun legacyProfile(get: (String, String) -> String, id: String = newProfileId()):
     host = get("host", ""),
     installPort = get("install_port", "12800"),
     payloadPort = get("payload_port", "9021"),
-    ftpPort = get("ftp_port", "2121"),
+    // A fresh install comes through here too (nothing saved yet), so it gets the new default
+    ftpPort = get("ftp_port", ConsoleType.PS5.ftpPort),
     ftpUser = get("ftp_user", "anonymous"),
     ftpDir = get("ftp_dir", "/data")
 )

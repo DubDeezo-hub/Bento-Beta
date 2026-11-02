@@ -36,7 +36,8 @@ import java.net.SocketTimeoutException
 
 // ---------------------------------------------------------------------------------------------
 // The console's log: ps5debug-NG sends the kernel log (what the system and payloads print) to anyone who connects
-// to port 3232. Useful when a payload or a cheat misbehaves. Shown on the Memory tab under "Console log".
+// to port 3232, and etaHEN does the same on 9081 when its Klog setting is on. Either one is tried when the other
+// doesn't answer. Useful when a payload or a cheat misbehaves. Shown on the Memory tab under "Console log".
 // ---------------------------------------------------------------------------------------------
 
 /** Splits a stream of bytes into lines (UTF-8 is decoded per line, so no letter is cut in two). */
@@ -59,6 +60,16 @@ class LineSplitter(private val maxLine: Int = 4000) {
 
     /** What is left after the last line break. */
     fun rest(): String = take()
+}
+
+/** etaHEN's own console log (its Klog setting). */
+const val ETAHEN_KLOG_PORT = 9081
+
+/** The ports to try for [port]: a usual one is followed by the other usual one; a port typed by hand is only itself. */
+fun klogPorts(port: Int): List<Int> = when (port) {
+    KernelLog.DEFAULT_PORT -> listOf(KernelLog.DEFAULT_PORT, ETAHEN_KLOG_PORT)
+    ETAHEN_KLOG_PORT -> listOf(ETAHEN_KLOG_PORT, KernelLog.DEFAULT_PORT)
+    else -> listOf(port)
 }
 
 object KernelLog {
@@ -132,11 +143,25 @@ object KernelLog {
             }
             try {
                 withContext(Dispatchers.IO) {
-                    val s = Socket()
-                    socket = s
-                    s.connect(InetSocketAddress(host, p), 5000)
-                    s.soTimeout = 1000
-                    withContext(Dispatchers.Main) { status = AppText.get(R.string.klog_receiving, host, p) }
+                    val ports = klogPorts(p)
+                    var s: Socket? = null
+                    var used = p
+                    for ((i, port) in ports.withIndex()) {
+                        val attempt = Socket()
+                        socket = attempt
+                        try {
+                            attempt.connect(InetSocketAddress(host, port), 5000)
+                            s = attempt
+                            used = port
+                            break
+                        } catch (e: java.io.IOException) {
+                            try { attempt.close() } catch (_: Exception) {}
+                            // Stopped by hand, or the last port: give up with what went wrong
+                            if (!running || i == ports.lastIndex) throw e
+                        }
+                    }
+                    s!!.soTimeout = 1000
+                    withContext(Dispatchers.Main) { status = AppText.get(R.string.klog_receiving, host, used) }
                     val input: InputStream = s.getInputStream()
                     val buf = ByteArray(16 * 1024)
                     val split = LineSplitter()

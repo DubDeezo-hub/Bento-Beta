@@ -111,7 +111,7 @@ object Diagnose {
     fun alternatives(type: ConsoleType, service: DiagService): List<Int> = when (service) {
         DiagService.INSTALLER -> listOf(12800)
         DiagService.LOADER -> if (type == ConsoleType.PS4) listOf(9090, 9020, 9021) else listOf(9021, 9020)
-        DiagService.FTP -> if (type == ConsoleType.PS4) listOf(2121, 21, 1337) else listOf(2121, 1337, 21)
+        DiagService.FTP -> if (type == ConsoleType.PS4) listOf(2121, 21, 1337) else listOf(1337, 2121, 21)
         DiagService.DEBUGGER -> listOf(DEBUG_PORT)
     }
 
