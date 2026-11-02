@@ -722,13 +722,13 @@ PY
       if wait_fmt 40 "$(ui string zip_done)"; then
         pass "a console folder downloads as a zip"
       else
-        soft "zip download" "no \"saved\" message. Seen: $(ui texts "$XML" 2> /dev/null)"
+        fail "zip download" "no \"saved\" message. Seen: $(ui texts "$XML" 2> /dev/null)"
       fi
     else
-      soft "zip download" "no \"Download as zip\" in the folder's menu. Seen: $(ui texts "$XML" 2> /dev/null)"
+      fail "zip download" "no \"Download as zip\" in the folder's menu. Seen: $(ui texts "$XML" 2> /dev/null)"
     fi
   else
-    soft "zip download" "the console's top folder did not show. Seen: $(ui texts "$XML" 2> /dev/null)"
+    fail "zip download" "the console's top folder did not show. Seen: $(ui texts "$XML" 2> /dev/null)"
   fi
   shot "fake-zip"
   healthy "the app is fine after the newer checks"

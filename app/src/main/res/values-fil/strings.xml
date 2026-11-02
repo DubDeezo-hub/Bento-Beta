@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Made-delete ito sa library. Hindi magagalaw ang orihinal na file sa iyong telepono.</string>
     <string name="payload_loader_port">Port ng Loader</string>
     <string name="payload_shelf_title">Payload library</string>
-    <string name="payload_shelf_empty">Wala pang naka-save. Magdagdag ng mga payload na madalas mong gamitin (FTP server, %1$s, ...) at ipadala ang bawat isa sa isang tap. Puwede mo rin itong direktang i-save mula sa Web tab habang dina-download.</string>
+    <string name="payload_shelf_empty">Wala pang naka-save. Magdagdag ng mga payload na madalas mong gamitin (FTP server, %1$s, …) at ipadala ang bawat isa sa isang tap. Puwede mo rin itong direktang i-save mula sa Web tab habang dina-download.</string>
     <string name="payload_sending">Ipinapadala ang %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Magdagdag ng payload sa library</string>

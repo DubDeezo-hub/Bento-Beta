@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Bude vymazaný z knižnice. Pôvodný súbor vo vašom telefóne zostane nedotknutý.</string>
     <string name="payload_loader_port">Port pre Loader</string>
     <string name="payload_shelf_title">Knižnica payloadov</string>
-    <string name="payload_shelf_empty">Zatiaľ nič nie je uložené. Pridajte payloady, ktoré často používate (server FTP, %1$s, ...), a odošlite každý jedným ťuknutím. Môžete ho uložiť aj priamo z karty Web pri sťahovaní.</string>
+    <string name="payload_shelf_empty">Zatiaľ nič nie je uložené. Pridajte payloady, ktoré často používate (server FTP, %1$s, …), a odošlite každý jedným ťuknutím. Môžete ho uložiť aj priamo z karty Web pri sťahovaní.</string>
     <string name="payload_sending">Odosiela sa %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Pridať payload do knižnice</string>

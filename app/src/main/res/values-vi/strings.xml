@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Nó sẽ bị xóa khỏi thư viện. Tệp gốc trên điện thoại của bạn không bị ảnh hưởng.</string>
     <string name="payload_loader_port">Cổng Loader</string>
     <string name="payload_shelf_title">Thư viện payload</string>
-    <string name="payload_shelf_empty">Chưa lưu gì. Hãy thêm các payload bạn dùng thường xuyên (máy chủ FTP, %1$s, ...) và gửi từng cái chỉ với một lần nhấn. Bạn cũng có thể lưu trực tiếp từ tab Web khi tải xuống.</string>
+    <string name="payload_shelf_empty">Chưa lưu gì. Hãy thêm các payload bạn dùng thường xuyên (máy chủ FTP, %1$s, …) và gửi từng cái chỉ với một lần nhấn. Bạn cũng có thể lưu trực tiếp từ tab Web khi tải xuống.</string>
     <string name="payload_sending">Đang gửi %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Thêm payload vào thư viện</string>

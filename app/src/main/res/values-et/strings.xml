@@ -207,7 +207,7 @@
     <string name="payload_remove_text">See kustutatakse kogust. Algne fail teie telefonis jääb puutumata.</string>
     <string name="payload_loader_port">Loaderi port</string>
     <string name="payload_shelf_title">Payloadide kogu</string>
-    <string name="payload_shelf_empty">Veel pole midagi salvestatud. Lisage payloadid, mida sageli kasutate (FTP-server, %1$s, ...), ja saatke igaüks ühe puudutusega. Selle saate salvestada ka otse vahekaardilt Veeb, kui seda alla laadite.</string>
+    <string name="payload_shelf_empty">Veel pole midagi salvestatud. Lisage payloadid, mida sageli kasutate (FTP-server, %1$s, …), ja saatke igaüks ühe puudutusega. Selle saate salvestada ka otse vahekaardilt Veeb, kui seda alla laadite.</string>
     <string name="payload_sending">Saatmine: %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Lisa payload kogusse</string>

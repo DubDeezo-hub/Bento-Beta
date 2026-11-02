@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Биће избрисан из библиотеке. Оригинална датотека на вашем телефону остаје нетакнута.</string>
     <string name="payload_loader_port">Порт за Loader</string>
     <string name="payload_shelf_title">Библиотека payload-а</string>
-    <string name="payload_shelf_empty">Још ништа није сачувано. Додајте payload-е које често користите (FTP сервер, %1$s, ...) и пошаљите сваки једним додиром. Можете га сачувати и директно са картице Веб док га преузимате.</string>
+    <string name="payload_shelf_empty">Још ништа није сачувано. Додајте payload-е које често користите (FTP сервер, %1$s, …) и пошаљите сваки једним додиром. Можете га сачувати и директно са картице Веб док га преузимате.</string>
     <string name="payload_sending">Слање %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Додај payload у библиотеку</string>

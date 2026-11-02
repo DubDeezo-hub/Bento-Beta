@@ -210,7 +210,7 @@
     <string name="payload_remove_text">It is deleted from the shelf. The original file on your phone isn\'t touched.</string>
     <string name="payload_loader_port">Loader port</string>
     <string name="payload_shelf_title">Payload shelf</string>
-    <string name="payload_shelf_empty">Nothing saved yet. Add the payloads you use often (an FTP server, %1$s, ...) and send each with one tap. You can also save one straight from the Web tab when you download it.</string>
+    <string name="payload_shelf_empty">Nothing saved yet. Add the payloads you use often (an FTP server, %1$s, …) and send each with one tap. You can also save one straight from the Web tab when you download it.</string>
     <string name="payload_sending">Sending %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Add payload to shelf</string>

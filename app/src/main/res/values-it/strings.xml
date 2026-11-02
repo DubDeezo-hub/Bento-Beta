@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Viene eliminato dalla libreria. Il file originale sul telefono non viene toccato.</string>
     <string name="payload_loader_port">Porta del loader</string>
     <string name="payload_shelf_title">Libreria di payload</string>
-    <string name="payload_shelf_empty">Ancora niente di salvato. Aggiungi i payload che usi spesso (un server FTP, %1$s, ...) e inviali con un tocco. Puoi anche salvarne uno direttamente dalla scheda Web quando lo scarichi.</string>
+    <string name="payload_shelf_empty">Ancora niente di salvato. Aggiungi i payload che usi spesso (un server FTP, %1$s, …) e inviali con un tocco. Puoi anche salvarne uno direttamente dalla scheda Web quando lo scarichi.</string>
     <string name="payload_sending">Invio di %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Aggiungi payload alla libreria</string>

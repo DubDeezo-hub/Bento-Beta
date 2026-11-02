@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Se poistetaan kirjastosta. Puhelimessa oleva alkuperäinen tiedosto säilyy koskemattomana.</string>
     <string name="payload_loader_port">Loaderin portti</string>
     <string name="payload_shelf_title">Payload-kirjasto</string>
-    <string name="payload_shelf_empty">Mitään ei ole vielä tallennettu. Lisää usein käyttämäsi payloadit (FTP-palvelin, %1$s, ...) ja lähetä jokainen yhdellä napautuksella. Voit tallentaa payloadin myös suoraan Web-välilehdeltä, kun lataat sen.</string>
+    <string name="payload_shelf_empty">Mitään ei ole vielä tallennettu. Lisää usein käyttämäsi payloadit (FTP-palvelin, %1$s, …) ja lähetä jokainen yhdellä napautuksella. Voit tallentaa payloadin myös suoraan Web-välilehdeltä, kun lataat sen.</string>
     <string name="payload_sending">Lähetetään: %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Lisää payload kirjastoon</string>

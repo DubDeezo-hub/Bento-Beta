@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Itafutwa kwenye maktaba. Faili asili kwenye simu yako haitaguswa.</string>
     <string name="payload_loader_port">Mlango wa Loader</string>
     <string name="payload_shelf_title">Maktaba ya payload</string>
-    <string name="payload_shelf_empty">Hakuna kilichohifadhiwa bado. Ongeza payload unazotumia mara kwa mara (seva ya FTP, %1$s, ...) na utume kila moja kwa mguso mmoja. Unaweza pia kuzihifadhi moja kwa moja kutoka kichupo cha Wavuti unapozipakua.</string>
+    <string name="payload_shelf_empty">Hakuna kilichohifadhiwa bado. Ongeza payload unazotumia mara kwa mara (seva ya FTP, %1$s, …) na utume kila moja kwa mguso mmoja. Unaweza pia kuzihifadhi moja kwa moja kutoka kichupo cha Wavuti unapozipakua.</string>
     <string name="payload_sending">Inatuma %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Ongeza payload kwenye maktaba</string>

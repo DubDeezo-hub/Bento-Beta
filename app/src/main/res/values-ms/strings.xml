@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Ia akan dipadam daripada pustaka. Fail asal pada telefon anda tidak diusik.</string>
     <string name="payload_loader_port">Port Loader</string>
     <string name="payload_shelf_title">Pustaka payload</string>
-    <string name="payload_shelf_empty">Belum ada yang disimpan. Tambah payload yang kerap anda gunakan (pelayan FTP, %1$s, ...) dan hantar setiap satu dengan satu ketikan. Anda juga boleh menyimpannya terus daripada tab Web semasa memuat turunnya.</string>
+    <string name="payload_shelf_empty">Belum ada yang disimpan. Tambah payload yang kerap anda gunakan (pelayan FTP, %1$s, …) dan hantar setiap satu dengan satu ketikan. Anda juga boleh menyimpannya terus daripada tab Web semasa memuat turunnya.</string>
     <string name="payload_sending">Menghantar %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Tambah payload ke pustaka</string>

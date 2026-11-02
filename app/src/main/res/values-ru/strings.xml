@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Он будет удалён из библиотеки. Исходный файл на телефоне не затрагивается.</string>
     <string name="payload_loader_port">Порт загрузчика</string>
     <string name="payload_shelf_title">Библиотека пейлоадов</string>
-    <string name="payload_shelf_empty">Пока ничего не сохранено. Добавьте пейлоады, которые вы часто используете (FTP-сервер, %1$s, ...), и отправляйте каждый одним касанием. Также можно сохранить пейлоад прямо при скачивании на вкладке «Веб».</string>
+    <string name="payload_shelf_empty">Пока ничего не сохранено. Добавьте пейлоады, которые вы часто используете (FTP-сервер, %1$s, …), и отправляйте каждый одним касанием. Также можно сохранить пейлоад прямо при скачивании на вкладке «Веб».</string>
     <string name="payload_sending">Отправка %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Добавить пейлоад в библиотеку</string>

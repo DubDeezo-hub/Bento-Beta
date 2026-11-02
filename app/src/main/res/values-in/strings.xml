@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Payload akan dihapus dari pustaka. File asli di ponsel Anda tidak tersentuh.</string>
     <string name="payload_loader_port">Port Loader</string>
     <string name="payload_shelf_title">Pustaka payload</string>
-    <string name="payload_shelf_empty">Belum ada yang disimpan. Tambahkan payload yang sering Anda pakai (server FTP, %1$s, ...) dan kirim masing-masing dengan satu ketukan. Anda juga dapat menyimpannya langsung dari tab Web saat mengunduhnya.</string>
+    <string name="payload_shelf_empty">Belum ada yang disimpan. Tambahkan payload yang sering Anda pakai (server FTP, %1$s, …) dan kirim masing-masing dengan satu ketukan. Anda juga dapat menyimpannya langsung dari tab Web saat mengunduhnya.</string>
     <string name="payload_sending">Mengirim %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Tambahkan payload ke pustaka</string>

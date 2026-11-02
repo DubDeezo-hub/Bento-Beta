@@ -207,7 +207,7 @@
     <string name="payload_remove_text">S\'elimina de la biblioteca. El fitxer original del teu telèfon no es toca.</string>
     <string name="payload_loader_port">Port del Loader</string>
     <string name="payload_shelf_title">Biblioteca de payloads</string>
-    <string name="payload_shelf_empty">Encara no hi ha res desat. Afegeix els payloads que fas servir sovint (un servidor FTP, %1$s, ...) i envia\'ls amb un sol toc. També en pots desar un directament des de la pestanya Web quan el baixes.</string>
+    <string name="payload_shelf_empty">Encara no hi ha res desat. Afegeix els payloads que fas servir sovint (un servidor FTP, %1$s, …) i envia\'ls amb un sol toc. També en pots desar un directament des de la pestanya Web quan el baixes.</string>
     <string name="payload_sending">S\'està enviant %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Afegeix un payload a la biblioteca</string>

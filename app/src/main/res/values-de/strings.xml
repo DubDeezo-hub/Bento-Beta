@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Es wird aus der Bibliothek gelöscht. Die Originaldatei auf deinem Handy bleibt unberührt.</string>
     <string name="payload_loader_port">Loader-Port</string>
     <string name="payload_shelf_title">Payload-Bibliothek</string>
-    <string name="payload_shelf_empty">Noch nichts gespeichert. Füge Payloads hinzu, die du oft brauchst (einen FTP-Server, %1$s, ...), und sende jeden mit einem Tipp. Du kannst einen auch direkt im Web-Tab speichern, wenn du ihn herunterlädst.</string>
+    <string name="payload_shelf_empty">Noch nichts gespeichert. Füge Payloads hinzu, die du oft brauchst (einen FTP-Server, %1$s, …), und sende jeden mit einem Tipp. Du kannst einen auch direkt im Web-Tab speichern, wenn du ihn herunterlädst.</string>
     <string name="payload_sending">%1$s wird gesendet…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Payload zur Bibliothek hinzufügen</string>

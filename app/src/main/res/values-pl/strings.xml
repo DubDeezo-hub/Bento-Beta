@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Zostanie usunięty z biblioteki. Oryginalny plik na telefonie pozostanie nietknięty.</string>
     <string name="payload_loader_port">Port loadera</string>
     <string name="payload_shelf_title">Biblioteka payloadów</string>
-    <string name="payload_shelf_empty">Nic jeszcze nie zapisano. Dodaj payloady, których często używasz (serwer FTP, %1$s, ...), i wysyłaj każdy jednym dotknięciem. Możesz też zapisać payload prosto z karty Web podczas jego pobierania.</string>
+    <string name="payload_shelf_empty">Nic jeszcze nie zapisano. Dodaj payloady, których często używasz (serwer FTP, %1$s, …), i wysyłaj każdy jednym dotknięciem. Możesz też zapisać payload prosto z karty Web podczas jego pobierania.</string>
     <string name="payload_sending">Wysyłanie: %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Dodaj payload do biblioteki</string>

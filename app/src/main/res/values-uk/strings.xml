@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Його буде видалено з бібліотеки. Оригінальний файл на вашому телефоні не зміниться.</string>
     <string name="payload_loader_port">Порт Loader</string>
     <string name="payload_shelf_title">Бібліотека пейлоадів</string>
-    <string name="payload_shelf_empty">Поки нічого не збережено. Додайте пейлоади, якими часто користуєтеся (FTP-сервер, %1$s, ...), і надсилайте кожен одним дотиком. Також можна зберегти пейлоад прямо з вкладки «Веб» під час його завантаження.</string>
+    <string name="payload_shelf_empty">Поки нічого не збережено. Додайте пейлоади, якими часто користуєтеся (FTP-сервер, %1$s, …), і надсилайте кожен одним дотиком. Також можна зберегти пейлоад прямо з вкладки «Веб» під час його завантаження.</string>
     <string name="payload_sending">Надсилання %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Додати пейлоад до бібліотеки</string>

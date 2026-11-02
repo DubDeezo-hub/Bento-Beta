@@ -207,7 +207,7 @@
     <string name="payload_remove_text">از کتابخانه حذف می‌شود. فایل اصلی روی تلفن شما دست‌نخورده می‌ماند.</string>
     <string name="payload_loader_port">پورت Loader</string>
     <string name="payload_shelf_title">کتابخانه payload</string>
-    <string name="payload_shelf_empty">هنوز چیزی ذخیره نشده است. payload‌هایی را که زیاد استفاده می‌کنید (سرور FTP، %1$s، ...) اضافه کنید و هرکدام را با یک ضربه ارسال کنید. هنگام دانلود می‌توانید آن را مستقیماً از زبانه وب هم ذخیره کنید.</string>
+    <string name="payload_shelf_empty">هنوز چیزی ذخیره نشده است. payload‌هایی را که زیاد استفاده می‌کنید (سرور FTP، %1$s، …) اضافه کنید و هرکدام را با یک ضربه ارسال کنید. هنگام دانلود می‌توانید آن را مستقیماً از زبانه وب هم ذخیره کنید.</string>
     <string name="payload_sending">در حال ارسال %1$s…</string>
     <string name="payload_result">‏%1$s: %2$s</string>
     <string name="payload_add">افزودن payload به کتابخانه</string>

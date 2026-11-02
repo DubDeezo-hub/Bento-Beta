@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Den slettes fra biblioteket. Den oprindelige fil på din telefon berøres ikke.</string>
     <string name="payload_loader_port">Loader-port</string>
     <string name="payload_shelf_title">Payload-bibliotek</string>
-    <string name="payload_shelf_empty">Intet gemt endnu. Tilføj de payloads, du bruger ofte (en FTP-server, %1$s, ...), og send hver af dem med ét tryk. Du kan også gemme en direkte fra fanen Web, når du downloader den.</string>
+    <string name="payload_shelf_empty">Intet gemt endnu. Tilføj de payloads, du bruger ofte (en FTP-server, %1$s, …), og send hver af dem med ét tryk. Du kan også gemme en direkte fra fanen Web, når du downloader den.</string>
     <string name="payload_sending">Sender %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Føj payload til biblioteket</string>

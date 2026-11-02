@@ -207,7 +207,7 @@
     <string name="payload_remove_text">É eliminado da biblioteca. O ficheiro original no seu telemóvel não é afetado.</string>
     <string name="payload_loader_port">Porta do Loader</string>
     <string name="payload_shelf_title">Biblioteca de payloads</string>
-    <string name="payload_shelf_empty">Ainda não há nada guardado. Adicione os payloads que usa com frequência (um servidor FTP, o %1$s, ...) e envie cada um com um toque. Também pode guardar um diretamente a partir do separador Web quando o transfere.</string>
+    <string name="payload_shelf_empty">Ainda não há nada guardado. Adicione os payloads que usa com frequência (um servidor FTP, o %1$s, …) e envie cada um com um toque. Também pode guardar um diretamente a partir do separador Web quando o transfere.</string>
     <string name="payload_sending">A enviar %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Adicionar payload à biblioteca</string>

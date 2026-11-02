@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Διαγράφεται από τη βιβλιοθήκη. Το αρχικό αρχείο στο τηλέφωνό σας δεν επηρεάζεται.</string>
     <string name="payload_loader_port">Θύρα του Loader</string>
     <string name="payload_shelf_title">Βιβλιοθήκη payload</string>
-    <string name="payload_shelf_empty">Δεν έχει αποθηκευτεί τίποτα ακόμη. Προσθέστε τα payload που χρησιμοποιείτε συχνά (έναν διακομιστή FTP, το %1$s, ...) και στείλτε το καθένα με ένα πάτημα. Μπορείτε επίσης να αποθηκεύσετε ένα απευθείας από την καρτέλα Web όταν το κατεβάζετε.</string>
+    <string name="payload_shelf_empty">Δεν έχει αποθηκευτεί τίποτα ακόμη. Προσθέστε τα payload που χρησιμοποιείτε συχνά (έναν διακομιστή FTP, το %1$s, …) και στείλτε το καθένα με ένα πάτημα. Μπορείτε επίσης να αποθηκεύσετε ένα απευθείας από την καρτέλα Web όταν το κατεβάζετε.</string>
     <string name="payload_sending">Αποστολή του %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Προσθήκη payload στη βιβλιοθήκη</string>

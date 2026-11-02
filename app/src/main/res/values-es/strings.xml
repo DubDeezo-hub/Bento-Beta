@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Se elimina de la biblioteca. El archivo original de tu teléfono no se toca.</string>
     <string name="payload_loader_port">Puerto del cargador</string>
     <string name="payload_shelf_title">Biblioteca de payloads</string>
-    <string name="payload_shelf_empty">Aún no hay nada guardado. Añade los payloads que usas a menudo (un servidor FTP, %1$s, ...) y envía cada uno con un toque. También puedes guardar uno directamente desde la pestaña Web al descargarlo.</string>
+    <string name="payload_shelf_empty">Aún no hay nada guardado. Añade los payloads que usas a menudo (un servidor FTP, %1$s, …) y envía cada uno con un toque. También puedes guardar uno directamente desde la pestaña Web al descargarlo.</string>
     <string name="payload_sending">Enviando %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Añadir payload a la biblioteca</string>

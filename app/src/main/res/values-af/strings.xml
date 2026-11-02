@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Dit word uit die biblioteek uitgevee. Die oorspronklike lêer op jou foon bly onaangeraak.</string>
     <string name="payload_loader_port">Loader-poort</string>
     <string name="payload_shelf_title">Payload-biblioteek</string>
-    <string name="payload_shelf_empty">Niks gestoor nie. Voeg payloads by wat jy dikwels gebruik (FTP-bediener, %1$s, ...) en stuur elkeen met een tik. Jy kan dit ook direk vanaf die Web-oortjie stoor terwyl jy dit aflaai.</string>
+    <string name="payload_shelf_empty">Niks gestoor nie. Voeg payloads by wat jy dikwels gebruik (FTP-bediener, %1$s, …) en stuur elkeen met een tik. Jy kan dit ook direk vanaf die Web-oortjie stoor terwyl jy dit aflaai.</string>
     <string name="payload_sending">Stuur tans %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Voeg payload by die biblioteek</string>

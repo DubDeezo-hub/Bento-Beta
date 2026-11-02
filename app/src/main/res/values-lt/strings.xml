@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Jis bus ištrintas iš bibliotekos. Originalus failas jūsų telefone nebus paliestas.</string>
     <string name="payload_loader_port">Loader prievadas</string>
     <string name="payload_shelf_title">Payload biblioteka</string>
-    <string name="payload_shelf_empty">Dar nieko neišsaugota. Pridėkite dažnai naudojamus payload (FTP serverį, %1$s, ...) ir siųskite kiekvieną vienu palietimu. Taip pat galite išsaugoti tiesiai iš kortelės Naršyklė, kai jį atsisiunčiate.</string>
+    <string name="payload_shelf_empty">Dar nieko neišsaugota. Pridėkite dažnai naudojamus payload (FTP serverį, %1$s, …) ir siųskite kiekvieną vienu palietimu. Taip pat galite išsaugoti tiesiai iš kortelės Naršyklė, kai jį atsisiunčiate.</string>
     <string name="payload_sending">Siunčiama %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Pridėti payload į biblioteką</string>

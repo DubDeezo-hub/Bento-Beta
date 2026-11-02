@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Het wordt uit de bibliotheek verwijderd. Het originele bestand op je telefoon blijft ongemoeid.</string>
     <string name="payload_loader_port">Loader-poort</string>
     <string name="payload_shelf_title">Payload-bibliotheek</string>
-    <string name="payload_shelf_empty">Nog niets opgeslagen. Voeg de payloads toe die je vaak gebruikt (een FTP-server, %1$s, ...) en verstuur ze met één tik. Je kunt er ook een rechtstreeks vanuit het tabblad Web opslaan wanneer je hem downloadt.</string>
+    <string name="payload_shelf_empty">Nog niets opgeslagen. Voeg de payloads toe die je vaak gebruikt (een FTP-server, %1$s, …) en verstuur ze met één tik. Je kunt er ook een rechtstreeks vanuit het tabblad Web opslaan wanneer je hem downloadt.</string>
     <string name="payload_sending">%1$s verzenden…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Payload aan bibliotheek toevoegen</string>

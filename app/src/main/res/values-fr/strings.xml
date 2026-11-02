@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Il est supprimé de la bibliothèque. Le fichier d’origine sur votre téléphone n’est pas touché.</string>
     <string name="payload_loader_port">Port du chargeur</string>
     <string name="payload_shelf_title">Bibliothèque de payloads</string>
-    <string name="payload_shelf_empty">Rien d’enregistré pour l’instant. Ajoutez les payloads que vous utilisez souvent (un serveur FTP, %1$s, ...) et envoyez chacun d’une simple touche. Vous pouvez aussi en enregistrer un directement depuis l’onglet Web lors du téléchargement.</string>
+    <string name="payload_shelf_empty">Rien d’enregistré pour l’instant. Ajoutez les payloads que vous utilisez souvent (un serveur FTP, %1$s, …) et envoyez chacun d’une simple touche. Vous pouvez aussi en enregistrer un directement depuis l’onglet Web lors du téléchargement.</string>
     <string name="payload_sending">Envoi de %1$s…</string>
     <string name="payload_result">%1$s : %2$s</string>
     <string name="payload_add">Ajouter un payload à la bibliothèque</string>

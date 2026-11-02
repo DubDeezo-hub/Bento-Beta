@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Törlődik a tárból. A telefonodon lévő eredeti fájl érintetlen marad.</string>
     <string name="payload_loader_port">Loader-port</string>
     <string name="payload_shelf_title">Payload-tár</string>
-    <string name="payload_shelf_empty">Még nincs semmi mentve. Add hozzá a gyakran használt payloadokat (FTP-kiszolgáló, %1$s, ...), és küldd el mindegyiket egyetlen koppintással. Letöltéskor közvetlenül a Web lapról is elmentheted őket.</string>
+    <string name="payload_shelf_empty">Még nincs semmi mentve. Add hozzá a gyakran használt payloadokat (FTP-kiszolgáló, %1$s, …), és küldd el mindegyiket egyetlen koppintással. Letöltéskor közvetlenül a Web lapról is elmentheted őket.</string>
     <string name="payload_sending">Küldés: %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Payload hozzáadása a tárhoz</string>

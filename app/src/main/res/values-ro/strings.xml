@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Va fi șters din bibliotecă. Fișierul original de pe telefon nu este afectat.</string>
     <string name="payload_loader_port">Portul Loader-ului</string>
     <string name="payload_shelf_title">Bibliotecă de payload-uri</string>
-    <string name="payload_shelf_empty">Nimic salvat încă. Adaugă payload-urile pe care le folosești des (un server FTP, %1$s, ...) și trimite-le pe fiecare cu o atingere. Poți salva unul și direct din fila Web, când îl descarci.</string>
+    <string name="payload_shelf_empty">Nimic salvat încă. Adaugă payload-urile pe care le folosești des (un server FTP, %1$s, …) și trimite-le pe fiecare cu o atingere. Poți salva unul și direct din fila Web, când îl descarci.</string>
     <string name="payload_sending">Se trimite %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Adaugă payload în bibliotecă</string>

@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Izbrisan bo iz knjižnice. Izvirna datoteka v vašem telefonu ostane nedotaknjena.</string>
     <string name="payload_loader_port">Vrata za Loader</string>
     <string name="payload_shelf_title">Knjižnica payloadov</string>
-    <string name="payload_shelf_empty">Še nič ni shranjenega. Dodajte payloade, ki jih pogosto uporabljate (strežnik FTP, %1$s, ...), in vsakega pošljite z enim dotikom. Shranite ga lahko tudi neposredno z zavihka Splet, ko ga prenašate.</string>
+    <string name="payload_shelf_empty">Še nič ni shranjenega. Dodajte payloade, ki jih pogosto uporabljate (strežnik FTP, %1$s, …), in vsakega pošljite z enim dotikom. Shranite ga lahko tudi neposredno z zavihka Splet, ko ga prenašate.</string>
     <string name="payload_sending">Pošiljanje %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Dodaj payload v knjižnico</string>

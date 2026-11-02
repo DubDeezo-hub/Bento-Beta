@@ -207,7 +207,7 @@
     <string name="payload_remove_text">Tas tiks izdzēsts no bibliotēkas. Oriģinālais fails jūsu tālrunī netiek skarts.</string>
     <string name="payload_loader_port">Loader ports</string>
     <string name="payload_shelf_title">Payload bibliotēka</string>
-    <string name="payload_shelf_empty">Vēl nekas nav saglabāts. Pievienojiet payload, ko bieži izmantojat (FTP serveris, %1$s, ...), un sūtiet katru ar vienu pieskārienu. Varat arī saglabāt tieši no cilnes Tīmeklis, kad to lejupielādējat.</string>
+    <string name="payload_shelf_empty">Vēl nekas nav saglabāts. Pievienojiet payload, ko bieži izmantojat (FTP serveris, %1$s, …), un sūtiet katru ar vienu pieskārienu. Varat arī saglabāt tieši no cilnes Tīmeklis, kad to lejupielādējat.</string>
     <string name="payload_sending">Sūta %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">Pievienot payload bibliotēkai</string>

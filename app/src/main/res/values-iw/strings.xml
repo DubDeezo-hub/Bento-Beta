@@ -207,7 +207,7 @@
     <string name="payload_remove_text">הוא יימחק מהספרייה. הקובץ המקורי בטלפון שלכם לא ישתנה.</string>
     <string name="payload_loader_port">פורט של Loader</string>
     <string name="payload_shelf_title">ספריית payload</string>
-    <string name="payload_shelf_empty">עדיין לא נשמר דבר. הוסיפו payload שבהם אתם משתמשים לעיתים קרובות (שרת FTP, %1$s, ...) ושלחו כל אחד בהקשה אחת. אפשר גם לשמור אחד ישירות מהלשונית אינטרנט בזמן ההורדה.</string>
+    <string name="payload_shelf_empty">עדיין לא נשמר דבר. הוסיפו payload שבהם אתם משתמשים לעיתים קרובות (שרת FTP, %1$s, …) ושלחו כל אחד בהקשה אחת. אפשר גם לשמור אחד ישירות מהלשונית אינטרנט בזמן ההורדה.</string>
     <string name="payload_sending">שולח את %1$s…</string>
     <string name="payload_result">‏%1$s: %2$s</string>
     <string name="payload_add">הוספת payload לספרייה</string>

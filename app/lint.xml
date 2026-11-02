@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <!-- Names of jailbreak tools and the patch sites are spelled this way on purpose, not misspellings. -->
+    <issue id="Typos">
+        <ignore regexp="etaHEN" />
+        <ignore regexp="kstuff" />
+        <ignore regexp="GoldHEN" />
+        <ignore regexp="elfldr" />
+        <ignore regexp="nanoDNS" />
+        <ignore regexp="ShadowMountPlus" />
+        <ignore regexp="prosper0gdb" />
+        <ignore regexp="orbispatches" />
+        <ignore regexp="prosperopatches" />
+    </issue>
+    <!-- A trust-all helper that lives inside the FTP library; Bento never uses it. -->
+    <issue id="TrustAllX509TrustManager" severity="ignore" />
+    <!-- Two saves are meant to finish before the next step (the language before the screen restarts,
+         the capture lists before the old copy is removed). -->
+    <issue id="ApplySharedPref" severity="ignore" />
+</lint>

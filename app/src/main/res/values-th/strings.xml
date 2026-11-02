@@ -207,7 +207,7 @@
     <string name="payload_remove_text">ระบบจะลบออกจากคลัง ไฟล์ต้นฉบับในโทรศัพท์ของคุณจะไม่ได้รับผลกระทบ</string>
     <string name="payload_loader_port">พอร์ตของ Loader</string>
     <string name="payload_shelf_title">คลัง payload</string>
-    <string name="payload_shelf_empty">ยังไม่มีอะไรที่บันทึกไว้ เพิ่ม payload ที่คุณใช้บ่อย (เช่น เซิร์ฟเวอร์ FTP, %1$s, ...) แล้วส่งแต่ละรายการได้ด้วยการแตะครั้งเดียว คุณยังบันทึกจากแท็บเว็บได้โดยตรงเมื่อดาวน์โหลด</string>
+    <string name="payload_shelf_empty">ยังไม่มีอะไรที่บันทึกไว้ เพิ่ม payload ที่คุณใช้บ่อย (เช่น เซิร์ฟเวอร์ FTP, %1$s, …) แล้วส่งแต่ละรายการได้ด้วยการแตะครั้งเดียว คุณยังบันทึกจากแท็บเว็บได้โดยตรงเมื่อดาวน์โหลด</string>
     <string name="payload_sending">กำลังส่ง %1$s…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">เพิ่ม payload ลงในคลัง</string>

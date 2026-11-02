@@ -53,6 +53,7 @@ android {
     }
     lint {
         // A Lint error stops the Phone test; warnings are listed on the run page without stopping it
+        lintConfig = file("lint.xml")
         abortOnError = true
         warningsAsErrors = false
         checkReleaseBuilds = false

@@ -207,7 +207,7 @@
     <string name="payload_remove_text">તે લાઇબ્રેરીમાંથી કાઢી નાખવામાં આવશે. તમારા ફોન પરની મૂળ ફાઇલ જેમની તેમ રહેશે.</string>
     <string name="payload_loader_port">Loader પોર્ટ</string>
     <string name="payload_shelf_title">Payload લાઇબ્રેરી</string>
-    <string name="payload_shelf_empty">હજી કંઈ સાચવ્યું નથી. તમે વારંવાર વાપરો છો તે payload (FTP સર્વર, %1$s, ...) ઉમેરો અને દરેકને એક ટૅપથી મોકલો. વેબ ટૅબમાં ડાઉનલોડ કરતી વખતે તમે તેમને સીધા સાચવી પણ શકો છો.</string>
+    <string name="payload_shelf_empty">હજી કંઈ સાચવ્યું નથી. તમે વારંવાર વાપરો છો તે payload (FTP સર્વર, %1$s, …) ઉમેરો અને દરેકને એક ટૅપથી મોકલો. વેબ ટૅબમાં ડાઉનલોડ કરતી વખતે તમે તેમને સીધા સાચવી પણ શકો છો.</string>
     <string name="payload_sending">%1$s મોકલી રહ્યું છે…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">લાઇબ્રેરીમાં payload ઉમેરો</string>

@@ -207,7 +207,7 @@
     <string name="payload_remove_text">இது நூலகத்திலிருந்து நீக்கப்படும். உங்கள் தொலைபேசியில் உள்ள அசல் கோப்பு பாதிக்கப்படாது.</string>
     <string name="payload_loader_port">Loader போர்ட்</string>
     <string name="payload_shelf_title">Payload நூலகம்</string>
-    <string name="payload_shelf_empty">இன்னும் எதுவும் சேமிக்கப்படவில்லை. நீங்கள் அடிக்கடி பயன்படுத்தும் payload-களை (FTP சேவையகம், %1$s, ...) சேர்த்து, ஒவ்வொன்றையும் ஒரே தட்டலில் அனுப்புங்கள். இணையத் தாவலில் பதிவிறக்கும்போதே அவற்றை நேரடியாகச் சேமிக்கவும் முடியும்.</string>
+    <string name="payload_shelf_empty">இன்னும் எதுவும் சேமிக்கப்படவில்லை. நீங்கள் அடிக்கடி பயன்படுத்தும் payload-களை (FTP சேவையகம், %1$s, …) சேர்த்து, ஒவ்வொன்றையும் ஒரே தட்டலில் அனுப்புங்கள். இணையத் தாவலில் பதிவிறக்கும்போதே அவற்றை நேரடியாகச் சேமிக்கவும் முடியும்.</string>
     <string name="payload_sending">%1$s-ஐ அனுப்புகிறது…</string>
     <string name="payload_result">%1$s: %2$s</string>
     <string name="payload_add">நூலகத்தில் payload-ஐச் சேர்</string>
