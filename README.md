@@ -71,7 +71,7 @@ In Bento use `127.0.0.1` as the address, and port `7744` on the Memory tab. Its 
 
 ## Build it yourself
 
-Fork the repo, open **Actions**, run **Build APK**. The APK lands on your Releases page. Every push to `main` builds one too, and **Phone test** runs the app on a virtual phone in all 53 languages. Details: [Build, signing and releases](docs/GUIDE.md#build-signing-and-releases).
+Fork the repo, open **Actions**, run **Build APK**. The APK lands on your Releases page. Every push to `main` builds one too, and **Phone test** runs the unit tests, then the app on a virtual phone in all 53 languages and against a pretend console. Details: [Build, signing and releases](docs/GUIDE.md#build-signing-and-releases).
 
 ## Good to know
 

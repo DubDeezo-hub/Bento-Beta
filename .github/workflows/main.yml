@@ -39,6 +39,10 @@ jobs:
             exit 1
           fi
 
+      - name: Show the unit test results on the run page
+        if: always()
+        run: python3 .github/scripts/unit_summary.py app/build/test-results/testDebugUnitTest >> "$GITHUB_STEP_SUMMARY"
+
       - name: Build debug APK
         # A failed build puts the compiler's errors on the run page, so they can be read without opening the log
         run: |
