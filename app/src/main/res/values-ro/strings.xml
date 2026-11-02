@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">Versiunea de dinaintea ultimei actualizări a fost păstrată. Revenirea o pune deoparte pe aceasta, ca să poți schimba din nou.</string>
     <string name="shelf_switched">%1$s este din nou pe raft (versiunea %2$s); lanțurile tale îl folosesc acum.</string>
     <string name="shelf_switch_failed">Nu s-a putut schimba versiunea.</string>
+    <string name="look_buzz">Vibrează când se trimite ceva</string>
+    <string name="look_sound">Un sunet scurt când se trimite ceva</string>
+    <string name="files_sizes">Dimensiuni foldere</string>
+    <string name="files_sizes_title">Dimensiuni în %1$s</string>
+    <string name="files_sizes_counting">Se numără… un folder mare poate dura un minut.</string>
+    <string name="files_sizes_empty">Nimic în acest folder.</string>
+    <string name="files_sizes_total">În total: %1$s</string>
+    <string name="files_sizes_partial">Peste %1$d fișiere: dimensiunile sunt cel puțin atât.</string>
+    <string name="files_sizes_loose">Fișiere direct în acest folder</string>
+    <string name="files_dupes">Găsește duplicate</string>
+    <string name="files_dupes_title">Copii în %1$s</string>
+    <string name="files_dupes_none">Nu s-au găsit copii (fișiere peste 1 MB cu același nume și dimensiune).</string>
+    <string name="files_dupes_extra">Copiile în plus ocupă %1$s.</string>
+    <string name="files_dupes_hint">Același nume și aceeași dimensiune. Păstrează câte una și șterge-le pe cele de care nu ai nevoie.</string>
 </resources>

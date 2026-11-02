@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">前回の更新前のバージョンを保管しています。戻すと今のものを保管するので、また切り替えられます。</string>
     <string name="shelf_switched">%1$s が棚に戻りました（バージョン %2$s）。チェーンはこれを使います。</string>
     <string name="shelf_switch_failed">バージョンを切り替えられませんでした。</string>
+    <string name="look_buzz">送信したら振動</string>
+    <string name="look_sound">送信したら短い音</string>
+    <string name="files_sizes">フォルダーのサイズ</string>
+    <string name="files_sizes_title">%1$s 内のサイズ</string>
+    <string name="files_sizes_counting">数えています… 大きなフォルダーは 1 分ほどかかることがあります。</string>
+    <string name="files_sizes_empty">このフォルダーには何もありません。</string>
+    <string name="files_sizes_total">合計：%1$s</string>
+    <string name="files_sizes_partial">%1$d ファイルを超えています：サイズは少なくともこれだけあります。</string>
+    <string name="files_sizes_loose">このフォルダー直下のファイル</string>
+    <string name="files_dupes">重複を探す</string>
+    <string name="files_dupes_title">%1$s 内のコピー</string>
+    <string name="files_dupes_none">コピーは見つかりませんでした（名前とサイズが同じ 1 MB 以上のファイル）。</string>
+    <string name="files_dupes_extra">余分なコピーが %1$s 使っています。</string>
+    <string name="files_dupes_hint">名前もサイズも同じです。それぞれ 1 つ残し、不要なものを削除してください。</string>
 </resources>

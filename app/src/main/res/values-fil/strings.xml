@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">Itinabi ang bersyon bago ang huling update. Ang pagbalik ay magtatabi rito, kaya puwede kang magpalit ulit.</string>
     <string name="shelf_switched">Nasa shelf ulit ang %1$s (bersyon %2$s); ginagamit na ito ng mga chain mo.</string>
     <string name="shelf_switch_failed">Hindi napalitan ang bersyon.</string>
+    <string name="look_buzz">Mag-vibrate kapag may naipadala</string>
+    <string name="look_sound">Maikling tunog kapag may naipadala</string>
+    <string name="files_sizes">Laki ng mga folder</string>
+    <string name="files_sizes_title">Laki sa %1$s</string>
+    <string name="files_sizes_counting">Binibilang… maaaring tumagal nang isang minuto ang malaking folder.</string>
+    <string name="files_sizes_empty">Walang laman ang folder na ito.</string>
+    <string name="files_sizes_total">Kabuuan: %1$s</string>
+    <string name="files_sizes_partial">Higit sa %1$d file: hindi bababa rito ang mga laki.</string>
+    <string name="files_sizes_loose">Mga file nang direkta sa folder na ito</string>
+    <string name="files_dupes">Hanapin ang mga duplicate</string>
+    <string name="files_dupes_title">Mga kopya sa %1$s</string>
+    <string name="files_dupes_none">Walang nakitang kopya (mga file na higit 1 MB na may parehong pangalan at laki).</string>
+    <string name="files_dupes_extra">Ang mga sobrang kopya ay kumukuha ng %1$s.</string>
+    <string name="files_dupes_hint">Parehong pangalan at laki. Magtira ng isa sa bawat isa at burahin ang hindi mo kailangan.</string>
 </resources>

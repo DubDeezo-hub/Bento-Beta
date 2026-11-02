@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">เก็บเวอร์ชันก่อนอัปเดตล่าสุดไว้แล้ว การกลับไปจะเก็บอันนี้ไว้แทน จึงสลับได้อีก</string>
     <string name="shelf_switched">%1$s กลับมาอยู่บนชั้นแล้ว (เวอร์ชัน %2$s) เชนของคุณใช้อันนี้แล้ว</string>
     <string name="shelf_switch_failed">สลับเวอร์ชันไม่ได้</string>
+    <string name="look_buzz">สั่นเมื่อส่งแล้ว</string>
+    <string name="look_sound">เสียงสั้น ๆ เมื่อส่งแล้ว</string>
+    <string name="files_sizes">ขนาดโฟลเดอร์</string>
+    <string name="files_sizes_title">ขนาดใน %1$s</string>
+    <string name="files_sizes_counting">กำลังนับ… โฟลเดอร์ใหญ่อาจใช้เวลาหนึ่งนาที</string>
+    <string name="files_sizes_empty">ไม่มีอะไรในโฟลเดอร์นี้</string>
+    <string name="files_sizes_total">รวม: %1$s</string>
+    <string name="files_sizes_partial">มากกว่า %1$d ไฟล์: ขนาดอย่างน้อยเท่านี้</string>
+    <string name="files_sizes_loose">ไฟล์ที่อยู่ในโฟลเดอร์นี้โดยตรง</string>
+    <string name="files_dupes">ค้นหาไฟล์ซ้ำ</string>
+    <string name="files_dupes_title">สำเนาใน %1$s</string>
+    <string name="files_dupes_none">ไม่พบสำเนา (ไฟล์เกิน 1 MB ที่ชื่อและขนาดเหมือนกัน)</string>
+    <string name="files_dupes_extra">สำเนาส่วนเกินใช้พื้นที่ %1$s</string>
+    <string name="files_dupes_hint">ชื่อและขนาดเหมือนกัน เก็บไว้อย่างละหนึ่งแล้วลบที่ไม่ต้องการ</string>
 </resources>

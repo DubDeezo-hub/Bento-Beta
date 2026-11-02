@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">ਆਖਰੀ ਅੱਪਡੇਟ ਤੋਂ ਪਹਿਲਾਂ ਵਾਲਾ ਸੰਸਕਰਣ ਰੱਖਿਆ ਗਿਆ ਹੈ। ਵਾਪਸ ਜਾਣ \'ਤੇ ਇਹ ਪਾਸੇ ਰੱਖਿਆ ਜਾਂਦਾ ਹੈ, ਤਾਂ ਜੋ ਤੁਸੀਂ ਫਿਰ ਬਦਲ ਸਕੋ।</string>
     <string name="shelf_switched">%1$s ਫਿਰ ਸ਼ੈਲਫ਼ \'ਤੇ ਹੈ (ਸੰਸਕਰਣ %2$s); ਤੁਹਾਡੀਆਂ ਚੇਨਾਂ ਹੁਣ ਇਹ ਵਰਤਦੀਆਂ ਹਨ।</string>
     <string name="shelf_switch_failed">ਸੰਸਕਰਣ ਬਦਲਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ।</string>
+    <string name="look_buzz">ਕੁਝ ਭੇਜਣ \'ਤੇ ਕੰਬਣੀ</string>
+    <string name="look_sound">ਕੁਝ ਭੇਜਣ \'ਤੇ ਛੋਟੀ ਆਵਾਜ਼</string>
+    <string name="files_sizes">ਫੋਲਡਰ ਦੇ ਆਕਾਰ</string>
+    <string name="files_sizes_title">%1$s ਵਿੱਚ ਆਕਾਰ</string>
+    <string name="files_sizes_counting">ਗਿਣਤੀ ਹੋ ਰਹੀ ਹੈ… ਵੱਡੇ ਫੋਲਡਰ ਨੂੰ ਇੱਕ ਮਿੰਟ ਲੱਗ ਸਕਦਾ ਹੈ।</string>
+    <string name="files_sizes_empty">ਇਸ ਫੋਲਡਰ ਵਿੱਚ ਕੁਝ ਨਹੀਂ।</string>
+    <string name="files_sizes_total">ਕੁੱਲ: %1$s</string>
+    <string name="files_sizes_partial">%1$d ਤੋਂ ਵੱਧ ਫ਼ਾਈਲਾਂ: ਆਕਾਰ ਘੱਟੋ-ਘੱਟ ਇੰਨੇ ਹਨ।</string>
+    <string name="files_sizes_loose">ਸਿੱਧੇ ਇਸ ਫੋਲਡਰ ਵਿੱਚ ਫ਼ਾਈਲਾਂ</string>
+    <string name="files_dupes">ਡੁਪਲੀਕੇਟ ਲੱਭੋ</string>
+    <string name="files_dupes_title">%1$s ਵਿੱਚ ਕਾਪੀਆਂ</string>
+    <string name="files_dupes_none">ਕੋਈ ਕਾਪੀ ਨਹੀਂ ਮਿਲੀ (ਇੱਕੋ ਨਾਂ ਅਤੇ ਆਕਾਰ ਦੀਆਂ 1 MB ਤੋਂ ਵੱਡੀਆਂ ਫ਼ਾਈਲਾਂ)।</string>
+    <string name="files_dupes_extra">ਵਾਧੂ ਕਾਪੀਆਂ %1$s ਥਾਂ ਲੈਂਦੀਆਂ ਹਨ।</string>
+    <string name="files_dupes_hint">ਇੱਕੋ ਨਾਂ ਅਤੇ ਆਕਾਰ। ਹਰੇਕ ਦੀ ਇੱਕ ਰੱਖੋ ਅਤੇ ਬੇਲੋੜੀਆਂ ਮਿਟਾਓ।</string>
 </resources>

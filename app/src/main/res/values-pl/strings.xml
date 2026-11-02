@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">Wersja sprzed ostatniej aktualizacji została zachowana. Powrót odkłada tę na bok, więc możesz znów przełączyć.</string>
     <string name="shelf_switched">%1$s znów jest na półce (wersja %2$s); Twoje łańcuchy teraz jej używają.</string>
     <string name="shelf_switch_failed">Nie udało się przełączyć wersji.</string>
+    <string name="look_buzz">Wibracja po wysłaniu</string>
+    <string name="look_sound">Krótki dźwięk po wysłaniu</string>
+    <string name="files_sizes">Rozmiary folderów</string>
+    <string name="files_sizes_title">Rozmiary w %1$s</string>
+    <string name="files_sizes_counting">Liczenie… duży folder może zająć minutę.</string>
+    <string name="files_sizes_empty">W tym folderze nic nie ma.</string>
+    <string name="files_sizes_total">Razem: %1$s</string>
+    <string name="files_sizes_partial">Ponad %1$d plików: rozmiary są co najmniej takie.</string>
+    <string name="files_sizes_loose">Pliki bezpośrednio w tym folderze</string>
+    <string name="files_dupes">Znajdź duplikaty</string>
+    <string name="files_dupes_title">Kopie w %1$s</string>
+    <string name="files_dupes_none">Nie znaleziono kopii (pliki powyżej 1 MB o tej samej nazwie i rozmiarze).</string>
+    <string name="files_dupes_extra">Nadmiarowe kopie zajmują %1$s.</string>
+    <string name="files_dupes_hint">Ta sama nazwa i rozmiar. Zostaw po jednej, a niepotrzebne usuń.</string>
 </resources>

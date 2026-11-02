@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">Versija prieš paskutinį atnaujinimą išsaugota. Grįžus ši bus padėta į šalį, tad galėsite vėl perjungti.</string>
     <string name="shelf_switched">%1$s vėl lentynoje (versija %2$s); jūsų grandinės dabar naudoja ją.</string>
     <string name="shelf_switch_failed">Nepavyko perjungti versijos.</string>
+    <string name="look_buzz">Vibruoti išsiuntus</string>
+    <string name="look_sound">Trumpas garsas išsiuntus</string>
+    <string name="files_sizes">Aplankų dydžiai</string>
+    <string name="files_sizes_title">Dydžiai aplanke %1$s</string>
+    <string name="files_sizes_counting">Skaičiuojama… didelis aplankas gali užtrukti minutę.</string>
+    <string name="files_sizes_empty">Šiame aplanke nieko nėra.</string>
+    <string name="files_sizes_total">Iš viso: %1$s</string>
+    <string name="files_sizes_partial">Daugiau nei %1$d failų: dydžiai yra bent tokie.</string>
+    <string name="files_sizes_loose">Failai tiesiai šiame aplanke</string>
+    <string name="files_dupes">Rasti dublikatus</string>
+    <string name="files_dupes_title">Kopijos aplanke %1$s</string>
+    <string name="files_dupes_none">Kopijų nerasta (didesni nei 1 MB failai tuo pačiu pavadinimu ir dydžiu).</string>
+    <string name="files_dupes_extra">Perteklinės kopijos užima %1$s.</string>
+    <string name="files_dupes_hint">Tas pats pavadinimas ir dydis. Palikite po vieną, kitas nereikalingas ištrinkite.</string>
 </resources>

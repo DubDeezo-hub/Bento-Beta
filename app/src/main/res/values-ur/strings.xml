@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">آخری اپڈیٹ سے پہلے والا ورژن رکھا گیا ہے۔ واپس جانے سے یہ الگ رکھا جاتا ہے، تاکہ آپ پھر بدل سکیں۔</string>
     <string name="shelf_switched">‏%1$s دوبارہ شیلف پر ہے (ورژن %2$s)؛ آپ کی چینز اب اسے استعمال کرتی ہیں۔</string>
     <string name="shelf_switch_failed">ورژن نہیں بدلا جا سکا۔</string>
+    <string name="look_buzz">کچھ بھیجنے پر تھرتھراہٹ</string>
+    <string name="look_sound">کچھ بھیجنے پر مختصر آواز</string>
+    <string name="files_sizes">فولڈر کے سائز</string>
+    <string name="files_sizes_title">‏%1$s میں سائز</string>
+    <string name="files_sizes_counting">گنتی جاری… بڑے فولڈر میں ایک منٹ لگ سکتا ہے۔</string>
+    <string name="files_sizes_empty">اس فولڈر میں کچھ نہیں۔</string>
+    <string name="files_sizes_total">کل: %1$s</string>
+    <string name="files_sizes_partial">‏%1$d سے زیادہ فائلیں: سائز کم از کم اتنے ہیں۔</string>
+    <string name="files_sizes_loose">سیدھے اس فولڈر کی فائلیں</string>
+    <string name="files_dupes">نقول تلاش کریں</string>
+    <string name="files_dupes_title">‏%1$s میں نقلیں</string>
+    <string name="files_dupes_none">کوئی نقل نہیں ملی (ایک ہی نام اور سائز کی 1 MB سے بڑی فائلیں)۔</string>
+    <string name="files_dupes_extra">اضافی نقلیں %1$s جگہ لیتی ہیں۔</string>
+    <string name="files_dupes_hint">ایک ہی نام اور سائز۔ ہر ایک کی ایک رکھیں اور غیر ضروری حذف کریں۔</string>
 </resources>

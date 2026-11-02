@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">Версия до последнего обновления сохранена. При возврате текущая откладывается, так что можно переключиться снова.</string>
     <string name="shelf_switched">%1$s снова на полке (версия %2$s); ваши цепочки теперь используют её.</string>
     <string name="shelf_switch_failed">Не удалось сменить версию.</string>
+    <string name="look_buzz">Вибрация после отправки</string>
+    <string name="look_sound">Короткий звук после отправки</string>
+    <string name="files_sizes">Размеры папок</string>
+    <string name="files_sizes_title">Размеры в %1$s</string>
+    <string name="files_sizes_counting">Подсчёт… большая папка может занять минуту.</string>
+    <string name="files_sizes_empty">В этой папке ничего нет.</string>
+    <string name="files_sizes_total">Всего: %1$s</string>
+    <string name="files_sizes_partial">Больше %1$d файлов: размеры не меньше этих.</string>
+    <string name="files_sizes_loose">Файлы прямо в этой папке</string>
+    <string name="files_dupes">Найти дубликаты</string>
+    <string name="files_dupes_title">Копии в %1$s</string>
+    <string name="files_dupes_none">Копий не найдено (файлы больше 1 МБ с одинаковым именем и размером).</string>
+    <string name="files_dupes_extra">Лишние копии занимают %1$s.</string>
+    <string name="files_dupes_hint">Одинаковое имя и размер. Оставьте по одной, а ненужные удалите.</string>
 </resources>

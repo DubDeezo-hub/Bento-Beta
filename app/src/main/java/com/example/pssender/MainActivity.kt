@@ -197,12 +197,23 @@ fun readPref(ctx: Context, key: String, default: String): String =
 
 /** A short vibration when a transfer ends: a "confirm" tick for success and a "reject" buzz for a failure. */
 internal fun buzz(view: View, ok: Boolean) {
-    val kind = when {
-        Build.VERSION.SDK_INT < 30 -> HapticFeedbackConstants.LONG_PRESS
-        ok -> HapticFeedbackConstants.CONFIRM
-        else -> HapticFeedbackConstants.REJECT
+    if (AppLook.buzzOn) {
+        val kind = when {
+            Build.VERSION.SDK_INT < 30 -> HapticFeedbackConstants.LONG_PRESS
+            ok -> HapticFeedbackConstants.CONFIRM
+            else -> HapticFeedbackConstants.REJECT
+        }
+        view.performHapticFeedback(kind)
     }
-    view.performHapticFeedback(kind)
+    if (AppLook.soundOn) {
+        // The phone's own short tones: a rising one when it went, a low one when it didn't (at notification volume)
+        try {
+            val tone = android.media.ToneGenerator(android.media.AudioManager.STREAM_NOTIFICATION, 70)
+            tone.startTone(if (ok) android.media.ToneGenerator.TONE_PROP_ACK else android.media.ToneGenerator.TONE_PROP_NACK, 200)
+            view.postDelayed({ tone.release() }, 400)
+        } catch (_: Exception) {
+        }
+    }
 }
 
 /**

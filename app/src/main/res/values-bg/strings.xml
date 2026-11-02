@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">Версията преди последното обновяване е запазена. Връщането запазва тази настрана, така че можете да превключите отново.</string>
     <string name="shelf_switched">%1$s отново е на рафта (версия %2$s); веригите ви го използват сега.</string>
     <string name="shelf_switch_failed">Версиите не можаха да бъдат сменени.</string>
+    <string name="look_buzz">Вибрация при изпращане</string>
+    <string name="look_sound">Кратък звук при изпращане</string>
+    <string name="files_sizes">Размери на папки</string>
+    <string name="files_sizes_title">Размери в %1$s</string>
+    <string name="files_sizes_counting">Броене… голяма папка може да отнеме минута.</string>
+    <string name="files_sizes_empty">Няма нищо в тази папка.</string>
+    <string name="files_sizes_total">Общо: %1$s</string>
+    <string name="files_sizes_partial">Повече от %1$d файла: размерите са поне толкова.</string>
+    <string name="files_sizes_loose">Файлове директно в тази папка</string>
+    <string name="files_dupes">Намери дубликати</string>
+    <string name="files_dupes_title">Копия в %1$s</string>
+    <string name="files_dupes_none">Не са намерени копия (файлове над 1 MB с еднакво име и размер).</string>
+    <string name="files_dupes_extra">Излишните копия заемат %1$s.</string>
+    <string name="files_dupes_hint">Еднакво име и размер. Запазете по едно и изтрийте ненужните.</string>
 </resources>

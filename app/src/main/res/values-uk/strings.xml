@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">Версію до останнього оновлення збережено. Повернення відкладає поточну, тож можна перемкнути знову.</string>
     <string name="shelf_switched">%1$s знову на полиці (версія %2$s); ваші ланцюжки тепер використовують її.</string>
     <string name="shelf_switch_failed">Не вдалося змінити версію.</string>
+    <string name="look_buzz">Вібрація після надсилання</string>
+    <string name="look_sound">Короткий звук після надсилання</string>
+    <string name="files_sizes">Розміри тек</string>
+    <string name="files_sizes_title">Розміри в %1$s</string>
+    <string name="files_sizes_counting">Підрахунок… велика тека може зайняти хвилину.</string>
+    <string name="files_sizes_empty">У цій теці нічого немає.</string>
+    <string name="files_sizes_total">Загалом: %1$s</string>
+    <string name="files_sizes_partial">Понад %1$d файлів: розміри щонайменше такі.</string>
+    <string name="files_sizes_loose">Файли просто в цій теці</string>
+    <string name="files_dupes">Знайти дублікати</string>
+    <string name="files_dupes_title">Копії в %1$s</string>
+    <string name="files_dupes_none">Копій не знайдено (файли понад 1 МБ з однаковою назвою та розміром).</string>
+    <string name="files_dupes_extra">Зайві копії займають %1$s.</string>
+    <string name="files_dupes_hint">Однакова назва й розмір. Залиште по одній, а непотрібні видаліть.</string>
 </resources>

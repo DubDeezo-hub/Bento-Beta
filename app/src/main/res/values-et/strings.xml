@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">Viimasele uuendusele eelnenud versioon hoiti alles. Tagasi minnes hoitakse see kõrvale, nii et saad uuesti vahetada.</string>
     <string name="shelf_switched">%1$s on taas riiulil (versioon %2$s); sinu ahelad kasutavad nüüd seda.</string>
     <string name="shelf_switch_failed">Versiooni ei õnnestunud vahetada.</string>
+    <string name="look_buzz">Värista, kui midagi saadeti</string>
+    <string name="look_sound">Lühike heli, kui midagi saadeti</string>
+    <string name="files_sizes">Kaustade suurused</string>
+    <string name="files_sizes_title">Suurused kaustas %1$s</string>
+    <string name="files_sizes_counting">Loendan… suur kaust võib võtta minuti.</string>
+    <string name="files_sizes_empty">Selles kaustas pole midagi.</string>
+    <string name="files_sizes_total">Kokku: %1$s</string>
+    <string name="files_sizes_partial">Üle %1$d faili: suurused on vähemalt nii palju.</string>
+    <string name="files_sizes_loose">Failid otse selles kaustas</string>
+    <string name="files_dupes">Leia duplikaadid</string>
+    <string name="files_dupes_title">Koopiad kaustas %1$s</string>
+    <string name="files_dupes_none">Koopiaid ei leitud (üle 1 MB failid sama nime ja suurusega).</string>
+    <string name="files_dupes_extra">Lisakoopiad võtavad %1$s.</string>
+    <string name="files_dupes_hint">Sama nimi ja suurus. Jäta igast üks alles ja kustuta need, mida pole vaja.</string>
 </resources>

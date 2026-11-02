@@ -1195,4 +1195,18 @@
     <string name="shelf_go_back_note">Die Version vor dem letzten Update wurde aufbewahrt. Zurückgehen legt diese beiseite, sodass du wieder wechseln kannst.</string>
     <string name="shelf_switched">%1$s ist wieder im Regal (Version %2$s); deine Ketten nutzen sie jetzt.</string>
     <string name="shelf_switch_failed">Versionen konnten nicht gewechselt werden.</string>
+    <string name="look_buzz">Vibrieren, wenn etwas gesendet wurde</string>
+    <string name="look_sound">Kurzer Ton, wenn etwas gesendet wurde</string>
+    <string name="files_sizes">Ordnergrößen</string>
+    <string name="files_sizes_title">Größen in %1$s</string>
+    <string name="files_sizes_counting">Zähle… ein großer Ordner kann eine Minute dauern.</string>
+    <string name="files_sizes_empty">Nichts in diesem Ordner.</string>
+    <string name="files_sizes_total">Insgesamt: %1$s</string>
+    <string name="files_sizes_partial">Mehr als %1$d Dateien: Die Größen sind mindestens so groß.</string>
+    <string name="files_sizes_loose">Dateien direkt in diesem Ordner</string>
+    <string name="files_dupes">Duplikate finden</string>
+    <string name="files_dupes_title">Kopien in %1$s</string>
+    <string name="files_dupes_none">Keine Kopien gefunden (Dateien über 1 MB mit gleichem Namen und gleicher Größe).</string>
+    <string name="files_dupes_extra">Die zusätzlichen Kopien belegen %1$s.</string>
+    <string name="files_dupes_hint">Gleicher Name, gleiche Größe. Behalte je eine und lösche die anderen, die du nicht brauchst.</string>
 </resources>

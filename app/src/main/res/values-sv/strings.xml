@@ -1194,4 +1194,18 @@
     <string name="shelf_go_back_note">Versionen före senaste uppdateringen har sparats. Att gå tillbaka lägger den här åt sidan, så du kan byta igen.</string>
     <string name="shelf_switched">%1$s finns på hyllan igen (version %2$s); dina kedjor använder den nu.</string>
     <string name="shelf_switch_failed">Det gick inte att byta version.</string>
+    <string name="look_buzz">Vibrera när något har skickats</string>
+    <string name="look_sound">Ett kort ljud när något har skickats</string>
+    <string name="files_sizes">Mappstorlekar</string>
+    <string name="files_sizes_title">Storlekar i %1$s</string>
+    <string name="files_sizes_counting">Räknar… en stor mapp kan ta en minut.</string>
+    <string name="files_sizes_empty">Inget i den här mappen.</string>
+    <string name="files_sizes_total">Totalt: %1$s</string>
+    <string name="files_sizes_partial">Fler än %1$d filer: storlekarna är minst så här stora.</string>
+    <string name="files_sizes_loose">Filer direkt i den här mappen</string>
+    <string name="files_dupes">Hitta dubbletter</string>
+    <string name="files_dupes_title">Kopior i %1$s</string>
+    <string name="files_dupes_none">Inga kopior hittades (filer över 1 MB med samma namn och storlek).</string>
+    <string name="files_dupes_extra">De extra kopiorna tar %1$s.</string>
+    <string name="files_dupes_hint">Samma namn och storlek. Behåll en av varje och radera de du inte behöver.</string>
 </resources>

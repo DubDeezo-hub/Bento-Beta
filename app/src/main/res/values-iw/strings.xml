@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">הגרסה שלפני העדכון האחרון נשמרה. חזרה שומרת את הנוכחית בצד, כך שאפשר להחליף שוב.</string>
     <string name="shelf_switched">‏%1$s שוב על המדף (גרסה %2$s); השרשראות שלך משתמשות בו עכשיו.</string>
     <string name="shelf_switch_failed">לא ניתן היה להחליף גרסה.</string>
+    <string name="look_buzz">רטט כשמשהו נשלח</string>
+    <string name="look_sound">צליל קצר כשמשהו נשלח</string>
+    <string name="files_sizes">גודל תיקיות</string>
+    <string name="files_sizes_title">גדלים ב-%1$s</string>
+    <string name="files_sizes_counting">סופר… תיקייה גדולה עשויה לקחת דקה.</string>
+    <string name="files_sizes_empty">אין כלום בתיקייה הזו.</string>
+    <string name="files_sizes_total">בסך הכול: %1$s</string>
+    <string name="files_sizes_partial">יותר מ-%1$d קבצים: הגדלים לפחות כאלה.</string>
+    <string name="files_sizes_loose">קבצים ישירות בתיקייה הזו</string>
+    <string name="files_dupes">חיפוש כפילויות</string>
+    <string name="files_dupes_title">עותקים ב-%1$s</string>
+    <string name="files_dupes_none">לא נמצאו עותקים (קבצים מעל 1 MB עם אותו שם ואותו גודל).</string>
+    <string name="files_dupes_extra">העותקים העודפים תופסים %1$s.</string>
+    <string name="files_dupes_hint">אותו שם ואותו גודל. השאירו אחד מכל אחד ומחקו את המיותרים.</string>
 </resources>

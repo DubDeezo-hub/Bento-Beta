@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">Die weergawe voor die laaste opdatering is gehou. Teruggaan hou hierdie een eenkant, so jy kan weer wissel.</string>
     <string name="shelf_switched">%1$s is weer op die rak (weergawe %2$s); jou kettings gebruik dit nou.</string>
     <string name="shelf_switch_failed">Kon nie weergawes wissel nie.</string>
+    <string name="look_buzz">Vibreer wanneer iets gestuur is</string>
+    <string name="look_sound">\'n Kort klank wanneer iets gestuur is</string>
+    <string name="files_sizes">Gidsgroottes</string>
+    <string name="files_sizes_title">Groottes in %1$s</string>
+    <string name="files_sizes_counting">Tel… \'n groot gids kan \'n minuut neem.</string>
+    <string name="files_sizes_empty">Niks in hierdie gids nie.</string>
+    <string name="files_sizes_total">Altesaam: %1$s</string>
+    <string name="files_sizes_partial">Meer as %1$d lêers: die groottes is minstens soveel.</string>
+    <string name="files_sizes_loose">Lêers direk in hierdie gids</string>
+    <string name="files_dupes">Soek duplikate</string>
+    <string name="files_dupes_title">Kopieë in %1$s</string>
+    <string name="files_dupes_none">Geen kopieë gevind nie (lêers oor 1 MB met dieselfde naam en grootte).</string>
+    <string name="files_dupes_extra">Die ekstra kopieë neem %1$s in.</string>
+    <string name="files_dupes_hint">Dieselfde naam en grootte. Hou een van elk en vee die ander uit wat jy nie nodig het nie.</string>
 </resources>

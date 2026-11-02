@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">Son güncellemeden önceki sürüm saklandı. Geri dönmek bunu kenara koyar, böylece yeniden değiştirebilirsiniz.</string>
     <string name="shelf_switched">%1$s yeniden rafta (sürüm %2$s); zincirleriniz artık bunu kullanıyor.</string>
     <string name="shelf_switch_failed">Sürüm değiştirilemedi.</string>
+    <string name="look_buzz">Bir şey gönderilince titret</string>
+    <string name="look_sound">Bir şey gönderilince kısa ses</string>
+    <string name="files_sizes">Klasör boyutları</string>
+    <string name="files_sizes_title">%1$s içindeki boyutlar</string>
+    <string name="files_sizes_counting">Sayılıyor… büyük bir klasör bir dakika sürebilir.</string>
+    <string name="files_sizes_empty">Bu klasörde hiçbir şey yok.</string>
+    <string name="files_sizes_total">Toplam: %1$s</string>
+    <string name="files_sizes_partial">%1$d dosyadan fazla: boyutlar en az bu kadar.</string>
+    <string name="files_sizes_loose">Doğrudan bu klasördeki dosyalar</string>
+    <string name="files_dupes">Kopyaları bul</string>
+    <string name="files_dupes_title">%1$s içindeki kopyalar</string>
+    <string name="files_dupes_none">Kopya bulunamadı (aynı ad ve boyutta 1 MB üstü dosyalar).</string>
+    <string name="files_dupes_extra">Fazla kopyalar %1$s yer kaplıyor.</string>
+    <string name="files_dupes_hint">Aynı ad ve aynı boyut. Her birinden birini tutun, gerekmeyenleri silin.</string>
 </resources>

@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">Az utolsó frissítés előtti verzió megmaradt. A visszaváltás ezt teszi félre, így újra válthatsz.</string>
     <string name="shelf_switched">%1$s újra a polcon van (%2$s verzió); a láncaid most ezt használják.</string>
     <string name="shelf_switch_failed">Nem sikerült verziót váltani.</string>
+    <string name="look_buzz">Rezgés küldéskor</string>
+    <string name="look_sound">Rövid hang küldéskor</string>
+    <string name="files_sizes">Mappaméretek</string>
+    <string name="files_sizes_title">Méretek itt: %1$s</string>
+    <string name="files_sizes_counting">Számolás… egy nagy mappa egy percig is tarthat.</string>
+    <string name="files_sizes_empty">Ebben a mappában nincs semmi.</string>
+    <string name="files_sizes_total">Összesen: %1$s</string>
+    <string name="files_sizes_partial">Több mint %1$d fájl: a méretek legalább ekkorák.</string>
+    <string name="files_sizes_loose">Közvetlenül ebben a mappában lévő fájlok</string>
+    <string name="files_dupes">Duplikátumok keresése</string>
+    <string name="files_dupes_title">Másolatok itt: %1$s</string>
+    <string name="files_dupes_none">Nincs másolat (1 MB-nál nagyobb, azonos nevű és méretű fájlok).</string>
+    <string name="files_dupes_extra">A felesleges másolatok %1$s helyet foglalnak.</string>
+    <string name="files_dupes_hint">Azonos név és méret. Mindegyikből tarts meg egyet, a fölöslegeseket töröld.</string>
 </resources>

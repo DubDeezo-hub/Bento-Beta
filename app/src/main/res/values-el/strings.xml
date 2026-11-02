@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">Η έκδοση πριν από την τελευταία ενημέρωση φυλάχτηκε. Η επιστροφή φυλάει αυτήν στην άκρη, ώστε να αλλάξετε ξανά.</string>
     <string name="shelf_switched">Το %1$s είναι ξανά στο ράφι (έκδοση %2$s)· οι αλυσίδες σας το χρησιμοποιούν τώρα.</string>
     <string name="shelf_switch_failed">Δεν ήταν δυνατή η αλλαγή έκδοσης.</string>
+    <string name="look_buzz">Δόνηση όταν σταλεί κάτι</string>
+    <string name="look_sound">Σύντομος ήχος όταν σταλεί κάτι</string>
+    <string name="files_sizes">Μεγέθη φακέλων</string>
+    <string name="files_sizes_title">Μεγέθη στο %1$s</string>
+    <string name="files_sizes_counting">Μέτρηση… ένας μεγάλος φάκελος μπορεί να πάρει ένα λεπτό.</string>
+    <string name="files_sizes_empty">Δεν υπάρχει τίποτα σε αυτόν τον φάκελο.</string>
+    <string name="files_sizes_total">Συνολικά: %1$s</string>
+    <string name="files_sizes_partial">Πάνω από %1$d αρχεία: τα μεγέθη είναι τουλάχιστον τόσα.</string>
+    <string name="files_sizes_loose">Αρχεία απευθείας σε αυτόν τον φάκελο</string>
+    <string name="files_dupes">Εύρεση διπλότυπων</string>
+    <string name="files_dupes_title">Αντίγραφα στο %1$s</string>
+    <string name="files_dupes_none">Δεν βρέθηκαν αντίγραφα (αρχεία άνω του 1 MB με ίδιο όνομα και μέγεθος).</string>
+    <string name="files_dupes_extra">Τα επιπλέον αντίγραφα πιάνουν %1$s.</string>
+    <string name="files_dupes_hint">Ίδιο όνομα και μέγεθος. Κρατήστε ένα από το καθένα και διαγράψτε όσα δεν χρειάζεστε.</string>
 </resources>

@@ -1194,4 +1194,18 @@
     <string name="shelf_go_back_note">La version d\'avant la dernière mise à jour a été gardée. Revenir met celle-ci de côté, vous pouvez donc rechanger.</string>
     <string name="shelf_switched">%1$s est de nouveau sur l\'étagère (version %2$s) ; vos chaînes l\'utilisent maintenant.</string>
     <string name="shelf_switch_failed">Impossible de changer de version.</string>
+    <string name="look_buzz">Vibrer après un envoi</string>
+    <string name="look_sound">Un court son après un envoi</string>
+    <string name="files_sizes">Tailles des dossiers</string>
+    <string name="files_sizes_title">Tailles dans %1$s</string>
+    <string name="files_sizes_counting">Comptage… un gros dossier peut prendre une minute.</string>
+    <string name="files_sizes_empty">Rien dans ce dossier.</string>
+    <string name="files_sizes_total">Au total : %1$s</string>
+    <string name="files_sizes_partial">Plus de %1$d fichiers : les tailles sont au moins celles-ci.</string>
+    <string name="files_sizes_loose">Fichiers directement dans ce dossier</string>
+    <string name="files_dupes">Chercher les doublons</string>
+    <string name="files_dupes_title">Copies dans %1$s</string>
+    <string name="files_dupes_none">Aucune copie trouvée (fichiers de plus de 1 Mo avec le même nom et la même taille).</string>
+    <string name="files_dupes_extra">Les copies en trop occupent %1$s.</string>
+    <string name="files_dupes_hint">Même nom et même taille. Gardez-en une de chaque et supprimez celles dont vous n\'avez pas besoin.</string>
 </resources>

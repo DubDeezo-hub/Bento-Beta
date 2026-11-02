@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">Različica pred zadnjo posodobitvijo je shranjena. Vrnitev to odloži, zato lahko spet zamenjate.</string>
     <string name="shelf_switched">%1$s je spet na polici (različica %2$s); vaše verige jo zdaj uporabljajo.</string>
     <string name="shelf_switch_failed">Različice ni bilo mogoče zamenjati.</string>
+    <string name="look_buzz">Vibriraj, ko je nekaj poslano</string>
+    <string name="look_sound">Kratek zvok, ko je nekaj poslano</string>
+    <string name="files_sizes">Velikosti map</string>
+    <string name="files_sizes_title">Velikosti v %1$s</string>
+    <string name="files_sizes_counting">Štejem… velika mapa lahko traja minuto.</string>
+    <string name="files_sizes_empty">V tej mapi ni ničesar.</string>
+    <string name="files_sizes_total">Skupaj: %1$s</string>
+    <string name="files_sizes_partial">Več kot %1$d datotek: velikosti so vsaj takšne.</string>
+    <string name="files_sizes_loose">Datoteke neposredno v tej mapi</string>
+    <string name="files_dupes">Poišči podvojene</string>
+    <string name="files_dupes_title">Kopije v %1$s</string>
+    <string name="files_dupes_none">Ni najdenih kopij (datoteke nad 1 MB z enakim imenom in velikostjo).</string>
+    <string name="files_dupes_extra">Odvečne kopije zasedajo %1$s.</string>
+    <string name="files_dupes_hint">Enako ime in velikost. Obdržite po eno in izbrišite tiste, ki jih ne potrebujete.</string>
 </resources>

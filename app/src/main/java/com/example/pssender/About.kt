@@ -203,6 +203,15 @@ fun AboutDialog(
                     Text(str(R.string.look_black), style = MaterialTheme.typography.bodySmall, modifier = Modifier.weight(1f))
                     Switch(checked = AppLook.black, onCheckedChange = { AppLook.setBlack(ctx, it) })
                 }
+                // What happens when a payload, link or transfer has gone: a buzz, a short sound, both or neither
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(str(R.string.look_buzz), style = MaterialTheme.typography.bodySmall, modifier = Modifier.weight(1f))
+                    Switch(checked = AppLook.buzzOn, onCheckedChange = { AppLook.setBuzz(ctx, it) })
+                }
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(str(R.string.look_sound), style = MaterialTheme.typography.bodySmall, modifier = Modifier.weight(1f))
+                    Switch(checked = AppLook.soundOn, onCheckedChange = { AppLook.setSound(ctx, it) })
+                }
                 Text(str(R.string.look_text), style = MaterialTheme.typography.bodySmall)
                 ChipRow {
                     listOf(R.string.look_text_normal, R.string.look_text_large, R.string.look_text_larger).forEachIndexed { i, label ->

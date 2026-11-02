@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">نسخه پیش از آخرین به‌روزرسانی نگه داشته شد. بازگشت این یکی را کنار نگه می‌دارد تا دوباره بتوانید عوض کنید.</string>
     <string name="shelf_switched">‏%1$s دوباره روی قفسه است (نسخه %2$s)؛ زنجیره‌های شما اکنون از آن استفاده می‌کنند.</string>
     <string name="shelf_switch_failed">تعویض نسخه ممکن نشد.</string>
+    <string name="look_buzz">لرزش هنگام ارسال</string>
+    <string name="look_sound">صدای کوتاه هنگام ارسال</string>
+    <string name="files_sizes">اندازه پوشه‌ها</string>
+    <string name="files_sizes_title">اندازه‌ها در %1$s</string>
+    <string name="files_sizes_counting">در حال شمارش… یک پوشه بزرگ ممکن است یک دقیقه طول بکشد.</string>
+    <string name="files_sizes_empty">چیزی در این پوشه نیست.</string>
+    <string name="files_sizes_total">روی هم: %1$s</string>
+    <string name="files_sizes_partial">بیش از %1$d فایل: اندازه‌ها دست‌کم همین قدرند.</string>
+    <string name="files_sizes_loose">فایل‌های مستقیم در این پوشه</string>
+    <string name="files_dupes">یافتن تکراری‌ها</string>
+    <string name="files_dupes_title">نسخه‌ها در %1$s</string>
+    <string name="files_dupes_none">نسخه‌ای پیدا نشد (فایل‌های بیش از ۱ مگابایت با نام و اندازه یکسان).</string>
+    <string name="files_dupes_extra">نسخه‌های اضافه %1$s جا گرفته‌اند.</string>
+    <string name="files_dupes_hint">نام و اندازه یکسان. از هر کدام یکی را نگه دارید و بقیه را که لازم ندارید حذف کنید.</string>
 </resources>

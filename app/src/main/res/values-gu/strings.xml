@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">છેલ્લા અપડેટ પહેલાની આવૃત્તિ રાખી છે. પાછા જવાથી આ એક બાજુ રહે છે, જેથી તમે ફરી બદલી શકો.</string>
     <string name="shelf_switched">%1$s ફરી શેલ્ફ પર છે (આવૃત્તિ %2$s); તમારી ચેઇન હવે તે વાપરે છે.</string>
     <string name="shelf_switch_failed">આવૃત્તિ બદલી શકાઈ નહીં.</string>
+    <string name="look_buzz">કંઈક મોકલાય ત્યારે વાઇબ્રેટ</string>
+    <string name="look_sound">કંઈક મોકલાય ત્યારે ટૂંકો અવાજ</string>
+    <string name="files_sizes">ફોલ્ડરના કદ</string>
+    <string name="files_sizes_title">%1$s માં કદ</string>
+    <string name="files_sizes_counting">ગણતરી ચાલુ… મોટા ફોલ્ડરમાં એક મિનિટ લાગી શકે.</string>
+    <string name="files_sizes_empty">આ ફોલ્ડરમાં કંઈ નથી.</string>
+    <string name="files_sizes_total">કુલ: %1$s</string>
+    <string name="files_sizes_partial">%1$d થી વધુ ફાઇલો: કદ ઓછામાં ઓછું આટલું છે.</string>
+    <string name="files_sizes_loose">સીધા આ ફોલ્ડરમાંની ફાઇલો</string>
+    <string name="files_dupes">ડુપ્લિકેટ શોધો</string>
+    <string name="files_dupes_title">%1$s માં નકલો</string>
+    <string name="files_dupes_none">કોઈ નકલ મળી નથી (એક જ નામ અને કદની 1 MB થી મોટી ફાઇલો).</string>
+    <string name="files_dupes_extra">વધારાની નકલો %1$s રોકે છે.</string>
+    <string name="files_dupes_hint">એક જ નામ અને કદ. દરેકમાંથી એક રાખો અને જરૂર ન હોય તે કાઢી નાખો.</string>
 </resources>

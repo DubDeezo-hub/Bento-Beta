@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">Verzija prije zadnjeg ažuriranja je sačuvana. Povratak sprema ovu sa strane, pa možeš opet zamijeniti.</string>
     <string name="shelf_switched">%1$s je opet na polici (verzija %2$s); tvoji lanci ga sada koriste.</string>
     <string name="shelf_switch_failed">Verzije se nisu mogle zamijeniti.</string>
+    <string name="look_buzz">Vibriraj kad se nešto pošalje</string>
+    <string name="look_sound">Kratki zvuk kad se nešto pošalje</string>
+    <string name="files_sizes">Veličine mapa</string>
+    <string name="files_sizes_title">Veličine u %1$s</string>
+    <string name="files_sizes_counting">Brojim… velika mapa može potrajati minutu.</string>
+    <string name="files_sizes_empty">U ovoj mapi nema ničega.</string>
+    <string name="files_sizes_total">Ukupno: %1$s</string>
+    <string name="files_sizes_partial">Više od %1$d datoteka: veličine su barem tolike.</string>
+    <string name="files_sizes_loose">Datoteke izravno u ovoj mapi</string>
+    <string name="files_dupes">Pronađi duplikate</string>
+    <string name="files_dupes_title">Kopije u %1$s</string>
+    <string name="files_dupes_none">Nisu pronađene kopije (datoteke veće od 1 MB s istim imenom i veličinom).</string>
+    <string name="files_dupes_extra">Suvišne kopije zauzimaju %1$s.</string>
+    <string name="files_dupes_hint">Isto ime i ista veličina. Zadrži po jednu i izbriši one koje ti ne trebaju.</string>
 </resources>

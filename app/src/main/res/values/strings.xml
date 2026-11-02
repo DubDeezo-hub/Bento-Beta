@@ -1198,4 +1198,18 @@
     <string name="shelf_go_back_note">The version before the last update was kept. Going back keeps this one aside, so you can switch again.</string>
     <string name="shelf_switched">%1$s is on the shelf again (version %2$s); your chains use it now.</string>
     <string name="shelf_switch_failed">Couldn\'t switch versions.</string>
+    <string name="look_buzz">Buzz when something is sent</string>
+    <string name="look_sound">A short sound when something is sent</string>
+    <string name="files_sizes">Folder sizes</string>
+    <string name="files_sizes_title">Sizes in %1$s</string>
+    <string name="files_sizes_counting">Counting… a big folder can take a minute.</string>
+    <string name="files_sizes_empty">Nothing in this folder.</string>
+    <string name="files_sizes_total">In all: %1$s</string>
+    <string name="files_sizes_partial">More than %1$d files: the sizes are at least this much.</string>
+    <string name="files_sizes_loose">Files directly in this folder</string>
+    <string name="files_dupes">Find duplicates</string>
+    <string name="files_dupes_title">Copies in %1$s</string>
+    <string name="files_dupes_none">No copies found (files over 1 MB with the same name and size).</string>
+    <string name="files_dupes_extra">The extra copies take %1$s.</string>
+    <string name="files_dupes_hint">Same name and same size. Keep one of each and delete the others you don\'t need.</string>
 </resources>

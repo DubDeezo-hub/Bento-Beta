@@ -134,12 +134,30 @@ object AppLook {
         private set
     var textScale by mutableStateOf(1.0f)
         private set
+    /** A short buzz when a payload, link or transfer has gone (or failed). */
+    var buzzOn by mutableStateOf(true)
+        private set
+    /** A short tone at the same moments (off unless asked for). */
+    var soundOn by mutableStateOf(false)
+        private set
 
     private fun prefs(ctx: Context) = ctx.getSharedPreferences("settings", Context.MODE_PRIVATE)
 
     fun load(ctx: Context) {
         black = prefs(ctx).getBoolean("look_black", false)
         textScale = prefs(ctx).getFloat("look_text", 1.0f).takeIf { it in SCALES } ?: 1.0f
+        buzzOn = prefs(ctx).getBoolean("look_buzz", true)
+        soundOn = prefs(ctx).getBoolean("look_sound", false)
+    }
+
+    fun setBuzz(ctx: Context, on: Boolean) {
+        buzzOn = on
+        prefs(ctx).edit().putBoolean("look_buzz", on).apply()
+    }
+
+    fun setSound(ctx: Context, on: Boolean) {
+        soundOn = on
+        prefs(ctx).edit().putBoolean("look_sound", on).apply()
     }
 
     fun setBlack(ctx: Context, on: Boolean) {

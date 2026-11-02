@@ -46,6 +46,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -281,6 +282,8 @@ fun FilesTab(
 ) {
     val ctx = LocalContext.current
     var menuFor by remember { mutableStateOf<FtpEntry?>(null) }
+    var sizesFor by remember { mutableStateOf<String?>(null) }
+    var dupesFor by remember { mutableStateOf<String?>(null) }
     var editing by remember { mutableStateOf<String?>(null) }
     var zipping by remember { mutableStateOf(false) }
     var zipCancel by remember { mutableStateOf(false) }
@@ -416,6 +419,20 @@ fun FilesTab(
     }
 
     // ---- dialogs ----
+
+    dupesFor?.let { path ->
+        if (settings != null) DuplicatesDialog(settings, path, onClose = {
+            dupesFor = null
+            reload()
+        })
+    }
+
+    sizesFor?.let { path ->
+        if (settings != null) FolderSizesDialog(settings, path, onOpen = { sub ->
+            sizesFor = null
+            model.open(scope, settings, sub)
+        }, onClose = { sizesFor = null })
+    }
 
     menuFor?.let { e ->
         AlertDialog(
@@ -801,6 +818,8 @@ fun FilesTab(
                     }
                 ) { Text(str(if (pinned) R.string.files_unpin else R.string.files_pin)) }
                 TextButton(onClick = { showSettings = true }) { Text(str(R.string.files_ftp_settings)) }
+                TextButton(enabled = ready && hasFolder, onClick = { sizesFor = model.path }) { Text(str(R.string.files_sizes)) }
+                TextButton(enabled = ready && hasFolder, onClick = { dupesFor = model.path }) { Text(str(R.string.files_dupes)) }
             }
             FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.Center) {
                 // Screenshots and video clips: where the console keeps what the Create button captured
@@ -901,4 +920,135 @@ fun FilesTab(
         }
     }
     }
+}
+
+
+/** What each folder (and the loose files) directly inside [path] takes on the console, biggest first; tap one to open it. */
+@Composable
+private fun FolderSizesDialog(s: FtpSettings, path: String, onOpen: (String) -> Unit, onClose: () -> Unit) {
+    var rows by remember(path) { mutableStateOf<List<SizeRow>?>(null) }
+    var partial by remember(path) { mutableStateOf(false) }
+    var problem by remember(path) { mutableStateOf("") }
+    LaunchedEffect(path) {
+        try {
+            val tree = withContext(Dispatchers.IO) { ftpTree(s, path, FOLDER_SIZES_MAX) }
+            partial = tree.truncated
+            rows = sizesByChild(tree.files, tree.folders)
+        } catch (e: Exception) {
+            problem = ftpFailureMessage(e)
+        }
+    }
+    AlertDialog(
+        onDismissRequest = onClose,
+        title = { Text(str(R.string.files_sizes_title, path), maxLines = 2, overflow = TextOverflow.Ellipsis) },
+        text = {
+            Column(modifier = Modifier.heightIn(max = 440.dp).verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                val r = rows
+                when {
+                    problem.isNotEmpty() -> Text(problem, style = MaterialTheme.typography.bodySmall)
+                    r == null -> {
+                        Text(str(R.string.files_sizes_counting), style = MaterialTheme.typography.bodySmall)
+                        LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
+                    }
+                    r.isEmpty() -> Text(str(R.string.files_sizes_empty), style = MaterialTheme.typography.bodySmall)
+                    else -> {
+                        Text(str(R.string.files_sizes_total, fmtBytes(r.sumOf { it.bytes })), style = MaterialTheme.typography.titleSmall)
+                        if (partial) Text(str(R.string.files_sizes_partial, FOLDER_SIZES_MAX), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.error)
+                        val biggest = r.first().bytes.coerceAtLeast(1L)
+                        for (row in r) {
+                            Row(
+                                modifier = Modifier.fillMaxWidth().clickable(enabled = row.name.isNotEmpty()) { onOpen(joinPath(path, row.name)) }.padding(vertical = 4.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Column(modifier = Modifier.weight(1f)) {
+                                    Text(if (row.name.isEmpty()) str(R.string.files_sizes_loose) else row.name, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                                    LinearProgressIndicator(progress = { row.bytes.toFloat() / biggest }, modifier = Modifier.fillMaxWidth())
+                                }
+                                Text(fmtBytes(row.bytes), style = MaterialTheme.typography.bodySmall, modifier = Modifier.padding(start = 8.dp))
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        confirmButton = { TextButton(onClick = onClose) { Text(str(R.string.action_close)) } }
+    )
+}
+
+
+/** Files under [path] that look like copies of each other (same name and size), each copy deletable after a yes. */
+@Composable
+private fun DuplicatesDialog(s: FtpSettings, path: String, onClose: () -> Unit) {
+    val scope = rememberCoroutineScope()
+    var groups by remember(path) { mutableStateOf<List<DuplicateGroup>?>(null) }
+    var partial by remember(path) { mutableStateOf(false) }
+    var message by remember(path) { mutableStateOf("") }
+    var asking by remember { mutableStateOf<String?>(null) }
+    LaunchedEffect(path) {
+        try {
+            val tree = withContext(Dispatchers.IO) { ftpTree(s, path, FOLDER_SIZES_MAX) }
+            partial = tree.truncated
+            groups = duplicateGroups(tree.files)
+        } catch (e: Exception) {
+            message = ftpFailureMessage(e)
+        }
+    }
+    asking?.let { rel ->
+        val name = rel.substringAfterLast('/')
+        AlertDialog(
+            onDismissRequest = { asking = null },
+            title = { Text(str(R.string.files_delete_title, name), maxLines = 2, overflow = TextOverflow.Ellipsis) },
+            text = { Text(rel + "\n\n" + str(R.string.files_delete_file), style = MaterialTheme.typography.bodySmall) },
+            confirmButton = {
+                TextButton(onClick = {
+                    asking = null
+                    scope.launch {
+                        message = try {
+                            val full = joinPath(path, rel)
+                            withContext(Dispatchers.IO) { ftpDelete(s, parentPath(full), FtpEntry(name, isDir = false, isLink = false, size = 0L)) }
+                            // The copy is gone from the list; a group with one file left is no longer a duplicate
+                            groups = groups.orEmpty().map { g -> g.copy(paths = g.paths - rel) }.filter { it.paths.size > 1 }
+                            AppText.get(R.string.files_deleted, name)
+                        } catch (e: Exception) {
+                            ftpFailureMessage(e)
+                        }
+                    }
+                }) { Text(str(R.string.action_delete)) }
+            },
+            dismissButton = { TextButton(onClick = { asking = null }) { Text(str(R.string.action_cancel)) } }
+        )
+    }
+    AlertDialog(
+        onDismissRequest = onClose,
+        title = { Text(str(R.string.files_dupes_title, path), maxLines = 2, overflow = TextOverflow.Ellipsis) },
+        text = {
+            Column(modifier = Modifier.heightIn(max = 440.dp).verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                val g = groups
+                if (message.isNotEmpty()) Text(message, style = MaterialTheme.typography.bodySmall)
+                when {
+                    g == null && message.isEmpty() -> {
+                        Text(str(R.string.files_sizes_counting), style = MaterialTheme.typography.bodySmall)
+                        LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
+                    }
+                    g == null -> {}
+                    g.isEmpty() -> Text(str(R.string.files_dupes_none), style = MaterialTheme.typography.bodySmall)
+                    else -> {
+                        Text(str(R.string.files_dupes_extra, fmtBytes(g.sumOf { it.extra })), style = MaterialTheme.typography.titleSmall)
+                        Text(str(R.string.files_dupes_hint), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        for (group in g) {
+                            Text(group.name + " · " + fmtBytes(group.size), style = MaterialTheme.typography.labelLarge, modifier = Modifier.padding(top = 6.dp))
+                            for (rel in group.paths) {
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    Text(rel, style = MaterialTheme.typography.bodySmall, maxLines = 2, overflow = TextOverflow.Ellipsis, modifier = Modifier.weight(1f))
+                                    TextButton(onClick = { asking = rel }) { Text(str(R.string.action_delete)) }
+                                }
+                            }
+                        }
+                    }
+                }
+                if (partial) Text(str(R.string.files_sizes_partial, FOLDER_SIZES_MAX), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.error)
+            }
+        },
+        confirmButton = { TextButton(onClick = onClose) { Text(str(R.string.action_close)) } }
+    )
 }

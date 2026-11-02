@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">ಕೊನೆಯ ನವೀಕರಣಕ್ಕಿಂತ ಹಿಂದಿನ ಆವೃತ್ತಿಯನ್ನು ಉಳಿಸಲಾಗಿದೆ. ಹಿಂತಿರುಗಿದರೆ ಇದನ್ನು ಪಕ್ಕಕ್ಕೆ ಇಡಲಾಗುತ್ತದೆ, ಮತ್ತೆ ಬದಲಿಸಬಹುದು.</string>
     <string name="shelf_switched">%1$s ಮತ್ತೆ ಶೆಲ್ಫ್‌ನಲ್ಲಿದೆ (ಆವೃತ್ತಿ %2$s); ನಿಮ್ಮ ಸರಣಿಗಳು ಈಗ ಅದನ್ನು ಬಳಸುತ್ತವೆ.</string>
     <string name="shelf_switch_failed">ಆವೃತ್ತಿ ಬದಲಿಸಲಾಗಲಿಲ್ಲ.</string>
+    <string name="look_buzz">ಏನಾದರೂ ಕಳುಹಿಸಿದಾಗ ಕಂಪನ</string>
+    <string name="look_sound">ಏನಾದರೂ ಕಳುಹಿಸಿದಾಗ ಚಿಕ್ಕ ಶಬ್ದ</string>
+    <string name="files_sizes">ಫೋಲ್ಡರ್ ಗಾತ್ರಗಳು</string>
+    <string name="files_sizes_title">%1$s ನಲ್ಲಿ ಗಾತ್ರಗಳು</string>
+    <string name="files_sizes_counting">ಎಣಿಸಲಾಗುತ್ತಿದೆ… ದೊಡ್ಡ ಫೋಲ್ಡರ್‌ಗೆ ಒಂದು ನಿಮಿಷ ಬೇಕಾಗಬಹುದು.</string>
+    <string name="files_sizes_empty">ಈ ಫೋಲ್ಡರ್‌ನಲ್ಲಿ ಏನೂ ಇಲ್ಲ.</string>
+    <string name="files_sizes_total">ಒಟ್ಟು: %1$s</string>
+    <string name="files_sizes_partial">%1$d ಕ್ಕಿಂತ ಹೆಚ್ಚು ಫೈಲ್‌ಗಳು: ಗಾತ್ರಗಳು ಕನಿಷ್ಠ ಇಷ್ಟು.</string>
+    <string name="files_sizes_loose">ನೇರವಾಗಿ ಈ ಫೋಲ್ಡರ್‌ನಲ್ಲಿರುವ ಫೈಲ್‌ಗಳು</string>
+    <string name="files_dupes">ನಕಲುಗಳನ್ನು ಹುಡುಕಿ</string>
+    <string name="files_dupes_title">%1$s ನಲ್ಲಿ ನಕಲುಗಳು</string>
+    <string name="files_dupes_none">ನಕಲುಗಳು ಸಿಗಲಿಲ್ಲ (ಒಂದೇ ಹೆಸರು ಮತ್ತು ಗಾತ್ರದ 1 MB ಗಿಂತ ದೊಡ್ಡ ಫೈಲ್‌ಗಳು).</string>
+    <string name="files_dupes_extra">ಹೆಚ್ಚುವರಿ ನಕಲುಗಳು %1$s ಜಾಗ ತೆಗೆದುಕೊಳ್ಳುತ್ತವೆ.</string>
+    <string name="files_dupes_hint">ಒಂದೇ ಹೆಸರು ಮತ್ತು ಗಾತ್ರ. ಪ್ರತಿಯೊಂದರಲ್ಲಿ ಒಂದನ್ನು ಇಟ್ಟು ಬೇಡದವನ್ನು ಅಳಿಸಿ.</string>
 </resources>

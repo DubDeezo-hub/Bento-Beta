@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">শেষ আপডেটের আগের সংস্করণ রাখা হয়েছে। ফিরে গেলে এটি আলাদা রাখা হবে, তাই আবার বদলাতে পারবেন।</string>
     <string name="shelf_switched">%1$s আবার শেলফে (সংস্করণ %2$s); আপনার চেইন এখন এটি ব্যবহার করে।</string>
     <string name="shelf_switch_failed">সংস্করণ বদলানো গেল না।</string>
+    <string name="look_buzz">কিছু পাঠালে কাঁপুনি</string>
+    <string name="look_sound">কিছু পাঠালে ছোট শব্দ</string>
+    <string name="files_sizes">ফোল্ডারের আকার</string>
+    <string name="files_sizes_title">%1$s-এ আকার</string>
+    <string name="files_sizes_counting">গণনা চলছে… বড় ফোল্ডারে এক মিনিট লাগতে পারে।</string>
+    <string name="files_sizes_empty">এই ফোল্ডারে কিছু নেই।</string>
+    <string name="files_sizes_total">মোট: %1$s</string>
+    <string name="files_sizes_partial">%1$d-এর বেশি ফাইল: আকার অন্তত এতটা।</string>
+    <string name="files_sizes_loose">সরাসরি এই ফোল্ডারের ফাইল</string>
+    <string name="files_dupes">ডুপ্লিকেট খুঁজুন</string>
+    <string name="files_dupes_title">%1$s-এ কপি</string>
+    <string name="files_dupes_none">কোনো কপি পাওয়া যায়নি (একই নাম ও আকারের ১ MB-এর বেশি ফাইল)।</string>
+    <string name="files_dupes_extra">অতিরিক্ত কপিগুলো %1$s জায়গা নেয়।</string>
+    <string name="files_dupes_hint">একই নাম ও আকার। প্রতিটির একটি রাখুন, দরকার নেই এমনগুলো মুছুন।</string>
 </resources>

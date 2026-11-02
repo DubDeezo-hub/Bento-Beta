@@ -1194,4 +1194,18 @@
     <string name="shelf_go_back_note">De versie van vóór de laatste update is bewaard. Teruggaan legt deze opzij, dus je kunt opnieuw wisselen.</string>
     <string name="shelf_switched">%1$s staat weer op de plank (versie %2$s); je ketens gebruiken hem nu.</string>
     <string name="shelf_switch_failed">Kon niet van versie wisselen.</string>
+    <string name="look_buzz">Trillen als iets verstuurd is</string>
+    <string name="look_sound">Kort geluid als iets verstuurd is</string>
+    <string name="files_sizes">Mapgroottes</string>
+    <string name="files_sizes_title">Groottes in %1$s</string>
+    <string name="files_sizes_counting">Tellen… een grote map kan een minuut duren.</string>
+    <string name="files_sizes_empty">Niets in deze map.</string>
+    <string name="files_sizes_total">In totaal: %1$s</string>
+    <string name="files_sizes_partial">Meer dan %1$d bestanden: de groottes zijn minstens zo groot.</string>
+    <string name="files_sizes_loose">Bestanden direct in deze map</string>
+    <string name="files_dupes">Dubbele bestanden zoeken</string>
+    <string name="files_dupes_title">Kopieën in %1$s</string>
+    <string name="files_dupes_none">Geen kopieën gevonden (bestanden boven 1 MB met dezelfde naam en grootte).</string>
+    <string name="files_dupes_extra">De extra kopieën nemen %1$s in.</string>
+    <string name="files_dupes_hint">Zelfde naam en grootte. Houd er van elk één en verwijder wat je niet nodig hebt.</string>
 </resources>

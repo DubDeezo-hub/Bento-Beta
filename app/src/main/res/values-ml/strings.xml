@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">അവസാന അപ്‌ഡേറ്റിന് മുമ്പുള്ള പതിപ്പ് സൂക്ഷിച്ചിട്ടുണ്ട്. മടങ്ങുമ്പോൾ ഇത് മാറ്റിവയ്ക്കും, വീണ്ടും മാറ്റാം.</string>
     <string name="shelf_switched">%1$s വീണ്ടും ഷെൽഫിലുണ്ട് (പതിപ്പ് %2$s); നിങ്ങളുടെ ചെയിനുകൾ ഇപ്പോൾ അത് ഉപയോഗിക്കുന്നു.</string>
     <string name="shelf_switch_failed">പതിപ്പ് മാറ്റാനായില്ല.</string>
+    <string name="look_buzz">എന്തെങ്കിലും അയച്ചാൽ വിറയൽ</string>
+    <string name="look_sound">എന്തെങ്കിലും അയച്ചാൽ ചെറിയ ശബ്ദം</string>
+    <string name="files_sizes">ഫോൾഡർ വലുപ്പങ്ങൾ</string>
+    <string name="files_sizes_title">%1$s-ലെ വലുപ്പങ്ങൾ</string>
+    <string name="files_sizes_counting">എണ്ണുന്നു… വലിയ ഫോൾഡറിന് ഒരു മിനിറ്റ് എടുത്തേക്കാം.</string>
+    <string name="files_sizes_empty">ഈ ഫോൾഡറിൽ ഒന്നുമില്ല.</string>
+    <string name="files_sizes_total">ആകെ: %1$s</string>
+    <string name="files_sizes_partial">%1$d-ൽ കൂടുതൽ ഫയലുകൾ: വലുപ്പങ്ങൾ കുറഞ്ഞത് ഇത്രയുണ്ട്.</string>
+    <string name="files_sizes_loose">ഈ ഫോൾഡറിൽ നേരിട്ടുള്ള ഫയലുകൾ</string>
+    <string name="files_dupes">പകർപ്പുകൾ കണ്ടെത്തുക</string>
+    <string name="files_dupes_title">%1$s-ലെ പകർപ്പുകൾ</string>
+    <string name="files_dupes_none">പകർപ്പുകളൊന്നും കണ്ടില്ല (ഒരേ പേരും വലുപ്പവുമുള്ള 1 MB-യിൽ കൂടുതലുള്ള ഫയലുകൾ).</string>
+    <string name="files_dupes_extra">അധിക പകർപ്പുകൾ %1$s എടുക്കുന്നു.</string>
+    <string name="files_dupes_hint">ഒരേ പേരും വലുപ്പവും. ഓരോന്നിൽ നിന്നും ഒന്ന് സൂക്ഷിച്ച് ആവശ്യമില്ലാത്തവ മായ്ക്കുക.</string>
 </resources>

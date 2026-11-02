@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">Versija pirms pēdējā atjauninājuma ir saglabāta. Atgriežoties šī tiek nolikta malā, tāpēc varat pārslēgt vēlreiz.</string>
     <string name="shelf_switched">%1$s atkal ir plauktā (versija %2$s); jūsu ķēdes tagad izmanto to.</string>
     <string name="shelf_switch_failed">Neizdevās pārslēgt versiju.</string>
+    <string name="look_buzz">Vibrēt, kad kaut kas nosūtīts</string>
+    <string name="look_sound">Īsa skaņa, kad kaut kas nosūtīts</string>
+    <string name="files_sizes">Mapju izmēri</string>
+    <string name="files_sizes_title">Izmēri mapē %1$s</string>
+    <string name="files_sizes_counting">Skaita… liela mape var aizņemt minūti.</string>
+    <string name="files_sizes_empty">Šajā mapē nekā nav.</string>
+    <string name="files_sizes_total">Kopā: %1$s</string>
+    <string name="files_sizes_partial">Vairāk nekā %1$d faili: izmēri ir vismaz tik lieli.</string>
+    <string name="files_sizes_loose">Faili tieši šajā mapē</string>
+    <string name="files_dupes">Atrast dublikātus</string>
+    <string name="files_dupes_title">Kopijas mapē %1$s</string>
+    <string name="files_dupes_none">Kopijas nav atrastas (faili virs 1 MB ar vienādu nosaukumu un izmēru).</string>
+    <string name="files_dupes_extra">Liekās kopijas aizņem %1$s.</string>
+    <string name="files_dupes_hint">Vienāds nosaukums un izmērs. Paturiet pa vienai, pārējās nevajadzīgās izdzēsiet.</string>
 </resources>

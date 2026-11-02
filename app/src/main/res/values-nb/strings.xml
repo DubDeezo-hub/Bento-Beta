@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">Versjonen før siste oppdatering ble tatt vare på. Å gå tilbake legger denne til side, så du kan bytte igjen.</string>
     <string name="shelf_switched">%1$s er på hyllen igjen (versjon %2$s); kjedene dine bruker den nå.</string>
     <string name="shelf_switch_failed">Kunne ikke bytte versjon.</string>
+    <string name="look_buzz">Vibrer når noe er sendt</string>
+    <string name="look_sound">En kort lyd når noe er sendt</string>
+    <string name="files_sizes">Mappestørrelser</string>
+    <string name="files_sizes_title">Størrelser i %1$s</string>
+    <string name="files_sizes_counting">Teller… en stor mappe kan ta et minutt.</string>
+    <string name="files_sizes_empty">Ingenting i denne mappen.</string>
+    <string name="files_sizes_total">Til sammen: %1$s</string>
+    <string name="files_sizes_partial">Mer enn %1$d filer: størrelsene er minst så store.</string>
+    <string name="files_sizes_loose">Filer rett i denne mappen</string>
+    <string name="files_dupes">Finn duplikater</string>
+    <string name="files_dupes_title">Kopier i %1$s</string>
+    <string name="files_dupes_none">Fant ingen kopier (filer over 1 MB med samme navn og størrelse).</string>
+    <string name="files_dupes_extra">De ekstra kopiene tar %1$s.</string>
+    <string name="files_dupes_hint">Samme navn og størrelse. Behold én av hver og slett de du ikke trenger.</string>
 </resources>

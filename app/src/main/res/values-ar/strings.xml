@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">احتُفظ بالإصدار السابق لآخر تحديث. العودة تحتفظ بهذا جانبًا، لتتمكن من التبديل مجددًا.</string>
     <string name="shelf_switched">عاد %1$s إلى الرف (الإصدار %2$s)؛ سلاسلك تستخدمه الآن.</string>
     <string name="shelf_switch_failed">تعذّر تبديل الإصدارات.</string>
+    <string name="look_buzz">اهتزاز عند إرسال شيء</string>
+    <string name="look_sound">صوت قصير عند إرسال شيء</string>
+    <string name="files_sizes">أحجام المجلدات</string>
+    <string name="files_sizes_title">الأحجام في %1$s</string>
+    <string name="files_sizes_counting">جارٍ العدّ… قد يستغرق مجلد كبير دقيقة.</string>
+    <string name="files_sizes_empty">لا شيء في هذا المجلد.</string>
+    <string name="files_sizes_total">الإجمالي: %1$s</string>
+    <string name="files_sizes_partial">أكثر من %1$d ملف: الأحجام لا تقل عن هذا.</string>
+    <string name="files_sizes_loose">ملفات داخل هذا المجلد مباشرة</string>
+    <string name="files_dupes">البحث عن التكرارات</string>
+    <string name="files_dupes_title">النسخ في %1$s</string>
+    <string name="files_dupes_none">لم توجد نسخ (ملفات فوق 1 ميغابايت بنفس الاسم والحجم).</string>
+    <string name="files_dupes_extra">تشغل النسخ الزائدة %1$s.</string>
+    <string name="files_dupes_hint">الاسم نفسه والحجم نفسه. أبقِ واحدة من كل منها واحذف ما لا تحتاجه.</string>
 </resources>

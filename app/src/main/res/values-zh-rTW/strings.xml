@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">已保留上次更新前的版本。退回後會把目前版本保留起來，可以再換回來。</string>
     <string name="shelf_switched">%1$s 已回到書架（版本 %2$s）；你的鏈現在使用它。</string>
     <string name="shelf_switch_failed">無法切換版本。</string>
+    <string name="look_buzz">傳送後震動</string>
+    <string name="look_sound">傳送後短促提示音</string>
+    <string name="files_sizes">資料夾大小</string>
+    <string name="files_sizes_title">%1$s 中的大小</string>
+    <string name="files_sizes_counting">正在統計… 大資料夾可能要一分鐘。</string>
+    <string name="files_sizes_empty">此資料夾是空的。</string>
+    <string name="files_sizes_total">總計：%1$s</string>
+    <string name="files_sizes_partial">超過 %1$d 個檔案：大小至少如此。</string>
+    <string name="files_sizes_loose">直接位於此資料夾的檔案</string>
+    <string name="files_dupes">尋找重複檔案</string>
+    <string name="files_dupes_title">%1$s 中的副本</string>
+    <string name="files_dupes_none">找不到副本（名稱和大小相同、超過 1 MB 的檔案）。</string>
+    <string name="files_dupes_extra">多餘的副本佔用 %1$s。</string>
+    <string name="files_dupes_hint">名稱和大小都相同。每組保留一個，刪除不需要的。</string>
 </resources>

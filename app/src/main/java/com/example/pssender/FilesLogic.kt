@@ -343,3 +343,54 @@ fun syncTargetDir(base: String, rel: String): String =
 
 /** The name of a phone file inside a sync ("b.bin" for "a/b.bin"). */
 fun syncFileName(rel: String): String = rel.substringAfterLast('/')
+
+// ----- folder sizes -----
+
+/** Files counted at most when a folder's sizes are worked out (a game folder can hold tens of thousands). */
+const val FOLDER_SIZES_MAX = 40_000
+
+/** One line of a folder's sizes: a folder inside it, or (with an empty [name]) the files lying directly in it. */
+data class SizeRow(val name: String, val bytes: Long, val files: Int)
+
+/**
+ * What each thing directly inside a folder takes, biggest first, from all its [files] (paths relative to the folder,
+ * with their sizes) and [folders] (so an empty folder shows too, at zero).
+ */
+fun sizesByChild(files: Map<String, Long>, folders: Set<String>): List<SizeRow> {
+    val bytes = HashMap<String, Long>()
+    val counts = HashMap<String, Int>()
+    for ((path, size) in files) {
+        val top = if ('/' in path) path.substringBefore('/') else ""
+        bytes[top] = (bytes[top] ?: 0L) + size.coerceAtLeast(0L)
+        counts[top] = (counts[top] ?: 0) + 1
+    }
+    for (f in folders) if ('/' !in f) {
+        bytes.putIfAbsent(f, 0L)
+        counts.putIfAbsent(f, 0)
+    }
+    return bytes.map { SizeRow(it.key, it.value, counts[it.key] ?: 0) }
+        .sortedWith(compareByDescending<SizeRow> { it.bytes }.thenBy { it.name.lowercase() })
+}
+
+// ----- duplicates -----
+
+/** Files smaller than this are not looked at for duplicates (icons and small settings files repeat everywhere). */
+const val DUPLICATE_MIN_BYTES = 1L shl 20
+
+/** Copies of one file: the same [name] (ignoring capitals) and the same [size], at each of [paths]. */
+data class DuplicateGroup(val name: String, val size: Long, val paths: List<String>) {
+    /** The space the extra copies take. */
+    val extra: Long get() = size * (paths.size - 1)
+}
+
+/**
+ * Files under a folder that look like copies of each other (same name and same size), from its [files] (paths relative
+ * to the folder, with their sizes). The groups that waste the most space come first; each group's paths are sorted.
+ */
+fun duplicateGroups(files: Map<String, Long>, minBytes: Long = DUPLICATE_MIN_BYTES): List<DuplicateGroup> =
+    files.entries
+        .filter { it.value >= minBytes }
+        .groupBy { it.key.substringAfterLast('/').lowercase() to it.value }
+        .filter { it.value.size > 1 }
+        .map { (k, list) -> DuplicateGroup(list.first().key.substringAfterLast('/'), k.second, list.map { it.key }.sorted()) }
+        .sortedWith(compareByDescending<DuplicateGroup> { it.extra }.thenBy { it.name.lowercase() })

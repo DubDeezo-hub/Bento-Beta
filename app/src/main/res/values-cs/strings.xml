@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">Verze před poslední aktualizací byla uschována. Návrat uschová tuto, takže můžete přepnout znovu.</string>
     <string name="shelf_switched">%1$s je zpět na polici (verze %2$s); vaše řetězce ji teď používají.</string>
     <string name="shelf_switch_failed">Verze se nepodařilo přepnout.</string>
+    <string name="look_buzz">Zavibrovat po odeslání</string>
+    <string name="look_sound">Krátký zvuk po odeslání</string>
+    <string name="files_sizes">Velikosti složek</string>
+    <string name="files_sizes_title">Velikosti v %1$s</string>
+    <string name="files_sizes_counting">Počítám… velká složka může trvat minutu.</string>
+    <string name="files_sizes_empty">V této složce nic není.</string>
+    <string name="files_sizes_total">Celkem: %1$s</string>
+    <string name="files_sizes_partial">Více než %1$d souborů: velikosti jsou nejméně tolik.</string>
+    <string name="files_sizes_loose">Soubory přímo v této složce</string>
+    <string name="files_dupes">Najít duplikáty</string>
+    <string name="files_dupes_title">Kopie v %1$s</string>
+    <string name="files_dupes_none">Žádné kopie nenalezeny (soubory nad 1 MB se stejným názvem a velikostí).</string>
+    <string name="files_dupes_extra">Přebytečné kopie zabírají %1$s.</string>
+    <string name="files_dupes_hint">Stejný název i velikost. Jednu od každého si nechte a ostatní, které nepotřebujete, smažte.</string>
 </resources>

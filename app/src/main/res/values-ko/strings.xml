@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">마지막 업데이트 전 버전을 보관해 두었습니다. 되돌리면 지금 것을 보관하므로 다시 바꿀 수 있습니다.</string>
     <string name="shelf_switched">%1$s이(가) 다시 선반에 있습니다(버전 %2$s). 이제 체인이 이것을 사용합니다.</string>
     <string name="shelf_switch_failed">버전을 바꿀 수 없습니다.</string>
+    <string name="look_buzz">보내면 진동</string>
+    <string name="look_sound">보내면 짧은 소리</string>
+    <string name="files_sizes">폴더 크기</string>
+    <string name="files_sizes_title">%1$s 안의 크기</string>
+    <string name="files_sizes_counting">세는 중… 큰 폴더는 1분쯤 걸릴 수 있습니다.</string>
+    <string name="files_sizes_empty">이 폴더에는 아무것도 없습니다.</string>
+    <string name="files_sizes_total">합계: %1$s</string>
+    <string name="files_sizes_partial">파일이 %1$d개를 넘습니다: 크기는 최소 이만큼입니다.</string>
+    <string name="files_sizes_loose">이 폴더에 바로 있는 파일</string>
+    <string name="files_dupes">중복 찾기</string>
+    <string name="files_dupes_title">%1$s의 사본</string>
+    <string name="files_dupes_none">사본이 없습니다(이름과 크기가 같은 1MB 이상 파일).</string>
+    <string name="files_dupes_extra">남는 사본이 %1$s를 차지합니다.</string>
+    <string name="files_dupes_hint">이름과 크기가 같습니다. 하나씩 남기고 필요 없는 것은 삭제하세요.</string>
 </resources>

@@ -1194,4 +1194,18 @@
     <string name="shelf_go_back_note">La versione prima dell\'ultimo aggiornamento è stata conservata. Tornare indietro mette da parte questa, così puoi cambiare di nuovo.</string>
     <string name="shelf_switched">%1$s è di nuovo sullo scaffale (versione %2$s); le tue catene ora lo usano.</string>
     <string name="shelf_switch_failed">Impossibile cambiare versione.</string>
+    <string name="look_buzz">Vibra quando qualcosa è inviato</string>
+    <string name="look_sound">Un breve suono quando qualcosa è inviato</string>
+    <string name="files_sizes">Dimensioni cartelle</string>
+    <string name="files_sizes_title">Dimensioni in %1$s</string>
+    <string name="files_sizes_counting">Conteggio… una cartella grande può richiedere un minuto.</string>
+    <string name="files_sizes_empty">Niente in questa cartella.</string>
+    <string name="files_sizes_total">In tutto: %1$s</string>
+    <string name="files_sizes_partial">Più di %1$d file: le dimensioni sono almeno queste.</string>
+    <string name="files_sizes_loose">File direttamente in questa cartella</string>
+    <string name="files_dupes">Trova duplicati</string>
+    <string name="files_dupes_title">Copie in %1$s</string>
+    <string name="files_dupes_none">Nessuna copia trovata (file oltre 1 MB con lo stesso nome e la stessa dimensione).</string>
+    <string name="files_dupes_extra">Le copie in più occupano %1$s.</string>
+    <string name="files_dupes_hint">Stesso nome e stessa dimensione. Tienine una di ciascuna ed elimina quelle che non ti servono.</string>
 </resources>

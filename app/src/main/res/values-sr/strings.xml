@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">Верзија пре последњег ажурирања је сачувана. Враћање ову склања на страну, па можете поново да замените.</string>
     <string name="shelf_switched">%1$s је поново на полици (верзија %2$s); ваши ланци сада користе њу.</string>
     <string name="shelf_switch_failed">Није било могуће заменити верзију.</string>
+    <string name="look_buzz">Вибрирај када се нешто пошаље</string>
+    <string name="look_sound">Кратак звук када се нешто пошаље</string>
+    <string name="files_sizes">Величине фасцикли</string>
+    <string name="files_sizes_title">Величине у %1$s</string>
+    <string name="files_sizes_counting">Бројим… велика фасцикла може трајати минут.</string>
+    <string name="files_sizes_empty">У овој фасцикли нема ничега.</string>
+    <string name="files_sizes_total">Укупно: %1$s</string>
+    <string name="files_sizes_partial">Више од %1$d датотека: величине су бар толике.</string>
+    <string name="files_sizes_loose">Датотеке директно у овој фасцикли</string>
+    <string name="files_dupes">Пронађи дупликате</string>
+    <string name="files_dupes_title">Копије у %1$s</string>
+    <string name="files_dupes_none">Нису пронађене копије (датотеке веће од 1 MB са истим именом и величином).</string>
+    <string name="files_dupes_extra">Вишак копија заузима %1$s.</string>
+    <string name="files_dupes_hint">Исто име и величина. Задржите по једну и обришите оне које вам не требају.</string>
 </resources>

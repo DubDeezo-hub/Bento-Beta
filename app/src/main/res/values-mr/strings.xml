@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">शेवटच्या अपडेटपूर्वीची आवृत्ती ठेवली आहे. परत गेल्यास ही बाजूला ठेवली जाते, म्हणून पुन्हा बदलू शकता.</string>
     <string name="shelf_switched">%1$s पुन्हा शेल्फवर आहे (आवृत्ती %2$s); तुमच्या साखळ्या आता ते वापरतात.</string>
     <string name="shelf_switch_failed">आवृत्ती बदलता आली नाही.</string>
+    <string name="look_buzz">काही पाठवल्यावर कंपन</string>
+    <string name="look_sound">काही पाठवल्यावर छोटा आवाज</string>
+    <string name="files_sizes">फोल्डरचे आकार</string>
+    <string name="files_sizes_title">%1$s मधील आकार</string>
+    <string name="files_sizes_counting">मोजत आहे… मोठ्या फोल्डरला एक मिनिट लागू शकतो.</string>
+    <string name="files_sizes_empty">या फोल्डरमध्ये काहीही नाही.</string>
+    <string name="files_sizes_total">एकूण: %1$s</string>
+    <string name="files_sizes_partial">%1$d पेक्षा जास्त फाइल्स: आकार किमान इतके आहेत.</string>
+    <string name="files_sizes_loose">थेट या फोल्डरमधील फाइल्स</string>
+    <string name="files_dupes">डुप्लिकेट शोधा</string>
+    <string name="files_dupes_title">%1$s मधील प्रती</string>
+    <string name="files_dupes_none">प्रती सापडल्या नाहीत (एकाच नावाच्या व आकाराच्या 1 MB पेक्षा मोठ्या फाइल्स).</string>
+    <string name="files_dupes_extra">जास्तीच्या प्रती %1$s जागा घेतात.</string>
+    <string name="files_dupes_hint">एकच नाव आणि आकार. प्रत्येकी एक ठेवा आणि गरज नसलेल्या हटवा.</string>
 </resources>

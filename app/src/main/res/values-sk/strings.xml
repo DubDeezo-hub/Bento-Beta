@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">Verzia pred poslednou aktualizáciou bola odložená. Návrat odloží túto, takže môžete prepnúť znova.</string>
     <string name="shelf_switched">%1$s je znova na poličke (verzia %2$s); vaše reťazce ju teraz používajú.</string>
     <string name="shelf_switch_failed">Verziu sa nepodarilo prepnúť.</string>
+    <string name="look_buzz">Zavibrovať po odoslaní</string>
+    <string name="look_sound">Krátky zvuk po odoslaní</string>
+    <string name="files_sizes">Veľkosti priečinkov</string>
+    <string name="files_sizes_title">Veľkosti v %1$s</string>
+    <string name="files_sizes_counting">Počítam… veľký priečinok môže trvať minútu.</string>
+    <string name="files_sizes_empty">V tomto priečinku nič nie je.</string>
+    <string name="files_sizes_total">Spolu: %1$s</string>
+    <string name="files_sizes_partial">Viac ako %1$d súborov: veľkosti sú najmenej takéto.</string>
+    <string name="files_sizes_loose">Súbory priamo v tomto priečinku</string>
+    <string name="files_dupes">Nájsť duplikáty</string>
+    <string name="files_dupes_title">Kópie v %1$s</string>
+    <string name="files_dupes_none">Nenašli sa žiadne kópie (súbory nad 1 MB s rovnakým názvom a veľkosťou).</string>
+    <string name="files_dupes_extra">Nadbytočné kópie zaberajú %1$s.</string>
+    <string name="files_dupes_hint">Rovnaký názov aj veľkosť. Nechajte si po jednej a nepotrebné odstráňte.</string>
 </resources>

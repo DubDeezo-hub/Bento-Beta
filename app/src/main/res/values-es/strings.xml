@@ -1194,4 +1194,18 @@
     <string name="shelf_go_back_note">Se guardó la versión anterior a la última actualización. Volver guarda esta aparte, así que puedes cambiar otra vez.</string>
     <string name="shelf_switched">%1$s vuelve a estar en el estante (versión %2$s); tus cadenas ya lo usan.</string>
     <string name="shelf_switch_failed">No se pudo cambiar de versión.</string>
+    <string name="look_buzz">Vibrar al enviar algo</string>
+    <string name="look_sound">Un sonido corto al enviar algo</string>
+    <string name="files_sizes">Tamaños de carpetas</string>
+    <string name="files_sizes_title">Tamaños en %1$s</string>
+    <string name="files_sizes_counting">Contando… una carpeta grande puede tardar un minuto.</string>
+    <string name="files_sizes_empty">No hay nada en esta carpeta.</string>
+    <string name="files_sizes_total">En total: %1$s</string>
+    <string name="files_sizes_partial">Más de %1$d archivos: los tamaños son al menos estos.</string>
+    <string name="files_sizes_loose">Archivos directamente en esta carpeta</string>
+    <string name="files_dupes">Buscar duplicados</string>
+    <string name="files_dupes_title">Copias en %1$s</string>
+    <string name="files_dupes_none">No se encontraron copias (archivos de más de 1 MB con el mismo nombre y tamaño).</string>
+    <string name="files_dupes_extra">Las copias de más ocupan %1$s.</string>
+    <string name="files_dupes_hint">Mismo nombre y mismo tamaño. Conserva una de cada y elimina las que no necesites.</string>
 </resources>

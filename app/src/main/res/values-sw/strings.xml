@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">Toleo la kabla ya sasisho la mwisho limehifadhiwa. Kurudi kunahifadhi hili kando, kwa hivyo unaweza kubadilisha tena.</string>
     <string name="shelf_switched">%1$s iko kwenye rafu tena (toleo %2$s); minyororo yako sasa inaitumia.</string>
     <string name="shelf_switch_failed">Imeshindwa kubadilisha toleo.</string>
+    <string name="look_buzz">Tetema kitu kinapotumwa</string>
+    <string name="look_sound">Sauti fupi kitu kinapotumwa</string>
+    <string name="files_sizes">Ukubwa wa folda</string>
+    <string name="files_sizes_title">Ukubwa katika %1$s</string>
+    <string name="files_sizes_counting">Inahesabu… folda kubwa inaweza kuchukua dakika moja.</string>
+    <string name="files_sizes_empty">Hakuna kitu katika folda hii.</string>
+    <string name="files_sizes_total">Jumla: %1$s</string>
+    <string name="files_sizes_partial">Faili zaidi ya %1$d: ukubwa ni angalau huu.</string>
+    <string name="files_sizes_loose">Faili moja kwa moja katika folda hii</string>
+    <string name="files_dupes">Tafuta nakala rudufu</string>
+    <string name="files_dupes_title">Nakala katika %1$s</string>
+    <string name="files_dupes_none">Hakuna nakala zilizopatikana (faili zaidi ya 1 MB zenye jina na ukubwa sawa).</string>
+    <string name="files_dupes_extra">Nakala za ziada zinachukua %1$s.</string>
+    <string name="files_dupes_hint">Jina na ukubwa sawa. Bakiza moja ya kila moja na ufute usizohitaji.</string>
 </resources>

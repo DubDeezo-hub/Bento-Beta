@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">చివరి అప్‌డేట్‌కు ముందు వెర్షన్ దాచబడింది. తిరిగి వెళితే ఇది పక్కన పెట్టబడుతుంది, మళ్లీ మార్చవచ్చు.</string>
     <string name="shelf_switched">%1$s మళ్లీ షెల్ఫ్‌లో ఉంది (వెర్షన్ %2$s); మీ చెయిన్లు ఇప్పుడు దాన్నే వాడతాయి.</string>
     <string name="shelf_switch_failed">వెర్షన్ మార్చలేకపోయాం.</string>
+    <string name="look_buzz">ఏదైనా పంపితే వైబ్రేట్</string>
+    <string name="look_sound">ఏదైనా పంపితే చిన్న శబ్దం</string>
+    <string name="files_sizes">ఫోల్డర్ పరిమాణాలు</string>
+    <string name="files_sizes_title">%1$sలో పరిమాణాలు</string>
+    <string name="files_sizes_counting">లెక్కిస్తోంది… పెద్ద ఫోల్డర్‌కు ఒక నిమిషం పట్టవచ్చు.</string>
+    <string name="files_sizes_empty">ఈ ఫోల్డర్‌లో ఏమీ లేదు.</string>
+    <string name="files_sizes_total">మొత్తం: %1$s</string>
+    <string name="files_sizes_partial">%1$d కంటే ఎక్కువ ఫైళ్లు: పరిమాణాలు కనీసం ఇంత.</string>
+    <string name="files_sizes_loose">నేరుగా ఈ ఫోల్డర్‌లోని ఫైళ్లు</string>
+    <string name="files_dupes">నకిలీలను కనుగొను</string>
+    <string name="files_dupes_title">%1$sలో కాపీలు</string>
+    <string name="files_dupes_none">కాపీలు ఏవీ కనబడలేదు (ఒకే పేరు, పరిమాణం ఉన్న 1 MB కంటే పెద్ద ఫైళ్లు).</string>
+    <string name="files_dupes_extra">అదనపు కాపీలు %1$s తీసుకుంటున్నాయి.</string>
+    <string name="files_dupes_hint">ఒకే పేరు, ఒకే పరిమాణం. ఒక్కోదాంట్లో ఒకటి ఉంచి అవసరం లేనివి తొలగించండి.</string>
 </resources>

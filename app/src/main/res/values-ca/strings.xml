@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">S\'ha guardat la versió d\'abans de l\'última actualització. Tornar-hi guarda aquesta a part, així pots canviar de nou.</string>
     <string name="shelf_switched">%1$s torna a ser al prestatge (versió %2$s); les teves cadenes ara la fan servir.</string>
     <string name="shelf_switch_failed">No s\'han pogut canviar les versions.</string>
+    <string name="look_buzz">Vibra quan s\'envia alguna cosa</string>
+    <string name="look_sound">Un so curt quan s\'envia alguna cosa</string>
+    <string name="files_sizes">Mides de carpetes</string>
+    <string name="files_sizes_title">Mides a %1$s</string>
+    <string name="files_sizes_counting">Comptant… una carpeta gran pot trigar un minut.</string>
+    <string name="files_sizes_empty">No hi ha res en aquesta carpeta.</string>
+    <string name="files_sizes_total">En total: %1$s</string>
+    <string name="files_sizes_partial">Més de %1$d fitxers: les mides són com a mínim aquestes.</string>
+    <string name="files_sizes_loose">Fitxers directament en aquesta carpeta</string>
+    <string name="files_dupes">Cerca duplicats</string>
+    <string name="files_dupes_title">Còpies a %1$s</string>
+    <string name="files_dupes_none">No s\'han trobat còpies (fitxers de més d\'1 MB amb el mateix nom i mida).</string>
+    <string name="files_dupes_extra">Les còpies sobrants ocupen %1$s.</string>
+    <string name="files_dupes_hint">Mateix nom i mateixa mida. Conserva\'n una de cada i esborra les que no necessitis.</string>
 </resources>

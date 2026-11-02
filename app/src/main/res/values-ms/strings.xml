@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">Versi sebelum kemas kini terakhir disimpan. Kembali akan menyimpan yang ini, jadi anda boleh tukar lagi.</string>
     <string name="shelf_switched">%1$s ada di rak semula (versi %2$s); rantai anda kini menggunakannya.</string>
     <string name="shelf_switch_failed">Tidak dapat menukar versi.</string>
+    <string name="look_buzz">Bergetar apabila sesuatu dihantar</string>
+    <string name="look_sound">Bunyi pendek apabila sesuatu dihantar</string>
+    <string name="files_sizes">Saiz folder</string>
+    <string name="files_sizes_title">Saiz dalam %1$s</string>
+    <string name="files_sizes_counting">Mengira… folder besar boleh ambil masa seminit.</string>
+    <string name="files_sizes_empty">Tiada apa-apa dalam folder ini.</string>
+    <string name="files_sizes_total">Jumlah: %1$s</string>
+    <string name="files_sizes_partial">Lebih daripada %1$d fail: saiznya sekurang-kurangnya sebanyak ini.</string>
+    <string name="files_sizes_loose">Fail terus dalam folder ini</string>
+    <string name="files_dupes">Cari pendua</string>
+    <string name="files_dupes_title">Salinan dalam %1$s</string>
+    <string name="files_dupes_none">Tiada salinan ditemui (fail melebihi 1 MB dengan nama dan saiz sama).</string>
+    <string name="files_dupes_extra">Salinan lebihan mengambil %1$s.</string>
+    <string name="files_dupes_hint">Nama dan saiz sama. Simpan satu daripada setiap satu dan padam yang tidak diperlukan.</string>
 </resources>

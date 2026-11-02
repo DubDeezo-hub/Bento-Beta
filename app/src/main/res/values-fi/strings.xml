@@ -1193,4 +1193,18 @@
     <string name="shelf_go_back_note">Viimeistä päivitystä edeltävä versio säilytettiin. Palaaminen säilyttää tämän sivussa, joten voit vaihtaa taas.</string>
     <string name="shelf_switched">%1$s on taas hyllyssä (versio %2$s); ketjusi käyttävät sitä nyt.</string>
     <string name="shelf_switch_failed">Versiota ei voitu vaihtaa.</string>
+    <string name="look_buzz">Värinä, kun jotain lähetettiin</string>
+    <string name="look_sound">Lyhyt ääni, kun jotain lähetettiin</string>
+    <string name="files_sizes">Kansioiden koot</string>
+    <string name="files_sizes_title">Koot kansiossa %1$s</string>
+    <string name="files_sizes_counting">Lasketaan… iso kansio voi viedä minuutin.</string>
+    <string name="files_sizes_empty">Tässä kansiossa ei ole mitään.</string>
+    <string name="files_sizes_total">Yhteensä: %1$s</string>
+    <string name="files_sizes_partial">Yli %1$d tiedostoa: koot ovat vähintään näin suuret.</string>
+    <string name="files_sizes_loose">Tiedostot suoraan tässä kansiossa</string>
+    <string name="files_dupes">Etsi kaksoiskappaleet</string>
+    <string name="files_dupes_title">Kopiot kansiossa %1$s</string>
+    <string name="files_dupes_none">Kopioita ei löytynyt (yli 1 Mt:n tiedostot, joilla sama nimi ja koko).</string>
+    <string name="files_dupes_extra">Ylimääräiset kopiot vievät %1$s.</string>
+    <string name="files_dupes_hint">Sama nimi ja koko. Pidä yksi kustakin ja poista ne, joita et tarvitse.</string>
 </resources>
