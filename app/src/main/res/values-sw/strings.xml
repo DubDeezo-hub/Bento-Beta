@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Mnyororo huo haupo tena.</string>
     <string name="notif_channel_chain">Minyororo ya payload</string>
     <string name="backup_chains">Minyororo: %1$d</string>
+    <string name="backup_cheats">Udanganyifu: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Havijakamilika mara ya mwisho: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">Michakato yote kwenye konsoli. Fungua mmoja ili kuona maeneo yake ya kumbukumbu (rwx: soma, andika, tekeleza; maeneo yanayoandikika yameangaziwa), na ufungue eneo ili kuona baiti zake. Gusa mstari wa baiti ili kuzibadilisha, au nenda kwenye anwani.</string>
     <string name="memory_view_log">Kumbukumbu za konsoli</string>
     <string name="klog_title">Kumbukumbu za konsoli</string>
+    <string name="klog_etahen_note">etaHEN huituma kwenye mlango 9081 mpangilio wake wa Klog ukiwa umewashwa; mlango huo pia hujaribiwa.</string>
     <string name="klog_intro">Kile ambacho mfumo wa konsoli na payloads huchapisha, moja kwa moja. ps5debug-NG huzituma kwenye mlango 3232. Ni muhimu payload au udanganyifu usipofanya kazi ipasavyo.</string>
     <string name="klog_port">Mlango wa kumbukumbu</string>
     <string name="klog_start">Anza</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">Inabana: faili %1$d kati ya %2$d, %3$s kati ya %4$s</string>
     <string name="zip_done">Imehifadhiwa kama %1$s</string>
     <string name="zip_empty">Folda hiyo haina faili za kubana.</string>
+    <string name="zip_no_space">Hakuna nafasi ya kutosha kwenye simu: zip inahitaji takriban %1$s, na %2$s iko wazi.</string>
     <string name="zip_truncated">Folda ilikuwa kubwa kuliko upakuaji mmoja unavyoweza kubeba, kwa hiyo si kila kitu kipo kwenye zip.</string>
     <string name="zip_cancelled">Kubana kumesimamishwa</string>
     <string name="look_title">Mwonekano</string>

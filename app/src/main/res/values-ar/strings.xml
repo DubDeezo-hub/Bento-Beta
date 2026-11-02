@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">هذه السلسلة لم تعد موجودة.</string>
     <string name="notif_channel_chain">سلاسل payload</string>
     <string name="backup_chains">السلاسل: %1$d</string>
+    <string name="backup_cheats">الغش: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">لم يكتمل في المرة السابقة: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">كل العمليات على الجهاز. افتح إحداها لترى مناطق ذاكرتها (rwx: قراءة، كتابة، تشغيل؛ القابلة للكتابة مميّزة)، ومنطقةً لترى بايتاتها. اضغط سطر بايتات لتغييره، أو «اذهب» إلى عنوان.</string>
     <string name="memory_view_log">سجل الجهاز</string>
     <string name="klog_title">سجل الجهاز</string>
+    <string name="klog_etahen_note">يرسله etaHEN على المنفذ 9081 عند تشغيل إعداد Klog فيه، ويُجرَّب هذا المنفذ أيضًا.</string>
     <string name="klog_intro">ما يطبعه نظام الجهاز وملفات Payload، مباشرة. يرسله ps5debug-NG على المنفذ 3232. مفيد حين لا يعمل Payload أو غش كما يجب.</string>
     <string name="klog_port">منفذ السجل</string>
     <string name="klog_start">بدء</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">جارٍ الضغط: %1$d من %2$d ملفات، %3$s من %4$s</string>
     <string name="zip_done">حُفظ باسم %1$s</string>
     <string name="zip_empty">لا يحتوي هذا المجلد على ملفات لضغطها.</string>
+    <string name="zip_no_space">لا توجد مساحة كافية على الهاتف: يحتاج ملف zip إلى نحو %1$s، والمتاح %2$s.</string>
     <string name="zip_truncated">كان المجلد أكبر مما يتسع له تنزيل واحد، لذا ليس كل شيء في ملف zip.</string>
     <string name="zip_cancelled">توقف الضغط</string>
     <string name="look_title">المظهر</string>

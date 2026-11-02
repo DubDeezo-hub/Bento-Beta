@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Bu zincir artık yok.</string>
     <string name="notif_channel_chain">Payload zincirleri</string>
     <string name="backup_chains">Zincirler: %1$d</string>
+    <string name="backup_cheats">Hileler: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Geçen seferden tamamlanmayanlar: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">Konsoldaki her işlem. Bellek bölgelerini görmek için birini aç (rwx: okuma, yazma, çalıştırma; yazılabilir olanlar renklidir), baytları için de bir bölge aç. Değiştirmek için bir bayt satırına dokun ya da bir adrese Git.</string>
     <string name="memory_view_log">Konsol günlüğü</string>
     <string name="klog_title">Konsol günlüğü</string>
+    <string name="klog_etahen_note">etaHEN, Klog ayarı açıkken bunu 9081 numaralı porttan gönderir; o port da denenir.</string>
     <string name="klog_intro">Konsolun sisteminin ve payload\'ların yazdıkları, canlı. ps5debug-NG bunu 3232 portundan gönderir. Bir payload ya da hile düzgün çalışmadığında işe yarar.</string>
     <string name="klog_port">Günlük portu</string>
     <string name="klog_start">Başlat</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">Sıkıştırılıyor: %1$d / %2$d dosya, %3$s / %4$s</string>
     <string name="zip_done">%1$s olarak kaydedildi</string>
     <string name="zip_empty">O klasörde sıkıştırılacak dosya yok.</string>
+    <string name="zip_no_space">Telefonda yeterli yer yok: zip yaklaşık %1$s gerektiriyor, boş alan %2$s.</string>
     <string name="zip_truncated">Klasör tek bir indirmenin alabileceğinden büyüktü, bu yüzden her şey zip\'te değil.</string>
     <string name="zip_cancelled">Sıkıştırma durduruldu</string>
     <string name="look_title">Görünüm</string>

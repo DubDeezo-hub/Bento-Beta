@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Te verige ni več.</string>
     <string name="notif_channel_chain">Verige payloadov</string>
     <string name="backup_chains">Verige: %1$d</string>
+    <string name="backup_cheats">Goljufije: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Nedokončano od prejšnjič: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">Vsi procesi na konzoli. Odprite enega, da vidite njegova območja pomnilnika (rwx: branje, pisanje, zagon; zapisljiva so obarvana), in območje za njegove bajte. Tapnite vrstico bajtov, da jih spremenite, ali Pojdi na naslov.</string>
     <string name="memory_view_log">Dnevnik konzole</string>
     <string name="klog_title">Dnevnik konzole</string>
+    <string name="klog_etahen_note">etaHEN ga pošilja na vratih 9081, ko je vklopljena njegova nastavitev Klog; poskusi se tudi ta vrata.</string>
     <string name="klog_intro">Kar izpisujejo sistem konzole in payloadi, v živo. ps5debug-NG to pošilja na vratih 3232. Priročno, ko payload ali goljufija ne deluje prav.</string>
     <string name="klog_port">Vrata dnevnika</string>
     <string name="klog_start">Začni</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">Stiskanje: %1$d od %2$d datotek, %3$s od %4$s</string>
     <string name="zip_done">Shranjeno kot %1$s</string>
     <string name="zip_empty">V tej mapi ni datotek za stiskanje.</string>
+    <string name="zip_no_space">V telefonu ni dovolj prostora: zip potrebuje približno %1$s, prostega je %2$s.</string>
     <string name="zip_truncated">Mapa je bila večja, kot jo lahko zajame en prenos, zato v zipu ni vsega.</string>
     <string name="zip_cancelled">Stiskanje ustavljeno</string>
     <string name="look_title">Videz</string>

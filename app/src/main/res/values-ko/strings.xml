@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">해당 체인은 더 이상 존재하지 않습니다.</string>
     <string name="notif_channel_chain">페이로드 체인</string>
     <string name="backup_chains">체인: %1$d</string>
+    <string name="backup_cheats">치트: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">지난번에 끝나지 않은 전송: %1$d개</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">콘솔의 모든 프로세스입니다. 하나를 열면 메모리 영역이 보이고(rwx: 읽기, 쓰기, 실행. 쓰기 가능한 영역은 강조 표시), 영역을 열면 바이트가 보입니다. 바이트 줄을 눌러 바꾸거나 주소로 이동하세요.</string>
     <string name="memory_view_log">콘솔 로그</string>
     <string name="klog_title">콘솔 로그</string>
+    <string name="klog_etahen_note">etaHEN은 Klog 설정이 켜져 있으면 포트 9081로 보냅니다. 이 포트도 시도합니다.</string>
     <string name="klog_intro">콘솔 시스템과 페이로드가 출력하는 내용을 실시간으로 보여줍니다. ps5debug-NG가 포트 3232로 보냅니다. 페이로드나 치트가 제대로 작동하지 않을 때 유용합니다.</string>
     <string name="klog_port">로그 포트</string>
     <string name="klog_start">시작</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">압축하는 중: 파일 %2$d개 중 %1$d개, %4$s 중 %3$s</string>
     <string name="zip_done">%1$s(으)로 저장했습니다</string>
     <string name="zip_empty">그 폴더에는 압축할 파일이 없습니다.</string>
+    <string name="zip_no_space">휴대폰 공간이 부족합니다: zip에 약 %1$s가 필요하고 여유 공간은 %2$s입니다.</string>
     <string name="zip_truncated">폴더가 한 번에 다운로드할 수 있는 크기보다 커서 zip에 전부 들어가지 않았습니다.</string>
     <string name="zip_cancelled">압축 중지됨</string>
     <string name="look_title">화면</string>

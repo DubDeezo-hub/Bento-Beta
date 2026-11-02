@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">该链已不存在。</string>
     <string name="notif_channel_chain">Payload 链</string>
     <string name="backup_chains">链：%1$d</string>
+    <string name="backup_cheats">作弊：%1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">上次未完成的传输：%1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">主机上的所有进程。打开一个即可查看其内存区域（rwx：读、写、执行；可写区域会高亮），打开一个区域即可查看其字节。点击一行字节可修改，或转到某个地址。</string>
     <string name="memory_view_log">主机日志</string>
     <string name="klog_title">主机日志</string>
+    <string name="klog_etahen_note">etaHEN 在其 Klog 设置开启时通过端口 9081 发送；也会尝试该端口。</string>
     <string name="klog_intro">实时显示主机系统和 Payload 输出的内容。ps5debug-NG 通过端口 3232 发送。Payload 或金手指工作不正常时很有用。</string>
     <string name="klog_port">日志端口</string>
     <string name="klog_start">开始</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">正在压缩：%1$d / %2$d 个文件，%3$s / %4$s</string>
     <string name="zip_done">已保存为 %1$s</string>
     <string name="zip_empty">该文件夹中没有可压缩的文件。</string>
+    <string name="zip_no_space">手机空间不足：zip 需要约 %1$s，可用 %2$s。</string>
     <string name="zip_truncated">文件夹超过了一次下载能容纳的大小，因此 zip 中没有包含全部内容。</string>
     <string name="zip_cancelled">已停止压缩</string>
     <string name="look_title">外观</string>

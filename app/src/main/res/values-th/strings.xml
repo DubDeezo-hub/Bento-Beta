@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">ไม่มีเชนนั้นอีกแล้ว</string>
     <string name="notif_channel_chain">เชน payload</string>
     <string name="backup_chains">เชน: %1$d</string>
+    <string name="backup_cheats">สูตรโกง: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">ยังไม่เสร็จจากครั้งที่แล้ว: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">โปรเซสทั้งหมดบนคอนโซล เปิดโปรเซสเพื่อดูส่วนหน่วยความจำ (rwx: อ่าน เขียน รัน ส่วนที่เขียนได้จะถูกไฮไลต์) และเปิดส่วนหนึ่งเพื่อดูไบต์ แตะบรรทัดไบต์เพื่อแก้ไข หรือไปที่ที่อยู่</string>
     <string name="memory_view_log">บันทึกคอนโซล</string>
     <string name="klog_title">บันทึกคอนโซล</string>
+    <string name="klog_etahen_note">etaHEN ส่งมาทางพอร์ต 9081 เมื่อเปิดการตั้งค่า Klog ไว้ พอร์ตนั้นจะถูกลองด้วย</string>
     <string name="klog_intro">สิ่งที่ระบบของคอนโซลและ payload พิมพ์ออกมา แบบสด ps5debug-NG ส่งมาที่พอร์ต 3232 มีประโยชน์เมื่อ payload หรือโค้ดโกงทำงานไม่ถูกต้อง</string>
     <string name="klog_port">พอร์ตบันทึก</string>
     <string name="klog_start">เริ่ม</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">กำลังบีบอัด: %1$d จาก %2$d ไฟล์, %3$s จาก %4$s</string>
     <string name="zip_done">บันทึกเป็น %1$s แล้ว</string>
     <string name="zip_empty">โฟลเดอร์นั้นไม่มีไฟล์ให้บีบอัด</string>
+    <string name="zip_no_space">พื้นที่ในโทรศัพท์ไม่พอ: ไฟล์ zip ต้องใช้ประมาณ %1$s แต่ว่างอยู่ %2$s</string>
     <string name="zip_truncated">โฟลเดอร์ใหญ่เกินกว่าที่ดาวน์โหลดครั้งเดียวจะรับได้ จึงไม่ได้รวมทุกอย่างไว้ใน zip</string>
     <string name="zip_cancelled">หยุดการบีบอัดแล้ว</string>
     <string name="look_title">รูปลักษณ์</string>

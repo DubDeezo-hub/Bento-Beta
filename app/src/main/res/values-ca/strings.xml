@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Aquesta cadena ja no existeix.</string>
     <string name="notif_channel_chain">Cadenes de payloads</string>
     <string name="backup_chains">Cadenes: %1$d</string>
+    <string name="backup_cheats">Trucs: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Sense acabar l’última vegada: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">Tots els processos de la consola. Obre’n un per veure’n les regions de memòria (rwx: lectura, escriptura, execució; les regions escrivibles estan destacades), i obre una regió per veure’n els bytes. Toca una línia de bytes per canviar-los, o ves a una adreça.</string>
     <string name="memory_view_log">Registre de la consola</string>
     <string name="klog_title">Registre de la consola</string>
+    <string name="klog_etahen_note">etaHEN l\'envia pel port 9081 quan té activat el paràmetre Klog; també es prova aquest port.</string>
     <string name="klog_intro">El que imprimeixen el sistema de la consola i els payloads, en directe. ps5debug-NG l’envia pel port 3232. Útil quan un payload o un truc no funciona bé.</string>
     <string name="klog_port">Port del registre</string>
     <string name="klog_start">Inicia</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">Comprimint: %1$d de %2$d fitxers, %3$s de %4$s</string>
     <string name="zip_done">Desat com a %1$s</string>
     <string name="zip_empty">Aquesta carpeta no té fitxers per comprimir.</string>
+    <string name="zip_no_space">No hi ha prou espai al telèfon: el zip necessita uns %1$s i n\'hi ha %2$s de lliures.</string>
     <string name="zip_truncated">La carpeta era més gran del que pot contenir una baixada, així que no tot és al zip.</string>
     <string name="zip_cancelled">Compressió aturada</string>
     <string name="look_title">Aspecte</string>

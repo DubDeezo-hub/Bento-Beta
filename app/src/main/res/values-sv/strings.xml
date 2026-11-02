@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Den kedjan finns inte längre.</string>
     <string name="notif_channel_chain">Payload-kedjor</string>
     <string name="backup_chains">Kedjor: %1$d</string>
+    <string name="backup_cheats">Fusk: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Ej slutförda förra gången: %1$d</string>
@@ -659,6 +660,7 @@
     <string name="tip_mem_browse">Varje process på konsolen. Öppna en för att se dess minnesområden (rwx: läsa, skriva, köra; skrivbara är markerade) och ett område för dess byte. Tryck på en rad byte för att ändra den, eller gå till en adress.</string>
     <string name="memory_view_log">Konsollogg</string>
     <string name="klog_title">Konsollogg</string>
+    <string name="klog_etahen_note">etaHEN skickar den på port 9081 när dess Klog-inställning är på; den porten provas också.</string>
     <string name="klog_intro">Det konsolens system och payloads skriver ut, live. ps5debug-NG skickar det på port 3232. Praktiskt när en payload eller ett fusk krånglar.</string>
     <string name="klog_port">Loggport</string>
     <string name="klog_start">Starta</string>
@@ -1136,6 +1138,7 @@
     <string name="zip_progress">Zippar: %1$d av %2$d filer, %3$s av %4$s</string>
     <string name="zip_done">Sparad som %1$s</string>
     <string name="zip_empty">Mappen har inga filer att zippa.</string>
+    <string name="zip_no_space">Inte tillräckligt med utrymme på telefonen: zip-filen behöver ungefär %1$s och %2$s är ledigt.</string>
     <string name="zip_truncated">Mappen var större än vad en nedladdning rymmer, så allt kom inte med i zip-filen.</string>
     <string name="zip_cancelled">Zippningen stoppad</string>
     <string name="look_title">Utseende</string>

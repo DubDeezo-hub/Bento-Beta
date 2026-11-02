@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">அந்தச் சங்கிலி இனி இல்லை.</string>
     <string name="notif_channel_chain">Payload சங்கிலிகள்</string>
     <string name="backup_chains">சங்கிலிகள்: %1$d</string>
+    <string name="backup_cheats">ஏமாற்றுக் குறியீடுகள்: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">கடந்த முறை முடிக்கப்படாதவை: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">கன்சோலின் அனைத்துச் செயல்முறைகளும். ஒன்றைத் திறந்து அதன் நினைவகப் பகுதிகளைப் பார்க்கவும் (rwx: படி, எழுது, இயக்கு; எழுதக்கூடிய பகுதிகள் தனிப்படுத்தப்பட்டவை), ஒரு பகுதியைத் திறந்து அதன் பைட்டுகளையும். பைட்டுகளின் வரியைத் தட்டி அவற்றை மாற்றவும், அல்லது ஒரு முகவரிக்குச் செல்லவும்.</string>
     <string name="memory_view_log">கன்சோல் பதிவு</string>
     <string name="klog_title">கன்சோல் பதிவு</string>
+    <string name="klog_etahen_note">Klog அமைப்பு இயக்கத்தில் இருக்கும்போது etaHEN இதை போர்ட் 9081-இல் அனுப்புகிறது; அந்த போர்ட்டும் முயற்சிக்கப்படும்.</string>
     <string name="klog_intro">கன்சோலின் சிஸ்டமும் payloads-உம் அச்சிடுவது, நேரலையில். ps5debug-NG இதைப் போர்ட் 3232-இல் அனுப்பும். ஒரு payload அல்லது சீட் சரியாக வேலை செய்யாதபோது உதவும்.</string>
     <string name="klog_port">பதிவு போர்ட்</string>
     <string name="klog_start">தொடங்கு</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">zip செய்கிறது: %2$d-இல் %1$d கோப்புகள், %4$s-இல் %3$s</string>
     <string name="zip_done">%1$s ஆகச் சேமிக்கப்பட்டது</string>
     <string name="zip_empty">அந்தக் கோப்புறையில் zip செய்யக் கோப்புகள் இல்லை.</string>
+    <string name="zip_no_space">போனில் போதுமான இடம் இல்லை: zip-க்கு சுமார் %1$s தேவை, %2$s காலியாக உள்ளது.</string>
     <string name="zip_truncated">ஒரு பதிவிறக்கம் தாங்கக்கூடியதை விடக் கோப்புறை பெரியது, எனவே எல்லாம் zip-இல் இல்லை.</string>
     <string name="zip_cancelled">zip நிறுத்தப்பட்டது</string>
     <string name="look_title">தோற்றம்</string>

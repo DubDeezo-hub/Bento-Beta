@@ -132,6 +132,8 @@ def seed_samples():
         "data/notes.txt": b"Rename me, download me, or delete me.\n",
         "data/sample.bin": bytes(range(256)) * 1024,
         "user/home/hello.txt": b"A file inside nested folders.\n",
+        # etaHEN's settings file (Files tab > etaHEN settings), the way etaHEN writes it
+        "data/etaHEN/config.ini": b"[Settings]\nFTP=1\nDPI=0\nDPI_v2=1\nKlog=0\nPS5Debug=0\ntoolbox_auto_start=1\nStartOption=0\n",
         # Installed games (Files tab > Games & apps)
         "user/appmeta/CUSA01234/param.sfo": FAKE_SFO,
         "user/appmeta/CUSA01234/icon0.png": FAKE_ICON_PS4,

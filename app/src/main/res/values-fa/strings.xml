@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">آن زنجیره دیگر وجود ندارد.</string>
     <string name="notif_channel_chain">زنجیره‌های payload</string>
     <string name="backup_chains">زنجیره‌ها: %1$d</string>
+    <string name="backup_cheats">تقلب‌ها: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">ناتمام از دفعهٔ قبل: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">همه فرایندهای کنسول. یکی را باز کنید تا ناحیه‌های حافظه‌اش را ببینید (rwx: خواندن، نوشتن، اجرا؛ ناحیه‌های قابل نوشتن رنگی‌اند)، و یک ناحیه را برای دیدن بایت‌هایش. روی یک خط بایت بزنید تا تغییرشان دهید، یا به یک نشانی بروید.</string>
     <string name="memory_view_log">گزارش کنسول</string>
     <string name="klog_title">گزارش کنسول</string>
+    <string name="klog_etahen_note">‏etaHEN وقتی تنظیم Klog آن روشن باشد آن را روی درگاه 9081 می‌فرستد؛ آن درگاه هم امتحان می‌شود.</string>
     <string name="klog_intro">آنچه سیستم کنسول و payloadها چاپ می‌کنند، به‌صورت زنده. ps5debug-NG آن را روی درگاه 3232 می‌فرستد. وقتی یک payload یا تقلب درست کار نمی‌کند به کار می‌آید.</string>
     <string name="klog_port">درگاه گزارش</string>
     <string name="klog_start">شروع</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">در حال فشرده‌سازی: %1$d از %2$d فایل، %3$s از %4$s</string>
     <string name="zip_done">با نام %1$s ذخیره شد</string>
     <string name="zip_empty">آن پوشه فایلی برای فشرده‌سازی ندارد.</string>
+    <string name="zip_no_space">فضای کافی روی گوشی نیست: فایل zip حدود %1$s لازم دارد و %2$s آزاد است.</string>
     <string name="zip_truncated">پوشه بزرگ‌تر از ظرفیت یک دانلود بود، پس همه چیز در zip نیست.</string>
     <string name="zip_cancelled">فشرده‌سازی متوقف شد</string>
     <string name="look_title">ظاهر</string>

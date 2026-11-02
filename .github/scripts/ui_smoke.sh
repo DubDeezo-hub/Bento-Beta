@@ -597,6 +597,66 @@ PY
   fi
   shot "fake-memory"
   healthy "the app is fine after connecting the debugger"
+
+  # --- Newer checks: shown as notes (they don't turn the run red) until they have been seen to work ---
+
+  # Payload: one from the shelf goes to the console's loader (9021)
+  head -c 4096 /dev/urandom > "$OUT/bento-test.elf"
+  adb push "$OUT/bento-test.elf" /data/local/tmp/bento-test.elf > /dev/null 2>&1
+  adb shell "cat /data/local/tmp/bento-test.elf | run-as $PKG sh -c 'mkdir -p files/payloads && cat > files/payloads/bento-test.elf'"
+  dump || true
+  tap_text "$(nav_label nav_payload)" || true
+  sleep 3
+  if wait_text 10 bento-test.elf && tap_text "$(ui string action_send)"; then
+    if wait_log 20 "[payload] received 4096 bytes"; then
+      pass "a payload from the shelf reaches the console's loader"
+    else
+      soft "payload send" "the pretend console got no payload. Its log: $(tail -3 "$FAKE_LOG" | tr '\n' ' ')"
+    fi
+  else
+    soft "payload send" "the test payload or its Send button is not on screen. Seen: $(ui texts "$XML" 2> /dev/null)"
+  fi
+  shot "fake-payload"
+
+  # etaHEN settings: read from the console over FTP and shown as switches
+  dump || true
+  tap_text "$(nav_label nav_files)" || true
+  sleep 3
+  if wait_text 10 "$(ui string etahen_title)" && tap_text "$(ui string etahen_title)"; then
+    if wait_text 15 "$(ui string etahen_ftp)"; then
+      pass "etaHEN settings are read from the console and shown"
+    else
+      soft "etaHEN settings" "the settings did not show. Seen: $(ui texts "$XML" 2> /dev/null)"
+    fi
+    shot "fake-etahen"
+    adb shell input keyevent KEYCODE_BACK
+    sleep 2
+  else
+    soft "etaHEN settings" "no etaHEN settings button. Seen: $(ui texts "$XML" 2> /dev/null)"
+  fi
+
+  # Zip: the /data folder downloaded as one zip (go up to /, hold "data", Download as zip)
+  dump && tap_text "$(ui string files_up)" || true
+  sleep 3
+  if wait_text 10 data user && pos="$(ui find "$XML" data)"; then
+    # shellcheck disable=SC2086
+    set -- $pos
+    adb shell input swipe "$1" "$2" "$1" "$2" 900
+    sleep 2
+    if wait_text 6 "$(ui string zip_download)" && tap_text "$(ui string zip_download)"; then
+      if wait_fmt 40 "$(ui string zip_done)"; then
+        pass "a console folder downloads as a zip"
+      else
+        soft "zip download" "no \"saved\" message. Seen: $(ui texts "$XML" 2> /dev/null)"
+      fi
+    else
+      soft "zip download" "no \"Download as zip\" in the folder's menu. Seen: $(ui texts "$XML" 2> /dev/null)"
+    fi
+  else
+    soft "zip download" "the console's top folder did not show. Seen: $(ui texts "$XML" 2> /dev/null)"
+  fi
+  shot "fake-zip"
+  healthy "the app is fine after the newer checks"
 else
   soft "pretend console" "not running (FAKE_CONSOLE_LOG unset or the console did not start), so nothing was used for real"
 fi

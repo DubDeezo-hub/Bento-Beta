@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Tätä ketjua ei enää ole.</string>
     <string name="notif_channel_chain">Payload-ketjut</string>
     <string name="backup_chains">Ketjut: %1$d</string>
+    <string name="backup_cheats">Huijaukset: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Viime kerralla kesken jääneet: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">Kaikki konsolin prosessit. Avaa yksi nähdäksesi sen muistialueet (rwx: luku, kirjoitus, suoritus; kirjoitettavat on korostettu) ja alue nähdäksesi sen tavut. Napauta tavuriviä muuttaaksesi niitä tai Siirry osoitteeseen.</string>
     <string name="memory_view_log">Konsolin loki</string>
     <string name="klog_title">Konsolin loki</string>
+    <string name="klog_etahen_note">etaHEN lähettää sen porttiin 9081, kun sen Klog-asetus on päällä; myös sitä porttia kokeillaan.</string>
     <string name="klog_intro">Mitä konsolin järjestelmä ja payloadit tulostavat, reaaliajassa. ps5debug-NG lähettää sen portissa 3232. Kätevä, kun payload tai huijaus ei toimi kunnolla.</string>
     <string name="klog_port">Lokin portti</string>
     <string name="klog_start">Aloita</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">Pakataan: %1$d / %2$d tiedostoa, %3$s / %4$s</string>
     <string name="zip_done">Tallennettu nimellä %1$s</string>
     <string name="zip_empty">Kansiossa ei ole pakattavia tiedostoja.</string>
+    <string name="zip_no_space">Puhelimessa ei ole tarpeeksi tilaa: zip vie noin %1$s, ja vapaana on %2$s.</string>
     <string name="zip_truncated">Kansio oli suurempi kuin yhteen lataukseen mahtuu, joten kaikki ei ole zip-tiedostossa.</string>
     <string name="zip_cancelled">Pakkaus pysäytetty</string>
     <string name="look_title">Ulkoasu</string>

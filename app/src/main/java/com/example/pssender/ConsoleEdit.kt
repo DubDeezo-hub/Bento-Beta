@@ -141,7 +141,15 @@ fun EtaHenSettingsDialog(settings: FtpSettings, onClose: () -> Unit) {
     var message by remember { mutableStateOf("") }
     var busy by remember { mutableStateOf(true) }
     LaunchedEffect(settings) {
-        val bytes = withContext(Dispatchers.IO) { try { ftpReadSmall(settings, EtaHenConfig.PATH, TEXT_EDIT_MAX) } catch (e: Exception) { message = failedText(e); null } }
+        // The console's own reason comes first (a missing file and a refused one get the same FTP code), then the advice
+        val bytes = withContext(Dispatchers.IO) {
+            try {
+                ftpReadSmall(settings, EtaHenConfig.PATH, TEXT_EDIT_MAX, mustExist = true)
+            } catch (e: Exception) {
+                message = failedText(e) + "\n" + AppText.get(R.string.etahen_missing, EtaHenConfig.PATH)
+                null
+            }
+        }
         if (bytes != null) {
             val t = String(bytes, Charsets.UTF_8)
             text = t

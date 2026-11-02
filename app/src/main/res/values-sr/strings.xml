@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Тај ланац више не постоји.</string>
     <string name="notif_channel_chain">Ланци payload-а</string>
     <string name="backup_chains">Ланци: %1$d</string>
+    <string name="backup_cheats">Варалице: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Недовршено од прошлог пута: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">Сви процеси на конзоли. Отворите један да видите његове области меморије (rwx: читање, писање, покретање; уписиве су обојене), а област за њене бајтове. Додирните ред бајтова да их промените или Иди на адресу.</string>
     <string name="memory_view_log">Дневник конзоле</string>
     <string name="klog_title">Дневник конзоле</string>
+    <string name="klog_etahen_note">etaHEN га шаље на порту 9081 кад му је укључено подешавање Klog; пробава се и тај порт.</string>
     <string name="klog_intro">Шта исписују систем конзоле и payload-и, уживо. ps5debug-NG то шаље на порту 3232. Корисно кад payload или варање не ради како треба.</string>
     <string name="klog_port">Порт дневника</string>
     <string name="klog_start">Покрени</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">Паковање: %1$d од %2$d датотека, %3$s од %4$s</string>
     <string name="zip_done">Сачувано као %1$s</string>
     <string name="zip_empty">У тој фасцикли нема датотека за паковање.</string>
+    <string name="zip_no_space">Нема довољно места на телефону: zip-у треба око %1$s, а слободно је %2$s.</string>
     <string name="zip_truncated">Фасцикла је била већа него што једно преузимање може да прими, па није све у zip-у.</string>
     <string name="zip_cancelled">Паковање заустављено</string>
     <string name="look_title">Изглед</string>

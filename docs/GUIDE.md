@@ -420,9 +420,9 @@ Bento is Kotlin with Jetpack Compose and Material 3: 43 source files, about 12,3
 
 ### Checking the build
 
-GitHub builds every push (`.github/workflows/main.yml`) and puts the APK on the Releases page. A second workflow, `.github/workflows/tests.yml` ("Phone test"), runs the app on a virtual Android 14 phone: it installs the two newest releases one over the other (so a wrong signing key shows up at once), opens every tab, turns the screen, leaves the app and comes back, shares a link into it and switches through all 53 languages. Each time it checks that the app is still running, has not crashed or stopped responding, and shows its six tabs (in the right order, and not cut off, in right-to-left languages too). Then it starts [`fake_console.py`](../fake_console.py) on the build machine (the virtual phone reaches it at `10.0.2.2`), saves a console at that address and uses the app for real: the Files tab lists the console's `/data` folder over FTP, Games & apps reads the installed games, a shared package link goes to the installer (the pretend console has to receive it, and the app has to say it was accepted), and the Memory tab connects the debugger. The results are on the run's page under Actions: a table of every check, an annotation for each failure, and the screenshots, the phone's log and the pretend console's log under Artifacts. The script is `.github/scripts/ui_smoke.sh`.
+GitHub builds every push (`.github/workflows/main.yml`) and puts the APK on the Releases page. A second workflow, `.github/workflows/tests.yml` ("Phone test"), runs the app on a virtual Android 14 phone: it installs the two newest releases one over the other (so a wrong signing key shows up at once), opens every tab, turns the screen, leaves the app and comes back, shares a link into it and switches through all 53 languages. Each time it checks that the app is still running, has not crashed or stopped responding, and shows its six tabs (in the right order, and not cut off, in right-to-left languages too). Then it starts [`fake_console.py`](../fake_console.py) on the build machine (the virtual phone reaches it at `10.0.2.2`), saves a console at that address and uses the app for real: the Files tab lists the console's `/data` folder over FTP, Games & apps reads the installed games, a shared package link goes to the installer (the pretend console has to receive it, and the app has to say it was accepted), and the Memory tab connects the debugger. The results are on the run's page under Actions: a table of every check, an annotation for each failure, and the screenshots, the phone's log and the pretend console's log under Artifacts. The script is `.github/scripts/ui_smoke.sh`. The Phone test also runs Android Lint, which checks the code for common Android mistakes; for now it only reports (its findings are on the run page) and doesn't stop the run.
 
-Before that, both workflows run the unit tests (`gradle testDebugUnitTest`, in `app/src/test`): the parts of the app that need no phone, such as reading firmware claims, the payload lists, the patch sites' replies, package checks, the etaHEN settings file, cheat files, values typed into the Memory tab, the pointer search, chains, links and backups, and the debugger client against the practice game's pretend debugger. A failing test stops the build, so a broken version is never released; the run's page lists how many passed and which failed, and the full report is in the Phone test's Artifacts.
+Before that, both workflows run the unit tests (`gradle testDebugUnitTest`, in `app/src/test`): the parts of the app that need no phone, such as reading firmware claims, the payload lists, the patch sites' replies, package checks, the etaHEN settings file, cheat files, values typed into the Memory tab, the pointer search, chains, links and backups, and the debugger client against the practice game's pretend debugger. One test makes sure no Sony address ever turns up in the app's code, texts or payload list. A failing test stops the build, so a broken version is never released; the run's page lists how many passed and which failed, and the full report is in the Phone test's Artifacts.
 
 ### Source map
 
@@ -430,7 +430,8 @@ Paths are relative to [`app/src/main/java/com/example/pssender/`](app/src/main/j
 
 #### Screens
 
-- `MainActivity.kt`: the activity and the root screen: tabs, console checks, update check, share-sheet intake, chain requests from the app icon, the download chooser, the "Leave this site?" window, and the Install and Upload tabs.
+- `MainActivity.kt`: the activity and the root screen: tabs, console checks, update check, share-sheet intake, chain requests from the app icon, the download chooser, and the "Leave this site?" window.
+- `Tabs.kt`: the Install and Upload tabs, and the text fields the screens share.
 - `Chrome.kt`: the frame around every screen: header, console card, bottom bar, transfer card, queue dialog, speed limit window, status line.
 - `Files.kt`: the Files tab and the FTP settings fields.
 - `Web.kt`: the Web tab: web view setup, the check that notices a tap leaving the site, ad block, bookmarks, the toolbar.
@@ -448,7 +449,10 @@ Paths are relative to [`app/src/main/java/com/example/pssender/`](app/src/main/j
 - `Help.kt`: the "What can I do?" pages and the notes that say which page a message gets.
 - `Theme.kt`: dark and light colors, and the six accents.
 - `Icons.kt`: the few icons, drawn in code so no icon library is needed.
-- `Memory.kt`: the Memory tab's screens: Scan, Cheats and Browse, and their dialogs (pointer paths, cheat file).
+- `Memory.kt`: the Memory tab's screens: Scan, Cheats and Browse.
+- `MemoryDialogs.kt`: the Memory tab's dialogs: adding and editing cheats, hex lines, watches, importing, text search hits, undo and the cheat source.
+- `Cheats.kt`: what the Memory tab saves: cheats per game, watches, undo steps, and reading and writing cheat lists.
+- `CommonUi.kt`: small building blocks shared by the screens (chips, panels, list rows).
 - `Pointers.kt`: pointer paths: the backwards search from an address to the eboot, and following a path.
 - `Klog.kt`: the console log view (port 3232, or etaHEN's 9081).
 - `ConsoleMeta.kt`: reading `param.sfo`, `param.json` and the header of a PS4 package.
@@ -457,7 +461,7 @@ Paths are relative to [`app/src/main/java/com/example/pssender/`](app/src/main/j
 - `StoreIndex.kt`: where payloads come from: Bento's online list, the community list, the GitHub search, and which ones are new.
 - `Firmware.kt`: each console's firmware, and reading which firmware a payload's page names.
 - `PkgCheck.kt`: a checked package against what the console has installed.
-- `MemorySession.kt`: what the Memory tab keeps while the app runs: the connection, the search, text search, the cheats (saved per game), the freeze loop and the undo history.
+- `MemorySession.kt`: what the Memory tab keeps while the app runs: the connection, the search, text search, the cheats, the freeze loop and the undo history.
 - `MemoryText.kt`: text search: encodings, overlapping pieces, previews and replacement text.
 - `MemoryLearn.kt`: Memory > Learn: the lessons, the coach bar and the practice game's card.
 - `PracticeConsole.kt`: the practice game and the pretend ps5debug-NG in front of it on 127.0.0.1.

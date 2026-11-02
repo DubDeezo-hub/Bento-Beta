@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Ez a lánc már nem létezik.</string>
     <string name="notif_channel_chain">Payload-láncok</string>
     <string name="backup_chains">Láncok: %1$d</string>
+    <string name="backup_cheats">Csalások: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Legutóbb be nem fejezettek: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">A konzol összes folyamata. Nyiss meg egyet a memóriaterületei megtekintéséhez (rwx: olvasás, írás, futtatás; az írhatók ki vannak emelve), és egy területet a bájtjaihoz. Koppints egy bájtsorra a módosításához, vagy Ugrás egy címre.</string>
     <string name="memory_view_log">Konzolnapló</string>
     <string name="klog_title">Konzolnapló</string>
+    <string name="klog_etahen_note">Az etaHEN a 9081-es porton küldi, ha be van kapcsolva a Klog beállítása; ezt a portot is megpróbálja.</string>
     <string name="klog_intro">Amit a konzol rendszere és a payloadok kiírnak, élőben. A ps5debug-NG a 3232-es porton küldi. Jól jön, ha egy payload vagy csalás rosszul működik.</string>
     <string name="klog_port">Napló portja</string>
     <string name="klog_start">Indítás</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">Tömörítés: %1$d / %2$d fájl, %3$s / %4$s</string>
     <string name="zip_done">Mentve: %1$s</string>
     <string name="zip_empty">Ebben a mappában nincsenek tömöríthető fájlok.</string>
+    <string name="zip_no_space">Nincs elég hely a telefonon: a zipnek kb. %1$s kell, és %2$s szabad.</string>
     <string name="zip_truncated">A mappa nagyobb volt, mint amennyit egy letöltés elbír, ezért nem minden került a zipbe.</string>
     <string name="zip_cancelled">Tömörítés leállítva</string>
     <string name="look_title">Megjelenés</string>

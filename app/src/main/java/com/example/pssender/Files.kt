@@ -414,7 +414,10 @@ fun FilesTab(
                                         try {
                                             val plan = ftpPlanDownload(settings, model.path, listOf(e))
                                             val total = plan.totalBytes
+                                            // The zip is about as big as the files (game data barely shrinks): don't start one that can't fit
+                                            val free = try { android.os.Environment.getExternalStorageDirectory().usableSpace } catch (_: Exception) { Long.MAX_VALUE }
                                             if (plan.files.isEmpty()) AppText.get(R.string.zip_empty)
+                                            else if (total > free) AppText.get(R.string.zip_no_space, fmtBytes(total), fmtBytes(free))
                                             else {
                                                 var shown = 0L
                                                 val where = ftpZipToPhone(ctx.contentResolver, settings, plan, safeLocalName(e.name) + ".zip",

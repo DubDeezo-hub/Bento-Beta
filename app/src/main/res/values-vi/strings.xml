@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Chuỗi đó không còn tồn tại.</string>
     <string name="notif_channel_chain">Chuỗi payload</string>
     <string name="backup_chains">Chuỗi: %1$d</string>
+    <string name="backup_cheats">Mã gian lận: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Chưa xong từ lần trước: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">Tất cả tiến trình trên console. Mở một tiến trình để xem các vùng bộ nhớ (rwx: đọc, ghi, thực thi; vùng ghi được được tô sáng), và mở một vùng để xem byte. Nhấn vào một dòng byte để sửa, hoặc đi đến một địa chỉ.</string>
     <string name="memory_view_log">Nhật ký console</string>
     <string name="klog_title">Nhật ký console</string>
+    <string name="klog_etahen_note">etaHEN gửi qua cổng 9081 khi bật cài đặt Klog; cổng đó cũng được thử.</string>
     <string name="klog_intro">Những gì hệ thống console và payload in ra, trực tiếp. ps5debug-NG gửi nó ở cổng 3232. Hữu ích khi một payload hoặc cheat không hoạt động đúng.</string>
     <string name="klog_port">Cổng nhật ký</string>
     <string name="klog_start">Bắt đầu</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">Đang nén: %1$d / %2$d tệp, %3$s / %4$s</string>
     <string name="zip_done">Đã lưu thành %1$s</string>
     <string name="zip_empty">Thư mục đó không có tệp nào để nén.</string>
+    <string name="zip_no_space">Điện thoại không đủ dung lượng: tệp zip cần khoảng %1$s, còn trống %2$s.</string>
     <string name="zip_truncated">Thư mục lớn hơn mức một lần tải xuống có thể chứa, nên zip không có đủ mọi thứ.</string>
     <string name="zip_cancelled">Đã dừng nén</string>
     <string name="look_title">Giao diện</string>

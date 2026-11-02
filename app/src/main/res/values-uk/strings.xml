@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Такого ланцюжка більше немає.</string>
     <string name="notif_channel_chain">Ланцюжки пейлоадів</string>
     <string name="backup_chains">Ланцюжки: %1$d</string>
+    <string name="backup_cheats">Чити: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Не завершено минулого разу: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">Усі процеси на консолі. Відкрийте процес, щоб побачити його області пам\'яті (rwx: читання, запис, виконання; записувані виділено), а область — щоб побачити її байти. Натисніть на рядок байтів, щоб змінити їх, або «Перейти» до адреси.</string>
     <string name="memory_view_log">Журнал консолі</string>
     <string name="klog_title">Журнал консолі</string>
+    <string name="klog_etahen_note">etaHEN надсилає його на порт 9081, коли ввімкнено параметр Klog; цей порт теж пробується.</string>
     <string name="klog_intro">Те, що виводять система консолі й пейлоади, наживо. ps5debug-NG надсилає це на порт 3232. Корисно, коли пейлоад або чит працює не так.</string>
     <string name="klog_port">Порт журналу</string>
     <string name="klog_start">Старт</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">Пакування: %1$d з %2$d файлів, %3$s з %4$s</string>
     <string name="zip_done">Збережено як %1$s</string>
     <string name="zip_empty">У цій теці немає файлів для пакування.</string>
+    <string name="zip_no_space">На телефоні замало місця: для zip потрібно приблизно %1$s, вільно %2$s.</string>
     <string name="zip_truncated">Тека більша, ніж уміщує одне завантаження, тому в zip потрапило не все.</string>
     <string name="zip_cancelled">Пакування зупинено</string>
     <string name="look_title">Вигляд</string>

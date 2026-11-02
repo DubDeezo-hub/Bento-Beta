@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Taj lanac više ne postoji.</string>
     <string name="notif_channel_chain">Lanci payloada</string>
     <string name="backup_chains">Lanci: %1$d</string>
+    <string name="backup_cheats">Varanja: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Nedovršeno od prošli put: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">Svi procesi na konzoli. Otvorite jedan da vidite njegova područja memorije (rwx: čitanje, pisanje, pokretanje; zapisiva su obojena), a područje za njegove bajtove. Dodirnite redak bajtova da ih promijenite ili Idi na adresu.</string>
     <string name="memory_view_log">Zapisnik konzole</string>
     <string name="klog_title">Zapisnik konzole</string>
+    <string name="klog_etahen_note">etaHEN ga šalje na portu 9081 kad mu je uključena postavka Klog; isprobava se i taj port.</string>
     <string name="klog_intro">Što ispisuju sustav konzole i payloadi, uživo. ps5debug-NG to šalje na portu 3232. Korisno kad payload ili varanje ne radi kako treba.</string>
     <string name="klog_port">Port zapisnika</string>
     <string name="klog_start">Pokreni</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">Pakiranje: %1$d od %2$d datoteka, %3$s od %4$s</string>
     <string name="zip_done">Spremljeno kao %1$s</string>
     <string name="zip_empty">U toj mapi nema datoteka za pakiranje.</string>
+    <string name="zip_no_space">Na telefonu nema dovoljno mjesta: zip treba oko %1$s, a slobodno je %2$s.</string>
     <string name="zip_truncated">Mapa je bila veća nego što jedno preuzimanje može primiti, pa nije sve u zipu.</string>
     <string name="zip_cancelled">Pakiranje zaustavljeno</string>
     <string name="look_title">Izgled</string>

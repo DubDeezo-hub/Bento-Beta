@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Quella catena non esiste più.</string>
     <string name="notif_channel_chain">Catene di payload</string>
     <string name="backup_chains">Catene: %1$d</string>
+    <string name="backup_cheats">Trucchi: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Non terminati l’ultima volta: %1$d</string>
@@ -659,6 +660,7 @@
     <string name="tip_mem_browse">Tutti i processi della console. Aprine uno per vederne le regioni di memoria (rwx: leggi, scrivi, esegui; quelle scrivibili sono evidenziate) e una regione per vederne i byte. Tocca una riga di byte per cambiarla, o vai a un indirizzo.</string>
     <string name="memory_view_log">Log della console</string>
     <string name="klog_title">Log della console</string>
+    <string name="klog_etahen_note">etaHEN lo invia sulla porta 9081 quando l\'impostazione Klog è attiva; viene provata anche quella porta.</string>
     <string name="klog_intro">Ciò che il sistema della console e i payload scrivono, in diretta. ps5debug-NG lo invia sulla porta 3232. Utile quando un payload o un trucco non funziona bene.</string>
     <string name="klog_port">Porta del log</string>
     <string name="klog_start">Avvia</string>
@@ -1136,6 +1138,7 @@
     <string name="zip_progress">Compressione: %1$d di %2$d file, %3$s di %4$s</string>
     <string name="zip_done">Salvato come %1$s</string>
     <string name="zip_empty">Quella cartella non ha file da comprimere.</string>
+    <string name="zip_no_space">Spazio insufficiente sul telefono: lo zip richiede circa %1$s e ne sono liberi %2$s.</string>
     <string name="zip_truncated">La cartella era più grande di quanto possa contenere un download, quindi non tutto è nello zip.</string>
     <string name="zip_cancelled">Compressione interrotta</string>
     <string name="look_title">Aspetto</string>

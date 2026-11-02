@@ -235,7 +235,7 @@ fun LazyListScope.logItems(host: String, ctx: Context) {
     item {
         Panel {
             TipTitle(str(R.string.klog_title), Tip.MEM_LOG)
-            Text(str(R.string.klog_intro), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Text(str(R.string.klog_intro) + " " + str(R.string.klog_etahen_note), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
             if (!k.running) {
                 NumberField(str(R.string.klog_port), k.port) { k.changePort(ctx, it) }
             }

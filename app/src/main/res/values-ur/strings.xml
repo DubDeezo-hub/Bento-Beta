@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">وہ چین اب موجود نہیں ہے۔</string>
     <string name="notif_channel_chain">‏Payload چینز</string>
     <string name="backup_chains">چینز: %1$d</string>
+    <string name="backup_cheats">چیٹس: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">پچھلی بار ادھورے رہ گئے: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">کنسول کے تمام پروسیس۔ کسی ایک کو کھول کر اس کی میموری کے حصے دیکھیں (rwx: پڑھنا، لکھنا، چلانا؛ لکھنے کے قابل حصے نمایاں ہیں)، اور کسی حصے کو کھول کر اس کے بائٹس۔ بائٹس کی سطر پر ٹیپ کر کے انہیں بدلیں، یا کسی ایڈریس پر جائیں۔</string>
     <string name="memory_view_log">کنسول لاگ</string>
     <string name="klog_title">کنسول لاگ</string>
+    <string name="klog_etahen_note">جب etaHEN کی Klog سیٹنگ آن ہو تو وہ اسے پورٹ 9081 پر بھیجتا ہے؛ وہ پورٹ بھی آزمایا جاتا ہے۔</string>
     <string name="klog_intro">کنسول کا سسٹم اور payloads جو کچھ پرنٹ کرتے ہیں، لائیو۔ ps5debug-NG اسے پورٹ 3232 پر بھیجتا ہے۔ جب کوئی payload یا چیٹ ٹھیک کام نہ کرے تو مددگار ہے۔</string>
     <string name="klog_port">لاگ پورٹ</string>
     <string name="klog_start">شروع</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">‏zip بن رہی ہے: %2$d میں سے %1$d فائلیں، %4$s میں سے %3$s</string>
     <string name="zip_done">‏%1$s کے طور پر محفوظ ہوا</string>
     <string name="zip_empty">اس فولڈر میں zip کرنے کے لیے کوئی فائل نہیں۔</string>
+    <string name="zip_no_space">فون میں کافی جگہ نہیں: zip کو تقریباً %1$s چاہیے، اور %2$s خالی ہے۔</string>
     <string name="zip_truncated">فولڈر ایک ڈاؤن لوڈ کی گنجائش سے بڑا تھا، اس لیے سب کچھ zip میں نہیں ہے۔</string>
     <string name="zip_cancelled">‏zip روک دی گئی</string>
     <string name="look_title">ظاہری شکل</string>

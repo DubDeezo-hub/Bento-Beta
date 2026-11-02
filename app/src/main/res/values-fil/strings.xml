@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Wala na ang chain na iyon.</string>
     <string name="notif_channel_chain">Mga payload chain</string>
     <string name="backup_chains">Mga chain: %1$d</string>
+    <string name="backup_cheats">Mga cheat: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Hindi natapos noong huli: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">Lahat ng process sa console. Magbukas ng isa para makita ang mga memory region nito (rwx: read, write, execute; naka-highlight ang mga puwedeng sulatan), at magbukas ng region para makita ang mga byte nito. I-tap ang isang linya ng byte para baguhin ang mga ito, o pumunta sa isang address.</string>
     <string name="memory_view_log">Log ng console</string>
     <string name="klog_title">Log ng console</string>
+    <string name="klog_etahen_note">Ipinapadala ito ng etaHEN sa port 9081 kapag naka-on ang Klog setting nito; sinusubukan din ang port na iyon.</string>
     <string name="klog_intro">Ang ipini-print ng system ng console at mga payload, live. Ipinapadala ito ng ps5debug-NG sa port 3232. Kapaki-pakinabang kapag hindi gumagana nang tama ang isang payload o cheat.</string>
     <string name="klog_port">Port ng log</string>
     <string name="klog_start">Simulan</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">Zini-zip: %1$d ng %2$d file, %3$s ng %4$s</string>
     <string name="zip_done">Na-save bilang %1$s</string>
     <string name="zip_empty">Walang file na mazi-zip sa folder na iyon.</string>
+    <string name="zip_no_space">Kulang ang espasyo sa phone: kailangan ng zip ng mga %1$s, at %2$s ang bakante.</string>
     <string name="zip_truncated">Mas malaki ang folder kaysa kaya ng isang download, kaya hindi lahat ay nasa zip.</string>
     <string name="zip_cancelled">Itinigil ang zip</string>
     <string name="look_title">Itsura</string>

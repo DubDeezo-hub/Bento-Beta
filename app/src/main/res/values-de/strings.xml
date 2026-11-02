@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Diese Kette gibt es nicht mehr.</string>
     <string name="notif_channel_chain">Payload-Ketten</string>
     <string name="backup_chains">Ketten: %1$d</string>
+    <string name="backup_cheats">Cheats: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Vom letzten Mal nicht fertig: %1$d</string>
@@ -660,6 +661,7 @@
     <string name="memory_cmp_unchanged">Unverändert</string>
     <string name="memory_view_log">Konsolen-Log</string>
     <string name="klog_title">Konsolen-Log</string>
+    <string name="klog_etahen_note">etaHEN sendet es auf Port 9081, wenn seine Klog-Einstellung an ist; dieser Port wird auch versucht.</string>
     <string name="klog_intro">Was das System der Konsole und Payloads ausgeben, live. ps5debug-NG sendet es auf Port 3232. Praktisch, wenn eine Payload oder ein Cheat nicht richtig funktioniert.</string>
     <string name="klog_port">Log-Port</string>
     <string name="klog_start">Start</string>
@@ -1137,6 +1139,7 @@
     <string name="zip_progress">Zippe: %1$d von %2$d Dateien, %3$s von %4$s</string>
     <string name="zip_done">Gespeichert als %1$s</string>
     <string name="zip_empty">Dieser Ordner hat keine Dateien zum Zippen.</string>
+    <string name="zip_no_space">Nicht genug Platz auf dem Handy: Die Zip-Datei braucht etwa %1$s, frei sind %2$s.</string>
     <string name="zip_truncated">Der Ordner war größer, als ein Download fassen kann, daher ist nicht alles in der Zip.</string>
     <string name="zip_cancelled">Zippen gestoppt</string>
     <string name="look_title">Aussehen</string>

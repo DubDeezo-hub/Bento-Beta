@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">ആ ചെയിൻ ഇനി നിലവിലില്ല.</string>
     <string name="notif_channel_chain">Payload ചെയിനുകൾ</string>
     <string name="backup_chains">ചെയിനുകൾ: %1$d</string>
+    <string name="backup_cheats">ചീറ്റുകൾ: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">കഴിഞ്ഞ തവണ പൂർത്തിയാകാത്തവ: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">കൺസോളിലെ എല്ലാ പ്രോസസുകളും. ഒന്ന് തുറന്ന് അതിന്റെ മെമ്മറി ഭാഗങ്ങൾ കാണുക (rwx: വായിക്കുക, എഴുതുക, പ്രവർത്തിപ്പിക്കുക; എഴുതാവുന്ന ഭാഗങ്ങൾ ഹൈലൈറ്റ് ചെയ്തിരിക്കുന്നു), ഒരു ഭാഗം തുറന്ന് അതിന്റെ ബൈറ്റുകളും. ബൈറ്റുകളുടെ ഒരു വരിയിൽ ടാപ്പ് ചെയ്ത് അവ മാറ്റുക, അല്ലെങ്കിൽ ഒരു വിലാസത്തിലേക്ക് പോകുക.</string>
     <string name="memory_view_log">കൺസോൾ ലോഗ്</string>
     <string name="klog_title">കൺസോൾ ലോഗ്</string>
+    <string name="klog_etahen_note">Klog ക്രമീകരണം ഓണായിരിക്കുമ്പോൾ etaHEN ഇത് പോർട്ട് 9081-ൽ അയയ്ക്കുന്നു; ആ പോർട്ടും പരീക്ഷിക്കും.</string>
     <string name="klog_intro">കൺസോളിന്റെ സിസ്റ്റവും payloads-ഉം പ്രിന്റ് ചെയ്യുന്നത്, തത്സമയം. ps5debug-NG ഇത് പോർട്ട് 3232-ൽ അയയ്ക്കുന്നു. ഒരു payload അല്ലെങ്കിൽ ചീറ്റ് ശരിയായി പ്രവർത്തിക്കാത്തപ്പോൾ ഉപയോഗപ്രദം.</string>
     <string name="klog_port">ലോഗ് പോർട്ട്</string>
     <string name="klog_start">തുടങ്ങുക</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">zip ചെയ്യുന്നു: %2$d-ൽ %1$d ഫയലുകൾ, %4$s-ൽ %3$s</string>
     <string name="zip_done">%1$s ആയി സംരക്ഷിച്ചു</string>
     <string name="zip_empty">ആ ഫോൾഡറിൽ zip ചെയ്യാൻ ഫയലുകളില്ല.</string>
+    <string name="zip_no_space">ഫോണിൽ മതിയായ ഇടമില്ല: zip-ന് ഏകദേശം %1$s വേണം, %2$s ഒഴിവുണ്ട്.</string>
     <string name="zip_truncated">ഒരു ഡൗൺലോഡിന് ഉൾക്കൊള്ളാവുന്നതിനേക്കാൾ വലുതായിരുന്നു ഫോൾഡർ, അതിനാൽ എല്ലാം zip-ൽ ഇല്ല.</string>
     <string name="zip_cancelled">zip നിർത്തി</string>
     <string name="look_title">രൂപം</string>

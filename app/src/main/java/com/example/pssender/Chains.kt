@@ -137,12 +137,17 @@ object AutoChain {
         prefs(ctx).edit().putString("auto_chain_$profileId", chainId).apply()
     }
 
-    /** Whether the loader coming up ([wasUp] false, [nowUp] true) should start the chain now. Notes the run. */
-    fun due(profileId: String, wasUp: Boolean?, nowUp: Boolean?, now: Long = System.currentTimeMillis()): Boolean {
+    /**
+     * Whether the loader coming up ([wasUp] false, [nowUp] true) should start the chain now. Notes the run. With [ctx]
+     * the time of the run is saved too, so starting the app again doesn't run the same chain a second time.
+     */
+    fun due(profileId: String, wasUp: Boolean?, nowUp: Boolean?, now: Long = System.currentTimeMillis(), ctx: Context? = null): Boolean {
         if (wasUp != false || nowUp != true) return false
-        val last = lastRun[profileId] ?: 0L
-        if (now - last < COOLDOWN_MS) return false
+        val saved = ctx?.let { prefs(it).getLong("auto_chain_last_$profileId", 0L) } ?: 0L
+        val last = maxOf(lastRun[profileId] ?: 0L, saved)
+        if (now - last in 0 until COOLDOWN_MS) return false
         lastRun[profileId] = now
+        ctx?.let { prefs(it).edit().putLong("auto_chain_last_$profileId", now).apply() }
         return true
     }
 }

@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Tento reťazec už neexistuje.</string>
     <string name="notif_channel_chain">Reťazce payloadov</string>
     <string name="backup_chains">Reťazce: %1$d</string>
+    <string name="backup_cheats">Cheaty: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Minule nedokončené: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">Každý proces na konzole. Otvorte jeden a uvidíte jeho oblasti pamäte (rwx: čítanie, zápis, spustenie; zapisovateľné sú zvýraznené), oblasť otvorte pre jej bajty. Ťuknutím na riadok bajtov ich zmeníte, alebo Prejsť na adresu.</string>
     <string name="memory_view_log">Log konzoly</string>
     <string name="klog_title">Log konzoly</string>
+    <string name="klog_etahen_note">etaHEN ho posiela na porte 9081, keď má zapnuté nastavenie Klog; skúša sa aj tento port.</string>
     <string name="klog_intro">Čo systém konzoly a payloady vypisujú, naživo. ps5debug-NG to posiela na porte 3232. Hodí sa, keď payload alebo cheat zlobí.</string>
     <string name="klog_port">Port logu</string>
     <string name="klog_start">Spustiť</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">Komprimácia: %1$d z %2$d súborov, %3$s z %4$s</string>
     <string name="zip_done">Uložené ako %1$s</string>
     <string name="zip_empty">Tento priečinok nemá žiadne súbory na komprimáciu.</string>
+    <string name="zip_no_space">V telefóne nie je dosť miesta: zip potrebuje asi %1$s a voľných je %2$s.</string>
     <string name="zip_truncated">Priečinok bol väčší, než pojme jedno stiahnutie, takže v zipe nie je všetko.</string>
     <string name="zip_cancelled">Komprimácia zastavená</string>
     <string name="look_title">Vzhľad</string>

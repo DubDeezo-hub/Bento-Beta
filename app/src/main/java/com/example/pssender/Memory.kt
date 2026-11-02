@@ -112,7 +112,7 @@ fun groupCheats(list: List<Cheat>): List<Pair<String, List<Cheat>>> {
 fun bytesText(b: ByteArray): String = b.joinToString(" ") { "%02X".format(it.toInt() and 0xFF) }
 
 /** A match the user tapped, a cheat being added or edited, a line of the hex view, or a setting. */
-private sealed class MemoryDialog {
+internal sealed class MemoryDialog {
     class Hit(val hit: MemoryHit, val type: ValueType) : MemoryDialog()
     class EditCheat(val cheat: Cheat) : MemoryDialog()
     class NewCheat(val address: Long?, val type: ValueType, val value: String) : MemoryDialog()
@@ -214,7 +214,7 @@ fun MemoryTab(host: String, modifier: Modifier = Modifier) {
 // ---------------------------------------------------------------------------------------------
 
 @Composable
-private fun Header(s: MemorySnapshot?, onDialog: (MemoryDialog) -> Unit) {
+internal fun Header(s: MemorySnapshot?, onDialog: (MemoryDialog) -> Unit) {
     val m = MemorySession
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         if (s == null) {
@@ -284,7 +284,7 @@ private fun Header(s: MemorySnapshot?, onDialog: (MemoryDialog) -> Unit) {
 // Scan
 // ---------------------------------------------------------------------------------------------
 
-private fun LazyListScope.scanItems(s: MemorySnapshot, open: (MemoryDialog) -> Unit) {
+internal fun LazyListScope.scanItems(s: MemorySnapshot, open: (MemoryDialog) -> Unit) {
     val m = MemorySession
     if (s.game.pid == 0) {
         item { Text(str(R.string.memory_scan_needs_game), style = MaterialTheme.typography.bodySmall) }
@@ -392,13 +392,13 @@ private fun LazyListScope.scanItems(s: MemorySnapshot, open: (MemoryDialog) -> U
 
 /** A scan type's name. */
 @Composable
-private fun scanLabel(c: ScanCompare): String = str(c.res)
+internal fun scanLabel(c: ScanCompare): String = str(c.res)
 
 // ---------------------------------------------------------------------------------------------
 // Cheats
 // ---------------------------------------------------------------------------------------------
 
-private fun LazyListScope.cheatItems(s: MemorySnapshot, ctx: Context, open: (MemoryDialog) -> Unit) {
+internal fun LazyListScope.cheatItems(s: MemorySnapshot, ctx: Context, open: (MemoryDialog) -> Unit) {
     val m = MemorySession
     val playing = s.game.pid != 0
 
@@ -503,7 +503,7 @@ private fun LazyListScope.cheatItems(s: MemorySnapshot, ctx: Context, open: (Mem
 }
 
 @Composable
-private fun CheatRow(c: Cheat, playing: Boolean, onOpen: () -> Unit) {
+internal fun CheatRow(c: Cheat, playing: Boolean, onOpen: () -> Unit) {
     val m = MemorySession
     val cs = MaterialTheme.colorScheme
     Row(
@@ -538,7 +538,7 @@ private fun CheatRow(c: Cheat, playing: Boolean, onOpen: () -> Unit) {
 
 /** The pointer paths found for [target]: use one, or narrow them down after the game restarted. */
 @Composable
-private fun PointerPanel(target: Cheat, playing: Boolean) {
+internal fun PointerPanel(target: Cheat, playing: Boolean) {
     val m = MemorySession
     var addressNow by remember(target.id) { mutableStateOf(hexAddr(target.address)) }
     var picked by remember { mutableStateOf<PointerPath?>(null) }
@@ -595,7 +595,7 @@ private fun PointerPanel(target: Cheat, playing: Boolean) {
 
 /** A cheat file made from the cheats: share it, save it to Downloads or copy it. */
 @Composable
-private fun CheatFileOutDialog(d: MemoryDialog.CheatFileOut, onClose: () -> Unit) {
+internal fun CheatFileOutDialog(d: MemoryDialog.CheatFileOut, onClose: () -> Unit) {
     val ctx = LocalContext.current
     var saved by remember { mutableStateOf("") }
     AlertDialog(
@@ -633,7 +633,7 @@ private fun shareText(ctx: Context, text: String) {
 // Browse
 // ---------------------------------------------------------------------------------------------
 
-private fun LazyListScope.browseItems(s: MemorySnapshot, open: (MemoryDialog) -> Unit) {
+internal fun LazyListScope.browseItems(s: MemorySnapshot, open: (MemoryDialog) -> Unit) {
     val m = MemorySession
     val proc = m.openProc
     if (proc == null) {
@@ -748,7 +748,7 @@ private fun LazyListScope.browseItems(s: MemorySnapshot, open: (MemoryDialog) ->
 
 /** An address box and a Go button. */
 @Composable
-private fun GoToRow(onGo: (Long) -> Unit) {
+internal fun GoToRow(onGo: (Long) -> Unit) {
     var text by remember { mutableStateOf("") }
     var bad by remember { mutableStateOf(false) }
     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -771,7 +771,7 @@ private fun GoToRow(onGo: (Long) -> Unit) {
 // ---------------------------------------------------------------------------------------------
 
 @Composable
-private fun HitDialog(d: MemoryDialog.Hit, onClose: () -> Unit, onOpen: (MemoryDialog) -> Unit) {
+internal fun HitDialog(d: MemoryDialog.Hit, onClose: () -> Unit, onOpen: (MemoryDialog) -> Unit) {
     val m = MemorySession
     val current = d.type.format(d.hit.value)
     var value by remember { mutableStateOf(current) }
@@ -836,14 +836,14 @@ private fun HitDialog(d: MemoryDialog.Hit, onClose: () -> Unit, onOpen: (MemoryD
 }
 
 /** How far the neighbor view looks on each side of a match, in bytes. */
-private const val NEIGHBOR_SPAN = 0x20
+internal const val NEIGHBOR_SPAN = 0x20
 
 /**
  * The values just before and after a match, read as its type, with their distance from it. [onUse] puts a neighbor's
  * value into the new-value field (to fill health up to the max health beside it, say).
  */
 @Composable
-private fun Neighbors(type: ValueType, bytes: ByteArray?, span: Int, onUse: (String) -> Unit) {
+internal fun Neighbors(type: ValueType, bytes: ByteArray?, span: Int, onUse: (String) -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -904,7 +904,7 @@ object ValueFavorites {
 
 /** The 8 bytes at an address read as every kind of value, for when the kind was guessed wrong. */
 @Composable
-private fun AllTypes(bytes: ByteArray?) {
+internal fun AllTypes(bytes: ByteArray?) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -924,396 +924,5 @@ private fun AllTypes(bytes: ByteArray?) {
             }
             Text(bytesText(bytes), style = MaterialTheme.typography.bodySmall, fontFamily = FontFamily.Monospace)
         }
-    }
-}
-
-/** Adds a cheat ([new] set) or edits one ([cheat] set). */
-@Composable
-private fun CheatDialog(cheat: Cheat?, new: MemoryDialog.NewCheat?, onClose: () -> Unit) {
-    val m = MemorySession
-    var name by remember { mutableStateOf(cheat?.name ?: "") }
-    var group by remember { mutableStateOf(cheat?.group ?: m.cheats.lastOrNull()?.group ?: "") }
-    var address by remember {
-        mutableStateOf((cheat?.address ?: new?.address)?.let { java.lang.Long.toHexString(it).uppercase() } ?: "")
-    }
-    var type by remember { mutableStateOf(cheat?.type ?: new?.type ?: ValueType.INT) }
-    var value by remember { mutableStateOf(cheat?.value ?: new?.value ?: "") }
-    val addr = parseAddress(address)
-    val valueOk = value.isBlank() || type.parse(value) != null
-    AlertDialog(
-        onDismissRequest = onClose,
-        title = { Text(str(if (cheat == null) R.string.memory_cheat_add else R.string.memory_cheat_edit)) },
-        text = {
-            Column(
-                modifier = Modifier.verticalScroll(rememberScrollState()),
-                verticalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                Field(str(R.string.memory_cheat_name), name) { name = it }
-                Field(str(R.string.memory_cheat_group), group) { group = it }
-                Field(str(R.string.memory_cheat_address), address) { address = it }
-                if (addr == null && address.isNotBlank()) {
-                    Text(str(R.string.memory_bad_address), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.error)
-                }
-                ChipRow {
-                    ValueType.entries.forEach { t -> Chip(str(t.res), type == t) { type = t } }
-                }
-                Field(str(R.string.memory_value), value) { value = it }
-                ValuePresets(type) { value = it }
-                if (!valueOk) {
-                    Text(str(R.string.memory_bad_value, str(type.res)), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.error)
-                }
-                if (cheat != null) {
-                    Text(
-                        str(if (cheat.signature != null) R.string.memory_cheat_findable else R.string.memory_cheat_not_findable),
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-                Row(
-                    modifier = Modifier.horizontalScroll(rememberScrollState()),
-                    horizontalArrangement = Arrangement.spacedBy(4.dp)
-                ) {
-                    TextButton(enabled = !m.busy && addr != null && value.isNotBlank() && valueOk, onClick = {
-                        if (addr != null) m.writeValue(addr, type, value)
-                    }) { Text(str(R.string.memory_write_now)) }
-                    if (cheat != null) {
-                        if (cheat.signature != null) {
-                            TextButton(enabled = !m.busy, onClick = {
-                                m.findAgain(cheat)
-                                onClose()
-                            }) { Text(str(R.string.memory_find_again)) }
-                        } else {
-                            TextButton(enabled = !m.busy, onClick = {
-                                m.captureSignature(cheat)
-                                onClose()
-                            }) { Text(str(R.string.memory_make_findable)) }
-                        }
-                        TextButton(enabled = !m.busy, onClick = {
-                            m.findPointers(cheat)
-                            onClose()
-                        }) { Text(str(R.string.ptr_find)) }
-                        TextButton(onClick = {
-                            m.watch(cheat.address, cheat.type)
-                            onClose()
-                        }) { Text(str(R.string.memory_watch)) }
-                        TextButton(onClick = {
-                            m.removeCheat(cheat)
-                            onClose()
-                        }) { Text(str(R.string.action_remove)) }
-                    }
-                }
-            }
-        },
-        confirmButton = {
-            TextButton(enabled = addr != null && valueOk, onClick = {
-                if (addr != null) {
-                    if (cheat == null) {
-                        m.addCheat(name, addr, type, value, group)
-                    } else {
-                        val moved = addr != cheat.address || type != cheat.type
-                        val c = cheat.copy(name = name.trim().ifBlank { cheat.name }, address = addr, type = type, value = value.trim(), group = group.trim())
-                        // A cheat moved by hand no longer matches its old signature
-                        m.updateCheat(if (moved) c.copy(sigHex = "", sigMask = "", sigAt = 0) else c)
-                    }
-                }
-                onClose()
-            }) { Text(str(R.string.action_save)) }
-        },
-        dismissButton = { TextButton(onClick = onClose) { Text(str(R.string.action_cancel)) } }
-    )
-}
-
-/** Edits the bytes of one line of the hex view. */
-@Composable
-private fun HexLineDialog(d: MemoryDialog.HexLine, onClose: () -> Unit) {
-    val m = MemorySession
-    var text by remember { mutableStateOf(bytesText(d.bytes)) }
-    val parsed = CheatFiles.hex(text)
-    AlertDialog(
-        onDismissRequest = onClose,
-        title = { Text(hexAddr(d.address), fontFamily = FontFamily.Monospace) },
-        text = {
-            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text(str(R.string.memory_hex_edit_help), style = MaterialTheme.typography.bodySmall)
-                Field(str(R.string.memory_hex_bytes), text) { text = it }
-                if (parsed == null || parsed.isEmpty()) {
-                    Text(str(R.string.memory_hex_bad), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.error)
-                }
-                AllTypes(d.bytes.copyOf(8))
-            }
-        },
-        confirmButton = {
-            TextButton(enabled = !m.busy && parsed != null && parsed.isNotEmpty(), onClick = {
-                if (parsed != null) m.writeBytes(d.address, parsed, inOpen = true)
-                onClose()
-            }) { Text(str(R.string.memory_write)) }
-        },
-        dismissButton = { TextButton(onClick = onClose) { Text(str(R.string.action_cancel)) } }
-    )
-}
-
-@Composable
-private fun WatchDialog(w: Watch, onClose: () -> Unit, onOpen: (MemoryDialog) -> Unit) {
-    val m = MemorySession
-    val now = w.value?.let { w.type.format(it) } ?: ""
-    var value by remember { mutableStateOf(now) }
-    AlertDialog(
-        onDismissRequest = onClose,
-        title = { Text(hexAddr(w.address), fontFamily = FontFamily.Monospace) },
-        text = {
-            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text(str(R.string.memory_hit_now, str(w.type.res), now.ifBlank { "…" }), style = MaterialTheme.typography.bodyMedium)
-                Field(str(R.string.memory_new_value), value) { value = it }
-                Row(
-                    modifier = Modifier.horizontalScroll(rememberScrollState()),
-                    horizontalArrangement = Arrangement.spacedBy(4.dp)
-                ) {
-                    TextButton(onClick = { onOpen(MemoryDialog.NewCheat(w.address, w.type, value)) }) { Text(str(R.string.memory_cheat_add_short)) }
-                    TextButton(onClick = {
-                        m.unwatch(w)
-                        onClose()
-                    }) { Text(str(R.string.memory_unwatch)) }
-                }
-            }
-        },
-        confirmButton = {
-            TextButton(enabled = !m.busy && w.type.parse(value) != null, onClick = {
-                m.writeValue(w.address, w.type, value)
-                onClose()
-            }) { Text(str(R.string.memory_write)) }
-        },
-        dismissButton = { TextButton(onClick = onClose) { Text(str(R.string.action_close)) } }
-    )
-}
-
-@Composable
-private fun ImportDialog(ctx: Context, onClose: () -> Unit) {
-    val m = MemorySession
-    var text by remember { mutableStateOf("") }
-    AlertDialog(
-        onDismissRequest = onClose,
-        title = { Text(str(R.string.memory_import)) },
-        text = {
-            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text(str(R.string.memory_import_help), style = MaterialTheme.typography.bodySmall)
-                LinesField(str(R.string.memory_import_box), text, 4) { text = it }
-                TextButton(onClick = { text = clipboardText(ctx) }) { Text(str(R.string.install_paste)) }
-            }
-        },
-        confirmButton = {
-            TextButton(enabled = text.isNotBlank(), onClick = {
-                m.importText(text)
-                onClose()
-            }) { Text(str(R.string.memory_import)) }
-        },
-        dismissButton = { TextButton(onClick = onClose) { Text(str(R.string.action_cancel)) } }
-    )
-}
-
-/** The word to look for, how it may be stored, and the search button. */
-@Composable
-private fun TextSearchPanel(s: MemorySnapshot) {
-    val m = MemorySession
-    TipTitle(str(R.string.memory_text_title), Tip.MEM_TEXT, style = MaterialTheme.typography.labelLarge)
-    if (!s.info.isNg) {
-        Text(str(R.string.memory_text_needs_ng), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-        return
-    }
-    Field(str(R.string.memory_text_field), m.textQuery) { m.textQuery = it }
-    ChipRow {
-        TextEncoding.entries.forEach { e ->
-            val on = e in m.textEncodings
-            Chip(e.label, on, enabled = !m.busy) {
-                // At least one stays chosen
-                m.textEncodings = if (on) (m.textEncodings - e).ifEmpty { setOf(e) } else m.textEncodings + e
-            }
-        }
-    }
-    Text(str(R.string.memory_text_help), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-    if (!m.scanning) {
-        Button(enabled = !m.busy && m.textQuery.isNotEmpty(), onClick = { m.textSearch() }) { Text(str(R.string.memory_text_search)) }
-    }
-    val total = m.textTotal
-    if (total >= 0) {
-        Text(
-            if (total > m.textHits.size) str(R.string.memory_text_more, total, m.textHits.size) else str(R.string.memory_text_found, total),
-            style = MaterialTheme.typography.labelLarge
-        )
-    }
-}
-
-/** One place the text was found: see it in memory, or write new text over it. */
-@Composable
-private fun TextHitDialog(hit: TextHit, onClose: () -> Unit) {
-    val m = MemorySession
-    val ctx = LocalContext.current
-    val now = m.textHits.firstOrNull { it.address == hit.address && it.encoding == hit.encoding } ?: hit
-    var text by remember { mutableStateOf(now.written ?: m.textQuery) }
-    val room = hit.length / hit.encoding.unit
-    val fits = TextSearch.replacement(text, hit.encoding, hit.length) != null
-    AlertDialog(
-        onDismissRequest = onClose,
-        title = { Text(hexAddr(hit.address), fontFamily = FontFamily.Monospace) },
-        text = {
-            Column(modifier = Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text(hit.encoding.label, style = MaterialTheme.typography.labelLarge)
-                Text(now.before + "[" + (now.written ?: m.textQuery) + "]" + now.after, style = MaterialTheme.typography.bodyMedium)
-                Field(str(R.string.memory_text_new), text) { text = it }
-                Text(
-                    if (fits) str(R.string.memory_text_room, room) else str(R.string.memory_text_too_long, room),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = if (fits) MaterialTheme.colorScheme.onSurfaceVariant else MaterialTheme.colorScheme.error
-                )
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    OutlinedButton(onClick = {
-                        m.browseTo(hit.address)
-                        onClose()
-                    }) { Text(str(R.string.memory_text_show)) }
-                    TextButton(onClick = { copyText(ctx, "address", hexAddr(hit.address), AppText.get(R.string.memory_address_copied)) }) { Text(str(R.string.memory_copy_address)) }
-                }
-            }
-        },
-        confirmButton = {
-            TextButton(enabled = fits && text.isNotEmpty() && !m.busy, onClick = { m.writeText(hit, text, onClose) }) {
-                Text(str(R.string.memory_text_write))
-            }
-        },
-        dismissButton = { TextButton(onClick = onClose) { Text(str(R.string.action_close)) } }
-    )
-}
-
-/** Every change this session can take back, newest first. */
-@Composable
-private fun UndoDialog(onClose: () -> Unit) {
-    val m = MemorySession
-    val steps = m.undoSteps
-    val clock = remember { java.text.DateFormat.getTimeInstance(java.text.DateFormat.SHORT) }
-    AlertDialog(
-        onDismissRequest = onClose,
-        title = { TipTitle(str(R.string.undo_title), Tip.MEM_UNDO) },
-        text = {
-            Column(modifier = Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                Text(str(R.string.undo_intro), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                steps.asReversed().forEachIndexed { i, step ->
-                    ListRow(
-                        title = step.label,
-                        detail = clock.format(java.util.Date(step.time)) + "  ·  " + step.parts.take(3).joinToString(", ") { hexAddr(it.address) } + (if (step.parts.size > 3) " …" else ""),
-                        highlight = i == 0,
-                        enabled = i == 0 && !m.busy,
-                        mono = false
-                    ) { m.undoLast() }
-                }
-            }
-        },
-        confirmButton = {
-            TextButton(enabled = steps.isNotEmpty() && !m.busy, onClick = {
-                m.undoAll()
-                onClose()
-            }) { Text(str(R.string.undo_all)) }
-        },
-        dismissButton = { TextButton(onClick = onClose) { Text(str(R.string.action_close)) } }
-    )
-    if (steps.isEmpty()) LaunchedEffect(Unit) { onClose() }
-}
-
-@Composable
-private fun SourceDialog(onClose: () -> Unit) {
-    val m = MemorySession
-    var text by remember { mutableStateOf(m.cheatSource) }
-    AlertDialog(
-        onDismissRequest = onClose,
-        title = { Text(str(R.string.memory_cheatfile_source)) },
-        text = {
-            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text(str(R.string.memory_cheatfile_source_help), style = MaterialTheme.typography.bodySmall)
-                Field(str(R.string.memory_cheatfile_source_url), text) { text = it }
-                TextButton(onClick = { text = CheatFiles.DEFAULT_SOURCE }) { Text(str(R.string.memory_cheatfile_source_reset)) }
-            }
-        },
-        confirmButton = {
-            TextButton(onClick = {
-                m.changeCheatSource(text)
-                onClose()
-            }) { Text(str(R.string.action_save)) }
-        },
-        dismissButton = { TextButton(onClick = onClose) { Text(str(R.string.action_cancel)) } }
-    )
-}
-
-// ---------------------------------------------------------------------------------------------
-// Small parts
-// ---------------------------------------------------------------------------------------------
-
-@Composable
-internal fun ChipRow(content: @Composable () -> Unit) {
-    Row(
-        modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
-        horizontalArrangement = Arrangement.spacedBy(8.dp)
-    ) { content() }
-}
-
-/** A rounded button that shows whether it is the chosen one. */
-@Composable
-internal fun Chip(label: String, selected: Boolean, enabled: Boolean = true, onClick: () -> Unit) {
-    val cs = MaterialTheme.colorScheme
-    Text(
-        label,
-        style = MaterialTheme.typography.labelLarge,
-        color = when {
-            selected -> cs.onPrimary
-            enabled -> cs.onSurface
-            else -> cs.onSurfaceVariant.copy(alpha = 0.6f)
-        },
-        maxLines = 1,
-        modifier = Modifier
-            .clip(RoundedCornerShape(50))
-            .background(if (selected) cs.primary else cs.surfaceContainerHigh)
-            .clickable(enabled = enabled, onClick = onClick)
-            .padding(horizontal = 14.dp, vertical = 8.dp)
-    )
-}
-
-/** A rounded box in the card color, like the console card at the top. */
-@Composable
-internal fun Panel(content: @Composable ColumnScope.() -> Unit) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(16.dp))
-            .background(MaterialTheme.colorScheme.surfaceContainer)
-            .padding(12.dp),
-        verticalArrangement = Arrangement.spacedBy(4.dp),
-        content = content
-    )
-}
-
-/** One tappable line of a list: a name and a smaller detail under it. */
-@Composable
-internal fun ListRow(title: String, detail: String, highlight: Boolean, enabled: Boolean, mono: Boolean = false, onClick: () -> Unit) {
-    val cs = MaterialTheme.colorScheme
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(12.dp))
-            .background(if (highlight) cs.primary.copy(alpha = 0.10f) else cs.surfaceContainerLow)
-            .clickable(enabled = enabled, onClick = onClick)
-            .padding(horizontal = 12.dp, vertical = 8.dp)
-    ) {
-        Text(
-            title,
-            style = MaterialTheme.typography.bodyMedium,
-            fontWeight = if (highlight) FontWeight.Medium else FontWeight.Normal,
-            fontFamily = if (mono) FontFamily.Monospace else null,
-            color = if (enabled) cs.onSurface else cs.onSurfaceVariant,
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis
-        )
-        Text(
-            detail,
-            style = MaterialTheme.typography.bodySmall,
-            fontFamily = if (mono) FontFamily.Monospace else null,
-            color = cs.onSurfaceVariant,
-            maxLines = 1
-        )
     }
 }

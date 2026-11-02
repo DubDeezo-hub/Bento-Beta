@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Lanțul acela nu mai există.</string>
     <string name="notif_channel_chain">Lanțuri de payload-uri</string>
     <string name="backup_chains">Lanțuri: %1$d</string>
+    <string name="backup_cheats">Trucuri: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Neterminate data trecută: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">Fiecare proces de pe consolă. Deschide unul ca să-i vezi regiunile de memorie (rwx: citire, scriere, rulare; cele scriibile sunt evidențiate) și o regiune ca să-i vezi octeții. Atinge un rând de octeți ca să-i schimbi sau Mergi la o adresă.</string>
     <string name="memory_view_log">Jurnalul consolei</string>
     <string name="klog_title">Jurnalul consolei</string>
+    <string name="klog_etahen_note">etaHEN îl trimite pe portul 9081 când setarea Klog e pornită; e încercat și acest port.</string>
     <string name="klog_intro">Ce scriu sistemul consolei și payload-urile, live. ps5debug-NG îl trimite pe portul 3232. Util când un payload sau o trișare nu merge bine.</string>
     <string name="klog_port">Portul jurnalului</string>
     <string name="klog_start">Pornește</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">Arhivare: %1$d din %2$d fișiere, %3$s din %4$s</string>
     <string name="zip_done">Salvat ca %1$s</string>
     <string name="zip_empty">Acest dosar nu are fișiere de arhivat.</string>
+    <string name="zip_no_space">Nu e destul spațiu pe telefon: arhiva zip are nevoie de aproximativ %1$s și sunt liberi %2$s.</string>
     <string name="zip_truncated">Dosarul era mai mare decât poate cuprinde o descărcare, așa că nu totul e în zip.</string>
     <string name="zip_cancelled">Arhivare oprită</string>
     <string name="look_title">Aspect</string>

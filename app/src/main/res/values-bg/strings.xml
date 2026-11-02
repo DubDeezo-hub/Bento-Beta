@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Тази верига вече не съществува.</string>
     <string name="notif_channel_chain">Вериги от payload-и</string>
     <string name="backup_chains">Вериги: %1$d</string>
+    <string name="backup_cheats">Чийтове: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Незавършени от миналия път: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">Всеки процес на конзолата. Отворете един, за да видите областите му в паметта (rwx: четене, запис, изпълнение; записваемите са оцветени), и област за байтовете ѝ. Докоснете ред с байтове, за да ги промените, или Отиди на адрес.</string>
     <string name="memory_view_log">Дневник на конзолата</string>
     <string name="klog_title">Дневник на конзолата</string>
+    <string name="klog_etahen_note">etaHEN го изпраща на порт 9081, когато настройката му Klog е включена; и този порт се пробва.</string>
     <string name="klog_intro">Каквото пишат системата на конзолата и payload-ите, на живо. ps5debug-NG го изпраща на порт 3232. Полезно, когато payload или измама не работи както трябва.</string>
     <string name="klog_port">Порт на дневника</string>
     <string name="klog_start">Старт</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">Архивиране: %1$d от %2$d файла, %3$s от %4$s</string>
     <string name="zip_done">Запазено като %1$s</string>
     <string name="zip_empty">В тази папка няма файлове за архивиране.</string>
+    <string name="zip_no_space">Няма достатъчно място на телефона: zip файлът има нужда от около %1$s, а свободни са %2$s.</string>
     <string name="zip_truncated">Папката беше по-голяма, отколкото побира едно изтегляне, затова не всичко е в zip файла.</string>
     <string name="zip_cancelled">Архивирането е спряно</string>
     <string name="look_title">Изглед</string>

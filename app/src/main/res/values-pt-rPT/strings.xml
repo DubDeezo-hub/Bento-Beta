@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Essa cadeia já não existe.</string>
     <string name="notif_channel_chain">Cadeias de payloads</string>
     <string name="backup_chains">Cadeias: %1$d</string>
+    <string name="backup_cheats">Batotas: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Por concluir da última vez: %1$d</string>
@@ -659,6 +660,7 @@
     <string name="tip_mem_browse">Todos os processos do console. Abra um para ver as regiões de memória (rwx: ler, escrever, executar; as graváveis ficam destacadas) e uma região para ver os bytes. Toque numa linha de bytes para mudá-la, ou vá para um endereço.</string>
     <string name="memory_view_log">Registo da consola</string>
     <string name="klog_title">Registo da consola</string>
+    <string name="klog_etahen_note">O etaHEN envia-o na porta 9081 quando a opção Klog está ligada; essa porta também é experimentada.</string>
     <string name="klog_intro">O que o sistema da consola e os payloads escrevem, em direto. O ps5debug-NG envia-o pela porta 3232. Útil quando um payload ou uma batota não funciona bem.</string>
     <string name="klog_port">Porta do registo</string>
     <string name="klog_start">Iniciar</string>
@@ -1136,6 +1138,7 @@
     <string name="zip_progress">A comprimir: %1$d de %2$d ficheiros, %3$s de %4$s</string>
     <string name="zip_done">Guardado como %1$s</string>
     <string name="zip_empty">Essa pasta não tem ficheiros para comprimir.</string>
+    <string name="zip_no_space">Não há espaço suficiente no telemóvel: o zip precisa de cerca de %1$s e há %2$s livres.</string>
     <string name="zip_truncated">A pasta era maior do que cabe numa transferência, por isso nem tudo está no zip.</string>
     <string name="zip_cancelled">Compressão parada</string>
     <string name="look_title">Aspeto</string>

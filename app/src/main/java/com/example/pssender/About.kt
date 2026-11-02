@@ -157,7 +157,7 @@ fun AboutDialog(
                     modifier = Modifier.verticalScroll(rememberScrollState()),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    Text(str(R.string.backup_contents, data.consoles.size, data.bookmarks?.size ?: 0, data.shelf.size))
+                    Text(backupContentsLine(data))
                     backupDay(data)?.let { Text(str(R.string.backup_made, it), style = MaterialTheme.typography.bodySmall) }
                     Text(str(R.string.restore_text))
                 }

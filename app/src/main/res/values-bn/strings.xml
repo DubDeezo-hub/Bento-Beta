@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">ওই চেইন আর নেই।</string>
     <string name="notif_channel_chain">Payload চেইন</string>
     <string name="backup_chains">চেইন: %1$d</string>
+    <string name="backup_cheats">চিট: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">গতবার অসম্পূর্ণ: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">কনসোলের সব প্রসেস। একটি খুলে তার মেমরি অংশ দেখুন (rwx: পড়া, লেখা, চালানো; লেখা যায় এমন অংশ চিহ্নিত), আর একটি অংশ খুলে তার বাইট। বাইটের লাইনে ট্যাপ করে বদলান, বা একটি ঠিকানায় যান।</string>
     <string name="memory_view_log">কনসোল লগ</string>
     <string name="klog_title">কনসোল লগ</string>
+    <string name="klog_etahen_note">Klog সেটিং চালু থাকলে etaHEN এটি 9081 পোর্টে পাঠায়; সেই পোর্টও চেষ্টা করা হয়।</string>
     <string name="klog_intro">কনসোলের সিস্টেম ও payload যা প্রিন্ট করে, সরাসরি। ps5debug-NG এটি পোর্ট 3232-এ পাঠায়। কোনো payload বা চিট ঠিকমতো কাজ না করলে কাজে লাগে।</string>
     <string name="klog_port">লগ পোর্ট</string>
     <string name="klog_start">শুরু</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">zip হচ্ছে: %1$d / %2$d ফাইল, %3$s / %4$s</string>
     <string name="zip_done">%1$s হিসেবে সংরক্ষিত</string>
     <string name="zip_empty">সেই ফোল্ডারে zip করার মতো কোনো ফাইল নেই।</string>
+    <string name="zip_no_space">ফোনে যথেষ্ট জায়গা নেই: zip-এর জন্য প্রায় %1$s লাগবে, ফাঁকা আছে %2$s।</string>
     <string name="zip_truncated">ফোল্ডারটি একটি ডাউনলোডের সীমার চেয়ে বড় ছিল, তাই zip-এ সবকিছু নেই।</string>
     <string name="zip_cancelled">zip থামানো হয়েছে</string>
     <string name="look_title">চেহারা</string>

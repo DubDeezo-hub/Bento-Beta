@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">השרשרת הזו כבר לא קיימת.</string>
     <string name="notif_channel_chain">שרשראות payload</string>
     <string name="backup_chains">שרשראות: %1$d</string>
+    <string name="backup_cheats">צ\'יטים: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">לא הושלמו בפעם הקודמת: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">כל התהליכים בקונסולה. פתחו אחד כדי לראות את אזורי הזיכרון שלו (rwx: קריאה, כתיבה, הרצה; אזורים לכתיבה מודגשים), ואזור כדי לראות את הבייטים שלו. הקישו על שורת בייטים כדי לשנות אותם, או \"מעבר\" לכתובת.</string>
     <string name="memory_view_log">יומן הקונסולה</string>
     <string name="klog_title">יומן הקונסולה</string>
+    <string name="klog_etahen_note">‏etaHEN שולח אותו ביציאה 9081 כשהגדרת Klog שלו פועלת; גם היציאה הזו נבדקת.</string>
     <string name="klog_intro">מה שמערכת הקונסולה וה-payloads מדפיסים, בזמן אמת. ps5debug-NG שולח את זה בפורט 3232. שימושי כש-payload או צ\'יט לא מתנהגים כמו שצריך.</string>
     <string name="klog_port">פורט היומן</string>
     <string name="klog_start">התחלה</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">דוחס: %1$d מתוך %2$d קבצים, %3$s מתוך %4$s</string>
     <string name="zip_done">נשמר בשם %1$s</string>
     <string name="zip_empty">אין בתיקייה הזו קבצים לדחוס.</string>
+    <string name="zip_no_space">אין מספיק מקום בטלפון: קובץ ה-zip צריך כ-%1$s, ופנויים %2$s.</string>
     <string name="zip_truncated">התיקייה גדולה יותר ממה שהורדה אחת יכולה להכיל, ולכן לא הכול נכלל ב-zip.</string>
     <string name="zip_cancelled">הדחיסה נעצרה</string>
     <string name="look_title">מראה</string>

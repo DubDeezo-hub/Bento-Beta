@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Rantaian itu sudah tiada.</string>
     <string name="notif_channel_chain">Rantaian payload</string>
     <string name="backup_chains">Rantaian: %1$d</string>
+    <string name="backup_cheats">Tipu: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Belum selesai kali lepas: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">Semua proses pada konsol. Buka satu untuk melihat kawasan memorinya (rwx: baca, tulis, laksana; kawasan boleh tulis diserlahkan), dan buka satu kawasan untuk melihat baitnya. Ketik satu baris bait untuk mengubahnya, atau pergi ke satu alamat.</string>
     <string name="memory_view_log">Log konsol</string>
     <string name="klog_title">Log konsol</string>
+    <string name="klog_etahen_note">etaHEN menghantarnya pada port 9081 apabila tetapan Klog dihidupkan; port itu juga dicuba.</string>
     <string name="klog_intro">Apa yang dicetak oleh sistem konsol dan payload, secara langsung. ps5debug-NG menghantarnya pada port 3232. Berguna apabila payload atau tipu tidak berfungsi dengan betul.</string>
     <string name="klog_port">Port log</string>
     <string name="klog_start">Mula</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">Mengezip: %1$d daripada %2$d fail, %3$s daripada %4$s</string>
     <string name="zip_done">Disimpan sebagai %1$s</string>
     <string name="zip_empty">Folder itu tiada fail untuk dizip.</string>
+    <string name="zip_no_space">Ruang dalam telefon tidak cukup: zip perlukan kira-kira %1$s, dan %2$s kosong.</string>
     <string name="zip_truncated">Folder itu lebih besar daripada yang boleh dimuatkan dalam satu muat turun, jadi bukan semuanya ada dalam zip.</string>
     <string name="zip_cancelled">Zip dihentikan</string>
     <string name="look_title">Rupa</string>

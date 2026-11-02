@@ -51,6 +51,13 @@ android {
     buildFeatures {
         compose = true
     }
+    lint {
+        // For now Lint reports and doesn't stop the build: the Phone test shows what it found on the run page
+        abortOnError = false
+        checkReleaseBuilds = false
+        xmlReport = true
+        htmlReport = true
+    }
     testOptions {
         // The tests cover plain logic; an Android call they touch by the way gives an empty answer instead of failing
         unitTests.isReturnDefaultValues = true

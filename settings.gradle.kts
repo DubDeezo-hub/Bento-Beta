@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "PsSender"
+rootProject.name = "Bento"
 include(":app")

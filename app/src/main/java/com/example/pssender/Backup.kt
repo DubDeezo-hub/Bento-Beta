@@ -257,11 +257,15 @@ fun applyBackup(ctx: Context, data: BackupData): Int {
 // Files and messages (the About screen uses these)
 // ---------------------------------------------------------------------------------------------
 
-/** "Consoles: 2 · Bookmarks: 5 · Payloads: 3" (and "Chains: 2" on a line of its own when there are chains): what [data] holds. */
+/** "Consoles: 2 · Bookmarks: 5 · Payloads: 3" (and "Chains: 2 · Cheats: 7" on a line of its own when it has those): what [data] holds. */
 fun backupContentsLine(data: BackupData): String {
     val line = AppText.get(R.string.backup_contents, data.consoles.size, data.bookmarks?.size ?: 0, data.shelf.size)
+    val more = ArrayList<String>()
     val chains = data.chains?.size ?: 0
-    return if (chains > 0) line + "\n" + AppText.get(R.string.backup_chains, chains) else line
+    if (chains > 0) more.add(AppText.get(R.string.backup_chains, chains))
+    val cheats = data.cheats?.values?.sumOf { it.size } ?: 0
+    if (cheats > 0) more.add(AppText.get(R.string.backup_cheats, cheats))
+    return if (more.isEmpty()) line else line + "\n" + more.joinToString(" · ")
 }
 
 /** The message for a file that could not be used as a backup. */

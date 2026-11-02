@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Seda ahelat enam ei ole.</string>
     <string name="notif_channel_chain">Payloadide ahelad</string>
     <string name="backup_chains">Ahelad: %1$d</string>
+    <string name="backup_cheats">Petted: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Eelmisel korral pooleli jäänud: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">Kõik konsooli protsessid. Ava üks, et näha selle mälupiirkondi (rwx: lugemine, kirjutamine, käivitamine; kirjutatavad piirkonnad on esile tõstetud), ja ava piirkond, et näha selle baite. Puuduta baitide rida nende muutmiseks või mine aadressile.</string>
     <string name="memory_view_log">Konsooli logi</string>
     <string name="klog_title">Konsooli logi</string>
+    <string name="klog_etahen_note">etaHEN saadab selle pordile 9081, kui tema Klog-seade on sees; proovitakse ka seda porti.</string>
     <string name="klog_intro">Mida konsooli süsteem ja payloadid välja prindivad, reaalajas. ps5debug-NG saadab selle pordile 3232. Kasulik, kui payload või petu ei tööta õigesti.</string>
     <string name="klog_port">Logi port</string>
     <string name="klog_start">Alusta</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">Pakin: %1$d / %2$d faili, %3$s / %4$s</string>
     <string name="zip_done">Salvestatud nimega %1$s</string>
     <string name="zip_empty">Selles kaustas pole pakkimiseks faile.</string>
+    <string name="zip_no_space">Telefonis pole piisavalt ruumi: zip vajab umbes %1$s, vaba on %2$s.</string>
     <string name="zip_truncated">Kaust oli suurem, kui üks allalaadimine mahutab, seega kõik ei ole zip-failis.</string>
     <string name="zip_cancelled">Pakkimine peatatud</string>
     <string name="look_title">Välimus</string>

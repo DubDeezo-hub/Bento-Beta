@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Tokios grandinės nebėra.</string>
     <string name="notif_channel_chain">Payload grandinės</string>
     <string name="backup_chains">Grandinės: %1$d</string>
+    <string name="backup_cheats">Gudrybės: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Praeitą kartą nebaigta: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">Visi konsolės procesai. Atidarykite vieną, kad pamatytumėte jo atminties sritis (rwx: skaityti, rašyti, vykdyti; rašomos sritys paryškintos), ir atidarykite sritį, kad pamatytumėte jos baitus. Palieskite baitų eilutę, kad juos pakeistumėte, arba eikite į adresą.</string>
     <string name="memory_view_log">Konsolės žurnalas</string>
     <string name="klog_title">Konsolės žurnalas</string>
+    <string name="klog_etahen_note">etaHEN jį siunčia per 9081 prievadą, kai įjungtas jo Klog nustatymas; bandomas ir šis prievadas.</string>
     <string name="klog_intro">Ką konsolės sistema ir payloads išveda, tiesiogiai. ps5debug-NG jį siunčia prievadu 3232. Naudinga, kai payload ar gudrybė veikia netinkamai.</string>
     <string name="klog_port">Žurnalo prievadas</string>
     <string name="klog_start">Pradėti</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">Archyvuojama: %1$d iš %2$d failų, %3$s iš %4$s</string>
     <string name="zip_done">Išsaugota kaip %1$s</string>
     <string name="zip_empty">Tame aplanke nėra failų archyvuoti.</string>
+    <string name="zip_no_space">Telefone nepakanka vietos: zip reikia apie %1$s, o laisva %2$s.</string>
     <string name="zip_truncated">Aplankas buvo didesnis, nei telpa į vieną atsisiuntimą, todėl ne viskas pateko į zip.</string>
     <string name="zip_cancelled">Archyvavimas sustabdytas</string>
     <string name="look_title">Išvaizda</string>

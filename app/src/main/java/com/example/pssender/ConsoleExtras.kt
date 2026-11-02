@@ -90,12 +90,29 @@ object CaptureSync {
     private fun prefs(ctx: Context) = ctx.getSharedPreferences("settings", Context.MODE_PRIVATE)
     private fun key(profileId: String) = "captures_copied_$profileId"
 
+    /**
+     * The lists of copied captures, in a file of their own: one can hold thousands of paths, and the app's main
+     * settings are read every time it starts. A list kept in the main settings by an older version moves here.
+     */
+    private fun lists(ctx: Context): android.content.SharedPreferences {
+        val own = ctx.getSharedPreferences("capture_sync", Context.MODE_PRIVATE)
+        val old = prefs(ctx)
+        val moving = old.all.keys.filter { it.startsWith("captures_copied_") }
+        if (moving.isNotEmpty()) {
+            val e = own.edit()
+            for (k in moving) if (!own.contains(k)) e.putString(k, old.getString(k, "") ?: "")
+            e.commit()
+            old.edit().apply { moving.forEach { remove(it) } }.apply()
+        }
+        return own
+    }
+
     fun autoOn(ctx: Context, profileId: String): Boolean = prefs(ctx).getBoolean("captures_auto_$profileId", false)
     fun setAuto(ctx: Context, profileId: String, on: Boolean) = prefs(ctx).edit().putBoolean("captures_auto_$profileId", on).apply()
 
     /** The captures already copied for [profileId] (paths on the console). */
     private fun copied(ctx: Context, profileId: String): Set<String> =
-        (prefs(ctx).getString(key(profileId), "") ?: "").split('\n').filter { it.isNotEmpty() }.toSet()
+        (lists(ctx).getString(key(profileId), "") ?: "").split('\n').filter { it.isNotEmpty() }.toSet()
 
     /**
      * Notes [paths] as copied. The list holds as many as a sync looks through: a shorter one would drop older captures
@@ -103,11 +120,11 @@ object CaptureSync {
      */
     fun markCopied(ctx: Context, profileId: String, paths: Collection<String>) {
         val all = (copied(ctx, profileId) + paths).toList().takeLast(MAX_FILES)
-        prefs(ctx).edit().putString(key(profileId), all.joinToString("\n")).apply()
+        lists(ctx).edit().putString(key(profileId), all.joinToString("\n")).apply()
     }
 
     /** Forgets what was copied, so the next copy takes everything again. */
-    fun reset(ctx: Context, profileId: String) = prefs(ctx).edit().remove(key(profileId)).apply()
+    fun reset(ctx: Context, profileId: String) = lists(ctx).edit().remove(key(profileId)).apply()
 
     /**
      * The captures on the console not copied yet, as downloads into Downloads/…/Captures/<game folder>. Blocking. The
@@ -118,7 +135,7 @@ object CaptureSync {
         val tree = ftpTree(s, ConsolePaths.MEDIA, MAX_FILES)
         if (!tree.exists) return emptyList()
         val media = tree.files.filter { (rel, _) -> MEDIA.containsMatchIn(rel) && !rel.contains("/.") }
-        val first = !prefs(ctx).contains(key(profileId))
+        val first = !lists(ctx).contains(key(profileId))
         if (first && !firstTimeAll) {
             markCopied(ctx, profileId, media.keys.map { joinPath(ConsolePaths.MEDIA, it) })
             return emptyList()
@@ -129,7 +146,7 @@ object CaptureSync {
         // Captures deleted on the console are forgotten, so the list doesn't keep growing (only when the whole folder
         // was looked through: a cut-short look doesn't show everything that is still there)
         if (!tree.truncated && done.size < noted.size) {
-            prefs(ctx).edit().putString(key(profileId), done.joinToString("\n")).apply()
+            lists(ctx).edit().putString(key(profileId), done.joinToString("\n")).apply()
         }
         return media.mapNotNull { (rel, size) ->
             val remote = joinPath(ConsolePaths.MEDIA, rel)

@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Rangkaian itu sudah tidak ada.</string>
     <string name="notif_channel_chain">Rangkaian payload</string>
     <string name="backup_chains">Rangkaian: %1$d</string>
+    <string name="backup_cheats">Cheat: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Belum selesai dari sesi sebelumnya: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">Semua proses di konsol. Buka satu untuk melihat wilayah memorinya (rwx: baca, tulis, jalankan; wilayah yang bisa ditulis disorot), dan buka satu wilayah untuk melihat byte-nya. Ketuk baris byte untuk mengubahnya, atau pergi ke sebuah alamat.</string>
     <string name="memory_view_log">Log konsol</string>
     <string name="klog_title">Log konsol</string>
+    <string name="klog_etahen_note">etaHEN mengirimnya di port 9081 saat setelan Klog-nya aktif; port itu juga dicoba.</string>
     <string name="klog_intro">Apa yang dicetak sistem konsol dan payload, secara langsung. ps5debug-NG mengirimnya di port 3232. Berguna saat payload atau cheat tidak bekerja dengan benar.</string>
     <string name="klog_port">Port log</string>
     <string name="klog_start">Mulai</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">Membuat zip: %1$d dari %2$d file, %3$s dari %4$s</string>
     <string name="zip_done">Disimpan sebagai %1$s</string>
     <string name="zip_empty">Folder itu tidak berisi file untuk di-zip.</string>
+    <string name="zip_no_space">Ruang di ponsel tidak cukup: zip butuh sekitar %1$s, dan yang kosong %2$s.</string>
     <string name="zip_truncated">Folder lebih besar daripada yang bisa ditampung satu unduhan, jadi tidak semuanya masuk ke zip.</string>
     <string name="zip_cancelled">Zip dihentikan</string>
     <string name="look_title">Tampilan</string>

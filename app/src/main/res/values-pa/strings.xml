@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">ਉਹ ਚੇਨ ਹੁਣ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।</string>
     <string name="notif_channel_chain">Payload ਚੇਨਾਂ</string>
     <string name="backup_chains">ਚੇਨਾਂ: %1$d</string>
+    <string name="backup_cheats">ਚੀਟ: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">ਪਿਛਲੀ ਵਾਰ ਅਧੂਰੇ ਰਹੇ: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">ਕੰਸੋਲ ਦੇ ਸਾਰੇ ਪ੍ਰੋਸੈੱਸ। ਇੱਕ ਖੋਲ੍ਹ ਕੇ ਉਸਦੇ ਮੈਮੋਰੀ ਹਿੱਸੇ ਦੇਖੋ (rwx: ਪੜ੍ਹਨਾ, ਲਿਖਣਾ, ਚਲਾਉਣਾ; ਲਿਖਣਯੋਗ ਹਿੱਸੇ ਉਭਾਰੇ ਹੋਏ), ਅਤੇ ਕੋਈ ਹਿੱਸਾ ਖੋਲ੍ਹ ਕੇ ਉਸਦੇ ਬਾਈਟ। ਬਾਈਟਾਂ ਦੀ ਲਾਈਨ ਉੱਤੇ ਟੈਪ ਕਰਕੇ ਉਹਨਾਂ ਨੂੰ ਬਦਲੋ, ਜਾਂ ਕਿਸੇ ਪਤੇ ਉੱਤੇ ਜਾਓ।</string>
     <string name="memory_view_log">ਕੰਸੋਲ ਲੌਗ</string>
     <string name="klog_title">ਕੰਸੋਲ ਲੌਗ</string>
+    <string name="klog_etahen_note">Klog ਸੈਟਿੰਗ ਚਾਲੂ ਹੋਣ \'ਤੇ etaHEN ਇਸਨੂੰ ਪੋਰਟ 9081 \'ਤੇ ਭੇਜਦਾ ਹੈ; ਉਹ ਪੋਰਟ ਵੀ ਅਜ਼ਮਾਇਆ ਜਾਂਦਾ ਹੈ।</string>
     <string name="klog_intro">ਕੰਸੋਲ ਦਾ ਸਿਸਟਮ ਅਤੇ payloads ਜੋ ਛਾਪਦੇ ਹਨ, ਲਾਈਵ। ps5debug-NG ਇਸਨੂੰ ਪੋਰਟ 3232 ਉੱਤੇ ਭੇਜਦਾ ਹੈ। ਜਦੋਂ ਕੋਈ payload ਜਾਂ ਚੀਟ ਠੀਕ ਕੰਮ ਨਾ ਕਰੇ ਤਾਂ ਲਾਭਦਾਇਕ।</string>
     <string name="klog_port">ਲੌਗ ਪੋਰਟ</string>
     <string name="klog_start">ਸ਼ੁਰੂ</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">zip ਬਣ ਰਿਹਾ ਹੈ: %1$d / %2$d ਫਾਈਲਾਂ, %3$s / %4$s</string>
     <string name="zip_done">%1$s ਵਜੋਂ ਸੰਭਾਲਿਆ</string>
     <string name="zip_empty">ਉਸ ਫੋਲਡਰ ਵਿੱਚ zip ਕਰਨ ਲਈ ਕੋਈ ਫਾਈਲ ਨਹੀਂ।</string>
+    <string name="zip_no_space">ਫ਼ੋਨ ਵਿੱਚ ਕਾਫ਼ੀ ਥਾਂ ਨਹੀਂ: zip ਨੂੰ ਲਗਭਗ %1$s ਚਾਹੀਦੀ ਹੈ, ਅਤੇ %2$s ਖਾਲੀ ਹੈ।</string>
     <string name="zip_truncated">ਫੋਲਡਰ ਇੱਕ ਡਾਊਨਲੋਡ ਦੀ ਹੱਦ ਤੋਂ ਵੱਡਾ ਸੀ, ਇਸ ਲਈ zip ਵਿੱਚ ਸਭ ਕੁਝ ਨਹੀਂ ਹੈ।</string>
     <string name="zip_cancelled">zip ਰੋਕਿਆ ਗਿਆ</string>
     <string name="look_title">ਦਿੱਖ</string>

@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Daardie ketting bestaan nie meer nie.</string>
     <string name="notif_channel_chain">Payload-kettings</string>
     <string name="backup_chains">Kettings: %1$d</string>
+    <string name="backup_cheats">Cheats: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Laas nie klaar nie: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">Al die prosesse op die konsole. Maak een oop om sy geheuestreke te sien (rwx: lees, skryf, voer uit; skryfbare streke is uitgelig), en ’n streek om sy grepe te sien. Tik ’n reël grepe om hulle te verander, of gaan na ’n adres.</string>
     <string name="memory_view_log">Konsole-log</string>
     <string name="klog_title">Konsole-log</string>
+    <string name="klog_etahen_note">etaHEN stuur dit op poort 9081 as sy Klog-instelling aan is; daardie poort word ook probeer.</string>
     <string name="klog_intro">Wat die konsole se stelsel en payloads uitdruk, regstreeks. ps5debug-NG stuur dit op poort 3232. Nuttig wanneer ’n payload of kul nie reg werk nie.</string>
     <string name="klog_port">Logpoort</string>
     <string name="klog_start">Begin</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">Zip: %1$d van %2$d lêers, %3$s van %4$s</string>
     <string name="zip_done">Gestoor as %1$s</string>
     <string name="zip_empty">Daardie gids het geen lêers om te zip nie.</string>
+    <string name="zip_no_space">Nie genoeg spasie op die foon nie: die zip het omtrent %1$s nodig, en %2$s is vry.</string>
     <string name="zip_truncated">Die gids was groter as wat een aflaai kan hou, so nie alles is in die zip nie.</string>
     <string name="zip_cancelled">Zip gestop</string>
     <string name="look_title">Voorkoms</string>

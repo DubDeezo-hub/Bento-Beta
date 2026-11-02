@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Šādas ķēdes vairs nav.</string>
     <string name="notif_channel_chain">Payload ķēdes</string>
     <string name="backup_chains">Ķēdes: %1$d</string>
+    <string name="backup_cheats">Krāpšanās kodi: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Pagājušoreiz nepabeigts: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">Visi konsoles procesi. Atveriet vienu, lai redzētu tā atmiņas apgabalus (rwx: lasīt, rakstīt, izpildīt; rakstāmie apgabali ir izcelti), un atveriet apgabalu, lai redzētu tā baitus. Pieskarieties baitu rindai, lai tos mainītu, vai dodieties uz adresi.</string>
     <string name="memory_view_log">Konsoles žurnāls</string>
     <string name="klog_title">Konsoles žurnāls</string>
+    <string name="klog_etahen_note">etaHEN to sūta uz portu 9081, kad ieslēgts tā Klog iestatījums; tiek mēģināts arī šis ports.</string>
     <string name="klog_intro">Tas, ko konsoles sistēma un payloads izdrukā, reāllaikā. ps5debug-NG to sūta portā 3232. Noder, ja payload vai krāpšanās kods nedarbojas pareizi.</string>
     <string name="klog_port">Žurnāla ports</string>
     <string name="klog_start">Sākt</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">Arhivē: %1$d no %2$d failiem, %3$s no %4$s</string>
     <string name="zip_done">Saglabāts kā %1$s</string>
     <string name="zip_empty">Šajā mapē nav failu, ko arhivēt.</string>
+    <string name="zip_no_space">Tālrunī nepietiek vietas: zip vajag ap %1$s, brīvi ir %2$s.</string>
     <string name="zip_truncated">Mape bija lielāka, nekā var ietilpt vienā lejupielādē, tāpēc zip failā nav viss.</string>
     <string name="zip_cancelled">Arhivēšana apturēta</string>
     <string name="look_title">Izskats</string>

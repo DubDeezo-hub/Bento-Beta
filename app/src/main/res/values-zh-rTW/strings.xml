@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">該鏈已不存在。</string>
     <string name="notif_channel_chain">Payload 鏈</string>
     <string name="backup_chains">鏈：%1$d</string>
+    <string name="backup_cheats">作弊：%1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">上次未完成的傳輸：%1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">主機上的所有處理程序。開啟一個即可查看其記憶體區域（rwx：讀取、寫入、執行；可寫入的區域會醒目標示），開啟一個區域即可查看其位元組。點選一行位元組可修改，或前往某個位址。</string>
     <string name="memory_view_log">主機記錄</string>
     <string name="klog_title">主機記錄</string>
+    <string name="klog_etahen_note">etaHEN 在其 Klog 設定開啟時透過連接埠 9081 傳送；也會嘗試該連接埠。</string>
     <string name="klog_intro">即時顯示主機系統和 Payload 輸出的內容。ps5debug-NG 透過連接埠 3232 傳送。Payload 或金手指運作不正常時很有用。</string>
     <string name="klog_port">記錄連接埠</string>
     <string name="klog_start">開始</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">正在壓縮：%1$d / %2$d 個檔案，%3$s / %4$s</string>
     <string name="zip_done">已儲存為 %1$s</string>
     <string name="zip_empty">該資料夾中沒有可壓縮的檔案。</string>
+    <string name="zip_no_space">手機空間不足：zip 需要約 %1$s，可用 %2$s。</string>
     <string name="zip_truncated">資料夾超過一次下載能容納的大小，因此 zip 中沒有包含全部內容。</string>
     <string name="zip_cancelled">已停止壓縮</string>
     <string name="look_title">外觀</string>

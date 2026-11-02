@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Ten łańcuch już nie istnieje.</string>
     <string name="notif_channel_chain">Łańcuchy payloadów</string>
     <string name="backup_chains">Łańcuchy: %1$d</string>
+    <string name="backup_cheats">Kody: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Niedokończone poprzednim razem: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">Każdy proces na konsoli. Otwórz jeden, by zobaczyć jego obszary pamięci (rwx: odczyt, zapis, wykonanie; zapisywalne są wyróżnione), a obszar, by zobaczyć jego bajty. Stuknij wiersz bajtów, by je zmienić, albo Przejdź do adresu.</string>
     <string name="memory_view_log">Log konsoli</string>
     <string name="klog_title">Log konsoli</string>
+    <string name="klog_etahen_note">etaHEN wysyła go na porcie 9081, gdy jego ustawienie Klog jest włączone; ten port też jest sprawdzany.</string>
     <string name="klog_intro">To, co wypisują system konsoli i payloady, na żywo. ps5debug-NG wysyła to na porcie 3232. Przydatne, gdy payload lub kod działa źle.</string>
     <string name="klog_port">Port logu</string>
     <string name="klog_start">Start</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">Pakowanie: %1$d z %2$d plików, %3$s z %4$s</string>
     <string name="zip_done">Zapisano jako %1$s</string>
     <string name="zip_empty">Ten folder nie ma plików do spakowania.</string>
+    <string name="zip_no_space">Za mało miejsca w telefonie: zip potrzebuje około %1$s, a wolne jest %2$s.</string>
     <string name="zip_truncated">Folder był większy, niż mieści jedno pobieranie, więc nie wszystko jest w zipie.</string>
     <string name="zip_cancelled">Pakowanie zatrzymane</string>
     <string name="look_title">Wygląd</string>

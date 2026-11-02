@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">ఆ చైన్ ఇకపై లేదు.</string>
     <string name="notif_channel_chain">Payload చైన్‌లు</string>
     <string name="backup_chains">చైన్‌లు: %1$d</string>
+    <string name="backup_cheats">చీట్‌లు: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">గత సారి పూర్తికానివి: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">కన్సోల్‌లోని అన్ని ప్రాసెస్‌లు. ఒకదాన్ని తెరిచి దాని మెమరీ భాగాలను చూడండి (rwx: చదవడం, రాయడం, నడపడం; రాయదగిన భాగాలు హైలైట్ చేయబడ్డాయి), ఒక భాగాన్ని తెరిచి దాని బైట్‌లను కూడా. బైట్‌ల పంక్తిని నొక్కి వాటిని మార్చండి, లేదా ఒక చిరునామాకు వెళ్లండి.</string>
     <string name="memory_view_log">కన్సోల్ లాగ్</string>
     <string name="klog_title">కన్సోల్ లాగ్</string>
+    <string name="klog_etahen_note">Klog సెట్టింగ్ ఆన్‌లో ఉన్నప్పుడు etaHEN దీన్ని పోర్ట్ 9081 లో పంపుతుంది; ఆ పోర్ట్‌ను కూడా ప్రయత్నిస్తారు.</string>
     <string name="klog_intro">కన్సోల్ సిస్టమ్, payloads ముద్రించేది, ప్రత్యక్షంగా. ps5debug-NG దీన్ని పోర్ట్ 3232లో పంపుతుంది. ఒక payload లేదా చీట్ సరిగ్గా పనిచేయనప్పుడు ఉపయోగకరం.</string>
     <string name="klog_port">లాగ్ పోర్ట్</string>
     <string name="klog_start">ప్రారంభించు</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">zip చేస్తోంది: %2$dలో %1$d ఫైళ్లు, %4$sలో %3$s</string>
     <string name="zip_done">%1$sగా సేవ్ అయింది</string>
     <string name="zip_empty">ఆ ఫోల్డర్‌లో zip చేయడానికి ఫైళ్లు లేవు.</string>
+    <string name="zip_no_space">ఫోన్‌లో తగినంత స్థలం లేదు: zip కి సుమారు %1$s కావాలి, %2$s ఖాళీగా ఉంది.</string>
     <string name="zip_truncated">ఒక డౌన్‌లోడ్ పట్టగలిగిన దానికంటే ఫోల్డర్ పెద్దది, కాబట్టి అన్నీ zipలో లేవు.</string>
     <string name="zip_cancelled">zip ఆపబడింది</string>
     <string name="look_title">రూపం</string>

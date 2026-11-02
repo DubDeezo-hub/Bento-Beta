@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">ಆ ಚೈನ್ ಇನ್ನು ಅಸ್ತಿತ್ವದಲ್ಲಿ ಇಲ್ಲ.</string>
     <string name="notif_channel_chain">Payload ಚೈನ್‌ಗಳು</string>
     <string name="backup_chains">ಚೈನ್‌ಗಳು: %1$d</string>
+    <string name="backup_cheats">ಚೀಟ್‌ಗಳು: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">ಕಳೆದ ಬಾರಿ ಪೂರ್ಣಗೊಳ್ಳದವು: %1$d</string>
@@ -658,6 +659,7 @@
     <string name="tip_mem_browse">ಕನ್ಸೋಲ್‌ನ ಎಲ್ಲಾ ಪ್ರಕ್ರಿಯೆಗಳು. ಒಂದನ್ನು ತೆರೆದು ಅದರ ಮೆಮೊರಿ ಭಾಗಗಳನ್ನು ನೋಡಿ (rwx: ಓದು, ಬರೆ, ಚಲಾಯಿಸು; ಬರೆಯಬಹುದಾದ ಭಾಗಗಳು ಹೈಲೈಟ್), ಮತ್ತು ಒಂದು ಭಾಗ ತೆರೆದು ಅದರ ಬೈಟ್‌ಗಳನ್ನು. ಬೈಟ್‌ಗಳ ಸಾಲನ್ನು ಟ್ಯಾಪ್ ಮಾಡಿ ಅವನ್ನು ಬದಲಿಸಿ, ಅಥವಾ ಒಂದು ವಿಳಾಸಕ್ಕೆ ಹೋಗಿ.</string>
     <string name="memory_view_log">ಕನ್ಸೋಲ್ ಲಾಗ್</string>
     <string name="klog_title">ಕನ್ಸೋಲ್ ಲಾಗ್</string>
+    <string name="klog_etahen_note">Klog ಸೆಟ್ಟಿಂಗ್ ಆನ್ ಇದ್ದಾಗ etaHEN ಇದನ್ನು ಪೋರ್ಟ್ 9081 ನಲ್ಲಿ ಕಳುಹಿಸುತ್ತದೆ; ಆ ಪೋರ್ಟ್ ಅನ್ನೂ ಪ್ರಯತ್ನಿಸಲಾಗುತ್ತದೆ.</string>
     <string name="klog_intro">ಕನ್ಸೋಲ್‌ನ ಸಿಸ್ಟಮ್ ಮತ್ತು payloads ಮುದ್ರಿಸುವುದು, ನೇರವಾಗಿ. ps5debug-NG ಇದನ್ನು ಪೋರ್ಟ್ 3232 ನಲ್ಲಿ ಕಳುಹಿಸುತ್ತದೆ. payload ಅಥವಾ ಚೀಟ್ ಸರಿಯಾಗಿ ಕೆಲಸ ಮಾಡದಿದ್ದಾಗ ಉಪಯುಕ್ತ.</string>
     <string name="klog_port">ಲಾಗ್ ಪೋರ್ಟ್</string>
     <string name="klog_start">ಪ್ರಾರಂಭ</string>
@@ -1135,6 +1137,7 @@
     <string name="zip_progress">zip ಮಾಡಲಾಗುತ್ತಿದೆ: %2$d ರಲ್ಲಿ %1$d ಫೈಲ್‌ಗಳು, %4$s ರಲ್ಲಿ %3$s</string>
     <string name="zip_done">%1$s ಆಗಿ ಉಳಿಸಲಾಗಿದೆ</string>
     <string name="zip_empty">ಆ ಫೋಲ್ಡರ್‌ನಲ್ಲಿ zip ಮಾಡಲು ಫೈಲ್‌ಗಳಿಲ್ಲ.</string>
+    <string name="zip_no_space">ಫೋನ್‌ನಲ್ಲಿ ಸಾಕಷ್ಟು ಸ್ಥಳವಿಲ್ಲ: zip ಗೆ ಸುಮಾರು %1$s ಬೇಕು, %2$s ಖಾಲಿ ಇದೆ.</string>
     <string name="zip_truncated">ಒಂದು ಡೌನ್‌ಲೋಡ್ ಹಿಡಿಯಬಲ್ಲದಕ್ಕಿಂತ ಫೋಲ್ಡರ್ ದೊಡ್ಡದಾಗಿತ್ತು, ಆದ್ದರಿಂದ ಎಲ್ಲವೂ zip ನಲ್ಲಿ ಇಲ್ಲ.</string>
     <string name="zip_cancelled">zip ನಿಲ್ಲಿಸಲಾಗಿದೆ</string>
     <string name="look_title">ನೋಟ</string>

@@ -381,6 +381,7 @@
     <string name="chain_err_unknown">Die keten bestaat niet meer.</string>
     <string name="notif_channel_chain">Payload-ketens</string>
     <string name="backup_chains">Ketens: %1$d</string>
+    <string name="backup_cheats">Cheats: %1$d</string>
 
     <!-- unfinished transfers -->
     <string name="unfinished_title">Vorige keer niet afgerond: %1$d</string>
@@ -659,6 +660,7 @@
     <string name="tip_mem_browse">Elk proces op de console. Open er een om zijn geheugengebieden te zien (rwx: lezen, schrijven, uitvoeren; beschrijfbare zijn gemarkeerd) en een gebied voor de bytes. Tik op een regel bytes om ze te veranderen, of ga naar een adres.</string>
     <string name="memory_view_log">Consolelog</string>
     <string name="klog_title">Consolelog</string>
+    <string name="klog_etahen_note">etaHEN stuurt het op poort 9081 als de Klog-instelling aan staat; die poort wordt ook geprobeerd.</string>
     <string name="klog_intro">Wat het systeem van de console en payloads printen, live. ps5debug-NG stuurt het op poort 3232. Handig als een payload of cheat niet goed werkt.</string>
     <string name="klog_port">Logpoort</string>
     <string name="klog_start">Start</string>
@@ -1136,6 +1138,7 @@
     <string name="zip_progress">Zippen: %1$d van %2$d bestanden, %3$s van %4$s</string>
     <string name="zip_done">Opgeslagen als %1$s</string>
     <string name="zip_empty">Die map heeft geen bestanden om te zippen.</string>
+    <string name="zip_no_space">Niet genoeg ruimte op de telefoon: de zip heeft ongeveer %1$s nodig en er is %2$s vrij.</string>
     <string name="zip_truncated">De map was groter dan één download kan bevatten, dus niet alles zit in de zip.</string>
     <string name="zip_cancelled">Zippen gestopt</string>
     <string name="look_title">Weergave</string>
