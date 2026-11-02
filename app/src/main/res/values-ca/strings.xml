@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">Les còpies sobrants ocupen %1$s.</string>
     <string name="files_dupes_hint">Mateix nom i mateixa mida. Conserva\'n una de cada i esborra les que no necessitis.</string>
     <string name="memory_cheat_note">Nota (opcional): què fa, quina versió del joc</string>
+    <string name="running_title">Què s\'està executant</string>
+    <string name="running_hint">Què respon a %1$s ara mateix. Un servei que no respon no és cap problema si no el fas servir.</string>
+    <string name="running_on">respon</string>
+    <string name="running_off">no respon</string>
+    <string name="running_web">Servidor web (websrv)</string>
+    <string name="running_shell">Intèrpret (shsrv)</string>
+    <string name="home_up_exact">Jailbreak fa %1$s (a les %2$s)</string>
+    <string name="home_up_atleast">Respon des de fa almenys %1$s</string>
+    <string name="files_speed">Prova de velocitat</string>
+    <string name="speed_running">Enviant %1$s a la consola i llegint-ho de nou…</string>
+    <string name="speed_up">Cap a la consola: %1$s per segon</string>
+    <string name="speed_down">Des de la consola: %1$s per segon</string>
+    <string name="speed_hint">Menys d\'uns 3 MB per segon sol voler dir una Wi-Fi feble: apropa\'t, fes servir 5 GHz o connecta la consola al router amb cable. El fitxer de prova s\'esborra després.</string>
+    <string name="files_upload_zip">Puja un zip com a carpeta</string>
+    <string name="zipup_progress">Descomprimint a la consola: %1$d fitxers, %2$s</string>
+    <string name="zipup_done">S\'han descomprimit %1$d fitxers a %2$s</string>
+    <string name="zipup_empty">Aquest zip no té fitxers.</string>
+    <string name="zipup_bad">Aquest fitxer no es pot llegir com a zip.</string>
+    <string name="export_put">Posa-ho a la consola</string>
+    <string name="export_put_done">A la consola com a %1$s. etaHEN el carregarà el proper cop que s\'iniciï el joc.</string>
+    <string name="export_put_done_ps4">A la consola com a %1$s. GoldHEN el carregarà el proper cop que s\'iniciï el joc.</string>
 </resources>

@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">Nakala za ziada zinachukua %1$s.</string>
     <string name="files_dupes_hint">Jina na ukubwa sawa. Bakiza moja ya kila moja na ufute usizohitaji.</string>
     <string name="memory_cheat_note">Dokezo (hiari): kinachofanya, toleo gani la mchezo</string>
+    <string name="running_title">Kinachoendeshwa</string>
+    <string name="running_hint">Kinachojibu kwenye %1$s sasa hivi. Huduma isiyojibu si tatizo isipokuwa unaitumia.</string>
+    <string name="running_on">inajibu</string>
+    <string name="running_off">hakuna jibu</string>
+    <string name="running_web">Seva ya wavuti (websrv)</string>
+    <string name="running_shell">Shell (shsrv)</string>
+    <string name="home_up_exact">Ilivunjwa kinga %1$s iliyopita (saa %2$s)</string>
+    <string name="home_up_atleast">Inajibu kwa angalau %1$s</string>
+    <string name="files_speed">Jaribio la kasi</string>
+    <string name="speed_running">Inatuma %1$s kwa konsoli na kuisoma tena…</string>
+    <string name="speed_up">Kwenda konsoli: %1$s kwa sekunde</string>
+    <string name="speed_down">Kutoka konsoli: %1$s kwa sekunde</string>
+    <string name="speed_hint">Chini ya takriban 3 MB kwa sekunde kwa kawaida ni Wi-Fi dhaifu: sogea karibu, tumia 5 GHz, au unganisha konsoli kwenye ruta kwa kebo. Faili ya jaribio hufutwa baadaye.</string>
+    <string name="files_upload_zip">Pakia zip kama folda</string>
+    <string name="zipup_progress">Inafungua kwenye konsoli: faili %1$d, %2$s</string>
+    <string name="zipup_done">Faili %1$d zimefunguliwa kwenye %2$s</string>
+    <string name="zipup_empty">Zip hiyo haina faili.</string>
+    <string name="zipup_bad">Faili hiyo haiwezi kusomwa kama zip.</string>
+    <string name="export_put">Weka kwenye konsoli</string>
+    <string name="export_put_done">Kwenye konsoli kama %1$s. etaHEN itaipakia mchezo utakapoanza tena.</string>
+    <string name="export_put_done_ps4">Kwenye konsoli kama %1$s. GoldHEN itaipakia mchezo utakapoanza tena.</string>
 </resources>

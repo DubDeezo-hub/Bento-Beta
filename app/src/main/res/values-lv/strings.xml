@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">Liekās kopijas aizņem %1$s.</string>
     <string name="files_dupes_hint">Vienāds nosaukums un izmērs. Paturiet pa vienai, pārējās nevajadzīgās izdzēsiet.</string>
     <string name="memory_cheat_note">Piezīme (neobligāti): ko tā dara, kurai spēles versijai</string>
+    <string name="running_title">Kas darbojas</string>
+    <string name="running_hint">Kas tagad atbild adresē %1$s. Pakalpojums, kas neatbild, nav problēma, ja to neizmantojat.</string>
+    <string name="running_on">atbild</string>
+    <string name="running_off">nav atbildes</string>
+    <string name="running_web">Tīmekļa serveris (websrv)</string>
+    <string name="running_shell">Čaula (shsrv)</string>
+    <string name="home_up_exact">Jailbreak pirms %1$s (%2$s)</string>
+    <string name="home_up_atleast">Atbild vismaz %1$s</string>
+    <string name="files_speed">Ātruma tests</string>
+    <string name="speed_running">Sūta %1$s uz konsoli un nolasa atpakaļ…</string>
+    <string name="speed_up">Uz konsoli: %1$s sekundē</string>
+    <string name="speed_down">No konsoles: %1$s sekundē</string>
+    <string name="speed_hint">Mazāk par aptuveni 3 MB sekundē parasti nozīmē vāju Wi-Fi: pieejiet tuvāk, izmantojiet 5 GHz vai pievienojiet konsoli maršrutētājam ar kabeli. Testa fails pēc tam tiek izdzēsts.</string>
+    <string name="files_upload_zip">Augšupielādēt zip kā mapi</string>
+    <string name="zipup_progress">Izpako konsolē: %1$d faili, %2$s</string>
+    <string name="zipup_done">%1$d faili izpakoti mapē %2$s</string>
+    <string name="zipup_empty">Šajā zip nav failu.</string>
+    <string name="zipup_bad">Šo failu nevar nolasīt kā zip.</string>
+    <string name="export_put">Ielikt konsolē</string>
+    <string name="export_put_done">Konsolē kā %1$s. etaHEN to ielādēs nākamreiz, kad spēle sāksies.</string>
+    <string name="export_put_done_ps4">Konsolē kā %1$s. GoldHEN to ielādēs nākamreiz, kad spēle sāksies.</string>
 </resources>

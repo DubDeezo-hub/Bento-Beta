@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">남는 사본이 %1$s를 차지합니다.</string>
     <string name="files_dupes_hint">이름과 크기가 같습니다. 하나씩 남기고 필요 없는 것은 삭제하세요.</string>
     <string name="memory_cheat_note">메모(선택): 하는 일, 게임 버전</string>
+    <string name="running_title">실행 중인 것</string>
+    <string name="running_hint">지금 %1$s에서 응답하는 것. 응답하지 않는 서비스는 쓰지 않는다면 문제가 아닙니다.</string>
+    <string name="running_on">응답</string>
+    <string name="running_off">응답 없음</string>
+    <string name="running_web">웹 서버(websrv)</string>
+    <string name="running_shell">셸(shsrv)</string>
+    <string name="home_up_exact">%1$s 전에 탈옥(%2$s)</string>
+    <string name="home_up_atleast">최소 %1$s째 응답 중</string>
+    <string name="files_speed">속도 테스트</string>
+    <string name="speed_running">콘솔로 %1$s를 보내고 다시 읽는 중…</string>
+    <string name="speed_up">콘솔로: 초당 %1$s</string>
+    <string name="speed_down">콘솔에서: 초당 %1$s</string>
+    <string name="speed_hint">초당 약 3MB 미만이면 대개 Wi-Fi가 약한 것입니다. 더 가까이 가거나 5GHz를 쓰거나 콘솔을 공유기에 유선으로 연결하세요. 테스트 파일은 끝나면 지워집니다.</string>
+    <string name="files_upload_zip">zip을 폴더로 업로드</string>
+    <string name="zipup_progress">콘솔에 푸는 중: 파일 %1$d개, %2$s</string>
+    <string name="zipup_done">파일 %1$d개를 %2$s에 풀었습니다</string>
+    <string name="zipup_empty">그 zip에는 파일이 없습니다.</string>
+    <string name="zipup_bad">그 파일은 zip으로 읽을 수 없습니다.</string>
+    <string name="export_put">콘솔에 넣기</string>
+    <string name="export_put_done">콘솔에 %1$s(으)로 넣었습니다. 다음에 게임을 시작하면 etaHEN이 불러옵니다.</string>
+    <string name="export_put_done_ps4">콘솔에 %1$s(으)로 넣었습니다. 다음에 게임을 시작하면 GoldHEN이 불러옵니다.</string>
 </resources>

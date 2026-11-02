@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">De ekstra kopier fylder %1$s.</string>
     <string name="files_dupes_hint">Samme navn og størrelse. Behold én af hver, og slet dem, du ikke har brug for.</string>
     <string name="memory_cheat_note">Note (valgfri): hvad den gør, hvilken spilversion</string>
+    <string name="running_title">Hvad kører</string>
+    <string name="running_hint">Hvad der svarer på %1$s lige nu. En tjeneste, der ikke svarer, er ikke et problem, medmindre du bruger den.</string>
+    <string name="running_on">svarer</string>
+    <string name="running_off">intet svar</string>
+    <string name="running_web">Webserver (websrv)</string>
+    <string name="running_shell">Shell (shsrv)</string>
+    <string name="home_up_exact">Jailbroken for %1$s siden (kl. %2$s)</string>
+    <string name="home_up_atleast">Har svaret i mindst %1$s</string>
+    <string name="files_speed">Hastighedstest</string>
+    <string name="speed_running">Sender %1$s til konsollen og læser det tilbage…</string>
+    <string name="speed_up">Til konsollen: %1$s i sekundet</string>
+    <string name="speed_down">Fra konsollen: %1$s i sekundet</string>
+    <string name="speed_hint">Under ca. 3 MB i sekundet betyder som regel svag Wi-Fi: kom tættere på, brug 5 GHz, eller sæt konsollen i routeren med kabel. Testfilen slettes bagefter.</string>
+    <string name="files_upload_zip">Upload en zip som en mappe</string>
+    <string name="zipup_progress">Pakker ud på konsollen: %1$d filer, %2$s</string>
+    <string name="zipup_done">Pakkede %1$d filer ud i %2$s</string>
+    <string name="zipup_empty">Den zip har ingen filer.</string>
+    <string name="zipup_bad">Den fil kan ikke læses som en zip.</string>
+    <string name="export_put">Læg på konsollen</string>
+    <string name="export_put_done">På konsollen som %1$s. etaHEN indlæser den, næste gang spillet starter.</string>
+    <string name="export_put_done_ps4">På konsollen som %1$s. GoldHEN indlæser den, næste gang spillet starter.</string>
 </resources>

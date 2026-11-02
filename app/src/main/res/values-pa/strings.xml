@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">ਵਾਧੂ ਕਾਪੀਆਂ %1$s ਥਾਂ ਲੈਂਦੀਆਂ ਹਨ।</string>
     <string name="files_dupes_hint">ਇੱਕੋ ਨਾਂ ਅਤੇ ਆਕਾਰ। ਹਰੇਕ ਦੀ ਇੱਕ ਰੱਖੋ ਅਤੇ ਬੇਲੋੜੀਆਂ ਮਿਟਾਓ।</string>
     <string name="memory_cheat_note">ਨੋਟ (ਵਿਕਲਪਿਕ): ਇਹ ਕੀ ਕਰਦਾ ਹੈ, ਗੇਮ ਦਾ ਕਿਹੜਾ ਸੰਸਕਰਣ</string>
+    <string name="running_title">ਕੀ ਚੱਲ ਰਿਹਾ ਹੈ</string>
+    <string name="running_hint">ਹੁਣ %1$s \'ਤੇ ਕੀ ਜਵਾਬ ਦੇ ਰਿਹਾ ਹੈ। ਜਵਾਬ ਨਾ ਦੇਣ ਵਾਲੀ ਸੇਵਾ ਸਮੱਸਿਆ ਨਹੀਂ, ਜਦੋਂ ਤੱਕ ਤੁਸੀਂ ਉਸਨੂੰ ਨਾ ਵਰਤੋ।</string>
+    <string name="running_on">ਜਵਾਬ ਦਿੰਦਾ ਹੈ</string>
+    <string name="running_off">ਕੋਈ ਜਵਾਬ ਨਹੀਂ</string>
+    <string name="running_web">ਵੈੱਬ ਸਰਵਰ (websrv)</string>
+    <string name="running_shell">ਸ਼ੈੱਲ (shsrv)</string>
+    <string name="home_up_exact">%1$s ਪਹਿਲਾਂ ਜੇਲ੍ਹਬ੍ਰੇਕ (%2$s ਵਜੇ)</string>
+    <string name="home_up_atleast">ਘੱਟੋ-ਘੱਟ %1$s ਤੋਂ ਜਵਾਬ ਦੇ ਰਿਹਾ ਹੈ</string>
+    <string name="files_speed">ਸਪੀਡ ਟੈਸਟ</string>
+    <string name="speed_running">ਕਨਸੋਲ ਨੂੰ %1$s ਭੇਜ ਕੇ ਵਾਪਸ ਪੜ੍ਹ ਰਿਹਾ ਹੈ…</string>
+    <string name="speed_up">ਕਨਸੋਲ ਵੱਲ: ਪ੍ਰਤੀ ਸਕਿੰਟ %1$s</string>
+    <string name="speed_down">ਕਨਸੋਲ ਤੋਂ: ਪ੍ਰਤੀ ਸਕਿੰਟ %1$s</string>
+    <string name="speed_hint">ਲਗਭਗ 3 MB ਪ੍ਰਤੀ ਸਕਿੰਟ ਤੋਂ ਘੱਟ ਦਾ ਮਤਲਬ ਆਮ ਤੌਰ \'ਤੇ ਕਮਜ਼ੋਰ Wi-Fi ਹੈ: ਨੇੜੇ ਜਾਓ, 5 GHz ਵਰਤੋ, ਜਾਂ ਕਨਸੋਲ ਨੂੰ ਰਾਊਟਰ ਨਾਲ ਕੇਬਲ ਨਾਲ ਜੋੜੋ। ਟੈਸਟ ਫ਼ਾਈਲ ਬਾਅਦ ਵਿੱਚ ਮਿਟਾ ਦਿੱਤੀ ਜਾਂਦੀ ਹੈ।</string>
+    <string name="files_upload_zip">zip ਨੂੰ ਫੋਲਡਰ ਵਜੋਂ ਅੱਪਲੋਡ ਕਰੋ</string>
+    <string name="zipup_progress">ਕਨਸੋਲ \'ਤੇ ਖੋਲ੍ਹ ਰਿਹਾ ਹੈ: %1$d ਫ਼ਾਈਲਾਂ, %2$s</string>
+    <string name="zipup_done">%2$s ਵਿੱਚ %1$d ਫ਼ਾਈਲਾਂ ਖੋਲ੍ਹੀਆਂ</string>
+    <string name="zipup_empty">ਉਸ zip ਵਿੱਚ ਕੋਈ ਫ਼ਾਈਲ ਨਹੀਂ।</string>
+    <string name="zipup_bad">ਉਹ ਫ਼ਾਈਲ zip ਵਜੋਂ ਪੜ੍ਹੀ ਨਹੀਂ ਜਾ ਸਕਦੀ।</string>
+    <string name="export_put">ਕਨਸੋਲ \'ਤੇ ਰੱਖੋ</string>
+    <string name="export_put_done">ਕਨਸੋਲ \'ਤੇ %1$s ਵਜੋਂ। ਅਗਲੀ ਵਾਰ ਗੇਮ ਸ਼ੁਰੂ ਹੋਣ \'ਤੇ etaHEN ਇਸਨੂੰ ਲੋਡ ਕਰੇਗਾ।</string>
+    <string name="export_put_done_ps4">ਕਨਸੋਲ \'ਤੇ %1$s ਵਜੋਂ। ਅਗਲੀ ਵਾਰ ਗੇਮ ਸ਼ੁਰੂ ਹੋਣ \'ਤੇ GoldHEN ਇਸਨੂੰ ਲੋਡ ਕਰੇਗਾ।</string>
 </resources>

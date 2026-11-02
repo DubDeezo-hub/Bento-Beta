@@ -1209,4 +1209,25 @@
     <string name="files_dupes_extra">Les copies en trop occupent %1$s.</string>
     <string name="files_dupes_hint">Même nom et même taille. Gardez-en une de chaque et supprimez celles dont vous n\'avez pas besoin.</string>
     <string name="memory_cheat_note">Note (facultative) : ce qu\'il fait, quelle version du jeu</string>
+    <string name="running_title">Ce qui tourne</string>
+    <string name="running_hint">Ce qui répond sur %1$s en ce moment. Un service qui ne répond pas n\'est un problème que si vous l\'utilisez.</string>
+    <string name="running_on">répond</string>
+    <string name="running_off">pas de réponse</string>
+    <string name="running_web">Serveur web (websrv)</string>
+    <string name="running_shell">Shell (shsrv)</string>
+    <string name="home_up_exact">Jailbreak il y a %1$s (à %2$s)</string>
+    <string name="home_up_atleast">Répond depuis au moins %1$s</string>
+    <string name="files_speed">Test de vitesse</string>
+    <string name="speed_running">Envoi de %1$s à la console et relecture…</string>
+    <string name="speed_up">Vers la console : %1$s par seconde</string>
+    <string name="speed_down">Depuis la console : %1$s par seconde</string>
+    <string name="speed_hint">Moins d\'environ 3 Mo par seconde signifie souvent un Wi-Fi faible : rapprochez-vous, passez en 5 GHz ou branchez la console au routeur par câble. Le fichier de test est supprimé ensuite.</string>
+    <string name="files_upload_zip">Envoyer un zip comme dossier</string>
+    <string name="zipup_progress">Décompression sur la console : %1$d fichiers, %2$s</string>
+    <string name="zipup_done">%1$d fichiers décompressés dans %2$s</string>
+    <string name="zipup_empty">Ce zip ne contient aucun fichier.</string>
+    <string name="zipup_bad">Ce fichier ne peut pas être lu comme un zip.</string>
+    <string name="export_put">Mettre sur la console</string>
+    <string name="export_put_done">Sur la console sous %1$s. etaHEN le chargera au prochain lancement du jeu.</string>
+    <string name="export_put_done_ps4">Sur la console sous %1$s. GoldHEN le chargera au prochain lancement du jeu.</string>
 </resources>

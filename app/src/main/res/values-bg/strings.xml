@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">Излишните копия заемат %1$s.</string>
     <string name="files_dupes_hint">Еднакво име и размер. Запазете по едно и изтрийте ненужните.</string>
     <string name="memory_cheat_note">Бележка (по желание): какво прави, за коя версия на играта</string>
+    <string name="running_title">Какво работи</string>
+    <string name="running_hint">Какво отговаря на %1$s в момента. Услуга, която не отговаря, не е проблем, освен ако не я ползвате.</string>
+    <string name="running_on">отговаря</string>
+    <string name="running_off">няма отговор</string>
+    <string name="running_web">Уеб сървър (websrv)</string>
+    <string name="running_shell">Обвивка (shsrv)</string>
+    <string name="home_up_exact">Джейлбрейк преди %1$s (в %2$s)</string>
+    <string name="home_up_atleast">Отговаря от поне %1$s</string>
+    <string name="files_speed">Тест на скоростта</string>
+    <string name="speed_running">Изпраща %1$s до конзолата и го чете обратно…</string>
+    <string name="speed_up">Към конзолата: %1$s в секунда</string>
+    <string name="speed_down">От конзолата: %1$s в секунда</string>
+    <string name="speed_hint">Под около 3 MB в секунда обикновено значи слаб Wi-Fi: приближете се, ползвайте 5 GHz или включете конзолата в рутера с кабел. Тестовият файл се изтрива след това.</string>
+    <string name="files_upload_zip">Качи zip като папка</string>
+    <string name="zipup_progress">Разархивиране на конзолата: %1$d файла, %2$s</string>
+    <string name="zipup_done">Разархивирани %1$d файла в %2$s</string>
+    <string name="zipup_empty">В този zip няма файлове.</string>
+    <string name="zipup_bad">Този файл не може да се прочете като zip.</string>
+    <string name="export_put">Сложи на конзолата</string>
+    <string name="export_put_done">На конзолата като %1$s. etaHEN ще го зареди при следващото пускане на играта.</string>
+    <string name="export_put_done_ps4">На конзолата като %1$s. GoldHEN ще го зареди при следващото пускане на играта.</string>
 </resources>

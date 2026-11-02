@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">Лишние копии занимают %1$s.</string>
     <string name="files_dupes_hint">Одинаковое имя и размер. Оставьте по одной, а ненужные удалите.</string>
     <string name="memory_cheat_note">Заметка (необязательно): что делает, для какой версии игры</string>
+    <string name="running_title">Что запущено</string>
+    <string name="running_hint">Что сейчас отвечает на %1$s. Служба, которая не отвечает, не проблема, если вы ею не пользуетесь.</string>
+    <string name="running_on">отвечает</string>
+    <string name="running_off">нет ответа</string>
+    <string name="running_web">Веб-сервер (websrv)</string>
+    <string name="running_shell">Оболочка (shsrv)</string>
+    <string name="home_up_exact">Джейлбрейк %1$s назад (в %2$s)</string>
+    <string name="home_up_atleast">Отвечает не меньше %1$s</string>
+    <string name="files_speed">Тест скорости</string>
+    <string name="speed_running">Отправляем %1$s на консоль и читаем обратно…</string>
+    <string name="speed_up">На консоль: %1$s в секунду</string>
+    <string name="speed_down">С консоли: %1$s в секунду</string>
+    <string name="speed_hint">Меньше примерно 3 МБ в секунду обычно означает слабый Wi-Fi: подойдите ближе, включите 5 ГГц или подключите консоль к роутеру кабелем. Тестовый файл потом удаляется.</string>
+    <string name="files_upload_zip">Загрузить zip как папку</string>
+    <string name="zipup_progress">Распаковка на консоль: %1$d файлов, %2$s</string>
+    <string name="zipup_done">Распаковано %1$d файлов в %2$s</string>
+    <string name="zipup_empty">В этом zip нет файлов.</string>
+    <string name="zipup_bad">Этот файл не читается как zip.</string>
+    <string name="export_put">Положить на консоль</string>
+    <string name="export_put_done">На консоли как %1$s. etaHEN загрузит его при следующем запуске игры.</string>
+    <string name="export_put_done_ps4">На консоли как %1$s. GoldHEN загрузит его при следующем запуске игры.</string>
 </resources>

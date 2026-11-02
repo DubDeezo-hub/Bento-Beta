@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">A felesleges másolatok %1$s helyet foglalnak.</string>
     <string name="files_dupes_hint">Azonos név és méret. Mindegyikből tarts meg egyet, a fölöslegeseket töröld.</string>
     <string name="memory_cheat_note">Megjegyzés (nem kötelező): mit csinál, melyik játékverzió</string>
+    <string name="running_title">Mi fut</string>
+    <string name="running_hint">Mi válaszol most ezen: %1$s. Egy nem válaszoló szolgáltatás nem gond, hacsak nem használod.</string>
+    <string name="running_on">válaszol</string>
+    <string name="running_off">nincs válasz</string>
+    <string name="running_web">Webkiszolgáló (websrv)</string>
+    <string name="running_shell">Shell (shsrv)</string>
+    <string name="home_up_exact">%1$s ezelőtt jailbreakelve (%2$s-kor)</string>
+    <string name="home_up_atleast">Legalább %1$s óta válaszol</string>
+    <string name="files_speed">Sebességteszt</string>
+    <string name="speed_running">%1$s küldése a konzolra és visszaolvasása…</string>
+    <string name="speed_up">A konzolra: %1$s másodpercenként</string>
+    <string name="speed_down">A konzolról: %1$s másodpercenként</string>
+    <string name="speed_hint">Kb. 3 MB/s alatt általában gyenge a Wi-Fi: menj közelebb, használj 5 GHz-et, vagy kösd kábellel a konzolt a routerre. A tesztfájl utána törlődik.</string>
+    <string name="files_upload_zip">Zip feltöltése mappaként</string>
+    <string name="zipup_progress">Kicsomagolás a konzolra: %1$d fájl, %2$s</string>
+    <string name="zipup_done">%1$d fájl kicsomagolva ide: %2$s</string>
+    <string name="zipup_empty">Abban a zipben nincs fájl.</string>
+    <string name="zipup_bad">Ez a fájl nem olvasható zipként.</string>
+    <string name="export_put">Feltöltés a konzolra</string>
+    <string name="export_put_done">A konzolon ezen a néven: %1$s. Az etaHEN a játék következő indításakor betölti.</string>
+    <string name="export_put_done_ps4">A konzolon ezen a néven: %1$s. A GoldHEN a játék következő indításakor betölti.</string>
 </resources>

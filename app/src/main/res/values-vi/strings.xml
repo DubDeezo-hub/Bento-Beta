@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">Các bản sao thừa chiếm %1$s.</string>
     <string name="files_dupes_hint">Cùng tên và cùng dung lượng. Giữ lại một bản mỗi loại và xóa những bản không cần.</string>
     <string name="memory_cheat_note">Ghi chú (không bắt buộc): làm gì, phiên bản game nào</string>
+    <string name="running_title">Đang chạy gì</string>
+    <string name="running_hint">Những gì đang phản hồi tại %1$s lúc này. Dịch vụ không phản hồi không sao nếu bạn không dùng.</string>
+    <string name="running_on">phản hồi</string>
+    <string name="running_off">không phản hồi</string>
+    <string name="running_web">Máy chủ web (websrv)</string>
+    <string name="running_shell">Shell (shsrv)</string>
+    <string name="home_up_exact">Đã jailbreak %1$s trước (lúc %2$s)</string>
+    <string name="home_up_atleast">Phản hồi ít nhất %1$s</string>
+    <string name="files_speed">Kiểm tra tốc độ</string>
+    <string name="speed_running">Đang gửi %1$s tới máy rồi đọc lại…</string>
+    <string name="speed_up">Tới máy: %1$s mỗi giây</string>
+    <string name="speed_down">Từ máy: %1$s mỗi giây</string>
+    <string name="speed_hint">Dưới khoảng 3 MB mỗi giây thường là Wi-Fi yếu: lại gần hơn, dùng 5 GHz hoặc cắm dây máy vào router. Tệp thử sẽ được xóa sau đó.</string>
+    <string name="files_upload_zip">Tải zip lên dưới dạng thư mục</string>
+    <string name="zipup_progress">Đang giải nén lên máy: %1$d tệp, %2$s</string>
+    <string name="zipup_done">Đã giải nén %1$d tệp vào %2$s</string>
+    <string name="zipup_empty">Tệp zip đó không có tệp nào.</string>
+    <string name="zipup_bad">Không đọc được tệp đó dưới dạng zip.</string>
+    <string name="export_put">Đưa lên máy</string>
+    <string name="export_put_done">Đã có trên máy là %1$s. etaHEN sẽ nạp khi game khởi động lần tới.</string>
+    <string name="export_put_done_ps4">Đã có trên máy là %1$s. GoldHEN sẽ nạp khi game khởi động lần tới.</string>
 </resources>

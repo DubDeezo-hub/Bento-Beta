@@ -312,6 +312,7 @@ fun SenderApp(
     val ftpSettings: FtpSettings? = active.ftpPort.trim().toIntOrNull()?.let { port ->
         if (active.host.isBlank()) null else FtpSettings(active.host.trim(), port, active.ftpUser.trim(), ftpPass, active.type.model)
     }
+    SideEffect { ActiveConsole.ftp = ftpSettings }
     val switchConsole: (String) -> Unit = { id ->
         if (id != activeId) {
             activeId = id
@@ -338,6 +339,8 @@ fun SenderApp(
     var loaderWasUp by remember(target) { mutableStateOf<Boolean?>(null) }
     // "Tell me when it comes online" for this console (the address dialog has the switch)
     var onlineOn by remember(active.id) { mutableStateOf(OnlineAlert.isOn(ctx, active.id)) }
+    // Since when this console's loader answers (the last jailbreak), for Home
+    var upSince by remember(active.id) { mutableStateOf(UpSince.load(ctx, active.id)) }
     val checks = consoleStatus?.takeIf { it.target == target }?.checks ?: pendingChecks(target)
 
     // Checks the console now and then, but only while the app is on screen and an address is set. The loop ends
@@ -465,6 +468,7 @@ fun SenderApp(
         loaderWasUp = up
         // The open app keeps the "online" state current, so the background check only speaks up about a real change
         OnlineAlert.note(ctx, active, up || s.checks.firstOrNull { it.label == ftpName }?.up == true, notify = false)
+        upSince = UpSince.update(ctx, active.id, was, up)
         val chainId = AutoChain.get(ctx, active.id)
         if (chainId.isEmpty() || chainState.active) return@LaunchedEffect
         if (AutoChain.due(active.id, was, up, ctx = ctx)) {
@@ -608,7 +612,8 @@ fun SenderApp(
                                             loaderPort = active.payloadPort, ftp = ftpSettings,
                                             onEdit = { showAddress = true }, onFind = { showFind = true }, onCheck = { showDiagnose = true },
                                             onOpenPayloads = { tab = TAB_PAYLOADS },
-                                            shelfVersion = shelfVersion
+                                            shelfVersion = shelfVersion,
+                                            upLine = UpSince.text(upSince)
                                         ) {
                                             InstallTab(host, active.installPort, { v -> updateActive { it.copy(installPort = v) } }, active.name, installLinks, changeInstallLinks, askNotificationsIfNeeded, active.type, ftpSettings)
                                         }
@@ -617,7 +622,8 @@ fun SenderApp(
                                             onUpload = { filesUpload = true; tab = TAB_FILES },
                                             onEtaHen = if (ftpSettings != null) ({ showEtaHen = true }) else null,
                                             onConsoles = { showConsoles = true },
-                                            onAbout = { showAbout = true }
+                                            onAbout = { showAbout = true },
+                                            console = active
                                         )
                                         TAB_PAYLOADS -> PayloadTab(
                                             host, active.payloadPort, { v -> updateActive { it.copy(payloadPort = v) } }, shelfVersion,

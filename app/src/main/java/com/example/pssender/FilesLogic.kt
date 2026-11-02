@@ -394,3 +394,22 @@ fun duplicateGroups(files: Map<String, Long>, minBytes: Long = DUPLICATE_MIN_BYT
         .filter { it.value.size > 1 }
         .map { (k, list) -> DuplicateGroup(list.first().key.substringAfterLast('/'), k.second, list.map { it.key }.sorted()) }
         .sortedWith(compareByDescending<DuplicateGroup> { it.extra }.thenBy { it.name.lowercase() })
+
+// ----- a zip unpacked onto the console -----
+
+/**
+ * The folders and file name a zip entry [name] becomes on the console: "." and ".." and empty parts are dropped, and
+ * each part is made a safe name, so nothing can land outside the folder it is unpacked into. Null for nothing usable.
+ */
+fun zipEntryParts(name: String): List<String>? {
+    val parts = name.replace('\\', '/').split('/').map { it.trim() }.filter { it.isNotEmpty() && it != "." && it != ".." }
+        .map { safeLocalName(it) }
+    return parts.ifEmpty { null }
+}
+
+/** When every file of a zip sits in the same one top folder, that folder's name (so it isn't nested twice); else null. */
+fun zipSharedTop(files: List<List<String>>): String? {
+    if (files.isEmpty() || files.any { it.size < 2 }) return null
+    val top = files.first().first()
+    return if (files.all { it.first() == top }) top else null
+}

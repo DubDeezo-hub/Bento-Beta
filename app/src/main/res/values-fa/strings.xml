@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">نسخه‌های اضافه %1$s جا گرفته‌اند.</string>
     <string name="files_dupes_hint">نام و اندازه یکسان. از هر کدام یکی را نگه دارید و بقیه را که لازم ندارید حذف کنید.</string>
     <string name="memory_cheat_note">یادداشت (اختیاری): چه می‌کند، کدام نسخه بازی</string>
+    <string name="running_title">چه چیزی در حال اجراست</string>
+    <string name="running_hint">آنچه اکنون روی %1$s پاسخ می‌دهد. سرویسی که پاسخ نمی‌دهد مشکلی نیست، مگر اینکه از آن استفاده کنید.</string>
+    <string name="running_on">پاسخ می‌دهد</string>
+    <string name="running_off">بدون پاسخ</string>
+    <string name="running_web">سرور وب (websrv)</string>
+    <string name="running_shell">پوسته (shsrv)</string>
+    <string name="home_up_exact">‏%1$s پیش جیلبریک شد (ساعت %2$s)</string>
+    <string name="home_up_atleast">دست‌کم %1$s است که پاسخ می‌دهد</string>
+    <string name="files_speed">تست سرعت</string>
+    <string name="speed_running">در حال فرستادن %1$s به کنسول و خواندن دوباره آن…</string>
+    <string name="speed_up">به کنسول: %1$s در ثانیه</string>
+    <string name="speed_down">از کنسول: %1$s در ثانیه</string>
+    <string name="speed_hint">کمتر از حدود ۳ مگابایت در ثانیه معمولاً یعنی Wi-Fi ضعیف: نزدیک‌تر شوید، از ۵ گیگاهرتز استفاده کنید یا کنسول را با کابل به روتر وصل کنید. فایل آزمایشی بعداً حذف می‌شود.</string>
+    <string name="files_upload_zip">بارگذاری zip به‌صورت پوشه</string>
+    <string name="zipup_progress">در حال باز کردن روی کنسول: %1$d فایل، %2$s</string>
+    <string name="zipup_done">‏%1$d فایل در %2$s باز شد</string>
+    <string name="zipup_empty">این zip فایلی ندارد.</string>
+    <string name="zipup_bad">این فایل به‌عنوان zip خوانده نمی‌شود.</string>
+    <string name="export_put">روی کنسول بگذار</string>
+    <string name="export_put_done">روی کنسول با نام %1$s. etaHEN دفعه بعد که بازی شروع شود آن را بارگذاری می‌کند.</string>
+    <string name="export_put_done_ps4">روی کنسول با نام %1$s. GoldHEN دفعه بعد که بازی شروع شود آن را بارگذاری می‌کند.</string>
 </resources>

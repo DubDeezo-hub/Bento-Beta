@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">Die ekstra kopieë neem %1$s in.</string>
     <string name="files_dupes_hint">Dieselfde naam en grootte. Hou een van elk en vee die ander uit wat jy nie nodig het nie.</string>
     <string name="memory_cheat_note">Nota (opsioneel): wat dit doen, watter speletjie-weergawe</string>
+    <string name="running_title">Wat loop</string>
+    <string name="running_hint">Wat nou op %1$s antwoord. \'n Diens wat nie antwoord nie, is nie \'n probleem tensy jy dit gebruik nie.</string>
+    <string name="running_on">antwoord</string>
+    <string name="running_off">geen antwoord</string>
+    <string name="running_web">Webbediener (websrv)</string>
+    <string name="running_shell">Dop (shsrv)</string>
+    <string name="home_up_exact">%1$s gelede gejailbreak (om %2$s)</string>
+    <string name="home_up_atleast">Antwoord al minstens %1$s</string>
+    <string name="files_speed">Spoedtoets</string>
+    <string name="speed_running">Stuur %1$s na die konsole en lees dit terug…</string>
+    <string name="speed_up">Na die konsole: %1$s per sekonde</string>
+    <string name="speed_down">Van die konsole: %1$s per sekonde</string>
+    <string name="speed_hint">Onder sowat 3 MB per sekonde beteken gewoonlik swak Wi-Fi: kom nader, gebruik 5 GHz, of prop die konsole in die roeteerder. Die toetslêer word daarna verwyder.</string>
+    <string name="files_upload_zip">Laai \'n zip op as \'n gids</string>
+    <string name="zipup_progress">Pak uit op die konsole: %1$d lêers, %2$s</string>
+    <string name="zipup_done">%1$d lêers uitgepak in %2$s</string>
+    <string name="zipup_empty">Daardie zip het geen lêers nie.</string>
+    <string name="zipup_bad">Daardie lêer kan nie as \'n zip gelees word nie.</string>
+    <string name="export_put">Sit op die konsole</string>
+    <string name="export_put_done">Op die konsole as %1$s. etaHEN laai dit die volgende keer as die speletjie begin.</string>
+    <string name="export_put_done_ps4">Op die konsole as %1$s. GoldHEN laai dit die volgende keer as die speletjie begin.</string>
 </resources>

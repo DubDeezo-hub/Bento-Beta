@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">تشغل النسخ الزائدة %1$s.</string>
     <string name="files_dupes_hint">الاسم نفسه والحجم نفسه. أبقِ واحدة من كل منها واحذف ما لا تحتاجه.</string>
     <string name="memory_cheat_note">ملاحظة (اختيارية): ماذا يفعل، وأي إصدار من اللعبة</string>
+    <string name="running_title">ما الذي يعمل</string>
+    <string name="running_hint">ما الذي يستجيب على %1$s الآن. الخدمة التي لا تستجيب ليست مشكلة إلا إذا كنت تستخدمها.</string>
+    <string name="running_on">يستجيب</string>
+    <string name="running_off">لا استجابة</string>
+    <string name="running_web">خادم ويب (websrv)</string>
+    <string name="running_shell">صدفة (shsrv)</string>
+    <string name="home_up_exact">كُسرت الحماية منذ %1$s (عند %2$s)</string>
+    <string name="home_up_atleast">يستجيب منذ %1$s على الأقل</string>
+    <string name="files_speed">اختبار السرعة</string>
+    <string name="speed_running">يرسل %1$s إلى الجهاز ثم يقرأه…</string>
+    <string name="speed_up">إلى الجهاز: %1$s في الثانية</string>
+    <string name="speed_down">من الجهاز: %1$s في الثانية</string>
+    <string name="speed_hint">أقل من نحو 3 ميغابايت في الثانية يعني غالبًا ضعف Wi-Fi: اقترب، أو استخدم 5 غيغاهرتز، أو صِل الجهاز بالموجّه بكابل. يُحذف ملف الاختبار بعد ذلك.</string>
+    <string name="files_upload_zip">رفع ملف zip كمجلد</string>
+    <string name="zipup_progress">فك الضغط على الجهاز: %1$d ملفات، %2$s</string>
+    <string name="zipup_done">فُك ضغط %1$d ملفات في %2$s</string>
+    <string name="zipup_empty">لا يحتوي ملف zip هذا على ملفات.</string>
+    <string name="zipup_bad">لا يمكن قراءة هذا الملف كملف zip.</string>
+    <string name="export_put">ضعه على الجهاز</string>
+    <string name="export_put_done">على الجهاز باسم %1$s. يحمّله etaHEN عند تشغيل اللعبة في المرة القادمة.</string>
+    <string name="export_put_done_ps4">على الجهاز باسم %1$s. يحمّله GoldHEN عند تشغيل اللعبة في المرة القادمة.</string>
 </resources>

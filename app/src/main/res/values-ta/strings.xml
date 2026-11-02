@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">கூடுதல் நகல்கள் %1$s எடுக்கின்றன.</string>
     <string name="files_dupes_hint">ஒரே பெயர், ஒரே அளவு. ஒவ்வொன்றிலும் ஒன்றை வைத்து தேவையற்றவற்றை நீக்கவும்.</string>
     <string name="memory_cheat_note">குறிப்பு (விருப்பம்): என்ன செய்கிறது, எந்த விளையாட்டுப் பதிப்பு</string>
+    <string name="running_title">என்ன இயங்குகிறது</string>
+    <string name="running_hint">இப்போது %1$s-இல் எது பதிலளிக்கிறது. பதிலளிக்காத சேவை நீங்கள் பயன்படுத்தாவிட்டால் பிரச்சனை இல்லை.</string>
+    <string name="running_on">பதிலளிக்கிறது</string>
+    <string name="running_off">பதில் இல்லை</string>
+    <string name="running_web">வலை சேவையகம் (websrv)</string>
+    <string name="running_shell">ஷெல் (shsrv)</string>
+    <string name="home_up_exact">%1$s முன் ஜெயில்பிரேக் (%2$s-க்கு)</string>
+    <string name="home_up_atleast">குறைந்தது %1$s ஆக பதிலளிக்கிறது</string>
+    <string name="files_speed">வேகச் சோதனை</string>
+    <string name="speed_running">கன்சோலுக்கு %1$s அனுப்பி மீண்டும் படிக்கிறது…</string>
+    <string name="speed_up">கன்சோலுக்கு: வினாடிக்கு %1$s</string>
+    <string name="speed_down">கன்சோலிலிருந்து: வினாடிக்கு %1$s</string>
+    <string name="speed_hint">வினாடிக்குச் சுமார் 3 MB-க்குக் குறைவு என்றால் பொதுவாக பலவீனமான Wi-Fi: அருகே செல்லுங்கள், 5 GHz பயன்படுத்துங்கள், அல்லது கன்சோலை ரௌட்டருடன் கேபிளில் இணையுங்கள். சோதனைக் கோப்பு பிறகு நீக்கப்படும்.</string>
+    <string name="files_upload_zip">zip-ஐக் கோப்புறையாகப் பதிவேற்று</string>
+    <string name="zipup_progress">கன்சோலில் பிரிக்கிறது: %1$d கோப்புகள், %2$s</string>
+    <string name="zipup_done">%2$s-இல் %1$d கோப்புகள் பிரிக்கப்பட்டன</string>
+    <string name="zipup_empty">அந்த zip-இல் கோப்புகள் இல்லை.</string>
+    <string name="zipup_bad">அந்தக் கோப்பை zip ஆகப் படிக்க முடியாது.</string>
+    <string name="export_put">கன்சோலில் வை</string>
+    <string name="export_put_done">கன்சோலில் %1$s ஆக. அடுத்த முறை விளையாட்டு தொடங்கும்போது etaHEN அதை ஏற்றும்.</string>
+    <string name="export_put_done_ps4">கன்சோலில் %1$s ஆக. அடுத்த முறை விளையாட்டு தொடங்கும்போது GoldHEN அதை ஏற்றும்.</string>
 </resources>

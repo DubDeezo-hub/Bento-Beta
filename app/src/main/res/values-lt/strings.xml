@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">Perteklinės kopijos užima %1$s.</string>
     <string name="files_dupes_hint">Tas pats pavadinimas ir dydis. Palikite po vieną, kitas nereikalingas ištrinkite.</string>
     <string name="memory_cheat_note">Pastaba (neprivaloma): ką daro, kuriai žaidimo versijai</string>
+    <string name="running_title">Kas veikia</string>
+    <string name="running_hint">Kas dabar atsako adresu %1$s. Neatsakanti paslauga nėra problema, jei jos nenaudojate.</string>
+    <string name="running_on">atsako</string>
+    <string name="running_off">neatsako</string>
+    <string name="running_web">Žiniatinklio serveris (websrv)</string>
+    <string name="running_shell">Apvalkalas (shsrv)</string>
+    <string name="home_up_exact">Jailbreak prieš %1$s (%2$s)</string>
+    <string name="home_up_atleast">Atsako mažiausiai %1$s</string>
+    <string name="files_speed">Greičio testas</string>
+    <string name="speed_running">Siunčiama %1$s į pultą ir skaitoma atgal…</string>
+    <string name="speed_up">Į pultą: %1$s per sekundę</string>
+    <string name="speed_down">Iš pulto: %1$s per sekundę</string>
+    <string name="speed_hint">Mažiau nei apie 3 MB per sekundę dažniausiai reiškia silpną Wi-Fi: prieikite arčiau, naudokite 5 GHz arba prijunkite pultą prie maršrutizatoriaus laidu. Bandomasis failas paskui ištrinamas.</string>
+    <string name="files_upload_zip">Įkelti zip kaip aplanką</string>
+    <string name="zipup_progress">Išpakuojama į pultą: %1$d failai, %2$s</string>
+    <string name="zipup_done">%1$d failai išpakuoti į %2$s</string>
+    <string name="zipup_empty">Tame zip nėra failų.</string>
+    <string name="zipup_bad">To failo negalima perskaityti kaip zip.</string>
+    <string name="export_put">Įdėti į pultą</string>
+    <string name="export_put_done">Pulte kaip %1$s. etaHEN įkels jį kitą kartą paleidus žaidimą.</string>
+    <string name="export_put_done_ps4">Pulte kaip %1$s. GoldHEN įkels jį kitą kartą paleidus žaidimą.</string>
 </resources>

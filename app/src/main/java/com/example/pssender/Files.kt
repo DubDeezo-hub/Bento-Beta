@@ -284,6 +284,7 @@ fun FilesTab(
     var menuFor by remember { mutableStateOf<FtpEntry?>(null) }
     var sizesFor by remember { mutableStateOf<String?>(null) }
     var dupesFor by remember { mutableStateOf<String?>(null) }
+    var speedTest by remember { mutableStateOf(false) }
     var editing by remember { mutableStateOf<String?>(null) }
     var zipping by remember { mutableStateOf(false) }
     var zipCancel by remember { mutableStateOf(false) }
@@ -402,6 +403,38 @@ fun FilesTab(
         if (list.size == 1) deleteFor = list[0] else if (list.size > 1) deleteMany = list
     }
 
+    // A zip on the phone, unpacked onto the console as a folder named after it
+    val zipUpPicker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+        val at = model.path
+        if (uri != null && settings != null && at.isNotEmpty()) {
+            val folder = safeLocalName(ctx.contentResolver.displayName(uri).replace(Regex("(?i)\\.zip$"), ""))
+            zipping = true
+            zipCancel = false
+            scope.launch {
+                model.message = AppText.get(R.string.zipup_progress, 0, fmtBytes(0))
+                model.message = withContext(Dispatchers.IO) {
+                    try {
+                        var shown = 0L
+                        val n = ftpUploadZip(ctx.contentResolver, settings, uri, at, folder,
+                            progress = { f, b ->
+                                val now = System.currentTimeMillis()
+                                if (now - shown > 250) {
+                                    shown = now
+                                    model.message = AppText.get(R.string.zipup_progress, f, fmtBytes(b))
+                                }
+                            },
+                            cancelled = { zipCancel })
+                        AppText.get(R.string.zipup_done, n, joinPath(at, folder))
+                    } catch (e: Exception) {
+                        ftpFailureMessage(e)
+                    }
+                }
+                zipping = false
+                reload()
+            }
+        }
+    }
+
     val uploadPicker = rememberLauncherForActivityResult(ActivityResultContracts.OpenMultipleDocuments()) { picked ->
         if (picked.isNotEmpty() && settings != null && model.path.isNotEmpty()) {
             for (file in picked) {
@@ -419,6 +452,8 @@ fun FilesTab(
     }
 
     // ---- dialogs ----
+
+    if (speedTest && settings != null) SpeedTestDialog(settings) { speedTest = false }
 
     dupesFor?.let { path ->
         if (settings != null) DuplicatesDialog(settings, path, onClose = {
@@ -820,6 +855,10 @@ fun FilesTab(
                 TextButton(onClick = { showSettings = true }) { Text(str(R.string.files_ftp_settings)) }
                 TextButton(enabled = ready && hasFolder, onClick = { sizesFor = model.path }) { Text(str(R.string.files_sizes)) }
                 TextButton(enabled = ready && hasFolder, onClick = { dupesFor = model.path }) { Text(str(R.string.files_dupes)) }
+                TextButton(enabled = ready, onClick = { speedTest = true }) { Text(str(R.string.files_speed)) }
+                TextButton(enabled = ready && hasFolder && !zipping, onClick = {
+                    zipUpPicker.launch(arrayOf("application/zip", "application/x-zip-compressed", "application/octet-stream"))
+                }) { Text(str(R.string.files_upload_zip)) }
             }
             FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.Center) {
                 // Screenshots and video clips: where the console keeps what the Create button captured
@@ -1050,5 +1089,43 @@ private fun DuplicatesDialog(s: FtpSettings, path: String, onClose: () -> Unit) 
             }
         },
         confirmButton = { TextButton(onClick = onClose) { Text(str(R.string.action_close)) } }
+    )
+}
+
+
+/** Sends a test file to the console and reads it back, and says how fast each way went. */
+@Composable
+private fun SpeedTestDialog(s: FtpSettings, onClose: () -> Unit) {
+    var result by remember { mutableStateOf<Pair<Long, Long>?>(null) }
+    var problem by remember { mutableStateOf("") }
+    var stop by remember { mutableStateOf(false) }
+    LaunchedEffect(Unit) {
+        try {
+            result = withContext(Dispatchers.IO) { ftpSpeedTest(s, cancelled = { stop }) }
+        } catch (e: Exception) {
+            problem = ftpFailureMessage(e)
+        }
+    }
+    AlertDialog(
+        onDismissRequest = { stop = true; onClose() },
+        title = { Text(str(R.string.files_speed)) },
+        text = {
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                val r = result
+                when {
+                    problem.isNotEmpty() -> Text(problem, style = MaterialTheme.typography.bodySmall)
+                    r == null -> {
+                        Text(str(R.string.speed_running, fmtBytes(SPEED_TEST_BYTES)), style = MaterialTheme.typography.bodySmall)
+                        LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
+                    }
+                    else -> {
+                        Text(str(R.string.speed_up, fmtBytes((mbPerSecond(SPEED_TEST_BYTES, r.first) * 1_048_576).toLong())), style = MaterialTheme.typography.titleSmall)
+                        Text(str(R.string.speed_down, fmtBytes((mbPerSecond(SPEED_TEST_BYTES, r.second) * 1_048_576).toLong())), style = MaterialTheme.typography.titleSmall)
+                    }
+                }
+                Text(str(R.string.speed_hint), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
+        },
+        confirmButton = { TextButton(onClick = { stop = true; onClose() }) { Text(str(if (result == null && problem.isEmpty()) R.string.action_cancel else R.string.action_close)) } }
     )
 }

@@ -1209,4 +1209,25 @@
     <string name="files_dupes_extra">De extra kopieën nemen %1$s in.</string>
     <string name="files_dupes_hint">Zelfde naam en grootte. Houd er van elk één en verwijder wat je niet nodig hebt.</string>
     <string name="memory_cheat_note">Notitie (optioneel): wat het doet, welke gameversie</string>
+    <string name="running_title">Wat draait er</string>
+    <string name="running_hint">Wat er nu op %1$s antwoordt. Een dienst die niet antwoordt is geen probleem, tenzij je hem gebruikt.</string>
+    <string name="running_on">antwoordt</string>
+    <string name="running_off">geen antwoord</string>
+    <string name="running_web">Webserver (websrv)</string>
+    <string name="running_shell">Shell (shsrv)</string>
+    <string name="home_up_exact">%1$s geleden gejailbreakt (om %2$s)</string>
+    <string name="home_up_atleast">Antwoordt al minstens %1$s</string>
+    <string name="files_speed">Snelheidstest</string>
+    <string name="speed_running">Stuurt %1$s naar de console en leest het terug…</string>
+    <string name="speed_up">Naar de console: %1$s per seconde</string>
+    <string name="speed_down">Van de console: %1$s per seconde</string>
+    <string name="speed_hint">Onder ongeveer 3 MB per seconde betekent meestal zwakke wifi: ga dichterbij staan, gebruik 5 GHz of sluit de console met een kabel op de router aan. Het testbestand wordt daarna verwijderd.</string>
+    <string name="files_upload_zip">Zip als map uploaden</string>
+    <string name="zipup_progress">Uitpakken op de console: %1$d bestanden, %2$s</string>
+    <string name="zipup_done">%1$d bestanden uitgepakt in %2$s</string>
+    <string name="zipup_empty">Die zip bevat geen bestanden.</string>
+    <string name="zipup_bad">Dat bestand kan niet als zip worden gelezen.</string>
+    <string name="export_put">Op de console zetten</string>
+    <string name="export_put_done">Op de console als %1$s. etaHEN laadt het de volgende keer dat het spel start.</string>
+    <string name="export_put_done_ps4">Op de console als %1$s. GoldHEN laadt het de volgende keer dat het spel start.</string>
 </resources>

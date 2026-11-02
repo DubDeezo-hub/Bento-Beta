@@ -1209,4 +1209,25 @@
     <string name="files_dupes_extra">As cópias a mais ocupam %1$s.</string>
     <string name="files_dupes_hint">Mesmo nome e mesmo tamanho. Mantenha uma de cada e elimine as que não precisa.</string>
     <string name="memory_cheat_note">Nota (opcional): o que faz, que versão do jogo</string>
+    <string name="running_title">O que está a correr</string>
+    <string name="running_hint">O que responde em %1$s neste momento. Um serviço que não responde não é problema, a não ser que o use.</string>
+    <string name="running_on">responde</string>
+    <string name="running_off">sem resposta</string>
+    <string name="running_web">Servidor web (websrv)</string>
+    <string name="running_shell">Shell (shsrv)</string>
+    <string name="home_up_exact">Jailbreak há %1$s (às %2$s)</string>
+    <string name="home_up_atleast">Responde há pelo menos %1$s</string>
+    <string name="files_speed">Teste de velocidade</string>
+    <string name="speed_running">A enviar %1$s para a consola e a ler de volta…</string>
+    <string name="speed_up">Para a consola: %1$s por segundo</string>
+    <string name="speed_down">Da consola: %1$s por segundo</string>
+    <string name="speed_hint">Menos de cerca de 3 MB por segundo costuma indicar Wi-Fi fraco: aproxime-se, use 5 GHz ou ligue a consola ao router por cabo. O ficheiro de teste é apagado depois.</string>
+    <string name="files_upload_zip">Carregar um zip como pasta</string>
+    <string name="zipup_progress">A descompactar na consola: %1$d ficheiros, %2$s</string>
+    <string name="zipup_done">Descompactados %1$d ficheiros em %2$s</string>
+    <string name="zipup_empty">Esse zip não tem ficheiros.</string>
+    <string name="zipup_bad">Esse ficheiro não pode ser lido como zip.</string>
+    <string name="export_put">Pôr na consola</string>
+    <string name="export_put_done">Na consola como %1$s. O etaHEN carrega-o da próxima vez que o jogo arrancar.</string>
+    <string name="export_put_done_ps4">Na consola como %1$s. O GoldHEN carrega-o da próxima vez que o jogo arrancar.</string>
 </resources>

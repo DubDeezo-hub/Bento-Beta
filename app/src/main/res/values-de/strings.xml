@@ -1210,4 +1210,25 @@
     <string name="files_dupes_extra">Die zusätzlichen Kopien belegen %1$s.</string>
     <string name="files_dupes_hint">Gleicher Name, gleiche Größe. Behalte je eine und lösche die anderen, die du nicht brauchst.</string>
     <string name="memory_cheat_note">Notiz (optional): was es tut, welche Spielversion</string>
+    <string name="running_title">Was läuft</string>
+    <string name="running_hint">Was auf %1$s gerade antwortet. Ein Dienst, der nicht antwortet, ist kein Problem, solange du ihn nicht nutzt.</string>
+    <string name="running_on">antwortet</string>
+    <string name="running_off">keine Antwort</string>
+    <string name="running_web">Webserver (websrv)</string>
+    <string name="running_shell">Shell (shsrv)</string>
+    <string name="home_up_exact">Jailbreak vor %1$s (um %2$s)</string>
+    <string name="home_up_atleast">Antwortet seit mindestens %1$s</string>
+    <string name="files_speed">Geschwindigkeitstest</string>
+    <string name="speed_running">Sendet %1$s an die Konsole und liest sie zurück…</string>
+    <string name="speed_up">Zur Konsole: %1$s pro Sekunde</string>
+    <string name="speed_down">Von der Konsole: %1$s pro Sekunde</string>
+    <string name="speed_hint">Unter etwa 3 MB pro Sekunde heißt meist schwaches WLAN: näher rangehen, 5 GHz nutzen oder die Konsole per Kabel an den Router anschließen. Die Testdatei wird danach gelöscht.</string>
+    <string name="files_upload_zip">Zip als Ordner hochladen</string>
+    <string name="zipup_progress">Entpacke auf die Konsole: %1$d Dateien, %2$s</string>
+    <string name="zipup_done">%1$d Dateien nach %2$s entpackt</string>
+    <string name="zipup_empty">Diese Zip enthält keine Dateien.</string>
+    <string name="zipup_bad">Diese Datei lässt sich nicht als Zip lesen.</string>
+    <string name="export_put">Auf die Konsole legen</string>
+    <string name="export_put_done">Auf der Konsole als %1$s. etaHEN lädt sie beim nächsten Spielstart.</string>
+    <string name="export_put_done_ps4">Auf der Konsole als %1$s. GoldHEN lädt sie beim nächsten Spielstart.</string>
 </resources>

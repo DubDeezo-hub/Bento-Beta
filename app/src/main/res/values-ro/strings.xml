@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">Copiile în plus ocupă %1$s.</string>
     <string name="files_dupes_hint">Același nume și aceeași dimensiune. Păstrează câte una și șterge-le pe cele de care nu ai nevoie.</string>
     <string name="memory_cheat_note">Notă (opțională): ce face, ce versiune a jocului</string>
+    <string name="running_title">Ce rulează</string>
+    <string name="running_hint">Ce răspunde acum pe %1$s. Un serviciu care nu răspunde nu e o problemă dacă nu îl folosești.</string>
+    <string name="running_on">răspunde</string>
+    <string name="running_off">niciun răspuns</string>
+    <string name="running_web">Server web (websrv)</string>
+    <string name="running_shell">Shell (shsrv)</string>
+    <string name="home_up_exact">Jailbreak acum %1$s (la %2$s)</string>
+    <string name="home_up_atleast">Răspunde de cel puțin %1$s</string>
+    <string name="files_speed">Test de viteză</string>
+    <string name="speed_running">Se trimit %1$s la consolă și se citesc înapoi…</string>
+    <string name="speed_up">Spre consolă: %1$s pe secundă</string>
+    <string name="speed_down">De la consolă: %1$s pe secundă</string>
+    <string name="speed_hint">Sub aproximativ 3 MB pe secundă înseamnă de obicei Wi-Fi slab: apropie-te, folosește 5 GHz sau conectează consola la router prin cablu. Fișierul de test este șters apoi.</string>
+    <string name="files_upload_zip">Încarcă un zip ca dosar</string>
+    <string name="zipup_progress">Se dezarhivează pe consolă: %1$d fișiere, %2$s</string>
+    <string name="zipup_done">Au fost dezarhivate %1$d fișiere în %2$s</string>
+    <string name="zipup_empty">Acel zip nu are fișiere.</string>
+    <string name="zipup_bad">Acel fișier nu poate fi citit ca zip.</string>
+    <string name="export_put">Pune pe consolă</string>
+    <string name="export_put_done">Pe consolă ca %1$s. etaHEN îl încarcă la următoarea pornire a jocului.</string>
+    <string name="export_put_done_ps4">Pe consolă ca %1$s. GoldHEN îl încarcă la următoarea pornire a jocului.</string>
 </resources>

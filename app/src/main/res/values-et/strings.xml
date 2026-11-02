@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">Lisakoopiad võtavad %1$s.</string>
     <string name="files_dupes_hint">Sama nimi ja suurus. Jäta igast üks alles ja kustuta need, mida pole vaja.</string>
     <string name="memory_cheat_note">Märkus (valikuline): mida teeb, milline mänguversioon</string>
+    <string name="running_title">Mis töötab</string>
+    <string name="running_hint">Mis praegu aadressil %1$s vastab. Teenus, mis ei vasta, pole probleem, kui sa seda ei kasuta.</string>
+    <string name="running_on">vastab</string>
+    <string name="running_off">ei vasta</string>
+    <string name="running_web">Veebiserver (websrv)</string>
+    <string name="running_shell">Kest (shsrv)</string>
+    <string name="home_up_exact">Jailbreak %1$s tagasi (kell %2$s)</string>
+    <string name="home_up_atleast">Vastab vähemalt %1$s</string>
+    <string name="files_speed">Kiirustest</string>
+    <string name="speed_running">Saadan %1$s konsooli ja loen tagasi…</string>
+    <string name="speed_up">Konsooli: %1$s sekundis</string>
+    <string name="speed_down">Konsoolist: %1$s sekundis</string>
+    <string name="speed_hint">Alla umbes 3 MB sekundis tähendab tavaliselt nõrka Wi-Fit: tule lähemale, kasuta 5 GHz-i või ühenda konsool kaabliga ruuterisse. Testfail kustutatakse pärast.</string>
+    <string name="files_upload_zip">Laadi zip üles kaustana</string>
+    <string name="zipup_progress">Pakin konsooli lahti: %1$d faili, %2$s</string>
+    <string name="zipup_done">%1$d faili pakiti lahti kausta %2$s</string>
+    <string name="zipup_empty">Selles zipis pole faile.</string>
+    <string name="zipup_bad">Seda faili ei saa zipina lugeda.</string>
+    <string name="export_put">Pane konsooli</string>
+    <string name="export_put_done">Konsoolis nimega %1$s. etaHEN laeb selle järgmisel mängu käivitamisel.</string>
+    <string name="export_put_done_ps4">Konsoolis nimega %1$s. GoldHEN laeb selle järgmisel mängu käivitamisel.</string>
 </resources>

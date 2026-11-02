@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">अतिरिक्त कॉपियाँ %1$s जगह लेती हैं।</string>
     <string name="files_dupes_hint">एक ही नाम और आकार। हर एक की एक रखें और जिनकी ज़रूरत नहीं उन्हें मिटाएँ।</string>
     <string name="memory_cheat_note">नोट (वैकल्पिक): यह क्या करता है, गेम का कौन सा संस्करण</string>
+    <string name="running_title">क्या चल रहा है</string>
+    <string name="running_hint">अभी %1$s पर क्या जवाब दे रहा है। जो सेवा जवाब नहीं देती वह समस्या नहीं, जब तक आप उसे इस्तेमाल न करें।</string>
+    <string name="running_on">जवाब देता है</string>
+    <string name="running_off">कोई जवाब नहीं</string>
+    <string name="running_web">वेब सर्वर (websrv)</string>
+    <string name="running_shell">शेल (shsrv)</string>
+    <string name="home_up_exact">%1$s पहले जेलब्रेक हुआ (%2$s पर)</string>
+    <string name="home_up_atleast">कम से कम %1$s से जवाब दे रहा है</string>
+    <string name="files_speed">स्पीड टेस्ट</string>
+    <string name="speed_running">कंसोल को %1$s भेजकर वापस पढ़ रहा है…</string>
+    <string name="speed_up">कंसोल की ओर: %1$s प्रति सेकंड</string>
+    <string name="speed_down">कंसोल से: %1$s प्रति सेकंड</string>
+    <string name="speed_hint">लगभग 3 MB प्रति सेकंड से कम आमतौर पर कमज़ोर Wi-Fi है: पास जाएँ, 5 GHz इस्तेमाल करें, या कंसोल को राउटर से केबल से जोड़ें। टेस्ट फ़ाइल बाद में मिटा दी जाती है।</string>
+    <string name="files_upload_zip">zip को फ़ोल्डर के रूप में अपलोड करें</string>
+    <string name="zipup_progress">कंसोल पर खोल रहा है: %1$d फ़ाइलें, %2$s</string>
+    <string name="zipup_done">%2$s में %1$d फ़ाइलें खोली गईं</string>
+    <string name="zipup_empty">उस zip में कोई फ़ाइल नहीं है।</string>
+    <string name="zipup_bad">वह फ़ाइल zip के रूप में पढ़ी नहीं जा सकती।</string>
+    <string name="export_put">कंसोल पर रखें</string>
+    <string name="export_put_done">कंसोल पर %1$s के रूप में। अगली बार गेम शुरू होने पर etaHEN इसे लोड करेगा।</string>
+    <string name="export_put_done_ps4">कंसोल पर %1$s के रूप में। अगली बार गेम शुरू होने पर GoldHEN इसे लोड करेगा।</string>
 </resources>

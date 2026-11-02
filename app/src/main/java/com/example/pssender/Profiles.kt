@@ -73,6 +73,10 @@ object ActiveConsole {
     /** The saved console's id, for things remembered per console (like its firmware). */
     @Volatile
     var id: String = ""
+
+    /** The selected console's FTP login (null without an address or port), for places that have no console at hand. */
+    @Volatile
+    var ftp: FtpSettings? = null
 }
 
 /** One saved console. Ports are kept as text because they are typed into text fields. */

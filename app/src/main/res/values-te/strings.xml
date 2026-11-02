@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">అదనపు కాపీలు %1$s తీసుకుంటున్నాయి.</string>
     <string name="files_dupes_hint">ఒకే పేరు, ఒకే పరిమాణం. ఒక్కోదాంట్లో ఒకటి ఉంచి అవసరం లేనివి తొలగించండి.</string>
     <string name="memory_cheat_note">నోట్ (ఐచ్ఛికం): ఏం చేస్తుంది, ఏ ఆట వెర్షన్</string>
+    <string name="running_title">ఏం నడుస్తోంది</string>
+    <string name="running_hint">ఇప్పుడు %1$sలో ఏం స్పందిస్తోంది. స్పందించని సేవ మీరు వాడకపోతే సమస్య కాదు.</string>
+    <string name="running_on">స్పందిస్తోంది</string>
+    <string name="running_off">స్పందన లేదు</string>
+    <string name="running_web">వెబ్ సర్వర్ (websrv)</string>
+    <string name="running_shell">షెల్ (shsrv)</string>
+    <string name="home_up_exact">%1$s క్రితం జైల్‌బ్రేక్ (%2$sకి)</string>
+    <string name="home_up_atleast">కనీసం %1$s నుండి స్పందిస్తోంది</string>
+    <string name="files_speed">వేగ పరీక్ష</string>
+    <string name="speed_running">కన్సోల్‌కు %1$s పంపి తిరిగి చదువుతోంది…</string>
+    <string name="speed_up">కన్సోల్‌కు: సెకనుకు %1$s</string>
+    <string name="speed_down">కన్సోల్ నుండి: సెకనుకు %1$s</string>
+    <string name="speed_hint">సెకనుకు సుమారు 3 MB కంటే తక్కువ అంటే సాధారణంగా బలహీన Wi-Fi: దగ్గరగా రండి, 5 GHz వాడండి, లేదా కన్సోల్‌ను రౌటర్‌కు కేబుల్‌తో కలపండి. పరీక్ష ఫైల్ తర్వాత తొలగించబడుతుంది.</string>
+    <string name="files_upload_zip">zipను ఫోల్డర్‌గా అప్‌లోడ్ చేయి</string>
+    <string name="zipup_progress">కన్సోల్‌పై విప్పుతోంది: %1$d ఫైళ్లు, %2$s</string>
+    <string name="zipup_done">%2$sలోకి %1$d ఫైళ్లు విప్పబడ్డాయి</string>
+    <string name="zipup_empty">ఆ zipలో ఫైళ్లు లేవు.</string>
+    <string name="zipup_bad">ఆ ఫైల్‌ను zipగా చదవలేము.</string>
+    <string name="export_put">కన్సోల్‌లో పెట్టు</string>
+    <string name="export_put_done">కన్సోల్‌లో %1$sగా ఉంది. తర్వాతిసారి ఆట మొదలైనప్పుడు etaHEN దాన్ని లోడ్ చేస్తుంది.</string>
+    <string name="export_put_done_ps4">కన్సోల్‌లో %1$sగా ఉంది. తర్వాతిసారి ఆట మొదలైనప్పుడు GoldHEN దాన్ని లోడ్ చేస్తుంది.</string>
 </resources>

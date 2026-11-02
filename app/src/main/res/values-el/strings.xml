@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">Τα επιπλέον αντίγραφα πιάνουν %1$s.</string>
     <string name="files_dupes_hint">Ίδιο όνομα και μέγεθος. Κρατήστε ένα από το καθένα και διαγράψτε όσα δεν χρειάζεστε.</string>
     <string name="memory_cheat_note">Σημείωση (προαιρετική): τι κάνει, ποια έκδοση παιχνιδιού</string>
+    <string name="running_title">Τι τρέχει</string>
+    <string name="running_hint">Τι απαντά στο %1$s τώρα. Μια υπηρεσία που δεν απαντά δεν είναι πρόβλημα, εκτός αν τη χρησιμοποιείτε.</string>
+    <string name="running_on">απαντά</string>
+    <string name="running_off">καμία απάντηση</string>
+    <string name="running_web">Διακομιστής web (websrv)</string>
+    <string name="running_shell">Κέλυφος (shsrv)</string>
+    <string name="home_up_exact">Jailbreak πριν από %1$s (στις %2$s)</string>
+    <string name="home_up_atleast">Απαντά εδώ και τουλάχιστον %1$s</string>
+    <string name="files_speed">Τεστ ταχύτητας</string>
+    <string name="speed_running">Αποστολή %1$s στην κονσόλα και ανάγνωση πίσω…</string>
+    <string name="speed_up">Προς την κονσόλα: %1$s το δευτερόλεπτο</string>
+    <string name="speed_down">Από την κονσόλα: %1$s το δευτερόλεπτο</string>
+    <string name="speed_hint">Κάτω από περίπου 3 MB το δευτερόλεπτο σημαίνει συνήθως αδύναμο Wi-Fi: πλησιάστε, χρησιμοποιήστε 5 GHz ή συνδέστε την κονσόλα στο ρούτερ με καλώδιο. Το αρχείο δοκιμής διαγράφεται μετά.</string>
+    <string name="files_upload_zip">Ανέβασμα zip ως φάκελο</string>
+    <string name="zipup_progress">Αποσυμπίεση στην κονσόλα: %1$d αρχεία, %2$s</string>
+    <string name="zipup_done">Αποσυμπιέστηκαν %1$d αρχεία στο %2$s</string>
+    <string name="zipup_empty">Αυτό το zip δεν έχει αρχεία.</string>
+    <string name="zipup_bad">Αυτό το αρχείο δεν διαβάζεται ως zip.</string>
+    <string name="export_put">Βάλε το στην κονσόλα</string>
+    <string name="export_put_done">Στην κονσόλα ως %1$s. Το etaHEN θα το φορτώσει την επόμενη φορά που θα ξεκινήσει το παιχνίδι.</string>
+    <string name="export_put_done_ps4">Στην κονσόλα ως %1$s. Το GoldHEN θα το φορτώσει την επόμενη φορά που θα ξεκινήσει το παιχνίδι.</string>
 </resources>

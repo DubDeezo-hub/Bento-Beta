@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">多余的副本占用 %1$s。</string>
     <string name="files_dupes_hint">名称和大小都相同。每组保留一个，删除不需要的。</string>
     <string name="memory_cheat_note">备注（可选）：作用、适用的游戏版本</string>
+    <string name="running_title">运行状态</string>
+    <string name="running_hint">此刻 %1$s 上有响应的服务。没有响应的服务只要你不用就没关系。</string>
+    <string name="running_on">有响应</string>
+    <string name="running_off">无响应</string>
+    <string name="running_web">网页服务器 (websrv)</string>
+    <string name="running_shell">Shell (shsrv)</string>
+    <string name="home_up_exact">%1$s前已越狱（%2$s）</string>
+    <string name="home_up_atleast">至少已响应 %1$s</string>
+    <string name="files_speed">测速</string>
+    <string name="speed_running">正在向主机发送 %1$s 并读回…</string>
+    <string name="speed_up">发往主机：每秒 %1$s</string>
+    <string name="speed_down">来自主机：每秒 %1$s</string>
+    <string name="speed_hint">每秒低于约 3 MB 通常说明 Wi-Fi 信号弱：靠近一些、使用 5 GHz，或用网线把主机接到路由器。测试文件之后会被删除。</string>
+    <string name="files_upload_zip">将 zip 作为文件夹上传</string>
+    <string name="zipup_progress">正在解压到主机：%1$d 个文件，%2$s</string>
+    <string name="zipup_done">已将 %1$d 个文件解压到 %2$s</string>
+    <string name="zipup_empty">该 zip 中没有文件。</string>
+    <string name="zipup_bad">无法将该文件作为 zip 读取。</string>
+    <string name="export_put">放到主机上</string>
+    <string name="export_put_done">已放到主机：%1$s。下次启动游戏时 etaHEN 会加载它。</string>
+    <string name="export_put_done_ps4">已放到主机：%1$s。下次启动游戏时 GoldHEN 会加载它。</string>
 </resources>

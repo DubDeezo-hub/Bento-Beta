@@ -926,3 +926,149 @@ fun saveTextToDownloads(cr: ContentResolver, root: String, folder: String, name:
     } catch (_: Exception) {
         null
     }
+
+// ---------------------------------------------------------------------------------------------
+// Speed test: how fast files really go to and from the console over FTP, to tell a slow Wi-Fi from a busy console.
+// ---------------------------------------------------------------------------------------------
+
+/** How much the speed test sends each way. */
+const val SPEED_TEST_BYTES = 16L shl 20
+
+/** The file the speed test writes (and removes again) in /data, where a console's FTP can always write. */
+const val SPEED_TEST_PATH = "/data/.bento-speedtest.bin"
+
+/** Megabytes per second for [bytes] in [ms] milliseconds (0 when no time passed). */
+fun mbPerSecond(bytes: Long, ms: Long): Double = if (ms <= 0) 0.0 else bytes / 1_048_576.0 / (ms / 1000.0)
+
+/**
+ * Sends [bytes] to the console, reads them back, and removes the file. Gives how long each way took (milliseconds).
+ * Blocking; [cancelled] stops it (the file is still removed).
+ */
+fun ftpSpeedTest(s: FtpSettings, bytes: Long = SPEED_TEST_BYTES, cancelled: () -> Boolean = { false }): Pair<Long, Long> = withFtp(s) { ftp ->
+    ftp.setFileType(FTP.BINARY_FILE_TYPE)
+    // Bytes that don't repeat in a short pattern, in case anything on the way would squeeze repeats
+    val pattern = ByteArray(64 * 1024) { i -> ((i * 31 + (i shr 8) * 17) and 0xFF).toByte() }
+    try {
+        val upStart = System.nanoTime()
+        val source = object : InputStream() {
+            var left = bytes
+            override fun read(): Int {
+                if (left <= 0 || cancelled()) return -1
+                left--
+                return pattern[(left % pattern.size).toInt()].toInt() and 0xFF
+            }
+            override fun read(b: ByteArray, off: Int, len: Int): Int {
+                if (left <= 0 || cancelled()) return -1
+                val n = minOf(len.toLong(), left, pattern.size.toLong()).toInt()
+                System.arraycopy(pattern, 0, b, off, n)
+                left -= n
+                return n
+            }
+        }
+        if (!ftp.storeFile(SPEED_TEST_PATH, source)) throw IOException(deniedText(R.string.err_cant_open, ftp, SPEED_TEST_PATH))
+        if (cancelled()) throw IOException(AppText.get(R.string.zip_cancelled))
+        val upMs = (System.nanoTime() - upStart) / 1_000_000
+        val downStart = System.nanoTime()
+        val input = ftp.retrieveFileStream(SPEED_TEST_PATH) ?: throw IOException(deniedText(R.string.err_cant_open, ftp, SPEED_TEST_PATH))
+        val buf = ByteArray(256 * 1024)
+        input.use { while (!cancelled() && it.read(buf) >= 0) Unit }
+        ftp.completePendingCommand()
+        if (cancelled()) throw IOException(AppText.get(R.string.zip_cancelled))
+        upMs to (System.nanoTime() - downStart) / 1_000_000
+    } finally {
+        try { ftp.deleteFile(SPEED_TEST_PATH) } catch (_: Exception) {}
+    }
+}
+
+// ---------------------------------------------------------------------------------------------
+// A zip on the phone unpacked onto the console as a folder, file by file, without unpacking it on the phone first.
+// ---------------------------------------------------------------------------------------------
+
+/**
+ * Unpacks the zip at [uri] into [dir]/[folder] on the console (a single top folder inside the zip is not nested a
+ * second time). Gives how many files went. Blocking; [progress] gets the files and bytes done; [cancelled] stops it.
+ */
+fun ftpUploadZip(
+    cr: ContentResolver, s: FtpSettings, uri: Uri, dir: String, folder: String,
+    progress: (files: Int, bytes: Long) -> Unit, cancelled: () -> Boolean
+): Int {
+    // First look: which files there are, so a shared top folder can be left out
+    val names = ArrayList<List<String>>()
+    (cr.openInputStream(uri) ?: throw IOException(AppText.get(R.string.zipup_bad))).use { raw ->
+        java.util.zip.ZipInputStream(raw.buffered()).use { zip ->
+            while (true) {
+                val e = try { zip.nextEntry } catch (_: Exception) { throw IOException(AppText.get(R.string.zipup_bad)) } ?: break
+                if (!e.isDirectory) zipEntryParts(e.name)?.let { names.add(it) }
+            }
+        }
+    }
+    if (names.isEmpty()) throw IOException(AppText.get(R.string.zipup_empty))
+    val drop = if (zipSharedTop(names) != null) 1 else 0
+    val base = joinPath(dir, folder)
+    return withFtp(s) { ftp ->
+        ftp.setFileType(FTP.BINARY_FILE_TYPE)
+        val made = HashSet<String>()
+        // Makes a folder (and the ones above it, down from the base) once; false from the console means it is there already
+        fun ensure(path: String) {
+            if (path in made) return
+            val parent = parentPath(path)
+            if (path != base && parent != path && parent.startsWith(base)) ensure(parent)
+            ftp.makeDirectory(path)
+            made.add(path)
+        }
+        ensure(base)
+        var files = 0
+        var bytes = 0L
+        (cr.openInputStream(uri) ?: throw IOException(AppText.get(R.string.zipup_bad))).use { raw ->
+            java.util.zip.ZipInputStream(raw.buffered()).use { zip ->
+                while (true) {
+                    if (cancelled()) throw IOException(AppText.get(R.string.zip_cancelled))
+                    val e = zip.nextEntry ?: break
+                    if (e.isDirectory) continue
+                    val parts = zipEntryParts(e.name)?.drop(drop)?.takeIf { it.isNotEmpty() } ?: continue
+                    val folderPath = parts.dropLast(1).fold(base) { acc, p -> joinPath(acc, p) }
+                    ensure(folderPath)
+                    val target = joinPath(folderPath, parts.last())
+                    // The FTP library must not close the zip after one entry, and each byte is counted for the progress
+                    val entry = object : java.io.FilterInputStream(zip) {
+                        override fun close() {}
+                        override fun read(b: ByteArray, off: Int, len: Int): Int {
+                            if (cancelled()) return -1
+                            val n = super.read(b, off, len)
+                            if (n > 0) { bytes += n; progress(files, bytes) }
+                            return n
+                        }
+                    }
+                    if (!ftp.storeFile(target, entry)) throw IOException(deniedText(R.string.err_cant_open, ftp, target))
+                    if (cancelled()) throw IOException(AppText.get(R.string.zip_cancelled))
+                    files++
+                    progress(files, bytes)
+                }
+            }
+        }
+        files
+    }
+}
+
+// ---------------------------------------------------------------------------------------------
+// A cheat file put straight into the cheat folder of etaHEN (PS5) or GoldHEN (PS4) on the console.
+// ---------------------------------------------------------------------------------------------
+
+/** Where etaHEN looks for cheat files in the PS5_Cheats layout. */
+const val ETAHEN_CHEATS_DIR = "/data/etaHEN/cheats/json"
+
+/** Where GoldHEN looks for cheat files on a PS4. */
+const val GOLDHEN_CHEATS_DIR = "/data/GoldHEN/cheats/json"
+
+/** Writes [text] as [name] into [dir] on the console, making the folders on the way. Gives the file's path. Blocking. */
+fun ftpPutFile(s: FtpSettings, dir: String, name: String, text: String): String = withFtp(s) { ftp ->
+    ftp.setFileType(FTP.BINARY_FILE_TYPE)
+    var at = ""
+    for (part in dir.split('/').filter { it.isNotEmpty() }) {
+        at = "$at/$part"
+        ftp.makeDirectory(at) // false when it is there already
+    }
+    val path = joinPath(dir, safeLocalName(name))
+    if (!ftp.storeFile(path, text.toByteArray(Charsets.UTF_8).inputStream())) throw IOException(deniedText(R.string.err_save, ftp, path))
+    path
+}

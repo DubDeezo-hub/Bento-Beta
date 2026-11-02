@@ -1209,4 +1209,25 @@
     <string name="files_dupes_extra">As cópias extras ocupam %1$s.</string>
     <string name="files_dupes_hint">Mesmo nome e mesmo tamanho. Mantenha uma de cada e exclua as que você não precisa.</string>
     <string name="memory_cheat_note">Nota (opcional): o que faz, qual versão do jogo</string>
+    <string name="running_title">O que está rodando</string>
+    <string name="running_hint">O que responde em %1$s agora. Um serviço que não responde não é problema, a menos que você o use.</string>
+    <string name="running_on">responde</string>
+    <string name="running_off">sem resposta</string>
+    <string name="running_web">Servidor web (websrv)</string>
+    <string name="running_shell">Shell (shsrv)</string>
+    <string name="home_up_exact">Jailbreak há %1$s (às %2$s)</string>
+    <string name="home_up_atleast">Respondendo há pelo menos %1$s</string>
+    <string name="files_speed">Teste de velocidade</string>
+    <string name="speed_running">Enviando %1$s para o console e lendo de volta…</string>
+    <string name="speed_up">Para o console: %1$s por segundo</string>
+    <string name="speed_down">Do console: %1$s por segundo</string>
+    <string name="speed_hint">Menos de uns 3 MB por segundo costuma indicar Wi-Fi fraco: chegue mais perto, use 5 GHz ou ligue o console ao roteador por cabo. O arquivo de teste é apagado depois.</string>
+    <string name="files_upload_zip">Enviar um zip como pasta</string>
+    <string name="zipup_progress">Descompactando no console: %1$d arquivos, %2$s</string>
+    <string name="zipup_done">%1$d arquivos descompactados em %2$s</string>
+    <string name="zipup_empty">Esse zip não tem arquivos.</string>
+    <string name="zipup_bad">Esse arquivo não pode ser lido como zip.</string>
+    <string name="export_put">Colocar no console</string>
+    <string name="export_put_done">No console como %1$s. O etaHEN carrega na próxima vez que o jogo iniciar.</string>
+    <string name="export_put_done_ps4">No console como %1$s. O GoldHEN carrega na próxima vez que o jogo iniciar.</string>
 </resources>

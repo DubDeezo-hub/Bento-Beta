@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">העותקים העודפים תופסים %1$s.</string>
     <string name="files_dupes_hint">אותו שם ואותו גודל. השאירו אחד מכל אחד ומחקו את המיותרים.</string>
     <string name="memory_cheat_note">הערה (לא חובה): מה זה עושה, לאיזו גרסת משחק</string>
+    <string name="running_title">מה רץ</string>
+    <string name="running_hint">מה עונה ב-%1$s עכשיו. שירות שלא עונה אינו בעיה, אלא אם אתם משתמשים בו.</string>
+    <string name="running_on">עונה</string>
+    <string name="running_off">אין תשובה</string>
+    <string name="running_web">שרת אינטרנט (websrv)</string>
+    <string name="running_shell">מעטפת (shsrv)</string>
+    <string name="home_up_exact">פריצה לפני %1$s (ב-%2$s)</string>
+    <string name="home_up_atleast">עונה כבר לפחות %1$s</string>
+    <string name="files_speed">בדיקת מהירות</string>
+    <string name="speed_running">שולח %1$s לקונסולה וקורא בחזרה…</string>
+    <string name="speed_up">אל הקונסולה: %1$s בשנייה</string>
+    <string name="speed_down">מהקונסולה: %1$s בשנייה</string>
+    <string name="speed_hint">פחות מכ-3 MB בשנייה מעיד בדרך כלל על Wi-Fi חלש: התקרבו, השתמשו ב-5 GHz או חברו את הקונסולה לנתב בכבל. קובץ הבדיקה נמחק אחר כך.</string>
+    <string name="files_upload_zip">העלאת zip כתיקייה</string>
+    <string name="zipup_progress">פורס לקונסולה: %1$d קבצים, %2$s</string>
+    <string name="zipup_done">נפרסו %1$d קבצים אל %2$s</string>
+    <string name="zipup_empty">אין קבצים ב-zip הזה.</string>
+    <string name="zipup_bad">אי אפשר לקרוא את הקובץ הזה כ-zip.</string>
+    <string name="export_put">שים בקונסולה</string>
+    <string name="export_put_done">בקונסולה בשם %1$s. etaHEN יטען אותו בפעם הבאה שהמשחק יופעל.</string>
+    <string name="export_put_done_ps4">בקונסולה בשם %1$s. GoldHEN יטען אותו בפעם הבאה שהמשחק יופעל.</string>
 </resources>

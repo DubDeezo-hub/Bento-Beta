@@ -739,7 +739,9 @@ object MemorySession {
                     val (h, wv) = fresh
                     // Keep "was" at the value of the last scan
                     if (shown.isNotEmpty() && hits === shown) hits = h.mapIndexed { i, f -> MemoryHit(f.address, f.value, shown[i].previous) }
-                    if (watches === w) watches = w.mapIndexed { i, x -> x.copy(value = wv[i]) }
+                    if (watches === w) watches = w.mapIndexed { i, x ->
+                        x.copy(value = wv[i], history = withReading(x.history, wv[i]?.let { b -> x.type.format(b).toDoubleOrNull() }))
+                    }
                 }
             } finally {
                 refreshing = false

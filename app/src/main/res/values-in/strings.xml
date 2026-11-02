@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">Salinan berlebih memakan %1$s.</string>
     <string name="files_dupes_hint">Nama dan ukuran sama. Simpan satu dari masing-masing dan hapus yang tidak diperlukan.</string>
     <string name="memory_cheat_note">Catatan (opsional): fungsinya, versi game yang mana</string>
+    <string name="running_title">Apa yang berjalan</string>
+    <string name="running_hint">Apa yang menjawab di %1$s sekarang. Layanan yang tidak menjawab bukan masalah kecuali Anda memakainya.</string>
+    <string name="running_on">menjawab</string>
+    <string name="running_off">tidak menjawab</string>
+    <string name="running_web">Server web (websrv)</string>
+    <string name="running_shell">Shell (shsrv)</string>
+    <string name="home_up_exact">Di-jailbreak %1$s lalu (pukul %2$s)</string>
+    <string name="home_up_atleast">Menjawab setidaknya selama %1$s</string>
+    <string name="files_speed">Tes kecepatan</string>
+    <string name="speed_running">Mengirim %1$s ke konsol lalu membacanya kembali…</string>
+    <string name="speed_up">Ke konsol: %1$s per detik</string>
+    <string name="speed_down">Dari konsol: %1$s per detik</string>
+    <string name="speed_hint">Di bawah sekitar 3 MB per detik biasanya berarti Wi-Fi lemah: mendekatlah, pakai 5 GHz, atau sambungkan konsol ke router dengan kabel. File tes dihapus setelahnya.</string>
+    <string name="files_upload_zip">Unggah zip sebagai folder</string>
+    <string name="zipup_progress">Membongkar ke konsol: %1$d file, %2$s</string>
+    <string name="zipup_done">%1$d file dibongkar ke %2$s</string>
+    <string name="zipup_empty">Zip itu tidak berisi file.</string>
+    <string name="zipup_bad">File itu tidak bisa dibaca sebagai zip.</string>
+    <string name="export_put">Taruh di konsol</string>
+    <string name="export_put_done">Di konsol sebagai %1$s. etaHEN akan memuatnya saat game dimulai lagi.</string>
+    <string name="export_put_done_ps4">Di konsol sebagai %1$s. GoldHEN akan memuatnya saat game dimulai lagi.</string>
 </resources>

@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">ಹೆಚ್ಚುವರಿ ನಕಲುಗಳು %1$s ಜಾಗ ತೆಗೆದುಕೊಳ್ಳುತ್ತವೆ.</string>
     <string name="files_dupes_hint">ಒಂದೇ ಹೆಸರು ಮತ್ತು ಗಾತ್ರ. ಪ್ರತಿಯೊಂದರಲ್ಲಿ ಒಂದನ್ನು ಇಟ್ಟು ಬೇಡದವನ್ನು ಅಳಿಸಿ.</string>
     <string name="memory_cheat_note">ಟಿಪ್ಪಣಿ (ಐಚ್ಛಿಕ): ಏನು ಮಾಡುತ್ತದೆ, ಆಟದ ಯಾವ ಆವೃತ್ತಿ</string>
+    <string name="running_title">ಏನು ಚಾಲನೆಯಲ್ಲಿದೆ</string>
+    <string name="running_hint">ಈಗ %1$s ನಲ್ಲಿ ಏನು ಉತ್ತರಿಸುತ್ತಿದೆ. ಉತ್ತರಿಸದ ಸೇವೆ ನೀವು ಬಳಸದಿದ್ದರೆ ಸಮಸ್ಯೆಯಲ್ಲ.</string>
+    <string name="running_on">ಉತ್ತರಿಸುತ್ತದೆ</string>
+    <string name="running_off">ಉತ್ತರವಿಲ್ಲ</string>
+    <string name="running_web">ವೆಬ್ ಸರ್ವರ್ (websrv)</string>
+    <string name="running_shell">ಶೆಲ್ (shsrv)</string>
+    <string name="home_up_exact">%1$s ಹಿಂದೆ ಜೈಲ್‌ಬ್ರೇಕ್ (%2$s ಕ್ಕೆ)</string>
+    <string name="home_up_atleast">ಕನಿಷ್ಠ %1$s ನಿಂದ ಉತ್ತರಿಸುತ್ತಿದೆ</string>
+    <string name="files_speed">ವೇಗ ಪರೀಕ್ಷೆ</string>
+    <string name="speed_running">ಕನ್ಸೋಲ್‌ಗೆ %1$s ಕಳುಹಿಸಿ ಹಿಂದಕ್ಕೆ ಓದುತ್ತಿದೆ…</string>
+    <string name="speed_up">ಕನ್ಸೋಲ್‌ಗೆ: ಸೆಕೆಂಡಿಗೆ %1$s</string>
+    <string name="speed_down">ಕನ್ಸೋಲ್‌ನಿಂದ: ಸೆಕೆಂಡಿಗೆ %1$s</string>
+    <string name="speed_hint">ಸೆಕೆಂಡಿಗೆ ಸುಮಾರು 3 MB ಗಿಂತ ಕಡಿಮೆ ಎಂದರೆ ಸಾಮಾನ್ಯವಾಗಿ ದುರ್ಬಲ Wi-Fi: ಹತ್ತಿರ ಬನ್ನಿ, 5 GHz ಬಳಸಿ, ಅಥವಾ ಕನ್ಸೋಲ್ ಅನ್ನು ರೂಟರ್‌ಗೆ ಕೇಬಲ್‌ನಿಂದ ಜೋಡಿಸಿ. ಪರೀಕ್ಷಾ ಫೈಲ್ ನಂತರ ಅಳಿಸಲಾಗುತ್ತದೆ.</string>
+    <string name="files_upload_zip">zip ಅನ್ನು ಫೋಲ್ಡರ್ ಆಗಿ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ</string>
+    <string name="zipup_progress">ಕನ್ಸೋಲ್‌ಗೆ ತೆರೆಯಲಾಗುತ್ತಿದೆ: %1$d ಫೈಲ್‌ಗಳು, %2$s</string>
+    <string name="zipup_done">%2$s ಗೆ %1$d ಫೈಲ್‌ಗಳನ್ನು ತೆರೆಯಲಾಗಿದೆ</string>
+    <string name="zipup_empty">ಆ zip ನಲ್ಲಿ ಫೈಲ್‌ಗಳಿಲ್ಲ.</string>
+    <string name="zipup_bad">ಆ ಫೈಲ್ ಅನ್ನು zip ಆಗಿ ಓದಲಾಗುವುದಿಲ್ಲ.</string>
+    <string name="export_put">ಕನ್ಸೋಲ್‌ಗೆ ಹಾಕಿ</string>
+    <string name="export_put_done">ಕನ್ಸೋಲ್‌ನಲ್ಲಿ %1$s ಆಗಿ. ಮುಂದಿನ ಬಾರಿ ಆಟ ಪ್ರಾರಂಭವಾದಾಗ etaHEN ಅದನ್ನು ಲೋಡ್ ಮಾಡುತ್ತದೆ.</string>
+    <string name="export_put_done_ps4">ಕನ್ಸೋಲ್‌ನಲ್ಲಿ %1$s ಆಗಿ. ಮುಂದಿನ ಬಾರಿ ಆಟ ಪ್ರಾರಂಭವಾದಾಗ GoldHEN ಅದನ್ನು ಲೋಡ್ ಮಾಡುತ್ತದೆ.</string>
 </resources>

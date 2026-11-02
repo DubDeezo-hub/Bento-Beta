@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">Nadmiarowe kopie zajmują %1$s.</string>
     <string name="files_dupes_hint">Ta sama nazwa i rozmiar. Zostaw po jednej, a niepotrzebne usuń.</string>
     <string name="memory_cheat_note">Notatka (opcjonalna): co robi, która wersja gry</string>
+    <string name="running_title">Co działa</string>
+    <string name="running_hint">Co teraz odpowiada pod %1$s. Usługa, która nie odpowiada, nie jest problemem, jeśli jej nie używasz.</string>
+    <string name="running_on">odpowiada</string>
+    <string name="running_off">brak odpowiedzi</string>
+    <string name="running_web">Serwer WWW (websrv)</string>
+    <string name="running_shell">Powłoka (shsrv)</string>
+    <string name="home_up_exact">Jailbreak %1$s temu (o %2$s)</string>
+    <string name="home_up_atleast">Odpowiada od co najmniej %1$s</string>
+    <string name="files_speed">Test prędkości</string>
+    <string name="speed_running">Wysyłanie %1$s do konsoli i odczyt z powrotem…</string>
+    <string name="speed_up">Do konsoli: %1$s na sekundę</string>
+    <string name="speed_down">Z konsoli: %1$s na sekundę</string>
+    <string name="speed_hint">Poniżej około 3 MB na sekundę zwykle oznacza słabe Wi-Fi: podejdź bliżej, użyj 5 GHz albo podłącz konsolę kablem do routera. Plik testowy jest potem usuwany.</string>
+    <string name="files_upload_zip">Wyślij zip jako folder</string>
+    <string name="zipup_progress">Rozpakowywanie na konsolę: %1$d plików, %2$s</string>
+    <string name="zipup_done">Rozpakowano %1$d plików do %2$s</string>
+    <string name="zipup_empty">Ten zip nie ma plików.</string>
+    <string name="zipup_bad">Tego pliku nie da się odczytać jako zip.</string>
+    <string name="export_put">Umieść na konsoli</string>
+    <string name="export_put_done">Na konsoli jako %1$s. etaHEN wczyta go przy następnym uruchomieniu gry.</string>
+    <string name="export_put_done_ps4">Na konsoli jako %1$s. GoldHEN wczyta go przy następnym uruchomieniu gry.</string>
 </resources>

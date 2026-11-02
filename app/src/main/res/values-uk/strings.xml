@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">Зайві копії займають %1$s.</string>
     <string name="files_dupes_hint">Однакова назва й розмір. Залиште по одній, а непотрібні видаліть.</string>
     <string name="memory_cheat_note">Нотатка (необов\'язково): що робить, для якої версії гри</string>
+    <string name="running_title">Що працює</string>
+    <string name="running_hint">Що зараз відповідає на %1$s. Служба, яка не відповідає, не проблема, якщо ви нею не користуєтеся.</string>
+    <string name="running_on">відповідає</string>
+    <string name="running_off">немає відповіді</string>
+    <string name="running_web">Вебсервер (websrv)</string>
+    <string name="running_shell">Оболонка (shsrv)</string>
+    <string name="home_up_exact">Джейлбрейк %1$s тому (о %2$s)</string>
+    <string name="home_up_atleast">Відповідає щонайменше %1$s</string>
+    <string name="files_speed">Тест швидкості</string>
+    <string name="speed_running">Надсилаємо %1$s на консоль і читаємо назад…</string>
+    <string name="speed_up">На консоль: %1$s за секунду</string>
+    <string name="speed_down">З консолі: %1$s за секунду</string>
+    <string name="speed_hint">Менше приблизно 3 МБ за секунду зазвичай означає слабкий Wi-Fi: підійдіть ближче, увімкніть 5 ГГц або під\'єднайте консоль до роутера кабелем. Тестовий файл потім видаляється.</string>
+    <string name="files_upload_zip">Завантажити zip як теку</string>
+    <string name="zipup_progress">Розпаковуємо на консоль: %1$d файлів, %2$s</string>
+    <string name="zipup_done">Розпаковано %1$d файлів у %2$s</string>
+    <string name="zipup_empty">У цьому zip немає файлів.</string>
+    <string name="zipup_bad">Цей файл не читається як zip.</string>
+    <string name="export_put">Покласти на консоль</string>
+    <string name="export_put_done">На консолі як %1$s. etaHEN завантажить його під час наступного запуску гри.</string>
+    <string name="export_put_done_ps4">На консолі як %1$s. GoldHEN завантажить його під час наступного запуску гри.</string>
 </resources>

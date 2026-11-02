@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">สำเนาส่วนเกินใช้พื้นที่ %1$s</string>
     <string name="files_dupes_hint">ชื่อและขนาดเหมือนกัน เก็บไว้อย่างละหนึ่งแล้วลบที่ไม่ต้องการ</string>
     <string name="memory_cheat_note">บันทึก (ไม่บังคับ): ทำอะไร ใช้กับเกมเวอร์ชันไหน</string>
+    <string name="running_title">อะไรทำงานอยู่</string>
+    <string name="running_hint">สิ่งที่ตอบสนองที่ %1$s ตอนนี้ บริการที่ไม่ตอบไม่ใช่ปัญหา ถ้าคุณไม่ได้ใช้</string>
+    <string name="running_on">ตอบ</string>
+    <string name="running_off">ไม่ตอบ</string>
+    <string name="running_web">เว็บเซิร์ฟเวอร์ (websrv)</string>
+    <string name="running_shell">เชลล์ (shsrv)</string>
+    <string name="home_up_exact">เจลเบรกเมื่อ %1$s ที่แล้ว (เวลา %2$s)</string>
+    <string name="home_up_atleast">ตอบมาแล้วอย่างน้อย %1$s</string>
+    <string name="files_speed">ทดสอบความเร็ว</string>
+    <string name="speed_running">กำลังส่ง %1$s ไปยังเครื่องแล้วอ่านกลับ…</string>
+    <string name="speed_up">ไปยังเครื่อง: %1$s ต่อวินาที</string>
+    <string name="speed_down">จากเครื่อง: %1$s ต่อวินาที</string>
+    <string name="speed_hint">ต่ำกว่าราว 3 MB ต่อวินาทีมักหมายถึง Wi-Fi อ่อน: เข้าใกล้ขึ้น ใช้ 5 GHz หรือเสียบสายเครื่องเข้ากับเราเตอร์ ไฟล์ทดสอบจะถูกลบภายหลัง</string>
+    <string name="files_upload_zip">อัปโหลด zip เป็นโฟลเดอร์</string>
+    <string name="zipup_progress">กำลังแตกไฟล์ลงเครื่อง: %1$d ไฟล์, %2$s</string>
+    <string name="zipup_done">แตกไฟล์ %1$d ไฟล์ไปที่ %2$s แล้ว</string>
+    <string name="zipup_empty">zip นั้นไม่มีไฟล์</string>
+    <string name="zipup_bad">อ่านไฟล์นั้นเป็น zip ไม่ได้</string>
+    <string name="export_put">ใส่ลงเครื่อง</string>
+    <string name="export_put_done">อยู่ในเครื่องเป็น %1$s แล้ว etaHEN จะโหลดเมื่อเริ่มเกมครั้งถัดไป</string>
+    <string name="export_put_done_ps4">อยู่ในเครื่องเป็น %1$s แล้ว GoldHEN จะโหลดเมื่อเริ่มเกมครั้งถัดไป</string>
 </resources>

@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">जास्तीच्या प्रती %1$s जागा घेतात.</string>
     <string name="files_dupes_hint">एकच नाव आणि आकार. प्रत्येकी एक ठेवा आणि गरज नसलेल्या हटवा.</string>
     <string name="memory_cheat_note">टीप (ऐच्छिक): हे काय करते, खेळाची कोणती आवृत्ती</string>
+    <string name="running_title">काय चालू आहे</string>
+    <string name="running_hint">आत्ता %1$s वर काय उत्तर देत आहे. उत्तर न देणारी सेवा तुम्ही वापरत नसाल तर अडचण नाही.</string>
+    <string name="running_on">उत्तर देते</string>
+    <string name="running_off">उत्तर नाही</string>
+    <string name="running_web">वेब सर्व्हर (websrv)</string>
+    <string name="running_shell">शेल (shsrv)</string>
+    <string name="home_up_exact">%1$s पूर्वी जेलब्रेक (%2$s वाजता)</string>
+    <string name="home_up_atleast">किमान %1$s पासून उत्तर देत आहे</string>
+    <string name="files_speed">वेग चाचणी</string>
+    <string name="speed_running">कन्सोलला %1$s पाठवून परत वाचत आहे…</string>
+    <string name="speed_up">कन्सोलकडे: सेकंदाला %1$s</string>
+    <string name="speed_down">कन्सोलकडून: सेकंदाला %1$s</string>
+    <string name="speed_hint">सेकंदाला सुमारे 3 MB पेक्षा कमी म्हणजे सहसा कमकुवत Wi-Fi: जवळ जा, 5 GHz वापरा, किंवा कन्सोल राउटरला केबलने जोडा. चाचणी फाइल नंतर हटवली जाते.</string>
+    <string name="files_upload_zip">zip फोल्डर म्हणून अपलोड करा</string>
+    <string name="zipup_progress">कन्सोलवर उघडत आहे: %1$d फाइल्स, %2$s</string>
+    <string name="zipup_done">%2$s मध्ये %1$d फाइल्स उघडल्या</string>
+    <string name="zipup_empty">त्या zip मध्ये फाइल्स नाहीत.</string>
+    <string name="zipup_bad">ती फाइल zip म्हणून वाचता येत नाही.</string>
+    <string name="export_put">कन्सोलवर ठेवा</string>
+    <string name="export_put_done">कन्सोलवर %1$s म्हणून. पुढच्या वेळी खेळ सुरू झाल्यावर etaHEN ते लोड करेल.</string>
+    <string name="export_put_done_ps4">कन्सोलवर %1$s म्हणून. पुढच्या वेळी खेळ सुरू झाल्यावर GoldHEN ते लोड करेल.</string>
 </resources>

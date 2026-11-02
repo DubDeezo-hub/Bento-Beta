@@ -1,5 +1,9 @@
 package com.example.pssender
 
+import androidx.compose.runtime.rememberCoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import android.content.Context
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
@@ -38,6 +42,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.foundation.layout.height
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -301,6 +306,18 @@ internal fun LazyListScope.scanItems(s: MemorySnapshot, open: (MemoryDialog) -> 
                         Chip(hexAddr(w.address).takeLast(8) + " = " + (w.value?.let { w.type.format(it) } ?: "…"), selected = false) {
                             open(MemoryDialog.WatchMenu(w))
                         }
+                    }
+                }
+                // A small line of each watched value's last readings, lowest and highest beside it
+                m.watches.filter { it.history.size >= 2 }.forEach { w ->
+                    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Text(hexAddr(w.address).takeLast(8), style = MaterialTheme.typography.labelSmall, fontFamily = FontFamily.Monospace)
+                        Sparkline(w.history, Modifier.weight(1f).height(28.dp))
+                        Text(
+                            fmtReading(w.history.min()) + "–" + fmtReading(w.history.max()),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
                     }
                 }
             }
@@ -598,7 +615,9 @@ internal fun PointerPanel(target: Cheat, playing: Boolean) {
 @Composable
 internal fun CheatFileOutDialog(d: MemoryDialog.CheatFileOut, onClose: () -> Unit) {
     val ctx = LocalContext.current
+    val scope = rememberCoroutineScope()
     var saved by remember { mutableStateOf("") }
+    var putting by remember { mutableStateOf(false) }
     AlertDialog(
         onDismissRequest = onClose,
         title = { TipTitle(str(R.string.export_title), Tip.MEM_EXPORT) },
@@ -617,6 +636,24 @@ internal fun CheatFileOutDialog(d: MemoryDialog.CheatFileOut, onClose: () -> Uni
                         }) { Text(str(R.string.export_save)) }
                         TextButton(onClick = { copyText(ctx, "cheat file", d.text, AppText.get(R.string.help_copied)) }) { Text(str(R.string.klog_copy)) }
                     }
+                    // Straight into the cheat folder on the console, so the game picks it up without copying by hand
+                    val ftp = ActiveConsole.ftp
+                    val ps4 = MemorySession.snapshot?.info?.isPs4 == true
+                    OutlinedButton(enabled = ftp != null && !putting, onClick = {
+                        if (ftp != null) {
+                            putting = true
+                            scope.launch {
+                                saved = try {
+                                    val path = withContext(Dispatchers.IO) { ftpPutFile(ftp, if (ps4) GOLDHEN_CHEATS_DIR else ETAHEN_CHEATS_DIR, d.name, d.text) }
+                                    AppText.get(if (ps4) R.string.export_put_done_ps4 else R.string.export_put_done, path)
+                                } catch (e: Exception) {
+                                    ftpFailureMessage(e)
+                                }
+                                putting = false
+                            }
+                        }
+                    }) { Text(str(R.string.export_put)) }
+                    if (ftp == null) Text(str(R.string.files_need_ip), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
                 if (saved.isNotEmpty()) Text(saved, style = MaterialTheme.typography.bodySmall)
             }
@@ -624,6 +661,27 @@ internal fun CheatFileOutDialog(d: MemoryDialog.CheatFileOut, onClose: () -> Uni
         confirmButton = { TextButton(onClick = onClose) { Text(str(R.string.action_close)) } }
     )
 }
+
+/** A small line through [values], low at the bottom and high at the top. */
+@Composable
+private fun Sparkline(values: List<Double>, modifier: Modifier) {
+    androidx.compose.foundation.Canvas(modifier) {
+        if (values.size < 2) return@Canvas
+        val lo = values.min()
+        val span = (values.max() - lo).takeIf { it > 0 } ?: 1.0
+        val stepX = size.width / (values.size - 1)
+        val path = androidx.compose.ui.graphics.Path()
+        values.forEachIndexed { i, v ->
+            val x = i * stepX
+            val y = size.height - ((v - lo) / span * size.height).toFloat()
+            if (i == 0) path.moveTo(x, y) else path.lineTo(x, y)
+        }
+        drawPath(path, BLOOD_BRIGHT, style = androidx.compose.ui.graphics.drawscope.Stroke(width = 2.dp.toPx()))
+    }
+}
+
+/** A reading as short text: whole numbers without ".0". */
+private fun fmtReading(v: Double): String = if (v == Math.floor(v) && Math.abs(v) < 1e15) v.toLong().toString() else "%.2f".format(v)
 
 /** Opens the phone's share sheet with cheats as [text]. */
 private fun shareText(ctx: Context, text: String) {

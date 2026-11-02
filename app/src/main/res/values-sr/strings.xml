@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">Вишак копија заузима %1$s.</string>
     <string name="files_dupes_hint">Исто име и величина. Задржите по једну и обришите оне које вам не требају.</string>
     <string name="memory_cheat_note">Белешка (опционо): шта ради, за коју верзију игре</string>
+    <string name="running_title">Шта ради</string>
+    <string name="running_hint">Шта тренутно одговара на %1$s. Услуга која не одговара није проблем, осим ако је користите.</string>
+    <string name="running_on">одговара</string>
+    <string name="running_off">нема одговора</string>
+    <string name="running_web">Веб сервер (websrv)</string>
+    <string name="running_shell">Шкољка (shsrv)</string>
+    <string name="home_up_exact">Џејлбрејк пре %1$s (у %2$s)</string>
+    <string name="home_up_atleast">Одговара најмање %1$s</string>
+    <string name="files_speed">Тест брзине</string>
+    <string name="speed_running">Шаљем %1$s на конзолу и читам назад…</string>
+    <string name="speed_up">Ка конзоли: %1$s у секунди</string>
+    <string name="speed_down">Са конзоле: %1$s у секунди</string>
+    <string name="speed_hint">Испод око 3 MB у секунди обично значи слаб Wi-Fi: приђите ближе, користите 5 GHz или повежите конзолу каблом са рутером. Пробна датотека се затим брише.</string>
+    <string name="files_upload_zip">Отпреми zip као фасциклу</string>
+    <string name="zipup_progress">Распакујем на конзолу: %1$d датотека, %2$s</string>
+    <string name="zipup_done">Распаковано %1$d датотека у %2$s</string>
+    <string name="zipup_empty">Тај zip нема датотека.</string>
+    <string name="zipup_bad">Та датотека се не може прочитати као zip.</string>
+    <string name="export_put">Стави на конзолу</string>
+    <string name="export_put_done">На конзоли као %1$s. etaHEN ће га учитати при следећем покретању игре.</string>
+    <string name="export_put_done_ps4">На конзоли као %1$s. GoldHEN ће га учитати при следећем покретању игре.</string>
 </resources>

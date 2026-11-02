@@ -1209,4 +1209,25 @@
     <string name="files_dupes_extra">De extra kopiorna tar %1$s.</string>
     <string name="files_dupes_hint">Samma namn och storlek. Behåll en av varje och radera de du inte behöver.</string>
     <string name="memory_cheat_note">Anteckning (valfri): vad den gör, vilken spelversion</string>
+    <string name="running_title">Vad körs</string>
+    <string name="running_hint">Vad som svarar på %1$s just nu. En tjänst som inte svarar är inget problem om du inte använder den.</string>
+    <string name="running_on">svarar</string>
+    <string name="running_off">inget svar</string>
+    <string name="running_web">Webbserver (websrv)</string>
+    <string name="running_shell">Skal (shsrv)</string>
+    <string name="home_up_exact">Jailbreakad för %1$s sedan (kl. %2$s)</string>
+    <string name="home_up_atleast">Har svarat i minst %1$s</string>
+    <string name="files_speed">Hastighetstest</string>
+    <string name="speed_running">Skickar %1$s till konsolen och läser tillbaka…</string>
+    <string name="speed_up">Till konsolen: %1$s per sekund</string>
+    <string name="speed_down">Från konsolen: %1$s per sekund</string>
+    <string name="speed_hint">Under ungefär 3 MB per sekund betyder oftast svagt wifi: gå närmare, använd 5 GHz eller koppla konsolen till routern med kabel. Testfilen tas bort efteråt.</string>
+    <string name="files_upload_zip">Ladda upp en zip som en mapp</string>
+    <string name="zipup_progress">Packar upp på konsolen: %1$d filer, %2$s</string>
+    <string name="zipup_done">Packade upp %1$d filer i %2$s</string>
+    <string name="zipup_empty">Den zip-filen har inga filer.</string>
+    <string name="zipup_bad">Den filen kan inte läsas som zip.</string>
+    <string name="export_put">Lägg på konsolen</string>
+    <string name="export_put_done">På konsolen som %1$s. etaHEN läser in den nästa gång spelet startar.</string>
+    <string name="export_put_done_ps4">På konsolen som %1$s. GoldHEN läser in den nästa gång spelet startar.</string>
 </resources>

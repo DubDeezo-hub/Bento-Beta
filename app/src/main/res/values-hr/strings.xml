@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">Suvišne kopije zauzimaju %1$s.</string>
     <string name="files_dupes_hint">Isto ime i ista veličina. Zadrži po jednu i izbriši one koje ti ne trebaju.</string>
     <string name="memory_cheat_note">Bilješka (neobavezno): što radi, koja verzija igre</string>
+    <string name="running_title">Što radi</string>
+    <string name="running_hint">Što trenutno odgovara na %1$s. Usluga koja ne odgovara nije problem, osim ako je koristiš.</string>
+    <string name="running_on">odgovara</string>
+    <string name="running_off">nema odgovora</string>
+    <string name="running_web">Web poslužitelj (websrv)</string>
+    <string name="running_shell">Ljuska (shsrv)</string>
+    <string name="home_up_exact">Jailbreak prije %1$s (u %2$s)</string>
+    <string name="home_up_atleast">Odgovara najmanje %1$s</string>
+    <string name="files_speed">Test brzine</string>
+    <string name="speed_running">Šaljem %1$s na konzolu i čitam natrag…</string>
+    <string name="speed_up">Prema konzoli: %1$s u sekundi</string>
+    <string name="speed_down">S konzole: %1$s u sekundi</string>
+    <string name="speed_hint">Ispod oko 3 MB u sekundi obično znači slab Wi-Fi: približi se, koristi 5 GHz ili spoji konzolu kabelom na usmjerivač. Testna datoteka se zatim briše.</string>
+    <string name="files_upload_zip">Učitaj zip kao mapu</string>
+    <string name="zipup_progress">Raspakiravam na konzolu: %1$d datoteka, %2$s</string>
+    <string name="zipup_done">Raspakirano %1$d datoteka u %2$s</string>
+    <string name="zipup_empty">Taj zip nema datoteka.</string>
+    <string name="zipup_bad">Ta se datoteka ne može pročitati kao zip.</string>
+    <string name="export_put">Stavi na konzolu</string>
+    <string name="export_put_done">Na konzoli kao %1$s. etaHEN će je učitati pri sljedećem pokretanju igre.</string>
+    <string name="export_put_done_ps4">Na konzoli kao %1$s. GoldHEN će je učitati pri sljedećem pokretanju igre.</string>
 </resources>

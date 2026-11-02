@@ -170,6 +170,7 @@ fun HomeTab(
     onCheck: () -> Unit,
     onOpenPayloads: () -> Unit,
     shelfVersion: Int = 0,
+    upLine: String = "",
     install: @Composable () -> Unit
 ) {
     val ctx = LocalContext.current
@@ -219,6 +220,8 @@ fun HomeTab(
     val ringPart: @Composable () -> Unit = {
         Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxWidth().padding(top = 4.dp)) {
             StatusRing(up, counted.size, consoleHeadline(level, down, true, type), host.trim(), onEdit)
+            // How long ago the last jailbreak was (the loader started answering)
+            if (upLine.isNotEmpty()) Text(upLine, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(top = 8.dp))
             Row(
                 horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),
                 modifier = Modifier.fillMaxWidth().padding(top = 14.dp).horizontalScroll(rememberScrollState())

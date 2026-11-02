@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">Ylimääräiset kopiot vievät %1$s.</string>
     <string name="files_dupes_hint">Sama nimi ja koko. Pidä yksi kustakin ja poista ne, joita et tarvitse.</string>
     <string name="memory_cheat_note">Huomautus (valinnainen): mitä tekee, mikä peliversio</string>
+    <string name="running_title">Mikä on käynnissä</string>
+    <string name="running_hint">Mikä vastaa osoitteessa %1$s juuri nyt. Palvelu, joka ei vastaa, ei ole ongelma, ellet käytä sitä.</string>
+    <string name="running_on">vastaa</string>
+    <string name="running_off">ei vastaa</string>
+    <string name="running_web">Verkkopalvelin (websrv)</string>
+    <string name="running_shell">Komentotulkki (shsrv)</string>
+    <string name="home_up_exact">Jailbreak %1$s sitten (klo %2$s)</string>
+    <string name="home_up_atleast">Vastannut vähintään %1$s</string>
+    <string name="files_speed">Nopeustesti</string>
+    <string name="speed_running">Lähetetään %1$s konsoliin ja luetaan takaisin…</string>
+    <string name="speed_up">Konsoliin: %1$s sekunnissa</string>
+    <string name="speed_down">Konsolista: %1$s sekunnissa</string>
+    <string name="speed_hint">Alle noin 3 Mt sekunnissa tarkoittaa yleensä heikkoa Wi-Fiä: mene lähemmäs, käytä 5 GHz:ä tai kytke konsoli reitittimeen kaapelilla. Testitiedosto poistetaan lopuksi.</string>
+    <string name="files_upload_zip">Lähetä zip kansiona</string>
+    <string name="zipup_progress">Puretaan konsoliin: %1$d tiedostoa, %2$s</string>
+    <string name="zipup_done">Purettiin %1$d tiedostoa kansioon %2$s</string>
+    <string name="zipup_empty">Siinä zipissä ei ole tiedostoja.</string>
+    <string name="zipup_bad">Tiedostoa ei voi lukea zipinä.</string>
+    <string name="export_put">Laita konsoliin</string>
+    <string name="export_put_done">Konsolissa nimellä %1$s. etaHEN lataa sen, kun peli käynnistyy seuraavan kerran.</string>
+    <string name="export_put_done_ps4">Konsolissa nimellä %1$s. GoldHEN lataa sen, kun peli käynnistyy seuraavan kerran.</string>
 </resources>

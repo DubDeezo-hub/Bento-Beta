@@ -1213,4 +1213,25 @@
     <string name="files_dupes_extra">The extra copies take %1$s.</string>
     <string name="files_dupes_hint">Same name and same size. Keep one of each and delete the others you don\'t need.</string>
     <string name="memory_cheat_note">Note (optional): what it does, which game version</string>
+    <string name="running_title">What\'s running</string>
+    <string name="running_hint">What answers on %1$s right now. A service that doesn\'t answer isn\'t a problem unless you use it.</string>
+    <string name="running_on">answers</string>
+    <string name="running_off">no answer</string>
+    <string name="running_web">Web server (websrv)</string>
+    <string name="running_shell">Shell (shsrv)</string>
+    <string name="home_up_exact">Jailbroken %1$s ago (at %2$s)</string>
+    <string name="home_up_atleast">Answering for at least %1$s</string>
+    <string name="files_speed">Speed test</string>
+    <string name="speed_running">Sending %1$s to the console and reading it back…</string>
+    <string name="speed_up">To the console: %1$s a second</string>
+    <string name="speed_down">From the console: %1$s a second</string>
+    <string name="speed_hint">Under about 3 MB a second usually means weak Wi-Fi: move closer, use 5 GHz, or plug the console into the router. The test file is removed afterwards.</string>
+    <string name="files_upload_zip">Upload a zip as a folder</string>
+    <string name="zipup_progress">Unpacking onto the console: %1$d files, %2$s</string>
+    <string name="zipup_done">Unpacked %1$d files into %2$s</string>
+    <string name="zipup_empty">That zip has no files in it.</string>
+    <string name="zipup_bad">That file can\'t be read as a zip.</string>
+    <string name="export_put">Put on the console</string>
+    <string name="export_put_done">On the console as %1$s. etaHEN loads it the next time the game starts.</string>
+    <string name="export_put_done_ps4">On the console as %1$s. GoldHEN loads it the next time the game starts.</string>
 </resources>

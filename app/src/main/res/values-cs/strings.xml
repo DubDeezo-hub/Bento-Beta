@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">Přebytečné kopie zabírají %1$s.</string>
     <string name="files_dupes_hint">Stejný název i velikost. Jednu od každého si nechte a ostatní, které nepotřebujete, smažte.</string>
     <string name="memory_cheat_note">Poznámka (volitelná): co dělá, pro jakou verzi hry</string>
+    <string name="running_title">Co běží</string>
+    <string name="running_hint">Co právě odpovídá na %1$s. Služba, která neodpovídá, nevadí, pokud ji nepoužíváte.</string>
+    <string name="running_on">odpovídá</string>
+    <string name="running_off">bez odpovědi</string>
+    <string name="running_web">Webový server (websrv)</string>
+    <string name="running_shell">Shell (shsrv)</string>
+    <string name="home_up_exact">Jailbreak před %1$s (v %2$s)</string>
+    <string name="home_up_atleast">Odpovídá nejméně %1$s</string>
+    <string name="files_speed">Test rychlosti</string>
+    <string name="speed_running">Odesílám %1$s do konzole a čtu je zpět…</string>
+    <string name="speed_up">Do konzole: %1$s za sekundu</string>
+    <string name="speed_down">Z konzole: %1$s za sekundu</string>
+    <string name="speed_hint">Méně než asi 3 MB za sekundu obvykle znamená slabou Wi-Fi: přibližte se, použijte 5 GHz nebo připojte konzoli k routeru kabelem. Testovací soubor se poté smaže.</string>
+    <string name="files_upload_zip">Nahrát zip jako složku</string>
+    <string name="zipup_progress">Rozbaluji do konzole: %1$d souborů, %2$s</string>
+    <string name="zipup_done">Rozbaleno %1$d souborů do %2$s</string>
+    <string name="zipup_empty">Ten zip neobsahuje žádné soubory.</string>
+    <string name="zipup_bad">Ten soubor nejde přečíst jako zip.</string>
+    <string name="export_put">Dát do konzole</string>
+    <string name="export_put_done">V konzoli jako %1$s. etaHEN ho načte při příštím spuštění hry.</string>
+    <string name="export_put_done_ps4">V konzoli jako %1$s. GoldHEN ho načte při příštím spuštění hry.</string>
 </resources>

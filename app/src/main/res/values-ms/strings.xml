@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">Salinan lebihan mengambil %1$s.</string>
     <string name="files_dupes_hint">Nama dan saiz sama. Simpan satu daripada setiap satu dan padam yang tidak diperlukan.</string>
     <string name="memory_cheat_note">Nota (pilihan): apa fungsinya, versi permainan yang mana</string>
+    <string name="running_title">Apa yang berjalan</string>
+    <string name="running_hint">Apa yang menjawab di %1$s sekarang. Perkhidmatan yang tidak menjawab bukan masalah melainkan anda menggunakannya.</string>
+    <string name="running_on">menjawab</string>
+    <string name="running_off">tiada jawapan</string>
+    <string name="running_web">Pelayan web (websrv)</string>
+    <string name="running_shell">Shell (shsrv)</string>
+    <string name="home_up_exact">Di-jailbreak %1$s lalu (pada %2$s)</string>
+    <string name="home_up_atleast">Menjawab sekurang-kurangnya %1$s</string>
+    <string name="files_speed">Ujian kelajuan</string>
+    <string name="speed_running">Menghantar %1$s ke konsol dan membacanya semula…</string>
+    <string name="speed_up">Ke konsol: %1$s sesaat</string>
+    <string name="speed_down">Dari konsol: %1$s sesaat</string>
+    <string name="speed_hint">Di bawah kira-kira 3 MB sesaat biasanya bermaksud Wi-Fi lemah: dekatkan diri, guna 5 GHz, atau sambung konsol ke penghala dengan kabel. Fail ujian dipadam selepas itu.</string>
+    <string name="files_upload_zip">Muat naik zip sebagai folder</string>
+    <string name="zipup_progress">Membuka ke konsol: %1$d fail, %2$s</string>
+    <string name="zipup_done">%1$d fail dibuka ke %2$s</string>
+    <string name="zipup_empty">Zip itu tiada fail.</string>
+    <string name="zipup_bad">Fail itu tidak boleh dibaca sebagai zip.</string>
+    <string name="export_put">Letak pada konsol</string>
+    <string name="export_put_done">Pada konsol sebagai %1$s. etaHEN akan memuatkannya apabila permainan dimulakan semula.</string>
+    <string name="export_put_done_ps4">Pada konsol sebagai %1$s. GoldHEN akan memuatkannya apabila permainan dimulakan semula.</string>
 </resources>

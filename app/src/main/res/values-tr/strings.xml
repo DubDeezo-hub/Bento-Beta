@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">Fazla kopyalar %1$s yer kaplıyor.</string>
     <string name="files_dupes_hint">Aynı ad ve aynı boyut. Her birinden birini tutun, gerekmeyenleri silin.</string>
     <string name="memory_cheat_note">Not (isteğe bağlı): ne yapar, hangi oyun sürümü</string>
+    <string name="running_title">Neler çalışıyor</string>
+    <string name="running_hint">Şu an %1$s üzerinde neyin yanıt verdiği. Yanıt vermeyen bir hizmet, kullanmıyorsanız sorun değildir.</string>
+    <string name="running_on">yanıt veriyor</string>
+    <string name="running_off">yanıt yok</string>
+    <string name="running_web">Web sunucusu (websrv)</string>
+    <string name="running_shell">Kabuk (shsrv)</string>
+    <string name="home_up_exact">%1$s önce jailbreak yapıldı (%2$s)</string>
+    <string name="home_up_atleast">En az %1$s süredir yanıt veriyor</string>
+    <string name="files_speed">Hız testi</string>
+    <string name="speed_running">Konsola %1$s gönderiliyor ve geri okunuyor…</string>
+    <string name="speed_up">Konsola: saniyede %1$s</string>
+    <string name="speed_down">Konsoldan: saniyede %1$s</string>
+    <string name="speed_hint">Saniyede yaklaşık 3 MB\'ın altı genelde zayıf Wi-Fi demektir: yaklaşın, 5 GHz kullanın ya da konsolu yönlendiriciye kabloyla bağlayın. Test dosyası sonra silinir.</string>
+    <string name="files_upload_zip">Zip\'i klasör olarak yükle</string>
+    <string name="zipup_progress">Konsola açılıyor: %1$d dosya, %2$s</string>
+    <string name="zipup_done">%1$d dosya %2$s içine açıldı</string>
+    <string name="zipup_empty">O zip\'te dosya yok.</string>
+    <string name="zipup_bad">Bu dosya zip olarak okunamıyor.</string>
+    <string name="export_put">Konsola koy</string>
+    <string name="export_put_done">Konsolda %1$s olarak. etaHEN oyun bir sonraki açılışta yükler.</string>
+    <string name="export_put_done_ps4">Konsolda %1$s olarak. GoldHEN oyun bir sonraki açılışta yükler.</string>
 </resources>

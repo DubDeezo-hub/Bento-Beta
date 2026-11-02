@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">അധിക പകർപ്പുകൾ %1$s എടുക്കുന്നു.</string>
     <string name="files_dupes_hint">ഒരേ പേരും വലുപ്പവും. ഓരോന്നിൽ നിന്നും ഒന്ന് സൂക്ഷിച്ച് ആവശ്യമില്ലാത്തവ മായ്ക്കുക.</string>
     <string name="memory_cheat_note">കുറിപ്പ് (ഐച്ഛികം): എന്ത് ചെയ്യുന്നു, ഗെയിമിന്റെ ഏത് പതിപ്പ്</string>
+    <string name="running_title">എന്താണ് പ്രവർത്തിക്കുന്നത്</string>
+    <string name="running_hint">ഇപ്പോൾ %1$s-ൽ എന്താണ് പ്രതികരിക്കുന്നത്. പ്രതികരിക്കാത്ത സേവനം നിങ്ങൾ ഉപയോഗിക്കുന്നില്ലെങ്കിൽ പ്രശ്നമല്ല.</string>
+    <string name="running_on">പ്രതികരിക്കുന്നു</string>
+    <string name="running_off">പ്രതികരണമില്ല</string>
+    <string name="running_web">വെബ് സെർവർ (websrv)</string>
+    <string name="running_shell">ഷെൽ (shsrv)</string>
+    <string name="home_up_exact">%1$s മുമ്പ് ജയിൽബ്രേക്ക് (%2$s-ന്)</string>
+    <string name="home_up_atleast">കുറഞ്ഞത് %1$s ആയി പ്രതികരിക്കുന്നു</string>
+    <string name="files_speed">വേഗ പരിശോധന</string>
+    <string name="speed_running">കൺസോളിലേക്ക് %1$s അയച്ച് തിരികെ വായിക്കുന്നു…</string>
+    <string name="speed_up">കൺസോളിലേക്ക്: സെക്കൻഡിൽ %1$s</string>
+    <string name="speed_down">കൺസോളിൽ നിന്ന്: സെക്കൻഡിൽ %1$s</string>
+    <string name="speed_hint">സെക്കൻഡിൽ ഏകദേശം 3 MB-യിൽ താഴെയെങ്കിൽ സാധാരണ ദുർബലമായ Wi-Fi ആണ്: അടുത്തേക്ക് വരിക, 5 GHz ഉപയോഗിക്കുക, അല്ലെങ്കിൽ കൺസോൾ റൂട്ടറിലേക്ക് കേബിളിൽ ബന്ധിപ്പിക്കുക. പരിശോധനാ ഫയൽ പിന്നീട് മായ്ക്കും.</string>
+    <string name="files_upload_zip">zip ഫോൾഡറായി അപ്‌ലോഡ് ചെയ്യുക</string>
+    <string name="zipup_progress">കൺസോളിലേക്ക് തുറക്കുന്നു: %1$d ഫയലുകൾ, %2$s</string>
+    <string name="zipup_done">%2$s-ലേക്ക് %1$d ഫയലുകൾ തുറന്നു</string>
+    <string name="zipup_empty">ആ zip-ൽ ഫയലുകളൊന്നുമില്ല.</string>
+    <string name="zipup_bad">ആ ഫയൽ zip ആയി വായിക്കാനാവില്ല.</string>
+    <string name="export_put">കൺസോളിൽ വയ്ക്കുക</string>
+    <string name="export_put_done">കൺസോളിൽ %1$s ആയി. അടുത്ത തവണ ഗെയിം തുടങ്ങുമ്പോൾ etaHEN ഇത് ലോഡ് ചെയ്യും.</string>
+    <string name="export_put_done_ps4">കൺസോളിൽ %1$s ആയി. അടുത്ത തവണ ഗെയിം തുടങ്ങുമ്പോൾ GoldHEN ഇത് ലോഡ് ചെയ്യും.</string>
 </resources>

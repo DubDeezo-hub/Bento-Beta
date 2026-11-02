@@ -1209,4 +1209,25 @@
     <string name="files_dupes_extra">Las copias de más ocupan %1$s.</string>
     <string name="files_dupes_hint">Mismo nombre y mismo tamaño. Conserva una de cada y elimina las que no necesites.</string>
     <string name="memory_cheat_note">Nota (opcional): qué hace, qué versión del juego</string>
+    <string name="running_title">Qué está activo</string>
+    <string name="running_hint">Lo que responde en %1$s ahora mismo. Un servicio que no responde no es un problema salvo que lo uses.</string>
+    <string name="running_on">responde</string>
+    <string name="running_off">sin respuesta</string>
+    <string name="running_web">Servidor web (websrv)</string>
+    <string name="running_shell">Shell (shsrv)</string>
+    <string name="home_up_exact">Jailbreak hace %1$s (a las %2$s)</string>
+    <string name="home_up_atleast">Responde desde hace al menos %1$s</string>
+    <string name="files_speed">Prueba de velocidad</string>
+    <string name="speed_running">Enviando %1$s a la consola y leyéndolo de vuelta…</string>
+    <string name="speed_up">Hacia la consola: %1$s por segundo</string>
+    <string name="speed_down">Desde la consola: %1$s por segundo</string>
+    <string name="speed_hint">Menos de unos 3 MB por segundo suele indicar Wi-Fi débil: acércate, usa 5 GHz o conecta la consola al router por cable. El archivo de prueba se borra después.</string>
+    <string name="files_upload_zip">Subir un zip como carpeta</string>
+    <string name="zipup_progress">Descomprimiendo en la consola: %1$d archivos, %2$s</string>
+    <string name="zipup_done">Se descomprimieron %1$d archivos en %2$s</string>
+    <string name="zipup_empty">Ese zip no tiene archivos.</string>
+    <string name="zipup_bad">Ese archivo no se puede leer como zip.</string>
+    <string name="export_put">Poner en la consola</string>
+    <string name="export_put_done">En la consola como %1$s. etaHEN lo cargará la próxima vez que se inicie el juego.</string>
+    <string name="export_put_done_ps4">En la consola como %1$s. GoldHEN lo cargará la próxima vez que se inicie el juego.</string>
 </resources>

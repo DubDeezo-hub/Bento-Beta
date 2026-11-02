@@ -1209,4 +1209,25 @@
     <string name="files_dupes_extra">Le copie in più occupano %1$s.</string>
     <string name="files_dupes_hint">Stesso nome e stessa dimensione. Tienine una di ciascuna ed elimina quelle che non ti servono.</string>
     <string name="memory_cheat_note">Nota (facoltativa): cosa fa, quale versione del gioco</string>
+    <string name="running_title">Cosa è attivo</string>
+    <string name="running_hint">Cosa risponde su %1$s in questo momento. Un servizio che non risponde non è un problema se non lo usi.</string>
+    <string name="running_on">risponde</string>
+    <string name="running_off">nessuna risposta</string>
+    <string name="running_web">Server web (websrv)</string>
+    <string name="running_shell">Shell (shsrv)</string>
+    <string name="home_up_exact">Jailbreak %1$s fa (alle %2$s)</string>
+    <string name="home_up_atleast">Risponde da almeno %1$s</string>
+    <string name="files_speed">Test di velocità</string>
+    <string name="speed_running">Invio di %1$s alla console e rilettura…</string>
+    <string name="speed_up">Verso la console: %1$s al secondo</string>
+    <string name="speed_down">Dalla console: %1$s al secondo</string>
+    <string name="speed_hint">Meno di circa 3 MB al secondo di solito significa Wi-Fi debole: avvicinati, usa i 5 GHz o collega la console al router via cavo. Il file di prova viene poi eliminato.</string>
+    <string name="files_upload_zip">Carica uno zip come cartella</string>
+    <string name="zipup_progress">Estrazione sulla console: %1$d file, %2$s</string>
+    <string name="zipup_done">Estratti %1$d file in %2$s</string>
+    <string name="zipup_empty">Quello zip non contiene file.</string>
+    <string name="zipup_bad">Quel file non si può leggere come zip.</string>
+    <string name="export_put">Metti sulla console</string>
+    <string name="export_put_done">Sulla console come %1$s. etaHEN lo caricherà al prossimo avvio del gioco.</string>
+    <string name="export_put_done_ps4">Sulla console come %1$s. GoldHEN lo caricherà al prossimo avvio del gioco.</string>
 </resources>

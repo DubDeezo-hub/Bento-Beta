@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">Ang mga sobrang kopya ay kumukuha ng %1$s.</string>
     <string name="files_dupes_hint">Parehong pangalan at laki. Magtira ng isa sa bawat isa at burahin ang hindi mo kailangan.</string>
     <string name="memory_cheat_note">Tala (opsyonal): ano ang ginagawa, aling bersyon ng laro</string>
+    <string name="running_title">Ano ang tumatakbo</string>
+    <string name="running_hint">Ano ang sumasagot sa %1$s ngayon. Hindi problema ang serbisyong hindi sumasagot maliban kung ginagamit mo ito.</string>
+    <string name="running_on">sumasagot</string>
+    <string name="running_off">walang sagot</string>
+    <string name="running_web">Web server (websrv)</string>
+    <string name="running_shell">Shell (shsrv)</string>
+    <string name="home_up_exact">Na-jailbreak %1$s na ang nakalipas (%2$s)</string>
+    <string name="home_up_atleast">Sumasagot nang hindi bababa sa %1$s</string>
+    <string name="files_speed">Speed test</string>
+    <string name="speed_running">Nagpapadala ng %1$s sa console at binabasa pabalik…</string>
+    <string name="speed_up">Papunta sa console: %1$s bawat segundo</string>
+    <string name="speed_down">Mula sa console: %1$s bawat segundo</string>
+    <string name="speed_hint">Kapag mas mababa sa mga 3 MB bawat segundo, karaniwang mahina ang Wi-Fi: lumapit, gumamit ng 5 GHz, o ikabit ang console sa router. Binubura ang test file pagkatapos.</string>
+    <string name="files_upload_zip">Mag-upload ng zip bilang folder</string>
+    <string name="zipup_progress">Ina-unpack sa console: %1$d file, %2$s</string>
+    <string name="zipup_done">Na-unpack ang %1$d file sa %2$s</string>
+    <string name="zipup_empty">Walang file ang zip na iyon.</string>
+    <string name="zipup_bad">Hindi mabasa bilang zip ang file na iyon.</string>
+    <string name="export_put">Ilagay sa console</string>
+    <string name="export_put_done">Nasa console bilang %1$s. Ilo-load ito ng etaHEN sa susunod na pagbukas ng laro.</string>
+    <string name="export_put_done_ps4">Nasa console bilang %1$s. Ilo-load ito ng GoldHEN sa susunod na pagbukas ng laro.</string>
 </resources>

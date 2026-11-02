@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">অতিরিক্ত কপিগুলো %1$s জায়গা নেয়।</string>
     <string name="files_dupes_hint">একই নাম ও আকার। প্রতিটির একটি রাখুন, দরকার নেই এমনগুলো মুছুন।</string>
     <string name="memory_cheat_note">নোট (ঐচ্ছিক): কী করে, গেমের কোন সংস্করণ</string>
+    <string name="running_title">কী চলছে</string>
+    <string name="running_hint">এখন %1$s-এ কী সাড়া দিচ্ছে। যে সার্ভিস সাড়া দেয় না, আপনি ব্যবহার না করলে তা সমস্যা নয়।</string>
+    <string name="running_on">সাড়া দেয়</string>
+    <string name="running_off">সাড়া নেই</string>
+    <string name="running_web">ওয়েব সার্ভার (websrv)</string>
+    <string name="running_shell">শেল (shsrv)</string>
+    <string name="home_up_exact">%1$s আগে জেলব্রেক হয়েছে (%2$s-এ)</string>
+    <string name="home_up_atleast">অন্তত %1$s ধরে সাড়া দিচ্ছে</string>
+    <string name="files_speed">স্পিড টেস্ট</string>
+    <string name="speed_running">কনসোলে %1$s পাঠিয়ে আবার পড়ছে…</string>
+    <string name="speed_up">কনসোলে: প্রতি সেকেন্ডে %1$s</string>
+    <string name="speed_down">কনসোল থেকে: প্রতি সেকেন্ডে %1$s</string>
+    <string name="speed_hint">প্রতি সেকেন্ডে প্রায় ৩ MB-এর কম সাধারণত দুর্বল Wi-Fi বোঝায়: কাছে যান, ৫ GHz ব্যবহার করুন, বা কনসোল রাউটারে কেবল দিয়ে যুক্ত করুন। পরীক্ষার ফাইলটি পরে মুছে ফেলা হয়।</string>
+    <string name="files_upload_zip">zip ফোল্ডার হিসেবে আপলোড</string>
+    <string name="zipup_progress">কনসোলে আনপ্যাক হচ্ছে: %1$d ফাইল, %2$s</string>
+    <string name="zipup_done">%2$s-এ %1$d ফাইল আনপ্যাক হয়েছে</string>
+    <string name="zipup_empty">এই zip-এ কোনো ফাইল নেই।</string>
+    <string name="zipup_bad">এই ফাইলটি zip হিসেবে পড়া যায় না।</string>
+    <string name="export_put">কনসোলে রাখুন</string>
+    <string name="export_put_done">কনসোলে %1$s হিসেবে আছে। পরের বার গেম চালু হলে etaHEN এটি লোড করবে।</string>
+    <string name="export_put_done_ps4">কনসোলে %1$s হিসেবে আছে। পরের বার গেম চালু হলে GoldHEN এটি লোড করবে।</string>
 </resources>

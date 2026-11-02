@@ -1208,4 +1208,25 @@
     <string name="files_dupes_extra">اضافی نقلیں %1$s جگہ لیتی ہیں۔</string>
     <string name="files_dupes_hint">ایک ہی نام اور سائز۔ ہر ایک کی ایک رکھیں اور غیر ضروری حذف کریں۔</string>
     <string name="memory_cheat_note">نوٹ (اختیاری): یہ کیا کرتا ہے، گیم کا کون سا ورژن</string>
+    <string name="running_title">کیا چل رہا ہے</string>
+    <string name="running_hint">ابھی %1$s پر کیا جواب دے رہا ہے۔ جواب نہ دینے والی سروس مسئلہ نہیں، جب تک آپ اسے استعمال نہ کریں۔</string>
+    <string name="running_on">جواب دیتا ہے</string>
+    <string name="running_off">کوئی جواب نہیں</string>
+    <string name="running_web">ویب سرور (websrv)</string>
+    <string name="running_shell">شیل (shsrv)</string>
+    <string name="home_up_exact">‏%1$s پہلے جیل بریک ہوا (%2$s بجے)</string>
+    <string name="home_up_atleast">کم از کم %1$s سے جواب دے رہا ہے</string>
+    <string name="files_speed">اسپیڈ ٹیسٹ</string>
+    <string name="speed_running">کنسول کو %1$s بھیج کر واپس پڑھ رہا ہے…</string>
+    <string name="speed_up">کنسول کی طرف: فی سیکنڈ %1$s</string>
+    <string name="speed_down">کنسول سے: فی سیکنڈ %1$s</string>
+    <string name="speed_hint">تقریباً 3 MB فی سیکنڈ سے کم عموماً کمزور Wi-Fi ہے: قریب آئیں، 5 GHz استعمال کریں، یا کنسول کو روٹر سے کیبل سے جوڑیں۔ ٹیسٹ فائل بعد میں حذف کر دی جاتی ہے۔</string>
+    <string name="files_upload_zip">‏zip کو فولڈر کے طور پر اپ لوڈ کریں</string>
+    <string name="zipup_progress">کنسول پر کھول رہا ہے: %1$d فائلیں، %2$s</string>
+    <string name="zipup_done">‏%2$s میں %1$d فائلیں کھولی گئیں</string>
+    <string name="zipup_empty">اس zip میں کوئی فائل نہیں۔</string>
+    <string name="zipup_bad">یہ فائل zip کے طور پر نہیں پڑھی جا سکتی۔</string>
+    <string name="export_put">کنسول پر رکھیں</string>
+    <string name="export_put_done">کنسول پر %1$s کے طور پر۔ اگلی بار گیم شروع ہونے پر etaHEN اسے لوڈ کرے گا۔</string>
+    <string name="export_put_done_ps4">کنسول پر %1$s کے طور پر۔ اگلی بار گیم شروع ہونے پر GoldHEN اسے لوڈ کرے گا۔</string>
 </resources>

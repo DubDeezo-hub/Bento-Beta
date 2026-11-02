@@ -56,8 +56,15 @@ data class Cheat(
     val findable: Boolean get() = signature != null || pointer != null
 }
 
-/** An address shown at the top of Scan with its live value. */
-data class Watch(val address: Long, val type: ValueType, val value: ByteArray? = null)
+/** An address shown at the top of Scan with its live value, and its last few values as numbers (for a small graph). */
+data class Watch(val address: Long, val type: ValueType, val value: ByteArray? = null, val history: List<Double> = emptyList())
+
+/** How many of a watched value's last readings are kept for its graph. */
+const val WATCH_HISTORY = 60
+
+/** [history] with the reading [v] added (nothing when it isn't a number), keeping the last [max]. */
+fun withReading(history: List<Double>, v: Double?, max: Int = WATCH_HISTORY): List<Double> =
+    if (v == null || v.isNaN() || v.isInfinite()) history else (history + v).takeLast(max)
 
 /** One place a write changed: what was there before and what was written. */
 class UndoPart(val address: Long, val before: ByteArray, val after: ByteArray)
