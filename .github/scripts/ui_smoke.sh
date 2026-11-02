@@ -691,10 +691,9 @@ PY
   shot "fake-payload"
 
   # etaHEN settings: read from the console over FTP and shown as switches
-  files_folders
-  # etaHEN settings sit among the folded-away actions ("⋯")
-  dump && tap_text "⋯" || true
-  sleep 2
+  # (opened from More, its own row there; in Files it sits among the folded-away "⋯" actions)
+  tap_text "$(nav_label nav_more)" || true
+  sleep 3
   if scroll_find 8 "$(ui string etahen_title)" && tap_text "$(ui string etahen_title)"; then
     if wait_text 15 "$(ui string etahen_ftp)"; then
       pass "etaHEN settings are read from the console and shown"
@@ -710,6 +709,8 @@ PY
 
   # Zip: the /data folder downloaded as one zip (go up to /, hold "data", Download as zip)
   files_folders
+  # The folded "⋯" actions stay open between visits: fold them so the folder's list has the room
+  dump && tap_text "⋯ ▴" && sleep 2 || true
   dump && tap_text "$(ui string files_up)" || true
   sleep 3
   if scroll_find 8 data user && pos="$(ui find "$XML" data)"; then

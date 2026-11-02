@@ -18,6 +18,9 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
@@ -778,7 +781,14 @@ fun FilesTab(
                 // The less-used actions fold away, so the folder's list keeps the room (small phones above all)
                 TextButton(onClick = { tools = !tools }) { Text(if (tools) "⋯ ▴" else "⋯", fontWeight = FontWeight.ExtraBold) }
             }
-            if (tools) FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            val labels = pinLabels(pins)
+            // The folded actions get at most this much height and scroll inside it, so on a small phone the folder's
+            // list below still has room (before, the list was squeezed to nothing and later rows were cut off)
+            if (tools) Column(
+                verticalArrangement = Arrangement.spacedBy(4.dp),
+                modifier = Modifier.heightIn(max = 200.dp).verticalScroll(rememberScrollState())
+            ) {
+            FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 Button(
                     enabled = ready && hasFolder,
                     onClick = { uploadPicker.launch(arrayOf("*/*")) }
@@ -792,8 +802,7 @@ fun FilesTab(
                 ) { Text(str(if (pinned) R.string.files_unpin else R.string.files_pin)) }
                 TextButton(onClick = { showSettings = true }) { Text(str(R.string.files_ftp_settings)) }
             }
-            val labels = pinLabels(pins)
-            if (tools) FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.Center) {
+            FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.Center) {
                 // Screenshots and video clips: where the console keeps what the Create button captured
                 OutlinedButton(
                     enabled = ready,
@@ -826,7 +835,7 @@ fun FilesTab(
                     OutlinedButton(enabled = ready, onClick = { showEtaHen = true }) { Text(str(R.string.etahen_title), maxLines = 1) }
                 }
             }
-            if (tools) run {
+            run {
                 var auto by remember(profile.id) { mutableStateOf(CaptureSync.autoOn(ctx, profile.id)) }
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Text(str(R.string.captures_auto), style = MaterialTheme.typography.bodySmall, modifier = Modifier.weight(1f))
@@ -835,6 +844,7 @@ fun FilesTab(
                         CaptureSync.setAuto(ctx, profile.id, it)
                     })
                 }
+            }
             }
             if (pins.isNotEmpty()) {
                 FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
