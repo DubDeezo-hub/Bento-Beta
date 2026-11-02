@@ -514,7 +514,7 @@ fun SenderApp(
 
     AppTheme(active.color) {
         // The red glow behind every screen (plain black with the black look on)
-        Surface(modifier = Modifier.fillMaxSize().background(pageBackground(AppLook.black)), color = Color.Transparent) {
+        Surface(modifier = Modifier.fillMaxSize().background(pageBackground(AppLook.black)), color = Color.Transparent, contentColor = MaterialTheme.colorScheme.onBackground) {
             Column(modifier = Modifier.fillMaxSize()) {
                 AppHeader(active.name, accentColor(active.color), onAbout = { showAbout = true }) { showConsoles = true }
                 update?.takeIf { !shortScreen }?.let { u ->

@@ -3,6 +3,7 @@ package com.example.pssender
 import android.content.Context
 import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
@@ -270,7 +271,11 @@ fun AppTheme(@Suppress("UNUSED_PARAMETER") accentIndex: Int, content: @Composabl
     val scheme = bloodScheme().let { if (AppLook.black) blackScheme(it) else it }
     val d = LocalDensity.current
     CompositionLocalProvider(LocalDensity provides Density(d.density, d.fontScale * AppLook.textScale)) {
-        MaterialTheme(colorScheme = scheme, shapes = ROUND_SHAPES, typography = APP_TYPOGRAPHY, content = content)
+        MaterialTheme(colorScheme = scheme, shapes = ROUND_SHAPES, typography = APP_TYPOGRAPHY) {
+            // Text with no color of its own follows this. Without it, text on the see-through page (and on the welcome
+            // page) fell back to Android's default, black, which is near invisible on the black-and-red background.
+            CompositionLocalProvider(LocalContentColor provides scheme.onBackground, content = content)
+        }
     }
 }
 
