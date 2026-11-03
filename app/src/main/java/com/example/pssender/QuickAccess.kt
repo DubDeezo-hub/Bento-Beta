@@ -55,6 +55,8 @@ class ChainTileService : TileService() {
         tile.updateTile()
     }
 
+    // The older way is the only one Android 10 to 13 have; newer phones take the PendingIntent one above it
+    @android.annotation.SuppressLint("StartActivityAndCollapseDeprecated")
     override fun onClick() {
         super.onClick()
         val intent = runChainIntent(this, quickChain(this))
