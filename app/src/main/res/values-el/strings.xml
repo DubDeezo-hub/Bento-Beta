@@ -669,7 +669,7 @@
     <string name="memory_view_log">Αρχείο καταγραφής κονσόλας</string>
     <string name="klog_title">Αρχείο καταγραφής κονσόλας</string>
     <string name="klog_save">Αποθήκευση στο τηλέφωνο</string>
-    <string name="klog_save_detail">Κάθε γραμμή γράφεται μόλις φτάσει και σε αρχείο στο Downloads/Bento/Logs, ώστε μετά από κατάρρευση να βλέπεις τι έγραψε η κονσόλα ακριβώς πριν.</string>
+    <string name="klog_save_detail">Κάθε γραμμή γράφεται μόλις φτάσει και σε αρχείο στο Downloads/Crimson Multitool/Logs, ώστε μετά από κατάρρευση να βλέπεις τι έγραψε η κονσόλα ακριβώς πριν.</string>
     <string name="klog_saving_to">Αποθήκευση στο %1$s</string>
     <string name="klog_save_channel">Αρχείο καταγραφής κονσόλας</string>
     <string name="klog_save_notif_title">Αποθήκευση αρχείου καταγραφής κονσόλας</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">Αυτό το αρχείο δεν ταιριάζει πια με το checksum με το οποίο επαληθεύτηκε.</string>
     <string name="shelf_copy_sha">Αντιγραφή SHA-256</string>
     <string name="store_checksum_bad_github">Η λήψη δεν ταίριαζε με το checksum που αναφέρει το GitHub για αυτήν, οπότε δεν κρατήθηκε.</string>
-    <string name="backup_auto">Αυτόματο αντίγραφο ασφαλείας μία φορά την εβδομάδα (στο Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Αυτόματο αντίγραφο ασφαλείας μία φορά την εβδομάδα (στο Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Το εβδομαδιαίο αντίγραφο ασφαλείας αποθηκεύτηκε: %1$s</string>
     <string name="etahen_title">Ρυθμίσεις etaHEN</string>
     <string name="etahen_intro">Το αρχείο ρυθμίσεων του ίδιου του etaHEN στην κονσόλα. Οι περισσότερες αλλαγές ισχύουν την επόμενη φορά που ξεκινά το etaHEN (μετά το επόμενο jailbreak). Η αποθήκευση κρατά το παλιό αρχείο ως config.ini.bak.</string>

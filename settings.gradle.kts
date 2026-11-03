@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Bento"
+rootProject.name = "CrimsonMultitool"
 include(":app")

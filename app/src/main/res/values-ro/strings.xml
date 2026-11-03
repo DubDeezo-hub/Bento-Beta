@@ -669,7 +669,7 @@
     <string name="memory_view_log">Jurnalul consolei</string>
     <string name="klog_title">Jurnalul consolei</string>
     <string name="klog_save">Salvează pe telefon</string>
-    <string name="klog_save_detail">Fiecare rând ajunge și într-un fișier din Descărcări/Bento/Logs imediat ce sosește, așa că după o cădere vezi ce a afișat consola chiar înainte.</string>
+    <string name="klog_save_detail">Fiecare rând ajunge și într-un fișier din Descărcări/Crimson Multitool/Logs imediat ce sosește, așa că după o cădere vezi ce a afișat consola chiar înainte.</string>
     <string name="klog_saving_to">Se salvează în %1$s</string>
     <string name="klog_save_channel">Jurnalul consolei</string>
     <string name="klog_save_notif_title">Se salvează jurnalul consolei</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">Acest fișier nu se mai potrivește cu suma de control după care a fost verificat.</string>
     <string name="shelf_copy_sha">Copiază SHA-256</string>
     <string name="store_checksum_bad_github">Descărcarea nu s-a potrivit cu suma de control pe care o afișează GitHub pentru ea, așa că nu a fost păstrată.</string>
-    <string name="backup_auto">Fă singur o copie de rezervă o dată pe săptămână (în Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Fă singur o copie de rezervă o dată pe săptămână (în Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Copia de rezervă săptămânală a fost salvată: %1$s</string>
     <string name="etahen_title">Setările etaHEN</string>
     <string name="etahen_intro">Fișierul de setări al etaHEN de pe consolă. Cele mai multe modificări se aplică data viitoare când pornește etaHEN (după următorul jailbreak). La salvare, fișierul vechi e păstrat ca config.ini.bak.</string>

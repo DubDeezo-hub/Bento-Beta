@@ -669,7 +669,7 @@
     <string name="memory_view_log">Konsolės žurnalas</string>
     <string name="klog_title">Konsolės žurnalas</string>
     <string name="klog_save">Saugoti telefone</string>
-    <string name="klog_save_detail">Kiekviena eilutė vos atėjusi įrašoma ir į failą aplanke Atsisiuntimai/Bento/Logs, tad po strigties matysite, ką konsolė parašė prieš pat ją.</string>
+    <string name="klog_save_detail">Kiekviena eilutė vos atėjusi įrašoma ir į failą aplanke Atsisiuntimai/Crimson Multitool/Logs, tad po strigties matysite, ką konsolė parašė prieš pat ją.</string>
     <string name="klog_saving_to">Saugoma į %1$s</string>
     <string name="klog_save_channel">Konsolės žurnalas</string>
     <string name="klog_save_notif_title">Saugomas konsolės žurnalas</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">Šis failas nebeatitinka kontrolinės sumos, pagal kurią buvo patikrintas.</string>
     <string name="shelf_copy_sha">Kopijuoti SHA-256</string>
     <string name="store_checksum_bad_github">Atsisiųstas failas neatitiko kontrolinės sumos, kurią jam nurodo GitHub, todėl nebuvo išsaugotas.</string>
-    <string name="backup_auto">Automatiškai kurti atsarginę kopiją kartą per savaitę (į Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Automatiškai kurti atsarginę kopiją kartą per savaitę (į Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Savaitinė atsarginė kopija išsaugota: %1$s</string>
     <string name="etahen_title">etaHEN nustatymai</string>
     <string name="etahen_intro">Paties etaHEN nustatymų failas konsolėje. Dauguma pakeitimų įsigalioja kitą kartą paleidus etaHEN (po kito nulaužimo). Išsaugojus senas failas paliekamas kaip config.ini.bak.</string>

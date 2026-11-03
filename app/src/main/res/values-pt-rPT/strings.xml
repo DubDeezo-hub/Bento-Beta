@@ -670,7 +670,7 @@
     <string name="memory_view_log">Registo da consola</string>
     <string name="klog_title">Registo da consola</string>
     <string name="klog_save">Guardar no telemóvel</string>
-    <string name="klog_save_detail">Cada linha também vai para um ficheiro em Transferências/Bento/Logs assim que chega, para veres depois de uma falha o que a consola mostrou mesmo antes.</string>
+    <string name="klog_save_detail">Cada linha também vai para um ficheiro em Transferências/Crimson Multitool/Logs assim que chega, para veres depois de uma falha o que a consola mostrou mesmo antes.</string>
     <string name="klog_saving_to">A guardar em %1$s</string>
     <string name="klog_save_channel">Registo da consola</string>
     <string name="klog_save_notif_title">A guardar o registo da consola</string>
@@ -1095,7 +1095,7 @@
     <string name="shelf_changed">Este ficheiro já não corresponde ao checksum com que foi verificado.</string>
     <string name="shelf_copy_sha">Copiar SHA-256</string>
     <string name="store_checksum_bad_github">A transferência não correspondia ao checksum que o GitHub indica para ela, por isso não foi guardada.</string>
-    <string name="backup_auto">Fazer uma cópia de segurança sozinho uma vez por semana (em Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Fazer uma cópia de segurança sozinho uma vez por semana (em Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Cópia de segurança semanal guardada: %1$s</string>
     <string name="etahen_title">Definições do etaHEN</string>
     <string name="etahen_intro">O ficheiro de definições do próprio etaHEN na consola. A maioria das alterações aplica-se da próxima vez que o etaHEN arrancar (depois do próximo jailbreak). Ao guardar, o ficheiro antigo fica guardado como config.ini.bak.</string>

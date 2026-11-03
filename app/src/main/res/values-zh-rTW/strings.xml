@@ -669,7 +669,7 @@
     <string name="memory_view_log">主機記錄</string>
     <string name="klog_title">主機記錄</string>
     <string name="klog_save">儲存到手機</string>
-    <string name="klog_save_detail">每一行送達時也會寫入 Downloads/Bento/Logs 中的檔案，主機當機後仍能看到它當機前輸出的內容。</string>
+    <string name="klog_save_detail">每一行送達時也會寫入 Downloads/Crimson Multitool/Logs 中的檔案，主機當機後仍能看到它當機前輸出的內容。</string>
     <string name="klog_saving_to">正在儲存到 %1$s</string>
     <string name="klog_save_channel">主機記錄</string>
     <string name="klog_save_notif_title">正在儲存主機記錄</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">這個檔案與驗證時使用的檢查碼不再相符。</string>
     <string name="shelf_copy_sha">複製 SHA-256</string>
     <string name="store_checksum_bad_github">下載的檔案與 GitHub 為其列出的檢查碼不符，因此未保留。</string>
-    <string name="backup_auto">每週自動備份一次（存到 Downloads/Bento/Backups）</string>
+    <string name="backup_auto">每週自動備份一次（存到 Downloads/Crimson Multitool/Backups）</string>
     <string name="backup_auto_done">已儲存每週備份：%1$s</string>
     <string name="etahen_title">etaHEN 設定</string>
     <string name="etahen_intro">主機上 etaHEN 自己的設定檔。大多數變更會在 etaHEN 下次啟動時（下次破解後）生效。儲存時會把舊檔案保留為 config.ini.bak。</string>

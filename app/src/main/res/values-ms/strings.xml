@@ -669,7 +669,7 @@
     <string name="memory_view_log">Log konsol</string>
     <string name="klog_title">Log konsol</string>
     <string name="klog_save">Simpan ke telefon</string>
-    <string name="klog_save_detail">Setiap baris juga ditulis terus ke fail dalam Muat Turun/Bento/Logs, jadi selepas ranap anda boleh lihat apa yang dipaparkan konsol sejurus sebelumnya.</string>
+    <string name="klog_save_detail">Setiap baris juga ditulis terus ke fail dalam Muat Turun/Crimson Multitool/Logs, jadi selepas ranap anda boleh lihat apa yang dipaparkan konsol sejurus sebelumnya.</string>
     <string name="klog_saving_to">Menyimpan ke %1$s</string>
     <string name="klog_save_channel">Log konsol</string>
     <string name="klog_save_notif_title">Menyimpan log konsol</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">Fail ini tidak lagi sepadan dengan checksum yang digunakan untuk mengesahkannya.</string>
     <string name="shelf_copy_sha">Salin SHA-256</string>
     <string name="store_checksum_bad_github">Muat turun tidak sepadan dengan checksum yang disenaraikan oleh GitHub, jadi ia tidak disimpan.</string>
-    <string name="backup_auto">Buat sandaran sendiri seminggu sekali (ke Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Buat sandaran sendiri seminggu sekali (ke Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Sandaran mingguan disimpan: %1$s</string>
     <string name="etahen_title">Tetapan etaHEN</string>
     <string name="etahen_intro">Fail tetapan etaHEN sendiri pada konsol. Kebanyakan perubahan berkuat kuasa pada kali seterusnya etaHEN bermula (selepas jailbreak seterusnya). Semasa menyimpan, fail lama disimpan sebagai config.ini.bak.</string>

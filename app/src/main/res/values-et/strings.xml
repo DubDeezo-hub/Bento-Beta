@@ -669,7 +669,7 @@
     <string name="memory_view_log">Konsooli logi</string>
     <string name="klog_title">Konsooli logi</string>
     <string name="klog_save">Salvesta telefoni</string>
-    <string name="klog_save_detail">Iga rida kirjutatakse saabumisel ka faili kaustas Allalaadimised/Bento/Logs, nii et pärast krahhi näed, mida konsool vahetult enne seda näitas.</string>
+    <string name="klog_save_detail">Iga rida kirjutatakse saabumisel ka faili kaustas Allalaadimised/Crimson Multitool/Logs, nii et pärast krahhi näed, mida konsool vahetult enne seda näitas.</string>
     <string name="klog_saving_to">Salvestatakse: %1$s</string>
     <string name="klog_save_channel">Konsooli logi</string>
     <string name="klog_save_notif_title">Konsooli logi salvestatakse</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">See fail ei vasta enam kontrollsummale, mille järgi see kontrolliti.</string>
     <string name="shelf_copy_sha">Kopeeri SHA-256</string>
     <string name="store_checksum_bad_github">Allalaaditud fail ei vastanud kontrollsummale, mille GitHub selle kohta näitab, seega seda ei säilitatud.</string>
-    <string name="backup_auto">Tee varukoopia ise kord nädalas (kausta Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Tee varukoopia ise kord nädalas (kausta Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Iganädalane varukoopia salvestatud: %1$s</string>
     <string name="etahen_title">etaHEN-i seaded</string>
     <string name="etahen_intro">etaHEN-i enda seadete fail konsoolis. Enamik muudatusi rakendub, kui etaHEN järgmine kord käivitub (pärast järgmist jailbreaki). Salvestamisel jäetakse vana fail alles nimega config.ini.bak.</string>

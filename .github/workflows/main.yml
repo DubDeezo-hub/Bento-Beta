@@ -54,25 +54,29 @@ jobs:
           fi
 
       - name: Name the APK after its build number
-        run: cp app/build/outputs/apk/debug/app-debug.apk "Bento-1.${{ github.run_number }}.apk"
+        # The old name too: versions from before the rename look for Bento-<version>.apk when GitHub's API is busy
+        run: |
+          cp app/build/outputs/apk/debug/app-debug.apk "Crimson-Multitool-1.${{ github.run_number }}.apk"
+          cp app/build/outputs/apk/debug/app-debug.apk "Bento-1.${{ github.run_number }}.apk"
 
       # Kept as a backup download (Actions tab > the run > Artifacts)
       - uses: actions/upload-artifact@v6
         with:
-          name: bento-debug-apk
-          path: Bento-1.${{ github.run_number }}.apk
+          name: crimson-multitool-debug-apk
+          path: Crimson-Multitool-1.${{ github.run_number }}.apk
 
       - name: Publish on the Releases page
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           TAG="v1.${{ github.run_number }}"
-          APK="Bento-1.${{ github.run_number }}.apk"
+          APK="Crimson-Multitool-1.${{ github.run_number }}.apk"
+          OLD_NAME="Bento-1.${{ github.run_number }}.apk"
           REPO="${{ github.repository }}"
           if gh release view "$TAG" --repo "$REPO" > /dev/null 2>&1; then
-            gh release upload "$TAG" "$APK" --clobber --repo "$REPO"
+            gh release upload "$TAG" "$APK" "$OLD_NAME" --clobber --repo "$REPO"
           else
-            gh release create "$TAG" "$APK" --repo "$REPO" --target "${{ github.sha }}" \
+            gh release create "$TAG" "$APK" "$OLD_NAME" --repo "$REPO" --target "${{ github.sha }}" \
               --title "Crimson Multitool 1.${{ github.run_number }}" \
               --notes "Build ${{ github.run_number }}. Download the .apk below and install it over the previous version."
           fi

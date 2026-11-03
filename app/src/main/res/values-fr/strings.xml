@@ -670,7 +670,7 @@
     <string name="memory_view_log">Journal de la console</string>
     <string name="klog_title">Journal de la console</string>
     <string name="klog_save">Enregistrer sur le téléphone</string>
-    <string name="klog_save_detail">Chaque ligne est aussi écrite dans un fichier de Téléchargements/Bento/Logs dès son arrivée : après un plantage, vous voyez ce que la console affichait juste avant.</string>
+    <string name="klog_save_detail">Chaque ligne est aussi écrite dans un fichier de Téléchargements/Crimson Multitool/Logs dès son arrivée : après un plantage, vous voyez ce que la console affichait juste avant.</string>
     <string name="klog_saving_to">Enregistrement dans %1$s</string>
     <string name="klog_save_channel">Journal de la console</string>
     <string name="klog_save_notif_title">Enregistrement du journal de la console</string>
@@ -1095,7 +1095,7 @@
     <string name="shelf_changed">Ce fichier ne correspond plus à la somme de contrôle avec laquelle il a été vérifié.</string>
     <string name="shelf_copy_sha">Copier le SHA-256</string>
     <string name="store_checksum_bad_github">Le téléchargement ne correspondait pas à la somme de contrôle indiquée par GitHub, il n’a donc pas été gardé.</string>
-    <string name="backup_auto">Faire une sauvegarde toute seule une fois par semaine (dans Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Faire une sauvegarde toute seule une fois par semaine (dans Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Sauvegarde hebdomadaire enregistrée : %1$s</string>
     <string name="etahen_title">Réglages d’etaHEN</string>
     <string name="etahen_intro">Le fichier de réglages d’etaHEN sur la console. La plupart des changements s’appliquent au prochain démarrage d’etaHEN (après le prochain jailbreak). L’enregistrement garde l’ancien fichier sous le nom config.ini.bak.</string>

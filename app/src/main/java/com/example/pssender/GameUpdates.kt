@@ -13,7 +13,7 @@ import kotlinx.coroutines.withContext
 
 // ---------------------------------------------------------------------------------------------
 // Game updates: which installed games have a newer patch than the one on the console. The lists come from the community
-// patch sites Orbis Patches (PS4 titles) and Prospero Patches (PS5 titles), the same ones PatchDL uses. Bento sends
+// patch sites Orbis Patches (PS4 titles) and Prospero Patches (PS5 titles), the same ones PatchDL uses. Crimson Multitool sends
 // them a title ID and nothing else. Sony's servers are never contacted, by the phone or by the console, and nothing is
 // downloaded or installed.
 // ---------------------------------------------------------------------------------------------
@@ -122,7 +122,7 @@ object GameUpdates {
             c.readTimeout = 12_000
             c.requestMethod = "POST"
             c.doOutput = true
-            c.setRequestProperty("User-Agent", "Mozilla/5.0 (Android; Bento)")
+            c.setRequestProperty("User-Agent", "Mozilla/5.0 (Android; Crimson Multitool)")
             c.setRequestProperty("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8")
             c.setRequestProperty("Accept", "application/json")
             c.outputStream.use { it.write(body.toByteArray()) }

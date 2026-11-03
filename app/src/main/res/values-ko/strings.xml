@@ -669,7 +669,7 @@
     <string name="memory_view_log">콘솔 로그</string>
     <string name="klog_title">콘솔 로그</string>
     <string name="klog_save">휴대폰에 저장</string>
-    <string name="klog_save_detail">들어오는 줄마다 Downloads/Bento/Logs의 파일에도 바로 기록됩니다. 본체가 멈춘 뒤에도 직전에 출력된 내용을 볼 수 있습니다.</string>
+    <string name="klog_save_detail">들어오는 줄마다 Downloads/Crimson Multitool/Logs의 파일에도 바로 기록됩니다. 본체가 멈춘 뒤에도 직전에 출력된 내용을 볼 수 있습니다.</string>
     <string name="klog_saving_to">%1$s에 저장 중</string>
     <string name="klog_save_channel">본체 로그</string>
     <string name="klog_save_notif_title">본체 로그 저장 중</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">이 파일이 검증에 쓴 체크섬과 더 이상 일치하지 않습니다.</string>
     <string name="shelf_copy_sha">SHA-256 복사</string>
     <string name="store_checksum_bad_github">다운로드한 파일이 GitHub에 표시된 체크섬과 일치하지 않아 보관하지 않았습니다.</string>
-    <string name="backup_auto">일주일에 한 번 자동으로 백업 만들기(Downloads/Bento/Backups에 저장)</string>
+    <string name="backup_auto">일주일에 한 번 자동으로 백업 만들기(Downloads/Crimson Multitool/Backups에 저장)</string>
     <string name="backup_auto_done">주간 백업 저장됨: %1$s</string>
     <string name="etahen_title">etaHEN 설정</string>
     <string name="etahen_intro">콘솔에 있는 etaHEN 자체 설정 파일입니다. 대부분의 변경은 다음에 etaHEN이 시작될 때(다음 탈옥 후) 적용됩니다. 저장하면 이전 파일은 config.ini.bak으로 남습니다.</string>

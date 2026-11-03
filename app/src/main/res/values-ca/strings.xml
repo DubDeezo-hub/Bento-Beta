@@ -669,7 +669,7 @@
     <string name="memory_view_log">Registre de la consola</string>
     <string name="klog_title">Registre de la consola</string>
     <string name="klog_save">Desa al telèfon</string>
-    <string name="klog_save_detail">Cada línia també s\'escriu en un fitxer de Baixades/Bento/Logs quan arriba, així després d\'una fallada veus què va mostrar la consola just abans.</string>
+    <string name="klog_save_detail">Cada línia també s\'escriu en un fitxer de Baixades/Crimson Multitool/Logs quan arriba, així després d\'una fallada veus què va mostrar la consola just abans.</string>
     <string name="klog_saving_to">S\'està desant a %1$s</string>
     <string name="klog_save_channel">Registre de la consola</string>
     <string name="klog_save_notif_title">S\'està desant el registre de la consola</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">Aquest fitxer ja no coincideix amb la suma de verificació amb què es va verificar.</string>
     <string name="shelf_copy_sha">Copia l’SHA-256</string>
     <string name="store_checksum_bad_github">La baixada no coincidia amb la suma de verificació que GitHub hi indica, així que no s’ha conservat.</string>
-    <string name="backup_auto">Fes una còpia de seguretat automàtica un cop per setmana (a Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Fes una còpia de seguretat automàtica un cop per setmana (a Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Còpia de seguretat setmanal desada: %1$s</string>
     <string name="etahen_title">Configuració d’etaHEN</string>
     <string name="etahen_intro">El fitxer de configuració d’etaHEN a la consola. La majoria de canvis s’apliquen la propera vegada que s’iniciï etaHEN (després del proper jailbreak). En desar, es conserva el fitxer antic com a config.ini.bak.</string>

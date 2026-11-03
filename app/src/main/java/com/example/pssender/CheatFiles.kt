@@ -120,7 +120,7 @@ object CheatFiles {
     }
 
     /** The load address of the game: the lowest region named like its process, else [fallback]. */
-    // --- writing a cheat file (Bento's own cheats, exported) ---
+    // --- writing a cheat file (Crimson Multitool's own cheats, exported) ---
 
     private fun jsonText(s: String): String {
         val sb = StringBuilder("\"")
@@ -161,7 +161,7 @@ object CheatFiles {
             "  \"version\": ${jsonText(version.trim())},\n" +
             "  \"process\": ${jsonText(process)},\n" +
             "  \"mods\": [\n" + mods.joinToString(",\n") + "\n  ],\n" +
-            "  \"credits\": [\n    \"Made with Bento\"\n  ]\n" +
+            "  \"credits\": [\n    \"Made with Crimson Multitool\"\n  ]\n" +
             "}\n"
 
     /** "PPSA01234_01.000.json": the name the cheat folders use. */

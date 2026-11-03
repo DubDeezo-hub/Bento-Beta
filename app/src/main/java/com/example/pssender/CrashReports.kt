@@ -10,7 +10,7 @@ import java.util.Date
 import java.util.Locale
 
 // ---------------------------------------------------------------------------------------------
-// When Bento closes because of a mistake in the app (a crash), what went wrong is written to a small file before it
+// When Crimson Multitool closes because of a mistake in the app (a crash), what went wrong is written to a small file before it
 // closes. The next time it opens, it says so and offers to share the report (to send to whoever helps you, or to
 // paste into a bug report). Only the app's version, the phone's model and Android version, and the error are in it:
 // no files, addresses or settings.

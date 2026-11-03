@@ -669,7 +669,7 @@
     <string name="memory_view_log">Konzolnapló</string>
     <string name="klog_title">Konzolnapló</string>
     <string name="klog_save">Mentés a telefonra</string>
-    <string name="klog_save_detail">Minden sor beérkezéskor egy fájlba is bekerül a Letöltések/Bento/Logs mappában, így összeomlás után is látod, mit írt ki a konzol közvetlenül előtte.</string>
+    <string name="klog_save_detail">Minden sor beérkezéskor egy fájlba is bekerül a Letöltések/Crimson Multitool/Logs mappában, így összeomlás után is látod, mit írt ki a konzol közvetlenül előtte.</string>
     <string name="klog_saving_to">Mentés ide: %1$s</string>
     <string name="klog_save_channel">Konzolnapló</string>
     <string name="klog_save_notif_title">A konzolnapló mentése</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">Ez a fájl már nem egyezik azzal az ellenőrzőösszeggel, amellyel ellenőrizve lett.</string>
     <string name="shelf_copy_sha">SHA-256 másolása</string>
     <string name="store_checksum_bad_github">A letöltés nem egyezett a GitHub által hozzá megadott ellenőrzőösszeggel, ezért nem lett megtartva.</string>
-    <string name="backup_auto">Heti egy automatikus biztonsági mentés (a Downloads/Bento/Backups mappába)</string>
+    <string name="backup_auto">Heti egy automatikus biztonsági mentés (a Downloads/Crimson Multitool/Backups mappába)</string>
     <string name="backup_auto_done">Heti biztonsági mentés elmentve: %1$s</string>
     <string name="etahen_title">etaHEN beállításai</string>
     <string name="etahen_intro">Az etaHEN saját beállításfájlja a konzolon. A legtöbb módosítás az etaHEN következő indításakor lép érvénybe (a következő jailbreak után). Mentéskor a régi fájl config.ini.bak néven megmarad.</string>

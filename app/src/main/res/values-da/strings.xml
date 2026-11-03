@@ -669,7 +669,7 @@
     <string name="memory_view_log">Konsollog</string>
     <string name="klog_title">Konsollog</string>
     <string name="klog_save">Gem på telefonen</string>
-    <string name="klog_save_detail">Hver linje skrives også til en fil i Downloads/Bento/Logs, når den kommer, så du efter et nedbrud kan se, hvad konsollen skrev lige før.</string>
+    <string name="klog_save_detail">Hver linje skrives også til en fil i Downloads/Crimson Multitool/Logs, når den kommer, så du efter et nedbrud kan se, hvad konsollen skrev lige før.</string>
     <string name="klog_saving_to">Gemmer i %1$s</string>
     <string name="klog_save_channel">Konsollog</string>
     <string name="klog_save_notif_title">Gemmer konsolloggen</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">Denne fil passer ikke længere med den kontrolsum, den blev bekræftet mod.</string>
     <string name="shelf_copy_sha">Kopiér SHA-256</string>
     <string name="store_checksum_bad_github">Downloaden passede ikke med den kontrolsum, GitHub angiver for den, så den blev ikke gemt.</string>
-    <string name="backup_auto">Lav en backup af sig selv én gang om ugen (i Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Lav en backup af sig selv én gang om ugen (i Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Ugentlig backup gemt: %1$s</string>
     <string name="etahen_title">etaHEN-indstillinger</string>
     <string name="etahen_intro">etaHENs egen indstillingsfil på konsollen. De fleste ændringer gælder næste gang, etaHEN starter (efter næste jailbreak). Ved gem beholdes den gamle fil som config.ini.bak.</string>

@@ -669,7 +669,7 @@
     <string name="memory_view_log">کنسول لاگ</string>
     <string name="klog_title">کنسول لاگ</string>
     <string name="klog_save">فون میں محفوظ کریں</string>
-    <string name="klog_save_detail">ہر لائن آتے ہی Downloads/Bento/Logs کی ایک فائل میں بھی لکھی جاتی ہے، تاکہ کریش کے بعد بھی دیکھ سکیں کہ کنسول نے بالکل پہلے کیا دکھایا تھا۔</string>
+    <string name="klog_save_detail">ہر لائن آتے ہی Downloads/Crimson Multitool/Logs کی ایک فائل میں بھی لکھی جاتی ہے، تاکہ کریش کے بعد بھی دیکھ سکیں کہ کنسول نے بالکل پہلے کیا دکھایا تھا۔</string>
     <string name="klog_saving_to">‏%1$s میں محفوظ ہو رہا ہے</string>
     <string name="klog_save_channel">کنسول لاگ</string>
     <string name="klog_save_notif_title">کنسول لاگ محفوظ ہو رہا ہے</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">یہ فائل اب اس checksum سے میل نہیں کھاتی جس سے اس کی تصدیق ہوئی تھی۔</string>
     <string name="shelf_copy_sha">‏SHA-256 کاپی کریں</string>
     <string name="store_checksum_bad_github">ڈاؤن لوڈ اس checksum سے میل نہیں کھایا جو GitHub اس کے لیے دکھاتا ہے، اس لیے رکھا نہیں گیا۔</string>
-    <string name="backup_auto">ہفتے میں ایک بار خود بخود بیک اپ بنائیں (Downloads/Bento/Backups میں)</string>
+    <string name="backup_auto">ہفتے میں ایک بار خود بخود بیک اپ بنائیں (Downloads/Crimson Multitool/Backups میں)</string>
     <string name="backup_auto_done">ہفتہ وار بیک اپ محفوظ ہو گیا: %1$s</string>
     <string name="etahen_title">‏etaHEN سیٹنگز</string>
     <string name="etahen_intro">کنسول پر etaHEN کی اپنی سیٹنگز فائل۔ زیادہ تر تبدیلیاں اگلی بار etaHEN شروع ہونے پر (اگلے جیل بریک کے بعد) لاگو ہوتی ہیں۔ محفوظ کرنے پر پرانی فائل config.ini.bak کے نام سے رکھ لی جاتی ہے۔</string>

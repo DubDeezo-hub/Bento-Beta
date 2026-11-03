@@ -58,7 +58,7 @@ class StoreIndexTest {
 
     @Test
     fun everyLanguageHasTheNewPayloadsText() {
-        // Entries in Bento's own list that bring their own text bring it in every language the app has
+        // Entries in Crimson Multitool's own list that bring their own text bring it in every language the app has
         val file = listOf(File("../payloads/index.json"), File("payloads/index.json")).first { it.exists() }
         val root = MiniJson.parse(file.readText()) as Map<*, *>
         val keys = listOf("en", "es", "fr", "de", "it", "pt", "pt-PT", "ru", "ja", "ko", "zh", "zh-TW", "ar", "tr", "nl", "pl", "sv", "nb",

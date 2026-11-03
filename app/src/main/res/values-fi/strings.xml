@@ -669,7 +669,7 @@
     <string name="memory_view_log">Konsolin loki</string>
     <string name="klog_title">Konsolin loki</string>
     <string name="klog_save">Tallenna puhelimeen</string>
-    <string name="klog_save_detail">Jokainen rivi kirjoitetaan saapuessaan myös tiedostoon kansioon Lataukset/Bento/Logs, joten kaatumisen jälkeen näet, mitä konsoli tulosti juuri ennen sitä.</string>
+    <string name="klog_save_detail">Jokainen rivi kirjoitetaan saapuessaan myös tiedostoon kansioon Lataukset/Crimson Multitool/Logs, joten kaatumisen jälkeen näet, mitä konsoli tulosti juuri ennen sitä.</string>
     <string name="klog_saving_to">Tallennetaan: %1$s</string>
     <string name="klog_save_channel">Konsolin loki</string>
     <string name="klog_save_notif_title">Konsolin lokia tallennetaan</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">Tämä tiedosto ei enää vastaa tarkistussummaa, jota vasten se varmennettiin.</string>
     <string name="shelf_copy_sha">Kopioi SHA-256</string>
     <string name="store_checksum_bad_github">Lataus ei vastannut GitHubin sille ilmoittamaa tarkistussummaa, joten sitä ei säilytetty.</string>
-    <string name="backup_auto">Tee varmuuskopio itsestään kerran viikossa (kansioon Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Tee varmuuskopio itsestään kerran viikossa (kansioon Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Viikoittainen varmuuskopio tallennettu: %1$s</string>
     <string name="etahen_title">etaHENin asetukset</string>
     <string name="etahen_intro">etaHENin oma asetustiedosto konsolissa. Useimmat muutokset tulevat voimaan, kun etaHEN seuraavan kerran käynnistyy (seuraavan jailbreakin jälkeen). Tallennettaessa vanha tiedosto säilytetään nimellä config.ini.bak.</string>

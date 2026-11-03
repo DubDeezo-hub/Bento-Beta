@@ -669,7 +669,7 @@
     <string name="memory_view_log">કન્સોલ લૉગ</string>
     <string name="klog_title">કન્સોલ લૉગ</string>
     <string name="klog_save">ફોનમાં સાચવો</string>
-    <string name="klog_save_detail">દરેક લાઇન આવતાં જ Downloads/Bento/Logs ની એક ફાઇલમાં પણ લખાય છે, એટલે ક્રેશ પછી પણ જોઈ શકો કે કન્સોલે તરત પહેલાં શું બતાવ્યું હતું.</string>
+    <string name="klog_save_detail">દરેક લાઇન આવતાં જ Downloads/Crimson Multitool/Logs ની એક ફાઇલમાં પણ લખાય છે, એટલે ક્રેશ પછી પણ જોઈ શકો કે કન્સોલે તરત પહેલાં શું બતાવ્યું હતું.</string>
     <string name="klog_saving_to">%1$s માં સાચવાય છે</string>
     <string name="klog_save_channel">કન્સોલ લૉગ</string>
     <string name="klog_save_notif_title">કન્સોલ લૉગ સાચવાય છે</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">આ ફાઇલ હવે જે ચેકસમ સાથે ચકાસાઈ હતી તેની સાથે મેળ ખાતી નથી.</string>
     <string name="shelf_copy_sha">SHA-256 કૉપિ કરો</string>
     <string name="store_checksum_bad_github">ડાઉનલોડ GitHub તેના માટે બતાવે છે તે ચેકસમ સાથે મેળ ન ખાધું, તેથી રાખ્યું નહીં.</string>
-    <string name="backup_auto">અઠવાડિયે એક વાર જાતે બૅકઅપ બનાવો (Downloads/Bento/Backups માં)</string>
+    <string name="backup_auto">અઠવાડિયે એક વાર જાતે બૅકઅપ બનાવો (Downloads/Crimson Multitool/Backups માં)</string>
     <string name="backup_auto_done">સાપ્તાહિક બૅકઅપ સાચવ્યો: %1$s</string>
     <string name="etahen_title">etaHEN સેટિંગ્સ</string>
     <string name="etahen_intro">કન્સોલ પર etaHEN ની પોતાની સેટિંગ્સ ફાઇલ. મોટાભાગના ફેરફારો આગલી વાર etaHEN શરૂ થાય ત્યારે (આગલા જેલબ્રેક પછી) લાગુ થાય છે. સાચવતી વખતે જૂની ફાઇલ config.ini.bak તરીકે રખાય છે.</string>

@@ -669,7 +669,7 @@
     <string name="memory_view_log">কনসোল লগ</string>
     <string name="klog_title">কনসোল লগ</string>
     <string name="klog_save">ফোনে সেভ করুন</string>
-    <string name="klog_save_detail">প্রতিটি লাইন আসার সঙ্গে সঙ্গে Downloads/Bento/Logs-এর একটি ফাইলেও লেখা হয়, তাই ক্র্যাশের পরেও দেখা যায় কনসোল ঠিক আগে কী দেখিয়েছিল।</string>
+    <string name="klog_save_detail">প্রতিটি লাইন আসার সঙ্গে সঙ্গে Downloads/Crimson Multitool/Logs-এর একটি ফাইলেও লেখা হয়, তাই ক্র্যাশের পরেও দেখা যায় কনসোল ঠিক আগে কী দেখিয়েছিল।</string>
     <string name="klog_saving_to">%1$s-এ সেভ হচ্ছে</string>
     <string name="klog_save_channel">কনসোল লগ</string>
     <string name="klog_save_notif_title">কনসোল লগ সেভ হচ্ছে</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">এই ফাইলটি আর সেই চেকসামের সাথে মেলে না যা দিয়ে এটি যাচাই হয়েছিল।</string>
     <string name="shelf_copy_sha">SHA-256 কপি করুন</string>
     <string name="store_checksum_bad_github">ডাউনলোডটি GitHub-এ এর জন্য দেখানো চেকসামের সাথে মেলেনি, তাই রাখা হয়নি।</string>
-    <string name="backup_auto">সপ্তাহে একবার নিজে থেকে ব্যাকআপ নিন (Downloads/Bento/Backups-এ)</string>
+    <string name="backup_auto">সপ্তাহে একবার নিজে থেকে ব্যাকআপ নিন (Downloads/Crimson Multitool/Backups-এ)</string>
     <string name="backup_auto_done">সাপ্তাহিক ব্যাকআপ সংরক্ষিত: %1$s</string>
     <string name="etahen_title">etaHEN সেটিংস</string>
     <string name="etahen_intro">কনসোলে etaHEN-এর নিজস্ব সেটিংস ফাইল। বেশিরভাগ পরিবর্তন পরের বার etaHEN চালু হলে (পরের জেলব্রেকের পরে) কার্যকর হয়। সংরক্ষণ করলে পুরোনো ফাইল config.ini.bak হিসেবে থাকে।</string>

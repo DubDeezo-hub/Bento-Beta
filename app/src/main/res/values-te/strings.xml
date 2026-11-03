@@ -669,7 +669,7 @@
     <string name="memory_view_log">కన్సోల్ లాగ్</string>
     <string name="klog_title">కన్సోల్ లాగ్</string>
     <string name="klog_save">ఫోన్‌లో సేవ్ చేయి</string>
-    <string name="klog_save_detail">ప్రతి లైన్ వచ్చిన వెంటనే Downloads/Bento/Logs లోని ఫైల్‌లో కూడా రాయబడుతుంది, కాబట్టి క్రాష్ తర్వాత కూడా కన్సోల్ దానికి ముందు ఏమి చూపిందో చూడవచ్చు.</string>
+    <string name="klog_save_detail">ప్రతి లైన్ వచ్చిన వెంటనే Downloads/Crimson Multitool/Logs లోని ఫైల్‌లో కూడా రాయబడుతుంది, కాబట్టి క్రాష్ తర్వాత కూడా కన్సోల్ దానికి ముందు ఏమి చూపిందో చూడవచ్చు.</string>
     <string name="klog_saving_to">%1$s లో సేవ్ అవుతోంది</string>
     <string name="klog_save_channel">కన్సోల్ లాగ్</string>
     <string name="klog_save_notif_title">కన్సోల్ లాగ్ సేవ్ అవుతోంది</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">ఈ ఫైల్ ధృవీకరించిన చెక్‌సమ్‌తో ఇక సరిపోలడం లేదు.</string>
     <string name="shelf_copy_sha">SHA-256 కాపీ చేయి</string>
     <string name="store_checksum_bad_github">డౌన్‌లోడ్ GitHub దాని కోసం చూపే చెక్‌సమ్‌తో సరిపోలలేదు, కాబట్టి ఉంచలేదు.</string>
-    <string name="backup_auto">వారానికి ఒకసారి దానంతట అదే బ్యాకప్ చేయి (Downloads/Bento/Backups లోకి)</string>
+    <string name="backup_auto">వారానికి ఒకసారి దానంతట అదే బ్యాకప్ చేయి (Downloads/Crimson Multitool/Backups లోకి)</string>
     <string name="backup_auto_done">వారపు బ్యాకప్ సేవ్ అయింది: %1$s</string>
     <string name="etahen_title">etaHEN సెట్టింగ్‌లు</string>
     <string name="etahen_intro">కన్సోల్‌లో etaHEN సొంత సెట్టింగ్‌ల ఫైల్. చాలా మార్పులు etaHEN తదుపరిసారి ప్రారంభమైనప్పుడు (తదుపరి జైల్‌బ్రేక్ తర్వాత) వర్తిస్తాయి. సేవ్ చేసినప్పుడు పాత ఫైల్ config.ini.bakగా ఉంచబడుతుంది.</string>

@@ -62,7 +62,7 @@ fun chainSummary(chain: Chain): String {
 
 // ---------------------------------------------------------------------------------------------
 // Load order: some payloads must go in a certain order, or not together, or the console crashes. Before a chain runs,
-// Bento looks at the order of its payloads (by their file names) and warns about the orders known to cause a panic.
+// Crimson Multitool looks at the order of its payloads (by their file names) and warns about the orders known to cause a panic.
 // This is only about the order inside one chain; whether a payload already runs on the console is ReloadGuard's job.
 // ---------------------------------------------------------------------------------------------
 
@@ -181,7 +181,7 @@ fun mergeChains(existing: List<Chain>, incoming: List<Chain>): List<Chain> {
 /** Saves and loads the chains in the app's settings. */
 /**
  * A chain that runs by itself when a console becomes ready: when its loader starts answering after it didn't (a
- * jailbreak just ran), while Bento is on screen. One chain per console; at most once in [COOLDOWN_MS].
+ * jailbreak just ran), while Crimson Multitool is on screen. One chain per console; at most once in [COOLDOWN_MS].
  */
 object AutoChain {
     private const val COOLDOWN_MS = 10L * 60 * 1000

@@ -50,7 +50,7 @@ object Sfo {
     }
 }
 
-/** What Bento shows about a game, app or package. */
+/** What Crimson Multitool shows about a game, app or package. */
 data class TitleInfo(
     val titleId: String,
     val name: String,

@@ -669,7 +669,7 @@
     <string name="memory_view_log">Log konzoly</string>
     <string name="klog_title">Log konzoly</string>
     <string name="klog_save">Ukladať do telefónu</string>
-    <string name="klog_save_detail">Každý riadok sa hneď zapíše aj do súboru v Stiahnuté/Bento/Logs, takže po páde uvidíte, čo konzola vypísala tesne predtým.</string>
+    <string name="klog_save_detail">Každý riadok sa hneď zapíše aj do súboru v Stiahnuté/Crimson Multitool/Logs, takže po páde uvidíte, čo konzola vypísala tesne predtým.</string>
     <string name="klog_saving_to">Ukladá sa do %1$s</string>
     <string name="klog_save_channel">Záznam konzoly</string>
     <string name="klog_save_notif_title">Ukladá sa záznam konzoly</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">Tento súbor už nezodpovedá kontrolnému súčtu, podľa ktorého bol overený.</string>
     <string name="shelf_copy_sha">Kopírovať SHA-256</string>
     <string name="store_checksum_bad_github">Stiahnutý súbor nezodpovedal kontrolnému súčtu, ktorý preň uvádza GitHub, preto nebol uložený.</string>
-    <string name="backup_auto">Raz týždenne vytvoriť zálohu automaticky (do Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Raz týždenne vytvoriť zálohu automaticky (do Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Týždenná záloha uložená: %1$s</string>
     <string name="etahen_title">Nastavenia etaHEN</string>
     <string name="etahen_intro">Vlastný súbor nastavení etaHEN v konzole. Väčšina zmien sa prejaví pri ďalšom spustení etaHEN (po ďalšom jailbreaku). Uloženie ponechá starý súbor ako config.ini.bak.</string>

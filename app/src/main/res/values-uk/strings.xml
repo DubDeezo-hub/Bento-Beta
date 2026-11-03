@@ -669,7 +669,7 @@
     <string name="memory_view_log">Журнал консолі</string>
     <string name="klog_title">Журнал консолі</string>
     <string name="klog_save">Зберігати на телефон</string>
-    <string name="klog_save_detail">Кожен рядок одразу записується й у файл у Завантаження/Bento/Logs, тож після збою видно, що консоль вивела просто перед ним.</string>
+    <string name="klog_save_detail">Кожен рядок одразу записується й у файл у Завантаження/Crimson Multitool/Logs, тож після збою видно, що консоль вивела просто перед ним.</string>
     <string name="klog_saving_to">Зберігається в %1$s</string>
     <string name="klog_save_channel">Журнал консолі</string>
     <string name="klog_save_notif_title">Збереження журналу консолі</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">Цей файл більше не збігається з контрольною сумою, за якою його перевірено.</string>
     <string name="shelf_copy_sha">Копіювати SHA-256</string>
     <string name="store_checksum_bad_github">Завантажений файл не збігся з контрольною сумою, вказаною для нього на GitHub, тому його не збережено.</string>
-    <string name="backup_auto">Автоматично робити резервну копію раз на тиждень (у Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Автоматично робити резервну копію раз на тиждень (у Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Щотижневу резервну копію збережено: %1$s</string>
     <string name="etahen_title">Налаштування etaHEN</string>
     <string name="etahen_intro">Власний файл налаштувань etaHEN на консолі. Більшість змін набуває чинності під час наступного запуску etaHEN (після наступного джейлбрейка). Під час збереження старий файл лишається як config.ini.bak.</string>

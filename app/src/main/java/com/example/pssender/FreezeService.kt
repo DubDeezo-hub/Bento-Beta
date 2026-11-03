@@ -11,7 +11,7 @@ import android.content.pm.ServiceInfo
 import android.os.IBinder
 
 /**
- * Keeps frozen values frozen while Bento is in the background (you are playing on the TV, the phone is in your
+ * Keeps frozen values frozen while Crimson Multitool is in the background (you are playing on the TV, the phone is in your
  * pocket): a foreground service with a notification and a Stop button, holding the processor and Wi-Fi awake. The
  * writing itself is MemorySession's freeze loop; this service only keeps the app alive while it runs.
  */
@@ -94,7 +94,7 @@ class FreezeService : Service() {
                 ctx.startForegroundService(Intent(ctx, FreezeService::class.java))
                 running = true
             } catch (_: Exception) {
-                // Not allowed from the background on some phones: freezing still works while Bento is open
+                // Not allowed from the background on some phones: freezing still works while Crimson Multitool is open
             }
         }
 

@@ -669,7 +669,7 @@
     <string name="memory_view_log">Nhật ký console</string>
     <string name="klog_title">Nhật ký console</string>
     <string name="klog_save">Lưu vào điện thoại</string>
-    <string name="klog_save_detail">Mỗi dòng cũng được ghi ngay vào một tệp trong Downloads/Bento/Logs, nên sau khi máy bị sập bạn vẫn thấy máy đã in gì ngay trước đó.</string>
+    <string name="klog_save_detail">Mỗi dòng cũng được ghi ngay vào một tệp trong Downloads/Crimson Multitool/Logs, nên sau khi máy bị sập bạn vẫn thấy máy đã in gì ngay trước đó.</string>
     <string name="klog_saving_to">Đang lưu vào %1$s</string>
     <string name="klog_save_channel">Nhật ký máy</string>
     <string name="klog_save_notif_title">Đang lưu nhật ký máy</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">Tệp này không còn khớp với checksum đã dùng để xác minh nó.</string>
     <string name="shelf_copy_sha">Sao chép SHA-256</string>
     <string name="store_checksum_bad_github">Tệp tải về không khớp checksum mà GitHub ghi cho nó nên không được giữ lại.</string>
-    <string name="backup_auto">Tự sao lưu mỗi tuần một lần (vào Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Tự sao lưu mỗi tuần một lần (vào Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Đã lưu bản sao lưu hằng tuần: %1$s</string>
     <string name="etahen_title">Cài đặt etaHEN</string>
     <string name="etahen_intro">Tệp cài đặt riêng của etaHEN trên console. Phần lớn thay đổi có hiệu lực vào lần tới etaHEN khởi động (sau lần jailbreak tiếp theo). Khi lưu, tệp cũ được giữ lại thành config.ini.bak.</string>

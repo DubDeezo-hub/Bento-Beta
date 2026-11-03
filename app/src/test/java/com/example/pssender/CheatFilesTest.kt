@@ -51,7 +51,7 @@ class CheatFilesTest {
     }
 
     @Test
-    fun aFileBentoWritesReadsBackTheSame() {
+    fun aFileThisAppWritesReadsBackTheSame() {
         val mod = CheatFiles.modJson("Gold \"max\"", 0x1100, byteArrayOf(0x3F, 0x42), byteArrayOf(0, 1))
         val text = CheatFiles.fileJson("My Game", "CUSA00001", " 01.00 ", "eboot.bin", listOf(mod))
         val c = CheatFiles.parse(text)

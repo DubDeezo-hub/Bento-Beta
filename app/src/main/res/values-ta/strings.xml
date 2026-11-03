@@ -669,7 +669,7 @@
     <string name="memory_view_log">கன்சோல் பதிவு</string>
     <string name="klog_title">கன்சோல் பதிவு</string>
     <string name="klog_save">போனில் சேமி</string>
-    <string name="klog_save_detail">ஒவ்வொரு வரியும் வந்தவுடன் Downloads/Bento/Logs இல் உள்ள கோப்பிலும் எழுதப்படும், எனவே கிராஷுக்குப் பிறகும் கன்சோல் அதற்கு சற்று முன் என்ன காட்டியது என்று பார்க்கலாம்.</string>
+    <string name="klog_save_detail">ஒவ்வொரு வரியும் வந்தவுடன் Downloads/Crimson Multitool/Logs இல் உள்ள கோப்பிலும் எழுதப்படும், எனவே கிராஷுக்குப் பிறகும் கன்சோல் அதற்கு சற்று முன் என்ன காட்டியது என்று பார்க்கலாம்.</string>
     <string name="klog_saving_to">%1$s இல் சேமிக்கப்படுகிறது</string>
     <string name="klog_save_channel">கன்சோல் பதிவு</string>
     <string name="klog_save_notif_title">கன்சோல் பதிவு சேமிக்கப்படுகிறது</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">இந்தக் கோப்பு சரிபார்க்கப்பட்ட செக்சத்துடன் இனி பொருந்தவில்லை.</string>
     <string name="shelf_copy_sha">SHA-256-ஐ நகலெடு</string>
     <string name="store_checksum_bad_github">பதிவிறக்கம் GitHub அதற்குப் பட்டியலிடும் செக்சத்துடன் பொருந்தவில்லை, எனவே வைக்கப்படவில்லை.</string>
-    <string name="backup_auto">வாரம் ஒருமுறை தானாகக் காப்புப்பிரதி எடு (Downloads/Bento/Backups-க்கு)</string>
+    <string name="backup_auto">வாரம் ஒருமுறை தானாகக் காப்புப்பிரதி எடு (Downloads/Crimson Multitool/Backups-க்கு)</string>
     <string name="backup_auto_done">வாராந்திரக் காப்புப்பிரதி சேமிக்கப்பட்டது: %1$s</string>
     <string name="etahen_title">etaHEN அமைப்புகள்</string>
     <string name="etahen_intro">கன்சோலில் உள்ள etaHEN-இன் சொந்த அமைப்புகள் கோப்பு. பெரும்பாலான மாற்றங்கள் அடுத்த முறை etaHEN தொடங்கும்போது (அடுத்த ஜெயில்பிரேக்கிற்குப் பிறகு) பொருந்தும். சேமிக்கும்போது பழைய கோப்பு config.ini.bak ஆக வைக்கப்படும்.</string>

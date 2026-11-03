@@ -3,6 +3,7 @@ package com.example.pssender
 import org.junit.Assert.assertArrayEquals
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
+import org.junit.Assert.assertTrue
 import org.junit.Test
 import java.util.Date
 
@@ -48,7 +49,7 @@ class BackupTest {
 
     @Test
     fun partsMissingFromTheFileAreLeftAlone() {
-        val d = parseBackup("""{"app": "Bento", "format": 1, "consoles": []}""").data!!
+        val d = parseBackup("""{"app": "Crimson Multitool", "format": 1, "consoles": []}""").data!!
         assertNull(d.bookmarks)
         assertNull(d.chains)
         assertNull(d.pins)
@@ -73,7 +74,7 @@ class BackupTest {
     fun otherFilesAreRefused() {
         assertEquals(BackupProblem.NOT_A_BACKUP, parseBackup("hello").problem)
         assertEquals(BackupProblem.NOT_A_BACKUP, parseBackup("""{"app": "Other"}""").problem)
-        assertEquals(BackupProblem.TOO_NEW, parseBackup("""{"app": "Bento", "format": 99}""").problem)
+        assertEquals(BackupProblem.TOO_NEW, parseBackup("""{"app": "Crimson Multitool", "format": 99}""").problem)
     }
 
     @Test
@@ -92,7 +93,16 @@ class BackupTest {
 
     @Test
     fun fileName() {
-        assertEquals("bento-backup-", backupFileName(Date()).take(13))
+        assertEquals("crimson-multitool-backup-", backupFileName(Date()).take(25))
         assertEquals(true, backupFileName().endsWith(".json"))
+    }
+
+    @Test
+    fun backupsFromBeforeTheRenameStillRestore() {
+        // Made when the app was still called Bento
+        val d = parseBackup("""{"app": "Bento", "format": 1, "consoles": []}""")
+        assertEquals(null, d.problem)
+        // And new ones carry the new name
+        assertTrue(backupToJson(sample(), "1.0").contains("\"app\":\"Crimson Multitool\""))
     }
 }

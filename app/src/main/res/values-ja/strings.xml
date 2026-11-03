@@ -669,7 +669,7 @@
     <string name="memory_view_log">コンソールログ</string>
     <string name="klog_title">コンソールログ</string>
     <string name="klog_save">スマホに保存</string>
-    <string name="klog_save_detail">届いた行を Downloads/Bento/Logs のファイルにも書き込みます。本体がクラッシュしても、直前に出力された内容を確認できます。</string>
+    <string name="klog_save_detail">届いた行を Downloads/Crimson Multitool/Logs のファイルにも書き込みます。本体がクラッシュしても、直前に出力された内容を確認できます。</string>
     <string name="klog_saving_to">%1$s に保存中</string>
     <string name="klog_save_channel">本体ログ</string>
     <string name="klog_save_notif_title">本体ログを保存中</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">このファイルは、検証に使ったチェックサムと一致しなくなっています。</string>
     <string name="shelf_copy_sha">SHA-256 をコピー</string>
     <string name="store_checksum_bad_github">ダウンロードしたファイルが GitHub に記載されたチェックサムと一致しなかったため、保存しませんでした。</string>
-    <string name="backup_auto">週に 1 回、自動でバックアップを作成（Downloads/Bento/Backups に保存）</string>
+    <string name="backup_auto">週に 1 回、自動でバックアップを作成（Downloads/Crimson Multitool/Backups に保存）</string>
     <string name="backup_auto_done">毎週のバックアップを保存しました: %1$s</string>
     <string name="etahen_title">etaHEN の設定</string>
     <string name="etahen_intro">コンソール上にある etaHEN 自身の設定ファイルです。ほとんどの変更は、次に etaHEN が起動したとき（次の脱獄の後）に反映されます。保存すると、古いファイルは config.ini.bak として残ります。</string>

@@ -669,7 +669,7 @@
     <string name="memory_view_log">കൺസോൾ ലോഗ്</string>
     <string name="klog_title">കൺസോൾ ലോഗ്</string>
     <string name="klog_save">ഫോണിൽ സേവ് ചെയ്യുക</string>
-    <string name="klog_save_detail">ഓരോ വരിയും എത്തുമ്പോൾത്തന്നെ Downloads/Bento/Logs-ലെ ഒരു ഫയലിലും എഴുതുന്നു, അതിനാൽ ക്രാഷിന് ശേഷവും കൺസോൾ തൊട്ടുമുമ്പ് എന്ത് കാണിച്ചെന്ന് കാണാം.</string>
+    <string name="klog_save_detail">ഓരോ വരിയും എത്തുമ്പോൾത്തന്നെ Downloads/Crimson Multitool/Logs-ലെ ഒരു ഫയലിലും എഴുതുന്നു, അതിനാൽ ക്രാഷിന് ശേഷവും കൺസോൾ തൊട്ടുമുമ്പ് എന്ത് കാണിച്ചെന്ന് കാണാം.</string>
     <string name="klog_saving_to">%1$s-ലേക്ക് സേവ് ചെയ്യുന്നു</string>
     <string name="klog_save_channel">കൺസോൾ ലോഗ്</string>
     <string name="klog_save_notif_title">കൺസോൾ ലോഗ് സേവ് ചെയ്യുന്നു</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">ഈ ഫയൽ പരിശോധിച്ച ചെക്ക്സവുമായി ഇനി പൊരുത്തപ്പെടുന്നില്ല.</string>
     <string name="shelf_copy_sha">SHA-256 പകർത്തുക</string>
     <string name="store_checksum_bad_github">ഡൗൺലോഡ് GitHub അതിനായി നൽകുന്ന ചെക്ക്സവുമായി പൊരുത്തപ്പെട്ടില്ല, അതിനാൽ സൂക്ഷിച്ചില്ല.</string>
-    <string name="backup_auto">ആഴ്ചയിൽ ഒരിക്കൽ സ്വയം ബാക്കപ്പ് ചെയ്യുക (Downloads/Bento/Backups-ലേക്ക്)</string>
+    <string name="backup_auto">ആഴ്ചയിൽ ഒരിക്കൽ സ്വയം ബാക്കപ്പ് ചെയ്യുക (Downloads/Crimson Multitool/Backups-ലേക്ക്)</string>
     <string name="backup_auto_done">പ്രതിവാര ബാക്കപ്പ് സംരക്ഷിച്ചു: %1$s</string>
     <string name="etahen_title">etaHEN ക്രമീകരണങ്ങൾ</string>
     <string name="etahen_intro">കൺസോളിലെ etaHEN-ന്റെ സ്വന്തം ക്രമീകരണ ഫയൽ. മിക്ക മാറ്റങ്ങളും അടുത്ത തവണ etaHEN തുടങ്ങുമ്പോൾ (അടുത്ത ജയിൽബ്രേക്കിന് ശേഷം) ബാധകമാകും. സംരക്ഷിക്കുമ്പോൾ പഴയ ഫയൽ config.ini.bak ആയി സൂക്ഷിക്കും.</string>

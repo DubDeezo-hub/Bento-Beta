@@ -2,7 +2,7 @@ package com.example.pssender
 
 // ---------------------------------------------------------------------------------------------
 // Loading the homebrew enabler (etaHEN, GoldHEN) or the kernel patch (kstuff) a second time while it already runs
-// is a common way to crash a console (a kernel panic). Before such a payload goes out, Bento looks whether it was sent
+// is a common way to crash a console (a kernel panic). Before such a payload goes out, Crimson Multitool looks whether it was sent
 // to this console already in this session, and on a PS5 whether etaHEN already answers (its built-in FTP server on
 // port 1337, which is on by default). Then it asks first; the automatic chain doesn't send it at all.
 // ---------------------------------------------------------------------------------------------

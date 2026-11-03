@@ -35,7 +35,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 
 // ---------------------------------------------------------------------------------------------
-// The welcome page: on the first start, a short rundown of what Bento is, what each tab does, what is needed and
+// The welcome page: on the first start, a short rundown of what Crimson Multitool is, what each tab does, what is needed and
 // how to begin. It can be opened again from the About window.
 // ---------------------------------------------------------------------------------------------
 

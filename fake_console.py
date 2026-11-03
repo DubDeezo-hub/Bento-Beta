@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fake console for testing the Bento app without a PS5.
+"""Fake console for testing the Crimson Multitool app without a PS5.
 
 Run it in Termux on the same phone. In the app, tap the card at the top and enter 127.0.0.1
 as the console's IP address; the three lights on the card turn green once this is running.
@@ -128,7 +128,7 @@ FAKE_PKG = make_pkg(FAKE_SFO, FAKE_ICON_PS4)
 def seed_samples():
     """Creates a few sample files for the app's Files tab (only the ones that are missing)."""
     samples = {
-        "readme.txt": b"Fake PS5 file system for testing the Bento app.\n",
+        "readme.txt": b"Fake PS5 file system for testing the Crimson Multitool app.\n",
         "data/notes.txt": b"Rename me, download me, or delete me.\n",
         "data/sample.bin": bytes(range(256)) * 1024,
         "user/home/hello.txt": b"A file inside nested folders.\n",
@@ -916,7 +916,7 @@ class WebPageHandler(BaseHTTPRequestHandler):
         path = self.path.split("?")[0]
         if path == "/":
             page = (b"<html><head><meta name=viewport content='width=device-width'></head><body style='font-size:22px'>"
-                    b"<h1>Bento web test</h1><p><a href='/get/bento-web-test.bin' style='font-size:28px'>"
+                    b"<h1>Crimson Multitool web test</h1><p><a href='/get/crimson-web-test.bin' style='font-size:28px'>"
                     b"Download the test file</a></p></body></html>")
             self.send_response(200)
             self.send_header("Content-Type", "text/html")
@@ -928,7 +928,7 @@ class WebPageHandler(BaseHTTPRequestHandler):
             host = (self.headers.get("Host") or "127.0.0.1").split(":")[0]
             print(f"[web] redirect {path}", flush=True)
             self.send_response(302)
-            self.send_header("Location", f"http://{host}:8089/files/bento-web-test.bin")
+            self.send_header("Location", f"http://{host}:8089/files/crimson-web-test.bin")
             self.end_headers()
         else:
             self.send_response(404)
@@ -942,14 +942,14 @@ class FileHostHandler(BaseHTTPRequestHandler):
     """Port 8089: the "file host" the download bounces to; it sends the file as an attachment."""
 
     def do_GET(self):
-        if self.path.split("?")[0] != "/files/bento-web-test.bin":
+        if self.path.split("?")[0] != "/files/crimson-web-test.bin":
             self.send_response(404)
             self.end_headers()
             return
         print(f"[web] file sent to {self.client_address[0]}", flush=True)
         self.send_response(200)
         self.send_header("Content-Type", "application/octet-stream")
-        self.send_header("Content-Disposition", "attachment; filename=\"bento-web-test.bin\"")
+        self.send_header("Content-Disposition", "attachment; filename=\"crimson-web-test.bin\"")
         self.send_header("Content-Length", str(len(WEB_TEST_FILE)))
         self.end_headers()
         self.wfile.write(WEB_TEST_FILE)

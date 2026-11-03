@@ -669,7 +669,7 @@
     <string name="memory_view_log">Дневник конзоле</string>
     <string name="klog_title">Дневник конзоле</string>
     <string name="klog_save">Сачувај на телефону</string>
-    <string name="klog_save_detail">Сваки ред се чим стигне уписује и у датотеку у Downloads/Bento/Logs, па после пада видиш шта је конзола исписала непосредно пре њега.</string>
+    <string name="klog_save_detail">Сваки ред се чим стигне уписује и у датотеку у Downloads/Crimson Multitool/Logs, па после пада видиш шта је конзола исписала непосредно пре њега.</string>
     <string name="klog_saving_to">Чува се у %1$s</string>
     <string name="klog_save_channel">Дневник конзоле</string>
     <string name="klog_save_notif_title">Чува се дневник конзоле</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">Ова датотека се више не поклапа са контролним збиром према ком је проверена.</string>
     <string name="shelf_copy_sha">Копирај SHA-256</string>
     <string name="store_checksum_bad_github">Преузимање се није поклопило са контролним збиром који GitHub наводи за њега, па није задржано.</string>
-    <string name="backup_auto">Сам направи резервну копију једном недељно (у Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Сам направи резервну копију једном недељно (у Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Недељна резервна копија сачувана: %1$s</string>
     <string name="etahen_title">Подешавања etaHEN-а</string>
     <string name="etahen_intro">Сопствена датотека подешавања etaHEN-а на конзоли. Већина промена важи од следећег покретања etaHEN-а (после следећег jailbreak-а). Чување задржава стару датотеку као config.ini.bak.</string>

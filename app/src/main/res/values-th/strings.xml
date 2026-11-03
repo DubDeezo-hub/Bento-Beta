@@ -669,7 +669,7 @@
     <string name="memory_view_log">บันทึกคอนโซล</string>
     <string name="klog_title">บันทึกคอนโซล</string>
     <string name="klog_save">บันทึกลงโทรศัพท์</string>
-    <string name="klog_save_detail">ทุกบรรทัดจะถูกเขียนลงไฟล์ใน Downloads/Bento/Logs ทันทีที่มาถึง หลังเครื่องค้างจึงยังเห็นได้ว่าเครื่องแสดงอะไรก่อนหน้านั้น</string>
+    <string name="klog_save_detail">ทุกบรรทัดจะถูกเขียนลงไฟล์ใน Downloads/Crimson Multitool/Logs ทันทีที่มาถึง หลังเครื่องค้างจึงยังเห็นได้ว่าเครื่องแสดงอะไรก่อนหน้านั้น</string>
     <string name="klog_saving_to">กำลังบันทึกไปที่ %1$s</string>
     <string name="klog_save_channel">บันทึกของเครื่อง</string>
     <string name="klog_save_notif_title">กำลังบันทึกบันทึกของเครื่อง</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">ไฟล์นี้ไม่ตรงกับ checksum ที่ใช้ตรวจสอบอีกต่อไป</string>
     <string name="shelf_copy_sha">คัดลอก SHA-256</string>
     <string name="store_checksum_bad_github">ไฟล์ที่ดาวน์โหลดไม่ตรงกับ checksum ที่ GitHub ระบุไว้ จึงไม่ได้เก็บไว้</string>
-    <string name="backup_auto">สำรองข้อมูลให้เองสัปดาห์ละครั้ง (ไปยัง Downloads/Bento/Backups)</string>
+    <string name="backup_auto">สำรองข้อมูลให้เองสัปดาห์ละครั้ง (ไปยัง Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">บันทึกข้อมูลสำรองรายสัปดาห์แล้ว: %1$s</string>
     <string name="etahen_title">การตั้งค่า etaHEN</string>
     <string name="etahen_intro">ไฟล์การตั้งค่าของ etaHEN บนคอนโซล การเปลี่ยนแปลงส่วนใหญ่จะมีผลในครั้งถัดไปที่ etaHEN เริ่ม (หลังเจลเบรกครั้งถัดไป) การบันทึกจะเก็บไฟล์เดิมไว้เป็น config.ini.bak</string>

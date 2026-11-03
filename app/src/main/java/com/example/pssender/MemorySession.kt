@@ -975,7 +975,7 @@ object MemorySession {
     fun exportText(): String {
         val s = snapshot?.game
         val o = JSONObject()
-            .put("bento", "cheats")
+            .put("app", "Crimson Multitool")
             .put("game", s?.name.orEmpty())
             .put("titleId", s?.titleId.orEmpty())
             .put("version", s?.version.orEmpty())

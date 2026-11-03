@@ -12,7 +12,7 @@
         <ignore regexp="orbispatches" />
         <ignore regexp="prosperopatches" />
     </issue>
-    <!-- A trust-all helper that lives inside the FTP library; Bento never uses it. -->
+    <!-- A trust-all helper that lives inside the FTP library; Crimson Multitool never uses it. -->
     <issue id="TrustAllX509TrustManager" severity="ignore" />
     <!-- Two saves are meant to finish before the next step (the language before the screen restarts,
          the capture lists before the old copy is removed). -->

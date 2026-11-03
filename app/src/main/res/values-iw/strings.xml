@@ -669,7 +669,7 @@
     <string name="memory_view_log">יומן הקונסולה</string>
     <string name="klog_title">יומן הקונסולה</string>
     <string name="klog_save">שמירה בטלפון</string>
-    <string name="klog_save_detail">כל שורה נכתבת עם הגעתה גם לקובץ ב-Downloads/Bento/Logs, כך שאחרי קריסה רואים מה הקונסולה הדפיסה רגע לפניה.</string>
+    <string name="klog_save_detail">כל שורה נכתבת עם הגעתה גם לקובץ ב-Downloads/Crimson Multitool/Logs, כך שאחרי קריסה רואים מה הקונסולה הדפיסה רגע לפניה.</string>
     <string name="klog_saving_to">נשמר ב-%1$s</string>
     <string name="klog_save_channel">יומן הקונסולה</string>
     <string name="klog_save_notif_title">שומר את יומן הקונסולה</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">הקובץ הזה כבר לא תואם ל-checksum שמולו הוא אומת.</string>
     <string name="shelf_copy_sha">העתקת SHA-256</string>
     <string name="store_checksum_bad_github">ההורדה לא תאמה ל-checksum ש-GitHub מציג עבורה, ולכן לא נשמרה.</string>
-    <string name="backup_auto">גיבוי אוטומטי פעם בשבוע (אל Downloads/Bento/Backups)</string>
+    <string name="backup_auto">גיבוי אוטומטי פעם בשבוע (אל Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">הגיבוי השבועי נשמר: %1$s</string>
     <string name="etahen_title">הגדרות etaHEN</string>
     <string name="etahen_intro">קובץ ההגדרות של etaHEN עצמו בקונסולה. רוב השינויים חלים בפעם הבאה ש-etaHEN עולה (אחרי הפריצה הבאה). שמירה משאירה את הקובץ הישן בשם config.ini.bak.</string>

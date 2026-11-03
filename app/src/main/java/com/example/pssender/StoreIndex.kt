@@ -6,7 +6,7 @@ import java.util.Locale
 
 // ---------------------------------------------------------------------------------------------
 // Where Get payloads finds payloads, beyond the few built into the app:
-//  - Bento's own list (payloads/index.json in Bento's repository): vetted entries, so a new payload can be added to every
+//  - Crimson Multitool's own list (payloads/index.json in Crimson Multitool's repository): vetted entries, so a new payload can be added to every
 //    copy of the app without an app update.
 //  - The community list kept by the PS5 Payloads Mirror (itsPLK/ps5-payloads-mirror): dozens of PS5 payloads with the
 //    makers' descriptions, versions and checksums, refreshed daily by its maintainer.
@@ -76,7 +76,7 @@ object StoreIndex {
         return keys.firstNotNullOfOrNull { texts[it] as? String } ?: ""
     }
 
-    /** Bento's own list: entries to add to (or change in) the built-in ones. */
+    /** Crimson Multitool's own list: entries to add to (or change in) the built-in ones. */
     fun parseCurated(json: String, lang: String = Locale.getDefault().language, region: String = Locale.getDefault().country): List<StoreEntry> {
         val root = readJson(json) as? Map<*, *> ?: return emptyList()
         return (root["payloads"] as? List<*>).orEmpty().mapNotNull { x ->
@@ -102,7 +102,7 @@ object StoreIndex {
         }
     }
 
-    /** The built-in entries with Bento's list applied: changes to known ones, new ones after them, hidden ones gone. */
+    /** The built-in entries with Crimson Multitool's list applied: changes to known ones, new ones after them, hidden ones gone. */
     fun merge(builtIn: List<StoreEntry>, curated: List<StoreEntry>): List<StoreEntry> {
         val byRepo = curated.associateBy { it.repo.lowercase() }
         val known = builtIn.map { it.repo.lowercase() }.toSet()
@@ -179,7 +179,7 @@ object StoreIndex {
         }
     }
 
-    /** The store's entries: the built-in ones with Bento's list applied. Blocking. */
+    /** The store's entries: the built-in ones with Crimson Multitool's list applied. Blocking. */
     fun entries(ctx: Context, force: Boolean = false): List<StoreEntry> {
         val text = fetch(ctx, "store_index_curated", CURATED_URL, force) ?: return Store.BUILT_IN
         return merge(Store.BUILT_IN, parseCurated(text))

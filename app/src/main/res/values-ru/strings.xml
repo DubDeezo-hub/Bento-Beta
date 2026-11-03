@@ -669,7 +669,7 @@
     <string name="memory_view_log">Журнал консоли</string>
     <string name="klog_title">Журнал консоли</string>
     <string name="klog_save">Сохранять на телефон</string>
-    <string name="klog_save_detail">Каждая строка сразу записывается и в файл в Загрузки/Bento/Logs, так что после сбоя видно, что консоль вывела прямо перед ним.</string>
+    <string name="klog_save_detail">Каждая строка сразу записывается и в файл в Загрузки/Crimson Multitool/Logs, так что после сбоя видно, что консоль вывела прямо перед ним.</string>
     <string name="klog_saving_to">Сохраняется в %1$s</string>
     <string name="klog_save_channel">Журнал консоли</string>
     <string name="klog_save_notif_title">Сохранение журнала консоли</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">Этот файл больше не совпадает с контрольной суммой, по которой был проверен.</string>
     <string name="shelf_copy_sha">Копировать SHA-256</string>
     <string name="store_checksum_bad_github">Загруженный файл не совпал с контрольной суммой, указанной для него на GitHub, поэтому он не сохранён.</string>
-    <string name="backup_auto">Автоматически делать резервную копию раз в неделю (в Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Автоматически делать резервную копию раз в неделю (в Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Еженедельная резервная копия сохранена: %1$s</string>
     <string name="etahen_title">Настройки etaHEN</string>
     <string name="etahen_intro">Собственный файл настроек etaHEN на консоли. Большинство изменений вступает в силу при следующем запуске etaHEN (после следующего джейлбрейка). При сохранении старый файл остаётся как config.ini.bak.</string>

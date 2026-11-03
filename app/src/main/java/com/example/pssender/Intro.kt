@@ -27,7 +27,7 @@ import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
 
 // ---------------------------------------------------------------------------------------------
-// The opening: the Bento logo, in the same place and size as on Android's own launch screen, grows a little and
+// The opening: the Crimson Multitool logo, in the same place and size as on Android's own launch screen, grows a little and
 // fades while the first screen rises in under it. On Android 12 and newer the system's launch screen (the same
 // logo on the same color, see values-v31/themes.xml) hands over to this without a jump; on older phones this is
 // the launch screen. It plays once per start of the app, not when the phone is turned.

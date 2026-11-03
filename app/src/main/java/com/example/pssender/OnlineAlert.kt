@@ -16,7 +16,7 @@ import android.content.pm.PackageManager
 import android.os.Build
 
 // ---------------------------------------------------------------------------------------------
-// "Tell me when it comes online": for a console with the switch on, Bento notices when it starts answering on the
+// "Tell me when it comes online": for a console with the switch on, Crimson Multitool notices when it starts answering on the
 // network (its payload loader or FTP server opens, which is what a jailbreak does) and says so once. While the app is
 // open the usual status checks keep track; while it is closed, the phone looks every 15 minutes (the shortest Android
 // allows for a background check). Only the console's own address is asked, on your network.

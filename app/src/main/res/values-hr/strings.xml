@@ -669,7 +669,7 @@
     <string name="memory_view_log">Zapisnik konzole</string>
     <string name="klog_title">Zapisnik konzole</string>
     <string name="klog_save">Spremi na mobitel</string>
-    <string name="klog_save_detail">Svaki redak odmah ide i u datoteku u Preuzimanja/Bento/Logs, pa nakon rušenja vidiš što je konzola ispisala neposredno prije.</string>
+    <string name="klog_save_detail">Svaki redak odmah ide i u datoteku u Preuzimanja/Crimson Multitool/Logs, pa nakon rušenja vidiš što je konzola ispisala neposredno prije.</string>
     <string name="klog_saving_to">Sprema se u %1$s</string>
     <string name="klog_save_channel">Zapisnik konzole</string>
     <string name="klog_save_notif_title">Spremanje zapisnika konzole</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">Ova se datoteka više ne podudara s kontrolnim zbrojem prema kojem je provjerena.</string>
     <string name="shelf_copy_sha">Kopiraj SHA-256</string>
     <string name="store_checksum_bad_github">Preuzimanje se nije podudaralo s kontrolnim zbrojem koji GitHub navodi za njega, pa nije zadržano.</string>
-    <string name="backup_auto">Sama izradi sigurnosnu kopiju jednom tjedno (u Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Sama izradi sigurnosnu kopiju jednom tjedno (u Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Tjedna sigurnosna kopija spremljena: %1$s</string>
     <string name="etahen_title">Postavke etaHEN-a</string>
     <string name="etahen_intro">Vlastita datoteka postavki etaHEN-a na konzoli. Većina promjena primjenjuje se pri sljedećem pokretanju etaHEN-a (nakon sljedećeg jailbreaka). Spremanje čuva staru datoteku kao config.ini.bak.</string>

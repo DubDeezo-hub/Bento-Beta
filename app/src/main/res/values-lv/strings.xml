@@ -669,7 +669,7 @@
     <string name="memory_view_log">Konsoles žurnāls</string>
     <string name="klog_title">Konsoles žurnāls</string>
     <string name="klog_save">Saglabāt tālrunī</string>
-    <string name="klog_save_detail">Katra rinda, tiklīdz pienāk, tiek ierakstīta arī failā mapē Lejupielādes/Bento/Logs, tāpēc pēc avārijas var redzēt, ko konsole izvadīja tieši pirms tās.</string>
+    <string name="klog_save_detail">Katra rinda, tiklīdz pienāk, tiek ierakstīta arī failā mapē Lejupielādes/Crimson Multitool/Logs, tāpēc pēc avārijas var redzēt, ko konsole izvadīja tieši pirms tās.</string>
     <string name="klog_saving_to">Saglabā: %1$s</string>
     <string name="klog_save_channel">Konsoles žurnāls</string>
     <string name="klog_save_notif_title">Saglabā konsoles žurnālu</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">Šis fails vairs neatbilst kontrolsummai, pēc kuras tas tika pārbaudīts.</string>
     <string name="shelf_copy_sha">Kopēt SHA-256</string>
     <string name="store_checksum_bad_github">Lejupielāde neatbilda kontrolsummai, ko tai norāda GitHub, tāpēc tā netika saglabāta.</string>
-    <string name="backup_auto">Automātiski izveidot dublējumu reizi nedēļā (mapē Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Automātiski izveidot dublējumu reizi nedēļā (mapē Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Iknedēļas dublējums saglabāts: %1$s</string>
     <string name="etahen_title">etaHEN iestatījumi</string>
     <string name="etahen_intro">etaHEN paša iestatījumu fails konsolē. Lielākā daļa izmaiņu stājas spēkā nākamajā etaHEN startēšanas reizē (pēc nākamās uzlaušanas). Saglabājot vecais fails tiek paturēts kā config.ini.bak.</string>

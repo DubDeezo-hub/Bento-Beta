@@ -1,5 +1,5 @@
 {
-  "_readme": "Bento's own list of vetted payloads. Every copy of the app reads this file (at most every few hours) and shows these under Get payloads > Bento's picks. Add an entry to offer a new payload without an app update; set \"hidden\": true to take one off. Fields: repo (GitHub owner/repo with Releases), name, console (ps5 or ps4), file (the file to take from a release or from the zip in it), anyFirmware (true for plain tools that run on any firmware), about (text, or {\"en\": ..., \"de\": ...} per language; built-in entries keep their translated text).",
+  "_readme": "Crimson Multitool's own list of vetted payloads. Every copy of the app reads this file (at most every few hours) and shows these under Get payloads > Crimson Multitool's picks. Add an entry to offer a new payload without an app update; set \"hidden\": true to take one off. Fields: repo (GitHub owner/repo with Releases), name, console (ps5 or ps4), file (the file to take from a release or from the zip in it), anyFirmware (true for plain tools that run on any firmware), about (text, or {\"en\": ..., \"de\": ...} per language; built-in entries keep their translated text).",
   "version": 1,
   "payloads": [
     {

@@ -669,7 +669,7 @@
     <string name="memory_view_log">ಕನ್ಸೋಲ್ ಲಾಗ್</string>
     <string name="klog_title">ಕನ್ಸೋಲ್ ಲಾಗ್</string>
     <string name="klog_save">ಫೋನ್‌ನಲ್ಲಿ ಉಳಿಸಿ</string>
-    <string name="klog_save_detail">ಪ್ರತಿ ಸಾಲು ಬಂದ ಕೂಡಲೇ Downloads/Bento/Logs ನಲ್ಲಿನ ಫೈಲ್‌ಗೂ ಬರೆಯಲಾಗುತ್ತದೆ, ಹಾಗಾಗಿ ಕ್ರ್ಯಾಶ್ ನಂತರವೂ ಕನ್ಸೋಲ್ ಅದಕ್ಕೂ ಮುನ್ನ ಏನು ತೋರಿಸಿತು ಎಂದು ನೋಡಬಹುದು.</string>
+    <string name="klog_save_detail">ಪ್ರತಿ ಸಾಲು ಬಂದ ಕೂಡಲೇ Downloads/Crimson Multitool/Logs ನಲ್ಲಿನ ಫೈಲ್‌ಗೂ ಬರೆಯಲಾಗುತ್ತದೆ, ಹಾಗಾಗಿ ಕ್ರ್ಯಾಶ್ ನಂತರವೂ ಕನ್ಸೋಲ್ ಅದಕ್ಕೂ ಮುನ್ನ ಏನು ತೋರಿಸಿತು ಎಂದು ನೋಡಬಹುದು.</string>
     <string name="klog_saving_to">%1$s ಗೆ ಉಳಿಸಲಾಗುತ್ತಿದೆ</string>
     <string name="klog_save_channel">ಕನ್ಸೋಲ್ ಲಾಗ್</string>
     <string name="klog_save_notif_title">ಕನ್ಸೋಲ್ ಲಾಗ್ ಉಳಿಸಲಾಗುತ್ತಿದೆ</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">ಈ ಫೈಲ್ ಪರಿಶೀಲಿಸಿದ ಚೆಕ್‌ಸಮ್‌ಗೆ ಇನ್ನು ಹೊಂದುತ್ತಿಲ್ಲ.</string>
     <string name="shelf_copy_sha">SHA-256 ನಕಲಿಸಿ</string>
     <string name="store_checksum_bad_github">ಡೌನ್‌ಲೋಡ್ GitHub ಅದಕ್ಕೆ ಪಟ್ಟಿ ಮಾಡುವ ಚೆಕ್‌ಸಮ್‌ಗೆ ಹೊಂದಲಿಲ್ಲ, ಆದ್ದರಿಂದ ಇಟ್ಟುಕೊಳ್ಳಲಾಗಿಲ್ಲ.</string>
-    <string name="backup_auto">ವಾರಕ್ಕೊಮ್ಮೆ ತಾನಾಗಿಯೇ ಬ್ಯಾಕಪ್ ಮಾಡಿ (Downloads/Bento/Backups ಗೆ)</string>
+    <string name="backup_auto">ವಾರಕ್ಕೊಮ್ಮೆ ತಾನಾಗಿಯೇ ಬ್ಯಾಕಪ್ ಮಾಡಿ (Downloads/Crimson Multitool/Backups ಗೆ)</string>
     <string name="backup_auto_done">ವಾರದ ಬ್ಯಾಕಪ್ ಉಳಿಸಲಾಗಿದೆ: %1$s</string>
     <string name="etahen_title">etaHEN ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="etahen_intro">ಕನ್ಸೋಲ್‌ನಲ್ಲಿರುವ etaHEN ನ ಸ್ವಂತ ಸೆಟ್ಟಿಂಗ್‌ಗಳ ಫೈಲ್. ಹೆಚ್ಚಿನ ಬದಲಾವಣೆಗಳು etaHEN ಮುಂದಿನ ಬಾರಿ ಪ್ರಾರಂಭವಾದಾಗ (ಮುಂದಿನ ಜೈಲ್‌ಬ್ರೇಕ್ ನಂತರ) ಅನ್ವಯವಾಗುತ್ತವೆ. ಉಳಿಸುವಾಗ ಹಳೆಯ ಫೈಲ್ ಅನ್ನು config.ini.bak ಆಗಿ ಇಡಲಾಗುತ್ತದೆ.</string>

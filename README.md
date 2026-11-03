@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="bento-icon.png" width="128" height="128" alt="Crimson Multitool app icon: a crimson hex nut with a terminal prompt">
+  <img src="crimson-multitool-icon.png" width="128" height="128" alt="Crimson Multitool app icon: a crimson hex nut with a terminal prompt">
 </p>
 
 <h1 align="center">Crimson Multitool</h1>
@@ -39,7 +39,7 @@ Every option has a small **?** that explains it, and a welcome page walks you th
 
 ## Get started
 
-1. Download the newest `Bento-1.N.apk` from **[Releases](https://github.com/DubDeezo-hub/Bento-Beta/releases)** and open it on your phone. New versions install over the old one and keep your settings; Crimson Multitool tells you when one is out.
+1. Download the newest `Crimson-Multitool-1.N.apk` from **[Releases](https://github.com/DubDeezo-hub/Bento-Beta/releases)** and open it on your phone. New versions install over the old one and keep your settings; Crimson Multitool tells you when one is out.
 2. Open Crimson Multitool and tap the card at the top. Enter the console's IP address, or tap **Find my console**.
 3. When the lights on the card turn green, pick a tab.
 

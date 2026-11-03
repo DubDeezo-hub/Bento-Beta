@@ -220,7 +220,7 @@ suspend fun scanWifi(
     val hosts = networks.flatMap { hostsToScan(it) }.distinct()
     val counter = AtomicInteger()
     val pool = Executors.newFixedThreadPool(SCAN_PARALLEL) { job ->
-        Thread(job, "bento-scan-" + counter.incrementAndGet()).apply { isDaemon = true }
+        Thread(job, "crimson-scan-" + counter.incrementAndGet()).apply { isDaemon = true }
     }
     val dispatcher = pool.asCoroutineDispatcher()
     try {

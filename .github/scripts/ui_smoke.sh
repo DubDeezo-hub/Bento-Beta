@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Phone-side smoke test for Bento. Run by .github/workflows/tests.yml while an Android emulator is running.
+# Phone-side smoke test for Crimson Multitool. Run by .github/workflows/tests.yml while an Android emulator is running.
 #
 #   ui_smoke.sh <app.apk> <results folder>
 #
@@ -164,7 +164,7 @@ adb shell settings put global always_finish_activities 0 > /dev/null 2>&1
 adb uninstall "$PKG" > /dev/null 2>&1
 
 {
-  echo "## Bento on a phone (emulator)"
+  echo "## Crimson Multitool on a phone (emulator)"
   echo
   echo "| | check |"
   echo "|---|---|"
@@ -587,8 +587,8 @@ put("string", "active_profile", "fake")
 put("string", "debug_port", "7744")
 ET.ElementTree(root).write(dst, encoding="utf-8", xml_declaration=True)
 PY
-  adb push "$OUT/settings.xml" /data/local/tmp/bento-settings.xml > /dev/null 2>&1
-  adb shell "cat /data/local/tmp/bento-settings.xml | run-as $PKG sh -c 'mkdir -p shared_prefs && cat > shared_prefs/settings.xml'"
+  adb push "$OUT/settings.xml" /data/local/tmp/crimson-settings.xml > /dev/null 2>&1
+  adb shell "cat /data/local/tmp/crimson-settings.xml | run-as $PKG sh -c 'mkdir -p shared_prefs && cat > shared_prefs/settings.xml'"
   if adb shell run-as "$PKG" cat shared_prefs/settings.xml 2> /dev/null | grep -q "$FAKE_HOST"; then
     pass "a console at the pretend console's address is saved in the app"
   else
@@ -673,13 +673,13 @@ PY
   # --- Newer checks: shown as notes (they don't turn the run red) until they have been seen to work ---
 
   # Payload: one from the shelf goes to the console's loader (9021)
-  head -c 4096 /dev/urandom > "$OUT/bento-test.elf"
-  adb push "$OUT/bento-test.elf" /data/local/tmp/bento-test.elf > /dev/null 2>&1
-  adb shell "cat /data/local/tmp/bento-test.elf | run-as $PKG sh -c 'mkdir -p files/payloads && cat > files/payloads/bento-test.elf'"
+  head -c 4096 /dev/urandom > "$OUT/crimson-test.elf"
+  adb push "$OUT/crimson-test.elf" /data/local/tmp/crimson-test.elf > /dev/null 2>&1
+  adb shell "cat /data/local/tmp/crimson-test.elf | run-as $PKG sh -c 'mkdir -p files/payloads && cat > files/payloads/crimson-test.elf'"
   dump || true
   tap_text "$(nav_label nav_payload)" || true
   sleep 3
-  if wait_text 10 bento-test.elf && tap_text "$(ui string action_send)"; then
+  if wait_text 10 crimson-test.elf && tap_text "$(ui string action_send)"; then
     if wait_log 20 "[payload] received 4096 bytes"; then
       pass "a payload from the shelf reaches the console's loader"
     else
@@ -781,7 +781,7 @@ PY
         # shellcheck disable=SC2086
         set -- $pos
         adb shell input tap "$1" "$2"
-        if wait_log 60 "[ftp] received bento-web-test.bin"; then
+        if wait_log 60 "[ftp] received crimson-web-test.bin"; then
           pass "a download from the browser goes through the site's redirect straight to the console"
         else
           fail "web download" "the file did not reach the console's FTP. Its log: $(tail -4 "$FAKE_LOG" | tr '\n' ' ')"

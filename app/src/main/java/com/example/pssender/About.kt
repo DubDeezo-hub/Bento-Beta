@@ -233,7 +233,7 @@ fun AboutDialog(
                     Button(onClick = { saveFile.launch(backupFileName()) }) { Text(str(R.string.backup_save)) }
                     Button(onClick = { openFile.launch(arrayOf("*/*")) }) { Text(str(R.string.backup_restore)) }
                 }
-                // A backup by itself once a week, into Downloads/Bento/Backups
+                // A backup by itself once a week, into Downloads/Crimson Multitool/Backups
                 var autoBackup by remember { mutableStateOf(AutoBackup.isOn(ctx)) }
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Text(str(R.string.backup_auto), style = MaterialTheme.typography.bodySmall, modifier = Modifier.weight(1f))

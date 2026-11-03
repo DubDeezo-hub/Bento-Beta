@@ -669,7 +669,7 @@
     <string name="memory_view_log">Konsol günlüğü</string>
     <string name="klog_title">Konsol günlüğü</string>
     <string name="klog_save">Telefona kaydet</string>
-    <string name="klog_save_detail">Her satır geldiği anda Downloads/Bento/Logs içindeki bir dosyaya da yazılır; böylece bir çökmeden sonra konsolun hemen öncesinde ne yazdığını görürsün.</string>
+    <string name="klog_save_detail">Her satır geldiği anda Downloads/Crimson Multitool/Logs içindeki bir dosyaya da yazılır; böylece bir çökmeden sonra konsolun hemen öncesinde ne yazdığını görürsün.</string>
     <string name="klog_saving_to">%1$s konumuna kaydediliyor</string>
     <string name="klog_save_channel">Konsol günlüğü</string>
     <string name="klog_save_notif_title">Konsol günlüğü kaydediliyor</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">Bu dosya artık doğrulandığı sağlama toplamıyla eşleşmiyor.</string>
     <string name="shelf_copy_sha">SHA-256\'yı kopyala</string>
     <string name="store_checksum_bad_github">İndirilen dosya GitHub\'ın listelediği sağlama toplamıyla eşleşmedi, bu yüzden saklanmadı.</string>
-    <string name="backup_auto">Haftada bir kendiliğinden yedek al (Downloads/Bento/Backups içine)</string>
+    <string name="backup_auto">Haftada bir kendiliğinden yedek al (Downloads/Crimson Multitool/Backups içine)</string>
     <string name="backup_auto_done">Haftalık yedek kaydedildi: %1$s</string>
     <string name="etahen_title">etaHEN ayarları</string>
     <string name="etahen_intro">etaHEN\'in konsoldaki kendi ayar dosyası. Çoğu değişiklik etaHEN bir sonraki başladığında (bir sonraki jailbreak\'ten sonra) uygulanır. Kaydetmek eski dosyayı config.ini.bak olarak saklar.</string>

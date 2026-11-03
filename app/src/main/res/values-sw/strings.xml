@@ -669,7 +669,7 @@
     <string name="memory_view_log">Kumbukumbu za konsoli</string>
     <string name="klog_title">Kumbukumbu za konsoli</string>
     <string name="klog_save">Hifadhi kwenye simu</string>
-    <string name="klog_save_detail">Kila mstari pia huandikwa mara moja kwenye faili ndani ya Downloads/Bento/Logs, kwa hivyo baada ya kukwama unaona konsoli ilionyesha nini kabla tu.</string>
+    <string name="klog_save_detail">Kila mstari pia huandikwa mara moja kwenye faili ndani ya Downloads/Crimson Multitool/Logs, kwa hivyo baada ya kukwama unaona konsoli ilionyesha nini kabla tu.</string>
     <string name="klog_saving_to">Inahifadhi kwenye %1$s</string>
     <string name="klog_save_channel">Kumbukumbu ya konsoli</string>
     <string name="klog_save_notif_title">Inahifadhi kumbukumbu ya konsoli</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">Faili hii hailingani tena na checksum iliyothibitishwa nayo.</string>
     <string name="shelf_copy_sha">Nakili SHA-256</string>
     <string name="store_checksum_bad_github">Upakuaji haukulingana na checksum ambayo GitHub inaorodhesha kwake, kwa hiyo haukuhifadhiwa.</string>
-    <string name="backup_auto">Tengeneza nakala rudufu yenyewe mara moja kwa wiki (kwenye Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Tengeneza nakala rudufu yenyewe mara moja kwa wiki (kwenye Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Nakala rudufu ya kila wiki imehifadhiwa: %1$s</string>
     <string name="etahen_title">Mipangilio ya etaHEN</string>
     <string name="etahen_intro">Faili ya mipangilio ya etaHEN yenyewe kwenye konsoli. Mabadiliko mengi yanatumika etaHEN inapoanza wakati ujao (baada ya jailbreak inayofuata). Kuhifadhi huweka faili ya zamani kama config.ini.bak.</string>

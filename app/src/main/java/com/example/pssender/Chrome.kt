@@ -265,7 +265,7 @@ fun ConsoleEditDialog(
                     TextButton(onClick = onFind) { Text(str(R.string.find_button, type.model)) }
                     if (onCheck != null && host.isNotBlank()) TextButton(onClick = onCheck) { Text(str(R.string.diag_button)) }
                 }
-                // A notification when this console starts answering (after a jailbreak), even while Bento is closed
+                // A notification when this console starts answering (after a jailbreak), even while Crimson Multitool is closed
                 if (onAlert != null && host.isNotBlank()) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Column(modifier = Modifier.weight(1f)) {

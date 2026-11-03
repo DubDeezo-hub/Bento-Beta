@@ -29,7 +29,7 @@ import java.util.Date
 import java.util.Locale
 
 // ---------------------------------------------------------------------------------------------
-// When the console log stops answering (a likely kernel panic), Bento notes what it can: the time, the last log lines,
+// When the console log stops answering (a likely kernel panic), Crimson Multitool notes what it can: the time, the last log lines,
 // and which payloads went out in the minutes before. The notes are kept on the phone (no files, no addresses leave it)
 // so a pattern is easy to spot — "it always goes down a minute after this payload". The notes are plain text, in
 // English like the crash report, because they are meant to be shared with whoever helps or pasted into a bug report.

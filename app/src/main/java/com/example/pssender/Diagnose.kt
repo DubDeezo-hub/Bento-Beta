@@ -46,7 +46,7 @@ import java.util.concurrent.TimeUnit
 // The deciding part ([diagnose]) only looks at what was measured, so it can be tested without a console.
 // ---------------------------------------------------------------------------------------------
 
-/** What happened when Bento tried to connect to one port. */
+/** What happened when Crimson Multitool tried to connect to one port. */
 enum class PortState {
     /** Something accepted the connection. */
     OPEN,
@@ -310,7 +310,7 @@ object Diagnose {
         val tries = portsToTry(profile.type, ports)
         val probes = tries.map { p -> async(Dispatchers.IO) { p to probe(host, p) } }
         val pinged = async(Dispatchers.IO) { ping(host) }
-        // The console log: what Bento's log view already has, plus whatever arrives in two seconds now
+        // The console log: what Crimson Multitool's log view already has, plus whatever arrives in two seconds now
         val seen = KernelLog.lines.toList()
         val logPort = KernelLog.port.trim().toIntOrNull() ?: KernelLog.DEFAULT_PORT
         // ps5debug-NG's log (3232) or etaHEN's (9081): the first that has something to say

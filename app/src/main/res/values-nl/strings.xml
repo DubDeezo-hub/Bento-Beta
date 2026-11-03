@@ -670,7 +670,7 @@
     <string name="memory_view_log">Consolelog</string>
     <string name="klog_title">Consolelog</string>
     <string name="klog_save">Opslaan op telefoon</string>
-    <string name="klog_save_detail">Elke regel gaat bij aankomst ook naar een bestand in Downloads/Bento/Logs, zodat je na een crash ziet wat de console vlak daarvoor schreef.</string>
+    <string name="klog_save_detail">Elke regel gaat bij aankomst ook naar een bestand in Downloads/Crimson Multitool/Logs, zodat je na een crash ziet wat de console vlak daarvoor schreef.</string>
     <string name="klog_saving_to">Opslaan in %1$s</string>
     <string name="klog_save_channel">Consolelog</string>
     <string name="klog_save_notif_title">Consolelog wordt opgeslagen</string>
@@ -1095,7 +1095,7 @@
     <string name="shelf_changed">Dit bestand komt niet meer overeen met de checksum waarmee het geverifieerd is.</string>
     <string name="shelf_copy_sha">SHA-256 kopiëren</string>
     <string name="store_checksum_bad_github">De download kwam niet overeen met de checksum die GitHub ervoor vermeldt en is daarom niet bewaard.</string>
-    <string name="backup_auto">Eens per week vanzelf een back-up maken (in Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Eens per week vanzelf een back-up maken (in Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Wekelijkse back-up opgeslagen: %1$s</string>
     <string name="etahen_title">etaHEN-instellingen</string>
     <string name="etahen_intro">Het eigen instellingenbestand van etaHEN op de console. De meeste wijzigingen gelden de volgende keer dat etaHEN start (na de volgende jailbreak). Bij opslaan wordt het oude bestand bewaard als config.ini.bak.</string>

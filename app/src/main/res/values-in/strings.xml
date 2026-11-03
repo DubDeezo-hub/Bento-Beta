@@ -669,7 +669,7 @@
     <string name="memory_view_log">Log konsol</string>
     <string name="klog_title">Log konsol</string>
     <string name="klog_save">Simpan ke ponsel</string>
-    <string name="klog_save_detail">Setiap baris juga langsung ditulis ke file di Download/Bento/Logs, jadi setelah crash kamu bisa melihat apa yang ditulis konsol tepat sebelumnya.</string>
+    <string name="klog_save_detail">Setiap baris juga langsung ditulis ke file di Download/Crimson Multitool/Logs, jadi setelah crash kamu bisa melihat apa yang ditulis konsol tepat sebelumnya.</string>
     <string name="klog_saving_to">Menyimpan ke %1$s</string>
     <string name="klog_save_channel">Log konsol</string>
     <string name="klog_save_notif_title">Menyimpan log konsol</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">File ini tidak lagi cocok dengan checksum yang dipakai untuk memverifikasinya.</string>
     <string name="shelf_copy_sha">Salin SHA-256</string>
     <string name="store_checksum_bad_github">Unduhan tidak cocok dengan checksum yang dicantumkan GitHub, jadi tidak disimpan.</string>
-    <string name="backup_auto">Buat cadangan otomatis seminggu sekali (ke Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Buat cadangan otomatis seminggu sekali (ke Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Cadangan mingguan disimpan: %1$s</string>
     <string name="etahen_title">Pengaturan etaHEN</string>
     <string name="etahen_intro">File pengaturan etaHEN sendiri di konsol. Sebagian besar perubahan berlaku saat etaHEN dimulai berikutnya (setelah jailbreak berikutnya). Saat disimpan, file lama disimpan sebagai config.ini.bak.</string>

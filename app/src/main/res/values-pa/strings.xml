@@ -669,7 +669,7 @@
     <string name="memory_view_log">ਕੰਸੋਲ ਲੌਗ</string>
     <string name="klog_title">ਕੰਸੋਲ ਲੌਗ</string>
     <string name="klog_save">ਫ਼ੋਨ ਵਿੱਚ ਸੇਵ ਕਰੋ</string>
-    <string name="klog_save_detail">ਹਰ ਲਾਈਨ ਆਉਂਦਿਆਂ ਹੀ Downloads/Bento/Logs ਦੀ ਇੱਕ ਫ਼ਾਈਲ ਵਿੱਚ ਵੀ ਲਿਖੀ ਜਾਂਦੀ ਹੈ, ਤਾਂ ਜੋ ਕ੍ਰੈਸ਼ ਤੋਂ ਬਾਅਦ ਵੀ ਦਿਖੇ ਕਿ ਕੰਸੋਲ ਨੇ ਠੀਕ ਪਹਿਲਾਂ ਕੀ ਦਿਖਾਇਆ ਸੀ।</string>
+    <string name="klog_save_detail">ਹਰ ਲਾਈਨ ਆਉਂਦਿਆਂ ਹੀ Downloads/Crimson Multitool/Logs ਦੀ ਇੱਕ ਫ਼ਾਈਲ ਵਿੱਚ ਵੀ ਲਿਖੀ ਜਾਂਦੀ ਹੈ, ਤਾਂ ਜੋ ਕ੍ਰੈਸ਼ ਤੋਂ ਬਾਅਦ ਵੀ ਦਿਖੇ ਕਿ ਕੰਸੋਲ ਨੇ ਠੀਕ ਪਹਿਲਾਂ ਕੀ ਦਿਖਾਇਆ ਸੀ।</string>
     <string name="klog_saving_to">%1$s ਵਿੱਚ ਸੇਵ ਹੋ ਰਿਹਾ ਹੈ</string>
     <string name="klog_save_channel">ਕੰਸੋਲ ਲੌਗ</string>
     <string name="klog_save_notif_title">ਕੰਸੋਲ ਲੌਗ ਸੇਵ ਹੋ ਰਿਹਾ ਹੈ</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">ਇਹ ਫਾਈਲ ਹੁਣ ਉਸ ਚੈੱਕਸਮ ਨਾਲ ਮੇਲ ਨਹੀਂ ਖਾਂਦੀ ਜਿਸ ਨਾਲ ਇਸ ਨੂੰ ਪ੍ਰਮਾਣਿਤ ਕੀਤਾ ਗਿਆ ਸੀ।</string>
     <string name="shelf_copy_sha">SHA-256 ਕਾਪੀ ਕਰੋ</string>
     <string name="store_checksum_bad_github">ਡਾਊਨਲੋਡ ਉਸ ਚੈੱਕਸਮ ਨਾਲ ਮੇਲ ਨਹੀਂ ਖਾਂਦਾ ਸੀ ਜੋ GitHub ਇਸ ਲਈ ਦਿਖਾਉਂਦਾ ਹੈ, ਇਸ ਲਈ ਰੱਖਿਆ ਨਹੀਂ ਗਿਆ।</string>
-    <string name="backup_auto">ਹਫ਼ਤੇ ਵਿੱਚ ਇੱਕ ਵਾਰ ਆਪਣੇ-ਆਪ ਬੈਕਅੱਪ ਬਣਾਓ (Downloads/Bento/Backups ਵਿੱਚ)</string>
+    <string name="backup_auto">ਹਫ਼ਤੇ ਵਿੱਚ ਇੱਕ ਵਾਰ ਆਪਣੇ-ਆਪ ਬੈਕਅੱਪ ਬਣਾਓ (Downloads/Crimson Multitool/Backups ਵਿੱਚ)</string>
     <string name="backup_auto_done">ਹਫ਼ਤਾਵਾਰੀ ਬੈਕਅੱਪ ਸੰਭਾਲਿਆ: %1$s</string>
     <string name="etahen_title">etaHEN ਸੈਟਿੰਗਾਂ</string>
     <string name="etahen_intro">ਕੰਸੋਲ \'ਤੇ etaHEN ਦੀ ਆਪਣੀ ਸੈਟਿੰਗ ਫਾਈਲ। ਜ਼ਿਆਦਾਤਰ ਬਦਲਾਅ ਅਗਲੀ ਵਾਰ etaHEN ਸ਼ੁਰੂ ਹੋਣ \'ਤੇ (ਅਗਲੇ ਜੇਲਬ੍ਰੇਕ ਤੋਂ ਬਾਅਦ) ਲਾਗੂ ਹੁੰਦੇ ਹਨ। ਸੰਭਾਲਣ \'ਤੇ ਪੁਰਾਣੀ ਫਾਈਲ config.ini.bak ਵਜੋਂ ਰੱਖੀ ਜਾਂਦੀ ਹੈ।</string>

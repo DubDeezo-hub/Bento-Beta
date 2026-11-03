@@ -5,7 +5,7 @@ import org.junit.Test
 import java.io.File
 
 /**
- * Bento's first rule: nothing the phone does, and nothing it tells the console to do, may reach a Sony server (no
+ * Crimson Multitool's first rule: nothing the phone does, and nothing it tells the console to do, may reach a Sony server (no
  * updates pushed, no bans). This fails the build if a Sony address ever turns up in the app's code, its texts or
  * its payload list.
  */

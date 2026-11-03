@@ -669,7 +669,7 @@
     <string name="memory_view_log">Log ng console</string>
     <string name="klog_title">Log ng console</string>
     <string name="klog_save">I-save sa phone</string>
-    <string name="klog_save_detail">Isinusulat din agad ang bawat linya sa isang file sa Downloads/Bento/Logs, kaya pagkatapos mag-crash ay makikita mo ang ipinakita ng console bago iyon.</string>
+    <string name="klog_save_detail">Isinusulat din agad ang bawat linya sa isang file sa Downloads/Crimson Multitool/Logs, kaya pagkatapos mag-crash ay makikita mo ang ipinakita ng console bago iyon.</string>
     <string name="klog_saving_to">Sine-save sa %1$s</string>
     <string name="klog_save_channel">Log ng console</string>
     <string name="klog_save_notif_title">Sine-save ang log ng console</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">Hindi na tumutugma ang file na ito sa checksum na ginamit sa pag-verify nito.</string>
     <string name="shelf_copy_sha">Kopyahin ang SHA-256</string>
     <string name="store_checksum_bad_github">Hindi tumugma ang download sa checksum na nakalista sa GitHub para dito, kaya hindi ito itinabi.</string>
-    <string name="backup_auto">Kusang gumawa ng backup isang beses bawat linggo (sa Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Kusang gumawa ng backup isang beses bawat linggo (sa Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Na-save ang lingguhang backup: %1$s</string>
     <string name="etahen_title">Settings ng etaHEN</string>
     <string name="etahen_intro">Ang sariling settings file ng etaHEN sa console. Karamihan sa mga pagbabago ay magkakabisa sa susunod na pagsisimula ng etaHEN (pagkatapos ng susunod na jailbreak). Kapag nag-save, itinatabi ang lumang file bilang config.ini.bak.</string>

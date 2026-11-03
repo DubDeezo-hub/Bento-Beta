@@ -61,9 +61,14 @@ class BackupRead(val data: BackupData?, val problem: BackupProblem?)
 private fun nowStamp(): String =
     SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.US).apply { timeZone = TimeZone.getTimeZone("UTC") }.format(Date())
 
-/** The name suggested for a new backup file, with today's date: bento-backup-2026-10-11.json. */
+/** The name suggested for a new backup file, with today's date: crimson-multitool-backup-2026-10-11.json. */
+
+/** The app's mark in a backup file, and the marks it reads (the first is its name before the rename). */
+const val BACKUP_APP = "Crimson Multitool"
+val BACKUP_APPS = setOf("Bento", BACKUP_APP)
+
 fun backupFileName(now: Date = Date()): String =
-    "bento-backup-" + SimpleDateFormat("yyyy-MM-dd", Locale.US).format(now) + ".json"
+    "crimson-multitool-backup-" + SimpleDateFormat("yyyy-MM-dd", Locale.US).format(now) + ".json"
 
 /** Keeps payloads from the front of [files] while their total stays within [maxBytes]; the rest are counted as skipped. */
 fun fitShelf(files: List<ShelfFile>, maxBytes: Long): Pair<List<ShelfFile>, Int> {
@@ -94,8 +99,7 @@ fun backupToJson(data: BackupData, versionName: String, savedAt: String = nowSta
         shelf.put(JSONObject().put("name", f.name).put("data", Base64.getEncoder().encodeToString(f.bytes)))
     }
     val o = JSONObject()
-        // Still "Bento" (the app's name before): backups stay readable by older and newer versions alike
-        .put("app", "Bento")
+        .put("app", BACKUP_APP)
         .put("format", BACKUP_FORMAT)
         .put("version", versionName)
         .put("saved", savedAt)
@@ -131,7 +135,8 @@ fun parseBackup(text: String): BackupRead {
     } catch (_: Exception) {
         return BackupRead(null, BackupProblem.NOT_A_BACKUP)
     }
-    if (o.optString("app", "") != "Bento") return BackupRead(null, BackupProblem.NOT_A_BACKUP)
+    // Backups made before the app was renamed say "Bento"; they are read just the same
+    if (o.optString("app", "") !in BACKUP_APPS) return BackupRead(null, BackupProblem.NOT_A_BACKUP)
     if (o.optInt("format", 0) > BACKUP_FORMAT) return BackupRead(null, BackupProblem.TOO_NEW)
 
     // A name longer than the console button allows is cut, as typing it would have done
@@ -311,7 +316,7 @@ fun restoreMessage(failedPayloads: Int): String {
 }
 
 /**
- * A backup made by itself: when switched on, once a week when the app opens, into Downloads/Bento/Backups on the phone
+ * A backup made by itself: when switched on, once a week when the app opens, into Downloads/Crimson Multitool/Backups on the phone
  * (a new file each time, so older ones stay until you delete them).
  */
 object AutoBackup {
@@ -326,7 +331,7 @@ object AutoBackup {
     fun runIfDue(ctx: Context, versionName: String, now: Long = System.currentTimeMillis()): String? {
         if (!isOn(ctx) || now - last(ctx) in 0 until EVERY_MS) return null
         val text = backupToJson(collectBackup(ctx), versionName)
-        val where = saveTextToDownloads(ctx.contentResolver, "Bento", "Backups", backupFileName(), text) ?: return null
+        val where = saveTextToDownloads(ctx.contentResolver, DOWNLOADS_ROOT, "Backups", backupFileName(), text) ?: return null
         prefs(ctx).edit().putLong("auto_backup_last", now).apply()
         return where
     }

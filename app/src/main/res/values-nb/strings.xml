@@ -669,7 +669,7 @@
     <string name="memory_view_log">Konsollogg</string>
     <string name="klog_title">Konsollogg</string>
     <string name="klog_save">Lagre på telefonen</string>
-    <string name="klog_save_detail">Hver linje skrives også til en fil i Nedlastinger/Bento/Logs når den kommer, så etter en krasj ser du hva konsollen skrev rett før.</string>
+    <string name="klog_save_detail">Hver linje skrives også til en fil i Nedlastinger/Crimson Multitool/Logs når den kommer, så etter en krasj ser du hva konsollen skrev rett før.</string>
     <string name="klog_saving_to">Lagrer i %1$s</string>
     <string name="klog_save_channel">Konsollogg</string>
     <string name="klog_save_notif_title">Lagrer konsolloggen</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">Denne filen stemmer ikke lenger med sjekksummen den ble bekreftet mot.</string>
     <string name="shelf_copy_sha">Kopier SHA-256</string>
     <string name="store_checksum_bad_github">Nedlastingen stemte ikke med sjekksummen GitHub oppgir for den, så den ble ikke beholdt.</string>
-    <string name="backup_auto">Ta en sikkerhetskopi av seg selv én gang i uken (i Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Ta en sikkerhetskopi av seg selv én gang i uken (i Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Ukentlig sikkerhetskopi lagret: %1$s</string>
     <string name="etahen_title">etaHEN-innstillinger</string>
     <string name="etahen_intro">etaHENs egen innstillingsfil på konsollen. De fleste endringer gjelder neste gang etaHEN starter (etter neste jailbreak). Ved lagring beholdes den gamle filen som config.ini.bak.</string>

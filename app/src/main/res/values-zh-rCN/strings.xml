@@ -669,7 +669,7 @@
     <string name="memory_view_log">主机日志</string>
     <string name="klog_title">主机日志</string>
     <string name="klog_save">保存到手机</string>
-    <string name="klog_save_detail">每一行到达时也会写入 Downloads/Bento/Logs 中的文件，主机崩溃后仍能看到它崩溃前输出的内容。</string>
+    <string name="klog_save_detail">每一行到达时也会写入 Downloads/Crimson Multitool/Logs 中的文件，主机崩溃后仍能看到它崩溃前输出的内容。</string>
     <string name="klog_saving_to">正在保存到 %1$s</string>
     <string name="klog_save_channel">主机日志</string>
     <string name="klog_save_notif_title">正在保存主机日志</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">此文件与验证时使用的校验和不再一致。</string>
     <string name="shelf_copy_sha">复制 SHA-256</string>
     <string name="store_checksum_bad_github">下载的文件与 GitHub 为其列出的校验和不符，因此未保留。</string>
-    <string name="backup_auto">每周自动备份一次（保存到 Downloads/Bento/Backups）</string>
+    <string name="backup_auto">每周自动备份一次（保存到 Downloads/Crimson Multitool/Backups）</string>
     <string name="backup_auto_done">已保存每周备份：%1$s</string>
     <string name="etahen_title">etaHEN 设置</string>
     <string name="etahen_intro">主机上 etaHEN 自己的设置文件。大多数修改会在 etaHEN 下次启动时（下次破解后）生效。保存时会把旧文件保留为 config.ini.bak。</string>

@@ -47,7 +47,7 @@ import java.util.zip.ZipInputStream
 
 // ---------------------------------------------------------------------------------------------
 // The payload store: well-known homebrew payloads, fetched from their own GitHub Releases pages straight onto the
-// shelf, with a notice when a newer version is out. Bento ships none of them; it only knows where they are published.
+// shelf, with a notice when a newer version is out. Crimson Multitool ships none of them; it only knows where they are published.
 // ---------------------------------------------------------------------------------------------
 
 /** One payload the store knows: where its releases are and which file in them to take. */
@@ -62,9 +62,9 @@ data class StoreEntry(
     val file: String,
     /** A plain tool (a server, a logger) that runs on any firmware where payloads can be loaded at all. */
     val anyFirmware: Boolean = false,
-    /** What it is for, as text (entries from Bento's online list, which has no string resource). */
+    /** What it is for, as text (entries from Crimson Multitool's online list, which has no string resource). */
     val aboutText: String = "",
-    /** Taken off the list by Bento's online list. */
+    /** Taken off the list by Crimson Multitool's online list. */
     val hidden: Boolean = false
 )
 
@@ -75,7 +75,7 @@ data class StoreAsset(val name: String, val url: String, val size: Long, /** "sh
 data class StoreRelease(val tag: String, val page: String, val date: String, val assets: List<StoreAsset>, val notes: String = "")
 
 object Store {
-    /** The payloads built into the app; Bento's online list can add to them (see [StoreIndex]). */
+    /** The payloads built into the app; Crimson Multitool's online list can add to them (see [StoreIndex]). */
     val BUILT_IN = listOf(
         StoreEntry("etaHEN/etaHEN", "etaHEN", R.string.store_about_etahen, ConsoleType.PS5, "etaHEN.bin"),
         StoreEntry("Pharaoh2k/ps5debug-NG", "ps5debug-NG", R.string.store_about_ps5debug, ConsoleType.PS5, "ps5debug-NG.elf"),
@@ -88,7 +88,7 @@ object Store {
         StoreEntry("GoldHEN/GoldHEN_Releases", "GoldHEN", R.string.store_about_goldhen, ConsoleType.PS4, "goldhen.bin")
     )
 
-    /** The payloads the store shows now: [BUILT_IN] with Bento's online list applied once it has been read. */
+    /** The payloads the store shows now: [BUILT_IN] with Crimson Multitool's online list applied once it has been read. */
     var entries by mutableStateOf(BUILT_IN)
 
     private val PAYLOAD = Regex("""\.(elf|bin)$""", RegexOption.IGNORE_CASE)
@@ -247,7 +247,7 @@ object Store {
             c.connectTimeout = 10_000
             c.readTimeout = 30_000
             c.instanceFollowRedirects = true
-            c.setRequestProperty("User-Agent", "Bento-store")
+            c.setRequestProperty("User-Agent", "Crimson-Multitool-store")
             if (c.responseCode !in 200..299) throw java.io.IOException("HTTP ${c.responseCode}")
             if (c.contentLengthLong > SHELF_MAX_BYTES * 2) throw ShelfTooLarge(SHELF_MAX_BYTES)
             return c.inputStream.use { readCapped(it, SHELF_MAX_BYTES * 2) } ?: throw ShelfTooLarge(SHELF_MAX_BYTES)
@@ -337,7 +337,7 @@ object Store {
             c.connectTimeout = 10_000
             c.readTimeout = 30_000
             c.instanceFollowRedirects = true
-            c.setRequestProperty("User-Agent", "Bento-store")
+            c.setRequestProperty("User-Agent", "Crimson-Multitool-store")
             if (c.responseCode !in 200..299) throw java.io.IOException("HTTP ${c.responseCode}")
             val len = c.contentLengthLong
             if (len > SHELF_MAX_BYTES * 2) throw ShelfTooLarge(SHELF_MAX_BYTES)
@@ -519,7 +519,7 @@ fun StoreDialog(type: ConsoleType, onAdded: () -> Unit, onClose: () -> Unit) {
                     HelpLink(message)
                 }
 
-                // --- Bento's picks ---
+                // --- Crimson Multitool's picks ---
                 SectionTitle(str(R.string.store_section_picks))
                 rows.forEach { row ->
                     val e = row.entry
@@ -785,7 +785,7 @@ private fun firmwareNote(@Suppress("UNUSED_PARAMETER") name: String, claims: FwC
 
 /**
  * Looked for once per start of the app: newer versions of payloads that came from the store, and payloads that
- * appeared in Bento's list or the community list since the store was last opened.
+ * appeared in Crimson Multitool's list or the community list since the store was last opened.
  */
 object StoreUpdates {
     var newer by mutableStateOf<List<String>>(emptyList())

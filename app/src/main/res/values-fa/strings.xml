@@ -669,7 +669,7 @@
     <string name="memory_view_log">گزارش کنسول</string>
     <string name="klog_title">گزارش کنسول</string>
     <string name="klog_save">ذخیره در گوشی</string>
-    <string name="klog_save_detail">هر خط هم‌زمان با رسیدن در فایلی در Downloads/Bento/Logs هم نوشته می‌شود تا بعد از کرش ببینید کنسول درست قبل از آن چه نوشته بود.</string>
+    <string name="klog_save_detail">هر خط هم‌زمان با رسیدن در فایلی در Downloads/Crimson Multitool/Logs هم نوشته می‌شود تا بعد از کرش ببینید کنسول درست قبل از آن چه نوشته بود.</string>
     <string name="klog_saving_to">در حال ذخیره در %1$s</string>
     <string name="klog_save_channel">گزارش کنسول</string>
     <string name="klog_save_notif_title">در حال ذخیرهٔ گزارش کنسول</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">این فایل دیگر با checksumی که با آن تأیید شده بود مطابقت ندارد.</string>
     <string name="shelf_copy_sha">کپی SHA-256</string>
     <string name="store_checksum_bad_github">دانلود با checksumی که GitHub برایش فهرست کرده مطابقت نداشت، پس نگه داشته نشد.</string>
-    <string name="backup_auto">هفته‌ای یک بار خودکار پشتیبان بگیر (در Downloads/Bento/Backups)</string>
+    <string name="backup_auto">هفته‌ای یک بار خودکار پشتیبان بگیر (در Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">پشتیبان هفتگی ذخیره شد: %1$s</string>
     <string name="etahen_title">تنظیمات etaHEN</string>
     <string name="etahen_intro">فایل تنظیمات خود etaHEN روی کنسول. بیشتر تغییرها دفعه بعد که etaHEN شروع شود (بعد از جیلبریک بعدی) اعمال می‌شوند. ذخیره، فایل قدیمی را به نام config.ini.bak نگه می‌دارد.</string>

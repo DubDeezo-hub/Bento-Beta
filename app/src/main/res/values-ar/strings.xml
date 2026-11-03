@@ -669,7 +669,7 @@
     <string name="memory_view_log">سجل الجهاز</string>
     <string name="klog_title">سجل الجهاز</string>
     <string name="klog_save">الحفظ على الهاتف</string>
-    <string name="klog_save_detail">يُكتب كل سطر أيضًا في ملف داخل Downloads/Bento/Logs فور وصوله، فترى بعد الانهيار ما طبعه الجهاز قبله مباشرة.</string>
+    <string name="klog_save_detail">يُكتب كل سطر أيضًا في ملف داخل Downloads/Crimson Multitool/Logs فور وصوله، فترى بعد الانهيار ما طبعه الجهاز قبله مباشرة.</string>
     <string name="klog_saving_to">يُحفظ في %1$s</string>
     <string name="klog_save_channel">سجل الجهاز</string>
     <string name="klog_save_notif_title">يتم حفظ سجل الجهاز</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">هذا الملف لم يعد يطابق المجموع الاختباري الذي تم التحقق منه به.</string>
     <string name="shelf_copy_sha">نسخ SHA-256</string>
     <string name="store_checksum_bad_github">التنزيل لم يطابق المجموع الاختباري الذي يذكره GitHub له، لذا لم يُحفظ.</string>
-    <string name="backup_auto">أنشئ نسخة احتياطية تلقائيًا مرة كل أسبوع (في Downloads/Bento/Backups)</string>
+    <string name="backup_auto">أنشئ نسخة احتياطية تلقائيًا مرة كل أسبوع (في Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">حُفظت النسخة الاحتياطية الأسبوعية: %1$s</string>
     <string name="etahen_title">إعدادات etaHEN</string>
     <string name="etahen_intro">ملف إعدادات etaHEN نفسه على الجهاز. معظم التغييرات تُطبَّق في المرة التالية التي يبدأ فيها etaHEN (بعد كسر الحماية التالي). الحفظ يحتفظ بالملف القديم باسم config.ini.bak.</string>

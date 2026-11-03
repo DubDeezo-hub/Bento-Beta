@@ -9,7 +9,7 @@ import kotlinx.coroutines.withContext
 
 // ---------------------------------------------------------------------------------------------
 // Two Files-tab helpers: how much space each installed game takes, and copying new screenshots and video clips from
-// the console to the phone (on request, or by itself when Bento opens).
+// the console to the phone (on request, or by itself when Crimson Multitool opens).
 // ---------------------------------------------------------------------------------------------
 
 /** How much each installed title takes on the console, counted over FTP. */

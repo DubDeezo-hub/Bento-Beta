@@ -669,7 +669,7 @@
     <string name="memory_view_log">Log konsoli</string>
     <string name="klog_title">Log konsoli</string>
     <string name="klog_save">Zapisuj na telefonie</string>
-    <string name="klog_save_detail">Każdy wiersz trafia od razu także do pliku w Pobrane/Bento/Logs, więc po awarii widać, co konsola wypisała tuż przed nią.</string>
+    <string name="klog_save_detail">Każdy wiersz trafia od razu także do pliku w Pobrane/Crimson Multitool/Logs, więc po awarii widać, co konsola wypisała tuż przed nią.</string>
     <string name="klog_saving_to">Zapisywanie do %1$s</string>
     <string name="klog_save_channel">Dziennik konsoli</string>
     <string name="klog_save_notif_title">Zapisywanie dziennika konsoli</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">Ten plik nie zgadza się już z sumą kontrolną, z którą był weryfikowany.</string>
     <string name="shelf_copy_sha">Kopiuj SHA-256</string>
     <string name="store_checksum_bad_github">Pobrany plik nie zgadzał się z sumą kontrolną podaną dla niego przez GitHub, więc nie został zachowany.</string>
-    <string name="backup_auto">Twórz kopię zapasową samoczynnie raz w tygodniu (w Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Twórz kopię zapasową samoczynnie raz w tygodniu (w Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Zapisano cotygodniową kopię zapasową: %1$s</string>
     <string name="etahen_title">Ustawienia etaHEN</string>
     <string name="etahen_intro">Własny plik ustawień etaHEN na konsoli. Większość zmian zadziała przy następnym starcie etaHEN (po następnym jailbreaku). Zapis zachowuje stary plik jako config.ini.bak.</string>

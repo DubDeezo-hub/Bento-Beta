@@ -669,7 +669,7 @@
     <string name="memory_view_log">कन्सोल लॉग</string>
     <string name="klog_title">कन्सोल लॉग</string>
     <string name="klog_save">फोनमध्ये सेव्ह करा</string>
-    <string name="klog_save_detail">प्रत्येक ओळ येताच Downloads/Bento/Logs मधील एका फाइलमध्येही लिहिली जाते, त्यामुळे क्रॅशनंतरही कन्सोलने अगदी आधी काय दाखवले ते पाहता येते.</string>
+    <string name="klog_save_detail">प्रत्येक ओळ येताच Downloads/Crimson Multitool/Logs मधील एका फाइलमध्येही लिहिली जाते, त्यामुळे क्रॅशनंतरही कन्सोलने अगदी आधी काय दाखवले ते पाहता येते.</string>
     <string name="klog_saving_to">%1$s मध्ये सेव्ह होत आहे</string>
     <string name="klog_save_channel">कन्सोल लॉग</string>
     <string name="klog_save_notif_title">कन्सोल लॉग सेव्ह होत आहे</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">ही फाइल आता ज्या चेकसमशी पडताळली होती त्याच्याशी जुळत नाही.</string>
     <string name="shelf_copy_sha">SHA-256 कॉपी करा</string>
     <string name="store_checksum_bad_github">डाउनलोड GitHub त्यासाठी दाखवत असलेल्या चेकसमशी जुळले नाही, म्हणून ठेवले नाही.</string>
-    <string name="backup_auto">आठवड्यातून एकदा आपोआप बॅकअप घ्या (Downloads/Bento/Backups मध्ये)</string>
+    <string name="backup_auto">आठवड्यातून एकदा आपोआप बॅकअप घ्या (Downloads/Crimson Multitool/Backups मध्ये)</string>
     <string name="backup_auto_done">साप्ताहिक बॅकअप जतन केला: %1$s</string>
     <string name="etahen_title">etaHEN सेटिंग्ज</string>
     <string name="etahen_intro">कन्सोलवरील etaHEN ची स्वतःची सेटिंग्ज फाइल. बहुतेक बदल पुढच्या वेळी etaHEN सुरू झाल्यावर (पुढच्या जेलब्रेकनंतर) लागू होतात. जतन करताना जुनी फाइल config.ini.bak म्हणून ठेवली जाते.</string>

@@ -104,12 +104,12 @@ fun parseRelease(json: String): ReleaseInfo? {
     }
 }
 
-/** The release behind a tag, when only the tag is known: the build names its file Bento-<version>.apk. */
+/** The release behind a tag, when only the tag is known: the build names its file Crimson-Multitool-<version>.apk. */
 fun releaseFromTag(tag: String): ReleaseInfo? {
     val number = releaseNumber(tag) ?: return null
     val base = "https://github.com/$UPDATE_REPO/releases"
     val name = tag.removePrefix("v").removePrefix("V")
-    return ReleaseInfo(tag, number, "$base/tag/$tag", "$base/download/$tag/Bento-$name.apk")
+    return ReleaseInfo(tag, number, "$base/tag/$tag", "$base/download/$tag/Crimson-Multitool-$name.apk")
 }
 
 /** The tag in the address that the website's "latest" page sends you on to, or null when it is not a release page. */
@@ -152,7 +152,7 @@ fun webGet(address: String, follow: Boolean, accept: String, timeoutMs: Int = 80
         c.connectTimeout = timeoutMs
         c.readTimeout = timeoutMs
         c.instanceFollowRedirects = follow
-        c.setRequestProperty("User-Agent", "Bento-update-check")
+        c.setRequestProperty("User-Agent", "Crimson-Multitool-update-check")
         c.setRequestProperty("Accept", accept)
         val code = c.responseCode
         val stream = if (code in 200..299) c.inputStream else c.errorStream

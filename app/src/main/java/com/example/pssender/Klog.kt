@@ -75,7 +75,7 @@ fun klogPorts(port: Int): List<Int> = when (port) {
     else -> listOf(port)
 }
 
-/** No line for this long: Bento looks whether the console still answers. */
+/** No line for this long: Crimson Multitool looks whether the console still answers. */
 private const val SILENT_MS = 20_000L
 
 /** Whether anything on the console at [host] answers: the log's own port or the usual service ports. Blocking. */
@@ -110,10 +110,10 @@ object KernelLog {
         private set
     /** Keep the newest line in sight. */
     var follow by mutableStateOf(true)
-    /** Also write every line to a file in Downloads/Bento/Logs (see KlogSaver.kt). */
+    /** Also write every line to a file in Downloads/Crimson Multitool/Logs (see KlogSaver.kt). */
     var saveToPhone by mutableStateOf(false)
         private set
-    /** Where the log is being saved ("Download/Bento/Logs/…"), or "". */
+    /** Where the log is being saved ("Download/Crimson Multitool/Logs/…"), or "". */
     var savedTo by mutableStateOf("")
         private set
 
@@ -207,7 +207,7 @@ object KernelLog {
                     val buf = ByteArray(16 * 1024)
                     val split = LineSplitter()
                     // A quiet log is normal; a console that no longer answers at all most likely crashed. After a while
-                    // without a line, Bento looks whether anything on the console still answers, and notes it once.
+                    // without a line, Crimson Multitool looks whether anything on the console still answers, and notes it once.
                     var lastData = System.currentTimeMillis()
                     var lastLook = 0L
                     var silent = false

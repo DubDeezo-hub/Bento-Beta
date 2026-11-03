@@ -670,7 +670,7 @@
     <string name="memory_view_log">Log della console</string>
     <string name="klog_title">Log della console</string>
     <string name="klog_save">Salva sul telefono</string>
-    <string name="klog_save_detail">Ogni riga va anche in un file in Download/Bento/Logs appena arriva, così dopo un crash vedi cosa ha scritto la console subito prima.</string>
+    <string name="klog_save_detail">Ogni riga va anche in un file in Download/Crimson Multitool/Logs appena arriva, così dopo un crash vedi cosa ha scritto la console subito prima.</string>
     <string name="klog_saving_to">Salvataggio in %1$s</string>
     <string name="klog_save_channel">Log della console</string>
     <string name="klog_save_notif_title">Salvataggio del log della console</string>
@@ -1095,7 +1095,7 @@
     <string name="shelf_changed">Questo file non corrisponde più al checksum con cui era stato verificato.</string>
     <string name="shelf_copy_sha">Copia SHA-256</string>
     <string name="store_checksum_bad_github">Il download non corrispondeva al checksum indicato da GitHub, quindi non è stato tenuto.</string>
-    <string name="backup_auto">Fai un backup da solo una volta a settimana (in Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Fai un backup da solo una volta a settimana (in Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Backup settimanale salvato: %1$s</string>
     <string name="etahen_title">Impostazioni di etaHEN</string>
     <string name="etahen_intro">Il file delle impostazioni di etaHEN sulla console. La maggior parte delle modifiche vale dal prossimo avvio di etaHEN (dopo il prossimo jailbreak). Salvando, il vecchio file viene tenuto come config.ini.bak.</string>

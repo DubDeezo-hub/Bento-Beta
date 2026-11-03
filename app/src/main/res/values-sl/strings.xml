@@ -669,7 +669,7 @@
     <string name="memory_view_log">Dnevnik konzole</string>
     <string name="klog_title">Dnevnik konzole</string>
     <string name="klog_save">Shrani v telefon</string>
-    <string name="klog_save_detail">Vsaka vrstica se ob prihodu zapiše tudi v datoteko v Prenosi/Bento/Logs, zato po zrušitvi vidite, kaj je konzola izpisala tik pred njo.</string>
+    <string name="klog_save_detail">Vsaka vrstica se ob prihodu zapiše tudi v datoteko v Prenosi/Crimson Multitool/Logs, zato po zrušitvi vidite, kaj je konzola izpisala tik pred njo.</string>
     <string name="klog_saving_to">Shranjevanje v %1$s</string>
     <string name="klog_save_channel">Dnevnik konzole</string>
     <string name="klog_save_notif_title">Shranjevanje dnevnika konzole</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">Ta datoteka se ne ujema več s kontrolno vsoto, s katero je bila preverjena.</string>
     <string name="shelf_copy_sha">Kopiraj SHA-256</string>
     <string name="store_checksum_bad_github">Prenos se ni ujemal s kontrolno vsoto, ki jo zanj navaja GitHub, zato ni bil shranjen.</string>
-    <string name="backup_auto">Samodejno ustvari varnostno kopijo enkrat na teden (v Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Samodejno ustvari varnostno kopijo enkrat na teden (v Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Tedenska varnostna kopija shranjena: %1$s</string>
     <string name="etahen_title">Nastavitve etaHEN</string>
     <string name="etahen_intro">Lastna datoteka z nastavitvami etaHEN na konzoli. Večina sprememb začne veljati ob naslednjem zagonu etaHEN (po naslednjem jailbreaku). Shranjevanje ohrani staro datoteko kot config.ini.bak.</string>

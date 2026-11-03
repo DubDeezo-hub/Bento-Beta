@@ -4,7 +4,7 @@ import android.content.Context
 
 // ---------------------------------------------------------------------------------------------
 // When the console was last jailbroken: the moment its payload loader started answering after it didn't. Home shows how
-// long ago that was, so a restart that wiped the jailbreak is plain to see. Bento only sees the console while it is open
+// long ago that was, so a restart that wiped the jailbreak is plain to see. Crimson Multitool only sees the console while it is open
 // (or during the online alert's background look), so when it first finds a console already up it can only say "up for
 // at least" since then, unless it saw it up a short while ago and nothing can have happened in between.
 // ---------------------------------------------------------------------------------------------

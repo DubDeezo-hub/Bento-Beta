@@ -935,7 +935,7 @@ fun saveTextToDownloads(cr: ContentResolver, root: String, folder: String, name:
 const val SPEED_TEST_BYTES = 16L shl 20
 
 /** The file the speed test writes (and removes again) in /data, where a console's FTP can always write. */
-const val SPEED_TEST_PATH = "/data/.bento-speedtest.bin"
+const val SPEED_TEST_PATH = "/data/.crimson-multitool-speedtest.bin"
 
 /** Megabytes per second for [bytes] in [ms] milliseconds (0 when no time passed). */
 fun mbPerSecond(bytes: Long, ms: Long): Double = if (ms <= 0) 0.0 else bytes / 1_048_576.0 / (ms / 1000.0)

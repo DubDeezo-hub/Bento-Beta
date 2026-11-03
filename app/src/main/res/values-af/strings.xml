@@ -669,7 +669,7 @@
     <string name="memory_view_log">Konsole-log</string>
     <string name="klog_title">Konsole-log</string>
     <string name="klog_save">Stoor op foon</string>
-    <string name="klog_save_detail">Elke reël gaan ook dadelik na \'n lêer in Downloads/Bento/Logs, sodat jy ná \'n ineenstorting kan sien wat die konsole net daarvoor gewys het.</string>
+    <string name="klog_save_detail">Elke reël gaan ook dadelik na \'n lêer in Downloads/Crimson Multitool/Logs, sodat jy ná \'n ineenstorting kan sien wat die konsole net daarvoor gewys het.</string>
     <string name="klog_saving_to">Stoor in %1$s</string>
     <string name="klog_save_channel">Konsole-log</string>
     <string name="klog_save_notif_title">Konsole-log word gestoor</string>
@@ -1094,7 +1094,7 @@
     <string name="shelf_changed">Hierdie lêer stem nie meer ooreen met die kontrolesom waarteen dit geverifieer is nie.</string>
     <string name="shelf_copy_sha">Kopieer SHA-256</string>
     <string name="store_checksum_bad_github">Die aflaai het nie met die kontrolesom wat GitHub daarvoor lys, ooreengestem nie, so dit is nie gehou nie.</string>
-    <string name="backup_auto">Maak vanself een keer per week ’n rugsteun (in Downloads/Bento/Backups)</string>
+    <string name="backup_auto">Maak vanself een keer per week ’n rugsteun (in Downloads/Crimson Multitool/Backups)</string>
     <string name="backup_auto_done">Weeklikse rugsteun gestoor: %1$s</string>
     <string name="etahen_title">etaHEN-instellings</string>
     <string name="etahen_intro">etaHEN se eie instellingslêer op die konsole. Die meeste veranderinge geld die volgende keer as etaHEN begin (ná die volgende jailbreak). Stoor hou die ou lêer as config.ini.bak.</string>

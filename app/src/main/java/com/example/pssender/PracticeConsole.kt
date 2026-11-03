@@ -12,7 +12,7 @@ import kotlin.concurrent.thread
 
 // ---------------------------------------------------------------------------------------------
 // The practice game for Memory > Learn: a tiny pretend game inside the app, with a pretend debugger in front of it on
-// this phone (127.0.0.1). The debugger speaks ps5debug-NG's wire protocol for every command Bento uses, so the Memory
+// this phone (127.0.0.1). The debugger speaks ps5debug-NG's wire protocol for every command Crimson Multitool uses, so the Memory
 // tab works on it exactly as on a console, and every lesson can be tried without a console, a payload or a game.
 //
 // The game keeps what real games keep, the way they keep it:
@@ -297,7 +297,7 @@ object PracticeConsole {
             0xBD000001.toInt() -> { c.u32(3); c.send("1.3".toByteArray()) } // version
             0xBD000500.toInt() -> c.send(le(2).putShort(1040.toShort()).array()) // firmware
             0xBD000501.toInt() -> { // branding
-                val text = "ps5debug-NG by OSR v1.3.2 [Bento practice]".toByteArray() + 0 + "1.1".toByteArray()
+                val text = "ps5debug-NG by OSR v1.3.2 [Crimson Multitool practice]".toByteArray() + 0 + "1.1".toByteArray()
                 c.u32(text.size); c.send(text)
             }
             0xBDAACC06.toInt(), 0xBDDD0005.toInt() -> c.u32(OK) // nop, info
@@ -309,7 +309,7 @@ object PracticeConsole {
             0xBDDD0006.toInt() -> { // foreground app
                 c.u32(OK)
                 c.send(le(4).putInt(PracticeGame.PID).array() + fixed(PracticeGame.TITLE_ID, 16) +
-                    fixed("UP0000-${PracticeGame.TITLE_ID}_00-BENTOPRACTICE000", 64) + fixed(PracticeGame.NAME, 40) + fixed("01.000", 16))
+                    fixed("UP0000-${PracticeGame.TITLE_ID}_00-CRIMSONPRACTICE0", 64) + fixed(PracticeGame.NAME, 40) + fixed("01.000", 16))
             }
             0xBDAA0004.toInt() -> { // memory maps
                 val maps = if (bb.getInt(0) == PracticeGame.PID) g.maps() else emptyList()

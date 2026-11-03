@@ -18,10 +18,13 @@ import java.util.Locale
 
 // ---------------------------------------------------------------------------------------------
 // The console log kept on the phone: while it runs with "Save to phone" on, every line also goes into a text file in
-// Downloads/Bento/Logs, written out as it arrives. When the console crashes (a kernel panic), the lines just before
+// Downloads/Crimson Multitool/Logs, written out as it arrives. When the console crashes (a kernel panic), the lines just before
 // the crash are in that file, and they usually say which payload or game was the cause. A small foreground service
 // keeps the app running while the phone is idle (you are playing, the phone is in your pocket).
 // ---------------------------------------------------------------------------------------------
+
+/** The app's folder in the phone's Downloads (logs, backups). It was "Bento" before the rename; files there stay where they are. */
+const val DOWNLOADS_ROOT = "Crimson Multitool"
 
 /** One log file being written. Lines are written in batches and flushed each time, so nothing waits in memory. */
 class KlogFile private constructor(private val out: OutputStream, val shownPath: String) {
@@ -40,14 +43,14 @@ class KlogFile private constructor(private val out: OutputStream, val shownPath:
     }
 
     companion object {
-        const val ROOT = "Bento"
+        const val ROOT = DOWNLOADS_ROOT
         const val FOLDER = "Logs"
 
         /** "console-log-2026-11-02_14-05-33.txt" */
         fun fileName(now: Date = Date()): String =
             "console-log-" + SimpleDateFormat("yyyy-MM-dd_HH-mm-ss", Locale.US).format(now) + ".txt"
 
-        /** A new log file in Downloads/Bento/Logs, starting with which console it is from. Null when the phone refuses. Blocking. */
+        /** A new log file in Downloads/Crimson Multitool/Logs, starting with which console it is from. Null when the phone refuses. Blocking. */
         fun open(ctx: Context, host: String, port: Int): KlogFile? = try {
             val name = fileName()
             val values = ContentValues().apply {
@@ -60,7 +63,7 @@ class KlogFile private constructor(private val out: OutputStream, val shownPath:
             val out = uri?.let { cr.openOutputStream(it, "wa") }
             out?.let {
                 KlogFile(it, downloadFolder(FOLDER, ROOT) + "/" + name).also { f ->
-                    f.write(listOf("# Bento console log: $host port $port, " + SimpleDateFormat("yyyy-MM-dd HH:mm:ss Z", Locale.US).format(Date())))
+                    f.write(listOf("# Crimson Multitool console log: $host port $port, " + SimpleDateFormat("yyyy-MM-dd HH:mm:ss Z", Locale.US).format(Date())))
                 }
             }
         } catch (_: Exception) {
@@ -69,7 +72,7 @@ class KlogFile private constructor(private val out: OutputStream, val shownPath:
     }
 }
 
-/** Keeps Bento running while the console log is saved to the phone: a notification with a Stop button, Wi-Fi kept awake. */
+/** Keeps Crimson Multitool running while the console log is saved to the phone: a notification with a Stop button, Wi-Fi kept awake. */
 class KlogService : Service() {
     private var locks: TransferLocks? = null
 
@@ -142,7 +145,7 @@ class KlogService : Service() {
             try {
                 ctx.startForegroundService(Intent(ctx, KlogService::class.java))
             } catch (_: Exception) {
-                // Not allowed from the background on some phones: the log is still saved while Bento is open
+                // Not allowed from the background on some phones: the log is still saved while Crimson Multitool is open
             }
         }
     }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--
-        Android 12 and newer, with the launch screen. Bento is dark only (blood red and black, Theme.kt): the status bar takes the red glow's dark edge, the
+        Android 12 and newer, with the launch screen. Crimson Multitool is dark only (blood red and black, Theme.kt): the status bar takes the red glow's dark edge, the
         navigation bar and the first frame the black page, so nothing flashes before the screen is drawn.
     -->
     <style name="Theme.PSSender" parent="@android:style/Theme.Material.NoActionBar">
