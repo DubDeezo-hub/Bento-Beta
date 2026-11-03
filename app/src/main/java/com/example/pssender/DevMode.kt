@@ -144,7 +144,7 @@ fun DevModeDialog(console: Profile, onClose: () -> Unit) {
                     val name = devName(url)
                     val verdict = elfCheck(name, now)
                     if (verdict != null && verdict != ElfVerdict.OK) {
-                        status = AppText.get(R.string.dev_not_sent, str(verdict.res))
+                        status = AppText.get(R.string.dev_not_sent, AppText.get(verdict.res))
                     } else if (canSend) {
                         val reply = withContext(Dispatchers.IO) {
                             val f = File(shelfDir(ctx), name)
