@@ -1290,8 +1290,6 @@
     <string name="helper_restart">Começar de novo</string>
     <string name="helper_number_label">Número no jogo</string>
     <string name="compat_title">Como foi para os outros</string>
-    <string name="compat_need_fw">Informe o firmware do seu %1$s (nos detalhes do console) para ver relatos.</string>
-    <string name="compat_none">Ainda não há relatos para %1$s %2$s.</string>
     <string name="compat_counts">No %1$s %2$s: %3$d funcionou, %4$d travou, %5$d não funcionou.</string>
     <string name="compat_report">Contar como foi</string>
     <string name="compat_report_hint">Isso abre um relato já preenchido no GitHub (só o payload, a versão, o modelo do console, o firmware e o resultado). Você envia com sua conta do GitHub.</string>
@@ -1329,4 +1327,10 @@
     <string name="memory_game_notes">Notas deste jogo</string>
     <string name="memory_game_notes_hint">O que funciona, endereços, qual versão…</string>
     <string name="stab_report">Informar que travou</string>
+    <string name="compat_none_any">Ainda não há relatos para este payload.</string>
+    <string name="compat_more">E mais %1$d versões de firmware.</string>
+    <string name="compat_fw_label">Firmware (por exemplo 10.40)</string>
+    <string name="compat_fw_any">Qualquer firmware e modelo pode ser relatado.</string>
+    <string name="compat_bad_fw">Digite um firmware como 10.40 ou 9.00.</string>
+    <string name="compat_send">Abrir relato</string>
 </resources>

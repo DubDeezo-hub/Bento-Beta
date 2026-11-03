@@ -1290,8 +1290,6 @@
     <string name="helper_restart">Recommencer</string>
     <string name="helper_number_label">Nombre dans le jeu</string>
     <string name="compat_title">Comment ça s\'est passé pour les autres</string>
-    <string name="compat_need_fw">Indique le firmware de ta %1$s (dans les détails de la console) pour voir les rapports.</string>
-    <string name="compat_none">Pas encore de rapports pour %1$s %2$s.</string>
     <string name="compat_counts">Sur %1$s %2$s : %3$d a marché, %4$d a planté, %5$d n\'a pas marché.</string>
     <string name="compat_report">Dire comment ça s\'est passé</string>
     <string name="compat_report_hint">Cela ouvre un rapport prérempli sur GitHub (seulement le payload, sa version, le modèle de console, le firmware et le résultat). Tu l\'envoies avec ton compte GitHub.</string>
@@ -1329,4 +1327,10 @@
     <string name="memory_game_notes">Notes pour ce jeu</string>
     <string name="memory_game_notes_hint">Ce qui marche, adresses, quelle version…</string>
     <string name="stab_report">Signaler un plantage</string>
+    <string name="compat_none_any">Pas encore de rapports pour ce payload.</string>
+    <string name="compat_more">Et %1$d autres versions de firmware.</string>
+    <string name="compat_fw_label">Firmware (par exemple 10.40)</string>
+    <string name="compat_fw_any">N\'importe quel firmware et modèle peut être signalé.</string>
+    <string name="compat_bad_fw">Tape un firmware comme 10.40 ou 9.00.</string>
+    <string name="compat_send">Ouvrir le rapport</string>
 </resources>

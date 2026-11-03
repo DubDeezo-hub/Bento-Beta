@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Bắt đầu lại</string>
     <string name="helper_number_label">Số trong game</string>
     <string name="compat_title">Người khác thế nào</string>
-    <string name="compat_need_fw">Đặt firmware cho %1$s của bạn (trong chi tiết máy) để xem báo cáo.</string>
-    <string name="compat_none">Chưa có báo cáo cho %1$s %2$s.</string>
     <string name="compat_counts">Trên %1$s %2$s: %3$d chạy được, %4$d bị treo, %5$d không chạy.</string>
     <string name="compat_report">Cho biết kết quả</string>
     <string name="compat_report_hint">Mở một báo cáo đã điền sẵn trên GitHub (chỉ payload, phiên bản, dòng máy, firmware và kết quả). Bạn gửi bằng tài khoản GitHub của mình.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Ghi chú cho game này</string>
     <string name="memory_game_notes_hint">Cái gì chạy, địa chỉ, phiên bản nào…</string>
     <string name="stab_report">Báo cáo bị treo</string>
+    <string name="compat_none_any">Chưa có báo cáo cho payload này.</string>
+    <string name="compat_more">Và %1$d phiên bản firmware khác.</string>
+    <string name="compat_fw_label">Firmware (ví dụ 10.40)</string>
+    <string name="compat_fw_any">Có thể báo cáo mọi firmware và dòng máy.</string>
+    <string name="compat_bad_fw">Nhập firmware như 10.40 hoặc 9.00.</string>
+    <string name="compat_send">Mở báo cáo</string>
 </resources>

@@ -5,7 +5,6 @@ import android.content.Intent
 import android.net.Uri
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
@@ -124,46 +123,100 @@ object CompatData {
     }
 }
 
-/** In a payload's details: what others saw on this model and firmware, and buttons to say how it went here. */
+/**
+ * The counts to show for one payload, from [byWhere] ("PS5 10.40" -> counts): this console's model and firmware first,
+ * then the same model's other firmware (newest first), then the other model's. Empty counts are left out.
+ */
+fun compatRows(byWhere: Map<String, CompatCounts>, model: String, firmware: String): List<Pair<String, CompatCounts>> {
+    val here = compatWhere(model, firmware)
+    fun fwNumber(where: String) = ConsoleFirmware.number(where.substringAfter(' ')) ?: 0
+    return byWhere.entries.filter { it.value.total > 0 }.sortedWith(
+        compareByDescending<Map.Entry<String, CompatCounts>> { it.key == here }
+            .thenByDescending { it.key.startsWith("$model ") }
+            .thenByDescending { fwNumber(it.key) }
+    ).map { it.key to it.value }
+}
+
+/** At most this many firmware lines are shown for a payload; the rest are counted. */
+const val COMPAT_SHOWN = 6
+
+/** In a payload's details: what others saw on every model and firmware (this console's first), and "Say how it went". */
 @Composable
 fun CompatSection(name: String, version: String) {
     val ctx = LocalContext.current
     val model = ActiveConsole.type.model
     val firmware = remember(ActiveConsole.id) { ConsoleFirmware.get(ctx, ActiveConsole.id) }
-    var counts by remember(name) { mutableStateOf<CompatCounts?>(null) }
+    var rows by remember(name) { mutableStateOf<List<Pair<String, CompatCounts>>>(emptyList()) }
     var asking by remember { mutableStateOf(false) }
     LaunchedEffect(name, firmware) {
-        if (firmware.isNotEmpty()) {
-            counts = withContext(Dispatchers.IO) { CompatData.get(ctx)[compatKey(name)]?.get(compatWhere(model, firmware)) }
-        }
+        rows = withContext(Dispatchers.IO) { compatRows(CompatData.get(ctx)[compatKey(name)].orEmpty(), model, firmware) }
     }
     Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
         Text(str(R.string.compat_title), style = MaterialTheme.typography.labelLarge)
-        if (firmware.isEmpty()) {
-            Text(str(R.string.compat_need_fw, model), style = MaterialTheme.typography.bodySmall)
-            return@Column
+        if (rows.isEmpty()) Text(str(R.string.compat_none_any), style = MaterialTheme.typography.bodySmall)
+        rows.take(COMPAT_SHOWN).forEach { (where, c) ->
+            val fw = where.substringAfter(' ')
+            val m = where.substringBefore(' ')
+            Text(
+                str(R.string.compat_counts, m, fw, c.worked, c.crashed, c.failed),
+                style = MaterialTheme.typography.bodySmall,
+                color = if (where == compatWhere(model, firmware)) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface
+            )
         }
-        val c = counts
-        Text(
-            if (c == null || c.total == 0) str(R.string.compat_none, model, firmware)
-            else str(R.string.compat_counts, model, firmware, c.worked, c.crashed, c.failed),
-            style = MaterialTheme.typography.bodySmall
-        )
-        if (!asking) {
-            OutlinedButton(onClick = { asking = true }) { Text(str(R.string.compat_report)) }
-        } else {
-            Text(str(R.string.compat_report_hint), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-            Row {
-                CompatResult.entries.forEach { r ->
-                    TextButton(onClick = {
-                        asking = false
-                        try {
-                            ctx.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(compatReportUrl(name, version, model, firmware, r))))
-                        } catch (_: Exception) {
-                        }
-                    }) { Text(str(r.res)) }
-                }
-            }
+        if (rows.size > COMPAT_SHOWN) {
+            Text(str(R.string.compat_more, rows.size - COMPAT_SHOWN), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
+        OutlinedButton(onClick = { asking = true }) { Text(str(R.string.compat_report)) }
     }
+    if (asking) CompatReportDialog(name, version, null) { asking = false }
+}
+
+/**
+ * Asks how [name] went and on which console model and firmware (any of them; this console's are filled in when known),
+ * then opens the filled-in report on GitHub. [preset] picks a result to start with (the crash diary picks "crashed").
+ */
+@Composable
+fun CompatReportDialog(name: String, version: String, preset: CompatResult?, onClose: () -> Unit) {
+    val ctx = LocalContext.current
+    var model by remember { mutableStateOf(ActiveConsole.type.model) }
+    var firmware by remember { mutableStateOf(ConsoleFirmware.get(ctx, ActiveConsole.id)) }
+    var result by remember { mutableStateOf(preset) }
+    val fw = ConsoleFirmware.normalize(firmware)
+    androidx.compose.material3.AlertDialog(
+        onDismissRequest = onClose,
+        title = { Text(str(R.string.compat_report)) },
+        text = {
+            Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                Text(name, style = MaterialTheme.typography.bodyMedium)
+                ChipRow {
+                    ConsoleType.entries.forEach { t -> Chip(t.model, model == t.model) { model = t.model } }
+                }
+                androidx.compose.material3.OutlinedTextField(
+                    value = firmware,
+                    onValueChange = { v -> firmware = v.filter { it.isDigit() || it == '.' || it == ',' }.take(6) },
+                    singleLine = true,
+                    label = { Text(str(R.string.compat_fw_label)) },
+                    supportingText = { Text(str(if (fw == null && firmware.isNotBlank()) R.string.compat_bad_fw else R.string.compat_fw_any)) },
+                    isError = fw == null && firmware.isNotBlank()
+                )
+                ChipRow {
+                    CompatResult.entries.forEach { r -> Chip(str(r.res), result == r) { result = r } }
+                }
+                Text(str(R.string.compat_report_hint), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
+        },
+        confirmButton = {
+            TextButton(enabled = fw != null && result != null, onClick = {
+                val r = result
+                if (fw != null && r != null) {
+                    try {
+                        ctx.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(compatReportUrl(name, version, model, fw, r))))
+                    } catch (_: Exception) {
+                    }
+                }
+                onClose()
+            }) { Text(str(R.string.compat_send)) }
+        },
+        dismissButton = { TextButton(onClick = onClose) { Text(str(R.string.action_cancel)) } }
+    )
 }

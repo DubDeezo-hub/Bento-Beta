@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Torna a començar</string>
     <string name="helper_number_label">Número al joc</string>
     <string name="compat_title">Com els ha anat a altres</string>
-    <string name="compat_need_fw">Indica el microprogramari de la teva %1$s (als detalls de la consola) per veure informes.</string>
-    <string name="compat_none">Encara no hi ha informes per a %1$s %2$s.</string>
     <string name="compat_counts">A %1$s %2$s: %3$d ha funcionat, %4$d s\'ha penjat, %5$d no ha funcionat.</string>
     <string name="compat_report">Explica com ha anat</string>
     <string name="compat_report_hint">Obre un informe emplenat a GitHub (només el payload, la versió, el model de consola, el microprogramari i el resultat). L\'envies amb el teu compte de GitHub.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Notes d\'aquest joc</string>
     <string name="memory_game_notes_hint">Què funciona, adreces, quina versió…</string>
     <string name="stab_report">Informa que s\'ha penjat</string>
+    <string name="compat_none_any">Encara no hi ha informes d\'aquest payload.</string>
+    <string name="compat_more">I %1$d versions més del microprogramari.</string>
+    <string name="compat_fw_label">Microprogramari (per exemple 10.40)</string>
+    <string name="compat_fw_any">Es pot informar de qualsevol microprogramari i model.</string>
+    <string name="compat_bad_fw">Escriu un microprogramari com 10.40 o 9.00.</string>
+    <string name="compat_send">Obre l\'informe</string>
 </resources>

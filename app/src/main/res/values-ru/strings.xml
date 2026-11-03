@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Начать заново</string>
     <string name="helper_number_label">Число в игре</string>
     <string name="compat_title">Как было у других</string>
-    <string name="compat_need_fw">Укажите прошивку вашей %1$s (в сведениях о консоли), чтобы видеть отчёты.</string>
-    <string name="compat_none">Пока нет отчётов для %1$s %2$s.</string>
     <string name="compat_counts">На %1$s %2$s: работало %3$d, падало %4$d, не работало %5$d.</string>
     <string name="compat_report">Рассказать, как прошло</string>
     <string name="compat_report_hint">Откроется заполненный отчёт на GitHub (только payload, его версия, модель консоли, прошивка и результат). Вы отправляете его со своего аккаунта GitHub.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Заметки об этой игре</string>
     <string name="memory_game_notes_hint">Что работает, адреса, какая версия…</string>
     <string name="stab_report">Сообщить о падении</string>
+    <string name="compat_none_any">Для этого payload пока нет отчётов.</string>
+    <string name="compat_more">И ещё версий прошивки: %1$d.</string>
+    <string name="compat_fw_label">Прошивка (например, 10.40)</string>
+    <string name="compat_fw_any">Можно сообщить о любой прошивке и модели.</string>
+    <string name="compat_bad_fw">Введите прошивку вроде 10.40 или 9.00.</string>
+    <string name="compat_send">Открыть отчёт</string>
 </resources>

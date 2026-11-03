@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Ia-o de la capăt</string>
     <string name="helper_number_label">Număr în joc</string>
     <string name="compat_title">Cum le-a mers altora</string>
-    <string name="compat_need_fw">Setează firmware-ul %1$s tale (în detaliile consolei) ca să vezi rapoarte.</string>
-    <string name="compat_none">Încă nu sunt rapoarte pentru %1$s %2$s.</string>
     <string name="compat_counts">Pe %1$s %2$s: %3$d a mers, %4$d s-a blocat, %5$d n-a mers.</string>
     <string name="compat_report">Spune cum a mers</string>
     <string name="compat_report_hint">Deschide un raport completat pe GitHub (doar payload-ul, versiunea, modelul consolei, firmware-ul și rezultatul). Îl trimiți cu contul tău GitHub.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Note pentru acest joc</string>
     <string name="memory_game_notes_hint">Ce merge, adrese, ce versiune…</string>
     <string name="stab_report">Raportează blocarea</string>
+    <string name="compat_none_any">Încă nu sunt rapoarte pentru acest payload.</string>
+    <string name="compat_more">Și încă %1$d versiuni de firmware.</string>
+    <string name="compat_fw_label">Firmware (de exemplu 10.40)</string>
+    <string name="compat_fw_any">Se poate raporta orice firmware și model.</string>
+    <string name="compat_bad_fw">Scrie un firmware ca 10.40 sau 9.00.</string>
+    <string name="compat_send">Deschide raportul</string>
 </resources>

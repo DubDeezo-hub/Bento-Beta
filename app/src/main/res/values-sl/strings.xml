@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Začni znova</string>
     <string name="helper_number_label">Število v igri</string>
     <string name="compat_title">Kako je šlo drugim</string>
-    <string name="compat_need_fw">Nastavite vdelano programsko opremo svoje %1$s (v podrobnostih konzole), da vidite poročila.</string>
-    <string name="compat_none">Še ni poročil za %1$s %2$s.</string>
     <string name="compat_counts">Na %1$s %2$s: %3$d delovalo, %4$d zrušilo, %5$d ni delovalo.</string>
     <string name="compat_report">Povej, kako je šlo</string>
     <string name="compat_report_hint">Odpre izpolnjeno poročilo na GitHubu (samo payload, različica, model konzole, programska oprema in rezultat). Pošljete ga s svojim računom GitHub.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Opombe za to igro</string>
     <string name="memory_game_notes_hint">Kaj deluje, naslovi, katera različica…</string>
     <string name="stab_report">Prijavi zrušitev</string>
+    <string name="compat_none_any">Za ta payload še ni poročil.</string>
+    <string name="compat_more">In še %1$d različic programske opreme.</string>
+    <string name="compat_fw_label">Programska oprema (na primer 10.40)</string>
+    <string name="compat_fw_any">Prijaviti je mogoče katero koli programsko opremo in model.</string>
+    <string name="compat_bad_fw">Vpišite različico, na primer 10.40 ali 9.00.</string>
+    <string name="compat_send">Odpri poročilo</string>
 </resources>

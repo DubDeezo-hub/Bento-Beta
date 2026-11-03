@@ -1289,8 +1289,6 @@
     <string name="helper_restart">เริ่มใหม่</string>
     <string name="helper_number_label">ตัวเลขในเกม</string>
     <string name="compat_title">ผลของคนอื่น</string>
-    <string name="compat_need_fw">ตั้งเฟิร์มแวร์ของ %1$s (ในรายละเอียดคอนโซล) เพื่อดูรายงาน</string>
-    <string name="compat_none">ยังไม่มีรายงานสำหรับ %1$s %2$s</string>
     <string name="compat_counts">บน %1$s %2$s: ใช้ได้ %3$d ค้าง %4$d ใช้ไม่ได้ %5$d</string>
     <string name="compat_report">บอกผลลัพธ์</string>
     <string name="compat_report_hint">เปิดรายงานที่กรอกไว้บน GitHub (เฉพาะเพย์โหลด เวอร์ชัน รุ่นคอนโซล เฟิร์มแวร์ และผลลัพธ์) คุณส่งด้วยบัญชี GitHub ของคุณ</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">บันทึกของเกมนี้</string>
     <string name="memory_game_notes_hint">อะไรใช้ได้ ที่อยู่ เวอร์ชันไหน…</string>
     <string name="stab_report">รายงานว่าค้าง</string>
+    <string name="compat_none_any">ยังไม่มีรายงานสำหรับเพย์โหลดนี้</string>
+    <string name="compat_more">และเฟิร์มแวร์อื่นอีก %1$d เวอร์ชัน</string>
+    <string name="compat_fw_label">เฟิร์มแวร์ (เช่น 10.40)</string>
+    <string name="compat_fw_any">รายงานได้ทุกเฟิร์มแวร์และทุกรุ่น</string>
+    <string name="compat_bad_fw">พิมพ์เฟิร์มแวร์ เช่น 10.40 หรือ 9.00</string>
+    <string name="compat_send">เปิดรายงาน</string>
 </resources>

@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Почни испочетка</string>
     <string name="helper_number_label">Број у игри</string>
     <string name="compat_title">Како је прошло другима</string>
-    <string name="compat_need_fw">Подесите фирмвер своје %1$s (у детаљима конзоле) да видите извештаје.</string>
-    <string name="compat_none">Још нема извештаја за %1$s %2$s.</string>
     <string name="compat_counts">На %1$s %2$s: %3$d радило, %4$d пало, %5$d није радило.</string>
     <string name="compat_report">Реци како је прошло</string>
     <string name="compat_report_hint">Отвара попуњен извештај на GitHub-у (само payload, верзија, модел конзоле, фирмвер и резултат). Шаљете га својим GitHub налогом.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Белешке за ову игру</string>
     <string name="memory_game_notes_hint">Шта ради, адресе, која верзија…</string>
     <string name="stab_report">Пријави пад</string>
+    <string name="compat_none_any">Још нема извештаја за овај payload.</string>
+    <string name="compat_more">И још %1$d верзија фирмвера.</string>
+    <string name="compat_fw_label">Фирмвер (на пример 10.40)</string>
+    <string name="compat_fw_any">Може се пријавити било који фирмвер и модел.</string>
+    <string name="compat_bad_fw">Упишите фирмвер као 10.40 или 9.00.</string>
+    <string name="compat_send">Отвори извештај</string>
 </resources>

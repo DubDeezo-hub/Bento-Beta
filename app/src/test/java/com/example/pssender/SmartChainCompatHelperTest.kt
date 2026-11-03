@@ -119,4 +119,18 @@ class SmartChainCompatHelperTest {
         assertEquals(ScanCompare.INCREASED, HelperChange.UP.compare)
         assertEquals(ScanCompare.UNCHANGED, HelperChange.SAME.compare)
     }
+
+    @Test
+    fun everyFirmwareIsShownWithThisConsoleFirst() {
+        val all = mapOf(
+            "PS4 9.00" to CompatCounts(5, 0, 0),
+            "PS5 4.03" to CompatCounts(2, 1, 0),
+            "PS5 10.40" to CompatCounts(1, 2, 0),
+            "PS5 12.00" to CompatCounts(3, 0, 0),
+            "PS5 7.61" to CompatCounts(0, 0, 0) // nothing counted: left out
+        )
+        assertEquals(listOf("PS5 10.40", "PS5 12.00", "PS5 4.03", "PS4 9.00"), compatRows(all, "PS5", "10.40").map { it.first })
+        // Firmware not set: this model's newest first, then the other model
+        assertEquals("PS5 12.00", compatRows(all, "PS5", "").first().first)
+    }
 }

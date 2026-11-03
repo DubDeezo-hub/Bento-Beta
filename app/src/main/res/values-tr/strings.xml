@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Baştan başla</string>
     <string name="helper_number_label">Oyundaki sayı</string>
     <string name="compat_title">Başkalarında nasıl oldu</string>
-    <string name="compat_need_fw">Raporları görmek için %1$s cihazınızın yazılımını (konsol ayrıntılarında) girin.</string>
-    <string name="compat_none">%1$s %2$s için henüz rapor yok.</string>
     <string name="compat_counts">%1$s %2$s üzerinde: %3$d çalıştı, %4$d çöktü, %5$d çalışmadı.</string>
     <string name="compat_report">Nasıl gittiğini söyle</string>
     <string name="compat_report_hint">GitHub\'da doldurulmuş bir rapor açar (yalnızca payload, sürümü, konsol modeli, yazılım ve sonuç). Kendi GitHub hesabınızla gönderirsiniz.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Bu oyunun notları</string>
     <string name="memory_game_notes_hint">Ne çalışıyor, adresler, hangi sürüm…</string>
     <string name="stab_report">Çöktüğünü bildir</string>
+    <string name="compat_none_any">Bu payload için henüz rapor yok.</string>
+    <string name="compat_more">Ve %1$d yazılım sürümü daha.</string>
+    <string name="compat_fw_label">Yazılım (örneğin 10.40)</string>
+    <string name="compat_fw_any">Her yazılım ve model raporlanabilir.</string>
+    <string name="compat_bad_fw">10.40 veya 9.00 gibi bir yazılım yazın.</string>
+    <string name="compat_send">Raporu aç</string>
 </resources>

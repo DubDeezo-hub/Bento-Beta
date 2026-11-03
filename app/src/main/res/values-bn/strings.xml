@@ -1289,8 +1289,6 @@
     <string name="helper_restart">আবার শুরু</string>
     <string name="helper_number_label">গেমের সংখ্যা</string>
     <string name="compat_title">অন্যদের কেমন গেছে</string>
-    <string name="compat_need_fw">রিপোর্ট দেখতে আপনার %1$s-এর ফার্মওয়্যার দিন (কনসোলের বিবরণে)।</string>
-    <string name="compat_none">%1$s %2$s-এর জন্য এখনও রিপোর্ট নেই।</string>
     <string name="compat_counts">%1$s %2$s-এ: %3$d কাজ করেছে, %4$d ক্র্যাশ, %5$d কাজ করেনি।</string>
     <string name="compat_report">কেমন গেল জানান</string>
     <string name="compat_report_hint">এটি GitHub-এ একটি ভরা রিপোর্ট খোলে (শুধু পেলোড, সংস্করণ, কনসোল মডেল, ফার্মওয়্যার ও ফল)। আপনি নিজের GitHub অ্যাকাউন্টে পাঠান।</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">এই গেমের নোট</string>
     <string name="memory_game_notes_hint">কী কাজ করে, ঠিকানা, কোন সংস্করণ…</string>
     <string name="stab_report">ক্র্যাশ জানান</string>
+    <string name="compat_none_any">এই পেলোডের এখনও কোনো রিপোর্ট নেই।</string>
+    <string name="compat_more">আর %1$d টি ফার্মওয়্যার সংস্করণ।</string>
+    <string name="compat_fw_label">ফার্মওয়্যার (যেমন 10.40)</string>
+    <string name="compat_fw_any">যেকোনো ফার্মওয়্যার ও মডেল জানানো যায়।</string>
+    <string name="compat_bad_fw">10.40 বা 9.00 এর মতো ফার্মওয়্যার লিখুন।</string>
+    <string name="compat_send">রিপোর্ট খুলুন</string>
 </resources>

@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Začít znovu</string>
     <string name="helper_number_label">Číslo ve hře</string>
     <string name="compat_title">Jak to šlo ostatním</string>
-    <string name="compat_need_fw">Nastavte firmware své %1$s (v podrobnostech konzole), abyste viděli hlášení.</string>
-    <string name="compat_none">Zatím žádná hlášení pro %1$s %2$s.</string>
     <string name="compat_counts">Na %1$s %2$s: %3$d fungovalo, %4$d spadlo, %5$d nefungovalo.</string>
     <string name="compat_report">Říct, jak to šlo</string>
     <string name="compat_report_hint">Otevře vyplněné hlášení na GitHubu (jen payload, jeho verzi, model konzole, firmware a výsledek). Odešlete ho svým účtem GitHub.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Poznámky k této hře</string>
     <string name="memory_game_notes_hint">Co funguje, adresy, která verze…</string>
     <string name="stab_report">Nahlásit pád</string>
+    <string name="compat_none_any">Pro tento payload zatím nejsou hlášení.</string>
+    <string name="compat_more">A dalších %1$d verzí firmwaru.</string>
+    <string name="compat_fw_label">Firmware (například 10.40)</string>
+    <string name="compat_fw_any">Nahlásit lze jakýkoli firmware a model.</string>
+    <string name="compat_bad_fw">Napište firmware jako 10.40 nebo 9.00.</string>
+    <string name="compat_send">Otevřít hlášení</string>
 </resources>

@@ -1289,8 +1289,6 @@
     <string name="helper_restart">دوبارہ شروع کریں</string>
     <string name="helper_number_label">گیم میں نمبر</string>
     <string name="compat_title">دوسروں کے ساتھ کیسا رہا</string>
-    <string name="compat_need_fw">رپورٹیں دیکھنے کے لیے اپنے %1$s کا فرم ویئر (کنسول کی تفصیل میں) سیٹ کریں۔</string>
-    <string name="compat_none">‏%1$s %2$s کے لیے ابھی کوئی رپورٹ نہیں۔</string>
     <string name="compat_counts">‏%1$s %2$s پر: %3$d چلا، %4$d کریش، %5$d نہیں چلا۔</string>
     <string name="compat_report">بتائیں کیسا رہا</string>
     <string name="compat_report_hint">یہ GitHub پر بھری ہوئی رپورٹ کھولتا ہے (صرف پے لوڈ، ورژن، کنسول ماڈل، فرم ویئر اور نتیجہ)۔ آپ اسے اپنے GitHub اکاؤنٹ سے بھیجتے ہیں۔</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">اس گیم کے نوٹس</string>
     <string name="memory_game_notes_hint">کیا چلتا ہے، پتے، کون سا ورژن…</string>
     <string name="stab_report">کریش کی رپورٹ کریں</string>
+    <string name="compat_none_any">اس پے لوڈ کی ابھی کوئی رپورٹ نہیں۔</string>
+    <string name="compat_more">اور %1$d مزید فرم ویئر ورژن۔</string>
+    <string name="compat_fw_label">فرم ویئر (مثلاً 10.40)</string>
+    <string name="compat_fw_any">کسی بھی فرم ویئر اور ماڈل کی رپورٹ کی جا سکتی ہے۔</string>
+    <string name="compat_bad_fw">10.40 یا 9.00 جیسا فرم ویئر لکھیں۔</string>
+    <string name="compat_send">رپورٹ کھولیں</string>
 </resources>

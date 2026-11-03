@@ -1289,8 +1289,6 @@
     <string name="helper_restart">ਮੁੜ ਸ਼ੁਰੂ ਕਰੋ</string>
     <string name="helper_number_label">ਗੇਮ ਵਿੱਚ ਨੰਬਰ</string>
     <string name="compat_title">ਦੂਜਿਆਂ ਲਈ ਕਿਵੇਂ ਰਿਹਾ</string>
-    <string name="compat_need_fw">ਰਿਪੋਰਟਾਂ ਵੇਖਣ ਲਈ ਆਪਣੇ %1$s ਦਾ ਫ਼ਰਮਵੇਅਰ (ਕੰਸੋਲ ਵੇਰਵਿਆਂ ਵਿੱਚ) ਸੈੱਟ ਕਰੋ।</string>
-    <string name="compat_none">%1$s %2$s ਲਈ ਅਜੇ ਕੋਈ ਰਿਪੋਰਟ ਨਹੀਂ।</string>
     <string name="compat_counts">%1$s %2$s \'ਤੇ: %3$d ਚੱਲਿਆ, %4$d ਕ੍ਰੈਸ਼, %5$d ਨਹੀਂ ਚੱਲਿਆ।</string>
     <string name="compat_report">ਦੱਸੋ ਕਿਵੇਂ ਰਿਹਾ</string>
     <string name="compat_report_hint">ਇਹ GitHub \'ਤੇ ਭਰੀ ਹੋਈ ਰਿਪੋਰਟ ਖੋਲ੍ਹਦਾ ਹੈ (ਸਿਰਫ਼ ਪੇਲੋਡ, ਵਰਜਨ, ਕੰਸੋਲ ਮਾਡਲ, ਫ਼ਰਮਵੇਅਰ ਅਤੇ ਨਤੀਜਾ)। ਤੁਸੀਂ ਇਸਨੂੰ ਆਪਣੇ GitHub ਖਾਤੇ ਨਾਲ ਭੇਜਦੇ ਹੋ।</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">ਇਸ ਗੇਮ ਲਈ ਨੋਟ</string>
     <string name="memory_game_notes_hint">ਕੀ ਚੱਲਦਾ ਹੈ, ਪਤੇ, ਕਿਹੜਾ ਵਰਜਨ…</string>
     <string name="stab_report">ਕ੍ਰੈਸ਼ ਦੀ ਰਿਪੋਰਟ ਕਰੋ</string>
+    <string name="compat_none_any">ਇਸ ਪੇਲੋਡ ਲਈ ਅਜੇ ਕੋਈ ਰਿਪੋਰਟ ਨਹੀਂ।</string>
+    <string name="compat_more">ਅਤੇ %1$d ਹੋਰ ਫ਼ਰਮਵੇਅਰ ਵਰਜਨ।</string>
+    <string name="compat_fw_label">ਫ਼ਰਮਵੇਅਰ (ਜਿਵੇਂ 10.40)</string>
+    <string name="compat_fw_any">ਕਿਸੇ ਵੀ ਫ਼ਰਮਵੇਅਰ ਅਤੇ ਮਾਡਲ ਦੀ ਰਿਪੋਰਟ ਹੋ ਸਕਦੀ ਹੈ।</string>
+    <string name="compat_bad_fw">10.40 ਜਾਂ 9.00 ਵਰਗਾ ਫ਼ਰਮਵੇਅਰ ਲਿਖੋ।</string>
+    <string name="compat_send">ਰਿਪੋਰਟ ਖੋਲ੍ਹੋ</string>
 </resources>

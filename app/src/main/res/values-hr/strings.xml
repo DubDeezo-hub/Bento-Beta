@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Počni ispočetka</string>
     <string name="helper_number_label">Broj u igri</string>
     <string name="compat_title">Kako je prošlo drugima</string>
-    <string name="compat_need_fw">Postavite firmware svoje %1$s (u detaljima konzole) da vidite izvješća.</string>
-    <string name="compat_none">Još nema izvješća za %1$s %2$s.</string>
     <string name="compat_counts">Na %1$s %2$s: %3$d radilo, %4$d se srušilo, %5$d nije radilo.</string>
     <string name="compat_report">Reci kako je prošlo</string>
     <string name="compat_report_hint">Otvara popunjeno izvješće na GitHubu (samo payload, verzija, model konzole, firmware i rezultat). Šaljete ga svojim GitHub računom.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Bilješke za ovu igru</string>
     <string name="memory_game_notes_hint">Što radi, adrese, koja verzija…</string>
     <string name="stab_report">Prijavi rušenje</string>
+    <string name="compat_none_any">Još nema izvješća za ovaj payload.</string>
+    <string name="compat_more">I još %1$d verzija firmwarea.</string>
+    <string name="compat_fw_label">Firmware (na primjer 10.40)</string>
+    <string name="compat_fw_any">Može se prijaviti bilo koji firmware i model.</string>
+    <string name="compat_bad_fw">Upišite firmware poput 10.40 ili 9.00.</string>
+    <string name="compat_send">Otvori izvješće</string>
 </resources>

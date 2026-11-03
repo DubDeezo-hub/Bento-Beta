@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Magsimula ulit</string>
     <string name="helper_number_label">Numero sa laro</string>
     <string name="compat_title">Paano ito sa iba</string>
-    <string name="compat_need_fw">Ilagay ang firmware ng %1$s mo (sa detalye ng console) para makita ang mga ulat.</string>
-    <string name="compat_none">Wala pang ulat para sa %1$s %2$s.</string>
     <string name="compat_counts">Sa %1$s %2$s: %3$d gumana, %4$d nag-crash, %5$d hindi gumana.</string>
     <string name="compat_report">Sabihin kung paano</string>
     <string name="compat_report_hint">Magbubukas ito ng punong ulat sa GitHub (payload, bersyon, modelo ng console, firmware at resulta lang). Ipapadala mo ito gamit ang GitHub account mo.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Mga tala para sa larong ito</string>
     <string name="memory_game_notes_hint">Ano ang gumagana, address, aling bersyon…</string>
     <string name="stab_report">I-ulat na nag-crash</string>
+    <string name="compat_none_any">Wala pang ulat para sa payload na ito.</string>
+    <string name="compat_more">At %1$d pang bersyon ng firmware.</string>
+    <string name="compat_fw_label">Firmware (halimbawa 10.40)</string>
+    <string name="compat_fw_any">Puwedeng iulat ang anumang firmware at modelo.</string>
+    <string name="compat_bad_fw">Mag-type ng firmware tulad ng 10.40 o 9.00.</string>
+    <string name="compat_send">Buksan ang ulat</string>
 </resources>

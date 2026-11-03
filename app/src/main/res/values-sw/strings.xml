@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Anza upya</string>
     <string name="helper_number_label">Nambari kwenye mchezo</string>
     <string name="compat_title">Ilivyokwenda kwa wengine</string>
-    <string name="compat_need_fw">Weka programu dhibiti ya %1$s yako (kwenye maelezo ya konsoli) ili kuona ripoti.</string>
-    <string name="compat_none">Bado hakuna ripoti za %1$s %2$s.</string>
     <string name="compat_counts">Kwenye %1$s %2$s: %3$d ilifanya kazi, %4$d ilianguka, %5$d haikufanya kazi.</string>
     <string name="compat_report">Sema ilivyokwenda</string>
     <string name="compat_report_hint">Hii inafungua ripoti iliyojazwa kwenye GitHub (payload, toleo lake, modeli ya konsoli, programu dhibiti na matokeo tu). Unaituma kwa akaunti yako ya GitHub.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Maelezo ya mchezo huu</string>
     <string name="memory_game_notes_hint">Kinachofanya kazi, anwani, toleo gani…</string>
     <string name="stab_report">Ripoti kuanguka</string>
+    <string name="compat_none_any">Bado hakuna ripoti za payload hii.</string>
+    <string name="compat_more">Na matoleo mengine %1$d ya programu dhibiti.</string>
+    <string name="compat_fw_label">Programu dhibiti (kwa mfano 10.40)</string>
+    <string name="compat_fw_any">Programu dhibiti na modeli yoyote inaweza kuripotiwa.</string>
+    <string name="compat_bad_fw">Andika programu dhibiti kama 10.40 au 9.00.</string>
+    <string name="compat_send">Fungua ripoti</string>
 </resources>

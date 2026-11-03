@@ -1289,8 +1289,6 @@
     <string name="helper_restart">다시 시작</string>
     <string name="helper_number_label">게임 속 숫자</string>
     <string name="compat_title">다른 사람들의 결과</string>
-    <string name="compat_need_fw">보고를 보려면 %1$s의 펌웨어를 콘솔 세부 정보에서 설정하세요.</string>
-    <string name="compat_none">%1$s %2$s에 대한 보고가 아직 없습니다.</string>
     <string name="compat_counts">%1$s %2$s: 작동 %3$d, 다운 %4$d, 작동 안 함 %5$d</string>
     <string name="compat_report">결과 알리기</string>
     <string name="compat_report_hint">GitHub에 작성된 보고서를 엽니다(페이로드, 버전, 콘솔 모델, 펌웨어, 결과만). 본인의 GitHub 계정으로 보냅니다.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">이 게임 메모</string>
     <string name="memory_game_notes_hint">되는 것, 주소, 어떤 버전…</string>
     <string name="stab_report">다운 신고</string>
+    <string name="compat_none_any">이 페이로드에 대한 보고가 아직 없습니다.</string>
+    <string name="compat_more">외 펌웨어 %1$d개.</string>
+    <string name="compat_fw_label">펌웨어 (예: 10.40)</string>
+    <string name="compat_fw_any">어떤 펌웨어와 모델이든 보고할 수 있습니다.</string>
+    <string name="compat_bad_fw">10.40이나 9.00처럼 펌웨어를 입력하세요.</string>
+    <string name="compat_send">보고서 열기</string>
 </resources>

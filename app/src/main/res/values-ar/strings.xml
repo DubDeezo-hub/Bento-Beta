@@ -1289,8 +1289,6 @@
     <string name="helper_restart">ابدأ من جديد</string>
     <string name="helper_number_label">الرقم في اللعبة</string>
     <string name="compat_title">كيف جرى الأمر مع الآخرين</string>
-    <string name="compat_need_fw">حدّد إصدار نظام %1$s (في تفاصيل الجهاز) لترى التقارير.</string>
-    <string name="compat_none">لا تقارير بعد لـ %1$s %2$s.</string>
     <string name="compat_counts">على %1$s %2$s: نجح %3$d، تعطّل %4$d، لم يعمل %5$d.</string>
     <string name="compat_report">أخبر كيف جرى</string>
     <string name="compat_report_hint">يفتح هذا تقريرًا معبأً على GitHub (الحمولة وإصدارها وطراز الجهاز والنظام والنتيجة فقط). ترسله بحسابك على GitHub.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">ملاحظات لهذه اللعبة</string>
     <string name="memory_game_notes_hint">ما يعمل، العناوين، أي إصدار…</string>
     <string name="stab_report">أبلغ أنه تعطّل</string>
+    <string name="compat_none_any">لا تقارير بعد لهذه الحمولة.</string>
+    <string name="compat_more">و%1$d إصدارات أخرى من النظام.</string>
+    <string name="compat_fw_label">إصدار النظام (مثلًا 10.40)</string>
+    <string name="compat_fw_any">يمكن الإبلاغ عن أي إصدار وأي طراز.</string>
+    <string name="compat_bad_fw">اكتب إصدارًا مثل 10.40 أو 9.00.</string>
+    <string name="compat_send">افتح التقرير</string>
 </resources>

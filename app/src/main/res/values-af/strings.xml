@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Begin weer</string>
     <string name="helper_number_label">Getal in die speletjie</string>
     <string name="compat_title">Hoe dit vir ander gegaan het</string>
-    <string name="compat_need_fw">Stel jou %1$s se fermware (in die konsole se besonderhede) om verslae te sien.</string>
-    <string name="compat_none">Nog geen verslae vir %1$s %2$s nie.</string>
     <string name="compat_counts">Op %1$s %2$s: %3$d het gewerk, %4$d het ineengestort, %5$d het nie gewerk nie.</string>
     <string name="compat_report">Sê hoe dit gegaan het</string>
     <string name="compat_report_hint">Dit maak ’n ingevulde verslag op GitHub oop (net die payload, sy weergawe, die konsolemodel, fermware en die uitslag). Jy stuur dit met jou GitHub-rekening.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Notas vir hierdie speletjie</string>
     <string name="memory_game_notes_hint">Wat werk, adresse, watter weergawe…</string>
     <string name="stab_report">Meld dat dit ineengestort het</string>
+    <string name="compat_none_any">Nog geen verslae vir hierdie payload nie.</string>
+    <string name="compat_more">En nog %1$d fermwareweergawes.</string>
+    <string name="compat_fw_label">Fermware (byvoorbeeld 10.40)</string>
+    <string name="compat_fw_any">Enige fermware en model kan gerapporteer word.</string>
+    <string name="compat_bad_fw">Tik ’n fermware soos 10.40 of 9.00.</string>
+    <string name="compat_send">Maak verslag oop</string>
 </resources>

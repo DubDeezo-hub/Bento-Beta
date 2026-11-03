@@ -1289,8 +1289,6 @@
     <string name="helper_restart">ફરી શરૂ કરો</string>
     <string name="helper_number_label">રમતમાંની સંખ્યા</string>
     <string name="compat_title">બીજાઓ માટે કેવું રહ્યું</string>
-    <string name="compat_need_fw">રિપોર્ટ જોવા તમારા %1$s નું ફર્મવેર (કન્સોલની વિગતોમાં) સેટ કરો.</string>
-    <string name="compat_none">%1$s %2$s માટે હજી કોઈ રિપોર્ટ નથી.</string>
     <string name="compat_counts">%1$s %2$s પર: %3$d ચાલ્યું, %4$d ક્રેશ, %5$d ન ચાલ્યું.</string>
     <string name="compat_report">કેવું રહ્યું કહો</string>
     <string name="compat_report_hint">આ GitHub પર ભરેલો રિપોર્ટ ખોલે છે (ફક્ત પેલોડ, આવૃત્તિ, કન્સોલ મોડલ, ફર્મવેર અને પરિણામ). તમે તેને તમારા GitHub એકાઉન્ટથી મોકલો છો.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">આ રમત માટે નોંધો</string>
     <string name="memory_game_notes_hint">શું ચાલે છે, સરનામાં, કઈ આવૃત્તિ…</string>
     <string name="stab_report">ક્રેશ જણાવો</string>
+    <string name="compat_none_any">આ પેલોડ માટે હજી કોઈ રિપોર્ટ નથી.</string>
+    <string name="compat_more">અને %1$d વધુ ફર્મવેર આવૃત્તિઓ.</string>
+    <string name="compat_fw_label">ફર્મવેર (ઉદાહરણ 10.40)</string>
+    <string name="compat_fw_any">કોઈપણ ફર્મવેર અને મોડલ જણાવી શકાય છે.</string>
+    <string name="compat_bad_fw">10.40 કે 9.00 જેવું ફર્મવેર લખો.</string>
+    <string name="compat_send">રિપોર્ટ ખોલો</string>
 </resources>

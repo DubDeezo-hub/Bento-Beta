@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Začať znova</string>
     <string name="helper_number_label">Číslo v hre</string>
     <string name="compat_title">Ako to išlo ostatným</string>
-    <string name="compat_need_fw">Nastavte firmvér svojej %1$s (v podrobnostiach konzoly), aby ste videli hlásenia.</string>
-    <string name="compat_none">Zatiaľ žiadne hlásenia pre %1$s %2$s.</string>
     <string name="compat_counts">Na %1$s %2$s: %3$d fungovalo, %4$d spadlo, %5$d nefungovalo.</string>
     <string name="compat_report">Povedať, ako to išlo</string>
     <string name="compat_report_hint">Otvorí vyplnené hlásenie na GitHube (iba payload, jeho verziu, model konzoly, firmvér a výsledok). Odošlete ho svojím účtom GitHub.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Poznámky k tejto hre</string>
     <string name="memory_game_notes_hint">Čo funguje, adresy, ktorá verzia…</string>
     <string name="stab_report">Nahlásiť pád</string>
+    <string name="compat_none_any">Pre tento payload zatiaľ nie sú hlásenia.</string>
+    <string name="compat_more">A ďalších %1$d verzií firmvéru.</string>
+    <string name="compat_fw_label">Firmvér (napríklad 10.40)</string>
+    <string name="compat_fw_any">Nahlásiť sa dá akýkoľvek firmvér a model.</string>
+    <string name="compat_bad_fw">Napíšte firmvér ako 10.40 alebo 9.00.</string>
+    <string name="compat_send">Otvoriť hlásenie</string>
 </resources>

@@ -1290,8 +1290,6 @@
     <string name="helper_restart">Börja om</string>
     <string name="helper_number_label">Tal i spelet</string>
     <string name="compat_title">Hur det gick för andra</string>
-    <string name="compat_need_fw">Ange firmware för din %1$s (i konsolens detaljer) för att se rapporter.</string>
-    <string name="compat_none">Inga rapporter ännu för %1$s %2$s.</string>
     <string name="compat_counts">På %1$s %2$s: %3$d fungerade, %4$d kraschade, %5$d fungerade inte.</string>
     <string name="compat_report">Berätta hur det gick</string>
     <string name="compat_report_hint">Det här öppnar en ifylld rapport på GitHub (bara payloaden, versionen, konsolmodellen, firmware och resultatet). Du skickar den med ditt GitHub-konto.</string>
@@ -1329,4 +1327,10 @@
     <string name="memory_game_notes">Anteckningar för det här spelet</string>
     <string name="memory_game_notes_hint">Vad som fungerar, adresser, vilken version…</string>
     <string name="stab_report">Rapportera krasch</string>
+    <string name="compat_none_any">Inga rapporter ännu för den här payloaden.</string>
+    <string name="compat_more">Och %1$d andra firmwareversioner.</string>
+    <string name="compat_fw_label">Firmware (till exempel 10.40)</string>
+    <string name="compat_fw_any">Alla firmware och modeller kan rapporteras.</string>
+    <string name="compat_bad_fw">Skriv en firmware som 10.40 eller 9.00.</string>
+    <string name="compat_send">Öppna rapport</string>
 </resources>

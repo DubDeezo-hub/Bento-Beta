@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Start på nytt</string>
     <string name="helper_number_label">Tall i spillet</string>
     <string name="compat_title">Hvordan det gikk for andre</string>
-    <string name="compat_need_fw">Angi fastvaren til din %1$s (i konsollens detaljer) for å se rapporter.</string>
-    <string name="compat_none">Ingen rapporter ennå for %1$s %2$s.</string>
     <string name="compat_counts">På %1$s %2$s: %3$d virket, %4$d krasjet, %5$d virket ikke.</string>
     <string name="compat_report">Si hvordan det gikk</string>
     <string name="compat_report_hint">Dette åpner en utfylt rapport på GitHub (bare payloaden, versjonen, konsollmodellen, fastvaren og resultatet). Du sender den med GitHub-kontoen din.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Notater for dette spillet</string>
     <string name="memory_game_notes_hint">Hva virker, adresser, hvilken versjon…</string>
     <string name="stab_report">Meld krasj</string>
+    <string name="compat_none_any">Ingen rapporter ennå for denne payloaden.</string>
+    <string name="compat_more">Og %1$d andre fastvareversjoner.</string>
+    <string name="compat_fw_label">Fastvare (for eksempel 10.40)</string>
+    <string name="compat_fw_any">All fastvare og alle modeller kan rapporteres.</string>
+    <string name="compat_bad_fw">Skriv en fastvare som 10.40 eller 9.00.</string>
+    <string name="compat_send">Åpne rapport</string>
 </resources>

@@ -1289,8 +1289,6 @@
     <string name="helper_restart">మళ్లీ ప్రారంభించు</string>
     <string name="helper_number_label">ఆటలోని సంఖ్య</string>
     <string name="compat_title">ఇతరులకు ఎలా జరిగింది</string>
-    <string name="compat_need_fw">నివేదికలు చూడటానికి మీ %1$s ఫర్మ్‌వేర్‌ను (కన్సోల్ వివరాల్లో) సెట్ చేయండి.</string>
-    <string name="compat_none">%1$s %2$s కోసం ఇంకా నివేదికలు లేవు.</string>
     <string name="compat_counts">%1$s %2$s‌లో: %3$d పనిచేసింది, %4$d క్రాష్, %5$d పనిచేయలేదు.</string>
     <string name="compat_report">ఎలా జరిగిందో చెప్పు</string>
     <string name="compat_report_hint">ఇది GitHub‌లో నింపిన నివేదికను తెరుస్తుంది (పేలోడ్, వెర్షన్, కన్సోల్ మోడల్, ఫర్మ్‌వేర్, ఫలితం మాత్రమే). మీరు మీ GitHub ఖాతాతో పంపుతారు.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">ఈ ఆట కోసం నోట్స్</string>
     <string name="memory_game_notes_hint">ఏది పనిచేస్తుంది, చిరునామాలు, ఏ వెర్షన్…</string>
     <string name="stab_report">క్రాష్ నివేదించు</string>
+    <string name="compat_none_any">ఈ పేలోడ్‌కు ఇంకా నివేదికలు లేవు.</string>
+    <string name="compat_more">మరియు మరో %1$d ఫర్మ్‌వేర్ వెర్షన్లు.</string>
+    <string name="compat_fw_label">ఫర్మ్‌వేర్ (ఉదా. 10.40)</string>
+    <string name="compat_fw_any">ఏ ఫర్మ్‌వేర్ మరియు మోడల్ అయినా నివేదించవచ్చు.</string>
+    <string name="compat_bad_fw">10.40 లేదా 9.00 లాంటి ఫర్మ్‌వేర్ టైప్ చేయండి.</string>
+    <string name="compat_send">నివేదిక తెరువు</string>
 </resources>

@@ -1289,8 +1289,6 @@
     <string name="helper_restart">पुन्हा सुरू करा</string>
     <string name="helper_number_label">गेममधील संख्या</string>
     <string name="compat_title">इतरांना कसे गेले</string>
-    <string name="compat_need_fw">अहवाल पाहण्यासाठी तुमच्या %1$s चे फर्मवेअर (कन्सोलच्या तपशिलात) सेट करा.</string>
-    <string name="compat_none">%1$s %2$s साठी अजून अहवाल नाहीत.</string>
     <string name="compat_counts">%1$s %2$s वर: %3$d चालले, %4$d क्रॅश, %5$d चालले नाही.</string>
     <string name="compat_report">कसे गेले ते सांगा</string>
     <string name="compat_report_hint">हे GitHub वर भरलेला अहवाल उघडते (फक्त पेलोड, आवृत्ती, कन्सोल मॉडेल, फर्मवेअर आणि निकाल). तुम्ही तो तुमच्या GitHub खात्याने पाठवता.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">या गेमसाठी नोंदी</string>
     <string name="memory_game_notes_hint">काय चालते, पत्ते, कोणती आवृत्ती…</string>
     <string name="stab_report">क्रॅश कळवा</string>
+    <string name="compat_none_any">या पेलोडसाठी अजून अहवाल नाहीत.</string>
+    <string name="compat_more">आणि आणखी %1$d फर्मवेअर आवृत्त्या.</string>
+    <string name="compat_fw_label">फर्मवेअर (उदा. 10.40)</string>
+    <string name="compat_fw_any">कोणतेही फर्मवेअर आणि मॉडेल कळवता येते.</string>
+    <string name="compat_bad_fw">10.40 किंवा 9.00 सारखे फर्मवेअर लिहा.</string>
+    <string name="compat_send">अहवाल उघडा</string>
 </resources>

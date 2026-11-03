@@ -1289,8 +1289,6 @@
     <string name="helper_restart">फिर से शुरू करें</string>
     <string name="helper_number_label">गेम में संख्या</string>
     <string name="compat_title">दूसरों के साथ कैसा रहा</string>
-    <string name="compat_need_fw">रिपोर्ट देखने के लिए अपने %1$s का फ़र्मवेयर (कंसोल के विवरण में) सेट करें।</string>
-    <string name="compat_none">%1$s %2$s के लिए अभी कोई रिपोर्ट नहीं।</string>
     <string name="compat_counts">%1$s %2$s पर: %3$d चला, %4$d क्रैश, %5$d नहीं चला।</string>
     <string name="compat_report">बताएं कैसा रहा</string>
     <string name="compat_report_hint">यह GitHub पर भरी हुई रिपोर्ट खोलता है (सिर्फ़ पेलोड, उसका संस्करण, कंसोल मॉडल, फ़र्मवेयर और नतीजा)। आप इसे अपने GitHub खाते से भेजते हैं।</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">इस गेम के नोट्स</string>
     <string name="memory_game_notes_hint">क्या चलता है, पते, कौन सा संस्करण…</string>
     <string name="stab_report">क्रैश की रिपोर्ट करें</string>
+    <string name="compat_none_any">इस पेलोड की अभी कोई रिपोर्ट नहीं।</string>
+    <string name="compat_more">और %1$d फ़र्मवेयर संस्करण।</string>
+    <string name="compat_fw_label">फ़र्मवेयर (जैसे 10.40)</string>
+    <string name="compat_fw_any">किसी भी फ़र्मवेयर और मॉडल की रिपोर्ट की जा सकती है।</string>
+    <string name="compat_bad_fw">10.40 या 9.00 जैसा फ़र्मवेयर लिखें।</string>
+    <string name="compat_send">रिपोर्ट खोलें</string>
 </resources>

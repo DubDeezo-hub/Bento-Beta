@@ -1289,8 +1289,6 @@
     <string name="helper_restart">やり直す</string>
     <string name="helper_number_label">ゲーム内の数字</string>
     <string name="compat_title">ほかの人の結果</string>
-    <string name="compat_need_fw">レポートを見るには、%1$sのファームウェア（本体の詳細）を設定してください。</string>
-    <string name="compat_none">%1$s %2$sのレポートはまだありません。</string>
     <string name="compat_counts">%1$s %2$s：動いた%3$d、クラッシュ%4$d、動かなかった%5$d</string>
     <string name="compat_report">結果を伝える</string>
     <string name="compat_report_hint">GitHubに記入済みのレポートを開きます（ペイロード、バージョン、本体の機種、ファームウェア、結果のみ）。ご自身のGitHubアカウントで送信します。</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">このゲームのメモ</string>
     <string name="memory_game_notes_hint">使えるもの、アドレス、バージョン…</string>
     <string name="stab_report">クラッシュを報告</string>
+    <string name="compat_none_any">このペイロードのレポートはまだありません。</string>
+    <string name="compat_more">ほかに%1$d件のファームウェア。</string>
+    <string name="compat_fw_label">ファームウェア（例：10.40）</string>
+    <string name="compat_fw_any">どのファームウェア・機種でも報告できます。</string>
+    <string name="compat_bad_fw">10.40や9.00のように入力してください。</string>
+    <string name="compat_send">レポートを開く</string>
 </resources>

@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Ξεκίνα ξανά</string>
     <string name="helper_number_label">Αριθμός στο παιχνίδι</string>
     <string name="compat_title">Πώς πήγε σε άλλους</string>
-    <string name="compat_need_fw">Όρισε το firmware του %1$s σου (στις λεπτομέρειες της κονσόλας) για να δεις αναφορές.</string>
-    <string name="compat_none">Καμία αναφορά ακόμα για %1$s %2$s.</string>
     <string name="compat_counts">Στο %1$s %2$s: %3$d δούλεψαν, %4$d κόλλησαν, %5$d δεν δούλεψαν.</string>
     <string name="compat_report">Πες πώς πήγε</string>
     <string name="compat_report_hint">Ανοίγει μια συμπληρωμένη αναφορά στο GitHub (μόνο το payload, την έκδοσή του, το μοντέλο κονσόλας, το firmware και το αποτέλεσμα). Τη στέλνεις με τον λογαριασμό σου στο GitHub.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Σημειώσεις για αυτό το παιχνίδι</string>
     <string name="memory_game_notes_hint">Τι δουλεύει, διευθύνσεις, ποια έκδοση…</string>
     <string name="stab_report">Αναφορά κολλήματος</string>
+    <string name="compat_none_any">Καμία αναφορά ακόμα για αυτό το payload.</string>
+    <string name="compat_more">Και %1$d ακόμα εκδόσεις firmware.</string>
+    <string name="compat_fw_label">Firmware (για παράδειγμα 10.40)</string>
+    <string name="compat_fw_any">Μπορεί να αναφερθεί οποιοδήποτε firmware και μοντέλο.</string>
+    <string name="compat_bad_fw">Γράψε firmware όπως 10.40 ή 9.00.</string>
+    <string name="compat_send">Άνοιγμα αναφοράς</string>
 </resources>

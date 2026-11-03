@@ -1291,8 +1291,6 @@
     <string name="helper_restart">Neu anfangen</string>
     <string name="helper_number_label">Zahl im Spiel</string>
     <string name="compat_title">Wie es bei anderen lief</string>
-    <string name="compat_need_fw">Trag die Firmware deiner %1$s ein (in den Details der Konsole), um Berichte dafür zu sehen.</string>
-    <string name="compat_none">Noch keine Berichte für %1$s %2$s.</string>
     <string name="compat_counts">Auf %1$s %2$s: %3$d lief, %4$d abgestürzt, %5$d ging nicht.</string>
     <string name="compat_report">Sagen, wie es lief</string>
     <string name="compat_report_hint">Das öffnet einen ausgefüllten Bericht auf GitHub (nur der Payload, seine Version, das Konsolenmodell, die Firmware und das Ergebnis). Du sendest ihn mit deinem GitHub-Konto.</string>
@@ -1330,4 +1328,10 @@
     <string name="memory_game_notes">Notizen zu diesem Spiel</string>
     <string name="memory_game_notes_hint">Was geht, Adressen, welche Version…</string>
     <string name="stab_report">Absturz melden</string>
+    <string name="compat_none_any">Noch keine Berichte für diesen Payload.</string>
+    <string name="compat_more">Und %1$d weitere Firmware-Versionen.</string>
+    <string name="compat_fw_label">Firmware (zum Beispiel 10.40)</string>
+    <string name="compat_fw_any">Jede Firmware und jedes Modell kann gemeldet werden.</string>
+    <string name="compat_bad_fw">Gib eine Firmware wie 10.40 oder 9.00 ein.</string>
+    <string name="compat_send">Bericht öffnen</string>
 </resources>

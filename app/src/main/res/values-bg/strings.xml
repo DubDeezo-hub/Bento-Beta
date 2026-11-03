@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Започни отново</string>
     <string name="helper_number_label">Число в играта</string>
     <string name="compat_title">Как е минало при другите</string>
-    <string name="compat_need_fw">Въведете фърмуера на вашата %1$s (в детайлите на конзолата), за да видите отчети.</string>
-    <string name="compat_none">Още няма отчети за %1$s %2$s.</string>
     <string name="compat_counts">На %1$s %2$s: %3$d работи, %4$d срив, %5$d не работи.</string>
     <string name="compat_report">Кажи как мина</string>
     <string name="compat_report_hint">Това отваря попълнен отчет в GitHub (само payload-а, версията, модела на конзолата, фърмуера и резултата). Изпращате го с вашия GitHub акаунт.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Бележки за тази игра</string>
     <string name="memory_game_notes_hint">Какво работи, адреси, коя версия…</string>
     <string name="stab_report">Отчети срив</string>
+    <string name="compat_none_any">Още няма отчети за този payload.</string>
+    <string name="compat_more">И още %1$d версии на фърмуера.</string>
+    <string name="compat_fw_label">Фърмуер (например 10.40)</string>
+    <string name="compat_fw_any">Може да се докладва всеки фърмуер и модел.</string>
+    <string name="compat_bad_fw">Въведете фърмуер като 10.40 или 9.00.</string>
+    <string name="compat_send">Отвори отчета</string>
 </resources>

@@ -1290,8 +1290,6 @@
     <string name="helper_restart">Opnieuw beginnen</string>
     <string name="helper_number_label">Getal in de game</string>
     <string name="compat_title">Hoe het bij anderen ging</string>
-    <string name="compat_need_fw">Vul de firmware van je %1$s in (bij de details van de console) om meldingen te zien.</string>
-    <string name="compat_none">Nog geen meldingen voor %1$s %2$s.</string>
     <string name="compat_counts">Op %1$s %2$s: %3$d werkte, %4$d crashte, %5$d werkte niet.</string>
     <string name="compat_report">Zeg hoe het ging</string>
     <string name="compat_report_hint">Dit opent een ingevulde melding op GitHub (alleen de payload, de versie, het consolemodel, de firmware en het resultaat). Je verstuurt hem met je GitHub-account.</string>
@@ -1329,4 +1327,10 @@
     <string name="memory_game_notes">Notities voor deze game</string>
     <string name="memory_game_notes_hint">Wat werkt, adressen, welke versie…</string>
     <string name="stab_report">Crash melden</string>
+    <string name="compat_none_any">Nog geen meldingen voor deze payload.</string>
+    <string name="compat_more">En nog %1$d firmwareversies.</string>
+    <string name="compat_fw_label">Firmware (bijvoorbeeld 10.40)</string>
+    <string name="compat_fw_any">Elke firmware en elk model kan worden gemeld.</string>
+    <string name="compat_bad_fw">Typ een firmware zoals 10.40 of 9.00.</string>
+    <string name="compat_send">Melding openen</string>
 </resources>

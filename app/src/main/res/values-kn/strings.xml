@@ -1289,8 +1289,6 @@
     <string name="helper_restart">ಮತ್ತೆ ಆರಂಭಿಸಿ</string>
     <string name="helper_number_label">ಆಟದ ಸಂಖ್ಯೆ</string>
     <string name="compat_title">ಇತರರಿಗೆ ಹೇಗಾಯಿತು</string>
-    <string name="compat_need_fw">ವರದಿಗಳನ್ನು ನೋಡಲು ನಿಮ್ಮ %1$s ನ ಫರ್ಮ್‌ವೇರ್ (ಕನ್ಸೋಲ್ ವಿವರಗಳಲ್ಲಿ) ಹೊಂದಿಸಿ.</string>
-    <string name="compat_none">%1$s %2$s ಗೆ ಇನ್ನೂ ವರದಿಗಳಿಲ್ಲ.</string>
     <string name="compat_counts">%1$s %2$s ನಲ್ಲಿ: %3$d ಕೆಲಸ ಮಾಡಿತು, %4$d ಕ್ರ್ಯಾಶ್, %5$d ಕೆಲಸ ಮಾಡಲಿಲ್ಲ.</string>
     <string name="compat_report">ಹೇಗಾಯಿತು ಹೇಳಿ</string>
     <string name="compat_report_hint">ಇದು GitHub ನಲ್ಲಿ ತುಂಬಿದ ವರದಿಯನ್ನು ತೆರೆಯುತ್ತದೆ (ಪೇಲೋಡ್, ಆವೃತ್ತಿ, ಕನ್ಸೋಲ್ ಮಾದರಿ, ಫರ್ಮ್‌ವೇರ್ ಮತ್ತು ಫಲಿತಾಂಶ ಮಾತ್ರ). ನಿಮ್ಮ GitHub ಖಾತೆಯಿಂದ ಕಳುಹಿಸುತ್ತೀರಿ.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">ಈ ಆಟದ ಟಿಪ್ಪಣಿಗಳು</string>
     <string name="memory_game_notes_hint">ಏನು ಕೆಲಸ ಮಾಡುತ್ತದೆ, ವಿಳಾಸಗಳು, ಯಾವ ಆವೃತ್ತಿ…</string>
     <string name="stab_report">ಕ್ರ್ಯಾಶ್ ವರದಿ ಮಾಡಿ</string>
+    <string name="compat_none_any">ಈ ಪೇಲೋಡ್‌ಗೆ ಇನ್ನೂ ವರದಿಗಳಿಲ್ಲ.</string>
+    <string name="compat_more">ಮತ್ತು ಇನ್ನೂ %1$d ಫರ್ಮ್‌ವೇರ್ ಆವೃತ್ತಿಗಳು.</string>
+    <string name="compat_fw_label">ಫರ್ಮ್‌ವೇರ್ (ಉದಾಹರಣೆ 10.40)</string>
+    <string name="compat_fw_any">ಯಾವುದೇ ಫರ್ಮ್‌ವೇರ್ ಮತ್ತು ಮಾದರಿಯನ್ನು ವರದಿ ಮಾಡಬಹುದು.</string>
+    <string name="compat_bad_fw">10.40 ಅಥವಾ 9.00 ನಂತಹ ಫರ್ಮ್‌ವೇರ್ ಬರೆಯಿರಿ.</string>
+    <string name="compat_send">ವರದಿ ತೆರೆಯಿರಿ</string>
 </resources>

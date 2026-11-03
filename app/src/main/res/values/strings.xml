@@ -1294,8 +1294,6 @@
     <string name="helper_restart">Start again</string>
     <string name="helper_number_label">Number in the game</string>
     <string name="compat_title">How it went for others</string>
-    <string name="compat_need_fw">Set your %1$s\'s firmware (in the console\'s details) to see reports for it.</string>
-    <string name="compat_none">No reports yet for %1$s %2$s.</string>
     <string name="compat_counts">On %1$s %2$s: %3$d worked, %4$d crashed, %5$d didn\'t work.</string>
     <string name="compat_report">Say how it went</string>
     <string name="compat_report_hint">This opens a filled-in report on GitHub (only the payload, its version, the console model, firmware and the result). You send it with your GitHub account.</string>
@@ -1333,4 +1331,10 @@
     <string name="memory_game_notes">Notes for this game</string>
     <string name="memory_game_notes_hint">What works, addresses, which version…</string>
     <string name="stab_report">Report it crashed</string>
+    <string name="compat_none_any">No reports yet for this payload.</string>
+    <string name="compat_more">And %1$d more firmware versions.</string>
+    <string name="compat_fw_label">Firmware (for example 10.40)</string>
+    <string name="compat_fw_any">Any firmware and model can be reported.</string>
+    <string name="compat_bad_fw">Type a firmware like 10.40 or 9.00.</string>
+    <string name="compat_send">Open report</string>
 </resources>

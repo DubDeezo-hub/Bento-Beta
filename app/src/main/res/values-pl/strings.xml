@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Zacznij od nowa</string>
     <string name="helper_number_label">Liczba w grze</string>
     <string name="compat_title">Jak poszło innym</string>
-    <string name="compat_need_fw">Ustaw firmware swojej %1$s (w szczegółach konsoli), by zobaczyć zgłoszenia.</string>
-    <string name="compat_none">Brak jeszcze zgłoszeń dla %1$s %2$s.</string>
     <string name="compat_counts">Na %1$s %2$s: %3$d działało, %4$d padło, %5$d nie działało.</string>
     <string name="compat_report">Powiedz, jak poszło</string>
     <string name="compat_report_hint">Otwiera wypełnione zgłoszenie na GitHubie (tylko payload, jego wersja, model konsoli, firmware i wynik). Wysyłasz je swoim kontem GitHub.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Notatki do tej gry</string>
     <string name="memory_game_notes_hint">Co działa, adresy, która wersja…</string>
     <string name="stab_report">Zgłoś, że padło</string>
+    <string name="compat_none_any">Brak jeszcze zgłoszeń dla tego payloadu.</string>
+    <string name="compat_more">I jeszcze %1$d wersji firmware.</string>
+    <string name="compat_fw_label">Firmware (na przykład 10.40)</string>
+    <string name="compat_fw_any">Można zgłosić dowolny firmware i model.</string>
+    <string name="compat_bad_fw">Wpisz firmware, np. 10.40 lub 9.00.</string>
+    <string name="compat_send">Otwórz zgłoszenie</string>
 </resources>

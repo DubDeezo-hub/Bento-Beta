@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Mulai lagi</string>
     <string name="helper_number_label">Angka di game</string>
     <string name="compat_title">Bagaimana hasil orang lain</string>
-    <string name="compat_need_fw">Atur firmware %1$s kamu (di detail konsol) untuk melihat laporan.</string>
-    <string name="compat_none">Belum ada laporan untuk %1$s %2$s.</string>
     <string name="compat_counts">Di %1$s %2$s: %3$d berhasil, %4$d crash, %5$d tidak berhasil.</string>
     <string name="compat_report">Ceritakan hasilnya</string>
     <string name="compat_report_hint">Ini membuka laporan yang sudah terisi di GitHub (hanya payload, versinya, model konsol, firmware, dan hasilnya). Kamu mengirimnya dengan akun GitHub-mu.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Catatan untuk game ini</string>
     <string name="memory_game_notes_hint">Apa yang jalan, alamat, versi mana…</string>
     <string name="stab_report">Laporkan crash</string>
+    <string name="compat_none_any">Belum ada laporan untuk payload ini.</string>
+    <string name="compat_more">Dan %1$d versi firmware lainnya.</string>
+    <string name="compat_fw_label">Firmware (misalnya 10.40)</string>
+    <string name="compat_fw_any">Firmware dan model apa pun bisa dilaporkan.</string>
+    <string name="compat_bad_fw">Ketik firmware seperti 10.40 atau 9.00.</string>
+    <string name="compat_send">Buka laporan</string>
 </resources>

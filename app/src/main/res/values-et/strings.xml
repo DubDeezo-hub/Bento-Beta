@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Alusta uuesti</string>
     <string name="helper_number_label">Arv mängus</string>
     <string name="compat_title">Kuidas teistel läks</string>
-    <string name="compat_need_fw">Määra oma %1$s püsivara (konsooli üksikasjades), et näha teateid.</string>
-    <string name="compat_none">Veel pole teateid: %1$s %2$s.</string>
     <string name="compat_counts">%1$s %2$s: %3$d töötas, %4$d jooksis kokku, %5$d ei töötanud.</string>
     <string name="compat_report">Ütle, kuidas läks</string>
     <string name="compat_report_hint">See avab GitHubis täidetud teate (ainult payload, versioon, konsooli mudel, püsivara ja tulemus). Saadad selle oma GitHubi kontoga.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Märkmed selle mängu kohta</string>
     <string name="memory_game_notes_hint">Mis töötab, aadressid, milline versioon…</string>
     <string name="stab_report">Teata kokkujooksmisest</string>
+    <string name="compat_none_any">Selle payloadi kohta pole veel teateid.</string>
+    <string name="compat_more">Ja veel %1$d püsivara versiooni.</string>
+    <string name="compat_fw_label">Püsivara (näiteks 10.40)</string>
+    <string name="compat_fw_any">Teatada saab mis tahes püsivarast ja mudelist.</string>
+    <string name="compat_bad_fw">Kirjuta püsivara nagu 10.40 või 9.00.</string>
+    <string name="compat_send">Ava teade</string>
 </resources>

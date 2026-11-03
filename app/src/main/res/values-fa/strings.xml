@@ -1289,8 +1289,6 @@
     <string name="helper_restart">شروع دوباره</string>
     <string name="helper_number_label">عدد در بازی</string>
     <string name="compat_title">تجربهٔ دیگران</string>
-    <string name="compat_need_fw">برای دیدن گزارش‌ها، سفت‌افزار %1$s خود را (در جزئیات کنسول) وارد کنید.</string>
-    <string name="compat_none">هنوز گزارشی برای %1$s %2$s نیست.</string>
     <string name="compat_counts">روی %1$s %2$s: %3$d کار کرد، %4$d از کار انداخت، %5$d کار نکرد.</string>
     <string name="compat_report">گفتن نتیجه</string>
     <string name="compat_report_hint">این یک گزارش پرشده در GitHub باز می‌کند (فقط پی‌لود، نسخه، مدل کنسول، سفت‌افزار و نتیجه). آن را با حساب GitHub خود می‌فرستید.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">یادداشت‌های این بازی</string>
     <string name="memory_game_notes_hint">چه کار می‌کند، نشانی‌ها، کدام نسخه…</string>
     <string name="stab_report">گزارش از کار افتادن</string>
+    <string name="compat_none_any">هنوز گزارشی برای این پی‌لود نیست.</string>
+    <string name="compat_more">و %1$d نسخهٔ دیگر سفت‌افزار.</string>
+    <string name="compat_fw_label">سفت‌افزار (مثلاً 10.40)</string>
+    <string name="compat_fw_any">هر سفت‌افزار و مدلی را می‌توان گزارش کرد.</string>
+    <string name="compat_bad_fw">سفت‌افزاری مانند 10.40 یا 9.00 بنویسید.</string>
+    <string name="compat_send">باز کردن گزارش</string>
 </resources>

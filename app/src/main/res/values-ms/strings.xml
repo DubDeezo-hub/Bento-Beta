@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Mula semula</string>
     <string name="helper_number_label">Nombor dalam permainan</string>
     <string name="compat_title">Bagaimana untuk orang lain</string>
-    <string name="compat_need_fw">Tetapkan perisian tegar %1$s anda (dalam butiran konsol) untuk melihat laporan.</string>
-    <string name="compat_none">Belum ada laporan untuk %1$s %2$s.</string>
     <string name="compat_counts">Pada %1$s %2$s: %3$d berjaya, %4$d ranap, %5$d tidak berjaya.</string>
     <string name="compat_report">Beritahu hasilnya</string>
     <string name="compat_report_hint">Ini membuka laporan yang sudah diisi di GitHub (hanya payload, versi, model konsol, perisian tegar dan hasil). Anda menghantarnya dengan akaun GitHub anda.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Nota untuk permainan ini</string>
     <string name="memory_game_notes_hint">Apa yang berfungsi, alamat, versi mana…</string>
     <string name="stab_report">Laporkan ranap</string>
+    <string name="compat_none_any">Belum ada laporan untuk payload ini.</string>
+    <string name="compat_more">Dan %1$d lagi versi perisian tegar.</string>
+    <string name="compat_fw_label">Perisian tegar (contohnya 10.40)</string>
+    <string name="compat_fw_any">Mana-mana perisian tegar dan model boleh dilaporkan.</string>
+    <string name="compat_bad_fw">Taip perisian tegar seperti 10.40 atau 9.00.</string>
+    <string name="compat_send">Buka laporan</string>
 </resources>

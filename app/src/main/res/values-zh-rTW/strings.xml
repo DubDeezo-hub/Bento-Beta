@@ -1289,8 +1289,6 @@
     <string name="helper_restart">重新開始</string>
     <string name="helper_number_label">遊戲裡的數字</string>
     <string name="compat_title">其他人的結果</string>
-    <string name="compat_need_fw">在主機詳細資訊中設定你的 %1$s 韌體即可查看回報。</string>
-    <string name="compat_none">%1$s %2$s 還沒有回報。</string>
     <string name="compat_counts">在 %1$s %2$s 上：成功 %3$d，當機 %4$d，無效 %5$d。</string>
     <string name="compat_report">說說結果</string>
     <string name="compat_report_hint">這會在 GitHub 開啟一份已填好的回報（只有酬載、版本、主機型號、韌體和結果）。你用自己的 GitHub 帳號送出。</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">這個遊戲的筆記</string>
     <string name="memory_game_notes_hint">哪些有效、位址、哪個版本…</string>
     <string name="stab_report">回報當機</string>
+    <string name="compat_none_any">這個酬載還沒有回報。</string>
+    <string name="compat_more">還有 %1$d 個韌體版本。</string>
+    <string name="compat_fw_label">韌體（例如 10.40）</string>
+    <string name="compat_fw_any">任何韌體和型號都可以回報。</string>
+    <string name="compat_bad_fw">請輸入類似 10.40 或 9.00 的韌體。</string>
+    <string name="compat_send">開啟回報</string>
 </resources>

@@ -1289,8 +1289,6 @@
     <string name="helper_restart">വീണ്ടും തുടങ്ങുക</string>
     <string name="helper_number_label">ഗെയിമിലെ സംഖ്യ</string>
     <string name="compat_title">മറ്റുള്ളവർക്ക് എങ്ങനെയായിരുന്നു</string>
-    <string name="compat_need_fw">റിപ്പോർട്ടുകൾ കാണാൻ നിങ്ങളുടെ %1$s-ന്റെ ഫേംവെയർ (കൺസോൾ വിവരങ്ങളിൽ) സജ്ജമാക്കുക.</string>
-    <string name="compat_none">%1$s %2$s-ന് ഇതുവരെ റിപ്പോർട്ടുകൾ ഇല്ല.</string>
     <string name="compat_counts">%1$s %2$s-ൽ: %3$d പ്രവർത്തിച്ചു, %4$d ക്രാഷ്, %5$d പ്രവർത്തിച്ചില്ല.</string>
     <string name="compat_report">എങ്ങനെയായിരുന്നു എന്ന് പറയുക</string>
     <string name="compat_report_hint">ഇത് GitHub-ൽ പൂരിപ്പിച്ച റിപ്പോർട്ട് തുറക്കുന്നു (പേലോഡ്, പതിപ്പ്, കൺസോൾ മോഡൽ, ഫേംവെയർ, ഫലം മാത്രം). നിങ്ങളുടെ GitHub അക്കൗണ്ടിൽ നിന്ന് അയയ്ക്കുന്നു.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">ഈ ഗെയിമിനുള്ള കുറിപ്പുകൾ</string>
     <string name="memory_game_notes_hint">എന്ത് പ്രവർത്തിക്കുന്നു, വിലാസങ്ങൾ, ഏത് പതിപ്പ്…</string>
     <string name="stab_report">ക്രാഷ് റിപ്പോർട്ട് ചെയ്യുക</string>
+    <string name="compat_none_any">ഈ പേലോഡിന് ഇതുവരെ റിപ്പോർട്ടുകൾ ഇല്ല.</string>
+    <string name="compat_more">കൂടാതെ %1$d ഫേംവെയർ പതിപ്പുകൾ കൂടി.</string>
+    <string name="compat_fw_label">ഫേംവെയർ (ഉദാ. 10.40)</string>
+    <string name="compat_fw_any">ഏത് ഫേംവെയറും മോഡലും റിപ്പോർട്ട് ചെയ്യാം.</string>
+    <string name="compat_bad_fw">10.40 അല്ലെങ്കിൽ 9.00 പോലെ ഫേംവെയർ ടൈപ്പ് ചെയ്യുക.</string>
+    <string name="compat_send">റിപ്പോർട്ട് തുറക്കുക</string>
 </resources>

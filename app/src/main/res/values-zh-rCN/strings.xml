@@ -1289,8 +1289,6 @@
     <string name="helper_restart">重新开始</string>
     <string name="helper_number_label">游戏里的数字</string>
     <string name="compat_title">其他人的结果</string>
-    <string name="compat_need_fw">在主机详情中设置你的 %1$s 固件即可查看报告。</string>
-    <string name="compat_none">%1$s %2$s 还没有报告。</string>
     <string name="compat_counts">在 %1$s %2$s 上：成功 %3$d，崩溃 %4$d，无效 %5$d。</string>
     <string name="compat_report">说说结果</string>
     <string name="compat_report_hint">这会在 GitHub 打开一份已填好的报告（只有载荷、版本、主机型号、固件和结果）。你用自己的 GitHub 账号发送。</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">这个游戏的笔记</string>
     <string name="memory_game_notes_hint">哪些有效、地址、哪个版本…</string>
     <string name="stab_report">报告崩溃</string>
+    <string name="compat_none_any">这个载荷还没有报告。</string>
+    <string name="compat_more">还有 %1$d 个固件版本。</string>
+    <string name="compat_fw_label">固件（例如 10.40）</string>
+    <string name="compat_fw_any">任何固件和型号都可以报告。</string>
+    <string name="compat_bad_fw">请输入类似 10.40 或 9.00 的固件。</string>
+    <string name="compat_send">打开报告</string>
 </resources>

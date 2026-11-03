@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Aloita alusta</string>
     <string name="helper_number_label">Luku pelissä</string>
     <string name="compat_title">Miten muilla meni</string>
-    <string name="compat_need_fw">Aseta konsolisi %1$s laiteohjelmisto (konsolin tiedoissa) nähdäksesi raportit.</string>
-    <string name="compat_none">Ei vielä raportteja: %1$s %2$s.</string>
     <string name="compat_counts">%1$s %2$s: %3$d toimi, %4$d kaatui, %5$d ei toiminut.</string>
     <string name="compat_report">Kerro miten meni</string>
     <string name="compat_report_hint">Tämä avaa täytetyn raportin GitHubissa (vain payload, versio, konsolin malli, laiteohjelmisto ja tulos). Lähetät sen omalla GitHub-tililläsi.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Muistiinpanot tästä pelistä</string>
     <string name="memory_game_notes_hint">Mikä toimii, osoitteet, mikä versio…</string>
     <string name="stab_report">Ilmoita kaatumisesta</string>
+    <string name="compat_none_any">Tästä payloadista ei ole vielä raportteja.</string>
+    <string name="compat_more">Ja %1$d muuta laiteohjelmistoversiota.</string>
+    <string name="compat_fw_label">Laiteohjelmisto (esimerkiksi 10.40)</string>
+    <string name="compat_fw_any">Mistä tahansa laiteohjelmistosta ja mallista voi raportoida.</string>
+    <string name="compat_bad_fw">Kirjoita laiteohjelmisto kuten 10.40 tai 9.00.</string>
+    <string name="compat_send">Avaa raportti</string>
 </resources>

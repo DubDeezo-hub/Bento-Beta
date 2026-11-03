@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Sākt no jauna</string>
     <string name="helper_number_label">Skaitlis spēlē</string>
     <string name="compat_title">Kā gāja citiem</string>
-    <string name="compat_need_fw">Iestatiet savas %1$s programmaparatūru (konsoles datos), lai redzētu ziņojumus.</string>
-    <string name="compat_none">Vēl nav ziņojumu par %1$s %2$s.</string>
     <string name="compat_counts">%1$s %2$s: strādāja %3$d, nogāzās %4$d, nestrādāja %5$d.</string>
     <string name="compat_report">Pastāstīt, kā gāja</string>
     <string name="compat_report_hint">Tiek atvērts aizpildīts ziņojums GitHub (tikai payload, versija, konsoles modelis, programmaparatūra un rezultāts). To sūtāt ar savu GitHub kontu.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Piezīmes par šo spēli</string>
     <string name="memory_game_notes_hint">Kas darbojas, adreses, kura versija…</string>
     <string name="stab_report">Ziņot par nogāšanos</string>
+    <string name="compat_none_any">Par šo payload vēl nav ziņojumu.</string>
+    <string name="compat_more">Un vēl %1$d programmaparatūras versijas.</string>
+    <string name="compat_fw_label">Programmaparatūra (piemēram, 10.40)</string>
+    <string name="compat_fw_any">Var ziņot par jebkuru programmaparatūru un modeli.</string>
+    <string name="compat_bad_fw">Ierakstiet versiju, piemēram, 10.40 vai 9.00.</string>
+    <string name="compat_send">Atvērt ziņojumu</string>
 </resources>

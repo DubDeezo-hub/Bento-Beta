@@ -1289,8 +1289,6 @@
     <string name="helper_restart">மீண்டும் தொடங்கு</string>
     <string name="helper_number_label">விளையாட்டில் உள்ள எண்</string>
     <string name="compat_title">மற்றவர்களுக்கு எப்படி இருந்தது</string>
-    <string name="compat_need_fw">அறிக்கைகளைப் பார்க்க உங்கள் %1$s-இன் ஃபர்ம்வேரை (கன்சோல் விவரங்களில்) அமைக்கவும்.</string>
-    <string name="compat_none">%1$s %2$s-க்கு இன்னும் அறிக்கைகள் இல்லை.</string>
     <string name="compat_counts">%1$s %2$s-இல்: %3$d வேலை செய்தது, %4$d செயலிழந்தது, %5$d வேலை செய்யவில்லை.</string>
     <string name="compat_report">எப்படி இருந்தது சொல்லுங்கள்</string>
     <string name="compat_report_hint">இது GitHub-இல் நிரப்பப்பட்ட அறிக்கையைத் திறக்கும் (பேலோட், பதிப்பு, கன்சோல் மாடல், ஃபர்ம்வேர், முடிவு மட்டும்). உங்கள் GitHub கணக்கில் அனுப்புவீர்கள்.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">இந்த விளையாட்டுக்கான குறிப்புகள்</string>
     <string name="memory_game_notes_hint">எது வேலை செய்கிறது, முகவரிகள், எந்தப் பதிப்பு…</string>
     <string name="stab_report">செயலிழப்பைப் புகாரளி</string>
+    <string name="compat_none_any">இந்தப் பேலோடுக்கு இன்னும் அறிக்கைகள் இல்லை.</string>
+    <string name="compat_more">மேலும் %1$d ஃபர்ம்வேர் பதிப்புகள்.</string>
+    <string name="compat_fw_label">ஃபர்ம்வேர் (எ.கா. 10.40)</string>
+    <string name="compat_fw_any">எந்த ஃபர்ம்வேரும் மாடலும் புகாரளிக்கலாம்.</string>
+    <string name="compat_bad_fw">10.40 அல்லது 9.00 போன்ற ஃபர்ம்வேரை உள்ளிடவும்.</string>
+    <string name="compat_send">அறிக்கையைத் திற</string>
 </resources>

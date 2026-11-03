@@ -1289,8 +1289,6 @@
     <string name="helper_restart">Újrakezdés</string>
     <string name="helper_number_label">Szám a játékban</string>
     <string name="compat_title">Mások tapasztalata</string>
-    <string name="compat_need_fw">Add meg a(z) %1$s firmware-ét (a konzol adatainál) a jelentések megtekintéséhez.</string>
-    <string name="compat_none">Még nincs jelentés ehhez: %1$s %2$s.</string>
     <string name="compat_counts">%1$s %2$s: %3$d működött, %4$d összeomlott, %5$d nem működött.</string>
     <string name="compat_report">Mondd el, hogy ment</string>
     <string name="compat_report_hint">Ez megnyit egy kitöltött jelentést a GitHubon (csak a payload, a verziója, a konzol típusa, a firmware és az eredmény). A saját GitHub-fiókoddal küldöd el.</string>
@@ -1328,4 +1326,10 @@
     <string name="memory_game_notes">Jegyzetek ehhez a játékhoz</string>
     <string name="memory_game_notes_hint">Mi működik, címek, melyik verzió…</string>
     <string name="stab_report">Összeomlás jelentése</string>
+    <string name="compat_none_any">Ehhez a payloadhoz még nincs jelentés.</string>
+    <string name="compat_more">És még %1$d firmware-verzió.</string>
+    <string name="compat_fw_label">Firmware (például 10.40)</string>
+    <string name="compat_fw_any">Bármilyen firmware és típus jelenthető.</string>
+    <string name="compat_bad_fw">Írj be egy firmware-t, például 10.40 vagy 9.00.</string>
+    <string name="compat_send">Jelentés megnyitása</string>
 </resources>
