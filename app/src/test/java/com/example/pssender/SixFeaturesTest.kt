@@ -54,7 +54,7 @@ class SixFeaturesTest {
         // A helper that fails gives its file back, first in line
         c.helperFinished(h!!, TransferResult(false, "no"), 0L)
         assertEquals(0, c.helpersBusy)
-        assertEquals("b.bin", c.queue.waiting.value.first().item.name)
+        assertEquals(h.item.name, c.queue.waiting.value.first().item.name)
     }
 
     @Test
