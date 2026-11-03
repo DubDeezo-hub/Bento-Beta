@@ -1,0 +1,89 @@
+name: Compatibility reports
+
+# People report from the app how a payload went on their console ("worked", "crashed", "didn't work") by opening an
+# issue the app fills in for them. This counts each report into compat.json on the "compat-data" branch, which the app
+# reads to show what others saw. Only the payload's name, the console model, its firmware and the result are counted;
+# the issue is then thanked and closed. Nothing here runs code from the issue: its text is only matched field by field.
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+# One report at a time, so two reports can't overwrite each other's count
+concurrency:
+  group: compat-reports
+  cancel-in-progress: false
+
+jobs:
+  count:
+    if: contains(github.event.issue.body, '<!-- crimson-compat -->')
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.issue.body || '';
+            const field = (name) => {
+              const m = body.match(new RegExp('^' + name + ':[ \\t]*(.+)$', 'm'));
+              return m ? m[1].trim() : '';
+            };
+            const payload = field('payload');
+            const model = field('console').toUpperCase();
+            const firmware = field('firmware');
+            const result = field('result').toLowerCase();
+            const close = async (text) => {
+              await github.rest.issues.createComment({ ...context.repo, issue_number: context.issue.number, body: text + '\n\n---\n_Counted by the Compatibility reports workflow._' });
+              await github.rest.issues.update({ ...context.repo, issue_number: context.issue.number, state: 'closed', state_reason: 'completed' });
+            };
+            // Each field must look exactly as the app writes it
+            if (!/^[A-Za-z0-9._ +-]{1,64}$/.test(payload) || !['PS4', 'PS5'].includes(model) ||
+                !/^\d{1,2}\.\d{2}$/.test(firmware) || !['worked', 'crashed', 'failed'].includes(result)) {
+              await close('This report could not be read, so it was not counted. Please send it again from the app.');
+              return;
+            }
+            // The same name the app uses: lower case, no file ending, no version at the end
+            const key = payload.toLowerCase().replace(/\.(elf|bin|js|lua|jar)$/, '').replace(/[-_ ]*v?\d+(\.\d+)*[a-z]?$/, '').trim() || payload.toLowerCase();
+            const where = model + ' ' + firmware;
+            const branch = 'compat-data';
+            const path = 'compat.json';
+            // The data branch, made from the default branch the first time
+            try {
+              await github.rest.repos.getBranch({ ...context.repo, branch });
+            } catch (e) {
+              const base = await github.rest.repos.get({ ...context.repo });
+              const head = await github.rest.repos.getBranch({ ...context.repo, branch: base.data.default_branch });
+              await github.rest.git.createRef({ ...context.repo, ref: 'refs/heads/' + branch, sha: head.data.commit.sha });
+            }
+            let data = { version: 1, reports: {}, seen: [] };
+            let sha;
+            try {
+              const f = await github.rest.repos.getContent({ ...context.repo, path, ref: branch });
+              sha = f.data.sha;
+              data = JSON.parse(Buffer.from(f.data.content, 'base64').toString('utf8'));
+            } catch (e) {
+              if (e.status !== 404) throw e;
+            }
+            data.reports = data.reports || {};
+            data.seen = data.seen || [];
+            // One vote per person, payload and firmware (kept as a hash, not the name)
+            const crypto = require('crypto');
+            const voter = crypto.createHash('sha256').update(context.payload.issue.user.id + '|' + key + '|' + where).digest('hex').slice(0, 16);
+            if (data.seen.includes(voter)) {
+              await close('Thanks! You already reported ' + payload + ' on ' + where + ', so this one was not counted again.');
+              return;
+            }
+            data.seen.push(voter);
+            const entry = (data.reports[key] = data.reports[key] || {});
+            const counts = (entry[where] = entry[where] || { worked: 0, crashed: 0, failed: 0 });
+            counts[result] = (counts[result] || 0) + 1;
+            data.updated = new Date().toISOString();
+            await github.rest.repos.createOrUpdateFileContents({
+              ...context.repo, path, branch, sha,
+              message: 'Count a report: ' + key + ' on ' + where + ' (' + result + ')',
+              content: Buffer.from(JSON.stringify(data, null, 1) + '\n').toString('base64')
+            });
+            await close('Thanks! Counted: ' + payload + ' on ' + where + ' (' + result + '). Everyone using Crimson Multitool will see it within a day.');

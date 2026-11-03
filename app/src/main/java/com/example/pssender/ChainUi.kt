@@ -88,6 +88,19 @@ fun ChainsSection(
             enabled = chains.size < CHAINS_MAX,
             onClick = { editing = Chain(newChainId(), "", emptyList()) }
         ) { Text(str(R.string.chain_new)) }
+        // Smart chains: wait for etaHEN to answer before the next payload, and stop if it never does
+        val smartCtx = LocalContext.current
+        var smart by remember { mutableStateOf(SmartChain.on) }
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Column(modifier = Modifier.weight(1f)) {
+                Text(str(R.string.chain_smart_title), style = MaterialTheme.typography.labelLarge)
+                Text(str(R.string.chain_smart_hint), style = MaterialTheme.typography.bodySmall)
+            }
+            androidx.compose.material3.Switch(checked = smart, onCheckedChange = {
+                smart = it
+                SmartChain.set(smartCtx, it)
+            })
+        }
         // Safe mode: only the basics from the shelf, to find out whether another payload is what crashes the console
         val type = ActiveConsole.type
         val safe = remember(shelf, type) { safeModeNames(shelf.map { it.name }, type) }

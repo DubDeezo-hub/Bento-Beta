@@ -39,6 +39,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
@@ -240,7 +242,7 @@ fun PayloadTab(
             onDismissRequest = { details = null },
             title = { Text(item.name) },
             text = {
-                Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                Column(modifier = Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                     Text(fmtBytes(item.size), style = MaterialTheme.typography.bodySmall)
                     Text("SHA-256", style = MaterialTheme.typography.labelLarge)
                     Text(sha.ifEmpty { "…" }, style = MaterialTheme.typography.bodySmall, fontFamily = FontFamily.Monospace)
@@ -266,6 +268,8 @@ fun PayloadTab(
                             Text(str(R.string.shelf_go_back_note), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                         }
                     }
+                    // What others saw with this payload on the same firmware, and "How did it go?"
+                    CompatSection(item.name, if (key != null) Store.installedTag(ctx, key) else "")
                 }
             },
             confirmButton = { TextButton(onClick = { details = null }) { Text(str(R.string.action_close)) } },

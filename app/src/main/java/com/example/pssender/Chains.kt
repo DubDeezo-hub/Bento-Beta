@@ -33,6 +33,41 @@ const val CHAIN_CONNECT_RETRY_SECONDS = 15
 /** One payload of a chain: its file name on the shelf, and the pause after it before the next payload goes (the last one's is not used). */
 data class ChainStep(val payload: String, val waitSeconds: Int = 0)
 
+/** How long a smart chain waits for a payload's sign of life before it stops. */
+const val CHAIN_PROOF_SECONDS = 90
+
+/**
+ * Smart chains: after a payload that shows when it runs (etaHEN opens its FTP server), the chain waits for that before it
+ * sends the next one, and stops when it never comes. On unless the person turns it off (some turn etaHEN's FTP off).
+ */
+object SmartChain {
+    private const val KEY = "chain_smart"
+
+    @Volatile
+    var on: Boolean = true
+
+    fun load(ctx: android.content.Context) {
+        on = ctx.getSharedPreferences("settings", android.content.Context.MODE_PRIVATE).getBoolean(KEY, true)
+    }
+
+    fun set(ctx: android.content.Context, value: Boolean) {
+        on = value
+        ctx.getSharedPreferences("settings", android.content.Context.MODE_PRIVATE).edit().putBoolean(KEY, value).apply()
+    }
+
+    /**
+     * The sign of life of [name] at [host]: null when it has none to wait for (or smart chains are off), else whether it
+     * shows now. [isOpen] asks a port.
+     */
+    fun proof(name: String, host: String, isOpen: (String, Int) -> Boolean): Boolean? {
+        if (!on) return null
+        return when (ReloadGuard.kindOf(name)) {
+            ReloadKind.ETAHEN -> isOpen(host, ReloadGuard.ETAHEN_FTP_PORT)
+            else -> null
+        }
+    }
+}
+
 /** A named list of payloads that are sent in order. */
 data class Chain(val id: String, val name: String, val steps: List<ChainStep>)
 
@@ -286,7 +321,10 @@ suspend fun runChain(
     onWait: (secondsLeft: Int) -> Unit = {},
     onRetry: () -> Unit = {},
     retrySeconds: Int = CHAIN_CONNECT_RETRY_SECONDS,
-    clock: () -> Long = { System.nanoTime() / 1_000_000L }
+    clock: () -> Long = { System.nanoTime() / 1_000_000L },
+    proof: suspend (String) -> Boolean? = { null },
+    onProof: (payload: String, waited: Int) -> Unit = { _, _ -> },
+    proofSeconds: Int = CHAIN_PROOF_SECONDS
 ): ChainOutcome {
     val total = steps.size
     var sent = 0
@@ -307,6 +345,22 @@ suspend fun runChain(
         sent++
         if (index < total - 1) {
             var left = step.waitSeconds
+            // Smart chain: a payload with a sign of life (etaHEN's FTP server) is waited for before the next one goes,
+            // and the chain stops when the sign never comes, instead of sending more payloads to a console in trouble
+            if (proof(step.payload) != null) {
+                var waited = 0
+                while (proof(step.payload) != true) {
+                    if (cancelled()) return ChainOutcome(total, sent, stopped = true)
+                    if (waited >= proofSeconds) {
+                        return ChainOutcome(total, sent, index + 1, step.payload, AppText.get(R.string.chain_no_proof, step.payload, proofSeconds))
+                    }
+                    onProof(step.payload, waited)
+                    sleepSecond()
+                    waited++
+                }
+                // Up and answering: the rest of the pause only if the person asked for a longer one
+                left = (left - waited).coerceAtLeast(0)
+            }
             while (left > 0) {
                 if (cancelled()) return ChainOutcome(total, sent, stopped = true)
                 onWait(left)
@@ -347,12 +401,16 @@ data class ChainState(
     val waitLeft: Int = -1,
     val retrying: Boolean = false,
     val message: String = "",
-    val ok: Boolean = false
+    val ok: Boolean = false,
+    /** Smart chain: the payload whose sign of life is awaited ("" when none), and for how long so far. */
+    val proofFor: String = "",
+    val proofWaited: Int = 0
 )
 
 /** The line that says what a running chain is doing now. */
 fun chainProgressText(s: ChainState): String = when {
     s.retrying -> AppText.get(R.string.chain_retrying)
+    s.proofFor.isNotEmpty() -> AppText.get(R.string.chain_waiting_proof, s.proofFor, s.proofWaited)
     s.waitLeft >= 0 -> AppText.get(R.string.chain_waiting, fmtDuration(s.waitLeft.toLong()))
     s.step > 0 -> AppText.get(R.string.chain_sending, s.payload, s.step, s.steps)
     else -> AppText.get(R.string.transfer_starting)
@@ -423,11 +481,15 @@ class ChainCenter {
     }
 
     fun onStep(number: Int, total: Int, payload: String) {
-        state.update { it.copy(step = number, steps = total, payload = payload, waitLeft = -1, retrying = false) }
+        state.update { it.copy(step = number, steps = total, payload = payload, waitLeft = -1, retrying = false, proofFor = "") }
     }
 
     fun onWait(secondsLeft: Int) {
-        state.update { it.copy(waitLeft = secondsLeft, retrying = false) }
+        state.update { it.copy(waitLeft = secondsLeft, retrying = false, proofFor = "") }
+    }
+
+    fun onProof(payload: String, waited: Int) {
+        state.update { it.copy(proofFor = payload, proofWaited = waited, waitLeft = -1, retrying = false) }
     }
 
     fun onRetry() {

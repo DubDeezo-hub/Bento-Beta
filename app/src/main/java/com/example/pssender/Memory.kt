@@ -124,6 +124,7 @@ internal sealed class MemoryDialog {
     class HexLine(val address: Long, val bytes: ByteArray) : MemoryDialog()
     class WatchMenu(val watch: Watch) : MemoryDialog()
     object Import : MemoryDialog()
+    object Helper : MemoryDialog()
     class CheatFileOut(val name: String, val text: String, val inside: Int, val outside: Int) : MemoryDialog()
     object Source : MemoryDialog()
     object Undo : MemoryDialog()
@@ -206,6 +207,7 @@ fun MemoryTab(host: String, label: String, modifier: Modifier = Modifier) {
         is MemoryDialog.HexLine -> HexLineDialog(d, close)
         is MemoryDialog.WatchMenu -> WatchDialog(d.watch, onClose = close, onOpen = { dialog = it })
         MemoryDialog.Import -> ImportDialog(ctx, close)
+        MemoryDialog.Helper -> CheatHelperDialog(close) { hit, t -> dialog = MemoryDialog.NewCheat(hit.address, t, t.format(hit.value)) }
         is MemoryDialog.CheatFileOut -> CheatFileOutDialog(d, close)
         MemoryDialog.Source -> SourceDialog(close)
         MemoryDialog.Undo -> UndoDialog(close)
@@ -322,6 +324,10 @@ internal fun LazyListScope.scanItems(s: MemorySnapshot, open: (MemoryDialog) -> 
                 }
             }
         }
+    }
+    // The helper: say what you see in the game, it runs the scans
+    item {
+        Button(onClick = { open(MemoryDialog.Helper) }, modifier = Modifier.fillMaxWidth()) { Text(str(R.string.helper_open)) }
     }
     item {
         Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {

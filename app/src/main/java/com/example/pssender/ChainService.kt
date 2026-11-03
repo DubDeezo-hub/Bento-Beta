@@ -77,7 +77,9 @@ class ChainService : Service() {
                     cancelled = { ChainRunner.stopRequested },
                     onStep = ChainRunner::onStep,
                     onWait = ChainRunner::onWait,
-                    onRetry = ChainRunner::onRetry
+                    onRetry = ChainRunner::onRetry,
+                    proof = { name -> SmartChain.proof(name, request.host) { h, p -> Diagnose.probe(h, p, 800) == PortState.OPEN } },
+                    onProof = ChainRunner::onProof
                 )
             } catch (e: CancellationException) {
                 throw e
