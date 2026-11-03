@@ -77,7 +77,9 @@ fun elfCheck(name: String, b: ByteArray): ElfVerdict? {
 
 /** The name a build is kept under on the shelf: "dev-" and the link's file name. */
 fun devName(url: String): String {
-    val last = url.substringBefore('?').substringBefore('#').trimEnd('/').substringAfterLast('/')
+    // Only the path counts (not the site's name): "https://example.com/" has no file name
+    val path = url.substringAfter("://").substringAfter('/', "")
+    val last = path.substringBefore('?').substringBefore('#').trimEnd('/').substringAfterLast('/')
     val clean = last.filter { it.isLetterOrDigit() || it in "._-" }.ifEmpty { "payload.elf" }
     return "dev-$clean"
 }
