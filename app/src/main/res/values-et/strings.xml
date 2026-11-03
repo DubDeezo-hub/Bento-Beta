@@ -1229,4 +1229,10 @@
     <string name="export_put">Pane konsooli</string>
     <string name="export_put_done">Konsoolis nimega %1$s. etaHEN laeb selle järgmisel mängu käivitamisel.</string>
     <string name="export_put_done_ps4">Konsoolis nimega %1$s. GoldHEN laeb selle järgmisel mängu käivitamisel.</string>
+    <string name="notice_dl_started_title">Allalaadimine algas</string>
+    <string name="notice_dl_started_text">%1$s on teel %2$s-sse (kausta %3$s)</string>
+    <string name="notice_dl_done_title">Saadetud %1$s-sse</string>
+    <string name="notice_dl_done_text">%1$s on %2$s-s kaustas %3$s</string>
+    <string name="notice_dl_failed_title">Ei jõudnud %1$s-sse</string>
+    <string name="notice_install_title">Saadetud %1$s-i paigaldajale</string>
 </resources>

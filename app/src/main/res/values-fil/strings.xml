@@ -1229,4 +1229,10 @@
     <string name="export_put">Ilagay sa console</string>
     <string name="export_put_done">Nasa console bilang %1$s. Ilo-load ito ng etaHEN sa susunod na pagbukas ng laro.</string>
     <string name="export_put_done_ps4">Nasa console bilang %1$s. Ilo-load ito ng GoldHEN sa susunod na pagbukas ng laro.</string>
+    <string name="notice_dl_started_title">Nagsimula ang download</string>
+    <string name="notice_dl_started_text">Papunta na ang %1$s sa %2$s (sa %3$s)</string>
+    <string name="notice_dl_done_title">Naipadala sa %1$s</string>
+    <string name="notice_dl_done_text">Nasa %2$s na ang %1$s, sa %3$s</string>
+    <string name="notice_dl_failed_title">Hindi umabot sa %1$s</string>
+    <string name="notice_install_title">Naipadala sa installer ng %1$s</string>
 </resources>

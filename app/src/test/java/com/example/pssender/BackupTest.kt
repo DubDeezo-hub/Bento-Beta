@@ -3,7 +3,6 @@ package com.example.pssender
 import org.junit.Assert.assertArrayEquals
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
-import org.junit.Assert.assertTrue
 import org.junit.Test
 import java.util.Date
 
@@ -103,6 +102,6 @@ class BackupTest {
         val d = parseBackup("""{"app": "Bento", "format": 1, "consoles": []}""")
         assertEquals(null, d.problem)
         // And new ones carry the new name
-        assertTrue(backupToJson(sample(), "1.0").contains("\"app\":\"Crimson Multitool\""))
+        assertEquals(BACKUP_APP, org.json.JSONObject(backupToJson(sample(), "1.0")).getString("app"))
     }
 }

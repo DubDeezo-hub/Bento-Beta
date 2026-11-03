@@ -1229,4 +1229,10 @@
     <string name="export_put">本体に置く</string>
     <string name="export_put_done">本体に %1$s として置きました。次にゲームを起動したときに etaHEN が読み込みます。</string>
     <string name="export_put_done_ps4">本体に %1$s として置きました。次にゲームを起動したときに GoldHEN が読み込みます。</string>
+    <string name="notice_dl_started_title">ダウンロード開始</string>
+    <string name="notice_dl_started_text">%1$sを%2$sへ送っています（%3$s）</string>
+    <string name="notice_dl_done_title">%1$sへ送信しました</string>
+    <string name="notice_dl_done_text">%1$sは%2$sの%3$sにあります</string>
+    <string name="notice_dl_failed_title">%1$sに届きませんでした</string>
+    <string name="notice_install_title">%1$sのインストーラーへ送信しました</string>
 </resources>

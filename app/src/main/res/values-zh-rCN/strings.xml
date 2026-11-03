@@ -1229,4 +1229,10 @@
     <string name="export_put">放到主机上</string>
     <string name="export_put_done">已放到主机：%1$s。下次启动游戏时 etaHEN 会加载它。</string>
     <string name="export_put_done_ps4">已放到主机：%1$s。下次启动游戏时 GoldHEN 会加载它。</string>
+    <string name="notice_dl_started_title">下载已开始</string>
+    <string name="notice_dl_started_text">%1$s 正在发送到 %2$s（%3$s）</string>
+    <string name="notice_dl_done_title">已发送到 %1$s</string>
+    <string name="notice_dl_done_text">%1$s 已在 %2$s 的 %3$s 中</string>
+    <string name="notice_dl_failed_title">未能送达 %1$s</string>
+    <string name="notice_install_title">已发送到 %1$s 的安装程序</string>
 </resources>

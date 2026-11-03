@@ -1229,4 +1229,10 @@
     <string name="export_put">Feltöltés a konzolra</string>
     <string name="export_put_done">A konzolon ezen a néven: %1$s. Az etaHEN a játék következő indításakor betölti.</string>
     <string name="export_put_done_ps4">A konzolon ezen a néven: %1$s. A GoldHEN a játék következő indításakor betölti.</string>
+    <string name="notice_dl_started_title">A letöltés elindult</string>
+    <string name="notice_dl_started_text">A(z) %1$s úton van a(z) %2$s felé (ide: %3$s)</string>
+    <string name="notice_dl_done_title">Elküldve ide: %1$s</string>
+    <string name="notice_dl_done_text">A(z) %1$s a(z) %2$s gépen van itt: %3$s</string>
+    <string name="notice_dl_failed_title">Nem jutott el ide: %1$s</string>
+    <string name="notice_install_title">Elküldve a(z) %1$s telepítőjének</string>
 </resources>

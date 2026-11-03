@@ -1230,4 +1230,10 @@
     <string name="export_put">Pôr na consola</string>
     <string name="export_put_done">Na consola como %1$s. O etaHEN carrega-o da próxima vez que o jogo arrancar.</string>
     <string name="export_put_done_ps4">Na consola como %1$s. O GoldHEN carrega-o da próxima vez que o jogo arrancar.</string>
+    <string name="notice_dl_started_title">Transferência iniciada</string>
+    <string name="notice_dl_started_text">%1$s está a caminho da %2$s (em %3$s)</string>
+    <string name="notice_dl_done_title">Enviado para a %1$s</string>
+    <string name="notice_dl_done_text">%1$s está na %2$s em %3$s</string>
+    <string name="notice_dl_failed_title">Não chegou à %1$s</string>
+    <string name="notice_install_title">Enviado para o instalador da %1$s</string>
 </resources>

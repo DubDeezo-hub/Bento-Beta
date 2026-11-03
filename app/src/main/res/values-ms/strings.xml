@@ -1229,4 +1229,10 @@
     <string name="export_put">Letak pada konsol</string>
     <string name="export_put_done">Pada konsol sebagai %1$s. etaHEN akan memuatkannya apabila permainan dimulakan semula.</string>
     <string name="export_put_done_ps4">Pada konsol sebagai %1$s. GoldHEN akan memuatkannya apabila permainan dimulakan semula.</string>
+    <string name="notice_dl_started_title">Muat turun bermula</string>
+    <string name="notice_dl_started_text">%1$s sedang menuju ke %2$s (ke %3$s)</string>
+    <string name="notice_dl_done_title">Dihantar ke %1$s</string>
+    <string name="notice_dl_done_text">%1$s ada pada %2$s dalam %3$s</string>
+    <string name="notice_dl_failed_title">Tidak sampai ke %1$s</string>
+    <string name="notice_install_title">Dihantar ke pemasang %1$s</string>
 </resources>

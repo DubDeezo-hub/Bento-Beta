@@ -1229,4 +1229,10 @@
     <string name="export_put">Dát do konzole</string>
     <string name="export_put_done">V konzoli jako %1$s. etaHEN ho načte při příštím spuštění hry.</string>
     <string name="export_put_done_ps4">V konzoli jako %1$s. GoldHEN ho načte při příštím spuštění hry.</string>
+    <string name="notice_dl_started_title">Stahování začalo</string>
+    <string name="notice_dl_started_text">%1$s je na cestě do %2$s (do %3$s)</string>
+    <string name="notice_dl_done_title">Odesláno do %1$s</string>
+    <string name="notice_dl_done_text">%1$s je na %2$s v %3$s</string>
+    <string name="notice_dl_failed_title">Nedorazilo do %1$s</string>
+    <string name="notice_install_title">Odesláno do instalátoru %1$s</string>
 </resources>

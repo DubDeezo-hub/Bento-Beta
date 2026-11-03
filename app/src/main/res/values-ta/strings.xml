@@ -1229,4 +1229,10 @@
     <string name="export_put">கன்சோலில் வை</string>
     <string name="export_put_done">கன்சோலில் %1$s ஆக. அடுத்த முறை விளையாட்டு தொடங்கும்போது etaHEN அதை ஏற்றும்.</string>
     <string name="export_put_done_ps4">கன்சோலில் %1$s ஆக. அடுத்த முறை விளையாட்டு தொடங்கும்போது GoldHEN அதை ஏற்றும்.</string>
+    <string name="notice_dl_started_title">பதிவிறக்கம் தொடங்கியது</string>
+    <string name="notice_dl_started_text">%1$s %2$s க்குச் செல்கிறது (%3$s க்கு)</string>
+    <string name="notice_dl_done_title">%1$s க்கு அனுப்பப்பட்டது</string>
+    <string name="notice_dl_done_text">%1$s இப்போது %2$s இல் %3$s இல் உள்ளது</string>
+    <string name="notice_dl_failed_title">%1$s ஐ அடையவில்லை</string>
+    <string name="notice_install_title">%1$s நிறுவியுக்கு அனுப்பப்பட்டது</string>
 </resources>

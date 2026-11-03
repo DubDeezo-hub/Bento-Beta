@@ -1231,4 +1231,10 @@
     <string name="export_put">Auf die Konsole legen</string>
     <string name="export_put_done">Auf der Konsole als %1$s. etaHEN lädt sie beim nächsten Spielstart.</string>
     <string name="export_put_done_ps4">Auf der Konsole als %1$s. GoldHEN lädt sie beim nächsten Spielstart.</string>
+    <string name="notice_dl_started_title">Download gestartet</string>
+    <string name="notice_dl_started_text">%1$s ist unterwegs zur %2$s (nach %3$s)</string>
+    <string name="notice_dl_done_title">An die %1$s gesendet</string>
+    <string name="notice_dl_done_text">%1$s ist auf der %2$s in %3$s</string>
+    <string name="notice_dl_failed_title">Hat die %1$s nicht erreicht</string>
+    <string name="notice_install_title">An den Installer der %1$s gesendet</string>
 </resources>

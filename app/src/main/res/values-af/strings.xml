@@ -1229,4 +1229,10 @@
     <string name="export_put">Sit op die konsole</string>
     <string name="export_put_done">Op die konsole as %1$s. etaHEN laai dit die volgende keer as die speletjie begin.</string>
     <string name="export_put_done_ps4">Op die konsole as %1$s. GoldHEN laai dit die volgende keer as die speletjie begin.</string>
+    <string name="notice_dl_started_title">Aflaai het begin</string>
+    <string name="notice_dl_started_text">%1$s is op pad na die %2$s (na %3$s)</string>
+    <string name="notice_dl_done_title">Na die %1$s gestuur</string>
+    <string name="notice_dl_done_text">%1$s is op die %2$s in %3$s</string>
+    <string name="notice_dl_failed_title">Het nie die %1$s bereik nie</string>
+    <string name="notice_install_title">Na die %1$s se installeerder gestuur</string>
 </resources>

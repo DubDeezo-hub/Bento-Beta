@@ -1229,4 +1229,10 @@
     <string name="export_put">ضعه على الجهاز</string>
     <string name="export_put_done">على الجهاز باسم %1$s. يحمّله etaHEN عند تشغيل اللعبة في المرة القادمة.</string>
     <string name="export_put_done_ps4">على الجهاز باسم %1$s. يحمّله GoldHEN عند تشغيل اللعبة في المرة القادمة.</string>
+    <string name="notice_dl_started_title">بدأ التنزيل</string>
+    <string name="notice_dl_started_text">‏%1$s في طريقه إلى %2$s (إلى %3$s)</string>
+    <string name="notice_dl_done_title">أُرسل إلى %1$s</string>
+    <string name="notice_dl_done_text">‏%1$s موجود على %2$s في %3$s</string>
+    <string name="notice_dl_failed_title">لم يصل إلى %1$s</string>
+    <string name="notice_install_title">أُرسل إلى مثبّت %1$s</string>
 </resources>

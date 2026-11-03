@@ -1230,4 +1230,10 @@
     <string name="export_put">Lägg på konsolen</string>
     <string name="export_put_done">På konsolen som %1$s. etaHEN läser in den nästa gång spelet startar.</string>
     <string name="export_put_done_ps4">På konsolen som %1$s. GoldHEN läser in den nästa gång spelet startar.</string>
+    <string name="notice_dl_started_title">Nedladdningen har startat</string>
+    <string name="notice_dl_started_text">%1$s är på väg till %2$s (till %3$s)</string>
+    <string name="notice_dl_done_title">Skickad till %1$s</string>
+    <string name="notice_dl_done_text">%1$s finns på %2$s i %3$s</string>
+    <string name="notice_dl_failed_title">Kom inte fram till %1$s</string>
+    <string name="notice_install_title">Skickad till installationsprogrammet på %1$s</string>
 </resources>

@@ -259,6 +259,8 @@ fun SenderApp(
     val findAsked by FindConsole.asked.collectAsState()
     var shelfVersion by remember { mutableStateOf(0) }
     var chains by remember { mutableStateOf(ChainStore.load(ctx)) }
+    // A web download on its way to the console (started, arrived, didn't): said in the status line too
+    val notice by ConsoleNotices.latest.collectAsState()
     // A payload update or a switch back to its earlier version renames it in the saved chains: show them as saved
     val chainsChanged by ChainStore.changed.collectAsState()
     LaunchedEffect(chainsChanged) { if (chainsChanged > 0) chains = ChainStore.load(ctx) }
@@ -462,6 +464,8 @@ fun SenderApp(
         ChainStore.save(ctx, list)
         ChainShortcuts.publish(ctx, list, removed)
     }
+
+    LaunchedEffect(notice) { notice?.let { if (System.currentTimeMillis() - it.at < 60_000) statusLine = it.text } }
 
     // When the loader starts answering after it didn't, the console's automatic chain (if any) runs
     LaunchedEffect(consoleStatus) {
@@ -943,7 +947,10 @@ fun SenderApp(
                                         scope.launch {
                                             val reply = installRequest(host.trim(), active.installPort.trim(), d.url)
                                             statusLine = reply.text
-                                            if (reply.ok) RecentLinkStore.push(ctx, listOf(d.url))
+                                            if (reply.ok) {
+                                                RecentLinkStore.push(ctx, listOf(d.url))
+                                                ConsoleNotices.installSent(ctx, name, active.type.model, reply.text)
+                                            }
                                         }
                                     }
                                 }

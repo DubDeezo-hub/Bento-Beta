@@ -1229,4 +1229,10 @@
     <string name="export_put">Βάλε το στην κονσόλα</string>
     <string name="export_put_done">Στην κονσόλα ως %1$s. Το etaHEN θα το φορτώσει την επόμενη φορά που θα ξεκινήσει το παιχνίδι.</string>
     <string name="export_put_done_ps4">Στην κονσόλα ως %1$s. Το GoldHEN θα το φορτώσει την επόμενη φορά που θα ξεκινήσει το παιχνίδι.</string>
+    <string name="notice_dl_started_title">Η λήψη ξεκίνησε</string>
+    <string name="notice_dl_started_text">Το %1$s πηγαίνει στο %2$s (στο %3$s)</string>
+    <string name="notice_dl_done_title">Στάλθηκε στο %1$s</string>
+    <string name="notice_dl_done_text">Το %1$s είναι στο %2$s, στο %3$s</string>
+    <string name="notice_dl_failed_title">Δεν έφτασε στο %1$s</string>
+    <string name="notice_install_title">Στάλθηκε στο πρόγραμμα εγκατάστασης του %1$s</string>
 </resources>

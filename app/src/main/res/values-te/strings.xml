@@ -1229,4 +1229,10 @@
     <string name="export_put">కన్సోల్‌లో పెట్టు</string>
     <string name="export_put_done">కన్సోల్‌లో %1$sగా ఉంది. తర్వాతిసారి ఆట మొదలైనప్పుడు etaHEN దాన్ని లోడ్ చేస్తుంది.</string>
     <string name="export_put_done_ps4">కన్సోల్‌లో %1$sగా ఉంది. తర్వాతిసారి ఆట మొదలైనప్పుడు GoldHEN దాన్ని లోడ్ చేస్తుంది.</string>
+    <string name="notice_dl_started_title">డౌన్‌లోడ్ మొదలైంది</string>
+    <string name="notice_dl_started_text">%1$s %2$s‌కి వెళ్తోంది (%3$s‌లోకి)</string>
+    <string name="notice_dl_done_title">%1$s‌కి పంపబడింది</string>
+    <string name="notice_dl_done_text">%1$s ఇప్పుడు %2$s‌లో %3$s‌లో ఉంది</string>
+    <string name="notice_dl_failed_title">%1$s‌కి చేరలేదు</string>
+    <string name="notice_install_title">%1$s ఇన్‌స్టాలర్‌కి పంపబడింది</string>
 </resources>

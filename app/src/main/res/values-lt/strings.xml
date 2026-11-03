@@ -1229,4 +1229,10 @@
     <string name="export_put">Įdėti į pultą</string>
     <string name="export_put_done">Pulte kaip %1$s. etaHEN įkels jį kitą kartą paleidus žaidimą.</string>
     <string name="export_put_done_ps4">Pulte kaip %1$s. GoldHEN įkels jį kitą kartą paleidus žaidimą.</string>
+    <string name="notice_dl_started_title">Atsisiuntimas pradėtas</string>
+    <string name="notice_dl_started_text">%1$s keliauja į %2$s (į %3$s)</string>
+    <string name="notice_dl_done_title">Išsiųsta į %1$s</string>
+    <string name="notice_dl_done_text">%1$s yra %2$s aplanke %3$s</string>
+    <string name="notice_dl_failed_title">Nepasiekė %1$s</string>
+    <string name="notice_install_title">Išsiųsta į %1$s diegimo programą</string>
 </resources>

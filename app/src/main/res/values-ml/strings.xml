@@ -1229,4 +1229,10 @@
     <string name="export_put">കൺസോളിൽ വയ്ക്കുക</string>
     <string name="export_put_done">കൺസോളിൽ %1$s ആയി. അടുത്ത തവണ ഗെയിം തുടങ്ങുമ്പോൾ etaHEN ഇത് ലോഡ് ചെയ്യും.</string>
     <string name="export_put_done_ps4">കൺസോളിൽ %1$s ആയി. അടുത്ത തവണ ഗെയിം തുടങ്ങുമ്പോൾ GoldHEN ഇത് ലോഡ് ചെയ്യും.</string>
+    <string name="notice_dl_started_title">ഡൗൺലോഡ് തുടങ്ങി</string>
+    <string name="notice_dl_started_text">%1$s %2$s ലേക്ക് പോകുന്നു (%3$s ലേക്ക്)</string>
+    <string name="notice_dl_done_title">%1$s ലേക്ക് അയച്ചു</string>
+    <string name="notice_dl_done_text">%1$s ഇപ്പോൾ %2$s ലെ %3$s ൽ ഉണ്ട്</string>
+    <string name="notice_dl_failed_title">%1$s ൽ എത്തിയില്ല</string>
+    <string name="notice_install_title">%1$s ഇൻസ്റ്റാളറിലേക്ക് അയച്ചു</string>
 </resources>

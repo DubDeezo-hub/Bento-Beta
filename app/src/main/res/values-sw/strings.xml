@@ -1229,4 +1229,10 @@
     <string name="export_put">Weka kwenye konsoli</string>
     <string name="export_put_done">Kwenye konsoli kama %1$s. etaHEN itaipakia mchezo utakapoanza tena.</string>
     <string name="export_put_done_ps4">Kwenye konsoli kama %1$s. GoldHEN itaipakia mchezo utakapoanza tena.</string>
+    <string name="notice_dl_started_title">Upakuaji umeanza</string>
+    <string name="notice_dl_started_text">%1$s inaenda kwenye %2$s (kwenye %3$s)</string>
+    <string name="notice_dl_done_title">Imetumwa kwa %1$s</string>
+    <string name="notice_dl_done_text">%1$s iko kwenye %2$s ndani ya %3$s</string>
+    <string name="notice_dl_failed_title">Haikufika kwenye %1$s</string>
+    <string name="notice_install_title">Imetumwa kwa kisakinishi cha %1$s</string>
 </resources>

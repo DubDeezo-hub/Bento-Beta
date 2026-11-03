@@ -1229,4 +1229,10 @@
     <string name="export_put">Đưa lên máy</string>
     <string name="export_put_done">Đã có trên máy là %1$s. etaHEN sẽ nạp khi game khởi động lần tới.</string>
     <string name="export_put_done_ps4">Đã có trên máy là %1$s. GoldHEN sẽ nạp khi game khởi động lần tới.</string>
+    <string name="notice_dl_started_title">Đã bắt đầu tải xuống</string>
+    <string name="notice_dl_started_text">%1$s đang được gửi đến %2$s (vào %3$s)</string>
+    <string name="notice_dl_done_title">Đã gửi đến %1$s</string>
+    <string name="notice_dl_done_text">%1$s đã ở trên %2$s, trong %3$s</string>
+    <string name="notice_dl_failed_title">Không đến được %1$s</string>
+    <string name="notice_install_title">Đã gửi đến trình cài đặt của %1$s</string>
 </resources>

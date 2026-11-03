@@ -1229,4 +1229,10 @@
     <string name="export_put">Taruh di konsol</string>
     <string name="export_put_done">Di konsol sebagai %1$s. etaHEN akan memuatnya saat game dimulai lagi.</string>
     <string name="export_put_done_ps4">Di konsol sebagai %1$s. GoldHEN akan memuatnya saat game dimulai lagi.</string>
+    <string name="notice_dl_started_title">Unduhan dimulai</string>
+    <string name="notice_dl_started_text">%1$s sedang menuju %2$s (ke %3$s)</string>
+    <string name="notice_dl_done_title">Terkirim ke %1$s</string>
+    <string name="notice_dl_done_text">%1$s sudah ada di %2$s, di %3$s</string>
+    <string name="notice_dl_failed_title">Tidak sampai ke %1$s</string>
+    <string name="notice_install_title">Terkirim ke penginstal %1$s</string>
 </resources>

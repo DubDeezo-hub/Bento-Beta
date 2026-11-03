@@ -1229,4 +1229,10 @@
     <string name="export_put">שים בקונסולה</string>
     <string name="export_put_done">בקונסולה בשם %1$s. etaHEN יטען אותו בפעם הבאה שהמשחק יופעל.</string>
     <string name="export_put_done_ps4">בקונסולה בשם %1$s. GoldHEN יטען אותו בפעם הבאה שהמשחק יופעל.</string>
+    <string name="notice_dl_started_title">ההורדה התחילה</string>
+    <string name="notice_dl_started_text">‏%1$s בדרך אל %2$s (אל %3$s)</string>
+    <string name="notice_dl_done_title">נשלח אל %1$s</string>
+    <string name="notice_dl_done_text">‏%1$s נמצא ב־%2$s בתוך %3$s</string>
+    <string name="notice_dl_failed_title">לא הגיע אל %1$s</string>
+    <string name="notice_install_title">נשלח למתקין של %1$s</string>
 </resources>

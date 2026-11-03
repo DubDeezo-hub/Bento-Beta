@@ -1229,4 +1229,10 @@
     <string name="export_put">Posa-ho a la consola</string>
     <string name="export_put_done">A la consola com a %1$s. etaHEN el carregarà el proper cop que s\'iniciï el joc.</string>
     <string name="export_put_done_ps4">A la consola com a %1$s. GoldHEN el carregarà el proper cop que s\'iniciï el joc.</string>
+    <string name="notice_dl_started_title">Ha començat la baixada</string>
+    <string name="notice_dl_started_text">%1$s va cap a la %2$s (a %3$s)</string>
+    <string name="notice_dl_done_title">Enviat a la %1$s</string>
+    <string name="notice_dl_done_text">%1$s és a la %2$s, a %3$s</string>
+    <string name="notice_dl_failed_title">No ha arribat a la %1$s</string>
+    <string name="notice_install_title">Enviat a l\'instal·lador de la %1$s</string>
 </resources>

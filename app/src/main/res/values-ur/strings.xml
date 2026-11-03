@@ -1229,4 +1229,10 @@
     <string name="export_put">کنسول پر رکھیں</string>
     <string name="export_put_done">کنسول پر %1$s کے طور پر۔ اگلی بار گیم شروع ہونے پر etaHEN اسے لوڈ کرے گا۔</string>
     <string name="export_put_done_ps4">کنسول پر %1$s کے طور پر۔ اگلی بار گیم شروع ہونے پر GoldHEN اسے لوڈ کرے گا۔</string>
+    <string name="notice_dl_started_title">ڈاؤن لوڈ شروع ہو گیا</string>
+    <string name="notice_dl_started_text">‏%1$s %2$s کی طرف جا رہا ہے (%3$s میں)</string>
+    <string name="notice_dl_done_title">‏%1$s پر بھیج دیا</string>
+    <string name="notice_dl_done_text">‏%1$s اب %2$s پر %3$s میں ہے</string>
+    <string name="notice_dl_failed_title">‏%1$s تک نہیں پہنچا</string>
+    <string name="notice_install_title">‏%1$s کے انسٹالر کو بھیج دیا</string>
 </resources>

@@ -1234,4 +1234,10 @@
     <string name="export_put">Put on the console</string>
     <string name="export_put_done">On the console as %1$s. etaHEN loads it the next time the game starts.</string>
     <string name="export_put_done_ps4">On the console as %1$s. GoldHEN loads it the next time the game starts.</string>
+    <string name="notice_dl_started_title">Download started</string>
+    <string name="notice_dl_started_text">%1$s is on its way to the %2$s (into %3$s)</string>
+    <string name="notice_dl_done_title">Sent to the %1$s</string>
+    <string name="notice_dl_done_text">%1$s is on the %2$s in %3$s</string>
+    <string name="notice_dl_failed_title">Didn\'t reach the %1$s</string>
+    <string name="notice_install_title">Sent to the %1$s installer</string>
 </resources>

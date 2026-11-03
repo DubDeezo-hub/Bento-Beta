@@ -1229,4 +1229,10 @@
     <string name="export_put">Ielikt konsolē</string>
     <string name="export_put_done">Konsolē kā %1$s. etaHEN to ielādēs nākamreiz, kad spēle sāksies.</string>
     <string name="export_put_done_ps4">Konsolē kā %1$s. GoldHEN to ielādēs nākamreiz, kad spēle sāksies.</string>
+    <string name="notice_dl_started_title">Lejupielāde sākta</string>
+    <string name="notice_dl_started_text">%1$s ceļo uz %2$s (uz %3$s)</string>
+    <string name="notice_dl_done_title">Nosūtīts uz %1$s</string>
+    <string name="notice_dl_done_text">%1$s ir %2$s mapē %3$s</string>
+    <string name="notice_dl_failed_title">Nesasniedza %1$s</string>
+    <string name="notice_install_title">Nosūtīts uz %1$s instalētāju</string>
 </resources>

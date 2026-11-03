@@ -1229,4 +1229,10 @@
     <string name="export_put">Сложи на конзолата</string>
     <string name="export_put_done">На конзолата като %1$s. etaHEN ще го зареди при следващото пускане на играта.</string>
     <string name="export_put_done_ps4">На конзолата като %1$s. GoldHEN ще го зареди при следващото пускане на играта.</string>
+    <string name="notice_dl_started_title">Изтеглянето започна</string>
+    <string name="notice_dl_started_text">%1$s пътува към %2$s (в %3$s)</string>
+    <string name="notice_dl_done_title">Изпратено към %1$s</string>
+    <string name="notice_dl_done_text">%1$s е на %2$s в %3$s</string>
+    <string name="notice_dl_failed_title">Не стигна до %1$s</string>
+    <string name="notice_install_title">Изпратено към инсталатора на %1$s</string>
 </resources>

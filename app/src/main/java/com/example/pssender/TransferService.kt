@@ -122,6 +122,9 @@ class TransferService : Service() {
     }
 
     /** Runs the queued transfers one after the other until none is left or one fails and the queue has to wait. */
+    /** Whether the newest transfer came from the web (it then has its own notice when it ends). */
+    @Volatile private var lastFromWeb = false
+
     private suspend fun work() {
         val locks = TransferLocks(this)
         locks.acquire()
@@ -130,8 +133,15 @@ class TransferService : Service() {
             while (true) {
                 val entry = TransferState.takeNext() ?: break
                 TransferState.begin(entry)
+                // A download from the web to the console is announced when it starts and when it has arrived
+                val fromWeb = entry.item.url != null
+                lastFromWeb = fromWeb
+                if (fromWeb) ConsoleNotices.started(this, entry.item.name, entry.item.model, entry.item.dir)
                 // While the user has paused, the phone is let go of (no wake locks, no connections) until it is resumed
                 val result = runAcrossPauses(TransferState, locks::release, locks::acquire) { runTransfer(entry) }
+                if (fromWeb && !result.paused) {
+                    ConsoleNotices.finished(this, entry.item.name, entry.item.model, entry.item.dir, result.ok, result.message, result.cancelled)
+                }
                 if (!TransferState.finishItem(entry, result)) break
             }
         } finally {
@@ -176,6 +186,12 @@ class TransferService : Service() {
     /** Runs on the main thread after a worker is done. Stops the service unless a new worker was ordered meanwhile. */
     private fun workerEnded() {
         if (TransferState.queue.isWorking) return // a new start command is on its way
+        if (lastFromWeb) {
+            // A web download has its own "sent" notice (ConsoleNotices), so the progress one simply goes
+            stopForeground(Service.STOP_FOREGROUND_REMOVE)
+            stopSelf(lastStartId)
+            return
+        }
         // Keep the notification, but turn it into a plain result message that can be swiped away
         stopForeground(Service.STOP_FOREGROUND_DETACH)
         notifyUser(buildNotification(TransferState.info.value))

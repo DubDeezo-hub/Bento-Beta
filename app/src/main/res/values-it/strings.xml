@@ -1230,4 +1230,10 @@
     <string name="export_put">Metti sulla console</string>
     <string name="export_put_done">Sulla console come %1$s. etaHEN lo caricherà al prossimo avvio del gioco.</string>
     <string name="export_put_done_ps4">Sulla console come %1$s. GoldHEN lo caricherà al prossimo avvio del gioco.</string>
+    <string name="notice_dl_started_title">Download avviato</string>
+    <string name="notice_dl_started_text">%1$s sta arrivando alla %2$s (in %3$s)</string>
+    <string name="notice_dl_done_title">Inviato alla %1$s</string>
+    <string name="notice_dl_done_text">%1$s è sulla %2$s in %3$s</string>
+    <string name="notice_dl_failed_title">Non è arrivato alla %1$s</string>
+    <string name="notice_install_title">Inviato all\'installer della %1$s</string>
 </resources>

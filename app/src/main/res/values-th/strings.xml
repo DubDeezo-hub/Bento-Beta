@@ -1229,4 +1229,10 @@
     <string name="export_put">ใส่ลงเครื่อง</string>
     <string name="export_put_done">อยู่ในเครื่องเป็น %1$s แล้ว etaHEN จะโหลดเมื่อเริ่มเกมครั้งถัดไป</string>
     <string name="export_put_done_ps4">อยู่ในเครื่องเป็น %1$s แล้ว GoldHEN จะโหลดเมื่อเริ่มเกมครั้งถัดไป</string>
+    <string name="notice_dl_started_title">เริ่มดาวน์โหลดแล้ว</string>
+    <string name="notice_dl_started_text">%1$s กำลังไปยัง %2$s (ไปที่ %3$s)</string>
+    <string name="notice_dl_done_title">ส่งไปยัง %1$s แล้ว</string>
+    <string name="notice_dl_done_text">%1$s อยู่บน %2$s ใน %3$s แล้ว</string>
+    <string name="notice_dl_failed_title">ไปไม่ถึง %1$s</string>
+    <string name="notice_install_title">ส่งไปยังตัวติดตั้งของ %1$s แล้ว</string>
 </resources>

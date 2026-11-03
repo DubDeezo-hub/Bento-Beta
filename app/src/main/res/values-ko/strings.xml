@@ -1229,4 +1229,10 @@
     <string name="export_put">콘솔에 넣기</string>
     <string name="export_put_done">콘솔에 %1$s(으)로 넣었습니다. 다음에 게임을 시작하면 etaHEN이 불러옵니다.</string>
     <string name="export_put_done_ps4">콘솔에 %1$s(으)로 넣었습니다. 다음에 게임을 시작하면 GoldHEN이 불러옵니다.</string>
+    <string name="notice_dl_started_title">다운로드 시작됨</string>
+    <string name="notice_dl_started_text">%1$s 파일을 %2$s(으)로 보내는 중 (%3$s)</string>
+    <string name="notice_dl_done_title">%1$s(으)로 보냄</string>
+    <string name="notice_dl_done_text">%1$s 파일이 %2$s의 %3$s에 있습니다</string>
+    <string name="notice_dl_failed_title">%1$s에 도착하지 못했습니다</string>
+    <string name="notice_install_title">%1$s 설치 프로그램으로 보냄</string>
 </resources>

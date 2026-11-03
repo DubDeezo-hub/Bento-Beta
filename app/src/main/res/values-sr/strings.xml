@@ -1229,4 +1229,10 @@
     <string name="export_put">Стави на конзолу</string>
     <string name="export_put_done">На конзоли као %1$s. etaHEN ће га учитати при следећем покретању игре.</string>
     <string name="export_put_done_ps4">На конзоли као %1$s. GoldHEN ће га учитати при следећем покретању игре.</string>
+    <string name="notice_dl_started_title">Преузимање је почело</string>
+    <string name="notice_dl_started_text">%1$s иде ка %2$s (у %3$s)</string>
+    <string name="notice_dl_done_title">Послато на %1$s</string>
+    <string name="notice_dl_done_text">%1$s је на %2$s у %3$s</string>
+    <string name="notice_dl_failed_title">Није стигло на %1$s</string>
+    <string name="notice_install_title">Послато инсталатеру за %1$s</string>
 </resources>

@@ -1229,4 +1229,10 @@
     <string name="export_put">Pune pe consolă</string>
     <string name="export_put_done">Pe consolă ca %1$s. etaHEN îl încarcă la următoarea pornire a jocului.</string>
     <string name="export_put_done_ps4">Pe consolă ca %1$s. GoldHEN îl încarcă la următoarea pornire a jocului.</string>
+    <string name="notice_dl_started_title">Descărcarea a început</string>
+    <string name="notice_dl_started_text">%1$s este în drum spre %2$s (în %3$s)</string>
+    <string name="notice_dl_done_title">Trimis la %1$s</string>
+    <string name="notice_dl_done_text">%1$s este pe %2$s în %3$s</string>
+    <string name="notice_dl_failed_title">Nu a ajuns la %1$s</string>
+    <string name="notice_install_title">Trimis la instalatorul %1$s</string>
 </resources>

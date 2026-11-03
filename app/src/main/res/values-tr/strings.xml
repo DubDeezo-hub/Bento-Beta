@@ -1229,4 +1229,10 @@
     <string name="export_put">Konsola koy</string>
     <string name="export_put_done">Konsolda %1$s olarak. etaHEN oyun bir sonraki açılışta yükler.</string>
     <string name="export_put_done_ps4">Konsolda %1$s olarak. GoldHEN oyun bir sonraki açılışta yükler.</string>
+    <string name="notice_dl_started_title">İndirme başladı</string>
+    <string name="notice_dl_started_text">%1$s, %2$s cihazına gidiyor (%3$s içine)</string>
+    <string name="notice_dl_done_title">%1$s cihazına gönderildi</string>
+    <string name="notice_dl_done_text">%1$s artık %2$s üzerinde, %3$s içinde</string>
+    <string name="notice_dl_failed_title">%1$s cihazına ulaşmadı</string>
+    <string name="notice_install_title">%1$s yükleyicisine gönderildi</string>
 </resources>

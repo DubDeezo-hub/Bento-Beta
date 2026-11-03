@@ -1229,4 +1229,10 @@
     <string name="export_put">Postavi na konzolo</string>
     <string name="export_put_done">Na konzoli kot %1$s. etaHEN jo bo naložil ob naslednjem zagonu igre.</string>
     <string name="export_put_done_ps4">Na konzoli kot %1$s. GoldHEN jo bo naložil ob naslednjem zagonu igre.</string>
+    <string name="notice_dl_started_title">Prenos se je začel</string>
+    <string name="notice_dl_started_text">%1$s je na poti na %2$s (v %3$s)</string>
+    <string name="notice_dl_done_title">Poslano na %1$s</string>
+    <string name="notice_dl_done_text">%1$s je na %2$s v %3$s</string>
+    <string name="notice_dl_failed_title">Ni prispelo na %1$s</string>
+    <string name="notice_install_title">Poslano namestitvenemu programu za %1$s</string>
 </resources>

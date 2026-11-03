@@ -780,9 +780,22 @@ PY
       if wait_fmt 20 "$(ui string choose_ftp)" && pos="$(ui findfmt "$XML" "$(ui string choose_ftp)")"; then
         # shellcheck disable=SC2086
         set -- $pos
+        # Notifications allowed, so the download notices can be checked below
+        adb shell pm grant com.example.pssender android.permission.POST_NOTIFICATIONS 2> /dev/null || true
         adb shell input tap "$1" "$2"
         if wait_log 60 "[ftp] received crimson-web-test.bin"; then
           pass "a download from the browser goes through the site's redirect straight to the console"
+          # The phone says so too: "Download started" turns into "Sent to the PS5" in the notifications
+          sent=""
+          for _ in $(seq 1 10); do
+            if adb shell dumpsys notification --noredact 2> /dev/null | grep -q "crimson-web-test.bin is on the"; then sent=1; break; fi
+            sleep 1
+          done
+          if [ -n "$sent" ]; then
+            pass "the phone shows a notice when the download reached the console"
+          else
+            soft "download notice" "no 'Sent to the PS5' notice seen (notifications may be off on this phone)"
+          fi
         else
           fail "web download" "the file did not reach the console's FTP. Its log: $(tail -4 "$FAKE_LOG" | tr '\n' ' ')"
         fi

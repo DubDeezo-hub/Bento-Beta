@@ -1229,4 +1229,10 @@
     <string name="export_put">روی کنسول بگذار</string>
     <string name="export_put_done">روی کنسول با نام %1$s. etaHEN دفعه بعد که بازی شروع شود آن را بارگذاری می‌کند.</string>
     <string name="export_put_done_ps4">روی کنسول با نام %1$s. GoldHEN دفعه بعد که بازی شروع شود آن را بارگذاری می‌کند.</string>
+    <string name="notice_dl_started_title">دانلود شروع شد</string>
+    <string name="notice_dl_started_text">‏%1$s در راه %2$s است (به %3$s)</string>
+    <string name="notice_dl_done_title">به %1$s فرستاده شد</string>
+    <string name="notice_dl_done_text">‏%1$s روی %2$s در %3$s است</string>
+    <string name="notice_dl_failed_title">به %1$s نرسید</string>
+    <string name="notice_install_title">به نصب‌کنندهٔ %1$s فرستاده شد</string>
 </resources>

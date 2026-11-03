@@ -1229,4 +1229,10 @@
     <string name="export_put">कन्सोलवर ठेवा</string>
     <string name="export_put_done">कन्सोलवर %1$s म्हणून. पुढच्या वेळी खेळ सुरू झाल्यावर etaHEN ते लोड करेल.</string>
     <string name="export_put_done_ps4">कन्सोलवर %1$s म्हणून. पुढच्या वेळी खेळ सुरू झाल्यावर GoldHEN ते लोड करेल.</string>
+    <string name="notice_dl_started_title">डाउनलोड सुरू झाले</string>
+    <string name="notice_dl_started_text">%1$s %2$s कडे जात आहे (%3$s मध्ये)</string>
+    <string name="notice_dl_done_title">%1$s वर पाठवले</string>
+    <string name="notice_dl_done_text">%1$s आता %2$s वर %3$s मध्ये आहे</string>
+    <string name="notice_dl_failed_title">%1$s पर्यंत पोहोचले नाही</string>
+    <string name="notice_install_title">%1$s च्या इंस्टॉलरला पाठवले</string>
 </resources>
