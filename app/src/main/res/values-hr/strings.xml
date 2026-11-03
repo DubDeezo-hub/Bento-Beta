@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Taj lanac više ne postoji.</string>
     <string name="notif_channel_chain">Lanci payloada</string>
     <string name="backup_chains">Lanci: %1$d</string>
-    <string name="reload_warn_title">Već učitano?</string>
     <string name="reload_warn_running">etaHEN već odgovara na ovoj konzoli (njegov FTP poslužitelj na portu %2$d radi). Ponovno učitavanje %1$s dok radi može srušiti konzolu. Pošalji ga samo ako je etaHEN prestao raditi.</string>
     <string name="reload_warn_sent">%1$s je već poslan ovoj konzoli prije %2$s. Drugo učitavanje može srušiti konzolu. Pošalji ga ponovno samo ako je konzola u međuvremenu ponovno pokrenuta.</string>
     <string name="reload_send_anyway">Ipak pošalji</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s je na %2$s u %3$s</string>
     <string name="notice_dl_failed_title">Nije stiglo na %1$s</string>
     <string name="notice_install_title">Poslano instalacijskom programu za %1$s</string>
+    <string name="local_network_refused">Crimson Multitool ne može doći do konzole bez dopuštenja Uređaji u blizini. Dopustite ga u postavkama telefona.</string>
+    <string name="turbo_title">Datoteka odjednom</string>
+    <string name="turbo_hint">Datoteke s telefona šalju se usporedno, svaka svojom vezom. Puno malih datoteka ide puno brže.</string>
+    <string name="turbo_hint_limited">Isključite ograničenje brzine da biste slali više datoteka odjednom.</string>
+    <string name="turbo_all_sent">Poslano svih %1$d datoteka</string>
+    <string name="send_check_title">Provjera prije slanja</string>
+    <string name="fwcheck_warn">Stranica za %1$s navodi firmware %2$s do %3$s. Vaša %4$s je na %5$s, koji nije naveden. Možda neće raditi ili će srušiti konzolu.</string>
+    <string name="stab_title">Stabilnost</string>
+    <string name="stab_hint">Koliko se često konzola srušila unutar 10 minuta nakon učitavanja svakog payloada.</string>
+    <string name="stab_row">%1$s: učitan %2$d puta, rušenje nakon %3$d</string>
+    <string name="stab_suspect">%1$s: konzola se nakon njega srušila %2$d od %3$d puta. Probajte bez njega.</string>
+    <string name="stab_reset">Poništi brojače</string>
+    <string name="missed_title">Nisu dovršeni</string>
+    <string name="missed_empty">Svi prijenosi su dovršeni.</string>
+    <string name="missed_retry">Pokušaj ponovno</string>
+    <string name="missed_retry_all">Pokušaj sve ponovno</string>
+    <string name="missed_clear">Očisti popis</string>
+    <string name="autofind_title">Je li ovo vaša %1$s?</string>
+    <string name="autofind_text">%1$s ne odgovara na %2$s, ali konzola odgovara na %3$s. Koristiti novu adresu?</string>
+    <string name="autofind_keep">Zadrži staru</string>
+    <string name="cheatshare_open">Otvori datoteku</string>
+    <string name="cheatshare_unreadable">Ta se datoteka ne može pročitati kao popis varki.</string>
+    <string name="cheatshare_save">Spremi kao datoteku</string>
+    <string name="cheatshare_saved">Popis varki spremljen. Pošaljite datoteku bilo kome: otvara se kroz Uvoz.</string>
+    <string name="cheatshare_save_failed">Datoteka se nije mogla spremiti.</string>
 </resources>

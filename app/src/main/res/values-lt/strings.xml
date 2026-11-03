@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Tokios grandinės nebėra.</string>
     <string name="notif_channel_chain">Payload grandinės</string>
     <string name="backup_chains">Grandinės: %1$d</string>
-    <string name="reload_warn_title">Jau įkelta?</string>
     <string name="reload_warn_running">etaHEN šioje konsolėje jau atsako (jo FTP serveris per %2$d prievadą veikia). Iš naujo įkėlus %1$s, kol jis veikia, konsolė gali užstrigti. Siųskite tik jei etaHEN nustojo veikti.</string>
     <string name="reload_warn_sent">%1$s į šią konsolę jau išsiųstas prieš %2$s. Antras įkėlimas gali užstrigdyti konsolę. Siųskite dar kartą tik jei nuo to laiko konsolė buvo paleista iš naujo.</string>
     <string name="reload_send_anyway">Vis tiek siųsti</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s yra %2$s aplanke %3$s</string>
     <string name="notice_dl_failed_title">Nepasiekė %1$s</string>
     <string name="notice_install_title">Išsiųsta į %1$s diegimo programą</string>
+    <string name="local_network_refused">Crimson Multitool be leidimo „Įrenginiai netoliese“ nepasiekia konsolės. Leiskite jį telefono nustatymuose.</string>
+    <string name="turbo_title">Failų vienu metu</string>
+    <string name="turbo_hint">Telefono failai keliami greta, kiekvienas savo ryšiu. Daug mažų failų keliauja daug greičiau.</string>
+    <string name="turbo_hint_limited">Išjunkite greičio ribą, kad galėtumėte siųsti kelis failus vienu metu.</string>
+    <string name="turbo_all_sent">Išsiųsti visi %1$d failai</string>
+    <string name="send_check_title">Patikrinti prieš siunčiant</string>
+    <string name="fwcheck_warn">%1$s puslapyje nurodyta programinė įranga nuo %2$s iki %3$s. Jūsų %4$s yra %5$s, kurios ten nėra. Gali neveikti arba nulaužti konsolę.</string>
+    <string name="stab_title">Stabilumas</string>
+    <string name="stab_hint">Kaip dažnai konsolė lūžo per 10 minučių po kiekvieno payload įkėlimo.</string>
+    <string name="stab_row">%1$s: įkelta %2$d k., po to lūžo %3$d k.</string>
+    <string name="stab_suspect">%1$s: po jo konsolė lūžo %2$d iš %3$d kartų. Bandykite be jo.</string>
+    <string name="stab_reset">Nunulinti skaičius</string>
+    <string name="missed_title">Nebaigti</string>
+    <string name="missed_empty">Visi perdavimai baigti.</string>
+    <string name="missed_retry">Bandyti dar kartą</string>
+    <string name="missed_retry_all">Bandyti visus dar kartą</string>
+    <string name="missed_clear">Išvalyti sąrašą</string>
+    <string name="autofind_title">Ar tai jūsų %1$s?</string>
+    <string name="autofind_text">%1$s neatsako adresu %2$s, bet konsolė atsako adresu %3$s. Naudoti naują adresą?</string>
+    <string name="autofind_keep">Palikti senąjį</string>
+    <string name="cheatshare_open">Atidaryti failą</string>
+    <string name="cheatshare_unreadable">Šio failo nepavyksta perskaityti kaip gudrybių sąrašo.</string>
+    <string name="cheatshare_save">Įrašyti kaip failą</string>
+    <string name="cheatshare_saved">Gudrybių sąrašas įrašytas. Siųskite failą bet kam: jis atidaromas per Importuoti.</string>
+    <string name="cheatshare_save_failed">Failo įrašyti nepavyko.</string>
 </resources>

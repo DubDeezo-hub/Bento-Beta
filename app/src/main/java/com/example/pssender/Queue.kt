@@ -61,6 +61,28 @@ class TransferQueue<T> {
         }
     }
 
+    /**
+     * A helper lane (several files at once): takes the first waiting transfer that [fits], or null. It does not start or
+     * stop the worker; the worker waits for its helpers before it stops.
+     */
+    fun takeFirst(fits: (T) -> Boolean): QueueEntry<T>? {
+        synchronized(lock) {
+            val i = waitingList.indexOfFirst { fits(it.item) }
+            if (i < 0) return null
+            val entry = waitingList.removeAt(i)
+            publish()
+            return entry
+        }
+    }
+
+    /** A helper lane gives [entry] back (it failed or was paused): it goes first in line, for the worker to deal with. */
+    fun putBack(entry: QueueEntry<T>) {
+        synchronized(lock) {
+            waitingList.add(0, entry)
+            publish()
+        }
+    }
+
     /** Worker: [entry] failed and waits for the user's decision. The worker stops after this call. */
     fun park(entry: QueueEntry<T>) {
         synchronized(lock) {

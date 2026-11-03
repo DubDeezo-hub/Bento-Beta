@@ -185,7 +185,7 @@ fun PayloadTab(
     reloadAsk?.let { (why, go) ->
         AlertDialog(
             onDismissRequest = { reloadAsk = null },
-            title = { Text(str(R.string.reload_warn_title)) },
+            title = { Text(str(R.string.send_check_title)) },
             text = { Text(why) },
             confirmButton = { TextButton(onClick = { reloadAsk = null; go() }) { Text(str(R.string.reload_send_anyway)) } },
             dismissButton = { TextButton(onClick = { reloadAsk = null }) { Text(str(R.string.action_cancel)) } }
@@ -222,6 +222,7 @@ fun PayloadTab(
                 TextButton(onClick = {
                     shelfRemove(shelfDir(ctx), item.name)
                     ShelfChecks.forget(ctx, item.name)
+                    PayloadFirmware.forget(ctx, item.name)
                     shelf = shelfList(shelfDir(ctx))
                     removing = null
                 }) { Text(str(R.string.action_remove)) }

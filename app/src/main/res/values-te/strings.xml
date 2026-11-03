@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">ఆ చైన్ ఇకపై లేదు.</string>
     <string name="notif_channel_chain">Payload చైన్‌లు</string>
     <string name="backup_chains">చైన్‌లు: %1$d</string>
-    <string name="reload_warn_title">ఇప్పటికే లోడ్ అయిందా?</string>
     <string name="reload_warn_running">ఈ కన్సోల్‌లో etaHEN ఇప్పటికే స్పందిస్తోంది (పోర్ట్ %2$d లో దాని FTP సర్వర్ నడుస్తోంది). అది నడుస్తుండగా %1$s ను మళ్లీ లోడ్ చేస్తే కన్సోల్ క్రాష్ కావచ్చు. etaHEN పని చేయడం ఆగిపోతేనే పంపండి.</string>
     <string name="reload_warn_sent">%1$s ను ఈ కన్సోల్‌కు %2$s క్రితమే పంపారు. రెండోసారి లోడ్ చేస్తే కన్సోల్ క్రాష్ కావచ్చు. అప్పటి నుంచి కన్సోల్ రీస్టార్ట్ అయి ఉంటేనే మళ్లీ పంపండి.</string>
     <string name="reload_send_anyway">అయినా పంపు</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s ఇప్పుడు %2$s‌లో %3$s‌లో ఉంది</string>
     <string name="notice_dl_failed_title">%1$s‌కి చేరలేదు</string>
     <string name="notice_install_title">%1$s ఇన్‌స్టాలర్‌కి పంపబడింది</string>
+    <string name="local_network_refused">సమీప పరికరాల అనుమతి లేకుండా Crimson Multitool మీ కన్సోల్‌ను చేరుకోలేదు. ఫోన్ సెట్టింగ్‌లలో అనుమతించండి.</string>
+    <string name="turbo_title">ఒకేసారి ఫైళ్లు</string>
+    <string name="turbo_hint">ఫోన్ ఫైళ్లు పక్కపక్కనే అప్‌లోడ్ అవుతాయి, ఒక్కొక్కటి తన కనెక్షన్‌పై. చాలా చిన్న ఫైళ్లు చాలా వేగంగా వెళ్తాయి.</string>
+    <string name="turbo_hint_limited">ఒకేసారి ఒకటి కంటే ఎక్కువ ఫైళ్లు పంపడానికి వేగ పరిమితిని ఆపండి.</string>
+    <string name="turbo_all_sent">మొత్తం %1$d ఫైళ్లు పంపబడ్డాయి</string>
+    <string name="send_check_title">పంపే ముందు తనిఖీ</string>
+    <string name="fwcheck_warn">%1$s పేజీలో ఫర్మ్‌వేర్ %2$s నుండి %3$s ఉంది. మీ %4$s %5$s‌పై ఉంది, అది అందులో లేదు. ఇది పనిచేయకపోవచ్చు లేదా కన్సోల్ క్రాష్ కావచ్చు.</string>
+    <string name="stab_title">స్థిరత్వం</string>
+    <string name="stab_hint">ప్రతి పేలోడ్ లోడ్ చేసిన 10 నిమిషాల్లో కన్సోల్ ఎన్నిసార్లు ఆగిపోయింది.</string>
+    <string name="stab_row">%1$s: %2$d సార్లు లోడ్, తర్వాత %3$d సార్లు ఆగింది</string>
+    <string name="stab_suspect">%1$s: దీని తర్వాత కన్సోల్ %3$d లో %2$d సార్లు ఆగింది. ఇది లేకుండా ప్రయత్నించండి.</string>
+    <string name="stab_reset">గణనలను రీసెట్ చేయి</string>
+    <string name="missed_title">పూర్తి కాలేదు</string>
+    <string name="missed_empty">అన్ని బదిలీలు పూర్తయ్యాయి.</string>
+    <string name="missed_retry">మళ్లీ ప్రయత్నించు</string>
+    <string name="missed_retry_all">అన్నీ మళ్లీ ప్రయత్నించు</string>
+    <string name="missed_clear">జాబితా క్లియర్ చేయి</string>
+    <string name="autofind_title">ఇది మీ %1$s‌నా?</string>
+    <string name="autofind_text">%1$s %2$s‌లో స్పందించడం లేదు, కానీ %3$s‌లో ఒక కన్సోల్ స్పందిస్తోంది. కొత్త చిరునామా వాడాలా?</string>
+    <string name="autofind_keep">పాతదే ఉంచు</string>
+    <string name="cheatshare_open">ఫైల్ తెరువు</string>
+    <string name="cheatshare_unreadable">ఈ ఫైల్‌ను చీట్ జాబితాగా చదవలేము.</string>
+    <string name="cheatshare_save">ఫైల్‌గా సేవ్ చేయి</string>
+    <string name="cheatshare_saved">చీట్ జాబితా సేవ్ అయింది. ఫైల్‌ను ఎవరికైనా పంపండి: ఇంపోర్ట్‌తో తెరవవచ్చు.</string>
+    <string name="cheatshare_save_failed">ఫైల్ సేవ్ కాలేదు.</string>
 </resources>

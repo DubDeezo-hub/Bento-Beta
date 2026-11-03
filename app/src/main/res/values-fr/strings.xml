@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Cette chaîne n’existe plus.</string>
     <string name="notif_channel_chain">Chaînes de payloads</string>
     <string name="backup_chains">Chaînes : %1$d</string>
-    <string name="reload_warn_title">Déjà chargé ?</string>
     <string name="reload_warn_running">etaHEN répond déjà sur cette console (son serveur FTP sur le port %2$d est actif). Recharger %1$s pendant qu\'il tourne peut planter la console. Ne l\'envoyez que si etaHEN ne fonctionne plus.</string>
     <string name="reload_warn_sent">%1$s a déjà été envoyé à cette console il y a %2$s. Le charger une deuxième fois peut planter la console. Ne le renvoyez que si la console a redémarré depuis.</string>
     <string name="reload_send_anyway">Envoyer quand même</string>
@@ -1236,4 +1235,29 @@
     <string name="notice_dl_done_text">%1$s est sur la %2$s dans %3$s</string>
     <string name="notice_dl_failed_title">N\'a pas atteint la %1$s</string>
     <string name="notice_install_title">Envoyé à l\'installateur de la %1$s</string>
+    <string name="local_network_refused">Crimson Multitool ne peut pas joindre ta console sans l\'autorisation Appareils à proximité. Autorise-la dans les réglages du téléphone.</string>
+    <string name="turbo_title">Fichiers en même temps</string>
+    <string name="turbo_hint">Les fichiers du téléphone sont envoyés côte à côte, chacun sur sa propre connexion. Beaucoup de petits fichiers vont bien plus vite.</string>
+    <string name="turbo_hint_limited">Désactive la limite de vitesse pour envoyer plus d\'un fichier à la fois.</string>
+    <string name="turbo_all_sent">Les %1$d fichiers sont envoyés</string>
+    <string name="send_check_title">Vérifier avant d\'envoyer</string>
+    <string name="fwcheck_warn">La page de %1$s indique les firmwares %2$s à %3$s. Ta %4$s est en %5$s, qui n\'y figure pas. Cela peut ne pas marcher ou faire planter la console.</string>
+    <string name="stab_title">Stabilité</string>
+    <string name="stab_hint">Combien de fois la console a planté dans les 10 minutes après le chargement de chaque payload.</string>
+    <string name="stab_row">%1$s : chargé %2$d fois, plantage ensuite %3$d fois</string>
+    <string name="stab_suspect">%1$s : la console a planté après lui %2$d fois sur %3$d. Essaie sans.</string>
+    <string name="stab_reset">Remettre à zéro</string>
+    <string name="missed_title">Pas terminés</string>
+    <string name="missed_empty">Tous les transferts sont terminés.</string>
+    <string name="missed_retry">Réessayer</string>
+    <string name="missed_retry_all">Tout réessayer</string>
+    <string name="missed_clear">Vider la liste</string>
+    <string name="autofind_title">Est-ce ta %1$s ?</string>
+    <string name="autofind_text">%1$s ne répond pas à %2$s, mais une console répond à %3$s. Utiliser la nouvelle adresse ?</string>
+    <string name="autofind_keep">Garder l\'ancienne</string>
+    <string name="cheatshare_open">Ouvrir un fichier</string>
+    <string name="cheatshare_unreadable">Ce fichier ne peut pas être lu comme une liste de codes.</string>
+    <string name="cheatshare_save">Enregistrer en fichier</string>
+    <string name="cheatshare_saved">Liste de codes enregistrée. Envoie le fichier à qui tu veux : il s\'ouvre avec Importer.</string>
+    <string name="cheatshare_save_failed">Le fichier n\'a pas pu être enregistré.</string>
 </resources>

@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Ten łańcuch już nie istnieje.</string>
     <string name="notif_channel_chain">Łańcuchy payloadów</string>
     <string name="backup_chains">Łańcuchy: %1$d</string>
-    <string name="reload_warn_title">Już wczytany?</string>
     <string name="reload_warn_running">etaHEN już odpowiada na tej konsoli (jego serwer FTP na porcie %2$d działa). Ponowne wczytanie %1$s podczas jego pracy może zawiesić konsolę. Wysyłaj tylko, jeśli etaHEN przestał działać.</string>
     <string name="reload_warn_sent">%1$s został już wysłany do tej konsoli %2$s temu. Drugie wczytanie może zawiesić konsolę. Wyślij ponownie tylko, jeśli konsola była od tego czasu uruchomiona ponownie.</string>
     <string name="reload_send_anyway">Wyślij mimo to</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s jest na %2$s w %3$s</string>
     <string name="notice_dl_failed_title">Nie dotarło do %1$s</string>
     <string name="notice_install_title">Wysłano do instalatora %1$s</string>
+    <string name="local_network_refused">Crimson Multitool nie połączy się z konsolą bez uprawnienia Urządzenia w pobliżu. Zezwól na nie w ustawieniach telefonu.</string>
+    <string name="turbo_title">Plików naraz</string>
+    <string name="turbo_hint">Pliki z telefonu wysyłają się obok siebie, każdy własnym połączeniem. Wiele małych plików idzie dużo szybciej.</string>
+    <string name="turbo_hint_limited">Wyłącz limit prędkości, by wysyłać więcej niż jeden plik naraz.</string>
+    <string name="turbo_all_sent">Wysłano wszystkie pliki (%1$d)</string>
+    <string name="send_check_title">Sprawdź przed wysłaniem</string>
+    <string name="fwcheck_warn">Strona %1$s podaje firmware od %2$s do %3$s. Twoja %4$s ma %5$s, którego tam nie ma. Może nie działać albo zawiesić konsolę.</string>
+    <string name="stab_title">Stabilność</string>
+    <string name="stab_hint">Jak często konsola padała w ciągu 10 minut od załadowania każdego payloadu.</string>
+    <string name="stab_row">%1$s: załadowany %2$d razy, potem padła %3$d</string>
+    <string name="stab_suspect">%1$s: konsola padła po nim %2$d z %3$d razy. Spróbuj bez niego.</string>
+    <string name="stab_reset">Wyzeruj liczniki</string>
+    <string name="missed_title">Niedokończone</string>
+    <string name="missed_empty">Wszystkie przesyłania zakończone.</string>
+    <string name="missed_retry">Spróbuj ponownie</string>
+    <string name="missed_retry_all">Ponów wszystkie</string>
+    <string name="missed_clear">Wyczyść listę</string>
+    <string name="autofind_title">Czy to twoja %1$s?</string>
+    <string name="autofind_text">%1$s nie odpowiada pod %2$s, ale pod %3$s odpowiada konsola. Użyć nowego adresu?</string>
+    <string name="autofind_keep">Zostaw stary</string>
+    <string name="cheatshare_open">Otwórz plik</string>
+    <string name="cheatshare_unreadable">Tego pliku nie da się odczytać jako listy kodów.</string>
+    <string name="cheatshare_save">Zapisz jako plik</string>
+    <string name="cheatshare_saved">Lista kodów zapisana. Wyślij plik komu chcesz: otwiera się go przez Importuj.</string>
+    <string name="cheatshare_save_failed">Nie udało się zapisać pliku.</string>
 </resources>

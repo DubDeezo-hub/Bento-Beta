@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">ಆ ಚೈನ್ ಇನ್ನು ಅಸ್ತಿತ್ವದಲ್ಲಿ ಇಲ್ಲ.</string>
     <string name="notif_channel_chain">Payload ಚೈನ್‌ಗಳು</string>
     <string name="backup_chains">ಚೈನ್‌ಗಳು: %1$d</string>
-    <string name="reload_warn_title">ಈಗಾಗಲೇ ಲೋಡ್ ಆಗಿದೆಯೇ?</string>
     <string name="reload_warn_running">ಈ ಕನ್ಸೋಲ್‌ನಲ್ಲಿ etaHEN ಈಗಾಗಲೇ ಪ್ರತಿಕ್ರಿಯಿಸುತ್ತಿದೆ (ಪೋರ್ಟ್ %2$d ನಲ್ಲಿ ಅದರ FTP ಸರ್ವರ್ ಚಾಲನೆಯಲ್ಲಿದೆ). ಅದು ಚಾಲನೆಯಲ್ಲಿರುವಾಗ %1$s ಅನ್ನು ಮತ್ತೆ ಲೋಡ್ ಮಾಡಿದರೆ ಕನ್ಸೋಲ್ ಕ್ರ್ಯಾಶ್ ಆಗಬಹುದು. etaHEN ಕೆಲಸ ನಿಲ್ಲಿಸಿದಾಗ ಮಾತ್ರ ಕಳುಹಿಸಿ.</string>
     <string name="reload_warn_sent">%1$s ಅನ್ನು %2$s ಹಿಂದೆ ಈ ಕನ್ಸೋಲ್‌ಗೆ ಈಗಾಗಲೇ ಕಳುಹಿಸಲಾಗಿದೆ. ಎರಡನೇ ಬಾರಿ ಲೋಡ್ ಮಾಡಿದರೆ ಕನ್ಸೋಲ್ ಕ್ರ್ಯಾಶ್ ಆಗಬಹುದು. ಅಂದಿನಿಂದ ಕನ್ಸೋಲ್ ಮರುಪ್ರಾರಂಭವಾಗಿದ್ದರೆ ಮಾತ್ರ ಮತ್ತೆ ಕಳುಹಿಸಿ.</string>
     <string name="reload_send_anyway">ಆದರೂ ಕಳುಹಿಸಿ</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s ಈಗ %2$s ನ %3$s ನಲ್ಲಿದೆ</string>
     <string name="notice_dl_failed_title">%1$s ತಲುಪಲಿಲ್ಲ</string>
     <string name="notice_install_title">%1$s ಇನ್‌ಸ್ಟಾಲರ್‌ಗೆ ಕಳುಹಿಸಲಾಗಿದೆ</string>
+    <string name="local_network_refused">ಹತ್ತಿರದ ಸಾಧನಗಳ ಅನುಮತಿ ಇಲ್ಲದೆ Crimson Multitool ನಿಮ್ಮ ಕನ್ಸೋಲ್ ತಲುಪಲು ಸಾಧ್ಯವಿಲ್ಲ. ಫೋನ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಅನುಮತಿಸಿ.</string>
+    <string name="turbo_title">ಒಮ್ಮೆಗೆ ಫೈಲ್‌ಗಳು</string>
+    <string name="turbo_hint">ಫೋನ್‌ನ ಫೈಲ್‌ಗಳು ಜೊತೆಜೊತೆಯಾಗಿ ಅಪ್‌ಲೋಡ್ ಆಗುತ್ತವೆ, ಪ್ರತಿಯೊಂದೂ ತನ್ನದೇ ಸಂಪರ್ಕದಲ್ಲಿ. ಹಲವು ಸಣ್ಣ ಫೈಲ್‌ಗಳು ಬಹಳ ವೇಗವಾಗಿ ಹೋಗುತ್ತವೆ.</string>
+    <string name="turbo_hint_limited">ಒಮ್ಮೆಗೆ ಒಂದಕ್ಕಿಂತ ಹೆಚ್ಚು ಫೈಲ್ ಕಳುಹಿಸಲು ವೇಗ ಮಿತಿಯನ್ನು ಆಫ್ ಮಾಡಿ.</string>
+    <string name="turbo_all_sent">ಎಲ್ಲಾ %1$d ಫೈಲ್‌ಗಳನ್ನು ಕಳುಹಿಸಲಾಗಿದೆ</string>
+    <string name="send_check_title">ಕಳುಹಿಸುವ ಮೊದಲು ಪರಿಶೀಲಿಸಿ</string>
+    <string name="fwcheck_warn">%1$s ಪುಟದಲ್ಲಿ ಫರ್ಮ್‌ವೇರ್ %2$s ರಿಂದ %3$s ಇದೆ. ನಿಮ್ಮ %4$s %5$s ನಲ್ಲಿದೆ, ಅದು ಅಲ್ಲಿ ಇಲ್ಲ. ಅದು ಕೆಲಸ ಮಾಡದಿರಬಹುದು ಅಥವಾ ಕನ್ಸೋಲ್ ಕ್ರ್ಯಾಶ್ ಆಗಬಹುದು.</string>
+    <string name="stab_title">ಸ್ಥಿರತೆ</string>
+    <string name="stab_hint">ಪ್ರತಿ ಪೇಲೋಡ್ ಲೋಡ್ ಮಾಡಿದ 10 ನಿಮಿಷಗಳಲ್ಲಿ ಕನ್ಸೋಲ್ ಎಷ್ಟು ಬಾರಿ ನಿಂತಿತು.</string>
+    <string name="stab_row">%1$s: %2$d ಬಾರಿ ಲೋಡ್, ನಂತರ %3$d ಬಾರಿ ನಿಂತಿತು</string>
+    <string name="stab_suspect">%1$s: ಇದರ ನಂತರ ಕನ್ಸೋಲ್ %3$d ರಲ್ಲಿ %2$d ಬಾರಿ ನಿಂತಿತು. ಇದಿಲ್ಲದೆ ಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="stab_reset">ಎಣಿಕೆ ಮರುಹೊಂದಿಸಿ</string>
+    <string name="missed_title">ಮುಗಿಯಲಿಲ್ಲ</string>
+    <string name="missed_empty">ಎಲ್ಲಾ ವರ್ಗಾವಣೆಗಳು ಮುಗಿದಿವೆ.</string>
+    <string name="missed_retry">ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ</string>
+    <string name="missed_retry_all">ಎಲ್ಲವನ್ನೂ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ</string>
+    <string name="missed_clear">ಪಟ್ಟಿ ತೆರವುಗೊಳಿಸಿ</string>
+    <string name="autofind_title">ಇದು ನಿಮ್ಮ %1$s ಆಗಿದೆಯೇ?</string>
+    <string name="autofind_text">%1$s %2$s ನಲ್ಲಿ ಉತ್ತರಿಸುತ್ತಿಲ್ಲ, ಆದರೆ %3$s ನಲ್ಲಿ ಒಂದು ಕನ್ಸೋಲ್ ಉತ್ತರಿಸುತ್ತಿದೆ. ಹೊಸ ವಿಳಾಸ ಬಳಸುವುದೇ?</string>
+    <string name="autofind_keep">ಹಳೆಯದನ್ನೇ ಇರಿಸಿ</string>
+    <string name="cheatshare_open">ಫೈಲ್ ತೆರೆಯಿರಿ</string>
+    <string name="cheatshare_unreadable">ಈ ಫೈಲ್ ಅನ್ನು ಚೀಟ್ ಪಟ್ಟಿಯಾಗಿ ಓದಲಾಗುವುದಿಲ್ಲ.</string>
+    <string name="cheatshare_save">ಫೈಲ್ ಆಗಿ ಉಳಿಸಿ</string>
+    <string name="cheatshare_saved">ಚೀಟ್ ಪಟ್ಟಿ ಉಳಿಸಲಾಗಿದೆ. ಫೈಲ್ ಅನ್ನು ಯಾರಿಗಾದರೂ ಕಳುಹಿಸಿ: ಇಂಪೋರ್ಟ್ ಮೂಲಕ ತೆರೆಯಬಹುದು.</string>
+    <string name="cheatshare_save_failed">ಫೈಲ್ ಉಳಿಸಲಾಗಲಿಲ್ಲ.</string>
 </resources>

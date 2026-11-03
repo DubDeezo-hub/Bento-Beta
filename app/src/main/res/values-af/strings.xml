@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Daardie ketting bestaan nie meer nie.</string>
     <string name="notif_channel_chain">Payload-kettings</string>
     <string name="backup_chains">Kettings: %1$d</string>
-    <string name="reload_warn_title">Reeds gelaai?</string>
     <string name="reload_warn_running">etaHEN antwoord reeds op hierdie konsole (sy FTP-bediener op poort %2$d loop). Om %1$s weer te laai terwyl dit loop, kan die konsole laat ineenstort. Stuur dit net as etaHEN opgehou werk het.</string>
     <string name="reload_warn_sent">%1$s is %2$s gelede reeds na hierdie konsole gestuur. \'n Tweede keer laai kan die konsole laat ineenstort. Stuur dit net weer as die konsole sedertdien herbegin is.</string>
     <string name="reload_send_anyway">Stuur in elk geval</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s is op die %2$s in %3$s</string>
     <string name="notice_dl_failed_title">Het nie die %1$s bereik nie</string>
     <string name="notice_install_title">Na die %1$s se installeerder gestuur</string>
+    <string name="local_network_refused">Crimson Multitool kan nie jou konsole bereik sonder die toestemming Toestelle naby nie. Laat dit toe in die foon se instellings.</string>
+    <string name="turbo_title">Lêers tegelyk</string>
+    <string name="turbo_hint">Lêers van die foon word langs mekaar opgelaai, elk oor sy eie verbinding. Baie klein lêers gaan so baie vinniger.</string>
+    <string name="turbo_hint_limited">Skakel die spoedlimiet af om meer as een lêer tegelyk te stuur.</string>
+    <string name="turbo_all_sent">Al %1$d lêers gestuur</string>
+    <string name="send_check_title">Kyk voor jy stuur</string>
+    <string name="fwcheck_warn">%1$s se bladsy noem fermware %2$s tot %3$s. Jou %4$s is op %5$s, wat dit nie noem nie. Dit werk dalk nie, of laat die konsole ineenstort.</string>
+    <string name="stab_title">Stabiliteit</string>
+    <string name="stab_hint">Hoe dikwels die konsole binne 10 minute ná elke payload gelaai is, afgegaan het.</string>
+    <string name="stab_row">%1$s: %2$d keer gelaai, daarna %3$d keer afgegaan</string>
+    <string name="stab_suspect">%1$s: die konsole het %2$d van %3$d keer daarna afgegaan. Probeer sonder dit.</string>
+    <string name="stab_reset">Tellings herstel</string>
+    <string name="missed_title">Nie klaar nie</string>
+    <string name="missed_empty">Elke oordrag is klaar.</string>
+    <string name="missed_retry">Probeer weer</string>
+    <string name="missed_retry_all">Probeer almal weer</string>
+    <string name="missed_clear">Maak lys skoon</string>
+    <string name="autofind_title">Is dit jou %1$s?</string>
+    <string name="autofind_text">%1$s antwoord nie by %2$s nie, maar ’n konsole antwoord by %3$s. Gebruik die nuwe adres?</string>
+    <string name="autofind_keep">Hou die oue</string>
+    <string name="cheatshare_open">Maak ’n lêer oop</string>
+    <string name="cheatshare_unreadable">Daardie lêer kan nie as ’n cheatlys gelees word nie.</string>
+    <string name="cheatshare_save">Stoor as lêer</string>
+    <string name="cheatshare_saved">Cheatlys gestoor. Stuur die lêer vir enigiemand: hulle maak dit oop met Invoer.</string>
+    <string name="cheatshare_save_failed">Die lêer kon nie gestoor word nie.</string>
 </resources>

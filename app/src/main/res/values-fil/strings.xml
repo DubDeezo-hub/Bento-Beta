@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Wala na ang chain na iyon.</string>
     <string name="notif_channel_chain">Mga payload chain</string>
     <string name="backup_chains">Mga chain: %1$d</string>
-    <string name="reload_warn_title">Naka-load na?</string>
     <string name="reload_warn_running">Sumasagot na ang etaHEN sa console na ito (tumatakbo ang FTP server nito sa port %2$d). Ang muling pag-load ng %1$s habang tumatakbo ito ay puwedeng magpa-crash sa console. Ipadala lang kung tumigil na sa paggana ang etaHEN.</string>
     <string name="reload_warn_sent">Naipadala na ang %1$s sa console na ito %2$s ang nakalipas. Ang pangalawang pag-load ay puwedeng magpa-crash sa console. Ipadala lang ulit kung na-restart na ang console mula noon.</string>
     <string name="reload_send_anyway">Ipadala pa rin</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">Nasa %2$s na ang %1$s, sa %3$s</string>
     <string name="notice_dl_failed_title">Hindi umabot sa %1$s</string>
     <string name="notice_install_title">Naipadala sa installer ng %1$s</string>
+    <string name="local_network_refused">Hindi maaabot ng Crimson Multitool ang console mo nang walang pahintulot na Mga kalapit na device. Payagan ito sa settings ng telepono.</string>
+    <string name="turbo_title">Mga file nang sabay</string>
+    <string name="turbo_hint">Sabay-sabay na ina-upload ang mga file mula sa telepono, bawat isa sa sariling koneksyon. Mas mabilis ang maraming maliliit na file.</string>
+    <string name="turbo_hint_limited">Patayin ang speed limit para makapagpadala ng higit sa isang file nang sabay.</string>
+    <string name="turbo_all_sent">Naipadala ang lahat ng %1$d file</string>
+    <string name="send_check_title">Suriin bago ipadala</string>
+    <string name="fwcheck_warn">Nakasaad sa page ng %1$s ang firmware %2$s hanggang %3$s. Nasa %5$s ang %4$s mo, na hindi nakalista. Baka hindi gumana o mag-crash ang console.</string>
+    <string name="stab_title">Katatagan</string>
+    <string name="stab_hint">Gaano kadalas bumagsak ang console sa loob ng 10 minuto matapos i-load ang bawat payload.</string>
+    <string name="stab_row">%1$s: na-load nang %2$d beses, bumagsak pagkatapos nang %3$d</string>
+    <string name="stab_suspect">%1$s: bumagsak ang console pagkatapos nito %2$d sa %3$d beses. Subukan nang wala ito.</string>
+    <string name="stab_reset">I-reset ang bilang</string>
+    <string name="missed_title">Hindi natapos</string>
+    <string name="missed_empty">Natapos ang lahat ng transfer.</string>
+    <string name="missed_retry">Subukan ulit</string>
+    <string name="missed_retry_all">Subukan lahat ulit</string>
+    <string name="missed_clear">I-clear ang listahan</string>
+    <string name="autofind_title">Ito ba ang %1$s mo?</string>
+    <string name="autofind_text">Hindi sumasagot ang %1$s sa %2$s, pero may console na sumasagot sa %3$s. Gamitin ang bagong address?</string>
+    <string name="autofind_keep">Panatilihin ang luma</string>
+    <string name="cheatshare_open">Magbukas ng file</string>
+    <string name="cheatshare_unreadable">Hindi mabasa ang file na iyan bilang listahan ng cheat.</string>
+    <string name="cheatshare_save">I-save bilang file</string>
+    <string name="cheatshare_saved">Na-save ang listahan ng cheat. Ipadala ang file kahit kanino: binubuksan ito sa Import.</string>
+    <string name="cheatshare_save_failed">Hindi ma-save ang file.</string>
 </resources>

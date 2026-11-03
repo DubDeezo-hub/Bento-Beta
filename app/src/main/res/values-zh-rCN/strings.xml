@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">该链已不存在。</string>
     <string name="notif_channel_chain">Payload 链</string>
     <string name="backup_chains">链：%1$d</string>
-    <string name="reload_warn_title">已经加载？</string>
     <string name="reload_warn_running">这台主机上的 etaHEN 已在响应（端口 %2$d 的 FTP 服务器正在运行）。在它运行时再次加载 %1$s 可能导致主机崩溃。只有在 etaHEN 停止工作时才发送。</string>
     <string name="reload_warn_sent">%1$s 已在 %2$s 前发送到这台主机。第二次加载可能导致主机崩溃。只有在主机重启过之后才再次发送。</string>
     <string name="reload_send_anyway">仍然发送</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s 已在 %2$s 的 %3$s 中</string>
     <string name="notice_dl_failed_title">未能送达 %1$s</string>
     <string name="notice_install_title">已发送到 %1$s 的安装程序</string>
+    <string name="local_network_refused">没有“附近的设备”权限，Crimson Multitool 无法连接主机。请在手机设置中允许。</string>
+    <string name="turbo_title">同时传输的文件数</string>
+    <string name="turbo_hint">手机上的文件会并行上传，每个文件用自己的连接。小文件很多时会快得多。</string>
+    <string name="turbo_hint_limited">关闭限速后才能同时发送多个文件。</string>
+    <string name="turbo_all_sent">全部 %1$d 个文件已发送</string>
+    <string name="send_check_title">发送前检查</string>
+    <string name="fwcheck_warn">%1$s 的页面列出的固件为 %2$s 至 %3$s。你的 %4$s 是 %5$s，不在其中。可能无法运行，或导致主机崩溃。</string>
+    <string name="stab_title">稳定性</string>
+    <string name="stab_hint">加载每个载荷后 10 分钟内主机宕机的次数。</string>
+    <string name="stab_row">%1$s：加载 %2$d 次，之后宕机 %3$d 次</string>
+    <string name="stab_suspect">%1$s：加载 %3$d 次中有 %2$d 次之后主机宕机。试试不加载它。</string>
+    <string name="stab_reset">重置计数</string>
+    <string name="missed_title">未完成</string>
+    <string name="missed_empty">所有传输都已完成。</string>
+    <string name="missed_retry">重试</string>
+    <string name="missed_retry_all">全部重试</string>
+    <string name="missed_clear">清空列表</string>
+    <string name="autofind_title">这是你的 %1$s 吗？</string>
+    <string name="autofind_text">%1$s 在 %2$s 没有响应，但 %3$s 有主机响应。使用新地址吗？</string>
+    <string name="autofind_keep">保留旧地址</string>
+    <string name="cheatshare_open">打开文件</string>
+    <string name="cheatshare_unreadable">无法将此文件读取为作弊列表。</string>
+    <string name="cheatshare_save">另存为文件</string>
+    <string name="cheatshare_saved">作弊列表已保存。把文件发给任何人：用“导入”打开。</string>
+    <string name="cheatshare_save_failed">无法保存文件。</string>
 </resources>

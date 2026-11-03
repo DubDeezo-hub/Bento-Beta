@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Tento reťazec už neexistuje.</string>
     <string name="notif_channel_chain">Reťazce payloadov</string>
     <string name="backup_chains">Reťazce: %1$d</string>
-    <string name="reload_warn_title">Už načítané?</string>
     <string name="reload_warn_running">etaHEN na tejto konzole už odpovedá (jeho FTP server na porte %2$d beží). Opätovné načítanie %1$s, kým beží, môže konzolu zhodiť. Pošlite ho len vtedy, keď etaHEN prestal fungovať.</string>
     <string name="reload_warn_sent">%1$s už bol do tejto konzoly poslaný pred %2$s. Druhé načítanie môže konzolu zhodiť. Pošlite ho znova len vtedy, ak sa konzola medzitým reštartovala.</string>
     <string name="reload_send_anyway">Aj tak poslať</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s je na %2$s v %3$s</string>
     <string name="notice_dl_failed_title">Nedorazilo do %1$s</string>
     <string name="notice_install_title">Odoslané do inštalátora %1$s</string>
+    <string name="local_network_refused">Crimson Multitool sa bez povolenia Zariadenia v okolí ku konzole nedostane. Povoľte ho v nastaveniach telefónu.</string>
+    <string name="turbo_title">Súborov naraz</string>
+    <string name="turbo_hint">Súbory z telefónu sa nahrávajú vedľa seba, každý vlastným pripojením. Veľa malých súborov ide oveľa rýchlejšie.</string>
+    <string name="turbo_hint_limited">Vypnite obmedzenie rýchlosti, aby ste mohli posielať viac súborov naraz.</string>
+    <string name="turbo_all_sent">Odoslaných všetkých %1$d súborov</string>
+    <string name="send_check_title">Kontrola pred odoslaním</string>
+    <string name="fwcheck_warn">Stránka %1$s uvádza firmvér %2$s až %3$s. Vaša %4$s má %5$s, ktorý tam nie je. Nemusí fungovať alebo môže konzolu zhodiť.</string>
+    <string name="stab_title">Stabilita</string>
+    <string name="stab_hint">Ako často konzola spadla do 10 minút po načítaní každého payloadu.</string>
+    <string name="stab_row">%1$s: načítané %2$d-krát, pád potom %3$d-krát</string>
+    <string name="stab_suspect">%1$s: konzola po ňom spadla %2$d z %3$d prípadov. Skúste to bez neho.</string>
+    <string name="stab_reset">Vynulovať počty</string>
+    <string name="missed_title">Nedokončené</string>
+    <string name="missed_empty">Všetky prenosy sú hotové.</string>
+    <string name="missed_retry">Skúsiť znova</string>
+    <string name="missed_retry_all">Skúsiť všetko znova</string>
+    <string name="missed_clear">Vymazať zoznam</string>
+    <string name="autofind_title">Je to vaša %1$s?</string>
+    <string name="autofind_text">%1$s neodpovedá na %2$s, ale na %3$s odpovedá konzola. Použiť novú adresu?</string>
+    <string name="autofind_keep">Ponechať starú</string>
+    <string name="cheatshare_open">Otvoriť súbor</string>
+    <string name="cheatshare_unreadable">Tento súbor sa nedá prečítať ako zoznam cheatov.</string>
+    <string name="cheatshare_save">Uložiť ako súbor</string>
+    <string name="cheatshare_saved">Zoznam cheatov uložený. Pošlite súbor komukoľvek: otvorí sa cez Import.</string>
+    <string name="cheatshare_save_failed">Súbor sa nepodarilo uložiť.</string>
 </resources>

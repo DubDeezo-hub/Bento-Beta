@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">ไม่มีเชนนั้นอีกแล้ว</string>
     <string name="notif_channel_chain">เชน payload</string>
     <string name="backup_chains">เชน: %1$d</string>
-    <string name="reload_warn_title">โหลดไว้แล้ว?</string>
     <string name="reload_warn_running">etaHEN ตอบสนองบนเครื่องนี้อยู่แล้ว (เซิร์ฟเวอร์ FTP ที่พอร์ต %2$d ทำงานอยู่) การโหลด %1$s ซ้ำขณะที่ทำงานอยู่อาจทำให้เครื่องค้าง ส่งเฉพาะเมื่อ etaHEN หยุดทำงานแล้ว</string>
     <string name="reload_warn_sent">%1$s ถูกส่งไปยังเครื่องนี้แล้วเมื่อ %2$s ที่แล้ว การโหลดครั้งที่สองอาจทำให้เครื่องค้าง ส่งซ้ำเฉพาะเมื่อรีสตาร์ตเครื่องไปแล้ว</string>
     <string name="reload_send_anyway">ส่งต่อไป</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s อยู่บน %2$s ใน %3$s แล้ว</string>
     <string name="notice_dl_failed_title">ไปไม่ถึง %1$s</string>
     <string name="notice_install_title">ส่งไปยังตัวติดตั้งของ %1$s แล้ว</string>
+    <string name="local_network_refused">Crimson Multitool เข้าถึงคอนโซลไม่ได้หากไม่มีสิทธิ์อุปกรณ์ที่อยู่ใกล้เคียง อนุญาตได้ในการตั้งค่าโทรศัพท์</string>
+    <string name="turbo_title">ไฟล์พร้อมกัน</string>
+    <string name="turbo_hint">ไฟล์จากโทรศัพท์จะอัปโหลดคู่กัน แต่ละไฟล์ใช้การเชื่อมต่อของตัวเอง ไฟล์เล็กจำนวนมากจะเร็วขึ้นมาก</string>
+    <string name="turbo_hint_limited">ปิดการจำกัดความเร็วเพื่อส่งมากกว่าหนึ่งไฟล์พร้อมกัน</string>
+    <string name="turbo_all_sent">ส่งครบทั้ง %1$d ไฟล์แล้ว</string>
+    <string name="send_check_title">ตรวจก่อนส่ง</string>
+    <string name="fwcheck_warn">หน้าของ %1$s ระบุเฟิร์มแวร์ %2$s ถึง %3$s แต่ %4$s ของคุณใช้ %5$s ซึ่งไม่ได้ระบุไว้ อาจใช้งานไม่ได้หรือทำให้คอนโซลค้าง</string>
+    <string name="stab_title">ความเสถียร</string>
+    <string name="stab_hint">จำนวนครั้งที่คอนโซลดับภายใน 10 นาทีหลังโหลดแต่ละเพย์โหลด</string>
+    <string name="stab_row">%1$s: โหลด %2$d ครั้ง ดับหลังจากนั้น %3$d ครั้ง</string>
+    <string name="stab_suspect">%1$s: คอนโซลดับหลังโหลดตัวนี้ %2$d จาก %3$d ครั้ง ลองโดยไม่ใช้มัน</string>
+    <string name="stab_reset">รีเซ็ตตัวนับ</string>
+    <string name="missed_title">ยังไม่เสร็จ</string>
+    <string name="missed_empty">การโอนทั้งหมดเสร็จแล้ว</string>
+    <string name="missed_retry">ลองอีกครั้ง</string>
+    <string name="missed_retry_all">ลองทั้งหมดอีกครั้ง</string>
+    <string name="missed_clear">ล้างรายการ</string>
+    <string name="autofind_title">นี่คือ %1$s ของคุณใช่ไหม</string>
+    <string name="autofind_text">%1$s ไม่ตอบที่ %2$s แต่มีคอนโซลตอบที่ %3$s ใช้ที่อยู่ใหม่ไหม</string>
+    <string name="autofind_keep">ใช้ที่อยู่เดิม</string>
+    <string name="cheatshare_open">เปิดไฟล์</string>
+    <string name="cheatshare_unreadable">อ่านไฟล์นี้เป็นรายการโกงไม่ได้</string>
+    <string name="cheatshare_save">บันทึกเป็นไฟล์</string>
+    <string name="cheatshare_saved">บันทึกรายการโกงแล้ว ส่งไฟล์ให้ใครก็ได้ เปิดได้ด้วยนำเข้า</string>
+    <string name="cheatshare_save_failed">บันทึกไฟล์ไม่ได้</string>
 </resources>

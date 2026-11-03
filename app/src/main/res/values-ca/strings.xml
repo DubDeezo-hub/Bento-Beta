@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Aquesta cadena ja no existeix.</string>
     <string name="notif_channel_chain">Cadenes de payloads</string>
     <string name="backup_chains">Cadenes: %1$d</string>
-    <string name="reload_warn_title">Ja carregat?</string>
     <string name="reload_warn_running">etaHEN ja respon en aquesta consola (el seu servidor FTP al port %2$d funciona). Tornar a carregar %1$s mentre funciona pot penjar la consola. Envia-ho només si etaHEN ha deixat de funcionar.</string>
     <string name="reload_warn_sent">%1$s ja es va enviar a aquesta consola fa %2$s. Carregar-lo una segona vegada pot penjar la consola. Torna\'l a enviar només si la consola s\'ha reiniciat des de llavors.</string>
     <string name="reload_send_anyway">Envia igualment</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s és a la %2$s, a %3$s</string>
     <string name="notice_dl_failed_title">No ha arribat a la %1$s</string>
     <string name="notice_install_title">Enviat a l\'instal·lador de la %1$s</string>
+    <string name="local_network_refused">Crimson Multitool no pot arribar a la consola sense el permís Dispositius propers. Permet-lo a la configuració del telèfon.</string>
+    <string name="turbo_title">Fitxers alhora</string>
+    <string name="turbo_hint">Els fitxers del telèfon es pugen alhora, cadascun per la seva connexió. Molts fitxers petits van molt més de pressa.</string>
+    <string name="turbo_hint_limited">Treu el límit de velocitat per enviar més d\'un fitxer alhora.</string>
+    <string name="turbo_all_sent">S\'han enviat els %1$d fitxers</string>
+    <string name="send_check_title">Comprova abans d\'enviar</string>
+    <string name="fwcheck_warn">La pàgina de %1$s indica el microprogramari %2$s a %3$s. La teva %4$s és a la %5$s, que no hi surt. Pot no funcionar o penjar la consola.</string>
+    <string name="stab_title">Estabilitat</string>
+    <string name="stab_hint">Quantes vegades ha caigut la consola en els 10 minuts després de carregar cada payload.</string>
+    <string name="stab_row">%1$s: carregat %2$d vegades, ha caigut després %3$d</string>
+    <string name="stab_suspect">%1$s: la consola ha caigut després %2$d de %3$d vegades. Prova-ho sense.</string>
+    <string name="stab_reset">Reinicia els comptes</string>
+    <string name="missed_title">Sense acabar</string>
+    <string name="missed_empty">Totes les transferències han acabat.</string>
+    <string name="missed_retry">Torna-ho a provar</string>
+    <string name="missed_retry_all">Torna-ho a provar tot</string>
+    <string name="missed_clear">Buida la llista</string>
+    <string name="autofind_title">És la teva %1$s?</string>
+    <string name="autofind_text">%1$s no respon a %2$s, però una consola respon a %3$s. Vols fer servir l\'adreça nova?</string>
+    <string name="autofind_keep">Mantén l\'antiga</string>
+    <string name="cheatshare_open">Obre un fitxer</string>
+    <string name="cheatshare_unreadable">Aquest fitxer no es pot llegir com a llista de trucs.</string>
+    <string name="cheatshare_save">Desa com a fitxer</string>
+    <string name="cheatshare_saved">Llista de trucs desada. Envia el fitxer a qui vulguis: s\'obre amb Importa.</string>
+    <string name="cheatshare_save_failed">No s\'ha pogut desar el fitxer.</string>
 </resources>

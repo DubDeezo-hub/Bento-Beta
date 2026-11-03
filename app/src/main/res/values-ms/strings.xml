@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Rantaian itu sudah tiada.</string>
     <string name="notif_channel_chain">Rantaian payload</string>
     <string name="backup_chains">Rantaian: %1$d</string>
-    <string name="reload_warn_title">Sudah dimuatkan?</string>
     <string name="reload_warn_running">etaHEN sudah menjawab pada konsol ini (pelayan FTP-nya pada port %2$d sedang berjalan). Memuatkan %1$s semula semasa ia berjalan boleh merosakkan konsol. Hantar hanya jika etaHEN sudah berhenti berfungsi.</string>
     <string name="reload_warn_sent">%1$s sudah dihantar ke konsol ini %2$s yang lalu. Memuatkannya kali kedua boleh merosakkan konsol. Hantar semula hanya jika konsol telah dimulakan semula sejak itu.</string>
     <string name="reload_send_anyway">Hantar juga</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s ada pada %2$s dalam %3$s</string>
     <string name="notice_dl_failed_title">Tidak sampai ke %1$s</string>
     <string name="notice_install_title">Dihantar ke pemasang %1$s</string>
+    <string name="local_network_refused">Crimson Multitool tidak dapat mencapai konsol tanpa kebenaran Peranti berdekatan. Benarkannya dalam tetapan telefon.</string>
+    <string name="turbo_title">Fail serentak</string>
+    <string name="turbo_hint">Fail daripada telefon dimuat naik serentak, setiap satu pada sambungannya sendiri. Banyak fail kecil jadi lebih pantas.</string>
+    <string name="turbo_hint_limited">Matikan had kelajuan untuk menghantar lebih daripada satu fail serentak.</string>
+    <string name="turbo_all_sent">Semua %1$d fail dihantar</string>
+    <string name="send_check_title">Semak sebelum menghantar</string>
+    <string name="fwcheck_warn">Halaman %1$s menyenaraikan perisian tegar %2$s hingga %3$s. %4$s anda pada %5$s, yang tidak disebut. Ia mungkin tidak berfungsi atau merosakkan konsol.</string>
+    <string name="stab_title">Kestabilan</string>
+    <string name="stab_hint">Berapa kerap konsol terhenti dalam 10 minit selepas setiap payload dimuatkan.</string>
+    <string name="stab_row">%1$s: dimuatkan %2$d kali, terhenti selepasnya %3$d</string>
+    <string name="stab_suspect">%1$s: konsol terhenti selepasnya %2$d daripada %3$d kali. Cuba tanpanya.</string>
+    <string name="stab_reset">Set semula kiraan</string>
+    <string name="missed_title">Tidak selesai</string>
+    <string name="missed_empty">Semua pemindahan selesai.</string>
+    <string name="missed_retry">Cuba lagi</string>
+    <string name="missed_retry_all">Cuba semua lagi</string>
+    <string name="missed_clear">Kosongkan senarai</string>
+    <string name="autofind_title">Adakah ini %1$s anda?</string>
+    <string name="autofind_text">%1$s tidak menjawab di %2$s, tetapi konsol menjawab di %3$s. Guna alamat baharu?</string>
+    <string name="autofind_keep">Kekalkan yang lama</string>
+    <string name="cheatshare_open">Buka fail</string>
+    <string name="cheatshare_unreadable">Fail itu tidak boleh dibaca sebagai senarai tipu.</string>
+    <string name="cheatshare_save">Simpan sebagai fail</string>
+    <string name="cheatshare_saved">Senarai tipu disimpan. Hantar fail kepada sesiapa: ia dibuka dengan Import.</string>
+    <string name="cheatshare_save_failed">Fail tidak dapat disimpan.</string>
 </resources>

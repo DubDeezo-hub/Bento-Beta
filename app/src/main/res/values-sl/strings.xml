@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Te verige ni več.</string>
     <string name="notif_channel_chain">Verige payloadov</string>
     <string name="backup_chains">Verige: %1$d</string>
-    <string name="reload_warn_title">Že naloženo?</string>
     <string name="reload_warn_running">etaHEN na tej konzoli že odgovarja (njegov strežnik FTP na vratih %2$d deluje). Ponovno nalaganje %1$s, medtem ko deluje, lahko zruši konzolo. Pošljite ga le, če je etaHEN nehal delovati.</string>
     <string name="reload_warn_sent">%1$s je bil tej konzoli poslan že pred %2$s. Drugo nalaganje lahko zruši konzolo. Ponovno ga pošljite le, če je bila konzola od takrat znova zagnana.</string>
     <string name="reload_send_anyway">Vseeno pošlji</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s je na %2$s v %3$s</string>
     <string name="notice_dl_failed_title">Ni prispelo na %1$s</string>
     <string name="notice_install_title">Poslano namestitvenemu programu za %1$s</string>
+    <string name="local_network_refused">Crimson Multitool brez dovoljenja Naprave v bližini ne doseže konzole. Dovolite ga v nastavitvah telefona.</string>
+    <string name="turbo_title">Datotek hkrati</string>
+    <string name="turbo_hint">Datoteke s telefona se nalagajo vzporedno, vsaka po svoji povezavi. Veliko majhnih datotek gre veliko hitreje.</string>
+    <string name="turbo_hint_limited">Izklopite omejitev hitrosti, da pošljete več datotek hkrati.</string>
+    <string name="turbo_all_sent">Poslanih vseh %1$d datotek</string>
+    <string name="send_check_title">Preverjanje pred pošiljanjem</string>
+    <string name="fwcheck_warn">Stran za %1$s navaja vdelano programsko opremo %2$s do %3$s. Vaša %4$s je na %5$s, ki ni navedena. Morda ne bo delovalo ali bo zrušilo konzolo.</string>
+    <string name="stab_title">Stabilnost</string>
+    <string name="stab_hint">Kako pogosto se je konzola zrušila v 10 minutah po nalaganju vsakega payloada.</string>
+    <string name="stab_row">%1$s: naložen %2$d-krat, zrušitev potem %3$d-krat</string>
+    <string name="stab_suspect">%1$s: konzola se je po njem zrušila %2$d od %3$d-krat. Poskusite brez njega.</string>
+    <string name="stab_reset">Ponastavi števce</string>
+    <string name="missed_title">Niso končani</string>
+    <string name="missed_empty">Vsi prenosi so končani.</string>
+    <string name="missed_retry">Poskusi znova</string>
+    <string name="missed_retry_all">Poskusi vse znova</string>
+    <string name="missed_clear">Počisti seznam</string>
+    <string name="autofind_title">Je to vaša %1$s?</string>
+    <string name="autofind_text">%1$s se ne odziva na %2$s, na %3$s pa se odziva konzola. Uporabim nov naslov?</string>
+    <string name="autofind_keep">Obdrži starega</string>
+    <string name="cheatshare_open">Odpri datoteko</string>
+    <string name="cheatshare_unreadable">Te datoteke ni mogoče prebrati kot seznam goljufij.</string>
+    <string name="cheatshare_save">Shrani kot datoteko</string>
+    <string name="cheatshare_saved">Seznam goljufij shranjen. Datoteko pošljite komurkoli: odpre se z Uvozi.</string>
+    <string name="cheatshare_save_failed">Datoteke ni bilo mogoče shraniti.</string>
 </resources>

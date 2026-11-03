@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">ওই চেইন আর নেই।</string>
     <string name="notif_channel_chain">Payload চেইন</string>
     <string name="backup_chains">চেইন: %1$d</string>
-    <string name="reload_warn_title">আগেই লোড করা?</string>
     <string name="reload_warn_running">এই কনসোলে etaHEN আগেই সাড়া দিচ্ছে (পোর্ট %2$d-এ এর FTP সার্ভার চালু)। চলার সময় %1$s আবার লোড করলে কনসোল ক্র্যাশ করতে পারে। etaHEN কাজ করা বন্ধ করলে তবেই পাঠান।</string>
     <string name="reload_warn_sent">%1$s এই কনসোলে %2$s আগে পাঠানো হয়েছে। দ্বিতীয়বার লোড করলে কনসোল ক্র্যাশ করতে পারে। এর মধ্যে কনসোল রিস্টার্ট হলে তবেই আবার পাঠান।</string>
     <string name="reload_send_anyway">তবুও পাঠান</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s এখন %2$s-এর %3$s-এ আছে</string>
     <string name="notice_dl_failed_title">%1$s-এ পৌঁছায়নি</string>
     <string name="notice_install_title">%1$s-এর ইনস্টলারে পাঠানো হয়েছে</string>
+    <string name="local_network_refused">কাছাকাছি ডিভাইস অনুমতি ছাড়া Crimson Multitool আপনার কনসোলে পৌঁছাতে পারে না। ফোনের সেটিংসে অনুমতি দিন।</string>
+    <string name="turbo_title">একসাথে ফাইল</string>
+    <string name="turbo_hint">ফোনের ফাইল পাশাপাশি আপলোড হয়, প্রতিটি নিজের সংযোগে। অনেক ছোট ফাইল অনেক দ্রুত যায়।</string>
+    <string name="turbo_hint_limited">একসাথে একাধিক ফাইল পাঠাতে গতি সীমা বন্ধ করুন।</string>
+    <string name="turbo_all_sent">সব %1$d ফাইল পাঠানো হয়েছে</string>
+    <string name="send_check_title">পাঠানোর আগে দেখুন</string>
+    <string name="fwcheck_warn">%1$s-এর পাতায় ফার্মওয়্যার %2$s থেকে %3$s লেখা আছে। আপনার %4$s চলছে %5$s-এ, যা সেখানে নেই। এটি কাজ না-ও করতে পারে বা কনসোল ক্র্যাশ করাতে পারে।</string>
+    <string name="stab_title">স্থিতিশীলতা</string>
+    <string name="stab_hint">প্রতিটি পেলোড লোড করার ১০ মিনিটের মধ্যে কনসোল কতবার বন্ধ হয়ে গেছে।</string>
+    <string name="stab_row">%1$s: %2$d বার লোড, পরে বন্ধ %3$d বার</string>
+    <string name="stab_suspect">%1$s: এর পরে কনসোল %3$d বারের মধ্যে %2$d বার বন্ধ হয়েছে। এটি ছাড়া চেষ্টা করুন।</string>
+    <string name="stab_reset">গণনা রিসেট</string>
+    <string name="missed_title">শেষ হয়নি</string>
+    <string name="missed_empty">সব ট্রান্সফার শেষ হয়েছে।</string>
+    <string name="missed_retry">আবার চেষ্টা</string>
+    <string name="missed_retry_all">সব আবার চেষ্টা</string>
+    <string name="missed_clear">তালিকা মুছুন</string>
+    <string name="autofind_title">এটা কি আপনার %1$s?</string>
+    <string name="autofind_text">%1$s %2$s-এ সাড়া দিচ্ছে না, কিন্তু %3$s-এ একটি কনসোল সাড়া দিচ্ছে। নতুন ঠিকানা ব্যবহার করবেন?</string>
+    <string name="autofind_keep">পুরোনোটাই রাখুন</string>
+    <string name="cheatshare_open">ফাইল খুলুন</string>
+    <string name="cheatshare_unreadable">ফাইলটি চিট তালিকা হিসেবে পড়া যাচ্ছে না।</string>
+    <string name="cheatshare_save">ফাইল হিসেবে সংরক্ষণ</string>
+    <string name="cheatshare_saved">চিট তালিকা সংরক্ষিত। যে কাউকে ফাইলটি পাঠান: ইমপোর্ট দিয়ে খোলা যায়।</string>
+    <string name="cheatshare_save_failed">ফাইল সংরক্ষণ করা যায়নি।</string>
 </resources>

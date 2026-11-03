@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">அந்தச் சங்கிலி இனி இல்லை.</string>
     <string name="notif_channel_chain">Payload சங்கிலிகள்</string>
     <string name="backup_chains">சங்கிலிகள்: %1$d</string>
-    <string name="reload_warn_title">ஏற்கனவே ஏற்றப்பட்டதா?</string>
     <string name="reload_warn_running">இந்த கன்சோலில் etaHEN ஏற்கனவே பதிலளிக்கிறது (போர்ட் %2$d இல் அதன் FTP சர்வர் இயங்குகிறது). அது இயங்கும்போது %1$s ஐ மீண்டும் ஏற்றினால் கன்சோல் கிராஷ் ஆகலாம். etaHEN வேலை செய்வதை நிறுத்தியிருந்தால் மட்டும் அனுப்புங்கள்.</string>
     <string name="reload_warn_sent">%1$s ஏற்கனவே %2$s முன்பு இந்த கன்சோலுக்கு அனுப்பப்பட்டது. இரண்டாவது முறை ஏற்றினால் கன்சோல் கிராஷ் ஆகலாம். அதன் பிறகு கன்சோல் மறுதொடக்கம் செய்யப்பட்டிருந்தால் மட்டும் மீண்டும் அனுப்புங்கள்.</string>
     <string name="reload_send_anyway">இருந்தாலும் அனுப்பு</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s இப்போது %2$s இல் %3$s இல் உள்ளது</string>
     <string name="notice_dl_failed_title">%1$s ஐ அடையவில்லை</string>
     <string name="notice_install_title">%1$s நிறுவியுக்கு அனுப்பப்பட்டது</string>
+    <string name="local_network_refused">அருகிலுள்ள சாதனங்கள் அனுமதி இல்லாமல் Crimson Multitool உங்கள் கன்சோலை அடைய முடியாது. ஃபோன் அமைப்புகளில் அனுமதிக்கவும்.</string>
+    <string name="turbo_title">ஒரே நேரத்தில் கோப்புகள்</string>
+    <string name="turbo_hint">ஃபோனின் கோப்புகள் அருகருகே பதிவேற்றப்படும், ஒவ்வொன்றும் தனி இணைப்பில். பல சிறிய கோப்புகள் மிக வேகமாகச் செல்லும்.</string>
+    <string name="turbo_hint_limited">ஒன்றுக்கு மேற்பட்ட கோப்புகளை ஒரே நேரத்தில் அனுப்ப வேக வரம்பை அணைக்கவும்.</string>
+    <string name="turbo_all_sent">அனைத்து %1$d கோப்புகளும் அனுப்பப்பட்டன</string>
+    <string name="send_check_title">அனுப்பும் முன் சரிபார்க்கவும்</string>
+    <string name="fwcheck_warn">%1$s பக்கத்தில் ஃபர்ம்வேர் %2$s முதல் %3$s வரை உள்ளது. உங்கள் %4$s %5$s இல் உள்ளது, அது அதில் இல்லை. இது வேலை செய்யாமல் போகலாம் அல்லது கன்சோல் செயலிழக்கலாம்.</string>
+    <string name="stab_title">நிலைத்தன்மை</string>
+    <string name="stab_hint">ஒவ்வொரு பேலோடையும் ஏற்றிய 10 நிமிடங்களுக்குள் கன்சோல் எத்தனை முறை நின்றது.</string>
+    <string name="stab_row">%1$s: %2$d முறை ஏற்றப்பட்டது, பின்னர் %3$d முறை நின்றது</string>
+    <string name="stab_suspect">%1$s: இதற்குப் பின் கன்சோல் %3$d இல் %2$d முறை நின்றது. இது இல்லாமல் முயலவும்.</string>
+    <string name="stab_reset">எண்ணிக்கையை மீட்டமை</string>
+    <string name="missed_title">முடியவில்லை</string>
+    <string name="missed_empty">எல்லா பரிமாற்றங்களும் முடிந்தன.</string>
+    <string name="missed_retry">மீண்டும் முயல்</string>
+    <string name="missed_retry_all">அனைத்தையும் மீண்டும் முயல்</string>
+    <string name="missed_clear">பட்டியலை அழி</string>
+    <string name="autofind_title">இது உங்கள் %1$s ஆ?</string>
+    <string name="autofind_text">%1$s %2$s இல் பதிலளிக்கவில்லை, ஆனால் %3$s இல் ஒரு கன்சோல் பதிலளிக்கிறது. புதிய முகவரியைப் பயன்படுத்தவா?</string>
+    <string name="autofind_keep">பழையதையே வை</string>
+    <string name="cheatshare_open">கோப்பைத் திற</string>
+    <string name="cheatshare_unreadable">இந்தக் கோப்பை ஏமாற்றுப் பட்டியலாகப் படிக்க முடியாது.</string>
+    <string name="cheatshare_save">கோப்பாகச் சேமி</string>
+    <string name="cheatshare_saved">ஏமாற்றுப் பட்டியல் சேமிக்கப்பட்டது. கோப்பை யாருக்கும் அனுப்புங்கள்: இறக்குமதி மூலம் திறக்கலாம்.</string>
+    <string name="cheatshare_save_failed">கோப்பைச் சேமிக்க முடியவில்லை.</string>
 </resources>

@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Rangkaian itu sudah tidak ada.</string>
     <string name="notif_channel_chain">Rangkaian payload</string>
     <string name="backup_chains">Rangkaian: %1$d</string>
-    <string name="reload_warn_title">Sudah dimuat?</string>
     <string name="reload_warn_running">etaHEN sudah merespons di konsol ini (server FTP-nya di port %2$d aktif). Memuat %1$s lagi saat masih berjalan bisa membuat konsol crash. Kirim hanya jika etaHEN sudah berhenti bekerja.</string>
     <string name="reload_warn_sent">%1$s sudah dikirim ke konsol ini %2$s yang lalu. Memuatnya untuk kedua kali bisa membuat konsol crash. Kirim lagi hanya jika konsol sudah dinyalakan ulang sejak itu.</string>
     <string name="reload_send_anyway">Tetap kirim</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s sudah ada di %2$s, di %3$s</string>
     <string name="notice_dl_failed_title">Tidak sampai ke %1$s</string>
     <string name="notice_install_title">Terkirim ke penginstal %1$s</string>
+    <string name="local_network_refused">Crimson Multitool tidak bisa menjangkau konsol tanpa izin Perangkat sekitar. Izinkan di setelan ponsel.</string>
+    <string name="turbo_title">File sekaligus</string>
+    <string name="turbo_hint">File dari ponsel diunggah berdampingan, masing-masing lewat koneksinya sendiri. Banyak file kecil jadi jauh lebih cepat.</string>
+    <string name="turbo_hint_limited">Matikan batas kecepatan untuk mengirim lebih dari satu file sekaligus.</string>
+    <string name="turbo_all_sent">Semua %1$d file terkirim</string>
+    <string name="send_check_title">Periksa sebelum mengirim</string>
+    <string name="fwcheck_warn">Halaman %1$s mencantumkan firmware %2$s sampai %3$s. %4$s kamu di %5$s, yang tidak disebut. Mungkin tidak jalan atau membuat konsol crash.</string>
+    <string name="stab_title">Stabilitas</string>
+    <string name="stab_hint">Seberapa sering konsol mati dalam 10 menit setelah tiap payload dimuat.</string>
+    <string name="stab_row">%1$s: dimuat %2$d kali, mati setelahnya %3$d</string>
+    <string name="stab_suspect">%1$s: konsol mati setelahnya %2$d dari %3$d kali. Coba tanpanya.</string>
+    <string name="stab_reset">Atur ulang hitungan</string>
+    <string name="missed_title">Tidak selesai</string>
+    <string name="missed_empty">Semua transfer selesai.</string>
+    <string name="missed_retry">Coba lagi</string>
+    <string name="missed_retry_all">Coba semua lagi</string>
+    <string name="missed_clear">Kosongkan daftar</string>
+    <string name="autofind_title">Apakah ini %1$s kamu?</string>
+    <string name="autofind_text">%1$s tidak menjawab di %2$s, tapi ada konsol yang menjawab di %3$s. Pakai alamat baru?</string>
+    <string name="autofind_keep">Tetap yang lama</string>
+    <string name="cheatshare_open">Buka file</string>
+    <string name="cheatshare_unreadable">File itu tidak bisa dibaca sebagai daftar cheat.</string>
+    <string name="cheatshare_save">Simpan sebagai file</string>
+    <string name="cheatshare_saved">Daftar cheat disimpan. Kirim file ke siapa saja: dibuka lewat Impor.</string>
+    <string name="cheatshare_save_failed">File tidak bisa disimpan.</string>
 </resources>

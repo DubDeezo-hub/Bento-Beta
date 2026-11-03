@@ -191,7 +191,7 @@ fun HomeTab(
     reloadAsk?.let { (why, go) ->
         AlertDialog(
             onDismissRequest = { reloadAsk = null },
-            title = { Text(str(R.string.reload_warn_title)) },
+            title = { Text(str(R.string.send_check_title)) },
             text = { Text(why) },
             confirmButton = { TextButton(onClick = { reloadAsk = null }) { Text(str(R.string.action_cancel)) } },
             dismissButton = { TextButton(onClick = { reloadAsk = null; go() }) { Text(str(R.string.reload_send_anyway)) } }

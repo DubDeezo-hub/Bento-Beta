@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Šādas ķēdes vairs nav.</string>
     <string name="notif_channel_chain">Payload ķēdes</string>
     <string name="backup_chains">Ķēdes: %1$d</string>
-    <string name="reload_warn_title">Jau ielādēts?</string>
     <string name="reload_warn_running">etaHEN šajā konsolē jau atbild (tā FTP serveris portā %2$d darbojas). Atkārtoti ielādējot %1$s, kamēr tas darbojas, konsole var avarēt. Sūtiet tikai tad, ja etaHEN vairs nedarbojas.</string>
     <string name="reload_warn_sent">%1$s uz šo konsoli jau tika nosūtīts pirms %2$s. Otrreizēja ielāde var izraisīt konsoles avāriju. Sūtiet vēlreiz tikai tad, ja kopš tā laika konsole ir restartēta.</string>
     <string name="reload_send_anyway">Tomēr sūtīt</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s ir %2$s mapē %3$s</string>
     <string name="notice_dl_failed_title">Nesasniedza %1$s</string>
     <string name="notice_install_title">Nosūtīts uz %1$s instalētāju</string>
+    <string name="local_network_refused">Crimson Multitool nevar sasniegt konsoli bez atļaujas “Tuvumā esošās ierīces”. Atļaujiet to tālruņa iestatījumos.</string>
+    <string name="turbo_title">Faili vienlaikus</string>
+    <string name="turbo_hint">Tālruņa faili tiek augšupielādēti blakus, katrs pa savu savienojumu. Daudzi mazi faili iet daudz ātrāk.</string>
+    <string name="turbo_hint_limited">Izslēdziet ātruma ierobežojumu, lai sūtītu vairākus failus vienlaikus.</string>
+    <string name="turbo_all_sent">Nosūtīti visi %1$d faili</string>
+    <string name="send_check_title">Pārbaudīt pirms sūtīšanas</string>
+    <string name="fwcheck_warn">%1$s lapā norādīta programmaparatūra no %2$s līdz %3$s. Jūsu %4$s ir %5$s, kas tur nav minēta. Tā var nedarboties vai nogāzt konsoli.</string>
+    <string name="stab_title">Stabilitāte</string>
+    <string name="stab_hint">Cik bieži konsole nogāzās 10 minūšu laikā pēc katra payload ielādes.</string>
+    <string name="stab_row">%1$s: ielādēts %2$d reizes, pēc tam nogāzās %3$d</string>
+    <string name="stab_suspect">%1$s: konsole pēc tā nogāzās %2$d no %3$d reizēm. Mēģiniet bez tā.</string>
+    <string name="stab_reset">Atiestatīt skaitītājus</string>
+    <string name="missed_title">Nepabeigti</string>
+    <string name="missed_empty">Visi pārsūtījumi pabeigti.</string>
+    <string name="missed_retry">Mēģināt vēlreiz</string>
+    <string name="missed_retry_all">Mēģināt visus vēlreiz</string>
+    <string name="missed_clear">Notīrīt sarakstu</string>
+    <string name="autofind_title">Vai šī ir jūsu %1$s?</string>
+    <string name="autofind_text">%1$s neatbild adresē %2$s, bet konsole atbild adresē %3$s. Izmantot jauno adresi?</string>
+    <string name="autofind_keep">Paturēt veco</string>
+    <string name="cheatshare_open">Atvērt failu</string>
+    <string name="cheatshare_unreadable">Šo failu nevar nolasīt kā krāpšanās kodu sarakstu.</string>
+    <string name="cheatshare_save">Saglabāt kā failu</string>
+    <string name="cheatshare_saved">Kodu saraksts saglabāts. Sūtiet failu jebkuram: to atver ar Importēt.</string>
+    <string name="cheatshare_save_failed">Failu neizdevās saglabāt.</string>
 </resources>

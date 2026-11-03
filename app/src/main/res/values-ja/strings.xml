@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">そのチェーンはもう存在しません。</string>
     <string name="notif_channel_chain">ペイロードのチェーン</string>
     <string name="backup_chains">チェーン: %1$d</string>
-    <string name="reload_warn_title">読み込み済み？</string>
     <string name="reload_warn_running">この本体では etaHEN がすでに応答しています（ポート %2$d の FTP サーバーが動作中）。動作中に %1$s をもう一度読み込むと本体がクラッシュすることがあります。etaHEN が動かなくなった場合だけ送ってください。</string>
     <string name="reload_warn_sent">%1$s は %2$s 前にこの本体へ送信済みです。2回読み込むと本体がクラッシュすることがあります。その後本体を再起動した場合だけ送り直してください。</string>
     <string name="reload_send_anyway">それでも送る</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$sは%2$sの%3$sにあります</string>
     <string name="notice_dl_failed_title">%1$sに届きませんでした</string>
     <string name="notice_install_title">%1$sのインストーラーへ送信しました</string>
+    <string name="local_network_refused">「付近のデバイス」の許可がないと、Crimson Multitoolはゲーム機に接続できません。スマホの設定で許可してください。</string>
+    <string name="turbo_title">同時に送るファイル数</string>
+    <string name="turbo_hint">スマホのファイルを並行してアップロードします。それぞれ別の接続を使うので、小さなファイルが多いときにずっと速くなります。</string>
+    <string name="turbo_hint_limited">複数のファイルを同時に送るには速度制限をオフにしてください。</string>
+    <string name="turbo_all_sent">%1$d個のファイルをすべて送信しました</string>
+    <string name="send_check_title">送信前の確認</string>
+    <string name="fwcheck_warn">%1$sのページに書かれているファームウェアは%2$s〜%3$sです。お使いの%4$sは%5$sで、記載がありません。動かないか、ゲーム機がクラッシュするおそれがあります。</string>
+    <string name="stab_title">安定性</string>
+    <string name="stab_hint">各ペイロードを読み込んでから10分以内にゲーム機が落ちた回数です。</string>
+    <string name="stab_row">%1$s：%2$d回読み込み、その後%3$d回ダウン</string>
+    <string name="stab_suspect">%1$s：読み込み%3$d回のうち%2$d回、その後にゲーム機が落ちました。外して試してください。</string>
+    <string name="stab_reset">回数をリセット</string>
+    <string name="missed_title">完了しなかった転送</string>
+    <string name="missed_empty">すべての転送が完了しました。</string>
+    <string name="missed_retry">再試行</string>
+    <string name="missed_retry_all">すべて再試行</string>
+    <string name="missed_clear">リストを消去</string>
+    <string name="autofind_title">これはあなたの%1$sですか？</string>
+    <string name="autofind_text">%1$sは%2$sで応答しませんが、%3$sでゲーム機が応答しています。新しいアドレスを使いますか？</string>
+    <string name="autofind_keep">元のままにする</string>
+    <string name="cheatshare_open">ファイルを開く</string>
+    <string name="cheatshare_unreadable">このファイルはチートリストとして読み込めません。</string>
+    <string name="cheatshare_save">ファイルとして保存</string>
+    <string name="cheatshare_saved">チートリストを保存しました。ファイルを誰にでも送れます。「インポート」で開けます。</string>
+    <string name="cheatshare_save_failed">ファイルを保存できませんでした。</string>
 </resources>

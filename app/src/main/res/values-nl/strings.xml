@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Die keten bestaat niet meer.</string>
     <string name="notif_channel_chain">Payload-ketens</string>
     <string name="backup_chains">Ketens: %1$d</string>
-    <string name="reload_warn_title">Al geladen?</string>
     <string name="reload_warn_running">etaHEN antwoordt al op deze console (de FTP-server op poort %2$d draait). %1$s opnieuw laden terwijl het draait kan de console laten crashen. Stuur het alleen als etaHEN niet meer werkt.</string>
     <string name="reload_warn_sent">%1$s is %2$s geleden al naar deze console gestuurd. Een tweede keer laden kan de console laten crashen. Stuur het alleen opnieuw als de console sindsdien is herstart.</string>
     <string name="reload_send_anyway">Toch versturen</string>
@@ -1236,4 +1235,29 @@
     <string name="notice_dl_done_text">%1$s staat op de %2$s in %3$s</string>
     <string name="notice_dl_failed_title">Is niet bij de %1$s aangekomen</string>
     <string name="notice_install_title">Naar het installatieprogramma van de %1$s gestuurd</string>
+    <string name="local_network_refused">Crimson Multitool kan je console niet bereiken zonder de toestemming Apparaten in de buurt. Sta die toe in de instellingen van de telefoon.</string>
+    <string name="turbo_title">Bestanden tegelijk</string>
+    <string name="turbo_hint">Bestanden van de telefoon gaan naast elkaar, elk over een eigen verbinding. Veel kleine bestanden gaan zo veel sneller.</string>
+    <string name="turbo_hint_limited">Zet de snelheidslimiet uit om meer dan één bestand tegelijk te sturen.</string>
+    <string name="turbo_all_sent">Alle %1$d bestanden verstuurd</string>
+    <string name="send_check_title">Controleren voor het versturen</string>
+    <string name="fwcheck_warn">De pagina van %1$s noemt firmware %2$s tot %3$s. Je %4$s draait %5$s, die er niet bij staat. Het werkt misschien niet of laat de console crashen.</string>
+    <string name="stab_title">Stabiliteit</string>
+    <string name="stab_hint">Hoe vaak de console binnen 10 minuten na het laden van elke payload uitviel.</string>
+    <string name="stab_row">%1$s: %2$d keer geladen, daarna %3$d keer uitgevallen</string>
+    <string name="stab_suspect">%1$s: de console viel erna %2$d van de %3$d keer uit. Probeer het zonder.</string>
+    <string name="stab_reset">Tellingen wissen</string>
+    <string name="missed_title">Niet afgerond</string>
+    <string name="missed_empty">Alle overdrachten zijn klaar.</string>
+    <string name="missed_retry">Opnieuw proberen</string>
+    <string name="missed_retry_all">Alles opnieuw proberen</string>
+    <string name="missed_clear">Lijst wissen</string>
+    <string name="autofind_title">Is dit je %1$s?</string>
+    <string name="autofind_text">%1$s antwoordt niet op %2$s, maar er antwoordt een console op %3$s. Het nieuwe adres gebruiken?</string>
+    <string name="autofind_keep">Het oude houden</string>
+    <string name="cheatshare_open">Een bestand openen</string>
+    <string name="cheatshare_unreadable">Dat bestand is niet te lezen als cheatlijst.</string>
+    <string name="cheatshare_save">Opslaan als bestand</string>
+    <string name="cheatshare_saved">Cheatlijst opgeslagen. Stuur het bestand naar wie je wilt: openen gaat met Importeren.</string>
+    <string name="cheatshare_save_failed">Het bestand kon niet worden opgeslagen.</string>
 </resources>

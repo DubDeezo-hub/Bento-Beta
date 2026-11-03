@@ -76,6 +76,7 @@ class App : Application() {
         super.onCreate()
         AppText.init(this)
         AppLook.load(this)
+        Stability.init(this)
         val store = UnfinishedFile(File(noBackupFilesDir, "unfinished-transfers.json"))
         TransferState.adoptUnfinished(store.load())
         TransferState.journal = FileJournal(store)

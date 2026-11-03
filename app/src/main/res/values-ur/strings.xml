@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">وہ چین اب موجود نہیں ہے۔</string>
     <string name="notif_channel_chain">‏Payload چینز</string>
     <string name="backup_chains">چینز: %1$d</string>
-    <string name="reload_warn_title">پہلے سے لوڈ ہے؟</string>
     <string name="reload_warn_running">اس کنسول پر etaHEN پہلے ہی جواب دے رہا ہے (پورٹ %2$d پر اس کا FTP سرور چل رہا ہے)۔ اس کے چلتے ہوئے %1$s دوبارہ لوڈ کرنے سے کنسول کریش ہو سکتا ہے۔ صرف تب بھیجیں جب etaHEN کام کرنا بند کر چکا ہو۔</string>
     <string name="reload_warn_sent">‏%1$s اس کنسول کو %2$s پہلے بھیجا جا چکا ہے۔ دوسری بار لوڈ کرنے سے کنسول کریش ہو سکتا ہے۔ دوبارہ صرف تب بھیجیں جب اس کے بعد کنسول ری اسٹارٹ ہوا ہو۔</string>
     <string name="reload_send_anyway">پھر بھی بھیجیں</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">‏%1$s اب %2$s پر %3$s میں ہے</string>
     <string name="notice_dl_failed_title">‏%1$s تک نہیں پہنچا</string>
     <string name="notice_install_title">‏%1$s کے انسٹالر کو بھیج دیا</string>
+    <string name="local_network_refused">قریبی آلات کی اجازت کے بغیر Crimson Multitool آپ کے کنسول تک نہیں پہنچ سکتا۔ فون کی ترتیبات میں اجازت دیں۔</string>
+    <string name="turbo_title">ایک ساتھ فائلیں</string>
+    <string name="turbo_hint">فون کی فائلیں ساتھ ساتھ اپ لوڈ ہوتی ہیں، ہر ایک اپنے کنکشن پر۔ بہت سی چھوٹی فائلیں بہت تیزی سے جاتی ہیں۔</string>
+    <string name="turbo_hint_limited">ایک ساتھ ایک سے زیادہ فائل بھیجنے کے لیے رفتار کی حد بند کریں۔</string>
+    <string name="turbo_all_sent">تمام %1$d فائلیں بھیج دی گئیں</string>
+    <string name="send_check_title">بھیجنے سے پہلے جانچیں</string>
+    <string name="fwcheck_warn">‏%1$s کے صفحے پر فرم ویئر %2$s سے %3$s لکھا ہے۔ آپ کا %4$s %5$s پر ہے، جو اس میں نہیں۔ ہو سکتا ہے یہ کام نہ کرے یا کنسول کریش ہو جائے۔</string>
+    <string name="stab_title">استحکام</string>
+    <string name="stab_hint">ہر پے لوڈ لوڈ کرنے کے 10 منٹ کے اندر کنسول کتنی بار بند ہوا۔</string>
+    <string name="stab_row">‏%1$s: %2$d بار لوڈ، بعد میں %3$d بار بند ہوا</string>
+    <string name="stab_suspect">‏%1$s: اس کے بعد کنسول %3$d میں سے %2$d بار بند ہوا۔ اس کے بغیر آزمائیں۔</string>
+    <string name="stab_reset">گنتی ری سیٹ کریں</string>
+    <string name="missed_title">مکمل نہیں ہوئے</string>
+    <string name="missed_empty">تمام منتقلیاں مکمل ہو گئیں۔</string>
+    <string name="missed_retry">دوبارہ کوشش کریں</string>
+    <string name="missed_retry_all">سب دوبارہ آزمائیں</string>
+    <string name="missed_clear">فہرست صاف کریں</string>
+    <string name="autofind_title">کیا یہ آپ کا %1$s ہے؟</string>
+    <string name="autofind_text">‏%1$s %2$s پر جواب نہیں دیتا، لیکن %3$s پر ایک کنسول جواب دیتا ہے۔ نیا پتہ استعمال کریں؟</string>
+    <string name="autofind_keep">پرانا ہی رکھیں</string>
+    <string name="cheatshare_open">فائل کھولیں</string>
+    <string name="cheatshare_unreadable">یہ فائل چیٹ فہرست کے طور پر نہیں پڑھی جا سکتی۔</string>
+    <string name="cheatshare_save">فائل کے طور پر محفوظ کریں</string>
+    <string name="cheatshare_saved">چیٹ فہرست محفوظ ہو گئی۔ فائل کسی کو بھی بھیجیں: یہ امپورٹ سے کھلتی ہے۔</string>
+    <string name="cheatshare_save_failed">فائل محفوظ نہیں ہو سکی۔</string>
 </resources>

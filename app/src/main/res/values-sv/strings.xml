@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Den kedjan finns inte längre.</string>
     <string name="notif_channel_chain">Payload-kedjor</string>
     <string name="backup_chains">Kedjor: %1$d</string>
-    <string name="reload_warn_title">Redan laddad?</string>
     <string name="reload_warn_running">etaHEN svarar redan på den här konsolen (dess FTP-server på port %2$d är igång). Att ladda %1$s igen medan den kör kan krascha konsolen. Skicka den bara om etaHEN har slutat fungera.</string>
     <string name="reload_warn_sent">%1$s skickades redan till den här konsolen för %2$s sedan. Att ladda den en andra gång kan krascha konsolen. Skicka igen bara om konsolen har startats om sedan dess.</string>
     <string name="reload_send_anyway">Skicka ändå</string>
@@ -1236,4 +1235,29 @@
     <string name="notice_dl_done_text">%1$s finns på %2$s i %3$s</string>
     <string name="notice_dl_failed_title">Kom inte fram till %1$s</string>
     <string name="notice_install_title">Skickad till installationsprogrammet på %1$s</string>
+    <string name="local_network_refused">Crimson Multitool når inte konsolen utan behörigheten Enheter i närheten. Tillåt den i telefonens inställningar.</string>
+    <string name="turbo_title">Filer samtidigt</string>
+    <string name="turbo_hint">Filer från telefonen laddas upp sida vid sida, var och en på en egen anslutning. Många små filer går mycket snabbare.</string>
+    <string name="turbo_hint_limited">Stäng av hastighetsgränsen för att skicka mer än en fil i taget.</string>
+    <string name="turbo_all_sent">Alla %1$d filer skickade</string>
+    <string name="send_check_title">Kontrollera innan du skickar</string>
+    <string name="fwcheck_warn">Sidan för %1$s nämner firmware %2$s till %3$s. Din %4$s kör %5$s, som inte nämns. Den kanske inte fungerar eller får konsolen att krascha.</string>
+    <string name="stab_title">Stabilitet</string>
+    <string name="stab_hint">Hur ofta konsolen gick ner inom 10 minuter efter att varje payload lästes in.</string>
+    <string name="stab_row">%1$s: inläst %2$d gånger, gick ner efteråt %3$d</string>
+    <string name="stab_suspect">%1$s: konsolen gick ner efter den %2$d av %3$d gånger. Prova utan.</string>
+    <string name="stab_reset">Nollställ räknare</string>
+    <string name="missed_title">Blev inte klara</string>
+    <string name="missed_empty">Alla överföringar blev klara.</string>
+    <string name="missed_retry">Försök igen</string>
+    <string name="missed_retry_all">Försök alla igen</string>
+    <string name="missed_clear">Töm listan</string>
+    <string name="autofind_title">Är det här din %1$s?</string>
+    <string name="autofind_text">%1$s svarar inte på %2$s, men en konsol svarar på %3$s. Använda den nya adressen?</string>
+    <string name="autofind_keep">Behåll den gamla</string>
+    <string name="cheatshare_open">Öppna en fil</string>
+    <string name="cheatshare_unreadable">Den filen kan inte läsas som en fusklista.</string>
+    <string name="cheatshare_save">Spara som fil</string>
+    <string name="cheatshare_saved">Fusklistan sparad. Skicka filen till vem som helst: den öppnas med Importera.</string>
+    <string name="cheatshare_save_failed">Filen kunde inte sparas.</string>
 </resources>

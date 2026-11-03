@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Bu zincir artık yok.</string>
     <string name="notif_channel_chain">Payload zincirleri</string>
     <string name="backup_chains">Zincirler: %1$d</string>
-    <string name="reload_warn_title">Zaten yüklü mü?</string>
     <string name="reload_warn_running">etaHEN bu konsolda zaten yanıt veriyor (%2$d numaralı porttaki FTP sunucusu açık). O çalışırken %1$s yeniden yüklemek konsolu çökertebilir. Yalnızca etaHEN çalışmayı bıraktıysa gönder.</string>
     <string name="reload_warn_sent">%1$s bu konsola %2$s önce zaten gönderildi. İkinci kez yüklemek konsolu çökertebilir. Yalnızca konsol o zamandan beri yeniden başlatıldıysa tekrar gönder.</string>
     <string name="reload_send_anyway">Yine de gönder</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s artık %2$s üzerinde, %3$s içinde</string>
     <string name="notice_dl_failed_title">%1$s cihazına ulaşmadı</string>
     <string name="notice_install_title">%1$s yükleyicisine gönderildi</string>
+    <string name="local_network_refused">Crimson Multitool, Yakındaki cihazlar izni olmadan konsola ulaşamaz. Telefonun ayarlarından izin verin.</string>
+    <string name="turbo_title">Aynı anda dosya</string>
+    <string name="turbo_hint">Telefondaki dosyalar yan yana yüklenir, her biri kendi bağlantısıyla. Çok sayıda küçük dosya çok daha hızlı gider.</string>
+    <string name="turbo_hint_limited">Aynı anda birden fazla dosya göndermek için hız sınırını kapatın.</string>
+    <string name="turbo_all_sent">%1$d dosyanın tümü gönderildi</string>
+    <string name="send_check_title">Göndermeden önce kontrol</string>
+    <string name="fwcheck_warn">%1$s sayfası %2$s ile %3$s arası yazılımları listeliyor. %4$s cihazınız %5$s sürümünde ve bu listede yok. Çalışmayabilir ya da konsolu çökertebilir.</string>
+    <string name="stab_title">Kararlılık</string>
+    <string name="stab_hint">Her payload yüklendikten sonraki 10 dakika içinde konsolun kaç kez çöktüğü.</string>
+    <string name="stab_row">%1$s: %2$d kez yüklendi, ardından %3$d kez çöktü</string>
+    <string name="stab_suspect">%1$s: konsol bundan sonra %3$d seferin %2$d\'sinde çöktü. Onsuz deneyin.</string>
+    <string name="stab_reset">Sayaçları sıfırla</string>
+    <string name="missed_title">Bitmeyenler</string>
+    <string name="missed_empty">Tüm aktarımlar bitti.</string>
+    <string name="missed_retry">Tekrar dene</string>
+    <string name="missed_retry_all">Tümünü tekrar dene</string>
+    <string name="missed_clear">Listeyi temizle</string>
+    <string name="autofind_title">Bu sizin %1$s cihazınız mı?</string>
+    <string name="autofind_text">%1$s, %2$s adresinde yanıt vermiyor ama %3$s adresinde bir konsol yanıt veriyor. Yeni adres kullanılsın mı?</string>
+    <string name="autofind_keep">Eskisi kalsın</string>
+    <string name="cheatshare_open">Dosya aç</string>
+    <string name="cheatshare_unreadable">Bu dosya hile listesi olarak okunamıyor.</string>
+    <string name="cheatshare_save">Dosya olarak kaydet</string>
+    <string name="cheatshare_saved">Hile listesi kaydedildi. Dosyayı istediğinize gönderin: İçe aktar ile açılır.</string>
+    <string name="cheatshare_save_failed">Dosya kaydedilemedi.</string>
 </resources>

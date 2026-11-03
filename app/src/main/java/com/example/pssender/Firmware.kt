@@ -159,3 +159,81 @@ object FirmwareSupport {
         return if (from.first <= to.last) from.first..to.last else null
     }
 }
+
+// ---------------------------------------------------------------------------------------------
+// The firmware check before sending: what a payload's page said about firmware is kept when it comes from the store,
+// so sending it to a console on firmware the page doesn't name asks first ("its page lists 4.03 to 10.01; your PS5 is on
+// 10.40"). Payloads from elsewhere, and pages that say nothing clear, send without asking.
+// ---------------------------------------------------------------------------------------------
+
+object PayloadFirmware {
+    private const val PREFS = "payload_fw"
+
+    /** The kept claims, by shelf file name (loaded once at the start, then kept in step). */
+    private val kept = java.util.concurrent.ConcurrentHashMap<String, FwClaims>()
+
+    /** The selected console's firmware as a number (1040 for 10.40), or null when not known. */
+    @Volatile
+    var consoleFirmware: Int? = null
+
+    fun load(ctx: Context) {
+        val p = ctx.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+        kept.clear()
+        for ((name, v) in p.all) decode(v as? String ?: continue)?.let { kept[name] = it }
+    }
+
+    /** Keeps what [name]'s page says (nothing clear: forgets it, so it sends without asking). */
+    fun remember(ctx: Context, name: String, claims: FwClaims?) {
+        val p = ctx.getSharedPreferences(PREFS, Context.MODE_PRIVATE).edit()
+        if (claims == null || claims.isEmpty) {
+            kept.remove(name)
+            p.remove(name)
+        } else {
+            kept[name] = claims
+            p.putString(name, encode(claims))
+        }
+        p.apply()
+    }
+
+    fun forget(ctx: Context, name: String) = remember(ctx, name, null)
+
+    /** The question to ask before sending [names] (the first one whose page doesn't name the console's firmware), or null. */
+    fun warning(names: List<String>, firmware: Int? = consoleFirmware, model: String = ActiveConsole.type.model): String? {
+        val fw = firmware ?: return null
+        for (name in names) {
+            val c = kept[name] ?: continue
+            if (c.fit(fw) == FwFit.NOT_LISTED) {
+                return AppText.get(R.string.fwcheck_warn, name, c.lowest ?: "?", c.highest ?: "?", model, FwClaims.text(fw))
+            }
+        }
+        return null
+    }
+
+    /** For the tests: claims as they would be kept. */
+    internal fun put(name: String, claims: FwClaims) {
+        kept[name] = claims
+    }
+
+    internal fun reset() {
+        kept.clear()
+        consoleFirmware = null
+    }
+
+    /** "e:1040,1050;r:403-1001,1100-1252" */
+    fun encode(c: FwClaims): String =
+        "e:" + c.exact.sorted().joinToString(",") + ";r:" + c.ranges.joinToString(",") { "${it.first}-${it.last}" }
+
+    fun decode(text: String): FwClaims? {
+        val parts = text.split(';')
+        val e = parts.firstOrNull { it.startsWith("e:") }?.removePrefix("e:") ?: return null
+        val r = parts.firstOrNull { it.startsWith("r:") }?.removePrefix("r:") ?: return null
+        val exact = e.split(',').mapNotNull { it.trim().toIntOrNull() }.toSet()
+        val ranges = r.split(',').mapNotNull { span ->
+            val a = span.substringBefore('-', "").toIntOrNull()
+            val b = span.substringAfter('-', "").toIntOrNull()
+            if (a != null && b != null && a <= b) a..b else null
+        }
+        val c = FwClaims(exact, ranges)
+        return if (c.isEmpty) null else c
+    }
+}

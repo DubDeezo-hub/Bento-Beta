@@ -16,8 +16,10 @@ import android.os.Looper
 import android.os.PowerManager
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.cancel
+import kotlinx.coroutines.joinAll
 import kotlinx.coroutines.launch
 
 /** The longest the phone is kept awake for one run of transfers (a safety net: the locks are normally let go much earlier). */
@@ -121,16 +123,28 @@ class TransferService : Service() {
         return START_NOT_STICKY
     }
 
-    /** Runs the queued transfers one after the other until none is left or one fails and the queue has to wait. */
     /** Whether the newest transfer came from the web (it then has its own notice when it ends). */
     @Volatile private var lastFromWeb = false
 
+    /**
+     * Runs the queued transfers until none is left or one fails and the queue has to wait. With "Files at once" above 1,
+     * helper lanes upload further files from the phone next to the one shown.
+     */
     private suspend fun work() {
         val locks = TransferLocks(this)
         locks.acquire()
         val watcher = scope.launch { watchProgress() }
+        val helpers = ArrayList<Job>()
         try {
             while (true) {
+                // Nothing waits but helpers ran: wait for them (one may give its file back), then end the run
+                if (TransferState.queue.waitingCount == 0 && helpers.isNotEmpty()) {
+                    helpers.joinAll()
+                    helpers.clear()
+                    if (TransferState.queue.waitingCount == 0) TransferState.helpersDone()
+                }
+                // More files at once: helper lanes take the next uploads from the phone next to this one
+                topUpHelpers(helpers)
                 val entry = TransferState.takeNext() ?: break
                 TransferState.begin(entry)
                 // A download from the web to the console is announced when it starts and when it has arrived
@@ -145,9 +159,45 @@ class TransferService : Service() {
                 if (!TransferState.finishItem(entry, result)) break
             }
         } finally {
+            // Helpers still uploading finish (or give their file back) before the service lets go
+            try {
+                helpers.joinAll()
+            } catch (_: Exception) {
+            }
             watcher.cancel()
             locks.release()
             mainHandler.post { workerEnded() }
+        }
+    }
+
+    /** Starts helper lanes until there are as many as the setting allows (one lane is the worker itself). */
+    private fun topUpHelpers(helpers: MutableList<Job>) {
+        while (helpers.count { it.isActive } < TransferState.lanes - 1 && TransferState.helpersAllowed() &&
+            TransferState.queue.waitingCount > 1
+        ) {
+            helpers.add(scope.launch(Dispatchers.IO) { helperLane() })
+        }
+    }
+
+    /** One helper lane: uploads waiting files from the phone, each on its own connection, until none is left for it. */
+    private fun helperLane() {
+        while (true) {
+            val entry = TransferState.takeForHelper() ?: return
+            val req = entry.item
+            val hooks = TransferState.helperHooks()
+            val result = try {
+                ftpUploadPicked(
+                    contentResolver, Uri.parse(req.fileUri), req.name,
+                    FtpSettings(req.host, req.port, req.user, req.pass, req.model), req.dir,
+                    TransferState.memoryFor(entry.id), hooks
+                )
+            } catch (e: Exception) {
+                TransferResult(false, failedText(e), retry = true)
+            } finally {
+                hooks.setAbort(null)
+            }
+            TransferState.helperFinished(entry, result, hooks.bytes)
+            if (!result.ok) return // the worker shows what went wrong; this lane stops
         }
     }
 

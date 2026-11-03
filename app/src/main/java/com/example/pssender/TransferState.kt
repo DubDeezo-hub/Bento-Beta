@@ -109,6 +109,33 @@ class TransferCenter(clock: () -> Long = { System.currentTimeMillis() }) : Trans
     /** The transfer the worker has taken and not finished yet. */
     private var current: TransferRequest? = null
 
+    /** How many files go at once (1: one after the other). Set from the saved setting ([Turbo]). */
+    @Volatile
+    var lanes = 1
+
+    /** The transfers the helper lanes are on (see [takeForHelper]). Guarded by [listLock]. */
+    private val helping = ArrayList<TransferRequest>()
+
+    /** Transfers that ended without finishing (stopped, or skipped after failing), newest first, for "Try again". */
+    private val missedState = MutableStateFlow<List<MissedTransfer>>(emptyList())
+    val missed: StateFlow<List<MissedTransfer>> get() = missedState
+
+    private fun noteMissed(req: TransferRequest, message: String) {
+        missedState.update { list -> (listOf(MissedTransfer(req, message)) + list.filterNot { sameTransfer(it.req, req) }).take(MISSED_MAX) }
+    }
+
+    /** Takes [m] off the list (it is being tried again, or dropped). */
+    fun dropMissed(m: MissedTransfer) {
+        missedState.update { list -> list.filterNot { it === m } }
+    }
+
+    fun clearMissed() {
+        missedState.value = emptyList()
+    }
+
+    /** What closes the connections of each helper lane, for a pause. */
+    private val helperAborts = java.util.Collections.synchronizedSet(HashSet<() -> Unit>())
+
     /** True once the service was cut short from outside: the transfer it was on is not lost, it waits for the user's decision. */
     @Volatile
     private var interrupted = false
@@ -152,6 +179,7 @@ class TransferCenter(clock: () -> Long = { System.currentTimeMillis() }) : Trans
             queue.skipParked().also { record() }
         }
         if (failed != null) {
+            noteMissed(failed.item, info.value.message)
             discard(failed.id, true)
             tally.transferFailed()
         }
@@ -249,6 +277,7 @@ class TransferCenter(clock: () -> Long = { System.currentTimeMillis() }) : Trans
     /** True when [req] is the same work as something that runs, failed and waits, or waits its turn. Call with [listLock] held. */
     private fun isListed(req: TransferRequest): Boolean =
         current?.let { sameTransfer(it, req) } == true ||
+            helping.any { sameTransfer(it, req) } ||
             queue.parked?.let { sameTransfer(it.item, req) } == true ||
             queue.waiting.value.any { sameTransfer(it.item, req) }
 
@@ -256,6 +285,7 @@ class TransferCenter(clock: () -> Long = { System.currentTimeMillis() }) : Trans
     private fun snapshot(): List<TransferRequest> {
         val now = ArrayList<TransferRequest>()
         current?.let { now.add(it) }
+        now.addAll(helping)
         queue.parked?.let { now.add(it.item) }
         for (e in queue.waiting.value) now.add(e.item)
         now.addAll(unfinishedState.value)
@@ -286,6 +316,7 @@ class TransferCenter(clock: () -> Long = { System.currentTimeMillis() }) : Trans
         tally.paused()
         info.update { it.copy(paused = true, speed = 0L, secondsLeft = -1L, status = "") }
         closeConnections() // a transfer that is stuck waiting on the network stops at once, too
+        closeHelpers() // the helper lanes give their files back; they go on after the pause
         return true
     }
 
@@ -367,7 +398,7 @@ class TransferCenter(clock: () -> Long = { System.currentTimeMillis() }) : Trans
      * several ends, the card shows how the run went as a whole.
      */
     fun finishItem(entry: QueueEntry<TransferRequest>, result: TransferResult): Boolean {
-        val more = queue.waitingCount > 0
+        val more = queue.waitingCount > 0 || helpersBusy > 0
         if (result.ok) {
             leaveList()
             discard(entry.id, false)
@@ -381,6 +412,7 @@ class TransferCenter(clock: () -> Long = { System.currentTimeMillis() }) : Trans
         }
         val cutShort = interrupted
         if (result.cancelled && !cutShort) {
+            noteMissed(entry.item, result.message)
             leaveList()
             discard(entry.id, false)
             tally.transferStopped()
@@ -399,6 +431,55 @@ class TransferCenter(clock: () -> Long = { System.currentTimeMillis() }) : Trans
         val text = if (cutShort) AppText.get(R.string.transfer_stopped) else result.message
         info.update { ended(it, text, false).copy(parked = true, canRetry = result.retry || cutShort) }
         return false
+    }
+
+    // ----- helper lanes: more files at once -----
+
+    /** Whether helper lanes may run now: more than one lane, no speed limit (it is for one connection), not paused. */
+    fun helpersAllowed(): Boolean = lanes > 1 && limitState.value == 0L && !pausedState.value
+
+    /** How many transfers the helper lanes are on right now. */
+    val helpersBusy: Int get() = synchronized(listLock) { helping.size }
+
+    /**
+     * A helper lane takes the next waiting upload of a file from the phone (links and downloads stay with the worker, which
+     * shows their progress). Null when there is none, or helpers may not run now.
+     */
+    fun takeForHelper(): QueueEntry<TransferRequest>? {
+        if (!helpersAllowed()) return null
+        return synchronized(listLock) {
+            // The last one in line is always left for the worker, so only the worker empties the line (and then waits
+            // for its helpers before it stops)
+            if (queue.waitingCount <= 1) null else queue.takeFirst { fitsHelper(it) }?.also { helping.add(it.item) }
+        }
+    }
+
+    /** [entry] from a helper lane ended. Done: counted. Otherwise it goes back first in line, and the worker deals with it. */
+    fun helperFinished(entry: QueueEntry<TransferRequest>, result: TransferResult, bytes: Long) {
+        synchronized(listLock) {
+            helping.remove(entry.item)
+            if (!result.ok) queue.putBack(entry)
+            record()
+        }
+        if (result.ok) {
+            discard(entry.id, false)
+            tally.transferDone(bytes)
+            info.update { it.copy(completed = it.completed + 1) }
+        }
+    }
+
+    /** The hooks a helper lane hands the engine: it stops for a pause, and counts its own bytes. */
+    fun helperHooks(): HelperHooks = HelperHooks(this, helperAborts)
+
+    /**
+     * The worker found nothing more to do after waiting for its helpers. When the card still shows a run going (its last
+     * file ended while helpers were busy), the run ends here and says how it went.
+     */
+    fun helpersDone() {
+        val now = info.value
+        if (!now.active || queue.waitingCount > 0 || queue.parked != null) return
+        val end = runEnd()
+        info.update { ended(it, AppText.get(R.string.turbo_all_sent, it.completed), true).withSummary(end) }
     }
 
     /** The worker is through with its transfer: it is no longer unfinished work. */
@@ -502,6 +583,20 @@ class TransferCenter(clock: () -> Long = { System.currentTimeMillis() }) : Trans
         }
     }
 
+    /** Closes the connections of the helper lanes, off the caller's thread. */
+    private fun closeHelpers() {
+        val hooks = synchronized(helperAborts) { helperAborts.toList() }
+        if (hooks.isEmpty()) return
+        Thread {
+            for (h in hooks) {
+                try {
+                    h()
+                } catch (_: Exception) {
+                }
+            }
+        }.start()
+    }
+
     /** Forgets what the engine remembered about [id] and cleans up after it (for example deletes a half-written download). */
     private fun discard(id: Long, inBackground: Boolean) {
         val memory = synchronized(memories) { memories.remove(id) } ?: return
@@ -520,6 +615,44 @@ class TransferCenter(clock: () -> Long = { System.currentTimeMillis() }) : Trans
             } catch (_: Exception) {
             }
         }
+    }
+}
+
+/** A transfer that ended without finishing, and why ([message]). */
+class MissedTransfer(val req: TransferRequest, val message: String, val at: Long = System.currentTimeMillis())
+
+/** How many transfers that didn't finish are kept for "Try again". */
+const val MISSED_MAX = 30
+
+/** Whether a helper lane may take [req]: an upload of a file picked on the phone. */
+fun fitsHelper(req: TransferRequest): Boolean = req.fileUri != null && req.url == null && req.remotePath == null
+
+/**
+ * What a helper lane's transfer reports to: it stops when the user pauses (the file goes back in line), keeps its own
+ * byte count (the card shows the worker's file), and lets the center close its connection.
+ */
+class HelperHooks(private val center: TransferCenter, private val aborts: MutableSet<() -> Unit>) : TransferHooks {
+    @Volatile
+    var bytes = 0L
+        private set
+    private var hook: (() -> Unit)? = null
+
+    override val cancelled: Boolean get() = center.paused
+
+    override fun starting(done: Long, total: Long) {
+        bytes = done
+    }
+
+    override fun progress(done: Long, total: Long) {
+        bytes = done
+    }
+
+    override fun status(text: String) {}
+
+    override fun setAbort(hook: (() -> Unit)?) {
+        this.hook?.let { aborts.remove(it) }
+        this.hook = hook
+        hook?.let { aborts.add(it) }
     }
 }
 

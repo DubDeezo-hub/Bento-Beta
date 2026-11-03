@@ -136,6 +136,8 @@ class MainActivity : ComponentActivity() {
         CrashReports.install(this, appVersion(this).name) // a crash from here on is noted, and offered on the next start
         OnlineAlert.schedule(this) // the "console is online" check, while any console has it on
         TransferState.setSpeedLimit(SpeedLimits.load(this)) // the saved speed limit applies from the first transfer on
+        TransferState.lanes = FilesAtOnce.load(this)
+        PayloadFirmware.load(this)
         // Only on a fresh start: after a rotation the same intent would otherwise be handled twice
         if (savedInstanceState == null) {
             readShare(intent)
@@ -286,6 +288,10 @@ fun SenderApp(
     val waiting by TransferState.queue.waiting.collectAsState()
     val leftovers by TransferState.unfinished.collectAsState() // transfers the last run of the app did not finish
     val askNotifications = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { }
+    // Android 17: reaching the console needs the "local network" permission; refused, the status line says why
+    val askLocalNetwork = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+        if (!granted) statusLine = AppText.get(R.string.local_network_refused)
+    }
     // One browser for the whole session, so the pages survive switching tabs; its own tabs come back from savedTabs after a rebuild
     val web = remember {
         allowedSites.add(siteOf(Uri.parse(homeUrl).host))
@@ -300,6 +306,7 @@ fun SenderApp(
     SideEffect {
         ActiveConsole.type = active.type
         ActiveConsole.id = active.id
+        PayloadFirmware.consoleFirmware = ConsoleFirmware.number(ConsoleFirmware.get(ctx, active.id))
     }
     // The debugger tells us the console's firmware; the store uses it to say which payloads fit
     val seenFirmware = MemorySession.snapshot?.info?.firmware.orEmpty()
@@ -522,6 +529,21 @@ fun SenderApp(
     // The shortcuts on the app icon follow the saved chains (a restore rebuilds the screen, so they follow that, too)
     LaunchedEffect(Unit) { ChainShortcuts.publish(ctx, chains) }
     LaunchedEffect(Unit) { WelcomeState.check(ctx) }
+    LaunchedEffect(Unit) { if (!LocalNetwork.allowed(ctx)) askLocalNetwork.launch(LocalNetwork.PERMISSION) }
+    // The saved address doesn't answer at the start: look for the console on the Wi-Fi network and offer what answers
+    var autoFound by remember { mutableStateOf<AutoFound?>(null) }
+    LaunchedEffect(Unit) {
+        val p = active
+        if (p.host.isBlank()) return@LaunchedEffect
+        delay(AUTO_FIND_DELAY_MS) // the app's first checks go first
+        val others = profiles.filter { it.id != p.id }.map { it.host.trim() }.toSet()
+        val found = withContext(Dispatchers.IO) {
+            if (!LocalNetwork.allowed(ctx) || OnlineAlert.answers(p)) return@withContext null
+            val nets = scanNetworks(localAddresses(), ::routeSource)
+            if (nets.isEmpty()) null else autoPick(scanWifi(nets, scanPortsFor(p)), p.host, others)
+        }
+        if (found != null) autoFound = AutoFound(p.id, p.host.trim(), found)
+    }
 
     // A chain asked for from the app icon or the home screen: show the Payload tab and start it
     LaunchedEffect(chainRequest) {
@@ -858,10 +880,27 @@ fun SenderApp(
                     dismissButton = { TextButton(onClick = { CrashReports.clear(ctx); crashReport = null }) { Text(str(R.string.action_close)) } }
                 )
             }
+            autoFound?.let { f ->
+                if (f.profileId == active.id && host.trim() == f.saved) {
+                    AlertDialog(
+                        onDismissRequest = { autoFound = null },
+                        title = { Text(str(R.string.autofind_title, active.type.model)) },
+                        text = { Text(str(R.string.autofind_text, active.name, f.saved, f.found)) },
+                        confirmButton = {
+                            TextButton(onClick = {
+                                updateActive { it.copy(host = f.found) }
+                                statusLine = AppText.get(R.string.find_updated, active.name, f.found)
+                                autoFound = null
+                            }) { Text(str(R.string.action_use)) }
+                        },
+                        dismissButton = { TextButton(onClick = { autoFound = null }) { Text(str(R.string.autofind_keep)) } }
+                    )
+                }
+            }
             reloadAsk?.let { (why, go) ->
                 AlertDialog(
                     onDismissRequest = { reloadAsk = null },
-                    title = { Text(str(R.string.reload_warn_title)) },
+                    title = { Text(str(R.string.send_check_title)) },
                     text = { Text(why) },
                     confirmButton = { TextButton(onClick = { reloadAsk = null; go() }) { Text(str(R.string.reload_send_anyway)) } },
                     dismissButton = { TextButton(onClick = { reloadAsk = null }) { Text(str(R.string.action_cancel)) } }

@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Esa cadena ya no existe.</string>
     <string name="notif_channel_chain">Cadenas de payloads</string>
     <string name="backup_chains">Cadenas: %1$d</string>
-    <string name="reload_warn_title">¿Ya está cargado?</string>
     <string name="reload_warn_running">etaHEN ya responde en esta consola (su servidor FTP en el puerto %2$d está activo). Volver a cargar %1$s mientras funciona puede colgar la consola. Envíalo solo si etaHEN ha dejado de funcionar.</string>
     <string name="reload_warn_sent">%1$s ya se envió a esta consola hace %2$s. Cargarlo por segunda vez puede colgar la consola. Vuelve a enviarlo solo si la consola se ha reiniciado desde entonces.</string>
     <string name="reload_send_anyway">Enviar igualmente</string>
@@ -1236,4 +1235,29 @@
     <string name="notice_dl_done_text">%1$s está en la %2$s, en %3$s</string>
     <string name="notice_dl_failed_title">No llegó a la %1$s</string>
     <string name="notice_install_title">Enviado al instalador de la %1$s</string>
+    <string name="local_network_refused">Crimson Multitool no puede llegar a tu consola sin el permiso de Dispositivos cercanos. Permítelo en los ajustes del teléfono.</string>
+    <string name="turbo_title">Archivos a la vez</string>
+    <string name="turbo_hint">Los archivos del teléfono se suben a la vez, cada uno por su propia conexión. Muchos archivos pequeños van mucho más rápido.</string>
+    <string name="turbo_hint_limited">Quita el límite de velocidad para enviar más de un archivo a la vez.</string>
+    <string name="turbo_all_sent">Enviados los %1$d archivos</string>
+    <string name="send_check_title">Comprobar antes de enviar</string>
+    <string name="fwcheck_warn">La página de %1$s indica el firmware %2$s a %3$s. Tu %4$s tiene %5$s, que no aparece. Puede que no funcione o que bloquee la consola.</string>
+    <string name="stab_title">Estabilidad</string>
+    <string name="stab_hint">Cuántas veces se cayó la consola en los 10 minutos siguientes a cargar cada payload.</string>
+    <string name="stab_row">%1$s: cargado %2$d veces, se cayó después %3$d</string>
+    <string name="stab_suspect">%1$s: la consola se cayó después %2$d de %3$d veces. Prueba sin él.</string>
+    <string name="stab_reset">Reiniciar cuentas</string>
+    <string name="missed_title">Sin terminar</string>
+    <string name="missed_empty">Todas las transferencias terminaron.</string>
+    <string name="missed_retry">Reintentar</string>
+    <string name="missed_retry_all">Reintentar todo</string>
+    <string name="missed_clear">Vaciar lista</string>
+    <string name="autofind_title">¿Es esta tu %1$s?</string>
+    <string name="autofind_text">%1$s no responde en %2$s, pero una consola responde en %3$s. ¿Usar la nueva dirección?</string>
+    <string name="autofind_keep">Mantener la anterior</string>
+    <string name="cheatshare_open">Abrir un archivo</string>
+    <string name="cheatshare_unreadable">Ese archivo no se puede leer como lista de trucos.</string>
+    <string name="cheatshare_save">Guardar como archivo</string>
+    <string name="cheatshare_saved">Lista de trucos guardada. Envía el archivo a quien quieras: se abre con Importar.</string>
+    <string name="cheatshare_save_failed">No se pudo guardar el archivo.</string>
 </resources>

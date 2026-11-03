@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">ती चेन आता अस्तित्वात नाही.</string>
     <string name="notif_channel_chain">Payload चेन</string>
     <string name="backup_chains">चेन: %1$d</string>
-    <string name="reload_warn_title">आधीच लोड केले?</string>
     <string name="reload_warn_running">या कन्सोलवर etaHEN आधीच प्रतिसाद देत आहे (पोर्ट %2$d वर त्याचा FTP सर्व्हर चालू आहे). ते चालू असताना %1$s पुन्हा लोड केल्यास कन्सोल क्रॅश होऊ शकतो. etaHEN काम करणे थांबले असेल तरच पाठवा.</string>
     <string name="reload_warn_sent">%1$s या कन्सोलला %2$s पूर्वी आधीच पाठवले आहे. दुसऱ्यांदा लोड केल्यास कन्सोल क्रॅश होऊ शकतो. तेव्हापासून कन्सोल रीस्टार्ट झाला असेल तरच पुन्हा पाठवा.</string>
     <string name="reload_send_anyway">तरीही पाठवा</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s आता %2$s वर %3$s मध्ये आहे</string>
     <string name="notice_dl_failed_title">%1$s पर्यंत पोहोचले नाही</string>
     <string name="notice_install_title">%1$s च्या इंस्टॉलरला पाठवले</string>
+    <string name="local_network_refused">जवळपासची डिव्हाइस परवानगी नसल्यास Crimson Multitool तुमच्या कन्सोलपर्यंत पोहोचू शकत नाही. फोनच्या सेटिंग्जमध्ये परवानगी द्या.</string>
+    <string name="turbo_title">एकाच वेळी फायली</string>
+    <string name="turbo_hint">फोनच्या फायली शेजारी शेजारी अपलोड होतात, प्रत्येक स्वतःच्या कनेक्शनवर. अनेक लहान फायली खूप वेगाने जातात.</string>
+    <string name="turbo_hint_limited">एकाच वेळी एकापेक्षा जास्त फाइल पाठवण्यासाठी वेग मर्यादा बंद करा.</string>
+    <string name="turbo_all_sent">सर्व %1$d फायली पाठवल्या</string>
+    <string name="send_check_title">पाठवण्यापूर्वी तपासा</string>
+    <string name="fwcheck_warn">%1$s च्या पानावर फर्मवेअर %2$s ते %3$s दिले आहे. तुमचे %4$s %5$s वर आहे, जे त्यात नाही. ते चालणार नाही किंवा कन्सोल क्रॅश होऊ शकतो.</string>
+    <string name="stab_title">स्थिरता</string>
+    <string name="stab_hint">प्रत्येक पेलोड लोड केल्यानंतर 10 मिनिटांत कन्सोल किती वेळा बंद पडला.</string>
+    <string name="stab_row">%1$s: %2$d वेळा लोड, नंतर %3$d वेळा बंद पडला</string>
+    <string name="stab_suspect">%1$s: यानंतर कन्सोल %3$d पैकी %2$d वेळा बंद पडला. याशिवाय करून पहा.</string>
+    <string name="stab_reset">मोजणी रीसेट करा</string>
+    <string name="missed_title">पूर्ण झाले नाहीत</string>
+    <string name="missed_empty">सर्व हस्तांतरणे पूर्ण झाली.</string>
+    <string name="missed_retry">पुन्हा प्रयत्न करा</string>
+    <string name="missed_retry_all">सर्व पुन्हा प्रयत्न करा</string>
+    <string name="missed_clear">यादी साफ करा</string>
+    <string name="autofind_title">हा तुमचा %1$s आहे का?</string>
+    <string name="autofind_text">%1$s %2$s वर उत्तर देत नाही, पण %3$s वर एक कन्सोल उत्तर देतो. नवीन पत्ता वापरायचा?</string>
+    <string name="autofind_keep">जुनाच ठेवा</string>
+    <string name="cheatshare_open">फाइल उघडा</string>
+    <string name="cheatshare_unreadable">ही फाइल चीट यादी म्हणून वाचता येत नाही.</string>
+    <string name="cheatshare_save">फाइल म्हणून सेव्ह करा</string>
+    <string name="cheatshare_saved">चीट यादी सेव्ह झाली. फाइल कोणालाही पाठवा: ती इम्पोर्टने उघडते.</string>
+    <string name="cheatshare_save_failed">फाइल सेव्ह करता आली नाही.</string>
 </resources>

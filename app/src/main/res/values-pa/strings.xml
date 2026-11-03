@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">ਉਹ ਚੇਨ ਹੁਣ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।</string>
     <string name="notif_channel_chain">Payload ਚੇਨਾਂ</string>
     <string name="backup_chains">ਚੇਨਾਂ: %1$d</string>
-    <string name="reload_warn_title">ਪਹਿਲਾਂ ਹੀ ਲੋਡ ਹੈ?</string>
     <string name="reload_warn_running">ਇਸ ਕੰਸੋਲ \'ਤੇ etaHEN ਪਹਿਲਾਂ ਹੀ ਜਵਾਬ ਦੇ ਰਿਹਾ ਹੈ (ਪੋਰਟ %2$d \'ਤੇ ਇਸਦਾ FTP ਸਰਵਰ ਚੱਲ ਰਿਹਾ ਹੈ)। ਇਸਦੇ ਚੱਲਦਿਆਂ %1$s ਦੁਬਾਰਾ ਲੋਡ ਕਰਨ ਨਾਲ ਕੰਸੋਲ ਕ੍ਰੈਸ਼ ਹੋ ਸਕਦਾ ਹੈ। ਤਾਂ ਹੀ ਭੇਜੋ ਜੇ etaHEN ਕੰਮ ਕਰਨਾ ਬੰਦ ਕਰ ਚੁੱਕਾ ਹੋਵੇ।</string>
     <string name="reload_warn_sent">%1$s ਇਸ ਕੰਸੋਲ ਨੂੰ %2$s ਪਹਿਲਾਂ ਭੇਜਿਆ ਜਾ ਚੁੱਕਾ ਹੈ। ਦੂਜੀ ਵਾਰ ਲੋਡ ਕਰਨ ਨਾਲ ਕੰਸੋਲ ਕ੍ਰੈਸ਼ ਹੋ ਸਕਦਾ ਹੈ। ਤਾਂ ਹੀ ਦੁਬਾਰਾ ਭੇਜੋ ਜੇ ਉਦੋਂ ਤੋਂ ਕੰਸੋਲ ਰੀਸਟਾਰਟ ਹੋਇਆ ਹੋਵੇ।</string>
     <string name="reload_send_anyway">ਫਿਰ ਵੀ ਭੇਜੋ</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s ਹੁਣ %2$s \'ਤੇ %3$s ਵਿੱਚ ਹੈ</string>
     <string name="notice_dl_failed_title">%1$s ਤੱਕ ਨਹੀਂ ਪਹੁੰਚਿਆ</string>
     <string name="notice_install_title">%1$s ਦੇ ਇੰਸਟਾਲਰ ਨੂੰ ਭੇਜਿਆ</string>
+    <string name="local_network_refused">ਨੇੜਲੇ ਡੀਵਾਈਸ ਦੀ ਇਜਾਜ਼ਤ ਤੋਂ ਬਿਨਾਂ Crimson Multitool ਤੁਹਾਡੇ ਕੰਸੋਲ ਤੱਕ ਨਹੀਂ ਪਹੁੰਚ ਸਕਦਾ। ਫ਼ੋਨ ਦੀਆਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਇਜਾਜ਼ਤ ਦਿਓ।</string>
+    <string name="turbo_title">ਇੱਕੋ ਵੇਲੇ ਫ਼ਾਈਲਾਂ</string>
+    <string name="turbo_hint">ਫ਼ੋਨ ਦੀਆਂ ਫ਼ਾਈਲਾਂ ਨਾਲ-ਨਾਲ ਅੱਪਲੋਡ ਹੁੰਦੀਆਂ ਹਨ, ਹਰ ਇੱਕ ਆਪਣੇ ਕਨੈਕਸ਼ਨ \'ਤੇ। ਕਈ ਛੋਟੀਆਂ ਫ਼ਾਈਲਾਂ ਬਹੁਤ ਤੇਜ਼ ਜਾਂਦੀਆਂ ਹਨ।</string>
+    <string name="turbo_hint_limited">ਇੱਕੋ ਵੇਲੇ ਇੱਕ ਤੋਂ ਵੱਧ ਫ਼ਾਈਲ ਭੇਜਣ ਲਈ ਸਪੀਡ ਸੀਮਾ ਬੰਦ ਕਰੋ।</string>
+    <string name="turbo_all_sent">ਸਾਰੀਆਂ %1$d ਫ਼ਾਈਲਾਂ ਭੇਜੀਆਂ</string>
+    <string name="send_check_title">ਭੇਜਣ ਤੋਂ ਪਹਿਲਾਂ ਜਾਂਚੋ</string>
+    <string name="fwcheck_warn">%1$s ਦੇ ਪੰਨੇ \'ਤੇ ਫ਼ਰਮਵੇਅਰ %2$s ਤੋਂ %3$s ਲਿਖਿਆ ਹੈ। ਤੁਹਾਡਾ %4$s %5$s \'ਤੇ ਹੈ, ਜੋ ਉਸ ਵਿੱਚ ਨਹੀਂ। ਇਹ ਨਾ ਚੱਲੇ ਜਾਂ ਕੰਸੋਲ ਕ੍ਰੈਸ਼ ਹੋ ਸਕਦਾ ਹੈ।</string>
+    <string name="stab_title">ਸਥਿਰਤਾ</string>
+    <string name="stab_hint">ਹਰ ਪੇਲੋਡ ਲੋਡ ਕਰਨ ਤੋਂ 10 ਮਿੰਟ ਅੰਦਰ ਕੰਸੋਲ ਕਿੰਨੀ ਵਾਰ ਬੰਦ ਹੋਇਆ।</string>
+    <string name="stab_row">%1$s: %2$d ਵਾਰ ਲੋਡ, ਫਿਰ %3$d ਵਾਰ ਬੰਦ ਹੋਇਆ</string>
+    <string name="stab_suspect">%1$s: ਇਸ ਤੋਂ ਬਾਅਦ ਕੰਸੋਲ %3$d ਵਿੱਚੋਂ %2$d ਵਾਰ ਬੰਦ ਹੋਇਆ। ਇਸ ਤੋਂ ਬਿਨਾਂ ਅਜ਼ਮਾਓ।</string>
+    <string name="stab_reset">ਗਿਣਤੀ ਰੀਸੈੱਟ ਕਰੋ</string>
+    <string name="missed_title">ਪੂਰੇ ਨਹੀਂ ਹੋਏ</string>
+    <string name="missed_empty">ਸਾਰੇ ਟ੍ਰਾਂਸਫ਼ਰ ਪੂਰੇ ਹੋ ਗਏ।</string>
+    <string name="missed_retry">ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ</string>
+    <string name="missed_retry_all">ਸਾਰੇ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ</string>
+    <string name="missed_clear">ਸੂਚੀ ਸਾਫ਼ ਕਰੋ</string>
+    <string name="autofind_title">ਕੀ ਇਹ ਤੁਹਾਡਾ %1$s ਹੈ?</string>
+    <string name="autofind_text">%1$s %2$s \'ਤੇ ਜਵਾਬ ਨਹੀਂ ਦਿੰਦਾ, ਪਰ %3$s \'ਤੇ ਇੱਕ ਕੰਸੋਲ ਜਵਾਬ ਦਿੰਦਾ ਹੈ। ਨਵਾਂ ਪਤਾ ਵਰਤਣਾ ਹੈ?</string>
+    <string name="autofind_keep">ਪੁਰਾਣਾ ਰੱਖੋ</string>
+    <string name="cheatshare_open">ਫ਼ਾਈਲ ਖੋਲ੍ਹੋ</string>
+    <string name="cheatshare_unreadable">ਇਹ ਫ਼ਾਈਲ ਚੀਟ ਸੂਚੀ ਵਜੋਂ ਨਹੀਂ ਪੜ੍ਹੀ ਜਾ ਸਕਦੀ।</string>
+    <string name="cheatshare_save">ਫ਼ਾਈਲ ਵਜੋਂ ਸੰਭਾਲੋ</string>
+    <string name="cheatshare_saved">ਚੀਟ ਸੂਚੀ ਸੰਭਾਲੀ ਗਈ। ਫ਼ਾਈਲ ਕਿਸੇ ਨੂੰ ਵੀ ਭੇਜੋ: ਇਹ ਇੰਪੋਰਟ ਨਾਲ ਖੁੱਲ੍ਹਦੀ ਹੈ।</string>
+    <string name="cheatshare_save_failed">ਫ਼ਾਈਲ ਸੰਭਾਲੀ ਨਹੀਂ ਜਾ ਸਕੀ।</string>
 </resources>

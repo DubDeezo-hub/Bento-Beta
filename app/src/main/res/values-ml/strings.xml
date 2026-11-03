@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">ആ ചെയിൻ ഇനി നിലവിലില്ല.</string>
     <string name="notif_channel_chain">Payload ചെയിനുകൾ</string>
     <string name="backup_chains">ചെയിനുകൾ: %1$d</string>
-    <string name="reload_warn_title">ഇതിനകം ലോഡ് ചെയ്തോ?</string>
     <string name="reload_warn_running">ഈ കൺസോളിൽ etaHEN ഇതിനകം പ്രതികരിക്കുന്നു (പോർട്ട് %2$d-ലെ അതിന്റെ FTP സെർവർ പ്രവർത്തിക്കുന്നു). അത് പ്രവർത്തിക്കുമ്പോൾ %1$s വീണ്ടും ലോഡ് ചെയ്താൽ കൺസോൾ ക്രാഷ് ആകാം. etaHEN പ്രവർത്തനം നിർത്തിയാൽ മാത്രം അയയ്ക്കുക.</string>
     <string name="reload_warn_sent">%1$s %2$s മുമ്പ് ഈ കൺസോളിലേക്ക് ഇതിനകം അയച്ചിട്ടുണ്ട്. രണ്ടാമതും ലോഡ് ചെയ്താൽ കൺസോൾ ക്രാഷ് ആകാം. അതിനുശേഷം കൺസോൾ റീസ്റ്റാർട്ട് ചെയ്തെങ്കിൽ മാത്രം വീണ്ടും അയയ്ക്കുക.</string>
     <string name="reload_send_anyway">എന്നാലും അയയ്ക്കുക</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s ഇപ്പോൾ %2$s ലെ %3$s ൽ ഉണ്ട്</string>
     <string name="notice_dl_failed_title">%1$s ൽ എത്തിയില്ല</string>
     <string name="notice_install_title">%1$s ഇൻസ്റ്റാളറിലേക്ക് അയച്ചു</string>
+    <string name="local_network_refused">സമീപത്തുള്ള ഉപകരണങ്ങൾ എന്ന അനുമതി ഇല്ലാതെ Crimson Multitool-ന് കൺസോളിൽ എത്താനാവില്ല. ഫോൺ ക്രമീകരണങ്ങളിൽ അനുവദിക്കുക.</string>
+    <string name="turbo_title">ഒരേസമയം ഫയലുകൾ</string>
+    <string name="turbo_hint">ഫോണിലെ ഫയലുകൾ ഒരുമിച്ച് അപ്‌ലോഡ് ചെയ്യുന്നു, ഓരോന്നും സ്വന്തം കണക്ഷനിൽ. ധാരാളം ചെറിയ ഫയലുകൾ വളരെ വേഗത്തിൽ പോകും.</string>
+    <string name="turbo_hint_limited">ഒന്നിലധികം ഫയലുകൾ ഒരുമിച്ച് അയയ്ക്കാൻ വേഗപരിധി ഓഫാക്കുക.</string>
+    <string name="turbo_all_sent">എല്ലാ %1$d ഫയലുകളും അയച്ചു</string>
+    <string name="send_check_title">അയയ്ക്കും മുമ്പ് പരിശോധിക്കുക</string>
+    <string name="fwcheck_warn">%1$s പേജിൽ ഫേംവെയർ %2$s മുതൽ %3$s വരെ പറയുന്നു. നിങ്ങളുടെ %4$s %5$s-ലാണ്, അത് അതിലില്ല. ഇത് പ്രവർത്തിക്കാതിരിക്കാം അല്ലെങ്കിൽ കൺസോൾ ക്രാഷ് ആകാം.</string>
+    <string name="stab_title">സ്ഥിരത</string>
+    <string name="stab_hint">ഓരോ പേലോഡും ലോഡ് ചെയ്ത് 10 മിനിറ്റിനുള്ളിൽ കൺസോൾ എത്ര തവണ നിലച്ചു.</string>
+    <string name="stab_row">%1$s: %2$d തവണ ലോഡ്, ശേഷം %3$d തവണ നിലച്ചു</string>
+    <string name="stab_suspect">%1$s: ഇതിനുശേഷം കൺസോൾ %3$d-ൽ %2$d തവണ നിലച്ചു. ഇതില്ലാതെ ശ്രമിക്കുക.</string>
+    <string name="stab_reset">എണ്ണം പുനഃസജ്ജമാക്കുക</string>
+    <string name="missed_title">പൂർത്തിയായില്ല</string>
+    <string name="missed_empty">എല്ലാ കൈമാറ്റങ്ങളും പൂർത്തിയായി.</string>
+    <string name="missed_retry">വീണ്ടും ശ്രമിക്കുക</string>
+    <string name="missed_retry_all">എല്ലാം വീണ്ടും ശ്രമിക്കുക</string>
+    <string name="missed_clear">പട്ടിക മായ്ക്കുക</string>
+    <string name="autofind_title">ഇത് നിങ്ങളുടെ %1$s ആണോ?</string>
+    <string name="autofind_text">%1$s %2$s-ൽ മറുപടി നൽകുന്നില്ല, പക്ഷേ %3$s-ൽ ഒരു കൺസോൾ മറുപടി നൽകുന്നു. പുതിയ വിലാസം ഉപയോഗിക്കണോ?</string>
+    <string name="autofind_keep">പഴയത് നിലനിർത്തുക</string>
+    <string name="cheatshare_open">ഫയൽ തുറക്കുക</string>
+    <string name="cheatshare_unreadable">ഈ ഫയൽ ചീറ്റ് പട്ടികയായി വായിക്കാനാവില്ല.</string>
+    <string name="cheatshare_save">ഫയലായി സേവ് ചെയ്യുക</string>
+    <string name="cheatshare_saved">ചീറ്റ് പട്ടിക സേവ് ചെയ്തു. ഫയൽ ആർക്കും അയയ്ക്കുക: ഇംപോർട്ട് വഴി തുറക്കാം.</string>
+    <string name="cheatshare_save_failed">ഫയൽ സേവ് ചെയ്യാനായില്ല.</string>
 </resources>

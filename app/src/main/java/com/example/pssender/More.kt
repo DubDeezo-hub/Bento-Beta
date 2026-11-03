@@ -83,6 +83,8 @@ fun MoreTab(
     var showLanguage by remember { mutableStateOf(false) }
     var showDiary by remember { mutableStateOf(false) }
     var showRunning by remember { mutableStateOf(false) }
+    var showMissed by remember { mutableStateOf(false) }
+    if (showMissed) MissedDialog { showMissed = false }
     if (showRunning && console != null) RunningDialog(console) { showRunning = false }
     if (showLanguage) LanguageDialog { showLanguage = false }
     if (showDiary) CrashDiaryDialog { showDiary = false }
@@ -94,6 +96,7 @@ fun MoreTab(
         RoundRow(str(R.string.consoles_title), letter = "C", onClick = onConsoles)
         RoundRow(str(R.string.running_title), letter = "●", enabled = console != null, onClick = { showRunning = true })
         RoundRow(str(R.string.crashdiary_title), letter = "!", onClick = { showDiary = true })
+        RoundRow(str(R.string.missed_title), letter = "↻", onClick = { showMissed = true })
         RoundRow(str(R.string.language_title), letter = "A", onClick = { showLanguage = true })
         RoundRow(str(R.string.about_button), letter = "i", onClick = onAbout)
     }

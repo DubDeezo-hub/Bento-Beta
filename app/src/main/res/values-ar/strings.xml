@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">هذه السلسلة لم تعد موجودة.</string>
     <string name="notif_channel_chain">سلاسل payload</string>
     <string name="backup_chains">السلاسل: %1$d</string>
-    <string name="reload_warn_title">هل حُمّل من قبل؟</string>
     <string name="reload_warn_running">يستجيب etaHEN بالفعل على هذا الجهاز (خادم FTP الخاص به على المنفذ %2$d يعمل). إعادة تحميل %1$s أثناء عمله قد تُسقط الجهاز. أرسله فقط إذا توقف etaHEN عن العمل.</string>
     <string name="reload_warn_sent">أُرسل %1$s إلى هذا الجهاز قبل %2$s. تحميله مرة ثانية قد يُسقط الجهاز. أعد إرساله فقط إذا أُعيد تشغيل الجهاز منذ ذلك الحين.</string>
     <string name="reload_send_anyway">أرسل على أي حال</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">‏%1$s موجود على %2$s في %3$s</string>
     <string name="notice_dl_failed_title">لم يصل إلى %1$s</string>
     <string name="notice_install_title">أُرسل إلى مثبّت %1$s</string>
+    <string name="local_network_refused">لا يستطيع Crimson Multitool الوصول إلى جهازك دون إذن «الأجهزة القريبة». اسمح به من إعدادات الهاتف.</string>
+    <string name="turbo_title">ملفات في وقت واحد</string>
+    <string name="turbo_hint">تُرفع ملفات الهاتف جنبًا إلى جنب، كل ملف عبر اتصاله الخاص. الملفات الصغيرة الكثيرة تصبح أسرع بكثير.</string>
+    <string name="turbo_hint_limited">أوقف حد السرعة لإرسال أكثر من ملف في وقت واحد.</string>
+    <string name="turbo_all_sent">أُرسلت الملفات كلها (%1$d)</string>
+    <string name="send_check_title">تحقّق قبل الإرسال</string>
+    <string name="fwcheck_warn">صفحة %1$s تذكر الإصدارات %2$s إلى %3$s. جهازك %4$s على %5$s، وهو غير مذكور. قد لا يعمل أو قد يتعطل الجهاز.</string>
+    <string name="stab_title">الثبات</string>
+    <string name="stab_hint">كم مرة توقف الجهاز خلال 10 دقائق من تحميل كل حمولة.</string>
+    <string name="stab_row">‏%1$s: حُمّل %2$d مرة، وتوقف الجهاز بعده %3$d</string>
+    <string name="stab_suspect">‏%1$s: توقف الجهاز بعده %2$d من %3$d مرات. جرّب دونه.</string>
+    <string name="stab_reset">تصفير العدادات</string>
+    <string name="missed_title">لم تكتمل</string>
+    <string name="missed_empty">اكتملت كل عمليات النقل.</string>
+    <string name="missed_retry">أعد المحاولة</string>
+    <string name="missed_retry_all">أعد محاولة الكل</string>
+    <string name="missed_clear">امسح القائمة</string>
+    <string name="autofind_title">هل هذا جهازك %1$s؟</string>
+    <string name="autofind_text">‏%1$s لا يجيب على %2$s، لكن جهازًا يجيب على %3$s. هل تستخدم العنوان الجديد؟</string>
+    <string name="autofind_keep">احتفظ بالقديم</string>
+    <string name="cheatshare_open">افتح ملفًا</string>
+    <string name="cheatshare_unreadable">لا يمكن قراءة هذا الملف كقائمة غش.</string>
+    <string name="cheatshare_save">احفظ كملف</string>
+    <string name="cheatshare_saved">حُفظت قائمة الغش. أرسل الملف لمن تشاء: يُفتح من «استيراد».</string>
+    <string name="cheatshare_save_failed">تعذّر حفظ الملف.</string>
 </resources>

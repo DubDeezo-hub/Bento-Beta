@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Тази верига вече не съществува.</string>
     <string name="notif_channel_chain">Вериги от payload-и</string>
     <string name="backup_chains">Вериги: %1$d</string>
-    <string name="reload_warn_title">Вече зареден?</string>
     <string name="reload_warn_running">etaHEN вече отговаря на тази конзола (FTP сървърът му на порт %2$d работи). Повторното зареждане на %1$s, докато работи, може да срине конзолата. Изпратете го само ако etaHEN е спрял да работи.</string>
     <string name="reload_warn_sent">%1$s вече е изпратен на тази конзола преди %2$s. Второ зареждане може да срине конзолата. Изпратете го отново само ако конзолата е рестартирана оттогава.</string>
     <string name="reload_send_anyway">Изпрати въпреки това</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s е на %2$s в %3$s</string>
     <string name="notice_dl_failed_title">Не стигна до %1$s</string>
     <string name="notice_install_title">Изпратено към инсталатора на %1$s</string>
+    <string name="local_network_refused">Crimson Multitool не може да достигне конзолата без разрешението „Устройства наблизо“. Разрешете го в настройките на телефона.</string>
+    <string name="turbo_title">Файлове едновременно</string>
+    <string name="turbo_hint">Файловете от телефона се качват паралелно, всеки по своя връзка. Много малки файлове вървят много по-бързо.</string>
+    <string name="turbo_hint_limited">Изключете ограничението на скоростта, за да пращате повече от един файл наведнъж.</string>
+    <string name="turbo_all_sent">Изпратени са всички %1$d файла</string>
+    <string name="send_check_title">Проверка преди изпращане</string>
+    <string name="fwcheck_warn">Страницата на %1$s посочва фърмуер %2$s до %3$s. Вашата %4$s е на %5$s, който не е посочен. Може да не работи или да срине конзолата.</string>
+    <string name="stab_title">Стабилност</string>
+    <string name="stab_hint">Колко често конзолата е падала до 10 минути след зареждане на всеки payload.</string>
+    <string name="stab_row">%1$s: зареден %2$d пъти, срив след него %3$d</string>
+    <string name="stab_suspect">%1$s: конзолата е падала след него %2$d от %3$d пъти. Опитайте без него.</string>
+    <string name="stab_reset">Нулиране на броячите</string>
+    <string name="missed_title">Незавършени</string>
+    <string name="missed_empty">Всички прехвърляния завършиха.</string>
+    <string name="missed_retry">Опитай пак</string>
+    <string name="missed_retry_all">Опитай всички пак</string>
+    <string name="missed_clear">Изчисти списъка</string>
+    <string name="autofind_title">Това ли е вашата %1$s?</string>
+    <string name="autofind_text">%1$s не отговаря на %2$s, но конзола отговаря на %3$s. Да се използва ли новият адрес?</string>
+    <string name="autofind_keep">Запази стария</string>
+    <string name="cheatshare_open">Отвори файл</string>
+    <string name="cheatshare_unreadable">Този файл не може да се прочете като списък с чийтове.</string>
+    <string name="cheatshare_save">Запази като файл</string>
+    <string name="cheatshare_saved">Списъкът с чийтове е запазен. Пратете файла на когото искате: отваря се с Импорт.</string>
+    <string name="cheatshare_save_failed">Файлът не можа да се запази.</string>
 </resources>

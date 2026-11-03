@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Den kjeden finnes ikke lenger.</string>
     <string name="notif_channel_chain">Payload-kjeder</string>
     <string name="backup_chains">Kjeder: %1$d</string>
-    <string name="reload_warn_title">Allerede lastet?</string>
     <string name="reload_warn_running">etaHEN svarer allerede på denne konsollen (FTP-serveren på port %2$d kjører). Å laste %1$s igjen mens den kjører kan krasje konsollen. Send den bare hvis etaHEN har sluttet å virke.</string>
     <string name="reload_warn_sent">%1$s ble allerede sendt til denne konsollen for %2$s siden. Å laste den en gang til kan krasje konsollen. Send den igjen bare hvis konsollen er startet på nytt siden.</string>
     <string name="reload_send_anyway">Send likevel</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s ligger på %2$s i %3$s</string>
     <string name="notice_dl_failed_title">Kom ikke frem til %1$s</string>
     <string name="notice_install_title">Sendt til installasjonsprogrammet på %1$s</string>
+    <string name="local_network_refused">Crimson Multitool når ikke konsollen uten tillatelsen Enheter i nærheten. Tillat den i telefonens innstillinger.</string>
+    <string name="turbo_title">Filer samtidig</string>
+    <string name="turbo_hint">Filer fra telefonen lastes opp side om side, hver over sin egen forbindelse. Mange små filer går mye raskere.</string>
+    <string name="turbo_hint_limited">Slå av fartsgrensen for å sende mer enn én fil om gangen.</string>
+    <string name="turbo_all_sent">Alle %1$d filer sendt</string>
+    <string name="send_check_title">Sjekk før sending</string>
+    <string name="fwcheck_warn">Siden til %1$s nevner fastvare %2$s til %3$s. Din %4$s kjører %5$s, som ikke er nevnt. Det virker kanskje ikke, eller får konsollen til å krasje.</string>
+    <string name="stab_title">Stabilitet</string>
+    <string name="stab_hint">Hvor ofte konsollen gikk ned innen 10 minutter etter at hver payload ble lastet.</string>
+    <string name="stab_row">%1$s: lastet %2$d ganger, gikk ned etterpå %3$d</string>
+    <string name="stab_suspect">%1$s: konsollen gikk ned etter den %2$d av %3$d ganger. Prøv uten.</string>
+    <string name="stab_reset">Nullstill tellere</string>
+    <string name="missed_title">Ikke fullført</string>
+    <string name="missed_empty">Alle overføringer ble fullført.</string>
+    <string name="missed_retry">Prøv igjen</string>
+    <string name="missed_retry_all">Prøv alle igjen</string>
+    <string name="missed_clear">Tøm listen</string>
+    <string name="autofind_title">Er dette din %1$s?</string>
+    <string name="autofind_text">%1$s svarer ikke på %2$s, men en konsoll svarer på %3$s. Bruke den nye adressen?</string>
+    <string name="autofind_keep">Behold den gamle</string>
+    <string name="cheatshare_open">Åpne en fil</string>
+    <string name="cheatshare_unreadable">Den filen kan ikke leses som en juksekodeliste.</string>
+    <string name="cheatshare_save">Lagre som fil</string>
+    <string name="cheatshare_saved">Juksekodelisten er lagret. Send filen til hvem som helst: den åpnes med Importer.</string>
+    <string name="cheatshare_save_failed">Filen kunne ikke lagres.</string>
 </resources>

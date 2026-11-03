@@ -363,6 +363,8 @@ object Store {
             }
             // An older version under another name goes, so the shelf keeps one copy
             replaceOld(ctx, e.repo, release.tag, added)
+            // What its page says about firmware, for the check before sending (a plain tool runs anywhere)
+            PayloadFirmware.remember(ctx, added.name, if (e.anyFirmware) null else firmwareClaims(ctx, e, release))
             return AppText.get(R.string.store_added, added.name, release.tag)
         } finally {
             c.disconnect()

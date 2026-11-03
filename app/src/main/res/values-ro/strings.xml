@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Lanțul acela nu mai există.</string>
     <string name="notif_channel_chain">Lanțuri de payload-uri</string>
     <string name="backup_chains">Lanțuri: %1$d</string>
-    <string name="reload_warn_title">Deja încărcat?</string>
     <string name="reload_warn_running">etaHEN răspunde deja pe această consolă (serverul lui FTP de pe portul %2$d funcționează). Reîncărcarea %1$s cât timp rulează poate bloca consola. Trimite-l doar dacă etaHEN nu mai funcționează.</string>
     <string name="reload_warn_sent">%1$s a fost deja trimis acestei console acum %2$s. A doua încărcare poate bloca consola. Retrimite-l doar dacă între timp consola a fost repornită.</string>
     <string name="reload_send_anyway">Trimite oricum</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s este pe %2$s în %3$s</string>
     <string name="notice_dl_failed_title">Nu a ajuns la %1$s</string>
     <string name="notice_install_title">Trimis la instalatorul %1$s</string>
+    <string name="local_network_refused">Crimson Multitool nu poate ajunge la consolă fără permisiunea Dispozitive din apropiere. Permite-o în setările telefonului.</string>
+    <string name="turbo_title">Fișiere deodată</string>
+    <string name="turbo_hint">Fișierele de pe telefon se încarcă în paralel, fiecare pe conexiunea lui. Multe fișiere mici merg mult mai repede.</string>
+    <string name="turbo_hint_limited">Oprește limita de viteză ca să trimiți mai multe fișiere deodată.</string>
+    <string name="turbo_all_sent">Toate cele %1$d fișiere trimise</string>
+    <string name="send_check_title">Verifică înainte de trimitere</string>
+    <string name="fwcheck_warn">Pagina %1$s indică firmware %2$s până la %3$s. %4$s ta are %5$s, care nu e menționat. S-ar putea să nu meargă sau să blocheze consola.</string>
+    <string name="stab_title">Stabilitate</string>
+    <string name="stab_hint">Cât de des a căzut consola în 10 minute de la încărcarea fiecărui payload.</string>
+    <string name="stab_row">%1$s: încărcat de %2$d ori, a căzut după de %3$d ori</string>
+    <string name="stab_suspect">%1$s: consola a căzut după el de %2$d din %3$d ori. Încearcă fără el.</string>
+    <string name="stab_reset">Resetează contoarele</string>
+    <string name="missed_title">Neterminate</string>
+    <string name="missed_empty">Toate transferurile s-au terminat.</string>
+    <string name="missed_retry">Reîncearcă</string>
+    <string name="missed_retry_all">Reîncearcă tot</string>
+    <string name="missed_clear">Golește lista</string>
+    <string name="autofind_title">Este aceasta %1$s ta?</string>
+    <string name="autofind_text">%1$s nu răspunde la %2$s, dar o consolă răspunde la %3$s. Folosești adresa nouă?</string>
+    <string name="autofind_keep">Păstrează-o pe cea veche</string>
+    <string name="cheatshare_open">Deschide un fișier</string>
+    <string name="cheatshare_unreadable">Fișierul nu poate fi citit ca listă de trucuri.</string>
+    <string name="cheatshare_save">Salvează ca fișier</string>
+    <string name="cheatshare_saved">Lista de trucuri a fost salvată. Trimite fișierul oricui: se deschide cu Importă.</string>
+    <string name="cheatshare_save_failed">Fișierul nu a putut fi salvat.</string>
 </resources>

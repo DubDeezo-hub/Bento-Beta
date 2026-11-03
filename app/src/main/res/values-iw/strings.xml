@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">השרשרת הזו כבר לא קיימת.</string>
     <string name="notif_channel_chain">שרשראות payload</string>
     <string name="backup_chains">שרשראות: %1$d</string>
-    <string name="reload_warn_title">כבר נטען?</string>
     <string name="reload_warn_running">‏etaHEN כבר עונה בקונסולה הזו (שרת ה-FTP שלו ביציאה %2$d פועל). טעינה חוזרת של %1$s בזמן שהוא פועל עלולה להקריס את הקונסולה. שלחו רק אם etaHEN הפסיק לעבוד.</string>
     <string name="reload_warn_sent">‏%1$s כבר נשלח לקונסולה הזו לפני %2$s. טעינה שנייה עלולה להקריס את הקונסולה. שלחו שוב רק אם הקונסולה הופעלה מחדש מאז.</string>
     <string name="reload_send_anyway">לשלוח בכל זאת</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">‏%1$s נמצא ב־%2$s בתוך %3$s</string>
     <string name="notice_dl_failed_title">לא הגיע אל %1$s</string>
     <string name="notice_install_title">נשלח למתקין של %1$s</string>
+    <string name="local_network_refused">‏Crimson Multitool לא יכול להגיע לקונסולה בלי ההרשאה מכשירים בקרבת מקום. אפשר אותה בהגדרות הטלפון.</string>
+    <string name="turbo_title">קבצים במקביל</string>
+    <string name="turbo_hint">קבצים מהטלפון עולים זה לצד זה, כל אחד בחיבור משלו. הרבה קבצים קטנים עוברים הרבה יותר מהר.</string>
+    <string name="turbo_hint_limited">כבה את מגבלת המהירות כדי לשלוח יותר מקובץ אחד בכל פעם.</string>
+    <string name="turbo_all_sent">כל %1$d הקבצים נשלחו</string>
+    <string name="send_check_title">בדיקה לפני שליחה</string>
+    <string name="fwcheck_warn">הדף של %1$s מציין קושחה %2$s עד %3$s. ה־%4$s שלך בגרסה %5$s, שלא מצוינת. ייתכן שלא יעבוד או שיקריס את הקונסולה.</string>
+    <string name="stab_title">יציבות</string>
+    <string name="stab_hint">כמה פעמים הקונסולה נפלה בתוך 10 דקות מטעינת כל מטען.</string>
+    <string name="stab_row">‏%1$s: נטען %2$d פעמים, נפילה אחריו %3$d</string>
+    <string name="stab_suspect">‏%1$s: הקונסולה נפלה אחריו %2$d מתוך %3$d פעמים. נסה בלעדיו.</string>
+    <string name="stab_reset">איפוס ספירות</string>
+    <string name="missed_title">לא הסתיימו</string>
+    <string name="missed_empty">כל ההעברות הסתיימו.</string>
+    <string name="missed_retry">נסה שוב</string>
+    <string name="missed_retry_all">נסה את כולם שוב</string>
+    <string name="missed_clear">נקה רשימה</string>
+    <string name="autofind_title">זה ה־%1$s שלך?</string>
+    <string name="autofind_text">‏%1$s לא עונה ב־%2$s, אבל קונסולה עונה ב־%3$s. להשתמש בכתובת החדשה?</string>
+    <string name="autofind_keep">השאר את הישנה</string>
+    <string name="cheatshare_open">פתח קובץ</string>
+    <string name="cheatshare_unreadable">אי אפשר לקרוא את הקובץ הזה כרשימת צ׳יטים.</string>
+    <string name="cheatshare_save">שמור כקובץ</string>
+    <string name="cheatshare_saved">רשימת הצ׳יטים נשמרה. שלח את הקובץ לכל מי שתרצה: פותחים אותו דרך ייבוא.</string>
+    <string name="cheatshare_save_failed">לא ניתן היה לשמור את הקובץ.</string>
 </resources>

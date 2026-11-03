@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">該鏈已不存在。</string>
     <string name="notif_channel_chain">Payload 鏈</string>
     <string name="backup_chains">鏈：%1$d</string>
-    <string name="reload_warn_title">已經載入？</string>
     <string name="reload_warn_running">這台主機上的 etaHEN 已在回應（連接埠 %2$d 的 FTP 伺服器正在執行）。在它執行時再次載入 %1$s 可能導致主機當機。只有在 etaHEN 停止運作時才傳送。</string>
     <string name="reload_warn_sent">%1$s 已在 %2$s 前傳送到這台主機。第二次載入可能導致主機當機。只有在主機重新啟動過之後才再次傳送。</string>
     <string name="reload_send_anyway">仍要傳送</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s 已在 %2$s 的 %3$s 中</string>
     <string name="notice_dl_failed_title">未能送達 %1$s</string>
     <string name="notice_install_title">已傳送到 %1$s 的安裝程式</string>
+    <string name="local_network_refused">沒有「鄰近裝置」權限，Crimson Multitool 無法連線到主機。請在手機設定中允許。</string>
+    <string name="turbo_title">同時傳輸的檔案數</string>
+    <string name="turbo_hint">手機上的檔案會並行上傳，每個檔案用自己的連線。小檔案很多時會快得多。</string>
+    <string name="turbo_hint_limited">關閉限速後才能同時傳送多個檔案。</string>
+    <string name="turbo_all_sent">全部 %1$d 個檔案已傳送</string>
+    <string name="send_check_title">傳送前檢查</string>
+    <string name="fwcheck_warn">%1$s 的頁面列出的韌體為 %2$s 至 %3$s。你的 %4$s 是 %5$s，不在其中。可能無法執行，或導致主機當機。</string>
+    <string name="stab_title">穩定性</string>
+    <string name="stab_hint">載入每個酬載後 10 分鐘內主機當機的次數。</string>
+    <string name="stab_row">%1$s：載入 %2$d 次，之後當機 %3$d 次</string>
+    <string name="stab_suspect">%1$s：載入 %3$d 次中有 %2$d 次之後主機當機。試試不載入它。</string>
+    <string name="stab_reset">重設計數</string>
+    <string name="missed_title">未完成</string>
+    <string name="missed_empty">所有傳輸都已完成。</string>
+    <string name="missed_retry">重試</string>
+    <string name="missed_retry_all">全部重試</string>
+    <string name="missed_clear">清除清單</string>
+    <string name="autofind_title">這是你的 %1$s 嗎？</string>
+    <string name="autofind_text">%1$s 在 %2$s 沒有回應，但 %3$s 有主機回應。要使用新位址嗎？</string>
+    <string name="autofind_keep">保留舊位址</string>
+    <string name="cheatshare_open">開啟檔案</string>
+    <string name="cheatshare_unreadable">無法將此檔案讀取為作弊清單。</string>
+    <string name="cheatshare_save">另存為檔案</string>
+    <string name="cheatshare_saved">作弊清單已儲存。把檔案傳給任何人：用「匯入」開啟。</string>
+    <string name="cheatshare_save_failed">無法儲存檔案。</string>
 </resources>

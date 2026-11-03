@@ -388,7 +388,6 @@
     <string name="chain_err_unknown">That chain doesn\'t exist any more.</string>
     <string name="notif_channel_chain">Payload chains</string>
     <string name="backup_chains">Chains: %1$d</string>
-    <string name="reload_warn_title">Already loaded?</string>
     <string name="reload_warn_running">etaHEN already answers on this console (its FTP server on port %2$d is up). Loading %1$s again while it runs can crash the console. Send it only if etaHEN has stopped working.</string>
     <string name="reload_warn_sent">%1$s was already sent to this console %2$s ago. Loading it a second time can crash the console. Send it again only if the console has been restarted since.</string>
     <string name="reload_send_anyway">Send anyway</string>
@@ -1240,4 +1239,29 @@
     <string name="notice_dl_done_text">%1$s is on the %2$s in %3$s</string>
     <string name="notice_dl_failed_title">Didn\'t reach the %1$s</string>
     <string name="notice_install_title">Sent to the %1$s installer</string>
+    <string name="local_network_refused">Crimson Multitool can\'t reach your console without the Nearby devices permission. Allow it in the phone\'s settings.</string>
+    <string name="turbo_title">Files at once</string>
+    <string name="turbo_hint">Files from the phone upload side by side, each on its own connection. Many small files go much faster.</string>
+    <string name="turbo_hint_limited">Turn the speed limit off to send more than one file at once.</string>
+    <string name="turbo_all_sent">All %1$d files sent</string>
+    <string name="send_check_title">Check before sending</string>
+    <string name="fwcheck_warn">%1$s\'s page lists firmware %2$s to %3$s. Your %4$s is on %5$s, which it doesn\'t name. It may not work, or may crash the console.</string>
+    <string name="stab_title">Stability</string>
+    <string name="stab_hint">How often the console went down within 10 minutes of loading each payload.</string>
+    <string name="stab_row">%1$s: loaded %2$d times, went down after %3$d</string>
+    <string name="stab_suspect">%1$s: the console went down after it %2$d of %3$d times. Try without it.</string>
+    <string name="stab_reset">Reset counts</string>
+    <string name="missed_title">Didn\'t finish</string>
+    <string name="missed_empty">Every transfer finished.</string>
+    <string name="missed_retry">Try again</string>
+    <string name="missed_retry_all">Try all again</string>
+    <string name="missed_clear">Clear list</string>
+    <string name="autofind_title">Is this your %1$s?</string>
+    <string name="autofind_text">%1$s doesn\'t answer at %2$s, but a console answers at %3$s. Use the new address?</string>
+    <string name="autofind_keep">Keep the old one</string>
+    <string name="cheatshare_open">Open a file</string>
+    <string name="cheatshare_unreadable">That file can\'t be read as a cheat list.</string>
+    <string name="cheatshare_save">Save as file</string>
+    <string name="cheatshare_saved">Cheat list saved. Send the file to anyone: they open it with Import.</string>
+    <string name="cheatshare_save_failed">The file couldn\'t be saved.</string>
 </resources>

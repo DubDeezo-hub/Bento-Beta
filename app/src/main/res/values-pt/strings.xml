@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Essa cadeia não existe mais.</string>
     <string name="notif_channel_chain">Cadeias de payloads</string>
     <string name="backup_chains">Cadeias: %1$d</string>
-    <string name="reload_warn_title">Já carregado?</string>
     <string name="reload_warn_running">O etaHEN já responde neste console (o servidor FTP dele na porta %2$d está ativo). Carregar %1$s de novo enquanto ele roda pode travar o console. Envie só se o etaHEN parou de funcionar.</string>
     <string name="reload_warn_sent">%1$s já foi enviado a este console há %2$s. Carregar uma segunda vez pode travar o console. Envie de novo só se o console foi reiniciado desde então.</string>
     <string name="reload_send_anyway">Enviar mesmo assim</string>
@@ -1236,4 +1235,29 @@
     <string name="notice_dl_done_text">%1$s está no %2$s em %3$s</string>
     <string name="notice_dl_failed_title">Não chegou ao %1$s</string>
     <string name="notice_install_title">Enviado ao instalador do %1$s</string>
+    <string name="local_network_refused">O Crimson Multitool não alcança seu console sem a permissão Dispositivos próximos. Permita nas configurações do celular.</string>
+    <string name="turbo_title">Arquivos ao mesmo tempo</string>
+    <string name="turbo_hint">Os arquivos do celular sobem lado a lado, cada um na sua conexão. Muitos arquivos pequenos ficam bem mais rápidos.</string>
+    <string name="turbo_hint_limited">Desligue o limite de velocidade para enviar mais de um arquivo por vez.</string>
+    <string name="turbo_all_sent">Todos os %1$d arquivos enviados</string>
+    <string name="send_check_title">Verificar antes de enviar</string>
+    <string name="fwcheck_warn">A página de %1$s lista o firmware %2$s a %3$s. Seu %4$s está no %5$s, que não aparece. Pode não funcionar ou travar o console.</string>
+    <string name="stab_title">Estabilidade</string>
+    <string name="stab_hint">Quantas vezes o console caiu nos 10 minutos depois de carregar cada payload.</string>
+    <string name="stab_row">%1$s: carregado %2$d vezes, caiu depois %3$d</string>
+    <string name="stab_suspect">%1$s: o console caiu depois dele %2$d de %3$d vezes. Tente sem ele.</string>
+    <string name="stab_reset">Zerar contagens</string>
+    <string name="missed_title">Não terminaram</string>
+    <string name="missed_empty">Todas as transferências terminaram.</string>
+    <string name="missed_retry">Tentar de novo</string>
+    <string name="missed_retry_all">Tentar todas de novo</string>
+    <string name="missed_clear">Limpar lista</string>
+    <string name="autofind_title">Este é o seu %1$s?</string>
+    <string name="autofind_text">%1$s não responde em %2$s, mas um console responde em %3$s. Usar o novo endereço?</string>
+    <string name="autofind_keep">Manter o antigo</string>
+    <string name="cheatshare_open">Abrir um arquivo</string>
+    <string name="cheatshare_unreadable">Esse arquivo não pode ser lido como lista de trapaças.</string>
+    <string name="cheatshare_save">Salvar como arquivo</string>
+    <string name="cheatshare_saved">Lista de trapaças salva. Envie o arquivo para quem quiser: abre-se com Importar.</string>
+    <string name="cheatshare_save_failed">Não foi possível salvar o arquivo.</string>
 </resources>

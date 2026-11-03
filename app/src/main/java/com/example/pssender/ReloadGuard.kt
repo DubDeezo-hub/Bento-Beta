@@ -53,6 +53,8 @@ object ReloadGuard {
         now: Long = System.currentTimeMillis(),
         isOpen: (String, Int) -> Boolean = { h, p -> Diagnose.probe(h, p, PROBE_MS) == PortState.OPEN }
     ): String? {
+        // First: a payload whose page doesn't name the console's firmware
+        PayloadFirmware.warning(names)?.let { return it }
         val risky = names.filter { kindOf(it) != null }
         if (risky.isEmpty() || host.isBlank()) return null
         val h = host.trim()

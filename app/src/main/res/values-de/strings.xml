@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Diese Kette gibt es nicht mehr.</string>
     <string name="notif_channel_chain">Payload-Ketten</string>
     <string name="backup_chains">Ketten: %1$d</string>
-    <string name="reload_warn_title">Schon geladen?</string>
     <string name="reload_warn_running">etaHEN antwortet auf dieser Konsole schon (sein FTP-Server auf Port %2$d läuft). %1$s erneut zu laden, während es läuft, kann die Konsole abstürzen lassen. Sende es nur, wenn etaHEN nicht mehr funktioniert.</string>
     <string name="reload_warn_sent">%1$s wurde vor %2$s schon an diese Konsole gesendet. Ein zweites Laden kann die Konsole abstürzen lassen. Sende es nur erneut, wenn die Konsole inzwischen neu gestartet wurde.</string>
     <string name="reload_send_anyway">Trotzdem senden</string>
@@ -1237,4 +1236,29 @@
     <string name="notice_dl_done_text">%1$s ist auf der %2$s in %3$s</string>
     <string name="notice_dl_failed_title">Hat die %1$s nicht erreicht</string>
     <string name="notice_install_title">An den Installer der %1$s gesendet</string>
+    <string name="local_network_refused">Crimson Multitool erreicht deine Konsole nicht ohne die Berechtigung „Geräte in der Nähe“. Erlaube sie in den Einstellungen des Handys.</string>
+    <string name="turbo_title">Dateien gleichzeitig</string>
+    <string name="turbo_hint">Dateien vom Handy werden nebeneinander hochgeladen, jede über eine eigene Verbindung. Viele kleine Dateien gehen so viel schneller.</string>
+    <string name="turbo_hint_limited">Schalte das Tempolimit aus, um mehr als eine Datei gleichzeitig zu senden.</string>
+    <string name="turbo_all_sent">Alle %1$d Dateien gesendet</string>
+    <string name="send_check_title">Vor dem Senden prüfen</string>
+    <string name="fwcheck_warn">Die Seite von %1$s nennt Firmware %2$s bis %3$s. Deine %4$s hat %5$s, die dort nicht genannt wird. Es könnte nicht funktionieren oder die Konsole abstürzen lassen.</string>
+    <string name="stab_title">Stabilität</string>
+    <string name="stab_hint">Wie oft die Konsole innerhalb von 10 Minuten nach dem Laden jedes Payloads abgestürzt ist.</string>
+    <string name="stab_row">%1$s: %2$d-mal geladen, danach %3$d-mal abgestürzt</string>
+    <string name="stab_suspect">%1$s: Die Konsole ist danach %2$d von %3$d Malen abgestürzt. Versuche es ohne.</string>
+    <string name="stab_reset">Zähler zurücksetzen</string>
+    <string name="missed_title">Nicht fertig geworden</string>
+    <string name="missed_empty">Alle Übertragungen sind fertig.</string>
+    <string name="missed_retry">Erneut versuchen</string>
+    <string name="missed_retry_all">Alle erneut versuchen</string>
+    <string name="missed_clear">Liste leeren</string>
+    <string name="autofind_title">Ist das deine %1$s?</string>
+    <string name="autofind_text">%1$s antwortet nicht unter %2$s, aber unter %3$s antwortet eine Konsole. Die neue Adresse verwenden?</string>
+    <string name="autofind_keep">Die alte behalten</string>
+    <string name="cheatshare_open">Datei öffnen</string>
+    <string name="cheatshare_unreadable">Diese Datei lässt sich nicht als Cheat-Liste lesen.</string>
+    <string name="cheatshare_save">Als Datei speichern</string>
+    <string name="cheatshare_saved">Cheat-Liste gespeichert. Schick die Datei an wen du willst: Sie wird mit Importieren geöffnet.</string>
+    <string name="cheatshare_save_failed">Die Datei konnte nicht gespeichert werden.</string>
 </resources>

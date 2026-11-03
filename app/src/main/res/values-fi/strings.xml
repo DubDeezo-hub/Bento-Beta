@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Tätä ketjua ei enää ole.</string>
     <string name="notif_channel_chain">Payload-ketjut</string>
     <string name="backup_chains">Ketjut: %1$d</string>
-    <string name="reload_warn_title">Jo ladattu?</string>
     <string name="reload_warn_running">etaHEN vastaa jo tässä konsolissa (sen FTP-palvelin portissa %2$d on käynnissä). Kohteen %1$s lataaminen uudelleen sen ollessa käynnissä voi kaataa konsolin. Lähetä vain, jos etaHEN on lakannut toimimasta.</string>
     <string name="reload_warn_sent">%1$s lähetettiin tähän konsoliin jo %2$s sitten. Toinen lataus voi kaataa konsolin. Lähetä uudelleen vain, jos konsoli on sen jälkeen käynnistetty uudelleen.</string>
     <string name="reload_send_anyway">Lähetä silti</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s on konsolissa %2$s kansiossa %3$s</string>
     <string name="notice_dl_failed_title">Ei päässyt konsoliin %1$s</string>
     <string name="notice_install_title">Lähetetty konsolin %1$s asentajalle</string>
+    <string name="local_network_refused">Crimson Multitool ei tavoita konsolia ilman Lähellä olevat laitteet -lupaa. Salli se puhelimen asetuksissa.</string>
+    <string name="turbo_title">Tiedostoja kerralla</string>
+    <string name="turbo_hint">Puhelimen tiedostot lähtevät rinnakkain, kukin omalla yhteydellään. Monet pienet tiedostot menevät paljon nopeammin.</string>
+    <string name="turbo_hint_limited">Poista nopeusrajoitus, niin voit lähettää useamman tiedoston kerralla.</string>
+    <string name="turbo_all_sent">Kaikki %1$d tiedostoa lähetetty</string>
+    <string name="send_check_title">Tarkista ennen lähetystä</string>
+    <string name="fwcheck_warn">Kohteen %1$s sivu mainitsee laiteohjelmistot %2$s–%3$s. Konsolisi %4$s on versiossa %5$s, jota ei mainita. Se ei ehkä toimi tai voi kaataa konsolin.</string>
+    <string name="stab_title">Vakaus</string>
+    <string name="stab_hint">Kuinka usein konsoli kaatui 10 minuutin sisällä kunkin payloadin lataamisesta.</string>
+    <string name="stab_row">%1$s: ladattu %2$d kertaa, kaatui sen jälkeen %3$d</string>
+    <string name="stab_suspect">%1$s: konsoli kaatui sen jälkeen %2$d kertaa %3$d:sta. Kokeile ilman sitä.</string>
+    <string name="stab_reset">Nollaa laskurit</string>
+    <string name="missed_title">Kesken jääneet</string>
+    <string name="missed_empty">Kaikki siirrot valmistuivat.</string>
+    <string name="missed_retry">Yritä uudelleen</string>
+    <string name="missed_retry_all">Yritä kaikkia uudelleen</string>
+    <string name="missed_clear">Tyhjennä lista</string>
+    <string name="autofind_title">Onko tämä sinun %1$s?</string>
+    <string name="autofind_text">%1$s ei vastaa osoitteessa %2$s, mutta konsoli vastaa osoitteessa %3$s. Käytetäänkö uutta osoitetta?</string>
+    <string name="autofind_keep">Pidä vanha</string>
+    <string name="cheatshare_open">Avaa tiedosto</string>
+    <string name="cheatshare_unreadable">Tiedostoa ei voi lukea huijauslistana.</string>
+    <string name="cheatshare_save">Tallenna tiedostoksi</string>
+    <string name="cheatshare_saved">Huijauslista tallennettu. Lähetä tiedosto kenelle tahansa: se avataan Tuo-toiminnolla.</string>
+    <string name="cheatshare_save_failed">Tiedostoa ei voitu tallentaa.</string>
 </resources>

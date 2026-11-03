@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Chuỗi đó không còn tồn tại.</string>
     <string name="notif_channel_chain">Chuỗi payload</string>
     <string name="backup_chains">Chuỗi: %1$d</string>
-    <string name="reload_warn_title">Đã nạp rồi?</string>
     <string name="reload_warn_running">etaHEN đã đang phản hồi trên máy này (máy chủ FTP của nó ở cổng %2$d đang chạy). Nạp lại %1$s khi nó đang chạy có thể làm sập máy. Chỉ gửi nếu etaHEN đã ngừng hoạt động.</string>
     <string name="reload_warn_sent">%1$s đã được gửi tới máy này %2$s trước. Nạp lần thứ hai có thể làm sập máy. Chỉ gửi lại nếu máy đã khởi động lại kể từ đó.</string>
     <string name="reload_send_anyway">Vẫn gửi</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s đã ở trên %2$s, trong %3$s</string>
     <string name="notice_dl_failed_title">Không đến được %1$s</string>
     <string name="notice_install_title">Đã gửi đến trình cài đặt của %1$s</string>
+    <string name="local_network_refused">Crimson Multitool không thể kết nối với máy nếu thiếu quyền Thiết bị ở gần. Hãy cho phép trong cài đặt điện thoại.</string>
+    <string name="turbo_title">Số tệp cùng lúc</string>
+    <string name="turbo_hint">Tệp từ điện thoại được tải lên song song, mỗi tệp một kết nối riêng. Nhiều tệp nhỏ sẽ đi nhanh hơn nhiều.</string>
+    <string name="turbo_hint_limited">Tắt giới hạn tốc độ để gửi nhiều tệp cùng lúc.</string>
+    <string name="turbo_all_sent">Đã gửi đủ %1$d tệp</string>
+    <string name="send_check_title">Kiểm tra trước khi gửi</string>
+    <string name="fwcheck_warn">Trang của %1$s ghi firmware %2$s đến %3$s. %4$s của bạn đang ở %5$s, không có trong đó. Có thể không chạy hoặc làm treo máy.</string>
+    <string name="stab_title">Độ ổn định</string>
+    <string name="stab_hint">Số lần máy bị sập trong 10 phút sau khi nạp từng payload.</string>
+    <string name="stab_row">%1$s: nạp %2$d lần, sập sau đó %3$d lần</string>
+    <string name="stab_suspect">%1$s: máy sập sau nó %2$d trên %3$d lần. Hãy thử không dùng nó.</string>
+    <string name="stab_reset">Đặt lại số đếm</string>
+    <string name="missed_title">Chưa xong</string>
+    <string name="missed_empty">Mọi lần chuyển đã xong.</string>
+    <string name="missed_retry">Thử lại</string>
+    <string name="missed_retry_all">Thử lại tất cả</string>
+    <string name="missed_clear">Xóa danh sách</string>
+    <string name="autofind_title">Đây có phải %1$s của bạn?</string>
+    <string name="autofind_text">%1$s không trả lời ở %2$s, nhưng có máy trả lời ở %3$s. Dùng địa chỉ mới?</string>
+    <string name="autofind_keep">Giữ địa chỉ cũ</string>
+    <string name="cheatshare_open">Mở tệp</string>
+    <string name="cheatshare_unreadable">Không thể đọc tệp này như một danh sách cheat.</string>
+    <string name="cheatshare_save">Lưu thành tệp</string>
+    <string name="cheatshare_saved">Đã lưu danh sách cheat. Gửi tệp cho bất kỳ ai: mở bằng Nhập.</string>
+    <string name="cheatshare_save_failed">Không lưu được tệp.</string>
 </resources>

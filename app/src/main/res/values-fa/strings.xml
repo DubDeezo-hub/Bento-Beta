@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">آن زنجیره دیگر وجود ندارد.</string>
     <string name="notif_channel_chain">زنجیره‌های payload</string>
     <string name="backup_chains">زنجیره‌ها: %1$d</string>
-    <string name="reload_warn_title">از قبل بارگذاری شده؟</string>
     <string name="reload_warn_running">‏etaHEN روی این کنسول از قبل پاسخ می‌دهد (سرور FTP آن روی درگاه %2$d فعال است). بارگذاری دوبارهٔ %1$s در حالی که اجرا می‌شود ممکن است کنسول را از کار بیندازد. فقط اگر etaHEN از کار افتاده بفرستید.</string>
     <string name="reload_warn_sent">‏%1$s از %2$s پیش به این کنسول فرستاده شده است. بارگذاری دوباره ممکن است کنسول را از کار بیندازد. فقط اگر از آن موقع کنسول دوباره راه‌اندازی شده، دوباره بفرستید.</string>
     <string name="reload_send_anyway">با این حال بفرست</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">‏%1$s روی %2$s در %3$s است</string>
     <string name="notice_dl_failed_title">به %1$s نرسید</string>
     <string name="notice_install_title">به نصب‌کنندهٔ %1$s فرستاده شد</string>
+    <string name="local_network_refused">‏Crimson Multitool بدون مجوز «دستگاه‌های نزدیک» به کنسول شما نمی‌رسد. آن را در تنظیمات گوشی مجاز کنید.</string>
+    <string name="turbo_title">چند فایل با هم</string>
+    <string name="turbo_hint">فایل‌های گوشی کنار هم بارگذاری می‌شوند، هر کدام با اتصال خودش. فایل‌های کوچک زیاد خیلی سریع‌تر می‌روند.</string>
+    <string name="turbo_hint_limited">برای فرستادن بیش از یک فایل با هم، محدودیت سرعت را خاموش کنید.</string>
+    <string name="turbo_all_sent">هر %1$d فایل فرستاده شد</string>
+    <string name="send_check_title">بررسی پیش از فرستادن</string>
+    <string name="fwcheck_warn">صفحهٔ %1$s سفت‌افزار %2$s تا %3$s را نام می‌برد. %4$s شما روی %5$s است که نامش نیامده. شاید کار نکند یا کنسول را از کار بیندازد.</string>
+    <string name="stab_title">پایداری</string>
+    <string name="stab_hint">کنسول چند بار در ۱۰ دقیقه پس از بارگذاری هر پی‌لود از کار افتاد.</string>
+    <string name="stab_row">‏%1$s: %2$d بار بارگذاری، پس از آن %3$d بار از کار افتاد</string>
+    <string name="stab_suspect">‏%1$s: کنسول پس از آن %2$d بار از %3$d بار از کار افتاد. بدون آن امتحان کنید.</string>
+    <string name="stab_reset">صفر کردن شمارش‌ها</string>
+    <string name="missed_title">تمام‌نشده</string>
+    <string name="missed_empty">همهٔ انتقال‌ها تمام شد.</string>
+    <string name="missed_retry">دوباره</string>
+    <string name="missed_retry_all">همه دوباره</string>
+    <string name="missed_clear">پاک کردن فهرست</string>
+    <string name="autofind_title">این %1$s شماست؟</string>
+    <string name="autofind_text">‏%1$s در %2$s پاسخ نمی‌دهد، اما کنسولی در %3$s پاسخ می‌دهد. نشانی تازه استفاده شود؟</string>
+    <string name="autofind_keep">قبلی بماند</string>
+    <string name="cheatshare_open">باز کردن فایل</string>
+    <string name="cheatshare_unreadable">این فایل را نمی‌شود به‌عنوان فهرست تقلب خواند.</string>
+    <string name="cheatshare_save">ذخیره به‌صورت فایل</string>
+    <string name="cheatshare_saved">فهرست تقلب ذخیره شد. فایل را برای هر کسی بفرستید: با «وارد کردن» باز می‌شود.</string>
+    <string name="cheatshare_save_failed">فایل ذخیره نشد.</string>
 </resources>

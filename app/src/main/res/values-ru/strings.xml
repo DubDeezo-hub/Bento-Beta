@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Такой цепочки больше нет.</string>
     <string name="notif_channel_chain">Цепочки пейлоадов</string>
     <string name="backup_chains">Цепочки: %1$d</string>
-    <string name="reload_warn_title">Уже загружен?</string>
     <string name="reload_warn_running">etaHEN уже отвечает на этой консоли (его FTP-сервер на порту %2$d работает). Повторная загрузка %1$s, пока он работает, может обрушить консоль. Отправляйте, только если etaHEN перестал работать.</string>
     <string name="reload_warn_sent">%1$s уже отправлялся на эту консоль %2$s назад. Повторная загрузка может обрушить консоль. Отправляйте снова, только если консоль с тех пор перезагружалась.</string>
     <string name="reload_send_anyway">Всё равно отправить</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s на %2$s в %3$s</string>
     <string name="notice_dl_failed_title">Не дошло до %1$s</string>
     <string name="notice_install_title">Отправлено в установщик %1$s</string>
+    <string name="local_network_refused">Без разрешения «Устройства поблизости» Crimson Multitool не может связаться с консолью. Разрешите его в настройках телефона.</string>
+    <string name="turbo_title">Файлов одновременно</string>
+    <string name="turbo_hint">Файлы с телефона загружаются параллельно, каждый по своему соединению. Много маленьких файлов идут гораздо быстрее.</string>
+    <string name="turbo_hint_limited">Отключите ограничение скорости, чтобы отправлять больше одного файла сразу.</string>
+    <string name="turbo_all_sent">Отправлены все файлы (%1$d)</string>
+    <string name="send_check_title">Проверка перед отправкой</string>
+    <string name="fwcheck_warn">На странице %1$s указаны прошивки от %2$s до %3$s. Ваша %4$s на %5$s, которой там нет. Может не работать или уронить консоль.</string>
+    <string name="stab_title">Стабильность</string>
+    <string name="stab_hint">Как часто консоль падала в течение 10 минут после загрузки каждого payload.</string>
+    <string name="stab_row">%1$s: загружен %2$d раз, падений после — %3$d</string>
+    <string name="stab_suspect">%1$s: консоль падала после него %2$d из %3$d раз. Попробуйте без него.</string>
+    <string name="stab_reset">Сбросить счётчики</string>
+    <string name="missed_title">Не завершены</string>
+    <string name="missed_empty">Все передачи завершены.</string>
+    <string name="missed_retry">Повторить</string>
+    <string name="missed_retry_all">Повторить все</string>
+    <string name="missed_clear">Очистить список</string>
+    <string name="autofind_title">Это ваша %1$s?</string>
+    <string name="autofind_text">%1$s не отвечает по адресу %2$s, но по адресу %3$s отвечает консоль. Использовать новый адрес?</string>
+    <string name="autofind_keep">Оставить старый</string>
+    <string name="cheatshare_open">Открыть файл</string>
+    <string name="cheatshare_unreadable">Этот файл не читается как список читов.</string>
+    <string name="cheatshare_save">Сохранить файлом</string>
+    <string name="cheatshare_saved">Список читов сохранён. Отправьте файл кому угодно: он открывается через «Импорт».</string>
+    <string name="cheatshare_save_failed">Не удалось сохранить файл.</string>
 </resources>

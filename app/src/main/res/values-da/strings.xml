@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Den kæde findes ikke længere.</string>
     <string name="notif_channel_chain">Payload-kæder</string>
     <string name="backup_chains">Kæder: %1$d</string>
-    <string name="reload_warn_title">Allerede indlæst?</string>
     <string name="reload_warn_running">etaHEN svarer allerede på denne konsol (dens FTP-server på port %2$d kører). At indlæse %1$s igen, mens den kører, kan få konsollen til at gå ned. Send den kun, hvis etaHEN er holdt op med at virke.</string>
     <string name="reload_warn_sent">%1$s blev allerede sendt til denne konsol for %2$s siden. At indlæse den en gang til kan få konsollen til at gå ned. Send den kun igen, hvis konsollen er genstartet siden.</string>
     <string name="reload_send_anyway">Send alligevel</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s ligger på %2$s i %3$s</string>
     <string name="notice_dl_failed_title">Nåede ikke frem til %1$s</string>
     <string name="notice_install_title">Sendt til %1$s-installationsprogrammet</string>
+    <string name="local_network_refused">Crimson Multitool kan ikke nå din konsol uden tilladelsen Enheder i nærheden. Tillad den i telefonens indstillinger.</string>
+    <string name="turbo_title">Filer ad gangen</string>
+    <string name="turbo_hint">Filer fra telefonen uploades side om side, hver over sin egen forbindelse. Mange små filer går meget hurtigere.</string>
+    <string name="turbo_hint_limited">Slå hastighedsgrænsen fra for at sende mere end én fil ad gangen.</string>
+    <string name="turbo_all_sent">Alle %1$d filer sendt</string>
+    <string name="send_check_title">Tjek før afsendelse</string>
+    <string name="fwcheck_warn">Siden for %1$s nævner firmware %2$s til %3$s. Din %4$s kører %5$s, som ikke er nævnt. Det virker måske ikke eller får konsollen til at gå ned.</string>
+    <string name="stab_title">Stabilitet</string>
+    <string name="stab_hint">Hvor tit konsollen gik ned inden for 10 minutter efter hver payload blev indlæst.</string>
+    <string name="stab_row">%1$s: indlæst %2$d gange, gik ned bagefter %3$d</string>
+    <string name="stab_suspect">%1$s: konsollen gik ned efter den %2$d af %3$d gange. Prøv uden.</string>
+    <string name="stab_reset">Nulstil tællere</string>
+    <string name="missed_title">Ikke færdige</string>
+    <string name="missed_empty">Alle overførsler blev færdige.</string>
+    <string name="missed_retry">Prøv igen</string>
+    <string name="missed_retry_all">Prøv alle igen</string>
+    <string name="missed_clear">Ryd listen</string>
+    <string name="autofind_title">Er det din %1$s?</string>
+    <string name="autofind_text">%1$s svarer ikke på %2$s, men en konsol svarer på %3$s. Brug den nye adresse?</string>
+    <string name="autofind_keep">Behold den gamle</string>
+    <string name="cheatshare_open">Åbn en fil</string>
+    <string name="cheatshare_unreadable">Den fil kan ikke læses som en snydeliste.</string>
+    <string name="cheatshare_save">Gem som fil</string>
+    <string name="cheatshare_saved">Snydeliste gemt. Send filen til hvem som helst: den åbnes med Importér.</string>
+    <string name="cheatshare_save_failed">Filen kunne ikke gemmes.</string>
 </resources>

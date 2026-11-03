@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Αυτή η αλυσίδα δεν υπάρχει πια.</string>
     <string name="notif_channel_chain">Αλυσίδες payload</string>
     <string name="backup_chains">Αλυσίδες: %1$d</string>
-    <string name="reload_warn_title">Ήδη φορτωμένο;</string>
     <string name="reload_warn_running">Το etaHEN απαντά ήδη σε αυτή την κονσόλα (ο διακομιστής FTP του στη θύρα %2$d λειτουργεί). Η επαναφόρτωση του %1$s ενώ τρέχει μπορεί να ρίξει την κονσόλα. Στείλ\' το μόνο αν το etaHEN σταμάτησε να λειτουργεί.</string>
     <string name="reload_warn_sent">Το %1$s στάλθηκε ήδη σε αυτή την κονσόλα πριν από %2$s. Η δεύτερη φόρτωση μπορεί να ρίξει την κονσόλα. Στείλ\' το ξανά μόνο αν η κονσόλα έχει επανεκκινηθεί από τότε.</string>
     <string name="reload_send_anyway">Αποστολή παρ\' όλα αυτά</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">Το %1$s είναι στο %2$s, στο %3$s</string>
     <string name="notice_dl_failed_title">Δεν έφτασε στο %1$s</string>
     <string name="notice_install_title">Στάλθηκε στο πρόγραμμα εγκατάστασης του %1$s</string>
+    <string name="local_network_refused">Το Crimson Multitool δεν φτάνει στην κονσόλα σου χωρίς την άδεια Κοντινές συσκευές. Επίτρεψέ την στις ρυθμίσεις του κινητού.</string>
+    <string name="turbo_title">Αρχεία ταυτόχρονα</string>
+    <string name="turbo_hint">Τα αρχεία του κινητού ανεβαίνουν παράλληλα, το καθένα με δική του σύνδεση. Πολλά μικρά αρχεία πάνε πολύ πιο γρήγορα.</string>
+    <string name="turbo_hint_limited">Κλείσε το όριο ταχύτητας για να στέλνεις πάνω από ένα αρχείο τη φορά.</string>
+    <string name="turbo_all_sent">Στάλθηκαν και τα %1$d αρχεία</string>
+    <string name="send_check_title">Έλεγχος πριν την αποστολή</string>
+    <string name="fwcheck_warn">Η σελίδα του %1$s αναφέρει firmware %2$s έως %3$s. Το %4$s σου είναι στο %5$s, που δεν αναφέρεται. Ίσως να μη δουλέψει ή να κολλήσει την κονσόλα.</string>
+    <string name="stab_title">Σταθερότητα</string>
+    <string name="stab_hint">Πόσο συχνά η κονσόλα έπεσε μέσα σε 10 λεπτά από τη φόρτωση κάθε payload.</string>
+    <string name="stab_row">%1$s: φορτώθηκε %2$d φορές, έπεσε μετά %3$d</string>
+    <string name="stab_suspect">%1$s: η κονσόλα έπεσε μετά από αυτό %2$d από %3$d φορές. Δοκίμασε χωρίς αυτό.</string>
+    <string name="stab_reset">Μηδενισμός μετρητών</string>
+    <string name="missed_title">Δεν ολοκληρώθηκαν</string>
+    <string name="missed_empty">Όλες οι μεταφορές ολοκληρώθηκαν.</string>
+    <string name="missed_retry">Ξανά</string>
+    <string name="missed_retry_all">Όλα ξανά</string>
+    <string name="missed_clear">Καθαρισμός λίστας</string>
+    <string name="autofind_title">Είναι αυτό το %1$s σου;</string>
+    <string name="autofind_text">Το %1$s δεν απαντά στο %2$s, αλλά μια κονσόλα απαντά στο %3$s. Χρήση της νέας διεύθυνσης;</string>
+    <string name="autofind_keep">Κράτα την παλιά</string>
+    <string name="cheatshare_open">Άνοιγμα αρχείου</string>
+    <string name="cheatshare_unreadable">Αυτό το αρχείο δεν διαβάζεται ως λίστα cheat.</string>
+    <string name="cheatshare_save">Αποθήκευση ως αρχείο</string>
+    <string name="cheatshare_saved">Η λίστα cheat αποθηκεύτηκε. Στείλε το αρχείο σε όποιον θες: ανοίγει με την Εισαγωγή.</string>
+    <string name="cheatshare_save_failed">Το αρχείο δεν αποθηκεύτηκε.</string>
 </resources>

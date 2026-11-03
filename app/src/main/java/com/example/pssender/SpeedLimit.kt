@@ -78,3 +78,25 @@ object SpeedLimits {
         prefs(ctx).edit().putLong(KEY, bytesPerSecond.coerceAtLeast(0L)).apply()
     }
 }
+
+/**
+ * "Files at once": how many files from the phone go to the console at the same time, each on its own FTP connection.
+ * Several small files go much faster this way (each file costs a few round trips on its own). One big file is not split.
+ */
+object FilesAtOnce {
+    private const val KEY = "files_at_once"
+
+    /** What can be picked. Four is the most a console's FTP server is asked to handle at once. */
+    val choices: List<Int> = listOf(1, 2, 3, 4)
+
+    /** Two at once unless the person picks otherwise: faster, and gentle on the console. */
+    const val DEFAULT = 2
+
+    private fun prefs(ctx: Context) = ctx.getSharedPreferences("settings", Context.MODE_PRIVATE)
+
+    fun load(ctx: Context): Int = prefs(ctx).getInt(KEY, DEFAULT).coerceIn(1, choices.last())
+
+    fun save(ctx: Context, n: Int) {
+        prefs(ctx).edit().putInt(KEY, n.coerceIn(1, choices.last())).apply()
+    }
+}

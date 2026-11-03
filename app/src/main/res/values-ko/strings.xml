@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">해당 체인은 더 이상 존재하지 않습니다.</string>
     <string name="notif_channel_chain">페이로드 체인</string>
     <string name="backup_chains">체인: %1$d</string>
-    <string name="reload_warn_title">이미 불러왔나요?</string>
     <string name="reload_warn_running">이 본체에서 etaHEN이 이미 응답하고 있습니다(포트 %2$d의 FTP 서버 작동 중). 작동 중에 %1$s을(를) 다시 불러오면 본체가 멈출 수 있습니다. etaHEN이 작동하지 않을 때만 보내세요.</string>
     <string name="reload_warn_sent">%1$s은(는) %2$s 전에 이미 이 본체로 보냈습니다. 두 번 불러오면 본체가 멈출 수 있습니다. 그 사이 본체를 다시 시작했을 때만 다시 보내세요.</string>
     <string name="reload_send_anyway">그래도 보내기</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s 파일이 %2$s의 %3$s에 있습니다</string>
     <string name="notice_dl_failed_title">%1$s에 도착하지 못했습니다</string>
     <string name="notice_install_title">%1$s 설치 프로그램으로 보냄</string>
+    <string name="local_network_refused">근처 기기 권한이 없으면 Crimson Multitool이 콘솔에 연결할 수 없습니다. 휴대폰 설정에서 허용하세요.</string>
+    <string name="turbo_title">동시 전송 파일 수</string>
+    <string name="turbo_hint">휴대폰의 파일을 각각 별도 연결로 나란히 올립니다. 작은 파일이 많을 때 훨씬 빠릅니다.</string>
+    <string name="turbo_hint_limited">여러 파일을 동시에 보내려면 속도 제한을 끄세요.</string>
+    <string name="turbo_all_sent">파일 %1$d개를 모두 보냈습니다</string>
+    <string name="send_check_title">보내기 전 확인</string>
+    <string name="fwcheck_warn">%1$s 페이지에는 펌웨어 %2$s~%3$s가 적혀 있습니다. 사용 중인 %4$s는 %5$s로, 목록에 없습니다. 작동하지 않거나 콘솔이 멈출 수 있습니다.</string>
+    <string name="stab_title">안정성</string>
+    <string name="stab_hint">각 페이로드를 불러온 뒤 10분 안에 콘솔이 멈춘 횟수입니다.</string>
+    <string name="stab_row">%1$s: %2$d번 불러옴, 이후 %3$d번 멈춤</string>
+    <string name="stab_suspect">%1$s: 불러온 %3$d번 중 %2$d번 콘솔이 멈췄습니다. 빼고 시도해 보세요.</string>
+    <string name="stab_reset">횟수 초기화</string>
+    <string name="missed_title">완료되지 않은 전송</string>
+    <string name="missed_empty">모든 전송이 끝났습니다.</string>
+    <string name="missed_retry">다시 시도</string>
+    <string name="missed_retry_all">모두 다시 시도</string>
+    <string name="missed_clear">목록 지우기</string>
+    <string name="autofind_title">이것이 내 %1$s인가요?</string>
+    <string name="autofind_text">%1$s이(가) %2$s에서 응답하지 않지만 %3$s에서 콘솔이 응답합니다. 새 주소를 사용할까요?</string>
+    <string name="autofind_keep">기존 주소 유지</string>
+    <string name="cheatshare_open">파일 열기</string>
+    <string name="cheatshare_unreadable">이 파일은 치트 목록으로 읽을 수 없습니다.</string>
+    <string name="cheatshare_save">파일로 저장</string>
+    <string name="cheatshare_saved">치트 목록을 저장했습니다. 파일을 누구에게나 보내세요. 가져오기로 열 수 있습니다.</string>
+    <string name="cheatshare_save_failed">파일을 저장하지 못했습니다.</string>
 </resources>

@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Такого ланцюжка більше немає.</string>
     <string name="notif_channel_chain">Ланцюжки пейлоадів</string>
     <string name="backup_chains">Ланцюжки: %1$d</string>
-    <string name="reload_warn_title">Уже завантажено?</string>
     <string name="reload_warn_running">etaHEN уже відповідає на цій консолі (його FTP-сервер на порту %2$d працює). Повторне завантаження %1$s, поки він працює, може обвалити консоль. Надсилайте, лише якщо etaHEN перестав працювати.</string>
     <string name="reload_warn_sent">%1$s уже надсилався на цю консоль %2$s тому. Повторне завантаження може обвалити консоль. Надсилайте знову, лише якщо відтоді консоль перезапускалася.</string>
     <string name="reload_send_anyway">Усе одно надіслати</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s на %2$s у %3$s</string>
     <string name="notice_dl_failed_title">Не дійшло до %1$s</string>
     <string name="notice_install_title">Надіслано до інсталятора %1$s</string>
+    <string name="local_network_refused">Без дозволу «Пристрої поблизу» Crimson Multitool не може зв’язатися з консоллю. Дозвольте його в налаштуваннях телефона.</string>
+    <string name="turbo_title">Файлів одночасно</string>
+    <string name="turbo_hint">Файли з телефона завантажуються паралельно, кожен своїм з’єднанням. Багато малих файлів ідуть набагато швидше.</string>
+    <string name="turbo_hint_limited">Вимкніть обмеження швидкості, щоб надсилати більше одного файлу одночасно.</string>
+    <string name="turbo_all_sent">Надіслано всі файли (%1$d)</string>
+    <string name="send_check_title">Перевірка перед надсиланням</string>
+    <string name="fwcheck_warn">На сторінці %1$s вказано прошивки від %2$s до %3$s. Ваша %4$s на %5$s, якої там немає. Може не працювати або вивести консоль з ладу.</string>
+    <string name="stab_title">Стабільність</string>
+    <string name="stab_hint">Як часто консоль падала протягом 10 хвилин після завантаження кожного payload.</string>
+    <string name="stab_row">%1$s: завантажено %2$d раз, падінь після — %3$d</string>
+    <string name="stab_suspect">%1$s: консоль падала після нього %2$d з %3$d разів. Спробуйте без нього.</string>
+    <string name="stab_reset">Скинути лічильники</string>
+    <string name="missed_title">Не завершені</string>
+    <string name="missed_empty">Усі передачі завершено.</string>
+    <string name="missed_retry">Повторити</string>
+    <string name="missed_retry_all">Повторити всі</string>
+    <string name="missed_clear">Очистити список</string>
+    <string name="autofind_title">Це ваша %1$s?</string>
+    <string name="autofind_text">%1$s не відповідає за адресою %2$s, але за адресою %3$s відповідає консоль. Використати нову адресу?</string>
+    <string name="autofind_keep">Залишити стару</string>
+    <string name="cheatshare_open">Відкрити файл</string>
+    <string name="cheatshare_unreadable">Цей файл не читається як список читів.</string>
+    <string name="cheatshare_save">Зберегти файлом</string>
+    <string name="cheatshare_saved">Список читів збережено. Надішліть файл будь-кому: він відкривається через «Імпорт».</string>
+    <string name="cheatshare_save_failed">Не вдалося зберегти файл.</string>
 </resources>

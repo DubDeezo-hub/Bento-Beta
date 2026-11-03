@@ -489,6 +489,19 @@ internal fun LazyListScope.cheatItems(s: MemorySnapshot, ctx: Context, open: (Me
 
     // --- your own cheats ---
     item {
+        // "Save as file": the cheat list as a file to send to someone (they open it with Import, "Open a file")
+        val saveFile = androidx.activity.compose.rememberLauncherForActivityResult(
+            androidx.activity.result.contract.ActivityResultContracts.CreateDocument("application/json")
+        ) { uri ->
+            if (uri != null) {
+                val ok = try {
+                    ctx.contentResolver.openOutputStream(uri)?.use { it.write(m.exportText().toByteArray(Charsets.UTF_8)) } != null
+                } catch (_: Exception) {
+                    false
+                }
+                m.status = AppText.get(if (ok) R.string.cheatshare_saved else R.string.cheatshare_save_failed)
+            }
+        }
         Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
             TipTitle(str(R.string.memory_my_cheats), Tip.MEM_MY_CHEATS)
             Row(
@@ -500,6 +513,9 @@ internal fun LazyListScope.cheatItems(s: MemorySnapshot, ctx: Context, open: (Me
                     Text(str(R.string.memory_find_again_all))
                 }
                 OutlinedButton(enabled = m.cheats.isNotEmpty(), onClick = { shareText(ctx, m.exportText()) }) { Text(str(R.string.memory_export)) }
+                OutlinedButton(enabled = m.cheats.isNotEmpty(), onClick = {
+                    saveFile.launch(cheatShareName(s.game.titleId, s.game.name))
+                }) { Text(str(R.string.cheatshare_save)) }
                 OutlinedButton(enabled = playing && !m.busy && m.cheats.isNotEmpty(), onClick = {
                     m.exportCheatFile { name, text, inside, outside -> open(MemoryDialog.CheatFileOut(name, text, inside, outside)) }
                 }) { Text(str(R.string.export_cheat_file)) }

@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Essa cadeia já não existe.</string>
     <string name="notif_channel_chain">Cadeias de payloads</string>
     <string name="backup_chains">Cadeias: %1$d</string>
-    <string name="reload_warn_title">Já carregado?</string>
     <string name="reload_warn_running">O etaHEN já responde nesta consola (o servidor FTP dele na porta %2$d está ativo). Carregar %1$s outra vez enquanto corre pode bloquear a consola. Envia só se o etaHEN deixou de funcionar.</string>
     <string name="reload_warn_sent">%1$s já foi enviado a esta consola há %2$s. Carregá-lo uma segunda vez pode bloquear a consola. Envia de novo só se a consola foi reiniciada entretanto.</string>
     <string name="reload_send_anyway">Enviar mesmo assim</string>
@@ -1236,4 +1235,29 @@
     <string name="notice_dl_done_text">%1$s está na %2$s em %3$s</string>
     <string name="notice_dl_failed_title">Não chegou à %1$s</string>
     <string name="notice_install_title">Enviado para o instalador da %1$s</string>
+    <string name="local_network_refused">O Crimson Multitool não chega à consola sem a permissão Dispositivos próximos. Permite-a nas definições do telemóvel.</string>
+    <string name="turbo_title">Ficheiros em simultâneo</string>
+    <string name="turbo_hint">Os ficheiros do telemóvel são enviados lado a lado, cada um na sua ligação. Muitos ficheiros pequenos vão muito mais depressa.</string>
+    <string name="turbo_hint_limited">Desliga o limite de velocidade para enviar mais de um ficheiro de cada vez.</string>
+    <string name="turbo_all_sent">Enviados os %1$d ficheiros</string>
+    <string name="send_check_title">Verificar antes de enviar</string>
+    <string name="fwcheck_warn">A página de %1$s indica o firmware %2$s a %3$s. A tua %4$s está no %5$s, que não aparece. Pode não funcionar ou bloquear a consola.</string>
+    <string name="stab_title">Estabilidade</string>
+    <string name="stab_hint">Quantas vezes a consola foi abaixo nos 10 minutos depois de carregar cada payload.</string>
+    <string name="stab_row">%1$s: carregado %2$d vezes, foi abaixo depois %3$d</string>
+    <string name="stab_suspect">%1$s: a consola foi abaixo depois dele %2$d de %3$d vezes. Experimenta sem ele.</string>
+    <string name="stab_reset">Repor contagens</string>
+    <string name="missed_title">Não terminaram</string>
+    <string name="missed_empty">Todas as transferências terminaram.</string>
+    <string name="missed_retry">Tentar de novo</string>
+    <string name="missed_retry_all">Tentar todas de novo</string>
+    <string name="missed_clear">Limpar lista</string>
+    <string name="autofind_title">É esta a tua %1$s?</string>
+    <string name="autofind_text">%1$s não responde em %2$s, mas uma consola responde em %3$s. Usar o novo endereço?</string>
+    <string name="autofind_keep">Manter o antigo</string>
+    <string name="cheatshare_open">Abrir um ficheiro</string>
+    <string name="cheatshare_unreadable">Esse ficheiro não pode ser lido como lista de batotas.</string>
+    <string name="cheatshare_save">Guardar como ficheiro</string>
+    <string name="cheatshare_saved">Lista de batotas guardada. Envia o ficheiro a quem quiseres: abre-se com Importar.</string>
+    <string name="cheatshare_save_failed">Não foi possível guardar o ficheiro.</string>
 </resources>

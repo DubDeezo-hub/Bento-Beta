@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Mnyororo huo haupo tena.</string>
     <string name="notif_channel_chain">Minyororo ya payload</string>
     <string name="backup_chains">Minyororo: %1$d</string>
-    <string name="reload_warn_title">Tayari imepakiwa?</string>
     <string name="reload_warn_running">etaHEN tayari inajibu kwenye konsoli hii (seva yake ya FTP kwenye mlango %2$d inafanya kazi). Kupakia %1$s tena ikiwa inafanya kazi kunaweza kukwamisha konsoli. Ituma tu ikiwa etaHEN imeacha kufanya kazi.</string>
     <string name="reload_warn_sent">%1$s tayari ilitumwa kwa konsoli hii %2$s zilizopita. Kuipakia mara ya pili kunaweza kukwamisha konsoli. Ituma tena tu ikiwa konsoli imewashwa upya tangu hapo.</string>
     <string name="reload_send_anyway">Tuma hata hivyo</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s iko kwenye %2$s ndani ya %3$s</string>
     <string name="notice_dl_failed_title">Haikufika kwenye %1$s</string>
     <string name="notice_install_title">Imetumwa kwa kisakinishi cha %1$s</string>
+    <string name="local_network_refused">Crimson Multitool haiwezi kufikia konsoli bila ruhusa ya Vifaa vilivyo karibu. Iruhusu kwenye mipangilio ya simu.</string>
+    <string name="turbo_title">Faili kwa wakati mmoja</string>
+    <string name="turbo_hint">Faili za simu hupakiwa sambamba, kila moja kwa muunganisho wake. Faili nyingi ndogo huenda kwa kasi zaidi.</string>
+    <string name="turbo_hint_limited">Zima kikomo cha kasi ili kutuma zaidi ya faili moja kwa wakati mmoja.</string>
+    <string name="turbo_all_sent">Faili zote %1$d zimetumwa</string>
+    <string name="send_check_title">Kagua kabla ya kutuma</string>
+    <string name="fwcheck_warn">Ukurasa wa %1$s unataja programu dhibiti %2$s hadi %3$s. %4$s yako iko kwenye %5$s, ambayo haitajwi. Huenda isifanye kazi au ikaangusha konsoli.</string>
+    <string name="stab_title">Uthabiti</string>
+    <string name="stab_hint">Mara ngapi konsoli ilizimika ndani ya dakika 10 baada ya kupakia kila payload.</string>
+    <string name="stab_row">%1$s: imepakiwa mara %2$d, ilizimika baadaye mara %3$d</string>
+    <string name="stab_suspect">%1$s: konsoli ilizimika baada yake mara %2$d kati ya %3$d. Jaribu bila hiyo.</string>
+    <string name="stab_reset">Weka upya hesabu</string>
+    <string name="missed_title">Hazikukamilika</string>
+    <string name="missed_empty">Uhamisho wote umekamilika.</string>
+    <string name="missed_retry">Jaribu tena</string>
+    <string name="missed_retry_all">Jaribu zote tena</string>
+    <string name="missed_clear">Futa orodha</string>
+    <string name="autofind_title">Je, hii ni %1$s yako?</string>
+    <string name="autofind_text">%1$s haijibu kwenye %2$s, lakini konsoli inajibu kwenye %3$s. Tumia anwani mpya?</string>
+    <string name="autofind_keep">Baki na ya zamani</string>
+    <string name="cheatshare_open">Fungua faili</string>
+    <string name="cheatshare_unreadable">Faili hiyo haisomeki kama orodha ya cheat.</string>
+    <string name="cheatshare_save">Hifadhi kama faili</string>
+    <string name="cheatshare_saved">Orodha ya cheat imehifadhiwa. Tuma faili kwa yeyote: hufunguliwa kwa Leta.</string>
+    <string name="cheatshare_save_failed">Faili haikuweza kuhifadhiwa.</string>
 </resources>

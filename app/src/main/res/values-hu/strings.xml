@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Ez a lánc már nem létezik.</string>
     <string name="notif_channel_chain">Payload-láncok</string>
     <string name="backup_chains">Láncok: %1$d</string>
-    <string name="reload_warn_title">Már betöltve?</string>
     <string name="reload_warn_running">Az etaHEN már válaszol ezen a konzolon (az FTP-szervere fut a(z) %2$d porton). Ha futás közben újra betöltöd: %1$s, a konzol összeomolhat. Csak akkor küldd el, ha az etaHEN már nem működik.</string>
     <string name="reload_warn_sent">%1$s már el lett küldve erre a konzolra %2$s ideje. Másodszori betöltése összeomlaszthatja a konzolt. Csak akkor küldd újra, ha azóta a konzol újraindult.</string>
     <string name="reload_send_anyway">Küldés mégis</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">A(z) %1$s a(z) %2$s gépen van itt: %3$s</string>
     <string name="notice_dl_failed_title">Nem jutott el ide: %1$s</string>
     <string name="notice_install_title">Elküldve a(z) %1$s telepítőjének</string>
+    <string name="local_network_refused">A Crimson Multitool a Közeli eszközök engedély nélkül nem éri el a konzolt. Engedélyezd a telefon beállításaiban.</string>
+    <string name="turbo_title">Fájl egyszerre</string>
+    <string name="turbo_hint">A telefon fájljai egymás mellett töltődnek fel, mindegyik saját kapcsolaton. Sok kis fájl így sokkal gyorsabb.</string>
+    <string name="turbo_hint_limited">Kapcsold ki a sebességkorlátot, hogy egyszerre több fájlt küldhess.</string>
+    <string name="turbo_all_sent">Mind a %1$d fájl elküldve</string>
+    <string name="send_check_title">Ellenőrzés küldés előtt</string>
+    <string name="fwcheck_warn">A(z) %1$s oldala a(z) %2$s–%3$s firmware-t említi. A(z) %4$s gépeden %5$s fut, ami nincs benne. Lehet, hogy nem működik, vagy lefagyasztja a konzolt.</string>
+    <string name="stab_title">Stabilitás</string>
+    <string name="stab_hint">Milyen gyakran omlott össze a konzol az egyes payloadok betöltése utáni 10 percben.</string>
+    <string name="stab_row">%1$s: %2$d betöltés, utána %3$d összeomlás</string>
+    <string name="stab_suspect">%1$s: a konzol utána %3$d esetből %2$d-szer összeomlott. Próbáld nélküle.</string>
+    <string name="stab_reset">Számlálók nullázása</string>
+    <string name="missed_title">Nem fejeződtek be</string>
+    <string name="missed_empty">Minden átvitel befejeződött.</string>
+    <string name="missed_retry">Újra</string>
+    <string name="missed_retry_all">Mind újra</string>
+    <string name="missed_clear">Lista törlése</string>
+    <string name="autofind_title">Ez a te %1$s géped?</string>
+    <string name="autofind_text">A(z) %1$s nem válaszol itt: %2$s, de egy konzol válaszol itt: %3$s. Az új címet használod?</string>
+    <string name="autofind_keep">Maradjon a régi</string>
+    <string name="cheatshare_open">Fájl megnyitása</string>
+    <string name="cheatshare_unreadable">Ez a fájl nem olvasható csalólistaként.</string>
+    <string name="cheatshare_save">Mentés fájlként</string>
+    <string name="cheatshare_saved">Csalólista mentve. Küldd el a fájlt bárkinek: az Importálással nyitható meg.</string>
+    <string name="cheatshare_save_failed">A fájlt nem sikerült menteni.</string>
 </resources>

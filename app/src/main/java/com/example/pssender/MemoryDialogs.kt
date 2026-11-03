@@ -215,6 +215,12 @@ internal fun WatchDialog(w: Watch, onClose: () -> Unit, onOpen: (MemoryDialog) -
 internal fun ImportDialog(ctx: Context, onClose: () -> Unit) {
     val m = MemorySession
     var text by remember { mutableStateOf("") }
+    // A cheat file someone shared (saved with "Save as file"): its text goes into the box, to check before importing
+    val openFile = androidx.activity.compose.rememberLauncherForActivityResult(
+        androidx.activity.result.contract.ActivityResultContracts.OpenDocument()
+    ) { uri ->
+        if (uri != null) text = readCheatShare(ctx, uri) ?: AppText.get(R.string.cheatshare_unreadable)
+    }
     AlertDialog(
         onDismissRequest = onClose,
         title = { Text(str(R.string.memory_import)) },
@@ -222,7 +228,12 @@ internal fun ImportDialog(ctx: Context, onClose: () -> Unit) {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text(str(R.string.memory_import_help), style = MaterialTheme.typography.bodySmall)
                 LinesField(str(R.string.memory_import_box), text, 4) { text = it }
-                TextButton(onClick = { text = clipboardText(ctx) }) { Text(str(R.string.install_paste)) }
+                Row {
+                    TextButton(onClick = { text = clipboardText(ctx) }) { Text(str(R.string.install_paste)) }
+                    TextButton(onClick = { openFile.launch(arrayOf("application/json", "text/*", "application/octet-stream")) }) {
+                        Text(str(R.string.cheatshare_open))
+                    }
+                }
             }
         },
         confirmButton = {
@@ -363,4 +374,35 @@ internal fun SourceDialog(onClose: () -> Unit) {
         },
         dismissButton = { TextButton(onClick = onClose) { Text(str(R.string.action_cancel)) } }
     )
+}
+
+/** The text of a shared cheat file at [uri], or null when it can't be read (or is too big to be one). */
+internal fun readCheatShare(ctx: Context, uri: android.net.Uri): String? = try {
+    ctx.contentResolver.openInputStream(uri)?.use { input ->
+        val bytes = input.readNBytesCompat(CHEAT_SHARE_MAX + 1)
+        if (bytes.size > CHEAT_SHARE_MAX) null else String(bytes, Charsets.UTF_8)
+    }
+} catch (_: Exception) {
+    null
+}
+
+/** A shared cheat list is small; anything bigger than this is not one. */
+const val CHEAT_SHARE_MAX = 1 shl 20
+
+/** Reads at most [max] bytes (InputStream.readNBytes needs a newer Android). */
+private fun java.io.InputStream.readNBytesCompat(max: Int): ByteArray {
+    val out = java.io.ByteArrayOutputStream()
+    val buf = ByteArray(8192)
+    while (out.size() < max) {
+        val n = read(buf, 0, minOf(buf.size, max - out.size()))
+        if (n < 0) break
+        out.write(buf, 0, n)
+    }
+    return out.toByteArray()
+}
+
+/** The file name a shared cheat list is saved under: the game's title ID or name, then "-cheats.json". */
+fun cheatShareName(titleId: String, game: String): String {
+    val base = titleId.ifBlank { game }.replace(Regex("[^A-Za-z0-9._-]+"), "-").trim('-').take(40)
+    return (base.ifEmpty { "my" }) + "-cheats.json"
 }

@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Тај ланац више не постоји.</string>
     <string name="notif_channel_chain">Ланци payload-а</string>
     <string name="backup_chains">Ланци: %1$d</string>
-    <string name="reload_warn_title">Већ учитано?</string>
     <string name="reload_warn_running">etaHEN већ одговара на овој конзоли (његов FTP сервер на порту %2$d ради). Поновно учитавање %1$s док ради може да обори конзолу. Пошаљи га само ако је etaHEN престао да ради.</string>
     <string name="reload_warn_sent">%1$s је већ послат овој конзоли пре %2$s. Друго учитавање може да обори конзолу. Пошаљи га поново само ако је конзола од тада поново покренута.</string>
     <string name="reload_send_anyway">Ипак пошаљи</string>
@@ -1235,4 +1234,29 @@
     <string name="notice_dl_done_text">%1$s је на %2$s у %3$s</string>
     <string name="notice_dl_failed_title">Није стигло на %1$s</string>
     <string name="notice_install_title">Послато инсталатеру за %1$s</string>
+    <string name="local_network_refused">Crimson Multitool не може да дође до конзоле без дозволе Уређаји у близини. Дозволите је у подешавањима телефона.</string>
+    <string name="turbo_title">Датотека одједном</string>
+    <string name="turbo_hint">Датотеке са телефона се отпремају упоредо, свака својом везом. Много малих датотека иде много брже.</string>
+    <string name="turbo_hint_limited">Искључите ограничење брзине да бисте слали више датотека одједном.</string>
+    <string name="turbo_all_sent">Послато свих %1$d датотека</string>
+    <string name="send_check_title">Провера пре слања</string>
+    <string name="fwcheck_warn">Страница за %1$s наводи фирмвер %2$s до %3$s. Ваша %4$s је на %5$s, који није наведен. Можда неће радити или ће срушити конзолу.</string>
+    <string name="stab_title">Стабилност</string>
+    <string name="stab_hint">Колико често се конзола срушила у року од 10 минута од учитавања сваког payload-а.</string>
+    <string name="stab_row">%1$s: учитан %2$d пута, рушење после %3$d</string>
+    <string name="stab_suspect">%1$s: конзола се срушила после њега %2$d од %3$d пута. Пробајте без њега.</string>
+    <string name="stab_reset">Поништи бројаче</string>
+    <string name="missed_title">Нису завршени</string>
+    <string name="missed_empty">Сви преноси су завршени.</string>
+    <string name="missed_retry">Покушај поново</string>
+    <string name="missed_retry_all">Покушај све поново</string>
+    <string name="missed_clear">Очисти листу</string>
+    <string name="autofind_title">Да ли је ово ваша %1$s?</string>
+    <string name="autofind_text">%1$s не одговара на %2$s, али конзола одговара на %3$s. Користити нову адресу?</string>
+    <string name="autofind_keep">Задржи стару</string>
+    <string name="cheatshare_open">Отвори датотеку</string>
+    <string name="cheatshare_unreadable">Ова датотека не може да се прочита као листа варалица.</string>
+    <string name="cheatshare_save">Сачувај као датотеку</string>
+    <string name="cheatshare_saved">Листа варалица је сачувана. Пошаљите датотеку коме год желите: отвара се кроз Увоз.</string>
+    <string name="cheatshare_save_failed">Датотека није могла да се сачува.</string>
 </resources>

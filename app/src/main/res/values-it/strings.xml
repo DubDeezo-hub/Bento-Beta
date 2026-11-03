@@ -385,7 +385,6 @@
     <string name="chain_err_unknown">Quella catena non esiste più.</string>
     <string name="notif_channel_chain">Catene di payload</string>
     <string name="backup_chains">Catene: %1$d</string>
-    <string name="reload_warn_title">Già caricato?</string>
     <string name="reload_warn_running">etaHEN risponde già su questa console (il suo server FTP sulla porta %2$d è attivo). Caricare di nuovo %1$s mentre funziona può bloccare la console. Invialo solo se etaHEN ha smesso di funzionare.</string>
     <string name="reload_warn_sent">%1$s è già stato inviato a questa console %2$s fa. Caricarlo una seconda volta può bloccare la console. Invialo di nuovo solo se nel frattempo la console è stata riavviata.</string>
     <string name="reload_send_anyway">Invia comunque</string>
@@ -1236,4 +1235,29 @@
     <string name="notice_dl_done_text">%1$s è sulla %2$s in %3$s</string>
     <string name="notice_dl_failed_title">Non è arrivato alla %1$s</string>
     <string name="notice_install_title">Inviato all\'installer della %1$s</string>
+    <string name="local_network_refused">Crimson Multitool non raggiunge la console senza il permesso Dispositivi nelle vicinanze. Consentilo nelle impostazioni del telefono.</string>
+    <string name="turbo_title">File insieme</string>
+    <string name="turbo_hint">I file del telefono vengono caricati in parallelo, ognuno con la sua connessione. Tanti file piccoli vanno molto più veloci.</string>
+    <string name="turbo_hint_limited">Disattiva il limite di velocità per inviare più file insieme.</string>
+    <string name="turbo_all_sent">Inviati tutti i %1$d file</string>
+    <string name="send_check_title">Controlla prima di inviare</string>
+    <string name="fwcheck_warn">La pagina di %1$s indica firmware da %2$s a %3$s. La tua %4$s è alla %5$s, che non è indicata. Potrebbe non funzionare o bloccare la console.</string>
+    <string name="stab_title">Stabilità</string>
+    <string name="stab_hint">Quante volte la console si è bloccata entro 10 minuti dal caricamento di ogni payload.</string>
+    <string name="stab_row">%1$s: caricato %2$d volte, blocco dopo %3$d</string>
+    <string name="stab_suspect">%1$s: la console si è bloccata dopo %2$d volte su %3$d. Prova senza.</string>
+    <string name="stab_reset">Azzera conteggi</string>
+    <string name="missed_title">Non completati</string>
+    <string name="missed_empty">Tutti i trasferimenti sono finiti.</string>
+    <string name="missed_retry">Riprova</string>
+    <string name="missed_retry_all">Riprova tutti</string>
+    <string name="missed_clear">Svuota elenco</string>
+    <string name="autofind_title">È questa la tua %1$s?</string>
+    <string name="autofind_text">%1$s non risponde a %2$s, ma una console risponde a %3$s. Usare il nuovo indirizzo?</string>
+    <string name="autofind_keep">Tieni il vecchio</string>
+    <string name="cheatshare_open">Apri un file</string>
+    <string name="cheatshare_unreadable">Quel file non si può leggere come elenco di trucchi.</string>
+    <string name="cheatshare_save">Salva come file</string>
+    <string name="cheatshare_saved">Elenco trucchi salvato. Invia il file a chi vuoi: si apre con Importa.</string>
+    <string name="cheatshare_save_failed">Impossibile salvare il file.</string>
 </resources>

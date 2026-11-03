@@ -65,6 +65,7 @@ object SendLog {
 fun notePayloadSent(host: String, name: String) {
     ReloadGuard.noteSent(host, name)
     SendLog.note(host, name)
+    Stability.noteLoad(name)
 }
 
 object CrashDiary {
@@ -106,7 +107,9 @@ object CrashDiary {
         try {
             val d = dir(ctx)
             val f = File(d, "crash-" + stamp.format(Date(now)) + ".txt")
-            f.writeText(format(host, label, lines, SendLog.recent(host, RECENT_WINDOW_MS, now), Date(now)))
+            val sent = SendLog.recent(host, RECENT_WINDOW_MS, now)
+            f.writeText(format(host, label, lines, sent, Date(now)))
+            Stability.noteCrash(sent.map { it.name })
             prune(d)
         } catch (_: Exception) {
         }
@@ -144,6 +147,7 @@ object CrashDiary {
 fun CrashDiaryDialog(onClose: () -> Unit) {
     val ctx = LocalContext.current
     var entries by remember { mutableStateOf(CrashDiary.entries(ctx)) }
+    var report by remember { mutableStateOf(Stability.rows(ctx)) }
     var open by remember { mutableStateOf<CrashDiary.Entry?>(null) }
 
     val viewing = open
@@ -169,6 +173,23 @@ fun CrashDiaryDialog(onClose: () -> Unit) {
         text = {
             Column(modifier = Modifier.heightIn(max = 460.dp).verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                 Text(str(R.string.crashdiary_desc), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                // The stability report: which payloads the console tends to go down after
+                if (report.isNotEmpty()) {
+                    Text(str(R.string.stab_title), style = MaterialTheme.typography.titleSmall, modifier = Modifier.padding(top = 4.dp))
+                    Text(str(R.string.stab_hint), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    for (r in report.take(12)) {
+                        Text(
+                            if (r.suspect) str(R.string.stab_suspect, r.name, r.crashes, r.loads)
+                            else str(R.string.stab_row, r.name, r.loads, r.crashes),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = if (r.suspect) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.onSurface
+                        )
+                    }
+                    TextButton(onClick = {
+                        Stability.clear(ctx)
+                        report = Stability.rows(ctx)
+                    }) { Text(str(R.string.stab_reset)) }
+                }
                 if (entries.isEmpty()) {
                     Text(str(R.string.crashdiary_empty), style = MaterialTheme.typography.bodyMedium)
                 } else {

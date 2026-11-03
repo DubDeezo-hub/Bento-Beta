@@ -36,6 +36,9 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.material3.Switch
 import androidx.compose.ui.Modifier
@@ -592,6 +595,7 @@ fun QueueDialog(
 fun SpeedLimitDialog(onClose: () -> Unit) {
     val ctx = LocalContext.current
     val current by TransferState.limit.collectAsState()
+    var lanes by remember { mutableIntStateOf(TransferState.lanes) }
     AlertDialog(
         onDismissRequest = onClose,
         title = { Text(str(R.string.speed_limit_title)) },
@@ -617,6 +621,21 @@ fun SpeedLimitDialog(onClose: () -> Unit) {
                             if (value == 0L) str(R.string.speed_limit_off) else fmtRate(value),
                             modifier = Modifier.padding(start = 8.dp)
                         )
+                    }
+                }
+                // Files at once: only without a speed limit (a limit is for one connection)
+                Text(str(R.string.turbo_title), style = MaterialTheme.typography.titleSmall, modifier = Modifier.padding(top = 10.dp))
+                Text(
+                    str(if (current > 0L) R.string.turbo_hint_limited else R.string.turbo_hint),
+                    style = MaterialTheme.typography.bodySmall
+                )
+                ChipRow {
+                    FilesAtOnce.choices.forEach { n ->
+                        Chip(n.toString(), n == lanes, enabled = current == 0L) {
+                            FilesAtOnce.save(ctx, n)
+                            TransferState.lanes = n
+                            lanes = n
+                        }
                     }
                 }
             }
@@ -651,4 +670,53 @@ fun StatusStrip(text: String, onDismiss: () -> Unit) {
         HelpLink(text)
         Text("✕", color = cs.onSurfaceVariant, style = MaterialTheme.typography.bodySmall)
     }
+}
+
+/**
+ * Transfers that ended without finishing (stopped, or skipped after failing), with why, and "Try again" for each or all.
+ * They go back in the queue for the console they were meant for.
+ */
+@Composable
+fun MissedDialog(onClose: () -> Unit) {
+    val ctx = LocalContext.current
+    val list by TransferState.missed.collectAsState()
+    val retry: (MissedTransfer) -> Unit = { m ->
+        TransferState.dropMissed(m)
+        TransferService.enqueue(ctx, m.req)
+    }
+    AlertDialog(
+        onDismissRequest = onClose,
+        title = { Text(str(R.string.missed_title)) },
+        text = {
+            if (list.isEmpty()) {
+                Text(str(R.string.missed_empty))
+            } else {
+                Column(
+                    modifier = Modifier.verticalScroll(rememberScrollState()),
+                    verticalArrangement = Arrangement.spacedBy(4.dp)
+                ) {
+                    list.forEach { m ->
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Column(modifier = Modifier.weight(1f)) {
+                                Text(m.req.name, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                                if (m.message.isNotBlank()) {
+                                    Text(
+                                        m.message, maxLines = 2, overflow = TextOverflow.Ellipsis,
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                                    )
+                                }
+                            }
+                            TextButton(onClick = { retry(m) }) { Text(str(R.string.missed_retry)) }
+                        }
+                    }
+                    Row {
+                        TextButton(onClick = { list.reversed().forEach(retry) }) { Text(str(R.string.missed_retry_all)) }
+                        TextButton(onClick = { TransferState.clearMissed() }) { Text(str(R.string.missed_clear)) }
+                    }
+                }
+            }
+        },
+        confirmButton = { TextButton(onClick = onClose) { Text(str(R.string.action_done)) } }
+    )
 }
