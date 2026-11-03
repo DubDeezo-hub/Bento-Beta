@@ -400,6 +400,7 @@ class TransferCenter(clock: () -> Long = { System.currentTimeMillis() }) : Trans
     fun finishItem(entry: QueueEntry<TransferRequest>, result: TransferResult): Boolean {
         val more = queue.waitingCount > 0 || helpersBusy > 0
         if (result.ok) {
+            SessionLog.note(AppText.get(R.string.session_transfer, entry.item.name))
             leaveList()
             discard(entry.id, false)
             tally.transferDone(info.value.done)

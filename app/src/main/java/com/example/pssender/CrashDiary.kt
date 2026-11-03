@@ -66,6 +66,7 @@ fun notePayloadSent(host: String, name: String) {
     ReloadGuard.noteSent(host, name)
     SendLog.note(host, name)
     Stability.noteLoad(name)
+    SessionLog.note(AppText.get(R.string.session_sent, name))
 }
 
 object CrashDiary {
@@ -110,6 +111,7 @@ object CrashDiary {
             val sent = SendLog.recent(host, RECENT_WINDOW_MS, now)
             f.writeText(format(host, label, lines, sent, Date(now)))
             Stability.noteCrash(sent.map { it.name })
+            SessionLog.note(AppText.get(R.string.session_silent, label.ifBlank { "console" }), now)
             prune(d)
         } catch (_: Exception) {
         }
@@ -153,11 +155,23 @@ fun CrashDiaryDialog(onClose: () -> Unit) {
     val viewing = open
     if (viewing != null) {
         val text = remember(viewing) { CrashDiary.read(viewing) }
+        val parts = remember(text) { parseCrashNote(text) }
+        var noRepo by remember(viewing) { mutableStateOf("") }
         AlertDialog(
             onDismissRequest = { open = null },
             title = { Text(CrashDiary.title(viewing), maxLines = 1) },
             text = {
-                Column(modifier = Modifier.heightIn(max = 420.dp).verticalScroll(rememberScrollState())) {
+                Column(modifier = Modifier.heightIn(max = 420.dp).verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                    // What likely happened, in plain words
+                    Text(str(R.string.expl_title), style = MaterialTheme.typography.titleSmall)
+                    explainCrash(parts.lines, parts.sent).forEach { c -> Text("• " + str(c.res), style = MaterialTheme.typography.bodySmall) }
+                    // A bug report for the developer of each payload sent just before
+                    parts.sent.distinct().forEach { name ->
+                        TextButton(onClick = {
+                            if (!DevReport.open(ctx, name, parts.sent, parts.lines)) noRepo = AppText.get(R.string.devreport_no_repo, name)
+                        }) { Text(str(R.string.devreport_for, name)) }
+                    }
+                    if (noRepo.isNotEmpty()) Text(noRepo, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     Text(text, fontFamily = FontFamily.Monospace, fontSize = 11.sp, lineHeight = 14.sp)
                 }
             },

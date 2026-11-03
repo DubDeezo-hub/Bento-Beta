@@ -1,9 +1,13 @@
 name: Compatibility reports
 
-# People report from the app how a payload went on their console ("worked", "crashed", "didn't work") by opening an
-# issue the app fills in for them. This counts each report into compat.json on the "compat-data" branch, which the app
-# reads to show what others saw. Only the payload's name, the console model, its firmware and the result are counted;
-# the issue is then thanked and closed. Nothing here runs code from the issue: its text is only matched field by field.
+# People report from the app, by opening an issue the app fills in for them:
+#   <!-- crimson-compat -->       how a payload went on a console (worked, crashed, didn't work)
+#   <!-- crimson-recipe -->       how a load order (a chain) went on a console
+#   <!-- crimson-cheats -->       a cheat list for a game, shared with everyone
+#   <!-- crimson-cheat-vote -->   whether a shared cheat list works
+# This counts each report into compat.json (and cheat lists into cheats/<title ID>.json) on the "compat-data" branch,
+# which the app reads. Each issue is then thanked and closed. Nothing here runs code from the issue: its text is only
+# matched field by field, and a cheat list is rebuilt from its known fields only.
 
 on:
   issues:
@@ -20,36 +24,23 @@ concurrency:
 
 jobs:
   count:
-    if: contains(github.event.issue.body, '<!-- crimson-compat -->')
+    if: contains(github.event.issue.body, '<!-- crimson-')
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/github-script@v7
         with:
           script: |
             const body = context.payload.issue.body || '';
+            const crypto = require('crypto');
             const field = (name) => {
               const m = body.match(new RegExp('^' + name + ':[ \\t]*(.+)$', 'm'));
               return m ? m[1].trim() : '';
             };
-            const payload = field('payload');
-            const model = field('console').toUpperCase();
-            const firmware = field('firmware');
-            const result = field('result').toLowerCase();
             const close = async (text) => {
               await github.rest.issues.createComment({ ...context.repo, issue_number: context.issue.number, body: text + '\n\n---\n_Counted by the Compatibility reports workflow._' });
               await github.rest.issues.update({ ...context.repo, issue_number: context.issue.number, state: 'closed', state_reason: 'completed' });
             };
-            // Each field must look exactly as the app writes it
-            if (!/^[A-Za-z0-9._ +-]{1,64}$/.test(payload) || !['PS4', 'PS5'].includes(model) ||
-                !/^\d{1,2}\.\d{2}$/.test(firmware) || !['worked', 'crashed', 'failed'].includes(result)) {
-              await close('This report could not be read, so it was not counted. Please send it again from the app.');
-              return;
-            }
-            // The same name the app uses: lower case, no file ending, no version at the end
-            const key = payload.toLowerCase().replace(/\.(elf|bin|js|lua|jar)$/, '').replace(/[-_ ]*v?\d+(\.\d+)*[a-z]?$/, '').trim() || payload.toLowerCase();
-            const where = model + ' ' + firmware;
             const branch = 'compat-data';
-            const path = 'compat.json';
             // The data branch, made from the default branch the first time
             try {
               await github.rest.repos.getBranch({ ...context.repo, branch });
@@ -58,32 +49,124 @@ jobs:
               const head = await github.rest.repos.getBranch({ ...context.repo, branch: base.data.default_branch });
               await github.rest.git.createRef({ ...context.repo, ref: 'refs/heads/' + branch, sha: head.data.commit.sha });
             }
-            let data = { version: 1, reports: {}, seen: [] };
-            let sha;
-            try {
-              const f = await github.rest.repos.getContent({ ...context.repo, path, ref: branch });
-              sha = f.data.sha;
-              data = JSON.parse(Buffer.from(f.data.content, 'base64').toString('utf8'));
-            } catch (e) {
-              if (e.status !== 404) throw e;
-            }
-            data.reports = data.reports || {};
-            data.seen = data.seen || [];
-            // One vote per person, payload and firmware (kept as a hash, not the name)
-            const crypto = require('crypto');
-            const voter = crypto.createHash('sha256').update(context.payload.issue.user.id + '|' + key + '|' + where).digest('hex').slice(0, 16);
-            if (data.seen.includes(voter)) {
-              await close('Thanks! You already reported ' + payload + ' on ' + where + ', so this one was not counted again.');
+            const read = async (path, empty) => {
+              try {
+                const f = await github.rest.repos.getContent({ ...context.repo, path, ref: branch });
+                return { sha: f.data.sha, data: JSON.parse(Buffer.from(f.data.content, 'base64').toString('utf8')) };
+              } catch (e) {
+                if (e.status !== 404) throw e;
+                return { sha: undefined, data: empty };
+              }
+            };
+            const write = async (path, sha, data, message) => {
+              data.updated = new Date().toISOString();
+              await github.rest.repos.createOrUpdateFileContents({
+                ...context.repo, path, branch, sha, message,
+                content: Buffer.from(JSON.stringify(data, null, 1) + '\n').toString('base64')
+              });
+            };
+            const voterOf = (what) => crypto.createHash('sha256').update(context.payload.issue.user.id + '|' + what).digest('hex').slice(0, 16);
+            // The same name the app uses: lower case, no file ending, no version at the end
+            const keyOf = (p) => p.toLowerCase().replace(/\.(elf|bin|js|lua|jar)$/, '').replace(/[-_ ]*v?\d+(\.\d+)*[a-z]?$/, '').trim() || p.toLowerCase();
+            const okName = (p) => /^[A-Za-z0-9._ +-]{1,64}$/.test(p);
+            const model = field('console').toUpperCase();
+            const firmware = field('firmware');
+            const okConsole = ['PS4', 'PS5'].includes(model) && /^\d{1,2}\.\d{2}$/.test(firmware);
+            const where = model + ' ' + firmware;
+
+            if (body.includes('<!-- crimson-compat -->')) {
+              const payload = field('payload');
+              const result = field('result').toLowerCase();
+              if (!okName(payload) || !okConsole || !['worked', 'crashed', 'failed'].includes(result)) {
+                await close('This report could not be read, so it was not counted. Please send it again from the app.');
+                return;
+              }
+              const key = keyOf(payload);
+              const { sha, data } = await read('compat.json', { version: 1, reports: {}, seen: [] });
+              data.reports = data.reports || {}; data.seen = data.seen || [];
+              const voter = voterOf(key + '|' + where);
+              if (data.seen.includes(voter)) { await close('Thanks! You already reported ' + payload + ' on ' + where + ', so this one was not counted again.'); return; }
+              data.seen.push(voter);
+              const entry = (data.reports[key] = data.reports[key] || {});
+              const counts = (entry[where] = entry[where] || { worked: 0, crashed: 0, failed: 0 });
+              counts[result] = (counts[result] || 0) + 1;
+              await write('compat.json', sha, data, 'Count a report: ' + key + ' on ' + where + ' (' + result + ')');
+              await close('Thanks! Counted: ' + payload + ' on ' + where + ' (' + result + '). Everyone using Crimson Multitool will see it within a day.');
               return;
             }
-            data.seen.push(voter);
-            const entry = (data.reports[key] = data.reports[key] || {});
-            const counts = (entry[where] = entry[where] || { worked: 0, crashed: 0, failed: 0 });
-            counts[result] = (counts[result] || 0) + 1;
-            data.updated = new Date().toISOString();
-            await github.rest.repos.createOrUpdateFileContents({
-              ...context.repo, path, branch, sha,
-              message: 'Count a report: ' + key + ' on ' + where + ' (' + result + ')',
-              content: Buffer.from(JSON.stringify(data, null, 1) + '\n').toString('base64')
-            });
-            await close('Thanks! Counted: ' + payload + ' on ' + where + ' (' + result + '). Everyone using Crimson Multitool will see it within a day.');
+
+            if (body.includes('<!-- crimson-recipe -->')) {
+              const parts = field('order').split('>').map((s) => s.trim()).filter((s) => s.length > 0);
+              const result = field('result').toLowerCase();
+              if (parts.length < 1 || parts.length > 12 || !parts.every(okName) || !okConsole || !['worked', 'crashed'].includes(result)) {
+                await close('This load order could not be read, so it was not counted. Please send it again from the app.');
+                return;
+              }
+              const order = parts.map(keyOf).join('>');
+              const { sha, data } = await read('compat.json', { version: 1, reports: {}, seen: [] });
+              data.recipes = data.recipes || {}; data.seen = data.seen || [];
+              const voter = voterOf('recipe|' + order + '|' + where);
+              if (data.seen.includes(voter)) { await close('Thanks! You already reported this order on ' + where + '.'); return; }
+              data.seen.push(voter);
+              const entry = (data.recipes[where] = data.recipes[where] || {});
+              const counts = (entry[order] = entry[order] || { worked: 0, crashed: 0, failed: 0 });
+              counts[result] = (counts[result] || 0) + 1;
+              await write('compat.json', sha, data, 'Count a load order on ' + where + ' (' + result + ')');
+              await close('Thanks! Counted this load order on ' + where + ' (' + result + ').');
+              return;
+            }
+
+            if (body.includes('<!-- crimson-cheats -->')) {
+              const titleId = field('titleId').toUpperCase();
+              const game = field('game').replace(/[^\p{L}\p{N} .:'!&+-]/gu, '').slice(0, 80);
+              const version = field('version').replace(/[^0-9A-Za-z.]/g, '').slice(0, 16);
+              const m = body.match(/```json\s*([\s\S]*?)```/);
+              let cheats = [];
+              try {
+                const parsed = JSON.parse(m ? m[1] : '');
+                const list = Array.isArray(parsed) ? parsed : (parsed && Array.isArray(parsed.cheats) ? parsed.cheats : []);
+                const types = ['BYTE', 'SHORT', 'INT', 'LONG', 'FLOAT', 'DOUBLE'];
+                const text = (v, n) => (typeof v === 'string' ? v : String(v ?? '')).slice(0, n);
+                cheats = list.slice(0, 200).map((c) => ({
+                  name: text(c.name, 60), address: text(c.address, 16).replace(/[^0-9A-Fa-f]/g, ''),
+                  type: types.includes(c.type) ? c.type : 'INT', value: text(c.value, 40), group: text(c.group, 40),
+                  ptr: text(c.ptr, 200).replace(/[^0-9A-Fa-f:,]/g, ''), note: text(c.note, 200), rule: ['exact', 'min', 'max'].includes(c.rule) ? c.rule : undefined
+                })).filter((c) => c.address.length > 0);
+              } catch (e) { cheats = []; }
+              if (!/^[A-Z]{4}\d{5}$/.test(titleId) || cheats.length === 0) {
+                await close('This cheat list could not be read, so it was not added. Please share it again from the app.');
+                return;
+              }
+              const path = 'cheats/' + titleId + '.json';
+              const { sha, data } = await read(path, { version: 1, lists: [] });
+              data.lists = data.lists || [];
+              data.lists.push({ id: context.issue.number, game, version, by: voterOf('author'), cheats, works: 0, broken: 0, seen: [] });
+              if (data.lists.length > 50) data.lists = data.lists.slice(-50);
+              await write(path, sha, data, 'Add a shared cheat list for ' + titleId);
+              await close('Thanks! Your ' + cheats.length + ' cheats for ' + titleId + ' are in the shared library.');
+              return;
+            }
+
+            if (body.includes('<!-- crimson-cheat-vote -->')) {
+              const titleId = field('titleId').toUpperCase();
+              const list = parseInt(field('list'), 10);
+              const vote = field('vote').toLowerCase();
+              if (!/^[A-Z]{4}\d{5}$/.test(titleId) || !(list > 0) || !['works', 'broken'].includes(vote)) {
+                await close('This vote could not be read, so it was not counted.');
+                return;
+              }
+              const path = 'cheats/' + titleId + '.json';
+              const { sha, data } = await read(path, { version: 1, lists: [] });
+              const entry = (data.lists || []).find((l) => l.id === list);
+              if (!entry) { await close('That cheat list is not in the library any more.'); return; }
+              entry.seen = entry.seen || [];
+              const voter = voterOf('vote|' + titleId + '|' + list);
+              if (entry.seen.includes(voter)) { await close('Thanks! You already voted on this list.'); return; }
+              entry.seen.push(voter);
+              entry[vote] = (entry[vote] || 0) + 1;
+              await write(path, sha, data, 'Count a vote for ' + titleId + ' list ' + list + ' (' + vote + ')');
+              await close('Thanks! Your vote is counted.');
+              return;
+            }
+
+            await close('This report could not be read, so it was not counted.');

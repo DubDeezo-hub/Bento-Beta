@@ -88,6 +88,7 @@ fun AutomationDialog(console: Profile, onClose: () -> Unit) {
     var daily by remember { mutableStateOf(DailySnapshot.isOn(ctx)) }
     var smart by remember { mutableStateOf(SmartChain.on) }
     var box by remember { mutableStateOf(BlackBox.on) }
+    var controls by remember { mutableStateOf(ConsoleControls.isOn(ctx)) }
     val chain = remember { pickQuickChain(ChainStore.load(ctx), AutoChain.get(ctx, console.id)) }
     AlertDialog(
         onDismissRequest = onClose,
@@ -114,6 +115,10 @@ fun AutomationDialog(console: Profile, onClose: () -> Unit) {
                 Rule(str(R.string.blackbox_title), str(R.string.blackbox_detail), box) {
                     box = it
                     BlackBox.set(ctx, it)
+                }
+                Rule(str(R.string.controls_title), str(R.string.controls_hint), controls) {
+                    controls = it
+                    ConsoleControls.set(ctx, it)
                 }
             }
         },

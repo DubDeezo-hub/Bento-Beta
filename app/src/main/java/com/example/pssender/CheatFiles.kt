@@ -39,9 +39,23 @@ object CheatFiles {
     /** GoldHEN's own repository of PS4 cheats (the same layout); asked too for a PS4 game while the usual source is set. */
     const val GOLDHEN_SOURCE = "https://raw.githubusercontent.com/GoldHEN/GoldHEN_Cheat_Repository/main/"
 
-    /** Where to look for [titleId]'s cheats when [source] is set: a PS4 game also looks in GoldHEN's repository. */
-    fun sourcesFor(source: String, titleId: String): List<String> =
-        if (source == DEFAULT_SOURCE && titleId.startsWith("CUSA")) listOf(GOLDHEN_SOURCE, DEFAULT_SOURCE) else listOf(source)
+    /**
+     * Where to look for [titleId]'s cheats when [source] is set. With the usual source, both community repositories are
+     * asked for every game (etaHEN's and GoldHEN's), the one made for the game's console first; a list that can't be read
+     * is skipped. A source set by hand is used alone.
+     */
+    fun sourcesFor(source: String, titleId: String): List<String> = when {
+        source != DEFAULT_SOURCE -> listOf(source)
+        titleId.startsWith("CUSA", ignoreCase = true) -> listOf(GOLDHEN_SOURCE, DEFAULT_SOURCE)
+        else -> listOf(DEFAULT_SOURCE, GOLDHEN_SOURCE)
+    }
+
+    /** Who made a list, for the credit line under ready-made cheats. */
+    fun sourceName(source: String): String = when (source) {
+        DEFAULT_SOURCE -> "etaHEN/PS5_Cheats"
+        GOLDHEN_SOURCE -> "GoldHEN/GoldHEN_Cheat_Repository"
+        else -> source.removePrefix("https://raw.githubusercontent.com/").removePrefix("https://").trimEnd('/')
+    }
 
     /** The entries of several lists, each file once (the first list that has it wins). */
     fun mergeChoices(lists: List<List<CheatIndexEntry>>): List<CheatIndexEntry> {

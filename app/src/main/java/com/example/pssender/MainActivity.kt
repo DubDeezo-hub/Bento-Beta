@@ -536,6 +536,8 @@ fun SenderApp(
             KernelLog.start(active.host.trim(), active.name)
         }
     }
+    // Console controls (and on a paired watch): follow the selected console and its chain
+    LaunchedEffect(active.id, chains) { ConsoleControls.refresh(ctx) }
     // The shared compatibility list, ready for the check before sending (read at most once a day)
     LaunchedEffect(Unit) { withContext(Dispatchers.IO) { try { CompatData.get(ctx) } catch (_: Exception) {} } }
     LaunchedEffect(Unit) { if (!LocalNetwork.allowed(ctx)) askLocalNetwork.launch(LocalNetwork.PERMISSION) }
@@ -691,7 +693,8 @@ fun SenderApp(
                                             onEtaHen = if (ftpSettings != null) ({ showEtaHen = true }) else null,
                                             onConsoles = { showConsoles = true },
                                             onAbout = { showAbout = true },
-                                            console = active
+                                            console = active,
+                                            onRunChain = runChainChecked
                                         )
                                         TAB_PAYLOADS -> PayloadTab(
                                             host, active.payloadPort, { v -> updateActive { it.copy(payloadPort = v) } }, shelfVersion,

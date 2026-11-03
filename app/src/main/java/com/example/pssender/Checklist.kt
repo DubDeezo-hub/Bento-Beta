@@ -12,9 +12,12 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -22,7 +25,10 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 // ---------------------------------------------------------------------------------------------
 // The first-jailbreak checklist: the steps to a steady jailbreak, each ticked off when it is done, with a button where
@@ -63,6 +69,24 @@ fun ChecklistDialog(console: Profile, onClose: () -> Unit) {
     val (order, missing) = suggestedOrder(shelf, console.type)
     val chainName = AppText.get(R.string.check_chain_name)
     val haveChain = order.isNotEmpty() && chains.any { c -> c.steps.map { it.payload } == order }
+    val scope = rememberCoroutineScope()
+    var recipe by remember { mutableStateOf<Pair<List<String>, CompatCounts>?>(null) }
+    LaunchedEffect(tick, firmware) {
+        if (firmware.isNotEmpty()) {
+            recipe = withContext(Dispatchers.IO) {
+                try { bestRecipe(CompatData.recipes(ctx), compatWhere(console.type.model, firmware), shelf) } catch (_: Exception) { null }
+            }
+        }
+    }
+    var updates by remember { mutableStateOf<UpdateBlockResult?>(null) }
+    var checking by remember { mutableStateOf(false) }
+    val u = updates
+    val updatesText = when {
+        u == null -> str(R.string.upd_how)
+        !u.found -> str(R.string.upd_not_found)
+        u.blocked -> str(R.string.upd_ok, u.rules, u.file)
+        else -> str(R.string.upd_none, u.file)
+    }
 
     AlertDialog(
         onDismissRequest = onClose,
@@ -89,6 +113,40 @@ fun ChecklistDialog(console: Profile, onClose: () -> Unit) {
                 }
                 Step(BlackBox.on, str(R.string.blackbox_title), str(R.string.blackbox_detail)) {
                     if (!BlackBox.on) TextButton(onClick = { BlackBox.set(ctx, true); tick++ }) { Text(str(R.string.check_turn_on)) }
+                }
+                // System updates end a jailbreak: are they blocked on the console (nanoDNS)?
+                Step(updates?.blocked, str(R.string.upd_title), updatesText) {
+                    TextButton(enabled = ActiveConsole.ftp != null && !checking, onClick = {
+                        val s = ActiveConsole.ftp ?: return@TextButton
+                        checking = true
+                        scope.launch {
+                            updates = try { withContext(Dispatchers.IO) { UpdateBlock.check(s) } } catch (_: Exception) { UpdateBlockResult("", 0) }
+                            checking = false
+                        }
+                    }) { Text(str(if (checking) R.string.snap_working else R.string.upd_check)) }
+                }
+                // What worked for others on this firmware, as a whole load order (the shared recipes)
+                val best = recipe
+                if (best != null) {
+                    Step(null, str(R.string.recipe_title, console.type.model, firmware), str(R.string.recipe_row, best.first.joinToString(" → "), best.second.worked, best.second.crashed)) {
+                        TextButton(onClick = {
+                            ChainStore.save(ctx, ChainStore.load(ctx) + orderChain(best.first, AppText.get(R.string.recipe_chain_name, console.type.model, firmware)))
+                            ChainStore.changed.update { it + 1 }
+                            tick++
+                        }) { Text(str(R.string.check_make_chain)) }
+                    }
+                }
+                // Tell others how a chain went (only with the firmware known, so the report says where)
+                if (firmware.isNotEmpty() && chains.isNotEmpty()) {
+                    Step(null, str(R.string.recipe_report_title), str(R.string.recipe_report_how)) {
+                        chains.forEach { c ->
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Text(c.name, style = MaterialTheme.typography.bodySmall, modifier = Modifier.weight(1f))
+                                TextButton(onClick = { openUrl(ctx, recipeReportUrl(c.steps.map { it.payload }, console.type.model, firmware, true)) }) { Text(str(R.string.compat_worked)) }
+                                TextButton(onClick = { openUrl(ctx, recipeReportUrl(c.steps.map { it.payload }, console.type.model, firmware, false)) }) { Text(str(R.string.compat_crashed)) }
+                            }
+                        }
+                    }
                 }
                 Step(null, str(R.string.check_others), str(R.string.check_others_how))
                 Step(null, str(R.string.check_crash), str(R.string.check_crash_how))
@@ -119,5 +177,13 @@ private fun Step(done: Boolean?, title: String, detail: String, action: @Composa
             if (detail.isNotBlank()) Text(detail, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
             action()
         }
+    }
+}
+
+/** Opens [url] in the browser (a report on GitHub). */
+fun openUrl(ctx: android.content.Context, url: String) {
+    try {
+        ctx.startActivity(android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse(url)).addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK))
+    } catch (_: Exception) {
     }
 }

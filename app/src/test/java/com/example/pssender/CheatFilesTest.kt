@@ -88,7 +88,8 @@ class CheatFilesTest {
     @Test
     fun sourcesAndMerging() {
         assertEquals(listOf(CheatFiles.GOLDHEN_SOURCE, CheatFiles.DEFAULT_SOURCE), CheatFiles.sourcesFor(CheatFiles.DEFAULT_SOURCE, "CUSA00001"))
-        assertEquals(listOf(CheatFiles.DEFAULT_SOURCE), CheatFiles.sourcesFor(CheatFiles.DEFAULT_SOURCE, "PPSA00001"))
+        assertEquals(listOf(CheatFiles.DEFAULT_SOURCE, CheatFiles.GOLDHEN_SOURCE), CheatFiles.sourcesFor(CheatFiles.DEFAULT_SOURCE, "PPSA00001"))
+        assertEquals("GoldHEN/GoldHEN_Cheat_Repository", CheatFiles.sourceName(CheatFiles.GOLDHEN_SOURCE))
         assertEquals(listOf("http://x/"), CheatFiles.sourcesFor("http://x/", "CUSA00001"))
         val merged = CheatFiles.mergeChoices(listOf(listOf(CheatIndexEntry("A.json", "first")), listOf(CheatIndexEntry("a.JSON", "second"), CheatIndexEntry("b.json", "b"))))
         assertEquals(listOf("first", "b"), merged.map { it.game })

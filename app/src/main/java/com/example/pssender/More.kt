@@ -78,7 +78,8 @@ fun MoreTab(
     onEtaHen: (() -> Unit)?,
     onConsoles: () -> Unit,
     onAbout: () -> Unit,
-    console: Profile? = null
+    console: Profile? = null,
+    onRunChain: ((Chain) -> Unit)? = null
 ) {
     var showLanguage by remember { mutableStateOf(false) }
     var showDiary by remember { mutableStateOf(false) }
@@ -89,11 +90,15 @@ fun MoreTab(
     var showSnapshots by remember { mutableStateOf(false) }
     var showAutomation by remember { mutableStateOf(false) }
     var showDev by remember { mutableStateOf(false) }
+    var showBisect by remember { mutableStateOf(false) }
+    var showSession by remember { mutableStateOf(false) }
     if (console != null) {
         if (showChecklist) ChecklistDialog(console) { showChecklist = false }
         if (showSnapshots) SnapshotsDialog(console) { showSnapshots = false }
         if (showAutomation) AutomationDialog(console) { showAutomation = false }
         if (showDev) DevModeDialog(console) { showDev = false }
+        if (showBisect && onRunChain != null) BisectDialog(console, onRunChain) { showBisect = false }
+        if (showSession) SessionDialog(console) { showSession = false }
     }
     if (showRunning && console != null) RunningDialog(console) { showRunning = false }
     if (showLanguage) LanguageDialog { showLanguage = false }
@@ -106,6 +111,8 @@ fun MoreTab(
         RoundRow(str(R.string.consoles_title), letter = "C", onClick = onConsoles)
         RoundRow(str(R.string.running_title), letter = "●", enabled = console != null, onClick = { showRunning = true })
         RoundRow(str(R.string.crashdiary_title), letter = "!", onClick = { showDiary = true })
+        RoundRow(str(R.string.bisect_title), letter = "½", enabled = console != null && onRunChain != null, onClick = { showBisect = true })
+        RoundRow(str(R.string.session_title), letter = "≡", enabled = console != null, onClick = { showSession = true })
         RoundRow(str(R.string.missed_title), letter = "↻", onClick = { showMissed = true })
         RoundRow(str(R.string.check_title, console?.type?.model ?: ActiveConsole.type.model), letter = "✓", enabled = console != null, onClick = { showChecklist = true })
         RoundRow(str(R.string.snap_title), letter = "S", enabled = console != null, onClick = { showSnapshots = true })

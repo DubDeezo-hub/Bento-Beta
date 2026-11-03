@@ -508,6 +508,7 @@ class ChainCenter {
 
     /** Service: the chain is over. */
     fun finish(outcome: ChainOutcome) {
+        SessionLog.note(state.value.name + ": " + chainResultText(outcome))
         state.update {
             ChainState(name = it.name, console = it.console, steps = outcome.total, message = chainResultText(outcome), ok = outcome.ok)
         }

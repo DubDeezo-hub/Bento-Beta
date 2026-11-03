@@ -102,9 +102,13 @@ object CompatData {
     @Volatile
     private var cached: Map<String, Map<String, CompatCounts>>? = null
 
+    /** False until the recipes were read in this run of the app (older cached counts are read again once). */
+    @Volatile
+    private var fresh = false
+
     /** The counts, read from GitHub at most once a day (the copy kept on the phone in between). Blocking. */
     fun get(ctx: Context): Map<String, Map<String, CompatCounts>> {
-        cached?.let { return it }
+        cached?.let { if (fresh) return it }
         val p = ctx.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
         val at = p.getLong("at", 0L)
         val kept = p.getString("json", null)
@@ -119,7 +123,18 @@ object CompatData {
         } catch (_: Exception) {
             kept
         }
+        recipesCache = parseRecipes(json)
+        fresh = true
         return parseCompat(json).also { cached = it }
+    }
+
+    @Volatile
+    private var recipesCache: Map<String, Map<String, CompatCounts>> = emptyMap()
+
+    /** The load-order recipes (read together with the counts). Blocking the first time. */
+    fun recipes(ctx: Context): Map<String, Map<String, CompatCounts>> {
+        get(ctx)
+        return recipesCache
     }
 
     /** The counts read already (none when not read yet), without asking GitHub: for checks that can't wait. */
@@ -242,4 +257,54 @@ fun CompatReportDialog(name: String, version: String, preset: CompatResult?, onC
         },
         dismissButton = { TextButton(onClick = onClose) { Text(str(R.string.action_cancel)) } }
     )
+}
+
+// ---------------------------------------------------------------------------------------------
+// Load-order recipes: how whole chains went, by model and firmware ("kstuff > shadowmountplus > etahen": 34 worked).
+// Reported like the payload results (marker <!-- crimson-recipe -->) and kept in compat.json under "recipes".
+// ---------------------------------------------------------------------------------------------
+
+/** A load order's key: its payloads' compatibility keys joined by ">" (must match the workflow). */
+fun recipeKey(names: List<String>): String = names.joinToString(">") { compatKey(it) }
+
+/** Reads the recipes in compat.json: "PS5 10.40" -> (order key -> counts). */
+fun parseRecipes(json: String?): Map<String, Map<String, CompatCounts>> {
+    if (json.isNullOrBlank()) return emptyMap()
+    return try {
+        val r = JSONObject(json).optJSONObject("recipes") ?: return emptyMap()
+        r.keys().asSequence().associateWith { where ->
+            val byOrder = r.optJSONObject(where) ?: return@associateWith emptyMap<String, CompatCounts>()
+            byOrder.keys().asSequence().associateWith { k ->
+                val c = byOrder.optJSONObject(k)
+                CompatCounts(c?.optInt("worked") ?: 0, c?.optInt("crashed") ?: 0, c?.optInt("failed") ?: 0)
+            }
+        }
+    } catch (_: Exception) {
+        emptyMap()
+    }
+}
+
+/**
+ * The best known load order for [where] that can be made from the [shelf]: the most "worked" reports with no more
+ * crashes than successes. Gives the shelf's file names in order and the counts, or null.
+ */
+fun bestRecipe(recipes: Map<String, Map<String, CompatCounts>>, where: String, shelf: List<String>): Pair<List<String>, CompatCounts>? {
+    val byKey = shelf.groupBy { compatKey(it) }.mapValues { (_, v) -> v.maxWith(String.CASE_INSENSITIVE_ORDER) }
+    return recipes[where].orEmpty().entries
+        .filter { it.value.worked > 0 && it.value.crashed <= it.value.worked }
+        .sortedWith(compareByDescending<Map.Entry<String, CompatCounts>> { it.value.worked - it.value.crashed }.thenByDescending { it.value.worked })
+        .firstNotNullOfOrNull { e ->
+            val names = e.key.split('>').map { byKey[it] }
+            if (names.any { it == null }) null else names.filterNotNull() to e.value
+        }
+}
+
+/** The address of a filled-in load-order report. */
+fun recipeReportUrl(order: List<String>, model: String, firmware: String, worked: Boolean): String {
+    val clean = order.map { n -> n.filter { it.isLetterOrDigit() || it in "._ +-" }.take(64) }
+    val result = if (worked) "worked" else "crashed"
+    val body = "<!-- crimson-recipe -->\norder: " + clean.joinToString(" > ") + "\nconsole: $model\nfirmware: $firmware\nresult: $result\n" +
+        "\nSent from Crimson Multitool. Only the lines above are counted; the issue is closed by itself.\n"
+    val title = "Load order on $model $firmware ($result)"
+    return "https://github.com/$UPDATE_REPO/issues/new?title=" + Uri.encode(title) + "&body=" + Uri.encode(body)
 }

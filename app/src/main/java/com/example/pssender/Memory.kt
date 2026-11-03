@@ -126,6 +126,7 @@ internal sealed class MemoryDialog {
     class WatchMenu(val watch: Watch) : MemoryDialog()
     object Import : MemoryDialog()
     object Helper : MemoryDialog()
+    object Shared : MemoryDialog()
     class CheatFileOut(val name: String, val text: String, val inside: Int, val outside: Int) : MemoryDialog()
     object Source : MemoryDialog()
     object Undo : MemoryDialog()
@@ -208,6 +209,7 @@ fun MemoryTab(host: String, label: String, modifier: Modifier = Modifier) {
         is MemoryDialog.HexLine -> HexLineDialog(d, close)
         is MemoryDialog.WatchMenu -> WatchDialog(d.watch, onClose = close, onOpen = { dialog = it })
         MemoryDialog.Import -> ImportDialog(ctx, close)
+        MemoryDialog.Shared -> SharedCheatsDialog(close)
         MemoryDialog.Helper -> CheatHelperDialog(
             close,
             onMakeCheat = { hit, t -> dialog = MemoryDialog.NewCheat(hit.address, t, t.format(hit.value), autoPointer = true) },
@@ -439,6 +441,8 @@ internal fun LazyListScope.cheatItems(s: MemorySnapshot, ctx: Context, open: (Me
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
                     OutlinedButton(enabled = playing && !m.busy, onClick = { m.findCheatFiles() }) { Text(str(R.string.memory_cheatfile_find)) }
                     TextButton(onClick = { open(MemoryDialog.Source) }) { Text(str(R.string.memory_cheatfile_source)) }
+                    // Lists people made with this app and shared, by game
+                    TextButton(enabled = playing, onClick = { open(MemoryDialog.Shared) }) { Text(str(R.string.shared_title)) }
                 }
                 val choices = m.cheatChoices
                 if (choices != null && choices.isNotEmpty()) {

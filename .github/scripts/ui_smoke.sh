@@ -290,7 +290,7 @@ content_visible() { # nav key
   return 1
 }
 
-visit_tab() { # nav key, values folder, label prefix
+visit_tab() { # nav key, values folder, label prefix, "any" to skip the fresh-start texts (later passes see screens already in use)
   local key="$1" dir="${2:-values}" prefix="${3:-}" label texts k v
   label="$(nav_label "$key" "$dir")"
   adb logcat -c > /dev/null 2>&1
@@ -306,7 +306,7 @@ visit_tab() { # nav key, values folder, label prefix
     shot "fail-tab-$key"
     return
   fi
-  if [ "$dir" = values ]; then
+  if [ "$dir" = values ] && [ "${4:-}" != any ]; then
     local hit
     if hit="$(content_visible "$key")"; then
       pass "${prefix}tab \"$label\" shows its screen (\"$hit\")"
@@ -824,7 +824,7 @@ adb shell settings put system font_scale 1.3 > /dev/null 2>&1 || true
 launch
 if wait_for_bar 30; then
   for key in $NAV_KEYS; do
-    visit_tab "$key" values "large text: "
+    visit_tab "$key" values "large text: " any
   done
 else
   fail "large text" "the bottom bar did not show with large text. Seen: $(ui texts "$XML" 2> /dev/null)"
