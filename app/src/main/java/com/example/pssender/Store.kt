@@ -449,6 +449,9 @@ fun StoreDialog(type: ConsoleType, onAdded: () -> Unit, onClose: () -> Unit) {
         }
     }
     val fwNumber = ConsoleFirmware.number(firmware)
+    // What others reported (the shared compatibility list), read at most once a day
+    var shared by remember { mutableStateOf<Map<String, Map<String, CompatCounts>>>(emptyMap()) }
+    LaunchedEffect(Unit) { shared = withContext(Dispatchers.IO) { CompatData.get(ctx) } }
 
     /** Starts a download; [work] gives the message to show. */
     fun get(key: String, name: String, work: () -> String) {
@@ -544,6 +547,14 @@ fun StoreDialog(type: ConsoleType, onAdded: () -> Unit, onClose: () -> Unit) {
                         }
                         StateLine(state, highlight = rel != null && have.isNotEmpty() && have != rel.tag)
                         firmwareNote(e, row.claims, fit, firmware)?.let { (text, good) -> FirmwareLine(text, good) }
+                        // What others reported for it: this console's firmware first
+                        shared[compatKey(e.file)]?.let { compatRows(it, type.model, firmware).firstOrNull() }?.let { (where, c) ->
+                            Text(
+                                str(R.string.compat_counts, where.substringBefore(' '), where.substringAfter(' '), c.worked, c.crashed, c.failed),
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
                         // What the maker says changed, before taking the update
                         val whatsNew = remember(rel) { rel?.let { plainReleaseNotes(it.notes) }.orEmpty() }
                         if (rel != null && whatsNew.isNotEmpty()) {

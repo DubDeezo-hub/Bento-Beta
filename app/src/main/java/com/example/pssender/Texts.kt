@@ -78,6 +78,8 @@ class App : Application() {
         AppLook.load(this)
         Stability.init(this)
         SmartChain.load(this)
+        PlayMode.load(this)
+        BlackBox.load(this)
         val store = UnfinishedFile(File(noBackupFilesDir, "unfinished-transfers.json"))
         TransferState.adoptUnfinished(store.load())
         TransferState.journal = FileJournal(store)

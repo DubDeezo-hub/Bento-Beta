@@ -529,6 +529,15 @@ fun SenderApp(
     // The shortcuts on the app icon follow the saved chains (a restore rebuilds the screen, so they follow that, too)
     LaunchedEffect(Unit) { ChainShortcuts.publish(ctx, chains) }
     LaunchedEffect(Unit) { WelcomeState.check(ctx) }
+    // Black box: the console log starts by itself for the selected console (and reconnects after restarts)
+    LaunchedEffect(active.id, active.host) {
+        if (BlackBox.on && active.host.isNotBlank() && !KernelLog.running) {
+            KernelLog.attach(ctx)
+            KernelLog.start(active.host.trim(), active.name)
+        }
+    }
+    // The shared compatibility list, ready for the check before sending (read at most once a day)
+    LaunchedEffect(Unit) { withContext(Dispatchers.IO) { try { CompatData.get(ctx) } catch (_: Exception) {} } }
     LaunchedEffect(Unit) { if (!LocalNetwork.allowed(ctx)) askLocalNetwork.launch(LocalNetwork.PERMISSION) }
     // The saved address doesn't answer at the start: look for the console on the Wi-Fi network and offer what answers
     var autoFound by remember { mutableStateOf<AutoFound?>(null) }

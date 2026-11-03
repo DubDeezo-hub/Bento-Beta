@@ -18,6 +18,7 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -151,6 +152,7 @@ object KernelLog {
 
     fun start(host: String, label: String = "") {
         if (running) return
+        stoppedByHand = false
         consoleLabel = label
         val p = port.toIntOrNull()?.takeIf { it in 1..65535 }
         if (host.isBlank()) {
@@ -170,7 +172,7 @@ object KernelLog {
             val ctx = appCtx
             val file = if (saveToPhone && ctx != null) withContext(Dispatchers.IO) { KlogFile.open(ctx, host.trim(), p) } else null
             savedTo = file?.shownPath.orEmpty()
-            if (file != null && ctx != null) KlogService.update(ctx)
+            if ((file != null || BlackBox.on) && ctx != null) KlogService.update(ctx)
             // Lines are handed to the screen a few times a second, not one by one (and to the file at the same time)
             val flusher = launch {
                 while (isActive) {
@@ -220,6 +222,7 @@ object KernelLog {
                                 lastLook = now
                                 if (!consoleAnswers(host.trim(), used)) {
                                     silent = true
+                                    wentSilentAt = now
                                     synchronized(lock) { pending.add(AppText.get(R.string.klog_silent, clock(now))) }
                                     // Note what the console printed last and what was sent just before it went down
                                     val tail = lines.toList()
@@ -232,6 +235,7 @@ object KernelLog {
                         lastData = System.currentTimeMillis()
                         if (silent) {
                             silent = false
+                            wentSilentAt = 0L
                             synchronized(lock) { pending.add(AppText.get(R.string.klog_back, clock(lastData))) }
                         }
                         split.feed(buf, n) { line -> synchronized(lock) { pending.add(line) } }
@@ -261,11 +265,29 @@ object KernelLog {
                     file.close()
                     ctx?.let { KlogService.update(it) }
                 }
+                // Black box: the connection ended without a Stop (the console restarted or went away): try again later
+                if (BlackBox.on && !stoppedByHand) {
+                    scope.launch {
+                        delay(BlackBox.RETRY_MS)
+                        if (!running && BlackBox.on && !stoppedByHand) start(host, consoleLabel)
+                    }
+                }
             }
         }
     }
 
+    /** When the console last went silent (a likely crash), 0 when it hasn't or came back since. */
+    @Volatile
+    var wentSilentAt = 0L
+        private set
+
+    /** True once the person pressed Stop; the black box then doesn't reconnect by itself. */
+    @Volatile
+    var stoppedByHand = false
+        private set
+
     fun stop() {
+        stoppedByHand = true
         running = false
         status = AppText.get(R.string.klog_stopped)
         try { socket?.close() } catch (_: Exception) {}
@@ -318,6 +340,19 @@ fun LazyListScope.logItems(host: String, label: String, ctx: Context) {
                     }
                     Switch(checked = k.saveToPhone, onCheckedChange = { k.changeSave(ctx, it) })
                 }
+                // Black box: always listening in the background, reconnecting after a restart, so a crash is caught
+                var box by remember { mutableStateOf(BlackBox.on) }
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(str(R.string.blackbox_title), style = MaterialTheme.typography.bodyMedium)
+                        Text(str(R.string.blackbox_detail), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    }
+                    Switch(checked = box, onCheckedChange = {
+                        box = it
+                        BlackBox.set(ctx, it)
+                        if (it && host.isNotBlank()) k.start(host, label)
+                    })
+                }
             } else if (k.savedTo.isNotEmpty()) {
                 Text(str(R.string.klog_saving_to, k.savedTo), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.primary)
             }
@@ -359,5 +394,31 @@ fun LazyListScope.logItems(host: String, label: String, ctx: Context) {
         Box(modifier = Modifier.fillMaxWidth()) {
             Text(line, fontFamily = FontFamily.Monospace, fontSize = 11.sp, lineHeight = 14.sp)
         }
+    }
+}
+
+/**
+ * The black box: the console log keeps running in the background (a notification keeps the app alive) and connects
+ * again by itself after the console restarts or drops off. When the console goes silent the crash diary notes the last
+ * lines and the payloads sent just before, as it does while the log is open.
+ */
+object BlackBox {
+    private const val KEY = "black_box"
+
+    /** How long it waits before connecting again. */
+    const val RETRY_MS = 30_000L
+
+    @Volatile
+    var on: Boolean = false
+        private set
+
+    fun load(ctx: Context) {
+        on = ctx.getSharedPreferences("settings", Context.MODE_PRIVATE).getBoolean(KEY, false)
+    }
+
+    fun set(ctx: Context, value: Boolean) {
+        on = value
+        ctx.getSharedPreferences("settings", Context.MODE_PRIVATE).edit().putBoolean(KEY, value).apply()
+        KlogService.update(ctx) // starts the keep-alive notification, or lets it end
     }
 }

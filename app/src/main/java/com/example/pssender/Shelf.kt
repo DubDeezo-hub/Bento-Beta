@@ -236,7 +236,12 @@ fun PayloadTab(
     // A payload's checksum, and whether it still matches the one it was verified against
     details?.let { item ->
         var sha by remember(item.name) { mutableStateOf("") }
-        LaunchedEffect(item.name) { sha = withContext(Dispatchers.IO) { ShelfChecks.sha256Of(File(shelfDir(ctx), item.name)) } }
+        var elf by remember(item.name) { mutableStateOf<ElfVerdict?>(null) }
+        LaunchedEffect(item.name) {
+            sha = withContext(Dispatchers.IO) { ShelfChecks.sha256Of(File(shelfDir(ctx), item.name)) }
+            // Is it a sound payload for the console (64-bit x86-64 ELF, not cut short)? A .bin isn't checked
+            elf = withContext(Dispatchers.IO) { try { elfCheck(item.name, File(shelfDir(ctx), item.name).readBytes()) } catch (_: Exception) { null } }
+        }
         val checked = ShelfChecks.verified(ctx, item.name)
         AlertDialog(
             onDismissRequest = { details = null },
@@ -244,6 +249,9 @@ fun PayloadTab(
             text = {
                 Column(modifier = Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                     Text(fmtBytes(item.size), style = MaterialTheme.typography.bodySmall)
+                    elf?.let { v ->
+                        Text(str(v.res), style = MaterialTheme.typography.bodySmall, color = if (v == ElfVerdict.OK) statusColors().good else statusColors().bad)
+                    }
                     Text("SHA-256", style = MaterialTheme.typography.labelLarge)
                     Text(sha.ifEmpty { "…" }, style = MaterialTheme.typography.bodySmall, fontFamily = FontFamily.Monospace)
                     when {
@@ -267,6 +275,24 @@ fun PayloadTab(
                             }) { Text(str(R.string.shelf_go_back, prev)) }
                             Text(str(R.string.shelf_go_back_note), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                         }
+                    }
+                    // The same payload to every saved console with an address (one after the other)
+                    val others = remember { ProfileStore.load(ctx).filter { it.host.isNotBlank() && it.payloadPort.trim().toIntOrNull() != null } }
+                    if (others.size > 1) {
+                        OutlinedButton(enabled = canSend, onClick = {
+                            details = null
+                            status = AppText.get(R.string.send_all_sending, item.name, others.size)
+                            scope.launch {
+                                val results = withContext(Dispatchers.IO) {
+                                    others.map { p ->
+                                        val r = sendPayloadReply(File(shelfDir(ctx), item.name), p.host.trim(), p.payloadPort.trim().toInt())
+                                        if (r.ok) notePayloadSent(p.host.trim(), item.name)
+                                        p.name to r.ok
+                                    }
+                                }
+                                status = sendAllSummary(item.name, results)
+                            }
+                        }) { Text(str(R.string.send_all, others.size)) }
                     }
                     // What others saw with this payload on the same firmware, and "How did it go?"
                     CompatSection(item.name, if (key != null) Store.installedTag(ctx, key) else "")
@@ -410,4 +436,11 @@ private fun ShelfTile(item: ShelfItem, verified: Boolean, canSend: Boolean, onDe
             contentAlignment = Alignment.Center
         ) { Text(str(R.string.action_send), color = if (canSend) Color.White else cs.onSurfaceVariant, fontWeight = FontWeight.Bold) }
     }
+}
+
+/** "Sent X to 3 consoles" or, when some failed, which ones didn't take it. */
+fun sendAllSummary(name: String, results: List<Pair<String, Boolean>>): String {
+    val failed = results.filter { !it.second }.map { it.first }
+    return if (failed.isEmpty()) AppText.get(R.string.send_all_done, name, results.size)
+    else AppText.get(R.string.send_all_some_failed, name, results.size - failed.size, results.size, joinList(failed))
 }

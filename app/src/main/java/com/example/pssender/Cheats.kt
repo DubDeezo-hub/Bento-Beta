@@ -226,6 +226,11 @@ object GameMemo {
         prefs(ctx).edit().putString("n_" + id(titleId), text.take(NOTES_MAX)).apply()
     }
 
+    /** Every game's notes (title ID -> text), for the backup. */
+    fun allNotes(ctx: Context): Map<String, String> =
+        prefs(ctx).all.entries.filter { it.key.startsWith("n_") }
+            .mapNotNull { (k, v) -> (v as? String)?.takeIf { it.isNotBlank() }?.let { k.removePrefix("n_") to it } }.toMap()
+
     fun version(ctx: Context, titleId: String): String = prefs(ctx).getString("v_" + id(titleId), "") ?: ""
 
     fun setVersion(ctx: Context, titleId: String, version: String) {

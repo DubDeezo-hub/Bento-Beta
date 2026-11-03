@@ -38,9 +38,14 @@ class FreezeService : Service() {
                 // A quick toggle from the notification: freeze or unfreeze one cheat without leaving the game
                 val id = intent.getStringExtra(EXTRA_CHEAT)
                 MemorySession.cheats.firstOrNull { it.id == id }?.let { MemorySession.setFrozen(it, !it.frozen) }
-                if (MemorySession.frozenCount == 0) finish() else update(this)
+                if (MemorySession.frozenCount == 0 && !PlayMode.wanted()) finish() else update(this)
             }
-            MemorySession.frozenCount == 0 -> finish()
+            MemorySession.frozenCount == 0 && !PlayMode.wanted() -> finish()
+            MemorySession.frozenCount == 0 -> {
+                // Nothing frozen, but the cheat buttons stay: no wake locks needed for that
+                locks?.release()
+                locks = null
+            }
             else -> {
                 if (locks == null) locks = TransferLocks(this).also { it.acquire() }
             }
@@ -70,7 +75,10 @@ class FreezeService : Service() {
         val game = MemorySession.gameName
         return Notification.Builder(this, CHANNEL_ID)
             .setSmallIcon(android.R.drawable.ic_lock_lock)
-            .setContentTitle(AppText.get(R.string.memory_freeze_notif_title, n))
+            .setContentTitle(
+                if (n > 0) AppText.get(R.string.memory_freeze_notif_title, n)
+                else AppText.get(R.string.play_notif_title, MemorySession.cheats.size)
+            )
             .setContentText(if (game.isBlank()) AppText.get(R.string.memory_freeze_notif_text_plain) else AppText.get(R.string.memory_freeze_notif_text, game))
             .setContentIntent(open)
             .setOngoing(true)
@@ -134,3 +142,29 @@ class FreezeService : Service() {
 
 /** The cheats offered as quick toggles in the freeze notification: the frozen ones first, two at most. */
 fun quickCheats(all: List<Cheat>): List<Cheat> = (all.filter { it.frozen } + all.filter { !it.frozen }).take(2)
+
+/**
+ * "Cheat buttons in the notification": the freeze notification stays while a game with cheats is connected, even with
+ * nothing frozen, so a cheat can be switched on from the notifications without leaving the game.
+ */
+object PlayMode {
+    private const val KEY = "play_mode"
+
+    @Volatile
+    var on: Boolean = false
+        private set
+
+    fun load(ctx: Context) {
+        on = ctx.getSharedPreferences("settings", Context.MODE_PRIVATE).getBoolean(KEY, false)
+    }
+
+    fun set(ctx: Context, value: Boolean) {
+        on = value
+        ctx.getSharedPreferences("settings", Context.MODE_PRIVATE).edit().putBoolean(KEY, value).apply()
+        if (value && MemorySession.cheats.isNotEmpty() && MemorySession.gameConnected) FreezeService.update(ctx)
+        if (!value && MemorySession.frozenCount == 0) FreezeService.stop(ctx)
+    }
+
+    /** Whether the notification should stay with nothing frozen now. */
+    fun wanted(): Boolean = on && MemorySession.cheats.isNotEmpty() && MemorySession.gameConnected
+}

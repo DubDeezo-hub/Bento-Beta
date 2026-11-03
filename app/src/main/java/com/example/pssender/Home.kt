@@ -33,6 +33,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
@@ -130,7 +131,12 @@ private fun PayloadBubble(name: String, onClick: () -> Unit) {
 @Composable
 private fun GameCircle(app: AppEntry, updateReady: Boolean) {
     val cs = MaterialTheme.colorScheme
-    Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.width(100.dp)) {
+    // Read out as one: the game's name, and "update ready" (not only the red ring) for screen readers
+    val ready = if (updateReady) str(R.string.a11y_update_ready) else ""
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier.width(100.dp).semantics(mergeDescendants = true) { if (ready.isNotEmpty()) stateDescription = ready }
+    ) {
         Box(
             modifier = Modifier
                 .size(92.dp)

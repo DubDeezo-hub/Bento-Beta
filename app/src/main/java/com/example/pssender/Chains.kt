@@ -59,6 +59,13 @@ object SmartChain {
      * The sign of life of [name] at [host]: null when it has none to wait for (or smart chains are off), else whether it
      * shows now. [isOpen] asks a port.
      */
+    /**
+     * Why the chain should stop now, or null: the console log (when it runs, also as the black box) saw the console go
+     * silent after the chain started at [startedAt].
+     */
+    fun trouble(startedAt: Long, silentAt: Long): String? =
+        if (on && silentAt >= startedAt && silentAt > 0) AppText.get(R.string.chain_console_silent) else null
+
     fun proof(name: String, host: String, isOpen: (String, Int) -> Boolean): Boolean? {
         if (!on) return null
         return when (ReloadGuard.kindOf(name)) {
@@ -324,7 +331,8 @@ suspend fun runChain(
     clock: () -> Long = { System.nanoTime() / 1_000_000L },
     proof: suspend (String) -> Boolean? = { null },
     onProof: (payload: String, waited: Int) -> Unit = { _, _ -> },
-    proofSeconds: Int = CHAIN_PROOF_SECONDS
+    proofSeconds: Int = CHAIN_PROOF_SECONDS,
+    trouble: () -> String? = { null }
 ): ChainOutcome {
     val total = steps.size
     var sent = 0
@@ -363,6 +371,8 @@ suspend fun runChain(
             }
             while (left > 0) {
                 if (cancelled()) return ChainOutcome(total, sent, stopped = true)
+                // The console went quiet (the console log saw it): no more payloads onto a console in trouble
+                trouble()?.let { return ChainOutcome(total, sent, index + 1, step.payload, it) }
                 onWait(left)
                 sleepSecond()
                 left--

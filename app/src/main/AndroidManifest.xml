@@ -39,6 +39,36 @@
         </activity>
 
         <!-- Looks every 15 minutes whether a console with "Tell me when it comes online" started answering -->
+        <!-- Quick Settings tile: runs the selected console's chain (QuickAccess.kt) -->
+        <service
+            android:name=".ChainTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_shortcut_chain"
+            android:label="@string/tile_label"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <!-- Home-screen widget: whether the console answers, and its chain (QuickAccess.kt) -->
+        <receiver
+            android:name=".StatusWidget"
+            android:exported="false"
+            android:label="@string/widget_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_status_info" />
+        </receiver>
+
+        <service
+            android:name=".DailySnapshotJob"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
         <service
             android:name=".OnlineJob"
             android:exported="false"

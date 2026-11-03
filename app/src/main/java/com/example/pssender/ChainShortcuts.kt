@@ -48,6 +48,7 @@ object ChainShortcuts {
      * screen: [removed] are their ids. Nothing here may stop the app, so a launcher that refuses is ignored.
      */
     fun publish(ctx: Context, chains: List<Chain>, removed: List<String> = emptyList()) {
+        StatusWidget.refresh(ctx) // the widget's chain button follows the chains too
         try {
             val manager = ctx.getSystemService(ShortcutManager::class.java) ?: return
             val (onIcon, others) = shortcutSplit(chains, manager.maxShortcutCountPerActivity)

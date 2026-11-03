@@ -101,12 +101,25 @@ object OnlineAlert {
             Intent(ctx, MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_CLEAR_TOP),
             PendingIntent.FLAG_IMMUTABLE
         )
+        // Automation: the console's chain is one tap away from the alert
+        val chain = pickQuickChain(ChainStore.load(ctx), AutoChain.get(ctx, profile.id))
         val n = Notification.Builder(ctx, CHANNEL_ID)
             .setSmallIcon(android.R.drawable.stat_notify_sync_noanim)
             .setContentTitle(AppText.get(R.string.online_title, profile.name))
             .setContentText(AppText.get(R.string.online_text))
             .setContentIntent(open)
             .setAutoCancel(true)
+            .apply {
+                if (chain != null) {
+                    val run = PendingIntent.getActivity(
+                        ctx, 7,
+                        Intent(ctx, MainActivity::class.java).setAction(ACTION_RUN_CHAIN).putExtra(EXTRA_CHAIN_ID, chain.id)
+                            .addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_CLEAR_TOP),
+                        PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
+                    )
+                    addAction(0, AppText.get(R.string.online_run_chain, chain.name), run)
+                }
+            }
             .build()
         // One notification per console, so a second console coming up doesn't replace the first
         nm.notify(5000 + (profile.id.hashCode() and 0xFFF), n)

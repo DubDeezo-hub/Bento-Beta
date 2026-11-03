@@ -85,6 +85,16 @@ fun MoreTab(
     var showRunning by remember { mutableStateOf(false) }
     var showMissed by remember { mutableStateOf(false) }
     if (showMissed) MissedDialog { showMissed = false }
+    var showChecklist by remember { mutableStateOf(false) }
+    var showSnapshots by remember { mutableStateOf(false) }
+    var showAutomation by remember { mutableStateOf(false) }
+    var showDev by remember { mutableStateOf(false) }
+    if (console != null) {
+        if (showChecklist) ChecklistDialog(console) { showChecklist = false }
+        if (showSnapshots) SnapshotsDialog(console) { showSnapshots = false }
+        if (showAutomation) AutomationDialog(console) { showAutomation = false }
+        if (showDev) DevModeDialog(console) { showDev = false }
+    }
     if (showRunning && console != null) RunningDialog(console) { showRunning = false }
     if (showLanguage) LanguageDialog { showLanguage = false }
     if (showDiary) CrashDiaryDialog { showDiary = false }
@@ -97,6 +107,10 @@ fun MoreTab(
         RoundRow(str(R.string.running_title), letter = "●", enabled = console != null, onClick = { showRunning = true })
         RoundRow(str(R.string.crashdiary_title), letter = "!", onClick = { showDiary = true })
         RoundRow(str(R.string.missed_title), letter = "↻", onClick = { showMissed = true })
+        RoundRow(str(R.string.check_title, console?.type?.model ?: ActiveConsole.type.model), letter = "✓", enabled = console != null, onClick = { showChecklist = true })
+        RoundRow(str(R.string.snap_title), letter = "S", enabled = console != null, onClick = { showSnapshots = true })
+        RoundRow(str(R.string.auto_title), letter = "⚙", enabled = console != null, onClick = { showAutomation = true })
+        RoundRow(str(R.string.dev_title), letter = "D", enabled = console != null, onClick = { showDev = true })
         RoundRow(str(R.string.language_title), letter = "A", onClick = { showLanguage = true })
         RoundRow(str(R.string.about_button), letter = "i", onClick = onAbout)
     }

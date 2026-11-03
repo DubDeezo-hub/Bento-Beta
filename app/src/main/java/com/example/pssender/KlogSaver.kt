@@ -93,7 +93,7 @@ class KlogService : Service() {
                 KernelLog.stop()
                 finish()
             }
-            !KernelLog.running -> finish()
+            !KernelLog.running && !BlackBox.on -> finish()
             else -> if (locks == null) locks = TransferLocks(this).also { it.acquire() }
         }
         return START_NOT_STICKY

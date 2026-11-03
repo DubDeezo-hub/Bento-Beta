@@ -513,6 +513,20 @@ internal fun LazyListScope.cheatItems(s: MemorySnapshot, ctx: Context, open: (Me
             }
         }
     }
+    // --- cheat buttons in the notification, even with nothing frozen ---
+    item {
+        var play by remember { mutableStateOf(PlayMode.on) }
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Column(modifier = Modifier.weight(1f)) {
+                Text(str(R.string.play_mode_title), style = MaterialTheme.typography.labelLarge)
+                Text(str(R.string.play_mode_hint), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
+            androidx.compose.material3.Switch(checked = play, onCheckedChange = {
+                play = it
+                PlayMode.set(ctx, it)
+            })
+        }
+    }
     // --- your own notes for this game ---
     item {
         var notes by remember(s.game.titleId) { mutableStateOf(m.gameNotes) }

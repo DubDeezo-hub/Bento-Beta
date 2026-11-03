@@ -55,6 +55,8 @@ object ReloadGuard {
     ): String? {
         // First: a payload whose page doesn't name the console's firmware
         PayloadFirmware.warning(names)?.let { return it }
+        // Then: others on the same firmware mostly saw it crash (the shared compatibility list)
+        compatWarning(names, type.model, PayloadFirmware.consoleFirmware?.let { FwClaims.text(it) }, CompatData.peek())?.let { return it }
         val risky = names.filter { kindOf(it) != null }
         if (risky.isEmpty() || host.isBlank()) return null
         val h = host.trim()

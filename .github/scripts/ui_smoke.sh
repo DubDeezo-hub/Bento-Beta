@@ -817,6 +817,21 @@ else
 fi
 
 # ---------------------------------------------------------------------------------------------
+# 5b. Large text: the biggest font size people commonly pick, every place still opens and the bar still shows
+# ---------------------------------------------------------------------------------------------
+
+adb shell settings put system font_scale 1.3 > /dev/null 2>&1 || true
+launch
+if wait_for_bar 30; then
+  for key in $NAV_KEYS; do
+    visit_tab "$key" values "large text: "
+  done
+else
+  fail "large text" "the bottom bar did not show with large text. Seen: $(ui texts "$XML" 2> /dev/null)"
+fi
+adb shell settings put system font_scale 1.0 > /dev/null 2>&1 || true
+
+# ---------------------------------------------------------------------------------------------
 # 6. Wrap up
 # ---------------------------------------------------------------------------------------------
 

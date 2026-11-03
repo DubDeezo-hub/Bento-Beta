@@ -163,6 +163,9 @@ object MemorySession {
         private set
 
     // --- cheats ---
+    /** Whether a game is connected (the debugger knows its process). */
+    val gameConnected: Boolean get() = gamePid != 0
+
     /** The person's notes for the game that runs (kept per game, see [GameMemo]). */
     var gameNotes by mutableStateOf("")
         private set
@@ -1230,7 +1233,8 @@ object MemorySession {
         if (freezeTargets.isEmpty() && ruleTargets.isEmpty()) {
             freezeJob?.cancel()
             freezeJob = null
-            ctx?.let { FreezeService.stop(it) }
+            // With "cheat buttons in the notification" on, the notification stays while there are cheats to switch
+            ctx?.let { if (PlayMode.on && cheats.isNotEmpty() && gamePid != 0) FreezeService.update(it) else FreezeService.stop(it) }
             return
         }
         ctx?.let { FreezeService.update(it) }

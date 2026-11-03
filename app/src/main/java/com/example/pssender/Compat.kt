@@ -121,6 +121,29 @@ object CompatData {
         }
         return parseCompat(json).also { cached = it }
     }
+
+    /** The counts read already (none when not read yet), without asking GitHub: for checks that can't wait. */
+    fun peek(): Map<String, Map<String, CompatCounts>> = cached.orEmpty()
+
+    /** For the tests. */
+    internal fun use(data: Map<String, Map<String, CompatCounts>>?) {
+        cached = data
+    }
+}
+
+/**
+ * The warning before sending [names] when others on the same [model] and [firmware] mostly saw it crash (at least two
+ * crashes, and more crashes than successes); null when nothing points that way.
+ */
+fun compatWarning(names: List<String>, model: String, firmware: String?, data: Map<String, Map<String, CompatCounts>>): String? {
+    if (firmware.isNullOrBlank()) return null
+    for (name in names) {
+        val c = data[compatKey(name)]?.get(compatWhere(model, firmware)) ?: continue
+        if (c.crashed >= 2 && c.crashed > c.worked) {
+            return AppText.get(R.string.compat_warn, name, model, firmware, c.crashed, c.worked)
+        }
+    }
+    return null
 }
 
 /**

@@ -46,6 +46,8 @@ class BackupData(
     val pins: Map<String, List<String>>? = null,
     /** The Memory tab's saved cheats, by game (title ID); null when the file has none, so restoring leaves the ones on the phone alone. */
     val cheats: Map<String, List<Cheat>>? = null,
+    /** The Memory tab's notes, by game (title ID); null when the file has none. */
+    val gameNotes: Map<String, String>? = null,
     /** When the backup was made ("2026-10-11T12:34:56Z"), as written in the file. */
     val savedAt: String = "",
     /** Payloads that were left out because the backup would have become too large. */
@@ -125,6 +127,11 @@ fun backupToJson(data: BackupData, versionName: String, savedAt: String = nowSta
         for ((titleId, list) in all) if (list.isNotEmpty()) games.put(titleId, JSONArray(cheatsToJson(list)))
         o.put("cheats", games)
     }
+    data.gameNotes?.let { all ->
+        val notes = JSONObject()
+        for ((titleId, text) in all) if (text.isNotBlank()) notes.put(titleId, text)
+        if (notes.length() > 0) o.put("gameNotes", notes)
+    }
     return o.toString(2)
 }
 
@@ -170,6 +177,9 @@ fun parseBackup(text: String): BackupRead {
         chains = if (o.has("chains")) parseChains(o.optJSONArray("chains")?.toString()) else null,
         pins = o.optJSONObject("pins")?.let { readPins(it) },
         cheats = o.optJSONObject("cheats")?.let { readCheats(it) },
+        gameNotes = o.optJSONObject("gameNotes")?.let { n ->
+            n.keys().asSequence().associateWith { n.optString(it, "").take(GameMemo.NOTES_MAX) }.filterValues { it.isNotBlank() }
+        },
         savedAt = o.optString("saved", "")
     )
     return BackupRead(data, null)
@@ -219,6 +229,7 @@ fun collectBackup(ctx: Context): BackupData {
         chains = ChainStore.load(ctx),
         pins = FilesStore.allPins(ctx, consoles.map { it.id }),
         cheats = CheatStore.all(ctx),
+        gameNotes = GameMemo.allNotes(ctx),
         skipped = skipped
     )
 }
@@ -243,6 +254,8 @@ fun applyBackup(ctx: Context, data: BackupData): Int {
     data.pins?.forEach { (id, folders) -> FilesStore.savePins(ctx, id, folders) }
     // Cheats are put among each game's own (one with the same id is replaced), so none made on this phone is lost
     data.cheats?.forEach { (titleId, list) -> CheatStore.save(ctx, titleId, mergeCheats(CheatStore.load(ctx, titleId), list)) }
+    // A game's notes on the phone are kept; the file's go only where there are none yet
+    data.gameNotes?.forEach { (titleId, text) -> if (GameMemo.notes(ctx, titleId).isBlank()) GameMemo.setNotes(ctx, titleId, text) }
     if (data.adblockOn != null || data.adblockCustom != null) {
         AdBlock.load(ctx)
         AdBlock.save(ctx, data.adblockOn ?: AdBlock.enabled.value, data.adblockCustom ?: AdBlock.customText(ctx))

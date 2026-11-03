@@ -1072,3 +1072,23 @@ fun ftpPutFile(s: FtpSettings, dir: String, name: String, text: String): String 
     if (!ftp.storeFile(path, text.toByteArray(Charsets.UTF_8).inputStream())) throw IOException(deniedText(R.string.err_save, ftp, path))
     path
 }
+
+/**
+ * Writes each of [files] (path on the console -> bytes) over one connection, making the folders on the way. Gives how
+ * many were written. Blocking.
+ */
+fun ftpWriteMany(s: FtpSettings, files: Map<String, ByteArray>): Int = withFtp(s) { ftp ->
+    ftp.setFileType(FTP.BINARY_FILE_TYPE)
+    val made = HashSet<String>()
+    var n = 0
+    for ((path, data) in files) {
+        var at = ""
+        for (part in parentPath(path).split('/').filter { it.isNotEmpty() }) {
+            at = "$at/$part"
+            if (made.add(at)) ftp.makeDirectory(at) // false when it is there already
+        }
+        if (!ftp.storeFile(path, data.inputStream())) throw IOException(deniedText(R.string.err_save, ftp, path))
+        n++
+    }
+    n
+}

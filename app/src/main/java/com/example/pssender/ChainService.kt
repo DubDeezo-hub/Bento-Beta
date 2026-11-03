@@ -66,6 +66,7 @@ class ChainService : Service() {
         locks.acquire()
         val watcher = scope.launch { watchProgress() }
         val shelf = shelfDir(this)
+        val startedAt = System.currentTimeMillis()
         try {
             val outcome = try {
                 runChain(
@@ -79,7 +80,8 @@ class ChainService : Service() {
                     onWait = ChainRunner::onWait,
                     onRetry = ChainRunner::onRetry,
                     proof = { name -> SmartChain.proof(name, request.host) { h, p -> Diagnose.probe(h, p, 800) == PortState.OPEN } },
-                    onProof = ChainRunner::onProof
+                    onProof = ChainRunner::onProof,
+                    trouble = { SmartChain.trouble(startedAt, KernelLog.wentSilentAt) }
                 )
             } catch (e: CancellationException) {
                 throw e
