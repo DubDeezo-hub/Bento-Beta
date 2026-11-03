@@ -32,8 +32,11 @@ import androidx.compose.ui.unit.dp
 // there at any point.
 // ---------------------------------------------------------------------------------------------
 
-/** What the person is looking for: a number shown in the game, or something without a number (a bar, a meter). */
-enum class HelperKind { NUMBER, BAR }
+/**
+ * What the person is looking for: a number shown in the game, something without a number (a bar, a meter), something
+ * that switches on and off (a door, an unlock: two snapshots compared), or a timer or clock.
+ */
+enum class HelperKind { NUMBER, BAR, SWITCH, TIMER }
 
 /** What happened to a bar since the last look, and the scan that matches it. */
 enum class HelperChange(val compare: ScanCompare) {
@@ -48,7 +51,8 @@ const val HELPER_FEW = 12
 
 /** The value type a helper search starts with: whole numbers for shown numbers, decimals for bars (games keep those as floats). */
 fun helperStartType(kind: HelperKind, decimals: Boolean): ValueType = when {
-    kind == HelperKind.BAR -> ValueType.FLOAT
+    kind == HelperKind.SWITCH -> ValueType.BYTE // flags are single bytes, 0 or 1
+    kind == HelperKind.BAR || kind == HelperKind.TIMER -> ValueType.FLOAT
     decimals -> ValueType.FLOAT
     else -> ValueType.INT
 }
@@ -64,7 +68,7 @@ fun helperStage(left: Long): HelperStage = when {
 }
 
 @Composable
-internal fun CheatHelperDialog(onClose: () -> Unit, onMakeCheat: (MemoryHit, ValueType) -> Unit) {
+internal fun CheatHelperDialog(onClose: () -> Unit, onMakeCheat: (MemoryHit, ValueType) -> Unit, onOpenHit: (MemoryHit, ValueType) -> Unit) {
     val m = MemorySession
     var kind by remember { mutableStateOf<HelperKind?>(null) }
     var decimals by remember { mutableStateOf(false) }
@@ -106,6 +110,12 @@ internal fun CheatHelperDialog(onClose: () -> Unit, onMakeCheat: (MemoryHit, Val
                     OutlinedButton(modifier = Modifier.fillMaxWidth(), onClick = { kind = HelperKind.BAR; m.newSearch() }) {
                         Text(str(R.string.helper_kind_bar))
                     }
+                    OutlinedButton(modifier = Modifier.fillMaxWidth(), onClick = { kind = HelperKind.SWITCH; m.newSearch() }) {
+                        Text(str(R.string.helper_kind_switch))
+                    }
+                    OutlinedButton(modifier = Modifier.fillMaxWidth(), onClick = { kind = HelperKind.TIMER; m.newSearch() }) {
+                        Text(str(R.string.helper_kind_timer))
+                    }
                     return@Column
                 }
                 if (m.scanning) {
@@ -125,7 +135,11 @@ internal fun CheatHelperDialog(onClose: () -> Unit, onMakeCheat: (MemoryHit, Val
                         NumberField(number) { number = it }
                         Button(enabled = number.isNotBlank(), onClick = { begin(k) }) { Text(str(R.string.helper_start)) }
                     } else {
-                        Text(str(R.string.helper_bar_first))
+                        Text(str(when (k) {
+                            HelperKind.SWITCH -> R.string.helper_switch_first
+                            HelperKind.TIMER -> R.string.helper_timer_first
+                            else -> R.string.helper_bar_first
+                        }))
                         Button(onClick = { begin(k) }) { Text(str(R.string.helper_start)) }
                     }
                     HelperStage.NARROW -> {
@@ -138,8 +152,15 @@ internal fun CheatHelperDialog(onClose: () -> Unit, onMakeCheat: (MemoryHit, Val
                                 m.value1 = number.trim()
                                 m.nextScan()
                             }) { Text(str(R.string.helper_next)) }
+                        } else if (k == HelperKind.SWITCH) {
+                            // Two snapshots compared: flip it in the game (open, close, unlock), or leave it alone
+                            Text(str(R.string.helper_switch_next))
+                            Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                                ChangeButton(R.string.helper_flipped, HelperChange.CHANGED)
+                                ChangeButton(R.string.helper_same, HelperChange.SAME)
+                            }
                         } else {
-                            Text(str(R.string.helper_bar_next))
+                            Text(str(if (k == HelperKind.TIMER) R.string.helper_timer_next else R.string.helper_bar_next))
                             Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                                 ChangeButton(R.string.helper_up, HelperChange.UP)
                                 ChangeButton(R.string.helper_down, HelperChange.DOWN)
@@ -161,10 +182,20 @@ internal fun CheatHelperDialog(onClose: () -> Unit, onMakeCheat: (MemoryHit, Val
                                     style = MaterialTheme.typography.bodySmall,
                                     modifier = Modifier.weight(1f)
                                 )
+                                // Watch it while playing (with its graph), or look at the values kept next to it
+                                TextButton(onClick = { m.watch(hit.address, t) }) { Text(str(R.string.memory_watch)) }
+                                TextButton(onClick = { onOpenHit(hit, t) }) { Text(str(R.string.related_short)) }
                                 TextButton(onClick = { onMakeCheat(hit, t) }) { Text(str(R.string.helper_make_cheat)) }
                             }
                         }
-                        Text(str(R.string.helper_few_hint), style = MaterialTheme.typography.bodySmall)
+                        Text(
+                            str(when (k) {
+                                HelperKind.TIMER -> R.string.helper_timer_few
+                                HelperKind.SWITCH -> R.string.helper_switch_few
+                                else -> R.string.helper_few_hint
+                            }),
+                            style = MaterialTheme.typography.bodySmall
+                        )
                     }
                     HelperStage.NONE -> {
                         Text(str(if (k == HelperKind.NUMBER && !decimals) R.string.helper_none_number else R.string.helper_none))

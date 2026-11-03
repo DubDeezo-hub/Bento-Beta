@@ -61,6 +61,7 @@ internal fun CheatDialog(cheat: Cheat?, new: MemoryDialog.NewCheat?, onClose: ()
     var type by remember { mutableStateOf(cheat?.type ?: new?.type ?: ValueType.INT) }
     var value by remember { mutableStateOf(cheat?.value ?: new?.value ?: "") }
     var note by remember { mutableStateOf(cheat?.note ?: "") }
+    var rule by remember { mutableStateOf(cheat?.rule ?: FreezeRule.EXACT) }
     val addr = parseAddress(address)
     val valueOk = value.isBlank() || type.parse(value) != null
     AlertDialog(
@@ -82,6 +83,14 @@ internal fun CheatDialog(cheat: Cheat?, new: MemoryDialog.NewCheat?, onClose: ()
                 }
                 Field(str(R.string.memory_value), value) { value = it }
                 ValuePresets(type) { value = it }
+                // When frozen: hold it exactly, or only keep it from going below / above the value
+                Text(str(R.string.freeze_rule_title), style = MaterialTheme.typography.labelLarge)
+                ChipRow {
+                    FreezeRule.entries.forEach { r -> Chip(str(r.res), rule == r) { rule = r } }
+                }
+                if (rule != FreezeRule.EXACT) {
+                    Text(str(R.string.freeze_rule_hint), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                }
                 // The person's own words about it: what it does, which game version it works on
                 Field(str(R.string.memory_cheat_note), note) { note = it.take(CHEAT_NOTE_MAX) }
                 if (!valueOk) {
@@ -133,10 +142,12 @@ internal fun CheatDialog(cheat: Cheat?, new: MemoryDialog.NewCheat?, onClose: ()
             TextButton(enabled = addr != null && valueOk, onClick = {
                 if (addr != null) {
                     if (cheat == null) {
-                        m.addCheat(name, addr, type, value, group, note = note)
+                        val added = m.addCheat(name, addr, type, value, group, note = note, rule = rule)
+                        // From the helper: look for a pointer path right away, so the cheat still works after a restart
+                        if (new?.autoPointer == true) m.findPointersAuto(added)
                     } else {
                         val moved = addr != cheat.address || type != cheat.type
-                        val c = cheat.copy(name = name.trim().ifBlank { cheat.name }, address = addr, type = type, value = value.trim(), group = group.trim(), note = note.trim())
+                        val c = cheat.copy(name = name.trim().ifBlank { cheat.name }, address = addr, type = type, value = value.trim(), group = group.trim(), note = note.trim(), rule = rule)
                         // A cheat moved by hand no longer matches its old signature
                         m.updateCheat(if (moved) c.copy(sigHex = "", sigMask = "", sigAt = 0) else c)
                     }

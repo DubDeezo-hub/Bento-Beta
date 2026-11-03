@@ -163,6 +163,13 @@ object MemorySession {
         private set
 
     // --- cheats ---
+    /** The person's notes for the game that runs (kept per game, see [GameMemo]). */
+    var gameNotes by mutableStateOf("")
+        private set
+
+    /** The game was updated since its cheats were last used: the version before and now (null: not, or noticed already). */
+    var versionChange by mutableStateOf<Pair<String, String>?>(null)
+
     var cheats by mutableStateOf<List<Cheat>>(emptyList())
         private set
 
@@ -190,6 +197,10 @@ object MemorySession {
 
     @Volatile
     private var freezeTargets: List<Pair<Long, ByteArray>> = emptyList()
+
+    /** Frozen cheats with a rule: read each time, written only when the game's value crosses the limit. */
+    @Volatile
+    private var ruleTargets: List<RuleTarget> = emptyList()
 
     /** The console the debugger is talking to. */
     var host = ""
@@ -456,6 +467,12 @@ object MemorySession {
                 // A different game (or a restart of it): its old search, process and cheat state no longer apply
                 forgetGame()
                 cheats = app?.let { CheatStore.load(it, s.game.titleId) } ?: emptyList()
+                app?.let { ctx ->
+                    gameNotes = GameMemo.notes(ctx, s.game.titleId)
+                    val before = GameMemo.version(ctx, s.game.titleId)
+                    versionChange = if (cheats.isNotEmpty() && versionMoved(before, s.game.version)) before to s.game.version else null
+                    if (s.game.version.isNotBlank()) GameMemo.setVersion(ctx, s.game.titleId, s.game.version)
+                }
             }
             followPointersQuietly()
         }
@@ -826,12 +843,21 @@ object MemorySession {
     }
 
     /** Adds a cheat; with [findable] the bytes around it are kept too, so "Find again" can find it after a restart. */
-    fun addCheat(name: String, address: Long, t: ValueType, value: String, group: String = "", findable: Boolean = true, note: String = "") {
+    fun addCheat(
+        name: String, address: Long, t: ValueType, value: String, group: String = "", findable: Boolean = true, note: String = "",
+        rule: FreezeRule = FreezeRule.EXACT
+    ): Cheat {
         val n = name.trim().ifBlank { AppText.get(R.string.memory_cheat_default, cheats.size + 1) }
-        val c = Cheat(UUID.randomUUID().toString(), n, address, t, value.trim(), group = group.trim(), note = note.trim().take(CHEAT_NOTE_MAX))
+        val c = Cheat(UUID.randomUUID().toString(), n, address, t, value.trim(), group = group.trim(), note = note.trim().take(CHEAT_NOTE_MAX), rule = rule)
         saveCheats(cheats + c)
         status = AppText.get(R.string.memory_cheat_added, n)
         if (findable) captureSignature(c)
+        return c
+    }
+
+    fun saveNotes(text: String) {
+        gameNotes = text.take(GameMemo.NOTES_MAX)
+        app?.let { GameMemo.setNotes(it, titleId, gameNotes) }
     }
 
     fun updateCheat(c: Cheat) = saveCheats(cheats.map { if (it.id == c.id) c else it })
@@ -980,11 +1006,15 @@ object MemorySession {
             .put("titleId", s?.titleId.orEmpty())
             .put("version", s?.version.orEmpty())
             .put("cheats", JSONArray(cheatsToJson(cheats.map { it.copy(frozen = false) })))
+            .apply { if (gameNotes.isNotBlank()) put("notes", gameNotes) }
         return o.toString(2)
     }
 
     /** Adds the cheats in [text] (an exported list); the ones already here (same address and type) are skipped. */
     fun importText(text: String) {
+        // Notes that came with a shared list are kept when this game has none yet
+        val notes = try { JSONObject(text).optString("notes", "") } catch (_: Exception) { "" }
+        if (notes.isNotBlank() && gameNotes.isBlank()) saveNotes(notes)
         val found = parseCheats(text)
         if (found.isEmpty()) {
             status = AppText.get(R.string.memory_import_none)
@@ -1060,6 +1090,34 @@ object MemorySession {
         }) { paths ->
             pointerPaths = paths
             status = if (paths.isEmpty()) AppText.get(R.string.ptr_none) else AppText.get(R.string.ptr_found, paths.size)
+        }
+        if (!busy) scanning = false
+    }
+
+    /**
+     * Like [findPointers], and the most likely path (the shortest, then the nearest offsets) is given to [c] at once, so it
+     * follows the value after a restart. The other paths stay listed for checking after the next restart.
+     */
+    fun findPointersAuto(c: Cheat, depth: Int = 3) {
+        val pid = gamePid
+        val info = snapshot?.info
+        if (pid == 0) return
+        pointerFor = c
+        pointerPaths = emptyList()
+        scanning = true
+        perform(scan = true, work = { d ->
+            val image = PointerScan.imageOf(d.maps(pid)) ?: throw DebuggerException(AppText.get(R.string.ptr_no_eboot))
+            PointerScan.find(memoryFor(d, pid, info, image), c.address, image, depth)
+        }) { paths ->
+            pointerPaths = paths
+            val best = bestPointer(paths)
+            val now = cheats.firstOrNull { it.id == c.id }
+            if (best != null && now != null) {
+                updateCheat(now.copy(ptr = best.encode()))
+                status = AppText.get(R.string.ptr_auto_used, now.name, best.text())
+            } else {
+                status = AppText.get(R.string.ptr_auto_none, c.name)
+            }
         }
         if (!busy) scanning = false
     }
@@ -1145,6 +1203,7 @@ object MemorySession {
     private fun stopFreezing() {
         if (cheats.any { it.frozen }) cheats = cheats.map { it.copy(frozen = false) }
         freezeTargets = emptyList()
+        ruleTargets = emptyList()
         freezeJob?.cancel()
         freezeJob = null
         app?.let { FreezeService.stop(it) }
@@ -1156,15 +1215,19 @@ object MemorySession {
     }
 
     /** How many values are frozen now (for the notification). */
-    val frozenCount: Int get() = freezeTargets.size
+    val frozenCount: Int get() = freezeTargets.size + ruleTargets.size
 
     val gameName: String get() = snapshot?.game?.let { it.name.ifBlank { it.titleId } }.orEmpty()
 
     /** Starts the freeze loop when a cheat is frozen, and stops it when none is. */
     private fun updateFreezing() {
-        freezeTargets = cheats.filter { it.frozen }.mapNotNull { c -> c.type.parse(c.value)?.let { c.address to it } }
+        freezeTargets = cheats.filter { it.frozen && it.rule == FreezeRule.EXACT }.mapNotNull { c -> c.type.parse(c.value)?.let { c.address to it } }
+        // Cheats with a rule ("never below", "never above") are read first and only written when they cross it
+        ruleTargets = cheats.filter { it.frozen && it.rule != FreezeRule.EXACT }.mapNotNull { c ->
+            c.type.parse(c.value)?.let { RuleTarget(c.address, c.type, it, c.rule) }
+        }
         val ctx = app
-        if (freezeTargets.isEmpty()) {
+        if (freezeTargets.isEmpty() && ruleTargets.isEmpty()) {
             freezeJob?.cancel()
             freezeJob = null
             ctx?.let { FreezeService.stop(it) }
@@ -1183,6 +1246,7 @@ object MemorySession {
                 status = stopped
                 if (cheats.any { it.frozen }) cheats = cheats.map { it.copy(frozen = false) }
                 freezeTargets = emptyList()
+                ruleTargets = emptyList()
                 app?.let { FreezeService.stop(it) }
             }
             freezeJob = null
@@ -1202,8 +1266,13 @@ object MemorySession {
                     if (failures > 0) withContext(Dispatchers.Main) { status = AppText.get(R.string.memory_freeze_back) }
                     while (currentCoroutineContext().isActive) {
                         val targets = freezeTargets
-                        if (targets.isEmpty()) return null
+                        val rules = ruleTargets
+                        if (targets.isEmpty() && rules.isEmpty()) return null
                         if (multi && targets.size > 1) d.writeMulti(pid, targets) else for ((addr, bytes) in targets) d.write(pid, addr, bytes)
+                        for (r in rules) {
+                            val now = d.read(pid, r.address, r.type.size)
+                            if (ruleWrites(r.rule, r.type, now, r.limit)) d.write(pid, r.address, r.limit)
+                        }
                         failures = 0
                         delay(FREEZE_MS)
                     }

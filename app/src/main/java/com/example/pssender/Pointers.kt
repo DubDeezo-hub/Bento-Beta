@@ -189,3 +189,10 @@ object PointerScan {
         return at
     }
 }
+
+/**
+ * The path most likely to keep working after a restart: the fewest pointers to follow, then the smallest offsets (a
+ * field near the start of an object is the usual case). Null when there is none.
+ */
+fun bestPointer(paths: List<PointerPath>): PointerPath? =
+    paths.minWithOrNull(compareBy<PointerPath> { it.depth }.thenBy { p -> p.offsets.sumOf { kotlin.math.abs(it) } }.thenBy { it.baseOffset })

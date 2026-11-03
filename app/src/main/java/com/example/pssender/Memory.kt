@@ -30,6 +30,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -120,7 +121,7 @@ fun bytesText(b: ByteArray): String = b.joinToString(" ") { "%02X".format(it.toI
 internal sealed class MemoryDialog {
     class Hit(val hit: MemoryHit, val type: ValueType) : MemoryDialog()
     class EditCheat(val cheat: Cheat) : MemoryDialog()
-    class NewCheat(val address: Long?, val type: ValueType, val value: String) : MemoryDialog()
+    class NewCheat(val address: Long?, val type: ValueType, val value: String, val autoPointer: Boolean = false) : MemoryDialog()
     class HexLine(val address: Long, val bytes: ByteArray) : MemoryDialog()
     class WatchMenu(val watch: Watch) : MemoryDialog()
     object Import : MemoryDialog()
@@ -207,7 +208,11 @@ fun MemoryTab(host: String, label: String, modifier: Modifier = Modifier) {
         is MemoryDialog.HexLine -> HexLineDialog(d, close)
         is MemoryDialog.WatchMenu -> WatchDialog(d.watch, onClose = close, onOpen = { dialog = it })
         MemoryDialog.Import -> ImportDialog(ctx, close)
-        MemoryDialog.Helper -> CheatHelperDialog(close) { hit, t -> dialog = MemoryDialog.NewCheat(hit.address, t, t.format(hit.value)) }
+        MemoryDialog.Helper -> CheatHelperDialog(
+            close,
+            onMakeCheat = { hit, t -> dialog = MemoryDialog.NewCheat(hit.address, t, t.format(hit.value), autoPointer = true) },
+            onOpenHit = { hit, t -> dialog = MemoryDialog.Hit(hit, t) }
+        )
         is MemoryDialog.CheatFileOut -> CheatFileOutDialog(d, close)
         MemoryDialog.Source -> SourceDialog(close)
         MemoryDialog.Undo -> UndoDialog(close)
@@ -493,6 +498,37 @@ internal fun LazyListScope.cheatItems(s: MemorySnapshot, ctx: Context, open: (Me
         item { PointerPanel(target, playing) }
     }
 
+    // The game was updated since its cheats were last used: they may sit somewhere else now
+    m.versionChange?.let { (before, now) ->
+        item {
+            Panel {
+                Text(str(R.string.memory_version_moved, before, now, m.cheats.size), style = MaterialTheme.typography.bodyMedium)
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Button(enabled = playing && !m.busy && m.cheats.any { it.findable }, onClick = {
+                        m.findAgain()
+                        m.versionChange = null
+                    }) { Text(str(R.string.memory_find_again_all)) }
+                    TextButton(onClick = { m.versionChange = null }) { Text(str(R.string.action_close)) }
+                }
+            }
+        }
+    }
+    // --- your own notes for this game ---
+    item {
+        var notes by remember(s.game.titleId) { mutableStateOf(m.gameNotes) }
+        OutlinedTextField(
+            value = notes,
+            onValueChange = {
+                notes = it.take(GameMemo.NOTES_MAX)
+                m.saveNotes(notes)
+            },
+            label = { Text(str(R.string.memory_game_notes)) },
+            placeholder = { Text(str(R.string.memory_game_notes_hint)) },
+            minLines = 2,
+            maxLines = 6,
+            modifier = Modifier.fillMaxWidth()
+        )
+    }
     // --- your own cheats ---
     item {
         // "Save as file": the cheat list as a file to send to someone (they open it with Import, "Open a file")
@@ -859,6 +895,7 @@ internal fun HitDialog(d: MemoryDialog.Hit, onClose: () -> Unit, onOpen: (Memory
     var peek by remember { mutableStateOf<ByteArray?>(null) }
     var neighbors by remember { mutableStateOf<ByteArray?>(null) }
     var showNeighbors by remember { mutableStateOf(false) }
+    var showRelated by remember { mutableStateOf(false) }
     val span = NEIGHBOR_SPAN
     LaunchedEffect(d.hit.address) { peek = m.peek(d.hit.address, 8) }
     LaunchedEffect(showNeighbors) {
@@ -887,6 +924,13 @@ internal fun HitDialog(d: MemoryDialog.Hit, onClose: () -> Unit, onOpen: (Memory
                     Neighbors(d.type, neighbors, span) { v ->
                         value = v
                     }
+                }
+                // Further out, and only what looks like a game number: max health next to health, armor, stamina
+                TextButton(onClick = { showRelated = !showRelated }) {
+                    Text(str(if (showRelated) R.string.related_hide else R.string.related_show), style = MaterialTheme.typography.labelLarge)
+                }
+                if (showRelated) {
+                    RelatedValues(d.hit.address, d.type) { addr, t, v -> onOpen(MemoryDialog.NewCheat(addr, t, v, autoPointer = true)) }
                 }
                 Row(
                     modifier = Modifier.horizontalScroll(rememberScrollState()),

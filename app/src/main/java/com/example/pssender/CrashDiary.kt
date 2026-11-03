@@ -177,6 +177,7 @@ fun CrashDiaryDialog(onClose: () -> Unit) {
                 if (report.isNotEmpty()) {
                     Text(str(R.string.stab_title), style = MaterialTheme.typography.titleSmall, modifier = Modifier.padding(top = 4.dp))
                     Text(str(R.string.stab_hint), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    val firmware = remember { ConsoleFirmware.get(ctx, ActiveConsole.id) }
                     for (r in report.take(12)) {
                         Text(
                             if (r.suspect) str(R.string.stab_suspect, r.name, r.crashes, r.loads)
@@ -184,6 +185,20 @@ fun CrashDiaryDialog(onClose: () -> Unit) {
                             style = MaterialTheme.typography.bodyMedium,
                             color = if (r.suspect) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.onSurface
                         )
+                        // A repeat offender can be reported to the shared list in one tap, so others on this firmware know
+                        if (r.suspect && firmware.isNotEmpty()) {
+                            TextButton(onClick = {
+                                try {
+                                    ctx.startActivity(
+                                        android.content.Intent(
+                                            android.content.Intent.ACTION_VIEW,
+                                            android.net.Uri.parse(compatReportUrl(r.name, "", ActiveConsole.type.model, firmware, CompatResult.CRASHED))
+                                        )
+                                    )
+                                } catch (_: Exception) {
+                                }
+                            }) { Text(str(R.string.stab_report)) }
+                        }
                     }
                     TextButton(onClick = {
                         Stability.clear(ctx)

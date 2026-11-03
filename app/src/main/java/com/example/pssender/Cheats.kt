@@ -47,7 +47,9 @@ data class Cheat(
     /** A pointer path from the eboot to the value (see [PointerPath.encode]); "" when there is none. */
     val ptr: String = "",
     /** The person's own note: what it does, which game version it works on ("" when none). */
-    val note: String = ""
+    val note: String = "",
+    /** How a frozen cheat holds its value: exactly, or only keeping it from going below or above it. */
+    val rule: FreezeRule = FreezeRule.EXACT
 ) {
     val signature: Signature? get() = if (sigHex.isEmpty()) null else Signature.parse(sigHex, sigMask, sigAt)
     val pointer: PointerPath? get() = PointerPath.decode(ptr)
@@ -118,6 +120,7 @@ fun cheatsToJson(list: List<Cheat>): String {
                 .put("type", c.type.name).put("value", c.value).put("group", c.group)
                 .put("sig", c.sigHex).put("sigMask", c.sigMask).put("sigAt", c.sigAt).put("ptr", c.ptr)
                 .apply { if (c.note.isNotBlank()) put("note", c.note) }
+                .apply { if (c.rule != FreezeRule.EXACT) put("rule", c.rule.wire) }
         )
     }
     return arr.toString()
@@ -146,7 +149,8 @@ fun parseCheats(json: String?): List<Cheat> {
             sigMask = o["sigMask"]?.toString().orEmpty(),
             sigAt = (o["sigAt"] as? Number)?.toInt() ?: o["sigAt"]?.toString()?.toIntOrNull() ?: 0,
             ptr = o["ptr"]?.toString().orEmpty(),
-            note = o["note"]?.toString().orEmpty().take(CHEAT_NOTE_MAX)
+            note = o["note"]?.toString().orEmpty().take(CHEAT_NOTE_MAX),
+            rule = FreezeRule.of(o["rule"]?.toString())
         )
     }
 }
@@ -164,3 +168,70 @@ fun parseAddress(text: String): Long? {
         null
     }
 }
+
+/**
+ * How a frozen cheat holds its value. EXACT writes it all the time; AT_LEAST only when the game's value drops below it
+ * (health never under 50, but potions still heal above it); AT_MOST only when it goes above it (a timer that may run
+ * down but never up, damage taken never more than this).
+ */
+enum class FreezeRule(val wire: String, val res: Int) {
+    EXACT("exact", R.string.freeze_exact),
+    AT_LEAST("min", R.string.freeze_at_least),
+    AT_MOST("max", R.string.freeze_at_most);
+
+    companion object {
+        fun of(text: String?): FreezeRule = entries.firstOrNull { it.wire == text } ?: EXACT
+    }
+}
+
+/** [buf] (little-endian, as the console keeps it) as a number of type [t]. */
+fun numberOf(t: ValueType, buf: ByteArray): Double? {
+    if (buf.size < t.size) return null
+    val b = java.nio.ByteBuffer.wrap(buf, 0, t.size).order(java.nio.ByteOrder.LITTLE_ENDIAN)
+    return when (t) {
+        ValueType.BYTE -> (b.get().toInt() and 0xFF).toDouble()
+        ValueType.SHORT -> b.short.toDouble()
+        ValueType.INT -> b.int.toDouble()
+        ValueType.LONG -> b.long.toDouble()
+        ValueType.FLOAT -> b.float.toDouble().takeIf { !it.isNaN() }
+        ValueType.DOUBLE -> b.double.takeIf { !it.isNaN() }
+    }
+}
+
+/** Whether a frozen cheat with [rule] has to write [limit] now, the game's value being [current]. */
+fun ruleWrites(rule: FreezeRule, t: ValueType, current: ByteArray?, limit: ByteArray): Boolean {
+    if (rule == FreezeRule.EXACT) return true
+    val now = current?.let { numberOf(t, it) } ?: return false // unreadable: leave the game alone
+    val want = numberOf(t, limit) ?: return false
+    return if (rule == FreezeRule.AT_LEAST) now < want else now > want
+}
+
+/** A frozen cheat with a rule, as the freeze loop works on it. */
+class RuleTarget(val address: Long, val type: ValueType, val limit: ByteArray, val rule: FreezeRule)
+
+/**
+ * Per game: the person's notes (addresses, what worked, which version), and the game version the cheats were last used
+ * with, so an update that may have moved them is noticed.
+ */
+object GameMemo {
+    /** The longest note kept for a game. */
+    const val NOTES_MAX = 4000
+
+    private fun prefs(ctx: Context) = ctx.getSharedPreferences("memory_games", Context.MODE_PRIVATE)
+    private fun id(titleId: String) = titleId.ifBlank { "unknown" }
+
+    fun notes(ctx: Context, titleId: String): String = prefs(ctx).getString("n_" + id(titleId), "") ?: ""
+
+    fun setNotes(ctx: Context, titleId: String, text: String) {
+        prefs(ctx).edit().putString("n_" + id(titleId), text.take(NOTES_MAX)).apply()
+    }
+
+    fun version(ctx: Context, titleId: String): String = prefs(ctx).getString("v_" + id(titleId), "") ?: ""
+
+    fun setVersion(ctx: Context, titleId: String, version: String) {
+        prefs(ctx).edit().putString("v_" + id(titleId), version).apply()
+    }
+}
+
+/** Whether the game went from version [saved] to [now] (both known and different): its cheats may have moved. */
+fun versionMoved(saved: String, now: String): Boolean = saved.isNotBlank() && now.isNotBlank() && saved.trim() != now.trim()

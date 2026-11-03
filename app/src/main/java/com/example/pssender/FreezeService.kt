@@ -34,6 +34,12 @@ class FreezeService : Service() {
                 MemorySession.stopAllFreezes()
                 finish()
             }
+            intent?.action == ACTION_TOGGLE -> {
+                // A quick toggle from the notification: freeze or unfreeze one cheat without leaving the game
+                val id = intent.getStringExtra(EXTRA_CHEAT)
+                MemorySession.cheats.firstOrNull { it.id == id }?.let { MemorySession.setFrozen(it, !it.frozen) }
+                if (MemorySession.frozenCount == 0) finish() else update(this)
+            }
             MemorySession.frozenCount == 0 -> finish()
             else -> {
                 if (locks == null) locks = TransferLocks(this).also { it.acquire() }
@@ -70,6 +76,17 @@ class FreezeService : Service() {
             .setOngoing(true)
             .setOnlyAlertOnce(true)
             .addAction(0, AppText.get(R.string.memory_freeze_notif_stop), stop)
+            .apply {
+                // Up to two cheats to switch from here (the frozen ones first): Android shows three buttons at most
+                quickCheats(MemorySession.cheats).forEachIndexed { i, c ->
+                    val toggle = PendingIntent.getService(
+                        this@FreezeService, 10 + i,
+                        Intent(this@FreezeService, FreezeService::class.java).setAction(ACTION_TOGGLE).putExtra(EXTRA_CHEAT, c.id),
+                        PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
+                    )
+                    addAction(0, AppText.get(if (c.frozen) R.string.freeze_quick_off else R.string.freeze_quick_on, c.name.take(16)), toggle)
+                }
+            }
             .build()
     }
 
@@ -84,6 +101,8 @@ class FreezeService : Service() {
         const val NOTIF_ID = 45
         const val CHANNEL_ID = "memory_freeze"
         const val ACTION_STOP = "com.example.pssender.STOP_FREEZING"
+        const val ACTION_TOGGLE = "com.example.pssender.TOGGLE_FREEZE"
+        const val EXTRA_CHEAT = "cheat"
 
         @Volatile
         private var running = false
@@ -112,3 +131,6 @@ class FreezeService : Service() {
         }
     }
 }
+
+/** The cheats offered as quick toggles in the freeze notification: the frozen ones first, two at most. */
+fun quickCheats(all: List<Cheat>): List<Cheat> = (all.filter { it.frozen } + all.filter { !it.frozen }).take(2)
