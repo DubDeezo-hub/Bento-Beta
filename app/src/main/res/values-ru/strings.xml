@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">Включено %1$d из %2$d</string>
     <string name="cheats_all_off">Выключить все</string>
     <string name="cheats_search">Поиск читов</string>
+    <string name="dialog_close">Закрыть это окно</string>
+    <string name="more_sec_daily">Каждый день</string>
+    <string name="more_sec_trouble">Если что-то пошло не так</string>
+    <string name="more_sec_setup">Настройка и инструменты</string>
+    <string name="more_d_web">Найти файлы и отправить на консоль</string>
+    <string name="more_d_upload">Скопировать файлы с телефона на консоль</string>
+    <string name="more_d_consoles">Добавить, сменить или переименовать консоль</string>
+    <string name="more_d_running">Что сейчас отвечает на консоли</string>
+    <string name="more_d_session">Что вы отправили и как прошло</string>
+    <string name="more_d_missed">Передачи, остановившиеся до конца</string>
+    <string name="more_d_diary">Что было перед каждым сбоем</string>
+    <string name="more_d_bisect">Узнать, какой payload вызывает сбой</string>
+    <string name="more_d_check">Шаг за шагом после джейлбрейка</string>
+    <string name="more_d_etahen">Собственные настройки etaHEN на консоли</string>
+    <string name="more_d_snap">Сохранить и вернуть настройки консоли</string>
+    <string name="more_d_auto">То, что происходит само</string>
+    <string name="more_d_dev">Проверить свои сборки payload</string>
+    <string name="more_d_language">Язык приложения</string>
+    <string name="more_d_about">Версия, обновления, резервная копия и настройки</string>
 </resources>

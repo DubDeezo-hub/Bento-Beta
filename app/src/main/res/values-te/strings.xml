@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">%2$d లో %1$d ఆన్</string>
     <string name="cheats_all_off">అన్నీ ఆఫ్ చేయి</string>
     <string name="cheats_search">చీట్‌లు వెతుకు</string>
+    <string name="dialog_close">ఈ విండో మూసివేయి</string>
+    <string name="more_sec_daily">ప్రతిరోజూ</string>
+    <string name="more_sec_trouble">ఏదైనా తప్పైనప్పుడు</string>
+    <string name="more_sec_setup">సెటప్ మరియు సాధనాలు</string>
+    <string name="more_d_web">ఫైళ్లు వెతికి కన్సోల్‌కు పంపండి</string>
+    <string name="more_d_upload">ఫోన్ నుంచి కన్సోల్‌కు ఫైళ్లు కాపీ చేయండి</string>
+    <string name="more_d_consoles">కన్సోల్‌లు జోడించండి, మార్చండి లేదా పేరు మార్చండి</string>
+    <string name="more_d_running">ఇప్పుడు కన్సోల్‌లో ఏది జవాబిస్తోంది</string>
+    <string name="more_d_session">మీరు ఏమి పంపారు, ఎలా జరిగింది</string>
+    <string name="more_d_missed">ముగింపుకు ముందే ఆగిన బదిలీలు</string>
+    <string name="more_d_diary">ప్రతి క్రాష్‌కు ముందు ఏమి జరిగింది</string>
+    <string name="more_d_bisect">ఏ పేలోడ్ క్రాష్ చేస్తుందో కనుగొనండి</string>
+    <string name="more_d_check">జైల్‌బ్రేక్ తర్వాత దశలవారీగా</string>
+    <string name="more_d_etahen">కన్సోల్‌లో etaHEN స్వంత సెట్టింగ్‌లు</string>
+    <string name="more_d_snap">కన్సోల్ సెట్టింగ్‌లు ఉంచి, తిరిగి తెండి</string>
+    <string name="more_d_auto">తమంతట తాము జరిగేవి</string>
+    <string name="more_d_dev">మీ పేలోడ్ బిల్డ్‌లు పరీక్షించండి</string>
+    <string name="more_d_language">యాప్ భాష</string>
+    <string name="more_d_about">వెర్షన్, అప్‌డేట్‌లు, బ్యాకప్ మరియు సెట్టింగ్‌లు</string>
 </resources>

@@ -1478,4 +1478,23 @@
     <string name="cheats_on_count">%1$d van %2$d aan</string>
     <string name="cheats_all_off">Alles uitzetten</string>
     <string name="cheats_search">Cheats zoeken</string>
+    <string name="dialog_close">Dit venster sluiten</string>
+    <string name="more_sec_daily">Elke dag</string>
+    <string name="more_sec_trouble">Als er iets misgaat</string>
+    <string name="more_sec_setup">Instellen en hulpmiddelen</string>
+    <string name="more_d_web">Zoek bestanden en stuur ze naar de console</string>
+    <string name="more_d_upload">Kopieer bestanden van de telefoon naar de console</string>
+    <string name="more_d_consoles">Consoles toevoegen, wisselen of hernoemen</string>
+    <string name="more_d_running">Wat er nu op de console antwoordt</string>
+    <string name="more_d_session">Wat je stuurde en hoe het ging</string>
+    <string name="more_d_missed">Overdrachten die voor het einde stopten</string>
+    <string name="more_d_diary">Wat er vlak voor elke crash gebeurde</string>
+    <string name="more_d_bisect">Zoek uit welke payload hem laat crashen</string>
+    <string name="more_d_check">Stap voor stap na een jailbreak</string>
+    <string name="more_d_etahen">De eigen instellingen van etaHEN op de console</string>
+    <string name="more_d_snap">Instellingen van de console bewaren en terugzetten</string>
+    <string name="more_d_auto">Dingen die vanzelf gebeuren</string>
+    <string name="more_d_dev">Test je eigen payload-builds</string>
+    <string name="more_d_language">De taal van de app</string>
+    <string name="more_d_about">Versie, updates, back-up en instellingen</string>
 </resources>

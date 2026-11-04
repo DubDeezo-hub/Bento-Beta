@@ -1478,4 +1478,23 @@
     <string name="cheats_on_count">%1$d av %2$d på</string>
     <string name="cheats_all_off">Stäng av alla</string>
     <string name="cheats_search">Sök fusk</string>
+    <string name="dialog_close">Stäng det här fönstret</string>
+    <string name="more_sec_daily">Varje dag</string>
+    <string name="more_sec_trouble">När något går fel</string>
+    <string name="more_sec_setup">Inställning och verktyg</string>
+    <string name="more_d_web">Hitta filer och skicka dem till konsolen</string>
+    <string name="more_d_upload">Kopiera filer från telefonen till konsolen</string>
+    <string name="more_d_consoles">Lägg till, byt eller byt namn på konsoler</string>
+    <string name="more_d_running">Vad som svarar på konsolen just nu</string>
+    <string name="more_d_session">Vad du skickade och hur det gick</string>
+    <string name="more_d_missed">Överföringar som stannade före slutet</string>
+    <string name="more_d_diary">Vad som hände precis före varje krasch</string>
+    <string name="more_d_bisect">Ta reda på vilken payload som kraschar den</string>
+    <string name="more_d_check">Steg för steg efter en jailbreak</string>
+    <string name="more_d_etahen">etaHENs egna inställningar på konsolen</string>
+    <string name="more_d_snap">Spara och återställ konsolens inställningar</string>
+    <string name="more_d_auto">Saker som sker av sig själva</string>
+    <string name="more_d_dev">Testa dina egna payload-byggen</string>
+    <string name="more_d_language">Appens språk</string>
+    <string name="more_d_about">Version, uppdateringar, säkerhetskopia och inställningar</string>
 </resources>

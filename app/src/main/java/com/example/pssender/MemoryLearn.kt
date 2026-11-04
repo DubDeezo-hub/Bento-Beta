@@ -1,6 +1,11 @@
 package com.example.pssender
 
 import androidx.compose.foundation.background
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -251,9 +256,7 @@ internal fun LazyListScope.learnItems() {
     item { PracticeCard() }
     item {
         Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-            ChipRow {
-                LearnLevel.entries.forEach { lv -> Chip(str(lv.label), LearnScreen.level == lv) { LearnScreen.level = lv } }
-            }
+            PillSwitch(LearnLevel.entries.map { str(it.label) }, LearnLevel.entries.indexOf(LearnScreen.level)) { LearnScreen.level = LearnLevel.entries[it] }
             Panel {
                 TipTitle(str(R.string.learn_look_title), Tip.MEM_LEARN, style = MaterialTheme.typography.labelLarge)
                 Text(str(LearnScreen.level.look), style = MaterialTheme.typography.bodySmall)
@@ -272,14 +275,17 @@ object LearnScreen {
 private fun LessonCard(l: Lesson) {
     var open by remember { mutableStateOf(false) }
     Panel {
-        Text(str(l.title), style = MaterialTheme.typography.titleSmall)
-        Text(str(l.look), style = MaterialTheme.typography.bodySmall)
+        Text(str(l.title), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+        Text(str(l.look), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
         if (l.steps.isNotEmpty()) {
             if (open) {
                 l.steps.forEachIndexed { i, s ->
-                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        Text("${i + 1}.", style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.Medium)
-                        Text(str(s.text), style = MaterialTheme.typography.bodySmall, modifier = Modifier.weight(1f))
+                    Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                        Box(
+                            Modifier.size(24.dp).clip(CircleShape).background(MaterialTheme.colorScheme.primary.copy(alpha = 0.18f)),
+                            contentAlignment = Alignment.Center
+                        ) { Text("${i + 1}", style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold) }
+                        Text(str(s.text), style = MaterialTheme.typography.bodyMedium, modifier = Modifier.weight(1f))
                     }
                 }
             }
@@ -319,45 +325,53 @@ private fun PracticeCard() {
         val max = PracticeGame.maxHealth().coerceAtLeast(1f)
         val t = PracticeGame.timer().coerceAtLeast(0f).toInt()
         Text(str(R.string.learn_practice_on), style = MaterialTheme.typography.bodySmall, color = statusColors().good)
+        // The pretend game's screen: what a real game would show, big enough to read while scanning
         Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(24.dp))
                 .background(MaterialTheme.colorScheme.surfaceContainerHigh)
-                .padding(10.dp),
-            verticalArrangement = Arrangement.spacedBy(4.dp)
+                .padding(14.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            Row {
-                Text(PracticeGame.name(), style = MaterialTheme.typography.titleSmall, modifier = Modifier.weight(1f))
-                Text("%d:%02d".format(t / 60, t % 60), style = MaterialTheme.typography.titleSmall, fontFamily = FontFamily.Monospace)
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(PracticeGame.name(), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
+                Text("⏱ " + "%d:%02d".format(t / 60, t % 60), style = MaterialTheme.typography.titleMedium, fontFamily = FontFamily.Monospace)
             }
-            Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                Text(str(R.string.learn_practice_gold, PracticeGame.gold()), style = MaterialTheme.typography.bodyMedium)
-                Text(str(R.string.learn_practice_ammo, PracticeGame.ammo(), PracticeGame.CLIP), style = MaterialTheme.typography.bodyMedium)
+            Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                GameStat("🪙", str(R.string.learn_practice_gold, PracticeGame.gold()), Modifier.weight(1f))
+                GameStat("🔫", str(R.string.learn_practice_ammo, PracticeGame.ammo(), PracticeGame.CLIP), Modifier.weight(1f))
             }
             // Health is only a bar, as in many games: there is no number to search for
-            Box(
-                Modifier
-                    .fillMaxWidth()
-                    .height(10.dp)
-                    .clip(RoundedCornerShape(5.dp))
-                    .background(MaterialTheme.colorScheme.surfaceVariant)
-            ) {
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Text("❤", style = MaterialTheme.typography.titleMedium, color = statusColors().bad)
                 Box(
                     Modifier
-                        .fillMaxWidth((hp / max).coerceIn(0f, 1f))
-                        .height(10.dp)
-                        .background(statusColors().bad)
-                )
+                        .weight(1f)
+                        .height(16.dp)
+                        .clip(RoundedCornerShape(8.dp))
+                        .background(MaterialTheme.colorScheme.surfaceVariant)
+                ) {
+                    Box(
+                        Modifier
+                            .fillMaxWidth((hp / max).coerceIn(0f, 1f))
+                            .height(16.dp)
+                            .clip(RoundedCornerShape(8.dp))
+                            .background(statusColors().bad)
+                    )
+                }
             }
             if (PracticeGame.damageCodeChanged()) Text(str(R.string.learn_practice_code_changed), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.primary)
         }
-        ChipRow {
-            Chip(str(R.string.learn_practice_buy), false) { PracticeGame.spendGold(50); tick++ }
-            Chip(str(R.string.learn_practice_find), false) { PracticeGame.earnGold(35); tick++ }
-            Chip(str(R.string.learn_practice_shoot), false) { PracticeGame.shoot(); tick++ }
-            Chip(str(R.string.learn_practice_reload), false) { PracticeGame.reload(); tick++ }
-            Chip(str(R.string.learn_practice_hit), false) { PracticeGame.takeHit(); tick++ }
+        // The game's controls as big buttons: gold, then the gun, then getting hurt
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            GameButton("🛒", str(R.string.learn_practice_buy), Modifier.weight(1f)) { PracticeGame.spendGold(50); tick++ }
+            GameButton("🪙", str(R.string.learn_practice_find), Modifier.weight(1f)) { PracticeGame.earnGold(35); tick++ }
+        }
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            GameButton("💥", str(R.string.learn_practice_shoot), Modifier.weight(1f)) { PracticeGame.shoot(); tick++ }
+            GameButton("🔄", str(R.string.learn_practice_reload), Modifier.weight(1f)) { PracticeGame.reload(); tick++ }
+            GameButton("🩸", str(R.string.learn_practice_hit), Modifier.weight(1f)) { PracticeGame.takeHit(); tick++ }
         }
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             OutlinedButton(onClick = {
@@ -367,5 +381,39 @@ private fun PracticeCard() {
             TextButton(enabled = !m.busy, onClick = { m.stopPractice() }) { Text(str(R.string.learn_practice_stop)) }
         }
         Text(str(R.string.learn_practice_restart_help), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+    }
+}
+
+/** One number on the practice game's screen, like a game's HUD. */
+@Composable
+private fun GameStat(icon: String, text: String, modifier: Modifier = Modifier) {
+    Row(
+        modifier = modifier
+            .clip(RoundedCornerShape(16.dp))
+            .background(MaterialTheme.colorScheme.surfaceContainer)
+            .padding(horizontal = 10.dp, vertical = 8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(6.dp)
+    ) {
+        Text(icon, style = MaterialTheme.typography.titleMedium)
+        Text(text, style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold, maxLines = 2)
+    }
+}
+
+/** A big button of the practice game: an icon over its name. */
+@Composable
+private fun GameButton(icon: String, label: String, modifier: Modifier = Modifier, onClick: () -> Unit) {
+    Column(
+        modifier = modifier
+            .heightIn(min = 64.dp)
+            .clip(RoundedCornerShape(18.dp))
+            .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.14f))
+            .clickable(onClick = onClick)
+            .padding(horizontal = 6.dp, vertical = 8.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Text(icon, style = MaterialTheme.typography.titleLarge)
+        Text(label, style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Medium, textAlign = TextAlign.Center, maxLines = 2)
     }
 }

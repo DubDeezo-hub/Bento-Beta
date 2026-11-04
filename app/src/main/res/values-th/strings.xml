@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">เปิด %1$d จาก %2$d</string>
     <string name="cheats_all_off">ปิดทั้งหมด</string>
     <string name="cheats_search">ค้นหาโกง</string>
+    <string name="dialog_close">ปิดหน้าต่างนี้</string>
+    <string name="more_sec_daily">ใช้ทุกวัน</string>
+    <string name="more_sec_trouble">เมื่อมีปัญหา</string>
+    <string name="more_sec_setup">ตั้งค่าและเครื่องมือ</string>
+    <string name="more_d_web">หาไฟล์แล้วส่งไปที่คอนโซล</string>
+    <string name="more_d_upload">คัดลอกไฟล์จากโทรศัพท์ไปคอนโซล</string>
+    <string name="more_d_consoles">เพิ่ม สลับ หรือเปลี่ยนชื่อคอนโซล</string>
+    <string name="more_d_running">สิ่งที่ตอบอยู่บนคอนโซลตอนนี้</string>
+    <string name="more_d_session">สิ่งที่คุณส่งและผลที่ได้</string>
+    <string name="more_d_missed">การโอนที่หยุดก่อนจบ</string>
+    <string name="more_d_diary">สิ่งที่เกิดขึ้นก่อนค้างแต่ละครั้ง</string>
+    <string name="more_d_bisect">หาว่าเพย์โหลดตัวไหนทำให้ค้าง</string>
+    <string name="more_d_check">ทีละขั้นหลังเจลเบรก</string>
+    <string name="more_d_etahen">การตั้งค่าของ etaHEN เองบนคอนโซล</string>
+    <string name="more_d_snap">เก็บและคืนการตั้งค่าของคอนโซล</string>
+    <string name="more_d_auto">สิ่งที่ทำงานเอง</string>
+    <string name="more_d_dev">ทดสอบเพย์โหลดที่คุณสร้างเอง</string>
+    <string name="more_d_language">ภาษาของแอป</string>
+    <string name="more_d_about">เวอร์ชัน อัปเดต สำรองข้อมูล และการตั้งค่า</string>
 </resources>

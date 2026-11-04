@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">%1$d от %2$d включени</string>
     <string name="cheats_all_off">Изключи всички</string>
     <string name="cheats_search">Търси чийтове</string>
+    <string name="dialog_close">Затвори този прозорец</string>
+    <string name="more_sec_daily">Всеки ден</string>
+    <string name="more_sec_trouble">Когато нещо се обърка</string>
+    <string name="more_sec_setup">Настройка и инструменти</string>
+    <string name="more_d_web">Намерете файлове и ги изпратете на конзолата</string>
+    <string name="more_d_upload">Копирайте файлове от телефона на конзолата</string>
+    <string name="more_d_consoles">Добавяйте, сменяйте или преименувайте конзоли</string>
+    <string name="more_d_running">Какво отговаря на конзолата в момента</string>
+    <string name="more_d_session">Какво сте изпратили и как е минало</string>
+    <string name="more_d_missed">Прехвърляния, спрели преди края</string>
+    <string name="more_d_diary">Какво се е случило точно преди всеки срив</string>
+    <string name="more_d_bisect">Открийте кой payload я срива</string>
+    <string name="more_d_check">Стъпка по стъпка след jailbreak</string>
+    <string name="more_d_etahen">Собствените настройки на etaHEN на конзолата</string>
+    <string name="more_d_snap">Пазете и връщайте настройките на конзолата</string>
+    <string name="more_d_auto">Неща, които стават сами</string>
+    <string name="more_d_dev">Тествайте свои версии на payload</string>
+    <string name="more_d_language">Езикът на приложението</string>
+    <string name="more_d_about">Версия, обновления, резервно копие и настройки</string>
 </resources>

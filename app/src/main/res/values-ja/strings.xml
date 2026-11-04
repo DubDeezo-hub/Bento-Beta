@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">%2$d 件中 %1$d 件オン</string>
     <string name="cheats_all_off">すべてオフ</string>
     <string name="cheats_search">チートを検索</string>
+    <string name="dialog_close">このウィンドウを閉じる</string>
+    <string name="more_sec_daily">ふだん使う</string>
+    <string name="more_sec_trouble">うまくいかないとき</string>
+    <string name="more_sec_setup">設定とツール</string>
+    <string name="more_d_web">ファイルを探して本体に送る</string>
+    <string name="more_d_upload">スマホから本体へファイルをコピー</string>
+    <string name="more_d_consoles">本体の追加・切り替え・名前変更</string>
+    <string name="more_d_running">いま本体で応答しているもの</string>
+    <string name="more_d_session">送ったものとその結果</string>
+    <string name="more_d_missed">途中で止まった転送</string>
+    <string name="more_d_diary">クラッシュ直前に起きたこと</string>
+    <string name="more_d_bisect">どのペイロードで落ちるか絞り込む</string>
+    <string name="more_d_check">脱獄後のチェックを順番に</string>
+    <string name="more_d_etahen">本体上の etaHEN の設定</string>
+    <string name="more_d_snap">本体の設定を保存して戻す</string>
+    <string name="more_d_auto">自動で行われること</string>
+    <string name="more_d_dev">自作ペイロードのビルドを試す</string>
+    <string name="more_d_language">アプリの言語</string>
+    <string name="more_d_about">バージョン、更新、バックアップ、設定</string>
 </resources>

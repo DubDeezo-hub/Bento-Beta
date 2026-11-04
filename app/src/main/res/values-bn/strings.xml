@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">%2$d এর মধ্যে %1$d চালু</string>
     <string name="cheats_all_off">সব বন্ধ করুন</string>
     <string name="cheats_search">চিট খুঁজুন</string>
+    <string name="dialog_close">এই উইন্ডো বন্ধ করুন</string>
+    <string name="more_sec_daily">প্রতিদিন</string>
+    <string name="more_sec_trouble">কিছু ভুল হলে</string>
+    <string name="more_sec_setup">সেটআপ ও টুল</string>
+    <string name="more_d_web">ফাইল খুঁজে কনসোলে পাঠান</string>
+    <string name="more_d_upload">ফোন থেকে কনসোলে ফাইল কপি করুন</string>
+    <string name="more_d_consoles">কনসোল যোগ, বদল বা নাম পরিবর্তন করুন</string>
+    <string name="more_d_running">এখন কনসোলে কী সাড়া দিচ্ছে</string>
+    <string name="more_d_session">কী পাঠিয়েছেন আর কেমন গেল</string>
+    <string name="more_d_missed">যে ট্রান্সফার শেষের আগে থেমেছে</string>
+    <string name="more_d_diary">প্রতিটি ক্র্যাশের ঠিক আগে কী হয়েছিল</string>
+    <string name="more_d_bisect">কোন পেলোড ক্র্যাশ করায় তা খুঁজুন</string>
+    <string name="more_d_check">জেলব্রেকের পরে ধাপে ধাপে</string>
+    <string name="more_d_etahen">কনসোলে etaHEN-এর নিজের সেটিংস</string>
+    <string name="more_d_snap">কনসোলের সেটিংস রাখুন ও ফিরিয়ে আনুন</string>
+    <string name="more_d_auto">যা নিজে থেকেই হয়</string>
+    <string name="more_d_dev">নিজের পেলোড বিল্ড পরীক্ষা করুন</string>
+    <string name="more_d_language">অ্যাপের ভাষা</string>
+    <string name="more_d_about">সংস্করণ, আপডেট, ব্যাকআপ ও সেটিংস</string>
 </resources>

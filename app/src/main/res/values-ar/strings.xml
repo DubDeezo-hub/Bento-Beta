@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">‏%1$d من %2$d مفعّلة</string>
     <string name="cheats_all_off">أوقف الكل</string>
     <string name="cheats_search">ابحث في الغشّات</string>
+    <string name="dialog_close">أغلق هذه النافذة</string>
+    <string name="more_sec_daily">كل يوم</string>
+    <string name="more_sec_trouble">عندما يحدث خطأ</string>
+    <string name="more_sec_setup">الإعداد والأدوات</string>
+    <string name="more_d_web">اعثر على ملفات وأرسلها إلى الجهاز</string>
+    <string name="more_d_upload">انسخ ملفات من الهاتف إلى الجهاز</string>
+    <string name="more_d_consoles">أضف أجهزتك أو بدّل بينها أو أعد تسميتها</string>
+    <string name="more_d_running">ما الذي يستجيب على الجهاز الآن</string>
+    <string name="more_d_session">ما أرسلته وكيف جرى</string>
+    <string name="more_d_missed">عمليات نقل توقفت قبل نهايتها</string>
+    <string name="more_d_diary">ما حدث قبل كل انهيار مباشرة</string>
+    <string name="more_d_bisect">حدّد الحمولة التي تسبب الانهيار</string>
+    <string name="more_d_check">خطوة بخطوة بعد كسر الحماية</string>
+    <string name="more_d_etahen">إعدادات etaHEN الخاصة على الجهاز</string>
+    <string name="more_d_snap">احفظ إعدادات الجهاز واستعدها</string>
+    <string name="more_d_auto">أشياء تحدث تلقائيًا</string>
+    <string name="more_d_dev">اختبر إصداراتك من الحمولات</string>
+    <string name="more_d_language">لغة التطبيق</string>
+    <string name="more_d_about">الإصدار والتحديثات والنسخ الاحتياطي والإعدادات</string>
 </resources>

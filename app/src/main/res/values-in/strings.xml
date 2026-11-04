@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">%1$d dari %2$d aktif</string>
     <string name="cheats_all_off">Matikan semua</string>
     <string name="cheats_search">Cari cheat</string>
+    <string name="dialog_close">Tutup jendela ini</string>
+    <string name="more_sec_daily">Setiap hari</string>
+    <string name="more_sec_trouble">Saat ada masalah</string>
+    <string name="more_sec_setup">Penyiapan dan alat</string>
+    <string name="more_d_web">Cari file dan kirim ke konsol</string>
+    <string name="more_d_upload">Salin file dari ponsel ke konsol</string>
+    <string name="more_d_consoles">Tambah, ganti, atau ganti nama konsol</string>
+    <string name="more_d_running">Apa yang menjawab di konsol sekarang</string>
+    <string name="more_d_session">Apa yang Anda kirim dan bagaimana hasilnya</string>
+    <string name="more_d_missed">Transfer yang berhenti sebelum selesai</string>
+    <string name="more_d_diary">Apa yang terjadi tepat sebelum tiap crash</string>
+    <string name="more_d_bisect">Cari payload mana yang membuatnya crash</string>
+    <string name="more_d_check">Langkah demi langkah setelah jailbreak</string>
+    <string name="more_d_etahen">Pengaturan etaHEN sendiri di konsol</string>
+    <string name="more_d_snap">Simpan dan pulihkan pengaturan konsol</string>
+    <string name="more_d_auto">Hal yang berjalan sendiri</string>
+    <string name="more_d_dev">Uji build payload Anda sendiri</string>
+    <string name="more_d_language">Bahasa aplikasi</string>
+    <string name="more_d_about">Versi, pembaruan, cadangan, dan pengaturan</string>
 </resources>

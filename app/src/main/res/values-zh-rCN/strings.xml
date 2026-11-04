@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">已开启 %1$d / %2$d</string>
     <string name="cheats_all_off">全部关闭</string>
     <string name="cheats_search">搜索金手指</string>
+    <string name="dialog_close">关闭此窗口</string>
+    <string name="more_sec_daily">日常</string>
+    <string name="more_sec_trouble">出问题时</string>
+    <string name="more_sec_setup">设置与工具</string>
+    <string name="more_d_web">查找文件并发送到主机</string>
+    <string name="more_d_upload">把文件从手机复制到主机</string>
+    <string name="more_d_consoles">添加、切换或重命名主机</string>
+    <string name="more_d_running">主机上现在有什么在响应</string>
+    <string name="more_d_session">你发送了什么、结果如何</string>
+    <string name="more_d_missed">没传完就停下的传输</string>
+    <string name="more_d_diary">每次崩溃前发生了什么</string>
+    <string name="more_d_bisect">找出是哪个载荷导致崩溃</string>
+    <string name="more_d_check">越狱后逐步检查</string>
+    <string name="more_d_etahen">主机上 etaHEN 自己的设置</string>
+    <string name="more_d_snap">保存并恢复主机的设置</string>
+    <string name="more_d_auto">自动进行的事</string>
+    <string name="more_d_dev">测试你自己构建的载荷</string>
+    <string name="more_d_language">应用的语言</string>
+    <string name="more_d_about">版本、更新、备份和设置</string>
 </resources>

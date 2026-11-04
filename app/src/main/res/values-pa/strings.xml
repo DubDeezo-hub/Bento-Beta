@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">%2$d ਵਿੱਚੋਂ %1$d ਚਾਲੂ</string>
     <string name="cheats_all_off">ਸਭ ਬੰਦ ਕਰੋ</string>
     <string name="cheats_search">ਚੀਟ ਖੋਜੋ</string>
+    <string name="dialog_close">ਇਹ ਵਿੰਡੋ ਬੰਦ ਕਰੋ</string>
+    <string name="more_sec_daily">ਹਰ ਰੋਜ਼</string>
+    <string name="more_sec_trouble">ਜਦੋਂ ਕੁਝ ਗਲਤ ਹੋਵੇ</string>
+    <string name="more_sec_setup">ਸੈੱਟਅੱਪ ਅਤੇ ਟੂਲ</string>
+    <string name="more_d_web">ਫ਼ਾਈਲਾਂ ਲੱਭੋ ਅਤੇ ਕੰਸੋਲ ਨੂੰ ਭੇਜੋ</string>
+    <string name="more_d_upload">ਫ਼ੋਨ ਤੋਂ ਕੰਸੋਲ ’ਤੇ ਫ਼ਾਈਲਾਂ ਕਾਪੀ ਕਰੋ</string>
+    <string name="more_d_consoles">ਕੰਸੋਲ ਜੋੜੋ, ਬਦਲੋ ਜਾਂ ਨਾਂ ਬਦਲੋ</string>
+    <string name="more_d_running">ਹੁਣ ਕੰਸੋਲ ’ਤੇ ਕੀ ਜਵਾਬ ਦੇ ਰਿਹਾ ਹੈ</string>
+    <string name="more_d_session">ਤੁਸੀਂ ਕੀ ਭੇਜਿਆ ਅਤੇ ਕਿਵੇਂ ਰਿਹਾ</string>
+    <string name="more_d_missed">ਜੋ ਟ੍ਰਾਂਸਫ਼ਰ ਅੰਤ ਤੋਂ ਪਹਿਲਾਂ ਰੁਕ ਗਏ</string>
+    <string name="more_d_diary">ਹਰ ਕ੍ਰੈਸ਼ ਤੋਂ ਠੀਕ ਪਹਿਲਾਂ ਕੀ ਹੋਇਆ</string>
+    <string name="more_d_bisect">ਪਤਾ ਕਰੋ ਕਿਹੜਾ ਪੇਲੋਡ ਕ੍ਰੈਸ਼ ਕਰਾਉਂਦਾ ਹੈ</string>
+    <string name="more_d_check">ਜੇਲਬ੍ਰੇਕ ਤੋਂ ਬਾਅਦ ਕਦਮ-ਦਰ-ਕਦਮ</string>
+    <string name="more_d_etahen">ਕੰਸੋਲ ’ਤੇ etaHEN ਦੀਆਂ ਆਪਣੀਆਂ ਸੈਟਿੰਗਾਂ</string>
+    <string name="more_d_snap">ਕੰਸੋਲ ਦੀਆਂ ਸੈਟਿੰਗਾਂ ਰੱਖੋ ਅਤੇ ਵਾਪਸ ਲਿਆਓ</string>
+    <string name="more_d_auto">ਜੋ ਆਪਣੇ ਆਪ ਹੁੰਦਾ ਹੈ</string>
+    <string name="more_d_dev">ਆਪਣੇ ਪੇਲੋਡ ਬਿਲਡ ਪਰਖੋ</string>
+    <string name="more_d_language">ਐਪ ਦੀ ਭਾਸ਼ਾ</string>
+    <string name="more_d_about">ਵਰਜਨ, ਅੱਪਡੇਟ, ਬੈਕਅੱਪ ਅਤੇ ਸੈਟਿੰਗਾਂ</string>
 </resources>

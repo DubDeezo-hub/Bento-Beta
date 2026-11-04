@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">‏%1$d מתוך %2$d פעילים</string>
     <string name="cheats_all_off">כבה הכול</string>
     <string name="cheats_search">חיפוש צ\'יטים</string>
+    <string name="dialog_close">סגור חלון זה</string>
+    <string name="more_sec_daily">כל יום</string>
+    <string name="more_sec_trouble">כשמשהו משתבש</string>
+    <string name="more_sec_setup">הגדרה וכלים</string>
+    <string name="more_d_web">מצא קבצים ושלח אותם לקונסולה</string>
+    <string name="more_d_upload">העתק קבצים מהטלפון לקונסולה</string>
+    <string name="more_d_consoles">הוסף, החלף או שנה שם לקונסולות</string>
+    <string name="more_d_running">מה עונה בקונסולה כרגע</string>
+    <string name="more_d_session">מה שלחת ואיך זה הלך</string>
+    <string name="more_d_missed">העברות שנעצרו לפני הסוף</string>
+    <string name="more_d_diary">מה קרה רגע לפני כל קריסה</string>
+    <string name="more_d_bisect">גלה איזה payload מקריס אותה</string>
+    <string name="more_d_check">צעד אחר צעד אחרי פריצה</string>
+    <string name="more_d_etahen">ההגדרות של etaHEN בקונסולה</string>
+    <string name="more_d_snap">שמור ושחזר את הגדרות הקונסולה</string>
+    <string name="more_d_auto">דברים שקורים מעצמם</string>
+    <string name="more_d_dev">בדוק גרסאות payload משלך</string>
+    <string name="more_d_language">שפת האפליקציה</string>
+    <string name="more_d_about">גרסה, עדכונים, גיבוי והגדרות</string>
 </resources>

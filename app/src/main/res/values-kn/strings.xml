@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">%2$d ರಲ್ಲಿ %1$d ಆನ್</string>
     <string name="cheats_all_off">ಎಲ್ಲವನ್ನೂ ಆಫ್ ಮಾಡಿ</string>
     <string name="cheats_search">ಚೀಟ್ ಹುಡುಕಿ</string>
+    <string name="dialog_close">ಈ ವಿಂಡೋ ಮುಚ್ಚಿ</string>
+    <string name="more_sec_daily">ಪ್ರತಿದಿನ</string>
+    <string name="more_sec_trouble">ಏನಾದರೂ ತಪ್ಪಾದಾಗ</string>
+    <string name="more_sec_setup">ಸೆಟಪ್ ಮತ್ತು ಸಾಧನಗಳು</string>
+    <string name="more_d_web">ಫೈಲ್ ಹುಡುಕಿ ಕನ್ಸೋಲ್‌ಗೆ ಕಳುಹಿಸಿ</string>
+    <string name="more_d_upload">ಫೋನ್‌ನಿಂದ ಕನ್ಸೋಲ್‌ಗೆ ಫೈಲ್ ನಕಲಿಸಿ</string>
+    <string name="more_d_consoles">ಕನ್ಸೋಲ್ ಸೇರಿಸಿ, ಬದಲಿಸಿ ಅಥವಾ ಹೆಸರು ಬದಲಿಸಿ</string>
+    <string name="more_d_running">ಈಗ ಕನ್ಸೋಲ್‌ನಲ್ಲಿ ಏನು ಉತ್ತರಿಸುತ್ತಿದೆ</string>
+    <string name="more_d_session">ನೀವು ಏನು ಕಳುಹಿಸಿದಿರಿ, ಹೇಗೆ ಆಯಿತು</string>
+    <string name="more_d_missed">ಕೊನೆಗೂ ಮೊದಲೇ ನಿಂತ ವರ್ಗಾವಣೆಗಳು</string>
+    <string name="more_d_diary">ಪ್ರತಿ ಕ್ರ್ಯಾಶ್‌ಗೂ ಮುನ್ನ ಏನಾಯಿತು</string>
+    <string name="more_d_bisect">ಯಾವ ಪೇಲೋಡ್ ಕ್ರ್ಯಾಶ್ ಮಾಡುತ್ತದೆ ಎಂದು ಕಂಡುಹಿಡಿಯಿರಿ</string>
+    <string name="more_d_check">ಜೈಲ್‌ಬ್ರೇಕ್ ನಂತರ ಹಂತ ಹಂತವಾಗಿ</string>
+    <string name="more_d_etahen">ಕನ್ಸೋಲ್‌ನಲ್ಲಿ etaHEN ನ ಸ್ವಂತ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
+    <string name="more_d_snap">ಕನ್ಸೋಲ್ ಸೆಟ್ಟಿಂಗ್ ಇಟ್ಟುಕೊಳ್ಳಿ, ಮರುಸ್ಥಾಪಿಸಿ</string>
+    <string name="more_d_auto">ತಾನಾಗಿಯೇ ಆಗುವ ಕೆಲಸಗಳು</string>
+    <string name="more_d_dev">ನಿಮ್ಮ ಪೇಲೋಡ್ ಬಿಲ್ಡ್ ಪರೀಕ್ಷಿಸಿ</string>
+    <string name="more_d_language">ಆ್ಯಪ್ ಭಾಷೆ</string>
+    <string name="more_d_about">ಆವೃತ್ತಿ, ಅಪ್‌ಡೇಟ್, ಬ್ಯಾಕಪ್ ಮತ್ತು ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
 </resources>

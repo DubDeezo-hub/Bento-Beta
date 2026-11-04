@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">%2$d இல் %1$d இயக்கத்தில்</string>
     <string name="cheats_all_off">அனைத்தையும் அணை</string>
     <string name="cheats_search">சீட்களைத் தேடு</string>
+    <string name="dialog_close">இந்தச் சாளரத்தை மூடு</string>
+    <string name="more_sec_daily">தினமும்</string>
+    <string name="more_sec_trouble">ஏதாவது தவறினால்</string>
+    <string name="more_sec_setup">அமைப்பு மற்றும் கருவிகள்</string>
+    <string name="more_d_web">கோப்புகளைக் கண்டு கன்சோலுக்கு அனுப்பு</string>
+    <string name="more_d_upload">போனிலிருந்து கன்சோலுக்கு கோப்புகளை நகலெடு</string>
+    <string name="more_d_consoles">கன்சோல்களைச் சேர், மாற்று அல்லது பெயர்மாற்று</string>
+    <string name="more_d_running">இப்போது கன்சோலில் எது பதிலளிக்கிறது</string>
+    <string name="more_d_session">நீங்கள் அனுப்பியதும் அது எப்படிப் போனதும்</string>
+    <string name="more_d_missed">முடிவுக்கு முன் நின்ற பரிமாற்றங்கள்</string>
+    <string name="more_d_diary">ஒவ்வொரு கிராஷுக்கும் முன் என்ன நடந்தது</string>
+    <string name="more_d_bisect">எந்த பேலோட் கிராஷ் செய்கிறது என்று கண்டறி</string>
+    <string name="more_d_check">ஜெயில்பிரேக்கிற்குப் பின் படிப்படியாக</string>
+    <string name="more_d_etahen">கன்சோலில் etaHEN-இன் சொந்த அமைப்புகள்</string>
+    <string name="more_d_snap">கன்சோல் அமைப்புகளைச் சேமித்து மீட்டெடு</string>
+    <string name="more_d_auto">தானாக நடப்பவை</string>
+    <string name="more_d_dev">உங்கள் பேலோட் உருவாக்கங்களைச் சோதி</string>
+    <string name="more_d_language">ஆப்பின் மொழி</string>
+    <string name="more_d_about">பதிப்பு, புதுப்பிப்புகள், காப்பு மற்றும் அமைப்புகள்</string>
 </resources>

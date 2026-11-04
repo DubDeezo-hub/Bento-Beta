@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">%1$d kati ya %2$d zimewashwa</string>
     <string name="cheats_all_off">Zima zote</string>
     <string name="cheats_search">Tafuta cheat</string>
+    <string name="dialog_close">Funga dirisha hili</string>
+    <string name="more_sec_daily">Kila siku</string>
+    <string name="more_sec_trouble">Kitu kikienda vibaya</string>
+    <string name="more_sec_setup">Usanidi na zana</string>
+    <string name="more_d_web">Tafuta faili na uzitume kwa konsoli</string>
+    <string name="more_d_upload">Nakili faili kutoka simu hadi konsoli</string>
+    <string name="more_d_consoles">Ongeza, badilisha au badili jina la konsoli</string>
+    <string name="more_d_running">Kinachojibu kwenye konsoli sasa</string>
+    <string name="more_d_session">Ulichotuma na jinsi kilivyokwenda</string>
+    <string name="more_d_missed">Uhamisho uliosimama kabla ya mwisho</string>
+    <string name="more_d_diary">Kilichotokea kabla ya kila kuanguka</string>
+    <string name="more_d_bisect">Tafuta payload ipi inaiangusha</string>
+    <string name="more_d_check">Hatua kwa hatua baada ya jailbreak</string>
+    <string name="more_d_etahen">Mipangilio ya etaHEN yenyewe kwenye konsoli</string>
+    <string name="more_d_snap">Hifadhi na urudishe mipangilio ya konsoli</string>
+    <string name="more_d_auto">Mambo yanayojitokea yenyewe</string>
+    <string name="more_d_dev">Jaribu payload zako mwenyewe</string>
+    <string name="more_d_language">Lugha ya programu</string>
+    <string name="more_d_about">Toleo, masasisho, nakala na mipangilio</string>
 </resources>

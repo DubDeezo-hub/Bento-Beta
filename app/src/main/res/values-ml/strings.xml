@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">%2$d ൽ %1$d ഓൺ</string>
     <string name="cheats_all_off">എല്ലാം ഓഫാക്കുക</string>
     <string name="cheats_search">ചീറ്റുകൾ തിരയുക</string>
+    <string name="dialog_close">ഈ ജാലകം അടയ്ക്കുക</string>
+    <string name="more_sec_daily">എല്ലാ ദിവസവും</string>
+    <string name="more_sec_trouble">എന്തെങ്കിലും തെറ്റുമ്പോൾ</string>
+    <string name="more_sec_setup">സജ്ജീകരണവും ഉപകരണങ്ങളും</string>
+    <string name="more_d_web">ഫയലുകൾ കണ്ടെത്തി കൺസോളിലേക്ക് അയയ്ക്കുക</string>
+    <string name="more_d_upload">ഫോണിൽ നിന്ന് കൺസോളിലേക്ക് ഫയലുകൾ പകർത്തുക</string>
+    <string name="more_d_consoles">കൺസോളുകൾ ചേർക്കുക, മാറ്റുക, പേരുമാറ്റുക</string>
+    <string name="more_d_running">ഇപ്പോൾ കൺസോളിൽ എന്ത് മറുപടി നൽകുന്നു</string>
+    <string name="more_d_session">നിങ്ങൾ അയച്ചതും അത് എങ്ങനെ പോയെന്നും</string>
+    <string name="more_d_missed">അവസാനിക്കും മുമ്പ് നിന്ന ട്രാൻസ്ഫറുകൾ</string>
+    <string name="more_d_diary">ഓരോ ക്രാഷിനും തൊട്ടുമുമ്പ് എന്തു സംഭവിച്ചു</string>
+    <string name="more_d_bisect">ഏത് പേലോഡ് ക്രാഷാക്കുന്നു എന്ന് കണ്ടെത്തുക</string>
+    <string name="more_d_check">ജയിൽബ്രേക്കിന് ശേഷം ഘട്ടം ഘട്ടമായി</string>
+    <string name="more_d_etahen">കൺസോളിലെ etaHEN-ന്റെ സ്വന്തം ക്രമീകരണങ്ങൾ</string>
+    <string name="more_d_snap">കൺസോൾ ക്രമീകരണങ്ങൾ സൂക്ഷിക്കുക, തിരികെ നൽകുക</string>
+    <string name="more_d_auto">താനേ നടക്കുന്ന കാര്യങ്ങൾ</string>
+    <string name="more_d_dev">നിങ്ങളുടെ പേലോഡ് ബിൽഡുകൾ പരീക്ഷിക്കുക</string>
+    <string name="more_d_language">ആപ്പിന്റെ ഭാഷ</string>
+    <string name="more_d_about">പതിപ്പ്, അപ്ഡേറ്റുകൾ, ബാക്കപ്പ്, ക്രമീകരണങ്ങൾ</string>
 </resources>

@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">Zapnuté %1$d z %2$d</string>
     <string name="cheats_all_off">Vypnúť všetky</string>
     <string name="cheats_search">Hľadať cheaty</string>
+    <string name="dialog_close">Zavrieť toto okno</string>
+    <string name="more_sec_daily">Každý deň</string>
+    <string name="more_sec_trouble">Keď sa niečo pokazí</string>
+    <string name="more_sec_setup">Nastavenie a nástroje</string>
+    <string name="more_d_web">Nájdite súbory a pošlite ich do konzoly</string>
+    <string name="more_d_upload">Kopírujte súbory z telefónu do konzoly</string>
+    <string name="more_d_consoles">Pridajte, prepnite alebo premenujte konzoly</string>
+    <string name="more_d_running">Čo na konzole práve odpovedá</string>
+    <string name="more_d_session">Čo ste poslali a ako to dopadlo</string>
+    <string name="more_d_missed">Prenosy, ktoré skončili predčasne</string>
+    <string name="more_d_diary">Čo sa stalo tesne pred každým pádom</string>
+    <string name="more_d_bisect">Zistite, ktorý payload ju zhadzuje</string>
+    <string name="more_d_check">Krok za krokom po jailbreaku</string>
+    <string name="more_d_etahen">Vlastné nastavenia etaHEN na konzole</string>
+    <string name="more_d_snap">Uložte a obnovte nastavenia konzoly</string>
+    <string name="more_d_auto">Veci, ktoré sa dejú samé</string>
+    <string name="more_d_dev">Testujte vlastné buildy payloadov</string>
+    <string name="more_d_language">Jazyk aplikácie</string>
+    <string name="more_d_about">Verzia, aktualizácie, záloha a nastavenia</string>
 </resources>

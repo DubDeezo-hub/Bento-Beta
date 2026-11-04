@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">Bật %1$d / %2$d</string>
     <string name="cheats_all_off">Tắt tất cả</string>
     <string name="cheats_search">Tìm cheat</string>
+    <string name="dialog_close">Đóng cửa sổ này</string>
+    <string name="more_sec_daily">Hằng ngày</string>
+    <string name="more_sec_trouble">Khi có sự cố</string>
+    <string name="more_sec_setup">Thiết lập và công cụ</string>
+    <string name="more_d_web">Tìm tệp và gửi sang máy</string>
+    <string name="more_d_upload">Chép tệp từ điện thoại sang máy</string>
+    <string name="more_d_consoles">Thêm, đổi hoặc đặt lại tên máy</string>
+    <string name="more_d_running">Những gì đang trả lời trên máy</string>
+    <string name="more_d_session">Bạn đã gửi gì và kết quả ra sao</string>
+    <string name="more_d_missed">Các lần chuyển dừng giữa chừng</string>
+    <string name="more_d_diary">Điều gì xảy ra ngay trước mỗi lần sập</string>
+    <string name="more_d_bisect">Tìm payload nào làm máy sập</string>
+    <string name="more_d_check">Từng bước sau khi jailbreak</string>
+    <string name="more_d_etahen">Cài đặt riêng của etaHEN trên máy</string>
+    <string name="more_d_snap">Lưu và khôi phục cài đặt của máy</string>
+    <string name="more_d_auto">Những việc tự diễn ra</string>
+    <string name="more_d_dev">Thử bản dựng payload của bạn</string>
+    <string name="more_d_language">Ngôn ngữ của ứng dụng</string>
+    <string name="more_d_about">Phiên bản, cập nhật, sao lưu và cài đặt</string>
 </resources>

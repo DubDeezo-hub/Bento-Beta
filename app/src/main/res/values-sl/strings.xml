@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">Vklopljenih %1$d od %2$d</string>
     <string name="cheats_all_off">Izklopi vse</string>
     <string name="cheats_search">Išči goljufije</string>
+    <string name="dialog_close">Zapri to okno</string>
+    <string name="more_sec_daily">Vsak dan</string>
+    <string name="more_sec_trouble">Ko gre kaj narobe</string>
+    <string name="more_sec_setup">Nastavitev in orodja</string>
+    <string name="more_d_web">Poiščite datoteke in jih pošljite na konzolo</string>
+    <string name="more_d_upload">Kopirajte datoteke s telefona na konzolo</string>
+    <string name="more_d_consoles">Dodajte, zamenjajte ali preimenujte konzole</string>
+    <string name="more_d_running">Kaj trenutno odgovarja na konzoli</string>
+    <string name="more_d_session">Kaj ste poslali in kako je šlo</string>
+    <string name="more_d_missed">Prenosi, ki so se ustavili pred koncem</string>
+    <string name="more_d_diary">Kaj se je zgodilo tik pred vsakim sesutjem</string>
+    <string name="more_d_bisect">Ugotovite, kateri payload jo sesuje</string>
+    <string name="more_d_check">Korak za korakom po jailbreaku</string>
+    <string name="more_d_etahen">etaHEN-ove lastne nastavitve na konzoli</string>
+    <string name="more_d_snap">Shranite in obnovite nastavitve konzole</string>
+    <string name="more_d_auto">Stvari, ki se zgodijo same</string>
+    <string name="more_d_dev">Preizkusite svoje različice payloadov</string>
+    <string name="more_d_language">Jezik aplikacije</string>
+    <string name="more_d_about">Različica, posodobitve, varnostna kopija in nastavitve</string>
 </resources>

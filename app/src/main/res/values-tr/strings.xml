@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">%2$d hileden %1$d açık</string>
     <string name="cheats_all_off">Tümünü kapat</string>
     <string name="cheats_search">Hile ara</string>
+    <string name="dialog_close">Bu pencereyi kapat</string>
+    <string name="more_sec_daily">Her gün</string>
+    <string name="more_sec_trouble">Bir şeyler ters gidince</string>
+    <string name="more_sec_setup">Kurulum ve araçlar</string>
+    <string name="more_d_web">Dosya bul ve konsola gönder</string>
+    <string name="more_d_upload">Telefondan konsola dosya kopyala</string>
+    <string name="more_d_consoles">Konsol ekle, değiştir veya yeniden adlandır</string>
+    <string name="more_d_running">Konsolda şu an ne yanıt veriyor</string>
+    <string name="more_d_session">Ne gönderdin ve nasıl gitti</string>
+    <string name="more_d_missed">Bitmeden duran aktarımlar</string>
+    <string name="more_d_diary">Her çökmeden hemen önce ne oldu</string>
+    <string name="more_d_bisect">Hangi payload\'ın çökerttiğini bul</string>
+    <string name="more_d_check">Jailbreak sonrası adım adım</string>
+    <string name="more_d_etahen">Konsoldaki etaHEN\'in kendi ayarları</string>
+    <string name="more_d_snap">Konsolun ayarlarını sakla ve geri getir</string>
+    <string name="more_d_auto">Kendiliğinden olan şeyler</string>
+    <string name="more_d_dev">Kendi payload derlemelerini dene</string>
+    <string name="more_d_language">Uygulamanın dili</string>
+    <string name="more_d_about">Sürüm, güncellemeler, yedek ve ayarlar</string>
 </resources>

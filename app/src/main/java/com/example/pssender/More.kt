@@ -37,7 +37,7 @@ import androidx.compose.ui.unit.sp
 
 /** One row of the More list: a round icon (or letter) and a title. */
 @Composable
-fun RoundRow(title: String, icon: ImageVector? = null, letter: String = "", enabled: Boolean = true, onClick: () -> Unit) {
+fun RoundRow(title: String, icon: ImageVector? = null, letter: String = "", enabled: Boolean = true, detail: String = "", onClick: () -> Unit) {
     val cs = MaterialTheme.colorScheme
     Row(
         modifier = Modifier
@@ -60,12 +60,11 @@ fun RoundRow(title: String, icon: ImageVector? = null, letter: String = "", enab
             if (icon != null) Icon(icon, contentDescription = null, tint = BLOOD_BRIGHT, modifier = Modifier.size(22.dp))
             else Text(letter, color = BLOOD_BRIGHT, fontWeight = FontWeight.ExtraBold, fontSize = 17.sp)
         }
-        Text(
-            title,
-            fontWeight = FontWeight.Bold,
-            color = if (enabled) cs.onSurface else cs.onSurfaceVariant,
-            modifier = Modifier.weight(1f)
-        )
+        Column(modifier = Modifier.weight(1f)) {
+            Text(title, fontWeight = FontWeight.Bold, color = if (enabled) cs.onSurface else cs.onSurfaceVariant)
+            // One line on what it is for, so the list can be read without opening everything
+            if (detail.isNotEmpty()) Text(detail, style = MaterialTheme.typography.bodySmall, color = cs.onSurfaceVariant)
+        }
         Text("›", color = cs.onSurfaceVariant, fontSize = 20.sp)
     }
 }
@@ -105,22 +104,40 @@ fun MoreTab(
     if (showDiary) CrashDiaryDialog { showDiary = false }
     Column(verticalArrangement = Arrangement.spacedBy(10.dp), modifier = Modifier.padding(top = 4.dp)) {
         Text(str(R.string.nav_more), fontSize = 28.sp, fontWeight = FontWeight.ExtraBold, modifier = Modifier.padding(bottom = 8.dp))
-        RoundRow(str(R.string.nav_web), icon = WebIcon, onClick = onWeb)
-        RoundRow(str(R.string.nav_upload), icon = UploadIcon, onClick = onUpload)
-        RoundRow(str(R.string.etahen_title), letter = "e", enabled = onEtaHen != null, onClick = { onEtaHen?.invoke() })
-        RoundRow(str(R.string.consoles_title), letter = "C", onClick = onConsoles)
-        RoundRow(str(R.string.running_title), letter = "●", enabled = console != null, onClick = { showRunning = true })
-        RoundRow(str(R.string.crashdiary_title), letter = "!", onClick = { showDiary = true })
-        RoundRow(str(R.string.bisect_title), letter = "½", enabled = console != null && onRunChain != null, onClick = { showBisect = true })
-        RoundRow(str(R.string.session_title), letter = "≡", enabled = console != null, onClick = { showSession = true })
-        RoundRow(str(R.string.missed_title), letter = "↻", onClick = { showMissed = true })
-        RoundRow(str(R.string.check_title, console?.type?.model ?: ActiveConsole.type.model), letter = "✓", enabled = console != null, onClick = { showChecklist = true })
-        RoundRow(str(R.string.snap_title), letter = "S", enabled = console != null, onClick = { showSnapshots = true })
-        RoundRow(str(R.string.auto_title), letter = "⚙", enabled = console != null, onClick = { showAutomation = true })
-        RoundRow(str(R.string.dev_title), letter = "D", enabled = console != null, onClick = { showDev = true })
-        RoundRow(str(R.string.language_title), letter = "A", onClick = { showLanguage = true })
-        RoundRow(str(R.string.about_button), letter = "i", onClick = onAbout)
+        // Grouped by when you need them: every day, when something goes wrong, and setting things up
+        MoreSection(str(R.string.more_sec_daily))
+        RoundRow(str(R.string.nav_web), icon = WebIcon, detail = str(R.string.more_d_web), onClick = onWeb)
+        RoundRow(str(R.string.nav_upload), icon = UploadIcon, detail = str(R.string.more_d_upload), onClick = onUpload)
+        RoundRow(str(R.string.consoles_title), letter = "C", detail = str(R.string.more_d_consoles), onClick = onConsoles)
+        RoundRow(str(R.string.running_title), letter = "●", enabled = console != null, detail = str(R.string.more_d_running), onClick = { showRunning = true })
+        RoundRow(str(R.string.session_title), letter = "≡", enabled = console != null, detail = str(R.string.more_d_session), onClick = { showSession = true })
+        RoundRow(str(R.string.missed_title), letter = "↻", detail = str(R.string.more_d_missed), onClick = { showMissed = true })
+
+        MoreSection(str(R.string.more_sec_trouble))
+        RoundRow(str(R.string.crashdiary_title), letter = "!", detail = str(R.string.more_d_diary), onClick = { showDiary = true })
+        RoundRow(str(R.string.bisect_title), letter = "½", enabled = console != null && onRunChain != null, detail = str(R.string.more_d_bisect), onClick = { showBisect = true })
+        RoundRow(str(R.string.check_title, console?.type?.model ?: ActiveConsole.type.model), letter = "✓", enabled = console != null, detail = str(R.string.more_d_check), onClick = { showChecklist = true })
+
+        MoreSection(str(R.string.more_sec_setup))
+        RoundRow(str(R.string.etahen_title), letter = "e", enabled = onEtaHen != null, detail = str(R.string.more_d_etahen), onClick = { onEtaHen?.invoke() })
+        RoundRow(str(R.string.snap_title), letter = "S", enabled = console != null, detail = str(R.string.more_d_snap), onClick = { showSnapshots = true })
+        RoundRow(str(R.string.auto_title), letter = "⚙", enabled = console != null, detail = str(R.string.more_d_auto), onClick = { showAutomation = true })
+        RoundRow(str(R.string.dev_title), letter = "D", enabled = console != null, detail = str(R.string.more_d_dev), onClick = { showDev = true })
+        RoundRow(str(R.string.language_title), letter = "A", detail = str(R.string.more_d_language), onClick = { showLanguage = true })
+        RoundRow(str(R.string.about_button), letter = "i", detail = str(R.string.more_d_about), onClick = onAbout)
     }
+}
+
+/** A heading over a group of More rows. */
+@Composable
+private fun MoreSection(title: String) {
+    Text(
+        title,
+        style = MaterialTheme.typography.labelLarge,
+        color = BLOOD_BRIGHT,
+        fontWeight = FontWeight.Bold,
+        modifier = Modifier.padding(start = 12.dp, top = 10.dp)
+    )
 }
 
 /** A row of pill buttons, one of them selected (red into black). */

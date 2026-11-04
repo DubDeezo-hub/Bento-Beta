@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">Włączone %1$d z %2$d</string>
     <string name="cheats_all_off">Wyłącz wszystkie</string>
     <string name="cheats_search">Szukaj kodów</string>
+    <string name="dialog_close">Zamknij to okno</string>
+    <string name="more_sec_daily">Na co dzień</string>
+    <string name="more_sec_trouble">Gdy coś pójdzie nie tak</string>
+    <string name="more_sec_setup">Ustawienia i narzędzia</string>
+    <string name="more_d_web">Znajdź pliki i wyślij je na konsolę</string>
+    <string name="more_d_upload">Kopiuj pliki z telefonu na konsolę</string>
+    <string name="more_d_consoles">Dodaj, przełącz lub zmień nazwę konsoli</string>
+    <string name="more_d_running">Co teraz odpowiada na konsoli</string>
+    <string name="more_d_session">Co wysłano i jak poszło</string>
+    <string name="more_d_missed">Przesyłania przerwane przed końcem</string>
+    <string name="more_d_diary">Co działo się tuż przed każdą awarią</string>
+    <string name="more_d_bisect">Sprawdź, który payload ją wysypuje</string>
+    <string name="more_d_check">Krok po kroku po jailbreaku</string>
+    <string name="more_d_etahen">Własne ustawienia etaHEN na konsoli</string>
+    <string name="more_d_snap">Zachowaj i przywróć ustawienia konsoli</string>
+    <string name="more_d_auto">Rzeczy, które dzieją się same</string>
+    <string name="more_d_dev">Testuj własne wersje payloadów</string>
+    <string name="more_d_language">Język aplikacji</string>
+    <string name="more_d_about">Wersja, aktualizacje, kopia i ustawienia</string>
 </resources>

@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">Укључено %1$d од %2$d</string>
     <string name="cheats_all_off">Искључи све</string>
     <string name="cheats_search">Претражи варке</string>
+    <string name="dialog_close">Затвори овај прозор</string>
+    <string name="more_sec_daily">Сваки дан</string>
+    <string name="more_sec_trouble">Кад нешто пође наопако</string>
+    <string name="more_sec_setup">Подешавање и алати</string>
+    <string name="more_d_web">Нађите датотеке и пошаљите их на конзолу</string>
+    <string name="more_d_upload">Копирајте датотеке са телефона на конзолу</string>
+    <string name="more_d_consoles">Додајте, промените или преименујте конзоле</string>
+    <string name="more_d_running">Шта тренутно одговара на конзоли</string>
+    <string name="more_d_session">Шта сте послали и како је прошло</string>
+    <string name="more_d_missed">Преноси који су стали пре краја</string>
+    <string name="more_d_diary">Шта се десило непосредно пре сваког пада</string>
+    <string name="more_d_bisect">Откријте који payload руши конзолу</string>
+    <string name="more_d_check">Корак по корак после jailbreak-а</string>
+    <string name="more_d_etahen">Сопствена подешавања etaHEN-а на конзоли</string>
+    <string name="more_d_snap">Сачувајте и вратите подешавања конзоле</string>
+    <string name="more_d_auto">Ствари које се дешавају саме</string>
+    <string name="more_d_dev">Тестирајте своје верзије payload-а</string>
+    <string name="more_d_language">Језик апликације</string>
+    <string name="more_d_about">Верзија, ажурирања, резервна копија и подешавања</string>
 </resources>

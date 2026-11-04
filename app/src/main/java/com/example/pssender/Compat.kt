@@ -220,7 +220,7 @@ fun CompatReportDialog(name: String, version: String, preset: CompatResult?, onC
     var firmware by remember { mutableStateOf(ConsoleFirmware.get(ctx, ActiveConsole.id)) }
     var result by remember { mutableStateOf(preset) }
     val fw = ConsoleFirmware.normalize(firmware)
-    androidx.compose.material3.AlertDialog(
+    AlertDialog(
         onDismissRequest = onClose,
         title = { Text(str(R.string.compat_report)) },
         text = {

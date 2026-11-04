@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">Ieslēgti %1$d no %2$d</string>
     <string name="cheats_all_off">Izslēgt visus</string>
     <string name="cheats_search">Meklēt krāpšanās kodus</string>
+    <string name="dialog_close">Aizvērt šo logu</string>
+    <string name="more_sec_daily">Katru dienu</string>
+    <string name="more_sec_trouble">Kad kaut kas noiet greizi</string>
+    <string name="more_sec_setup">Iestatīšana un rīki</string>
+    <string name="more_d_web">Atrodiet failus un sūtiet uz konsoli</string>
+    <string name="more_d_upload">Kopējiet failus no tālruņa uz konsoli</string>
+    <string name="more_d_consoles">Pievienojiet, pārslēdziet vai pārdēvējiet konsoles</string>
+    <string name="more_d_running">Kas konsolē atbild tieši tagad</string>
+    <string name="more_d_session">Ko nosūtījāt un kā gāja</string>
+    <string name="more_d_missed">Pārsūtīšanas, kas apstājās pirms beigām</string>
+    <string name="more_d_diary">Kas notika tieši pirms katras avārijas</string>
+    <string name="more_d_bisect">Atrodiet, kurš payload to nogāž</string>
+    <string name="more_d_check">Soli pa solim pēc jailbreak</string>
+    <string name="more_d_etahen">etaHEN pašas iestatījumi konsolē</string>
+    <string name="more_d_snap">Saglabājiet un atjaunojiet konsoles iestatījumus</string>
+    <string name="more_d_auto">Lietas, kas notiek pašas</string>
+    <string name="more_d_dev">Testējiet savas payload versijas</string>
+    <string name="more_d_language">Lietotnes valoda</string>
+    <string name="more_d_about">Versija, atjauninājumi, dublējums un iestatījumi</string>
 </resources>

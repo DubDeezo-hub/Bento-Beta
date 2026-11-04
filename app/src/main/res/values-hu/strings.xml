@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">%2$d-ből %1$d bekapcsolva</string>
     <string name="cheats_all_off">Mind kikapcsolása</string>
     <string name="cheats_search">Csalások keresése</string>
+    <string name="dialog_close">Ablak bezárása</string>
+    <string name="more_sec_daily">Minden nap</string>
+    <string name="more_sec_trouble">Ha valami elromlik</string>
+    <string name="more_sec_setup">Beállítás és eszközök</string>
+    <string name="more_d_web">Fájlok keresése és küldése a konzolra</string>
+    <string name="more_d_upload">Fájlok másolása a telefonról a konzolra</string>
+    <string name="more_d_consoles">Konzolok hozzáadása, váltása vagy átnevezése</string>
+    <string name="more_d_running">Mi válaszol most a konzolon</string>
+    <string name="more_d_session">Mit küldtél és hogyan sikerült</string>
+    <string name="more_d_missed">Átvitelek, amelyek a vége előtt leálltak</string>
+    <string name="more_d_diary">Mi történt közvetlenül minden összeomlás előtt</string>
+    <string name="more_d_bisect">Derítsd ki, melyik payload omlasztja össze</string>
+    <string name="more_d_check">Lépésről lépésre jailbreak után</string>
+    <string name="more_d_etahen">Az etaHEN saját beállításai a konzolon</string>
+    <string name="more_d_snap">A konzol beállításainak mentése és visszaállítása</string>
+    <string name="more_d_auto">Dolgok, amelyek maguktól történnek</string>
+    <string name="more_d_dev">Saját payload-buildek tesztelése</string>
+    <string name="more_d_language">Az app nyelve</string>
+    <string name="more_d_about">Verzió, frissítések, mentés és beállítások</string>
 </resources>

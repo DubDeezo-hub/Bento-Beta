@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">%2$d માંથી %1$d ચાલુ</string>
     <string name="cheats_all_off">બધા બંધ કરો</string>
     <string name="cheats_search">ચીટ શોધો</string>
+    <string name="dialog_close">આ વિન્ડો બંધ કરો</string>
+    <string name="more_sec_daily">દરરોજ</string>
+    <string name="more_sec_trouble">કંઈક ખોટું થાય ત્યારે</string>
+    <string name="more_sec_setup">સેટઅપ અને સાધનો</string>
+    <string name="more_d_web">ફાઇલો શોધો અને કન્સોલ પર મોકલો</string>
+    <string name="more_d_upload">ફોનથી કન્સોલ પર ફાઇલો કૉપિ કરો</string>
+    <string name="more_d_consoles">કન્સોલ ઉમેરો, બદલો અથવા નામ બદલો</string>
+    <string name="more_d_running">કન્સોલ પર અત્યારે શું જવાબ આપે છે</string>
+    <string name="more_d_session">તમે શું મોકલ્યું અને કેવું રહ્યું</string>
+    <string name="more_d_missed">અંત પહેલાં અટકેલા ટ્રાન્સફર</string>
+    <string name="more_d_diary">દરેક ક્રેશ પહેલાં શું થયું</string>
+    <string name="more_d_bisect">કયો પેલોડ ક્રેશ કરે છે તે શોધો</string>
+    <string name="more_d_check">જેલબ્રેક પછી પગલું દર પગલું</string>
+    <string name="more_d_etahen">કન્સોલ પર etaHEN ની પોતાની સેટિંગ્સ</string>
+    <string name="more_d_snap">કન્સોલની સેટિંગ્સ રાખો અને પાછી લાવો</string>
+    <string name="more_d_auto">જાતે થતી વસ્તુઓ</string>
+    <string name="more_d_dev">તમારા પેલોડ બિલ્ડ ચકાસો</string>
+    <string name="more_d_language">એપની ભાષા</string>
+    <string name="more_d_about">વર્ઝન, અપડેટ, બેકઅપ અને સેટિંગ્સ</string>
 </resources>

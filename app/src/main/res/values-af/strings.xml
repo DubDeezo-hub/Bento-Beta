@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">%1$d van %2$d aan</string>
     <string name="cheats_all_off">Skakel almal af</string>
     <string name="cheats_search">Soek cheats</string>
+    <string name="dialog_close">Maak hierdie venster toe</string>
+    <string name="more_sec_daily">Elke dag</string>
+    <string name="more_sec_trouble">As iets verkeerd loop</string>
+    <string name="more_sec_setup">Opstelling en gereedskap</string>
+    <string name="more_d_web">Vind lêers en stuur hulle na die konsole</string>
+    <string name="more_d_upload">Kopieer lêers van die foon na die konsole</string>
+    <string name="more_d_consoles">Voeg konsoles by, wissel of hernoem hulle</string>
+    <string name="more_d_running">Wat nou op die konsole antwoord</string>
+    <string name="more_d_session">Wat jy gestuur het en hoe dit gegaan het</string>
+    <string name="more_d_missed">Oordragte wat voor die einde gestop het</string>
+    <string name="more_d_diary">Wat net voor elke ineenstorting gebeur het</string>
+    <string name="more_d_bisect">Vind watter payload dit laat ineenstort</string>
+    <string name="more_d_check">Stap vir stap na \'n jailbreak</string>
+    <string name="more_d_etahen">etaHEN se eie instellings op die konsole</string>
+    <string name="more_d_snap">Bewaar en herstel die konsole se instellings</string>
+    <string name="more_d_auto">Dinge wat vanself gebeur</string>
+    <string name="more_d_dev">Toets jou eie payload-bouwerke</string>
+    <string name="more_d_language">Die app se taal</string>
+    <string name="more_d_about">Weergawe, opdaterings, rugsteun en instellings</string>
 </resources>

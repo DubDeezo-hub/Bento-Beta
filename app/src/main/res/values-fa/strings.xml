@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">‏%1$d از %2$d روشن</string>
     <string name="cheats_all_off">همه را خاموش کن</string>
     <string name="cheats_search">جستجوی تقلب‌ها</string>
+    <string name="dialog_close">بستن این پنجره</string>
+    <string name="more_sec_daily">هر روز</string>
+    <string name="more_sec_trouble">وقتی مشکلی پیش می‌آید</string>
+    <string name="more_sec_setup">راه‌اندازی و ابزارها</string>
+    <string name="more_d_web">فایل پیدا کنید و به کنسول بفرستید</string>
+    <string name="more_d_upload">فایل‌ها را از گوشی به کنسول کپی کنید</string>
+    <string name="more_d_consoles">کنسول اضافه کنید، عوض کنید یا نامش را تغییر دهید</string>
+    <string name="more_d_running">چه چیزی الان روی کنسول پاسخ می‌دهد</string>
+    <string name="more_d_session">چه فرستادید و چطور پیش رفت</string>
+    <string name="more_d_missed">انتقال‌هایی که پیش از پایان متوقف شدند</string>
+    <string name="more_d_diary">درست پیش از هر کرش چه شد</string>
+    <string name="more_d_bisect">پیدا کنید کدام پی‌لود کرش می‌دهد</string>
+    <string name="more_d_check">گام‌به‌گام بعد از جیلبریک</string>
+    <string name="more_d_etahen">تنظیمات خود etaHEN روی کنسول</string>
+    <string name="more_d_snap">نگه‌داشتن و بازگرداندن تنظیمات کنسول</string>
+    <string name="more_d_auto">کارهایی که خودبه‌خود انجام می‌شوند</string>
+    <string name="more_d_dev">نسخه‌های پی‌لود خود را آزمایش کنید</string>
+    <string name="more_d_language">زبان برنامه</string>
+    <string name="more_d_about">نسخه، به‌روزرسانی، پشتیبان و تنظیمات</string>
 </resources>

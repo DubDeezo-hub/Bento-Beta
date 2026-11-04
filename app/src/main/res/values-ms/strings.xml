@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">%1$d daripada %2$d hidup</string>
     <string name="cheats_all_off">Matikan semua</string>
     <string name="cheats_search">Cari cheat</string>
+    <string name="dialog_close">Tutup tetingkap ini</string>
+    <string name="more_sec_daily">Setiap hari</string>
+    <string name="more_sec_trouble">Apabila ada masalah</string>
+    <string name="more_sec_setup">Persediaan dan alat</string>
+    <string name="more_d_web">Cari fail dan hantar ke konsol</string>
+    <string name="more_d_upload">Salin fail dari telefon ke konsol</string>
+    <string name="more_d_consoles">Tambah, tukar atau namakan semula konsol</string>
+    <string name="more_d_running">Apa yang menjawab di konsol sekarang</string>
+    <string name="more_d_session">Apa yang anda hantar dan bagaimana hasilnya</string>
+    <string name="more_d_missed">Pemindahan yang berhenti sebelum tamat</string>
+    <string name="more_d_diary">Apa yang berlaku sejurus sebelum setiap ranap</string>
+    <string name="more_d_bisect">Cari payload mana yang membuatnya ranap</string>
+    <string name="more_d_check">Langkah demi langkah selepas jailbreak</string>
+    <string name="more_d_etahen">Tetapan etaHEN sendiri di konsol</string>
+    <string name="more_d_snap">Simpan dan pulihkan tetapan konsol</string>
+    <string name="more_d_auto">Perkara yang berlaku sendiri</string>
+    <string name="more_d_dev">Uji binaan payload anda sendiri</string>
+    <string name="more_d_language">Bahasa apl</string>
+    <string name="more_d_about">Versi, kemas kini, sandaran dan tetapan</string>
 </resources>

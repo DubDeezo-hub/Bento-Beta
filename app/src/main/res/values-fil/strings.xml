@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">%1$d sa %2$d ang naka-on</string>
     <string name="cheats_all_off">I-off lahat</string>
     <string name="cheats_search">Maghanap ng cheat</string>
+    <string name="dialog_close">Isara ang window na ito</string>
+    <string name="more_sec_daily">Araw-araw</string>
+    <string name="more_sec_trouble">Kapag may nagkamali</string>
+    <string name="more_sec_setup">Setup at mga tool</string>
+    <string name="more_d_web">Maghanap ng file at ipadala sa console</string>
+    <string name="more_d_upload">Kopyahin ang file mula sa phone papunta sa console</string>
+    <string name="more_d_consoles">Magdagdag, magpalit o magpalit ng pangalan ng console</string>
+    <string name="more_d_running">Ano ang sumasagot sa console ngayon</string>
+    <string name="more_d_session">Ano ang ipinadala mo at kumusta ito</string>
+    <string name="more_d_missed">Mga transfer na huminto bago matapos</string>
+    <string name="more_d_diary">Ano ang nangyari bago ang bawat crash</string>
+    <string name="more_d_bisect">Alamin kung aling payload ang nagpapa-crash</string>
+    <string name="more_d_check">Hakbang-hakbang pagkatapos ng jailbreak</string>
+    <string name="more_d_etahen">Sariling setting ng etaHEN sa console</string>
+    <string name="more_d_snap">Itago at ibalik ang setting ng console</string>
+    <string name="more_d_auto">Mga bagay na kusang nangyayari</string>
+    <string name="more_d_dev">Subukan ang sarili mong payload build</string>
+    <string name="more_d_language">Wika ng app</string>
+    <string name="more_d_about">Bersyon, update, backup at setting</string>
 </resources>

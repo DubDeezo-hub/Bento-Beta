@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">%1$d / %2$d sees</string>
     <string name="cheats_all_off">Lülita kõik välja</string>
     <string name="cheats_search">Otsi pettusi</string>
+    <string name="dialog_close">Sulge see aken</string>
+    <string name="more_sec_daily">Iga päev</string>
+    <string name="more_sec_trouble">Kui midagi läheb valesti</string>
+    <string name="more_sec_setup">Seadistus ja tööriistad</string>
+    <string name="more_d_web">Leia faile ja saada need konsooli</string>
+    <string name="more_d_upload">Kopeeri failid telefonist konsooli</string>
+    <string name="more_d_consoles">Lisa, vaheta või nimeta konsoole</string>
+    <string name="more_d_running">Mis konsoolis praegu vastab</string>
+    <string name="more_d_session">Mida saatsid ja kuidas läks</string>
+    <string name="more_d_missed">Ülekanded, mis peatusid enne lõppu</string>
+    <string name="more_d_diary">Mis juhtus vahetult enne iga krahhi</string>
+    <string name="more_d_bisect">Leia, milline payload selle krahhi ajab</string>
+    <string name="more_d_check">Samm-sammult pärast jailbreaki</string>
+    <string name="more_d_etahen">etaHEN-i enda seaded konsoolis</string>
+    <string name="more_d_snap">Hoia ja taasta konsooli seaded</string>
+    <string name="more_d_auto">Asjad, mis toimuvad iseenesest</string>
+    <string name="more_d_dev">Testi oma payloadi versioone</string>
+    <string name="more_d_language">Rakenduse keel</string>
+    <string name="more_d_about">Versioon, uuendused, varukoopia ja seaded</string>
 </resources>

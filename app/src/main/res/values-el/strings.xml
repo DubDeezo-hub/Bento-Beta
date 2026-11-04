@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">%1$d από %2$d ενεργά</string>
     <string name="cheats_all_off">Απενεργοποίηση όλων</string>
     <string name="cheats_search">Αναζήτηση cheats</string>
+    <string name="dialog_close">Κλείσιμο παραθύρου</string>
+    <string name="more_sec_daily">Κάθε μέρα</string>
+    <string name="more_sec_trouble">Όταν κάτι πάει στραβά</string>
+    <string name="more_sec_setup">Ρύθμιση και εργαλεία</string>
+    <string name="more_d_web">Βρείτε αρχεία και στείλτε τα στην κονσόλα</string>
+    <string name="more_d_upload">Αντιγράψτε αρχεία από το τηλέφωνο στην κονσόλα</string>
+    <string name="more_d_consoles">Προσθέστε, αλλάξτε ή μετονομάστε κονσόλες</string>
+    <string name="more_d_running">Τι απαντά τώρα στην κονσόλα</string>
+    <string name="more_d_session">Τι στείλατε και πώς πήγε</string>
+    <string name="more_d_missed">Μεταφορές που σταμάτησαν πριν το τέλος</string>
+    <string name="more_d_diary">Τι έγινε λίγο πριν από κάθε κόλλημα</string>
+    <string name="more_d_bisect">Βρείτε ποιο payload την κολλάει</string>
+    <string name="more_d_check">Βήμα βήμα μετά από jailbreak</string>
+    <string name="more_d_etahen">Οι ρυθμίσεις του etaHEN στην κονσόλα</string>
+    <string name="more_d_snap">Κρατήστε και επαναφέρετε τις ρυθμίσεις της κονσόλας</string>
+    <string name="more_d_auto">Πράγματα που γίνονται μόνα τους</string>
+    <string name="more_d_dev">Δοκιμάστε δικές σας εκδόσεις payload</string>
+    <string name="more_d_language">Η γλώσσα της εφαρμογής</string>
+    <string name="more_d_about">Έκδοση, ενημερώσεις, αντίγραφο και ρυθμίσεις</string>
 </resources>

@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">‏%2$d میں سے %1$d آن</string>
     <string name="cheats_all_off">سب بند کریں</string>
     <string name="cheats_search">چیٹس تلاش کریں</string>
+    <string name="dialog_close">یہ ونڈو بند کریں</string>
+    <string name="more_sec_daily">ہر روز</string>
+    <string name="more_sec_trouble">جب کچھ غلط ہو</string>
+    <string name="more_sec_setup">سیٹ اپ اور ٹولز</string>
+    <string name="more_d_web">فائلیں ڈھونڈیں اور کنسول کو بھیجیں</string>
+    <string name="more_d_upload">فون سے کنسول پر فائلیں کاپی کریں</string>
+    <string name="more_d_consoles">کنسول شامل کریں، بدلیں یا نام بدلیں</string>
+    <string name="more_d_running">ابھی کنسول پر کیا جواب دے رہا ہے</string>
+    <string name="more_d_session">آپ نے کیا بھیجا اور کیسا رہا</string>
+    <string name="more_d_missed">وہ منتقلیاں جو آخر سے پہلے رک گئیں</string>
+    <string name="more_d_diary">ہر کریش سے پہلے کیا ہوا</string>
+    <string name="more_d_bisect">پتا کریں کون سا پے لوڈ کریش کرتا ہے</string>
+    <string name="more_d_check">جیل بریک کے بعد قدم بہ قدم</string>
+    <string name="more_d_etahen">کنسول پر etaHEN کی اپنی سیٹنگز</string>
+    <string name="more_d_snap">کنسول کی سیٹنگز رکھیں اور واپس لائیں</string>
+    <string name="more_d_auto">جو خود بخود ہوتا ہے</string>
+    <string name="more_d_dev">اپنے پے لوڈ بلڈز آزمائیں</string>
+    <string name="more_d_language">ایپ کی زبان</string>
+    <string name="more_d_about">ورژن، اپ ڈیٹس، بیک اپ اور سیٹنگز</string>
 </resources>

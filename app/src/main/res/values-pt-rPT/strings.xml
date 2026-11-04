@@ -1478,4 +1478,23 @@
     <string name="cheats_on_count">%1$d de %2$d ativos</string>
     <string name="cheats_all_off">Desativar todos</string>
     <string name="cheats_search">Procurar batotas</string>
+    <string name="dialog_close">Fechar esta janela</string>
+    <string name="more_sec_daily">Todos os dias</string>
+    <string name="more_sec_trouble">Quando algo corre mal</string>
+    <string name="more_sec_setup">Configuração e ferramentas</string>
+    <string name="more_d_web">Encontre ficheiros e envie-os para a consola</string>
+    <string name="more_d_upload">Copie ficheiros do telemóvel para a consola</string>
+    <string name="more_d_consoles">Adicione, mude ou renomeie as consolas</string>
+    <string name="more_d_running">O que responde na consola agora</string>
+    <string name="more_d_session">O que enviou e como correu</string>
+    <string name="more_d_missed">Transferências que pararam antes do fim</string>
+    <string name="more_d_diary">O que aconteceu antes de cada falha</string>
+    <string name="more_d_bisect">Descubra que payload faz a consola falhar</string>
+    <string name="more_d_check">Passo a passo após um jailbreak</string>
+    <string name="more_d_etahen">As definições do etaHEN na consola</string>
+    <string name="more_d_snap">Guarde e reponha as definições da consola</string>
+    <string name="more_d_auto">Coisas que acontecem sozinhas</string>
+    <string name="more_d_dev">Teste as suas versões de payload</string>
+    <string name="more_d_language">O idioma da app</string>
+    <string name="more_d_about">Versão, atualizações, cópia e definições</string>
 </resources>

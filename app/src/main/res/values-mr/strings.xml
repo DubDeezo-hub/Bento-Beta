@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">%2$d पैकी %1$d चालू</string>
     <string name="cheats_all_off">सर्व बंद करा</string>
     <string name="cheats_search">चीट शोधा</string>
+    <string name="dialog_close">ही विंडो बंद करा</string>
+    <string name="more_sec_daily">दररोज</string>
+    <string name="more_sec_trouble">काही चुकले तर</string>
+    <string name="more_sec_setup">सेटअप आणि साधने</string>
+    <string name="more_d_web">फाइल्स शोधा आणि कन्सोलला पाठवा</string>
+    <string name="more_d_upload">फोनवरून कन्सोलवर फाइल्स कॉपी करा</string>
+    <string name="more_d_consoles">कन्सोल जोडा, बदला किंवा नाव बदला</string>
+    <string name="more_d_running">आत्ता कन्सोलवर काय उत्तर देते</string>
+    <string name="more_d_session">तुम्ही काय पाठवले आणि कसे झाले</string>
+    <string name="more_d_missed">शेवटापूर्वी थांबलेली ट्रान्सफर</string>
+    <string name="more_d_diary">प्रत्येक क्रॅशच्या आधी काय झाले</string>
+    <string name="more_d_bisect">कोणता पेलोड क्रॅश करतो ते शोधा</string>
+    <string name="more_d_check">जेलब्रेकनंतर टप्प्याटप्प्याने</string>
+    <string name="more_d_etahen">कन्सोलवरील etaHEN ची स्वतःची सेटिंग्ज</string>
+    <string name="more_d_snap">कन्सोलची सेटिंग्ज ठेवा आणि परत आणा</string>
+    <string name="more_d_auto">आपोआप होणाऱ्या गोष्टी</string>
+    <string name="more_d_dev">तुमचे पेलोड बिल्ड तपासा</string>
+    <string name="more_d_language">अ‍ॅपची भाषा</string>
+    <string name="more_d_about">आवृत्ती, अपडेट, बॅकअप आणि सेटिंग्ज</string>
 </resources>

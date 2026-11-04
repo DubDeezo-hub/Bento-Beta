@@ -1477,4 +1477,23 @@
     <string name="cheats_on_count">%1$d / %2$d päällä</string>
     <string name="cheats_all_off">Kaikki pois</string>
     <string name="cheats_search">Hae huijauksia</string>
+    <string name="dialog_close">Sulje tämä ikkuna</string>
+    <string name="more_sec_daily">Joka päivä</string>
+    <string name="more_sec_trouble">Kun jokin menee pieleen</string>
+    <string name="more_sec_setup">Asetukset ja työkalut</string>
+    <string name="more_d_web">Etsi tiedostoja ja lähetä ne konsoliin</string>
+    <string name="more_d_upload">Kopioi tiedostoja puhelimesta konsoliin</string>
+    <string name="more_d_consoles">Lisää, vaihda tai nimeä konsoleita</string>
+    <string name="more_d_running">Mikä konsolissa vastaa juuri nyt</string>
+    <string name="more_d_session">Mitä lähetit ja miten meni</string>
+    <string name="more_d_missed">Siirrot, jotka pysähtyivät kesken</string>
+    <string name="more_d_diary">Mitä tapahtui juuri ennen jokaista kaatumista</string>
+    <string name="more_d_bisect">Selvitä, mikä payload kaataa sen</string>
+    <string name="more_d_check">Vaihe vaiheelta jailbreakin jälkeen</string>
+    <string name="more_d_etahen">etaHENin omat asetukset konsolissa</string>
+    <string name="more_d_snap">Tallenna ja palauta konsolin asetukset</string>
+    <string name="more_d_auto">Asiat, jotka tapahtuvat itsestään</string>
+    <string name="more_d_dev">Testaa omia payload-versioitasi</string>
+    <string name="more_d_language">Sovelluksen kieli</string>
+    <string name="more_d_about">Versio, päivitykset, varmuuskopio ja asetukset</string>
 </resources>
