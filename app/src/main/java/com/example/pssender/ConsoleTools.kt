@@ -296,68 +296,71 @@ fun AppsView(settings: FtpSettings?, onOpenFolder: (String) -> Unit, onSaves: (S
         val list = if (q.isEmpty()) c.apps else c.apps.filter { it.shownName.contains(q, true) || it.id.contains(q, true) }
         if (bySize) list.sortedByDescending { sizes[it.id] ?: -1L } else list
     }
-    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(6.dp)) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            TipTitle(str(R.string.apps_title, c.apps.size), Tip.APPS, modifier = Modifier.weight(1f), style = MaterialTheme.typography.titleMedium)
-            TextButton(enabled = settings != null && !c.loading, onClick = { if (settings != null) c.load(ctx, settings, force = true) }) {
-                Text(str(R.string.files_refresh))
-            }
-        }
-        // How much space the games take
-        if (settings != null && c.apps.isNotEmpty() && !c.loading) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                val g = GameSizes
-                Text(
-                    when {
-                        g.counting -> str(R.string.apps_sizes_counting, g.done, g.total)
-                        g.sizes.isEmpty() -> str(R.string.apps_sizes_hint)
-                        else -> str(if (g.partial) R.string.apps_sizes_total_partial else R.string.apps_sizes_total, fmtBytes(g.totalBytes))
-                    },
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.weight(1f)
-                )
-                if (g.sizes.isNotEmpty()) Chip(str(R.string.apps_sizes_sort), bySize) { bySize = !bySize }
-                TextButton(enabled = !g.counting, onClick = {
-                    scope.launch { GameSizes.count("${settings.host}:${settings.port}", settings, c.apps) }
-                }) { Text(str(R.string.apps_sizes_count)) }
-            }
-        }
-        // Which games have a newer patch than the one installed
-        if (settings != null && c.apps.isNotEmpty() && !c.loading) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                val u = GameUpdates
-                Text(
-                    when {
-                        u.checking -> str(R.string.apps_updates_checking, u.done, u.total)
-                        u.results.isEmpty() -> str(R.string.apps_updates_hint)
-                        u.available > 0 -> str(R.string.apps_updates_found, u.available)
-                        else -> str(R.string.apps_updates_none)
-                    },
-                    style = MaterialTheme.typography.bodySmall,
-                    color = if (u.available > 0) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.weight(1f)
-                )
-                TipButton(Tip.APP_UPDATES)
-                TextButton(enabled = !u.checking, onClick = {
-                    scope.launch {
-                        val key = "${settings.host}:${settings.port}"
-                        val patches = withContext(Dispatchers.IO) { try { c.patchVersions(settings) } catch (_: Exception) { emptyMap() } }
-                        GameUpdates.check(key, c.apps, patches, ConsoleFirmware.get(ctx, ActiveConsole.id), ActiveConsole.type == ConsoleType.PS5)
+    // One scrolling list: the header rows scroll away with the games, so the list is never squeezed into the bottom half
+    LazyColumn(modifier = modifier, verticalArrangement = Arrangement.spacedBy(6.dp)) {
+        item(key = "apps-header") {
+            Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    TipTitle(str(R.string.apps_title, c.apps.size), Tip.APPS, modifier = Modifier.weight(1f), style = MaterialTheme.typography.titleMedium)
+                    TextButton(enabled = settings != null && !c.loading, onClick = { if (settings != null) c.load(ctx, settings, force = true) }) {
+                        Text(str(R.string.files_refresh))
                     }
-                }) { Text(str(R.string.apps_updates_check)) }
+                }
+                // How much space the games take
+                if (settings != null && c.apps.isNotEmpty() && !c.loading) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        val g = GameSizes
+                        Text(
+                            when {
+                                g.counting -> str(R.string.apps_sizes_counting, g.done, g.total)
+                                g.sizes.isEmpty() -> str(R.string.apps_sizes_hint)
+                                else -> str(if (g.partial) R.string.apps_sizes_total_partial else R.string.apps_sizes_total, fmtBytes(g.totalBytes))
+                            },
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.weight(1f)
+                        )
+                        if (g.sizes.isNotEmpty()) Chip(str(R.string.apps_sizes_sort), bySize) { bySize = !bySize }
+                        TextButton(enabled = !g.counting, onClick = {
+                            scope.launch { GameSizes.count("${settings.host}:${settings.port}", settings, c.apps) }
+                        }) { Text(str(R.string.apps_sizes_count)) }
+                    }
+                }
+                // Which games have a newer patch than the one installed
+                if (settings != null && c.apps.isNotEmpty() && !c.loading) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        val u = GameUpdates
+                        Text(
+                            when {
+                                u.checking -> str(R.string.apps_updates_checking, u.done, u.total)
+                                u.results.isEmpty() -> str(R.string.apps_updates_hint)
+                                u.available > 0 -> str(R.string.apps_updates_found, u.available)
+                                else -> str(R.string.apps_updates_none)
+                            },
+                            style = MaterialTheme.typography.bodySmall,
+                            color = if (u.available > 0) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.weight(1f)
+                        )
+                        TipButton(Tip.APP_UPDATES)
+                        TextButton(enabled = !u.checking, onClick = {
+                            scope.launch {
+                                val key = "${settings.host}:${settings.port}"
+                                val patches = withContext(Dispatchers.IO) { try { c.patchVersions(settings) } catch (_: Exception) { emptyMap() } }
+                                GameUpdates.check(key, c.apps, patches, ConsoleFirmware.get(ctx, ActiveConsole.id), ActiveConsole.type == ConsoleType.PS5)
+                            }
+                        }) { Text(str(R.string.apps_updates_check)) }
+                    }
+                }
+                if (c.apps.size > 6) Field(str(R.string.files_search_hint), query) { query = it }
+                if (c.loading) LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
+                if (settings == null) Text(str(R.string.files_need_ip), style = MaterialTheme.typography.bodySmall)
+                else if (c.message.isNotEmpty()) {
+                    Text(c.message, style = MaterialTheme.typography.bodySmall)
+                    HelpLink(c.message)
+                }
             }
         }
-        if (c.apps.size > 6) Field(str(R.string.files_search_hint), query) { query = it }
-        if (c.loading) LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
-        if (settings == null) Text(str(R.string.files_need_ip), style = MaterialTheme.typography.bodySmall)
-        else if (c.message.isNotEmpty()) {
-            Text(c.message, style = MaterialTheme.typography.bodySmall)
-            HelpLink(c.message)
-        }
-        LazyColumn(modifier = Modifier.fillMaxWidth().weight(1f)) {
-            items(shown) { a -> TitleRow(a.icon, a.shownName, appDetail(a)) { open = a } }
-        }
+        items(shown) { a -> TitleRow(a.icon, a.shownName, appDetail(a)) { open = a } }
     }
     open?.let { a ->
         AlertDialog(
@@ -534,47 +537,50 @@ fun SavesView(
     }
 
     val shown = c.saves.filter { c.only.isEmpty() || it.id == c.only }
-    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(6.dp)) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            TipTitle(str(R.string.saves_title), Tip.SAVES, modifier = Modifier.weight(1f), style = MaterialTheme.typography.titleMedium)
-            TextButton(enabled = settings != null && !c.loading, onClick = { if (settings != null) c.load(settings, force = true) }) {
-                Text(str(R.string.files_refresh))
-            }
-        }
-        if (c.users.size > 1) {
-            ChipRow {
-                c.users.forEachIndexed { i, u ->
-                    Chip(str(R.string.saves_user, i + 1), u == c.user, enabled = !c.loading) { if (settings != null) c.pickUser(settings, u) }
+    // One scrolling list, like the games: the header rows scroll away with the saves
+    LazyColumn(modifier = modifier, verticalArrangement = Arrangement.spacedBy(6.dp)) {
+        item(key = "saves-header") {
+            Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    TipTitle(str(R.string.saves_title), Tip.SAVES, modifier = Modifier.weight(1f), style = MaterialTheme.typography.titleMedium)
+                    TextButton(enabled = settings != null && !c.loading, onClick = { if (settings != null) c.load(settings, force = true) }) {
+                        Text(str(R.string.files_refresh))
+                    }
+                }
+                if (c.users.size > 1) {
+                    ChipRow {
+                        c.users.forEachIndexed { i, u ->
+                            Chip(str(R.string.saves_user, i + 1), u == c.user, enabled = !c.loading) { if (settings != null) c.pickUser(settings, u) }
+                        }
+                    }
+                }
+                if (c.only.isNotEmpty()) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Text(
+                            str(R.string.saves_only, ConsoleApps.nameOf(c.only) ?: c.only),
+                            style = MaterialTheme.typography.bodySmall,
+                            modifier = Modifier.weight(1f)
+                        )
+                        TextButton(onClick = { c.only = "" }) { Text(str(R.string.saves_show_all)) }
+                    }
+                }
+                if (c.loading || working) LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
+                if (settings == null) Text(str(R.string.files_need_ip), style = MaterialTheme.typography.bodySmall)
+                else if (c.message.isNotEmpty()) {
+                    Text(c.message, style = MaterialTheme.typography.bodySmall)
+                    HelpLink(c.message)
+                }
+                if (!c.loading && c.only.isNotEmpty() && shown.isEmpty() && c.users.isNotEmpty()) {
+                    Text(str(R.string.saves_none_for_game), style = MaterialTheme.typography.bodySmall)
                 }
             }
         }
-        if (c.only.isNotEmpty()) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(
-                    str(R.string.saves_only, ConsoleApps.nameOf(c.only) ?: c.only),
-                    style = MaterialTheme.typography.bodySmall,
-                    modifier = Modifier.weight(1f)
-                )
-                TextButton(onClick = { c.only = "" }) { Text(str(R.string.saves_show_all)) }
-            }
-        }
-        if (c.loading || working) LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
-        if (settings == null) Text(str(R.string.files_need_ip), style = MaterialTheme.typography.bodySmall)
-        else if (c.message.isNotEmpty()) {
-            Text(c.message, style = MaterialTheme.typography.bodySmall)
-            HelpLink(c.message)
-        }
-        if (!c.loading && c.only.isNotEmpty() && shown.isEmpty() && c.users.isNotEmpty()) {
-            Text(str(R.string.saves_none_for_game), style = MaterialTheme.typography.bodySmall)
-        }
-        LazyColumn(modifier = Modifier.fillMaxWidth().weight(1f)) {
-            items(shown) { sv ->
-                TitleRow(
-                    ConsoleApps.iconOf(sv.id),
-                    ConsoleApps.nameOf(sv.id) ?: sv.id,
-                    sv.id + " · " + str(if (sv.ps5) R.string.saves_kind_ps5 else R.string.saves_kind_ps4)
-                ) { open = sv }
-            }
+        items(shown) { sv ->
+            TitleRow(
+                ConsoleApps.iconOf(sv.id),
+                ConsoleApps.nameOf(sv.id) ?: sv.id,
+                sv.id + " · " + str(if (sv.ps5) R.string.saves_kind_ps5 else R.string.saves_kind_ps4)
+            ) { open = sv }
         }
     }
 
