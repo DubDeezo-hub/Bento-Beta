@@ -1474,4 +1474,7 @@
     <string name="console_etahen">Hierdie konsole gebruik etaHEN</string>
     <string name="console_etahen_on">Gebruik etaHEN se eie FTP-bediener (1337). Pakkette word deur etaHEN se installeerder (12800) geïnstalleer.</string>
     <string name="console_etahen_off">Gebruik die payloads wat saam met die jailbreak kom: %1$s. Skakel aan as jy etaHEN laai.</string>
+    <string name="cheats_on_count">%1$d van %2$d aan</string>
+    <string name="cheats_all_off">Skakel almal af</string>
+    <string name="cheats_search">Soek cheats</string>
 </resources>

@@ -1474,4 +1474,7 @@
     <string name="console_etahen">Тази конзола използва etaHEN</string>
     <string name="console_etahen_on">Използва FTP сървъра на etaHEN (1337). Пакетите се инсталират чрез инсталатора на etaHEN (12800).</string>
     <string name="console_etahen_off">Използва payload-ите, които идват с jailbreak-а: %1$s. Включете, ако зареждате etaHEN.</string>
+    <string name="cheats_on_count">%1$d от %2$d включени</string>
+    <string name="cheats_all_off">Изключи всички</string>
+    <string name="cheats_search">Търси чийтове</string>
 </resources>

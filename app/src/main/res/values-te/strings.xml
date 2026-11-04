@@ -1474,4 +1474,7 @@
     <string name="console_etahen">ఈ కన్సోల్ etaHEN నడుపుతుంది</string>
     <string name="console_etahen_on">etaHEN స్వంత FTP సర్వర్ (1337) వాడుతుంది. ప్యాకేజీలు etaHEN ఇన్‌స్టాలర్ (12800) ద్వారా ఇన్‌స్టాల్ అవుతాయి.</string>
     <string name="console_etahen_off">జైల్‌బ్రేక్‌తో వచ్చే పేలోడ్‌లు వాడుతుంది: %1$s. etaHEN లోడ్ చేస్తే ఆన్ చేయండి.</string>
+    <string name="cheats_on_count">%2$d లో %1$d ఆన్</string>
+    <string name="cheats_all_off">అన్నీ ఆఫ్ చేయి</string>
+    <string name="cheats_search">చీట్‌లు వెతుకు</string>
 </resources>

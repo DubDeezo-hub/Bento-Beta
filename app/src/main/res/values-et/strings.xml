@@ -1474,4 +1474,7 @@
     <string name="console_etahen">See konsool kasutab etaHEN-i</string>
     <string name="console_etahen_on">Kasutab etaHEN-i enda FTP-serverit (1337). Paketid paigaldatakse etaHEN-i paigaldajaga (12800).</string>
     <string name="console_etahen_off">Kasutab jailbreakiga kaasas olevaid payloade: %1$s. Lülita sisse, kui laadid etaHEN-i.</string>
+    <string name="cheats_on_count">%1$d / %2$d sees</string>
+    <string name="cheats_all_off">Lülita kõik välja</string>
+    <string name="cheats_search">Otsi pettusi</string>
 </resources>

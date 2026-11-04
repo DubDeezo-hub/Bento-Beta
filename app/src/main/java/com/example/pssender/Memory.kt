@@ -25,6 +25,9 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
@@ -428,11 +431,138 @@ internal fun scanLabel(c: ScanCompare): String = str(c.res)
 // Cheats
 // ---------------------------------------------------------------------------------------------
 
+/** What the Cheats page filters its list by (kept across the page's rows, which are drawn one by one). */
+internal object CheatsUi {
+    var query by mutableStateOf("")
+}
+
+/** [list] narrowed to the cheats whose name, note or group has [query] in it. */
+fun filterCheats(list: List<Cheat>, query: String): List<Cheat> {
+    val q = query.trim()
+    if (q.isEmpty()) return list
+    return list.filter { it.name.contains(q, true) || it.note.contains(q, true) || it.group.contains(q, true) }
+}
+
+/** How many cheats [CheatsUi.query]'s search box shows up from. */
+const val CHEAT_SEARCH_FROM = 8
+
 internal fun LazyListScope.cheatItems(s: MemorySnapshot, ctx: Context, open: (MemoryDialog) -> Unit) {
     val m = MemorySession
     val playing = s.game.pid != 0
 
-    // --- ready-made cheats from the cheat files ---
+    // Things that need a decision come first: the game was updated, or pointer paths are waiting
+    m.versionChange?.let { (before, now) ->
+        item {
+            Panel {
+                Text(str(R.string.memory_version_moved, before, now, m.cheats.size), style = MaterialTheme.typography.bodyMedium)
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Button(enabled = playing && !m.busy && m.cheats.any { it.findable }, onClick = {
+                        m.findAgain()
+                        m.versionChange = null
+                    }) { Text(str(R.string.memory_find_again_all)) }
+                    TextButton(onClick = { m.versionChange = null }) { Text(str(R.string.action_close)) }
+                }
+            }
+        }
+    }
+    val target = m.pointerFor
+    if (target != null) {
+        item { PointerPanel(target, playing) }
+    }
+
+    // --- your own cheats: the part used most, at the top ---
+    item {
+        // "Save as file": the cheat list as a file to send to someone (they open it with Import, "Open a file")
+        val saveFile = androidx.activity.compose.rememberLauncherForActivityResult(
+            androidx.activity.result.contract.ActivityResultContracts.CreateDocument("application/json")
+        ) { uri ->
+            if (uri != null) {
+                val ok = try {
+                    ctx.contentResolver.openOutputStream(uri)?.use { it.write(m.exportText().toByteArray(Charsets.UTF_8)) } != null
+                } catch (_: Exception) {
+                    false
+                }
+                m.status = AppText.get(if (ok) R.string.cheatshare_saved else R.string.cheatshare_save_failed)
+            }
+        }
+        var menu by remember { mutableStateOf(false) }
+        val on = m.cheats.count { it.frozen }
+        Panel {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                TipTitle(str(R.string.memory_my_cheats), Tip.MEM_MY_CHEATS, modifier = Modifier.weight(1f))
+                if (m.cheats.isNotEmpty()) {
+                    Text(
+                        str(R.string.cheats_on_count, on, m.cheats.size),
+                        style = MaterialTheme.typography.labelLarge,
+                        color = if (on > 0) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    TipButton(Tip.MEM_FREEZE)
+                }
+            }
+            // The two everyday actions as buttons; sharing and files in one menu
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+                Button(enabled = playing, onClick = { open(MemoryDialog.NewCheat(null, m.type, "")) }) { Text(str(R.string.memory_cheat_add)) }
+                if (on > 0) {
+                    OutlinedButton(onClick = { m.cheats.filter { it.frozen }.forEach { m.setFrozen(it, false) } }) { Text(str(R.string.cheats_all_off)) }
+                }
+                Box {
+                    TextButton(onClick = { menu = true }) { Text(str(R.string.nav_more) + " ▾") }
+                    DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+                        DropdownMenuItem(
+                            text = { Text(str(R.string.memory_find_again_all)) },
+                            enabled = playing && !m.busy && m.cheats.any { it.findable },
+                            onClick = { menu = false; m.findAgain() }
+                        )
+                        DropdownMenuItem(
+                            text = { Text(str(R.string.memory_export)) },
+                            enabled = m.cheats.isNotEmpty(),
+                            onClick = { menu = false; shareText(ctx, m.exportText()) }
+                        )
+                        DropdownMenuItem(
+                            text = { Text(str(R.string.cheatshare_save)) },
+                            enabled = m.cheats.isNotEmpty(),
+                            onClick = { menu = false; saveFile.launch(cheatShareName(s.game.titleId, s.game.name)) }
+                        )
+                        DropdownMenuItem(
+                            text = { Text(str(R.string.export_cheat_file)) },
+                            enabled = playing && !m.busy && m.cheats.isNotEmpty(),
+                            onClick = {
+                                menu = false
+                                m.exportCheatFile { name, text, inside, outside -> open(MemoryDialog.CheatFileOut(name, text, inside, outside)) }
+                            }
+                        )
+                        DropdownMenuItem(
+                            text = { Text(str(R.string.memory_import)) },
+                            onClick = { menu = false; open(MemoryDialog.Import) }
+                        )
+                    }
+                }
+                TipButton(Tip.MEM_FIND_AGAIN)
+            }
+            if (m.cheats.size >= CHEAT_SEARCH_FROM) Field(str(R.string.cheats_search), CheatsUi.query) { CheatsUi.query = it }
+            if (m.cheats.isEmpty()) {
+                Text(str(R.string.memory_cheats_empty), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
+        }
+    }
+    val shown = if (m.cheats.size >= CHEAT_SEARCH_FROM) filterCheats(m.cheats, CheatsUi.query) else m.cheats
+    for ((group, list) in groupCheats(shown)) {
+        if (group.isNotEmpty()) {
+            // A group's header turns all of its cheats on or off at once
+            item {
+                val allOn = list.all { it.frozen }
+                Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(start = 12.dp, end = 8.dp, top = 8.dp)) {
+                    Text("$group · ${list.size}", style = MaterialTheme.typography.titleSmall, modifier = Modifier.weight(1f))
+                    Switch(checked = allOn, enabled = playing, onCheckedChange = { want ->
+                        list.filter { it.frozen != want }.forEach { m.setFrozen(it, want) }
+                    })
+                }
+            }
+        }
+        items(list, key = { it.id }) { c -> CheatRow(c, playing) { open(MemoryDialog.EditCheat(c)) } }
+    }
+
+    // --- ready-made cheats from the cheat files (etaHEN's, GoldHEN's, the shared library) ---
     item {
         Panel {
             TipTitle(str(R.string.memory_cheatfile_title), Tip.MEM_CHEAT_FILES)
@@ -496,102 +626,34 @@ internal fun LazyListScope.cheatItems(s: MemorySnapshot, ctx: Context, open: (Me
         }
     }
 
-    // --- pointer paths found for one cheat ---
-    val target = m.pointerFor
-    if (target != null) {
-        item { PointerPanel(target, playing) }
-    }
-
-    // The game was updated since its cheats were last used: they may sit somewhere else now
-    m.versionChange?.let { (before, now) ->
-        item {
-            Panel {
-                Text(str(R.string.memory_version_moved, before, now, m.cheats.size), style = MaterialTheme.typography.bodyMedium)
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Button(enabled = playing && !m.busy && m.cheats.any { it.findable }, onClick = {
-                        m.findAgain()
-                        m.versionChange = null
-                    }) { Text(str(R.string.memory_find_again_all)) }
-                    TextButton(onClick = { m.versionChange = null }) { Text(str(R.string.action_close)) }
-                }
-            }
-        }
-    }
-    // --- cheat buttons in the notification, even with nothing frozen ---
+    // --- this game: buttons in the notification, and your own notes ---
     item {
         var play by remember { mutableStateOf(PlayMode.on) }
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Column(modifier = Modifier.weight(1f)) {
-                Text(str(R.string.play_mode_title), style = MaterialTheme.typography.labelLarge)
-                Text(str(R.string.play_mode_hint), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-            }
-            androidx.compose.material3.Switch(checked = play, onCheckedChange = {
-                play = it
-                PlayMode.set(ctx, it)
-            })
-        }
-    }
-    // --- your own notes for this game ---
-    item {
         var notes by remember(s.game.titleId) { mutableStateOf(m.gameNotes) }
-        OutlinedTextField(
-            value = notes,
-            onValueChange = {
-                notes = it.take(GameMemo.NOTES_MAX)
-                m.saveNotes(notes)
-            },
-            label = { Text(str(R.string.memory_game_notes)) },
-            placeholder = { Text(str(R.string.memory_game_notes_hint)) },
-            minLines = 2,
-            maxLines = 6,
-            modifier = Modifier.fillMaxWidth()
-        )
-    }
-    // --- your own cheats ---
-    item {
-        // "Save as file": the cheat list as a file to send to someone (they open it with Import, "Open a file")
-        val saveFile = androidx.activity.compose.rememberLauncherForActivityResult(
-            androidx.activity.result.contract.ActivityResultContracts.CreateDocument("application/json")
-        ) { uri ->
-            if (uri != null) {
-                val ok = try {
-                    ctx.contentResolver.openOutputStream(uri)?.use { it.write(m.exportText().toByteArray(Charsets.UTF_8)) } != null
-                } catch (_: Exception) {
-                    false
+        Panel {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Column(modifier = Modifier.weight(1f)) {
+                    Text(str(R.string.play_mode_title), style = MaterialTheme.typography.labelLarge)
+                    Text(str(R.string.play_mode_hint), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
-                m.status = AppText.get(if (ok) R.string.cheatshare_saved else R.string.cheatshare_save_failed)
+                Switch(checked = play, onCheckedChange = {
+                    play = it
+                    PlayMode.set(ctx, it)
+                })
             }
+            OutlinedTextField(
+                value = notes,
+                onValueChange = {
+                    notes = it.take(GameMemo.NOTES_MAX)
+                    m.saveNotes(notes)
+                },
+                label = { Text(str(R.string.memory_game_notes)) },
+                placeholder = { Text(str(R.string.memory_game_notes_hint)) },
+                minLines = 2,
+                maxLines = 6,
+                modifier = Modifier.fillMaxWidth()
+            )
         }
-        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-            TipTitle(str(R.string.memory_my_cheats), Tip.MEM_MY_CHEATS)
-            Row(
-                modifier = Modifier.horizontalScroll(rememberScrollState()),
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                OutlinedButton(enabled = playing, onClick = { open(MemoryDialog.NewCheat(null, m.type, "")) }) { Text(str(R.string.memory_cheat_add)) }
-                OutlinedButton(enabled = playing && !m.busy && m.cheats.any { it.findable }, onClick = { m.findAgain() }) {
-                    Text(str(R.string.memory_find_again_all))
-                }
-                OutlinedButton(enabled = m.cheats.isNotEmpty(), onClick = { shareText(ctx, m.exportText()) }) { Text(str(R.string.memory_export)) }
-                OutlinedButton(enabled = m.cheats.isNotEmpty(), onClick = {
-                    saveFile.launch(cheatShareName(s.game.titleId, s.game.name))
-                }) { Text(str(R.string.cheatshare_save)) }
-                OutlinedButton(enabled = playing && !m.busy && m.cheats.isNotEmpty(), onClick = {
-                    m.exportCheatFile { name, text, inside, outside -> open(MemoryDialog.CheatFileOut(name, text, inside, outside)) }
-                }) { Text(str(R.string.export_cheat_file)) }
-                OutlinedButton(onClick = { open(MemoryDialog.Import) }) { Text(str(R.string.memory_import)) }
-                TipButton(Tip.MEM_FIND_AGAIN, modifier = Modifier.align(Alignment.CenterVertically))
-            }
-            if (m.cheats.isEmpty()) {
-                Text(str(R.string.memory_cheats_empty), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-            }
-        }
-    }
-    for ((group, list) in groupCheats(m.cheats)) {
-        if (group.isNotEmpty()) {
-            item { Text(group, style = MaterialTheme.typography.labelLarge, modifier = Modifier.padding(top = 4.dp)) }
-        }
-        items(list) { c -> CheatRow(c, playing) { open(MemoryDialog.EditCheat(c)) } }
     }
 }
 
@@ -602,31 +664,39 @@ internal fun CheatRow(c: Cheat, playing: Boolean, onOpen: () -> Unit) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(24.dp))
-            .background(if (c.frozen) cs.primary.copy(alpha = 0.10f) else cs.surfaceContainerLow)
+            .padding(vertical = 2.dp)
+            .clip(RoundedCornerShape(20.dp))
+            .background(if (c.frozen) cs.primary.copy(alpha = 0.12f) else cs.surfaceContainerLow)
             .clickable(onClick = onOpen)
-            .padding(start = 12.dp, end = 8.dp, top = 6.dp, bottom = 6.dp),
-        verticalAlignment = Alignment.CenterVertically
+            .padding(start = 14.dp, end = 10.dp, top = 10.dp, bottom = 10.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         Column(modifier = Modifier.weight(1f)) {
-            Text(c.name, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Medium, maxLines = 1, overflow = TextOverflow.Ellipsis)
-            if (c.note.isNotBlank()) Text(c.note, style = MaterialTheme.typography.bodySmall, maxLines = 2, overflow = TextOverflow.Ellipsis)
+            Text(c.name, style = MaterialTheme.typography.bodyLarge, fontWeight = FontWeight.Medium, maxLines = 2, overflow = TextOverflow.Ellipsis)
+            if (c.note.isNotBlank()) {
+                Text(c.note, style = MaterialTheme.typography.bodySmall, color = cs.onSurfaceVariant, maxLines = 2, overflow = TextOverflow.Ellipsis)
+            }
             Text(
-                (if (c.pointer != null) "🔗 " else "") + hexAddr(c.address) + " · " + str(c.type.res) + " · " + c.value.ifBlank { "—" },
-                style = MaterialTheme.typography.bodySmall,
+                (if (c.pointer != null) "🔗 " else "") + hexAddr(c.address) + " · " + str(c.type.res),
+                style = MaterialTheme.typography.labelSmall,
                 fontFamily = FontFamily.Monospace,
                 color = cs.onSurfaceVariant,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
         }
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Switch(checked = c.frozen, onCheckedChange = { m.setFrozen(c, it) }, enabled = playing)
-            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                Text(str(R.string.memory_freeze), style = MaterialTheme.typography.labelSmall, color = cs.onSurfaceVariant)
-                TipButton(Tip.MEM_FREEZE)
-            }
-        }
+        // The value it keeps, large enough to read at a glance
+        Text(
+            c.value.ifBlank { "—" },
+            style = MaterialTheme.typography.titleMedium,
+            fontFamily = FontFamily.Monospace,
+            color = if (c.frozen) cs.primary else cs.onSurface,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier.widthIn(max = 110.dp)
+        )
+        Switch(checked = c.frozen, onCheckedChange = { m.setFrozen(c, it) }, enabled = playing)
     }
 }
 

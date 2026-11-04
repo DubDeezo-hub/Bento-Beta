@@ -1474,4 +1474,7 @@
     <string name="console_etahen">Gumagamit ng etaHEN ang console na ito</string>
     <string name="console_etahen_on">Gumagamit ng sariling FTP server ng etaHEN (1337). Ini-install ang mga package sa installer ng etaHEN (12800).</string>
     <string name="console_etahen_off">Gumagamit ng mga payload na kasama ng jailbreak: %1$s. I-on kung naglo-load ka ng etaHEN.</string>
+    <string name="cheats_on_count">%1$d sa %2$d ang naka-on</string>
+    <string name="cheats_all_off">I-off lahat</string>
+    <string name="cheats_search">Maghanap ng cheat</string>
 </resources>

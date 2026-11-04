@@ -1474,4 +1474,7 @@
     <string name="console_etahen">Bu konsol etaHEN çalıştırıyor</string>
     <string name="console_etahen_on">etaHEN\'in kendi FTP sunucusunu (1337) kullanır. Paketler etaHEN\'in yükleyicisiyle (12800) kurulur.</string>
     <string name="console_etahen_off">Jailbreak ile gelen payload\'ları kullanır: %1$s. etaHEN yüklüyorsanız açın.</string>
+    <string name="cheats_on_count">%2$d hileden %1$d açık</string>
+    <string name="cheats_all_off">Tümünü kapat</string>
+    <string name="cheats_search">Hile ara</string>
 </resources>

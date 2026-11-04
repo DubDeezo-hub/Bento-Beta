@@ -1474,4 +1474,7 @@
     <string name="console_etahen">Ta konsola używa etaHEN</string>
     <string name="console_etahen_on">Używa własnego serwera FTP etaHEN (1337). Pakiety instalują się przez instalator etaHEN (12800).</string>
     <string name="console_etahen_off">Używa payloadów dołączonych do jailbreaka: %1$s. Włącz, jeśli wczytujesz etaHEN.</string>
+    <string name="cheats_on_count">Włączone %1$d z %2$d</string>
+    <string name="cheats_all_off">Wyłącz wszystkie</string>
+    <string name="cheats_search">Szukaj kodów</string>
 </resources>

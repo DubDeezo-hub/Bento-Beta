@@ -1474,4 +1474,7 @@
     <string name="console_etahen">Ova konzola koristi etaHEN</string>
     <string name="console_etahen_on">Koristi etaHEN-ov vlastiti FTP poslužitelj (1337). Paketi se instaliraju etaHEN-ovim instalaterom (12800).</string>
     <string name="console_etahen_off">Koristi payloade koji dolaze s jailbreakom: %1$s. Uključite ako učitavate etaHEN.</string>
+    <string name="cheats_on_count">Uključeno %1$d od %2$d</string>
+    <string name="cheats_all_off">Isključi sve</string>
+    <string name="cheats_search">Traži varke</string>
 </resources>

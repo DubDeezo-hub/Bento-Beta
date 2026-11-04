@@ -1474,4 +1474,7 @@
     <string name="console_etahen">Denne konsollen kjører etaHEN</string>
     <string name="console_etahen_on">Bruker etaHENs egen FTP-server (1337). Pakker installeres med etaHENs installasjonsprogram (12800).</string>
     <string name="console_etahen_off">Bruker payloadene som følger med jailbreaken: %1$s. Slå på hvis du laster inn etaHEN.</string>
+    <string name="cheats_on_count">%1$d av %2$d på</string>
+    <string name="cheats_all_off">Slå av alle</string>
+    <string name="cheats_search">Søk i juksekoder</string>
 </resources>

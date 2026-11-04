@@ -1474,4 +1474,7 @@
     <string name="console_etahen">Máy này chạy etaHEN</string>
     <string name="console_etahen_on">Dùng máy chủ FTP riêng của etaHEN (1337). Gói được cài qua trình cài đặt của etaHEN (12800).</string>
     <string name="console_etahen_off">Dùng các payload đi kèm bản jailbreak: %1$s. Bật nếu bạn nạp etaHEN.</string>
+    <string name="cheats_on_count">Bật %1$d / %2$d</string>
+    <string name="cheats_all_off">Tắt tất cả</string>
+    <string name="cheats_search">Tìm cheat</string>
 </resources>

@@ -1474,4 +1474,7 @@
     <string name="console_etahen">Šī konsole izmanto etaHEN</string>
     <string name="console_etahen_on">Izmanto etaHEN pašu FTP serveri (1337). Pakotnes instalē ar etaHEN instalētāju (12800).</string>
     <string name="console_etahen_off">Izmanto payload, kas nāk ar jailbreak: %1$s. Ieslēdziet, ja ielādējat etaHEN.</string>
+    <string name="cheats_on_count">Ieslēgti %1$d no %2$d</string>
+    <string name="cheats_all_off">Izslēgt visus</string>
+    <string name="cheats_search">Meklēt krāpšanās kodus</string>
 </resources>

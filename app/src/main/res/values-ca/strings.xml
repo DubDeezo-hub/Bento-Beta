@@ -1474,4 +1474,7 @@
     <string name="console_etahen">Aquesta consola fa servir etaHEN</string>
     <string name="console_etahen_on">Fa servir el servidor FTP propi d\'etaHEN (1337). Els paquets s\'instal·len amb l\'instal·lador d\'etaHEN (12800).</string>
     <string name="console_etahen_off">Fa servir els payloads que venen amb el jailbreak: %1$s. Activa-ho si carregues etaHEN.</string>
+    <string name="cheats_on_count">%1$d de %2$d actius</string>
+    <string name="cheats_all_off">Desactiva-ho tot</string>
+    <string name="cheats_search">Cerca trucs</string>
 </resources>

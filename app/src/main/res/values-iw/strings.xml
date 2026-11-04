@@ -1474,4 +1474,7 @@
     <string name="console_etahen">הקונסולה הזו מריצה etaHEN</string>
     <string name="console_etahen_on">משתמש בשרת ה-FTP של etaHEN ‏(1337). חבילות מותקנות דרך המתקין של etaHEN ‏(12800).</string>
     <string name="console_etahen_off">משתמש ב-payloads שמגיעים עם הפריצה: %1$s. הפעל אם אתה טוען את etaHEN.</string>
+    <string name="cheats_on_count">‏%1$d מתוך %2$d פעילים</string>
+    <string name="cheats_all_off">כבה הכול</string>
+    <string name="cheats_search">חיפוש צ\'יטים</string>
 </resources>

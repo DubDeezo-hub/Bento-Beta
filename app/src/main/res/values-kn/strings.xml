@@ -1474,4 +1474,7 @@
     <string name="console_etahen">ಈ ಕನ್ಸೋಲ್ etaHEN ಬಳಸುತ್ತದೆ</string>
     <string name="console_etahen_on">etaHEN ನ ಸ್ವಂತ FTP ಸರ್ವರ್ (1337) ಬಳಸುತ್ತದೆ. ಪ್ಯಾಕೇಜ್‌ಗಳು etaHEN ಇನ್‌ಸ್ಟಾಲರ್ (12800) ಮೂಲಕ ಇನ್‌ಸ್ಟಾಲ್ ಆಗುತ್ತವೆ.</string>
     <string name="console_etahen_off">ಜೈಲ್‌ಬ್ರೇಕ್ ಜೊತೆ ಬರುವ ಪೇಲೋಡ್‌ಗಳನ್ನು ಬಳಸುತ್ತದೆ: %1$s. etaHEN ಲೋಡ್ ಮಾಡಿದರೆ ಆನ್ ಮಾಡಿ.</string>
+    <string name="cheats_on_count">%2$d ರಲ್ಲಿ %1$d ಆನ್</string>
+    <string name="cheats_all_off">ಎಲ್ಲವನ್ನೂ ಆಫ್ ಮಾಡಿ</string>
+    <string name="cheats_search">ಚೀಟ್ ಹುಡುಕಿ</string>
 </resources>

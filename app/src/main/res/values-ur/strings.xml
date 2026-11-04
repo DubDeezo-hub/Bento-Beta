@@ -1474,4 +1474,7 @@
     <string name="console_etahen">یہ کنسول etaHEN چلاتا ہے</string>
     <string name="console_etahen_on">‏etaHEN کا اپنا FTP سرور (1337) استعمال کرتا ہے۔ پیکجز etaHEN کے انسٹالر (12800) سے انسٹال ہوتے ہیں۔</string>
     <string name="console_etahen_off">جیل بریک کے ساتھ آنے والے پے لوڈز استعمال کرتا ہے: %1$s۔ اگر آپ etaHEN لوڈ کرتے ہیں تو آن کریں۔</string>
+    <string name="cheats_on_count">‏%2$d میں سے %1$d آن</string>
+    <string name="cheats_all_off">سب بند کریں</string>
+    <string name="cheats_search">چیٹس تلاش کریں</string>
 </resources>

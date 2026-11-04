@@ -1474,4 +1474,7 @@
     <string name="console_etahen">คอนโซลนี้ใช้ etaHEN</string>
     <string name="console_etahen_on">ใช้เซิร์ฟเวอร์ FTP ของ etaHEN เอง (1337) แพ็กเกจติดตั้งผ่านตัวติดตั้งของ etaHEN (12800)</string>
     <string name="console_etahen_off">ใช้เพย์โหลดที่มากับการเจลเบรก: %1$s เปิดถ้าคุณโหลด etaHEN</string>
+    <string name="cheats_on_count">เปิด %1$d จาก %2$d</string>
+    <string name="cheats_all_off">ปิดทั้งหมด</string>
+    <string name="cheats_search">ค้นหาโกง</string>
 </resources>

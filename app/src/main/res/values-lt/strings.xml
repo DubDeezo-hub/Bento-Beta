@@ -1474,4 +1474,7 @@
     <string name="console_etahen">Ši konsolė naudoja etaHEN</string>
     <string name="console_etahen_on">Naudoja etaHEN FTP serverį (1337). Paketai diegiami etaHEN diegimo programa (12800).</string>
     <string name="console_etahen_off">Naudoja su jailbreak ateinančius payload\'us: %1$s. Įjunkite, jei įkeliate etaHEN.</string>
+    <string name="cheats_on_count">Įjungta %1$d iš %2$d</string>
+    <string name="cheats_all_off">Išjungti visus</string>
+    <string name="cheats_search">Ieškoti apgaulių</string>
 </resources>

@@ -1474,4 +1474,7 @@
     <string name="console_etahen">这台主机运行 etaHEN</string>
     <string name="console_etahen_on">使用 etaHEN 自带的 FTP 服务器（1337）。安装包通过 etaHEN 的安装器（12800）安装。</string>
     <string name="console_etahen_off">使用越狱附带的载荷：%1$s。如果你加载 etaHEN，请打开。</string>
+    <string name="cheats_on_count">已开启 %1$d / %2$d</string>
+    <string name="cheats_all_off">全部关闭</string>
+    <string name="cheats_search">搜索金手指</string>
 </resources>

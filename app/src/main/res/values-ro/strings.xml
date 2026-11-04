@@ -1474,4 +1474,7 @@
     <string name="console_etahen">Această consolă rulează etaHEN</string>
     <string name="console_etahen_on">Folosește serverul FTP propriu etaHEN (1337). Pachetele se instalează prin instalatorul etaHEN (12800).</string>
     <string name="console_etahen_off">Folosește payload-urile care vin cu jailbreak-ul: %1$s. Activează dacă încarci etaHEN.</string>
+    <string name="cheats_on_count">%1$d din %2$d active</string>
+    <string name="cheats_all_off">Oprește toate</string>
+    <string name="cheats_search">Caută trucuri</string>
 </resources>

@@ -1474,4 +1474,7 @@
     <string name="console_etahen">На цій консолі etaHEN</string>
     <string name="console_etahen_on">Використовує власний FTP-сервер etaHEN (1337). Пакети ставляться через інсталятор etaHEN (12800).</string>
     <string name="console_etahen_off">Використовує payload, що йдуть із джейлбрейком: %1$s. Увімкніть, якщо завантажуєте etaHEN.</string>
+    <string name="cheats_on_count">Увімкнено %1$d з %2$d</string>
+    <string name="cheats_all_off">Вимкнути всі</string>
+    <string name="cheats_search">Пошук читів</string>
 </resources>

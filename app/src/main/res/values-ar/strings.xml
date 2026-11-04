@@ -1474,4 +1474,7 @@
     <string name="console_etahen">هذا الجهاز يشغّل etaHEN</string>
     <string name="console_etahen_on">يستخدم خادم FTP الخاص بـ etaHEN ‏(1337). تُثبَّت الحزم عبر مثبّت etaHEN ‏(12800).</string>
     <string name="console_etahen_off">يستخدم الحمولات التي تأتي مع كسر الحماية: %1$s. فعّله إذا كنت تحمّل etaHEN.</string>
+    <string name="cheats_on_count">‏%1$d من %2$d مفعّلة</string>
+    <string name="cheats_all_off">أوقف الكل</string>
+    <string name="cheats_search">ابحث في الغشّات</string>
 </resources>

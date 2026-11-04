@@ -1474,4 +1474,7 @@
     <string name="console_etahen">이 콘솔은 etaHEN을 사용</string>
     <string name="console_etahen_on">etaHEN 자체 FTP 서버(1337)를 씁니다. 패키지는 etaHEN 설치기(12800)로 설치됩니다.</string>
     <string name="console_etahen_off">탈옥에 함께 오는 페이로드를 씁니다: %1$s. etaHEN을 불러온다면 켜세요.</string>
+    <string name="cheats_on_count">%2$d개 중 %1$d개 켜짐</string>
+    <string name="cheats_all_off">모두 끄기</string>
+    <string name="cheats_search">치트 검색</string>
 </resources>

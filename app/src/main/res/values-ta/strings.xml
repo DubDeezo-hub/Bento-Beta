@@ -1474,4 +1474,7 @@
     <string name="console_etahen">இந்த கன்சோல் etaHEN இயக்குகிறது</string>
     <string name="console_etahen_on">etaHEN-இன் சொந்த FTP சர்வரை (1337) பயன்படுத்துகிறது. தொகுப்புகள் etaHEN நிறுவி (12800) மூலம் நிறுவப்படும்.</string>
     <string name="console_etahen_off">ஜெயில்பிரேக்குடன் வரும் பேலோடுகளைப் பயன்படுத்துகிறது: %1$s. etaHEN ஏற்றினால் இயக்கவும்.</string>
+    <string name="cheats_on_count">%2$d இல் %1$d இயக்கத்தில்</string>
+    <string name="cheats_all_off">அனைத்தையும் அணை</string>
+    <string name="cheats_search">சீட்களைத் தேடு</string>
 </resources>

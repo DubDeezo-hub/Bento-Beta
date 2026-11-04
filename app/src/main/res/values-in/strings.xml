@@ -1474,4 +1474,7 @@
     <string name="console_etahen">Konsol ini menjalankan etaHEN</string>
     <string name="console_etahen_on">Memakai server FTP milik etaHEN (1337). Paket dipasang lewat penginstal etaHEN (12800).</string>
     <string name="console_etahen_off">Memakai payload yang ikut dengan jailbreak: %1$s. Nyalakan jika Anda memuat etaHEN.</string>
+    <string name="cheats_on_count">%1$d dari %2$d aktif</string>
+    <string name="cheats_all_off">Matikan semua</string>
+    <string name="cheats_search">Cari cheat</string>
 </resources>

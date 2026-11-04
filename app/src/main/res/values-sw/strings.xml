@@ -1474,4 +1474,7 @@
     <string name="console_etahen">Konsoli hii inaendesha etaHEN</string>
     <string name="console_etahen_on">Inatumia seva ya FTP ya etaHEN yenyewe (1337). Vifurushi husakinishwa kupitia kisakinishi cha etaHEN (12800).</string>
     <string name="console_etahen_off">Inatumia payload zinazokuja na jailbreak: %1$s. Washa ikiwa unapakia etaHEN.</string>
+    <string name="cheats_on_count">%1$d kati ya %2$d zimewashwa</string>
+    <string name="cheats_all_off">Zima zote</string>
+    <string name="cheats_search">Tafuta cheat</string>
 </resources>

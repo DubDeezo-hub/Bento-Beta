@@ -1474,4 +1474,7 @@
     <string name="console_etahen">यह कंसोल etaHEN चलाता है</string>
     <string name="console_etahen_on">etaHEN का अपना FTP सर्वर (1337) इस्तेमाल करता है। पैकेज etaHEN के इंस्टॉलर (12800) से इंस्टॉल होते हैं।</string>
     <string name="console_etahen_off">जेलब्रेक के साथ आने वाले पेलोड इस्तेमाल करता है: %1$s। अगर आप etaHEN लोड करते हैं तो चालू करें।</string>
+    <string name="cheats_on_count">%2$d में से %1$d चालू</string>
+    <string name="cheats_all_off">सब बंद करें</string>
+    <string name="cheats_search">चीट खोजें</string>
 </resources>

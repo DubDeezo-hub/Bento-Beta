@@ -1474,4 +1474,7 @@
     <string name="console_etahen">Ez a konzol etaHEN-t futtat</string>
     <string name="console_etahen_on">Az etaHEN saját FTP-szerverét használja (1337). A csomagokat az etaHEN telepítője (12800) telepíti.</string>
     <string name="console_etahen_off">A jailbreakkel érkező payloadokat használja: %1$s. Kapcsold be, ha etaHEN-t töltesz be.</string>
+    <string name="cheats_on_count">%2$d-ből %1$d bekapcsolva</string>
+    <string name="cheats_all_off">Mind kikapcsolása</string>
+    <string name="cheats_search">Csalások keresése</string>
 </resources>

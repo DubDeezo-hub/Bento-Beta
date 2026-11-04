@@ -1474,4 +1474,7 @@
     <string name="console_etahen">এই কনসোলে etaHEN চলে</string>
     <string name="console_etahen_on">etaHEN-এর নিজস্ব FTP সার্ভার (1337) ব্যবহার করে। প্যাকেজ etaHEN-এর ইনস্টলার (12800) দিয়ে ইনস্টল হয়।</string>
     <string name="console_etahen_off">জেলব্রেকের সাথে আসা পেলোড ব্যবহার করে: %1$s। etaHEN লোড করলে চালু করুন।</string>
+    <string name="cheats_on_count">%2$d এর মধ্যে %1$d চালু</string>
+    <string name="cheats_all_off">সব বন্ধ করুন</string>
+    <string name="cheats_search">চিট খুঁজুন</string>
 </resources>

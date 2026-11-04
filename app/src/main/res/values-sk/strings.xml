@@ -1474,4 +1474,7 @@
     <string name="console_etahen">Táto konzola používa etaHEN</string>
     <string name="console_etahen_on">Používa vlastný FTP server etaHEN (1337). Balíky sa inštalujú inštalátorom etaHEN (12800).</string>
     <string name="console_etahen_off">Používa payloady, ktoré prichádzajú s jailbreakom: %1$s. Zapnite, ak načítavate etaHEN.</string>
+    <string name="cheats_on_count">Zapnuté %1$d z %2$d</string>
+    <string name="cheats_all_off">Vypnúť všetky</string>
+    <string name="cheats_search">Hľadať cheaty</string>
 </resources>

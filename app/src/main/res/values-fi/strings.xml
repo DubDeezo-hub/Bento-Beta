@@ -1474,4 +1474,7 @@
     <string name="console_etahen">Tässä konsolissa on etaHEN</string>
     <string name="console_etahen_on">Käyttää etaHENin omaa FTP-palvelinta (1337). Paketit asennetaan etaHENin asentimella (12800).</string>
     <string name="console_etahen_off">Käyttää jailbreakin mukana tulevia payloadeja: %1$s. Laita päälle, jos lataat etaHENin.</string>
+    <string name="cheats_on_count">%1$d / %2$d päällä</string>
+    <string name="cheats_all_off">Kaikki pois</string>
+    <string name="cheats_search">Hae huijauksia</string>
 </resources>

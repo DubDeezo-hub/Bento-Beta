@@ -1474,4 +1474,7 @@
     <string name="console_etahen">この本体は etaHEN を使う</string>
     <string name="console_etahen_on">etaHEN 内蔵の FTP サーバー（1337）を使います。パッケージは etaHEN のインストーラー（12800）で入ります。</string>
     <string name="console_etahen_off">脱獄に付属するペイロードを使います：%1$s。etaHEN を読み込むならオンにしてください。</string>
+    <string name="cheats_on_count">%2$d 件中 %1$d 件オン</string>
+    <string name="cheats_all_off">すべてオフ</string>
+    <string name="cheats_search">チートを検索</string>
 </resources>

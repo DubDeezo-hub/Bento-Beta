@@ -1474,4 +1474,7 @@
     <string name="console_etahen">ਇਹ ਕੰਸੋਲ etaHEN ਚਲਾਉਂਦਾ ਹੈ</string>
     <string name="console_etahen_on">etaHEN ਦਾ ਆਪਣਾ FTP ਸਰਵਰ (1337) ਵਰਤਦਾ ਹੈ। ਪੈਕੇਜ etaHEN ਦੇ ਇੰਸਟਾਲਰ (12800) ਨਾਲ ਇੰਸਟਾਲ ਹੁੰਦੇ ਹਨ।</string>
     <string name="console_etahen_off">ਜੇਲਬ੍ਰੇਕ ਨਾਲ ਆਉਣ ਵਾਲੇ ਪੇਲੋਡ ਵਰਤਦਾ ਹੈ: %1$s। ਜੇ ਤੁਸੀਂ etaHEN ਲੋਡ ਕਰਦੇ ਹੋ ਤਾਂ ਚਾਲੂ ਕਰੋ।</string>
+    <string name="cheats_on_count">%2$d ਵਿੱਚੋਂ %1$d ਚਾਲੂ</string>
+    <string name="cheats_all_off">ਸਭ ਬੰਦ ਕਰੋ</string>
+    <string name="cheats_search">ਚੀਟ ਖੋਜੋ</string>
 </resources>
