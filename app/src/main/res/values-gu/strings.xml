@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">ટેસ્ટ ફાઇલ ગૂંચવાઈને પાછી આવી.</string>
     <string name="split_fallback">તેના બદલે એક ટુકડામાં મોકલાય છે…</string>
     <string name="split_stuck">એક ભાગ અટકી ગયો.</string>
+    <string name="err_read_only">કન્સોલ %1$s માં લખશે નહીં: ફોલ્ડર ફક્ત વાંચવા માટે છે. બદલે /data (અથવા USB ડ્રાઇવ) પર મોકલો.</string>
+    <string name="upload_goes_to">કન્સોલ પર %1$s માં જાય છે</string>
+    <string name="upload_use_data">/data વાપરો</string>
 </resources>

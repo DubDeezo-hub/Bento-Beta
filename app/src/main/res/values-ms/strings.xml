@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">Fail ujian kembali bercampur aduk.</string>
     <string name="split_fallback">Menghantarnya sekeping sahaja…</string>
     <string name="split_stuck">Satu bahagian berhenti bergerak.</string>
+    <string name="err_read_only">Konsol tidak akan menulis ke %1$s: folder itu baca sahaja. Hantar ke /data (atau pemacu USB).</string>
+    <string name="upload_goes_to">Pergi ke %1$s di konsol</string>
+    <string name="upload_use_data">Guna /data</string>
 </resources>

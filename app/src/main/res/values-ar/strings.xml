@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">عاد ملف الاختبار مختلطًا.</string>
     <string name="split_fallback">يُرسل بقطعة واحدة بدلًا من ذلك…</string>
     <string name="split_stuck">توقف أحد الأجزاء عن التقدم.</string>
+    <string name="err_read_only">لن يكتب الجهاز في %1$s: هذا المجلد للقراءة فقط. أرسل إلى /data (أو قرص USB) بدلًا من ذلك.</string>
+    <string name="upload_goes_to">يذهب إلى %1$s على الجهاز</string>
+    <string name="upload_use_data">استخدم /data</string>
 </resources>

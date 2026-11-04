@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">Тестовый файл вернулся перемешанным.</string>
     <string name="split_fallback">Отправка одним куском…</string>
     <string name="split_stuck">Одна часть остановилась.</string>
+    <string name="err_read_only">Консоль не пишет в %1$s: эта папка только для чтения. Отправляйте в /data (или на USB-диск).</string>
+    <string name="upload_goes_to">Попадает в %1$s на консоли</string>
+    <string name="upload_use_data">Использовать /data</string>
 </resources>

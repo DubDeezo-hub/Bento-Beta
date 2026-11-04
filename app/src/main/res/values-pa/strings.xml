@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">ਟੈਸਟ ਫ਼ਾਈਲ ਰਲਗੱਡ ਹੋ ਕੇ ਮੁੜੀ।</string>
     <string name="split_fallback">ਇਸਦੀ ਥਾਂ ਇੱਕ ਟੁਕੜੇ ਵਿੱਚ ਭੇਜ ਰਿਹਾ ਹੈ…</string>
     <string name="split_stuck">ਇੱਕ ਹਿੱਸਾ ਰੁਕ ਗਿਆ।</string>
+    <string name="err_read_only">ਕੰਸੋਲ %1$s ਵਿੱਚ ਨਹੀਂ ਲਿਖੇਗਾ: ਉਹ ਫੋਲਡਰ ਸਿਰਫ਼ ਪੜ੍ਹਨ ਲਈ ਹੈ। ਇਸਦੀ ਥਾਂ /data (ਜਾਂ USB ਡਰਾਈਵ) ’ਤੇ ਭੇਜੋ।</string>
+    <string name="upload_goes_to">ਕੰਸੋਲ ’ਤੇ %1$s ਵਿੱਚ ਜਾਂਦਾ ਹੈ</string>
+    <string name="upload_use_data">/data ਵਰਤੋ</string>
 </resources>

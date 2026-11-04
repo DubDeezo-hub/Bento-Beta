@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">Testitiedosto palasi sekaisin.</string>
     <string name="split_fallback">Lähetetään yhtenä kappaleena…</string>
     <string name="split_stuck">Yksi osa pysähtyi.</string>
+    <string name="err_read_only">Konsoli ei kirjoita kansioon %1$s: se on vain luku. Lähetä mieluummin /data-kansioon (tai USB-asemalle).</string>
+    <string name="upload_goes_to">Menee konsolissa kansioon %1$s</string>
+    <string name="upload_use_data">Käytä /data</string>
 </resources>

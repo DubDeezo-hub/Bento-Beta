@@ -1512,4 +1512,7 @@
     <string name="split_mixed_up">The test file came back mixed up.</string>
     <string name="split_fallback">Sending it in one piece instead…</string>
     <string name="split_stuck">A part stopped moving.</string>
+    <string name="err_read_only">The console won\'t write to %1$s: that folder is read-only. Send to /data (or a USB drive) instead.</string>
+    <string name="upload_goes_to">Goes to %1$s on the console</string>
+    <string name="upload_use_data">Use /data</string>
 </resources>

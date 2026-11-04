@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">测试文件返回时顺序混乱。</string>
     <string name="split_fallback">改为整体发送…</string>
     <string name="split_stuck">有一部分停止了。</string>
+    <string name="err_read_only">主机不会写入 %1$s：该文件夹为只读。请改发到 /data（或 USB 硬盘）。</string>
+    <string name="upload_goes_to">发送到主机上的 %1$s</string>
+    <string name="upload_use_data">使用 /data</string>
 </resources>

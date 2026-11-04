@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">A tesztfájl összekeveredve jött vissza.</string>
     <string name="split_fallback">Inkább egy darabban küldi…</string>
     <string name="split_stuck">Egy rész megállt.</string>
+    <string name="err_read_only">A konzol nem ír ide: %1$s – a mappa csak olvasható. Küldd inkább a /data mappába (vagy USB-meghajtóra).</string>
+    <string name="upload_goes_to">A konzolon ide megy: %1$s</string>
+    <string name="upload_use_data">/data használata</string>
 </resources>

@@ -1508,4 +1508,7 @@
     <string name="split_mixed_up">Testfilen kom tillbaka blandad.</string>
     <string name="split_fallback">Skickar den i ett stycke i stället…</string>
     <string name="split_stuck">En del står still.</string>
+    <string name="err_read_only">Konsolen skriver inte till %1$s: mappen är skrivskyddad. Skicka till /data (eller en USB-enhet) i stället.</string>
+    <string name="upload_goes_to">Hamnar i %1$s på konsolen</string>
+    <string name="upload_use_data">Använd /data</string>
 </resources>

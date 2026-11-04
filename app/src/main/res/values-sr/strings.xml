@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">Тест датотека се вратила измешана.</string>
     <string name="split_fallback">Шаље се у једном комаду…</string>
     <string name="split_stuck">Један део је стао.</string>
+    <string name="err_read_only">Конзола неће писати у %1$s: та фасцикла је само за читање. Шаљите у /data (или на USB диск).</string>
+    <string name="upload_goes_to">Иде у %1$s на конзоли</string>
+    <string name="upload_use_data">Користи /data</string>
 </resources>

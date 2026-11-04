@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">測試檔案回傳時順序錯亂。</string>
     <string name="split_fallback">改為整份傳送…</string>
     <string name="split_stuck">有一部分停止了。</string>
+    <string name="err_read_only">主機不會寫入 %1$s：該資料夾為唯讀。請改傳到 /data（或 USB 硬碟）。</string>
+    <string name="upload_goes_to">傳送到主機上的 %1$s</string>
+    <string name="upload_use_data">使用 /data</string>
 </resources>

@@ -282,6 +282,14 @@ fun UploadTab(
                 }
             }
         ) { Text(str(R.string.upload_start)) }
+        // Where the files go, in plain sight: a read-only folder here makes every upload fail
+        val dir = profile.ftpDir.trim().ifEmpty { "/" }
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(str(R.string.upload_goes_to, dir), style = MaterialTheme.typography.bodyMedium, modifier = Modifier.weight(1f))
+            if (dir.trimEnd('/') != "/data") {
+                TextButton(onClick = { update { it.copy(ftpDir = "/data") } }) { Text(str(R.string.upload_use_data)) }
+            }
+        }
         Text(str(R.string.upload_help), style = MaterialTheme.typography.bodySmall)
         FolderSyncSection(settings, profile, onStartMany)
         Foldable(str(R.string.files_ftp_settings), Tip.FTP, summary = str(R.string.settings_ftp_summary, profile.ftpPort, profile.ftpDir)) {

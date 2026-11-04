@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">시험 파일이 뒤섞여 돌아왔습니다.</string>
     <string name="split_fallback">대신 한 덩어리로 보내는 중…</string>
     <string name="split_stuck">한 조각이 멈췄습니다.</string>
+    <string name="err_read_only">콘솔이 %1$s에 쓰지 않습니다: 읽기 전용 폴더입니다. 대신 /data(또는 USB 드라이브)로 보내세요.</string>
+    <string name="upload_goes_to">콘솔의 %1$s로 갑니다</string>
+    <string name="upload_use_data">/data 사용</string>
 </resources>

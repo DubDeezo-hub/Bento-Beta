@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">ไฟล์ทดสอบกลับมาแบบสลับกัน</string>
     <string name="split_fallback">ส่งเป็นชิ้นเดียวแทน…</string>
     <string name="split_stuck">มีส่วนหนึ่งหยุดเคลื่อนไหว</string>
+    <string name="err_read_only">คอนโซลจะไม่เขียนลง %1$s เพราะโฟลเดอร์นั้นอ่านได้อย่างเดียว ส่งไปที่ /data (หรือไดรฟ์ USB) แทน</string>
+    <string name="upload_goes_to">ไปที่ %1$s บนคอนโซล</string>
+    <string name="upload_use_data">ใช้ /data</string>
 </resources>

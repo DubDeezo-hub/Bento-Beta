@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">File uji kembali dalam keadaan teracak.</string>
     <string name="split_fallback">Mengirimnya utuh saja…</string>
     <string name="split_stuck">Satu bagian berhenti bergerak.</string>
+    <string name="err_read_only">Konsol tidak mau menulis ke %1$s: folder itu hanya-baca. Kirim ke /data (atau drive USB) saja.</string>
+    <string name="upload_goes_to">Masuk ke %1$s di konsol</string>
+    <string name="upload_use_data">Pakai /data</string>
 </resources>

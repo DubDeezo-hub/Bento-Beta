@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">পরীক্ষার ফাইল এলোমেলো হয়ে ফিরেছে।</string>
     <string name="split_fallback">বদলে এক টুকরোয় পাঠানো হচ্ছে…</string>
     <string name="split_stuck">একটি অংশ থেমে গেছে।</string>
+    <string name="err_read_only">কনসোল %1$s এ লিখবে না: ফোল্ডারটি শুধু পড়ার জন্য। বদলে /data (বা USB ড্রাইভ) এ পাঠান।</string>
+    <string name="upload_goes_to">কনসোলে %1$s এ যায়</string>
+    <string name="upload_use_data">/data ব্যবহার করুন</string>
 </resources>

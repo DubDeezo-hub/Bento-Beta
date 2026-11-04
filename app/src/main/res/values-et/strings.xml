@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">Testfail tuli segamini tagasi.</string>
     <string name="split_fallback">Saadan selle hoopis ühes tükis…</string>
     <string name="split_stuck">Üks osa jäi seisma.</string>
+    <string name="err_read_only">Konsool ei kirjuta kausta %1$s: see on kirjutuskaitstud. Saada hoopis /data alla (või USB-kettale).</string>
+    <string name="upload_goes_to">Läheb konsoolis kausta %1$s</string>
+    <string name="upload_use_data">Kasuta /data</string>
 </resources>

@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">Gulo-gulo ang bumalik na test file.</string>
     <string name="split_fallback">Ipinapadala na lang nang buo…</string>
     <string name="split_stuck">Huminto ang isang bahagi.</string>
+    <string name="err_read_only">Hindi susulat ang console sa %1$s: read-only ang folder na iyon. Ipadala sa /data (o sa USB drive) sa halip.</string>
+    <string name="upload_goes_to">Pupunta sa %1$s sa console</string>
+    <string name="upload_use_data">Gamitin ang /data</string>
 </resources>

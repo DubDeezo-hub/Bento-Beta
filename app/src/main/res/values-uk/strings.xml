@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">Тестовий файл повернувся перемішаним.</string>
     <string name="split_fallback">Надсилання одним шматком…</string>
     <string name="split_stuck">Одна частина зупинилася.</string>
+    <string name="err_read_only">Консоль не пише в %1$s: ця тека лише для читання. Надсилайте в /data (або на USB-диск).</string>
+    <string name="upload_goes_to">Потрапляє в %1$s на консолі</string>
+    <string name="upload_use_data">Використати /data</string>
 </resources>

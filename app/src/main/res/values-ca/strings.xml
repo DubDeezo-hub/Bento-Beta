@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">El fitxer de prova ha tornat barrejat.</string>
     <string name="split_fallback">Enviant-ho d\'una sola peça…</string>
     <string name="split_stuck">Una part ha deixat d\'avançar.</string>
+    <string name="err_read_only">La consola no escriu a %1$s: aquesta carpeta és només de lectura. Envia-ho a /data (o a un USB).</string>
+    <string name="upload_goes_to">Va a %1$s a la consola</string>
+    <string name="upload_use_data">Fes servir /data</string>
 </resources>

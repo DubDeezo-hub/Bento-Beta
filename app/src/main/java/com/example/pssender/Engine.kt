@@ -789,9 +789,15 @@ private fun storePass(
         if (!ok) {
             // 500-504: the console doesn't know how to continue a file. Send it from the start instead
             if (start > 0L && ftp.replyCode in 500..504) return Pass.FromStart
+            val reply = ftp.replyString.trim()
+            // A read-only folder: say which folder, and where files can go instead (the server's own words don't)
+            if (reply.contains("read-only", ignoreCase = true) || reply.contains("read only", ignoreCase = true)) {
+                val folder = remote.substringBeforeLast('/').ifEmpty { "/" }
+                return Pass.Failed(Problem(Hints.tag(AppText.get(R.string.err_read_only, folder), HelpTopic.FTP_DENIED), false))
+            }
             return Pass.Failed(
                 Problem(
-                    Hints.tag(AppText.get(R.string.err_upload, ftp.replyString.trim()), topicForFtpReply(ftp.replyCode)),
+                    Hints.tag(AppText.get(R.string.err_upload, reply), topicForFtpReply(ftp.replyCode)),
                     FTPReply.isNegativeTransient(ftp.replyCode)
                 )
             )

@@ -1508,4 +1508,7 @@
     <string name="split_mixed_up">O ficheiro de teste voltou baralhado.</string>
     <string name="split_fallback">A enviar numa só parte…</string>
     <string name="split_stuck">Uma parte deixou de avançar.</string>
+    <string name="err_read_only">A consola não escreve em %1$s: essa pasta é só de leitura. Envie para /data (ou uma pen USB).</string>
+    <string name="upload_goes_to">Vai para %1$s na consola</string>
+    <string name="upload_use_data">Usar /data</string>
 </resources>

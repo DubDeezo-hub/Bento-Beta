@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">Die toetslêer het deurmekaar teruggekom.</string>
     <string name="split_fallback">Stuur dit eerder in een stuk…</string>
     <string name="split_stuck">\'n Deel het gaan staan.</string>
+    <string name="err_read_only">Die konsole skryf nie na %1$s nie: daardie vouer is leesalleen. Stuur eerder na /data (of \'n USB-skyf).</string>
+    <string name="upload_goes_to">Gaan na %1$s op die konsole</string>
+    <string name="upload_use_data">Gebruik /data</string>
 </resources>

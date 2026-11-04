@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">Plik testowy wrócił pomieszany.</string>
     <string name="split_fallback">Wysyłanie w jednym kawałku…</string>
     <string name="split_stuck">Jedna część stanęła.</string>
+    <string name="err_read_only">Konsola nie zapisze w %1$s: ten folder jest tylko do odczytu. Wysyłaj do /data (lub na dysk USB).</string>
+    <string name="upload_goes_to">Trafia do %1$s na konsoli</string>
+    <string name="upload_use_data">Użyj /data</string>
 </resources>

@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">Testovací súbor sa vrátil pomiešaný.</string>
     <string name="split_fallback">Posiela sa v jednom kuse…</string>
     <string name="split_stuck">Jedna časť sa zastavila.</string>
+    <string name="err_read_only">Konzola nezapíše do %1$s: priečinok je len na čítanie. Posielajte radšej do /data (alebo na USB disk).</string>
+    <string name="upload_goes_to">Ide do %1$s na konzole</string>
+    <string name="upload_use_data">Použiť /data</string>
 </resources>

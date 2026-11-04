@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">Testna datoteka vratila se izmiješana.</string>
     <string name="split_fallback">Šalje se u jednom komadu…</string>
     <string name="split_stuck">Jedan dio je stao.</string>
+    <string name="err_read_only">Konzola neće pisati u %1$s: mapa je samo za čitanje. Šaljite u /data (ili na USB disk).</string>
+    <string name="upload_goes_to">Ide u %1$s na konzoli</string>
+    <string name="upload_use_data">Koristi /data</string>
 </resources>

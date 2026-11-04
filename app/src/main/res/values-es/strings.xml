@@ -1508,4 +1508,7 @@
     <string name="split_mixed_up">El archivo de prueba volvió desordenado.</string>
     <string name="split_fallback">Enviándolo en una sola pieza…</string>
     <string name="split_stuck">Una parte dejó de avanzar.</string>
+    <string name="err_read_only">La consola no escribe en %1$s: esa carpeta es de solo lectura. Envía a /data (o a un USB).</string>
+    <string name="upload_goes_to">Va a %1$s en la consola</string>
+    <string name="upload_use_data">Usar /data</string>
 </resources>

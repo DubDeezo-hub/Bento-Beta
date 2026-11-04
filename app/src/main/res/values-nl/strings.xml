@@ -1508,4 +1508,7 @@
     <string name="split_mixed_up">Het testbestand kwam door elkaar terug.</string>
     <string name="split_fallback">In één stuk versturen…</string>
     <string name="split_stuck">Een deel staat stil.</string>
+    <string name="err_read_only">De console schrijft niet naar %1$s: die map is alleen-lezen. Stuur naar /data (of een USB-schijf).</string>
+    <string name="upload_goes_to">Gaat naar %1$s op de console</string>
+    <string name="upload_use_data">/data gebruiken</string>
 </resources>

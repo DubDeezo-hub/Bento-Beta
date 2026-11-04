@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">Tệp thử trả về bị xáo trộn.</string>
     <string name="split_fallback">Đang gửi nguyên một khối…</string>
     <string name="split_stuck">Một phần đã dừng lại.</string>
+    <string name="err_read_only">Máy không ghi vào %1$s: thư mục đó chỉ đọc. Hãy gửi vào /data (hoặc ổ USB).</string>
+    <string name="upload_goes_to">Gửi vào %1$s trên máy</string>
+    <string name="upload_use_data">Dùng /data</string>
 </resources>

@@ -1509,4 +1509,7 @@
     <string name="split_mixed_up">Die Testdatei kam durcheinander zurück.</string>
     <string name="split_fallback">Stattdessen in einem Stück senden…</string>
     <string name="split_stuck">Ein Teil bewegt sich nicht mehr.</string>
+    <string name="err_read_only">Die Konsole schreibt nicht nach %1$s: Der Ordner ist schreibgeschützt. Sende stattdessen nach /data (oder auf ein USB-Laufwerk).</string>
+    <string name="upload_goes_to">Geht nach %1$s auf der Konsole</string>
+    <string name="upload_use_data">/data nehmen</string>
 </resources>

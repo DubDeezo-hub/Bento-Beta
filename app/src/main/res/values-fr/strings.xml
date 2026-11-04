@@ -1508,4 +1508,7 @@
     <string name="split_mixed_up">Le fichier de test est revenu mélangé.</string>
     <string name="split_fallback">Envoi en un seul morceau à la place…</string>
     <string name="split_stuck">Une partie n\'avance plus.</string>
+    <string name="err_read_only">La console n\'écrit pas dans %1$s : ce dossier est en lecture seule. Envoyez plutôt vers /data (ou une clé USB).</string>
+    <string name="upload_goes_to">Va dans %1$s sur la console</string>
+    <string name="upload_use_data">Utiliser /data</string>
 </resources>

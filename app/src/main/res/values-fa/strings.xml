@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">فایل آزمایشی به هم ریخته برگشت.</string>
     <string name="split_fallback">به جای آن یک‌تکه فرستاده می‌شود…</string>
     <string name="split_stuck">یک بخش از حرکت ایستاد.</string>
+    <string name="err_read_only">کنسول در %1$s نمی‌نویسد: این پوشه فقط‌خواندنی است. به جای آن به /data (یا درایو USB) بفرستید.</string>
+    <string name="upload_goes_to">به %1$s روی کنسول می‌رود</string>
+    <string name="upload_use_data">استفاده از /data</string>
 </resources>

@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">آزمائشی فائل گڈمڈ ہو کر واپس آئی۔</string>
     <string name="split_fallback">اس کے بجائے ایک ٹکڑے میں بھیجا جا رہا ہے…</string>
     <string name="split_stuck">ایک حصہ رک گیا۔</string>
+    <string name="err_read_only">کنسول %1$s میں نہیں لکھے گا: وہ فولڈر صرف پڑھنے کے لیے ہے۔ اس کے بجائے /data (یا USB ڈرائیو) پر بھیجیں۔</string>
+    <string name="upload_goes_to">کنسول پر %1$s میں جاتا ہے</string>
+    <string name="upload_use_data">‏/data استعمال کریں</string>
 </resources>

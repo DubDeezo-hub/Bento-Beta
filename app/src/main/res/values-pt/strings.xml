@@ -1508,4 +1508,7 @@
     <string name="split_mixed_up">O arquivo de teste voltou embaralhado.</string>
     <string name="split_fallback">Enviando em uma só parte…</string>
     <string name="split_stuck">Uma parte parou de andar.</string>
+    <string name="err_read_only">O console não grava em %1$s: essa pasta é somente leitura. Envie para /data (ou um pendrive).</string>
+    <string name="upload_goes_to">Vai para %1$s no console</string>
+    <string name="upload_use_data">Usar /data</string>
 </resources>

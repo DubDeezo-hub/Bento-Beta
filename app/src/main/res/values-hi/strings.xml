@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">टेस्ट फ़ाइल गड़बड़ होकर लौटी।</string>
     <string name="split_fallback">इसके बजाय एक टुकड़े में भेजा जा रहा है…</string>
     <string name="split_stuck">एक हिस्सा रुक गया।</string>
+    <string name="err_read_only">कंसोल %1$s में नहीं लिखेगा: वह फ़ोल्डर केवल पढ़ने के लिए है। इसके बजाय /data (या USB ड्राइव) पर भेजें।</string>
+    <string name="upload_goes_to">कंसोल पर %1$s में जाता है</string>
+    <string name="upload_use_data">/data इस्तेमाल करें</string>
 </resources>

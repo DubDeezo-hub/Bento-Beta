@@ -1507,4 +1507,7 @@
     <string name="split_mixed_up">పరీక్ష ఫైల్ కలగాపులగంగా తిరిగొచ్చింది.</string>
     <string name="split_fallback">బదులుగా ఒకే ముక్కగా పంపుతోంది…</string>
     <string name="split_stuck">ఒక భాగం ఆగిపోయింది.</string>
+    <string name="err_read_only">కన్సోల్ %1$s లో రాయదు: ఆ ఫోల్డర్ చదవడానికి మాత్రమే. బదులుగా /data (లేదా USB డ్రైవ్) కు పంపండి.</string>
+    <string name="upload_goes_to">కన్సోల్‌లో %1$s కు వెళ్తుంది</string>
+    <string name="upload_use_data">/data వాడు</string>
 </resources>
