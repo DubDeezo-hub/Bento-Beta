@@ -1516,4 +1516,11 @@
     <string name="upload_folder_reading">Ordner wird gelesen…</string>
     <string name="upload_folder_empty">In diesem Ordner sind keine Dateien.</string>
     <string name="upload_folder_queued">%1$s: %2$d Dateien unterwegs nach %3$s</string>
+    <string name="pkgmgr_copying">Das Paket wird zuerst auf die Konsole kopiert (%1$s). PKG Manager installiert es, sobald es dort ist.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager installiert Pakete, die auf der Konsole liegen; dafür werden die FTP-Einstellungen zum Hinkopieren gebraucht.</string>
+    <string name="pkgmgr_installing">PKG Manager installiert %1$s.</string>
+    <string name="pkgmgr_refused">PKG Manager hat das Paket nicht angenommen: %1$s</string>
+    <string name="pkgmgr_asking">PKG Manager wird um die Installation gebeten…</string>
+    <string name="install_port_label2">Installer-Port (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (unter Payloads holen) installiert Pakete, die auf der Konsole liegen: Ein Link wird zuerst nach %1$s kopiert und dann installiert. Kein etaHEN nötig.</string>
 </resources>

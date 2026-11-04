@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">Leser mappen…</string>
     <string name="upload_folder_empty">Den mappen har ingen filer.</string>
     <string name="upload_folder_queued">%1$s: %2$d filer på vei til %3$s</string>
+    <string name="pkgmgr_copying">Pakken kopieres først til konsollen (%1$s). PKG Manager installerer den når den er der.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager installerer pakker som ligger på konsollen, så FTP-innstillingene trengs for å kopiere den dit først.</string>
+    <string name="pkgmgr_installing">PKG Manager installerer %1$s.</string>
+    <string name="pkgmgr_refused">PKG Manager tok ikke imot pakken: %1$s</string>
+    <string name="pkgmgr_asking">Ber PKG Manager installere den…</string>
+    <string name="install_port_label2">Installasjonsport (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (fra Hent payloads) installerer pakker som ligger på konsollen: en lenke kopieres først til %1$s og installeres så. etaHEN trengs ikke.</string>
 </resources>

@@ -12,6 +12,7 @@ class PortsTest {
         val p = Profile(id = "a", name = "A")
         assertEquals("2121", p.ftpPort)
         assertEquals("9021", p.payloadPort)
+        assertEquals("8844", p.installPort) // PKG Manager
         assertFalse(p.etaHen)
         assertEquals("2121", ConsoleType.PS5.ftpPort)
         assertEquals("2121", ConsoleType.PS4.ftpPort)
@@ -32,6 +33,9 @@ class PortsTest {
         val ps4 = ps5.withType(ConsoleType.PS4)
         assertEquals("2121", ps4.ftpPort)
         assertEquals("9090", ps4.payloadPort)
+        assertEquals("12800", ps4.installPort)
+        assertEquals("8844", ps4.withType(ConsoleType.PS5).installPort)
+        assertEquals("12800", ps5.withEtaHen(true).withType(ConsoleType.PS4).installPort)
         assertEquals("2121", ps4.withType(ConsoleType.PS5).ftpPort)
         // A PS5 on etaHEN's FTP goes to the PS4's usual port, and etaHEN is off on a PS4
         val eta = ps5.withEtaHen(true)
@@ -47,8 +51,10 @@ class PortsTest {
         val on = ps5.withEtaHen(true)
         assertTrue(on.etaHen)
         assertEquals("1337", on.ftpPort)
+        assertEquals("12800", on.installPort)
         assertEquals("9021", on.payloadPort)
         assertEquals("2121", on.withEtaHen(false).ftpPort)
+        assertEquals("8844", on.withEtaHen(false).installPort)
         // A port typed by hand stays either way
         assertEquals("2222", ps5.copy(ftpPort = "2222").withEtaHen(true).ftpPort)
         // A PS4 never runs etaHEN
@@ -85,6 +91,14 @@ class PortsTest {
         val old = parseProfiles("""[{"id":"x","name":"X","ftpPort":"1337","type":"ps5"},{"id":"y","name":"Y","ftpPort":"2121","type":"ps5"}]""")
         assertTrue(old[0].etaHen)
         assertFalse(old[1].etaHen)
+        // Saved before PKG Manager: without etaHEN, etaHEN's installer port moves to PKG Manager's, once
+        val before = parseProfiles("""[{"id":"y","name":"Y","ftpPort":"2121","installPort":"12800","type":"ps5","etaHen":false},{"id":"z","name":"Z","ftpPort":"1337","installPort":"12800","type":"ps5","etaHen":true}]""")
+        assertEquals("8844", before[0].installPort)
+        assertEquals("12800", before[1].installPort)
+        val kept = parseProfiles("""[{"id":"y","name":"Y","installPort":"12800","type":"ps5","etaHen":false,"installer2":true}]""")
+        assertEquals("12800", kept[0].installPort)
+        assertEquals("{\"path\":\"/data/pkg/a b.pkg\"}", pkgManagerBody("/data/pkg/a b.pkg"))
+        assertEquals("Package file not found", pkgManagerError("{\"success\":false,\"error\":\"Package file not found\"}"))
     }
 
     @Test

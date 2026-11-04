@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">Lees die vouer…</string>
     <string name="upload_folder_empty">Daardie vouer het geen lêers nie.</string>
     <string name="upload_folder_queued">%1$s: %2$d lêers op pad na %3$s</string>
+    <string name="pkgmgr_copying">Kopieer eers die pakket na die konsole (%1$s). PKG Manager installeer dit sodra dit daar is.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager installeer pakkette wat op die konsole is, so die FTP-instellings is nodig om dit eers daar te kry.</string>
+    <string name="pkgmgr_installing">PKG Manager installeer %1$s.</string>
+    <string name="pkgmgr_refused">PKG Manager het die pakket nie aanvaar nie: %1$s</string>
+    <string name="pkgmgr_asking">Vra PKG Manager om dit te installeer…</string>
+    <string name="install_port_label2">Installeerderpoort (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (uit Kry payloads) installeer pakkette wat op die konsole is: \'n skakel word eers na %1$s gekopieer en dan geïnstalleer. Geen etaHEN nodig nie.</string>
 </resources>

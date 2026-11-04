@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">Ανάγνωση φακέλου…</string>
     <string name="upload_folder_empty">Αυτός ο φάκελος δεν έχει αρχεία.</string>
     <string name="upload_folder_queued">%1$s: %2$d αρχεία πηγαίνουν στο %3$s</string>
+    <string name="pkgmgr_copying">Το πακέτο αντιγράφεται πρώτα στην κονσόλα (%1$s). Το PKG Manager το εγκαθιστά μόλις φτάσει.</string>
+    <string name="pkgmgr_need_ftp">Το PKG Manager εγκαθιστά πακέτα που είναι στην κονσόλα, οπότε χρειάζονται οι ρυθμίσεις FTP για να αντιγραφεί πρώτα εκεί.</string>
+    <string name="pkgmgr_installing">Το PKG Manager εγκαθιστά το %1$s.</string>
+    <string name="pkgmgr_refused">Το PKG Manager δεν δέχτηκε το πακέτο: %1$s</string>
+    <string name="pkgmgr_asking">Ζητείται από το PKG Manager να το εγκαταστήσει…</string>
+    <string name="install_port_label2">Θύρα εγκαταστάτη (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">Το PKG Manager (από τη Λήψη payloads) εγκαθιστά πακέτα που είναι στην κονσόλα: ο σύνδεσμος αντιγράφεται πρώτα στο %1$s και μετά εγκαθίσταται. Δεν χρειάζεται etaHEN.</string>
 </resources>

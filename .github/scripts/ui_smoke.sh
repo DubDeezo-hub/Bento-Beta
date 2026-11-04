@@ -635,12 +635,13 @@ PY
     # shellcheck disable=SC2086
     set -- $pos
     adb shell input tap "$1" "$2"
-    if wait_log 20 "[install/etaHEN] url=$LINK"; then
+    # A PS5 without etaHEN uses PKG Manager (8844): the package is copied to /data/pkg over FTP, then installed from there
+    if wait_log 60 "[install/pkgmgr] path=/data/pkg/sample.pkg"; then
       pass "a shared link reaches the console's installer"
     else
-      fail "a shared link reaches the console's installer" "the pretend console got no install request. Its log: $(tail -5 "$FAKE_LOG" | tr '\n' ' ')"
+      fail "a shared link reaches the console's installer" "PKG Manager got no install request. Its log: $(tail -5 "$FAKE_LOG" | tr '\n' ' ')"
     fi
-    if wait_fmt 15 "$(ui string install_accepted)"; then
+    if wait_fmt 20 "$(ui string pkgmgr_installing)"; then
       pass "the app says the installer accepted it"
     else
       fail "the app says the installer accepted it" "Seen: $(ui texts "$XML" 2> /dev/null)"

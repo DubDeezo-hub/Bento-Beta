@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">フォルダーを読み込み中…</string>
     <string name="upload_folder_empty">そのフォルダーにはファイルがありません。</string>
     <string name="upload_folder_queued">%1$s：%2$d 個のファイルを %3$s へ送信中</string>
+    <string name="pkgmgr_copying">まずパッケージを本体（%1$s）にコピーします。届いたら PKG Manager がインストールします。</string>
+    <string name="pkgmgr_need_ftp">PKG Manager は本体上のパッケージをインストールするため、先にコピーする FTP 設定が必要です。</string>
+    <string name="pkgmgr_installing">PKG Manager が %1$s をインストール中です。</string>
+    <string name="pkgmgr_refused">PKG Manager がパッケージを受け付けませんでした：%1$s</string>
+    <string name="pkgmgr_asking">PKG Manager にインストールを依頼中…</string>
+    <string name="install_port_label2">インストーラーのポート（%1$s：%2$s）</string>
+    <string name="pkgmgr_hint">PKG Manager（ペイロード入手から）は本体上のパッケージをインストールします。リンクはまず %1$s にコピーされ、その後インストールされます。etaHEN は不要です。</string>
 </resources>

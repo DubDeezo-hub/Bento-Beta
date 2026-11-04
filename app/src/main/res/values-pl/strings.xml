@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">Odczyt folderu…</string>
     <string name="upload_folder_empty">W tym folderze nie ma plików.</string>
     <string name="upload_folder_queued">%1$s: %2$d plików w drodze do %3$s</string>
+    <string name="pkgmgr_copying">Pakiet najpierw jest kopiowany na konsolę (%1$s). PKG Manager zainstaluje go, gdy tam dotrze.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager instaluje pakiety, które są na konsoli, więc potrzebne są ustawienia FTP, by najpierw go tam skopiować.</string>
+    <string name="pkgmgr_installing">PKG Manager instaluje %1$s.</string>
+    <string name="pkgmgr_refused">PKG Manager nie przyjął pakietu: %1$s</string>
+    <string name="pkgmgr_asking">Prośba do PKG Managera o instalację…</string>
+    <string name="install_port_label2">Port instalatora (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (z Pobierz payloady) instaluje pakiety, które są na konsoli: link najpierw jest kopiowany do %1$s, potem instalowany. etaHEN nie jest potrzebny.</string>
 </resources>

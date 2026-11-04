@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">جارٍ قراءة المجلد…</string>
     <string name="upload_folder_empty">لا توجد ملفات في هذا المجلد.</string>
     <string name="upload_folder_queued">‏%1$s: %2$d ملفًا في الطريق إلى %3$s</string>
+    <string name="pkgmgr_copying">يُنسخ الملف إلى الجهاز (%1$s) أولًا. يثبّته PKG Manager حين يصل.</string>
+    <string name="pkgmgr_need_ftp">يثبّت PKG Manager الحزم الموجودة على الجهاز، لذا تلزم إعدادات FTP لنسخها إليه أولًا.</string>
+    <string name="pkgmgr_installing">يثبّت PKG Manager الآن %1$s.</string>
+    <string name="pkgmgr_refused">لم يقبل PKG Manager الحزمة: %1$s</string>
+    <string name="pkgmgr_asking">يُطلب من PKG Manager تثبيتها…</string>
+    <string name="install_port_label2">منفذ المثبّت (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">يثبّت PKG Manager (من «احصل على الحمولات») الحزم الموجودة على الجهاز: يُنسخ الرابط إلى %1$s أولًا ثم يُثبَّت. لا حاجة إلى etaHEN.</string>
 </resources>

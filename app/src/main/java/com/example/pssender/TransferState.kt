@@ -33,7 +33,9 @@ data class TransferRequest(
     val remoteSize: Long = -1L,
     val console: String = "",
     val profileId: String = "",
-    val model: String = "PS5"
+    val model: String = "PS5",
+    /** The port of PKG Manager when the package should be installed once it is on the console (see [PkgManagerRoute]). */
+    val installWith: String? = null
 )
 
 /**

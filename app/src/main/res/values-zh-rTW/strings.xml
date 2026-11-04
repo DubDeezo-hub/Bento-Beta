@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">正在讀取資料夾…</string>
     <string name="upload_folder_empty">該資料夾中沒有檔案。</string>
     <string name="upload_folder_queued">%1$s：%2$d 個檔案正在傳送到 %3$s</string>
+    <string name="pkgmgr_copying">正在先把安裝包複製到主機（%1$s），到達後由 PKG Manager 安裝。</string>
+    <string name="pkgmgr_need_ftp">PKG Manager 安裝的是主機上的安裝包，所以需要 FTP 設定先把它複製過去。</string>
+    <string name="pkgmgr_installing">PKG Manager 正在安裝 %1$s。</string>
+    <string name="pkgmgr_refused">PKG Manager 沒有接受該安裝包：%1$s</string>
+    <string name="pkgmgr_asking">正在請 PKG Manager 安裝…</string>
+    <string name="install_port_label2">安裝器連接埠（%1$s：%2$s）</string>
+    <string name="pkgmgr_hint">PKG Manager（在「取得酬載」中）安裝主機上的安裝包：連結會先複製到 %1$s，再進行安裝。不需要 etaHEN。</string>
 </resources>

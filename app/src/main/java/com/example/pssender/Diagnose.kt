@@ -108,7 +108,7 @@ object Diagnose {
 
     /** The ports a service often uses instead of the one that is set, by console. */
     fun alternatives(type: ConsoleType, service: DiagService): List<Int> = when (service) {
-        DiagService.INSTALLER -> listOf(12800)
+        DiagService.INSTALLER -> if (type == ConsoleType.PS4) listOf(12800) else listOf(8844, 12800)
         DiagService.LOADER -> if (type == ConsoleType.PS4) listOf(9090, 9020, 9021) else listOf(9021, 9020)
         DiagService.FTP -> listOf(2121, 1337, 21)
         DiagService.DEBUGGER -> listOf(DEBUG_PORT)

@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">Membaca folder…</string>
     <string name="upload_folder_empty">Folder itu tidak berisi file.</string>
     <string name="upload_folder_queued">%1$s: %2$d file sedang dikirim ke %3$s</string>
+    <string name="pkgmgr_copying">Paket disalin dulu ke konsol (%1$s). PKG Manager memasangnya setelah sampai.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager memasang paket yang ada di konsol, jadi pengaturan FTP diperlukan untuk menyalinnya ke sana dulu.</string>
+    <string name="pkgmgr_installing">PKG Manager sedang memasang %1$s.</string>
+    <string name="pkgmgr_refused">PKG Manager tidak menerima paket: %1$s</string>
+    <string name="pkgmgr_asking">Meminta PKG Manager memasangnya…</string>
+    <string name="install_port_label2">Port penginstal (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (dari Ambil payload) memasang paket yang ada di konsol: tautan disalin dulu ke %1$s, lalu dipasang. Tidak perlu etaHEN.</string>
 </resources>

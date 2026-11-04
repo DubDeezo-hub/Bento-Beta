@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">Klasör okunuyor…</string>
     <string name="upload_folder_empty">Bu klasörde dosya yok.</string>
     <string name="upload_folder_queued">%1$s: %2$d dosya %3$s klasörüne gidiyor</string>
+    <string name="pkgmgr_copying">Paket önce konsola kopyalanıyor (%1$s). Oraya varınca PKG Manager kuracak.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager konsoldaki paketleri kurar, bu yüzden önce oraya kopyalamak için FTP ayarları gerekir.</string>
+    <string name="pkgmgr_installing">PKG Manager %1$s paketini kuruyor.</string>
+    <string name="pkgmgr_refused">PKG Manager paketi kabul etmedi: %1$s</string>
+    <string name="pkgmgr_asking">PKG Manager\'dan kurması isteniyor…</string>
+    <string name="install_port_label2">Yükleyici portu (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (Payload al bölümünden) konsoldaki paketleri kurar: bağlantı önce %1$s klasörüne kopyalanır, sonra kurulur. etaHEN gerekmez.</string>
 </resources>

@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">Mappa olvasása…</string>
     <string name="upload_folder_empty">Abban a mappában nincs fájl.</string>
     <string name="upload_folder_queued">%1$s: %2$d fájl úton ide: %3$s</string>
+    <string name="pkgmgr_copying">Előbb a csomag a konzolra másolódik (%1$s). Ha ott van, a PKG Manager telepíti.</string>
+    <string name="pkgmgr_need_ftp">A PKG Manager a konzolon lévő csomagokat telepíti, ezért kellenek az FTP-beállítások, hogy előbb odamásoljuk.</string>
+    <string name="pkgmgr_installing">A PKG Manager telepíti: %1$s.</string>
+    <string name="pkgmgr_refused">A PKG Manager nem fogadta el a csomagot: %1$s</string>
+    <string name="pkgmgr_asking">A PKG Manager megkérése a telepítésre…</string>
+    <string name="install_port_label2">Telepítő portja (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">A PKG Manager (a Payloadok letöltése alatt) a konzolon lévő csomagokat telepíti: a link előbb ide másolódik: %1$s, aztán települ. Nem kell etaHEN.</string>
 </resources>

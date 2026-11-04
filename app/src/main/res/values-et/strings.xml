@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">Kausta lugemine…</string>
     <string name="upload_folder_empty">Selles kaustas pole faile.</string>
     <string name="upload_folder_queued">%1$s: %2$d faili teel kausta %3$s</string>
+    <string name="pkgmgr_copying">Pakett kopeeritakse esmalt konsooli (%1$s). PKG Manager paigaldab selle, kui see kohal on.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager paigaldab konsoolis olevaid pakette, seega on FTP seaded vajalikud, et see enne sinna kopeerida.</string>
+    <string name="pkgmgr_installing">PKG Manager paigaldab: %1$s.</string>
+    <string name="pkgmgr_refused">PKG Manager ei võtnud paketti vastu: %1$s</string>
+    <string name="pkgmgr_asking">Palun PKG Manageril see paigaldada…</string>
+    <string name="install_port_label2">Paigaldaja port (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (jaotisest Hangi payloadid) paigaldab konsoolis olevaid pakette: link kopeeritakse esmalt kausta %1$s ja siis paigaldatakse. etaHEN-i pole vaja.</string>
 </resources>

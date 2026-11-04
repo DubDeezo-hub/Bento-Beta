@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">קורא את התיקייה…</string>
     <string name="upload_folder_empty">אין קבצים בתיקייה הזו.</string>
     <string name="upload_folder_queued">‏%1$s: %2$d קבצים בדרך אל %3$s</string>
+    <string name="pkgmgr_copying">החבילה מועתקת קודם לקונסולה (%1$s). PKG Manager יתקין אותה כשתגיע.</string>
+    <string name="pkgmgr_need_ftp">‏PKG Manager מתקין חבילות שנמצאות בקונסולה, לכן צריך את הגדרות ה-FTP כדי להעתיק אותה לשם קודם.</string>
+    <string name="pkgmgr_installing">‏PKG Manager מתקין את %1$s.</string>
+    <string name="pkgmgr_refused">‏PKG Manager לא קיבל את החבילה: %1$s</string>
+    <string name="pkgmgr_asking">מבקש מ-PKG Manager להתקין…</string>
+    <string name="install_port_label2">פורט המתקין (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">‏PKG Manager (מתוך קבל payloads) מתקין חבילות שבקונסולה: הקישור מועתק קודם אל %1$s ואז מותקן. לא צריך etaHEN.</string>
 </resources>

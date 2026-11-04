@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">Читання теки…</string>
     <string name="upload_folder_empty">У цій теці немає файлів.</string>
     <string name="upload_folder_queued">%1$s: %2$d файлів прямують до %3$s</string>
+    <string name="pkgmgr_copying">Спершу пакет копіюється на консоль (%1$s). PKG Manager встановить його, щойно він там буде.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager встановлює пакети, що лежать на консолі, тож потрібні налаштування FTP, щоб спершу скопіювати його туди.</string>
+    <string name="pkgmgr_installing">PKG Manager встановлює %1$s.</string>
+    <string name="pkgmgr_refused">PKG Manager не прийняв пакет: %1$s</string>
+    <string name="pkgmgr_asking">Просимо PKG Manager встановити його…</string>
+    <string name="install_port_label2">Порт інсталятора (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (з «Отримати payload») встановлює пакети, що лежать на консолі: посилання спершу копіюється в %1$s, потім встановлюється. etaHEN не потрібен.</string>
 </resources>

@@ -90,6 +90,14 @@ class PhoneFileSource(private val cr: ContentResolver, private val uri: Uri) : B
 suspend fun installRequest(host: String, port: String, pkgUrl: String): InstallReply =
     withContext(Dispatchers.IO) {
         val base = "http://$host:$port"
+        // PKG Manager installs packages that are on the console: the link is copied there first, then it installs it
+        if (isPkgManager(host, port)) {
+            val queued = PkgManagerRoute.enqueue?.invoke(pkgUrl, port) ?: false
+            return@withContext InstallReply(
+                queued,
+                if (queued) AppText.get(R.string.pkgmgr_copying, PKG_DROP_DIR) else AppText.get(R.string.pkgmgr_need_ftp)
+            )
+        }
         try {
             val form = MultipartBody.Builder().setType(MultipartBody.FORM)
                 .addFormDataPart("file", "", "".toRequestBody("application/octet-stream".toMediaType()))
@@ -143,6 +151,58 @@ private fun jsonString(s: String): String {
     }
     return sb.append('"').toString()
 }
+
+// ---------------------------------------------------------------------------------------------
+// PKG Manager (itsPLK/ps5-pkg-manager): a package installer that runs from elfldr, without etaHEN. It installs a package
+// that is already on the console (POST /api/install {"path": "/data/pkg/x.pkg"}), so a link or a file from the phone
+// goes to the console over FTP first (into [PKG_DROP_DIR]) and the installer is asked once it is there.
+// ---------------------------------------------------------------------------------------------
+
+/** PKG Manager's port. */
+const val PKGMGR_PORT = "8844"
+
+/** Where packages wait on the console for PKG Manager. */
+const val PKG_DROP_DIR = "/data/pkg"
+
+/** How the app queues "copy this link to the console, then install it" (set by the screen that owns the transfers). */
+object PkgManagerRoute {
+    @Volatile
+    var enqueue: ((url: String, installerPort: String) -> Boolean)? = null
+}
+
+/** True when PKG Manager answers on [port]: its version is a short line of text, not a web page. */
+fun isPkgManager(host: String, port: String): Boolean {
+    if (port.trim().toIntOrNull() == null) return false
+    return try {
+        http.newCall(Request.Builder().url("http://$host:${port.trim()}/api/version").get().build()).execute().use { r ->
+            val body = r.body?.string().orEmpty().trim()
+            r.code == 200 && body.isNotEmpty() && body.length < 40 && !body.contains('<') && !body.contains('{')
+        }
+    } catch (_: Exception) {
+        false
+    }
+}
+
+/** The body PKG Manager takes for installing the package at [path] on the console. */
+fun pkgManagerBody(path: String): String = "{\"path\":" + jsonString(path) + "}"
+
+/** Asks PKG Manager on [port] to install [path] (a file on the console). Blocking. */
+fun pkgManagerInstall(host: String, port: String, path: String): InstallReply =
+    try {
+        val req = Request.Builder().url("http://$host:${port.trim()}/api/install")
+            .post(pkgManagerBody(path).toRequestBody("application/json".toMediaType())).build()
+        http.newCall(req).execute().use { r ->
+            val body = r.body?.string().orEmpty()
+            if (body.contains("\"success\":true")) InstallReply(true, AppText.get(R.string.pkgmgr_installing, path.substringAfterLast('/')))
+            else InstallReply(false, Hints.tag(AppText.get(R.string.pkgmgr_refused, pkgManagerError(body) ?: "HTTP ${r.code}"), HelpTopic.INSTALL_REFUSED))
+        }
+    } catch (e: Exception) {
+        InstallReply(false, failedText(e))
+    }
+
+/** The "error" text of a PKG Manager answer, or null. */
+fun pkgManagerError(body: String): String? =
+    Regex("\"error\"\\s*:\\s*\"((?:[^\"\\\\]|\\\\.)*)\"").find(body)?.groupValues?.get(1)
 
 /** Like [installRequest], but only returns the message to show. */
 suspend fun sendInstall(host: String, port: String, pkgUrl: String): String = installRequest(host, port, pkgUrl).text

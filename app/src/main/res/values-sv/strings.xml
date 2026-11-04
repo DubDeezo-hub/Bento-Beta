@@ -1515,4 +1515,11 @@
     <string name="upload_folder_reading">Läser mappen…</string>
     <string name="upload_folder_empty">Den mappen har inga filer.</string>
     <string name="upload_folder_queued">%1$s: %2$d filer på väg till %3$s</string>
+    <string name="pkgmgr_copying">Paketet kopieras först till konsolen (%1$s). PKG Manager installerar det när det är där.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager installerar paket som finns på konsolen, så FTP-inställningarna behövs för att kopiera dit det först.</string>
+    <string name="pkgmgr_installing">PKG Manager installerar %1$s.</string>
+    <string name="pkgmgr_refused">PKG Manager tog inte emot paketet: %1$s</string>
+    <string name="pkgmgr_asking">Ber PKG Manager installera det…</string>
+    <string name="install_port_label2">Installerarens port (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (under Hämta payloads) installerar paket som finns på konsolen: en länk kopieras först till %1$s och installeras sedan. Inget etaHEN behövs.</string>
 </resources>

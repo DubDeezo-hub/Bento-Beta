@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">Se citește dosarul…</string>
     <string name="upload_folder_empty">Dosarul nu are fișiere.</string>
     <string name="upload_folder_queued">%1$s: %2$d fișiere pe drum spre %3$s</string>
+    <string name="pkgmgr_copying">Pachetul se copiază întâi pe consolă (%1$s). PKG Manager îl instalează când ajunge.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager instalează pachete aflate pe consolă, deci sunt necesare setările FTP pentru a-l copia întâi acolo.</string>
+    <string name="pkgmgr_installing">PKG Manager instalează %1$s.</string>
+    <string name="pkgmgr_refused">PKG Manager nu a acceptat pachetul: %1$s</string>
+    <string name="pkgmgr_asking">Se cere PKG Manager să-l instaleze…</string>
+    <string name="install_port_label2">Portul instalatorului (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (din Obține payload-uri) instalează pachete aflate pe consolă: linkul e copiat întâi în %1$s, apoi instalat. Nu e nevoie de etaHEN.</string>
 </resources>

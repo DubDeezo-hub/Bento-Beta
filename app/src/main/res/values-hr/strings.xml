@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">Čitanje mape…</string>
     <string name="upload_folder_empty">U toj mapi nema datoteka.</string>
     <string name="upload_folder_queued">%1$s: %2$d datoteka na putu u %3$s</string>
+    <string name="pkgmgr_copying">Paket se najprije kopira na konzolu (%1$s). PKG Manager ga instalira kad stigne.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager instalira pakete koji su na konzoli, pa su potrebne FTP postavke da se najprije kopira tamo.</string>
+    <string name="pkgmgr_installing">PKG Manager instalira %1$s.</string>
+    <string name="pkgmgr_refused">PKG Manager nije prihvatio paket: %1$s</string>
+    <string name="pkgmgr_asking">Traži se od PKG Managera da ga instalira…</string>
+    <string name="install_port_label2">Port instalatera (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (iz Nabavi payloade) instalira pakete koji su na konzoli: poveznica se najprije kopira u %1$s pa instalira. etaHEN nije potreban.</string>
 </resources>

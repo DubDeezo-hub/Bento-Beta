@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">Čtení složky…</string>
     <string name="upload_folder_empty">Ve složce nejsou žádné soubory.</string>
     <string name="upload_folder_queued">%1$s: %2$d souborů na cestě do %3$s</string>
+    <string name="pkgmgr_copying">Balíček se nejdřív kopíruje do konzole (%1$s). PKG Manager ho nainstaluje, až tam bude.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager instaluje balíčky, které jsou v konzoli, takže je potřeba nastavení FTP, aby se tam nejdřív zkopíroval.</string>
+    <string name="pkgmgr_installing">PKG Manager instaluje %1$s.</string>
+    <string name="pkgmgr_refused">PKG Manager balíček nepřijal: %1$s</string>
+    <string name="pkgmgr_asking">Žádost pro PKG Manager o instalaci…</string>
+    <string name="install_port_label2">Port instalátoru (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (z Získat payloady) instaluje balíčky, které jsou v konzoli: odkaz se nejdřív zkopíruje do %1$s a pak nainstaluje. etaHEN není potřeba.</string>
 </resources>

@@ -1515,4 +1515,11 @@
     <string name="upload_folder_reading">Map lezen…</string>
     <string name="upload_folder_empty">Die map bevat geen bestanden.</string>
     <string name="upload_folder_queued">%1$s: %2$d bestanden onderweg naar %3$s</string>
+    <string name="pkgmgr_copying">Het pakket wordt eerst naar de console gekopieerd (%1$s). PKG Manager installeert het zodra het er is.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager installeert pakketten die op de console staan, dus de FTP-instellingen zijn nodig om het er eerst heen te kopiëren.</string>
+    <string name="pkgmgr_installing">PKG Manager installeert %1$s.</string>
+    <string name="pkgmgr_refused">PKG Manager nam het pakket niet aan: %1$s</string>
+    <string name="pkgmgr_asking">PKG Manager vragen het te installeren…</string>
+    <string name="install_port_label2">Installerpoort (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (via Payloads ophalen) installeert pakketten die op de console staan: een link wordt eerst naar %1$s gekopieerd en dan geïnstalleerd. Geen etaHEN nodig.</string>
 </resources>

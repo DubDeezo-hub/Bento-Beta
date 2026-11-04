@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">Читање фасцикле…</string>
     <string name="upload_folder_empty">У тој фасцикли нема датотека.</string>
     <string name="upload_folder_queued">%1$s: %2$d датотека на путу у %3$s</string>
+    <string name="pkgmgr_copying">Пакет се прво копира на конзолу (%1$s). PKG Manager га инсталира кад стигне.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager инсталира пакете који су на конзоли, па су потребна FTP подешавања да се прво копира тамо.</string>
+    <string name="pkgmgr_installing">PKG Manager инсталира %1$s.</string>
+    <string name="pkgmgr_refused">PKG Manager није прихватио пакет: %1$s</string>
+    <string name="pkgmgr_asking">Тражи се од PKG Manager-а да га инсталира…</string>
+    <string name="install_port_label2">Порт инсталатера (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (из Набави payload-е) инсталира пакете који су на конзоли: веза се прво копира у %1$s, па инсталира. etaHEN није потребан.</string>
 </resources>

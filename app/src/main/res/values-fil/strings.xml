@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">Binabasa ang folder…</string>
     <string name="upload_folder_empty">Walang file sa folder na iyon.</string>
     <string name="upload_folder_queued">%1$s: %2$d file papunta sa %3$s</string>
+    <string name="pkgmgr_copying">Kinokopya muna ang package sa console (%1$s). Ii-install ito ng PKG Manager pagdating doon.</string>
+    <string name="pkgmgr_need_ftp">Nag-i-install ang PKG Manager ng package na nasa console, kaya kailangan ang FTP settings para kopyahin muna ito roon.</string>
+    <string name="pkgmgr_installing">Ini-install ng PKG Manager ang %1$s.</string>
+    <string name="pkgmgr_refused">Hindi tinanggap ng PKG Manager ang package: %1$s</string>
+    <string name="pkgmgr_asking">Hinihiling sa PKG Manager na i-install ito…</string>
+    <string name="install_port_label2">Port ng installer (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">Ang PKG Manager (mula sa Kumuha ng payload) ay nag-i-install ng package na nasa console: kinokopya muna ang link sa %1$s, saka ini-install. Hindi kailangan ng etaHEN.</string>
 </resources>

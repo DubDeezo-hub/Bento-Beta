@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">ఫోల్డర్ చదువుతోంది…</string>
     <string name="upload_folder_empty">ఆ ఫోల్డర్‌లో ఫైళ్లు లేవు.</string>
     <string name="upload_folder_queued">%1$s: %2$d ఫైళ్లు %3$s కు వెళ్తున్నాయి</string>
+    <string name="pkgmgr_copying">ముందు ప్యాకేజీ కన్సోల్‌కు (%1$s) కాపీ అవుతోంది. అక్కడికి చేరాక PKG Manager ఇన్‌స్టాల్ చేస్తుంది.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager కన్సోల్‌లో ఉన్న ప్యాకేజీలను ఇన్‌స్టాల్ చేస్తుంది, కాబట్టి ముందు అక్కడికి కాపీ చేయడానికి FTP సెట్టింగ్‌లు కావాలి.</string>
+    <string name="pkgmgr_installing">PKG Manager %1$s ఇన్‌స్టాల్ చేస్తోంది.</string>
+    <string name="pkgmgr_refused">PKG Manager ప్యాకేజీని తీసుకోలేదు: %1$s</string>
+    <string name="pkgmgr_asking">ఇన్‌స్టాల్ చేయమని PKG Manager‌ను అడుగుతోంది…</string>
+    <string name="install_port_label2">ఇన్‌స్టాలర్ పోర్ట్ (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (పేలోడ్‌లు పొందు నుంచి) కన్సోల్‌లో ఉన్న ప్యాకేజీలను ఇన్‌స్టాల్ చేస్తుంది: లింక్ ముందు %1$s కు కాపీ అయి తర్వాత ఇన్‌స్టాల్ అవుతుంది. etaHEN అవసరం లేదు.</string>
 </resources>

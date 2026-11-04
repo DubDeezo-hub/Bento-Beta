@@ -227,7 +227,15 @@ fun InstallTab(
         TextButton(onClick = { pkgPicker.launch(arrayOf("*/*")) }) { Text(str(R.string.meta_check_phone)) }
         // Set once and then left alone: folded away
         Foldable(str(R.string.settings_section), Tip.INSTALL_PORT, summary = str(R.string.settings_port_summary, port)) {
-            Field(str(R.string.install_port_label, type.installerName), port, onPortChange) // etaHEN's installer, or the RPI app on a PS4
+            // PKG Manager on a PS5 without etaHEN, etaHEN's installer with it, the RPI app on a PS4
+            val etaHen = type == ConsoleType.PS5 && ActiveConsole.etaHen
+            Field(
+                str(R.string.install_port_label2, if (etaHen) "etaHEN" else type.installerName, if (etaHen) ETAHEN_INSTALLER else type.installPort),
+                port, onPortChange
+            )
+            if (type == ConsoleType.PS5 && !etaHen) {
+                Text(str(R.string.pkgmgr_hint, PKG_DROP_DIR), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
         }
     }
 }

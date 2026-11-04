@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">Đang đọc thư mục…</string>
     <string name="upload_folder_empty">Thư mục đó không có tệp nào.</string>
     <string name="upload_folder_queued">%1$s: %2$d tệp đang được gửi tới %3$s</string>
+    <string name="pkgmgr_copying">Gói đang được chép sang máy trước (%1$s). PKG Manager sẽ cài khi gói đã tới.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager cài các gói có sẵn trên máy, nên cần cài đặt FTP để chép gói sang trước.</string>
+    <string name="pkgmgr_installing">PKG Manager đang cài %1$s.</string>
+    <string name="pkgmgr_refused">PKG Manager không nhận gói: %1$s</string>
+    <string name="pkgmgr_asking">Đang nhờ PKG Manager cài đặt…</string>
+    <string name="install_port_label2">Cổng trình cài đặt (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (trong Lấy payload) cài các gói có trên máy: liên kết được chép vào %1$s trước rồi mới cài. Không cần etaHEN.</string>
 </resources>

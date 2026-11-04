@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">در حال خواندن پوشه…</string>
     <string name="upload_folder_empty">آن پوشه فایلی ندارد.</string>
     <string name="upload_folder_queued">‏%1$s: %2$d فایل در راه %3$s</string>
+    <string name="pkgmgr_copying">بسته ابتدا به کنسول (%1$s) کپی می‌شود. PKG Manager وقتی رسید آن را نصب می‌کند.</string>
+    <string name="pkgmgr_need_ftp">‏PKG Manager بسته‌هایی را که روی کنسول هستند نصب می‌کند، پس برای کپی کردن ابتدا تنظیمات FTP لازم است.</string>
+    <string name="pkgmgr_installing">‏PKG Manager در حال نصب %1$s است.</string>
+    <string name="pkgmgr_refused">‏PKG Manager بسته را نپذیرفت: %1$s</string>
+    <string name="pkgmgr_asking">درخواست نصب از PKG Manager…</string>
+    <string name="install_port_label2">درگاه نصب‌کننده (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">‏PKG Manager (از دریافت پی‌لودها) بسته‌های روی کنسول را نصب می‌کند: پیوند ابتدا به %1$s کپی و سپس نصب می‌شود. به etaHEN نیازی نیست.</string>
 </resources>

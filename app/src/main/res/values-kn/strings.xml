@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">ಫೋಲ್ಡರ್ ಓದಲಾಗುತ್ತಿದೆ…</string>
     <string name="upload_folder_empty">ಆ ಫೋಲ್ಡರ್‌ನಲ್ಲಿ ಫೈಲ್‌ಗಳಿಲ್ಲ.</string>
     <string name="upload_folder_queued">%1$s: %2$d ಫೈಲ್‌ಗಳು %3$s ಕಡೆಗೆ ಹೋಗುತ್ತಿವೆ</string>
+    <string name="pkgmgr_copying">ಮೊದಲು ಪ್ಯಾಕೇಜ್ ಕನ್ಸೋಲ್‌ಗೆ (%1$s) ನಕಲಾಗುತ್ತಿದೆ. ಅಲ್ಲಿಗೆ ತಲುಪಿದ ಮೇಲೆ PKG Manager ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡುತ್ತದೆ.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager ಕನ್ಸೋಲ್‌ನಲ್ಲಿರುವ ಪ್ಯಾಕೇಜ್‌ಗಳನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡುತ್ತದೆ, ಹಾಗಾಗಿ ಮೊದಲು ನಕಲಿಸಲು FTP ಸೆಟ್ಟಿಂಗ್ ಬೇಕು.</string>
+    <string name="pkgmgr_installing">PKG Manager %1$s ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡುತ್ತಿದೆ.</string>
+    <string name="pkgmgr_refused">PKG Manager ಪ್ಯಾಕೇಜ್ ಸ್ವೀಕರಿಸಲಿಲ್ಲ: %1$s</string>
+    <string name="pkgmgr_asking">PKG Manager ಗೆ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಲು ಕೇಳಲಾಗುತ್ತಿದೆ…</string>
+    <string name="install_port_label2">ಇನ್‌ಸ್ಟಾಲರ್ ಪೋರ್ಟ್ (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (ಪೇಲೋಡ್ ಪಡೆಯಿರಿ ಇಂದ) ಕನ್ಸೋಲ್‌ನಲ್ಲಿರುವ ಪ್ಯಾಕೇಜ್ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡುತ್ತದೆ: ಲಿಂಕ್ ಮೊದಲು %1$s ಗೆ ನಕಲಾಗಿ ನಂತರ ಇನ್‌ಸ್ಟಾಲ್. etaHEN ಬೇಡ.</string>
 </resources>

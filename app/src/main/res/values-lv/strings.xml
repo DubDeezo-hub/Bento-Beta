@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">Lasa mapi…</string>
     <string name="upload_folder_empty">Šajā mapē nav failu.</string>
     <string name="upload_folder_queued">%1$s: %2$d faili ceļā uz %3$s</string>
+    <string name="pkgmgr_copying">Vispirms pakotne tiek kopēta uz konsoli (%1$s). PKG Manager to instalēs, kad tā tur būs.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager instalē konsolē esošas pakotnes, tāpēc vajag FTP iestatījumus, lai to vispirms tur nokopētu.</string>
+    <string name="pkgmgr_installing">PKG Manager instalē %1$s.</string>
+    <string name="pkgmgr_refused">PKG Manager nepieņēma pakotni: %1$s</string>
+    <string name="pkgmgr_asking">Lūdz PKG Manager to instalēt…</string>
+    <string name="install_port_label2">Instalētāja ports (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (no Iegūt payload) instalē konsolē esošas pakotnes: saite vispirms tiek kopēta uz %1$s, tad instalēta. etaHEN nav vajadzīgs.</string>
 </resources>

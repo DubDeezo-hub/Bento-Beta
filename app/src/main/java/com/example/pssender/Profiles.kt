@@ -44,8 +44,9 @@ const val PROFILE_NAME_MAX = 16
 /**
  * Which console a saved console is: what it is called ([model]), the homebrew enabler that runs on it ([hen]), what its
  * package installer is called in the port field ([installerName]) and the ports its usual services listen on. A PS5's
- * defaults are the standalone payloads that come with the jailbreak (elfldr on 9021, ftpsrv on 2121); etaHEN is optional
- * (see [Profile.etaHen]) and brings its own FTP server on 1337 and the installer on 12800. A PS4 runs GoldHEN (loader on
+ * defaults are the standalone payloads that come with the jailbreak (elfldr on 9021, ftpsrv on 2121) and PKG Manager as
+ * the package installer (8844); etaHEN is optional (see [Profile.etaHen]) and brings its own FTP server on 1337 and its
+ * installer on 12800. A PS4 runs GoldHEN (loader on
  * 9090, FTP on 2121) and installs packages through flatz's Remote Package Installer (RPI) on 12800.
  */
 enum class ConsoleType(
@@ -57,7 +58,7 @@ enum class ConsoleType(
     val loaderPort: String,
     val ftpPort: String
 ) {
-    PS5("ps5", "PS5", "etaHEN", "etaHEN", "12800", "9021", "2121"),
+    PS5("ps5", "PS5", "etaHEN", "PKG Manager", PKGMGR_PORT, "9021", "2121"),
     PS4("ps4", "PS4", "GoldHEN", "RPI", "12800", "9090", "2121");
 
     companion object {
@@ -68,6 +69,12 @@ enum class ConsoleType(
 
 /** etaHEN's own FTP server port (on by default in etaHEN), used instead of ftpsrv's when a PS5 runs etaHEN. */
 const val ETAHEN_FTP = "1337"
+
+/** etaHEN's package installer port, used instead of PKG Manager's when a PS5 runs etaHEN. */
+const val ETAHEN_INSTALLER = "12800"
+
+/** What the installer port field calls the installer of [p]. */
+fun installerNameOf(p: Profile): String = if (p.type == ConsoleType.PS5 && p.etaHen) "etaHEN" else p.type.installerName
 
 /** The standalone payloads a PS5 uses without etaHEN, and their ports (shown on the consoles sheet). */
 const val STANDALONE_PORTS = "elfldr 9021 · ftpsrv 2121 · websrv 8080 · klogsrv 3232 · shsrv 2323 · ps5debug 744"
@@ -95,7 +102,7 @@ data class Profile(
     val id: String,
     val name: String,
     val host: String = "",
-    val installPort: String = "12800",
+    val installPort: String = ConsoleType.PS5.installPort,
     val payloadPort: String = "9021",
     // New consoles get ftpsrv's port. Consoles saved before keep theirs (see parseProfiles and legacyProfile)
     val ftpPort: String = ConsoleType.PS5.ftpPort,
@@ -138,12 +145,18 @@ fun otherUsualFtp(ftpPort: String): Int? = when (ftpPort.trim()) {
 fun Profile.withEtaHen(on: Boolean): Profile {
     if (type != ConsoleType.PS5 || on == etaHen) return copy(etaHen = on && type == ConsoleType.PS5)
     val ftp = ftpPort.trim()
+    val inst = installPort.trim()
     return copy(
         etaHen = on,
         ftpPort = when {
             on && ftp == ConsoleType.PS5.ftpPort -> ETAHEN_FTP
             !on && ftp == ETAHEN_FTP -> ConsoleType.PS5.ftpPort
             else -> ftpPort
+        },
+        installPort = when {
+            on && inst == ConsoleType.PS5.installPort -> ETAHEN_INSTALLER
+            !on && inst == ETAHEN_INSTALLER -> ConsoleType.PS5.installPort
+            else -> installPort
         }
     )
 }
@@ -197,6 +210,7 @@ fun profilesToJson(list: List<Profile>): String {
                 .put("color", p.color)
                 .put("type", p.type.id)
                 .put("etaHen", p.etaHen)
+                .put("installer2", true)
         )
     }
     return arr.toString()
@@ -229,7 +243,14 @@ fun parseProfiles(json: String?): List<Profile> {
                     type = ConsoleType.of(o.optString("type", "")),
                     // Saved before the switch existed: on when the console was set to etaHEN's FTP port
                     etaHen = o.optBoolean("etaHen", ConsoleType.of(o.optString("type", "")) == ConsoleType.PS5 && o.optString("ftpPort", "").trim() == ETAHEN_FTP)
-                )
+                ).let { p ->
+                    // Saved before PKG Manager was the default: a PS5 without etaHEN on etaHEN's installer port moves to it
+                    if (!o.has("installer2") && p.type == ConsoleType.PS5 && !p.etaHen && p.installPort.trim() == ETAHEN_INSTALLER) {
+                        p.copy(installPort = ConsoleType.PS5.installPort)
+                    } else {
+                        p
+                    }
+                }
             }
         }
     } catch (_: Exception) {
@@ -242,7 +263,7 @@ fun legacyProfile(get: (String, String) -> String, id: String = newProfileId()):
     id = id,
     name = AppText.get(R.string.profile_default, ConsoleType.PS5.model),
     host = get("host", ""),
-    installPort = get("install_port", "12800"),
+    installPort = get("install_port", ETAHEN_INSTALLER).let { if (get("ftp_port", "").trim() == ETAHEN_FTP) it else if (it == ETAHEN_INSTALLER) ConsoleType.PS5.installPort else it },
     payloadPort = get("payload_port", "9021"),
     // A fresh install comes through here too (nothing saved yet), so it gets the new default
     ftpPort = get("ftp_port", ConsoleType.PS5.ftpPort),

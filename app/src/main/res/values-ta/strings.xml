@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">கோப்புறை படிக்கப்படுகிறது…</string>
     <string name="upload_folder_empty">அந்தக் கோப்புறையில் கோப்புகள் இல்லை.</string>
     <string name="upload_folder_queued">%1$s: %2$d கோப்புகள் %3$s க்குச் செல்கின்றன</string>
+    <string name="pkgmgr_copying">முதலில் தொகுப்பு கன்சோலுக்கு (%1$s) நகலெடுக்கப்படுகிறது. அங்கு வந்ததும் PKG Manager நிறுவும்.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager கன்சோலில் உள்ள தொகுப்புகளை நிறுவுகிறது, எனவே முதலில் நகலெடுக்க FTP அமைப்புகள் தேவை.</string>
+    <string name="pkgmgr_installing">PKG Manager %1$s ஐ நிறுவுகிறது.</string>
+    <string name="pkgmgr_refused">PKG Manager தொகுப்பை ஏற்கவில்லை: %1$s</string>
+    <string name="pkgmgr_asking">நிறுவ PKG Manager-இடம் கேட்கப்படுகிறது…</string>
+    <string name="install_port_label2">நிறுவி போர்ட் (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (பேலோடுகளைப் பெறு இலிருந்து) கன்சோலில் உள்ள தொகுப்புகளை நிறுவுகிறது: இணைப்பு முதலில் %1$s க்கு நகலெடுக்கப்பட்டு பின் நிறுவப்படும். etaHEN தேவையில்லை.</string>
 </resources>

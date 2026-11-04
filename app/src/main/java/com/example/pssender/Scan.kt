@@ -56,7 +56,7 @@ class ScanPorts(val installer: List<Int>, val loader: List<Int>, val ftp: List<I
 fun scanPortsFor(profile: Profile): ScanPorts {
     fun own(text: String): List<Int> = listOfNotNull(text.trim().toIntOrNull()?.takeIf { it in 1..65535 })
     return ScanPorts(
-        installer = (own(profile.installPort) + 12800).distinct(),
+        installer = (own(profile.installPort) + listOf(8844, 12800)).distinct(),
         loader = (own(profile.payloadPort) + listOf(9021, 9090)).distinct(),
         ftp = (own(profile.ftpPort) + listOf(2121, 1337)).distinct()
     )

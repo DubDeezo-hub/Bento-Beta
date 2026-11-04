@@ -443,6 +443,29 @@ fun SenderApp(
     }
     val startTransfer: (TransferRequest) -> Unit = { req -> startTransfers(listOf(req)) }
 
+    // PKG Manager installs packages that are on the console: an install link is copied to the console first (a transfer
+    // like any other, with its progress), and the installer is asked once it is there
+    SideEffect {
+        PkgManagerRoute.enqueue = { url, installerPort ->
+            val settings = ftpSettings
+            if (settings == null) {
+                false
+            } else {
+                val name = URLUtil.guessFileName(url, null, null).let { if (it.endsWith(".pkg", true)) it else "$it.pkg" }
+                scope.launch {
+                    startTransfer(
+                        TransferRequest(
+                            name = name, host = settings.host, port = settings.port, user = settings.user, pass = settings.pass,
+                            dir = PKG_DROP_DIR, url = url, userAgent = FALLBACK_UA,
+                            cookie = CookieManager.getInstance().getCookie(url), installWith = installerPort
+                        )
+                    )
+                }
+                true
+            }
+        }
+    }
+
     // Transfers the last run of the app did not finish: Continue puts them back in the queue, each one up to date (the
     // console's address of the day, this session's password, the browser's cookie for a link). Whether a picked file can
     // still be read is looked at off the main thread; what cannot be found is said in the status line.

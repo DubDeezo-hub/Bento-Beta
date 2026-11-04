@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">ফোল্ডার পড়া হচ্ছে…</string>
     <string name="upload_folder_empty">ওই ফোল্ডারে কোনো ফাইল নেই।</string>
     <string name="upload_folder_queued">%1$s: %2$dটি ফাইল %3$s এ যাচ্ছে</string>
+    <string name="pkgmgr_copying">প্রথমে প্যাকেজটি কনসোলে (%1$s) কপি হচ্ছে। পৌঁছালে PKG Manager ইনস্টল করবে।</string>
+    <string name="pkgmgr_need_ftp">PKG Manager কনসোলে থাকা প্যাকেজ ইনস্টল করে, তাই আগে সেখানে কপি করতে FTP সেটিংস লাগবে।</string>
+    <string name="pkgmgr_installing">PKG Manager %1$s ইনস্টল করছে।</string>
+    <string name="pkgmgr_refused">PKG Manager প্যাকেজটি নেয়নি: %1$s</string>
+    <string name="pkgmgr_asking">PKG Manager-কে ইনস্টল করতে বলা হচ্ছে…</string>
+    <string name="install_port_label2">ইনস্টলার পোর্ট (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (পেলোড পান থেকে) কনসোলে থাকা প্যাকেজ ইনস্টল করে: লিংক আগে %1$s এ কপি হয়, তারপর ইনস্টল। etaHEN লাগে না।</string>
 </resources>

@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">กำลังอ่านโฟลเดอร์…</string>
     <string name="upload_folder_empty">โฟลเดอร์นั้นไม่มีไฟล์</string>
     <string name="upload_folder_queued">%1$s: กำลังส่ง %2$d ไฟล์ไปที่ %3$s</string>
+    <string name="pkgmgr_copying">กำลังคัดลอกแพ็กเกจไปที่คอนโซล (%1$s) ก่อน เมื่อถึงแล้ว PKG Manager จะติดตั้งให้</string>
+    <string name="pkgmgr_need_ftp">PKG Manager ติดตั้งแพ็กเกจที่อยู่บนคอนโซล จึงต้องใช้การตั้งค่า FTP เพื่อคัดลอกไปก่อน</string>
+    <string name="pkgmgr_installing">PKG Manager กำลังติดตั้ง %1$s</string>
+    <string name="pkgmgr_refused">PKG Manager ไม่รับแพ็กเกจ: %1$s</string>
+    <string name="pkgmgr_asking">กำลังขอให้ PKG Manager ติดตั้ง…</string>
+    <string name="install_port_label2">พอร์ตตัวติดตั้ง (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (จาก รับเพย์โหลด) ติดตั้งแพ็กเกจที่อยู่บนคอนโซล: ลิงก์จะถูกคัดลอกไปที่ %1$s ก่อนแล้วจึงติดตั้ง ไม่ต้องใช้ etaHEN</string>
 </resources>

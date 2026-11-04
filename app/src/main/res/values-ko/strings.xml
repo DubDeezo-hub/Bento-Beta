@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">폴더 읽는 중…</string>
     <string name="upload_folder_empty">그 폴더에는 파일이 없습니다.</string>
     <string name="upload_folder_queued">%1$s: 파일 %2$d개를 %3$s(으)로 보내는 중</string>
+    <string name="pkgmgr_copying">먼저 패키지를 콘솔(%1$s)로 복사합니다. 도착하면 PKG Manager가 설치합니다.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager는 콘솔에 있는 패키지를 설치하므로, 먼저 복사하려면 FTP 설정이 필요합니다.</string>
+    <string name="pkgmgr_installing">PKG Manager가 %1$s을(를) 설치하는 중입니다.</string>
+    <string name="pkgmgr_refused">PKG Manager가 패키지를 받지 않았습니다: %1$s</string>
+    <string name="pkgmgr_asking">PKG Manager에 설치를 요청하는 중…</string>
+    <string name="install_port_label2">설치기 포트 (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager(페이로드 받기에서)는 콘솔에 있는 패키지를 설치합니다. 링크는 먼저 %1$s에 복사된 뒤 설치됩니다. etaHEN은 필요 없습니다.</string>
 </resources>

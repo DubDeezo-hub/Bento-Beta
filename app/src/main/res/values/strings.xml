@@ -1519,4 +1519,11 @@
     <string name="upload_folder_reading">Reading the folder…</string>
     <string name="upload_folder_empty">That folder has no files in it.</string>
     <string name="upload_folder_queued">%1$s: %2$d files on their way to %3$s</string>
+    <string name="pkgmgr_copying">Copying the package to the console (%1$s) first. PKG Manager installs it once it\'s there.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager installs packages that are on the console, so the FTP settings are needed to copy it there first.</string>
+    <string name="pkgmgr_installing">PKG Manager is installing %1$s.</string>
+    <string name="pkgmgr_refused">PKG Manager didn\'t take the package: %1$s</string>
+    <string name="pkgmgr_asking">Asking PKG Manager to install it…</string>
+    <string name="install_port_label2">Installer port (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (from Get payloads) installs packages that are on the console: a link is copied to %1$s first, then installed. No etaHEN needed.</string>
 </resources>

@@ -964,8 +964,44 @@ class FileHostHandler(BaseHTTPRequestHandler):
         pass
 
 
+class PkgManagerHandler(BaseHTTPRequestHandler):
+    """Like PKG Manager (port 8844): it installs a package that is already on the console, named by its path."""
+
+    def do_GET(self):
+        if self.path.split("?")[0] in ("/api/version", "/version"):
+            return self.reply(200, b"1.4.0", "text/plain")
+        self.reply(404, b"", "text/plain")
+
+    def do_POST(self):
+        length = int(self.headers.get("Content-Length", "0") or 0)
+        body = self.rfile.read(length).decode("utf-8", "replace")
+        if self.path != "/api/install":
+            return self.reply(404, b"", "text/plain")
+        try:
+            path = json.loads(body).get("path", "")
+        except ValueError:
+            path = ""
+        on_disk = os.path.join(BASE, "ftp", path.lstrip("/"))
+        if not path or not os.path.isfile(on_disk):
+            print(f"[install/pkgmgr] missing {path}", flush=True)
+            return self.reply(200, b'{"success":false,"error":"Package file not found or cannot be opened"}', "application/json")
+        print(f"[install/pkgmgr] path={path}", flush=True)
+        self.reply(200, b'{"success":true,"message":"Installation queued"}', "application/json")
+
+    def reply(self, code, data, kind):
+        self.send_response(code)
+        self.send_header("Content-Type", kind)
+        self.send_header("Content-Length", str(len(data)))
+        self.end_headers()
+        self.wfile.write(data)
+
+    def log_message(self, *args):
+        pass
+
+
 def main():
     start_fake_debugger()
+    threading.Thread(target=HTTPServer(("0.0.0.0", 8844), PkgManagerHandler).serve_forever, daemon=True).start()
     start_fake_klog()
     threading.Thread(
         target=HTTPServer(("0.0.0.0", 12800), InstallHandler).serve_forever, daemon=True
@@ -999,7 +1035,7 @@ def main():
     # reaches this machine under another address than the one it sees itself on (an Android emulator: 10.0.2.2)
     if os.environ.get("FAKE_FTP_ADDRESS"):
         handler.masquerade_address = os.environ["FAKE_FTP_ADDRESS"]
-    print(f"Fake console running: install 12800, payload 9021/9090, ftp 2121, web 8088/8089, memory {DEBUG_PORT}, log {KLOG_PORT}. Ctrl+C to stop.", flush=True)
+    print(f"Fake console running: install 12800 (etaHEN) / 8844 (PKG Manager), payload 9021/9090, ftp 2121, web 8088/8089, memory {DEBUG_PORT}, log {KLOG_PORT}. Ctrl+C to stop.", flush=True)
     FTPServer(("0.0.0.0", 2121), handler).serve_forever()
 
 

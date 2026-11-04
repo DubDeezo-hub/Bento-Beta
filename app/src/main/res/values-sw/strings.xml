@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">Inasoma folda…</string>
     <string name="upload_folder_empty">Folda hiyo haina faili.</string>
     <string name="upload_folder_queued">%1$s: faili %2$d njiani kwenda %3$s</string>
+    <string name="pkgmgr_copying">Kifurushi kinanakiliwa kwanza kwenye konsoli (%1$s). PKG Manager itakisakinisha kikifika.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager husakinisha vifurushi vilivyo kwenye konsoli, kwa hiyo mipangilio ya FTP inahitajika kukinakili huko kwanza.</string>
+    <string name="pkgmgr_installing">PKG Manager inasakinisha %1$s.</string>
+    <string name="pkgmgr_refused">PKG Manager haikupokea kifurushi: %1$s</string>
+    <string name="pkgmgr_asking">Inaomba PKG Manager ikisakinishe…</string>
+    <string name="install_port_label2">Mlango wa kisakinishi (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (kutoka Pata payload) husakinisha vifurushi vilivyo kwenye konsoli: kiungo kinanakiliwa kwanza kwenye %1$s, kisha kusakinishwa. Hakuna haja ya etaHEN.</string>
 </resources>

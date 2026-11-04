@@ -203,8 +203,25 @@ class TransferService : Service() {
 
     private fun runTransfer(entry: QueueEntry<TransferRequest>): TransferResult {
         val req = entry.item
-        val memory = TransferState.memoryFor(entry.id)
         val settings = FtpSettings(req.host, req.port, req.user, req.pass, req.model)
+        val installer = req.installWith ?: return moveFiles(entry, settings)
+        // A package for PKG Manager: its folder is made if needed, the package is copied there, then it is installed
+        try {
+            ftpMakeDirs(settings, req.dir, emptyList(), makeTop = true)
+        } catch (_: Exception) {
+            // the folder may be there already, or the upload says what is wrong
+        }
+        val copied = moveFiles(entry, settings)
+        if (!copied.ok) return copied
+        TransferState.status(AppText.get(R.string.pkgmgr_asking))
+        val reply = pkgManagerInstall(req.host, installer, joinPath(req.dir, req.name))
+        TransferState.status("")
+        return TransferResult(reply.ok, reply.text)
+    }
+
+    private fun moveFiles(entry: QueueEntry<TransferRequest>, settings: FtpSettings): TransferResult {
+        val req = entry.item
+        val memory = TransferState.memoryFor(entry.id)
         return when {
             req.remotePath != null ->
                 ftpDownloadToPhone(contentResolver, req.remotePath, req.name, req.remoteSize, settings, memory, TransferState, req.dir)

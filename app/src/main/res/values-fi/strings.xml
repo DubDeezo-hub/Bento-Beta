@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">Luetaan kansiota…</string>
     <string name="upload_folder_empty">Kansiossa ei ole tiedostoja.</string>
     <string name="upload_folder_queued">%1$s: %2$d tiedostoa matkalla kohteeseen %3$s</string>
+    <string name="pkgmgr_copying">Paketti kopioidaan ensin konsoliin (%1$s). PKG Manager asentaa sen, kun se on perillä.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager asentaa konsolilla olevia paketteja, joten FTP-asetuksia tarvitaan sen kopioimiseen sinne ensin.</string>
+    <string name="pkgmgr_installing">PKG Manager asentaa: %1$s.</string>
+    <string name="pkgmgr_refused">PKG Manager ei ottanut pakettia: %1$s</string>
+    <string name="pkgmgr_asking">Pyydetään PKG Manageria asentamaan…</string>
+    <string name="install_port_label2">Asentajan portti (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (kohdasta Hae payloadit) asentaa konsolilla olevia paketteja: linkki kopioidaan ensin kansioon %1$s ja asennetaan sitten. etaHENiä ei tarvita.</string>
 </resources>

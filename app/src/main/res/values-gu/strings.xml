@@ -1514,4 +1514,11 @@
     <string name="upload_folder_reading">ફોલ્ડર વંચાય છે…</string>
     <string name="upload_folder_empty">એ ફોલ્ડરમાં કોઈ ફાઇલ નથી.</string>
     <string name="upload_folder_queued">%1$s: %2$d ફાઇલો %3$s તરફ જઈ રહી છે</string>
+    <string name="pkgmgr_copying">પહેલાં પેકેજ કન્સોલ પર (%1$s) કૉપિ થાય છે. ત્યાં પહોંચે એટલે PKG Manager ઇન્સ્ટોલ કરે છે.</string>
+    <string name="pkgmgr_need_ftp">PKG Manager કન્સોલ પરના પેકેજ ઇન્સ્ટોલ કરે છે, તેથી પહેલાં ત્યાં કૉપિ કરવા FTP સેટિંગ્સ જોઈએ.</string>
+    <string name="pkgmgr_installing">PKG Manager %1$s ઇન્સ્ટોલ કરે છે.</string>
+    <string name="pkgmgr_refused">PKG Manager એ પેકેજ ન લીધું: %1$s</string>
+    <string name="pkgmgr_asking">PKG Manager ને ઇન્સ્ટોલ કરવા કહેવાય છે…</string>
+    <string name="install_port_label2">ઇન્સ્ટોલર પોર્ટ (%1$s: %2$s)</string>
+    <string name="pkgmgr_hint">PKG Manager (પેલોડ મેળવો માંથી) કન્સોલ પરના પેકેજ ઇન્સ્ટોલ કરે છે: લિંક પહેલાં %1$s માં કૉપિ થાય પછી ઇન્સ્ટોલ. etaHEN જરૂરી નથી.</string>
 </resources>
