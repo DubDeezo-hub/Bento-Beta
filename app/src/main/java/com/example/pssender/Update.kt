@@ -93,8 +93,13 @@ fun parseRelease(json: String): ReleaseInfo? {
                 val name = a.optString("name", "")
                 val link = a.optString("browser_download_url", "")
                 if (link.isNotEmpty() && name.endsWith(".apk", ignoreCase = true)) {
-                    apk = link
-                    break
+                    // A release also carries a copy under the old name (Bento-<version>.apk) for versions from before
+                    // the rename; GitHub lists it first, so the app's own name wins whenever it is there
+                    if (name.startsWith("Crimson-Multitool", ignoreCase = true)) {
+                        apk = link
+                        break
+                    }
+                    if (apk == null) apk = link
                 }
             }
         }
