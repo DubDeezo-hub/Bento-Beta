@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">Kaustas /data pole nanoDNS-i seadeid. Kui blokeerid uuendusi muul viisil, võid seda eirata.</string>
     <string name="upd_ok">nanoDNS blokeerib %1$d uuendusaadressi (%2$s).</string>
     <string name="upd_none">Failis %1$s pole uuendusreegleid: uuendused ei pruugi olla blokeeritud.</string>
+    <string name="console_etahen">See konsool kasutab etaHEN-i</string>
+    <string name="console_etahen_on">Kasutab etaHEN-i enda FTP-serverit (1337). Paketid paigaldatakse etaHEN-i paigaldajaga (12800).</string>
+    <string name="console_etahen_off">Kasutab jailbreakiga kaasas olevaid payloade: %1$s. Lülita sisse, kui laadid etaHEN-i.</string>
 </resources>

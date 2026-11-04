@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">ไม่พบการตั้งค่า nanoDNS ใน /data ถ้าคุณบล็อกการอัปเดตด้วยวิธีอื่น ข้ามได้เลย</string>
     <string name="upd_ok">nanoDNS บล็อกที่อยู่การอัปเดต %1$d รายการ (%2$s)</string>
     <string name="upd_none">ไม่มีกฎการอัปเดตใน %1$s การอัปเดตอาจไม่ได้ถูกบล็อก</string>
+    <string name="console_etahen">คอนโซลนี้ใช้ etaHEN</string>
+    <string name="console_etahen_on">ใช้เซิร์ฟเวอร์ FTP ของ etaHEN เอง (1337) แพ็กเกจติดตั้งผ่านตัวติดตั้งของ etaHEN (12800)</string>
+    <string name="console_etahen_off">ใช้เพย์โหลดที่มากับการเจลเบรก: %1$s เปิดถ้าคุณโหลด etaHEN</string>
 </resources>

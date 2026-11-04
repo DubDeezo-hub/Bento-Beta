@@ -121,7 +121,7 @@ fun FindConsoleDialog(
                         hits.forEach { hit -> HitRow(hit, savedHost, otherConsoles[hit.host]) { onUse(hit.host) } }
                     } else if (phase != FindPhase.SCANNING) {
                         Text(str(R.string.find_none))
-                        Text(str(R.string.find_none_try, type.hen), style = MaterialTheme.typography.bodySmall)
+                        Text(str(R.string.find_none_try, henName(type)), style = MaterialTheme.typography.bodySmall)
                     }
                     Text(
                         str(R.string.find_privacy),

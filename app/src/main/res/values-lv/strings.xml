@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">/data nav nanoDNS iestatījumu. Ja atjauninājumus bloķējat citādi, ignorējiet.</string>
     <string name="upd_ok">nanoDNS bloķē %1$d atjauninājumu adreses (%2$s).</string>
     <string name="upd_none">%1$s nav atjauninājumu kārtulu: atjauninājumi var nebūt bloķēti.</string>
+    <string name="console_etahen">Šī konsole izmanto etaHEN</string>
+    <string name="console_etahen_on">Izmanto etaHEN pašu FTP serveri (1337). Pakotnes instalē ar etaHEN instalētāju (12800).</string>
+    <string name="console_etahen_off">Izmanto payload, kas nāk ar jailbreak: %1$s. Ieslēdziet, ja ielādējat etaHEN.</string>
 </resources>

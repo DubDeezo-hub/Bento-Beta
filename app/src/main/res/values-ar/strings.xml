@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">لم تُعثر إعدادات nanoDNS في /data. إن كنت تحظر التحديثات بطريقة أخرى فتجاهل هذا.</string>
     <string name="upd_ok">يحظر nanoDNS %1$d عناوين تحديث (%2$s).</string>
     <string name="upd_none">لا قواعد تحديث في %1$s: قد لا تكون التحديثات محظورة.</string>
+    <string name="console_etahen">هذا الجهاز يشغّل etaHEN</string>
+    <string name="console_etahen_on">يستخدم خادم FTP الخاص بـ etaHEN ‏(1337). تُثبَّت الحزم عبر مثبّت etaHEN ‏(12800).</string>
+    <string name="console_etahen_off">يستخدم الحمولات التي تأتي مع كسر الحماية: %1$s. فعّله إذا كنت تحمّل etaHEN.</string>
 </resources>

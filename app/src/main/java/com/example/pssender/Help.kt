@@ -188,7 +188,7 @@ fun HelpDialog(topic: HelpTopic, details: String, onClose: () -> Unit) {
                 Text(str(topic.what))
                 Text(str(R.string.help_try), style = MaterialTheme.typography.labelLarge, modifier = Modifier.padding(top = 6.dp))
                 // The advice may name the console (%1$s, "PS5") and its homebrew enabler (%2$s, "etaHEN")
-                Text(str(remedyFor(topic, type), type.model, type.hen))
+                Text(str(remedyFor(topic, type), type.model, henName(type)))
                 Text(str(R.string.help_details), style = MaterialTheme.typography.labelLarge, modifier = Modifier.padding(top = 6.dp))
                 Text(
                     details,

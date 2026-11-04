@@ -55,7 +55,7 @@ object Running {
     ) else listOf(
         RunPort(12800, RunKind.INSTALLER),
         RunPort(9021, RunKind.LOADER), RunPort(9020, RunKind.LOADER),
-        RunPort(1337, RunKind.FTP), RunPort(2121, RunKind.FTP), RunPort(21, RunKind.FTP),
+        RunPort(2121, RunKind.FTP), RunPort(1337, RunKind.FTP), RunPort(21, RunKind.FTP),
         RunPort(DEBUG_PORT, RunKind.DEBUGGER),
         RunPort(3232, RunKind.LOG), RunPort(ETAHEN_KLOG_PORT, RunKind.LOG),
         RunPort(8080, RunKind.WEB),

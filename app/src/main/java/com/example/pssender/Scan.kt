@@ -58,7 +58,7 @@ fun scanPortsFor(profile: Profile): ScanPorts {
     return ScanPorts(
         installer = (own(profile.installPort) + 12800).distinct(),
         loader = (own(profile.payloadPort) + listOf(9021, 9090)).distinct(),
-        ftp = (own(profile.ftpPort) + listOf(1337, 2121)).distinct()
+        ftp = (own(profile.ftpPort) + listOf(2121, 1337)).distinct()
     )
 }
 

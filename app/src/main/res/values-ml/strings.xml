@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">/data-ൽ nanoDNS ക്രമീകരണങ്ങൾ ഇല്ല. മറ്റൊരു വിധത്തിൽ അപ്ഡേറ്റ് തടയുന്നുണ്ടെങ്കിൽ ഇത് അവഗണിക്കുക.</string>
     <string name="upd_ok">nanoDNS %1$d അപ്ഡേറ്റ് വിലാസങ്ങൾ തടയുന്നു (%2$s).</string>
     <string name="upd_none">%1$s-ൽ അപ്ഡേറ്റ് നിയമങ്ങളില്ല: അപ്ഡേറ്റുകൾ തടഞ്ഞിട്ടുണ്ടാവില്ല.</string>
+    <string name="console_etahen">ഈ കൺസോൾ etaHEN ഉപയോഗിക്കുന്നു</string>
+    <string name="console_etahen_on">etaHEN-ന്റെ സ്വന്തം FTP സെർവർ (1337) ഉപയോഗിക്കുന്നു. പാക്കേജുകൾ etaHEN ഇൻസ്റ്റാളർ (12800) വഴി ഇൻസ്റ്റാൾ ചെയ്യുന്നു.</string>
+    <string name="console_etahen_off">ജയിൽബ്രേക്കിനൊപ്പം വരുന്ന പേലോഡുകൾ ഉപയോഗിക്കുന്നു: %1$s. etaHEN ലോഡ് ചെയ്യുന്നെങ്കിൽ ഓണാക്കുക.</string>
 </resources>

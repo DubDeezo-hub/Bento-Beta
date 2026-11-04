@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">/data‌లో nanoDNS సెట్టింగ్‌లు లేవు. వేరే విధంగా అప్‌డేట్‌లు నిరోధిస్తుంటే దీన్ని పట్టించుకోకండి.</string>
     <string name="upd_ok">nanoDNS %1$d అప్‌డేట్ చిరునామాలను నిరోధిస్తుంది (%2$s).</string>
     <string name="upd_none">%1$s‌లో అప్‌డేట్ నియమాలు లేవు: అప్‌డేట్‌లు నిరోధించబడకపోవచ్చు.</string>
+    <string name="console_etahen">ఈ కన్సోల్ etaHEN నడుపుతుంది</string>
+    <string name="console_etahen_on">etaHEN స్వంత FTP సర్వర్ (1337) వాడుతుంది. ప్యాకేజీలు etaHEN ఇన్‌స్టాలర్ (12800) ద్వారా ఇన్‌స్టాల్ అవుతాయి.</string>
+    <string name="console_etahen_off">జైల్‌బ్రేక్‌తో వచ్చే పేలోడ్‌లు వాడుతుంది: %1$s. etaHEN లోడ్ చేస్తే ఆన్ చేయండి.</string>
 </resources>

@@ -311,7 +311,7 @@ fun PayloadTab(
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         TipTitle(str(R.string.payload_shelf_title), Tip.PAYLOAD_SHELF, style = MaterialTheme.typography.titleMedium)
         if (shelf.isEmpty()) {
-            Text(str(R.string.payload_shelf_empty, ActiveConsole.type.hen), style = MaterialTheme.typography.bodySmall)
+            Text(str(R.string.payload_shelf_empty, henName(ActiveConsole.type)), style = MaterialTheme.typography.bodySmall)
         }
         // The shelf as round tiles: tap a tile for its details (checksum, Remove), Send under it
         FlowRow(

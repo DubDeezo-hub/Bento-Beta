@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">V /data nejsou nastavení nanoDNS. Pokud blokujete aktualizace jinak, můžete to ignorovat.</string>
     <string name="upd_ok">nanoDNS blokuje %1$d adres aktualizací (%2$s).</string>
     <string name="upd_none">V %1$s nejsou pravidla pro aktualizace: aktualizace možná nejsou blokované.</string>
+    <string name="console_etahen">Tato konzole používá etaHEN</string>
+    <string name="console_etahen_on">Používá vlastní FTP server etaHEN (1337). Balíčky se instalují instalátorem etaHEN (12800).</string>
+    <string name="console_etahen_off">Používá payloady, které přicházejí s jailbreakem: %1$s. Zapněte, pokud načítáte etaHEN.</string>
 </resources>

@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">在 /data 中沒有找到 nanoDNS 設定。如果你用其他方式封鎖更新，請忽略。</string>
     <string name="upd_ok">nanoDNS 封鎖了 %1$d 個更新位址（%2$s）。</string>
     <string name="upd_none">%1$s 中沒有更新規則：更新可能沒有被封鎖。</string>
+    <string name="console_etahen">這台主機執行 etaHEN</string>
+    <string name="console_etahen_on">使用 etaHEN 內建的 FTP 伺服器（1337）。安裝包透過 etaHEN 的安裝器（12800）安裝。</string>
+    <string name="console_etahen_off">使用越獄附帶的酬載：%1$s。如果你載入 etaHEN，請開啟。</string>
 </resources>

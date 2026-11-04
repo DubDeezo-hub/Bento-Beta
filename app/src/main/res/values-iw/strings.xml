@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">לא נמצאו הגדרות nanoDNS ב־/data. אם אתה חוסם עדכונים בדרך אחרת, התעלם מזה.</string>
     <string name="upd_ok">‏nanoDNS חוסם %1$d כתובות עדכון (%2$s).</string>
     <string name="upd_none">אין כללי עדכון ב־%1$s: ייתכן שהעדכונים לא חסומים.</string>
+    <string name="console_etahen">הקונסולה הזו מריצה etaHEN</string>
+    <string name="console_etahen_on">משתמש בשרת ה-FTP של etaHEN ‏(1337). חבילות מותקנות דרך המתקין של etaHEN ‏(12800).</string>
+    <string name="console_etahen_off">משתמש ב-payloads שמגיעים עם הפריצה: %1$s. הפעל אם אתה טוען את etaHEN.</string>
 </resources>

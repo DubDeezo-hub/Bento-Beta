@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">/dataにnanoDNSの設定が見つかりません。別の方法でブロックしているなら無視してかまいません。</string>
     <string name="upd_ok">nanoDNSは%1$d件のアップデートアドレスをブロックしています（%2$s）。</string>
     <string name="upd_none">%1$sにアップデートのルールがありません。ブロックされていない可能性があります。</string>
+    <string name="console_etahen">この本体は etaHEN を使う</string>
+    <string name="console_etahen_on">etaHEN 内蔵の FTP サーバー（1337）を使います。パッケージは etaHEN のインストーラー（12800）で入ります。</string>
+    <string name="console_etahen_off">脱獄に付属するペイロードを使います：%1$s。etaHEN を読み込むならオンにしてください。</string>
 </resources>

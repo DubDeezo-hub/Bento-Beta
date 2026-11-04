@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">Hakuna mipangilio ya nanoDNS kwenye /data. Ukizuia masasisho kwa njia nyingine, puuza hili.</string>
     <string name="upd_ok">nanoDNS inazuia anwani %1$d za masasisho (%2$s).</string>
     <string name="upd_none">Hakuna sheria za masasisho kwenye %1$s: huenda masasisho hayajazuiwa.</string>
+    <string name="console_etahen">Konsoli hii inaendesha etaHEN</string>
+    <string name="console_etahen_on">Inatumia seva ya FTP ya etaHEN yenyewe (1337). Vifurushi husakinishwa kupitia kisakinishi cha etaHEN (12800).</string>
+    <string name="console_etahen_off">Inatumia payload zinazokuja na jailbreak: %1$s. Washa ikiwa unapakia etaHEN.</string>
 </resources>

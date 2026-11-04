@@ -19,6 +19,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -43,9 +44,10 @@ const val PROFILE_NAME_MAX = 16
 
 /**
  * Which console a saved console is: what it is called ([model]), the homebrew enabler that runs on it ([hen]), what its
- * package installer is called in the port field ([installerName]) and the ports its usual services listen on. A PS5 runs
- * etaHEN, which brings the installer, the loader and its own FTP server (1337, on by default); a PS4 runs GoldHEN
- * (loader on 9090, FTP on 2121) and installs packages through flatz's Remote Package Installer (RPI) on 12800.
+ * package installer is called in the port field ([installerName]) and the ports its usual services listen on. A PS5's
+ * defaults are the standalone payloads that come with the jailbreak (elfldr on 9021, ftpsrv on 2121); etaHEN is optional
+ * (see [Profile.etaHen]) and brings its own FTP server on 1337 and the installer on 12800. A PS4 runs GoldHEN (loader on
+ * 9090, FTP on 2121) and installs packages through flatz's Remote Package Installer (RPI) on 12800.
  */
 enum class ConsoleType(
     val id: String,
@@ -56,7 +58,7 @@ enum class ConsoleType(
     val loaderPort: String,
     val ftpPort: String
 ) {
-    PS5("ps5", "PS5", "etaHEN", "etaHEN", "12800", "9021", "1337"),
+    PS5("ps5", "PS5", "etaHEN", "etaHEN", "12800", "9021", "2121"),
     PS4("ps4", "PS4", "GoldHEN", "RPI", "12800", "9090", "2121");
 
     companion object {
@@ -65,10 +67,20 @@ enum class ConsoleType(
     }
 }
 
+/** etaHEN's own FTP server port (on by default in etaHEN), used instead of ftpsrv's when a PS5 runs etaHEN. */
+const val ETAHEN_FTP = "1337"
+
+/** The standalone payloads a PS5 uses without etaHEN, and their ports (shown on the consoles sheet). */
+const val STANDALONE_PORTS = "elfldr 9021 · ftpsrv 2121 · websrv 8080 · klogsrv 3232 · shsrv 2323 · ps5debug 744"
+
 /** The type of the console that is selected, for texts made where no console is at hand (help pages, error messages). */
 object ActiveConsole {
     @Volatile
     var type: ConsoleType = ConsoleType.PS5
+
+    /** Whether the selected console runs etaHEN (see [Profile.etaHen]). */
+    @Volatile
+    var etaHen: Boolean = false
 
     /** The saved console's id, for things remembered per console (like its firmware). */
     @Volatile
@@ -86,15 +98,35 @@ data class Profile(
     val host: String = "",
     val installPort: String = "12800",
     val payloadPort: String = "9021",
-    // New consoles get etaHEN's own FTP port. Consoles saved before keep theirs (see parseProfiles and legacyProfile)
+    // New consoles get ftpsrv's port. Consoles saved before keep theirs (see parseProfiles and legacyProfile)
     val ftpPort: String = ConsoleType.PS5.ftpPort,
     val ftpUser: String = "anonymous",
     val ftpDir: String = "/data",
     /** Which accent color (a position in [ACCENTS]) this console uses across the app. */
     val color: Int = 0,
     /** Which console it is, a PS5 or a PS4. */
-    val type: ConsoleType = ConsoleType.PS5
+    val type: ConsoleType = ConsoleType.PS5,
+    /** A PS5 that runs etaHEN: its FTP server is etaHEN's own (1337). Off, the standalone payloads' ports are used. */
+    val etaHen: Boolean = false
 )
+
+/** The name of what runs the homebrew on a console of [type]: etaHEN, or elfldr on a PS5 without it; GoldHEN on a PS4. */
+fun henName(type: ConsoleType, etaHen: Boolean = ActiveConsole.etaHen): String =
+    if (type == ConsoleType.PS5 && !etaHen) "elfldr" else type.hen
+
+/** This console with etaHEN turned [on] or off: the FTP port follows when it is still the usual one. */
+fun Profile.withEtaHen(on: Boolean): Profile {
+    if (type != ConsoleType.PS5 || on == etaHen) return copy(etaHen = on && type == ConsoleType.PS5)
+    val ftp = ftpPort.trim()
+    return copy(
+        etaHen = on,
+        ftpPort = when {
+            on && ftp == ConsoleType.PS5.ftpPort -> ETAHEN_FTP
+            !on && ftp == ETAHEN_FTP -> ConsoleType.PS5.ftpPort
+            else -> ftpPort
+        }
+    )
+}
 
 /**
  * This console as a [to]. A port that is still the old type's usual one becomes the new type's (a port typed by hand
@@ -104,11 +136,14 @@ fun Profile.withType(to: ConsoleType): Profile {
     if (to == type) return this
     fun swap(current: String, old: String, new: String): String = if (current.trim() == old) new else current
     val usualName = AppText.get(R.string.profile_default, type.model)
-    return copy(
+    // etaHEN is a PS5 thing: a PS5 on etaHEN's FTP port goes back to the usual one first
+    val base = if (type == ConsoleType.PS5 && etaHen) withEtaHen(false) else this
+    return base.copy(
         type = to,
-        installPort = swap(installPort, type.installPort, to.installPort),
-        payloadPort = swap(payloadPort, type.loaderPort, to.loaderPort),
-        ftpPort = swap(ftpPort, type.ftpPort, to.ftpPort),
+        etaHen = false,
+        installPort = swap(base.installPort, type.installPort, to.installPort),
+        payloadPort = swap(base.payloadPort, type.loaderPort, to.loaderPort),
+        ftpPort = swap(base.ftpPort, type.ftpPort, to.ftpPort),
         name = if (name == usualName) AppText.get(R.string.profile_default, to.model) else name
     )
 }
@@ -141,6 +176,7 @@ fun profilesToJson(list: List<Profile>): String {
                 .put("ftpDir", p.ftpDir)
                 .put("color", p.color)
                 .put("type", p.type.id)
+                .put("etaHen", p.etaHen)
         )
     }
     return arr.toString()
@@ -170,7 +206,9 @@ fun parseProfiles(json: String?): List<Profile> {
                     // Consoles saved before colors existed get one each, in order, so they look different
                     color = o.optInt("color", i % ACCENTS.size),
                     // Consoles saved before there were types are PS5s
-                    type = ConsoleType.of(o.optString("type", ""))
+                    type = ConsoleType.of(o.optString("type", "")),
+                    // Saved before the switch existed: on when the console was set to etaHEN's FTP port
+                    etaHen = o.optBoolean("etaHen", ConsoleType.of(o.optString("type", "")) == ConsoleType.PS5 && o.optString("ftpPort", "").trim() == ETAHEN_FTP)
                 )
             }
         }
@@ -189,7 +227,8 @@ fun legacyProfile(get: (String, String) -> String, id: String = newProfileId()):
     // A fresh install comes through here too (nothing saved yet), so it gets the new default
     ftpPort = get("ftp_port", ConsoleType.PS5.ftpPort),
     ftpUser = get("ftp_user", "anonymous"),
-    ftpDir = get("ftp_dir", "/data")
+    ftpDir = get("ftp_dir", "/data"),
+    etaHen = get("ftp_port", "").trim() == ETAHEN_FTP
 )
 
 /** Saves and loads the consoles (and which one is selected) in the app's settings. */
@@ -243,6 +282,7 @@ fun ConsolesDialog(
     onDelete: () -> Unit,
     onColor: (Int) -> Unit,
     onType: (ConsoleType) -> Unit,
+    onEtaHen: (Boolean) -> Unit,
     onLanguage: () -> Unit,
     onAbout: () -> Unit,
     onClose: () -> Unit
@@ -348,6 +388,21 @@ fun ConsolesDialog(
                                 .padding(horizontal = 18.dp, vertical = 10.dp)
                         )
                     }
+                }
+                // etaHEN is optional on a PS5: off, the ports are the standalone payloads' (see Profile.withEtaHen)
+                if (active.type == ConsoleType.PS5) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth().padding(top = 12.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(12.dp)
+                    ) {
+                        Text(str(R.string.console_etahen), style = MaterialTheme.typography.labelLarge, modifier = Modifier.weight(1f))
+                        Switch(checked = active.etaHen, onCheckedChange = onEtaHen)
+                    }
+                    Text(
+                        if (active.etaHen) str(R.string.console_etahen_on) else str(R.string.console_etahen_off, STANDALONE_PORTS),
+                        style = MaterialTheme.typography.bodySmall
+                    )
                 }
                 // The actions wrap onto a second line when a language needs more room
                 FlowRow(

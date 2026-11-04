@@ -268,7 +268,7 @@ fun HomeTab(
     val restPart: @Composable () -> Unit = {
         SectionTitle(str(R.string.home_quick_send))
         if (shelf.isEmpty()) {
-            Text(str(R.string.payload_shelf_empty, type.hen), style = MaterialTheme.typography.bodySmall, color = cs.onSurfaceVariant)
+            Text(str(R.string.payload_shelf_empty, henName(type)), style = MaterialTheme.typography.bodySmall, color = cs.onSurfaceVariant)
         } else {
             Row(horizontalArrangement = Arrangement.spacedBy(12.dp), modifier = Modifier.horizontalScroll(rememberScrollState())) {
                 shelf.forEach { item -> PayloadBubble(item.name) { send(item.name) } }

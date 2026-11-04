@@ -1473,4 +1473,7 @@
     <string name="upd_not_found">Keine nanoDNS-Einstellungen in /data gefunden. Wenn du Updates anders blockierst, kannst du das ignorieren.</string>
     <string name="upd_ok">nanoDNS blockiert %1$d Update-Adressen (%2$s).</string>
     <string name="upd_none">Keine Update-Regeln in %1$s gefunden: Updates sind womöglich nicht blockiert.</string>
+    <string name="console_etahen">Diese Konsole nutzt etaHEN</string>
+    <string name="console_etahen_on">Nutzt den eigenen FTP-Server von etaHEN (1337). Pakete werden über den Installer von etaHEN (12800) installiert.</string>
+    <string name="console_etahen_off">Nutzt die Payloads, die mit dem Jailbreak kommen: %1$s. Einschalten, wenn du etaHEN lädst.</string>
 </resources>

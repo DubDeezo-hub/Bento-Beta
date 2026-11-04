@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">/data-তে কোনো nanoDNS সেটিংস নেই। অন্যভাবে আপডেট আটকালে এটি উপেক্ষা করুন।</string>
     <string name="upd_ok">nanoDNS %1$d টি আপডেট ঠিকানা আটকায় (%2$s)।</string>
     <string name="upd_none">%1$s-এ কোনো আপডেট নিয়ম নেই: আপডেট হয়তো আটকানো নেই।</string>
+    <string name="console_etahen">এই কনসোলে etaHEN চলে</string>
+    <string name="console_etahen_on">etaHEN-এর নিজস্ব FTP সার্ভার (1337) ব্যবহার করে। প্যাকেজ etaHEN-এর ইনস্টলার (12800) দিয়ে ইনস্টল হয়।</string>
+    <string name="console_etahen_off">জেলব্রেকের সাথে আসা পেলোড ব্যবহার করে: %1$s। etaHEN লোড করলে চালু করুন।</string>
 </resources>

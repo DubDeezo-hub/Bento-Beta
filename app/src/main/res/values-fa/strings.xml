@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">تنظیمات nanoDNS در /data پیدا نشد. اگر به‌روزرسانی را جور دیگری مسدود می‌کنید، نادیده بگیرید.</string>
     <string name="upd_ok">‏nanoDNS ‏%1$d نشانی به‌روزرسانی را مسدود می‌کند (%2$s).</string>
     <string name="upd_none">قانون به‌روزرسانی در %1$s نیست: شاید به‌روزرسانی‌ها مسدود نباشند.</string>
+    <string name="console_etahen">این کنسول etaHEN را اجرا می‌کند</string>
+    <string name="console_etahen_on">از سرور FTP خود etaHEN ‏(1337) استفاده می‌کند. بسته‌ها با نصب‌کننده etaHEN ‏(12800) نصب می‌شوند.</string>
+    <string name="console_etahen_off">از پی‌لودهایی که همراه جیلبریک می‌آیند استفاده می‌کند: %1$s. اگر etaHEN را بارگذاری می‌کنید روشن کنید.</string>
 </resources>

@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">Tiada tetapan nanoDNS dalam /data. Jika anda menyekat kemas kini dengan cara lain, abaikan ini.</string>
     <string name="upd_ok">nanoDNS menyekat %1$d alamat kemas kini (%2$s).</string>
     <string name="upd_none">Tiada peraturan kemas kini dalam %1$s: kemas kini mungkin tidak disekat.</string>
+    <string name="console_etahen">Konsol ini menjalankan etaHEN</string>
+    <string name="console_etahen_on">Guna pelayan FTP etaHEN sendiri (1337). Pakej dipasang melalui pemasang etaHEN (12800).</string>
+    <string name="console_etahen_off">Guna payload yang datang bersama jailbreak: %1$s. Hidupkan jika anda memuatkan etaHEN.</string>
 </resources>

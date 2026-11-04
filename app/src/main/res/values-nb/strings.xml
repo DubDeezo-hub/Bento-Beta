@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">Ingen nanoDNS-innstillinger i /data. Hvis du blokkerer oppdateringer på en annen måte, kan du se bort fra dette.</string>
     <string name="upd_ok">nanoDNS blokkerer %1$d oppdateringsadresser (%2$s).</string>
     <string name="upd_none">Ingen oppdateringsregler i %1$s: oppdateringer er kanskje ikke blokkert.</string>
+    <string name="console_etahen">Denne konsollen kjører etaHEN</string>
+    <string name="console_etahen_on">Bruker etaHENs egen FTP-server (1337). Pakker installeres med etaHENs installasjonsprogram (12800).</string>
+    <string name="console_etahen_off">Bruker payloadene som følger med jailbreaken: %1$s. Slå på hvis du laster inn etaHEN.</string>
 </resources>

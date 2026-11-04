@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">Walang nanoDNS settings sa /data. Kung iba ang paraan mo ng pag-block ng update, huwag nang pansinin.</string>
     <string name="upd_ok">Nagba-block ang nanoDNS ng %1$d update address (%2$s).</string>
     <string name="upd_none">Walang update rule sa %1$s: baka hindi naka-block ang mga update.</string>
+    <string name="console_etahen">Gumagamit ng etaHEN ang console na ito</string>
+    <string name="console_etahen_on">Gumagamit ng sariling FTP server ng etaHEN (1337). Ini-install ang mga package sa installer ng etaHEN (12800).</string>
+    <string name="console_etahen_off">Gumagamit ng mga payload na kasama ng jailbreak: %1$s. I-on kung naglo-load ka ng etaHEN.</string>
 </resources>

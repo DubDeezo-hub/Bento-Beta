@@ -1,20 +1,28 @@
 package com.example.pssender
 
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class PortsTest {
     @Test
-    fun aNewPs5UsesEtaHensOwnFtp() {
-        assertEquals("1337", Profile(id = "a", name = "A").ftpPort)
-        assertEquals("1337", ConsoleType.PS5.ftpPort)
+    fun aNewPs5UsesTheStandalonePayloads() {
+        val p = Profile(id = "a", name = "A")
+        assertEquals("2121", p.ftpPort)
+        assertEquals("9021", p.payloadPort)
+        assertFalse(p.etaHen)
+        assertEquals("2121", ConsoleType.PS5.ftpPort)
         assertEquals("2121", ConsoleType.PS4.ftpPort)
     }
 
     @Test
     fun aFreshInstallGetsTheNewDefaultButOldSettingsStay() {
-        assertEquals("1337", legacyProfile({ _, default -> default }).ftpPort)
-        assertEquals("2121", legacyProfile({ key, default -> if (key == "ftp_port") "2121" else default }).ftpPort)
+        assertEquals("2121", legacyProfile({ _, default -> default }).ftpPort)
+        assertFalse(legacyProfile({ _, default -> default }).etaHen)
+        val old = legacyProfile({ key, default -> if (key == "ftp_port") "1337" else default })
+        assertEquals("1337", old.ftpPort)
+        assertTrue(old.etaHen)
     }
 
     @Test
@@ -23,17 +31,46 @@ class PortsTest {
         val ps4 = ps5.withType(ConsoleType.PS4)
         assertEquals("2121", ps4.ftpPort)
         assertEquals("9090", ps4.payloadPort)
-        assertEquals("1337", ps4.withType(ConsoleType.PS5).ftpPort)
+        assertEquals("2121", ps4.withType(ConsoleType.PS5).ftpPort)
+        // A PS5 on etaHEN's FTP goes to the PS4's usual port, and etaHEN is off on a PS4
+        val eta = ps5.withEtaHen(true)
+        assertEquals("2121", eta.withType(ConsoleType.PS4).ftpPort)
+        assertFalse(eta.withType(ConsoleType.PS4).etaHen)
         // A port typed by hand stays
         assertEquals("2222", ps5.copy(ftpPort = "2222").withType(ConsoleType.PS4).ftpPort)
-        // A console saved with the old PS5 default (the ftpsrv payload's port) is not moved
-        assertEquals("2121", ps5.copy(ftpPort = "2121").withType(ConsoleType.PS4).ftpPort)
     }
 
     @Test
-    fun diagnoseTriesEtaHensFtpFirstOnAPs5() {
-        assertEquals(listOf(1337, 2121, 21), Diagnose.alternatives(ConsoleType.PS5, DiagService.FTP))
-        assertEquals(listOf(2121, 21, 1337), Diagnose.alternatives(ConsoleType.PS4, DiagService.FTP))
+    fun etaHenIsOptional() {
+        val ps5 = Profile(id = "a", name = "A")
+        val on = ps5.withEtaHen(true)
+        assertTrue(on.etaHen)
+        assertEquals("1337", on.ftpPort)
+        assertEquals("9021", on.payloadPort)
+        assertEquals("2121", on.withEtaHen(false).ftpPort)
+        // A port typed by hand stays either way
+        assertEquals("2222", ps5.copy(ftpPort = "2222").withEtaHen(true).ftpPort)
+        // A PS4 never runs etaHEN
+        assertFalse(ps5.withType(ConsoleType.PS4).withEtaHen(true).etaHen)
+        assertEquals("elfldr", henName(ConsoleType.PS5, false))
+        assertEquals("etaHEN", henName(ConsoleType.PS5, true))
+        assertEquals("GoldHEN", henName(ConsoleType.PS4, false))
+    }
+
+    @Test
+    fun savedConsolesKeepTheirSetup() {
+        val list = listOf(Profile(id = "a", name = "A").withEtaHen(true), Profile(id = "b", name = "B"))
+        assertEquals(list, parseProfiles(profilesToJson(list)))
+        // Saved before the switch: etaHEN's FTP port means etaHEN
+        val old = parseProfiles("""[{"id":"x","name":"X","ftpPort":"1337","type":"ps5"},{"id":"y","name":"Y","ftpPort":"2121","type":"ps5"}]""")
+        assertTrue(old[0].etaHen)
+        assertFalse(old[1].etaHen)
+    }
+
+    @Test
+    fun diagnoseTriesFtpsrvFirst() {
+        assertEquals(listOf(2121, 1337, 21), Diagnose.alternatives(ConsoleType.PS5, DiagService.FTP))
+        assertEquals(listOf(2121, 1337, 21), Diagnose.alternatives(ConsoleType.PS4, DiagService.FTP))
     }
 
     @Test

@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">U /data nema postavki nanoDNS-a. Ako ažuriranja blokirate drugačije, zanemarite ovo.</string>
     <string name="upd_ok">nanoDNS blokira %1$d adresa ažuriranja (%2$s).</string>
     <string name="upd_none">U %1$s nema pravila za ažuriranja: ažuriranja možda nisu blokirana.</string>
+    <string name="console_etahen">Ova konzola koristi etaHEN</string>
+    <string name="console_etahen_on">Koristi etaHEN-ov vlastiti FTP poslužitelj (1337). Paketi se instaliraju etaHEN-ovim instalaterom (12800).</string>
+    <string name="console_etahen_off">Koristi payloade koji dolaze s jailbreakom: %1$s. Uključite ako učitavate etaHEN.</string>
 </resources>

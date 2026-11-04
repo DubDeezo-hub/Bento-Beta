@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">‏/data میں nanoDNS سیٹنگز نہیں ملیں۔ اگر آپ اپ ڈیٹس کسی اور طرح بلاک کرتے ہیں تو اسے نظر انداز کریں۔</string>
     <string name="upd_ok">‏nanoDNS %1$d اپ ڈیٹ پتے بلاک کرتا ہے (%2$s)۔</string>
     <string name="upd_none">‏%1$s میں اپ ڈیٹ کے قواعد نہیں: شاید اپ ڈیٹس بلاک نہیں۔</string>
+    <string name="console_etahen">یہ کنسول etaHEN چلاتا ہے</string>
+    <string name="console_etahen_on">‏etaHEN کا اپنا FTP سرور (1337) استعمال کرتا ہے۔ پیکجز etaHEN کے انسٹالر (12800) سے انسٹال ہوتے ہیں۔</string>
+    <string name="console_etahen_off">جیل بریک کے ساتھ آنے والے پے لوڈز استعمال کرتا ہے: %1$s۔ اگر آپ etaHEN لوڈ کرتے ہیں تو آن کریں۔</string>
 </resources>

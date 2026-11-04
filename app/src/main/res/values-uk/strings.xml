@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">У /data немає налаштувань nanoDNS. Якщо ви блокуєте оновлення інакше, не зважайте.</string>
     <string name="upd_ok">nanoDNS блокує адреси оновлень: %1$d (%2$s).</string>
     <string name="upd_none">У %1$s немає правил для оновлень: можливо, їх не заблоковано.</string>
+    <string name="console_etahen">На цій консолі etaHEN</string>
+    <string name="console_etahen_on">Використовує власний FTP-сервер etaHEN (1337). Пакети ставляться через інсталятор etaHEN (12800).</string>
+    <string name="console_etahen_off">Використовує payload, що йдуть із джейлбрейком: %1$s. Увімкніть, якщо завантажуєте etaHEN.</string>
 </resources>

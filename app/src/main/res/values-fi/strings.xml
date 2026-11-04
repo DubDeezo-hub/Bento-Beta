@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">Kansiossa /data ei ole nanoDNS-asetuksia. Jos estät päivitykset muuten, voit ohittaa tämän.</string>
     <string name="upd_ok">nanoDNS estää %1$d päivitysosoitetta (%2$s).</string>
     <string name="upd_none">Tiedostossa %1$s ei ole päivityssääntöjä: päivityksiä ei ehkä ole estetty.</string>
+    <string name="console_etahen">Tässä konsolissa on etaHEN</string>
+    <string name="console_etahen_on">Käyttää etaHENin omaa FTP-palvelinta (1337). Paketit asennetaan etaHENin asentimella (12800).</string>
+    <string name="console_etahen_off">Käyttää jailbreakin mukana tulevia payloadeja: %1$s. Laita päälle, jos lataat etaHENin.</string>
 </resources>

@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">/data içinde nanoDNS ayarı bulunamadı. Güncellemeleri başka yolla engelliyorsanız bunu yok sayın.</string>
     <string name="upd_ok">nanoDNS %1$d güncelleme adresini engelliyor (%2$s).</string>
     <string name="upd_none">%1$s içinde güncelleme kuralı yok: güncellemeler engellenmemiş olabilir.</string>
+    <string name="console_etahen">Bu konsol etaHEN çalıştırıyor</string>
+    <string name="console_etahen_on">etaHEN\'in kendi FTP sunucusunu (1337) kullanır. Paketler etaHEN\'in yükleyicisiyle (12800) kurulur.</string>
+    <string name="console_etahen_off">Jailbreak ile gelen payload\'ları kullanır: %1$s. etaHEN yüklüyorsanız açın.</string>
 </resources>

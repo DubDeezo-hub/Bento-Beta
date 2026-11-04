@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">/data nerasta nanoDNS nustatymų. Jei atnaujinimus blokuojate kitaip, nekreipkite dėmesio.</string>
     <string name="upd_ok">nanoDNS blokuoja %1$d atnaujinimų adresus (%2$s).</string>
     <string name="upd_none">%1$s nėra atnaujinimų taisyklių: atnaujinimai gali būti neužblokuoti.</string>
+    <string name="console_etahen">Ši konsolė naudoja etaHEN</string>
+    <string name="console_etahen_on">Naudoja etaHEN FTP serverį (1337). Paketai diegiami etaHEN diegimo programa (12800).</string>
+    <string name="console_etahen_off">Naudoja su jailbreak ateinančius payload\'us: %1$s. Įjunkite, jei įkeliate etaHEN.</string>
 </resources>

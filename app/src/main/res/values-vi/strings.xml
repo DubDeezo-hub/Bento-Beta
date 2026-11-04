@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">Không thấy cài đặt nanoDNS trong /data. Nếu bạn chặn cập nhật cách khác, hãy bỏ qua.</string>
     <string name="upd_ok">nanoDNS chặn %1$d địa chỉ cập nhật (%2$s).</string>
     <string name="upd_none">Không có quy tắc cập nhật trong %1$s: có thể cập nhật chưa bị chặn.</string>
+    <string name="console_etahen">Máy này chạy etaHEN</string>
+    <string name="console_etahen_on">Dùng máy chủ FTP riêng của etaHEN (1337). Gói được cài qua trình cài đặt của etaHEN (12800).</string>
+    <string name="console_etahen_off">Dùng các payload đi kèm bản jailbreak: %1$s. Bật nếu bạn nạp etaHEN.</string>
 </resources>

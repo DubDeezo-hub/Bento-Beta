@@ -305,6 +305,7 @@ fun SenderApp(
     // Texts made where no console is at hand (help pages, error messages) name the selected console's type
     SideEffect {
         ActiveConsole.type = active.type
+        ActiveConsole.etaHen = active.etaHen
         ActiveConsole.id = active.id
         PayloadFirmware.consoleFirmware = ConsoleFirmware.number(ConsoleFirmware.get(ctx, active.id))
     }
@@ -785,6 +786,7 @@ fun SenderApp(
                     },
                     onColor = { c -> updateActive { it.copy(color = c) } },
                     onType = { t -> updateActive { it.withType(t) } },
+                    onEtaHen = { on -> updateActive { it.withEtaHen(on) } },
                     onLanguage = {
                         showConsoles = false
                         showLanguage = true

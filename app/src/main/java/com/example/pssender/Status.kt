@@ -83,7 +83,7 @@ fun consoleHeadline(level: ConsoleLevel, down: List<String>, compact: Boolean, t
  */
 fun consoleHint(level: ConsoleLevel, down: List<String>, type: ConsoleType = ConsoleType.PS5): String? = when (level) {
     ConsoleLevel.UNSET -> AppText.get(if (type == ConsoleType.PS4) R.string.status_hint_unset_ps4 else R.string.status_hint_unset)
-    ConsoleLevel.OFFLINE -> AppText.get(R.string.status_hint_offline, type.model, type.hen)
+    ConsoleLevel.OFFLINE -> AppText.get(R.string.status_hint_offline, type.model, henName(type))
     ConsoleLevel.PARTIAL -> when {
         down.isEmpty() -> null
         down.size == 1 -> AppText.get(R.string.status_hint_one, down[0])

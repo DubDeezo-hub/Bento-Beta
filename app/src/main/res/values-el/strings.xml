@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">Δεν βρέθηκαν ρυθμίσεις nanoDNS στο /data. Αν μπλοκάρεις αλλιώς τις ενημερώσεις, αγνόησέ το.</string>
     <string name="upd_ok">Το nanoDNS μπλοκάρει %1$d διευθύνσεις ενημέρωσης (%2$s).</string>
     <string name="upd_none">Κανένας κανόνας ενημέρωσης στο %1$s: ίσως δεν είναι μπλοκαρισμένες.</string>
+    <string name="console_etahen">Αυτή η κονσόλα τρέχει etaHEN</string>
+    <string name="console_etahen_on">Χρησιμοποιεί τον δικό του διακομιστή FTP του etaHEN (1337). Τα πακέτα εγκαθίστανται μέσω του εγκαταστάτη του etaHEN (12800).</string>
+    <string name="console_etahen_off">Χρησιμοποιεί τα payloads που έρχονται με το jailbreak: %1$s. Ενεργοποιήστε αν φορτώνετε το etaHEN.</string>
 </resources>

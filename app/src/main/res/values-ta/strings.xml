@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">/data-இல் nanoDNS அமைப்புகள் இல்லை. வேறு வழியில் புதுப்பிப்புகளைத் தடுத்தால் இதைப் புறக்கணியுங்கள்.</string>
     <string name="upd_ok">nanoDNS %1$d புதுப்பிப்பு முகவரிகளைத் தடுக்கிறது (%2$s).</string>
     <string name="upd_none">%1$s-இல் புதுப்பிப்பு விதிகள் இல்லை: புதுப்பிப்புகள் தடுக்கப்படாமல் இருக்கலாம்.</string>
+    <string name="console_etahen">இந்த கன்சோல் etaHEN இயக்குகிறது</string>
+    <string name="console_etahen_on">etaHEN-இன் சொந்த FTP சர்வரை (1337) பயன்படுத்துகிறது. தொகுப்புகள் etaHEN நிறுவி (12800) மூலம் நிறுவப்படும்.</string>
+    <string name="console_etahen_off">ஜெயில்பிரேக்குடன் வரும் பேலோடுகளைப் பயன்படுத்துகிறது: %1$s. etaHEN ஏற்றினால் இயக்கவும்.</string>
 </resources>

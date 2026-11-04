@@ -1471,4 +1471,7 @@
     <string name="upd_not_found">/data मध्ये nanoDNS सेटिंग्ज सापडल्या नाहीत. दुसऱ्या प्रकारे अपडेट अडवत असल्यास दुर्लक्ष करा.</string>
     <string name="upd_ok">nanoDNS %1$d अपडेट पत्ते अडवतो (%2$s).</string>
     <string name="upd_none">%1$s मध्ये अपडेट नियम नाहीत: अपडेट कदाचित अडवलेले नाहीत.</string>
+    <string name="console_etahen">हा कन्सोल etaHEN चालवतो</string>
+    <string name="console_etahen_on">etaHEN चा स्वतःचा FTP सर्व्हर (1337) वापरतो. पॅकेज etaHEN च्या इंस्टॉलरने (12800) इंस्टॉल होतात.</string>
+    <string name="console_etahen_off">जेलब्रेकसोबत येणारे पेलोड वापरतो: %1$s. etaHEN लोड करत असल्यास चालू करा.</string>
 </resources>
