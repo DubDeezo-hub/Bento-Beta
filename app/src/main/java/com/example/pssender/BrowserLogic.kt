@@ -133,11 +133,26 @@ fun linkAddress(hit: LinkHit, extra: String?, href: String?): String? {
 /** What the browser tells a site when it pretends to be Chrome on a computer and cannot work out a better text from its own. */
 const val DESKTOP_UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 
-/** The web view's own text about itself, [ua], without the "wv" mark that makes some sites treat the app like a bot. */
-fun phoneUserAgent(ua: String): String = ua.replace("; wv", "")
-
 private val ANDROID_SYSTEM_RE = Regex("""\(Linux; Android[^)]*\)""")
 private val VERSION_TOKEN_RE = Regex("""Version/[\d.]+ """)
+
+/**
+ * The web view's own text about itself, [ua], without the marks of an app's built-in browser (the "wv" mark and the
+ * "Version/4.0" word), which make bot checks treat the app like a bot. What is left is what Chrome on the phone says.
+ */
+fun phoneUserAgent(ua: String): String = ua.replace("; wv", "").replace(VERSION_TOKEN_RE, "")
+
+/**
+ * Whether an error answer to a page is a site's "checking your browser" step (Cloudflare and the like): it reloads the real
+ * page by itself a moment later, so it is not the site being down. [headers] are the answer's, any case.
+ */
+fun isBotCheck(code: Int, headers: Map<String, String>?): Boolean {
+    if (code != 403 && code != 429 && code != 503) return false
+    val h = headers.orEmpty().mapKeys { it.key.lowercase() }
+    return h["cf-mitigated"].equals("challenge", ignoreCase = true) ||
+        (h["server"]?.contains("cloudflare", ignoreCase = true) == true) ||
+        h.containsKey("cf-chl-bypass") || h["server"]?.contains("ddos-guard", ignoreCase = true) == true
+}
 
 /** [ua] changed to say "Chrome on a computer" instead of "Chrome on an Android phone", so sites send their full pages. */
 fun desktopUserAgent(ua: String): String {

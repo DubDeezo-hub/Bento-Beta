@@ -115,6 +115,9 @@ fun saveToPhone(ctx: Context, d: PendingDownload) {
     Toast.makeText(ctx, AppText.get(R.string.web_download_started), Toast.LENGTH_SHORT).show()
 }
 
+/** How long a page has to stay on its error before the message shows (a check step reloads sooner). */
+const val HTTP_ERROR_WAIT_MS = 4000L
+
 /** What to tell the user when the site answered the page with an error code such as 404 or 503. */
 fun httpErrorText(code: Int): String =
     AppText.get(if (code in 500..599) R.string.web_http_server else R.string.web_http_other, code.toString())
@@ -344,6 +347,9 @@ fun buildWebView(ctx: Context, hooks: WebHooks): WebView {
         }
 
         override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
+            // A new page started: an error message for the one before (a check step that went on) is no longer true
+            pendingError?.let { errorHandler.removeCallbacks(it) }
+            pendingError = null
             view?.let { hooks.pageChanged(it) }
         }
 
@@ -361,10 +367,22 @@ fun buildWebView(ctx: Context, hooks: WebHooks): WebView {
             }
         }
 
+        // Only a page that stays on its error gets the message: a site's browser check answers with an error code first
+        // and then loads the real page by itself, which is not the site being down
+        private val errorHandler = Handler(Looper.getMainLooper())
+        private var pendingError: Runnable? = null
+
         override fun onReceivedHttpError(view: WebView?, request: WebResourceRequest?, errorResponse: WebResourceResponse?) {
-            if (request?.isForMainFrame == true) {
-                Toast.makeText(ctx, httpErrorText(errorResponse?.statusCode ?: 0), Toast.LENGTH_LONG).show()
+            if (request?.isForMainFrame != true) return
+            val code = errorResponse?.statusCode ?: 0
+            if (isBotCheck(code, errorResponse?.responseHeaders)) return
+            pendingError?.let { errorHandler.removeCallbacks(it) }
+            val show = Runnable {
+                pendingError = null
+                Toast.makeText(ctx, httpErrorText(code), Toast.LENGTH_LONG).show()
             }
+            pendingError = show
+            errorHandler.postDelayed(show, HTTP_ERROR_WAIT_MS)
         }
     }
 
