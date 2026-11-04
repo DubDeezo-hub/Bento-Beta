@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">Jaribu payload zako mwenyewe</string>
     <string name="more_d_language">Lugha ya programu</string>
     <string name="more_d_about">Toleo, masasisho, nakala na mipangilio</string>
+    <string name="web_pieces_title">Pakua faili za wavuti kwa vipande</string>
+    <string name="web_pieces_hint">Huleta sehemu 4 za faili kwa wakati mmoja unapotuma kutoka wavuti kwenda konsoli. Tovuti nyingi hupunguza kasi ya kila muunganisho, hivyo mara nyingi ni haraka mara kadhaa. Tovuti isiyoruhusu hupata muunganisho mmoja.</string>
+    <string name="split_title">Gawanya upakiaji mkubwa (majaribio)</string>
+    <string name="split_hint">Hutuma faili la MB 128 au zaidi kutoka simu kwa sehemu 4 kwa wakati mmoja. Ukiwasha, seva ya FTP ya konsoli hujaribiwa kwanza kwa faili dogo.</string>
+    <string name="split_testing">Inajaribu konsoli…</string>
+    <string name="split_ok">Inafanya kazi na konsoli hii: faili kubwa sasa huenda kwa sehemu 4.</string>
+    <string name="split_failed">Konsoli hii haiwezi kupokea faili kwa sehemu (%1$s). Itabaki imezimwa.</string>
+    <string name="split_wrong_size">Konsoli ina baiti %1$s badala ya %2$s.</string>
+    <string name="split_mixed_up">Faili la majaribio lilirudi limechanganyika.</string>
+    <string name="split_fallback">Inatuma kwa kipande kimoja badala yake…</string>
+    <string name="split_stuck">Sehemu moja imesimama.</string>
 </resources>

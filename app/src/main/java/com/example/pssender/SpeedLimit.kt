@@ -81,13 +81,14 @@ object SpeedLimits {
 
 /**
  * "Files at once": how many files from the phone go to the console at the same time, each on its own FTP connection.
- * Several small files go much faster this way (each file costs a few round trips on its own). One big file is not split.
+ * Several small files go much faster this way (each file costs a few round trips on its own). One big file is split only
+ * with [TransferTuning.splitParts].
  */
 object FilesAtOnce {
     private const val KEY = "files_at_once"
 
-    /** What can be picked. Four is the most a console's FTP server is asked to handle at once. */
-    val choices: List<Int> = listOf(1, 2, 3, 4)
+    /** What can be picked. Eight is the most a console's FTP server is asked to handle at once. */
+    val choices: List<Int> = listOf(1, 2, 3, 4, 6, 8)
 
     /** Two at once unless the person picks otherwise: faster, and gentle on the console. */
     const val DEFAULT = 2

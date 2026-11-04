@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">अपने पेलोड बिल्ड जाँचें</string>
     <string name="more_d_language">ऐप की भाषा</string>
     <string name="more_d_about">वर्शन, अपडेट, बैकअप और सेटिंग्स</string>
+    <string name="web_pieces_title">वेब फ़ाइलें टुकड़ों में डाउनलोड करें</string>
+    <string name="web_pieces_hint">वेब से कंसोल पर भेजते समय फ़ाइल के 4 हिस्से एक साथ लाता है। कई साइटें हर कनेक्शन धीमा करती हैं, इसलिए यह अक्सर कई गुना तेज़ होता है। जो साइट इसकी अनुमति न दे, उसे एक कनेक्शन मिलता है।</string>
+    <string name="split_title">बड़े अपलोड बाँटें (प्रायोगिक)</string>
+    <string name="split_hint">फ़ोन से 128 MB या बड़ी फ़ाइल 4 हिस्सों में एक साथ भेजता है। चालू करने पर पहले छोटी फ़ाइल से कंसोल का FTP सर्वर जाँचा जाता है।</string>
+    <string name="split_testing">कंसोल जाँचा जा रहा है…</string>
+    <string name="split_ok">इस कंसोल के साथ काम करता है: बड़ी फ़ाइलें अब 4 हिस्सों में जाती हैं।</string>
+    <string name="split_failed">यह कंसोल फ़ाइल हिस्सों में नहीं ले सकता (%1$s)। बंद रहेगा।</string>
+    <string name="split_wrong_size">कंसोल पर %2$s की जगह %1$s बाइट हैं।</string>
+    <string name="split_mixed_up">टेस्ट फ़ाइल गड़बड़ होकर लौटी।</string>
+    <string name="split_fallback">इसके बजाय एक टुकड़े में भेजा जा रहा है…</string>
+    <string name="split_stuck">एक हिस्सा रुक गया।</string>
 </resources>

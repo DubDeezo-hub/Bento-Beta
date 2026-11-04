@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">ทดสอบเพย์โหลดที่คุณสร้างเอง</string>
     <string name="more_d_language">ภาษาของแอป</string>
     <string name="more_d_about">เวอร์ชัน อัปเดต สำรองข้อมูล และการตั้งค่า</string>
+    <string name="web_pieces_title">ดาวน์โหลดไฟล์จากเว็บเป็นชิ้น</string>
+    <string name="web_pieces_hint">ดึงไฟล์ 4 ส่วนพร้อมกันเมื่อส่งจากเว็บไปคอนโซล หลายเว็บจำกัดความเร็วแต่ละการเชื่อมต่อ จึงมักเร็วขึ้นหลายเท่า เว็บที่ไม่อนุญาตจะใช้การเชื่อมต่อเดียว</string>
+    <string name="split_title">แบ่งการอัปโหลดใหญ่ (ทดลอง)</string>
+    <string name="split_hint">ส่งไฟล์ 128 MB ขึ้นไปจากโทรศัพท์เป็น 4 ส่วนพร้อมกัน เมื่อเปิดจะทดสอบเซิร์ฟเวอร์ FTP ของคอนโซลด้วยไฟล์เล็กก่อน</string>
+    <string name="split_testing">กำลังทดสอบคอนโซล…</string>
+    <string name="split_ok">ใช้ได้กับคอนโซลนี้: ไฟล์ใหญ่จะส่งเป็น 4 ส่วนแล้ว</string>
+    <string name="split_failed">คอนโซลนี้รับไฟล์เป็นส่วนไม่ได้ (%1$s) จึงยังปิดอยู่</string>
+    <string name="split_wrong_size">คอนโซลมี %1$s ไบต์ แทนที่จะเป็น %2$s</string>
+    <string name="split_mixed_up">ไฟล์ทดสอบกลับมาแบบสลับกัน</string>
+    <string name="split_fallback">ส่งเป็นชิ้นเดียวแทน…</string>
+    <string name="split_stuck">มีส่วนหนึ่งหยุดเคลื่อนไหว</string>
 </resources>

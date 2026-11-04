@@ -1497,4 +1497,15 @@
     <string name="more_d_dev">Prova le tue build di payload</string>
     <string name="more_d_language">La lingua dell\'app</string>
     <string name="more_d_about">Versione, aggiornamenti, backup e impostazioni</string>
+    <string name="web_pieces_title">Scarica i file web a pezzi</string>
+    <string name="web_pieces_hint">Prende 4 parti di un file insieme quando invii dal web alla console. Molti siti rallentano ogni connessione, quindi spesso è molto più veloce. Un sito che non lo permette usa una connessione.</string>
+    <string name="split_title">Dividi i caricamenti grandi (sperimentale)</string>
+    <string name="split_hint">Invia un file da 128 MB in su dal telefono in 4 parti insieme. All\'attivazione prova prima il server FTP della console con un file piccolo.</string>
+    <string name="split_testing">Prova della console…</string>
+    <string name="split_ok">Funziona con questa console: i file grandi ora vanno in 4 parti.</string>
+    <string name="split_failed">Questa console non accetta un file a parti (%1$s). Resta spento.</string>
+    <string name="split_wrong_size">La console ha %1$s byte invece di %2$s.</string>
+    <string name="split_mixed_up">Il file di prova è tornato mescolato.</string>
+    <string name="split_fallback">Invio in un pezzo solo…</string>
+    <string name="split_stuck">Una parte si è fermata.</string>
 </resources>

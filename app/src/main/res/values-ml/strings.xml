@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">നിങ്ങളുടെ പേലോഡ് ബിൽഡുകൾ പരീക്ഷിക്കുക</string>
     <string name="more_d_language">ആപ്പിന്റെ ഭാഷ</string>
     <string name="more_d_about">പതിപ്പ്, അപ്ഡേറ്റുകൾ, ബാക്കപ്പ്, ക്രമീകരണങ്ങൾ</string>
+    <string name="web_pieces_title">വെബ് ഫയലുകൾ കഷണങ്ങളായി ഡൗൺലോഡ്</string>
+    <string name="web_pieces_hint">വെബിൽ നിന്ന് കൺസോളിലേക്ക് അയയ്ക്കുമ്പോൾ ഫയലിന്റെ 4 ഭാഗങ്ങൾ ഒരുമിച്ച് എടുക്കുന്നു. പല സൈറ്റുകളും ഓരോ കണക്ഷനും മന്ദഗതിയിലാക്കുന്നതിനാൽ ഇത് പലപ്പോഴും പല മടങ്ങ് വേഗം. അനുവദിക്കാത്ത സൈറ്റിന് ഒരു കണക്ഷൻ.</string>
+    <string name="split_title">വലിയ അപ്‌ലോഡുകൾ വിഭജിക്കുക (പരീക്ഷണം)</string>
+    <string name="split_hint">ഫോണിൽ നിന്ന് 128 MB അല്ലെങ്കിൽ കൂടുതൽ ഫയൽ 4 ഭാഗങ്ങളായി ഒരുമിച്ച് അയയ്ക്കുന്നു. ഓണാക്കുമ്പോൾ ആദ്യം ചെറിയ ഫയലുപയോഗിച്ച് കൺസോളിന്റെ FTP സെർവർ പരീക്ഷിക്കുന്നു.</string>
+    <string name="split_testing">കൺസോൾ പരീക്ഷിക്കുന്നു…</string>
+    <string name="split_ok">ഈ കൺസോളിൽ പ്രവർത്തിക്കുന്നു: വലിയ ഫയലുകൾ ഇനി 4 ഭാഗങ്ങളായി.</string>
+    <string name="split_failed">ഈ കൺസോളിന് ഫയൽ ഭാഗങ്ങളായി സ്വീകരിക്കാനാവില്ല (%1$s). ഓഫായി തുടരും.</string>
+    <string name="split_wrong_size">കൺസോളിൽ %2$s ന് പകരം %1$s ബൈറ്റുകൾ.</string>
+    <string name="split_mixed_up">പരീക്ഷണ ഫയൽ കലർന്ന് തിരിച്ചെത്തി.</string>
+    <string name="split_fallback">പകരം ഒറ്റ കഷണമായി അയയ്ക്കുന്നു…</string>
+    <string name="split_stuck">ഒരു ഭാഗം നിന്നുപോയി.</string>
 </resources>

@@ -40,6 +40,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.material3.Switch
+import androidx.compose.runtime.mutableStateOf
+import kotlinx.coroutines.withContext
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -637,6 +642,7 @@ fun SpeedLimitDialog(onClose: () -> Unit) {
                         }
                     }
                 }
+                FasterTransfers()
             }
         },
         confirmButton = { TextButton(onClick = onClose) { Text(str(R.string.action_done)) } }
@@ -718,4 +724,58 @@ fun MissedDialog(onClose: () -> Unit) {
         },
         confirmButton = { TextButton(onClick = onClose) { Text(str(R.string.action_done)) } }
     )
+}
+
+/** The speed switches under the speed limit: web files in pieces, and big uploads in parts (after a test on the console). */
+@Composable
+private fun FasterTransfers() {
+    val ctx = LocalContext.current
+    val scope = rememberCoroutineScope()
+    var pieces by remember { mutableStateOf(TransferTuning.webPieces) }
+    val console = ActiveConsole.ftp
+    var split by remember { mutableStateOf(console != null && TransferTuning.partsFor(console) > 1) }
+    var testing by remember { mutableStateOf(false) }
+    var result by remember { mutableStateOf("") }
+    Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(top = 10.dp)) {
+        Column(modifier = Modifier.weight(1f)) {
+            Text(str(R.string.web_pieces_title), style = MaterialTheme.typography.titleSmall)
+            Text(str(R.string.web_pieces_hint), style = MaterialTheme.typography.bodySmall)
+        }
+        Switch(checked = pieces, onCheckedChange = {
+            pieces = it
+            TransferTuning.setWebPieces(ctx, it)
+        })
+    }
+    Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(top = 10.dp)) {
+        Column(modifier = Modifier.weight(1f)) {
+            Text(str(R.string.split_title), style = MaterialTheme.typography.titleSmall)
+            Text(str(R.string.split_hint), style = MaterialTheme.typography.bodySmall)
+        }
+        Switch(checked = split, enabled = console != null && !testing, onCheckedChange = { on ->
+            if (!on) {
+                split = false
+                result = ""
+                TransferTuning.setSplitFor(ctx, "")
+            } else if (console != null) {
+                // Only on after the console wrote a test file in parts and gave it back unchanged
+                testing = true
+                result = AppText.get(R.string.split_testing)
+                scope.launch {
+                    val why = withContext(Dispatchers.IO) { splitSelfTest(console) }
+                    testing = false
+                    if (why == null) {
+                        TransferTuning.setSplitFor(ctx, TransferTuning.consoleKey(console))
+                        split = true
+                        result = AppText.get(R.string.split_ok)
+                    } else {
+                        TransferTuning.setSplitFor(ctx, "")
+                        split = false
+                        result = AppText.get(R.string.split_failed, why)
+                    }
+                }
+            }
+        })
+    }
+    if (testing) LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
+    if (result.isNotEmpty()) Text(result, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.primary)
 }

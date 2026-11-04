@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">Testējiet savas payload versijas</string>
     <string name="more_d_language">Lietotnes valoda</string>
     <string name="more_d_about">Versija, atjauninājumi, dublējums un iestatījumi</string>
+    <string name="web_pieces_title">Lejupielādēt tīmekļa failus pa daļām</string>
+    <string name="web_pieces_hint">Sūtot no tīmekļa uz konsoli, ielādē 4 faila daļas vienlaikus. Daudzas vietnes palēnina katru savienojumu, tāpēc bieži tas ir vairākas reizes ātrāk. Vietne, kas to neļauj, saņem vienu savienojumu.</string>
+    <string name="split_title">Dalīt lielas augšupielādes (eksperimentāli)</string>
+    <string name="split_hint">Sūta 128 MB vai lielāku failu no tālruņa 4 daļās vienlaikus. Ieslēdzot vispirms ar mazu failu tiek pārbaudīts konsoles FTP serveris.</string>
+    <string name="split_testing">Pārbauda konsoli…</string>
+    <string name="split_ok">Darbojas ar šo konsoli: lieli faili tagad iet 4 daļās.</string>
+    <string name="split_failed">Šī konsole nevar pieņemt failu pa daļām (%1$s). Paliek izslēgts.</string>
+    <string name="split_wrong_size">Konsolē ir %1$s baiti %2$s vietā.</string>
+    <string name="split_mixed_up">Testa fails atgriezās sajaukts.</string>
+    <string name="split_fallback">Tā vietā sūta vienā gabalā…</string>
+    <string name="split_stuck">Viena daļa apstājās.</string>
 </resources>

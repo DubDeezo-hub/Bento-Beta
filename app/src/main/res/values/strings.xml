@@ -1501,4 +1501,15 @@
     <string name="more_d_dev">Test your own payload builds</string>
     <string name="more_d_language">The app\'s language</string>
     <string name="more_d_about">Version, updates, backup and settings</string>
+    <string name="web_pieces_title">Download web files in pieces</string>
+    <string name="web_pieces_hint">Fetches 4 parts of a file at once when sending from the web to the console. Many file sites slow down each connection, so this is often several times faster. A site that doesn\'t allow it gets one connection.</string>
+    <string name="split_title">Split big uploads (experimental)</string>
+    <string name="split_hint">Sends a file of 128 MB or more from the phone as 4 parts at once. Turning it on first tests the console\'s FTP server with a small file.</string>
+    <string name="split_testing">Testing the console…</string>
+    <string name="split_ok">It works with this console: big files now go in 4 parts.</string>
+    <string name="split_failed">This console can\'t take a file in parts (%1$s). It stays off.</string>
+    <string name="split_wrong_size">The console has %1$s bytes instead of %2$s.</string>
+    <string name="split_mixed_up">The test file came back mixed up.</string>
+    <string name="split_fallback">Sending it in one piece instead…</string>
+    <string name="split_stuck">A part stopped moving.</string>
 </resources>

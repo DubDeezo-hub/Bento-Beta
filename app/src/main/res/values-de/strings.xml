@@ -1498,4 +1498,15 @@
     <string name="more_d_dev">Eigene Payload-Builds testen</string>
     <string name="more_d_language">Die Sprache der App</string>
     <string name="more_d_about">Version, Updates, Sicherung und Einstellungen</string>
+    <string name="web_pieces_title">Web-Dateien in Teilen laden</string>
+    <string name="web_pieces_hint">Holt 4 Teile einer Datei gleichzeitig, wenn vom Web an die Konsole gesendet wird. Viele Dateiseiten bremsen jede Verbindung, daher ist das oft mehrfach schneller. Seiten, die das nicht erlauben, bekommen eine Verbindung.</string>
+    <string name="split_title">Große Uploads aufteilen (experimentell)</string>
+    <string name="split_hint">Sendet eine Datei ab 128 MB vom Handy in 4 Teilen gleichzeitig. Beim Einschalten wird der FTP-Server der Konsole erst mit einer kleinen Datei getestet.</string>
+    <string name="split_testing">Konsole wird getestet…</string>
+    <string name="split_ok">Klappt mit dieser Konsole: Große Dateien gehen jetzt in 4 Teilen.</string>
+    <string name="split_failed">Diese Konsole kann keine Datei in Teilen annehmen (%1$s). Bleibt aus.</string>
+    <string name="split_wrong_size">Die Konsole hat %1$s Bytes statt %2$s.</string>
+    <string name="split_mixed_up">Die Testdatei kam durcheinander zurück.</string>
+    <string name="split_fallback">Stattdessen in einem Stück senden…</string>
+    <string name="split_stuck">Ein Teil bewegt sich nicht mehr.</string>
 </resources>

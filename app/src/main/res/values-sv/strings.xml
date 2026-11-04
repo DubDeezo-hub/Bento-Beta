@@ -1497,4 +1497,15 @@
     <string name="more_d_dev">Testa dina egna payload-byggen</string>
     <string name="more_d_language">Appens språk</string>
     <string name="more_d_about">Version, uppdateringar, säkerhetskopia och inställningar</string>
+    <string name="web_pieces_title">Hämta webbfiler i bitar</string>
+    <string name="web_pieces_hint">Hämtar 4 delar av en fil samtidigt när du skickar från webben till konsolen. Många sidor bromsar varje anslutning, så det är ofta flera gånger snabbare. En sida som inte tillåter det får en anslutning.</string>
+    <string name="split_title">Dela stora uppladdningar (experimentellt)</string>
+    <string name="split_hint">Skickar en fil på 128 MB eller mer från telefonen i 4 delar samtidigt. När det slås på testas konsolens FTP-server först med en liten fil.</string>
+    <string name="split_testing">Testar konsolen…</string>
+    <string name="split_ok">Det fungerar med den här konsolen: stora filer går nu i 4 delar.</string>
+    <string name="split_failed">Den här konsolen kan inte ta emot en fil i delar (%1$s). Den förblir av.</string>
+    <string name="split_wrong_size">Konsolen har %1$s byte i stället för %2$s.</string>
+    <string name="split_mixed_up">Testfilen kom tillbaka blandad.</string>
+    <string name="split_fallback">Skickar den i ett stycke i stället…</string>
+    <string name="split_stuck">En del står still.</string>
 </resources>

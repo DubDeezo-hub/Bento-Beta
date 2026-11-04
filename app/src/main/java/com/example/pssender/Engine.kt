@@ -438,8 +438,29 @@ internal class TrackingSocketFactory : DefaultSocketFactory() {
     private val sockets = mutableListOf<Socket>()
 
     private fun track(s: Socket): Socket {
-        synchronized(sockets) { sockets.add(s) }
+        tune(s)
+        synchronized(sockets) {
+            // A connection that is reused for many files opens a data connection for each: forget the closed ones
+            sockets.removeAll { it.isClosed }
+            sockets.add(s)
+        }
         return s
+    }
+
+    /**
+     * Commands go out at once instead of waiting to be bundled (each file costs several small exchanges), and larger
+     * socket buffers let a fast Wi-Fi keep more data on the way. A setting the system refuses is simply left as it was.
+     */
+    private fun tune(s: Socket) {
+        try {
+            s.tcpNoDelay = true
+        } catch (_: Exception) {
+        }
+        try {
+            s.sendBufferSize = SOCKET_BUFFER
+            s.receiveBufferSize = SOCKET_BUFFER
+        } catch (_: Exception) {
+        }
     }
 
     override fun createSocket(): Socket = track(super.createSocket())
@@ -462,8 +483,19 @@ internal class TrackingSocketFactory : DefaultSocketFactory() {
     }
 }
 
+/** The socket buffer asked for (the system may give less). */
+private const val SOCKET_BUFFER = 1024 * 1024
+
 /** One FTP client whose connections can all be shut at once. */
 internal class FtpSession {
+    /** Whom it is logged in as, when it is (a session kept for the next file skips logging in again). */
+    @Volatile
+    var loggedInAs: FtpSettings? = null
+
+    /** When it was put aside for reuse. */
+    @Volatile
+    var idleSince = 0L
+
     private val factory = TrackingSocketFactory()
     val ftp = FTPClient().also {
         it.setSocketFactory(factory)
@@ -482,6 +514,69 @@ internal class FtpSession {
         } catch (_: Exception) {
         }
     }
+}
+
+/**
+ * Logged-in connections kept for a moment after a file is done, so the next file of a batch starts at once instead of
+ * connecting and logging in again (several round trips each). A kept connection is checked with a NOOP before it is used,
+ * and dropped after [IDLE_MS].
+ */
+internal object FtpPool {
+    private const val IDLE_MS = 20_000L
+    private const val MAX_KEPT = 8
+    private val kept = ArrayList<FtpSession>()
+
+    fun take(s: FtpSettings): FtpSession? {
+        val now = System.currentTimeMillis()
+        while (true) {
+            val found = synchronized(kept) {
+                kept.removeAll { old -> (now - old.idleSince > IDLE_MS).also { if (it) closeQuietly(old) } }
+                kept.firstOrNull { it.loggedInAs == s }?.also { kept.remove(it) }
+            } ?: return null
+            val alive = try {
+                found.ftp.soTimeout = 3000
+                found.ftp.sendNoOp().also { found.ftp.soTimeout = 60_000 }
+            } catch (_: Exception) {
+                false
+            }
+            if (alive) return found
+            closeQuietly(found)
+        }
+    }
+
+    fun give(session: FtpSession) {
+        if (session.loggedInAs == null || !session.ftp.isConnected) return closeQuietly(session)
+        session.idleSince = System.currentTimeMillis()
+        synchronized(kept) {
+            kept.add(session)
+            while (kept.size > MAX_KEPT) closeQuietly(kept.removeAt(0))
+        }
+    }
+
+    /** Closes every kept connection (the console changed, or the app is cleaning up). */
+    fun clear() {
+        val all = synchronized(kept) { kept.toList().also { kept.clear() } }
+        all.forEach { closeQuietly(it) }
+    }
+
+    private fun closeQuietly(session: FtpSession) {
+        try {
+            if (session.ftp.isConnected) {
+                session.ftp.soTimeout = 2000
+                session.ftp.logout()
+            }
+        } catch (_: Exception) {
+        }
+        session.abort()
+    }
+}
+
+/** Logs [session] in as [s], unless it already is (a kept connection). Null when ready, otherwise the reason it isn't. */
+internal fun sessionLogin(session: FtpSession, s: FtpSettings): Problem? {
+    if (session.loggedInAs == s && session.ftp.isConnected) return null
+    val problem = ftpLogin(session.ftp, s)
+    if (problem == null) session.loggedInAs = s
+    return problem
 }
 
 /** Connects and logs in. Returns null when ready, otherwise the reason it isn't. */
@@ -534,9 +629,12 @@ private fun runFtpAttempt(
     okMessage: String,
     cancelMessage: String,
     abortSource: () -> Unit,
+    settings: FtpSettings? = null,
     work: (FtpSession, StallWatchdog) -> Problem?
 ): TransferResult {
-    val session = FtpSession()
+    // A connection kept from the last file to the same console is used again when there is one
+    val session = settings?.let { FtpPool.take(it) } ?: FtpSession()
+    var keep = false
     val abortAll = {
         abortSource()
         session.abort()
@@ -546,6 +644,7 @@ private fun runFtpAttempt(
     hooks.setAbort(abortAll)
     return try {
         val problem = work(session, watchdog)
+        keep = problem == null && settings != null && !hooks.cancelled && !hooks.paused
         when {
             problem == null -> TransferResult(true, okMessage)
             hooks.cancelled -> TransferResult(false, cancelMessage, cancelled = true)
@@ -561,16 +660,20 @@ private fun runFtpAttempt(
     } finally {
         watchdog.disarm()
         watchdog.close()
-        // Say goodbye politely, but never wait long for a console that has stopped answering
-        try {
-            if (session.ftp.isConnected) {
-                session.ftp.setSoTimeout(5000)
-                session.ftp.logout()
-            }
-        } catch (_: Exception) {
-        }
-        session.abort()
         hooks.setAbort(null)
+        if (keep) {
+            FtpPool.give(session)
+        } else {
+            // Say goodbye politely, but never wait long for a console that has stopped answering
+            try {
+                if (session.ftp.isConnected) {
+                    session.ftp.setSoTimeout(5000)
+                    session.ftp.logout()
+                }
+            } catch (_: Exception) {
+            }
+            session.abort()
+        }
     }
 }
 
@@ -723,7 +826,7 @@ private fun storeAttempt(
     resume: Boolean, mem: ResumeMemory, hooks: TransferHooks, policy: TransferPolicy
 ): Problem? {
     val ftp = session.ftp
-    ftpLogin(ftp, s)?.let { return it }
+    sessionLogin(session, s)?.let { return it }
     var startOver = !(resume && mem.resumeAllowed)
     while (true) {
         var wanted = 0L
@@ -755,8 +858,24 @@ fun ftpUpload(
     val remote = remoteDir.trimEnd('/') + "/" + remoteName
     val okMessage = AppText.get(R.string.sent_to_ps5, remote, s.model)
     val cancelMessage = AppText.get(R.string.err_cancelled_upload, remote)
+    // A big file from the phone to a console that passed the split test goes in parts at the same time. If that doesn't
+    // work out, the file is sent the usual way from the start (a file written in parts can't be continued)
+    val parts = TransferTuning.partsFor(s)
+    if (parts > 1 && source is SplittableSource && hooks.speedLimit == 0L && !mem.started) {
+        val total = source.size()
+        if (total >= SPLIT_MIN) {
+            val problem = splitUpload(source, total, remote, s, parts, hooks)
+            when {
+                problem == null -> return TransferResult(true, okMessage)
+                hooks.cancelled -> return TransferResult(false, cancelMessage, cancelled = true)
+                hooks.paused -> return pausedResult(cancelMessage)
+            }
+            hooks.status(AppText.get(R.string.split_fallback))
+            mem.resumeAllowed = false
+        }
+    }
     return runWithRetries(hooks, policy, mem, cancelMessage) { h, resume ->
-        runFtpAttempt(h, policy, okMessage, cancelMessage, { source.abort() }) { session, watchdog ->
+        runFtpAttempt(h, policy, okMessage, cancelMessage, { source.abort() }, s) { session, watchdog ->
             storeAttempt(session, watchdog, source, remote, s, resume, mem, h, policy)
         }
     }
@@ -771,7 +890,7 @@ private fun retrieveAttempt(
     resume: Boolean, mem: ResumeMemory, hooks: TransferHooks
 ): Problem? {
     val ftp = session.ftp
-    ftpLogin(ftp, s)?.let { return it }
+    sessionLogin(session, s)?.let { return it }
     var startOver = !(resume && mem.resumeAllowed)
     while (true) {
         var offset = if (startOver) 0L else sink.storedLength()
@@ -844,7 +963,7 @@ fun ftpDownload(
 ): TransferResult {
     val cancelMessage = AppText.get(R.string.err_cancelled_download)
     return runWithRetries(hooks, policy, mem, cancelMessage) { h, resume ->
-        runFtpAttempt(h, policy, okMessage, cancelMessage, {}) { session, watchdog ->
+        runFtpAttempt(h, policy, okMessage, cancelMessage, {}, s) { session, watchdog ->
             retrieveAttempt(session, watchdog, sink, remote, size, s, resume, mem, h)
         }
     }

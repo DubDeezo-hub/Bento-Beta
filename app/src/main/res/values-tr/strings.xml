@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">Kendi payload derlemelerini dene</string>
     <string name="more_d_language">Uygulamanın dili</string>
     <string name="more_d_about">Sürüm, güncellemeler, yedek ve ayarlar</string>
+    <string name="web_pieces_title">Web dosyalarını parça parça indir</string>
+    <string name="web_pieces_hint">Webden konsola gönderirken dosyanın 4 parçasını aynı anda alır. Birçok site her bağlantıyı yavaşlatır, bu yüzden bu genelde birkaç kat daha hızlıdır. İzin vermeyen site tek bağlantı kullanır.</string>
+    <string name="split_title">Büyük yüklemeleri böl (deneysel)</string>
+    <string name="split_hint">Telefondan 128 MB ve üzeri bir dosyayı aynı anda 4 parça halinde gönderir. Açıldığında önce konsolun FTP sunucusu küçük bir dosyayla denenir.</string>
+    <string name="split_testing">Konsol deneniyor…</string>
+    <string name="split_ok">Bu konsolda çalışıyor: büyük dosyalar artık 4 parça halinde gidiyor.</string>
+    <string name="split_failed">Bu konsol dosyayı parça halinde alamıyor (%1$s). Kapalı kalıyor.</string>
+    <string name="split_wrong_size">Konsolda %2$s yerine %1$s bayt var.</string>
+    <string name="split_mixed_up">Deneme dosyası karışık geri geldi.</string>
+    <string name="split_fallback">Bunun yerine tek parça gönderiliyor…</string>
+    <string name="split_stuck">Bir parça durdu.</string>
 </resources>

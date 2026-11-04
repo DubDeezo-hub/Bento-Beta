@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">Uji build payload Anda sendiri</string>
     <string name="more_d_language">Bahasa aplikasi</string>
     <string name="more_d_about">Versi, pembaruan, cadangan, dan pengaturan</string>
+    <string name="web_pieces_title">Unduh file web per bagian</string>
+    <string name="web_pieces_hint">Mengambil 4 bagian file sekaligus saat mengirim dari web ke konsol. Banyak situs memperlambat tiap koneksi, jadi ini sering beberapa kali lebih cepat. Situs yang tidak mengizinkan memakai satu koneksi.</string>
+    <string name="split_title">Bagi unggahan besar (eksperimental)</string>
+    <string name="split_hint">Mengirim file 128 MB atau lebih dari ponsel dalam 4 bagian sekaligus. Saat dinyalakan, server FTP konsol diuji dulu dengan file kecil.</string>
+    <string name="split_testing">Menguji konsol…</string>
+    <string name="split_ok">Berfungsi dengan konsol ini: file besar kini dikirim dalam 4 bagian.</string>
+    <string name="split_failed">Konsol ini tidak bisa menerima file per bagian (%1$s). Tetap mati.</string>
+    <string name="split_wrong_size">Konsol punya %1$s byte, bukan %2$s.</string>
+    <string name="split_mixed_up">File uji kembali dalam keadaan teracak.</string>
+    <string name="split_fallback">Mengirimnya utuh saja…</string>
+    <string name="split_stuck">Satu bagian berhenti bergerak.</string>
 </resources>

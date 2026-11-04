@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">Тествайте свои версии на payload</string>
     <string name="more_d_language">Езикът на приложението</string>
     <string name="more_d_about">Версия, обновления, резервно копие и настройки</string>
+    <string name="web_pieces_title">Изтегляне на уеб файлове на части</string>
+    <string name="web_pieces_hint">Взима 4 части от файл наведнъж при изпращане от уеб към конзолата. Много сайтове забавят всяка връзка, затова това често е няколко пъти по-бързо. Сайт, който не го позволява, получава една връзка.</string>
+    <string name="split_title">Разделяне на големи качвания (експериментално)</string>
+    <string name="split_hint">Изпраща файл от 128 MB или повече от телефона на 4 части наведнъж. При включване първо тества FTP сървъра на конзолата с малък файл.</string>
+    <string name="split_testing">Тестване на конзолата…</string>
+    <string name="split_ok">Работи с тази конзола: големите файлове вече отиват на 4 части.</string>
+    <string name="split_failed">Тази конзола не приема файл на части (%1$s). Остава изключено.</string>
+    <string name="split_wrong_size">Конзолата има %1$s байта вместо %2$s.</string>
+    <string name="split_mixed_up">Тестовият файл се върна разбъркан.</string>
+    <string name="split_fallback">Изпращане на едно парче вместо това…</string>
+    <string name="split_stuck">Една част спря да се движи.</string>
 </resources>

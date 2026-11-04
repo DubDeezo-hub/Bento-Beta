@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">自作ペイロードのビルドを試す</string>
     <string name="more_d_language">アプリの言語</string>
     <string name="more_d_about">バージョン、更新、バックアップ、設定</string>
+    <string name="web_pieces_title">Web のファイルを分割してダウンロード</string>
+    <string name="web_pieces_hint">Web から本体へ送るとき、ファイルを 4 つに分けて同時に取得します。多くのサイトは接続ごとに速度を絞るため、数倍速くなることがよくあります。対応しないサイトは 1 本の接続になります。</string>
+    <string name="split_title">大きなアップロードを分割（試験的）</string>
+    <string name="split_hint">スマホから 128 MB 以上のファイルを 4 分割で同時に送ります。オンにするとまず小さなファイルで本体の FTP サーバーを試します。</string>
+    <string name="split_testing">本体をテスト中…</string>
+    <string name="split_ok">この本体で使えます：大きなファイルは 4 分割で送ります。</string>
+    <string name="split_failed">この本体は分割したファイルを受け取れません（%1$s）。オフのままです。</string>
+    <string name="split_wrong_size">本体のサイズは %2$s ではなく %1$s バイトです。</string>
+    <string name="split_mixed_up">テストファイルが崩れて戻ってきました。</string>
+    <string name="split_fallback">代わりに 1 つにまとめて送信中…</string>
+    <string name="split_stuck">1 つの部分が止まりました。</string>
 </resources>

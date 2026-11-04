@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">Preizkusite svoje različice payloadov</string>
     <string name="more_d_language">Jezik aplikacije</string>
     <string name="more_d_about">Različica, posodobitve, varnostna kopija in nastavitve</string>
+    <string name="web_pieces_title">Prenašaj spletne datoteke po delih</string>
+    <string name="web_pieces_hint">Pri pošiljanju s spleta na konzolo pridobi 4 dele datoteke hkrati. Veliko strani upočasni vsako povezavo, zato je to pogosto nekajkrat hitreje. Stran, ki tega ne dovoli, dobi eno povezavo.</string>
+    <string name="split_title">Deli velika nalaganja (poskusno)</string>
+    <string name="split_hint">Pošlje datoteko od 128 MB s telefona v 4 delih hkrati. Ob vklopu najprej preizkusi strežnik FTP konzole z majhno datoteko.</string>
+    <string name="split_testing">Preizkušanje konzole…</string>
+    <string name="split_ok">Deluje s to konzolo: velike datoteke gredo zdaj v 4 delih.</string>
+    <string name="split_failed">Ta konzola ne sprejme datoteke po delih (%1$s). Ostane izklopljeno.</string>
+    <string name="split_wrong_size">Konzola ima %1$s bajtov namesto %2$s.</string>
+    <string name="split_mixed_up">Preizkusna datoteka se je vrnila premešana.</string>
+    <string name="split_fallback">Pošiljanje v enem kosu…</string>
+    <string name="split_stuck">En del se je ustavil.</string>
 </resources>

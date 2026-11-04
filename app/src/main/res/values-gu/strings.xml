@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">તમારા પેલોડ બિલ્ડ ચકાસો</string>
     <string name="more_d_language">એપની ભાષા</string>
     <string name="more_d_about">વર્ઝન, અપડેટ, બેકઅપ અને સેટિંગ્સ</string>
+    <string name="web_pieces_title">વેબ ફાઇલો ટુકડામાં ડાઉનલોડ કરો</string>
+    <string name="web_pieces_hint">વેબથી કન્સોલ પર મોકલતી વખતે ફાઇલના 4 ભાગ એકસાથે લાવે છે. ઘણી સાઇટ દરેક કનેક્શન ધીમું કરે છે, તેથી આ ઘણીવાર અનેક ગણું ઝડપી છે. જે સાઇટ મંજૂરી ન આપે તેને એક કનેક્શન મળે છે.</string>
+    <string name="split_title">મોટા અપલોડ ભાગમાં (પ્રાયોગિક)</string>
+    <string name="split_hint">ફોનથી 128 MB કે વધુની ફાઇલ એકસાથે 4 ભાગમાં મોકલે છે. ચાલુ કરતાં પહેલાં નાની ફાઇલથી કન્સોલનું FTP સર્વર તપાસાય છે.</string>
+    <string name="split_testing">કન્સોલ તપાસાય છે…</string>
+    <string name="split_ok">આ કન્સોલ સાથે ચાલે છે: મોટી ફાઇલો હવે 4 ભાગમાં જાય છે.</string>
+    <string name="split_failed">આ કન્સોલ ફાઇલ ભાગમાં લઈ શકતું નથી (%1$s). બંધ જ રહેશે.</string>
+    <string name="split_wrong_size">કન્સોલ પાસે %2$s ને બદલે %1$s બાઇટ છે.</string>
+    <string name="split_mixed_up">ટેસ્ટ ફાઇલ ગૂંચવાઈને પાછી આવી.</string>
+    <string name="split_fallback">તેના બદલે એક ટુકડામાં મોકલાય છે…</string>
+    <string name="split_stuck">એક ભાગ અટકી ગયો.</string>
 </resources>

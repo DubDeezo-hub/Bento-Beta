@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">בדוק גרסאות payload משלך</string>
     <string name="more_d_language">שפת האפליקציה</string>
     <string name="more_d_about">גרסה, עדכונים, גיבוי והגדרות</string>
+    <string name="web_pieces_title">הורדת קבצי רשת בחלקים</string>
+    <string name="web_pieces_hint">מביא 4 חלקים של קובץ בבת אחת כששולחים מהרשת לקונסולה. אתרים רבים מאטים כל חיבור, כך שזה לרוב מהיר פי כמה. אתר שלא מאפשר זאת מקבל חיבור אחד.</string>
+    <string name="split_title">פיצול העלאות גדולות (ניסיוני)</string>
+    <string name="split_hint">שולח קובץ של 128 MB ומעלה מהטלפון ב-4 חלקים בבת אחת. בהפעלה, שרת ה-FTP של הקונסולה נבדק קודם עם קובץ קטן.</string>
+    <string name="split_testing">בודק את הקונסולה…</string>
+    <string name="split_ok">עובד עם הקונסולה הזו: קבצים גדולים נשלחים עכשיו ב-4 חלקים.</string>
+    <string name="split_failed">הקונסולה הזו לא מקבלת קובץ בחלקים (%1$s). נשאר כבוי.</string>
+    <string name="split_wrong_size">בקונסולה יש %1$s בתים במקום %2$s.</string>
+    <string name="split_mixed_up">קובץ הבדיקה חזר מעורבב.</string>
+    <string name="split_fallback">שולח בחתיכה אחת במקום…</string>
+    <string name="split_stuck">חלק אחד הפסיק להתקדם.</string>
 </resources>

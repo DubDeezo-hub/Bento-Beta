@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">직접 만든 페이로드 빌드 테스트</string>
     <string name="more_d_language">앱 언어</string>
     <string name="more_d_about">버전, 업데이트, 백업, 설정</string>
+    <string name="web_pieces_title">웹 파일을 나눠서 다운로드</string>
+    <string name="web_pieces_hint">웹에서 콘솔로 보낼 때 파일을 4조각으로 동시에 받아옵니다. 많은 사이트가 연결마다 속도를 줄이므로 몇 배 빨라지는 경우가 많습니다. 허용하지 않는 사이트는 연결 하나를 씁니다.</string>
+    <string name="split_title">큰 업로드 나누기 (실험적)</string>
+    <string name="split_hint">휴대폰에서 128MB 이상 파일을 4조각으로 동시에 보냅니다. 켜면 먼저 작은 파일로 콘솔의 FTP 서버를 시험합니다.</string>
+    <string name="split_testing">콘솔 시험 중…</string>
+    <string name="split_ok">이 콘솔에서 작동합니다: 큰 파일은 이제 4조각으로 갑니다.</string>
+    <string name="split_failed">이 콘솔은 나눠진 파일을 받을 수 없습니다 (%1$s). 꺼진 상태로 둡니다.</string>
+    <string name="split_wrong_size">콘솔에 %2$s 대신 %1$s바이트가 있습니다.</string>
+    <string name="split_mixed_up">시험 파일이 뒤섞여 돌아왔습니다.</string>
+    <string name="split_fallback">대신 한 덩어리로 보내는 중…</string>
+    <string name="split_stuck">한 조각이 멈췄습니다.</string>
 </resources>

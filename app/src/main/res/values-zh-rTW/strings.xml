@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">測試你自己建置的酬載</string>
     <string name="more_d_language">App 的語言</string>
     <string name="more_d_about">版本、更新、備份和設定</string>
+    <string name="web_pieces_title">分段下載網頁檔案</string>
+    <string name="web_pieces_hint">從網頁傳送到主機時同時取得檔案的 4 個部分。許多網站會限制每個連線的速度，所以通常快好幾倍。不允許的網站只用一個連線。</string>
+    <string name="split_title">分割大型上傳（實驗性）</string>
+    <string name="split_hint">從手機傳送 128 MB 以上的檔案時同時分 4 部分傳送。開啟時會先用小檔案測試主機的 FTP 伺服器。</string>
+    <string name="split_testing">正在測試主機…</string>
+    <string name="split_ok">此主機可用：大型檔案現在分 4 部分傳送。</string>
+    <string name="split_failed">此主機無法分段接收檔案（%1$s），保持關閉。</string>
+    <string name="split_wrong_size">主機上是 %1$s 位元組，而不是 %2$s。</string>
+    <string name="split_mixed_up">測試檔案回傳時順序錯亂。</string>
+    <string name="split_fallback">改為整份傳送…</string>
+    <string name="split_stuck">有一部分停止了。</string>
 </resources>

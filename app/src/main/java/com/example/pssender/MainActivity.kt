@@ -136,6 +136,7 @@ class MainActivity : ComponentActivity() {
         OnlineAlert.schedule(this) // the "console is online" check, while any console has it on
         TransferState.setSpeedLimit(SpeedLimits.load(this)) // the saved speed limit applies from the first transfer on
         TransferState.lanes = FilesAtOnce.load(this)
+        TransferTuning.load(this)
         PayloadFirmware.load(this)
         // Only on a fresh start: after a rotation the same intent would otherwise be handled twice
         if (savedInstanceState == null) {

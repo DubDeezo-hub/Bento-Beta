@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">Testujte vlastní buildy payloadů</string>
     <string name="more_d_language">Jazyk aplikace</string>
     <string name="more_d_about">Verze, aktualizace, záloha a nastavení</string>
+    <string name="web_pieces_title">Stahovat webové soubory po částech</string>
+    <string name="web_pieces_hint">Při posílání z webu do konzole stahuje 4 části souboru najednou. Mnoho webů zpomaluje každé spojení, takže je to často několikrát rychlejší. Web, který to nedovolí, dostane jedno spojení.</string>
+    <string name="split_title">Dělit velká nahrávání (experimentální)</string>
+    <string name="split_hint">Posílá soubor od 128 MB z telefonu ve 4 částech najednou. Při zapnutí se nejdřív otestuje FTP server konzole malým souborem.</string>
+    <string name="split_testing">Testování konzole…</string>
+    <string name="split_ok">S touto konzolí to funguje: velké soubory jdou ve 4 částech.</string>
+    <string name="split_failed">Tato konzole neumí přijmout soubor po částech (%1$s). Zůstává vypnuto.</string>
+    <string name="split_wrong_size">Konzole má %1$s bajtů místo %2$s.</string>
+    <string name="split_mixed_up">Testovací soubor se vrátil promíchaný.</string>
+    <string name="split_fallback">Posílá se vcelku…</string>
+    <string name="split_stuck">Jedna část se zastavila.</string>
 </resources>

@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">Uji binaan payload anda sendiri</string>
     <string name="more_d_language">Bahasa apl</string>
     <string name="more_d_about">Versi, kemas kini, sandaran dan tetapan</string>
+    <string name="web_pieces_title">Muat turun fail web secara kepingan</string>
+    <string name="web_pieces_hint">Mengambil 4 bahagian fail serentak apabila menghantar dari web ke konsol. Banyak laman memperlahankan setiap sambungan, jadi ini selalunya beberapa kali lebih pantas. Laman yang tidak membenarkan mendapat satu sambungan.</string>
+    <string name="split_title">Pecahkan muat naik besar (percubaan)</string>
+    <string name="split_hint">Menghantar fail 128 MB atau lebih dari telefon dalam 4 bahagian serentak. Apabila dihidupkan, pelayan FTP konsol diuji dahulu dengan fail kecil.</string>
+    <string name="split_testing">Menguji konsol…</string>
+    <string name="split_ok">Berfungsi dengan konsol ini: fail besar kini dihantar dalam 4 bahagian.</string>
+    <string name="split_failed">Konsol ini tidak boleh terima fail secara bahagian (%1$s). Kekal mati.</string>
+    <string name="split_wrong_size">Konsol ada %1$s bait, bukan %2$s.</string>
+    <string name="split_mixed_up">Fail ujian kembali bercampur aduk.</string>
+    <string name="split_fallback">Menghantarnya sekeping sahaja…</string>
+    <string name="split_stuck">Satu bahagian berhenti bergerak.</string>
 </resources>

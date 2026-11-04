@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">Toets jou eie payload-bouwerke</string>
     <string name="more_d_language">Die app se taal</string>
     <string name="more_d_about">Weergawe, opdaterings, rugsteun en instellings</string>
+    <string name="web_pieces_title">Laai weblêers in stukke af</string>
+    <string name="web_pieces_hint">Haal 4 dele van \'n lêer gelyk wanneer van die web na die konsole gestuur word. Baie werwe vertraag elke verbinding, so dit is dikwels baie vinniger. \'n Werf wat dit nie toelaat nie, kry een verbinding.</string>
+    <string name="split_title">Verdeel groot oplaaie (eksperimenteel)</string>
+    <string name="split_hint">Stuur \'n lêer van 128 MB of meer van die foon in 4 dele gelyk. Aanskakel toets eers die konsole se FTP-bediener met \'n klein lêer.</string>
+    <string name="split_testing">Toets die konsole…</string>
+    <string name="split_ok">Dit werk met hierdie konsole: groot lêers gaan nou in 4 dele.</string>
+    <string name="split_failed">Hierdie konsole kan nie \'n lêer in dele neem nie (%1$s). Dit bly af.</string>
+    <string name="split_wrong_size">Die konsole het %1$s grepe in plaas van %2$s.</string>
+    <string name="split_mixed_up">Die toetslêer het deurmekaar teruggekom.</string>
+    <string name="split_fallback">Stuur dit eerder in een stuk…</string>
+    <string name="split_stuck">\'n Deel het gaan staan.</string>
 </resources>

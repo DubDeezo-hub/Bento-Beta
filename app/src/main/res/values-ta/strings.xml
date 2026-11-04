@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">உங்கள் பேலோட் உருவாக்கங்களைச் சோதி</string>
     <string name="more_d_language">ஆப்பின் மொழி</string>
     <string name="more_d_about">பதிப்பு, புதுப்பிப்புகள், காப்பு மற்றும் அமைப்புகள்</string>
+    <string name="web_pieces_title">வலைக் கோப்புகளைத் துண்டுகளாகப் பதிவிறக்கு</string>
+    <string name="web_pieces_hint">வலையிலிருந்து கன்சோலுக்கு அனுப்பும்போது கோப்பின் 4 பகுதிகளை ஒரே நேரத்தில் எடுக்கும். பல தளங்கள் ஒவ்வொரு இணைப்பையும் மெதுவாக்குவதால் இது பல மடங்கு வேகமாக இருக்கும். அனுமதிக்காத தளத்திற்கு ஒரு இணைப்பு.</string>
+    <string name="split_title">பெரிய பதிவேற்றங்களைப் பிரி (சோதனை)</string>
+    <string name="split_hint">போனிலிருந்து 128 MB அல்லது பெரிய கோப்பை 4 பகுதிகளாக ஒரே நேரத்தில் அனுப்பும். இயக்கும்போது முதலில் சிறிய கோப்பால் கன்சோலின் FTP சர்வர் சோதிக்கப்படும்.</string>
+    <string name="split_testing">கன்சோல் சோதிக்கப்படுகிறது…</string>
+    <string name="split_ok">இந்த கன்சோலில் வேலை செய்கிறது: பெரிய கோப்புகள் இனி 4 பகுதிகளாக.</string>
+    <string name="split_failed">இந்த கன்சோல் பகுதிகளாகக் கோப்பை ஏற்காது (%1$s). அணைந்தே இருக்கும்.</string>
+    <string name="split_wrong_size">கன்சோலில் %2$s க்கு பதிலாக %1$s பைட்டுகள் உள்ளன.</string>
+    <string name="split_mixed_up">சோதனைக் கோப்பு கலந்து திரும்பியது.</string>
+    <string name="split_fallback">பதிலாக ஒரே துண்டாக அனுப்புகிறது…</string>
+    <string name="split_stuck">ஒரு பகுதி நின்றுவிட்டது.</string>
 </resources>

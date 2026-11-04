@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">Testi oma payloadi versioone</string>
     <string name="more_d_language">Rakenduse keel</string>
     <string name="more_d_about">Versioon, uuendused, varukoopia ja seaded</string>
+    <string name="web_pieces_title">Laadi veebifailid tükkidena</string>
+    <string name="web_pieces_hint">Toob veebist konsooli saates faili 4 osa korraga. Paljud saidid aeglustavad iga ühendust, nii et see on sageli mitu korda kiirem. Sait, mis seda ei luba, saab ühe ühenduse.</string>
+    <string name="split_title">Jaga suured üleslaadimised (katseline)</string>
+    <string name="split_hint">Saadab telefonist 128 MB või suurema faili 4 osana korraga. Sisselülitamisel testitakse esmalt konsooli FTP-serverit väikese failiga.</string>
+    <string name="split_testing">Konsooli testimine…</string>
+    <string name="split_ok">Selle konsooliga töötab: suured failid lähevad nüüd 4 osana.</string>
+    <string name="split_failed">See konsool ei võta faili osadena vastu (%1$s). Jääb välja.</string>
+    <string name="split_wrong_size">Konsoolil on %1$s baiti %2$s asemel.</string>
+    <string name="split_mixed_up">Testfail tuli segamini tagasi.</string>
+    <string name="split_fallback">Saadan selle hoopis ühes tükis…</string>
+    <string name="split_stuck">Üks osa jäi seisma.</string>
 </resources>

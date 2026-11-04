@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">নিজের পেলোড বিল্ড পরীক্ষা করুন</string>
     <string name="more_d_language">অ্যাপের ভাষা</string>
     <string name="more_d_about">সংস্করণ, আপডেট, ব্যাকআপ ও সেটিংস</string>
+    <string name="web_pieces_title">ওয়েবের ফাইল টুকরো করে নামান</string>
+    <string name="web_pieces_hint">ওয়েব থেকে কনসোলে পাঠানোর সময় একটি ফাইলের ৪টি অংশ একসাথে আনে। অনেক সাইট প্রতিটি সংযোগ ধীর করে, তাই এটি প্রায়ই কয়েক গুণ দ্রুত। যে সাইট এটা দেয় না, সেটি একটি সংযোগ পায়।</string>
+    <string name="split_title">বড় আপলোড ভাগ করুন (পরীক্ষামূলক)</string>
+    <string name="split_hint">ফোন থেকে ১২৮ MB বা বড় ফাইল একসাথে ৪ ভাগে পাঠায়। চালু করলে আগে ছোট ফাইল দিয়ে কনসোলের FTP সার্ভার পরীক্ষা হয়।</string>
+    <string name="split_testing">কনসোল পরীক্ষা হচ্ছে…</string>
+    <string name="split_ok">এই কনসোলে কাজ করে: বড় ফাইল এখন ৪ ভাগে যায়।</string>
+    <string name="split_failed">এই কনসোল ভাগে ফাইল নিতে পারে না (%1$s)। বন্ধই থাকবে।</string>
+    <string name="split_wrong_size">কনসোলে %2$s এর বদলে %1$s বাইট আছে।</string>
+    <string name="split_mixed_up">পরীক্ষার ফাইল এলোমেলো হয়ে ফিরেছে।</string>
+    <string name="split_fallback">বদলে এক টুকরোয় পাঠানো হচ্ছে…</string>
+    <string name="split_stuck">একটি অংশ থেমে গেছে।</string>
 </resources>

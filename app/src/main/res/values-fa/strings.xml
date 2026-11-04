@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">نسخه‌های پی‌لود خود را آزمایش کنید</string>
     <string name="more_d_language">زبان برنامه</string>
     <string name="more_d_about">نسخه، به‌روزرسانی، پشتیبان و تنظیمات</string>
+    <string name="web_pieces_title">دانلود فایل‌های وب به صورت تکه‌تکه</string>
+    <string name="web_pieces_hint">هنگام فرستادن از وب به کنسول، ۴ بخش فایل را هم‌زمان می‌گیرد. بسیاری از سایت‌ها هر اتصال را کند می‌کنند، پس این اغلب چند برابر سریع‌تر است. سایتی که اجازه ندهد یک اتصال می‌گیرد.</string>
+    <string name="split_title">تقسیم آپلودهای بزرگ (آزمایشی)</string>
+    <string name="split_hint">فایل ۱۲۸ مگابایت یا بزرگ‌تر را از گوشی در ۴ بخش هم‌زمان می‌فرستد. با روشن کردن، ابتدا سرور FTP کنسول با یک فایل کوچک آزمایش می‌شود.</string>
+    <string name="split_testing">در حال آزمایش کنسول…</string>
+    <string name="split_ok">با این کنسول کار می‌کند: فایل‌های بزرگ اکنون در ۴ بخش می‌روند.</string>
+    <string name="split_failed">این کنسول نمی‌تواند فایل را بخش‌بخش بگیرد (%1$s). خاموش می‌ماند.</string>
+    <string name="split_wrong_size">کنسول %1$s بایت دارد به جای %2$s.</string>
+    <string name="split_mixed_up">فایل آزمایشی به هم ریخته برگشت.</string>
+    <string name="split_fallback">به جای آن یک‌تکه فرستاده می‌شود…</string>
+    <string name="split_stuck">یک بخش از حرکت ایستاد.</string>
 </resources>

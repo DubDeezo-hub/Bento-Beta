@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">Test dine egne payload-bygg</string>
     <string name="more_d_language">Appens språk</string>
     <string name="more_d_about">Versjon, oppdateringer, sikkerhetskopi og innstillinger</string>
+    <string name="web_pieces_title">Last ned nettfiler i biter</string>
+    <string name="web_pieces_hint">Henter 4 deler av en fil samtidig når du sender fra nettet til konsollen. Mange sider bremser hver tilkobling, så dette er ofte flere ganger raskere. En side som ikke tillater det får én tilkobling.</string>
+    <string name="split_title">Del opp store opplastinger (eksperimentelt)</string>
+    <string name="split_hint">Sender en fil på 128 MB eller mer fra telefonen i 4 deler samtidig. Når det slås på, testes konsollens FTP-server først med en liten fil.</string>
+    <string name="split_testing">Tester konsollen…</string>
+    <string name="split_ok">Det virker med denne konsollen: store filer går nå i 4 deler.</string>
+    <string name="split_failed">Denne konsollen kan ikke ta imot en fil i deler (%1$s). Den forblir av.</string>
+    <string name="split_wrong_size">Konsollen har %1$s byte i stedet for %2$s.</string>
+    <string name="split_mixed_up">Testfilen kom tilbake blandet.</string>
+    <string name="split_fallback">Sender den i ett stykke i stedet…</string>
+    <string name="split_stuck">En del står stille.</string>
 </resources>

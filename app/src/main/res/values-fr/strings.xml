@@ -1497,4 +1497,15 @@
     <string name="more_d_dev">Tester vos propres builds de payload</string>
     <string name="more_d_language">La langue de l\'app</string>
     <string name="more_d_about">Version, mises à jour, sauvegarde et réglages</string>
+    <string name="web_pieces_title">Télécharger les fichiers web en morceaux</string>
+    <string name="web_pieces_hint">Récupère 4 parties d\'un fichier à la fois lors d\'un envoi du web vers la console. Beaucoup de sites ralentissent chaque connexion, c\'est donc souvent plusieurs fois plus rapide. Un site qui ne le permet pas utilise une seule connexion.</string>
+    <string name="split_title">Découper les gros envois (expérimental)</string>
+    <string name="split_hint">Envoie un fichier de 128 Mo ou plus depuis le téléphone en 4 parties à la fois. À l\'activation, le serveur FTP de la console est d\'abord testé avec un petit fichier.</string>
+    <string name="split_testing">Test de la console…</string>
+    <string name="split_ok">Ça marche avec cette console : les gros fichiers partent en 4 parties.</string>
+    <string name="split_failed">Cette console n\'accepte pas un fichier en parties (%1$s). Reste désactivé.</string>
+    <string name="split_wrong_size">La console a %1$s octets au lieu de %2$s.</string>
+    <string name="split_mixed_up">Le fichier de test est revenu mélangé.</string>
+    <string name="split_fallback">Envoi en un seul morceau à la place…</string>
+    <string name="split_stuck">Une partie n\'avance plus.</string>
 </resources>

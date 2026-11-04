@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">Testuj własne wersje payloadów</string>
     <string name="more_d_language">Język aplikacji</string>
     <string name="more_d_about">Wersja, aktualizacje, kopia i ustawienia</string>
+    <string name="web_pieces_title">Pobieraj pliki z sieci w kawałkach</string>
+    <string name="web_pieces_hint">Przy wysyłaniu z sieci na konsolę pobiera 4 części pliku naraz. Wiele stron spowalnia każde połączenie, więc to często kilka razy szybciej. Strona, która na to nie pozwala, dostaje jedno połączenie.</string>
+    <string name="split_title">Dziel duże wysyłki (eksperymentalne)</string>
+    <string name="split_hint">Wysyła plik od 128 MB z telefonu w 4 częściach naraz. Po włączeniu najpierw testuje serwer FTP konsoli małym plikiem.</string>
+    <string name="split_testing">Testowanie konsoli…</string>
+    <string name="split_ok">Działa z tą konsolą: duże pliki idą teraz w 4 częściach.</string>
+    <string name="split_failed">Ta konsola nie przyjmuje pliku w częściach (%1$s). Zostaje wyłączone.</string>
+    <string name="split_wrong_size">Konsola ma %1$s bajtów zamiast %2$s.</string>
+    <string name="split_mixed_up">Plik testowy wrócił pomieszany.</string>
+    <string name="split_fallback">Wysyłanie w jednym kawałku…</string>
+    <string name="split_stuck">Jedna część stanęła.</string>
 </resources>

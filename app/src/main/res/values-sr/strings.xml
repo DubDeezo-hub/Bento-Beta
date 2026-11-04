@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">Тестирајте своје верзије payload-а</string>
     <string name="more_d_language">Језик апликације</string>
     <string name="more_d_about">Верзија, ажурирања, резервна копија и подешавања</string>
+    <string name="web_pieces_title">Преузимај веб датотеке у деловима</string>
+    <string name="web_pieces_hint">При слању са веба на конзолу преузима 4 дела датотеке одједном. Многи сајтови успоравају сваку везу, па је ово често неколико пута брже. Сајт који то не дозвољава добија једну везу.</string>
+    <string name="split_title">Дели велика слања (експериментално)</string>
+    <string name="split_hint">Шаље датотеку од 128 MB или већу са телефона у 4 дела одједном. При укључивању прво тестира FTP сервер конзоле малом датотеком.</string>
+    <string name="split_testing">Тестирање конзоле…</string>
+    <string name="split_ok">Ради са овом конзолом: велике датотеке сада иду у 4 дела.</string>
+    <string name="split_failed">Ова конзола не прима датотеку у деловима (%1$s). Остаје искључено.</string>
+    <string name="split_wrong_size">Конзола има %1$s бајтова уместо %2$s.</string>
+    <string name="split_mixed_up">Тест датотека се вратила измешана.</string>
+    <string name="split_fallback">Шаље се у једном комаду…</string>
+    <string name="split_stuck">Један део је стао.</string>
 </resources>

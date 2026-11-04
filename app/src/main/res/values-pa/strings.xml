@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">ਆਪਣੇ ਪੇਲੋਡ ਬਿਲਡ ਪਰਖੋ</string>
     <string name="more_d_language">ਐਪ ਦੀ ਭਾਸ਼ਾ</string>
     <string name="more_d_about">ਵਰਜਨ, ਅੱਪਡੇਟ, ਬੈਕਅੱਪ ਅਤੇ ਸੈਟਿੰਗਾਂ</string>
+    <string name="web_pieces_title">ਵੈੱਬ ਫ਼ਾਈਲਾਂ ਟੁਕੜਿਆਂ ਵਿੱਚ ਡਾਊਨਲੋਡ ਕਰੋ</string>
+    <string name="web_pieces_hint">ਵੈੱਬ ਤੋਂ ਕੰਸੋਲ ਨੂੰ ਭੇਜਣ ਵੇਲੇ ਫ਼ਾਈਲ ਦੇ 4 ਹਿੱਸੇ ਇੱਕੋ ਵਾਰ ਲਿਆਉਂਦਾ ਹੈ। ਕਈ ਸਾਈਟਾਂ ਹਰ ਕਨੈਕਸ਼ਨ ਹੌਲਾ ਕਰਦੀਆਂ ਹਨ, ਇਸ ਲਈ ਇਹ ਅਕਸਰ ਕਈ ਗੁਣਾ ਤੇਜ਼ ਹੈ। ਜੋ ਸਾਈਟ ਇਜਾਜ਼ਤ ਨਾ ਦੇਵੇ ਉਸਨੂੰ ਇੱਕ ਕਨੈਕਸ਼ਨ।</string>
+    <string name="split_title">ਵੱਡੇ ਅੱਪਲੋਡ ਵੰਡੋ (ਪ੍ਰਯੋਗੀ)</string>
+    <string name="split_hint">ਫ਼ੋਨ ਤੋਂ 128 MB ਜਾਂ ਵੱਡੀ ਫ਼ਾਈਲ 4 ਹਿੱਸਿਆਂ ਵਿੱਚ ਇੱਕੋ ਵਾਰ ਭੇਜਦਾ ਹੈ। ਚਾਲੂ ਕਰਨ ’ਤੇ ਪਹਿਲਾਂ ਛੋਟੀ ਫ਼ਾਈਲ ਨਾਲ ਕੰਸੋਲ ਦਾ FTP ਸਰਵਰ ਪਰਖਿਆ ਜਾਂਦਾ ਹੈ।</string>
+    <string name="split_testing">ਕੰਸੋਲ ਪਰਖਿਆ ਜਾ ਰਿਹਾ ਹੈ…</string>
+    <string name="split_ok">ਇਸ ਕੰਸੋਲ ਨਾਲ ਚੱਲਦਾ ਹੈ: ਵੱਡੀਆਂ ਫ਼ਾਈਲਾਂ ਹੁਣ 4 ਹਿੱਸਿਆਂ ਵਿੱਚ ਜਾਂਦੀਆਂ ਹਨ।</string>
+    <string name="split_failed">ਇਹ ਕੰਸੋਲ ਫ਼ਾਈਲ ਹਿੱਸਿਆਂ ਵਿੱਚ ਨਹੀਂ ਲੈ ਸਕਦਾ (%1$s)। ਬੰਦ ਹੀ ਰਹੇਗਾ।</string>
+    <string name="split_wrong_size">ਕੰਸੋਲ ’ਤੇ %2$s ਦੀ ਥਾਂ %1$s ਬਾਈਟ ਹਨ।</string>
+    <string name="split_mixed_up">ਟੈਸਟ ਫ਼ਾਈਲ ਰਲਗੱਡ ਹੋ ਕੇ ਮੁੜੀ।</string>
+    <string name="split_fallback">ਇਸਦੀ ਥਾਂ ਇੱਕ ਟੁਕੜੇ ਵਿੱਚ ਭੇਜ ਰਿਹਾ ਹੈ…</string>
+    <string name="split_stuck">ਇੱਕ ਹਿੱਸਾ ਰੁਕ ਗਿਆ।</string>
 </resources>

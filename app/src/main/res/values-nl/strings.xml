@@ -1497,4 +1497,15 @@
     <string name="more_d_dev">Test je eigen payload-builds</string>
     <string name="more_d_language">De taal van de app</string>
     <string name="more_d_about">Versie, updates, back-up en instellingen</string>
+    <string name="web_pieces_title">Webbestanden in stukken downloaden</string>
+    <string name="web_pieces_hint">Haalt 4 delen van een bestand tegelijk op bij versturen van het web naar de console. Veel sites remmen elke verbinding af, dus dit is vaak meerdere keren sneller. Een site die het niet toestaat krijgt één verbinding.</string>
+    <string name="split_title">Grote uploads opsplitsen (experimenteel)</string>
+    <string name="split_hint">Stuurt een bestand van 128 MB of meer van de telefoon in 4 delen tegelijk. Bij aanzetten wordt eerst de FTP-server van de console getest met een klein bestand.</string>
+    <string name="split_testing">Console testen…</string>
+    <string name="split_ok">Het werkt met deze console: grote bestanden gaan nu in 4 delen.</string>
+    <string name="split_failed">Deze console kan geen bestand in delen aannemen (%1$s). Blijft uit.</string>
+    <string name="split_wrong_size">De console heeft %1$s bytes in plaats van %2$s.</string>
+    <string name="split_mixed_up">Het testbestand kwam door elkaar terug.</string>
+    <string name="split_fallback">In één stuk versturen…</string>
+    <string name="split_stuck">Een deel staat stil.</string>
 </resources>

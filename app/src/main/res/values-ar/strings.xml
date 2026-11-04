@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">اختبر إصداراتك من الحمولات</string>
     <string name="more_d_language">لغة التطبيق</string>
     <string name="more_d_about">الإصدار والتحديثات والنسخ الاحتياطي والإعدادات</string>
+    <string name="web_pieces_title">نزّل ملفات الويب على أجزاء</string>
+    <string name="web_pieces_hint">يجلب 4 أجزاء من الملف معًا عند الإرسال من الويب إلى الجهاز. كثير من المواقع تبطئ كل اتصال، لذا يكون هذا غالبًا أسرع بعدة مرات. الموقع الذي لا يسمح بذلك يحصل على اتصال واحد.</string>
+    <string name="split_title">قسّم الرفع الكبير (تجريبي)</string>
+    <string name="split_hint">يرسل ملفًا بحجم 128 ميغابايت أو أكثر من الهاتف على 4 أجزاء معًا. عند التشغيل يُختبر خادم FTP في الجهاز أولًا بملف صغير.</string>
+    <string name="split_testing">جارٍ اختبار الجهاز…</string>
+    <string name="split_ok">يعمل مع هذا الجهاز: الملفات الكبيرة تُرسل الآن على 4 أجزاء.</string>
+    <string name="split_failed">هذا الجهاز لا يقبل ملفًا على أجزاء (%1$s). يبقى متوقفًا.</string>
+    <string name="split_wrong_size">لدى الجهاز %1$s بايت بدلًا من %2$s.</string>
+    <string name="split_mixed_up">عاد ملف الاختبار مختلطًا.</string>
+    <string name="split_fallback">يُرسل بقطعة واحدة بدلًا من ذلك…</string>
+    <string name="split_stuck">توقف أحد الأجزاء عن التقدم.</string>
 </resources>

@@ -584,7 +584,9 @@ fun canReadPicked(cr: ContentResolver, uri: Uri): Boolean =
     }
 
 /** A file picked with the system file picker, as something an upload can read and read again from the middle. */
-private class ContentUriSource(private val cr: ContentResolver, private val uri: Uri) : ResumableSource {
+private class ContentUriSource(private val cr: ContentResolver, private val uri: Uri) : SplittableSource {
+    override fun size(): Long = fileSize(cr, uri)
+
     private fun openStream(): InputStream =
         cr.openInputStream(uri) ?: throw TransferException(phoneFileProblem(), false)
 
@@ -639,7 +641,9 @@ fun ftpUploadFromUrl(
     url: String, userAgent: String, cookie: String?, fileName: String,
     s: FtpSettings, remoteDir: String, mem: ResumeMemory, hooks: TransferHooks
 ): TransferResult {
-    val source = httpSourceFor(mem) { HttpSource(url, userAgent, cookie, OkHttpFetcher(http)) }
+    val source = httpSourceFor(mem) {
+        HttpSource(url, userAgent, cookie, OkHttpFetcher(http), pieceFetchers = if (TransferTuning.webPieces) ({ OkHttpFetcher(http) }) else null)
+    }
     return ftpUpload(source, fileName, s, remoteDir, mem, hooks)
 }
 

@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">ನಿಮ್ಮ ಪೇಲೋಡ್ ಬಿಲ್ಡ್ ಪರೀಕ್ಷಿಸಿ</string>
     <string name="more_d_language">ಆ್ಯಪ್ ಭಾಷೆ</string>
     <string name="more_d_about">ಆವೃತ್ತಿ, ಅಪ್‌ಡೇಟ್, ಬ್ಯಾಕಪ್ ಮತ್ತು ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
+    <string name="web_pieces_title">ವೆಬ್ ಫೈಲ್‌ಗಳನ್ನು ತುಂಡುಗಳಲ್ಲಿ ಡೌನ್‌ಲೋಡ್</string>
+    <string name="web_pieces_hint">ವೆಬ್‌ನಿಂದ ಕನ್ಸೋಲ್‌ಗೆ ಕಳುಹಿಸುವಾಗ ಫೈಲ್‌ನ 4 ಭಾಗಗಳನ್ನು ಒಟ್ಟಿಗೆ ತರುತ್ತದೆ. ಹಲವು ಸೈಟ್‌ಗಳು ಪ್ರತಿ ಸಂಪರ್ಕವನ್ನು ನಿಧಾನಿಸುತ್ತವೆ, ಹಾಗಾಗಿ ಇದು ಹಲವು ಪಟ್ಟು ವೇಗ. ಅನುಮತಿಸದ ಸೈಟ್‌ಗೆ ಒಂದು ಸಂಪರ್ಕ.</string>
+    <string name="split_title">ದೊಡ್ಡ ಅಪ್‌ಲೋಡ್ ವಿಭಜಿಸಿ (ಪ್ರಾಯೋಗಿಕ)</string>
+    <string name="split_hint">ಫೋನ್‌ನಿಂದ 128 MB ಅಥವಾ ಹೆಚ್ಚಿನ ಫೈಲ್ ಅನ್ನು 4 ಭಾಗಗಳಲ್ಲಿ ಒಟ್ಟಿಗೆ ಕಳುಹಿಸುತ್ತದೆ. ಆನ್ ಮಾಡಿದಾಗ ಮೊದಲು ಸಣ್ಣ ಫೈಲ್‌ನಿಂದ ಕನ್ಸೋಲ್ FTP ಸರ್ವರ್ ಪರೀಕ್ಷಿಸುತ್ತದೆ.</string>
+    <string name="split_testing">ಕನ್ಸೋಲ್ ಪರೀಕ್ಷಿಸಲಾಗುತ್ತಿದೆ…</string>
+    <string name="split_ok">ಈ ಕನ್ಸೋಲ್‌ನಲ್ಲಿ ಕೆಲಸ ಮಾಡುತ್ತದೆ: ದೊಡ್ಡ ಫೈಲ್‌ಗಳು ಈಗ 4 ಭಾಗಗಳಲ್ಲಿ.</string>
+    <string name="split_failed">ಈ ಕನ್ಸೋಲ್ ಭಾಗಗಳಲ್ಲಿ ಫೈಲ್ ಸ್ವೀಕರಿಸುವುದಿಲ್ಲ (%1$s). ಆಫ್ ಆಗಿಯೇ ಇರುತ್ತದೆ.</string>
+    <string name="split_wrong_size">ಕನ್ಸೋಲ್‌ನಲ್ಲಿ %2$s ಬದಲು %1$s ಬೈಟ್‌ಗಳಿವೆ.</string>
+    <string name="split_mixed_up">ಪರೀಕ್ಷಾ ಫೈಲ್ ಗೊಂದಲವಾಗಿ ಹಿಂತಿರುಗಿತು.</string>
+    <string name="split_fallback">ಬದಲಿಗೆ ಒಂದೇ ತುಂಡಾಗಿ ಕಳುಹಿಸಲಾಗುತ್ತಿದೆ…</string>
+    <string name="split_stuck">ಒಂದು ಭಾಗ ನಿಂತುಹೋಯಿತು.</string>
 </resources>

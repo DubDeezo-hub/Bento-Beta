@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">Išbandykite savo payload versijas</string>
     <string name="more_d_language">Programėlės kalba</string>
     <string name="more_d_about">Versija, atnaujinimai, atsarginė kopija ir nuostatos</string>
+    <string name="web_pieces_title">Atsisiųsti žiniatinklio failus dalimis</string>
+    <string name="web_pieces_hint">Siunčiant iš žiniatinklio į konsolę, paima 4 failo dalis vienu metu. Daug svetainių lėtina kiekvieną ryšį, todėl dažnai tai kelis kartus greičiau. Svetainė, kuri neleidžia, gauna vieną ryšį.</string>
+    <string name="split_title">Dalyti didelius įkėlimus (eksperimentinė)</string>
+    <string name="split_hint">Siunčia 128 MB ar didesnį failą iš telefono 4 dalimis vienu metu. Įjungus pirmiausia išbandomas konsolės FTP serveris mažu failu.</string>
+    <string name="split_testing">Tikrinama konsolė…</string>
+    <string name="split_ok">Veikia su šia konsole: dideli failai dabar siunčiami 4 dalimis.</string>
+    <string name="split_failed">Ši konsolė negali priimti failo dalimis (%1$s). Lieka išjungta.</string>
+    <string name="split_wrong_size">Konsolėje yra %1$s baitų vietoj %2$s.</string>
+    <string name="split_mixed_up">Bandomasis failas grįžo sumaišytas.</string>
+    <string name="split_fallback">Vietoj to siunčiama vienu gabalu…</string>
+    <string name="split_stuck">Viena dalis sustojo.</string>
 </resources>

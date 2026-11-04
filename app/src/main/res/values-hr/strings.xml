@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">Testirajte svoje verzije payloada</string>
     <string name="more_d_language">Jezik aplikacije</string>
     <string name="more_d_about">Verzija, ažuriranja, sigurnosna kopija i postavke</string>
+    <string name="web_pieces_title">Preuzimaj web datoteke u dijelovima</string>
+    <string name="web_pieces_hint">Dohvaća 4 dijela datoteke odjednom pri slanju s weba na konzolu. Mnoge stranice usporavaju svaku vezu, pa je to često nekoliko puta brže. Stranica koja to ne dopušta dobiva jednu vezu.</string>
+    <string name="split_title">Dijeli velika slanja (eksperimentalno)</string>
+    <string name="split_hint">Šalje datoteku od 128 MB ili veću s mobitela u 4 dijela odjednom. Pri uključivanju najprije testira FTP poslužitelj konzole malom datotekom.</string>
+    <string name="split_testing">Testiranje konzole…</string>
+    <string name="split_ok">Radi s ovom konzolom: velike datoteke sad idu u 4 dijela.</string>
+    <string name="split_failed">Ova konzola ne prima datoteku u dijelovima (%1$s). Ostaje isključeno.</string>
+    <string name="split_wrong_size">Konzola ima %1$s bajtova umjesto %2$s.</string>
+    <string name="split_mixed_up">Testna datoteka vratila se izmiješana.</string>
+    <string name="split_fallback">Šalje se u jednom komadu…</string>
+    <string name="split_stuck">Jedan dio je stao.</string>
 </resources>

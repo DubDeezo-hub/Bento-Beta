@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">Перевірити власні збірки payload</string>
     <string name="more_d_language">Мова застосунку</string>
     <string name="more_d_about">Версія, оновлення, резервна копія й налаштування</string>
+    <string name="web_pieces_title">Завантажувати веб-файли частинами</string>
+    <string name="web_pieces_hint">Під час надсилання з мережі на консоль бере 4 частини файлу одночасно. Багато сайтів сповільнюють кожне з\'єднання, тож так часто в кілька разів швидше. Сайт, що цього не дозволяє, отримує одне з\'єднання.</string>
+    <string name="split_title">Ділити великі вивантаження (експериментально)</string>
+    <string name="split_hint">Надсилає файл від 128 МБ з телефона 4 частинами одночасно. Під час увімкнення спершу перевіряє FTP-сервер консолі малим файлом.</string>
+    <string name="split_testing">Перевірка консолі…</string>
+    <string name="split_ok">Працює з цією консоллю: великі файли тепер ідуть 4 частинами.</string>
+    <string name="split_failed">Ця консоль не приймає файл частинами (%1$s). Лишається вимкненим.</string>
+    <string name="split_wrong_size">На консолі %1$s байтів замість %2$s.</string>
+    <string name="split_mixed_up">Тестовий файл повернувся перемішаним.</string>
+    <string name="split_fallback">Надсилання одним шматком…</string>
+    <string name="split_stuck">Одна частина зупинилася.</string>
 </resources>

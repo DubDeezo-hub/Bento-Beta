@@ -1497,4 +1497,15 @@
     <string name="more_d_dev">Prueba tus propias versiones de payloads</string>
     <string name="more_d_language">El idioma de la app</string>
     <string name="more_d_about">Versión, actualizaciones, copia y ajustes</string>
+    <string name="web_pieces_title">Descargar archivos web por partes</string>
+    <string name="web_pieces_hint">Trae 4 partes de un archivo a la vez al enviar de la web a la consola. Muchos sitios frenan cada conexión, así que suele ser varias veces más rápido. Un sitio que no lo permite usa una conexión.</string>
+    <string name="split_title">Dividir subidas grandes (experimental)</string>
+    <string name="split_hint">Envía un archivo de 128 MB o más desde el teléfono en 4 partes a la vez. Al activarlo, primero prueba el servidor FTP de la consola con un archivo pequeño.</string>
+    <string name="split_testing">Probando la consola…</string>
+    <string name="split_ok">Funciona con esta consola: los archivos grandes van en 4 partes.</string>
+    <string name="split_failed">Esta consola no acepta un archivo por partes (%1$s). Sigue desactivado.</string>
+    <string name="split_wrong_size">La consola tiene %1$s bytes en vez de %2$s.</string>
+    <string name="split_mixed_up">El archivo de prueba volvió desordenado.</string>
+    <string name="split_fallback">Enviándolo en una sola pieza…</string>
+    <string name="split_stuck">Una parte dejó de avanzar.</string>
 </resources>

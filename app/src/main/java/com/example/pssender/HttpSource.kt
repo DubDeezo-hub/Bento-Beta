@@ -98,18 +98,33 @@ class HttpSource(
     private val url: String,
     private val userAgent: String,
     private val cookie: String?,
-    private val fetcher: HttpFetcher
+    private val fetcher: HttpFetcher,
+    /** Makes a fetcher for each extra connection when the file is fetched as pieces (see [PieceStream]); null for one connection. */
+    private val pieceFetchers: (() -> HttpFetcher)? = null
 ) : ResumableSource {
     private var total = -1L
     private var validator: String? = null
     private var reply: HttpReply? = null
 
+    /** Set once the server refused a piece: from then on this file comes over one connection. */
+    @Volatile
+    var piecesOff = false
+        private set
+    private var pieces: PieceStream? = null
+    private val pieceCalls = java.util.Collections.synchronizedList(ArrayList<HttpFetcher>())
+
     override fun open(offset: Long): OpenedSource {
         closeReply()
+        closePieces()
         // Without a known length a changed file couldn't be told from the old one, so there is no continuing
         val wanted = if (offset > 0L && total >= 0L) offset else 0L
-        val r = request(wanted)
+        // Asking for the first piece also tells whether the server does ranges and how long the file is
+        val r = if (pieceFetchers != null && !piecesOff) request(wanted, wanted + WEB_PIECE_SIZE - 1) else request(wanted)
         reply = r
+        if (pieceFetchers != null && !piecesOff && r.code == 206) {
+            asPieces(r, wanted)?.let { return it }
+            return openFresh()
+        }
         val code = r.code
         if (code == 206 && wanted > 0L) {
             val range = parseContentRange(r.header("Content-Range"))
@@ -156,6 +171,62 @@ class HttpSource(
 
     override fun abort() {
         fetcher.abort()
+        synchronized(pieceCalls) { pieceCalls.forEach { it.abort() } }
+        closePieces()
+    }
+
+    /**
+     * The file from [wanted] on as pieces, when [r] is the first piece of it: the server does ranges, said how long the
+     * file is, and (when continuing) it is still the same file. Null when it isn't (the caller asks for the whole file).
+     */
+    private fun asPieces(r: HttpReply, wanted: Long): OpenedSource? {
+        val range = parseContentRange(r.header("Content-Range")) ?: return null
+        val body = r.body ?: return null
+        if (range.start != wanted || range.total <= 0L) return null
+        if (wanted > 0L && (range.total != total || !isSameFile(r, honoredIfRange = true))) return null
+        if (wanted == 0L) {
+            total = range.total
+            validator = validatorOf(r)
+        }
+        val first = try {
+            readAll(body, WEB_PIECE_SIZE)
+        } finally {
+            closeReply()
+        }
+        val make = pieceFetchers ?: return null
+        val stream = PieceStream(wanted, total, first) { want -> fetchPiece(make, want) }
+        pieces = stream
+        return OpenedSource(stream, total, wanted)
+    }
+
+    /** One piece of the file, on its own connection. Throws [RangesRefused] when the answer isn't exactly that piece. */
+    private fun fetchPiece(make: () -> HttpFetcher, want: LongRange): ByteArray {
+        val f = make()
+        pieceCalls.add(f)
+        try {
+            val headers = baseHeaders()
+            headers["Range"] = "bytes=${want.first}-${want.last}"
+            validator?.let { headers["If-Range"] = it }
+            f.get(url, headers).use { r ->
+                val range = parseContentRange(r.header("Content-Range"))
+                if (r.code != 206 || range == null || range.start != want.first || (range.total >= 0L && range.total != total) ||
+                    !isSameFile(r, honoredIfRange = true)
+                ) {
+                    if (r.code in 500..599 || r.code == 429) throw IOException("HTTP ${r.code}")
+                    piecesOff = true
+                    throw RangesRefused("HTTP ${r.code}")
+                }
+                val body = r.body ?: throw IOException("no body")
+                return readAll(body, (want.last - want.first + 1).toInt())
+            }
+        } finally {
+            pieceCalls.remove(f)
+        }
+    }
+
+    private fun closePieces() {
+        pieces?.close()
+        pieces = null
     }
 
     /** Asks for the whole file, with no Range. */
@@ -176,11 +247,20 @@ class HttpSource(
         return OpenedSource(ReplyStream(body, r, r.bodyLength), r.bodyLength, 0L)
     }
 
-    private fun request(from: Long): HttpReply {
+    private fun baseHeaders(): LinkedHashMap<String, String> {
         val headers = LinkedHashMap<String, String>()
         headers["User-Agent"] = userAgent
         if (!cookie.isNullOrEmpty()) headers["Cookie"] = cookie
-        if (from > 0L) {
+        return headers
+    }
+
+    /** Asks for the file from [from] on, or only up to [to] (inclusive) when it is set. */
+    private fun request(from: Long, to: Long = -1L): HttpReply {
+        val headers = baseHeaders()
+        if (to >= 0L) {
+            headers["Range"] = "bytes=$from-$to"
+            if (from > 0L) validator?.let { headers["If-Range"] = it }
+        } else if (from > 0L) {
             headers["Range"] = "bytes=$from-"
             validator?.let { headers["If-Range"] = it }
         }

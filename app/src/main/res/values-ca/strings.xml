@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">Prova les teves versions de payload</string>
     <string name="more_d_language">L\'idioma de l\'app</string>
     <string name="more_d_about">Versió, actualitzacions, còpia i ajustos</string>
+    <string name="web_pieces_title">Baixa fitxers web per parts</string>
+    <string name="web_pieces_hint">Agafa 4 parts d\'un fitxer alhora en enviar del web a la consola. Molts llocs alenteixen cada connexió, així que sovint és diverses vegades més ràpid. Un lloc que no ho permet fa servir una connexió.</string>
+    <string name="split_title">Divideix pujades grans (experimental)</string>
+    <string name="split_hint">Envia un fitxer de 128 MB o més des del telèfon en 4 parts alhora. En activar-ho, primer prova el servidor FTP de la consola amb un fitxer petit.</string>
+    <string name="split_testing">Provant la consola…</string>
+    <string name="split_ok">Funciona amb aquesta consola: els fitxers grans ara van en 4 parts.</string>
+    <string name="split_failed">Aquesta consola no accepta un fitxer per parts (%1$s). Queda desactivat.</string>
+    <string name="split_wrong_size">La consola té %1$s bytes en lloc de %2$s.</string>
+    <string name="split_mixed_up">El fitxer de prova ha tornat barrejat.</string>
+    <string name="split_fallback">Enviant-ho d\'una sola peça…</string>
+    <string name="split_stuck">Una part ha deixat d\'avançar.</string>
 </resources>

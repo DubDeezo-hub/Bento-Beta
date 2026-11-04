@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">اپنے پے لوڈ بلڈز آزمائیں</string>
     <string name="more_d_language">ایپ کی زبان</string>
     <string name="more_d_about">ورژن، اپ ڈیٹس، بیک اپ اور سیٹنگز</string>
+    <string name="web_pieces_title">ویب فائلیں ٹکڑوں میں ڈاؤن لوڈ کریں</string>
+    <string name="web_pieces_hint">ویب سے کنسول کو بھیجتے وقت فائل کے 4 حصے ایک ساتھ لاتا ہے۔ کئی سائٹس ہر کنکشن سست کرتی ہیں، اس لیے یہ اکثر کئی گنا تیز ہوتا ہے۔ جو سائٹ اجازت نہ دے اسے ایک کنکشن ملتا ہے۔</string>
+    <string name="split_title">بڑے اپ لوڈ تقسیم کریں (تجرباتی)</string>
+    <string name="split_hint">فون سے 128 MB یا بڑی فائل 4 حصوں میں ایک ساتھ بھیجتا ہے۔ آن کرنے پر پہلے چھوٹی فائل سے کنسول کا FTP سرور آزمایا جاتا ہے۔</string>
+    <string name="split_testing">کنسول آزمایا جا رہا ہے…</string>
+    <string name="split_ok">اس کنسول کے ساتھ چلتا ہے: بڑی فائلیں اب 4 حصوں میں جاتی ہیں۔</string>
+    <string name="split_failed">یہ کنسول فائل حصوں میں نہیں لے سکتا (%1$s)۔ بند ہی رہے گا۔</string>
+    <string name="split_wrong_size">کنسول پر %2$s کے بجائے %1$s بائٹس ہیں۔</string>
+    <string name="split_mixed_up">آزمائشی فائل گڈمڈ ہو کر واپس آئی۔</string>
+    <string name="split_fallback">اس کے بجائے ایک ٹکڑے میں بھیجا جا رہا ہے…</string>
+    <string name="split_stuck">ایک حصہ رک گیا۔</string>
 </resources>

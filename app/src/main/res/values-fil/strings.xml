@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">Subukan ang sarili mong payload build</string>
     <string name="more_d_language">Wika ng app</string>
     <string name="more_d_about">Bersyon, update, backup at setting</string>
+    <string name="web_pieces_title">I-download nang hati-hati ang web file</string>
+    <string name="web_pieces_hint">Kumukuha ng 4 na bahagi ng file nang sabay kapag nagpapadala mula sa web papunta sa console. Maraming site ang nagpapabagal ng bawat koneksyon, kaya kadalasan ay ilang beses itong mas mabilis. Ang site na hindi pumapayag ay may isang koneksyon.</string>
+    <string name="split_title">Hatiin ang malalaking upload (experimental)</string>
+    <string name="split_hint">Ipinapadala ang file na 128 MB pataas mula sa phone bilang 4 na bahagi nang sabay. Kapag in-on, susubukan muna ang FTP server ng console gamit ang maliit na file.</string>
+    <string name="split_testing">Sinusubukan ang console…</string>
+    <string name="split_ok">Gumagana sa console na ito: ang malalaking file ay 4 na bahagi na.</string>
+    <string name="split_failed">Hindi kaya ng console na ito ang file na hati-hati (%1$s). Mananatiling naka-off.</string>
+    <string name="split_wrong_size">May %1$s byte ang console sa halip na %2$s.</string>
+    <string name="split_mixed_up">Gulo-gulo ang bumalik na test file.</string>
+    <string name="split_fallback">Ipinapadala na lang nang buo…</string>
+    <string name="split_stuck">Huminto ang isang bahagi.</string>
 </resources>

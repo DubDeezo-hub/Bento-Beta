@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">Saját payload-buildek tesztelése</string>
     <string name="more_d_language">Az app nyelve</string>
     <string name="more_d_about">Verzió, frissítések, mentés és beállítások</string>
+    <string name="web_pieces_title">Webes fájlok letöltése darabokban</string>
+    <string name="web_pieces_hint">Webről a konzolra küldéskor a fájl 4 részét egyszerre hozza. Sok oldal lassítja az egyes kapcsolatokat, így ez gyakran többszörösen gyorsabb. Ahol nem engedik, ott egy kapcsolat marad.</string>
+    <string name="split_title">Nagy feltöltések felosztása (kísérleti)</string>
+    <string name="split_hint">128 MB-os vagy nagyobb fájlt 4 részben egyszerre küld a telefonról. Bekapcsoláskor előbb egy kis fájllal teszteli a konzol FTP-szerverét.</string>
+    <string name="split_testing">Konzol tesztelése…</string>
+    <string name="split_ok">Működik ezzel a konzollal: a nagy fájlok most 4 részben mennek.</string>
+    <string name="split_failed">Ez a konzol nem fogad fájlt részekben (%1$s). Kikapcsolva marad.</string>
+    <string name="split_wrong_size">A konzolon %1$s bájt van %2$s helyett.</string>
+    <string name="split_mixed_up">A tesztfájl összekeveredve jött vissza.</string>
+    <string name="split_fallback">Inkább egy darabban küldi…</string>
+    <string name="split_stuck">Egy rész megállt.</string>
 </resources>

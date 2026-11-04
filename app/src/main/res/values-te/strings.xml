@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">మీ పేలోడ్ బిల్డ్‌లు పరీక్షించండి</string>
     <string name="more_d_language">యాప్ భాష</string>
     <string name="more_d_about">వెర్షన్, అప్‌డేట్‌లు, బ్యాకప్ మరియు సెట్టింగ్‌లు</string>
+    <string name="web_pieces_title">వెబ్ ఫైళ్లను ముక్కలుగా డౌన్‌లోడ్ చేయి</string>
+    <string name="web_pieces_hint">వెబ్ నుంచి కన్సోల్‌కు పంపేటప్పుడు ఫైల్‌లోని 4 భాగాలను ఒకేసారి తెస్తుంది. చాలా సైట్‌లు ప్రతి కనెక్షన్‌ను నెమ్మదిస్తాయి, కాబట్టి ఇది తరచుగా చాలా రెట్లు వేగం. అనుమతించని సైట్‌కు ఒక కనెక్షన్.</string>
+    <string name="split_title">పెద్ద అప్‌లోడ్‌లను విభజించు (ప్రయోగాత్మకం)</string>
+    <string name="split_hint">ఫోన్ నుంచి 128 MB లేదా పెద్ద ఫైల్‌ను 4 భాగాలుగా ఒకేసారి పంపుతుంది. ఆన్ చేస్తే ముందు చిన్న ఫైల్‌తో కన్సోల్ FTP సర్వర్‌ను పరీక్షిస్తుంది.</string>
+    <string name="split_testing">కన్సోల్‌ను పరీక్షిస్తోంది…</string>
+    <string name="split_ok">ఈ కన్సోల్‌తో పనిచేస్తుంది: పెద్ద ఫైళ్లు ఇప్పుడు 4 భాగాలుగా వెళ్తాయి.</string>
+    <string name="split_failed">ఈ కన్సోల్ ఫైల్‌ను భాగాలుగా తీసుకోలేదు (%1$s). ఆఫ్‌లోనే ఉంటుంది.</string>
+    <string name="split_wrong_size">కన్సోల్‌లో %2$s బదులు %1$s బైట్‌లు ఉన్నాయి.</string>
+    <string name="split_mixed_up">పరీక్ష ఫైల్ కలగాపులగంగా తిరిగొచ్చింది.</string>
+    <string name="split_fallback">బదులుగా ఒకే ముక్కగా పంపుతోంది…</string>
+    <string name="split_stuck">ఒక భాగం ఆగిపోయింది.</string>
 </resources>

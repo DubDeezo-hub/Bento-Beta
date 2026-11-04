@@ -1496,4 +1496,15 @@
     <string name="more_d_dev">Δοκιμάστε δικές σας εκδόσεις payload</string>
     <string name="more_d_language">Η γλώσσα της εφαρμογής</string>
     <string name="more_d_about">Έκδοση, ενημερώσεις, αντίγραφο και ρυθμίσεις</string>
+    <string name="web_pieces_title">Λήψη αρχείων ιστού σε κομμάτια</string>
+    <string name="web_pieces_hint">Φέρνει 4 κομμάτια ενός αρχείου μαζί όταν στέλνετε από τον ιστό στην κονσόλα. Πολλοί ιστότοποι επιβραδύνουν κάθε σύνδεση, οπότε συχνά είναι πολλές φορές ταχύτερο. Όποιος ιστότοπος δεν το επιτρέπει παίρνει μία σύνδεση.</string>
+    <string name="split_title">Διαίρεση μεγάλων αποστολών (πειραματικό)</string>
+    <string name="split_hint">Στέλνει αρχείο 128 MB ή μεγαλύτερο από το τηλέφωνο σε 4 κομμάτια μαζί. Με την ενεργοποίηση δοκιμάζει πρώτα τον διακομιστή FTP της κονσόλας με μικρό αρχείο.</string>
+    <string name="split_testing">Δοκιμή της κονσόλας…</string>
+    <string name="split_ok">Λειτουργεί με αυτή την κονσόλα: τα μεγάλα αρχεία πάνε σε 4 κομμάτια.</string>
+    <string name="split_failed">Αυτή η κονσόλα δεν δέχεται αρχείο σε κομμάτια (%1$s). Μένει ανενεργό.</string>
+    <string name="split_wrong_size">Η κονσόλα έχει %1$s byte αντί για %2$s.</string>
+    <string name="split_mixed_up">Το δοκιμαστικό αρχείο γύρισε ανακατεμένο.</string>
+    <string name="split_fallback">Αποστολή σε ένα κομμάτι αντί γι\' αυτό…</string>
+    <string name="split_stuck">Ένα κομμάτι σταμάτησε.</string>
 </resources>
