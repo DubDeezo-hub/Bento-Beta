@@ -1510,4 +1510,8 @@
     <string name="err_read_only">Konsoli haitaandika kwenye %1$s: folda hiyo ni ya kusoma tu. Tuma kwenye /data (au diski ya USB) badala yake.</string>
     <string name="upload_goes_to">Inaenda %1$s kwenye konsoli</string>
     <string name="upload_use_data">Tumia /data</string>
+    <string name="upload_choose_folder">Chagua folda</string>
+    <string name="upload_folder_reading">Inasoma folda…</string>
+    <string name="upload_folder_empty">Folda hiyo haina faili.</string>
+    <string name="upload_folder_queued">%1$s: faili %2$d njiani kwenda %3$s</string>
 </resources>

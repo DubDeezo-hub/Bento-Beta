@@ -1510,4 +1510,8 @@
     <string name="err_read_only">Hindi susulat ang console sa %1$s: read-only ang folder na iyon. Ipadala sa /data (o sa USB drive) sa halip.</string>
     <string name="upload_goes_to">Pupunta sa %1$s sa console</string>
     <string name="upload_use_data">Gamitin ang /data</string>
+    <string name="upload_choose_folder">Pumili ng folder</string>
+    <string name="upload_folder_reading">Binabasa ang folder…</string>
+    <string name="upload_folder_empty">Walang file sa folder na iyon.</string>
+    <string name="upload_folder_queued">%1$s: %2$d file papunta sa %3$s</string>
 </resources>

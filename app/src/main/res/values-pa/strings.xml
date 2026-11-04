@@ -1510,4 +1510,8 @@
     <string name="err_read_only">ਕੰਸੋਲ %1$s ਵਿੱਚ ਨਹੀਂ ਲਿਖੇਗਾ: ਉਹ ਫੋਲਡਰ ਸਿਰਫ਼ ਪੜ੍ਹਨ ਲਈ ਹੈ। ਇਸਦੀ ਥਾਂ /data (ਜਾਂ USB ਡਰਾਈਵ) ’ਤੇ ਭੇਜੋ।</string>
     <string name="upload_goes_to">ਕੰਸੋਲ ’ਤੇ %1$s ਵਿੱਚ ਜਾਂਦਾ ਹੈ</string>
     <string name="upload_use_data">/data ਵਰਤੋ</string>
+    <string name="upload_choose_folder">ਫੋਲਡਰ ਚੁਣੋ</string>
+    <string name="upload_folder_reading">ਫੋਲਡਰ ਪੜ੍ਹਿਆ ਜਾ ਰਿਹਾ ਹੈ…</string>
+    <string name="upload_folder_empty">ਉਸ ਫੋਲਡਰ ਵਿੱਚ ਕੋਈ ਫ਼ਾਈਲ ਨਹੀਂ।</string>
+    <string name="upload_folder_queued">%1$s: %2$d ਫ਼ਾਈਲਾਂ %3$s ਵੱਲ ਜਾ ਰਹੀਆਂ ਹਨ</string>
 </resources>

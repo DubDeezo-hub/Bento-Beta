@@ -1510,4 +1510,8 @@
     <string name="err_read_only">કન્સોલ %1$s માં લખશે નહીં: ફોલ્ડર ફક્ત વાંચવા માટે છે. બદલે /data (અથવા USB ડ્રાઇવ) પર મોકલો.</string>
     <string name="upload_goes_to">કન્સોલ પર %1$s માં જાય છે</string>
     <string name="upload_use_data">/data વાપરો</string>
+    <string name="upload_choose_folder">ફોલ્ડર પસંદ કરો</string>
+    <string name="upload_folder_reading">ફોલ્ડર વંચાય છે…</string>
+    <string name="upload_folder_empty">એ ફોલ્ડરમાં કોઈ ફાઇલ નથી.</string>
+    <string name="upload_folder_queued">%1$s: %2$d ફાઇલો %3$s તરફ જઈ રહી છે</string>
 </resources>

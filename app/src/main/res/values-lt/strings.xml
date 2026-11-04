@@ -1510,4 +1510,8 @@
     <string name="err_read_only">Konsolė nerašo į %1$s: aplankas tik skaitomas. Siųskite į /data (arba USB diską).</string>
     <string name="upload_goes_to">Keliauja į %1$s konsolėje</string>
     <string name="upload_use_data">Naudoti /data</string>
+    <string name="upload_choose_folder">Pasirinkti aplanką</string>
+    <string name="upload_folder_reading">Skaitomas aplankas…</string>
+    <string name="upload_folder_empty">Tame aplanke nėra failų.</string>
+    <string name="upload_folder_queued">%1$s: %2$d failai keliauja į %3$s</string>
 </resources>

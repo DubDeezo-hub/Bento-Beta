@@ -1510,4 +1510,8 @@
     <string name="err_read_only">Consola nu scrie în %1$s: dosarul este doar pentru citire. Trimite în /data (sau pe un stick USB).</string>
     <string name="upload_goes_to">Ajunge în %1$s pe consolă</string>
     <string name="upload_use_data">Folosește /data</string>
+    <string name="upload_choose_folder">Alege un dosar</string>
+    <string name="upload_folder_reading">Se citește dosarul…</string>
+    <string name="upload_folder_empty">Dosarul nu are fișiere.</string>
+    <string name="upload_folder_queued">%1$s: %2$d fișiere pe drum spre %3$s</string>
 </resources>

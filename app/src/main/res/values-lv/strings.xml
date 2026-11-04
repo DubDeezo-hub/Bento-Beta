@@ -1510,4 +1510,8 @@
     <string name="err_read_only">Konsole neraksta mapē %1$s: tā ir tikai lasāma. Sūtiet uz /data (vai USB disku).</string>
     <string name="upload_goes_to">Nonāk konsolē mapē %1$s</string>
     <string name="upload_use_data">Izmantot /data</string>
+    <string name="upload_choose_folder">Izvēlēties mapi</string>
+    <string name="upload_folder_reading">Lasa mapi…</string>
+    <string name="upload_folder_empty">Šajā mapē nav failu.</string>
+    <string name="upload_folder_queued">%1$s: %2$d faili ceļā uz %3$s</string>
 </resources>

@@ -1511,4 +1511,8 @@
     <string name="err_read_only">La console non scrive in %1$s: la cartella è di sola lettura. Invia invece in /data (o su un\'unità USB).</string>
     <string name="upload_goes_to">Va in %1$s sulla console</string>
     <string name="upload_use_data">Usa /data</string>
+    <string name="upload_choose_folder">Scegli una cartella</string>
+    <string name="upload_folder_reading">Lettura della cartella…</string>
+    <string name="upload_folder_empty">Quella cartella non contiene file.</string>
+    <string name="upload_folder_queued">%1$s: %2$d file in viaggio verso %3$s</string>
 </resources>

@@ -1511,4 +1511,8 @@
     <string name="err_read_only">La consola no escribe en %1$s: esa carpeta es de solo lectura. Envía a /data (o a un USB).</string>
     <string name="upload_goes_to">Va a %1$s en la consola</string>
     <string name="upload_use_data">Usar /data</string>
+    <string name="upload_choose_folder">Elegir una carpeta</string>
+    <string name="upload_folder_reading">Leyendo la carpeta…</string>
+    <string name="upload_folder_empty">Esa carpeta no tiene archivos.</string>
+    <string name="upload_folder_queued">%1$s: %2$d archivos de camino a %3$s</string>
 </resources>

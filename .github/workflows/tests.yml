@@ -148,3 +148,14 @@ jobs:
             app/build/reports/tests/testDebugUnitTest
             app/build/reports/lint-results-debug.html
           if-no-files-found: ignore
+
+      # The build this run tested, to install on a phone and try before it goes out to everyone (signed like a release,
+      # so it installs over the app). It is the APK inside the zip GitHub hands out.
+      - name: Keep the tested app
+        if: success()
+        uses: actions/upload-artifact@v6
+        with:
+          name: test-apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 14
+          if-no-files-found: ignore

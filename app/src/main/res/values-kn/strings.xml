@@ -1510,4 +1510,8 @@
     <string name="err_read_only">ಕನ್ಸೋಲ್ %1$s ಗೆ ಬರೆಯುವುದಿಲ್ಲ: ಆ ಫೋಲ್ಡರ್ ಓದಲು ಮಾತ್ರ. ಬದಲಿಗೆ /data (ಅಥವಾ USB ಡ್ರೈವ್) ಗೆ ಕಳುಹಿಸಿ.</string>
     <string name="upload_goes_to">ಕನ್ಸೋಲ್‌ನ %1$s ಗೆ ಹೋಗುತ್ತದೆ</string>
     <string name="upload_use_data">/data ಬಳಸಿ</string>
+    <string name="upload_choose_folder">ಫೋಲ್ಡರ್ ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="upload_folder_reading">ಫೋಲ್ಡರ್ ಓದಲಾಗುತ್ತಿದೆ…</string>
+    <string name="upload_folder_empty">ಆ ಫೋಲ್ಡರ್‌ನಲ್ಲಿ ಫೈಲ್‌ಗಳಿಲ್ಲ.</string>
+    <string name="upload_folder_queued">%1$s: %2$d ಫೈಲ್‌ಗಳು %3$s ಕಡೆಗೆ ಹೋಗುತ್ತಿವೆ</string>
 </resources>

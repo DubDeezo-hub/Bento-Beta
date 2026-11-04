@@ -1510,4 +1510,8 @@
     <string name="err_read_only">Konsool ei kirjuta kausta %1$s: see on kirjutuskaitstud. Saada hoopis /data alla (või USB-kettale).</string>
     <string name="upload_goes_to">Läheb konsoolis kausta %1$s</string>
     <string name="upload_use_data">Kasuta /data</string>
+    <string name="upload_choose_folder">Vali kaust</string>
+    <string name="upload_folder_reading">Kausta lugemine…</string>
+    <string name="upload_folder_empty">Selles kaustas pole faile.</string>
+    <string name="upload_folder_queued">%1$s: %2$d faili teel kausta %3$s</string>
 </resources>

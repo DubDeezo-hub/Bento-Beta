@@ -1510,4 +1510,8 @@
     <string name="err_read_only">Консоль не пишет в %1$s: эта папка только для чтения. Отправляйте в /data (или на USB-диск).</string>
     <string name="upload_goes_to">Попадает в %1$s на консоли</string>
     <string name="upload_use_data">Использовать /data</string>
+    <string name="upload_choose_folder">Выбрать папку</string>
+    <string name="upload_folder_reading">Чтение папки…</string>
+    <string name="upload_folder_empty">В этой папке нет файлов.</string>
+    <string name="upload_folder_queued">%1$s: %2$d файлов отправляются в %3$s</string>
 </resources>

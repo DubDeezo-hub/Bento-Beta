@@ -1510,4 +1510,8 @@
     <string name="err_read_only">Konsol tidak mau menulis ke %1$s: folder itu hanya-baca. Kirim ke /data (atau drive USB) saja.</string>
     <string name="upload_goes_to">Masuk ke %1$s di konsol</string>
     <string name="upload_use_data">Pakai /data</string>
+    <string name="upload_choose_folder">Pilih folder</string>
+    <string name="upload_folder_reading">Membaca folder…</string>
+    <string name="upload_folder_empty">Folder itu tidak berisi file.</string>
+    <string name="upload_folder_queued">%1$s: %2$d file sedang dikirim ke %3$s</string>
 </resources>

@@ -1510,4 +1510,8 @@
     <string name="err_read_only">Konsollen skriver ikke til %1$s: mappen er skrivebeskyttet. Send til /data (eller et USB-drev) i stedet.</string>
     <string name="upload_goes_to">Går til %1$s på konsollen</string>
     <string name="upload_use_data">Brug /data</string>
+    <string name="upload_choose_folder">Vælg en mappe</string>
+    <string name="upload_folder_reading">Læser mappen…</string>
+    <string name="upload_folder_empty">Den mappe har ingen filer.</string>
+    <string name="upload_folder_queued">%1$s: %2$d filer på vej til %3$s</string>
 </resources>

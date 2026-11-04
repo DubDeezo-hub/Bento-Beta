@@ -1510,4 +1510,8 @@
     <string name="err_read_only">کنسول در %1$s نمی‌نویسد: این پوشه فقط‌خواندنی است. به جای آن به /data (یا درایو USB) بفرستید.</string>
     <string name="upload_goes_to">به %1$s روی کنسول می‌رود</string>
     <string name="upload_use_data">استفاده از /data</string>
+    <string name="upload_choose_folder">یک پوشه انتخاب کنید</string>
+    <string name="upload_folder_reading">در حال خواندن پوشه…</string>
+    <string name="upload_folder_empty">آن پوشه فایلی ندارد.</string>
+    <string name="upload_folder_queued">‏%1$s: %2$d فایل در راه %3$s</string>
 </resources>

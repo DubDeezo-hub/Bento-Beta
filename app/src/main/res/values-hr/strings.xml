@@ -1510,4 +1510,8 @@
     <string name="err_read_only">Konzola neće pisati u %1$s: mapa je samo za čitanje. Šaljite u /data (ili na USB disk).</string>
     <string name="upload_goes_to">Ide u %1$s na konzoli</string>
     <string name="upload_use_data">Koristi /data</string>
+    <string name="upload_choose_folder">Odaberi mapu</string>
+    <string name="upload_folder_reading">Čitanje mape…</string>
+    <string name="upload_folder_empty">U toj mapi nema datoteka.</string>
+    <string name="upload_folder_queued">%1$s: %2$d datoteka na putu u %3$s</string>
 </resources>

@@ -1510,4 +1510,8 @@
     <string name="err_read_only">A konzol nem ír ide: %1$s – a mappa csak olvasható. Küldd inkább a /data mappába (vagy USB-meghajtóra).</string>
     <string name="upload_goes_to">A konzolon ide megy: %1$s</string>
     <string name="upload_use_data">/data használata</string>
+    <string name="upload_choose_folder">Mappa választása</string>
+    <string name="upload_folder_reading">Mappa olvasása…</string>
+    <string name="upload_folder_empty">Abban a mappában nincs fájl.</string>
+    <string name="upload_folder_queued">%1$s: %2$d fájl úton ide: %3$s</string>
 </resources>

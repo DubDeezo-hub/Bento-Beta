@@ -1510,4 +1510,8 @@
     <string name="err_read_only">Konsol %1$s klasörüne yazmıyor: bu klasör salt okunur. Bunun yerine /data\'ya (veya bir USB sürücüye) gönder.</string>
     <string name="upload_goes_to">Konsolda %1$s klasörüne gider</string>
     <string name="upload_use_data">/data kullan</string>
+    <string name="upload_choose_folder">Klasör seç</string>
+    <string name="upload_folder_reading">Klasör okunuyor…</string>
+    <string name="upload_folder_empty">Bu klasörde dosya yok.</string>
+    <string name="upload_folder_queued">%1$s: %2$d dosya %3$s klasörüne gidiyor</string>
 </resources>

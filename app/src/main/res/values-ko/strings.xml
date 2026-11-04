@@ -1510,4 +1510,8 @@
     <string name="err_read_only">콘솔이 %1$s에 쓰지 않습니다: 읽기 전용 폴더입니다. 대신 /data(또는 USB 드라이브)로 보내세요.</string>
     <string name="upload_goes_to">콘솔의 %1$s로 갑니다</string>
     <string name="upload_use_data">/data 사용</string>
+    <string name="upload_choose_folder">폴더 선택</string>
+    <string name="upload_folder_reading">폴더 읽는 중…</string>
+    <string name="upload_folder_empty">그 폴더에는 파일이 없습니다.</string>
+    <string name="upload_folder_queued">%1$s: 파일 %2$d개를 %3$s(으)로 보내는 중</string>
 </resources>

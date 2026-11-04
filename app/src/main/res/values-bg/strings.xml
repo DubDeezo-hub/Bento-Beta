@@ -1510,4 +1510,8 @@
     <string name="err_read_only">Конзолата не записва в %1$s: тази папка е само за четене. Изпратете в /data (или на USB устройство).</string>
     <string name="upload_goes_to">Отива в %1$s на конзолата</string>
     <string name="upload_use_data">Използвай /data</string>
+    <string name="upload_choose_folder">Изберете папка</string>
+    <string name="upload_folder_reading">Четене на папката…</string>
+    <string name="upload_folder_empty">В тази папка няма файлове.</string>
+    <string name="upload_folder_queued">%1$s: %2$d файла пътуват към %3$s</string>
 </resources>

@@ -1511,4 +1511,8 @@
     <string name="err_read_only">Konsolen skriver inte till %1$s: mappen är skrivskyddad. Skicka till /data (eller en USB-enhet) i stället.</string>
     <string name="upload_goes_to">Hamnar i %1$s på konsolen</string>
     <string name="upload_use_data">Använd /data</string>
+    <string name="upload_choose_folder">Välj en mapp</string>
+    <string name="upload_folder_reading">Läser mappen…</string>
+    <string name="upload_folder_empty">Den mappen har inga filer.</string>
+    <string name="upload_folder_queued">%1$s: %2$d filer på väg till %3$s</string>
 </resources>

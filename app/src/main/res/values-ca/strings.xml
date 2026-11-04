@@ -1510,4 +1510,8 @@
     <string name="err_read_only">La consola no escriu a %1$s: aquesta carpeta és només de lectura. Envia-ho a /data (o a un USB).</string>
     <string name="upload_goes_to">Va a %1$s a la consola</string>
     <string name="upload_use_data">Fes servir /data</string>
+    <string name="upload_choose_folder">Tria una carpeta</string>
+    <string name="upload_folder_reading">Llegint la carpeta…</string>
+    <string name="upload_folder_empty">Aquesta carpeta no té fitxers.</string>
+    <string name="upload_folder_queued">%1$s: %2$d fitxers de camí a %3$s</string>
 </resources>

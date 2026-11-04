@@ -1510,4 +1510,8 @@
     <string name="err_read_only">主机不会写入 %1$s：该文件夹为只读。请改发到 /data（或 USB 硬盘）。</string>
     <string name="upload_goes_to">发送到主机上的 %1$s</string>
     <string name="upload_use_data">使用 /data</string>
+    <string name="upload_choose_folder">选择文件夹</string>
+    <string name="upload_folder_reading">正在读取文件夹…</string>
+    <string name="upload_folder_empty">该文件夹中没有文件。</string>
+    <string name="upload_folder_queued">%1$s：%2$d 个文件正在发送到 %3$s</string>
 </resources>

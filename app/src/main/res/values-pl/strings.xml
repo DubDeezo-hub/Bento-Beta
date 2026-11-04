@@ -1510,4 +1510,8 @@
     <string name="err_read_only">Konsola nie zapisze w %1$s: ten folder jest tylko do odczytu. Wysyłaj do /data (lub na dysk USB).</string>
     <string name="upload_goes_to">Trafia do %1$s na konsoli</string>
     <string name="upload_use_data">Użyj /data</string>
+    <string name="upload_choose_folder">Wybierz folder</string>
+    <string name="upload_folder_reading">Odczyt folderu…</string>
+    <string name="upload_folder_empty">W tym folderze nie ma plików.</string>
+    <string name="upload_folder_queued">%1$s: %2$d plików w drodze do %3$s</string>
 </resources>

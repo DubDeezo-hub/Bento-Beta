@@ -1510,4 +1510,8 @@
     <string name="err_read_only">Konzole nezapíše do %1$s: složka je jen pro čtení. Posílejte raději do /data (nebo na USB disk).</string>
     <string name="upload_goes_to">Jde do %1$s na konzoli</string>
     <string name="upload_use_data">Použít /data</string>
+    <string name="upload_choose_folder">Vybrat složku</string>
+    <string name="upload_folder_reading">Čtení složky…</string>
+    <string name="upload_folder_empty">Ve složce nejsou žádné soubory.</string>
+    <string name="upload_folder_queued">%1$s: %2$d souborů na cestě do %3$s</string>
 </resources>

@@ -1510,4 +1510,8 @@
     <string name="err_read_only">本体は %1$s に書き込めません：読み取り専用のフォルダーです。/data（または USB ドライブ）に送ってください。</string>
     <string name="upload_goes_to">本体の %1$s に送ります</string>
     <string name="upload_use_data">/data を使う</string>
+    <string name="upload_choose_folder">フォルダーを選ぶ</string>
+    <string name="upload_folder_reading">フォルダーを読み込み中…</string>
+    <string name="upload_folder_empty">そのフォルダーにはファイルがありません。</string>
+    <string name="upload_folder_queued">%1$s：%2$d 個のファイルを %3$s へ送信中</string>
 </resources>

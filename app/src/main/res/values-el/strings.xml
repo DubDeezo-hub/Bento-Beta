@@ -1510,4 +1510,8 @@
     <string name="err_read_only">Η κονσόλα δεν γράφει στο %1$s: ο φάκελος είναι μόνο για ανάγνωση. Στείλτε στο /data (ή σε USB).</string>
     <string name="upload_goes_to">Πηγαίνει στο %1$s στην κονσόλα</string>
     <string name="upload_use_data">Χρήση /data</string>
+    <string name="upload_choose_folder">Επιλογή φακέλου</string>
+    <string name="upload_folder_reading">Ανάγνωση φακέλου…</string>
+    <string name="upload_folder_empty">Αυτός ο φάκελος δεν έχει αρχεία.</string>
+    <string name="upload_folder_queued">%1$s: %2$d αρχεία πηγαίνουν στο %3$s</string>
 </resources>

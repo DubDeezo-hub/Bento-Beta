@@ -1510,4 +1510,8 @@
     <string name="err_read_only">কনসোল %1$s এ লিখবে না: ফোল্ডারটি শুধু পড়ার জন্য। বদলে /data (বা USB ড্রাইভ) এ পাঠান।</string>
     <string name="upload_goes_to">কনসোলে %1$s এ যায়</string>
     <string name="upload_use_data">/data ব্যবহার করুন</string>
+    <string name="upload_choose_folder">একটি ফোল্ডার বাছুন</string>
+    <string name="upload_folder_reading">ফোল্ডার পড়া হচ্ছে…</string>
+    <string name="upload_folder_empty">ওই ফোল্ডারে কোনো ফাইল নেই।</string>
+    <string name="upload_folder_queued">%1$s: %2$dটি ফাইল %3$s এ যাচ্ছে</string>
 </resources>

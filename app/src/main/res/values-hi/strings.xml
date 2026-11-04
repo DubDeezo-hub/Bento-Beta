@@ -1510,4 +1510,8 @@
     <string name="err_read_only">कंसोल %1$s में नहीं लिखेगा: वह फ़ोल्डर केवल पढ़ने के लिए है। इसके बजाय /data (या USB ड्राइव) पर भेजें।</string>
     <string name="upload_goes_to">कंसोल पर %1$s में जाता है</string>
     <string name="upload_use_data">/data इस्तेमाल करें</string>
+    <string name="upload_choose_folder">फ़ोल्डर चुनें</string>
+    <string name="upload_folder_reading">फ़ोल्डर पढ़ा जा रहा है…</string>
+    <string name="upload_folder_empty">उस फ़ोल्डर में कोई फ़ाइल नहीं है।</string>
+    <string name="upload_folder_queued">%1$s: %2$d फ़ाइलें %3$s की ओर जा रही हैं</string>
 </resources>

@@ -1510,4 +1510,8 @@
     <string name="err_read_only">Конзола неће писати у %1$s: та фасцикла је само за читање. Шаљите у /data (или на USB диск).</string>
     <string name="upload_goes_to">Иде у %1$s на конзоли</string>
     <string name="upload_use_data">Користи /data</string>
+    <string name="upload_choose_folder">Изабери фасциклу</string>
+    <string name="upload_folder_reading">Читање фасцикле…</string>
+    <string name="upload_folder_empty">У тој фасцикли нема датотека.</string>
+    <string name="upload_folder_queued">%1$s: %2$d датотека на путу у %3$s</string>
 </resources>

@@ -1511,4 +1511,8 @@
     <string name="err_read_only">De console schrijft niet naar %1$s: die map is alleen-lezen. Stuur naar /data (of een USB-schijf).</string>
     <string name="upload_goes_to">Gaat naar %1$s op de console</string>
     <string name="upload_use_data">/data gebruiken</string>
+    <string name="upload_choose_folder">Kies een map</string>
+    <string name="upload_folder_reading">Map lezen…</string>
+    <string name="upload_folder_empty">Die map bevat geen bestanden.</string>
+    <string name="upload_folder_queued">%1$s: %2$d bestanden onderweg naar %3$s</string>
 </resources>

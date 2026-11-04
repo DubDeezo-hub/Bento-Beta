@@ -1511,4 +1511,8 @@
     <string name="err_read_only">O console não grava em %1$s: essa pasta é somente leitura. Envie para /data (ou um pendrive).</string>
     <string name="upload_goes_to">Vai para %1$s no console</string>
     <string name="upload_use_data">Usar /data</string>
+    <string name="upload_choose_folder">Escolher uma pasta</string>
+    <string name="upload_folder_reading">Lendo a pasta…</string>
+    <string name="upload_folder_empty">Essa pasta não tem arquivos.</string>
+    <string name="upload_folder_queued">%1$s: %2$d arquivos a caminho de %3$s</string>
 </resources>

@@ -1510,4 +1510,8 @@
     <string name="err_read_only">கன்சோல் %1$s இல் எழுதாது: அந்தக் கோப்புறை படிக்க மட்டும். பதிலாக /data (அல்லது USB டிரைவ்) க்கு அனுப்பவும்.</string>
     <string name="upload_goes_to">கன்சோலில் %1$s க்குச் செல்கிறது</string>
     <string name="upload_use_data">/data பயன்படுத்து</string>
+    <string name="upload_choose_folder">கோப்புறையைத் தேர்ந்தெடு</string>
+    <string name="upload_folder_reading">கோப்புறை படிக்கப்படுகிறது…</string>
+    <string name="upload_folder_empty">அந்தக் கோப்புறையில் கோப்புகள் இல்லை.</string>
+    <string name="upload_folder_queued">%1$s: %2$d கோப்புகள் %3$s க்குச் செல்கின்றன</string>
 </resources>

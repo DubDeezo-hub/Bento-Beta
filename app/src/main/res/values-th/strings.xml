@@ -1510,4 +1510,8 @@
     <string name="err_read_only">คอนโซลจะไม่เขียนลง %1$s เพราะโฟลเดอร์นั้นอ่านได้อย่างเดียว ส่งไปที่ /data (หรือไดรฟ์ USB) แทน</string>
     <string name="upload_goes_to">ไปที่ %1$s บนคอนโซล</string>
     <string name="upload_use_data">ใช้ /data</string>
+    <string name="upload_choose_folder">เลือกโฟลเดอร์</string>
+    <string name="upload_folder_reading">กำลังอ่านโฟลเดอร์…</string>
+    <string name="upload_folder_empty">โฟลเดอร์นั้นไม่มีไฟล์</string>
+    <string name="upload_folder_queued">%1$s: กำลังส่ง %2$d ไฟล์ไปที่ %3$s</string>
 </resources>

@@ -1512,4 +1512,8 @@
     <string name="err_read_only">Die Konsole schreibt nicht nach %1$s: Der Ordner ist schreibgeschützt. Sende stattdessen nach /data (oder auf ein USB-Laufwerk).</string>
     <string name="upload_goes_to">Geht nach %1$s auf der Konsole</string>
     <string name="upload_use_data">/data nehmen</string>
+    <string name="upload_choose_folder">Ordner wählen</string>
+    <string name="upload_folder_reading">Ordner wird gelesen…</string>
+    <string name="upload_folder_empty">In diesem Ordner sind keine Dateien.</string>
+    <string name="upload_folder_queued">%1$s: %2$d Dateien unterwegs nach %3$s</string>
 </resources>

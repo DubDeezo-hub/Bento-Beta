@@ -1510,4 +1510,8 @@
     <string name="err_read_only">主機不會寫入 %1$s：該資料夾為唯讀。請改傳到 /data（或 USB 硬碟）。</string>
     <string name="upload_goes_to">傳送到主機上的 %1$s</string>
     <string name="upload_use_data">使用 /data</string>
+    <string name="upload_choose_folder">選擇資料夾</string>
+    <string name="upload_folder_reading">正在讀取資料夾…</string>
+    <string name="upload_folder_empty">該資料夾中沒有檔案。</string>
+    <string name="upload_folder_queued">%1$s：%2$d 個檔案正在傳送到 %3$s</string>
 </resources>

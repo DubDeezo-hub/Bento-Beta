@@ -1510,4 +1510,8 @@
     <string name="err_read_only">Консоль не пише в %1$s: ця тека лише для читання. Надсилайте в /data (або на USB-диск).</string>
     <string name="upload_goes_to">Потрапляє в %1$s на консолі</string>
     <string name="upload_use_data">Використати /data</string>
+    <string name="upload_choose_folder">Вибрати теку</string>
+    <string name="upload_folder_reading">Читання теки…</string>
+    <string name="upload_folder_empty">У цій теці немає файлів.</string>
+    <string name="upload_folder_queued">%1$s: %2$d файлів прямують до %3$s</string>
 </resources>

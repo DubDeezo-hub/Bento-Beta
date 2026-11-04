@@ -1510,4 +1510,8 @@
     <string name="err_read_only">کنسول %1$s میں نہیں لکھے گا: وہ فولڈر صرف پڑھنے کے لیے ہے۔ اس کے بجائے /data (یا USB ڈرائیو) پر بھیجیں۔</string>
     <string name="upload_goes_to">کنسول پر %1$s میں جاتا ہے</string>
     <string name="upload_use_data">‏/data استعمال کریں</string>
+    <string name="upload_choose_folder">فولڈر منتخب کریں</string>
+    <string name="upload_folder_reading">فولڈر پڑھا جا رہا ہے…</string>
+    <string name="upload_folder_empty">اس فولڈر میں کوئی فائل نہیں۔</string>
+    <string name="upload_folder_queued">‏%1$s: %2$d فائلیں %3$s کی طرف جا رہی ہیں</string>
 </resources>
