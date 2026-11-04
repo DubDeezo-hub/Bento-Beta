@@ -2,6 +2,7 @@ package com.example.pssender
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
+import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
@@ -55,6 +56,25 @@ class PortsTest {
         assertEquals("elfldr", henName(ConsoleType.PS5, false))
         assertEquals("etaHEN", henName(ConsoleType.PS5, true))
         assertEquals("GoldHEN", henName(ConsoleType.PS4, false))
+    }
+
+    @Test
+    fun theFtpPortFollowsWhatRuns() {
+        val plain = Profile(id = "a", name = "A")
+        val eta = plain.withEtaHen(true)
+        // etaHEN loaded: 2121 is quiet, 1337 answers
+        assertEquals(eta, plain.followRunning(setFtpUp = false, otherFtpUp = true))
+        // Started without etaHEN: 1337 is quiet, ftpsrv's 2121 answers
+        assertEquals(plain, eta.followRunning(setFtpUp = false, otherFtpUp = true))
+        // Nothing to change when the set port answers or neither does
+        assertNull(plain.followRunning(setFtpUp = true, otherFtpUp = true))
+        assertNull(plain.followRunning(setFtpUp = false, otherFtpUp = false))
+        // A port typed by hand and a PS4 are left alone
+        assertNull(plain.copy(ftpPort = "2222").followRunning(setFtpUp = false, otherFtpUp = true))
+        assertNull(plain.withType(ConsoleType.PS4).followRunning(setFtpUp = false, otherFtpUp = true))
+        assertEquals(1337, otherUsualFtp("2121"))
+        assertEquals(2121, otherUsualFtp(" 1337"))
+        assertNull(otherUsualFtp("21"))
     }
 
     @Test

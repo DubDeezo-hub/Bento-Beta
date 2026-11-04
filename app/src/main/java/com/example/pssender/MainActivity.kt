@@ -340,10 +340,12 @@ fun SenderApp(
     val installerName = str(R.string.service_installer)
     val loaderName = str(R.string.service_loader)
     val ftpName = str(R.string.service_ftp)
+    // A PS5 without etaHEN has no package installer, so it is not checked: the loader and FTP answering is "ready"
+    val installerChecked = active.type != ConsoleType.PS5 || active.etaHen
     val target = ConsoleTarget(
         host.trim(),
-        listOf(
-            installerName to active.installPort.trim().toIntOrNull(),
+        listOfNotNull(
+            if (installerChecked) installerName to active.installPort.trim().toIntOrNull() else null,
             loaderName to active.payloadPort.trim().toIntOrNull(),
             ftpName to active.ftpPort.trim().toIntOrNull()
         )
@@ -364,7 +366,17 @@ fun SenderApp(
         delay(300) // typing an address or a port shouldn't start a check for every key
         while (isShown()) {
             // Not while a transfer runs: the console is busy with it, and the transfer card shows how it goes
-            if (!TransferState.info.value.active) consoleStatus = checkConsole(target)
+            if (!TransferState.info.value.active) {
+                val status = checkConsole(target)
+                consoleStatus = status
+                // The FTP port follows what runs: etaHEN's 1337 once it is loaded, ftpsrv's 2121 without it
+                val ftpUp = status.checks.firstOrNull { it.label == ftpName }?.up == true
+                val other = if (ftpUp || active.type != ConsoleType.PS5) null else otherUsualFtp(active.ftpPort)
+                if (other != null) {
+                    val otherUp = withContext(Dispatchers.IO) { isPortOpen(target.host, other, 1500) }
+                    active.followRunning(ftpUp, otherUp)?.let { moved -> updateActive { moved } }
+                }
+            }
             delay(CHECK_EVERY_MS)
         }
     }

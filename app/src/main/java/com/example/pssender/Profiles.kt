@@ -114,6 +114,27 @@ data class Profile(
 fun henName(type: ConsoleType, etaHen: Boolean = ActiveConsole.etaHen): String =
     if (type == ConsoleType.PS5 && !etaHen) "elfldr" else type.hen
 
+/**
+ * This console set to what is really running, or null when nothing needs to change: on a PS5 whose FTP port is still a
+ * usual one, [setFtpUp] says whether that port answered and [otherFtpUp] whether the other usual one did (etaHEN's 1337
+ * or ftpsrv's 2121). Loading etaHEN turns the switch on by itself, and a console started without it turns it off.
+ */
+fun Profile.followRunning(setFtpUp: Boolean, otherFtpUp: Boolean): Profile? {
+    if (type != ConsoleType.PS5 || setFtpUp || !otherFtpUp) return null
+    return when (ftpPort.trim()) {
+        ETAHEN_FTP -> withEtaHen(false)
+        ConsoleType.PS5.ftpPort -> withEtaHen(true)
+        else -> null
+    }
+}
+
+/** The other usual FTP port of a PS5 set to [ftpPort], or null when it was typed by hand. */
+fun otherUsualFtp(ftpPort: String): Int? = when (ftpPort.trim()) {
+    ETAHEN_FTP -> ConsoleType.PS5.ftpPort.toInt()
+    ConsoleType.PS5.ftpPort -> ETAHEN_FTP.toInt()
+    else -> null
+}
+
 /** This console with etaHEN turned [on] or off: the FTP port follows when it is still the usual one. */
 fun Profile.withEtaHen(on: Boolean): Profile {
     if (type != ConsoleType.PS5 || on == etaHen) return copy(etaHen = on && type == ConsoleType.PS5)
