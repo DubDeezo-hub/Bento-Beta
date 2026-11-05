@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">Prašoma PKG Manager jį įdiegti…</string>
     <string name="install_port_label2">Diegimo programos prievadas (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (iš Gauti payload) diegia konsolėje esančius paketus: nuoroda pirmiausia nukopijuojama į %1$s, tada įdiegiama. etaHEN nereikia.</string>
+    <string name="split_dl_title">Atsisiųsti didelius failus dalimis</string>
+    <string name="split_dl_hint">64 MB ar didesni failai iš konsolės ateina 4 dalimis vienu metu, kiekviena įrašoma į savo vietą telefone. Išjunkite, jei atsisiuntimas išeina blogas.</string>
+    <string name="split_dl_fallback">Vietoj to siunčiama vienu gabalu…</string>
 </resources>

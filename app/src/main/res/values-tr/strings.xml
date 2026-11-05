@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">PKG Manager\'dan kurması isteniyor…</string>
     <string name="install_port_label2">Yükleyici portu (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (Payload al bölümünden) konsoldaki paketleri kurar: bağlantı önce %1$s klasörüne kopyalanır, sonra kurulur. etaHEN gerekmez.</string>
+    <string name="split_dl_title">Büyük dosyaları parça parça indir</string>
+    <string name="split_dl_hint">64 MB ve üzeri dosyalar konsoldan aynı anda 4 parça halinde gelir, her biri telefonda kendi yerine yazılır. Bir indirme hatalı çıkarsa kapat.</string>
+    <string name="split_dl_fallback">Bunun yerine tek parça alınıyor…</string>
 </resources>

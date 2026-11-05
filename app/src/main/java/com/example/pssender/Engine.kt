@@ -163,6 +163,13 @@ interface ResumableSink {
     /** Opens for writing so that the next byte lands at [offset]. Anything stored after [offset] is discarded. */
     @Throws(IOException::class)
     fun open(offset: Long): OutputStream
+
+    /**
+     * Opens for writing at [offset] without discarding anything (for a download in parts, each writing its own stretch).
+     * Null when the sink can only be written from front to back.
+     */
+    @Throws(IOException::class)
+    fun openAt(offset: Long): OutputStream? = null
 }
 
 /**
@@ -502,8 +509,9 @@ internal class FtpSession {
         // A console that stops answering must not leave a transfer waiting forever
         it.setDefaultTimeout(60_000)
         it.setDataTimeout(Duration.ofSeconds(60))
-        // Larger chunks than the library's 1 KB default: far fewer calls, so a fast network is not held back
-        it.setBufferSize(256 * 1024)
+        // Larger chunks than the library's 1 KB default: far fewer calls, so a fast network is not held back (1 MB, the
+        // same as ftpsrv's own buffers)
+        it.setBufferSize(1024 * 1024)
     }
 
     /** Closes every connection, which also frees a thread stuck waiting on a stalled network. Safe to call twice. */
@@ -968,6 +976,17 @@ fun ftpDownload(
     mem: ResumeMemory, hooks: TransferHooks, policy: TransferPolicy = TransferPolicy()
 ): TransferResult {
     val cancelMessage = AppText.get(R.string.err_cancelled_download)
+    // A big file comes down in parts at the same time when the phone's copy can be written at any place. If that doesn't
+    // work out, it is fetched the usual way from the start (the first try starts at 0 and cuts off whatever is there)
+    if (size >= SPLIT_DL_MIN && hooks.speedLimit == 0L && !mem.started && TransferTuning.splitDownloads) {
+        val problem = splitDownload(sink, remote, size, s, SPLIT_PARTS, hooks)
+        when {
+            problem == null -> return TransferResult(true, okMessage)
+            hooks.cancelled -> return TransferResult(false, cancelMessage, cancelled = true)
+            hooks.paused -> return pausedResult(cancelMessage)
+            problem != SPLIT_NOT_POSSIBLE -> hooks.status(AppText.get(R.string.split_dl_fallback))
+        }
+    }
     return runWithRetries(hooks, policy, mem, cancelMessage) { h, resume ->
         runFtpAttempt(h, policy, okMessage, cancelMessage, {}, s) { session, watchdog ->
             retrieveAttempt(session, watchdog, sink, remote, size, s, resume, mem, h)

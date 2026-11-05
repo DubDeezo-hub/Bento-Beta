@@ -1526,4 +1526,7 @@
     <string name="pkgmgr_asking">Asking PKG Manager to install it…</string>
     <string name="install_port_label2">Installer port (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (from Get payloads) installs packages that are on the console: a link is copied to %1$s first, then installed. No etaHEN needed.</string>
+    <string name="split_dl_title">Download big files in parts</string>
+    <string name="split_dl_hint">Files of 64 MB or more come from the console as 4 parts at once, each written into its place on the phone. Turn off if a download comes out wrong.</string>
+    <string name="split_dl_fallback">Getting it in one piece instead…</string>
 </resources>

@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">Ber PKG Manager installere den…</string>
     <string name="install_port_label2">Installasjonsport (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (fra Hent payloads) installerer pakker som ligger på konsollen: en lenke kopieres først til %1$s og installeres så. etaHEN trengs ikke.</string>
+    <string name="split_dl_title">Last ned store filer i deler</string>
+    <string name="split_dl_hint">Filer på 64 MB eller mer kommer fra konsollen i 4 deler samtidig, hver skrevet på sin plass på telefonen. Slå av hvis en nedlasting blir feil.</string>
+    <string name="split_dl_fallback">Henter den i ett stykke i stedet…</string>
 </resources>

@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">PKG Manager ને ઇન્સ્ટોલ કરવા કહેવાય છે…</string>
     <string name="install_port_label2">ઇન્સ્ટોલર પોર્ટ (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (પેલોડ મેળવો માંથી) કન્સોલ પરના પેકેજ ઇન્સ્ટોલ કરે છે: લિંક પહેલાં %1$s માં કૉપિ થાય પછી ઇન્સ્ટોલ. etaHEN જરૂરી નથી.</string>
+    <string name="split_dl_title">મોટી ફાઇલો ભાગમાં ડાઉનલોડ કરો</string>
+    <string name="split_dl_hint">64 MB કે વધુની ફાઇલો કન્સોલમાંથી એકસાથે 4 ભાગમાં આવે છે, દરેક ફોન પર તેની જગ્યાએ લખાય છે. કોઈ ડાઉનલોડ ખોટું આવે તો બંધ કરો.</string>
+    <string name="split_dl_fallback">તેના બદલે એક ટુકડામાં લવાય છે…</string>
 </resources>

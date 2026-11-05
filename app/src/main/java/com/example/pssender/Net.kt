@@ -731,6 +731,18 @@ private class MediaStoreSink(private val cr: ContentResolver, private val uri: U
         return out
     }
 
+    override fun openAt(offset: Long): OutputStream? {
+        val pfd = cr.openFileDescriptor(uri, "rw") ?: return null
+        val out = ParcelFileDescriptor.AutoCloseOutputStream(pfd)
+        try {
+            out.channel.position(offset)
+        } catch (e: IOException) {
+            out.close()
+            throw e
+        }
+        return out
+    }
+
     /** Makes the finished file visible to the other apps. */
     fun publish() {
         try {

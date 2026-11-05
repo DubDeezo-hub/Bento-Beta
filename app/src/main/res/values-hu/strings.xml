@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">A PKG Manager megkérése a telepítésre…</string>
     <string name="install_port_label2">Telepítő portja (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">A PKG Manager (a Payloadok letöltése alatt) a konzolon lévő csomagokat telepíti: a link előbb ide másolódik: %1$s, aztán települ. Nem kell etaHEN.</string>
+    <string name="split_dl_title">Nagy fájlok letöltése részekben</string>
+    <string name="split_dl_hint">A 64 MB-os vagy nagyobb fájlok 4 részben egyszerre jönnek a konzolról, mindegyik a helyére íródik a telefonon. Kapcsold ki, ha egy letöltés hibás lesz.</string>
+    <string name="split_dl_fallback">Inkább egy darabban tölti le…</string>
 </resources>

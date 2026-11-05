@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">Prošnja PKG Managerju za namestitev…</string>
     <string name="install_port_label2">Vrata namestitvenega programa (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (iz Pridobi payloade) namešča pakete, ki so na konzoli: povezava se najprej kopira v %1$s, nato namesti. etaHEN ni potreben.</string>
+    <string name="split_dl_title">Prenašaj velike datoteke po delih</string>
+    <string name="split_dl_hint">Datoteke od 64 MB naprej pridejo s konzole v 4 delih hkrati, vsak zapisan na svoje mesto v telefonu. Izklopite, če prenos pride narobe.</string>
+    <string name="split_dl_fallback">Pridobivanje v enem kosu…</string>
 </resources>

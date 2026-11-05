@@ -1522,4 +1522,7 @@
     <string name="pkgmgr_asking">Ber PKG Manager installera det…</string>
     <string name="install_port_label2">Installerarens port (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (under Hämta payloads) installerar paket som finns på konsolen: en länk kopieras först till %1$s och installeras sedan. Inget etaHEN behövs.</string>
+    <string name="split_dl_title">Hämta stora filer i delar</string>
+    <string name="split_dl_hint">Filer på 64 MB eller mer kommer från konsolen i 4 delar samtidigt, var och en skriven på sin plats i telefonen. Stäng av om en nedladdning blir fel.</string>
+    <string name="split_dl_fallback">Hämtar den i ett stycke i stället…</string>
 </resources>

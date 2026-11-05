@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">PKG Manager にインストールを依頼中…</string>
     <string name="install_port_label2">インストーラーのポート（%1$s：%2$s）</string>
     <string name="pkgmgr_hint">PKG Manager（ペイロード入手から）は本体上のパッケージをインストールします。リンクはまず %1$s にコピーされ、その後インストールされます。etaHEN は不要です。</string>
+    <string name="split_dl_title">大きなファイルを分割してダウンロード</string>
+    <string name="split_dl_hint">64 MB 以上のファイルは本体から 4 分割で同時に届き、それぞれスマホ上の正しい位置に書き込まれます。ダウンロードがおかしくなる場合はオフにしてください。</string>
+    <string name="split_dl_fallback">代わりに 1 つにまとめて取得中…</string>
 </resources>

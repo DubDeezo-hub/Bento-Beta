@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">Ζητείται από το PKG Manager να το εγκαταστήσει…</string>
     <string name="install_port_label2">Θύρα εγκαταστάτη (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">Το PKG Manager (από τη Λήψη payloads) εγκαθιστά πακέτα που είναι στην κονσόλα: ο σύνδεσμος αντιγράφεται πρώτα στο %1$s και μετά εγκαθίσταται. Δεν χρειάζεται etaHEN.</string>
+    <string name="split_dl_title">Λήψη μεγάλων αρχείων σε κομμάτια</string>
+    <string name="split_dl_hint">Αρχεία 64 MB και πάνω έρχονται από την κονσόλα σε 4 κομμάτια μαζί, το καθένα γραμμένο στη θέση του στο τηλέφωνο. Απενεργοποιήστε αν μια λήψη βγει λάθος.</string>
+    <string name="split_dl_fallback">Λήψη σε ένα κομμάτι αντί γι\' αυτό…</string>
 </resources>

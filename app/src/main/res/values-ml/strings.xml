@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">ഇൻസ്റ്റാൾ ചെയ്യാൻ PKG Manager-നോട് ആവശ്യപ്പെടുന്നു…</string>
     <string name="install_port_label2">ഇൻസ്റ്റാളർ പോർട്ട് (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (പേലോഡുകൾ നേടുക എന്നതിൽ നിന്ന്) കൺസോളിലുള്ള പാക്കേജുകൾ ഇൻസ്റ്റാൾ ചെയ്യുന്നു: ലിങ്ക് ആദ്യം %1$s ലേക്ക് പകർത്തി പിന്നീട് ഇൻസ്റ്റാൾ ചെയ്യും. etaHEN വേണ്ട.</string>
+    <string name="split_dl_title">വലിയ ഫയലുകൾ ഭാഗങ്ങളായി ഡൗൺലോഡ്</string>
+    <string name="split_dl_hint">64 MB അല്ലെങ്കിൽ കൂടുതൽ ഫയലുകൾ കൺസോളിൽ നിന്ന് 4 ഭാഗങ്ങളായി ഒരുമിച്ച് വരുന്നു, ഓരോന്നും ഫോണിൽ അതിന്റെ സ്ഥാനത്ത് എഴുതുന്നു. ഡൗൺലോഡ് തെറ്റിയാൽ ഓഫാക്കുക.</string>
+    <string name="split_dl_fallback">പകരം ഒറ്റ കഷണമായി എടുക്കുന്നു…</string>
 </resources>

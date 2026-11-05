@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">Se cere PKG Manager să-l instaleze…</string>
     <string name="install_port_label2">Portul instalatorului (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (din Obține payload-uri) instalează pachete aflate pe consolă: linkul e copiat întâi în %1$s, apoi instalat. Nu e nevoie de etaHEN.</string>
+    <string name="split_dl_title">Descarcă fișierele mari pe părți</string>
+    <string name="split_dl_hint">Fișierele de 64 MB sau mai mari vin de la consolă în 4 părți deodată, fiecare scrisă la locul ei pe telefon. Oprește dacă o descărcare iese greșit.</string>
+    <string name="split_dl_fallback">Se aduce dintr-o bucată…</string>
 </resources>

@@ -1522,4 +1522,7 @@
     <string name="pkgmgr_asking">PKG Manager vragen het te installeren…</string>
     <string name="install_port_label2">Installerpoort (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (via Payloads ophalen) installeert pakketten die op de console staan: een link wordt eerst naar %1$s gekopieerd en dan geïnstalleerd. Geen etaHEN nodig.</string>
+    <string name="split_dl_title">Grote bestanden in delen downloaden</string>
+    <string name="split_dl_hint">Bestanden van 64 MB of meer komen in 4 delen tegelijk van de console, elk op zijn plek op de telefoon geschreven. Zet uit als een download fout uitkomt.</string>
+    <string name="split_dl_fallback">In één stuk ophalen…</string>
 </resources>

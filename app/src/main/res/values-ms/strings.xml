@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">Meminta PKG Manager memasangnya…</string>
     <string name="install_port_label2">Port pemasang (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (dari Dapatkan payload) memasang pakej yang ada di konsol: pautan disalin ke %1$s dahulu, kemudian dipasang. Tidak perlu etaHEN.</string>
+    <string name="split_dl_title">Muat turun fail besar secara bahagian</string>
+    <string name="split_dl_hint">Fail 64 MB atau lebih datang dari konsol dalam 4 bahagian serentak, setiap satu ditulis di tempatnya pada telefon. Matikan jika muat turun keluar salah.</string>
+    <string name="split_dl_fallback">Mengambilnya sekeping sahaja…</string>
 </resources>

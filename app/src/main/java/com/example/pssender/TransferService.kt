@@ -44,6 +44,19 @@ internal class TransferLocks(ctx: Context) {
         null
     }
 
+    // Android 14 made the high-performance lock above do nothing; the low-latency one turns the Wi-Fi's power saving off
+    // instead (while the app is on screen, which is when a transfer is usually watched)
+    private val fast: WifiManager.WifiLock? = try {
+        if (android.os.Build.VERSION.SDK_INT >= 29) {
+            ctx.applicationContext.getSystemService(WifiManager::class.java)
+                ?.createWifiLock(WifiManager.WIFI_MODE_FULL_LOW_LATENCY, "pssender:transfer-fast")
+        } else {
+            null
+        }
+    } catch (_: Exception) {
+        null
+    }
+
     fun acquire() {
         try {
             wake?.acquire(LOCK_MAX_MS)
@@ -51,6 +64,10 @@ internal class TransferLocks(ctx: Context) {
         }
         try {
             wifi?.acquire()
+        } catch (_: Exception) {
+        }
+        try {
+            fast?.acquire()
         } catch (_: Exception) {
         }
     }
@@ -62,6 +79,10 @@ internal class TransferLocks(ctx: Context) {
         }
         try {
             if (wifi?.isHeld == true) wifi.release()
+        } catch (_: Exception) {
+        }
+        try {
+            if (fast?.isHeld == true) fast.release()
         } catch (_: Exception) {
         }
     }

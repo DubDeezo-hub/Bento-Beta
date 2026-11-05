@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">நிறுவ PKG Manager-இடம் கேட்கப்படுகிறது…</string>
     <string name="install_port_label2">நிறுவி போர்ட் (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (பேலோடுகளைப் பெறு இலிருந்து) கன்சோலில் உள்ள தொகுப்புகளை நிறுவுகிறது: இணைப்பு முதலில் %1$s க்கு நகலெடுக்கப்பட்டு பின் நிறுவப்படும். etaHEN தேவையில்லை.</string>
+    <string name="split_dl_title">பெரிய கோப்புகளைப் பகுதிகளாகப் பதிவிறக்கு</string>
+    <string name="split_dl_hint">64 MB அல்லது பெரிய கோப்புகள் கன்சோலிலிருந்து 4 பகுதிகளாக ஒரே நேரத்தில் வந்து, ஒவ்வொன்றும் போனில் அதன் இடத்தில் எழுதப்படும். பதிவிறக்கம் தவறாக வந்தால் அணைக்கவும்.</string>
+    <string name="split_dl_fallback">பதிலாக ஒரே துண்டாக எடுக்கிறது…</string>
 </resources>

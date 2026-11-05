@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">Lūdz PKG Manager to instalēt…</string>
     <string name="install_port_label2">Instalētāja ports (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (no Iegūt payload) instalē konsolē esošas pakotnes: saite vispirms tiek kopēta uz %1$s, tad instalēta. etaHEN nav vajadzīgs.</string>
+    <string name="split_dl_title">Lejupielādēt lielus failus pa daļām</string>
+    <string name="split_dl_hint">64 MB vai lielāki faili no konsoles nāk 4 daļās vienlaikus, katra ierakstīta savā vietā tālrunī. Izslēdziet, ja lejupielāde sanāk nepareiza.</string>
+    <string name="split_dl_fallback">Tā vietā ielādē vienā gabalā…</string>
 </resources>

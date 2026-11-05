@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">Vra PKG Manager om dit te installeer…</string>
     <string name="install_port_label2">Installeerderpoort (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (uit Kry payloads) installeer pakkette wat op die konsole is: \'n skakel word eers na %1$s gekopieer en dan geïnstalleer. Geen etaHEN nodig nie.</string>
+    <string name="split_dl_title">Laai groot lêers in dele af</string>
+    <string name="split_dl_hint">Lêers van 64 MB of meer kom in 4 dele gelyk van die konsole, elk op sy plek op die foon geskryf. Skakel af as \'n aflaai verkeerd uitkom.</string>
+    <string name="split_dl_fallback">Kry dit eerder in een stuk…</string>
 </resources>

@@ -32,11 +32,16 @@ private const val SPLIT_STALL_MS = 60_000L
 /** The speed settings that are not the speed limit or files at once. */
 object TransferTuning {
     private const val PIECES = "web_pieces"
+    private const val SPLIT_DL = "split_downloads"
     private const val SPLIT_FOR = "split_ok_for"
 
     /** Web files come as several pieces at once (see [PieceStream]). On unless turned off. */
     @Volatile
     var webPieces = true
+
+    /** Big files from the console come down in parts at once (see [splitDownload]). On unless turned off. */
+    @Volatile
+    var splitDownloads = true
 
     /** The console ("host:port") that passed the split test, or "" when splitting is off. */
     @Volatile
@@ -46,12 +51,18 @@ object TransferTuning {
 
     fun load(ctx: Context) {
         webPieces = prefs(ctx).getBoolean(PIECES, true)
+        splitDownloads = prefs(ctx).getBoolean(SPLIT_DL, true)
         splitOkFor = prefs(ctx).getString(SPLIT_FOR, "") ?: ""
     }
 
     fun setWebPieces(ctx: Context, on: Boolean) {
         webPieces = on
         prefs(ctx).edit().putBoolean(PIECES, on).apply()
+    }
+
+    fun setSplitDownloads(ctx: Context, on: Boolean) {
+        splitDownloads = on
+        prefs(ctx).edit().putBoolean(SPLIT_DL, on).apply()
     }
 
     fun setSplitFor(ctx: Context, console: String) {
@@ -236,5 +247,118 @@ fun splitSelfTest(s: FtpSettings, dir: String = "/data"): String? {
         return describeFailure(e)
     } finally {
         session.abort()
+    }
+}
+
+// ---------------------------------------------------------------------------------------------
+// Downloads in parts: each connection asks for the file from its own place (REST, then RETR), takes its stretch and
+// hangs up; the phone's copy is written at each part's place. Any FTP server that continues downloads can do this.
+// ---------------------------------------------------------------------------------------------
+
+/** Files smaller than this come down in one piece. */
+const val SPLIT_DL_MIN = 64L * 1024 * 1024
+
+/** What [splitDownload] says when it can't be done here at all (nothing was tried, so there is nothing to tell). */
+const val SPLIT_NOT_POSSIBLE = "-"
+
+/**
+ * Fetches [remote] ([size] bytes) into [sink] in [parts] parts at the same time. Null when it worked, [SPLIT_NOT_POSSIBLE]
+ * when the sink can't be written in parts, otherwise why it didn't work (the caller then fetches it the usual way).
+ */
+internal fun splitDownload(
+    sink: ResumableSink, remote: String, size: Long, s: FtpSettings, parts: Int, hooks: TransferHooks
+): String? {
+    val bounds = splitBounds(size, parts)
+    if (bounds.size < 2) return SPLIT_NOT_POSSIBLE
+    // Every part's place must be writable before anything is asked of the console
+    val outs = ArrayList<OutputStream>()
+    try {
+        for (b in bounds) outs.add(sink.openAt(b.first) ?: run { outs.forEach { closeQuietly(it) }; return SPLIT_NOT_POSSIBLE })
+    } catch (e: Exception) {
+        outs.forEach { closeQuietly(it) }
+        return SPLIT_NOT_POSSIBLE
+    }
+    val sessions = bounds.map { FtpSession() }
+    val done = AtomicLong(0)
+    val failure = AtomicReference<String?>(null)
+    val abortAll = { sessions.forEach { it.abort() } }
+    hooks.setAbort(abortAll)
+    hooks.starting(0L, size)
+    try {
+        val workers = bounds.mapIndexed { i, range ->
+            thread(name = "split-dl-$i", isDaemon = true) {
+                try {
+                    fetchPart(sessions[i], s, remote, range, outs[i], done, last = i == bounds.lastIndex)
+                } catch (e: Exception) {
+                    failure.compareAndSet(null, describeFailure(e))
+                    abortAll()
+                } finally {
+                    closeQuietly(outs[i])
+                }
+            }
+        }
+        var last = -1L
+        var lastMove = System.currentTimeMillis()
+        while (workers.any { it.isAlive }) {
+            workers.firstOrNull { it.isAlive }?.join(300)
+            val now = done.get()
+            hooks.progress(now, size)
+            if (now != last) {
+                last = now
+                lastMove = System.currentTimeMillis()
+            }
+            if (hooks.cancelled || hooks.paused) {
+                abortAll()
+                return AppText.get(R.string.err_cancelled_download)
+            }
+            if (System.currentTimeMillis() - lastMove > SPLIT_STALL_MS) {
+                failure.compareAndSet(null, AppText.get(R.string.split_stuck))
+                abortAll()
+            }
+        }
+        failure.get()?.let { return it }
+        val stored = sink.storedLength()
+        if (stored != size) return AppText.get(R.string.split_wrong_size, stored.toString(), size.toString())
+        hooks.progress(size, size)
+        return null
+    } catch (e: Exception) {
+        return describeFailure(e)
+    } finally {
+        hooks.setAbort(null)
+        outs.forEach { closeQuietly(it) }
+        sessions.forEach { it.abort() }
+    }
+}
+
+/** One part of a download: logs in, starts the file at the part's place, copies exactly its stretch, then hangs up. */
+private fun fetchPart(
+    session: FtpSession, s: FtpSettings, remote: String, range: LongRange, out: OutputStream, done: AtomicLong, last: Boolean
+) {
+    sessionLogin(session, s)?.let { throw IOException(it.message) }
+    val ftp = session.ftp
+    if (range.first > 0L) ftp.setRestartOffset(range.first)
+    // Null also when the console refused to start at that place (REST): then this can't be done in parts
+    val input = ftp.retrieveFileStream(remote) ?: throw IOException(ftp.replyString?.trim().orEmpty())
+    var left = range.last - range.first + 1
+    val buf = ByteArray(256 * 1024)
+    try {
+        while (left > 0L) {
+            val n = input.read(buf, 0, minOf(buf.size.toLong(), left).toInt())
+            if (n < 0) throw IOException("the console stopped sending early")
+            out.write(buf, 0, n)
+            left -= n
+            done.addAndGet(n.toLong())
+        }
+    } finally {
+        closeQuietly(input)
+    }
+    // The last part reads to the end of the file, so the console finishes normally; the others hang up early on purpose
+    if (last && !ftp.completePendingCommand()) throw IOException(ftp.replyString?.trim().orEmpty())
+}
+
+private fun closeQuietly(c: java.io.Closeable) {
+    try {
+        c.close()
+    } catch (_: Exception) {
     }
 }

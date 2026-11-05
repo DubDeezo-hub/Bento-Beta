@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">กำลังขอให้ PKG Manager ติดตั้ง…</string>
     <string name="install_port_label2">พอร์ตตัวติดตั้ง (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (จาก รับเพย์โหลด) ติดตั้งแพ็กเกจที่อยู่บนคอนโซล: ลิงก์จะถูกคัดลอกไปที่ %1$s ก่อนแล้วจึงติดตั้ง ไม่ต้องใช้ etaHEN</string>
+    <string name="split_dl_title">ดาวน์โหลดไฟล์ใหญ่เป็นส่วน</string>
+    <string name="split_dl_hint">ไฟล์ 64 MB ขึ้นไปจะมาจากคอนโซลเป็น 4 ส่วนพร้อมกัน แต่ละส่วนเขียนลงตำแหน่งของมันในโทรศัพท์ ปิดไว้ถ้าดาวน์โหลดออกมาผิด</string>
+    <string name="split_dl_fallback">ดึงเป็นชิ้นเดียวแทน…</string>
 </resources>

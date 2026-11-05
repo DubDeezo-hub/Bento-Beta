@@ -1522,4 +1522,7 @@
     <string name="pkgmgr_asking">Demande d\'installation à PKG Manager…</string>
     <string name="install_port_label2">Port de l\'installateur (%1$s : %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (dans Obtenir des payloads) installe les paquets qui sont sur la console : un lien est d\'abord copié dans %1$s, puis installé. Pas besoin d\'etaHEN.</string>
+    <string name="split_dl_title">Télécharger les gros fichiers en parties</string>
+    <string name="split_dl_hint">Les fichiers de 64 Mo ou plus arrivent de la console en 4 parties à la fois, chacune écrite à sa place sur le téléphone. Désactivez si un téléchargement sort mal.</string>
+    <string name="split_dl_fallback">Récupération en un seul morceau à la place…</string>
 </resources>

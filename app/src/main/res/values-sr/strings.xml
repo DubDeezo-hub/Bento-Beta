@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">Тражи се од PKG Manager-а да га инсталира…</string>
     <string name="install_port_label2">Порт инсталатера (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (из Набави payload-е) инсталира пакете који су на конзоли: веза се прво копира у %1$s, па инсталира. etaHEN није потребан.</string>
+    <string name="split_dl_title">Преузимај велике датотеке у деловима</string>
+    <string name="split_dl_hint">Датотеке од 64 MB или веће стижу са конзоле у 4 дела одједном, сваки уписан на своје место у телефону. Искључите ако преузимање испадне погрешно.</string>
+    <string name="split_dl_fallback">Преузима се у једном комаду…</string>
 </resources>

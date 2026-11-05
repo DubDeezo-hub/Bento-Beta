@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">PKG Manager से इंस्टॉल करने को कहा जा रहा है…</string>
     <string name="install_port_label2">इंस्टॉलर पोर्ट (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (पेलोड पाएँ से) कंसोल पर मौजूद पैकेज इंस्टॉल करता है: लिंक पहले %1$s में कॉपी होता है, फिर इंस्टॉल। etaHEN की ज़रूरत नहीं।</string>
+    <string name="split_dl_title">बड़ी फ़ाइलें हिस्सों में डाउनलोड करें</string>
+    <string name="split_dl_hint">64 MB या बड़ी फ़ाइलें कंसोल से एक साथ 4 हिस्सों में आती हैं, हर हिस्सा फ़ोन पर अपनी जगह लिखा जाता है। कोई डाउनलोड गलत निकले तो बंद करें।</string>
+    <string name="split_dl_fallback">इसके बजाय एक टुकड़े में लाया जा रहा है…</string>
 </resources>

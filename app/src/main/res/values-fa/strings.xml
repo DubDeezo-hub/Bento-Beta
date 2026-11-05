@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">درخواست نصب از PKG Manager…</string>
     <string name="install_port_label2">درگاه نصب‌کننده (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">‏PKG Manager (از دریافت پی‌لودها) بسته‌های روی کنسول را نصب می‌کند: پیوند ابتدا به %1$s کپی و سپس نصب می‌شود. به etaHEN نیازی نیست.</string>
+    <string name="split_dl_title">دانلود فایل‌های بزرگ در بخش‌ها</string>
+    <string name="split_dl_hint">فایل‌های ۶۴ مگابایت یا بزرگ‌تر در ۴ بخش هم‌زمان از کنسول می‌آیند و هر بخش در جای خود روی گوشی نوشته می‌شود. اگر دانلودی نادرست شد خاموشش کنید.</string>
+    <string name="split_dl_fallback">به جای آن یک‌تکه دریافت می‌شود…</string>
 </resources>

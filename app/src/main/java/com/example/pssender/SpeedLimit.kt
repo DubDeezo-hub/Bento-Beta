@@ -90,8 +90,8 @@ object FilesAtOnce {
     /** What can be picked. Eight is the most a console's FTP server is asked to handle at once. */
     val choices: List<Int> = listOf(1, 2, 3, 4, 6, 8)
 
-    /** Two at once unless the person picks otherwise: faster, and gentle on the console. */
-    const val DEFAULT = 2
+    /** Four at once unless the person picks otherwise: many small files go much faster, and ftpsrv takes it easily. */
+    const val DEFAULT = 4
 
     private fun prefs(ctx: Context) = ctx.getSharedPreferences("settings", Context.MODE_PRIVATE)
 

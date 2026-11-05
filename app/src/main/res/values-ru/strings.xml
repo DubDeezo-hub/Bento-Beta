@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">Просим PKG Manager установить его…</string>
     <string name="install_port_label2">Порт установщика (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (из «Получить payload») ставит пакеты, которые лежат на консоли: ссылка сначала копируется в %1$s, затем устанавливается. etaHEN не нужен.</string>
+    <string name="split_dl_title">Скачивать большие файлы частями</string>
+    <string name="split_dl_hint">Файлы от 64 МБ приходят с консоли 4 частями одновременно, каждая записывается на своё место в телефоне. Выключите, если загрузка выйдет неверной.</string>
+    <string name="split_dl_fallback">Получение одним куском…</string>
 </resources>

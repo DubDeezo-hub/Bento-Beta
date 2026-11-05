@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">يُطلب من PKG Manager تثبيتها…</string>
     <string name="install_port_label2">منفذ المثبّت (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">يثبّت PKG Manager (من «احصل على الحمولات») الحزم الموجودة على الجهاز: يُنسخ الرابط إلى %1$s أولًا ثم يُثبَّت. لا حاجة إلى etaHEN.</string>
+    <string name="split_dl_title">نزّل الملفات الكبيرة على أجزاء</string>
+    <string name="split_dl_hint">الملفات بحجم 64 ميغابايت أو أكثر تأتي من الجهاز على 4 أجزاء معًا، ويُكتب كل جزء في مكانه على الهاتف. أوقفه إذا خرج تنزيل خاطئًا.</string>
+    <string name="split_dl_fallback">يُجلب بقطعة واحدة بدلًا من ذلك…</string>
 </resources>

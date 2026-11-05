@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">Đang nhờ PKG Manager cài đặt…</string>
     <string name="install_port_label2">Cổng trình cài đặt (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (trong Lấy payload) cài các gói có trên máy: liên kết được chép vào %1$s trước rồi mới cài. Không cần etaHEN.</string>
+    <string name="split_dl_title">Tải tệp lớn theo từng phần</string>
+    <string name="split_dl_hint">Tệp từ 64 MB trở lên đến từ máy thành 4 phần cùng lúc, mỗi phần được ghi đúng chỗ trên điện thoại. Tắt nếu một lần tải bị sai.</string>
+    <string name="split_dl_fallback">Đang lấy nguyên một khối…</string>
 </resources>

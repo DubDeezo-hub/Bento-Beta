@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">Pyydetään PKG Manageria asentamaan…</string>
     <string name="install_port_label2">Asentajan portti (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (kohdasta Hae payloadit) asentaa konsolilla olevia paketteja: linkki kopioidaan ensin kansioon %1$s ja asennetaan sitten. etaHENiä ei tarvita.</string>
+    <string name="split_dl_title">Lataa isot tiedostot osina</string>
+    <string name="split_dl_hint">Vähintään 64 Mt:n tiedostot tulevat konsolilta 4 osana kerralla, ja jokainen kirjoitetaan paikalleen puhelimeen. Laita pois, jos lataus menee väärin.</string>
+    <string name="split_dl_fallback">Haetaan yhtenä kappaleena…</string>
 </resources>

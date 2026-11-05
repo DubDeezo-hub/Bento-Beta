@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">Inaomba PKG Manager ikisakinishe…</string>
     <string name="install_port_label2">Mlango wa kisakinishi (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (kutoka Pata payload) husakinisha vifurushi vilivyo kwenye konsoli: kiungo kinanakiliwa kwanza kwenye %1$s, kisha kusakinishwa. Hakuna haja ya etaHEN.</string>
+    <string name="split_dl_title">Pakua faili kubwa kwa sehemu</string>
+    <string name="split_dl_hint">Faili za MB 64 au zaidi huja kutoka konsoli kwa sehemu 4 kwa wakati mmoja, kila moja ikiandikwa mahali pake kwenye simu. Zima ikiwa upakuaji umetoka vibaya.</string>
+    <string name="split_dl_fallback">Inaleta kwa kipande kimoja badala yake…</string>
 </resources>

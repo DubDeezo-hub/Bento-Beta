@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">Просимо PKG Manager встановити його…</string>
     <string name="install_port_label2">Порт інсталятора (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (з «Отримати payload») встановлює пакети, що лежать на консолі: посилання спершу копіюється в %1$s, потім встановлюється. etaHEN не потрібен.</string>
+    <string name="split_dl_title">Завантажувати великі файли частинами</string>
+    <string name="split_dl_hint">Файли від 64 МБ надходять із консолі 4 частинами одночасно, кожна записується на своє місце в телефоні. Вимкніть, якщо завантаження вийде неправильним.</string>
+    <string name="split_dl_fallback">Отримання одним шматком…</string>
 </resources>

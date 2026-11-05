@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">Žiadosť pre PKG Manager o inštaláciu…</string>
     <string name="install_port_label2">Port inštalátora (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (zo Získať payloady) inštaluje balíky, ktoré sú v konzole: odkaz sa najprv skopíruje do %1$s a potom nainštaluje. etaHEN netreba.</string>
+    <string name="split_dl_title">Sťahovať veľké súbory po častiach</string>
+    <string name="split_dl_hint">Súbory od 64 MB prichádzajú z konzoly v 4 častiach naraz, každá zapísaná na svoje miesto v telefóne. Vypnite, ak sťahovanie dopadne zle.</string>
+    <string name="split_dl_fallback">Sťahuje sa v jednom kuse…</string>
 </resources>

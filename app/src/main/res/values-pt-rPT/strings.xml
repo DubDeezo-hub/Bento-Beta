@@ -1522,4 +1522,7 @@
     <string name="pkgmgr_asking">A pedir ao PKG Manager que o instale…</string>
     <string name="install_port_label2">Porta do instalador (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">O PKG Manager (em Obter payloads) instala pacotes que estão na consola: a ligação é copiada primeiro para %1$s e depois instalada. Não é preciso etaHEN.</string>
+    <string name="split_dl_title">Transferir ficheiros grandes em partes</string>
+    <string name="split_dl_hint">Ficheiros de 64 MB ou mais vêm da consola em 4 partes ao mesmo tempo, cada uma escrita no seu lugar no telemóvel. Desligue se uma transferência sair errada.</string>
+    <string name="split_dl_fallback">A buscar numa só parte…</string>
 </resources>

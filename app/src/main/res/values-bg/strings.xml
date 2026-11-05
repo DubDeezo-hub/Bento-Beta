@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">PKG Manager се моли да го инсталира…</string>
     <string name="install_port_label2">Порт на инсталатора (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (от Вземи payload-и) инсталира пакети, които са на конзолата: връзката първо се копира в %1$s, после се инсталира. Не е нужен etaHEN.</string>
+    <string name="split_dl_title">Изтегляне на големи файлове на части</string>
+    <string name="split_dl_hint">Файлове от 64 MB или повече идват от конзолата на 4 части наведнъж, всяка записана на мястото си в телефона. Изключете, ако изтегляне излезе грешно.</string>
+    <string name="split_dl_fallback">Изтегляне на едно парче вместо това…</string>
 </resources>

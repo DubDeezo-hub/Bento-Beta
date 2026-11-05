@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">正在请 PKG Manager 安装…</string>
     <string name="install_port_label2">安装器端口（%1$s：%2$s）</string>
     <string name="pkgmgr_hint">PKG Manager（在“获取载荷”中）安装主机上的安装包：链接会先复制到 %1$s，再进行安装。不需要 etaHEN。</string>
+    <string name="split_dl_title">分段下载大文件</string>
+    <string name="split_dl_hint">64 MB 及以上的文件会从主机同时分 4 部分传来，每部分写入手机上对应的位置。若下载结果不对，请关闭。</string>
+    <string name="split_dl_fallback">改为整体获取…</string>
 </resources>

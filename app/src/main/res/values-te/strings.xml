@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">ఇన్‌స్టాల్ చేయమని PKG Manager‌ను అడుగుతోంది…</string>
     <string name="install_port_label2">ఇన్‌స్టాలర్ పోర్ట్ (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (పేలోడ్‌లు పొందు నుంచి) కన్సోల్‌లో ఉన్న ప్యాకేజీలను ఇన్‌స్టాల్ చేస్తుంది: లింక్ ముందు %1$s కు కాపీ అయి తర్వాత ఇన్‌స్టాల్ అవుతుంది. etaHEN అవసరం లేదు.</string>
+    <string name="split_dl_title">పెద్ద ఫైళ్లను భాగాలుగా డౌన్‌లోడ్ చేయి</string>
+    <string name="split_dl_hint">64 MB లేదా పెద్ద ఫైళ్లు కన్సోల్ నుంచి 4 భాగాలుగా ఒకేసారి వచ్చి, ప్రతి భాగం ఫోన్‌లో దాని స్థానంలో రాయబడుతుంది. డౌన్‌లోడ్ తప్పుగా వస్తే ఆఫ్ చేయండి.</string>
+    <string name="split_dl_fallback">బదులుగా ఒకే ముక్కగా తెస్తోంది…</string>
 </resources>

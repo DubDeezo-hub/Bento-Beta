@@ -746,6 +746,17 @@ private fun FasterTransfers() {
             TransferTuning.setWebPieces(ctx, it)
         })
     }
+    var splitDl by remember { mutableStateOf(TransferTuning.splitDownloads) }
+    Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(top = 10.dp)) {
+        Column(modifier = Modifier.weight(1f)) {
+            Text(str(R.string.split_dl_title), style = MaterialTheme.typography.titleSmall)
+            Text(str(R.string.split_dl_hint), style = MaterialTheme.typography.bodySmall)
+        }
+        Switch(checked = splitDl, onCheckedChange = {
+            splitDl = it
+            TransferTuning.setSplitDownloads(ctx, it)
+        })
+    }
     Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(top = 10.dp)) {
         Column(modifier = Modifier.weight(1f)) {
             Text(str(R.string.split_title), style = MaterialTheme.typography.titleSmall)

@@ -1521,4 +1521,7 @@
     <string name="pkgmgr_asking">Palun PKG Manageril see paigaldada…</string>
     <string name="install_port_label2">Paigaldaja port (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (jaotisest Hangi payloadid) paigaldab konsoolis olevaid pakette: link kopeeritakse esmalt kausta %1$s ja siis paigaldatakse. etaHEN-i pole vaja.</string>
+    <string name="split_dl_title">Laadi suured failid osade kaupa</string>
+    <string name="split_dl_hint">64 MB või suuremad failid tulevad konsoolist 4 osana korraga, iga osa kirjutatakse telefonis oma kohale. Lülita välja, kui allalaadimine tuleb vigane.</string>
+    <string name="split_dl_fallback">Toon selle hoopis ühes tükis…</string>
 </resources>

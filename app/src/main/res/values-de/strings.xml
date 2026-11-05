@@ -1523,4 +1523,7 @@
     <string name="pkgmgr_asking">PKG Manager wird um die Installation gebeten…</string>
     <string name="install_port_label2">Installer-Port (%1$s: %2$s)</string>
     <string name="pkgmgr_hint">PKG Manager (unter Payloads holen) installiert Pakete, die auf der Konsole liegen: Ein Link wird zuerst nach %1$s kopiert und dann installiert. Kein etaHEN nötig.</string>
+    <string name="split_dl_title">Große Dateien in Teilen laden</string>
+    <string name="split_dl_hint">Dateien ab 64 MB kommen in 4 Teilen gleichzeitig von der Konsole, jeder an seine Stelle auf dem Handy geschrieben. Ausschalten, falls ein Download fehlerhaft ist.</string>
+    <string name="split_dl_fallback">Stattdessen in einem Stück holen…</string>
 </resources>
