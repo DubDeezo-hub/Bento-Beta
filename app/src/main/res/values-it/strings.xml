@@ -1526,4 +1526,16 @@
     <string name="split_dl_hint">I file da 64 MB in su arrivano dalla console in 4 parti insieme, ognuna scritta al suo posto sul telefono. Disattiva se un download viene male.</string>
     <string name="split_dl_fallback">Prendo il file in un pezzo solo…</string>
     <string name="files_upload_folder_here">Carica una cartella qui</string>
+    <string name="unpack_title">Caricamento rapido cartelle</string>
+    <string name="unpack_hint">Invia una cartella intera in un unico flusso invece che file per file: molto più veloce con cartelle piene di file piccoli. Serve il piccolo payload di estrazione di Crimson sulla console. Scrive solo in /data e sulle unità USB. Ricaricalo dopo ogni jailbreak.</string>
+    <string name="unpack_running">Attivo: le cartelle vanno in un unico flusso.</string>
+    <string name="unpack_off">Spento: le cartelle vanno file per file via FTP.</string>
+    <string name="unpack_load">Caricalo sulla console</string>
+    <string name="unpack_loading">Invio al loader della console…</string>
+    <string name="unpack_loaded">Caricato: ora le cartelle vanno in un unico flusso.</string>
+    <string name="unpack_not_started">Inviato, ma non risponde. elfldr è in esecuzione?</string>
+    <string name="unpack_done">%1$d file sono in %2$s</string>
+    <string name="unpack_failed">Caricamento rapido interrotto: %1$s</string>
+    <string name="unpack_no_answer">La console non ha confermato la cartella.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d file in un unico flusso verso %3$s</string>
 </resources>

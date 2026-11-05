@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">Fișierele de 64 MB sau mai mari vin de la consolă în 4 părți deodată, fiecare scrisă la locul ei pe telefon. Oprește dacă o descărcare iese greșit.</string>
     <string name="split_dl_fallback">Se aduce dintr-o bucată…</string>
     <string name="files_upload_folder_here">Încarcă un dosar aici</string>
+    <string name="unpack_title">Încărcare rapidă de dosare</string>
+    <string name="unpack_hint">Trimite un dosar întreg într-un singur flux în loc de fișier cu fișier: mult mai rapid pentru dosare cu multe fișiere mici. Are nevoie de micul payload de despachetare Crimson pe consolă. Scrie doar în /data și pe unități USB. Încarcă-l din nou după fiecare jailbreak.</string>
+    <string name="unpack_running">Pornit: dosarele merg într-un singur flux.</string>
+    <string name="unpack_off">Oprit: dosarele merg fișier cu fișier prin FTP.</string>
+    <string name="unpack_load">Încarcă-l pe consolă</string>
+    <string name="unpack_loading">Se trimite la loaderul consolei…</string>
+    <string name="unpack_loaded">Încărcat: dosarele merg acum într-un singur flux.</string>
+    <string name="unpack_not_started">Trimis, dar nu răspunde. Rulează elfldr?</string>
+    <string name="unpack_done">%1$d fișiere sunt în %2$s</string>
+    <string name="unpack_failed">Încărcarea rapidă s-a oprit: %1$s</string>
+    <string name="unpack_no_answer">Consola nu a confirmat dosarul.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d fișiere într-un singur flux spre %3$s</string>
 </resources>

@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">Fail 64 MB atau lebih datang dari konsol dalam 4 bahagian serentak, setiap satu ditulis di tempatnya pada telefon. Matikan jika muat turun keluar salah.</string>
     <string name="split_dl_fallback">Mengambilnya sekeping sahaja…</string>
     <string name="files_upload_folder_here">Muat naik folder di sini</string>
+    <string name="unpack_title">Muat naik folder pantas</string>
+    <string name="unpack_hint">Menghantar seluruh folder dalam satu aliran, bukan fail demi fail: jauh lebih pantas untuk folder yang banyak fail kecil. Perlu payload nyahpek kecil Crimson pada konsol. Ia hanya menulis ke /data dan pemacu USB. Muatkan semula selepas setiap jailbreak.</string>
+    <string name="unpack_running">Hidup: folder dihantar dalam satu aliran.</string>
+    <string name="unpack_off">Mati: folder dihantar fail demi fail melalui FTP.</string>
+    <string name="unpack_load">Muatkan pada konsol</string>
+    <string name="unpack_loading">Menghantar ke pemuat konsol…</string>
+    <string name="unpack_loaded">Dimuatkan: folder kini dihantar dalam satu aliran.</string>
+    <string name="unpack_not_started">Dihantar, tetapi tiada jawapan. Adakah elfldr berjalan?</string>
+    <string name="unpack_done">%1$d fail berada dalam %2$s</string>
+    <string name="unpack_failed">Muat naik pantas berhenti: %1$s</string>
+    <string name="unpack_no_answer">Konsol tidak mengesahkan folder.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d fail dalam satu aliran ke %3$s</string>
 </resources>

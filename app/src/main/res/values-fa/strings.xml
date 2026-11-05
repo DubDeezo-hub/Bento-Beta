@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">فایل‌های ۶۴ مگابایت یا بزرگ‌تر در ۴ بخش هم‌زمان از کنسول می‌آیند و هر بخش در جای خود روی گوشی نوشته می‌شود. اگر دانلودی نادرست شد خاموشش کنید.</string>
     <string name="split_dl_fallback">به جای آن یک‌تکه دریافت می‌شود…</string>
     <string name="files_upload_folder_here">آپلود یک پوشه اینجا</string>
+    <string name="unpack_title">آپلود سریع پوشه</string>
+    <string name="unpack_hint">کل پوشه را در یک جریان می‌فرستد نه فایل به فایل: برای پوشه‌های پر از فایل‌های کوچک بسیار سریع‌تر. به پی‌لود کوچک باز کردن Crimson روی کنسول نیاز دارد. فقط در /data و درایوهای USB می‌نویسد. بعد از هر جیلبریک دوباره بارگذاری کنید.</string>
+    <string name="unpack_running">روشن: پوشه‌ها در یک جریان می‌روند.</string>
+    <string name="unpack_off">خاموش: پوشه‌ها فایل به فایل با FTP می‌روند.</string>
+    <string name="unpack_load">بارگذاری روی کنسول</string>
+    <string name="unpack_loading">در حال فرستادن به لودر کنسول…</string>
+    <string name="unpack_loaded">بارگذاری شد: پوشه‌ها اکنون در یک جریان می‌روند.</string>
+    <string name="unpack_not_started">فرستاده شد اما پاسخ نمی‌دهد. elfldr در حال اجراست؟</string>
+    <string name="unpack_done">‏%1$d فایل در %2$s است</string>
+    <string name="unpack_failed">آپلود سریع متوقف شد: %1$s</string>
+    <string name="unpack_no_answer">کنسول پوشه را تأیید نکرد.</string>
+    <string name="upload_folder_streaming">‏%1$s: %2$d فایل در یک جریان به %3$s</string>
 </resources>

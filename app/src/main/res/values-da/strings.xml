@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">Filer på 64 MB eller mere kommer fra konsollen i 4 dele på én gang, hver skrevet på sin plads på telefonen. Slå fra, hvis en download bliver forkert.</string>
     <string name="split_dl_fallback">Henter den i ét stykke i stedet…</string>
     <string name="files_upload_folder_here">Upload en mappe her</string>
+    <string name="unpack_title">Hurtig mappe-upload</string>
+    <string name="unpack_hint">Sender en hel mappe i én strøm i stedet for fil for fil: meget hurtigere for mapper med mange små filer. Kræver Crimsons lille udpaknings-payload på konsollen. Den skriver kun til /data og USB-drev. Indlæs den igen efter hvert jailbreak.</string>
+    <string name="unpack_running">Til: mapper sendes i én strøm.</string>
+    <string name="unpack_off">Fra: mapper sendes fil for fil over FTP.</string>
+    <string name="unpack_load">Indlæs den på konsollen</string>
+    <string name="unpack_loading">Sender den til konsollens loader…</string>
+    <string name="unpack_loaded">Indlæst: mapper sendes nu i én strøm.</string>
+    <string name="unpack_not_started">Sendt, men den svarer ikke. Kører elfldr?</string>
+    <string name="unpack_done">%1$d filer er i %2$s</string>
+    <string name="unpack_failed">Hurtig mappe-upload stoppede: %1$s</string>
+    <string name="unpack_no_answer">Konsollen bekræftede ikke mappen.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d filer sendes i én strøm til %3$s</string>
 </resources>

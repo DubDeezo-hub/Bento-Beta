@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">Pliki od 64 MB przychodzą z konsoli w 4 częściach naraz, każda zapisywana na swoim miejscu w telefonie. Wyłącz, jeśli pobranie wyjdzie źle.</string>
     <string name="split_dl_fallback">Pobieranie w jednym kawałku…</string>
     <string name="files_upload_folder_here">Wyślij folder tutaj</string>
+    <string name="unpack_title">Szybkie wysyłanie folderów</string>
+    <string name="unpack_hint">Wysyła cały folder jednym strumieniem zamiast plik po pliku: dużo szybciej dla folderów z wieloma małymi plikami. Wymaga małego payloadu rozpakowującego Crimson na konsoli. Zapisuje tylko w /data i na dyskach USB. Wczytaj go ponownie po każdym jailbreaku.</string>
+    <string name="unpack_running">Włączone: foldery idą jednym strumieniem.</string>
+    <string name="unpack_off">Wyłączone: foldery idą plik po pliku przez FTP.</string>
+    <string name="unpack_load">Wczytaj na konsolę</string>
+    <string name="unpack_loading">Wysyłanie do loadera konsoli…</string>
+    <string name="unpack_loaded">Wczytano: foldery idą teraz jednym strumieniem.</string>
+    <string name="unpack_not_started">Wysłano, ale nie odpowiada. Czy elfldr działa?</string>
+    <string name="unpack_done">%1$d plików jest w %2$s</string>
+    <string name="unpack_failed">Szybkie wysyłanie zatrzymane: %1$s</string>
+    <string name="unpack_no_answer">Konsola nie potwierdziła folderu.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d plików jednym strumieniem do %3$s</string>
 </resources>

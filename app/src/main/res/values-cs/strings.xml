@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">Soubory od 64 MB přicházejí z konzole ve 4 částech najednou, každá zapsaná na své místo v telefonu. Vypněte, pokud stažení dopadne špatně.</string>
     <string name="split_dl_fallback">Stahuje se vcelku…</string>
     <string name="files_upload_folder_here">Nahrát sem složku</string>
+    <string name="unpack_title">Rychlé nahrání složky</string>
+    <string name="unpack_hint">Pošle celou složku v jednom proudu místo souboru po souboru: mnohem rychlejší u složek s mnoha malými soubory. Potřebuje malý rozbalovací payload Crimson na konzoli. Zapisuje jen do /data a na USB disky. Po každém jailbreaku ho načtěte znovu.</string>
+    <string name="unpack_running">Zapnuto: složky jdou v jednom proudu.</string>
+    <string name="unpack_off">Vypnuto: složky jdou soubor po souboru přes FTP.</string>
+    <string name="unpack_load">Načíst na konzoli</string>
+    <string name="unpack_loading">Posílá se do loaderu konzole…</string>
+    <string name="unpack_loaded">Načteno: složky teď jdou v jednom proudu.</string>
+    <string name="unpack_not_started">Odesláno, ale neodpovídá. Běží elfldr?</string>
+    <string name="unpack_done">%1$d souborů je v %2$s</string>
+    <string name="unpack_failed">Rychlé nahrání se zastavilo: %1$s</string>
+    <string name="unpack_no_answer">Konzole složku nepotvrdila.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d souborů jde v jednom proudu do %3$s</string>
 </resources>

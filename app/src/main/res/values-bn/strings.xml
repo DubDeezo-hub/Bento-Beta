@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">৬৪ MB বা বড় ফাইল কনসোল থেকে একসাথে ৪ ভাগে আসে, প্রতিটি ফোনে নিজের জায়গায় লেখা হয়। কোনো ডাউনলোড ভুল হলে বন্ধ করুন।</string>
     <string name="split_dl_fallback">বদলে এক টুকরোয় আনা হচ্ছে…</string>
     <string name="files_upload_folder_here">এখানে ফোল্ডার আপলোড</string>
+    <string name="unpack_title">দ্রুত ফোল্ডার আপলোড</string>
+    <string name="unpack_hint">ফাইল-বাই-ফাইল না পাঠিয়ে পুরো ফোল্ডার এক স্ট্রিমে পাঠায়: অনেক ছোট ফাইলওয়ালা ফোল্ডারে অনেক দ্রুত। কনসোলে Crimson-এর ছোট আনপ্যাক পেলোড লাগে। এটি শুধু /data ও USB ড্রাইভে লেখে। প্রতিটি জেলব্রেকের পরে আবার লোড করুন।</string>
+    <string name="unpack_running">চালু: ফোল্ডার এক স্ট্রিমে যায়।</string>
+    <string name="unpack_off">বন্ধ: ফোল্ডার FTP-তে ফাইল-বাই-ফাইল যায়।</string>
+    <string name="unpack_load">কনসোলে লোড করুন</string>
+    <string name="unpack_loading">কনসোলের লোডারে পাঠানো হচ্ছে…</string>
+    <string name="unpack_loaded">লোড হয়েছে: ফোল্ডার এখন এক স্ট্রিমে যায়।</string>
+    <string name="unpack_not_started">পাঠানো হয়েছে, কিন্তু সাড়া দিচ্ছে না। elfldr চলছে?</string>
+    <string name="unpack_done">%2$s এ %1$dটি ফাইল আছে</string>
+    <string name="unpack_failed">দ্রুত ফোল্ডার আপলোড থেমেছে: %1$s</string>
+    <string name="unpack_no_answer">কনসোল ফোল্ডারটি নিশ্চিত করেনি।</string>
+    <string name="upload_folder_streaming">%1$s: %2$dটি ফাইল এক স্ট্রিমে %3$s এ যাচ্ছে</string>
 </resources>

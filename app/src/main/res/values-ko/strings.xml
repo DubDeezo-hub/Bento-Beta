@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">64MB 이상 파일은 콘솔에서 4조각으로 동시에 받아 휴대폰의 제자리에 씁니다. 다운로드가 잘못되면 끄세요.</string>
     <string name="split_dl_fallback">대신 한 덩어리로 받는 중…</string>
     <string name="files_upload_folder_here">여기에 폴더 올리기</string>
+    <string name="unpack_title">빠른 폴더 업로드</string>
+    <string name="unpack_hint">파일 하나씩이 아니라 폴더 전체를 한 번의 스트림으로 보냅니다. 작은 파일이 많은 폴더에서 훨씬 빠릅니다. 콘솔에 Crimson의 작은 압축 해제 페이로드가 필요합니다. /data와 USB 드라이브에만 씁니다. 탈옥할 때마다 다시 불러오세요.</string>
+    <string name="unpack_running">켜짐: 폴더를 한 스트림으로 보냅니다.</string>
+    <string name="unpack_off">꺼짐: 폴더를 FTP로 파일 하나씩 보냅니다.</string>
+    <string name="unpack_load">콘솔에 불러오기</string>
+    <string name="unpack_loading">콘솔 로더로 보내는 중…</string>
+    <string name="unpack_loaded">불러옴: 이제 폴더를 한 스트림으로 보냅니다.</string>
+    <string name="unpack_not_started">보냈지만 응답이 없습니다. elfldr가 실행 중인가요?</string>
+    <string name="unpack_done">%2$s에 파일 %1$d개가 있습니다</string>
+    <string name="unpack_failed">빠른 업로드가 멈췄습니다: %1$s</string>
+    <string name="unpack_no_answer">콘솔이 폴더를 확인하지 않았습니다.</string>
+    <string name="upload_folder_streaming">%1$s: 파일 %2$d개를 한 스트림으로 %3$s에 보내는 중</string>
 </resources>

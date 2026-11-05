@@ -25,6 +25,11 @@ jobs:
         with:
           gradle-version: 8.9
 
+      - name: Build the folder unpacker payload
+        # A small PS5 payload of our own (payload-src/unpack): tested on Linux first, then built for the console and
+        # put inside the app
+        run: bash .github/scripts/build_unpack.sh
+
       - name: Accept Android SDK licenses
         run: yes | sdkmanager --licenses > /dev/null || true
 

@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">64 MB vai lielāki faili no konsoles nāk 4 daļās vienlaikus, katra ierakstīta savā vietā tālrunī. Izslēdziet, ja lejupielāde sanāk nepareiza.</string>
     <string name="split_dl_fallback">Tā vietā ielādē vienā gabalā…</string>
     <string name="files_upload_folder_here">Augšupielādēt mapi šeit</string>
+    <string name="unpack_title">Ātra mapju augšupielāde</string>
+    <string name="unpack_hint">Sūta visu mapi vienā plūsmā, nevis failu pa failam: daudz ātrāk mapēm ar daudziem maziem failiem. Konsolē vajag Crimson mazo atpakošanas payload. Tas raksta tikai /data un USB diskos. Ielādējiet to atkal pēc katra jailbreak.</string>
+    <string name="unpack_running">Ieslēgts: mapes iet vienā plūsmā.</string>
+    <string name="unpack_off">Izslēgts: mapes iet failu pa failam caur FTP.</string>
+    <string name="unpack_load">Ielādēt konsolē</string>
+    <string name="unpack_loading">Sūta konsoles ielādētājam…</string>
+    <string name="unpack_loaded">Ielādēts: mapes tagad iet vienā plūsmā.</string>
+    <string name="unpack_not_started">Nosūtīts, bet neatbild. Vai elfldr darbojas?</string>
+    <string name="unpack_done">%1$d faili ir %2$s</string>
+    <string name="unpack_failed">Ātrā augšupielāde apstājās: %1$s</string>
+    <string name="unpack_no_answer">Konsole neapstiprināja mapi.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d faili vienā plūsmā uz %3$s</string>
 </resources>

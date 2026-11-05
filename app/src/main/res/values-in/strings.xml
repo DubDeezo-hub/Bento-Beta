@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">File 64 MB atau lebih datang dari konsol dalam 4 bagian sekaligus, tiap bagian ditulis di tempatnya di ponsel. Matikan jika unduhan hasilnya salah.</string>
     <string name="split_dl_fallback">Mengambilnya utuh saja…</string>
     <string name="files_upload_folder_here">Unggah folder ke sini</string>
+    <string name="unpack_title">Unggah folder cepat</string>
+    <string name="unpack_hint">Mengirim satu folder utuh dalam satu aliran, bukan per file: jauh lebih cepat untuk folder berisi banyak file kecil. Perlu payload pembongkar kecil dari Crimson di konsol. Hanya menulis ke /data dan drive USB. Muat ulang setelah setiap jailbreak.</string>
+    <string name="unpack_running">Aktif: folder dikirim dalam satu aliran.</string>
+    <string name="unpack_off">Mati: folder dikirim per file lewat FTP.</string>
+    <string name="unpack_load">Muat di konsol</string>
+    <string name="unpack_loading">Mengirim ke loader konsol…</string>
+    <string name="unpack_loaded">Termuat: folder kini dikirim dalam satu aliran.</string>
+    <string name="unpack_not_started">Terkirim, tapi tidak menjawab. Apakah elfldr berjalan?</string>
+    <string name="unpack_done">%1$d file ada di %2$s</string>
+    <string name="unpack_failed">Unggah cepat berhenti: %1$s</string>
+    <string name="unpack_no_answer">Konsol tidak mengonfirmasi folder.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d file dikirim dalam satu aliran ke %3$s</string>
 </resources>

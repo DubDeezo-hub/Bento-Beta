@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">64 MB या बड़ी फ़ाइलें कंसोल से एक साथ 4 हिस्सों में आती हैं, हर हिस्सा फ़ोन पर अपनी जगह लिखा जाता है। कोई डाउनलोड गलत निकले तो बंद करें।</string>
     <string name="split_dl_fallback">इसके बजाय एक टुकड़े में लाया जा रहा है…</string>
     <string name="files_upload_folder_here">यहाँ फ़ोल्डर अपलोड करें</string>
+    <string name="unpack_title">तेज़ फ़ोल्डर अपलोड</string>
+    <string name="unpack_hint">फ़ाइल-दर-फ़ाइल के बजाय पूरा फ़ोल्डर एक धारा में भेजता है: बहुत सी छोटी फ़ाइलों वाले फ़ोल्डर के लिए कहीं तेज़। कंसोल पर Crimson का छोटा अनपैक पेलोड चाहिए। यह सिर्फ़ /data और USB ड्राइव में लिखता है। हर जेलब्रेक के बाद फिर से लोड करें।</string>
+    <string name="unpack_running">चालू: फ़ोल्डर एक धारा में जाते हैं।</string>
+    <string name="unpack_off">बंद: फ़ोल्डर FTP पर फ़ाइल-दर-फ़ाइल जाते हैं।</string>
+    <string name="unpack_load">कंसोल पर लोड करें</string>
+    <string name="unpack_loading">कंसोल के लोडर को भेजा जा रहा है…</string>
+    <string name="unpack_loaded">लोड हो गया: फ़ोल्डर अब एक धारा में जाते हैं।</string>
+    <string name="unpack_not_started">भेजा, पर जवाब नहीं आया। क्या elfldr चल रहा है?</string>
+    <string name="unpack_done">%2$s में %1$d फ़ाइलें हैं</string>
+    <string name="unpack_failed">तेज़ फ़ोल्डर अपलोड रुका: %1$s</string>
+    <string name="unpack_no_answer">कंसोल ने फ़ोल्डर की पुष्टि नहीं की।</string>
+    <string name="upload_folder_streaming">%1$s: %2$d फ़ाइलें एक धारा में %3$s की ओर</string>
 </resources>

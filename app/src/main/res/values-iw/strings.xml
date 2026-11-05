@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">קבצים של 64 MB ומעלה מגיעים מהקונסולה ב-4 חלקים בבת אחת, וכל חלק נכתב במקומו בטלפון. כבה אם הורדה יוצאת שגויה.</string>
     <string name="split_dl_fallback">מביא בחתיכה אחת במקום…</string>
     <string name="files_upload_folder_here">העלה תיקייה לכאן</string>
+    <string name="unpack_title">העלאת תיקיות מהירה</string>
+    <string name="unpack_hint">שולח תיקייה שלמה בזרם אחד במקום קובץ אחר קובץ: מהיר בהרבה לתיקיות עם הרבה קבצים קטנים. צריך את payload הפריסה הקטן של Crimson בקונסולה. הוא כותב רק ל-/data ולכונני USB. טען אותו שוב אחרי כל פריצה.</string>
+    <string name="unpack_running">פועל: תיקיות נשלחות בזרם אחד.</string>
+    <string name="unpack_off">כבוי: תיקיות נשלחות קובץ אחר קובץ ב-FTP.</string>
+    <string name="unpack_load">טען בקונסולה</string>
+    <string name="unpack_loading">שולח לטוען של הקונסולה…</string>
+    <string name="unpack_loaded">נטען: תיקיות נשלחות עכשיו בזרם אחד.</string>
+    <string name="unpack_not_started">נשלח, אבל לא עונה. האם elfldr פועל?</string>
+    <string name="unpack_done">‏%1$d קבצים נמצאים ב-%2$s</string>
+    <string name="unpack_failed">ההעלאה המהירה נעצרה: %1$s</string>
+    <string name="unpack_no_answer">הקונסולה לא אישרה את התיקייה.</string>
+    <string name="upload_folder_streaming">‏%1$s: %2$d קבצים בזרם אחד אל %3$s</string>
 </resources>

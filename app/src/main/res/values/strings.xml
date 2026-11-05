@@ -1530,4 +1530,16 @@
     <string name="split_dl_hint">Files of 64 MB or more come from the console as 4 parts at once, each written into its place on the phone. Turn off if a download comes out wrong.</string>
     <string name="split_dl_fallback">Getting it in one piece instead…</string>
     <string name="files_upload_folder_here">Upload a folder here</string>
+    <string name="unpack_title">Fast folder upload</string>
+    <string name="unpack_hint">Sends a whole folder in one stream instead of file by file: much faster for folders with many small files. Needs Crimson\'s small unpack payload on the console. It only writes to /data and USB drives. Load it again after each jailbreak.</string>
+    <string name="unpack_running">On: folders go in one stream.</string>
+    <string name="unpack_off">Off: folders go file by file over FTP.</string>
+    <string name="unpack_load">Load it on the console</string>
+    <string name="unpack_loading">Sending it to the console\'s loader…</string>
+    <string name="unpack_loaded">Loaded: folders now go in one stream.</string>
+    <string name="unpack_not_started">Sent, but it doesn\'t answer. Is elfldr running?</string>
+    <string name="unpack_done">%1$d files are in %2$s</string>
+    <string name="unpack_failed">Fast folder upload stopped: %1$s</string>
+    <string name="unpack_no_answer">The console didn\'t confirm the folder.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d files going in one stream to %3$s</string>
 </resources>

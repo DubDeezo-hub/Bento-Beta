@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">Файлы от 64 МБ приходят с консоли 4 частями одновременно, каждая записывается на своё место в телефоне. Выключите, если загрузка выйдет неверной.</string>
     <string name="split_dl_fallback">Получение одним куском…</string>
     <string name="files_upload_folder_here">Загрузить папку сюда</string>
+    <string name="unpack_title">Быстрая загрузка папок</string>
+    <string name="unpack_hint">Отправляет всю папку одним потоком, а не по файлу: намного быстрее для папок с множеством мелких файлов. Нужен маленький payload распаковки Crimson на консоли. Он пишет только в /data и на USB-накопители. Загружайте его заново после каждого джейлбрейка.</string>
+    <string name="unpack_running">Вкл.: папки идут одним потоком.</string>
+    <string name="unpack_off">Выкл.: папки идут по файлу через FTP.</string>
+    <string name="unpack_load">Загрузить на консоль</string>
+    <string name="unpack_loading">Отправка загрузчику консоли…</string>
+    <string name="unpack_loaded">Загружен: папки теперь идут одним потоком.</string>
+    <string name="unpack_not_started">Отправлен, но не отвечает. Запущен ли elfldr?</string>
+    <string name="unpack_done">%1$d файлов в %2$s</string>
+    <string name="unpack_failed">Быстрая загрузка остановилась: %1$s</string>
+    <string name="unpack_no_answer">Консоль не подтвердила папку.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d файлов одним потоком в %3$s</string>
 </resources>

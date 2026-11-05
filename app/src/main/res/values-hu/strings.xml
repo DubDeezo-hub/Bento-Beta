@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">A 64 MB-os vagy nagyobb fájlok 4 részben egyszerre jönnek a konzolról, mindegyik a helyére íródik a telefonon. Kapcsold ki, ha egy letöltés hibás lesz.</string>
     <string name="split_dl_fallback">Inkább egy darabban tölti le…</string>
     <string name="files_upload_folder_here">Mappa feltöltése ide</string>
+    <string name="unpack_title">Gyors mappafeltöltés</string>
+    <string name="unpack_hint">Fájlonként helyett egyetlen folyamban küldi az egész mappát: sokkal gyorsabb sok kis fájlt tartalmazó mappáknál. Kell hozzá a Crimson kis kicsomagoló payloadja a konzolon. Csak a /data mappába és USB-meghajtókra ír. Minden jailbreak után töltsd be újra.</string>
+    <string name="unpack_running">Be: a mappák egy folyamban mennek.</string>
+    <string name="unpack_off">Ki: a mappák fájlonként mennek FTP-n.</string>
+    <string name="unpack_load">Betöltés a konzolra</string>
+    <string name="unpack_loading">Küldés a konzol betöltőjének…</string>
+    <string name="unpack_loaded">Betöltve: a mappák most egy folyamban mennek.</string>
+    <string name="unpack_not_started">Elküldve, de nem válaszol. Fut az elfldr?</string>
+    <string name="unpack_done">%1$d fájl van itt: %2$s</string>
+    <string name="unpack_failed">A gyors feltöltés leállt: %1$s</string>
+    <string name="unpack_no_answer">A konzol nem erősítette meg a mappát.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d fájl egy folyamban ide: %3$s</string>
 </resources>

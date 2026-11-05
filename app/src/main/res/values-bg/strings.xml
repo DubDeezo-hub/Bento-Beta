@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">Файлове от 64 MB или повече идват от конзолата на 4 части наведнъж, всяка записана на мястото си в телефона. Изключете, ако изтегляне излезе грешно.</string>
     <string name="split_dl_fallback">Изтегляне на едно парче вместо това…</string>
     <string name="files_upload_folder_here">Качи папка тук</string>
+    <string name="unpack_title">Бързо качване на папки</string>
+    <string name="unpack_hint">Изпраща цяла папка в един поток вместо файл по файл: много по-бързо за папки с много малки файлове. Нужен е малкият payload за разпакетиране на Crimson на конзолата. Пише само в /data и на USB устройства. Зареждайте го отново след всеки jailbreak.</string>
+    <string name="unpack_running">Вкл.: папките отиват в един поток.</string>
+    <string name="unpack_off">Изкл.: папките отиват файл по файл през FTP.</string>
+    <string name="unpack_load">Зареди го на конзолата</string>
+    <string name="unpack_loading">Изпращане към loader-а на конзолата…</string>
+    <string name="unpack_loaded">Зареден: папките вече отиват в един поток.</string>
+    <string name="unpack_not_started">Изпратен, но не отговаря. Работи ли elfldr?</string>
+    <string name="unpack_done">%1$d файла са в %2$s</string>
+    <string name="unpack_failed">Бързото качване спря: %1$s</string>
+    <string name="unpack_no_answer">Конзолата не потвърди папката.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d файла отиват в един поток към %3$s</string>
 </resources>

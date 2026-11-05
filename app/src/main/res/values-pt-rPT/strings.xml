@@ -1526,4 +1526,16 @@
     <string name="split_dl_hint">Ficheiros de 64 MB ou mais vêm da consola em 4 partes ao mesmo tempo, cada uma escrita no seu lugar no telemóvel. Desligue se uma transferência sair errada.</string>
     <string name="split_dl_fallback">A buscar numa só parte…</string>
     <string name="files_upload_folder_here">Enviar uma pasta para aqui</string>
+    <string name="unpack_title">Envio rápido de pastas</string>
+    <string name="unpack_hint">Envia uma pasta inteira num único fluxo em vez de ficheiro a ficheiro: muito mais rápido para pastas com muitos ficheiros pequenos. Precisa do pequeno payload de descompactação do Crimson na consola. Só escreve em /data e em pens USB. Carregue de novo após cada jailbreak.</string>
+    <string name="unpack_running">Ligado: as pastas vão num único fluxo.</string>
+    <string name="unpack_off">Desligado: as pastas vão ficheiro a ficheiro por FTP.</string>
+    <string name="unpack_load">Carregar na consola</string>
+    <string name="unpack_loading">A enviar para o carregador da consola…</string>
+    <string name="unpack_loaded">Carregado: as pastas vão agora num único fluxo.</string>
+    <string name="unpack_not_started">Enviado, mas não responde. O elfldr está a correr?</string>
+    <string name="unpack_done">%1$d ficheiros estão em %2$s</string>
+    <string name="unpack_failed">O envio rápido parou: %1$s</string>
+    <string name="unpack_no_answer">A consola não confirmou a pasta.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d ficheiros a ir num único fluxo para %3$s</string>
 </resources>

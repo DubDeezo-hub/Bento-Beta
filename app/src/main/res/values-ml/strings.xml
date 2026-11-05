@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">64 MB അല്ലെങ്കിൽ കൂടുതൽ ഫയലുകൾ കൺസോളിൽ നിന്ന് 4 ഭാഗങ്ങളായി ഒരുമിച്ച് വരുന്നു, ഓരോന്നും ഫോണിൽ അതിന്റെ സ്ഥാനത്ത് എഴുതുന്നു. ഡൗൺലോഡ് തെറ്റിയാൽ ഓഫാക്കുക.</string>
     <string name="split_dl_fallback">പകരം ഒറ്റ കഷണമായി എടുക്കുന്നു…</string>
     <string name="files_upload_folder_here">ഇവിടെ ഫോൾഡർ അപ്‌ലോഡ്</string>
+    <string name="unpack_title">വേഗത്തിലുള്ള ഫോൾഡർ അപ്‌ലോഡ്</string>
+    <string name="unpack_hint">ഫയൽ-ഫയലായി അല്ലാതെ മുഴുവൻ ഫോൾഡറും ഒരു ഒഴുക്കിൽ അയയ്ക്കുന്നു: ധാരാളം ചെറിയ ഫയലുകളുള്ള ഫോൾഡറുകൾക്ക് വളരെ വേഗം. കൺസോളിൽ Crimson-ന്റെ ചെറിയ അൺപാക്ക് പേലോഡ് വേണം. ഇത് /data, USB ഡ്രൈവുകൾ എന്നിവയിൽ മാത്രം എഴുതുന്നു. ഓരോ ജയിൽബ്രേക്കിനു ശേഷവും വീണ്ടും ലോഡ് ചെയ്യുക.</string>
+    <string name="unpack_running">ഓൺ: ഫോൾഡറുകൾ ഒരു ഒഴുക്കിൽ.</string>
+    <string name="unpack_off">ഓഫ്: ഫോൾഡറുകൾ FTP വഴി ഫയൽ-ഫയലായി.</string>
+    <string name="unpack_load">കൺസോളിൽ ലോഡ് ചെയ്യുക</string>
+    <string name="unpack_loading">കൺസോളിന്റെ ലോഡറിലേക്ക് അയയ്ക്കുന്നു…</string>
+    <string name="unpack_loaded">ലോഡ് ചെയ്തു: ഫോൾഡറുകൾ ഇപ്പോൾ ഒരു ഒഴുക്കിൽ.</string>
+    <string name="unpack_not_started">അയച്ചു, പക്ഷേ മറുപടിയില്ല. elfldr പ്രവർത്തിക്കുന്നുണ്ടോ?</string>
+    <string name="unpack_done">%2$s ൽ %1$d ഫയലുകളുണ്ട്</string>
+    <string name="unpack_failed">വേഗ അപ്‌ലോഡ് നിന്നു: %1$s</string>
+    <string name="unpack_no_answer">കൺസോൾ ഫോൾഡർ സ്ഥിരീകരിച്ചില്ല.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d ഫയലുകൾ ഒരു ഒഴുക്കിൽ %3$s ലേക്ക്</string>
 </resources>

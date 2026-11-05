@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">‏64 MB یا بڑی فائلیں کنسول سے ایک ساتھ 4 حصوں میں آتی ہیں، ہر حصہ فون پر اپنی جگہ لکھا جاتا ہے۔ اگر ڈاؤن لوڈ غلط آئے تو بند کریں۔</string>
     <string name="split_dl_fallback">اس کے بجائے ایک ٹکڑے میں لایا جا رہا ہے…</string>
     <string name="files_upload_folder_here">یہاں فولڈر اپ لوڈ کریں</string>
+    <string name="unpack_title">تیز فولڈر اپ لوڈ</string>
+    <string name="unpack_hint">فائل بہ فائل کے بجائے پورا فولڈر ایک بہاؤ میں بھیجتا ہے: بہت سی چھوٹی فائلوں والے فولڈرز کے لیے کہیں تیز۔ کنسول پر Crimson کا چھوٹا ان پیک پے لوڈ چاہیے۔ یہ صرف /data اور USB ڈرائیوز میں لکھتا ہے۔ ہر جیل بریک کے بعد دوبارہ لوڈ کریں۔</string>
+    <string name="unpack_running">آن: فولڈر ایک بہاؤ میں جاتے ہیں۔</string>
+    <string name="unpack_off">آف: فولڈر FTP پر فائل بہ فائل جاتے ہیں۔</string>
+    <string name="unpack_load">کنسول پر لوڈ کریں</string>
+    <string name="unpack_loading">کنسول کے لوڈر کو بھیجا جا رہا ہے…</string>
+    <string name="unpack_loaded">لوڈ ہو گیا: فولڈر اب ایک بہاؤ میں جاتے ہیں۔</string>
+    <string name="unpack_not_started">بھیج دیا، مگر جواب نہیں آیا۔ کیا elfldr چل رہا ہے؟</string>
+    <string name="unpack_done">‏%2$s میں %1$d فائلیں ہیں</string>
+    <string name="unpack_failed">تیز اپ لوڈ رک گیا: %1$s</string>
+    <string name="unpack_no_answer">کنسول نے فولڈر کی تصدیق نہیں کی۔</string>
+    <string name="upload_folder_streaming">‏%1$s: %2$d فائلیں ایک بہاؤ میں %3$s کی طرف</string>
 </resources>

@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">Lêers van 64 MB of meer kom in 4 dele gelyk van die konsole, elk op sy plek op die foon geskryf. Skakel af as \'n aflaai verkeerd uitkom.</string>
     <string name="split_dl_fallback">Kry dit eerder in een stuk…</string>
     <string name="files_upload_folder_here">Laai \'n vouer hier op</string>
+    <string name="unpack_title">Vinnige vouer-oplaai</string>
+    <string name="unpack_hint">Stuur \'n hele vouer in een stroom in plaas van lêer vir lêer: baie vinniger vir vouers met baie klein lêers. Benodig Crimson se klein uitpak-payload op die konsole. Dit skryf net na /data en USB-skywe. Laai dit weer na elke jailbreak.</string>
+    <string name="unpack_running">Aan: vouers gaan in een stroom.</string>
+    <string name="unpack_off">Af: vouers gaan lêer vir lêer oor FTP.</string>
+    <string name="unpack_load">Laai dit op die konsole</string>
+    <string name="unpack_loading">Stuur dit na die konsole se laaier…</string>
+    <string name="unpack_loaded">Gelaai: vouers gaan nou in een stroom.</string>
+    <string name="unpack_not_started">Gestuur, maar dit antwoord nie. Loop elfldr?</string>
+    <string name="unpack_done">%1$d lêers is in %2$s</string>
+    <string name="unpack_failed">Vinnige vouer-oplaai het gestop: %1$s</string>
+    <string name="unpack_no_answer">Die konsole het die vouer nie bevestig nie.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d lêers gaan in een stroom na %3$s</string>
 </resources>

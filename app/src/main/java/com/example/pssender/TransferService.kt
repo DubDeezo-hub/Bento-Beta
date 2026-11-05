@@ -225,6 +225,7 @@ class TransferService : Service() {
     private fun runTransfer(entry: QueueEntry<TransferRequest>): TransferResult {
         val req = entry.item
         val settings = FtpSettings(req.host, req.port, req.user, req.pass, req.model)
+        req.treeUri?.let { return streamFolder(req, Uri.parse(it)) }
         val installer = req.installWith ?: return moveFiles(entry, settings)
         // A package for PKG Manager: its folder is made if needed, the package is copied there, then it is installed
         try {
@@ -238,6 +239,25 @@ class TransferService : Service() {
         val reply = pkgManagerInstall(req.host, installer, joinPath(req.dir, req.name))
         TransferState.status("")
         return TransferResult(reply.ok, reply.text)
+    }
+
+    /** A whole phone folder in one stream through the unpack payload (see FolderStream.kt). */
+    private fun streamFolder(req: TransferRequest, tree: Uri): TransferResult {
+        val cr = contentResolver
+        val phone = try {
+            walkPhoneTree(cr, tree)
+        } catch (_: SecurityException) {
+            return TransferResult(false, AppText.get(R.string.sync_lost_access))
+        } catch (e: Exception) {
+            return TransferResult(false, failedText(e), retry = true)
+        }
+        val files = phone.files.map { f ->
+            val uri = Uri.parse(f.uri)
+            val size = if (f.size >= 0L) f.size else fileSize(cr, uri)
+            StreamFile(f.rel, size) { cr.openInputStream(uri) ?: throw java.io.IOException(phoneFileProblem()) }
+        }
+        if (files.any { it.size < 0L }) return TransferResult(false, AppText.get(R.string.unpack_failed, phoneFileProblem()))
+        return sendFolderStream(req.host, req.dir, phone.folders, files, TransferState)
     }
 
     private fun moveFiles(entry: QueueEntry<TransferRequest>, settings: FtpSettings): TransferResult {

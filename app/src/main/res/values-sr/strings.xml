@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">Датотеке од 64 MB или веће стижу са конзоле у 4 дела одједном, сваки уписан на своје место у телефону. Искључите ако преузимање испадне погрешно.</string>
     <string name="split_dl_fallback">Преузима се у једном комаду…</string>
     <string name="files_upload_folder_here">Отпреми фасциклу овде</string>
+    <string name="unpack_title">Брзо слање фасцикли</string>
+    <string name="unpack_hint">Шаље целу фасциклу у једном току уместо датотеку по датотеку: много брже за фасцикле са много малих датотека. Потребан је мали Crimson payload за распакивање на конзоли. Пише само у /data и на USB дискове. Учитајте га поново после сваког jailbreak-а.</string>
+    <string name="unpack_running">Укључено: фасцикле иду у једном току.</string>
+    <string name="unpack_off">Искључено: фасцикле иду датотеку по датотеку преко FTP-а.</string>
+    <string name="unpack_load">Учитај на конзолу</string>
+    <string name="unpack_loading">Шаље се loader-у конзоле…</string>
+    <string name="unpack_loaded">Учитано: фасцикле сада иду у једном току.</string>
+    <string name="unpack_not_started">Послато, али не одговара. Да ли elfldr ради?</string>
+    <string name="unpack_done">%1$d датотека је у %2$s</string>
+    <string name="unpack_failed">Брзо слање је стало: %1$s</string>
+    <string name="unpack_no_answer">Конзола није потврдила фасциклу.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d датотека у једном току у %3$s</string>
 </resources>

@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">Αρχεία 64 MB και πάνω έρχονται από την κονσόλα σε 4 κομμάτια μαζί, το καθένα γραμμένο στη θέση του στο τηλέφωνο. Απενεργοποιήστε αν μια λήψη βγει λάθος.</string>
     <string name="split_dl_fallback">Λήψη σε ένα κομμάτι αντί γι\' αυτό…</string>
     <string name="files_upload_folder_here">Ανέβασμα φακέλου εδώ</string>
+    <string name="unpack_title">Γρήγορη αποστολή φακέλων</string>
+    <string name="unpack_hint">Στέλνει ολόκληρο φάκελο σε μία ροή αντί για αρχείο-αρχείο: πολύ ταχύτερο για φακέλους με πολλά μικρά αρχεία. Χρειάζεται το μικρό payload αποσυμπίεσης του Crimson στην κονσόλα. Γράφει μόνο στο /data και σε USB. Φορτώστε το ξανά μετά από κάθε jailbreak.</string>
+    <string name="unpack_running">Ενεργό: οι φάκελοι πάνε σε μία ροή.</string>
+    <string name="unpack_off">Ανενεργό: οι φάκελοι πάνε αρχείο-αρχείο μέσω FTP.</string>
+    <string name="unpack_load">Φόρτωσέ το στην κονσόλα</string>
+    <string name="unpack_loading">Αποστολή στον loader της κονσόλας…</string>
+    <string name="unpack_loaded">Φορτώθηκε: οι φάκελοι πάνε τώρα σε μία ροή.</string>
+    <string name="unpack_not_started">Στάλθηκε, αλλά δεν απαντά. Τρέχει το elfldr;</string>
+    <string name="unpack_done">%1$d αρχεία είναι στο %2$s</string>
+    <string name="unpack_failed">Η γρήγορη αποστολή σταμάτησε: %1$s</string>
+    <string name="unpack_no_answer">Η κονσόλα δεν επιβεβαίωσε τον φάκελο.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d αρχεία πάνε σε μία ροή στο %3$s</string>
 </resources>

@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">64 MB ಅಥವಾ ಹೆಚ್ಚಿನ ಫೈಲ್‌ಗಳು ಕನ್ಸೋಲ್‌ನಿಂದ 4 ಭಾಗಗಳಲ್ಲಿ ಒಟ್ಟಿಗೆ ಬರುತ್ತವೆ, ಪ್ರತಿಯೊಂದೂ ಫೋನ್‌ನಲ್ಲಿ ತನ್ನ ಸ್ಥಳದಲ್ಲಿ ಬರೆಯಲ್ಪಡುತ್ತದೆ. ಡೌನ್‌ಲೋಡ್ ತಪ್ಪಾದರೆ ಆಫ್ ಮಾಡಿ.</string>
     <string name="split_dl_fallback">ಬದಲಿಗೆ ಒಂದೇ ತುಂಡಾಗಿ ತರಲಾಗುತ್ತಿದೆ…</string>
     <string name="files_upload_folder_here">ಇಲ್ಲಿ ಫೋಲ್ಡರ್ ಅಪ್‌ಲೋಡ್</string>
+    <string name="unpack_title">ವೇಗದ ಫೋಲ್ಡರ್ ಅಪ್‌ಲೋಡ್</string>
+    <string name="unpack_hint">ಫೈಲ್-ಫೈಲ್ ಬದಲು ಸಂಪೂರ್ಣ ಫೋಲ್ಡರ್ ಅನ್ನು ಒಂದೇ ಹರಿವಿನಲ್ಲಿ ಕಳುಹಿಸುತ್ತದೆ: ಹಲವು ಸಣ್ಣ ಫೈಲ್‌ಗಳ ಫೋಲ್ಡರ್‌ಗಳಿಗೆ ಬಹಳ ವೇಗ. ಕನ್ಸೋಲ್‌ನಲ್ಲಿ Crimson ನ ಸಣ್ಣ ಅನ್‌ಪ್ಯಾಕ್ ಪೇಲೋಡ್ ಬೇಕು. ಇದು /data ಮತ್ತು USB ಡ್ರೈವ್‌ಗಳಿಗೆ ಮಾತ್ರ ಬರೆಯುತ್ತದೆ. ಪ್ರತಿ ಜೈಲ್‌ಬ್ರೇಕ್ ನಂತರ ಮತ್ತೆ ಲೋಡ್ ಮಾಡಿ.</string>
+    <string name="unpack_running">ಆನ್: ಫೋಲ್ಡರ್‌ಗಳು ಒಂದೇ ಹರಿವಿನಲ್ಲಿ.</string>
+    <string name="unpack_off">ಆಫ್: ಫೋಲ್ಡರ್‌ಗಳು FTP ಮೂಲಕ ಫೈಲ್-ಫೈಲ್ ಆಗಿ.</string>
+    <string name="unpack_load">ಕನ್ಸೋಲ್‌ನಲ್ಲಿ ಲೋಡ್ ಮಾಡಿ</string>
+    <string name="unpack_loading">ಕನ್ಸೋಲ್ ಲೋಡರ್‌ಗೆ ಕಳುಹಿಸಲಾಗುತ್ತಿದೆ…</string>
+    <string name="unpack_loaded">ಲೋಡ್ ಆಯಿತು: ಫೋಲ್ಡರ್‌ಗಳು ಈಗ ಒಂದೇ ಹರಿವಿನಲ್ಲಿ.</string>
+    <string name="unpack_not_started">ಕಳುಹಿಸಲಾಗಿದೆ, ಆದರೆ ಉತ್ತರಿಸುತ್ತಿಲ್ಲ. elfldr ಚಾಲನೆಯಲ್ಲಿದೆಯೇ?</string>
+    <string name="unpack_done">%2$s ನಲ್ಲಿ %1$d ಫೈಲ್‌ಗಳಿವೆ</string>
+    <string name="unpack_failed">ವೇಗದ ಅಪ್‌ಲೋಡ್ ನಿಂತಿತು: %1$s</string>
+    <string name="unpack_no_answer">ಕನ್ಸೋಲ್ ಫೋಲ್ಡರ್ ಖಚಿತಪಡಿಸಲಿಲ್ಲ.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d ಫೈಲ್‌ಗಳು ಒಂದೇ ಹರಿವಿನಲ್ಲಿ %3$s ಗೆ</string>
 </resources>

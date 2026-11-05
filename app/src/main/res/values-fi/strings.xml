@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">Vähintään 64 Mt:n tiedostot tulevat konsolilta 4 osana kerralla, ja jokainen kirjoitetaan paikalleen puhelimeen. Laita pois, jos lataus menee väärin.</string>
     <string name="split_dl_fallback">Haetaan yhtenä kappaleena…</string>
     <string name="files_upload_folder_here">Lähetä kansio tähän</string>
+    <string name="unpack_title">Nopea kansion lähetys</string>
+    <string name="unpack_hint">Lähettää koko kansion yhtenä virtana tiedosto kerrallaan sijaan: paljon nopeampi kansioille, joissa on paljon pieniä tiedostoja. Vaatii Crimsonin pienen purku-payloadin konsolille. Se kirjoittaa vain /data-kansioon ja USB-asemille. Lataa se uudelleen jokaisen jailbreakin jälkeen.</string>
+    <string name="unpack_running">Päällä: kansiot menevät yhtenä virtana.</string>
+    <string name="unpack_off">Pois: kansiot menevät tiedosto kerrallaan FTP:llä.</string>
+    <string name="unpack_load">Lataa se konsolille</string>
+    <string name="unpack_loading">Lähetetään konsolin lataajalle…</string>
+    <string name="unpack_loaded">Ladattu: kansiot menevät nyt yhtenä virtana.</string>
+    <string name="unpack_not_started">Lähetetty, mutta se ei vastaa. Onko elfldr käynnissä?</string>
+    <string name="unpack_done">%1$d tiedostoa on kansiossa %2$s</string>
+    <string name="unpack_failed">Nopea lähetys pysähtyi: %1$s</string>
+    <string name="unpack_no_answer">Konsoli ei vahvistanut kansiota.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d tiedostoa menee yhtenä virtana kohteeseen %3$s</string>
 </resources>

@@ -1526,4 +1526,16 @@
     <string name="split_dl_hint">Les fichiers de 64 Mo ou plus arrivent de la console en 4 parties à la fois, chacune écrite à sa place sur le téléphone. Désactivez si un téléchargement sort mal.</string>
     <string name="split_dl_fallback">Récupération en un seul morceau à la place…</string>
     <string name="files_upload_folder_here">Envoyer un dossier ici</string>
+    <string name="unpack_title">Envoi rapide de dossiers</string>
+    <string name="unpack_hint">Envoie un dossier entier en un seul flux au lieu de fichier par fichier : bien plus rapide pour les dossiers pleins de petits fichiers. Nécessite le petit payload de décompactage de Crimson sur la console. Il n\'écrit que dans /data et sur les clés USB. À recharger après chaque jailbreak.</string>
+    <string name="unpack_running">Activé : les dossiers partent en un seul flux.</string>
+    <string name="unpack_off">Désactivé : les dossiers partent fichier par fichier en FTP.</string>
+    <string name="unpack_load">Le charger sur la console</string>
+    <string name="unpack_loading">Envoi au chargeur de la console…</string>
+    <string name="unpack_loaded">Chargé : les dossiers partent maintenant en un seul flux.</string>
+    <string name="unpack_not_started">Envoyé, mais il ne répond pas. elfldr tourne-t-il ?</string>
+    <string name="unpack_done">%1$d fichiers sont dans %2$s</string>
+    <string name="unpack_failed">L\'envoi rapide s\'est arrêté : %1$s</string>
+    <string name="unpack_no_answer">La console n\'a pas confirmé le dossier.</string>
+    <string name="upload_folder_streaming">%1$s : %2$d fichiers partent en un seul flux vers %3$s</string>
 </resources>

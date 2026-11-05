@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">64 MB அல்லது பெரிய கோப்புகள் கன்சோலிலிருந்து 4 பகுதிகளாக ஒரே நேரத்தில் வந்து, ஒவ்வொன்றும் போனில் அதன் இடத்தில் எழுதப்படும். பதிவிறக்கம் தவறாக வந்தால் அணைக்கவும்.</string>
     <string name="split_dl_fallback">பதிலாக ஒரே துண்டாக எடுக்கிறது…</string>
     <string name="files_upload_folder_here">இங்கே கோப்புறையைப் பதிவேற்று</string>
+    <string name="unpack_title">விரைவான கோப்புறை பதிவேற்றம்</string>
+    <string name="unpack_hint">கோப்பு கோப்பாக அல்லாமல் முழு கோப்புறையையும் ஒரே ஓட்டத்தில் அனுப்பும்: பல சிறிய கோப்புகள் உள்ள கோப்புறைகளுக்கு மிக வேகம். கன்சோலில் Crimson-இன் சிறிய அன்பேக் பேலோட் தேவை. இது /data மற்றும் USB டிரைவ்களில் மட்டும் எழுதும். ஒவ்வொரு ஜெயில்பிரேக்கிற்குப் பிறகும் மீண்டும் ஏற்றவும்.</string>
+    <string name="unpack_running">இயக்கத்தில்: கோப்புறைகள் ஒரே ஓட்டத்தில்.</string>
+    <string name="unpack_off">அணைப்பில்: கோப்புறைகள் FTP வழியாக கோப்பு கோப்பாக.</string>
+    <string name="unpack_load">கன்சோலில் ஏற்று</string>
+    <string name="unpack_loading">கன்சோல் லோடருக்கு அனுப்புகிறது…</string>
+    <string name="unpack_loaded">ஏற்றப்பட்டது: கோப்புறைகள் இப்போது ஒரே ஓட்டத்தில்.</string>
+    <string name="unpack_not_started">அனுப்பப்பட்டது, ஆனால் பதில் இல்லை. elfldr இயங்குகிறதா?</string>
+    <string name="unpack_done">%2$s இல் %1$d கோப்புகள் உள்ளன</string>
+    <string name="unpack_failed">விரைவான பதிவேற்றம் நின்றது: %1$s</string>
+    <string name="unpack_no_answer">கன்சோல் கோப்புறையை உறுதிப்படுத்தவில்லை.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d கோப்புகள் ஒரே ஓட்டத்தில் %3$s க்கு</string>
 </resources>

@@ -10,3 +10,6 @@ captures/
 
 # Python
 __pycache__/
+payload-src/unpack/crimson-unpack.elf
+payload-src/unpack/unpack-linux
+app/src/main/assets/crimson-unpack.elf

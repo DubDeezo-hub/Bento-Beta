@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">الملفات بحجم 64 ميغابايت أو أكثر تأتي من الجهاز على 4 أجزاء معًا، ويُكتب كل جزء في مكانه على الهاتف. أوقفه إذا خرج تنزيل خاطئًا.</string>
     <string name="split_dl_fallback">يُجلب بقطعة واحدة بدلًا من ذلك…</string>
     <string name="files_upload_folder_here">ارفع مجلدًا هنا</string>
+    <string name="unpack_title">رفع المجلدات السريع</string>
+    <string name="unpack_hint">يرسل مجلدًا كاملًا في تدفق واحد بدل ملف تلو الآخر: أسرع بكثير للمجلدات المليئة بالملفات الصغيرة. يحتاج حمولة فك الحزم الصغيرة من Crimson على الجهاز. تكتب فقط في /data وأقراص USB. حمّلها من جديد بعد كل كسر حماية.</string>
+    <string name="unpack_running">مفعّل: تُرسل المجلدات في تدفق واحد.</string>
+    <string name="unpack_off">متوقف: تُرسل المجلدات ملفًا تلو الآخر عبر FTP.</string>
+    <string name="unpack_load">حمّلها على الجهاز</string>
+    <string name="unpack_loading">يُرسل إلى محمّل الجهاز…</string>
+    <string name="unpack_loaded">تم التحميل: تُرسل المجلدات الآن في تدفق واحد.</string>
+    <string name="unpack_not_started">أُرسلت لكنها لا تستجيب. هل elfldr يعمل؟</string>
+    <string name="unpack_done">‏%1$d ملفًا في %2$s</string>
+    <string name="unpack_failed">توقف الرفع السريع: %1$s</string>
+    <string name="unpack_no_answer">لم يؤكد الجهاز المجلد.</string>
+    <string name="upload_folder_streaming">‏%1$s: %2$d ملفًا في تدفق واحد إلى %3$s</string>
 </resources>

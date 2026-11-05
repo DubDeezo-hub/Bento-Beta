@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">64 MB 以上のファイルは本体から 4 分割で同時に届き、それぞれスマホ上の正しい位置に書き込まれます。ダウンロードがおかしくなる場合はオフにしてください。</string>
     <string name="split_dl_fallback">代わりに 1 つにまとめて取得中…</string>
     <string name="files_upload_folder_here">ここにフォルダーを送る</string>
+    <string name="unpack_title">フォルダーの高速アップロード</string>
+    <string name="unpack_hint">ファイルごとではなくフォルダー全体を 1 本のストリームで送ります。小さなファイルが多いフォルダーではずっと速くなります。本体に Crimson の小さな展開ペイロードが必要です。書き込むのは /data と USB ドライブだけです。脱獄のたびに読み込み直してください。</string>
+    <string name="unpack_running">オン：フォルダーは 1 本のストリームで送ります。</string>
+    <string name="unpack_off">オフ：フォルダーは FTP でファイルごとに送ります。</string>
+    <string name="unpack_load">本体に読み込む</string>
+    <string name="unpack_loading">本体のローダーへ送信中…</string>
+    <string name="unpack_loaded">読み込み完了：フォルダーは 1 本のストリームで送ります。</string>
+    <string name="unpack_not_started">送りましたが応答がありません。elfldr は動いていますか？</string>
+    <string name="unpack_done">%1$d 個のファイルが %2$s にあります</string>
+    <string name="unpack_failed">高速アップロードが止まりました：%1$s</string>
+    <string name="unpack_no_answer">本体がフォルダーを確認しませんでした。</string>
+    <string name="upload_folder_streaming">%1$s：%2$d 個のファイルを 1 本のストリームで %3$s へ</string>
 </resources>

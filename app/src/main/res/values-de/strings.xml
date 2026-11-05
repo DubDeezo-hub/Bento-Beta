@@ -1527,4 +1527,16 @@
     <string name="split_dl_hint">Dateien ab 64 MB kommen in 4 Teilen gleichzeitig von der Konsole, jeder an seine Stelle auf dem Handy geschrieben. Ausschalten, falls ein Download fehlerhaft ist.</string>
     <string name="split_dl_fallback">Stattdessen in einem Stück holen…</string>
     <string name="files_upload_folder_here">Ordner hierher hochladen</string>
+    <string name="unpack_title">Schneller Ordner-Upload</string>
+    <string name="unpack_hint">Sendet einen ganzen Ordner in einem Strom statt Datei für Datei: viel schneller bei Ordnern mit vielen kleinen Dateien. Braucht Crimsons kleine Entpack-Payload auf der Konsole. Sie schreibt nur nach /data und auf USB-Laufwerke. Nach jedem Jailbreak neu laden.</string>
+    <string name="unpack_running">An: Ordner gehen in einem Strom.</string>
+    <string name="unpack_off">Aus: Ordner gehen Datei für Datei per FTP.</string>
+    <string name="unpack_load">Auf der Konsole laden</string>
+    <string name="unpack_loading">Wird an den Loader der Konsole gesendet…</string>
+    <string name="unpack_loaded">Geladen: Ordner gehen jetzt in einem Strom.</string>
+    <string name="unpack_not_started">Gesendet, aber sie antwortet nicht. Läuft elfldr?</string>
+    <string name="unpack_done">%1$d Dateien sind in %2$s</string>
+    <string name="unpack_failed">Schneller Ordner-Upload gestoppt: %1$s</string>
+    <string name="unpack_no_answer">Die Konsole hat den Ordner nicht bestätigt.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d Dateien gehen in einem Strom nach %3$s</string>
 </resources>

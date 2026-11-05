@@ -37,6 +37,7 @@ object UnfinishedCodec {
             o.put("profile", r.profileId)
             o.put("model", r.model)
             r.installWith?.let { o.put("installWith", it) }
+            r.treeUri?.let { o.put("treeUri", it) }
             items.put(o)
         }
         return JSONObject().put("v", VERSION).put("items", items).toString()
@@ -74,7 +75,8 @@ object UnfinishedCodec {
         val fileUri = text("fileUri")?.takeIf { it.isNotEmpty() }
         val url = text("url")?.takeIf { it.isNotEmpty() }
         val remotePath = text("remotePath")?.takeIf { it.isNotEmpty() }
-        if (listOfNotNull(fileUri, url, remotePath).size != 1) return null
+        val treeUri = text("treeUri")?.takeIf { it.isNotEmpty() }
+        if (listOfNotNull(fileUri, url, remotePath, treeUri).size != 1) return null
         return TransferRequest(
             name = name,
             host = host,
@@ -92,7 +94,8 @@ object UnfinishedCodec {
             profileId = text("profile").orEmpty(),
             // Kept before there were PS4s: those were all PS5s
             model = text("model")?.takeIf { it == ConsoleType.PS4.model } ?: ConsoleType.PS5.model,
-            installWith = text("installWith")?.takeIf { it.isNotEmpty() }
+            installWith = text("installWith")?.takeIf { it.isNotEmpty() },
+            treeUri = treeUri
         )
     }
 }

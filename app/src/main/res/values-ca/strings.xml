@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">Els fitxers de 64 MB o més arriben de la consola en 4 parts alhora, cadascuna escrita al seu lloc al telèfon. Desactiva-ho si una baixada surt malament.</string>
     <string name="split_dl_fallback">Agafant-ho d\'una sola peça…</string>
     <string name="files_upload_folder_here">Puja una carpeta aquí</string>
+    <string name="unpack_title">Pujada ràpida de carpetes</string>
+    <string name="unpack_hint">Envia una carpeta sencera en un sol flux en lloc de fitxer per fitxer: molt més ràpid per a carpetes amb molts fitxers petits. Cal el petit payload de desempaquetat de Crimson a la consola. Només escriu a /data i a unitats USB. Torna\'l a carregar després de cada jailbreak.</string>
+    <string name="unpack_running">Activat: les carpetes van en un sol flux.</string>
+    <string name="unpack_off">Desactivat: les carpetes van fitxer per fitxer per FTP.</string>
+    <string name="unpack_load">Carrega\'l a la consola</string>
+    <string name="unpack_loading">Enviant-lo al carregador de la consola…</string>
+    <string name="unpack_loaded">Carregat: ara les carpetes van en un sol flux.</string>
+    <string name="unpack_not_started">Enviat, però no respon. Funciona elfldr?</string>
+    <string name="unpack_done">%1$d fitxers són a %2$s</string>
+    <string name="unpack_failed">La pujada ràpida s\'ha aturat: %1$s</string>
+    <string name="unpack_no_answer">La consola no ha confirmat la carpeta.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d fitxers van en un sol flux a %3$s</string>
 </resources>

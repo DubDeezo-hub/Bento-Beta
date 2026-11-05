@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">64 MB કે વધુની ફાઇલો કન્સોલમાંથી એકસાથે 4 ભાગમાં આવે છે, દરેક ફોન પર તેની જગ્યાએ લખાય છે. કોઈ ડાઉનલોડ ખોટું આવે તો બંધ કરો.</string>
     <string name="split_dl_fallback">તેના બદલે એક ટુકડામાં લવાય છે…</string>
     <string name="files_upload_folder_here">અહીં ફોલ્ડર અપલોડ કરો</string>
+    <string name="unpack_title">ઝડપી ફોલ્ડર અપલોડ</string>
+    <string name="unpack_hint">ફાઇલ-દર-ફાઇલને બદલે આખું ફોલ્ડર એક પ્રવાહમાં મોકલે છે: ઘણી નાની ફાઇલોવાળા ફોલ્ડર માટે ઘણું ઝડપી. કન્સોલ પર Crimson નું નાનું અનપેક પેલોડ જોઈએ. તે ફક્ત /data અને USB ડ્રાઇવમાં લખે છે. દરેક જેલબ્રેક પછી ફરી લોડ કરો.</string>
+    <string name="unpack_running">ચાલુ: ફોલ્ડર એક પ્રવાહમાં જાય છે.</string>
+    <string name="unpack_off">બંધ: ફોલ્ડર FTP પર ફાઇલ-દર-ફાઇલ જાય છે.</string>
+    <string name="unpack_load">કન્સોલ પર લોડ કરો</string>
+    <string name="unpack_loading">કન્સોલના લોડરને મોકલાય છે…</string>
+    <string name="unpack_loaded">લોડ થયું: ફોલ્ડર હવે એક પ્રવાહમાં જાય છે.</string>
+    <string name="unpack_not_started">મોકલ્યું, પણ જવાબ નથી. elfldr ચાલે છે?</string>
+    <string name="unpack_done">%2$s માં %1$d ફાઇલો છે</string>
+    <string name="unpack_failed">ઝડપી અપલોડ અટક્યું: %1$s</string>
+    <string name="unpack_no_answer">કન્સોલે ફોલ્ડરની પુષ્ટિ ન કરી.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d ફાઇલો એક પ્રવાહમાં %3$s તરફ</string>
 </resources>

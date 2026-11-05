@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">Faili za MB 64 au zaidi huja kutoka konsoli kwa sehemu 4 kwa wakati mmoja, kila moja ikiandikwa mahali pake kwenye simu. Zima ikiwa upakuaji umetoka vibaya.</string>
     <string name="split_dl_fallback">Inaleta kwa kipande kimoja badala yake…</string>
     <string name="files_upload_folder_here">Pakia folda hapa</string>
+    <string name="unpack_title">Upakiaji wa haraka wa folda</string>
+    <string name="unpack_hint">Hutuma folda nzima kwa mkondo mmoja badala ya faili moja moja: haraka zaidi kwa folda zenye faili ndogo nyingi. Inahitaji payload ndogo ya kufungua ya Crimson kwenye konsoli. Huandika tu kwenye /data na diski za USB. Ipakie tena baada ya kila jailbreak.</string>
+    <string name="unpack_running">Imewashwa: folda huenda kwa mkondo mmoja.</string>
+    <string name="unpack_off">Imezimwa: folda huenda faili moja moja kupitia FTP.</string>
+    <string name="unpack_load">Ipakie kwenye konsoli</string>
+    <string name="unpack_loading">Inatuma kwa kipakiaji cha konsoli…</string>
+    <string name="unpack_loaded">Imepakiwa: folda sasa huenda kwa mkondo mmoja.</string>
+    <string name="unpack_not_started">Imetumwa, lakini haijibu. Je, elfldr inaendesha?</string>
+    <string name="unpack_done">Faili %1$d ziko katika %2$s</string>
+    <string name="unpack_failed">Upakiaji wa haraka umesimama: %1$s</string>
+    <string name="unpack_no_answer">Konsoli haikuthibitisha folda.</string>
+    <string name="upload_folder_streaming">%1$s: faili %2$d kwa mkondo mmoja kwenda %3$s</string>
 </resources>

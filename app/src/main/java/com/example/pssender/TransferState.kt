@@ -35,7 +35,9 @@ data class TransferRequest(
     val profileId: String = "",
     val model: String = "PS5",
     /** The port of PKG Manager when the package should be installed once it is on the console (see [PkgManagerRoute]). */
-    val installWith: String? = null
+    val installWith: String? = null,
+    /** A whole phone folder (a picked folder's address) sent in one stream through the unpack payload to [dir]. */
+    val treeUri: String? = null
 )
 
 /**

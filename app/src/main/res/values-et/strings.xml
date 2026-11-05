@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">64 MB või suuremad failid tulevad konsoolist 4 osana korraga, iga osa kirjutatakse telefonis oma kohale. Lülita välja, kui allalaadimine tuleb vigane.</string>
     <string name="split_dl_fallback">Toon selle hoopis ühes tükis…</string>
     <string name="files_upload_folder_here">Laadi kaust siia</string>
+    <string name="unpack_title">Kiire kaustade üleslaadimine</string>
+    <string name="unpack_hint">Saadab terve kausta ühe vooga, mitte fail-faililt: palju kiirem paljude väikeste failidega kaustadele. Vajab konsoolis Crimsoni väikest lahtipakkimise payloadi. See kirjutab ainult /data alla ja USB-ketastele. Laadi see uuesti pärast iga jailbreaki.</string>
+    <string name="unpack_running">Sees: kaustad lähevad ühe vooga.</string>
+    <string name="unpack_off">Väljas: kaustad lähevad FTP kaudu fail-faililt.</string>
+    <string name="unpack_load">Laadi see konsooli</string>
+    <string name="unpack_loading">Saadan konsooli laadijale…</string>
+    <string name="unpack_loaded">Laaditud: kaustad lähevad nüüd ühe vooga.</string>
+    <string name="unpack_not_started">Saadetud, kuid ei vasta. Kas elfldr töötab?</string>
+    <string name="unpack_done">%1$d faili on kaustas %2$s</string>
+    <string name="unpack_failed">Kiire üleslaadimine peatus: %1$s</string>
+    <string name="unpack_no_answer">Konsool ei kinnitanud kausta.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d faili lähevad ühe vooga kausta %3$s</string>
 </resources>

@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">Ang mga file na 64 MB pataas ay dumarating mula sa console bilang 4 na bahagi nang sabay, bawat isa nakasulat sa lugar nito sa phone. I-off kung may download na mali.</string>
     <string name="split_dl_fallback">Kinukuha na lang nang buo…</string>
     <string name="files_upload_folder_here">Mag-upload ng folder dito</string>
+    <string name="unpack_title">Mabilis na pag-upload ng folder</string>
+    <string name="unpack_hint">Ipinapadala ang buong folder sa isang daloy sa halip na isa-isang file: mas mabilis para sa folder na maraming maliliit na file. Kailangan ang maliit na unpack payload ng Crimson sa console. Sa /data at USB drive lang ito sumusulat. I-load ulit pagkatapos ng bawat jailbreak.</string>
+    <string name="unpack_running">Naka-on: isang daloy ang mga folder.</string>
+    <string name="unpack_off">Naka-off: isa-isang file sa FTP ang mga folder.</string>
+    <string name="unpack_load">I-load sa console</string>
+    <string name="unpack_loading">Ipinapadala sa loader ng console…</string>
+    <string name="unpack_loaded">Na-load: isang daloy na ang mga folder.</string>
+    <string name="unpack_not_started">Naipadala, pero hindi sumasagot. Tumatakbo ba ang elfldr?</string>
+    <string name="unpack_done">%1$d file ang nasa %2$s</string>
+    <string name="unpack_failed">Huminto ang mabilis na upload: %1$s</string>
+    <string name="unpack_no_answer">Hindi kinumpirma ng console ang folder.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d file papunta sa %3$s sa isang daloy</string>
 </resources>

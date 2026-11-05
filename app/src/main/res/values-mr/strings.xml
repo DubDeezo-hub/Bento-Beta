@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">64 MB किंवा मोठ्या फाइल्स कन्सोलवरून एकाच वेळी 4 भागांत येतात, प्रत्येक फोनवर आपल्या जागी लिहिला जातो. डाउनलोड चुकीचे आल्यास बंद करा.</string>
     <string name="split_dl_fallback">त्याऐवजी एका तुकड्यात आणत आहे…</string>
     <string name="files_upload_folder_here">येथे फोल्डर अपलोड करा</string>
+    <string name="unpack_title">जलद फोल्डर अपलोड</string>
+    <string name="unpack_hint">फाइल-दर-फाइल ऐवजी संपूर्ण फोल्डर एकाच प्रवाहात पाठवते: अनेक लहान फाइल्स असलेल्या फोल्डरसाठी खूप जलद. कन्सोलवर Crimson चा लहान अनपॅक पेलोड लागतो. तो फक्त /data आणि USB ड्राइव्हमध्ये लिहितो. प्रत्येक जेलब्रेकनंतर पुन्हा लोड करा.</string>
+    <string name="unpack_running">चालू: फोल्डर एकाच प्रवाहात जातात.</string>
+    <string name="unpack_off">बंद: फोल्डर FTP वरून फाइल-दर-फाइल जातात.</string>
+    <string name="unpack_load">कन्सोलवर लोड करा</string>
+    <string name="unpack_loading">कन्सोलच्या लोडरला पाठवत आहे…</string>
+    <string name="unpack_loaded">लोड झाले: फोल्डर आता एकाच प्रवाहात जातात.</string>
+    <string name="unpack_not_started">पाठवले, पण उत्तर नाही. elfldr चालू आहे का?</string>
+    <string name="unpack_done">%2$s मध्ये %1$d फाइल्स आहेत</string>
+    <string name="unpack_failed">जलद अपलोड थांबले: %1$s</string>
+    <string name="unpack_no_answer">कन्सोलने फोल्डरची पुष्टी केली नाही.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d फाइल्स एकाच प्रवाहात %3$s कडे</string>
 </resources>

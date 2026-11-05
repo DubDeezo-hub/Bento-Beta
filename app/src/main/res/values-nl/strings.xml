@@ -1526,4 +1526,16 @@
     <string name="split_dl_hint">Bestanden van 64 MB of meer komen in 4 delen tegelijk van de console, elk op zijn plek op de telefoon geschreven. Zet uit als een download fout uitkomt.</string>
     <string name="split_dl_fallback">In één stuk ophalen…</string>
     <string name="files_upload_folder_here">Map hierheen uploaden</string>
+    <string name="unpack_title">Snelle map-upload</string>
+    <string name="unpack_hint">Stuurt een hele map in één stroom in plaats van bestand voor bestand: veel sneller voor mappen met veel kleine bestanden. Vereist de kleine uitpak-payload van Crimson op de console. Die schrijft alleen naar /data en USB-schijven. Laad hem opnieuw na elke jailbreak.</string>
+    <string name="unpack_running">Aan: mappen gaan in één stroom.</string>
+    <string name="unpack_off">Uit: mappen gaan bestand voor bestand via FTP.</string>
+    <string name="unpack_load">Op de console laden</string>
+    <string name="unpack_loading">Naar de loader van de console sturen…</string>
+    <string name="unpack_loaded">Geladen: mappen gaan nu in één stroom.</string>
+    <string name="unpack_not_started">Verstuurd, maar hij antwoordt niet. Draait elfldr?</string>
+    <string name="unpack_done">%1$d bestanden staan in %2$s</string>
+    <string name="unpack_failed">Snelle map-upload gestopt: %1$s</string>
+    <string name="unpack_no_answer">De console heeft de map niet bevestigd.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d bestanden gaan in één stroom naar %3$s</string>
 </resources>

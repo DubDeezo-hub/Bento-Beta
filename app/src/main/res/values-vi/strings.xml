@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">Tệp từ 64 MB trở lên đến từ máy thành 4 phần cùng lúc, mỗi phần được ghi đúng chỗ trên điện thoại. Tắt nếu một lần tải bị sai.</string>
     <string name="split_dl_fallback">Đang lấy nguyên một khối…</string>
     <string name="files_upload_folder_here">Tải thư mục lên đây</string>
+    <string name="unpack_title">Tải thư mục nhanh</string>
+    <string name="unpack_hint">Gửi cả thư mục trong một luồng thay vì từng tệp: nhanh hơn nhiều với thư mục có nhiều tệp nhỏ. Cần payload giải nén nhỏ của Crimson trên máy. Nó chỉ ghi vào /data và ổ USB. Nạp lại sau mỗi lần jailbreak.</string>
+    <string name="unpack_running">Bật: thư mục được gửi trong một luồng.</string>
+    <string name="unpack_off">Tắt: thư mục được gửi từng tệp qua FTP.</string>
+    <string name="unpack_load">Nạp lên máy</string>
+    <string name="unpack_loading">Đang gửi tới trình nạp của máy…</string>
+    <string name="unpack_loaded">Đã nạp: thư mục giờ được gửi trong một luồng.</string>
+    <string name="unpack_not_started">Đã gửi nhưng không phản hồi. elfldr có đang chạy không?</string>
+    <string name="unpack_done">%1$d tệp đã nằm trong %2$s</string>
+    <string name="unpack_failed">Tải nhanh đã dừng: %1$s</string>
+    <string name="unpack_no_answer">Máy không xác nhận thư mục.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d tệp trong một luồng tới %3$s</string>
 </resources>

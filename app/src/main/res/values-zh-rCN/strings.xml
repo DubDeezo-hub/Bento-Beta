@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">64 MB 及以上的文件会从主机同时分 4 部分传来，每部分写入手机上对应的位置。若下载结果不对，请关闭。</string>
     <string name="split_dl_fallback">改为整体获取…</string>
     <string name="files_upload_folder_here">上传文件夹到这里</string>
+    <string name="unpack_title">快速上传文件夹</string>
+    <string name="unpack_hint">把整个文件夹作为一个数据流发送，而不是逐个文件：对包含大量小文件的文件夹快得多。需要主机上运行 Crimson 的小型解包载荷。它只写入 /data 和 USB 硬盘。每次越狱后需重新加载。</string>
+    <string name="unpack_running">已开启：文件夹以一个数据流发送。</string>
+    <string name="unpack_off">已关闭：文件夹通过 FTP 逐个文件发送。</string>
+    <string name="unpack_load">加载到主机</string>
+    <string name="unpack_loading">正在发送到主机的加载器…</string>
+    <string name="unpack_loaded">已加载：文件夹现在以一个数据流发送。</string>
+    <string name="unpack_not_started">已发送，但没有响应。elfldr 在运行吗？</string>
+    <string name="unpack_done">%2$s 中有 %1$d 个文件</string>
+    <string name="unpack_failed">快速上传已停止：%1$s</string>
+    <string name="unpack_no_answer">主机没有确认该文件夹。</string>
+    <string name="upload_folder_streaming">%1$s：%2$d 个文件正以一个数据流发送到 %3$s</string>
 </resources>

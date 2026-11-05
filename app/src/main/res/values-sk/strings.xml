@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">Súbory od 64 MB prichádzajú z konzoly v 4 častiach naraz, každá zapísaná na svoje miesto v telefóne. Vypnite, ak sťahovanie dopadne zle.</string>
     <string name="split_dl_fallback">Sťahuje sa v jednom kuse…</string>
     <string name="files_upload_folder_here">Nahrať sem priečinok</string>
+    <string name="unpack_title">Rýchle nahranie priečinka</string>
+    <string name="unpack_hint">Pošle celý priečinok v jednom prúde namiesto súboru po súbore: oveľa rýchlejšie pri priečinkoch s mnohými malými súbormi. Potrebuje malý rozbaľovací payload Crimson na konzole. Zapisuje len do /data a na USB disky. Po každom jailbreaku ho načítajte znova.</string>
+    <string name="unpack_running">Zapnuté: priečinky idú v jednom prúde.</string>
+    <string name="unpack_off">Vypnuté: priečinky idú súbor po súbore cez FTP.</string>
+    <string name="unpack_load">Načítať na konzolu</string>
+    <string name="unpack_loading">Posiela sa do loadera konzoly…</string>
+    <string name="unpack_loaded">Načítané: priečinky teraz idú v jednom prúde.</string>
+    <string name="unpack_not_started">Odoslané, ale neodpovedá. Beží elfldr?</string>
+    <string name="unpack_done">%1$d súborov je v %2$s</string>
+    <string name="unpack_failed">Rýchle nahranie sa zastavilo: %1$s</string>
+    <string name="unpack_no_answer">Konzola priečinok nepotvrdila.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d súborov ide v jednom prúde do %3$s</string>
 </resources>

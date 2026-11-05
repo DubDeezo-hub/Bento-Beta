@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">Datoteke od 64 MB ili veće stižu s konzole u 4 dijela odjednom, svaki zapisan na svoje mjesto na mobitelu. Isključite ako preuzimanje ispadne pogrešno.</string>
     <string name="split_dl_fallback">Preuzima se u jednom komadu…</string>
     <string name="files_upload_folder_here">Pošalji mapu ovdje</string>
+    <string name="unpack_title">Brzo slanje mapa</string>
+    <string name="unpack_hint">Šalje cijelu mapu u jednom toku umjesto datoteku po datoteku: puno brže za mape s mnogo malih datoteka. Treba Crimsonov mali payload za raspakiravanje na konzoli. Piše samo u /data i na USB diskove. Učitajte ga ponovno nakon svakog jailbreaka.</string>
+    <string name="unpack_running">Uključeno: mape idu u jednom toku.</string>
+    <string name="unpack_off">Isključeno: mape idu datoteku po datoteku preko FTP-a.</string>
+    <string name="unpack_load">Učitaj na konzolu</string>
+    <string name="unpack_loading">Šalje se loaderu konzole…</string>
+    <string name="unpack_loaded">Učitano: mape sad idu u jednom toku.</string>
+    <string name="unpack_not_started">Poslano, ali ne odgovara. Radi li elfldr?</string>
+    <string name="unpack_done">%1$d datoteka je u %2$s</string>
+    <string name="unpack_failed">Brzo slanje je stalo: %1$s</string>
+    <string name="unpack_no_answer">Konzola nije potvrdila mapu.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d datoteka ide u jednom toku u %3$s</string>
 </resources>

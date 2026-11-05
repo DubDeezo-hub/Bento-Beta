@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">64 MB లేదా పెద్ద ఫైళ్లు కన్సోల్ నుంచి 4 భాగాలుగా ఒకేసారి వచ్చి, ప్రతి భాగం ఫోన్‌లో దాని స్థానంలో రాయబడుతుంది. డౌన్‌లోడ్ తప్పుగా వస్తే ఆఫ్ చేయండి.</string>
     <string name="split_dl_fallback">బదులుగా ఒకే ముక్కగా తెస్తోంది…</string>
     <string name="files_upload_folder_here">ఇక్కడ ఫోల్డర్ అప్‌లోడ్ చేయి</string>
+    <string name="unpack_title">వేగవంతమైన ఫోల్డర్ అప్‌లోడ్</string>
+    <string name="unpack_hint">ఫైల్ ఫైల్‌గా కాకుండా మొత్తం ఫోల్డర్‌ను ఒకే ప్రవాహంలో పంపుతుంది: చాలా చిన్న ఫైళ్లున్న ఫోల్డర్లకు చాలా వేగం. కన్సోల్‌లో Crimson చిన్న అన్‌ప్యాక్ పేలోడ్ కావాలి. ఇది /data మరియు USB డ్రైవ్‌లలో మాత్రమే రాస్తుంది. ప్రతి జైల్‌బ్రేక్ తర్వాత మళ్లీ లోడ్ చేయండి.</string>
+    <string name="unpack_running">ఆన్: ఫోల్డర్లు ఒకే ప్రవాహంలో వెళ్తాయి.</string>
+    <string name="unpack_off">ఆఫ్: ఫోల్డర్లు FTP ద్వారా ఫైల్ ఫైల్‌గా వెళ్తాయి.</string>
+    <string name="unpack_load">కన్సోల్‌లో లోడ్ చేయి</string>
+    <string name="unpack_loading">కన్సోల్ లోడర్‌కు పంపుతోంది…</string>
+    <string name="unpack_loaded">లోడ్ అయింది: ఫోల్డర్లు ఇప్పుడు ఒకే ప్రవాహంలో వెళ్తాయి.</string>
+    <string name="unpack_not_started">పంపాం, కానీ జవాబు లేదు. elfldr నడుస్తోందా?</string>
+    <string name="unpack_done">%2$s లో %1$d ఫైళ్లు ఉన్నాయి</string>
+    <string name="unpack_failed">వేగవంతమైన అప్‌లోడ్ ఆగింది: %1$s</string>
+    <string name="unpack_no_answer">కన్సోల్ ఫోల్డర్‌ను నిర్ధారించలేదు.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d ఫైళ్లు ఒకే ప్రవాహంలో %3$s కు</string>
 </resources>

@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">64 MB 以上的檔案會從主機同時分 4 部分傳來，每部分寫入手機上對應的位置。若下載結果不對，請關閉。</string>
     <string name="split_dl_fallback">改為整份取得…</string>
     <string name="files_upload_folder_here">上傳資料夾到這裡</string>
+    <string name="unpack_title">快速上傳資料夾</string>
+    <string name="unpack_hint">把整個資料夾作為一個資料流傳送，而不是逐個檔案：對包含大量小檔案的資料夾快得多。需要主機上執行 Crimson 的小型解包酬載。它只寫入 /data 和 USB 硬碟。每次越獄後需重新載入。</string>
+    <string name="unpack_running">已開啟：資料夾以一個資料流傳送。</string>
+    <string name="unpack_off">已關閉：資料夾透過 FTP 逐個檔案傳送。</string>
+    <string name="unpack_load">載入到主機</string>
+    <string name="unpack_loading">正在傳送到主機的載入器…</string>
+    <string name="unpack_loaded">已載入：資料夾現在以一個資料流傳送。</string>
+    <string name="unpack_not_started">已傳送，但沒有回應。elfldr 在執行嗎？</string>
+    <string name="unpack_done">%2$s 中有 %1$d 個檔案</string>
+    <string name="unpack_failed">快速上傳已停止：%1$s</string>
+    <string name="unpack_no_answer">主機沒有確認該資料夾。</string>
+    <string name="upload_folder_streaming">%1$s：%2$d 個檔案正以一個資料流傳送到 %3$s</string>
 </resources>

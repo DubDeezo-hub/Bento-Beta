@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">ไฟล์ 64 MB ขึ้นไปจะมาจากคอนโซลเป็น 4 ส่วนพร้อมกัน แต่ละส่วนเขียนลงตำแหน่งของมันในโทรศัพท์ ปิดไว้ถ้าดาวน์โหลดออกมาผิด</string>
     <string name="split_dl_fallback">ดึงเป็นชิ้นเดียวแทน…</string>
     <string name="files_upload_folder_here">อัปโหลดโฟลเดอร์มาที่นี่</string>
+    <string name="unpack_title">อัปโหลดโฟลเดอร์แบบเร็ว</string>
+    <string name="unpack_hint">ส่งทั้งโฟลเดอร์เป็นสายเดียวแทนการส่งทีละไฟล์ เร็วกว่ามากสำหรับโฟลเดอร์ที่มีไฟล์เล็กจำนวนมาก ต้องมีเพย์โหลดแตกไฟล์ตัวเล็กของ Crimson บนคอนโซล ซึ่งเขียนเฉพาะ /data และไดรฟ์ USB โหลดใหม่ทุกครั้งหลังเจลเบรก</string>
+    <string name="unpack_running">เปิด: โฟลเดอร์ส่งเป็นสายเดียว</string>
+    <string name="unpack_off">ปิด: โฟลเดอร์ส่งทีละไฟล์ผ่าน FTP</string>
+    <string name="unpack_load">โหลดลงคอนโซล</string>
+    <string name="unpack_loading">กำลังส่งไปที่ตัวโหลดของคอนโซล…</string>
+    <string name="unpack_loaded">โหลดแล้ว: ตอนนี้โฟลเดอร์ส่งเป็นสายเดียว</string>
+    <string name="unpack_not_started">ส่งแล้วแต่ไม่ตอบ elfldr ทำงานอยู่ไหม</string>
+    <string name="unpack_done">มี %1$d ไฟล์อยู่ใน %2$s</string>
+    <string name="unpack_failed">การอัปโหลดแบบเร็วหยุด: %1$s</string>
+    <string name="unpack_no_answer">คอนโซลไม่ยืนยันโฟลเดอร์</string>
+    <string name="upload_folder_streaming">%1$s: กำลังส่ง %2$d ไฟล์เป็นสายเดียวไปที่ %3$s</string>
 </resources>

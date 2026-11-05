@@ -282,6 +282,7 @@ fun UploadTab(
             Text(folderStatus, style = MaterialTheme.typography.bodySmall)
             HelpLink(folderStatus)
         }
+        FastFolderRow(settings, profile)
         Text(
             when (uris.size) {
                 0 -> str(R.string.upload_none)
@@ -351,8 +352,21 @@ fun rememberFolderUpload(
             scope.launch {
                 try {
                     val phone = withContext(Dispatchers.IO) { walkPhoneTree(ctx.contentResolver, tree) }
+                    val fast = withContext(Dispatchers.IO) { unpackerAnswers(settings.host) }
                     if (phone.files.isEmpty()) {
                         onStatus(AppText.get(R.string.upload_folder_empty), false)
+                    } else if (fast) {
+                        // The unpack payload runs: the whole folder goes in one stream, as one transfer
+                        val root = folderUploadRoot(baseDir(), phone.name)
+                        onStartMany(
+                            listOf(
+                                TransferRequest(
+                                    name = phone.name, host = settings.host, port = settings.port, user = settings.user,
+                                    pass = settings.pass, dir = root, treeUri = tree.toString(), model = settings.model
+                                )
+                            )
+                        )
+                        onStatus(AppText.get(R.string.upload_folder_streaming, phone.name, phone.files.size, root), false)
                     } else {
                         val root = folderUploadRoot(baseDir(), phone.name)
                         withContext(Dispatchers.IO) { ftpMakeDirs(settings, root, phone.folders, makeTop = true) }
@@ -368,4 +382,54 @@ fun rememberFolderUpload(
         }
     }
     return { picker.launch(null) }
+}
+
+/**
+ * "Fast folder upload": whether Crimson's unpack payload runs on the console (then a picked folder goes in one stream),
+ * and a button that loads it through the console's loader. It is only ever loaded when the person taps the button.
+ */
+@Composable
+private fun FastFolderRow(settings: FtpSettings?, profile: Profile) {
+    val ctx = LocalContext.current
+    val scope = rememberCoroutineScope()
+    // A build without the payload inside (made without the PS5 SDK) shows nothing
+    val inApp = remember { try { ctx.assets.list("")?.contains(UNPACK_ASSET) == true } catch (_: Exception) { false } }
+    if (!inApp || settings == null) return
+    var running by remember(settings.host) { mutableStateOf<Boolean?>(null) }
+    var note by remember { mutableStateOf("") }
+    LaunchedEffect(settings.host) { running = withContext(Dispatchers.IO) { unpackerAnswers(settings.host) } }
+    Panel {
+        Text(str(R.string.unpack_title), style = MaterialTheme.typography.titleSmall)
+        Text(str(R.string.unpack_hint), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        Text(
+            when (running) {
+                true -> str(R.string.unpack_running)
+                false -> str(R.string.unpack_off)
+                null -> str(R.string.status_checking)
+            },
+            style = MaterialTheme.typography.bodySmall,
+            color = if (running == true) statusColors().good else MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        if (running == false) {
+            OutlinedButton(onClick = {
+                val port = profile.payloadPort.trim().toIntOrNull() ?: return@OutlinedButton
+                note = AppText.get(R.string.unpack_loading)
+                scope.launch {
+                    note = withContext(Dispatchers.IO) {
+                        try {
+                            ctx.assets.open(UNPACK_ASSET).use { sendBytesToLoader(it, settings.host, port) }
+                            // It starts listening a moment after the loader took it
+                            var up = false
+                            repeat(10) { if (!up) { Thread.sleep(500); up = unpackerAnswers(settings.host) } }
+                            if (up) AppText.get(R.string.unpack_loaded) else AppText.get(R.string.unpack_not_started)
+                        } catch (e: Exception) {
+                            failedText(e)
+                        }
+                    }
+                    running = withContext(Dispatchers.IO) { unpackerAnswers(settings.host) }
+                }
+            }) { Text(str(R.string.unpack_load)) }
+        }
+        if (note.isNotEmpty()) Text(note, style = MaterialTheme.typography.bodySmall)
+    }
 }

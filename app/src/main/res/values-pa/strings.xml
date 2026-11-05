@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">64 MB ਜਾਂ ਵੱਡੀਆਂ ਫ਼ਾਈਲਾਂ ਕੰਸੋਲ ਤੋਂ ਇੱਕੋ ਵਾਰ 4 ਹਿੱਸਿਆਂ ਵਿੱਚ ਆਉਂਦੀਆਂ ਹਨ, ਹਰ ਹਿੱਸਾ ਫ਼ੋਨ ’ਤੇ ਆਪਣੀ ਥਾਂ ਲਿਖਿਆ ਜਾਂਦਾ ਹੈ। ਡਾਊਨਲੋਡ ਗਲਤ ਆਵੇ ਤਾਂ ਬੰਦ ਕਰੋ।</string>
     <string name="split_dl_fallback">ਇਸਦੀ ਥਾਂ ਇੱਕ ਟੁਕੜੇ ਵਿੱਚ ਲਿਆ ਰਿਹਾ ਹੈ…</string>
     <string name="files_upload_folder_here">ਇੱਥੇ ਫੋਲਡਰ ਅੱਪਲੋਡ ਕਰੋ</string>
+    <string name="unpack_title">ਤੇਜ਼ ਫੋਲਡਰ ਅੱਪਲੋਡ</string>
+    <string name="unpack_hint">ਫ਼ਾਈਲ-ਦਰ-ਫ਼ਾਈਲ ਦੀ ਥਾਂ ਪੂਰਾ ਫੋਲਡਰ ਇੱਕ ਧਾਰਾ ਵਿੱਚ ਭੇਜਦਾ ਹੈ: ਕਈ ਛੋਟੀਆਂ ਫ਼ਾਈਲਾਂ ਵਾਲੇ ਫੋਲਡਰਾਂ ਲਈ ਕਾਫ਼ੀ ਤੇਜ਼। ਕੰਸੋਲ ’ਤੇ Crimson ਦਾ ਛੋਟਾ ਅਨਪੈਕ ਪੇਲੋਡ ਚਾਹੀਦਾ ਹੈ। ਇਹ ਸਿਰਫ਼ /data ਅਤੇ USB ਡਰਾਈਵਾਂ ਵਿੱਚ ਲਿਖਦਾ ਹੈ। ਹਰ ਜੇਲਬ੍ਰੇਕ ਤੋਂ ਬਾਅਦ ਮੁੜ ਲੋਡ ਕਰੋ।</string>
+    <string name="unpack_running">ਚਾਲੂ: ਫੋਲਡਰ ਇੱਕ ਧਾਰਾ ਵਿੱਚ ਜਾਂਦੇ ਹਨ।</string>
+    <string name="unpack_off">ਬੰਦ: ਫੋਲਡਰ FTP ’ਤੇ ਫ਼ਾਈਲ-ਦਰ-ਫ਼ਾਈਲ ਜਾਂਦੇ ਹਨ।</string>
+    <string name="unpack_load">ਕੰਸੋਲ ’ਤੇ ਲੋਡ ਕਰੋ</string>
+    <string name="unpack_loading">ਕੰਸੋਲ ਦੇ ਲੋਡਰ ਨੂੰ ਭੇਜ ਰਿਹਾ ਹੈ…</string>
+    <string name="unpack_loaded">ਲੋਡ ਹੋ ਗਿਆ: ਫੋਲਡਰ ਹੁਣ ਇੱਕ ਧਾਰਾ ਵਿੱਚ ਜਾਂਦੇ ਹਨ।</string>
+    <string name="unpack_not_started">ਭੇਜਿਆ, ਪਰ ਜਵਾਬ ਨਹੀਂ। ਕੀ elfldr ਚੱਲ ਰਿਹਾ ਹੈ?</string>
+    <string name="unpack_done">%2$s ਵਿੱਚ %1$d ਫ਼ਾਈਲਾਂ ਹਨ</string>
+    <string name="unpack_failed">ਤੇਜ਼ ਅੱਪਲੋਡ ਰੁਕ ਗਿਆ: %1$s</string>
+    <string name="unpack_no_answer">ਕੰਸੋਲ ਨੇ ਫੋਲਡਰ ਦੀ ਪੁਸ਼ਟੀ ਨਹੀਂ ਕੀਤੀ।</string>
+    <string name="upload_folder_streaming">%1$s: %2$d ਫ਼ਾਈਲਾਂ ਇੱਕ ਧਾਰਾ ਵਿੱਚ %3$s ਵੱਲ</string>
 </resources>

@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">Datoteke od 64 MB naprej pridejo s konzole v 4 delih hkrati, vsak zapisan na svoje mesto v telefonu. Izklopite, če prenos pride narobe.</string>
     <string name="split_dl_fallback">Pridobivanje v enem kosu…</string>
     <string name="files_upload_folder_here">Naloži mapo sem</string>
+    <string name="unpack_title">Hitro nalaganje map</string>
+    <string name="unpack_hint">Pošlje celo mapo v enem toku namesto datoteko za datoteko: veliko hitreje za mape z veliko majhnimi datotekami. Potrebuje Crimsonov majhen payload za razpakiranje na konzoli. Piše samo v /data in na pogone USB. Po vsakem jailbreaku ga naložite znova.</string>
+    <string name="unpack_running">Vklopljeno: mape gredo v enem toku.</string>
+    <string name="unpack_off">Izklopljeno: mape gredo datoteko za datoteko prek FTP.</string>
+    <string name="unpack_load">Naloži na konzolo</string>
+    <string name="unpack_loading">Pošiljanje nalagalniku konzole…</string>
+    <string name="unpack_loaded">Naloženo: mape zdaj gredo v enem toku.</string>
+    <string name="unpack_not_started">Poslano, a ne odgovori. Ali elfldr teče?</string>
+    <string name="unpack_done">%1$d datotek je v %2$s</string>
+    <string name="unpack_failed">Hitro nalaganje se je ustavilo: %1$s</string>
+    <string name="unpack_no_answer">Konzola mape ni potrdila.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d datotek v enem toku v %3$s</string>
 </resources>

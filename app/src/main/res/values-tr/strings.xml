@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">64 MB ve üzeri dosyalar konsoldan aynı anda 4 parça halinde gelir, her biri telefonda kendi yerine yazılır. Bir indirme hatalı çıkarsa kapat.</string>
     <string name="split_dl_fallback">Bunun yerine tek parça alınıyor…</string>
     <string name="files_upload_folder_here">Buraya klasör yükle</string>
+    <string name="unpack_title">Hızlı klasör yükleme</string>
+    <string name="unpack_hint">Klasörü dosya dosya değil, tek akışta gönderir: çok sayıda küçük dosyalı klasörlerde çok daha hızlı. Konsolda Crimson\'ın küçük açma payload\'ı gerekir. Yalnızca /data ve USB sürücülere yazar. Her jailbreak sonrası yeniden yükleyin.</string>
+    <string name="unpack_running">Açık: klasörler tek akışta gider.</string>
+    <string name="unpack_off">Kapalı: klasörler FTP ile dosya dosya gider.</string>
+    <string name="unpack_load">Konsola yükle</string>
+    <string name="unpack_loading">Konsolun yükleyicisine gönderiliyor…</string>
+    <string name="unpack_loaded">Yüklendi: klasörler artık tek akışta gidiyor.</string>
+    <string name="unpack_not_started">Gönderildi ama yanıt vermiyor. elfldr çalışıyor mu?</string>
+    <string name="unpack_done">%1$d dosya %2$s içinde</string>
+    <string name="unpack_failed">Hızlı yükleme durdu: %1$s</string>
+    <string name="unpack_no_answer">Konsol klasörü onaylamadı.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d dosya tek akışta %3$s klasörüne</string>
 </resources>

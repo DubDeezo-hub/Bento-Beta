@@ -1525,4 +1525,16 @@
     <string name="split_dl_hint">64 MB ar didesni failai iš konsolės ateina 4 dalimis vienu metu, kiekviena įrašoma į savo vietą telefone. Išjunkite, jei atsisiuntimas išeina blogas.</string>
     <string name="split_dl_fallback">Vietoj to siunčiama vienu gabalu…</string>
     <string name="files_upload_folder_here">Įkelti aplanką čia</string>
+    <string name="unpack_title">Greitas aplanko įkėlimas</string>
+    <string name="unpack_hint">Siunčia visą aplanką vienu srautu, o ne failą po failo: daug greičiau aplankams su daug mažų failų. Reikia mažo Crimson išpakavimo payload konsolėje. Jis rašo tik į /data ir USB diskus. Įkelkite iš naujo po kiekvieno jailbreak.</string>
+    <string name="unpack_running">Įjungta: aplankai siunčiami vienu srautu.</string>
+    <string name="unpack_off">Išjungta: aplankai siunčiami failas po failo per FTP.</string>
+    <string name="unpack_load">Įkelti į konsolę</string>
+    <string name="unpack_loading">Siunčiama konsolės įkėlikliui…</string>
+    <string name="unpack_loaded">Įkelta: aplankai dabar siunčiami vienu srautu.</string>
+    <string name="unpack_not_started">Išsiųsta, bet neatsako. Ar veikia elfldr?</string>
+    <string name="unpack_done">%1$d failai yra %2$s</string>
+    <string name="unpack_failed">Greitas įkėlimas sustojo: %1$s</string>
+    <string name="unpack_no_answer">Konsolė nepatvirtino aplanko.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d failai vienu srautu į %3$s</string>
 </resources>

@@ -1526,4 +1526,16 @@
     <string name="split_dl_hint">Los archivos de 64 MB o más llegan de la consola en 4 partes a la vez, cada una escrita en su lugar del teléfono. Desactívalo si una descarga sale mal.</string>
     <string name="split_dl_fallback">Trayéndolo en una sola pieza…</string>
     <string name="files_upload_folder_here">Subir una carpeta aquí</string>
+    <string name="unpack_title">Subida rápida de carpetas</string>
+    <string name="unpack_hint">Envía una carpeta entera en un solo flujo en vez de archivo por archivo: mucho más rápido con carpetas de muchos archivos pequeños. Necesita el pequeño payload de desempaquetado de Crimson en la consola. Solo escribe en /data y en unidades USB. Cárgalo de nuevo tras cada jailbreak.</string>
+    <string name="unpack_running">Activado: las carpetas van en un solo flujo.</string>
+    <string name="unpack_off">Desactivado: las carpetas van archivo por archivo por FTP.</string>
+    <string name="unpack_load">Cargarlo en la consola</string>
+    <string name="unpack_loading">Enviándolo al cargador de la consola…</string>
+    <string name="unpack_loaded">Cargado: las carpetas ya van en un solo flujo.</string>
+    <string name="unpack_not_started">Enviado, pero no responde. ¿Está elfldr en marcha?</string>
+    <string name="unpack_done">%1$d archivos están en %2$s</string>
+    <string name="unpack_failed">La subida rápida se detuvo: %1$s</string>
+    <string name="unpack_no_answer">La consola no confirmó la carpeta.</string>
+    <string name="upload_folder_streaming">%1$s: %2$d archivos van en un solo flujo a %3$s</string>
 </resources>
