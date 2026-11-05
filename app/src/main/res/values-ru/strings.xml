@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Скачивать большие файлы частями</string>
     <string name="split_dl_hint">Файлы от 64 МБ приходят с консоли 4 частями одновременно, каждая записывается на своё место в телефоне. Выключите, если загрузка выйдет неверной.</string>
     <string name="split_dl_fallback">Получение одним куском…</string>
+    <string name="files_upload_folder_here">Загрузить папку сюда</string>
 </resources>

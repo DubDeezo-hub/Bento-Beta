@@ -450,6 +450,12 @@ fun FilesTab(
         }
     }
 
+    // A whole phone folder into the folder being looked at; the list shows it once the folders are made
+    val pickFolderHere = rememberFolderUpload(settings, { model.path }, onStartMany) { text, busy ->
+        model.message = text
+        if (!busy && settings != null) model.open(scope, settings, model.path)
+    }
+
     // ---- dialogs ----
 
     if (speedTest && settings != null) SpeedTestDialog(settings) { speedTest = false }
@@ -832,6 +838,13 @@ fun FilesTab(
                 // The less-used actions fold away, so the folder's list keeps the room (small phones above all)
                 TextButton(onClick = { tools = !tools }) { Text(if (tools) "⋯ ▴" else "⋯", fontWeight = FontWeight.ExtraBold) }
             }
+            // Sending to this folder stays in sight: files, or a whole phone folder with everything inside it
+            if (hasFolder) {
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Button(enabled = ready, onClick = { uploadPicker.launch(arrayOf("*/*")) }) { Text(str(R.string.files_upload_here), maxLines = 1) }
+                    OutlinedButton(enabled = ready, onClick = pickFolderHere) { Text(str(R.string.files_upload_folder_here), maxLines = 1) }
+                }
+            }
             val labels = pinLabels(pins)
             // The folded actions get at most this much height and scroll inside it, so on a small phone the folder's
             // list below still has room (before, the list was squeezed to nothing and later rows were cut off)
@@ -840,10 +853,6 @@ fun FilesTab(
                 modifier = Modifier.heightIn(max = 200.dp).verticalScroll(rememberScrollState())
             ) {
             FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                Button(
-                    enabled = ready && hasFolder,
-                    onClick = { uploadPicker.launch(arrayOf("*/*")) }
-                ) { Text(str(R.string.files_upload_here)) }
                 TextButton(
                     enabled = hasFolder && (pinned || pins.size < PINS_MAX),
                     onClick = {

@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">بڑی فائلیں حصوں میں ڈاؤن لوڈ کریں</string>
     <string name="split_dl_hint">‏64 MB یا بڑی فائلیں کنسول سے ایک ساتھ 4 حصوں میں آتی ہیں، ہر حصہ فون پر اپنی جگہ لکھا جاتا ہے۔ اگر ڈاؤن لوڈ غلط آئے تو بند کریں۔</string>
     <string name="split_dl_fallback">اس کے بجائے ایک ٹکڑے میں لایا جا رہا ہے…</string>
+    <string name="files_upload_folder_here">یہاں فولڈر اپ لوڈ کریں</string>
 </resources>

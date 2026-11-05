@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">मोठ्या फाइल्स भागांत डाउनलोड करा</string>
     <string name="split_dl_hint">64 MB किंवा मोठ्या फाइल्स कन्सोलवरून एकाच वेळी 4 भागांत येतात, प्रत्येक फोनवर आपल्या जागी लिहिला जातो. डाउनलोड चुकीचे आल्यास बंद करा.</string>
     <string name="split_dl_fallback">त्याऐवजी एका तुकड्यात आणत आहे…</string>
+    <string name="files_upload_folder_here">येथे फोल्डर अपलोड करा</string>
 </resources>

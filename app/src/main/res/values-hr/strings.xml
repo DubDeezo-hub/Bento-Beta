@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Preuzimaj velike datoteke u dijelovima</string>
     <string name="split_dl_hint">Datoteke od 64 MB ili veće stižu s konzole u 4 dijela odjednom, svaki zapisan na svoje mjesto na mobitelu. Isključite ako preuzimanje ispadne pogrešno.</string>
     <string name="split_dl_fallback">Preuzima se u jednom komadu…</string>
+    <string name="files_upload_folder_here">Pošalji mapu ovdje</string>
 </resources>

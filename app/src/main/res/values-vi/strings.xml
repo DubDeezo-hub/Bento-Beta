@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Tải tệp lớn theo từng phần</string>
     <string name="split_dl_hint">Tệp từ 64 MB trở lên đến từ máy thành 4 phần cùng lúc, mỗi phần được ghi đúng chỗ trên điện thoại. Tắt nếu một lần tải bị sai.</string>
     <string name="split_dl_fallback">Đang lấy nguyên một khối…</string>
+    <string name="files_upload_folder_here">Tải thư mục lên đây</string>
 </resources>

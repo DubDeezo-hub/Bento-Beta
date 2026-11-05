@@ -1525,4 +1525,5 @@
     <string name="split_dl_title">Grote bestanden in delen downloaden</string>
     <string name="split_dl_hint">Bestanden van 64 MB of meer komen in 4 delen tegelijk van de console, elk op zijn plek op de telefoon geschreven. Zet uit als een download fout uitkomt.</string>
     <string name="split_dl_fallback">In één stuk ophalen…</string>
+    <string name="files_upload_folder_here">Map hierheen uploaden</string>
 </resources>

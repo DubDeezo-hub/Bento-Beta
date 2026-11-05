@@ -1525,4 +1525,5 @@
     <string name="split_dl_title">Hämta stora filer i delar</string>
     <string name="split_dl_hint">Filer på 64 MB eller mer kommer från konsolen i 4 delar samtidigt, var och en skriven på sin plats i telefonen. Stäng av om en nedladdning blir fel.</string>
     <string name="split_dl_fallback">Hämtar den i ett stycke i stället…</string>
+    <string name="files_upload_folder_here">Ladda upp en mapp hit</string>
 </resources>

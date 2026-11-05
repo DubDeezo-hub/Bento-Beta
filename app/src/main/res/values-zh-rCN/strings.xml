@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">分段下载大文件</string>
     <string name="split_dl_hint">64 MB 及以上的文件会从主机同时分 4 部分传来，每部分写入手机上对应的位置。若下载结果不对，请关闭。</string>
     <string name="split_dl_fallback">改为整体获取…</string>
+    <string name="files_upload_folder_here">上传文件夹到这里</string>
 </resources>

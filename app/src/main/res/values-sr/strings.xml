@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Преузимај велике датотеке у деловима</string>
     <string name="split_dl_hint">Датотеке од 64 MB или веће стижу са конзоле у 4 дела одједном, сваки уписан на своје место у телефону. Искључите ако преузимање испадне погрешно.</string>
     <string name="split_dl_fallback">Преузима се у једном комаду…</string>
+    <string name="files_upload_folder_here">Отпреми фасциклу овде</string>
 </resources>

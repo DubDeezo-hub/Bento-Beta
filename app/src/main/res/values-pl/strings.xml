@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Pobieraj duże pliki w częściach</string>
     <string name="split_dl_hint">Pliki od 64 MB przychodzą z konsoli w 4 częściach naraz, każda zapisywana na swoim miejscu w telefonie. Wyłącz, jeśli pobranie wyjdzie źle.</string>
     <string name="split_dl_fallback">Pobieranie w jednym kawałku…</string>
+    <string name="files_upload_folder_here">Wyślij folder tutaj</string>
 </resources>

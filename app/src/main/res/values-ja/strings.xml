@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">大きなファイルを分割してダウンロード</string>
     <string name="split_dl_hint">64 MB 以上のファイルは本体から 4 分割で同時に届き、それぞれスマホ上の正しい位置に書き込まれます。ダウンロードがおかしくなる場合はオフにしてください。</string>
     <string name="split_dl_fallback">代わりに 1 つにまとめて取得中…</string>
+    <string name="files_upload_folder_here">ここにフォルダーを送る</string>
 </resources>

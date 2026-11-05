@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">பெரிய கோப்புகளைப் பகுதிகளாகப் பதிவிறக்கு</string>
     <string name="split_dl_hint">64 MB அல்லது பெரிய கோப்புகள் கன்சோலிலிருந்து 4 பகுதிகளாக ஒரே நேரத்தில் வந்து, ஒவ்வொன்றும் போனில் அதன் இடத்தில் எழுதப்படும். பதிவிறக்கம் தவறாக வந்தால் அணைக்கவும்.</string>
     <string name="split_dl_fallback">பதிலாக ஒரே துண்டாக எடுக்கிறது…</string>
+    <string name="files_upload_folder_here">இங்கே கோப்புறையைப் பதிவேற்று</string>
 </resources>

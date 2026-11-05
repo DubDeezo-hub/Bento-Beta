@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Λήψη μεγάλων αρχείων σε κομμάτια</string>
     <string name="split_dl_hint">Αρχεία 64 MB και πάνω έρχονται από την κονσόλα σε 4 κομμάτια μαζί, το καθένα γραμμένο στη θέση του στο τηλέφωνο. Απενεργοποιήστε αν μια λήψη βγει λάθος.</string>
     <string name="split_dl_fallback">Λήψη σε ένα κομμάτι αντί γι\' αυτό…</string>
+    <string name="files_upload_folder_here">Ανέβασμα φακέλου εδώ</string>
 </resources>

@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">دانلود فایل‌های بزرگ در بخش‌ها</string>
     <string name="split_dl_hint">فایل‌های ۶۴ مگابایت یا بزرگ‌تر در ۴ بخش هم‌زمان از کنسول می‌آیند و هر بخش در جای خود روی گوشی نوشته می‌شود. اگر دانلودی نادرست شد خاموشش کنید.</string>
     <string name="split_dl_fallback">به جای آن یک‌تکه دریافت می‌شود…</string>
+    <string name="files_upload_folder_here">آپلود یک پوشه اینجا</string>
 </resources>

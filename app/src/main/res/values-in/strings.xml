@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Unduh file besar per bagian</string>
     <string name="split_dl_hint">File 64 MB atau lebih datang dari konsol dalam 4 bagian sekaligus, tiap bagian ditulis di tempatnya di ponsel. Matikan jika unduhan hasilnya salah.</string>
     <string name="split_dl_fallback">Mengambilnya utuh saja…</string>
+    <string name="files_upload_folder_here">Unggah folder ke sini</string>
 </resources>

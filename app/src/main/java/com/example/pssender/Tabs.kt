@@ -25,6 +25,8 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -240,6 +242,7 @@ fun InstallTab(
     }
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun UploadTab(
     host: String,
@@ -263,7 +266,22 @@ fun UploadTab(
 
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         TipTitle(str(R.string.tip_upload_title), Tip.UPLOAD)
-        Button(onClick = { picker.launch(arrayOf("*/*")) }) { Text(str(R.string.upload_choose)) }
+        // Files, or a whole folder with everything inside it, side by side so both are easy to find
+        var folderStatus by remember { mutableStateOf("") }
+        var folderBusy by remember { mutableStateOf(false) }
+        val pickFolder = rememberFolderUpload(settings, { profile.ftpDir }, onStartMany) { text, busy ->
+            folderStatus = text
+            folderBusy = busy
+        }
+        FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            Button(onClick = { picker.launch(arrayOf("*/*")) }) { Text(str(R.string.upload_choose)) }
+            OutlinedButton(enabled = settings != null && !folderBusy, onClick = pickFolder) { Text(str(R.string.upload_choose_folder)) }
+        }
+        if (folderBusy) LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
+        if (folderStatus.isNotEmpty()) {
+            Text(folderStatus, style = MaterialTheme.typography.bodySmall)
+            HelpLink(folderStatus)
+        }
         Text(
             when (uris.size) {
                 0 -> str(R.string.upload_none)
@@ -292,7 +310,6 @@ fun UploadTab(
                 }
             }
         ) { Text(str(R.string.upload_start)) }
-        FolderUploadRow(settings, profile, onStartMany)
         // Where the files go, in plain sight: a read-only folder here makes every upload fail
         val dir = profile.ftpDir.trim().ifEmpty { "/" }
         Row(verticalAlignment = Alignment.CenterVertically) {
@@ -314,45 +331,41 @@ fun folderUploadRoot(ftpDir: String, folderName: String): String =
     joinPath(ftpDir.trim().ifEmpty { "/data" }, folderName.trim().ifEmpty { "Folder" })
 
 /**
- * "Choose a folder": a whole folder from the phone, with the folders inside it, goes to the console. The folders are made
- * on the console first, then every file joins the queue (side by side, like several picked files).
+ * A folder picker that sends a whole phone folder, with the folders inside it, to [baseDir]/<its name> on the console:
+ * the folders are made there first, then every file joins the queue. [onStatus] gets what to show ("" clears it).
+ * Returns what starts the picker.
  */
 @Composable
-private fun FolderUploadRow(settings: FtpSettings?, profile: Profile, onStartMany: (List<TransferRequest>) -> Unit) {
+fun rememberFolderUpload(
+    settings: FtpSettings?,
+    baseDir: () -> String,
+    onStartMany: (List<TransferRequest>) -> Unit,
+    onStatus: (String, Boolean) -> Unit
+): () -> Unit {
     val ctx = LocalContext.current
     val scope = rememberCoroutineScope()
-    var status by remember { mutableStateOf("") }
-    var busy by remember { mutableStateOf(false) }
     val picker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocumentTree()) { tree ->
         if (tree != null && settings != null) {
             keepTreeAccess(ctx.contentResolver, tree)
-            busy = true
-            status = AppText.get(R.string.upload_folder_reading)
+            onStatus(AppText.get(R.string.upload_folder_reading), true)
             scope.launch {
                 try {
                     val phone = withContext(Dispatchers.IO) { walkPhoneTree(ctx.contentResolver, tree) }
                     if (phone.files.isEmpty()) {
-                        status = AppText.get(R.string.upload_folder_empty)
+                        onStatus(AppText.get(R.string.upload_folder_empty), false)
                     } else {
-                        val root = folderUploadRoot(profile.ftpDir, phone.name)
+                        val root = folderUploadRoot(baseDir(), phone.name)
                         withContext(Dispatchers.IO) { ftpMakeDirs(settings, root, phone.folders, makeTop = true) }
                         onStartMany(uploadRequests(settings, root, phone.files))
-                        status = AppText.get(R.string.upload_folder_queued, phone.name, phone.files.size, root)
+                        onStatus(AppText.get(R.string.upload_folder_queued, phone.name, phone.files.size, root), false)
                     }
                 } catch (_: SecurityException) {
-                    status = AppText.get(R.string.sync_lost_access)
+                    onStatus(AppText.get(R.string.sync_lost_access), false)
                 } catch (e: Exception) {
-                    status = ftpFailureMessage(e)
-                } finally {
-                    busy = false
+                    onStatus(ftpFailureMessage(e), false)
                 }
             }
         }
     }
-    OutlinedButton(enabled = settings != null && !busy, onClick = { picker.launch(null) }) { Text(str(R.string.upload_choose_folder)) }
-    if (busy) LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
-    if (status.isNotEmpty()) {
-        Text(status, style = MaterialTheme.typography.bodySmall)
-        HelpLink(status)
-    }
+    return { picker.launch(null) }
 }

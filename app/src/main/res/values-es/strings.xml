@@ -1525,4 +1525,5 @@
     <string name="split_dl_title">Descargar archivos grandes por partes</string>
     <string name="split_dl_hint">Los archivos de 64 MB o más llegan de la consola en 4 partes a la vez, cada una escrita en su lugar del teléfono. Desactívalo si una descarga sale mal.</string>
     <string name="split_dl_fallback">Trayéndolo en una sola pieza…</string>
+    <string name="files_upload_folder_here">Subir una carpeta aquí</string>
 </resources>

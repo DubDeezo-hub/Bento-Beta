@@ -1526,4 +1526,5 @@
     <string name="split_dl_title">Große Dateien in Teilen laden</string>
     <string name="split_dl_hint">Dateien ab 64 MB kommen in 4 Teilen gleichzeitig von der Konsole, jeder an seine Stelle auf dem Handy geschrieben. Ausschalten, falls ein Download fehlerhaft ist.</string>
     <string name="split_dl_fallback">Stattdessen in einem Stück holen…</string>
+    <string name="files_upload_folder_here">Ordner hierher hochladen</string>
 </resources>

@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">I-download nang hati-hati ang malalaking file</string>
     <string name="split_dl_hint">Ang mga file na 64 MB pataas ay dumarating mula sa console bilang 4 na bahagi nang sabay, bawat isa nakasulat sa lugar nito sa phone. I-off kung may download na mali.</string>
     <string name="split_dl_fallback">Kinukuha na lang nang buo…</string>
+    <string name="files_upload_folder_here">Mag-upload ng folder dito</string>
 </resources>

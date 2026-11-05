@@ -1525,4 +1525,5 @@
     <string name="split_dl_title">Scarica i file grandi a parti</string>
     <string name="split_dl_hint">I file da 64 MB in su arrivano dalla console in 4 parti insieme, ognuna scritta al suo posto sul telefono. Disattiva se un download viene male.</string>
     <string name="split_dl_fallback">Prendo il file in un pezzo solo…</string>
+    <string name="files_upload_folder_here">Carica una cartella qui</string>
 </resources>

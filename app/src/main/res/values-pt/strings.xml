@@ -1525,4 +1525,5 @@
     <string name="split_dl_title">Baixar arquivos grandes em partes</string>
     <string name="split_dl_hint">Arquivos de 64 MB ou mais vêm do console em 4 partes ao mesmo tempo, cada uma gravada no seu lugar no celular. Desligue se um download sair errado.</string>
     <string name="split_dl_fallback">Buscando em uma só parte…</string>
+    <string name="files_upload_folder_here">Enviar uma pasta aqui</string>
 </resources>

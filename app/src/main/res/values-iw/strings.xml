@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">הורדת קבצים גדולים בחלקים</string>
     <string name="split_dl_hint">קבצים של 64 MB ומעלה מגיעים מהקונסולה ב-4 חלקים בבת אחת, וכל חלק נכתב במקומו בטלפון. כבה אם הורדה יוצאת שגויה.</string>
     <string name="split_dl_fallback">מביא בחתיכה אחת במקום…</string>
+    <string name="files_upload_folder_here">העלה תיקייה לכאן</string>
 </resources>

@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Lataa isot tiedostot osina</string>
     <string name="split_dl_hint">Vähintään 64 Mt:n tiedostot tulevat konsolilta 4 osana kerralla, ja jokainen kirjoitetaan paikalleen puhelimeen. Laita pois, jos lataus menee väärin.</string>
     <string name="split_dl_fallback">Haetaan yhtenä kappaleena…</string>
+    <string name="files_upload_folder_here">Lähetä kansio tähän</string>
 </resources>

@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Laadi suured failid osade kaupa</string>
     <string name="split_dl_hint">64 MB või suuremad failid tulevad konsoolist 4 osana korraga, iga osa kirjutatakse telefonis oma kohale. Lülita välja, kui allalaadimine tuleb vigane.</string>
     <string name="split_dl_fallback">Toon selle hoopis ühes tükis…</string>
+    <string name="files_upload_folder_here">Laadi kaust siia</string>
 </resources>

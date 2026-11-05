@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">बड़ी फ़ाइलें हिस्सों में डाउनलोड करें</string>
     <string name="split_dl_hint">64 MB या बड़ी फ़ाइलें कंसोल से एक साथ 4 हिस्सों में आती हैं, हर हिस्सा फ़ोन पर अपनी जगह लिखा जाता है। कोई डाउनलोड गलत निकले तो बंद करें।</string>
     <string name="split_dl_fallback">इसके बजाय एक टुकड़े में लाया जा रहा है…</string>
+    <string name="files_upload_folder_here">यहाँ फ़ोल्डर अपलोड करें</string>
 </resources>

@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">ดาวน์โหลดไฟล์ใหญ่เป็นส่วน</string>
     <string name="split_dl_hint">ไฟล์ 64 MB ขึ้นไปจะมาจากคอนโซลเป็น 4 ส่วนพร้อมกัน แต่ละส่วนเขียนลงตำแหน่งของมันในโทรศัพท์ ปิดไว้ถ้าดาวน์โหลดออกมาผิด</string>
     <string name="split_dl_fallback">ดึงเป็นชิ้นเดียวแทน…</string>
+    <string name="files_upload_folder_here">อัปโหลดโฟลเดอร์มาที่นี่</string>
 </resources>

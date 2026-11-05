@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Büyük dosyaları parça parça indir</string>
     <string name="split_dl_hint">64 MB ve üzeri dosyalar konsoldan aynı anda 4 parça halinde gelir, her biri telefonda kendi yerine yazılır. Bir indirme hatalı çıkarsa kapat.</string>
     <string name="split_dl_fallback">Bunun yerine tek parça alınıyor…</string>
+    <string name="files_upload_folder_here">Buraya klasör yükle</string>
 </resources>

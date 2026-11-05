@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Descarcă fișierele mari pe părți</string>
     <string name="split_dl_hint">Fișierele de 64 MB sau mai mari vin de la consolă în 4 părți deodată, fiecare scrisă la locul ei pe telefon. Oprește dacă o descărcare iese greșit.</string>
     <string name="split_dl_fallback">Se aduce dintr-o bucată…</string>
+    <string name="files_upload_folder_here">Încarcă un dosar aici</string>
 </resources>

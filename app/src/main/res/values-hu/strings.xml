@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Nagy fájlok letöltése részekben</string>
     <string name="split_dl_hint">A 64 MB-os vagy nagyobb fájlok 4 részben egyszerre jönnek a konzolról, mindegyik a helyére íródik a telefonon. Kapcsold ki, ha egy letöltés hibás lesz.</string>
     <string name="split_dl_fallback">Inkább egy darabban tölti le…</string>
+    <string name="files_upload_folder_here">Mappa feltöltése ide</string>
 </resources>

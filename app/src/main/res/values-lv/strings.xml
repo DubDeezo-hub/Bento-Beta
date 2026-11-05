@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Lejupielādēt lielus failus pa daļām</string>
     <string name="split_dl_hint">64 MB vai lielāki faili no konsoles nāk 4 daļās vienlaikus, katra ierakstīta savā vietā tālrunī. Izslēdziet, ja lejupielāde sanāk nepareiza.</string>
     <string name="split_dl_fallback">Tā vietā ielādē vienā gabalā…</string>
+    <string name="files_upload_folder_here">Augšupielādēt mapi šeit</string>
 </resources>

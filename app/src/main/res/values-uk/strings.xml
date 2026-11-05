@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Завантажувати великі файли частинами</string>
     <string name="split_dl_hint">Файли від 64 МБ надходять із консолі 4 частинами одночасно, кожна записується на своє місце в телефоні. Вимкніть, якщо завантаження вийде неправильним.</string>
     <string name="split_dl_fallback">Отримання одним шматком…</string>
+    <string name="files_upload_folder_here">Вивантажити теку сюди</string>
 </resources>

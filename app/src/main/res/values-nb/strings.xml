@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Last ned store filer i deler</string>
     <string name="split_dl_hint">Filer på 64 MB eller mer kommer fra konsollen i 4 deler samtidig, hver skrevet på sin plass på telefonen. Slå av hvis en nedlasting blir feil.</string>
     <string name="split_dl_fallback">Henter den i ett stykke i stedet…</string>
+    <string name="files_upload_folder_here">Last opp en mappe hit</string>
 </resources>

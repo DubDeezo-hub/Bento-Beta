@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">ದೊಡ್ಡ ಫೈಲ್‌ಗಳನ್ನು ಭಾಗಗಳಲ್ಲಿ ಡೌನ್‌ಲೋಡ್</string>
     <string name="split_dl_hint">64 MB ಅಥವಾ ಹೆಚ್ಚಿನ ಫೈಲ್‌ಗಳು ಕನ್ಸೋಲ್‌ನಿಂದ 4 ಭಾಗಗಳಲ್ಲಿ ಒಟ್ಟಿಗೆ ಬರುತ್ತವೆ, ಪ್ರತಿಯೊಂದೂ ಫೋನ್‌ನಲ್ಲಿ ತನ್ನ ಸ್ಥಳದಲ್ಲಿ ಬರೆಯಲ್ಪಡುತ್ತದೆ. ಡೌನ್‌ಲೋಡ್ ತಪ್ಪಾದರೆ ಆಫ್ ಮಾಡಿ.</string>
     <string name="split_dl_fallback">ಬದಲಿಗೆ ಒಂದೇ ತುಂಡಾಗಿ ತರಲಾಗುತ್ತಿದೆ…</string>
+    <string name="files_upload_folder_here">ಇಲ್ಲಿ ಫೋಲ್ಡರ್ ಅಪ್‌ಲೋಡ್</string>
 </resources>

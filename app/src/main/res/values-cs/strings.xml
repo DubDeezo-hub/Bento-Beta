@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Stahovat velké soubory po částech</string>
     <string name="split_dl_hint">Soubory od 64 MB přicházejí z konzole ve 4 částech najednou, každá zapsaná na své místo v telefonu. Vypněte, pokud stažení dopadne špatně.</string>
     <string name="split_dl_fallback">Stahuje se vcelku…</string>
+    <string name="files_upload_folder_here">Nahrát sem složku</string>
 </resources>

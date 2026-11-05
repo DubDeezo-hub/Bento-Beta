@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">큰 파일을 나눠서 다운로드</string>
     <string name="split_dl_hint">64MB 이상 파일은 콘솔에서 4조각으로 동시에 받아 휴대폰의 제자리에 씁니다. 다운로드가 잘못되면 끄세요.</string>
     <string name="split_dl_fallback">대신 한 덩어리로 받는 중…</string>
+    <string name="files_upload_folder_here">여기에 폴더 올리기</string>
 </resources>

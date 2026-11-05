@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">分段下載大型檔案</string>
     <string name="split_dl_hint">64 MB 以上的檔案會從主機同時分 4 部分傳來，每部分寫入手機上對應的位置。若下載結果不對，請關閉。</string>
     <string name="split_dl_fallback">改為整份取得…</string>
+    <string name="files_upload_folder_here">上傳資料夾到這裡</string>
 </resources>

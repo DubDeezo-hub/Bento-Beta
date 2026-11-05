@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Изтегляне на големи файлове на части</string>
     <string name="split_dl_hint">Файлове от 64 MB или повече идват от конзолата на 4 части наведнъж, всяка записана на мястото си в телефона. Изключете, ако изтегляне излезе грешно.</string>
     <string name="split_dl_fallback">Изтегляне на едно парче вместо това…</string>
+    <string name="files_upload_folder_here">Качи папка тук</string>
 </resources>

@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Muat turun fail besar secara bahagian</string>
     <string name="split_dl_hint">Fail 64 MB atau lebih datang dari konsol dalam 4 bahagian serentak, setiap satu ditulis di tempatnya pada telefon. Matikan jika muat turun keluar salah.</string>
     <string name="split_dl_fallback">Mengambilnya sekeping sahaja…</string>
+    <string name="files_upload_folder_here">Muat naik folder di sini</string>
 </resources>

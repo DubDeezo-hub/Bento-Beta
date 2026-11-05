@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">ਵੱਡੀਆਂ ਫ਼ਾਈਲਾਂ ਹਿੱਸਿਆਂ ਵਿੱਚ ਡਾਊਨਲੋਡ ਕਰੋ</string>
     <string name="split_dl_hint">64 MB ਜਾਂ ਵੱਡੀਆਂ ਫ਼ਾਈਲਾਂ ਕੰਸੋਲ ਤੋਂ ਇੱਕੋ ਵਾਰ 4 ਹਿੱਸਿਆਂ ਵਿੱਚ ਆਉਂਦੀਆਂ ਹਨ, ਹਰ ਹਿੱਸਾ ਫ਼ੋਨ ’ਤੇ ਆਪਣੀ ਥਾਂ ਲਿਖਿਆ ਜਾਂਦਾ ਹੈ। ਡਾਊਨਲੋਡ ਗਲਤ ਆਵੇ ਤਾਂ ਬੰਦ ਕਰੋ।</string>
     <string name="split_dl_fallback">ਇਸਦੀ ਥਾਂ ਇੱਕ ਟੁਕੜੇ ਵਿੱਚ ਲਿਆ ਰਿਹਾ ਹੈ…</string>
+    <string name="files_upload_folder_here">ਇੱਥੇ ਫੋਲਡਰ ਅੱਪਲੋਡ ਕਰੋ</string>
 </resources>

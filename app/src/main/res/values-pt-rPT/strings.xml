@@ -1525,4 +1525,5 @@
     <string name="split_dl_title">Transferir ficheiros grandes em partes</string>
     <string name="split_dl_hint">Ficheiros de 64 MB ou mais vêm da consola em 4 partes ao mesmo tempo, cada uma escrita no seu lugar no telemóvel. Desligue se uma transferência sair errada.</string>
     <string name="split_dl_fallback">A buscar numa só parte…</string>
+    <string name="files_upload_folder_here">Enviar uma pasta para aqui</string>
 </resources>

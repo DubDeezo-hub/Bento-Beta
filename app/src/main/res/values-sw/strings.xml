@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Pakua faili kubwa kwa sehemu</string>
     <string name="split_dl_hint">Faili za MB 64 au zaidi huja kutoka konsoli kwa sehemu 4 kwa wakati mmoja, kila moja ikiandikwa mahali pake kwenye simu. Zima ikiwa upakuaji umetoka vibaya.</string>
     <string name="split_dl_fallback">Inaleta kwa kipande kimoja badala yake…</string>
+    <string name="files_upload_folder_here">Pakia folda hapa</string>
 </resources>

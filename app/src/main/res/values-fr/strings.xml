@@ -1525,4 +1525,5 @@
     <string name="split_dl_title">Télécharger les gros fichiers en parties</string>
     <string name="split_dl_hint">Les fichiers de 64 Mo ou plus arrivent de la console en 4 parties à la fois, chacune écrite à sa place sur le téléphone. Désactivez si un téléchargement sort mal.</string>
     <string name="split_dl_fallback">Récupération en un seul morceau à la place…</string>
+    <string name="files_upload_folder_here">Envoyer un dossier ici</string>
 </resources>

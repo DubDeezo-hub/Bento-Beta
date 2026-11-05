@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">نزّل الملفات الكبيرة على أجزاء</string>
     <string name="split_dl_hint">الملفات بحجم 64 ميغابايت أو أكثر تأتي من الجهاز على 4 أجزاء معًا، ويُكتب كل جزء في مكانه على الهاتف. أوقفه إذا خرج تنزيل خاطئًا.</string>
     <string name="split_dl_fallback">يُجلب بقطعة واحدة بدلًا من ذلك…</string>
+    <string name="files_upload_folder_here">ارفع مجلدًا هنا</string>
 </resources>

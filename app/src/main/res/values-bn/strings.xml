@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">বড় ফাইল ভাগে ডাউনলোড</string>
     <string name="split_dl_hint">৬৪ MB বা বড় ফাইল কনসোল থেকে একসাথে ৪ ভাগে আসে, প্রতিটি ফোনে নিজের জায়গায় লেখা হয়। কোনো ডাউনলোড ভুল হলে বন্ধ করুন।</string>
     <string name="split_dl_fallback">বদলে এক টুকরোয় আনা হচ্ছে…</string>
+    <string name="files_upload_folder_here">এখানে ফোল্ডার আপলোড</string>
 </resources>

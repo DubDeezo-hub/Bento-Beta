@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Prenašaj velike datoteke po delih</string>
     <string name="split_dl_hint">Datoteke od 64 MB naprej pridejo s konzole v 4 delih hkrati, vsak zapisan na svoje mesto v telefonu. Izklopite, če prenos pride narobe.</string>
     <string name="split_dl_fallback">Pridobivanje v enem kosu…</string>
+    <string name="files_upload_folder_here">Naloži mapo sem</string>
 </resources>

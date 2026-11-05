@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Atsisiųsti didelius failus dalimis</string>
     <string name="split_dl_hint">64 MB ar didesni failai iš konsolės ateina 4 dalimis vienu metu, kiekviena įrašoma į savo vietą telefone. Išjunkite, jei atsisiuntimas išeina blogas.</string>
     <string name="split_dl_fallback">Vietoj to siunčiama vienu gabalu…</string>
+    <string name="files_upload_folder_here">Įkelti aplanką čia</string>
 </resources>

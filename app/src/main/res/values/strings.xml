@@ -1529,4 +1529,5 @@
     <string name="split_dl_title">Download big files in parts</string>
     <string name="split_dl_hint">Files of 64 MB or more come from the console as 4 parts at once, each written into its place on the phone. Turn off if a download comes out wrong.</string>
     <string name="split_dl_fallback">Getting it in one piece instead…</string>
+    <string name="files_upload_folder_here">Upload a folder here</string>
 </resources>

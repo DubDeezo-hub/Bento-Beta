@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Hent store filer i dele</string>
     <string name="split_dl_hint">Filer på 64 MB eller mere kommer fra konsollen i 4 dele på én gang, hver skrevet på sin plads på telefonen. Slå fra, hvis en download bliver forkert.</string>
     <string name="split_dl_fallback">Henter den i ét stykke i stedet…</string>
+    <string name="files_upload_folder_here">Upload en mappe her</string>
 </resources>

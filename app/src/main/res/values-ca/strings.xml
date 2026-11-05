@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">Baixa els fitxers grans per parts</string>
     <string name="split_dl_hint">Els fitxers de 64 MB o més arriben de la consola en 4 parts alhora, cadascuna escrita al seu lloc al telèfon. Desactiva-ho si una baixada surt malament.</string>
     <string name="split_dl_fallback">Agafant-ho d\'una sola peça…</string>
+    <string name="files_upload_folder_here">Puja una carpeta aquí</string>
 </resources>

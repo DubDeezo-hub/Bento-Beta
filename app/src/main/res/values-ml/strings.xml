@@ -1524,4 +1524,5 @@
     <string name="split_dl_title">വലിയ ഫയലുകൾ ഭാഗങ്ങളായി ഡൗൺലോഡ്</string>
     <string name="split_dl_hint">64 MB അല്ലെങ്കിൽ കൂടുതൽ ഫയലുകൾ കൺസോളിൽ നിന്ന് 4 ഭാഗങ്ങളായി ഒരുമിച്ച് വരുന്നു, ഓരോന്നും ഫോണിൽ അതിന്റെ സ്ഥാനത്ത് എഴുതുന്നു. ഡൗൺലോഡ് തെറ്റിയാൽ ഓഫാക്കുക.</string>
     <string name="split_dl_fallback">പകരം ഒറ്റ കഷണമായി എടുക്കുന്നു…</string>
+    <string name="files_upload_folder_here">ഇവിടെ ഫോൾഡർ അപ്‌ലോഡ്</string>
 </resources>
