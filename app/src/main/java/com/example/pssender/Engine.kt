@@ -532,6 +532,9 @@ internal class FtpSession {
 internal object FtpPool {
     private const val IDLE_MS = 20_000L
     private const val MAX_KEPT = 8
+
+    /** A connection put aside less than this long ago is used without checking it first. */
+    private const val FRESH_MS = 2_000L
     private val kept = ArrayList<FtpSession>()
 
     fun take(s: FtpSettings): FtpSession? {
@@ -541,7 +544,8 @@ internal object FtpPool {
                 kept.removeAll { old -> (now - old.idleSince > IDLE_MS).also { if (it) closeQuietly(old) } }
                 kept.firstOrNull { it.loggedInAs == s }?.also { kept.remove(it) }
             } ?: return null
-            val alive = try {
+            // A connection used a moment ago is surely still there: the check would only cost a round trip per file
+            val alive = now - found.idleSince < FRESH_MS || try {
                 found.ftp.soTimeout = 3000
                 found.ftp.sendNoOp().also { found.ftp.soTimeout = 60_000 }
             } catch (_: Exception) {

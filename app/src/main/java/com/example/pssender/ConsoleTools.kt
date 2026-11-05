@@ -686,7 +686,9 @@ private fun backUp(scope: CoroutineScope, s: FtpSettings, sv: SaveEntry, onStart
 
 /** Uploads of phone files into [base] on the console, each into the folder it lies in on the phone. */
 fun uploadRequests(s: FtpSettings, base: String, files: List<PhoneFile>): List<TransferRequest> =
-    files.map { f ->
+    // Biggest first: with several files going at once, a big one started last would leave one lane working alone at the
+    // end while the others sit idle. Files of unknown size go last
+    files.sortedByDescending { it.size }.map { f ->
         TransferRequest(
             name = syncFileName(f.rel),
             host = s.host, port = s.port, user = s.user, pass = s.pass,
